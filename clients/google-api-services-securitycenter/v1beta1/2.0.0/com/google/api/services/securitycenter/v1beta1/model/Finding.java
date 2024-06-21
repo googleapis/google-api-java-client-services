@@ -236,6 +236,15 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String findingClass;
 
   /**
+   * Contains details about groups of which this finding is a member. A group is a collection of
+   * findings that are related in some way. This field cannot be updated. Its value is ignored in
+   * all update requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GroupMembership> groupMemberships;
+
+  /**
    * Represents IAM bindings associated with the finding.
    * The value may be {@code null}.
    */
@@ -424,6 +433,16 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Contains details about a group of security issues that, when the issues occur together,
+   * represent a greater risk than when the issues occur independently. A group of such issues is
+   * referred to as a toxic combination. This field cannot be updated. Its value is ignored in all
+   * update requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ToxicCombination toxicCombination;
 
   /**
    * Represents vulnerability-specific fields like CVE and CVSS scores. CVE stands for Common
@@ -840,6 +859,27 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setFindingClass(java.lang.String findingClass) {
     this.findingClass = findingClass;
+    return this;
+  }
+
+  /**
+   * Contains details about groups of which this finding is a member. A group is a collection of
+   * findings that are related in some way. This field cannot be updated. Its value is ignored in
+   * all update requests.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GroupMembership> getGroupMemberships() {
+    return groupMemberships;
+  }
+
+  /**
+   * Contains details about groups of which this finding is a member. A group is a collection of
+   * findings that are related in some way. This field cannot be updated. Its value is ignored in
+   * all update requests.
+   * @param groupMemberships groupMemberships or {@code null} for none
+   */
+  public Finding setGroupMemberships(java.util.List<GroupMembership> groupMemberships) {
+    this.groupMemberships = groupMemberships;
     return this;
   }
 
@@ -1292,6 +1332,29 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Contains details about a group of security issues that, when the issues occur together,
+   * represent a greater risk than when the issues occur independently. A group of such issues is
+   * referred to as a toxic combination. This field cannot be updated. Its value is ignored in all
+   * update requests.
+   * @return value or {@code null} for none
+   */
+  public ToxicCombination getToxicCombination() {
+    return toxicCombination;
+  }
+
+  /**
+   * Contains details about a group of security issues that, when the issues occur together,
+   * represent a greater risk than when the issues occur independently. A group of such issues is
+   * referred to as a toxic combination. This field cannot be updated. Its value is ignored in all
+   * update requests.
+   * @param toxicCombination toxicCombination or {@code null} for none
+   */
+  public Finding setToxicCombination(ToxicCombination toxicCombination) {
+    this.toxicCombination = toxicCombination;
     return this;
   }
 

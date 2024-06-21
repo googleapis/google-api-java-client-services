@@ -84,9 +84,9 @@ public final class PrometheusQueryLanguageCondition extends com.google.api.clien
   /**
    * Optional. Labels to add to or overwrite in the PromQL query result. Label names must be valid
    * (https://prometheus.io/docs/concepts/data_model/#metric-names-and-labels). Label values can be
-   * templatized by using variables (https://cloud.google.com/monitoring/alerts/doc-variables). The
-   * only available variable names are the names of the labels in the PromQL result, including
-   * "__name__" and "value". "labels" may be empty.
+   * templatized by using variables (https://cloud.google.com/monitoring/alerts/doc-variables#doc-
+   * vars). The only available variable names are the names of the labels in the PromQL result,
+   * including "__name__" and "value". "labels" may be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,9 +191,9 @@ public final class PrometheusQueryLanguageCondition extends com.google.api.clien
   /**
    * Optional. Labels to add to or overwrite in the PromQL query result. Label names must be valid
    * (https://prometheus.io/docs/concepts/data_model/#metric-names-and-labels). Label values can be
-   * templatized by using variables (https://cloud.google.com/monitoring/alerts/doc-variables). The
-   * only available variable names are the names of the labels in the PromQL result, including
-   * "__name__" and "value". "labels" may be empty.
+   * templatized by using variables (https://cloud.google.com/monitoring/alerts/doc-variables#doc-
+   * vars). The only available variable names are the names of the labels in the PromQL result,
+   * including "__name__" and "value". "labels" may be empty.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -203,9 +203,9 @@ public final class PrometheusQueryLanguageCondition extends com.google.api.clien
   /**
    * Optional. Labels to add to or overwrite in the PromQL query result. Label names must be valid
    * (https://prometheus.io/docs/concepts/data_model/#metric-names-and-labels). Label values can be
-   * templatized by using variables (https://cloud.google.com/monitoring/alerts/doc-variables). The
-   * only available variable names are the names of the labels in the PromQL result, including
-   * "__name__" and "value". "labels" may be empty.
+   * templatized by using variables (https://cloud.google.com/monitoring/alerts/doc-variables#doc-
+   * vars). The only available variable names are the names of the labels in the PromQL result,
+   * including "__name__" and "value". "labels" may be empty.
    * @param labels labels or {@code null} for none
    */
   public PrometheusQueryLanguageCondition setLabels(java.util.Map<String, java.lang.String> labels) {

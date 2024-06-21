@@ -33,11 +33,19 @@ public final class Documentation extends com.google.api.client.json.GenericJson 
    * The body of the documentation, interpreted according to mime_type. The content may not exceed
    * 8,192 Unicode characters and may not exceed more than 10,240 bytes when encoded in UTF-8
    * format, whichever is smaller. This text can be templatized by using variables
-   * (https://cloud.google.com/monitoring/alerts/doc-variables).
+   * (https://cloud.google.com/monitoring/alerts/doc-variables#doc-vars).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String content;
+
+  /**
+   * Optional. Links to content such as playbooks, repositories, and other resources. This field can
+   * contain up to 3 entries.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Link> links;
 
   /**
    * The format of the content field. Presently, only the value "text/markdown" is supported. See
@@ -55,8 +63,8 @@ public final class Documentation extends com.google.api.client.json.GenericJson 
    * is-the-email-subject-length-limit). It is both the limit imposed by some third-party ticketing
    * products and it is common to define textual fields in databases as VARCHAR(255).The contents of
    * the subject line can be templatized by using variables
-   * (https://cloud.google.com/monitoring/alerts/doc-variables). If this field is missing or empty,
-   * a default subject line will be generated.
+   * (https://cloud.google.com/monitoring/alerts/doc-variables#doc-vars). If this field is missing
+   * or empty, a default subject line will be generated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +74,7 @@ public final class Documentation extends com.google.api.client.json.GenericJson 
    * The body of the documentation, interpreted according to mime_type. The content may not exceed
    * 8,192 Unicode characters and may not exceed more than 10,240 bytes when encoded in UTF-8
    * format, whichever is smaller. This text can be templatized by using variables
-   * (https://cloud.google.com/monitoring/alerts/doc-variables).
+   * (https://cloud.google.com/monitoring/alerts/doc-variables#doc-vars).
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -77,11 +85,30 @@ public final class Documentation extends com.google.api.client.json.GenericJson 
    * The body of the documentation, interpreted according to mime_type. The content may not exceed
    * 8,192 Unicode characters and may not exceed more than 10,240 bytes when encoded in UTF-8
    * format, whichever is smaller. This text can be templatized by using variables
-   * (https://cloud.google.com/monitoring/alerts/doc-variables).
+   * (https://cloud.google.com/monitoring/alerts/doc-variables#doc-vars).
    * @param content content or {@code null} for none
    */
   public Documentation setContent(java.lang.String content) {
     this.content = content;
+    return this;
+  }
+
+  /**
+   * Optional. Links to content such as playbooks, repositories, and other resources. This field can
+   * contain up to 3 entries.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Link> getLinks() {
+    return links;
+  }
+
+  /**
+   * Optional. Links to content such as playbooks, repositories, and other resources. This field can
+   * contain up to 3 entries.
+   * @param links links or {@code null} for none
+   */
+  public Documentation setLinks(java.util.List<Link> links) {
+    this.links = links;
     return this;
   }
 
@@ -112,8 +139,8 @@ public final class Documentation extends com.google.api.client.json.GenericJson 
    * is-the-email-subject-length-limit). It is both the limit imposed by some third-party ticketing
    * products and it is common to define textual fields in databases as VARCHAR(255).The contents of
    * the subject line can be templatized by using variables
-   * (https://cloud.google.com/monitoring/alerts/doc-variables). If this field is missing or empty,
-   * a default subject line will be generated.
+   * (https://cloud.google.com/monitoring/alerts/doc-variables#doc-vars). If this field is missing
+   * or empty, a default subject line will be generated.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubject() {
@@ -128,8 +155,8 @@ public final class Documentation extends com.google.api.client.json.GenericJson 
    * is-the-email-subject-length-limit). It is both the limit imposed by some third-party ticketing
    * products and it is common to define textual fields in databases as VARCHAR(255).The contents of
    * the subject line can be templatized by using variables
-   * (https://cloud.google.com/monitoring/alerts/doc-variables). If this field is missing or empty,
-   * a default subject line will be generated.
+   * (https://cloud.google.com/monitoring/alerts/doc-variables#doc-vars). If this field is missing
+   * or empty, a default subject line will be generated.
    * @param subject subject or {@code null} for none
    */
   public Documentation setSubject(java.lang.String subject) {

@@ -31,14 +31,16 @@ package com.google.api.services.sqladmin.model;
 public final class MaintenanceWindow extends com.google.api.client.json.GenericJson {
 
   /**
-   * day of week (1-7), starting on Monday.
+   * Day of week - `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, or `SUNDAY`.
+   * Specify in the UTC time zone. Returned in output as an integer, 1 to 7, where `1` equals
+   * Monday.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer day;
 
   /**
-   * hour of day - 0 to 23.
+   * Hour of day - 0 to 23. Specify in the UTC time zone.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,15 +54,17 @@ public final class MaintenanceWindow extends com.google.api.client.json.GenericJ
   private java.lang.String kind;
 
   /**
-   * Maintenance timing setting: `canary` (Earlier) or `stable` (Later). [Learn
-   * more](https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).
+   * Maintenance timing settings: `canary`, `stable`, or `week5`. For more information, see [About
+   * maintenance on Cloud SQL instances](https://cloud.google.com/sql/docs/mysql/maintenance).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String updateTrack;
 
   /**
-   * day of week (1-7), starting on Monday.
+   * Day of week - `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, or `SUNDAY`.
+   * Specify in the UTC time zone. Returned in output as an integer, 1 to 7, where `1` equals
+   * Monday.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDay() {
@@ -68,7 +72,9 @@ public final class MaintenanceWindow extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * day of week (1-7), starting on Monday.
+   * Day of week - `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, or `SUNDAY`.
+   * Specify in the UTC time zone. Returned in output as an integer, 1 to 7, where `1` equals
+   * Monday.
    * @param day day or {@code null} for none
    */
   public MaintenanceWindow setDay(java.lang.Integer day) {
@@ -77,7 +83,7 @@ public final class MaintenanceWindow extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * hour of day - 0 to 23.
+   * Hour of day - 0 to 23. Specify in the UTC time zone.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getHour() {
@@ -85,7 +91,7 @@ public final class MaintenanceWindow extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * hour of day - 0 to 23.
+   * Hour of day - 0 to 23. Specify in the UTC time zone.
    * @param hour hour or {@code null} for none
    */
   public MaintenanceWindow setHour(java.lang.Integer hour) {
@@ -111,8 +117,8 @@ public final class MaintenanceWindow extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Maintenance timing setting: `canary` (Earlier) or `stable` (Later). [Learn
-   * more](https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).
+   * Maintenance timing settings: `canary`, `stable`, or `week5`. For more information, see [About
+   * maintenance on Cloud SQL instances](https://cloud.google.com/sql/docs/mysql/maintenance).
    * @return value or {@code null} for none
    */
   public java.lang.String getUpdateTrack() {
@@ -120,8 +126,8 @@ public final class MaintenanceWindow extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Maintenance timing setting: `canary` (Earlier) or `stable` (Later). [Learn
-   * more](https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).
+   * Maintenance timing settings: `canary`, `stable`, or `week5`. For more information, see [About
+   * maintenance on Cloud SQL instances](https://cloud.google.com/sql/docs/mysql/maintenance).
    * @param updateTrack updateTrack or {@code null} for none
    */
   public MaintenanceWindow setUpdateTrack(java.lang.String updateTrack) {

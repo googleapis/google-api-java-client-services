@@ -31,7 +31,8 @@ public final class CanaryDeployment extends com.google.api.client.json.GenericJs
 
   /**
    * Required. The percentage based deployments that will occur as a part of a `Rollout`. List is
-   * expected in ascending order and each integer n is 0 <= n < 100.
+   * expected in ascending order and each integer n is 0 <= n < 100. If the GatewayServiceMesh is
+   * configured for Kubernetes, then the range for n is 0 <= n <= 100.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +63,8 @@ public final class CanaryDeployment extends com.google.api.client.json.GenericJs
 
   /**
    * Required. The percentage based deployments that will occur as a part of a `Rollout`. List is
-   * expected in ascending order and each integer n is 0 <= n < 100.
+   * expected in ascending order and each integer n is 0 <= n < 100. If the GatewayServiceMesh is
+   * configured for Kubernetes, then the range for n is 0 <= n <= 100.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Integer> getPercentages() {
@@ -71,7 +73,8 @@ public final class CanaryDeployment extends com.google.api.client.json.GenericJs
 
   /**
    * Required. The percentage based deployments that will occur as a part of a `Rollout`. List is
-   * expected in ascending order and each integer n is 0 <= n < 100.
+   * expected in ascending order and each integer n is 0 <= n < 100. If the GatewayServiceMesh is
+   * configured for Kubernetes, then the range for n is 0 <= n <= 100.
    * @param percentages percentages or {@code null} for none
    */
   public CanaryDeployment setPercentages(java.util.List<java.lang.Integer> percentages) {

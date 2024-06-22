@@ -49,14 +49,6 @@ public final class GoogleFirestoreAdminV1RestoreDatabaseRequest extends com.goog
   private java.lang.String databaseId;
 
   /**
-   * Database snapshot to restore from. The source database must exist and have enabled PITR. The
-   * restored database will be created in the same location as the source database.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleFirestoreAdminV1DatabaseSnapshot databaseSnapshot;
-
-  /**
    * Use Customer Managed Encryption Keys (CMEK) for encryption. Only keys in the same location as
    * this database are allowed to be used for encryption. For Firestore's nam5 multi-region, this
    * corresponds to Cloud KMS multi-region us. For Firestore's eur3 multi-region, this corresponds
@@ -124,25 +116,6 @@ public final class GoogleFirestoreAdminV1RestoreDatabaseRequest extends com.goog
    */
   public GoogleFirestoreAdminV1RestoreDatabaseRequest setDatabaseId(java.lang.String databaseId) {
     this.databaseId = databaseId;
-    return this;
-  }
-
-  /**
-   * Database snapshot to restore from. The source database must exist and have enabled PITR. The
-   * restored database will be created in the same location as the source database.
-   * @return value or {@code null} for none
-   */
-  public GoogleFirestoreAdminV1DatabaseSnapshot getDatabaseSnapshot() {
-    return databaseSnapshot;
-  }
-
-  /**
-   * Database snapshot to restore from. The source database must exist and have enabled PITR. The
-   * restored database will be created in the same location as the source database.
-   * @param databaseSnapshot databaseSnapshot or {@code null} for none
-   */
-  public GoogleFirestoreAdminV1RestoreDatabaseRequest setDatabaseSnapshot(GoogleFirestoreAdminV1DatabaseSnapshot databaseSnapshot) {
-    this.databaseSnapshot = databaseSnapshot;
     return this;
   }
 

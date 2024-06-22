@@ -174,6 +174,154 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
     public class Databases {
 
       /**
+       * Bulk deletes a subset of documents from Google Cloud Firestore. Documents created or updated
+       * after the underlying system starts to process the request will not be deleted. The bulk delete
+       * occurs in the background and its progress can be monitored and managed via the Operation resource
+       * that is created. For more details on bulk delete behavior, refer to:
+       * https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+       *
+       * Create a request for the method "databases.bulkDeleteDocuments".
+       *
+       * This request holds the parameters needed by the firestore server.  After setting any optional
+       * parameters, call the {@link BulkDeleteDocuments#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Database to operate. Should be of the form:
+       *        `projects/{project_id}/databases/{database_id}`.
+       * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1BulkDeleteDocumentsRequest}
+       * @return the request
+       */
+      public BulkDeleteDocuments bulkDeleteDocuments(java.lang.String name, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1BulkDeleteDocumentsRequest content) throws java.io.IOException {
+        BulkDeleteDocuments result = new BulkDeleteDocuments(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class BulkDeleteDocuments extends FirestoreRequest<com.google.api.services.firestore.v1.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1/{+name}:bulkDeleteDocuments";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+$");
+
+        /**
+         * Bulk deletes a subset of documents from Google Cloud Firestore. Documents created or updated
+         * after the underlying system starts to process the request will not be deleted. The bulk delete
+         * occurs in the background and its progress can be monitored and managed via the Operation
+         * resource that is created. For more details on bulk delete behavior, refer to:
+         * https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+         *
+         * Create a request for the method "databases.bulkDeleteDocuments".
+         *
+         * This request holds the parameters needed by the the firestore server.  After setting any
+         * optional parameters, call the {@link BulkDeleteDocuments#execute()} method to invoke the remote
+         * operation. <p> {@link BulkDeleteDocuments#initialize(com.google.api.client.googleapis.services.
+         * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. Database to operate. Should be of the form:
+       *        `projects/{project_id}/databases/{database_id}`.
+         * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1BulkDeleteDocumentsRequest}
+         * @since 1.13
+         */
+        protected BulkDeleteDocuments(java.lang.String name, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1BulkDeleteDocumentsRequest content) {
+          super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.GoogleLongrunningOperation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/databases/[^/]+$");
+          }
+        }
+
+        @Override
+        public BulkDeleteDocuments set$Xgafv(java.lang.String $Xgafv) {
+          return (BulkDeleteDocuments) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BulkDeleteDocuments setAccessToken(java.lang.String accessToken) {
+          return (BulkDeleteDocuments) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BulkDeleteDocuments setAlt(java.lang.String alt) {
+          return (BulkDeleteDocuments) super.setAlt(alt);
+        }
+
+        @Override
+        public BulkDeleteDocuments setCallback(java.lang.String callback) {
+          return (BulkDeleteDocuments) super.setCallback(callback);
+        }
+
+        @Override
+        public BulkDeleteDocuments setFields(java.lang.String fields) {
+          return (BulkDeleteDocuments) super.setFields(fields);
+        }
+
+        @Override
+        public BulkDeleteDocuments setKey(java.lang.String key) {
+          return (BulkDeleteDocuments) super.setKey(key);
+        }
+
+        @Override
+        public BulkDeleteDocuments setOauthToken(java.lang.String oauthToken) {
+          return (BulkDeleteDocuments) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BulkDeleteDocuments setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BulkDeleteDocuments) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BulkDeleteDocuments setQuotaUser(java.lang.String quotaUser) {
+          return (BulkDeleteDocuments) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BulkDeleteDocuments setUploadType(java.lang.String uploadType) {
+          return (BulkDeleteDocuments) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BulkDeleteDocuments setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BulkDeleteDocuments) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Database to operate. Should be of the form:
+         * `projects/{project_id}/databases/{database_id}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Database to operate. Should be of the form:
+       `projects/{project_id}/databases/{database_id}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Database to operate. Should be of the form:
+         * `projects/{project_id}/databases/{database_id}`.
+         */
+        public BulkDeleteDocuments setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/databases/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public BulkDeleteDocuments set(String parameterName, Object value) {
+          return (BulkDeleteDocuments) super.set(parameterName, value);
+        }
+      }
+      /**
        * Create a database.
        *
        * Create a request for the method "databases.create".

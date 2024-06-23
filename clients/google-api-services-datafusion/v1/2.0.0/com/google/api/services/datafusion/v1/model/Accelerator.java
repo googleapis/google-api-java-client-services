@@ -31,21 +31,21 @@ package com.google.api.services.datafusion.v1.model;
 public final class Accelerator extends com.google.api.client.json.GenericJson {
 
   /**
-   * The type of an accelator for a CDF instance.
+   * Optional. The type of an accelator for a Cloud Data Fusion instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String acceleratorType;
 
   /**
-   * The state of the accelerator.
+   * Output only. The state of the accelerator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * The type of an accelator for a CDF instance.
+   * Optional. The type of an accelator for a Cloud Data Fusion instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getAcceleratorType() {
@@ -53,7 +53,7 @@ public final class Accelerator extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of an accelator for a CDF instance.
+   * Optional. The type of an accelator for a Cloud Data Fusion instance.
    * @param acceleratorType acceleratorType or {@code null} for none
    */
   public Accelerator setAcceleratorType(java.lang.String acceleratorType) {
@@ -62,7 +62,7 @@ public final class Accelerator extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The state of the accelerator.
+   * Output only. The state of the accelerator.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -70,7 +70,7 @@ public final class Accelerator extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The state of the accelerator.
+   * Output only. The state of the accelerator.
    * @param state state or {@code null} for none
    */
   public Accelerator setState(java.lang.String state) {

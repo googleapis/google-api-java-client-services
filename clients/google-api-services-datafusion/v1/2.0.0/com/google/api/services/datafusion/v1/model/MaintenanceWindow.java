@@ -17,8 +17,7 @@
 package com.google.api.services.datafusion.v1.model;
 
 /**
- * This message defines service-specific data that certain service teams must provide as part of the
- * Data Residency Augmented View for a resource. Next ID: 2
+ * Maintenance window of the instance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Fusion API. For a detailed explanation
@@ -29,43 +28,40 @@ package com.google.api.services.datafusion.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ServiceData extends com.google.api.client.json.GenericJson {
+public final class MaintenanceWindow extends com.google.api.client.json.GenericJson {
 
   /**
-   * Auxiliary data for the persistent disk pipeline provided to provide the LSV Colossus Roots and
-   * GCS Buckets.
+   * Required. The recurring time window of the maintenance window.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private PersistentDiskData pd;
+  private RecurringTimeWindow recurringTimeWindow;
 
   /**
-   * Auxiliary data for the persistent disk pipeline provided to provide the LSV Colossus Roots and
-   * GCS Buckets.
+   * Required. The recurring time window of the maintenance window.
    * @return value or {@code null} for none
    */
-  public PersistentDiskData getPd() {
-    return pd;
+  public RecurringTimeWindow getRecurringTimeWindow() {
+    return recurringTimeWindow;
   }
 
   /**
-   * Auxiliary data for the persistent disk pipeline provided to provide the LSV Colossus Roots and
-   * GCS Buckets.
-   * @param pd pd or {@code null} for none
+   * Required. The recurring time window of the maintenance window.
+   * @param recurringTimeWindow recurringTimeWindow or {@code null} for none
    */
-  public ServiceData setPd(PersistentDiskData pd) {
-    this.pd = pd;
+  public MaintenanceWindow setRecurringTimeWindow(RecurringTimeWindow recurringTimeWindow) {
+    this.recurringTimeWindow = recurringTimeWindow;
     return this;
   }
 
   @Override
-  public ServiceData set(String fieldName, Object value) {
-    return (ServiceData) super.set(fieldName, value);
+  public MaintenanceWindow set(String fieldName, Object value) {
+    return (MaintenanceWindow) super.set(fieldName, value);
   }
 
   @Override
-  public ServiceData clone() {
-    return (ServiceData) super.clone();
+  public MaintenanceWindow clone() {
+    return (MaintenanceWindow) super.clone();
   }
 
 }

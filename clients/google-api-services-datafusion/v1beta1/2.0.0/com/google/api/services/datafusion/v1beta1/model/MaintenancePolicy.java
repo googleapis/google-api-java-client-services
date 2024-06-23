@@ -17,7 +17,7 @@
 package com.google.api.services.datafusion.v1beta1.model;
 
 /**
- * Identifies Cloud Data Fusion accelerators for an instance.
+ * Maintenance policy of the instance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Fusion API. For a detailed explanation
@@ -28,64 +28,64 @@ package com.google.api.services.datafusion.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Accelerator extends com.google.api.client.json.GenericJson {
+public final class MaintenancePolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The type of an accelator for a Cloud Data Fusion instance.
+   * Optional. The maintenance exclusion window of the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String acceleratorType;
+  private TimeWindow maintenanceExclusionWindow;
 
   /**
-   * Output only. The state of the accelerator.
+   * Optional. The maintenance window of the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String state;
+  private MaintenanceWindow maintenanceWindow;
 
   /**
-   * Optional. The type of an accelator for a Cloud Data Fusion instance.
+   * Optional. The maintenance exclusion window of the instance.
    * @return value or {@code null} for none
    */
-  public java.lang.String getAcceleratorType() {
-    return acceleratorType;
+  public TimeWindow getMaintenanceExclusionWindow() {
+    return maintenanceExclusionWindow;
   }
 
   /**
-   * Optional. The type of an accelator for a Cloud Data Fusion instance.
-   * @param acceleratorType acceleratorType or {@code null} for none
+   * Optional. The maintenance exclusion window of the instance.
+   * @param maintenanceExclusionWindow maintenanceExclusionWindow or {@code null} for none
    */
-  public Accelerator setAcceleratorType(java.lang.String acceleratorType) {
-    this.acceleratorType = acceleratorType;
+  public MaintenancePolicy setMaintenanceExclusionWindow(TimeWindow maintenanceExclusionWindow) {
+    this.maintenanceExclusionWindow = maintenanceExclusionWindow;
     return this;
   }
 
   /**
-   * Output only. The state of the accelerator.
+   * Optional. The maintenance window of the instance.
    * @return value or {@code null} for none
    */
-  public java.lang.String getState() {
-    return state;
+  public MaintenanceWindow getMaintenanceWindow() {
+    return maintenanceWindow;
   }
 
   /**
-   * Output only. The state of the accelerator.
-   * @param state state or {@code null} for none
+   * Optional. The maintenance window of the instance.
+   * @param maintenanceWindow maintenanceWindow or {@code null} for none
    */
-  public Accelerator setState(java.lang.String state) {
-    this.state = state;
+  public MaintenancePolicy setMaintenanceWindow(MaintenanceWindow maintenanceWindow) {
+    this.maintenanceWindow = maintenanceWindow;
     return this;
   }
 
   @Override
-  public Accelerator set(String fieldName, Object value) {
-    return (Accelerator) super.set(fieldName, value);
+  public MaintenancePolicy set(String fieldName, Object value) {
+    return (MaintenancePolicy) super.set(fieldName, value);
   }
 
   @Override
-  public Accelerator clone() {
-    return (Accelerator) super.clone();
+  public MaintenancePolicy clone() {
+    return (MaintenancePolicy) super.clone();
   }
 
 }

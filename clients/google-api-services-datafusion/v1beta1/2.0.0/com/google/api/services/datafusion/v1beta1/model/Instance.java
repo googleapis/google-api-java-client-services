@@ -161,6 +161,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Optional. Configure the maintenance policy for this instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MaintenancePolicy maintenancePolicy;
+
+  /**
    * Output only. The name of this instance is in the form of
    * projects/{project}/locations/{location}/instances/{instance}.
    * The value may be {@code null}.
@@ -184,7 +191,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> options;
 
   /**
-   * Output only. P4 service account for the customer project.
+   * Output only. Service agent for the customer project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -584,6 +591,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Configure the maintenance policy for this instance.
+   * @return value or {@code null} for none
+   */
+  public MaintenancePolicy getMaintenancePolicy() {
+    return maintenancePolicy;
+  }
+
+  /**
+   * Optional. Configure the maintenance policy for this instance.
+   * @param maintenancePolicy maintenancePolicy or {@code null} for none
+   */
+  public Instance setMaintenancePolicy(MaintenancePolicy maintenancePolicy) {
+    this.maintenancePolicy = maintenancePolicy;
+    return this;
+  }
+
+  /**
    * Output only. The name of this instance is in the form of
    * projects/{project}/locations/{location}/instances/{instance}.
    * @return value or {@code null} for none
@@ -639,7 +663,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. P4 service account for the customer project.
+   * Output only. Service agent for the customer project.
    * @return value or {@code null} for none
    */
   public java.lang.String getP4ServiceAccount() {
@@ -647,7 +671,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. P4 service account for the customer project.
+   * Output only. Service agent for the customer project.
    * @param p4ServiceAccount p4ServiceAccount or {@code null} for none
    */
   public Instance setP4ServiceAccount(java.lang.String p4ServiceAccount) {

@@ -33,6 +33,14 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class LinkedVpnTunnels extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. IP ranges allowed to be included during import from hub.(does not control transit
+   * connectivity) The only allowed value for now is "ALL_IPV4_RANGES".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> includeImportRanges;
+
+  /**
    * A value that controls whether site-to-site data transfer is enabled for these resources. Data
    * transfer is available only in [supported locations](https://cloud.google.com/network-
    * connectivity/docs/network-connectivity-center/concepts/locations).
@@ -54,6 +62,25 @@ public final class LinkedVpnTunnels extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String vpcNetwork;
+
+  /**
+   * Optional. IP ranges allowed to be included during import from hub.(does not control transit
+   * connectivity) The only allowed value for now is "ALL_IPV4_RANGES".
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getIncludeImportRanges() {
+    return includeImportRanges;
+  }
+
+  /**
+   * Optional. IP ranges allowed to be included during import from hub.(does not control transit
+   * connectivity) The only allowed value for now is "ALL_IPV4_RANGES".
+   * @param includeImportRanges includeImportRanges or {@code null} for none
+   */
+  public LinkedVpnTunnels setIncludeImportRanges(java.util.List<java.lang.String> includeImportRanges) {
+    this.includeImportRanges = includeImportRanges;
+    return this;
+  }
 
   /**
    * A value that controls whether site-to-site data transfer is enabled for these resources. Data

@@ -31,11 +31,34 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class PscConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. List of Projects, Folders, or Organizations from where the Producer instance can be
+   * within. For example, a network administrator can provide both 'organizations/foo' and
+   * 'projects/bar' as allowed_google_producers_resource_hierarchy_levels. This allowlists this
+   * network to connect with any Producer instance within the 'foo' organization or the 'bar'
+   * project. By default, allowed_google_producers_resource_hierarchy_level is empty. The format for
+   * each allowed_google_producers_resource_hierarchy_level is / where is one of 'projects',
+   * 'folders', or 'organizations' and is either the ID or the number of the resource type. Format
+   * for each allowed_google_producers_resource_hierarchy_level value: 'projects/' or 'folders/' or
+   * 'organizations/' Eg. [projects/my-project-id, projects/567, folders/891, organizations/123]
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> allowedGoogleProducersResourceHierarchyLevel;
+
+  /**
    * Optional. Max number of PSC connections for this policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long limit;
+
+  /**
+   * Required. ProducerInstanceLocation is used to specify which authorization mechanism to use to
+   * determine which projects the Producer instance can be within.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String producerInstanceLocation;
 
   /**
    * The resource paths of subnetworks to use for IP address management. Example:
@@ -44,6 +67,39 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> subnetworks;
+
+  /**
+   * Optional. List of Projects, Folders, or Organizations from where the Producer instance can be
+   * within. For example, a network administrator can provide both 'organizations/foo' and
+   * 'projects/bar' as allowed_google_producers_resource_hierarchy_levels. This allowlists this
+   * network to connect with any Producer instance within the 'foo' organization or the 'bar'
+   * project. By default, allowed_google_producers_resource_hierarchy_level is empty. The format for
+   * each allowed_google_producers_resource_hierarchy_level is / where is one of 'projects',
+   * 'folders', or 'organizations' and is either the ID or the number of the resource type. Format
+   * for each allowed_google_producers_resource_hierarchy_level value: 'projects/' or 'folders/' or
+   * 'organizations/' Eg. [projects/my-project-id, projects/567, folders/891, organizations/123]
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAllowedGoogleProducersResourceHierarchyLevel() {
+    return allowedGoogleProducersResourceHierarchyLevel;
+  }
+
+  /**
+   * Optional. List of Projects, Folders, or Organizations from where the Producer instance can be
+   * within. For example, a network administrator can provide both 'organizations/foo' and
+   * 'projects/bar' as allowed_google_producers_resource_hierarchy_levels. This allowlists this
+   * network to connect with any Producer instance within the 'foo' organization or the 'bar'
+   * project. By default, allowed_google_producers_resource_hierarchy_level is empty. The format for
+   * each allowed_google_producers_resource_hierarchy_level is / where is one of 'projects',
+   * 'folders', or 'organizations' and is either the ID or the number of the resource type. Format
+   * for each allowed_google_producers_resource_hierarchy_level value: 'projects/' or 'folders/' or
+   * 'organizations/' Eg. [projects/my-project-id, projects/567, folders/891, organizations/123]
+   * @param allowedGoogleProducersResourceHierarchyLevel allowedGoogleProducersResourceHierarchyLevel or {@code null} for none
+   */
+  public PscConfig setAllowedGoogleProducersResourceHierarchyLevel(java.util.List<java.lang.String> allowedGoogleProducersResourceHierarchyLevel) {
+    this.allowedGoogleProducersResourceHierarchyLevel = allowedGoogleProducersResourceHierarchyLevel;
+    return this;
+  }
 
   /**
    * Optional. Max number of PSC connections for this policy.
@@ -59,6 +115,25 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
    */
   public PscConfig setLimit(java.lang.Long limit) {
     this.limit = limit;
+    return this;
+  }
+
+  /**
+   * Required. ProducerInstanceLocation is used to specify which authorization mechanism to use to
+   * determine which projects the Producer instance can be within.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProducerInstanceLocation() {
+    return producerInstanceLocation;
+  }
+
+  /**
+   * Required. ProducerInstanceLocation is used to specify which authorization mechanism to use to
+   * determine which projects the Producer instance can be within.
+   * @param producerInstanceLocation producerInstanceLocation or {@code null} for none
+   */
+  public PscConfig setProducerInstanceLocation(java.lang.String producerInstanceLocation) {
+    this.producerInstanceLocation = producerInstanceLocation;
     return this;
   }
 

@@ -31,6 +31,16 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class ConsumerPscConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Required. The project ID or project number of the consumer project. This project is the one
+   * that the consumer uses to interact with the producer instance. From the perspective of a
+   * consumer who's created a producer instance, this is the project of the producer instance.
+   * Format: 'projects/' Eg. 'projects/consumer-project' or 'projects/1234'
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String consumerInstanceProject;
+
+  /**
    * This is used in PSC consumer ForwardingRule to control whether the PSC endpoint can be accessed
    * from another region.
    * The value may be {@code null}.
@@ -75,6 +85,29 @@ public final class ConsumerPscConfig extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Required. The project ID or project number of the consumer project. This project is the one
+   * that the consumer uses to interact with the producer instance. From the perspective of a
+   * consumer who's created a producer instance, this is the project of the producer instance.
+   * Format: 'projects/' Eg. 'projects/consumer-project' or 'projects/1234'
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConsumerInstanceProject() {
+    return consumerInstanceProject;
+  }
+
+  /**
+   * Required. The project ID or project number of the consumer project. This project is the one
+   * that the consumer uses to interact with the producer instance. From the perspective of a
+   * consumer who's created a producer instance, this is the project of the producer instance.
+   * Format: 'projects/' Eg. 'projects/consumer-project' or 'projects/1234'
+   * @param consumerInstanceProject consumerInstanceProject or {@code null} for none
+   */
+  public ConsumerPscConfig setConsumerInstanceProject(java.lang.String consumerInstanceProject) {
+    this.consumerInstanceProject = consumerInstanceProject;
+    return this;
+  }
 
   /**
    * This is used in PSC consumer ForwardingRule to control whether the PSC endpoint can be accessed

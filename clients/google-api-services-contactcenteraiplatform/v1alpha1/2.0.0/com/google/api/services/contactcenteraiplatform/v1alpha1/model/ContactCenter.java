@@ -124,11 +124,7 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
   private PrivateAccess privateAccess;
 
   /**
-   * Output only. A list of UJET components that should be privately accessed. This field is set by
-   * reading settings from the data plane. For more information about the format of the component
-   * please refer to go/ccaip-vpc-sc-org-policy. This field is must be fully populated only for
-   * Create/Update resource operations. The main use case for this field is OrgPolicy checks via
-   * CPE.
+   * Output only. TODO(b/283407860) Deprecate this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -395,11 +391,7 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. A list of UJET components that should be privately accessed. This field is set by
-   * reading settings from the data plane. For more information about the format of the component
-   * please refer to go/ccaip-vpc-sc-org-policy. This field is must be fully populated only for
-   * Create/Update resource operations. The main use case for this field is OrgPolicy checks via
-   * CPE.
+   * Output only. TODO(b/283407860) Deprecate this field.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPrivateComponents() {
@@ -407,11 +399,7 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. A list of UJET components that should be privately accessed. This field is set by
-   * reading settings from the data plane. For more information about the format of the component
-   * please refer to go/ccaip-vpc-sc-org-policy. This field is must be fully populated only for
-   * Create/Update resource operations. The main use case for this field is OrgPolicy checks via
-   * CPE.
+   * Output only. TODO(b/283407860) Deprecate this field.
    * @param privateComponents privateComponents or {@code null} for none
    */
   public ContactCenter setPrivateComponents(java.util.List<java.lang.String> privateComponents) {

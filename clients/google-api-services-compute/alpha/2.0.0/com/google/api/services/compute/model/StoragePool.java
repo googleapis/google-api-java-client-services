@@ -103,7 +103,8 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.String performanceProvisioningType;
 
   /**
-   * Size, in GiB, of the storage pool.
+   * Size, in GiB, of the storage pool. For more information about the size limits, see
+   * https://cloud.google.com/compute/docs/disks/storage-pools.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -410,7 +411,8 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Size, in GiB, of the storage pool.
+   * Size, in GiB, of the storage pool. For more information about the size limits, see
+   * https://cloud.google.com/compute/docs/disks/storage-pools.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPoolProvisionedCapacityGb() {
@@ -418,7 +420,8 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Size, in GiB, of the storage pool.
+   * Size, in GiB, of the storage pool. For more information about the size limits, see
+   * https://cloud.google.com/compute/docs/disks/storage-pools.
    * @param poolProvisionedCapacityGb poolProvisionedCapacityGb or {@code null} for none
    */
   public StoragePool setPoolProvisionedCapacityGb(java.lang.Long poolProvisionedCapacityGb) {

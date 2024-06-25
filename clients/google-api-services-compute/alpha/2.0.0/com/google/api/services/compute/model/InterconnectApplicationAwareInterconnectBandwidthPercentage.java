@@ -17,9 +17,9 @@
 package com.google.api.services.compute.model;
 
 /**
- * Specify bandwidth percentages (0-100) for various traffic classes in BandwidthPercentagePolicy.
- * The sum of all percentages must equal 100. It is valid to specify percentages for some classes
- * and not for others. The others will be implicitly marked as 0.
+ * Specify bandwidth percentages [1-100] for various traffic classes in BandwidthPercentagePolicy.
+ * The sum of all percentages must equal 100. All traffic classes must have a percentage value
+ * specified.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

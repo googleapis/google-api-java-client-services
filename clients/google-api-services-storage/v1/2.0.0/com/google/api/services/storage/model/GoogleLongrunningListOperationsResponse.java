@@ -31,6 +31,13 @@ package com.google.api.services.storage.model;
 public final class GoogleLongrunningListOperationsResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * The kind of item this is. For lists of operations, this is always storage#operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kind;
+
+  /**
    * The continuation token, used to page through large result sets. Provide this value in a
    * subsequent request to return the next page of results.
    * The value may be {@code null}.
@@ -44,6 +51,23 @@ public final class GoogleLongrunningListOperationsResponse extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleLongrunningOperation> operations;
+
+  /**
+   * The kind of item this is. For lists of operations, this is always storage#operations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKind() {
+    return kind;
+  }
+
+  /**
+   * The kind of item this is. For lists of operations, this is always storage#operations.
+   * @param kind kind or {@code null} for none
+   */
+  public GoogleLongrunningListOperationsResponse setKind(java.lang.String kind) {
+    this.kind = kind;
+    return this;
+  }
 
   /**
    * The continuation token, used to page through large result sets. Provide this value in a

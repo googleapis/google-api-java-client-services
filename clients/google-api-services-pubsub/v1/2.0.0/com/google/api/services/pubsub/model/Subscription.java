@@ -50,6 +50,14 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private java.lang.Integer ackDeadlineSeconds;
 
   /**
+   * Output only. Information about the associated Analytics Hub subscription. Only set if the
+   * subscritpion is created by Analytics Hub.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AnalyticsHubSubscriptionInfo analyticsHubSubscriptionInfo;
+
+  /**
    * Optional. If delivery to BigQuery is used with this subscription, this field is used to
    * configure it.
    * The value may be {@code null}.
@@ -250,6 +258,25 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    */
   public Subscription setAckDeadlineSeconds(java.lang.Integer ackDeadlineSeconds) {
     this.ackDeadlineSeconds = ackDeadlineSeconds;
+    return this;
+  }
+
+  /**
+   * Output only. Information about the associated Analytics Hub subscription. Only set if the
+   * subscritpion is created by Analytics Hub.
+   * @return value or {@code null} for none
+   */
+  public AnalyticsHubSubscriptionInfo getAnalyticsHubSubscriptionInfo() {
+    return analyticsHubSubscriptionInfo;
+  }
+
+  /**
+   * Output only. Information about the associated Analytics Hub subscription. Only set if the
+   * subscritpion is created by Analytics Hub.
+   * @param analyticsHubSubscriptionInfo analyticsHubSubscriptionInfo or {@code null} for none
+   */
+  public Subscription setAnalyticsHubSubscriptionInfo(AnalyticsHubSubscriptionInfo analyticsHubSubscriptionInfo) {
+    this.analyticsHubSubscriptionInfo = analyticsHubSubscriptionInfo;
     return this;
   }
 

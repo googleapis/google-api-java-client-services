@@ -30,7 +30,7 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class VirtualMachineDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Number of CPU cores in the VirtualMachine. Must be non-negative.
+   * Number of logical CPU cores in the VirtualMachine. Must be non-negative.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,7 +149,7 @@ public final class VirtualMachineDetails extends com.google.api.client.json.Gene
   private java.lang.String vmUuid;
 
   /**
-   * Number of CPU cores in the VirtualMachine. Must be non-negative.
+   * Number of logical CPU cores in the VirtualMachine. Must be non-negative.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCoreCount() {
@@ -157,7 +157,7 @@ public final class VirtualMachineDetails extends com.google.api.client.json.Gene
   }
 
   /**
-   * Number of CPU cores in the VirtualMachine. Must be non-negative.
+   * Number of logical CPU cores in the VirtualMachine. Must be non-negative.
    * @param coreCount coreCount or {@code null} for none
    */
   public VirtualMachineDetails setCoreCount(java.lang.Integer coreCount) {

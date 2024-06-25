@@ -65,6 +65,14 @@ public final class ComputeEngineShapeDescriptor extends com.google.api.client.js
   private java.lang.String series;
 
   /**
+   * Output only. Whether simultaneous multithreading is enabled (see
+   * https://cloud.google.com/compute/docs/instances/set-threads-per-core).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean smtEnabled;
+
+  /**
    * Output only. Compute Engine storage. Never empty.
    * The value may be {@code null}.
    */
@@ -153,6 +161,25 @@ public final class ComputeEngineShapeDescriptor extends com.google.api.client.js
    */
   public ComputeEngineShapeDescriptor setSeries(java.lang.String series) {
     this.series = series;
+    return this;
+  }
+
+  /**
+   * Output only. Whether simultaneous multithreading is enabled (see
+   * https://cloud.google.com/compute/docs/instances/set-threads-per-core).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSmtEnabled() {
+    return smtEnabled;
+  }
+
+  /**
+   * Output only. Whether simultaneous multithreading is enabled (see
+   * https://cloud.google.com/compute/docs/instances/set-threads-per-core).
+   * @param smtEnabled smtEnabled or {@code null} for none
+   */
+  public ComputeEngineShapeDescriptor setSmtEnabled(java.lang.Boolean smtEnabled) {
+    this.smtEnabled = smtEnabled;
     return this;
   }
 

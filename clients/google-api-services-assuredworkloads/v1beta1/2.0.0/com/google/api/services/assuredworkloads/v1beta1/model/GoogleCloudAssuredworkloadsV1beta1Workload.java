@@ -63,6 +63,14 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   private GoogleCloudAssuredworkloadsV1beta1WorkloadComplianceStatus complianceStatus;
 
   /**
+   * Output only. Indicates whether the compliance updates feature is enabled for a workload. The
+   * compliance updates feature can be enabled via the EnableComplianceUpdates endpoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean complianceUpdatesEnabled;
+
+  /**
    * Output only. Urls for services which are compliant for this Assured Workload, but which are
    * currently disallowed by the ResourceUsageRestriction org policy. Invoke
    * RestrictAllowedResources endpoint to allow your project developers to use these services in
@@ -306,6 +314,25 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
    */
   public GoogleCloudAssuredworkloadsV1beta1Workload setComplianceStatus(GoogleCloudAssuredworkloadsV1beta1WorkloadComplianceStatus complianceStatus) {
     this.complianceStatus = complianceStatus;
+    return this;
+  }
+
+  /**
+   * Output only. Indicates whether the compliance updates feature is enabled for a workload. The
+   * compliance updates feature can be enabled via the EnableComplianceUpdates endpoint.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getComplianceUpdatesEnabled() {
+    return complianceUpdatesEnabled;
+  }
+
+  /**
+   * Output only. Indicates whether the compliance updates feature is enabled for a workload. The
+   * compliance updates feature can be enabled via the EnableComplianceUpdates endpoint.
+   * @param complianceUpdatesEnabled complianceUpdatesEnabled or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1Workload setComplianceUpdatesEnabled(java.lang.Boolean complianceUpdatesEnabled) {
+    this.complianceUpdatesEnabled = complianceUpdatesEnabled;
     return this;
   }
 

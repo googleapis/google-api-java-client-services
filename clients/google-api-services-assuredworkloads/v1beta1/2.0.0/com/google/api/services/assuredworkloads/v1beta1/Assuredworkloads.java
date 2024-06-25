@@ -1137,6 +1137,153 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           }
         }
         /**
+         * This endpoint enables Assured Workloads service to offer compliance updates for the folder based
+         * assured workload. It sets up an Assured Workloads Service Agent, having permissions to read
+         * compliance controls (for example: Org Policies) applied on the workload. The caller must have
+         * `resourcemanager.folders.getIamPolicy` and `resourcemanager.folders.setIamPolicy` permissions on
+         * the assured workload folder.
+         *
+         * Create a request for the method "workloads.enableComplianceUpdates".
+         *
+         * This request holds the parameters needed by the assuredworkloads server.  After setting any
+         * optional parameters, call the {@link EnableComplianceUpdates#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param name Required. The `name` field is used to identify the workload. Format:
+         *        organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+         * @return the request
+         */
+        public EnableComplianceUpdates enableComplianceUpdates(java.lang.String name) throws java.io.IOException {
+          EnableComplianceUpdates result = new EnableComplianceUpdates(name);
+          initialize(result);
+          return result;
+        }
+
+        public class EnableComplianceUpdates extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1EnableComplianceUpdatesResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:enableComplianceUpdates";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+
+          /**
+           * This endpoint enables Assured Workloads service to offer compliance updates for the folder
+           * based assured workload. It sets up an Assured Workloads Service Agent, having permissions to
+           * read compliance controls (for example: Org Policies) applied on the workload. The caller must
+           * have `resourcemanager.folders.getIamPolicy` and `resourcemanager.folders.setIamPolicy`
+           * permissions on the assured workload folder.
+           *
+           * Create a request for the method "workloads.enableComplianceUpdates".
+           *
+           * This request holds the parameters needed by the the assuredworkloads server.  After setting any
+           * optional parameters, call the {@link EnableComplianceUpdates#execute()} method to invoke the
+           * remote operation. <p> {@link EnableComplianceUpdates#initialize(com.google.api.client.googleapi
+           * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Required. The `name` field is used to identify the workload. Format:
+         *        organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+           * @since 1.13
+           */
+          protected EnableComplianceUpdates(java.lang.String name) {
+            super(Assuredworkloads.this, "PUT", REST_PATH, null, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1EnableComplianceUpdatesResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+            }
+          }
+
+          @Override
+          public EnableComplianceUpdates set$Xgafv(java.lang.String $Xgafv) {
+            return (EnableComplianceUpdates) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public EnableComplianceUpdates setAccessToken(java.lang.String accessToken) {
+            return (EnableComplianceUpdates) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public EnableComplianceUpdates setAlt(java.lang.String alt) {
+            return (EnableComplianceUpdates) super.setAlt(alt);
+          }
+
+          @Override
+          public EnableComplianceUpdates setCallback(java.lang.String callback) {
+            return (EnableComplianceUpdates) super.setCallback(callback);
+          }
+
+          @Override
+          public EnableComplianceUpdates setFields(java.lang.String fields) {
+            return (EnableComplianceUpdates) super.setFields(fields);
+          }
+
+          @Override
+          public EnableComplianceUpdates setKey(java.lang.String key) {
+            return (EnableComplianceUpdates) super.setKey(key);
+          }
+
+          @Override
+          public EnableComplianceUpdates setOauthToken(java.lang.String oauthToken) {
+            return (EnableComplianceUpdates) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public EnableComplianceUpdates setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (EnableComplianceUpdates) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public EnableComplianceUpdates setQuotaUser(java.lang.String quotaUser) {
+            return (EnableComplianceUpdates) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public EnableComplianceUpdates setUploadType(java.lang.String uploadType) {
+            return (EnableComplianceUpdates) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public EnableComplianceUpdates setUploadProtocol(java.lang.String uploadProtocol) {
+            return (EnableComplianceUpdates) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The `name` field is used to identify the workload. Format:
+           * organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The `name` field is used to identify the workload. Format:
+         organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The `name` field is used to identify the workload. Format:
+           * organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+           */
+          public EnableComplianceUpdates setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public EnableComplianceUpdates set(String parameterName, Object value) {
+            return (EnableComplianceUpdates) super.set(parameterName, value);
+          }
+        }
+        /**
          * Enable resource violation monitoring for a workload.
          *
          * Create a request for the method "workloads.enableResourceMonitoring".

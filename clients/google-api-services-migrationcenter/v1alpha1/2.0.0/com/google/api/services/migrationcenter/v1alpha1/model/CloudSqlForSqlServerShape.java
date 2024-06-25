@@ -65,6 +65,14 @@ public final class CloudSqlForSqlServerShape extends com.google.api.client.json.
   private java.lang.Integer memoryMb;
 
   /**
+   * Output only. Whether simultaneous multithreading is enabled (see
+   * https://cloud.google.com/sql/docs/sqlserver/create-instance#smt-create-instance).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean smtEnabled;
+
+  /**
    * Output only. Predicted storage shape.
    * The value may be {@code null}.
    */
@@ -167,6 +175,25 @@ public final class CloudSqlForSqlServerShape extends com.google.api.client.json.
    */
   public CloudSqlForSqlServerShape setMemoryMb(java.lang.Integer memoryMb) {
     this.memoryMb = memoryMb;
+    return this;
+  }
+
+  /**
+   * Output only. Whether simultaneous multithreading is enabled (see
+   * https://cloud.google.com/sql/docs/sqlserver/create-instance#smt-create-instance).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSmtEnabled() {
+    return smtEnabled;
+  }
+
+  /**
+   * Output only. Whether simultaneous multithreading is enabled (see
+   * https://cloud.google.com/sql/docs/sqlserver/create-instance#smt-create-instance).
+   * @param smtEnabled smtEnabled or {@code null} for none
+   */
+  public CloudSqlForSqlServerShape setSmtEnabled(java.lang.Boolean smtEnabled) {
+    this.smtEnabled = smtEnabled;
     return this;
   }
 

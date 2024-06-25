@@ -80,8 +80,8 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   private Money monthlyCostDatabaseBackup;
 
   /**
-   * Output only. Database licensing monthly cost for this preference set. For virtual machines
-   * denotes the cost of licenses for hosted databases.
+   * Output only. Database licensing monthly cost for this preference set. Only present for
+   * databases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -289,8 +289,8 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * Output only. Database licensing monthly cost for this preference set. For virtual machines
-   * denotes the cost of licenses for hosted databases.
+   * Output only. Database licensing monthly cost for this preference set. Only present for
+   * databases.
    * @return value or {@code null} for none
    */
   public Money getMonthlyCostDatabaseLicensing() {
@@ -298,8 +298,8 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * Output only. Database licensing monthly cost for this preference set. For virtual machines
-   * denotes the cost of licenses for hosted databases.
+   * Output only. Database licensing monthly cost for this preference set. Only present for
+   * databases.
    * @param monthlyCostDatabaseLicensing monthlyCostDatabaseLicensing or {@code null} for none
    */
   public ReportSummaryGroupPreferenceSetFinding setMonthlyCostDatabaseLicensing(Money monthlyCostDatabaseLicensing) {

@@ -46,6 +46,13 @@ public final class GoogleLongrunningOperation extends com.google.api.client.json
   private GoogleRpcStatus error;
 
   /**
+   * The kind of item this is. For operations, this is always storage#operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kind;
+
+  /**
    * Service-specific metadata associated with the operation. It typically contains progress
    * information and common metadata such as create time. Some services might not provide such
    * metadata. Any method that returns a long-running operation should document the metadata type,
@@ -75,6 +82,13 @@ public final class GoogleLongrunningOperation extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> response;
+
+  /**
+   * The link to this long running operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String selfLink;
 
   /**
    * If the value is "false", it means the operation is still in progress. If "true", the operation
@@ -109,6 +123,23 @@ public final class GoogleLongrunningOperation extends com.google.api.client.json
    */
   public GoogleLongrunningOperation setError(GoogleRpcStatus error) {
     this.error = error;
+    return this;
+  }
+
+  /**
+   * The kind of item this is. For operations, this is always storage#operation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKind() {
+    return kind;
+  }
+
+  /**
+   * The kind of item this is. For operations, this is always storage#operation.
+   * @param kind kind or {@code null} for none
+   */
+  public GoogleLongrunningOperation setKind(java.lang.String kind) {
+    this.kind = kind;
     return this;
   }
 
@@ -180,6 +211,23 @@ public final class GoogleLongrunningOperation extends com.google.api.client.json
    */
   public GoogleLongrunningOperation setResponse(java.util.Map<String, java.lang.Object> response) {
     this.response = response;
+    return this;
+  }
+
+  /**
+   * The link to this long running operation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSelfLink() {
+    return selfLink;
+  }
+
+  /**
+   * The link to this long running operation.
+   * @param selfLink selfLink or {@code null} for none
+   */
+  public GoogleLongrunningOperation setSelfLink(java.lang.String selfLink) {
+    this.selfLink = selfLink;
     return this;
   }
 

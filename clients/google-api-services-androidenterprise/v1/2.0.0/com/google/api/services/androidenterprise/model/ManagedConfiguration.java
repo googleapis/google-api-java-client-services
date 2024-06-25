@@ -17,7 +17,8 @@
 package com.google.api.services.androidenterprise.model;
 
 /**
- * A managed configuration resource contains the set of managed properties defined by the app
+ * *Deprecated:* New integrations cannot use this method and can refer to our new recommendations. A
+ * managed configuration resource contains the set of managed properties defined by the app
  * developer in the app's managed configurations schema, as well as any configuration variables
  * defined for the user.
  *

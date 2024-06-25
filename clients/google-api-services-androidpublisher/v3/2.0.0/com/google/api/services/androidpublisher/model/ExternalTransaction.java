@@ -109,6 +109,18 @@ public final class ExternalTransaction extends com.google.api.client.json.Generi
   private ExternalTransactionTestPurchase testPurchase;
 
   /**
+   * Optional. The transaction program code, used to help determine service fee for apps
+   * partcipating in special partner programs. This field can not be used for external offers
+   * transactions. Developers participating in the Play Media Experience Program
+   * (https://play.google.com/console/about/programs/mediaprogram/) must provide the program code
+   * when reporting alternative billing external transactions. If you are an eligible developer,
+   * please contact your BDM for more information on how to set this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer transactionProgramCode;
+
+  /**
    * Output only. The current state of the transaction.
    * The value may be {@code null}.
    */
@@ -312,6 +324,33 @@ public final class ExternalTransaction extends com.google.api.client.json.Generi
    */
   public ExternalTransaction setTestPurchase(ExternalTransactionTestPurchase testPurchase) {
     this.testPurchase = testPurchase;
+    return this;
+  }
+
+  /**
+   * Optional. The transaction program code, used to help determine service fee for apps
+   * partcipating in special partner programs. This field can not be used for external offers
+   * transactions. Developers participating in the Play Media Experience Program
+   * (https://play.google.com/console/about/programs/mediaprogram/) must provide the program code
+   * when reporting alternative billing external transactions. If you are an eligible developer,
+   * please contact your BDM for more information on how to set this field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTransactionProgramCode() {
+    return transactionProgramCode;
+  }
+
+  /**
+   * Optional. The transaction program code, used to help determine service fee for apps
+   * partcipating in special partner programs. This field can not be used for external offers
+   * transactions. Developers participating in the Play Media Experience Program
+   * (https://play.google.com/console/about/programs/mediaprogram/) must provide the program code
+   * when reporting alternative billing external transactions. If you are an eligible developer,
+   * please contact your BDM for more information on how to set this field.
+   * @param transactionProgramCode transactionProgramCode or {@code null} for none
+   */
+  public ExternalTransaction setTransactionProgramCode(java.lang.Integer transactionProgramCode) {
+    this.transactionProgramCode = transactionProgramCode;
     return this;
   }
 

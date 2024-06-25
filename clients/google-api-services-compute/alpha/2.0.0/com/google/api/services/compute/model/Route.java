@@ -130,8 +130,12 @@ public final class Route extends com.google.api.client.json.GenericJson {
   /**
    * The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching
    * packets or the IP address of the forwarding Rule. For example, the following are all valid
-   * URLs: - 10.128.0.56 - https://www.googleapis.com/compute/v1/projects/project/regions/region
-   * /forwardingRules/forwardingRule - regions/region/forwardingRules/forwardingRule
+   * URLs: - https://www.googleapis.com/compute/v1/projects/project/regions/region
+   * /forwardingRules/forwardingRule - regions/region/forwardingRules/forwardingRule If an IP
+   * address is provided, must specify an IPv4 address in dot-decimal notation or an IPv6 address in
+   * RFC 4291 format. For example, the following are all valid IP addresses: - 10.128.0.56 -
+   * 2001:db8::2d9:51:0:0 - 2001:db8:0:0:2d9:51:0:0 IPv6 addresses will be displayed using RFC 5952
+   * compressed format (e.g. 2001:db8::2d9:51:0:0). Should never be an IPv4-mapped IPv6 address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -505,8 +509,12 @@ public final class Route extends com.google.api.client.json.GenericJson {
   /**
    * The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching
    * packets or the IP address of the forwarding Rule. For example, the following are all valid
-   * URLs: - 10.128.0.56 - https://www.googleapis.com/compute/v1/projects/project/regions/region
-   * /forwardingRules/forwardingRule - regions/region/forwardingRules/forwardingRule
+   * URLs: - https://www.googleapis.com/compute/v1/projects/project/regions/region
+   * /forwardingRules/forwardingRule - regions/region/forwardingRules/forwardingRule If an IP
+   * address is provided, must specify an IPv4 address in dot-decimal notation or an IPv6 address in
+   * RFC 4291 format. For example, the following are all valid IP addresses: - 10.128.0.56 -
+   * 2001:db8::2d9:51:0:0 - 2001:db8:0:0:2d9:51:0:0 IPv6 addresses will be displayed using RFC 5952
+   * compressed format (e.g. 2001:db8::2d9:51:0:0). Should never be an IPv4-mapped IPv6 address.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextHopIlb() {
@@ -516,8 +524,12 @@ public final class Route extends com.google.api.client.json.GenericJson {
   /**
    * The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching
    * packets or the IP address of the forwarding Rule. For example, the following are all valid
-   * URLs: - 10.128.0.56 - https://www.googleapis.com/compute/v1/projects/project/regions/region
-   * /forwardingRules/forwardingRule - regions/region/forwardingRules/forwardingRule
+   * URLs: - https://www.googleapis.com/compute/v1/projects/project/regions/region
+   * /forwardingRules/forwardingRule - regions/region/forwardingRules/forwardingRule If an IP
+   * address is provided, must specify an IPv4 address in dot-decimal notation or an IPv6 address in
+   * RFC 4291 format. For example, the following are all valid IP addresses: - 10.128.0.56 -
+   * 2001:db8::2d9:51:0:0 - 2001:db8:0:0:2d9:51:0:0 IPv6 addresses will be displayed using RFC 5952
+   * compressed format (e.g. 2001:db8::2d9:51:0:0). Should never be an IPv4-mapped IPv6 address.
    * @param nextHopIlb nextHopIlb or {@code null} for none
    */
   public Route setNextHopIlb(java.lang.String nextHopIlb) {

@@ -108,9 +108,9 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
 
   /**
    * The machine type to use for instances that are created from these properties. This field only
-   * accept machine types name. e.g. n2-standard-4 and does not accept machine type full or partial
-   * url. e.g. projects/my-l7ilb-project/zones/us-central1-a/machineTypes/n2-standard-4 will throw
-   * INTERNAL_ERROR.
+   * accepts a machine type name, for example `n2-standard-4`. If you use the machine type full or
+   * partial URL, for example `projects/my-l7ilb-project/zones/us-
+   * central1-a/machineTypes/n2-standard-4`, the request will result in an `INTERNAL_ERROR`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -370,9 +370,9 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
 
   /**
    * The machine type to use for instances that are created from these properties. This field only
-   * accept machine types name. e.g. n2-standard-4 and does not accept machine type full or partial
-   * url. e.g. projects/my-l7ilb-project/zones/us-central1-a/machineTypes/n2-standard-4 will throw
-   * INTERNAL_ERROR.
+   * accepts a machine type name, for example `n2-standard-4`. If you use the machine type full or
+   * partial URL, for example `projects/my-l7ilb-project/zones/us-
+   * central1-a/machineTypes/n2-standard-4`, the request will result in an `INTERNAL_ERROR`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -381,9 +381,9 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
 
   /**
    * The machine type to use for instances that are created from these properties. This field only
-   * accept machine types name. e.g. n2-standard-4 and does not accept machine type full or partial
-   * url. e.g. projects/my-l7ilb-project/zones/us-central1-a/machineTypes/n2-standard-4 will throw
-   * INTERNAL_ERROR.
+   * accepts a machine type name, for example `n2-standard-4`. If you use the machine type full or
+   * partial URL, for example `projects/my-l7ilb-project/zones/us-
+   * central1-a/machineTypes/n2-standard-4`, the request will result in an `INTERNAL_ERROR`.
    * @param machineType machineType or {@code null} for none
    */
   public InstanceProperties setMachineType(java.lang.String machineType) {

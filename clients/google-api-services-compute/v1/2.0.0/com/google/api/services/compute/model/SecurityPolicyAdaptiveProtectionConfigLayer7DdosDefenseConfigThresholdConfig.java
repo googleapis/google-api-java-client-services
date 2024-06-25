@@ -55,12 +55,38 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
   private java.lang.Float autoDeployLoadThreshold;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float detectionAbsoluteQps;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float detectionLoadThreshold;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float detectionRelativeToBaselineQps;
+
+  /**
    * The name must be 1-63 characters long, and comply with RFC1035. The name must be unique within
    * the security policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Configuration options for enabling Adaptive Protection to operate on specified granular traffic
+   * units.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfigTrafficGranularityConfig> trafficGranularityConfigs;
 
   /**
    * @return value or {@code null} for none
@@ -123,6 +149,51 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
   }
 
   /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getDetectionAbsoluteQps() {
+    return detectionAbsoluteQps;
+  }
+
+  /**
+   * @param detectionAbsoluteQps detectionAbsoluteQps or {@code null} for none
+   */
+  public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfig setDetectionAbsoluteQps(java.lang.Float detectionAbsoluteQps) {
+    this.detectionAbsoluteQps = detectionAbsoluteQps;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getDetectionLoadThreshold() {
+    return detectionLoadThreshold;
+  }
+
+  /**
+   * @param detectionLoadThreshold detectionLoadThreshold or {@code null} for none
+   */
+  public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfig setDetectionLoadThreshold(java.lang.Float detectionLoadThreshold) {
+    this.detectionLoadThreshold = detectionLoadThreshold;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getDetectionRelativeToBaselineQps() {
+    return detectionRelativeToBaselineQps;
+  }
+
+  /**
+   * @param detectionRelativeToBaselineQps detectionRelativeToBaselineQps or {@code null} for none
+   */
+  public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfig setDetectionRelativeToBaselineQps(java.lang.Float detectionRelativeToBaselineQps) {
+    this.detectionRelativeToBaselineQps = detectionRelativeToBaselineQps;
+    return this;
+  }
+
+  /**
    * The name must be 1-63 characters long, and comply with RFC1035. The name must be unique within
    * the security policy.
    * @return value or {@code null} for none
@@ -138,6 +209,25 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
    */
   public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfig setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Configuration options for enabling Adaptive Protection to operate on specified granular traffic
+   * units.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfigTrafficGranularityConfig> getTrafficGranularityConfigs() {
+    return trafficGranularityConfigs;
+  }
+
+  /**
+   * Configuration options for enabling Adaptive Protection to operate on specified granular traffic
+   * units.
+   * @param trafficGranularityConfigs trafficGranularityConfigs or {@code null} for none
+   */
+  public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfig setTrafficGranularityConfigs(java.util.List<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfigTrafficGranularityConfig> trafficGranularityConfigs) {
+    this.trafficGranularityConfigs = trafficGranularityConfigs;
     return this;
   }
 

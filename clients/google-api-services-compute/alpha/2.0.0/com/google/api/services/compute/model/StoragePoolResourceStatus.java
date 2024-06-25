@@ -88,8 +88,9 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   private java.lang.Long poolUsedCapacityBytes;
 
   /**
-   * Sum of all the disks' provisioned IOPS, minus some amount that is allowed per disk that is not
-   * counted towards pool's IOPS capacity.
+   * [Output Only] Sum of all the disks' provisioned IOPS, minus some amount that is allowed per
+   * disk that is not counted towards pool's IOPS capacity. For more information, see
+   * https://cloud.google.com/compute/docs/disks/storage-pools.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -294,8 +295,9 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * Sum of all the disks' provisioned IOPS, minus some amount that is allowed per disk that is not
-   * counted towards pool's IOPS capacity.
+   * [Output Only] Sum of all the disks' provisioned IOPS, minus some amount that is allowed per
+   * disk that is not counted towards pool's IOPS capacity. For more information, see
+   * https://cloud.google.com/compute/docs/disks/storage-pools.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPoolUsedIops() {
@@ -303,8 +305,9 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * Sum of all the disks' provisioned IOPS, minus some amount that is allowed per disk that is not
-   * counted towards pool's IOPS capacity.
+   * [Output Only] Sum of all the disks' provisioned IOPS, minus some amount that is allowed per
+   * disk that is not counted towards pool's IOPS capacity. For more information, see
+   * https://cloud.google.com/compute/docs/disks/storage-pools.
    * @param poolUsedIops poolUsedIops or {@code null} for none
    */
   public StoragePoolResourceStatus setPoolUsedIops(java.lang.Long poolUsedIops) {

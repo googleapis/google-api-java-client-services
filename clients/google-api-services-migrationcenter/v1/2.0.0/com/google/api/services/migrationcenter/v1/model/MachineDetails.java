@@ -37,7 +37,7 @@ public final class MachineDetails extends com.google.api.client.json.GenericJson
   private MachineArchitectureDetails architecture;
 
   /**
-   * Number of CPU cores in the machine. Must be non-negative.
+   * Number of logical CPU cores in the machine. Must be non-negative.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +124,7 @@ public final class MachineDetails extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Number of CPU cores in the machine. Must be non-negative.
+   * Number of logical CPU cores in the machine. Must be non-negative.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCoreCount() {
@@ -132,7 +132,7 @@ public final class MachineDetails extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Number of CPU cores in the machine. Must be non-negative.
+   * Number of logical CPU cores in the machine. Must be non-negative.
    * @param coreCount coreCount or {@code null} for none
    */
   public MachineDetails setCoreCount(java.lang.Integer coreCount) {

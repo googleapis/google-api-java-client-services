@@ -17,6 +17,7 @@
 package com.google.api.services.androidenterprise.model;
 
 /**
+ * *Deprecated:* New integrations cannot use this method and can refer to our new recommendations.
  * Group license objects allow you to keep track of licenses (called entitlements) for both free and
  * paid apps. For a free app, a group license is created when an enterprise admin first approves the
  * product in Google Play or when the first entitlement for the product is created for a user via

@@ -17,6 +17,7 @@
 package com.google.api.services.androidenterprise.model;
 
 /**
+ * *Deprecated:* New integrations cannot use this method and can refer to our new recommendations.
  * The presence of an Entitlements resource indicates that a user has the right to use a particular
  * app. Entitlements are user specific, not device specific. This allows a user with an entitlement
  * to an app to install the app on all their devices. It's also possible for a user to hold an

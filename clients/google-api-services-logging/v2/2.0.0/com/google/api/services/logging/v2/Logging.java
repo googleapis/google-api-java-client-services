@@ -5767,6 +5767,32 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
+           * Optional. Specifies the type ("Logging" or "OpsAnalytics") of the recent queries to
+           * list. The only valid value for this field is one of the two allowable type function
+           * calls, which are the following: type("Logging") type("OpsAnalytics")
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Specifies the type ("Logging" or "OpsAnalytics") of the recent queries to list. The only
+         valid value for this field is one of the two allowable type function calls, which are the
+         following: type("Logging") type("OpsAnalytics")
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Specifies the type ("Logging" or "OpsAnalytics") of the recent queries to
+           * list. The only valid value for this field is one of the two allowable type function
+           * calls, which are the following: type("Logging") type("OpsAnalytics")
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
            * Optional. The maximum number of results to return from this request. Non-positive
            * values are ignored. The presence of nextPageToken in the response indicates that more
            * results might be available.
@@ -6196,6 +6222,173 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
+         * Returns all data associated with the requested query.
+         *
+         * Create a request for the method "savedQueries.get".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the saved query.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+         *        "projects/my-project/locations/global/savedQueries/my-saved-query"
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends LoggingRequest<com.google.api.services.logging.v2.model.SavedQuery> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+
+          /**
+           * Returns all data associated with the requested query.
+           *
+           * Create a request for the method "savedQueries.get".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the saved query.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+         *        "projects/my-project/locations/global/savedQueries/my-saved-query"
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.SavedQuery.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the saved query.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+           * "projects/my-project/locations/global/savedQueries/my-saved-query"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the saved query.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example: "projects/my-
+         project/locations/global/savedQueries/my-saved-query"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the saved query.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+           * "projects/my-project/locations/global/savedQueries/my-saved-query"
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists the SavedQueries that were created by the user making the request.
          *
          * Create a request for the method "savedQueries.list".
@@ -6424,6 +6617,197 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates an existing SavedQuery.
+         *
+         * Create a request for the method "savedQueries.patch".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. Resource name of the saved query.In the format:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
+         *        supported locations, see Supported Regions (https://cloud.google.com/logging/docs/region-
+         *        support#bucket-regions)After the saved query is created, the location cannot be changed.If
+         *        the user doesn't provide a QUERY_ID, the system will generate an alphanumeric ID.
+         * @param content the {@link com.google.api.services.logging.v2.model.SavedQuery}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.logging.v2.model.SavedQuery content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends LoggingRequest<com.google.api.services.logging.v2.model.SavedQuery> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+
+          /**
+           * Updates an existing SavedQuery.
+           *
+           * Create a request for the method "savedQueries.patch".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. Resource name of the saved query.In the format:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
+         *        supported locations, see Supported Regions (https://cloud.google.com/logging/docs/region-
+         *        support#bucket-regions)After the saved query is created, the location cannot be changed.If
+         *        the user doesn't provide a QUERY_ID, the system will generate an alphanumeric ID.
+           * @param content the {@link com.google.api.services.logging.v2.model.SavedQuery}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.logging.v2.model.SavedQuery content) {
+            super(Logging.this, "PATCH", REST_PATH, content, com.google.api.services.logging.v2.model.SavedQuery.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. Resource name of the saved query.In the format:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
+           * supported locations, see Supported Regions
+           * (https://cloud.google.com/logging/docs/region-support#bucket-regions)After the saved
+           * query is created, the location cannot be changed.If the user doesn't provide a
+           * QUERY_ID, the system will generate an alphanumeric ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. Resource name of the saved query.In the format:
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of supported
+         locations, see Supported Regions (https://cloud.google.com/logging/docs/region-support#bucket-
+         regions)After the saved query is created, the location cannot be changed.If the user doesn't
+         provide a QUERY_ID, the system will generate an alphanumeric ID.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. Resource name of the saved query.In the format:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
+           * supported locations, see Supported Regions
+           * (https://cloud.google.com/logging/docs/region-support#bucket-regions)After the saved
+           * query is created, the location cannot be changed.If the user doesn't provide a
+           * QUERY_ID, the system will generate an alphanumeric ID.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. A non-empty list of fields to change in the existing saved query. Fields are
+           * relative to the saved_query and new values for the fields are taken from the
+           * corresponding fields in the SavedQuery included in this request. Fields not mentioned
+           * in update_mask are not changed and are ignored in the request.To update all mutable
+           * fields, specify an update_mask of *.For example, to change the description and query
+           * filter text of a saved query, specify an update_mask of "description, query.filter".
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. A non-empty list of fields to change in the existing saved query. Fields are relative to
+         the saved_query and new values for the fields are taken from the corresponding fields in the
+         SavedQuery included in this request. Fields not mentioned in update_mask are not changed and are
+         ignored in the request.To update all mutable fields, specify an update_mask of *.For example, to
+         change the description and query filter text of a saved query, specify an update_mask of
+         "description, query.filter".
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. A non-empty list of fields to change in the existing saved query. Fields are
+           * relative to the saved_query and new values for the fields are taken from the
+           * corresponding fields in the SavedQuery included in this request. Fields not mentioned
+           * in update_mask are not changed and are ignored in the request.To update all mutable
+           * fields, specify an update_mask of *.For example, to change the description and query
+           * filter text of a saved query, specify an update_mask of "description, query.filter".
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
 
@@ -7021,28 +7405,28 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Optional. A service account provided by the caller that will be used to write the log
+         * Optional. The service account provided by the caller that will be used to write the log
          * entries. The format must be serviceAccount:some@email. This field can only be specified
-         * if you are routing logs to a destination outside this sink's project. If not specified, a
-         * Logging service account will automatically be generated.
+         * when you are routing logs to a log bucket that is in a different project than the sink.
+         * When not specified, a Logging service account will automatically be generated.
          */
         @com.google.api.client.util.Key
         private java.lang.String customWriterIdentity;
 
-        /** Optional. A service account provided by the caller that will be used to write the log entries. The
-       format must be serviceAccount:some@email. This field can only be specified if you are routing logs
-       to a destination outside this sink's project. If not specified, a Logging service account will
-       automatically be generated.
+        /** Optional. The service account provided by the caller that will be used to write the log entries.
+       The format must be serviceAccount:some@email. This field can only be specified when you are routing
+       logs to a log bucket that is in a different project than the sink. When not specified, a Logging
+       service account will automatically be generated.
          */
         public java.lang.String getCustomWriterIdentity() {
           return customWriterIdentity;
         }
 
         /**
-         * Optional. A service account provided by the caller that will be used to write the log
+         * Optional. The service account provided by the caller that will be used to write the log
          * entries. The format must be serviceAccount:some@email. This field can only be specified
-         * if you are routing logs to a destination outside this sink's project. If not specified, a
-         * Logging service account will automatically be generated.
+         * when you are routing logs to a log bucket that is in a different project than the sink.
+         * When not specified, a Logging service account will automatically be generated.
          */
         public Create setCustomWriterIdentity(java.lang.String customWriterIdentity) {
           this.customWriterIdentity = customWriterIdentity;
@@ -7799,28 +8183,28 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Optional. A service account provided by the caller that will be used to write the log
+         * Optional. The service account provided by the caller that will be used to write the log
          * entries. The format must be serviceAccount:some@email. This field can only be specified
-         * if you are routing logs to a destination outside this sink's project. If not specified, a
-         * Logging service account will automatically be generated.
+         * when you are routing logs to a log bucket that is in a different project than the sink.
+         * When not specified, a Logging service account will automatically be generated.
          */
         @com.google.api.client.util.Key
         private java.lang.String customWriterIdentity;
 
-        /** Optional. A service account provided by the caller that will be used to write the log entries. The
-       format must be serviceAccount:some@email. This field can only be specified if you are routing logs
-       to a destination outside this sink's project. If not specified, a Logging service account will
-       automatically be generated.
+        /** Optional. The service account provided by the caller that will be used to write the log entries.
+       The format must be serviceAccount:some@email. This field can only be specified when you are routing
+       logs to a log bucket that is in a different project than the sink. When not specified, a Logging
+       service account will automatically be generated.
          */
         public java.lang.String getCustomWriterIdentity() {
           return customWriterIdentity;
         }
 
         /**
-         * Optional. A service account provided by the caller that will be used to write the log
+         * Optional. The service account provided by the caller that will be used to write the log
          * entries. The format must be serviceAccount:some@email. This field can only be specified
-         * if you are routing logs to a destination outside this sink's project. If not specified, a
-         * Logging service account will automatically be generated.
+         * when you are routing logs to a log bucket that is in a different project than the sink.
+         * When not specified, a Logging service account will automatically be generated.
          */
         public Patch setCustomWriterIdentity(java.lang.String customWriterIdentity) {
           this.customWriterIdentity = customWriterIdentity;
@@ -8068,28 +8452,28 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Optional. A service account provided by the caller that will be used to write the log
+         * Optional. The service account provided by the caller that will be used to write the log
          * entries. The format must be serviceAccount:some@email. This field can only be specified
-         * if you are routing logs to a destination outside this sink's project. If not specified, a
-         * Logging service account will automatically be generated.
+         * when you are routing logs to a log bucket that is in a different project than the sink.
+         * When not specified, a Logging service account will automatically be generated.
          */
         @com.google.api.client.util.Key
         private java.lang.String customWriterIdentity;
 
-        /** Optional. A service account provided by the caller that will be used to write the log entries. The
-       format must be serviceAccount:some@email. This field can only be specified if you are routing logs
-       to a destination outside this sink's project. If not specified, a Logging service account will
-       automatically be generated.
+        /** Optional. The service account provided by the caller that will be used to write the log entries.
+       The format must be serviceAccount:some@email. This field can only be specified when you are routing
+       logs to a log bucket that is in a different project than the sink. When not specified, a Logging
+       service account will automatically be generated.
          */
         public java.lang.String getCustomWriterIdentity() {
           return customWriterIdentity;
         }
 
         /**
-         * Optional. A service account provided by the caller that will be used to write the log
+         * Optional. The service account provided by the caller that will be used to write the log
          * entries. The format must be serviceAccount:some@email. This field can only be specified
-         * if you are routing logs to a destination outside this sink's project. If not specified, a
-         * Logging service account will automatically be generated.
+         * when you are routing logs to a log bucket that is in a different project than the sink.
+         * When not specified, a Logging service account will automatically be generated.
          */
         public Update setCustomWriterIdentity(java.lang.String customWriterIdentity) {
           this.customWriterIdentity = customWriterIdentity;
@@ -15758,6 +16142,32 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
+           * Optional. Specifies the type ("Logging" or "OpsAnalytics") of the recent queries to
+           * list. The only valid value for this field is one of the two allowable type function
+           * calls, which are the following: type("Logging") type("OpsAnalytics")
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Specifies the type ("Logging" or "OpsAnalytics") of the recent queries to list. The only
+         valid value for this field is one of the two allowable type function calls, which are the
+         following: type("Logging") type("OpsAnalytics")
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Specifies the type ("Logging" or "OpsAnalytics") of the recent queries to
+           * list. The only valid value for this field is one of the two allowable type function
+           * calls, which are the following: type("Logging") type("OpsAnalytics")
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
            * Optional. The maximum number of results to return from this request. Non-positive
            * values are ignored. The presence of nextPageToken in the response indicates that more
            * results might be available.
@@ -16187,6 +16597,173 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
+         * Returns all data associated with the requested query.
+         *
+         * Create a request for the method "savedQueries.get".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the saved query.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+         *        "projects/my-project/locations/global/savedQueries/my-saved-query"
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends LoggingRequest<com.google.api.services.logging.v2.model.SavedQuery> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+
+          /**
+           * Returns all data associated with the requested query.
+           *
+           * Create a request for the method "savedQueries.get".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the saved query.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+         *        "projects/my-project/locations/global/savedQueries/my-saved-query"
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.SavedQuery.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the saved query.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+           * "projects/my-project/locations/global/savedQueries/my-saved-query"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the saved query.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example: "projects/my-
+         project/locations/global/savedQueries/my-saved-query"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the saved query.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+           * "projects/my-project/locations/global/savedQueries/my-saved-query"
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists the SavedQueries that were created by the user making the request.
          *
          * Create a request for the method "savedQueries.list".
@@ -16415,6 +16992,197 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates an existing SavedQuery.
+         *
+         * Create a request for the method "savedQueries.patch".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. Resource name of the saved query.In the format:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
+         *        supported locations, see Supported Regions (https://cloud.google.com/logging/docs/region-
+         *        support#bucket-regions)After the saved query is created, the location cannot be changed.If
+         *        the user doesn't provide a QUERY_ID, the system will generate an alphanumeric ID.
+         * @param content the {@link com.google.api.services.logging.v2.model.SavedQuery}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.logging.v2.model.SavedQuery content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends LoggingRequest<com.google.api.services.logging.v2.model.SavedQuery> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+
+          /**
+           * Updates an existing SavedQuery.
+           *
+           * Create a request for the method "savedQueries.patch".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. Resource name of the saved query.In the format:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
+         *        supported locations, see Supported Regions (https://cloud.google.com/logging/docs/region-
+         *        support#bucket-regions)After the saved query is created, the location cannot be changed.If
+         *        the user doesn't provide a QUERY_ID, the system will generate an alphanumeric ID.
+           * @param content the {@link com.google.api.services.logging.v2.model.SavedQuery}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.logging.v2.model.SavedQuery content) {
+            super(Logging.this, "PATCH", REST_PATH, content, com.google.api.services.logging.v2.model.SavedQuery.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. Resource name of the saved query.In the format:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
+           * supported locations, see Supported Regions
+           * (https://cloud.google.com/logging/docs/region-support#bucket-regions)After the saved
+           * query is created, the location cannot be changed.If the user doesn't provide a
+           * QUERY_ID, the system will generate an alphanumeric ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. Resource name of the saved query.In the format:
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of supported
+         locations, see Supported Regions (https://cloud.google.com/logging/docs/region-support#bucket-
+         regions)After the saved query is created, the location cannot be changed.If the user doesn't
+         provide a QUERY_ID, the system will generate an alphanumeric ID.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. Resource name of the saved query.In the format:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
+           * supported locations, see Supported Regions
+           * (https://cloud.google.com/logging/docs/region-support#bucket-regions)After the saved
+           * query is created, the location cannot be changed.If the user doesn't provide a
+           * QUERY_ID, the system will generate an alphanumeric ID.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. A non-empty list of fields to change in the existing saved query. Fields are
+           * relative to the saved_query and new values for the fields are taken from the
+           * corresponding fields in the SavedQuery included in this request. Fields not mentioned
+           * in update_mask are not changed and are ignored in the request.To update all mutable
+           * fields, specify an update_mask of *.For example, to change the description and query
+           * filter text of a saved query, specify an update_mask of "description, query.filter".
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. A non-empty list of fields to change in the existing saved query. Fields are relative to
+         the saved_query and new values for the fields are taken from the corresponding fields in the
+         SavedQuery included in this request. Fields not mentioned in update_mask are not changed and are
+         ignored in the request.To update all mutable fields, specify an update_mask of *.For example, to
+         change the description and query filter text of a saved query, specify an update_mask of
+         "description, query.filter".
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. A non-empty list of fields to change in the existing saved query. Fields are
+           * relative to the saved_query and new values for the fields are taken from the
+           * corresponding fields in the SavedQuery included in this request. Fields not mentioned
+           * in update_mask are not changed and are ignored in the request.To update all mutable
+           * fields, specify an update_mask of *.For example, to change the description and query
+           * filter text of a saved query, specify an update_mask of "description, query.filter".
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
 
@@ -17012,28 +17780,28 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Optional. A service account provided by the caller that will be used to write the log
+         * Optional. The service account provided by the caller that will be used to write the log
          * entries. The format must be serviceAccount:some@email. This field can only be specified
-         * if you are routing logs to a destination outside this sink's project. If not specified, a
-         * Logging service account will automatically be generated.
+         * when you are routing logs to a log bucket that is in a different project than the sink.
+         * When not specified, a Logging service account will automatically be generated.
          */
         @com.google.api.client.util.Key
         private java.lang.String customWriterIdentity;
 
-        /** Optional. A service account provided by the caller that will be used to write the log entries. The
-       format must be serviceAccount:some@email. This field can only be specified if you are routing logs
-       to a destination outside this sink's project. If not specified, a Logging service account will
-       automatically be generated.
+        /** Optional. The service account provided by the caller that will be used to write the log entries.
+       The format must be serviceAccount:some@email. This field can only be specified when you are routing
+       logs to a log bucket that is in a different project than the sink. When not specified, a Logging
+       service account will automatically be generated.
          */
         public java.lang.String getCustomWriterIdentity() {
           return customWriterIdentity;
         }
 
         /**
-         * Optional. A service account provided by the caller that will be used to write the log
+         * Optional. The service account provided by the caller that will be used to write the log
          * entries. The format must be serviceAccount:some@email. This field can only be specified
-         * if you are routing logs to a destination outside this sink's project. If not specified, a
-         * Logging service account will automatically be generated.
+         * when you are routing logs to a log bucket that is in a different project than the sink.
+         * When not specified, a Logging service account will automatically be generated.
          */
         public Create setCustomWriterIdentity(java.lang.String customWriterIdentity) {
           this.customWriterIdentity = customWriterIdentity;
@@ -17790,28 +18558,28 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Optional. A service account provided by the caller that will be used to write the log
+         * Optional. The service account provided by the caller that will be used to write the log
          * entries. The format must be serviceAccount:some@email. This field can only be specified
-         * if you are routing logs to a destination outside this sink's project. If not specified, a
-         * Logging service account will automatically be generated.
+         * when you are routing logs to a log bucket that is in a different project than the sink.
+         * When not specified, a Logging service account will automatically be generated.
          */
         @com.google.api.client.util.Key
         private java.lang.String customWriterIdentity;
 
-        /** Optional. A service account provided by the caller that will be used to write the log entries. The
-       format must be serviceAccount:some@email. This field can only be specified if you are routing logs
-       to a destination outside this sink's project. If not specified, a Logging service account will
-       automatically be generated.
+        /** Optional. The service account provided by the caller that will be used to write the log entries.
+       The format must be serviceAccount:some@email. This field can only be specified when you are routing
+       logs to a log bucket that is in a different project than the sink. When not specified, a Logging
+       service account will automatically be generated.
          */
         public java.lang.String getCustomWriterIdentity() {
           return customWriterIdentity;
         }
 
         /**
-         * Optional. A service account provided by the caller that will be used to write the log
+         * Optional. The service account provided by the caller that will be used to write the log
          * entries. The format must be serviceAccount:some@email. This field can only be specified
-         * if you are routing logs to a destination outside this sink's project. If not specified, a
-         * Logging service account will automatically be generated.
+         * when you are routing logs to a log bucket that is in a different project than the sink.
+         * When not specified, a Logging service account will automatically be generated.
          */
         public Patch setCustomWriterIdentity(java.lang.String customWriterIdentity) {
           this.customWriterIdentity = customWriterIdentity;
@@ -18059,28 +18827,28 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Optional. A service account provided by the caller that will be used to write the log
+         * Optional. The service account provided by the caller that will be used to write the log
          * entries. The format must be serviceAccount:some@email. This field can only be specified
-         * if you are routing logs to a destination outside this sink's project. If not specified, a
-         * Logging service account will automatically be generated.
+         * when you are routing logs to a log bucket that is in a different project than the sink.
+         * When not specified, a Logging service account will automatically be generated.
          */
         @com.google.api.client.util.Key
         private java.lang.String customWriterIdentity;
 
-        /** Optional. A service account provided by the caller that will be used to write the log entries. The
-       format must be serviceAccount:some@email. This field can only be specified if you are routing logs
-       to a destination outside this sink's project. If not specified, a Logging service account will
-       automatically be generated.
+        /** Optional. The service account provided by the caller that will be used to write the log entries.
+       The format must be serviceAccount:some@email. This field can only be specified when you are routing
+       logs to a log bucket that is in a different project than the sink. When not specified, a Logging
+       service account will automatically be generated.
          */
         public java.lang.String getCustomWriterIdentity() {
           return customWriterIdentity;
         }
 
         /**
-         * Optional. A service account provided by the caller that will be used to write the log
+         * Optional. The service account provided by the caller that will be used to write the log
          * entries. The format must be serviceAccount:some@email. This field can only be specified
-         * if you are routing logs to a destination outside this sink's project. If not specified, a
-         * Logging service account will automatically be generated.
+         * when you are routing logs to a log bucket that is in a different project than the sink.
+         * When not specified, a Logging service account will automatically be generated.
          */
         public Update setCustomWriterIdentity(java.lang.String customWriterIdentity) {
           this.customWriterIdentity = customWriterIdentity;
@@ -29601,6 +30369,32 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
+           * Optional. Specifies the type ("Logging" or "OpsAnalytics") of the recent queries to
+           * list. The only valid value for this field is one of the two allowable type function
+           * calls, which are the following: type("Logging") type("OpsAnalytics")
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Specifies the type ("Logging" or "OpsAnalytics") of the recent queries to list. The only
+         valid value for this field is one of the two allowable type function calls, which are the
+         following: type("Logging") type("OpsAnalytics")
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Specifies the type ("Logging" or "OpsAnalytics") of the recent queries to
+           * list. The only valid value for this field is one of the two allowable type function
+           * calls, which are the following: type("Logging") type("OpsAnalytics")
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
            * Optional. The maximum number of results to return from this request. Non-positive
            * values are ignored. The presence of nextPageToken in the response indicates that more
            * results might be available.
@@ -30030,6 +30824,173 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
+         * Returns all data associated with the requested query.
+         *
+         * Create a request for the method "savedQueries.get".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the saved query.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+         *        "projects/my-project/locations/global/savedQueries/my-saved-query"
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends LoggingRequest<com.google.api.services.logging.v2.model.SavedQuery> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+
+          /**
+           * Returns all data associated with the requested query.
+           *
+           * Create a request for the method "savedQueries.get".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the saved query.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+         *        "projects/my-project/locations/global/savedQueries/my-saved-query"
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.SavedQuery.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the saved query.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+           * "projects/my-project/locations/global/savedQueries/my-saved-query"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the saved query.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example: "projects/my-
+         project/locations/global/savedQueries/my-saved-query"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the saved query.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+           * "projects/my-project/locations/global/savedQueries/my-saved-query"
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists the SavedQueries that were created by the user making the request.
          *
          * Create a request for the method "savedQueries.list".
@@ -30258,6 +31219,197 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates an existing SavedQuery.
+         *
+         * Create a request for the method "savedQueries.patch".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. Resource name of the saved query.In the format:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
+         *        supported locations, see Supported Regions (https://cloud.google.com/logging/docs/region-
+         *        support#bucket-regions)After the saved query is created, the location cannot be changed.If
+         *        the user doesn't provide a QUERY_ID, the system will generate an alphanumeric ID.
+         * @param content the {@link com.google.api.services.logging.v2.model.SavedQuery}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.logging.v2.model.SavedQuery content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends LoggingRequest<com.google.api.services.logging.v2.model.SavedQuery> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+
+          /**
+           * Updates an existing SavedQuery.
+           *
+           * Create a request for the method "savedQueries.patch".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. Resource name of the saved query.In the format:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
+         *        supported locations, see Supported Regions (https://cloud.google.com/logging/docs/region-
+         *        support#bucket-regions)After the saved query is created, the location cannot be changed.If
+         *        the user doesn't provide a QUERY_ID, the system will generate an alphanumeric ID.
+           * @param content the {@link com.google.api.services.logging.v2.model.SavedQuery}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.logging.v2.model.SavedQuery content) {
+            super(Logging.this, "PATCH", REST_PATH, content, com.google.api.services.logging.v2.model.SavedQuery.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. Resource name of the saved query.In the format:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
+           * supported locations, see Supported Regions
+           * (https://cloud.google.com/logging/docs/region-support#bucket-regions)After the saved
+           * query is created, the location cannot be changed.If the user doesn't provide a
+           * QUERY_ID, the system will generate an alphanumeric ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. Resource name of the saved query.In the format:
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of supported
+         locations, see Supported Regions (https://cloud.google.com/logging/docs/region-support#bucket-
+         regions)After the saved query is created, the location cannot be changed.If the user doesn't
+         provide a QUERY_ID, the system will generate an alphanumeric ID.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. Resource name of the saved query.In the format:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
+           * supported locations, see Supported Regions
+           * (https://cloud.google.com/logging/docs/region-support#bucket-regions)After the saved
+           * query is created, the location cannot be changed.If the user doesn't provide a
+           * QUERY_ID, the system will generate an alphanumeric ID.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. A non-empty list of fields to change in the existing saved query. Fields are
+           * relative to the saved_query and new values for the fields are taken from the
+           * corresponding fields in the SavedQuery included in this request. Fields not mentioned
+           * in update_mask are not changed and are ignored in the request.To update all mutable
+           * fields, specify an update_mask of *.For example, to change the description and query
+           * filter text of a saved query, specify an update_mask of "description, query.filter".
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. A non-empty list of fields to change in the existing saved query. Fields are relative to
+         the saved_query and new values for the fields are taken from the corresponding fields in the
+         SavedQuery included in this request. Fields not mentioned in update_mask are not changed and are
+         ignored in the request.To update all mutable fields, specify an update_mask of *.For example, to
+         change the description and query filter text of a saved query, specify an update_mask of
+         "description, query.filter".
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. A non-empty list of fields to change in the existing saved query. Fields are
+           * relative to the saved_query and new values for the fields are taken from the
+           * corresponding fields in the SavedQuery included in this request. Fields not mentioned
+           * in update_mask are not changed and are ignored in the request.To update all mutable
+           * fields, specify an update_mask of *.For example, to change the description and query
+           * filter text of a saved query, specify an update_mask of "description, query.filter".
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
 
@@ -30855,28 +32007,28 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Optional. A service account provided by the caller that will be used to write the log
+         * Optional. The service account provided by the caller that will be used to write the log
          * entries. The format must be serviceAccount:some@email. This field can only be specified
-         * if you are routing logs to a destination outside this sink's project. If not specified, a
-         * Logging service account will automatically be generated.
+         * when you are routing logs to a log bucket that is in a different project than the sink.
+         * When not specified, a Logging service account will automatically be generated.
          */
         @com.google.api.client.util.Key
         private java.lang.String customWriterIdentity;
 
-        /** Optional. A service account provided by the caller that will be used to write the log entries. The
-       format must be serviceAccount:some@email. This field can only be specified if you are routing logs
-       to a destination outside this sink's project. If not specified, a Logging service account will
-       automatically be generated.
+        /** Optional. The service account provided by the caller that will be used to write the log entries.
+       The format must be serviceAccount:some@email. This field can only be specified when you are routing
+       logs to a log bucket that is in a different project than the sink. When not specified, a Logging
+       service account will automatically be generated.
          */
         public java.lang.String getCustomWriterIdentity() {
           return customWriterIdentity;
         }
 
         /**
-         * Optional. A service account provided by the caller that will be used to write the log
+         * Optional. The service account provided by the caller that will be used to write the log
          * entries. The format must be serviceAccount:some@email. This field can only be specified
-         * if you are routing logs to a destination outside this sink's project. If not specified, a
-         * Logging service account will automatically be generated.
+         * when you are routing logs to a log bucket that is in a different project than the sink.
+         * When not specified, a Logging service account will automatically be generated.
          */
         public Create setCustomWriterIdentity(java.lang.String customWriterIdentity) {
           this.customWriterIdentity = customWriterIdentity;
@@ -31633,28 +32785,28 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Optional. A service account provided by the caller that will be used to write the log
+         * Optional. The service account provided by the caller that will be used to write the log
          * entries. The format must be serviceAccount:some@email. This field can only be specified
-         * if you are routing logs to a destination outside this sink's project. If not specified, a
-         * Logging service account will automatically be generated.
+         * when you are routing logs to a log bucket that is in a different project than the sink.
+         * When not specified, a Logging service account will automatically be generated.
          */
         @com.google.api.client.util.Key
         private java.lang.String customWriterIdentity;
 
-        /** Optional. A service account provided by the caller that will be used to write the log entries. The
-       format must be serviceAccount:some@email. This field can only be specified if you are routing logs
-       to a destination outside this sink's project. If not specified, a Logging service account will
-       automatically be generated.
+        /** Optional. The service account provided by the caller that will be used to write the log entries.
+       The format must be serviceAccount:some@email. This field can only be specified when you are routing
+       logs to a log bucket that is in a different project than the sink. When not specified, a Logging
+       service account will automatically be generated.
          */
         public java.lang.String getCustomWriterIdentity() {
           return customWriterIdentity;
         }
 
         /**
-         * Optional. A service account provided by the caller that will be used to write the log
+         * Optional. The service account provided by the caller that will be used to write the log
          * entries. The format must be serviceAccount:some@email. This field can only be specified
-         * if you are routing logs to a destination outside this sink's project. If not specified, a
-         * Logging service account will automatically be generated.
+         * when you are routing logs to a log bucket that is in a different project than the sink.
+         * When not specified, a Logging service account will automatically be generated.
          */
         public Patch setCustomWriterIdentity(java.lang.String customWriterIdentity) {
           this.customWriterIdentity = customWriterIdentity;
@@ -31902,28 +33054,28 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Optional. A service account provided by the caller that will be used to write the log
+         * Optional. The service account provided by the caller that will be used to write the log
          * entries. The format must be serviceAccount:some@email. This field can only be specified
-         * if you are routing logs to a destination outside this sink's project. If not specified, a
-         * Logging service account will automatically be generated.
+         * when you are routing logs to a log bucket that is in a different project than the sink.
+         * When not specified, a Logging service account will automatically be generated.
          */
         @com.google.api.client.util.Key
         private java.lang.String customWriterIdentity;
 
-        /** Optional. A service account provided by the caller that will be used to write the log entries. The
-       format must be serviceAccount:some@email. This field can only be specified if you are routing logs
-       to a destination outside this sink's project. If not specified, a Logging service account will
-       automatically be generated.
+        /** Optional. The service account provided by the caller that will be used to write the log entries.
+       The format must be serviceAccount:some@email. This field can only be specified when you are routing
+       logs to a log bucket that is in a different project than the sink. When not specified, a Logging
+       service account will automatically be generated.
          */
         public java.lang.String getCustomWriterIdentity() {
           return customWriterIdentity;
         }
 
         /**
-         * Optional. A service account provided by the caller that will be used to write the log
+         * Optional. The service account provided by the caller that will be used to write the log
          * entries. The format must be serviceAccount:some@email. This field can only be specified
-         * if you are routing logs to a destination outside this sink's project. If not specified, a
-         * Logging service account will automatically be generated.
+         * when you are routing logs to a log bucket that is in a different project than the sink.
+         * When not specified, a Logging service account will automatically be generated.
          */
         public Update setCustomWriterIdentity(java.lang.String customWriterIdentity) {
           this.customWriterIdentity = customWriterIdentity;
@@ -38097,6 +39249,32 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
+           * Optional. Specifies the type ("Logging" or "OpsAnalytics") of the recent queries to
+           * list. The only valid value for this field is one of the two allowable type function
+           * calls, which are the following: type("Logging") type("OpsAnalytics")
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Specifies the type ("Logging" or "OpsAnalytics") of the recent queries to list. The only
+         valid value for this field is one of the two allowable type function calls, which are the
+         following: type("Logging") type("OpsAnalytics")
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Specifies the type ("Logging" or "OpsAnalytics") of the recent queries to
+           * list. The only valid value for this field is one of the two allowable type function
+           * calls, which are the following: type("Logging") type("OpsAnalytics")
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
            * Optional. The maximum number of results to return from this request. Non-positive
            * values are ignored. The presence of nextPageToken in the response indicates that more
            * results might be available.
@@ -38526,6 +39704,173 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
+         * Returns all data associated with the requested query.
+         *
+         * Create a request for the method "savedQueries.get".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the saved query.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+         *        "projects/my-project/locations/global/savedQueries/my-saved-query"
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends LoggingRequest<com.google.api.services.logging.v2.model.SavedQuery> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+
+          /**
+           * Returns all data associated with the requested query.
+           *
+           * Create a request for the method "savedQueries.get".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the saved query.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+         *        "projects/my-project/locations/global/savedQueries/my-saved-query"
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Logging.this, "GET", REST_PATH, null, com.google.api.services.logging.v2.model.SavedQuery.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the saved query.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+           * "projects/my-project/locations/global/savedQueries/my-saved-query"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the saved query.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example: "projects/my-
+         project/locations/global/savedQueries/my-saved-query"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the saved query.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For example:
+           * "projects/my-project/locations/global/savedQueries/my-saved-query"
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists the SavedQueries that were created by the user making the request.
          *
          * Create a request for the method "savedQueries.list".
@@ -38754,6 +40099,197 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates an existing SavedQuery.
+         *
+         * Create a request for the method "savedQueries.patch".
+         *
+         * This request holds the parameters needed by the logging server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. Resource name of the saved query.In the format:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
+         *        supported locations, see Supported Regions (https://cloud.google.com/logging/docs/region-
+         *        support#bucket-regions)After the saved query is created, the location cannot be changed.If
+         *        the user doesn't provide a QUERY_ID, the system will generate an alphanumeric ID.
+         * @param content the {@link com.google.api.services.logging.v2.model.SavedQuery}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.logging.v2.model.SavedQuery content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends LoggingRequest<com.google.api.services.logging.v2.model.SavedQuery> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+
+          /**
+           * Updates an existing SavedQuery.
+           *
+           * Create a request for the method "savedQueries.patch".
+           *
+           * This request holds the parameters needed by the the logging server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. Resource name of the saved query.In the format:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
+         *        supported locations, see Supported Regions (https://cloud.google.com/logging/docs/region-
+         *        support#bucket-regions)After the saved query is created, the location cannot be changed.If
+         *        the user doesn't provide a QUERY_ID, the system will generate an alphanumeric ID.
+           * @param content the {@link com.google.api.services.logging.v2.model.SavedQuery}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.logging.v2.model.SavedQuery content) {
+            super(Logging.this, "PATCH", REST_PATH, content, com.google.api.services.logging.v2.model.SavedQuery.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. Resource name of the saved query.In the format:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
+           * supported locations, see Supported Regions
+           * (https://cloud.google.com/logging/docs/region-support#bucket-regions)After the saved
+           * query is created, the location cannot be changed.If the user doesn't provide a
+           * QUERY_ID, the system will generate an alphanumeric ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. Resource name of the saved query.In the format:
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of supported
+         locations, see Supported Regions (https://cloud.google.com/logging/docs/region-support#bucket-
+         regions)After the saved query is created, the location cannot be changed.If the user doesn't
+         provide a QUERY_ID, the system will generate an alphanumeric ID.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. Resource name of the saved query.In the format:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
+           * supported locations, see Supported Regions
+           * (https://cloud.google.com/logging/docs/region-support#bucket-regions)After the saved
+           * query is created, the location cannot be changed.If the user doesn't provide a
+           * QUERY_ID, the system will generate an alphanumeric ID.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/savedQueries/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. A non-empty list of fields to change in the existing saved query. Fields are
+           * relative to the saved_query and new values for the fields are taken from the
+           * corresponding fields in the SavedQuery included in this request. Fields not mentioned
+           * in update_mask are not changed and are ignored in the request.To update all mutable
+           * fields, specify an update_mask of *.For example, to change the description and query
+           * filter text of a saved query, specify an update_mask of "description, query.filter".
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. A non-empty list of fields to change in the existing saved query. Fields are relative to
+         the saved_query and new values for the fields are taken from the corresponding fields in the
+         SavedQuery included in this request. Fields not mentioned in update_mask are not changed and are
+         ignored in the request.To update all mutable fields, specify an update_mask of *.For example, to
+         change the description and query filter text of a saved query, specify an update_mask of
+         "description, query.filter".
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. A non-empty list of fields to change in the existing saved query. Fields are
+           * relative to the saved_query and new values for the fields are taken from the
+           * corresponding fields in the SavedQuery included in this request. Fields not mentioned
+           * in update_mask are not changed and are ignored in the request.To update all mutable
+           * fields, specify an update_mask of *.For example, to change the description and query
+           * filter text of a saved query, specify an update_mask of "description, query.filter".
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
 
@@ -40126,28 +41662,28 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Optional. A service account provided by the caller that will be used to write the log
+         * Optional. The service account provided by the caller that will be used to write the log
          * entries. The format must be serviceAccount:some@email. This field can only be specified
-         * if you are routing logs to a destination outside this sink's project. If not specified, a
-         * Logging service account will automatically be generated.
+         * when you are routing logs to a log bucket that is in a different project than the sink.
+         * When not specified, a Logging service account will automatically be generated.
          */
         @com.google.api.client.util.Key
         private java.lang.String customWriterIdentity;
 
-        /** Optional. A service account provided by the caller that will be used to write the log entries. The
-       format must be serviceAccount:some@email. This field can only be specified if you are routing logs
-       to a destination outside this sink's project. If not specified, a Logging service account will
-       automatically be generated.
+        /** Optional. The service account provided by the caller that will be used to write the log entries.
+       The format must be serviceAccount:some@email. This field can only be specified when you are routing
+       logs to a log bucket that is in a different project than the sink. When not specified, a Logging
+       service account will automatically be generated.
          */
         public java.lang.String getCustomWriterIdentity() {
           return customWriterIdentity;
         }
 
         /**
-         * Optional. A service account provided by the caller that will be used to write the log
+         * Optional. The service account provided by the caller that will be used to write the log
          * entries. The format must be serviceAccount:some@email. This field can only be specified
-         * if you are routing logs to a destination outside this sink's project. If not specified, a
-         * Logging service account will automatically be generated.
+         * when you are routing logs to a log bucket that is in a different project than the sink.
+         * When not specified, a Logging service account will automatically be generated.
          */
         public Create setCustomWriterIdentity(java.lang.String customWriterIdentity) {
           this.customWriterIdentity = customWriterIdentity;
@@ -40904,28 +42440,28 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Optional. A service account provided by the caller that will be used to write the log
+         * Optional. The service account provided by the caller that will be used to write the log
          * entries. The format must be serviceAccount:some@email. This field can only be specified
-         * if you are routing logs to a destination outside this sink's project. If not specified, a
-         * Logging service account will automatically be generated.
+         * when you are routing logs to a log bucket that is in a different project than the sink.
+         * When not specified, a Logging service account will automatically be generated.
          */
         @com.google.api.client.util.Key
         private java.lang.String customWriterIdentity;
 
-        /** Optional. A service account provided by the caller that will be used to write the log entries. The
-       format must be serviceAccount:some@email. This field can only be specified if you are routing logs
-       to a destination outside this sink's project. If not specified, a Logging service account will
-       automatically be generated.
+        /** Optional. The service account provided by the caller that will be used to write the log entries.
+       The format must be serviceAccount:some@email. This field can only be specified when you are routing
+       logs to a log bucket that is in a different project than the sink. When not specified, a Logging
+       service account will automatically be generated.
          */
         public java.lang.String getCustomWriterIdentity() {
           return customWriterIdentity;
         }
 
         /**
-         * Optional. A service account provided by the caller that will be used to write the log
+         * Optional. The service account provided by the caller that will be used to write the log
          * entries. The format must be serviceAccount:some@email. This field can only be specified
-         * if you are routing logs to a destination outside this sink's project. If not specified, a
-         * Logging service account will automatically be generated.
+         * when you are routing logs to a log bucket that is in a different project than the sink.
+         * When not specified, a Logging service account will automatically be generated.
          */
         public Patch setCustomWriterIdentity(java.lang.String customWriterIdentity) {
           this.customWriterIdentity = customWriterIdentity;
@@ -41173,28 +42709,28 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Optional. A service account provided by the caller that will be used to write the log
+         * Optional. The service account provided by the caller that will be used to write the log
          * entries. The format must be serviceAccount:some@email. This field can only be specified
-         * if you are routing logs to a destination outside this sink's project. If not specified, a
-         * Logging service account will automatically be generated.
+         * when you are routing logs to a log bucket that is in a different project than the sink.
+         * When not specified, a Logging service account will automatically be generated.
          */
         @com.google.api.client.util.Key
         private java.lang.String customWriterIdentity;
 
-        /** Optional. A service account provided by the caller that will be used to write the log entries. The
-       format must be serviceAccount:some@email. This field can only be specified if you are routing logs
-       to a destination outside this sink's project. If not specified, a Logging service account will
-       automatically be generated.
+        /** Optional. The service account provided by the caller that will be used to write the log entries.
+       The format must be serviceAccount:some@email. This field can only be specified when you are routing
+       logs to a log bucket that is in a different project than the sink. When not specified, a Logging
+       service account will automatically be generated.
          */
         public java.lang.String getCustomWriterIdentity() {
           return customWriterIdentity;
         }
 
         /**
-         * Optional. A service account provided by the caller that will be used to write the log
+         * Optional. The service account provided by the caller that will be used to write the log
          * entries. The format must be serviceAccount:some@email. This field can only be specified
-         * if you are routing logs to a destination outside this sink's project. If not specified, a
-         * Logging service account will automatically be generated.
+         * when you are routing logs to a log bucket that is in a different project than the sink.
+         * When not specified, a Logging service account will automatically be generated.
          */
         public Update setCustomWriterIdentity(java.lang.String customWriterIdentity) {
           this.customWriterIdentity = customWriterIdentity;
@@ -41456,28 +42992,28 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * Optional. A service account provided by the caller that will be used to write the log
-       * entries. The format must be serviceAccount:some@email. This field can only be specified if
-       * you are routing logs to a destination outside this sink's project. If not specified, a
-       * Logging service account will automatically be generated.
+       * Optional. The service account provided by the caller that will be used to write the log
+       * entries. The format must be serviceAccount:some@email. This field can only be specified
+       * when you are routing logs to a log bucket that is in a different project than the sink.
+       * When not specified, a Logging service account will automatically be generated.
        */
       @com.google.api.client.util.Key
       private java.lang.String customWriterIdentity;
 
-      /** Optional. A service account provided by the caller that will be used to write the log entries. The
-     format must be serviceAccount:some@email. This field can only be specified if you are routing logs
-     to a destination outside this sink's project. If not specified, a Logging service account will
-     automatically be generated.
+      /** Optional. The service account provided by the caller that will be used to write the log entries.
+     The format must be serviceAccount:some@email. This field can only be specified when you are routing
+     logs to a log bucket that is in a different project than the sink. When not specified, a Logging
+     service account will automatically be generated.
        */
       public java.lang.String getCustomWriterIdentity() {
         return customWriterIdentity;
       }
 
       /**
-       * Optional. A service account provided by the caller that will be used to write the log
-       * entries. The format must be serviceAccount:some@email. This field can only be specified if
-       * you are routing logs to a destination outside this sink's project. If not specified, a
-       * Logging service account will automatically be generated.
+       * Optional. The service account provided by the caller that will be used to write the log
+       * entries. The format must be serviceAccount:some@email. This field can only be specified
+       * when you are routing logs to a log bucket that is in a different project than the sink.
+       * When not specified, a Logging service account will automatically be generated.
        */
       public Create setCustomWriterIdentity(java.lang.String customWriterIdentity) {
         this.customWriterIdentity = customWriterIdentity;
@@ -42234,28 +43770,28 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * Optional. A service account provided by the caller that will be used to write the log
-       * entries. The format must be serviceAccount:some@email. This field can only be specified if
-       * you are routing logs to a destination outside this sink's project. If not specified, a
-       * Logging service account will automatically be generated.
+       * Optional. The service account provided by the caller that will be used to write the log
+       * entries. The format must be serviceAccount:some@email. This field can only be specified
+       * when you are routing logs to a log bucket that is in a different project than the sink.
+       * When not specified, a Logging service account will automatically be generated.
        */
       @com.google.api.client.util.Key
       private java.lang.String customWriterIdentity;
 
-      /** Optional. A service account provided by the caller that will be used to write the log entries. The
-     format must be serviceAccount:some@email. This field can only be specified if you are routing logs
-     to a destination outside this sink's project. If not specified, a Logging service account will
-     automatically be generated.
+      /** Optional. The service account provided by the caller that will be used to write the log entries.
+     The format must be serviceAccount:some@email. This field can only be specified when you are routing
+     logs to a log bucket that is in a different project than the sink. When not specified, a Logging
+     service account will automatically be generated.
        */
       public java.lang.String getCustomWriterIdentity() {
         return customWriterIdentity;
       }
 
       /**
-       * Optional. A service account provided by the caller that will be used to write the log
-       * entries. The format must be serviceAccount:some@email. This field can only be specified if
-       * you are routing logs to a destination outside this sink's project. If not specified, a
-       * Logging service account will automatically be generated.
+       * Optional. The service account provided by the caller that will be used to write the log
+       * entries. The format must be serviceAccount:some@email. This field can only be specified
+       * when you are routing logs to a log bucket that is in a different project than the sink.
+       * When not specified, a Logging service account will automatically be generated.
        */
       public Update setCustomWriterIdentity(java.lang.String customWriterIdentity) {
         this.customWriterIdentity = customWriterIdentity;

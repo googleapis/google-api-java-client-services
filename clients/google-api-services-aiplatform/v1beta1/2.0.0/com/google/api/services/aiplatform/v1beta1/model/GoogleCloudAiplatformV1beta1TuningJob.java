@@ -100,14 +100,6 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
   private java.lang.String name;
 
   /**
-   * Output only. The resource name of the PipelineJob associated with the TuningJob. Format:
-   * `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String pipelineJob;
-
-  /**
    * Output only. Time when the TuningJob for the first time entered the `JOB_STATE_RUNNING` state.
    * The value may be {@code null}.
    */
@@ -321,25 +313,6 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1TuningJob setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Output only. The resource name of the PipelineJob associated with the TuningJob. Format:
-   * `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPipelineJob() {
-    return pipelineJob;
-  }
-
-  /**
-   * Output only. The resource name of the PipelineJob associated with the TuningJob. Format:
-   * `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`.
-   * @param pipelineJob pipelineJob or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1TuningJob setPipelineJob(java.lang.String pipelineJob) {
-    this.pipelineJob = pipelineJob;
     return this;
   }
 

@@ -174,6 +174,146 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
     public class Locations {
 
       /**
+       * Evaluates instances based on a given metric.
+       *
+       * Create a request for the method "locations.evaluateInstances".
+       *
+       * This request holds the parameters needed by the aiplatform server.  After setting any optional
+       * parameters, call the {@link EvaluateInstances#execute()} method to invoke the remote operation.
+       *
+       * @param location Required. The resource name of the Location to evaluate the instances. Format:
+       *        `projects/{project}/locations/{location}`
+       * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1EvaluateInstancesRequest}
+       * @return the request
+       */
+      public EvaluateInstances evaluateInstances(java.lang.String location, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1EvaluateInstancesRequest content) throws java.io.IOException {
+        EvaluateInstances result = new EvaluateInstances(location, content);
+        initialize(result);
+        return result;
+      }
+
+      public class EvaluateInstances extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1EvaluateInstancesResponse> {
+
+        private static final String REST_PATH = "v1/{+location}:evaluateInstances";
+
+        private final java.util.regex.Pattern LOCATION_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Evaluates instances based on a given metric.
+         *
+         * Create a request for the method "locations.evaluateInstances".
+         *
+         * This request holds the parameters needed by the the aiplatform server.  After setting any
+         * optional parameters, call the {@link EvaluateInstances#execute()} method to invoke the remote
+         * operation. <p> {@link EvaluateInstances#initialize(com.google.api.client.googleapis.services.Ab
+         * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param location Required. The resource name of the Location to evaluate the instances. Format:
+       *        `projects/{project}/locations/{location}`
+         * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1EvaluateInstancesRequest}
+         * @since 1.13
+         */
+        protected EvaluateInstances(java.lang.String location, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1EvaluateInstancesRequest content) {
+          super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1EvaluateInstancesResponse.class);
+          this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                "Parameter location must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public EvaluateInstances set$Xgafv(java.lang.String $Xgafv) {
+          return (EvaluateInstances) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public EvaluateInstances setAccessToken(java.lang.String accessToken) {
+          return (EvaluateInstances) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public EvaluateInstances setAlt(java.lang.String alt) {
+          return (EvaluateInstances) super.setAlt(alt);
+        }
+
+        @Override
+        public EvaluateInstances setCallback(java.lang.String callback) {
+          return (EvaluateInstances) super.setCallback(callback);
+        }
+
+        @Override
+        public EvaluateInstances setFields(java.lang.String fields) {
+          return (EvaluateInstances) super.setFields(fields);
+        }
+
+        @Override
+        public EvaluateInstances setKey(java.lang.String key) {
+          return (EvaluateInstances) super.setKey(key);
+        }
+
+        @Override
+        public EvaluateInstances setOauthToken(java.lang.String oauthToken) {
+          return (EvaluateInstances) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public EvaluateInstances setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (EvaluateInstances) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public EvaluateInstances setQuotaUser(java.lang.String quotaUser) {
+          return (EvaluateInstances) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public EvaluateInstances setUploadType(java.lang.String uploadType) {
+          return (EvaluateInstances) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public EvaluateInstances setUploadProtocol(java.lang.String uploadProtocol) {
+          return (EvaluateInstances) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the Location to evaluate the instances. Format:
+         * `projects/{project}/locations/{location}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String location;
+
+        /** Required. The resource name of the Location to evaluate the instances. Format:
+       `projects/{project}/locations/{location}`
+         */
+        public java.lang.String getLocation() {
+          return location;
+        }
+
+        /**
+         * Required. The resource name of the Location to evaluate the instances. Format:
+         * `projects/{project}/locations/{location}`
+         */
+        public EvaluateInstances setLocation(java.lang.String location) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                "Parameter location must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.location = location;
+          return this;
+        }
+
+        @Override
+        public EvaluateInstances set(String parameterName, Object value) {
+          return (EvaluateInstances) super.set(parameterName, value);
+        }
+      }
+      /**
        * Gets information about a location.
        *
        * Create a request for the method "locations.get".

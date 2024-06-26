@@ -95,6 +95,13 @@ public final class DiscoveryOccurrence extends com.google.api.client.json.Generi
   private SBOMStatus sbomStatus;
 
   /**
+   * The status of an vulnerability attestation generation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VulnerabilityAttestation vulnerabilityAttestation;
+
+  /**
    * @return value or {@code null} for none
    */
   public AnalysisCompleted getAnalysisCompleted() {
@@ -246,6 +253,23 @@ public final class DiscoveryOccurrence extends com.google.api.client.json.Generi
    */
   public DiscoveryOccurrence setSbomStatus(SBOMStatus sbomStatus) {
     this.sbomStatus = sbomStatus;
+    return this;
+  }
+
+  /**
+   * The status of an vulnerability attestation generation.
+   * @return value or {@code null} for none
+   */
+  public VulnerabilityAttestation getVulnerabilityAttestation() {
+    return vulnerabilityAttestation;
+  }
+
+  /**
+   * The status of an vulnerability attestation generation.
+   * @param vulnerabilityAttestation vulnerabilityAttestation or {@code null} for none
+   */
+  public DiscoveryOccurrence setVulnerabilityAttestation(VulnerabilityAttestation vulnerabilityAttestation) {
+    this.vulnerabilityAttestation = vulnerabilityAttestation;
     return this;
   }
 

@@ -62,14 +62,15 @@ public final class HttpRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * The request processing latency on the server, from the time the request was received until the
-   * response was sent.
+   * response was sent. For WebSocket connections, this field refers to the entire time duration of
+   * the connection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String latency;
 
   /**
-   * Protocol used for the request. Examples: "HTTP/1.1", "HTTP/2", "websocket"
+   * Protocol used for the request. Examples: "HTTP/1.1", "HTTP/2"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -219,7 +220,8 @@ public final class HttpRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * The request processing latency on the server, from the time the request was received until the
-   * response was sent.
+   * response was sent. For WebSocket connections, this field refers to the entire time duration of
+   * the connection.
    * @return value or {@code null} for none
    */
   public String getLatency() {
@@ -228,7 +230,8 @@ public final class HttpRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * The request processing latency on the server, from the time the request was received until the
-   * response was sent.
+   * response was sent. For WebSocket connections, this field refers to the entire time duration of
+   * the connection.
    * @param latency latency or {@code null} for none
    */
   public HttpRequest setLatency(String latency) {
@@ -237,7 +240,7 @@ public final class HttpRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Protocol used for the request. Examples: "HTTP/1.1", "HTTP/2", "websocket"
+   * Protocol used for the request. Examples: "HTTP/1.1", "HTTP/2"
    * @return value or {@code null} for none
    */
   public java.lang.String getProtocol() {
@@ -245,7 +248,7 @@ public final class HttpRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Protocol used for the request. Examples: "HTTP/1.1", "HTTP/2", "websocket"
+   * Protocol used for the request. Examples: "HTTP/1.1", "HTTP/2"
    * @param protocol protocol or {@code null} for none
    */
   public HttpRequest setProtocol(java.lang.String protocol) {

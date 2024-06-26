@@ -1416,7 +1416,8 @@ public class CloudControlsPartnerService extends com.google.api.client.googleapi
           public class AccessApprovalRequests {
 
             /**
-             * Lists access requests associated with a workload
+             * Deprecated: Only returns access approval requests directly associated with an assured workload
+             * folder.
              *
              * Create a request for the method "accessApprovalRequests.list".
              *
@@ -1442,7 +1443,8 @@ public class CloudControlsPartnerService extends com.google.api.client.googleapi
                   java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/customers/[^/]+/workloads/[^/]+$");
 
               /**
-               * Lists access requests associated with a workload
+               * Deprecated: Only returns access approval requests directly associated with an assured workload
+               * folder.
                *
                * Create a request for the method "accessApprovalRequests.list".
                *

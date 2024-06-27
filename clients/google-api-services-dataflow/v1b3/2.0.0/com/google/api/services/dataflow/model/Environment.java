@@ -39,15 +39,15 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.String clusterManagerApiService;
 
   /**
-   * The dataset for the current project where various workflow related tables are stored. The
-   * supported resource type is: Google BigQuery: bigquery.googleapis.com/{dataset}
+   * Optional. The dataset for the current project where various workflow related tables are stored.
+   * The supported resource type is: Google BigQuery: bigquery.googleapis.com/{dataset}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dataset;
 
   /**
-   * Any debugging options to be supplied to the job.
+   * Optional. Any debugging options to be supplied to the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> experiments;
 
   /**
-   * Which Flexible Resource Scheduling mode to run in.
+   * Optional. Which Flexible Resource Scheduling mode to run in.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,15 +86,15 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.Object> sdkPipelineOptions;
 
   /**
-   * Identity to run virtual machines as. Defaults to the default account.
+   * Optional. Identity to run virtual machines as. Defaults to the default account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAccountEmail;
 
   /**
-   * If set, contains the Cloud KMS key identifier used to encrypt data at rest, AKA a Customer
-   * Managed Encryption Key (CMEK). Format:
+   * Optional. If set, contains the Cloud KMS key identifier used to encrypt data at rest, AKA a
+   * Customer Managed Encryption Key (CMEK). Format:
    * projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY
    * The value may be {@code null}.
    */
@@ -171,19 +171,20 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.util.List<WorkerPool> workerPools;
 
   /**
-   * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones)
-   * in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone.
-   * If neither worker_region nor worker_zone is specified, default to the control plane's region.
+   * Optional. The Compute Engine region (https://cloud.google.com/compute/docs/regions-
+   * zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually
+   * exclusive with worker_zone. If neither worker_region nor worker_zone is specified, default to
+   * the control plane's region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String workerRegion;
 
   /**
-   * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in
-   * which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region.
-   * If neither worker_region nor worker_zone is specified, a zone in the control plane's region is
-   * chosen based on available capacity.
+   * Optional. The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-
+   * zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with
+   * worker_region. If neither worker_region nor worker_zone is specified, a zone in the control
+   * plane's region is chosen based on available capacity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,8 +212,8 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The dataset for the current project where various workflow related tables are stored. The
-   * supported resource type is: Google BigQuery: bigquery.googleapis.com/{dataset}
+   * Optional. The dataset for the current project where various workflow related tables are stored.
+   * The supported resource type is: Google BigQuery: bigquery.googleapis.com/{dataset}
    * @return value or {@code null} for none
    */
   public java.lang.String getDataset() {
@@ -220,8 +221,8 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The dataset for the current project where various workflow related tables are stored. The
-   * supported resource type is: Google BigQuery: bigquery.googleapis.com/{dataset}
+   * Optional. The dataset for the current project where various workflow related tables are stored.
+   * The supported resource type is: Google BigQuery: bigquery.googleapis.com/{dataset}
    * @param dataset dataset or {@code null} for none
    */
   public Environment setDataset(java.lang.String dataset) {
@@ -230,7 +231,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Any debugging options to be supplied to the job.
+   * Optional. Any debugging options to be supplied to the job.
    * @return value or {@code null} for none
    */
   public DebugOptions getDebugOptions() {
@@ -238,7 +239,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Any debugging options to be supplied to the job.
+   * Optional. Any debugging options to be supplied to the job.
    * @param debugOptions debugOptions or {@code null} for none
    */
   public Environment setDebugOptions(DebugOptions debugOptions) {
@@ -268,7 +269,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Which Flexible Resource Scheduling mode to run in.
+   * Optional. Which Flexible Resource Scheduling mode to run in.
    * @return value or {@code null} for none
    */
   public java.lang.String getFlexResourceSchedulingGoal() {
@@ -276,7 +277,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Which Flexible Resource Scheduling mode to run in.
+   * Optional. Which Flexible Resource Scheduling mode to run in.
    * @param flexResourceSchedulingGoal flexResourceSchedulingGoal or {@code null} for none
    */
   public Environment setFlexResourceSchedulingGoal(java.lang.String flexResourceSchedulingGoal) {
@@ -323,7 +324,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identity to run virtual machines as. Defaults to the default account.
+   * Optional. Identity to run virtual machines as. Defaults to the default account.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccountEmail() {
@@ -331,7 +332,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identity to run virtual machines as. Defaults to the default account.
+   * Optional. Identity to run virtual machines as. Defaults to the default account.
    * @param serviceAccountEmail serviceAccountEmail or {@code null} for none
    */
   public Environment setServiceAccountEmail(java.lang.String serviceAccountEmail) {
@@ -340,8 +341,8 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If set, contains the Cloud KMS key identifier used to encrypt data at rest, AKA a Customer
-   * Managed Encryption Key (CMEK). Format:
+   * Optional. If set, contains the Cloud KMS key identifier used to encrypt data at rest, AKA a
+   * Customer Managed Encryption Key (CMEK). Format:
    * projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY
    * @return value or {@code null} for none
    */
@@ -350,8 +351,8 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If set, contains the Cloud KMS key identifier used to encrypt data at rest, AKA a Customer
-   * Managed Encryption Key (CMEK). Format:
+   * Optional. If set, contains the Cloud KMS key identifier used to encrypt data at rest, AKA a
+   * Customer Managed Encryption Key (CMEK). Format:
    * projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY
    * @param serviceKmsKeyName serviceKmsKeyName or {@code null} for none
    */
@@ -523,9 +524,10 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones)
-   * in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone.
-   * If neither worker_region nor worker_zone is specified, default to the control plane's region.
+   * Optional. The Compute Engine region (https://cloud.google.com/compute/docs/regions-
+   * zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually
+   * exclusive with worker_zone. If neither worker_region nor worker_zone is specified, default to
+   * the control plane's region.
    * @return value or {@code null} for none
    */
   public java.lang.String getWorkerRegion() {
@@ -533,9 +535,10 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones)
-   * in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone.
-   * If neither worker_region nor worker_zone is specified, default to the control plane's region.
+   * Optional. The Compute Engine region (https://cloud.google.com/compute/docs/regions-
+   * zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually
+   * exclusive with worker_zone. If neither worker_region nor worker_zone is specified, default to
+   * the control plane's region.
    * @param workerRegion workerRegion or {@code null} for none
    */
   public Environment setWorkerRegion(java.lang.String workerRegion) {
@@ -544,10 +547,10 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in
-   * which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region.
-   * If neither worker_region nor worker_zone is specified, a zone in the control plane's region is
-   * chosen based on available capacity.
+   * Optional. The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-
+   * zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with
+   * worker_region. If neither worker_region nor worker_zone is specified, a zone in the control
+   * plane's region is chosen based on available capacity.
    * @return value or {@code null} for none
    */
   public java.lang.String getWorkerZone() {
@@ -555,10 +558,10 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in
-   * which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region.
-   * If neither worker_region nor worker_zone is specified, a zone in the control plane's region is
-   * chosen based on available capacity.
+   * Optional. The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-
+   * zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with
+   * worker_region. If neither worker_region nor worker_zone is specified, a zone in the control
+   * plane's region is chosen based on available capacity.
    * @param workerZone workerZone or {@code null} for none
    */
   public Environment setWorkerZone(java.lang.String workerZone) {

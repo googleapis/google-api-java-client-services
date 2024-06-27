@@ -37,7 +37,7 @@ public final class DebugOptions extends com.google.api.client.json.GenericJson {
   private DataSamplingConfig dataSampling;
 
   /**
-   * When true, enables the logging of the literal hot key to the user's Cloud Logging.
+   * Optional. When true, enables the logging of the literal hot key to the user's Cloud Logging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class DebugOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When true, enables the logging of the literal hot key to the user's Cloud Logging.
+   * Optional. When true, enables the logging of the literal hot key to the user's Cloud Logging.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableHotKeyLogging() {
@@ -69,7 +69,7 @@ public final class DebugOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When true, enables the logging of the literal hot key to the user's Cloud Logging.
+   * Optional. When true, enables the logging of the literal hot key to the user's Cloud Logging.
    * @param enableHotKeyLogging enableHotKeyLogging or {@code null} for none
    */
   public DebugOptions setEnableHotKeyLogging(java.lang.Boolean enableHotKeyLogging) {

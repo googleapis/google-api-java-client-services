@@ -115,8 +115,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints)
-   * that contains this job.
+   * Optional. The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+   * endpoints) that contains this job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -203,6 +203,13 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean satisfiesPzs;
 
   /**
+   * Output only. Resources used by the Dataflow Service to run the job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServiceResources serviceResources;
+
+  /**
    * This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
    * The value may be {@code null}.
    */
@@ -251,8 +258,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> tempFiles;
 
   /**
-   * The map of transform name prefixes of the job to be replaced to the corresponding name prefixes
-   * of the new job.
+   * Optional. The map of transform name prefixes of the job to be replaced to the corresponding
+   * name prefixes of the new job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -464,8 +471,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints)
-   * that contains this job.
+   * Optional. The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+   * endpoints) that contains this job.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -473,8 +480,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints)
-   * that contains this job.
+   * Optional. The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+   * endpoints) that contains this job.
    * @param location location or {@code null} for none
    */
   public Job setLocation(java.lang.String location) {
@@ -670,6 +677,23 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Resources used by the Dataflow Service to run the job.
+   * @return value or {@code null} for none
+   */
+  public ServiceResources getServiceResources() {
+    return serviceResources;
+  }
+
+  /**
+   * Output only. Resources used by the Dataflow Service to run the job.
+   * @param serviceResources serviceResources or {@code null} for none
+   */
+  public Job setServiceResources(ServiceResources serviceResources) {
+    this.serviceResources = serviceResources;
+    return this;
+  }
+
+  /**
    * This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
    * @return value or {@code null} for none
    */
@@ -769,8 +793,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The map of transform name prefixes of the job to be replaced to the corresponding name prefixes
-   * of the new job.
+   * Optional. The map of transform name prefixes of the job to be replaced to the corresponding
+   * name prefixes of the new job.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getTransformNameMapping() {
@@ -778,8 +802,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The map of transform name prefixes of the job to be replaced to the corresponding name prefixes
-   * of the new job.
+   * Optional. The map of transform name prefixes of the job to be replaced to the corresponding
+   * name prefixes of the new job.
    * @param transformNameMapping transformNameMapping or {@code null} for none
    */
   public Job setTransformNameMapping(java.util.Map<String, java.lang.String> transformNameMapping) {

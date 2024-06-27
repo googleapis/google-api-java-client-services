@@ -104,6 +104,13 @@ public final class Discovered extends com.google.api.client.json.GenericJson {
   private SBOMStatus sbomStatus;
 
   /**
+   * Output only. The status of a vulnerability attestation generation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VulnerabilityAttestation vulnerabilityAttestation;
+
+  /**
    * The list of analysis that were completed for a resource.
    * @return value or {@code null} for none
    */
@@ -276,6 +283,23 @@ public final class Discovered extends com.google.api.client.json.GenericJson {
    */
   public Discovered setSbomStatus(SBOMStatus sbomStatus) {
     this.sbomStatus = sbomStatus;
+    return this;
+  }
+
+  /**
+   * Output only. The status of a vulnerability attestation generation.
+   * @return value or {@code null} for none
+   */
+  public VulnerabilityAttestation getVulnerabilityAttestation() {
+    return vulnerabilityAttestation;
+  }
+
+  /**
+   * Output only. The status of a vulnerability attestation generation.
+   * @param vulnerabilityAttestation vulnerabilityAttestation or {@code null} for none
+   */
+  public Discovered setVulnerabilityAttestation(VulnerabilityAttestation vulnerabilityAttestation) {
+    this.vulnerabilityAttestation = vulnerabilityAttestation;
     return this;
   }
 

@@ -30,7 +30,14 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class ExternalDataSources extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Name of external data source. The name will be used inside the rego/sql to refer the
+   * Required. The asset type of the external data source must be one of go/cai-asset-types
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String assetType;
+
+  /**
+   * Optional. Name of external data source. The name will be used inside the rego/sql to refer the
    * external data
    * The value may be {@code null}.
    */
@@ -52,7 +59,24 @@ public final class ExternalDataSources extends com.google.api.client.json.Generi
   private java.lang.String uri;
 
   /**
-   * Required. Name of external data source. The name will be used inside the rego/sql to refer the
+   * Required. The asset type of the external data source must be one of go/cai-asset-types
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAssetType() {
+    return assetType;
+  }
+
+  /**
+   * Required. The asset type of the external data source must be one of go/cai-asset-types
+   * @param assetType assetType or {@code null} for none
+   */
+  public ExternalDataSources setAssetType(java.lang.String assetType) {
+    this.assetType = assetType;
+    return this;
+  }
+
+  /**
+   * Optional. Name of external data source. The name will be used inside the rego/sql to refer the
    * external data
    * @return value or {@code null} for none
    */
@@ -61,7 +85,7 @@ public final class ExternalDataSources extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Name of external data source. The name will be used inside the rego/sql to refer the
+   * Optional. Name of external data source. The name will be used inside the rego/sql to refer the
    * external data
    * @param name name or {@code null} for none
    */

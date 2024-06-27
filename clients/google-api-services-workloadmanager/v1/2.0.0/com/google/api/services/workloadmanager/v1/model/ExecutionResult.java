@@ -30,6 +30,19 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class ExecutionResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * The commands to remediate the violation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Command> commands;
+
+  static {
+    // hack to force ProGuard to consider Command used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Command.class);
+  }
+
+  /**
    * The URL for the documentation of the rule.
    * The value may be {@code null}.
    */
@@ -70,6 +83,23 @@ public final class ExecutionResult extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String violationMessage;
+
+  /**
+   * The commands to remediate the violation.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Command> getCommands() {
+    return commands;
+  }
+
+  /**
+   * The commands to remediate the violation.
+   * @param commands commands or {@code null} for none
+   */
+  public ExecutionResult setCommands(java.util.List<Command> commands) {
+    this.commands = commands;
+    return this;
+  }
 
   /**
    * The URL for the documentation of the rule.

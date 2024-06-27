@@ -60,6 +60,13 @@ public final class SupportedService extends com.google.api.client.json.GenericJs
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String serviceSupportStage;
+
+  /**
+   * The support stage of the service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String supportStage;
 
   /**
@@ -138,6 +145,23 @@ public final class SupportedService extends com.google.api.client.json.GenericJs
    */
   public SupportedService setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The support stage of the service.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceSupportStage() {
+    return serviceSupportStage;
+  }
+
+  /**
+   * The support stage of the service.
+   * @param serviceSupportStage serviceSupportStage or {@code null} for none
+   */
+  public SupportedService setServiceSupportStage(java.lang.String serviceSupportStage) {
+    this.serviceSupportStage = serviceSupportStage;
     return this;
   }
 

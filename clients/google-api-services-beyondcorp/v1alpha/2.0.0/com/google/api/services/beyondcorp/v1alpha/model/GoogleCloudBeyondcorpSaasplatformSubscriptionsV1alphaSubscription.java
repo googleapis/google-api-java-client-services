@@ -60,7 +60,7 @@ public final class GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscrip
   private String endTime;
 
   /**
-   * Required. Unique resource name of the Subscription. The name is ignored when creating a
+   * Identifier. Unique resource name of the Subscription. The name is ignored when creating a
    * subscription.
    * The value may be {@code null}.
    */
@@ -180,7 +180,7 @@ public final class GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscrip
   }
 
   /**
-   * Required. Unique resource name of the Subscription. The name is ignored when creating a
+   * Identifier. Unique resource name of the Subscription. The name is ignored when creating a
    * subscription.
    * @return value or {@code null} for none
    */
@@ -189,7 +189,7 @@ public final class GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscrip
   }
 
   /**
-   * Required. Unique resource name of the Subscription. The name is ignored when creating a
+   * Identifier. Unique resource name of the Subscription. The name is ignored when creating a
    * subscription.
    * @param name name or {@code null} for none
    */

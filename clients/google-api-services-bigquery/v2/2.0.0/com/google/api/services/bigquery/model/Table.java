@@ -305,8 +305,10 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.lang.Long numTotalPhysicalBytes;
 
   /**
-   * Output only. The partition information for all table formats, including managed partitioned
-   * tables, hive partitioned tables, and iceberg partitioned tables.
+   * Optional. The partition information for all table formats, including managed partitioned
+   * tables, hive partitioned tables, iceberg partitioned, and metastore partitioned tables. This
+   * field is only populated for metastore partitioned tables. For other table formats, this is an
+   * output only field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1089,8 +1091,10 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The partition information for all table formats, including managed partitioned
-   * tables, hive partitioned tables, and iceberg partitioned tables.
+   * Optional. The partition information for all table formats, including managed partitioned
+   * tables, hive partitioned tables, iceberg partitioned, and metastore partitioned tables. This
+   * field is only populated for metastore partitioned tables. For other table formats, this is an
+   * output only field.
    * @return value or {@code null} for none
    */
   public PartitioningDefinition getPartitionDefinition() {
@@ -1098,8 +1102,10 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The partition information for all table formats, including managed partitioned
-   * tables, hive partitioned tables, and iceberg partitioned tables.
+   * Optional. The partition information for all table formats, including managed partitioned
+   * tables, hive partitioned tables, iceberg partitioned, and metastore partitioned tables. This
+   * field is only populated for metastore partitioned tables. For other table formats, this is an
+   * output only field.
    * @param partitionDefinition partitionDefinition or {@code null} for none
    */
   public Table setPartitionDefinition(PartitioningDefinition partitionDefinition) {

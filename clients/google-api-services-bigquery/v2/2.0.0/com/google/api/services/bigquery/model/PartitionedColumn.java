@@ -30,14 +30,14 @@ package com.google.api.services.bigquery.model;
 public final class PartitionedColumn extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The name of the partition column.
+   * Required. The name of the partition column.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String field;
 
   /**
-   * Output only. The name of the partition column.
+   * Required. The name of the partition column.
    * @return value or {@code null} for none
    */
   public java.lang.String getField() {
@@ -45,7 +45,7 @@ public final class PartitionedColumn extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The name of the partition column.
+   * Required. The name of the partition column.
    * @param field field or {@code null} for none
    */
   public PartitionedColumn setField(java.lang.String field) {

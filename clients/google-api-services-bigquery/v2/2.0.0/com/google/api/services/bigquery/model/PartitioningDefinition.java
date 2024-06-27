@@ -17,8 +17,8 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * The partitioning information, which includes managed table and external table partition
- * information.
+ * The partitioning information, which includes managed table, external table and metastore
+ * partitioned table partition information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -31,8 +31,13 @@ package com.google.api.services.bigquery.model;
 public final class PartitioningDefinition extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Details about each partitioning column. BigQuery native tables only support 1
-   * partitioning column. Other table types may support 0, 1 or more partitioning columns.
+   * Optional. Details about each partitioning column. This field is output only for all
+   * partitioning types other than metastore partitioned tables. BigQuery native tables only support
+   * 1 partitioning column. Other table types may support 0, 1 or more partitioning columns. For
+   * metastore partitioned tables, the order must match the definition order in the Hive Metastore,
+   * where it must match the physical layout of the table. For example, CREATE TABLE a_table(id
+   * BIGINT, name STRING) PARTITIONED BY (city STRING, state STRING). In this case the values must
+   * be ['city', 'state'] in that order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +50,13 @@ public final class PartitioningDefinition extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. Details about each partitioning column. BigQuery native tables only support 1
-   * partitioning column. Other table types may support 0, 1 or more partitioning columns.
+   * Optional. Details about each partitioning column. This field is output only for all
+   * partitioning types other than metastore partitioned tables. BigQuery native tables only support
+   * 1 partitioning column. Other table types may support 0, 1 or more partitioning columns. For
+   * metastore partitioned tables, the order must match the definition order in the Hive Metastore,
+   * where it must match the physical layout of the table. For example, CREATE TABLE a_table(id
+   * BIGINT, name STRING) PARTITIONED BY (city STRING, state STRING). In this case the values must
+   * be ['city', 'state'] in that order.
    * @return value or {@code null} for none
    */
   public java.util.List<PartitionedColumn> getPartitionedColumn() {
@@ -54,8 +64,13 @@ public final class PartitioningDefinition extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. Details about each partitioning column. BigQuery native tables only support 1
-   * partitioning column. Other table types may support 0, 1 or more partitioning columns.
+   * Optional. Details about each partitioning column. This field is output only for all
+   * partitioning types other than metastore partitioned tables. BigQuery native tables only support
+   * 1 partitioning column. Other table types may support 0, 1 or more partitioning columns. For
+   * metastore partitioned tables, the order must match the definition order in the Hive Metastore,
+   * where it must match the physical layout of the table. For example, CREATE TABLE a_table(id
+   * BIGINT, name STRING) PARTITIONED BY (city STRING, state STRING). In this case the values must
+   * be ['city', 'state'] in that order.
    * @param partitionedColumn partitionedColumn or {@code null} for none
    */
   public PartitioningDefinition setPartitionedColumn(java.util.List<PartitionedColumn> partitionedColumn) {

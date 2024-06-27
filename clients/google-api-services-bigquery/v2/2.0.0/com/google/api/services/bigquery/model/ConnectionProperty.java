@@ -27,7 +27,10 @@ package com.google.api.services.bigquery.model;
  * associates the query with a given session. * **query_label**: associates the query with a given
  * job label. If set, all subsequent queries in a script or session will have this label. For the
  * format in which a you can specify a query label, see labels in the JobConfiguration resource
- * type: https://cloud.google.com/bigquery/docs/reference/rest/v2/Job#jobconfiguration Additional
+ * type: https://cloud.google.com/bigquery/docs/reference/rest/v2/Job#jobconfiguration *
+ * **service_account**: indicates the service account to use to run a continuous query. If set, the
+ * query job uses the service account to access Google Cloud resources. Service account access is
+ * bounded by the IAM permissions that you have granted to the service account. Additional
  * properties are allowed, but ignored. Specifying multiple connection properties with the same key
  * returns an error.
  *

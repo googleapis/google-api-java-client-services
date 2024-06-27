@@ -171,6 +171,13 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private Host host;
 
   /**
+   * Optional. Http options that customize the behavior of the workstation service's http proxy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HttpOptions httpOptions;
+
+  /**
    * Optional. Number of seconds to wait before automatically stopping a workstation after it last
    * received user traffic. A value of `"0s"` indicates that Cloud Workstations VMs created with
    * this configuration should never time out due to idleness. Provide
@@ -548,6 +555,23 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    */
   public WorkstationConfig setHost(Host host) {
     this.host = host;
+    return this;
+  }
+
+  /**
+   * Optional. Http options that customize the behavior of the workstation service's http proxy.
+   * @return value or {@code null} for none
+   */
+  public HttpOptions getHttpOptions() {
+    return httpOptions;
+  }
+
+  /**
+   * Optional. Http options that customize the behavior of the workstation service's http proxy.
+   * @param httpOptions httpOptions or {@code null} for none
+   */
+  public WorkstationConfig setHttpOptions(HttpOptions httpOptions) {
+    this.httpOptions = httpOptions;
     return this;
   }
 

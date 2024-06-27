@@ -53,6 +53,20 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
   private java.util.List<NfsExportOptions> nfsExportOptions;
 
   /**
+   * Optional. Used to configure performance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PerformanceConfig performanceConfig;
+
+  /**
+   * Output only. Used for getting performance limits.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PerformanceLimits performanceLimits;
+
+  /**
    * The resource name of the backup, in the format
    * `projects/{project_number}/locations/{location_id}/backups/{backup_id}`, that this file share
    * has been restored from.
@@ -113,6 +127,40 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
    */
   public FileShareConfig setNfsExportOptions(java.util.List<NfsExportOptions> nfsExportOptions) {
     this.nfsExportOptions = nfsExportOptions;
+    return this;
+  }
+
+  /**
+   * Optional. Used to configure performance.
+   * @return value or {@code null} for none
+   */
+  public PerformanceConfig getPerformanceConfig() {
+    return performanceConfig;
+  }
+
+  /**
+   * Optional. Used to configure performance.
+   * @param performanceConfig performanceConfig or {@code null} for none
+   */
+  public FileShareConfig setPerformanceConfig(PerformanceConfig performanceConfig) {
+    this.performanceConfig = performanceConfig;
+    return this;
+  }
+
+  /**
+   * Output only. Used for getting performance limits.
+   * @return value or {@code null} for none
+   */
+  public PerformanceLimits getPerformanceLimits() {
+    return performanceLimits;
+  }
+
+  /**
+   * Output only. Used for getting performance limits.
+   * @param performanceLimits performanceLimits or {@code null} for none
+   */
+  public FileShareConfig setPerformanceLimits(PerformanceLimits performanceLimits) {
+    this.performanceLimits = performanceLimits;
     return this;
   }
 

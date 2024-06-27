@@ -58,6 +58,13 @@ public final class GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig extend
   private java.lang.String name;
 
   /**
+   * Optional. Protocol config data for the Proxy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudBeyondcorpPartnerservicesV1alphaProxyProtocolConfig proxyProtocolConfig;
+
+  /**
    * Required. The URI of the proxy server.
    * The value may be {@code null}.
    */
@@ -150,6 +157,23 @@ public final class GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig extend
    */
   public GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Protocol config data for the Proxy.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpPartnerservicesV1alphaProxyProtocolConfig getProxyProtocolConfig() {
+    return proxyProtocolConfig;
+  }
+
+  /**
+   * Optional. Protocol config data for the Proxy.
+   * @param proxyProtocolConfig proxyProtocolConfig or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig setProxyProtocolConfig(GoogleCloudBeyondcorpPartnerservicesV1alphaProxyProtocolConfig proxyProtocolConfig) {
+    this.proxyProtocolConfig = proxyProtocolConfig;
     return this;
   }
 

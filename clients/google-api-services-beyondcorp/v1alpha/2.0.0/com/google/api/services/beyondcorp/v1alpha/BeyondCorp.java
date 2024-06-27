@@ -6753,7 +6753,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the beyondcorp server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Unique resource name of the Subscription. The name is ignored when creating a
+         * @param name Identifier. Unique resource name of the Subscription. The name is ignored when creating a
          *        subscription.
          * @param content the {@link com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscription}
          * @return the request
@@ -6783,7 +6783,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Unique resource name of the Subscription. The name is ignored when creating a
+           * @param name Identifier. Unique resource name of the Subscription. The name is ignored when creating a
          *        subscription.
            * @param content the {@link com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscription}
            * @since 1.13
@@ -6854,13 +6854,13 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required. Unique resource name of the Subscription. The name is ignored when creating a
-           * subscription.
+           * Identifier. Unique resource name of the Subscription. The name is ignored when creating
+           * a subscription.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Unique resource name of the Subscription. The name is ignored when creating a
+          /** Identifier. Unique resource name of the Subscription. The name is ignored when creating a
          subscription.
            */
           public java.lang.String getName() {
@@ -6868,8 +6868,8 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required. Unique resource name of the Subscription. The name is ignored when creating a
-           * subscription.
+           * Identifier. Unique resource name of the Subscription. The name is ignored when creating
+           * a subscription.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

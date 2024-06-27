@@ -46,9 +46,10 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   private FormAction action;
 
   /**
-   * Represents information about the user's client, such as locale, host app, and platform. For
-   * Chat apps, `CommonEventObject` includes information submitted by users interacting with
-   * [dialogs](https://developers.google.com/workspace/chat/dialogs), like data entered on a card.
+   * Represents informatmessage_visibilityion about the user's client, such as locale, host app, and
+   * platform. For Chat apps, `CommonEventObject` includes information submitted by users
+   * interacting with [dialogs](https://developers.google.com/workspace/chat/dialogs), like data
+   * entered on a card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,9 +161,10 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Represents information about the user's client, such as locale, host app, and platform. For
-   * Chat apps, `CommonEventObject` includes information submitted by users interacting with
-   * [dialogs](https://developers.google.com/workspace/chat/dialogs), like data entered on a card.
+   * Represents informatmessage_visibilityion about the user's client, such as locale, host app, and
+   * platform. For Chat apps, `CommonEventObject` includes information submitted by users
+   * interacting with [dialogs](https://developers.google.com/workspace/chat/dialogs), like data
+   * entered on a card.
    * @return value or {@code null} for none
    */
   public CommonEventObject getCommon() {
@@ -170,9 +172,10 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Represents information about the user's client, such as locale, host app, and platform. For
-   * Chat apps, `CommonEventObject` includes information submitted by users interacting with
-   * [dialogs](https://developers.google.com/workspace/chat/dialogs), like data entered on a card.
+   * Represents informatmessage_visibilityion about the user's client, such as locale, host app, and
+   * platform. For Chat apps, `CommonEventObject` includes information submitted by users
+   * interacting with [dialogs](https://developers.google.com/workspace/chat/dialogs), like data
+   * entered on a card.
    * @param common common or {@code null} for none
    */
   public DeprecatedEvent setCommon(CommonEventObject common) {

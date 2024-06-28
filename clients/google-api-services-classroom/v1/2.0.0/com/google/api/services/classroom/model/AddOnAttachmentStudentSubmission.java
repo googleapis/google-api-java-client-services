@@ -44,14 +44,6 @@ public final class AddOnAttachmentStudentSubmission extends com.google.api.clien
   private java.lang.String postSubmissionState;
 
   /**
-   * Identifier for the student that owns this submission. This field is part of an experimental API
-   * change and is populated only if sufficient scopes are granted.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String userId;
-
-  /**
    * Student grade on this attachment. If unset, no grade was set.
    * @return value or {@code null} for none
    */
@@ -82,25 +74,6 @@ public final class AddOnAttachmentStudentSubmission extends com.google.api.clien
    */
   public AddOnAttachmentStudentSubmission setPostSubmissionState(java.lang.String postSubmissionState) {
     this.postSubmissionState = postSubmissionState;
-    return this;
-  }
-
-  /**
-   * Identifier for the student that owns this submission. This field is part of an experimental API
-   * change and is populated only if sufficient scopes are granted.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getUserId() {
-    return userId;
-  }
-
-  /**
-   * Identifier for the student that owns this submission. This field is part of an experimental API
-   * change and is populated only if sufficient scopes are granted.
-   * @param userId userId or {@code null} for none
-   */
-  public AddOnAttachmentStudentSubmission setUserId(java.lang.String userId) {
-    this.userId = userId;
     return this;
   }
 

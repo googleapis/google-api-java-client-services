@@ -37,6 +37,13 @@ public final class SubscribeListingRequest extends com.google.api.client.json.Ge
   private DestinationDataset destinationDataset;
 
   /**
+   * Required. Input only. Destination Pub/Sub subscription to create for the subscriber.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DestinationPubSubSubscription destinationPubsubSubscription;
+
+  /**
    * Input only. BigQuery destination dataset to create for the subscriber.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class SubscribeListingRequest extends com.google.api.client.json.Ge
    */
   public SubscribeListingRequest setDestinationDataset(DestinationDataset destinationDataset) {
     this.destinationDataset = destinationDataset;
+    return this;
+  }
+
+  /**
+   * Required. Input only. Destination Pub/Sub subscription to create for the subscriber.
+   * @return value or {@code null} for none
+   */
+  public DestinationPubSubSubscription getDestinationPubsubSubscription() {
+    return destinationPubsubSubscription;
+  }
+
+  /**
+   * Required. Input only. Destination Pub/Sub subscription to create for the subscriber.
+   * @param destinationPubsubSubscription destinationPubsubSubscription or {@code null} for none
+   */
+  public SubscribeListingRequest setDestinationPubsubSubscription(DestinationPubSubSubscription destinationPubsubSubscription) {
+    this.destinationPubsubSubscription = destinationPubsubSubscription;
     return this;
   }
 

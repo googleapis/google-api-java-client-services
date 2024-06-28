@@ -119,7 +119,7 @@ public final class Listing extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. If set, restricted export configuration will be propagated and enforced on the linked
-   * dataset.
+   * dataset. This is a required field for data clean room exchanges.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -373,7 +373,7 @@ public final class Listing extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. If set, restricted export configuration will be propagated and enforced on the linked
-   * dataset.
+   * dataset. This is a required field for data clean room exchanges.
    * @return value or {@code null} for none
    */
   public RestrictedExportConfig getRestrictedExportConfig() {
@@ -382,7 +382,7 @@ public final class Listing extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. If set, restricted export configuration will be propagated and enforced on the linked
-   * dataset.
+   * dataset. This is a required field for data clean room exchanges.
    * @param restrictedExportConfig restrictedExportConfig or {@code null} for none
    */
   public Listing setRestrictedExportConfig(RestrictedExportConfig restrictedExportConfig) {

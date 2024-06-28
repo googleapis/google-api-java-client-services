@@ -62,6 +62,13 @@ public final class Listing extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Optional. Type of discovery of the listing on the discovery page.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String discoveryType;
+
+  /**
    * Required. Human-readable display name of the listing. The display name must contain only
    * Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), ampersands (&) and
    * can't start or end with spaces. Default value is an empty string. Max length: 63 bytes.
@@ -110,12 +117,26 @@ public final class Listing extends com.google.api.client.json.GenericJson {
   private Publisher publisher;
 
   /**
+   * Required. Pub/Sub topic source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PubSubTopicSource pubsubTopic;
+
+  /**
    * Optional. Email or URL of the request access of the listing. Subscribers can use this reference
    * to request access. Max Length: 1000 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String requestAccess;
+
+  /**
+   * Output only. Listing shared asset type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceType;
 
   /**
    * Optional. If set, restricted export configuration will be propagated and enforced on the linked
@@ -201,6 +222,23 @@ public final class Listing extends com.google.api.client.json.GenericJson {
    */
   public Listing setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Type of discovery of the listing on the discovery page.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDiscoveryType() {
+    return discoveryType;
+  }
+
+  /**
+   * Optional. Type of discovery of the listing on the discovery page.
+   * @param discoveryType discoveryType or {@code null} for none
+   */
+  public Listing setDiscoveryType(java.lang.String discoveryType) {
+    this.discoveryType = discoveryType;
     return this;
   }
 
@@ -353,6 +391,23 @@ public final class Listing extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Required. Pub/Sub topic source.
+   * @return value or {@code null} for none
+   */
+  public PubSubTopicSource getPubsubTopic() {
+    return pubsubTopic;
+  }
+
+  /**
+   * Required. Pub/Sub topic source.
+   * @param pubsubTopic pubsubTopic or {@code null} for none
+   */
+  public Listing setPubsubTopic(PubSubTopicSource pubsubTopic) {
+    this.pubsubTopic = pubsubTopic;
+    return this;
+  }
+
+  /**
    * Optional. Email or URL of the request access of the listing. Subscribers can use this reference
    * to request access. Max Length: 1000 bytes.
    * @return value or {@code null} for none
@@ -368,6 +423,23 @@ public final class Listing extends com.google.api.client.json.GenericJson {
    */
   public Listing setRequestAccess(java.lang.String requestAccess) {
     this.requestAccess = requestAccess;
+    return this;
+  }
+
+  /**
+   * Output only. Listing shared asset type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceType() {
+    return resourceType;
+  }
+
+  /**
+   * Output only. Listing shared asset type.
+   * @param resourceType resourceType or {@code null} for none
+   */
+  public Listing setResourceType(java.lang.String resourceType) {
+    this.resourceType = resourceType;
     return this;
   }
 

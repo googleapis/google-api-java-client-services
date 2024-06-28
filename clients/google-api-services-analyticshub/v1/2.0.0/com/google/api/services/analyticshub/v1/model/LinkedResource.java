@@ -38,6 +38,21 @@ public final class LinkedResource extends com.google.api.client.json.GenericJson
   private java.lang.String linkedDataset;
 
   /**
+   * Output only. Name of the Pub/Sub subscription, e.g.
+   * projects/subscriberproject/subscriptions/subscriptions/sub_id
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String linkedPubsubSubscription;
+
+  /**
+   * Output only. Listing for which linked resource is created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String listing;
+
+  /**
    * Output only. Name of the linked dataset, e.g.
    * projects/subscriberproject/datasets/linked_dataset
    * @return value or {@code null} for none
@@ -53,6 +68,42 @@ public final class LinkedResource extends com.google.api.client.json.GenericJson
    */
   public LinkedResource setLinkedDataset(java.lang.String linkedDataset) {
     this.linkedDataset = linkedDataset;
+    return this;
+  }
+
+  /**
+   * Output only. Name of the Pub/Sub subscription, e.g.
+   * projects/subscriberproject/subscriptions/subscriptions/sub_id
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLinkedPubsubSubscription() {
+    return linkedPubsubSubscription;
+  }
+
+  /**
+   * Output only. Name of the Pub/Sub subscription, e.g.
+   * projects/subscriberproject/subscriptions/subscriptions/sub_id
+   * @param linkedPubsubSubscription linkedPubsubSubscription or {@code null} for none
+   */
+  public LinkedResource setLinkedPubsubSubscription(java.lang.String linkedPubsubSubscription) {
+    this.linkedPubsubSubscription = linkedPubsubSubscription;
+    return this;
+  }
+
+  /**
+   * Output only. Listing for which linked resource is created.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getListing() {
+    return listing;
+  }
+
+  /**
+   * Output only. Listing for which linked resource is created.
+   * @param listing listing or {@code null} for none
+   */
+  public LinkedResource setListing(java.lang.String listing) {
+    this.listing = listing;
     return this;
   }
 

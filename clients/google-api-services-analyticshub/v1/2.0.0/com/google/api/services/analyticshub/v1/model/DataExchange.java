@@ -40,6 +40,15 @@ public final class DataExchange extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Optional. Type of discovery on the discovery page for all the listings under this exchange.
+   * Updating this field also updates (overwrites) the discovery_type field for all the listings
+   * under this exchange.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String discoveryType;
+
+  /**
    * Required. Human-readable display name of the data exchange. The display name must contain only
    * Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), ampersands (&) and
    * must not start or end with spaces. Default value is an empty string. Max length: 63 bytes.
@@ -113,6 +122,27 @@ public final class DataExchange extends com.google.api.client.json.GenericJson {
    */
   public DataExchange setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Type of discovery on the discovery page for all the listings under this exchange.
+   * Updating this field also updates (overwrites) the discovery_type field for all the listings
+   * under this exchange.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDiscoveryType() {
+    return discoveryType;
+  }
+
+  /**
+   * Optional. Type of discovery on the discovery page for all the listings under this exchange.
+   * Updating this field also updates (overwrites) the discovery_type field for all the listings
+   * under this exchange.
+   * @param discoveryType discoveryType or {@code null} for none
+   */
+  public DataExchange setDiscoveryType(java.lang.String discoveryType) {
+    this.discoveryType = discoveryType;
     return this;
   }
 

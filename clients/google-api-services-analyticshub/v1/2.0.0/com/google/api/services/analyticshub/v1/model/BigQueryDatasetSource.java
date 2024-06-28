@@ -48,9 +48,8 @@ public final class BigQueryDatasetSource extends com.google.api.client.json.Gene
   private RestrictedExportPolicy restrictedExportPolicy;
 
   /**
-   * Optional. Resources in this dataset that are selectively shared. If this field is empty, then
-   * the entire dataset (all resources) are shared. This field is only valid for data clean room
-   * exchanges.
+   * Optional. Resource in this dataset that is selectively shared. This field is required for data
+   * clean room exchanges.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,9 +92,8 @@ public final class BigQueryDatasetSource extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Resources in this dataset that are selectively shared. If this field is empty, then
-   * the entire dataset (all resources) are shared. This field is only valid for data clean room
-   * exchanges.
+   * Optional. Resource in this dataset that is selectively shared. This field is required for data
+   * clean room exchanges.
    * @return value or {@code null} for none
    */
   public java.util.List<SelectedResource> getSelectedResources() {
@@ -103,9 +101,8 @@ public final class BigQueryDatasetSource extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Resources in this dataset that are selectively shared. If this field is empty, then
-   * the entire dataset (all resources) are shared. This field is only valid for data clean room
-   * exchanges.
+   * Optional. Resource in this dataset that is selectively shared. This field is required for data
+   * clean room exchanges.
    * @param selectedResources selectedResources or {@code null} for none
    */
   public BigQueryDatasetSource setSelectedResources(java.util.List<SelectedResource> selectedResources) {

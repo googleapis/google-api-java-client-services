@@ -31,6 +31,13 @@ package com.google.api.services.firebaseappdistribution.v1alpha.model;
 public final class GoogleFirebaseAppdistroV1alphaReleaseTest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Input only. Instructions for AI driven test. Input only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleFirebaseAppdistroV1alphaAiInstructions aiInstructions;
+
+  /**
    * Output only. Timestamp when the test was run.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class GoogleFirebaseAppdistroV1alphaReleaseTest extends com.google.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. Input only. Instructions for AI driven test. Input only.
+   * @return value or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaAiInstructions getAiInstructions() {
+    return aiInstructions;
+  }
+
+  /**
+   * Optional. Input only. Instructions for AI driven test. Input only.
+   * @param aiInstructions aiInstructions or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaReleaseTest setAiInstructions(GoogleFirebaseAppdistroV1alphaAiInstructions aiInstructions) {
+    this.aiInstructions = aiInstructions;
+    return this;
+  }
 
   /**
    * Output only. Timestamp when the test was run.

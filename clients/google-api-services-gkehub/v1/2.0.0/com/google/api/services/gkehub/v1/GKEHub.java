@@ -5692,6 +5692,221 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           }
 
         }
+        /**
+         * An accessor for creating requests from the Rbacrolebindings collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code GKEHub gkehub = new GKEHub(...);}
+         *   {@code GKEHub.Rbacrolebindings.List request = gkehub.rbacrolebindings().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Rbacrolebindings rbacrolebindings() {
+          return new Rbacrolebindings();
+        }
+
+        /**
+         * The "rbacrolebindings" collection of methods.
+         */
+        public class Rbacrolebindings {
+
+          /**
+           * Lists all Membership RBACRoleBindings.
+           *
+           * Create a request for the method "rbacrolebindings.list".
+           *
+           * This request holds the parameters needed by the gkehub server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent (project and location) where the Features will be listed. Specified in the
+           *        format `projects/locations/memberships`.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends GKEHubRequest<com.google.api.services.gkehub.v1.model.ListMembershipRBACRoleBindingsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/rbacrolebindings";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/memberships/[^/]+$");
+
+            /**
+             * Lists all Membership RBACRoleBindings.
+             *
+             * Create a request for the method "rbacrolebindings.list".
+             *
+             * This request holds the parameters needed by the the gkehub server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent (project and location) where the Features will be listed. Specified in the
+           *        format `projects/locations/memberships`.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(GKEHub.this, "GET", REST_PATH, null, com.google.api.services.gkehub.v1.model.ListMembershipRBACRoleBindingsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/memberships/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent (project and location) where the Features will be listed.
+             * Specified in the format `projects/locations/memberships`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent (project and location) where the Features will be listed. Specified in the
+           format `projects/locations/memberships`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent (project and location) where the Features will be listed.
+             * Specified in the format `projects/locations/memberships`.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/memberships/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. When requesting a 'page' of resources, `page_size` specifies number of
+             * resources to return. If unspecified or set to 0, all resources will be returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. When requesting a 'page' of resources, `page_size` specifies number of resources to
+           return. If unspecified or set to 0, all resources will be returned.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. When requesting a 'page' of resources, `page_size` specifies number of
+             * resources to return. If unspecified or set to 0, all resources will be returned.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. Token returned by previous call to `ListMembershipRBACRoleBindings` which
+             * specifies the position in the list from where to continue listing the resources.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. Token returned by previous call to `ListMembershipRBACRoleBindings` which specifies the
+           position in the list from where to continue listing the resources.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. Token returned by previous call to `ListMembershipRBACRoleBindings` which
+             * specifies the position in the list from where to continue listing the resources.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the Operations collection.

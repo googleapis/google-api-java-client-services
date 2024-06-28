@@ -38,6 +38,13 @@ public final class GooglePrivacyDlpV2ProjectDataProfile extends com.google.api.c
   private GooglePrivacyDlpV2DataRiskLevel dataRiskLevel;
 
   /**
+   * The number of file store data profiles generated for this project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long fileStoreDataProfileCount;
+
+  /**
    * The resource name of the profile.
    * The value may be {@code null}.
    */
@@ -73,6 +80,13 @@ public final class GooglePrivacyDlpV2ProjectDataProfile extends com.google.api.c
   private GooglePrivacyDlpV2SensitivityScore sensitivityScore;
 
   /**
+   * The number of table data profiles generated for this project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long tableDataProfileCount;
+
+  /**
    * The data risk level of this project.
    * @return value or {@code null} for none
    */
@@ -86,6 +100,23 @@ public final class GooglePrivacyDlpV2ProjectDataProfile extends com.google.api.c
    */
   public GooglePrivacyDlpV2ProjectDataProfile setDataRiskLevel(GooglePrivacyDlpV2DataRiskLevel dataRiskLevel) {
     this.dataRiskLevel = dataRiskLevel;
+    return this;
+  }
+
+  /**
+   * The number of file store data profiles generated for this project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getFileStoreDataProfileCount() {
+    return fileStoreDataProfileCount;
+  }
+
+  /**
+   * The number of file store data profiles generated for this project.
+   * @param fileStoreDataProfileCount fileStoreDataProfileCount or {@code null} for none
+   */
+  public GooglePrivacyDlpV2ProjectDataProfile setFileStoreDataProfileCount(java.lang.Long fileStoreDataProfileCount) {
+    this.fileStoreDataProfileCount = fileStoreDataProfileCount;
     return this;
   }
 
@@ -171,6 +202,23 @@ public final class GooglePrivacyDlpV2ProjectDataProfile extends com.google.api.c
    */
   public GooglePrivacyDlpV2ProjectDataProfile setSensitivityScore(GooglePrivacyDlpV2SensitivityScore sensitivityScore) {
     this.sensitivityScore = sensitivityScore;
+    return this;
+  }
+
+  /**
+   * The number of table data profiles generated for this project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTableDataProfileCount() {
+    return tableDataProfileCount;
+  }
+
+  /**
+   * The number of table data profiles generated for this project.
+   * @param tableDataProfileCount tableDataProfileCount or {@code null} for none
+   */
+  public GooglePrivacyDlpV2ProjectDataProfile setTableDataProfileCount(java.lang.Long tableDataProfileCount) {
+    this.tableDataProfileCount = tableDataProfileCount;
     return this;
   }
 

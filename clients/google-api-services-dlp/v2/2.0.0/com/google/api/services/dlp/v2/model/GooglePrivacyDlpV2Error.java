@@ -39,6 +39,13 @@ public final class GooglePrivacyDlpV2Error extends com.google.api.client.json.Ge
   private GoogleRpcStatus details;
 
   /**
+   * Additional information about the error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String extraInfo;
+
+  /**
    * The times the error occurred. List includes the oldest timestamp and the last 9 timestamps.
    * The value may be {@code null}.
    */
@@ -59,6 +66,23 @@ public final class GooglePrivacyDlpV2Error extends com.google.api.client.json.Ge
    */
   public GooglePrivacyDlpV2Error setDetails(GoogleRpcStatus details) {
     this.details = details;
+    return this;
+  }
+
+  /**
+   * Additional information about the error.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExtraInfo() {
+    return extraInfo;
+  }
+
+  /**
+   * Additional information about the error.
+   * @param extraInfo extraInfo or {@code null} for none
+   */
+  public GooglePrivacyDlpV2Error setExtraInfo(java.lang.String extraInfo) {
+    this.extraInfo = extraInfo;
     return this;
   }
 

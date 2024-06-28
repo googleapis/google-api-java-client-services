@@ -38,6 +38,13 @@ public final class GooglePrivacyDlpV2DataProfileBigQueryRowSchema extends com.go
   private GooglePrivacyDlpV2ColumnDataProfile columnProfile;
 
   /**
+   * File store data profile column.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2FileStoreDataProfile fileStoreProfile;
+
+  /**
    * Table data profile column
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class GooglePrivacyDlpV2DataProfileBigQueryRowSchema extends com.go
    */
   public GooglePrivacyDlpV2DataProfileBigQueryRowSchema setColumnProfile(GooglePrivacyDlpV2ColumnDataProfile columnProfile) {
     this.columnProfile = columnProfile;
+    return this;
+  }
+
+  /**
+   * File store data profile column.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2FileStoreDataProfile getFileStoreProfile() {
+    return fileStoreProfile;
+  }
+
+  /**
+   * File store data profile column.
+   * @param fileStoreProfile fileStoreProfile or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DataProfileBigQueryRowSchema setFileStoreProfile(GooglePrivacyDlpV2FileStoreDataProfile fileStoreProfile) {
+    this.fileStoreProfile = fileStoreProfile;
     return this;
   }
 

@@ -5890,6 +5890,588 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
       }
       /**
+       * An accessor for creating requests from the FileStoreDataProfiles collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DLP dlp = new DLP(...);}
+       *   {@code DLP.FileStoreDataProfiles.List request = dlp.fileStoreDataProfiles().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public FileStoreDataProfiles fileStoreDataProfiles() {
+        return new FileStoreDataProfiles();
+      }
+
+      /**
+       * The "fileStoreDataProfiles" collection of methods.
+       */
+      public class FileStoreDataProfiles {
+
+        /**
+         * Delete a FileStoreDataProfile. Will not prevent the profile from being regenerated if the
+         * resource is still included in a discovery configuration.
+         *
+         * Create a request for the method "fileStoreDataProfiles.delete".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the file store data profile.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DLPRequest<com.google.api.services.dlp.v2.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/fileStoreDataProfiles/[^/]+$");
+
+          /**
+           * Delete a FileStoreDataProfile. Will not prevent the profile from being regenerated if the
+           * resource is still included in a discovery configuration.
+           *
+           * Create a request for the method "fileStoreDataProfiles.delete".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the file store data profile.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(DLP.this, "DELETE", REST_PATH, null, com.google.api.services.dlp.v2.model.GoogleProtobufEmpty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/fileStoreDataProfiles/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Resource name of the file store data profile. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the file store data profile.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Resource name of the file store data profile. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/fileStoreDataProfiles/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a file store data profile.
+         *
+         * Create a request for the method "fileStoreDataProfiles.get".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name, for example
+         *        `organizations/12345/locations/us/fileStoreDataProfiles/53234423`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2FileStoreDataProfile> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/fileStoreDataProfiles/[^/]+$");
+
+          /**
+           * Gets a file store data profile.
+           *
+           * Create a request for the method "fileStoreDataProfiles.get".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name, for example
+         *        `organizations/12345/locations/us/fileStoreDataProfiles/53234423`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2FileStoreDataProfile.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/fileStoreDataProfiles/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name, for example
+           * `organizations/12345/locations/us/fileStoreDataProfiles/53234423`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name, for example
+         `organizations/12345/locations/us/fileStoreDataProfiles/53234423`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name, for example
+           * `organizations/12345/locations/us/fileStoreDataProfiles/53234423`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/fileStoreDataProfiles/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists file store data profiles for an organization.
+         *
+         * Create a request for the method "fileStoreDataProfiles.list".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Resource name of the organization or project, for example
+         *        `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListFileStoreDataProfilesResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/fileStoreDataProfiles";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists file store data profiles for an organization.
+           *
+           * Create a request for the method "fileStoreDataProfiles.list".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Resource name of the organization or project, for example
+         *        `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListFileStoreDataProfilesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the organization or project, for example
+           * `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Resource name of the organization or project, for example
+         `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Resource name of the organization or project, for example
+           * `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Allows filtering. Supported syntax: * Filter expressions are made up of one
+           * or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
+           * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the
+           * form of `{field} {operator} {value}`. * Supported fields/values: - `project_id` - The
+           * Google Cloud project ID. - `file_store_path` - The path like "gs://bucket". -
+           * `sensitivity_level` - HIGH|MODERATE|LOW - `data_risk_level` - HIGH|MODERATE|LOW -
+           * `resource_visibility`: PUBLIC|RESTRICTED - `status_code` - an RPC status code as
+           * defined in https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto *
+           * The operator must be `=` or `!=`. Examples: * `project_id = 12345 AND status_code = 1`
+           * * `project_id = 12345 AND sensitivity_level = HIGH` * `project_id = 12345 AND
+           * resource_visibility = PUBLIC` . * 'file_store_path = "gs://mybucket"` The length of
+           * this field should be no more than 500 characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+         restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A sequence of
+         restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. *
+         Supported fields/values: - `project_id` - The Google Cloud project ID. - `file_store_path` - The
+         path like "gs://bucket". - `sensitivity_level` - HIGH|MODERATE|LOW - `data_risk_level` -
+         HIGH|MODERATE|LOW - `resource_visibility`: PUBLIC|RESTRICTED - `status_code` - an RPC status code
+         as defined in https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The
+         operator must be `=` or `!=`. Examples: * `project_id = 12345 AND status_code = 1` * `project_id =
+         12345 AND sensitivity_level = HIGH` * `project_id = 12345 AND resource_visibility = PUBLIC` . *
+         'file_store_path = "gs://mybucket"` The length of this field should be no more than 500 characters.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Allows filtering. Supported syntax: * Filter expressions are made up of one
+           * or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
+           * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the
+           * form of `{field} {operator} {value}`. * Supported fields/values: - `project_id` - The
+           * Google Cloud project ID. - `file_store_path` - The path like "gs://bucket". -
+           * `sensitivity_level` - HIGH|MODERATE|LOW - `data_risk_level` - HIGH|MODERATE|LOW -
+           * `resource_visibility`: PUBLIC|RESTRICTED - `status_code` - an RPC status code as
+           * defined in https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto *
+           * The operator must be `=` or `!=`. Examples: * `project_id = 12345 AND status_code = 1`
+           * * `project_id = 12345 AND sensitivity_level = HIGH` * `project_id = 12345 AND
+           * resource_visibility = PUBLIC` . * 'file_store_path = "gs://mybucket"` The length of
+           * this field should be no more than 500 characters.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. Comma separated list of fields to order by, followed by `asc` or `desc`
+           * postfix. This list is case insensitive. The default sorting order is ascending.
+           * Redundant space characters are insignificant. Only one order field at a time is
+           * allowed. Examples: * `project_id asc` * `name` * `sensitivity_level desc` Supported
+           * fields are: - `project_id`: The Google Cloud project ID. - `sensitivity_level`: How
+           * sensitive the data in a table is, at most. - `data_risk_level`: How much risk is
+           * associated with this data. - `profile_last_generated`: When the profile was last
+           * updated in epoch seconds. - `last_modified`: The last time the resource was modified. -
+           * `resource_visibility`: Visibility restriction for this resource. - `name`: The name of
+           * the profile. - `create_time`: The time the file store was first created.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+         list is case insensitive. The default sorting order is ascending. Redundant space characters are
+         insignificant. Only one order field at a time is allowed. Examples: * `project_id asc` * `name` *
+         `sensitivity_level desc` Supported fields are: - `project_id`: The Google Cloud project ID. -
+         `sensitivity_level`: How sensitive the data in a table is, at most. - `data_risk_level`: How much
+         risk is associated with this data. - `profile_last_generated`: When the profile was last updated in
+         epoch seconds. - `last_modified`: The last time the resource was modified. - `resource_visibility`:
+         Visibility restriction for this resource. - `name`: The name of the profile. - `create_time`: The
+         time the file store was first created.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. Comma separated list of fields to order by, followed by `asc` or `desc`
+           * postfix. This list is case insensitive. The default sorting order is ascending.
+           * Redundant space characters are insignificant. Only one order field at a time is
+           * allowed. Examples: * `project_id asc` * `name` * `sensitivity_level desc` Supported
+           * fields are: - `project_id`: The Google Cloud project ID. - `sensitivity_level`: How
+           * sensitive the data in a table is, at most. - `data_risk_level`: How much risk is
+           * associated with this data. - `profile_last_generated`: When the profile was last
+           * updated in epoch seconds. - `last_modified`: The last time the resource was modified. -
+           * `resource_visibility`: Visibility restriction for this resource. - `name`: The name of
+           * the profile. - `create_time`: The time the file store was first created.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Size of the page. This value can be limited by the server. If zero, server
+           * returns a page of max size 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Size of the page. This value can be limited by the server. If zero, server returns a page
+         of max size 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Size of the page. This value can be limited by the server. If zero, server
+           * returns a page of max size 100.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. Page token to continue retrieval. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Page token to continue retrieval.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. Page token to continue retrieval. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the InspectTemplates collection.
        *
        * <p>The typical use is:</p>
@@ -20329,6 +20911,588 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /** The type of job. Defaults to `DlpJobType.INSPECT` */
           public List setType(java.lang.String type) {
             this.type = type;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the FileStoreDataProfiles collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DLP dlp = new DLP(...);}
+       *   {@code DLP.FileStoreDataProfiles.List request = dlp.fileStoreDataProfiles().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public FileStoreDataProfiles fileStoreDataProfiles() {
+        return new FileStoreDataProfiles();
+      }
+
+      /**
+       * The "fileStoreDataProfiles" collection of methods.
+       */
+      public class FileStoreDataProfiles {
+
+        /**
+         * Delete a FileStoreDataProfile. Will not prevent the profile from being regenerated if the
+         * resource is still included in a discovery configuration.
+         *
+         * Create a request for the method "fileStoreDataProfiles.delete".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the file store data profile.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DLPRequest<com.google.api.services.dlp.v2.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/fileStoreDataProfiles/[^/]+$");
+
+          /**
+           * Delete a FileStoreDataProfile. Will not prevent the profile from being regenerated if the
+           * resource is still included in a discovery configuration.
+           *
+           * Create a request for the method "fileStoreDataProfiles.delete".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the file store data profile.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(DLP.this, "DELETE", REST_PATH, null, com.google.api.services.dlp.v2.model.GoogleProtobufEmpty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/fileStoreDataProfiles/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Resource name of the file store data profile. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the file store data profile.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Resource name of the file store data profile. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/fileStoreDataProfiles/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a file store data profile.
+         *
+         * Create a request for the method "fileStoreDataProfiles.get".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name, for example
+         *        `organizations/12345/locations/us/fileStoreDataProfiles/53234423`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2FileStoreDataProfile> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/fileStoreDataProfiles/[^/]+$");
+
+          /**
+           * Gets a file store data profile.
+           *
+           * Create a request for the method "fileStoreDataProfiles.get".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name, for example
+         *        `organizations/12345/locations/us/fileStoreDataProfiles/53234423`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2FileStoreDataProfile.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/fileStoreDataProfiles/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name, for example
+           * `organizations/12345/locations/us/fileStoreDataProfiles/53234423`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name, for example
+         `organizations/12345/locations/us/fileStoreDataProfiles/53234423`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name, for example
+           * `organizations/12345/locations/us/fileStoreDataProfiles/53234423`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/fileStoreDataProfiles/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists file store data profiles for an organization.
+         *
+         * Create a request for the method "fileStoreDataProfiles.list".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Resource name of the organization or project, for example
+         *        `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListFileStoreDataProfilesResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/fileStoreDataProfiles";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists file store data profiles for an organization.
+           *
+           * Create a request for the method "fileStoreDataProfiles.list".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Resource name of the organization or project, for example
+         *        `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListFileStoreDataProfilesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the organization or project, for example
+           * `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Resource name of the organization or project, for example
+         `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Resource name of the organization or project, for example
+           * `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Allows filtering. Supported syntax: * Filter expressions are made up of one
+           * or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
+           * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the
+           * form of `{field} {operator} {value}`. * Supported fields/values: - `project_id` - The
+           * Google Cloud project ID. - `file_store_path` - The path like "gs://bucket". -
+           * `sensitivity_level` - HIGH|MODERATE|LOW - `data_risk_level` - HIGH|MODERATE|LOW -
+           * `resource_visibility`: PUBLIC|RESTRICTED - `status_code` - an RPC status code as
+           * defined in https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto *
+           * The operator must be `=` or `!=`. Examples: * `project_id = 12345 AND status_code = 1`
+           * * `project_id = 12345 AND sensitivity_level = HIGH` * `project_id = 12345 AND
+           * resource_visibility = PUBLIC` . * 'file_store_path = "gs://mybucket"` The length of
+           * this field should be no more than 500 characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+         restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A sequence of
+         restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. *
+         Supported fields/values: - `project_id` - The Google Cloud project ID. - `file_store_path` - The
+         path like "gs://bucket". - `sensitivity_level` - HIGH|MODERATE|LOW - `data_risk_level` -
+         HIGH|MODERATE|LOW - `resource_visibility`: PUBLIC|RESTRICTED - `status_code` - an RPC status code
+         as defined in https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The
+         operator must be `=` or `!=`. Examples: * `project_id = 12345 AND status_code = 1` * `project_id =
+         12345 AND sensitivity_level = HIGH` * `project_id = 12345 AND resource_visibility = PUBLIC` . *
+         'file_store_path = "gs://mybucket"` The length of this field should be no more than 500 characters.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Allows filtering. Supported syntax: * Filter expressions are made up of one
+           * or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
+           * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the
+           * form of `{field} {operator} {value}`. * Supported fields/values: - `project_id` - The
+           * Google Cloud project ID. - `file_store_path` - The path like "gs://bucket". -
+           * `sensitivity_level` - HIGH|MODERATE|LOW - `data_risk_level` - HIGH|MODERATE|LOW -
+           * `resource_visibility`: PUBLIC|RESTRICTED - `status_code` - an RPC status code as
+           * defined in https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto *
+           * The operator must be `=` or `!=`. Examples: * `project_id = 12345 AND status_code = 1`
+           * * `project_id = 12345 AND sensitivity_level = HIGH` * `project_id = 12345 AND
+           * resource_visibility = PUBLIC` . * 'file_store_path = "gs://mybucket"` The length of
+           * this field should be no more than 500 characters.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. Comma separated list of fields to order by, followed by `asc` or `desc`
+           * postfix. This list is case insensitive. The default sorting order is ascending.
+           * Redundant space characters are insignificant. Only one order field at a time is
+           * allowed. Examples: * `project_id asc` * `name` * `sensitivity_level desc` Supported
+           * fields are: - `project_id`: The Google Cloud project ID. - `sensitivity_level`: How
+           * sensitive the data in a table is, at most. - `data_risk_level`: How much risk is
+           * associated with this data. - `profile_last_generated`: When the profile was last
+           * updated in epoch seconds. - `last_modified`: The last time the resource was modified. -
+           * `resource_visibility`: Visibility restriction for this resource. - `name`: The name of
+           * the profile. - `create_time`: The time the file store was first created.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+         list is case insensitive. The default sorting order is ascending. Redundant space characters are
+         insignificant. Only one order field at a time is allowed. Examples: * `project_id asc` * `name` *
+         `sensitivity_level desc` Supported fields are: - `project_id`: The Google Cloud project ID. -
+         `sensitivity_level`: How sensitive the data in a table is, at most. - `data_risk_level`: How much
+         risk is associated with this data. - `profile_last_generated`: When the profile was last updated in
+         epoch seconds. - `last_modified`: The last time the resource was modified. - `resource_visibility`:
+         Visibility restriction for this resource. - `name`: The name of the profile. - `create_time`: The
+         time the file store was first created.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. Comma separated list of fields to order by, followed by `asc` or `desc`
+           * postfix. This list is case insensitive. The default sorting order is ascending.
+           * Redundant space characters are insignificant. Only one order field at a time is
+           * allowed. Examples: * `project_id asc` * `name` * `sensitivity_level desc` Supported
+           * fields are: - `project_id`: The Google Cloud project ID. - `sensitivity_level`: How
+           * sensitive the data in a table is, at most. - `data_risk_level`: How much risk is
+           * associated with this data. - `profile_last_generated`: When the profile was last
+           * updated in epoch seconds. - `last_modified`: The last time the resource was modified. -
+           * `resource_visibility`: Visibility restriction for this resource. - `name`: The name of
+           * the profile. - `create_time`: The time the file store was first created.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Size of the page. This value can be limited by the server. If zero, server
+           * returns a page of max size 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Size of the page. This value can be limited by the server. If zero, server returns a page
+         of max size 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Size of the page. This value can be limited by the server. If zero, server
+           * returns a page of max size 100.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. Page token to continue retrieval. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Page token to continue retrieval.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. Page token to continue retrieval. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
             return this;
           }
 

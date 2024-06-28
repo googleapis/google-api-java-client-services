@@ -39,6 +39,14 @@ public final class GooglePrivacyDlpV2DataProfilePubSubMessage extends com.google
   private java.lang.String event;
 
   /**
+   * If `DetailLevel` is `FILE_STORE_PROFILE` this will be fully populated. Otherwise, if
+   * `DetailLevel` is `RESOURCE_NAME`, then only `name` and `file_store_path` will be populated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2FileStoreDataProfile fileStoreProfile;
+
+  /**
    * If `DetailLevel` is `TABLE_PROFILE` this will be fully populated. Otherwise, if `DetailLevel`
    * is `RESOURCE_NAME`, then only `name` and `full_resource` will be populated.
    * The value may be {@code null}.
@@ -60,6 +68,25 @@ public final class GooglePrivacyDlpV2DataProfilePubSubMessage extends com.google
    */
   public GooglePrivacyDlpV2DataProfilePubSubMessage setEvent(java.lang.String event) {
     this.event = event;
+    return this;
+  }
+
+  /**
+   * If `DetailLevel` is `FILE_STORE_PROFILE` this will be fully populated. Otherwise, if
+   * `DetailLevel` is `RESOURCE_NAME`, then only `name` and `file_store_path` will be populated.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2FileStoreDataProfile getFileStoreProfile() {
+    return fileStoreProfile;
+  }
+
+  /**
+   * If `DetailLevel` is `FILE_STORE_PROFILE` this will be fully populated. Otherwise, if
+   * `DetailLevel` is `RESOURCE_NAME`, then only `name` and `file_store_path` will be populated.
+   * @param fileStoreProfile fileStoreProfile or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DataProfilePubSubMessage setFileStoreProfile(GooglePrivacyDlpV2FileStoreDataProfile fileStoreProfile) {
+    this.fileStoreProfile = fileStoreProfile;
     return this;
   }
 

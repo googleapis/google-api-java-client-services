@@ -17,7 +17,7 @@
 package com.google.api.services.analyticshub.v1.model;
 
 /**
- * Resource in this dataset that is selectively shared.
+ * Sets the `data` field as the HTTP body for delivery.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Analytics Hub API. For a detailed explanation see:
@@ -27,43 +27,43 @@ package com.google.api.services.analyticshub.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SelectedResource extends com.google.api.client.json.GenericJson {
+public final class NoWrapper extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Format: For table: `projects/{projectId}/datasets/{datasetId}/tables/{tableId}`
-   * Example:"projects/test_project/datasets/test_dataset/tables/test_table"
+   * Optional. When true, writes the Pub/Sub message metadata to `x-goog-pubsub-:` headers of the
+   * HTTP request. Writes the Pub/Sub message attributes to `:` headers of the HTTP request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String table;
+  private java.lang.Boolean writeMetadata;
 
   /**
-   * Optional. Format: For table: `projects/{projectId}/datasets/{datasetId}/tables/{tableId}`
-   * Example:"projects/test_project/datasets/test_dataset/tables/test_table"
+   * Optional. When true, writes the Pub/Sub message metadata to `x-goog-pubsub-:` headers of the
+   * HTTP request. Writes the Pub/Sub message attributes to `:` headers of the HTTP request.
    * @return value or {@code null} for none
    */
-  public java.lang.String getTable() {
-    return table;
+  public java.lang.Boolean getWriteMetadata() {
+    return writeMetadata;
   }
 
   /**
-   * Optional. Format: For table: `projects/{projectId}/datasets/{datasetId}/tables/{tableId}`
-   * Example:"projects/test_project/datasets/test_dataset/tables/test_table"
-   * @param table table or {@code null} for none
+   * Optional. When true, writes the Pub/Sub message metadata to `x-goog-pubsub-:` headers of the
+   * HTTP request. Writes the Pub/Sub message attributes to `:` headers of the HTTP request.
+   * @param writeMetadata writeMetadata or {@code null} for none
    */
-  public SelectedResource setTable(java.lang.String table) {
-    this.table = table;
+  public NoWrapper setWriteMetadata(java.lang.Boolean writeMetadata) {
+    this.writeMetadata = writeMetadata;
     return this;
   }
 
   @Override
-  public SelectedResource set(String fieldName, Object value) {
-    return (SelectedResource) super.set(fieldName, value);
+  public NoWrapper set(String fieldName, Object value) {
+    return (NoWrapper) super.set(fieldName, value);
   }
 
   @Override
-  public SelectedResource clone() {
-    return (SelectedResource) super.clone();
+  public NoWrapper clone() {
+    return (NoWrapper) super.clone();
   }
 
 }

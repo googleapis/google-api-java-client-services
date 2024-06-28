@@ -69,6 +69,20 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Linked resources created in the subscription. Only contains values if state =
+   * STATE_ACTIVE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<LinkedResource> linkedResources;
+
+  static {
+    // hack to force ProGuard to consider LinkedResource used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(LinkedResource.class);
+  }
+
+  /**
    * Output only. Resource name of the source Listing. e.g.
    * projects/123/locations/US/dataExchanges/456/listings/789
    * The value may be {@code null}.
@@ -97,6 +111,13 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String organizationId;
+
+  /**
+   * Output only. Listing shared asset type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceType;
 
   /**
    * Output only. Current state of the subscription.
@@ -189,6 +210,25 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Linked resources created in the subscription. Only contains values if state =
+   * STATE_ACTIVE.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<LinkedResource> getLinkedResources() {
+    return linkedResources;
+  }
+
+  /**
+   * Output only. Linked resources created in the subscription. Only contains values if state =
+   * STATE_ACTIVE.
+   * @param linkedResources linkedResources or {@code null} for none
+   */
+  public Subscription setLinkedResources(java.util.List<LinkedResource> linkedResources) {
+    this.linkedResources = linkedResources;
+    return this;
+  }
+
+  /**
    * Output only. Resource name of the source Listing. e.g.
    * projects/123/locations/US/dataExchanges/456/listings/789
    * @return value or {@code null} for none
@@ -257,6 +297,23 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    */
   public Subscription setOrganizationId(java.lang.String organizationId) {
     this.organizationId = organizationId;
+    return this;
+  }
+
+  /**
+   * Output only. Listing shared asset type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceType() {
+    return resourceType;
+  }
+
+  /**
+   * Output only. Listing shared asset type.
+   * @param resourceType resourceType or {@code null} for none
+   */
+  public Subscription setResourceType(java.lang.String resourceType) {
+    this.resourceType = resourceType;
     return this;
   }
 

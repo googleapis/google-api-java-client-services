@@ -17,7 +17,7 @@
 package com.google.api.services.analyticshub.v1.model;
 
 /**
- * Resource in this dataset that is selectively shared.
+ * Defines the destination Pub/Sub subscription.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Analytics Hub API. For a detailed explanation see:
@@ -27,43 +27,40 @@ package com.google.api.services.analyticshub.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SelectedResource extends com.google.api.client.json.GenericJson {
+public final class DestinationPubSubSubscription extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Format: For table: `projects/{projectId}/datasets/{datasetId}/tables/{tableId}`
-   * Example:"projects/test_project/datasets/test_dataset/tables/test_table"
+   * Required. Destination Pub/Sub subscription resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String table;
+  private GooglePubsubV1Subscription pubsubSubscription;
 
   /**
-   * Optional. Format: For table: `projects/{projectId}/datasets/{datasetId}/tables/{tableId}`
-   * Example:"projects/test_project/datasets/test_dataset/tables/test_table"
+   * Required. Destination Pub/Sub subscription resource.
    * @return value or {@code null} for none
    */
-  public java.lang.String getTable() {
-    return table;
+  public GooglePubsubV1Subscription getPubsubSubscription() {
+    return pubsubSubscription;
   }
 
   /**
-   * Optional. Format: For table: `projects/{projectId}/datasets/{datasetId}/tables/{tableId}`
-   * Example:"projects/test_project/datasets/test_dataset/tables/test_table"
-   * @param table table or {@code null} for none
+   * Required. Destination Pub/Sub subscription resource.
+   * @param pubsubSubscription pubsubSubscription or {@code null} for none
    */
-  public SelectedResource setTable(java.lang.String table) {
-    this.table = table;
+  public DestinationPubSubSubscription setPubsubSubscription(GooglePubsubV1Subscription pubsubSubscription) {
+    this.pubsubSubscription = pubsubSubscription;
     return this;
   }
 
   @Override
-  public SelectedResource set(String fieldName, Object value) {
-    return (SelectedResource) super.set(fieldName, value);
+  public DestinationPubSubSubscription set(String fieldName, Object value) {
+    return (DestinationPubSubSubscription) super.set(fieldName, value);
   }
 
   @Override
-  public SelectedResource clone() {
-    return (SelectedResource) super.clone();
+  public DestinationPubSubSubscription clone() {
+    return (DestinationPubSubSubscription) super.clone();
   }
 
 }

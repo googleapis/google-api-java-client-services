@@ -17,7 +17,7 @@
 package com.google.api.services.firebaseappdistribution.v1alpha.model;
 
 /**
- * Configuration for Robo crawler
+ * Instructions for AI driven test
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase App Distribution API. For a detailed
@@ -28,64 +28,64 @@ package com.google.api.services.firebaseappdistribution.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleFirebaseAppdistroV1alphaRoboCrawler extends com.google.api.client.json.GenericJson {
+public final class GoogleFirebaseAppdistroV1alphaAiInstructions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Instructions for AI driven test
+   * Optional. Describes the app to give the AI some context
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleFirebaseAppdistroV1alphaAiInstructions aiInstructions;
+  private java.lang.String appDescription;
 
   /**
-   * Optional. Login credential for automated tests
+   * Required. Steps to be accomplished by the AI
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleFirebaseAppdistroV1alphaLoginCredential loginCredential;
+  private java.util.List<GoogleFirebaseAppdistroV1alphaAiInstructionsStep> steps;
 
   /**
-   * Optional. Instructions for AI driven test
+   * Optional. Describes the app to give the AI some context
    * @return value or {@code null} for none
    */
-  public GoogleFirebaseAppdistroV1alphaAiInstructions getAiInstructions() {
-    return aiInstructions;
+  public java.lang.String getAppDescription() {
+    return appDescription;
   }
 
   /**
-   * Optional. Instructions for AI driven test
-   * @param aiInstructions aiInstructions or {@code null} for none
+   * Optional. Describes the app to give the AI some context
+   * @param appDescription appDescription or {@code null} for none
    */
-  public GoogleFirebaseAppdistroV1alphaRoboCrawler setAiInstructions(GoogleFirebaseAppdistroV1alphaAiInstructions aiInstructions) {
-    this.aiInstructions = aiInstructions;
+  public GoogleFirebaseAppdistroV1alphaAiInstructions setAppDescription(java.lang.String appDescription) {
+    this.appDescription = appDescription;
     return this;
   }
 
   /**
-   * Optional. Login credential for automated tests
+   * Required. Steps to be accomplished by the AI
    * @return value or {@code null} for none
    */
-  public GoogleFirebaseAppdistroV1alphaLoginCredential getLoginCredential() {
-    return loginCredential;
+  public java.util.List<GoogleFirebaseAppdistroV1alphaAiInstructionsStep> getSteps() {
+    return steps;
   }
 
   /**
-   * Optional. Login credential for automated tests
-   * @param loginCredential loginCredential or {@code null} for none
+   * Required. Steps to be accomplished by the AI
+   * @param steps steps or {@code null} for none
    */
-  public GoogleFirebaseAppdistroV1alphaRoboCrawler setLoginCredential(GoogleFirebaseAppdistroV1alphaLoginCredential loginCredential) {
-    this.loginCredential = loginCredential;
+  public GoogleFirebaseAppdistroV1alphaAiInstructions setSteps(java.util.List<GoogleFirebaseAppdistroV1alphaAiInstructionsStep> steps) {
+    this.steps = steps;
     return this;
   }
 
   @Override
-  public GoogleFirebaseAppdistroV1alphaRoboCrawler set(String fieldName, Object value) {
-    return (GoogleFirebaseAppdistroV1alphaRoboCrawler) super.set(fieldName, value);
+  public GoogleFirebaseAppdistroV1alphaAiInstructions set(String fieldName, Object value) {
+    return (GoogleFirebaseAppdistroV1alphaAiInstructions) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleFirebaseAppdistroV1alphaRoboCrawler clone() {
-    return (GoogleFirebaseAppdistroV1alphaRoboCrawler) super.clone();
+  public GoogleFirebaseAppdistroV1alphaAiInstructions clone() {
+    return (GoogleFirebaseAppdistroV1alphaAiInstructions) super.clone();
   }
 
 }

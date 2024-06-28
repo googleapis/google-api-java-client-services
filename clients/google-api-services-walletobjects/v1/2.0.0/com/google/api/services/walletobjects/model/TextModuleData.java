@@ -48,7 +48,9 @@ public final class TextModuleData extends com.google.api.client.json.GenericJson
 
   /**
    * The ID associated with a text module. This field is here to enable ease of management of text
-   * modules.
+   * modules and referencing them in template overrides. The ID should only include alphanumeric
+   * characters, '_', or '-'. It can not include dots, as dots are used to separate fields within
+   * FieldReference.fieldPaths in template overrides.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +112,9 @@ public final class TextModuleData extends com.google.api.client.json.GenericJson
 
   /**
    * The ID associated with a text module. This field is here to enable ease of management of text
-   * modules.
+   * modules and referencing them in template overrides. The ID should only include alphanumeric
+   * characters, '_', or '-'. It can not include dots, as dots are used to separate fields within
+   * FieldReference.fieldPaths in template overrides.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -119,7 +123,9 @@ public final class TextModuleData extends com.google.api.client.json.GenericJson
 
   /**
    * The ID associated with a text module. This field is here to enable ease of management of text
-   * modules.
+   * modules and referencing them in template overrides. The ID should only include alphanumeric
+   * characters, '_', or '-'. It can not include dots, as dots are used to separate fields within
+   * FieldReference.fieldPaths in template overrides.
    * @param id id or {@code null} for none
    */
   public TextModuleData setId(java.lang.String id) {

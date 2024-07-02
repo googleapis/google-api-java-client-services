@@ -1792,8 +1792,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the parent project. For example: projects/{$project_number} or
-       *        projects/{$project_id}
+       * @param parent Name of the parent project. For example: projects/{$project_number} or projects/{$project_id}
        * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig}
        * @return the request
        */
@@ -1821,8 +1820,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the parent project. For example: projects/{$project_number} or
-       *        projects/{$project_id}
+         * @param parent Name of the parent project. For example: projects/{$project_number} or projects/{$project_id}
          * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig}
          * @since 1.13
          */
@@ -1892,21 +1890,20 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required. Name of the parent project. For example: projects/{$project_number} or
+         * Name of the parent project. For example: projects/{$project_number} or
          * projects/{$project_id}
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the parent project. For example: projects/{$project_number} or
-       projects/{$project_id}
+        /** Name of the parent project. For example: projects/{$project_number} or projects/{$project_id}
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. Name of the parent project. For example: projects/{$project_number} or
+         * Name of the parent project. For example: projects/{$project_number} or
          * projects/{$project_id}
          */
         public Create setParent(java.lang.String parent) {
@@ -6493,8 +6490,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the cloudbuild server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of the parent project. For example: projects/{$project_number} or
-         *        projects/{$project_id}
+         * @param parent Name of the parent project. For example: projects/{$project_number} or projects/{$project_id}
          * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig}
          * @return the request
          */
@@ -6522,8 +6518,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of the parent project. For example: projects/{$project_number} or
-         *        projects/{$project_id}
+           * @param parent Name of the parent project. For example: projects/{$project_number} or projects/{$project_id}
            * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig}
            * @since 1.13
            */
@@ -6593,21 +6588,20 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required. Name of the parent project. For example: projects/{$project_number} or
+           * Name of the parent project. For example: projects/{$project_number} or
            * projects/{$project_id}
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of the parent project. For example: projects/{$project_number} or
-         projects/{$project_id}
+          /** Name of the parent project. For example: projects/{$project_number} or projects/{$project_id}
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. Name of the parent project. For example: projects/{$project_number} or
+           * Name of the parent project. For example: projects/{$project_number} or
            * projects/{$project_id}
            */
           public Create setParent(java.lang.String parent) {

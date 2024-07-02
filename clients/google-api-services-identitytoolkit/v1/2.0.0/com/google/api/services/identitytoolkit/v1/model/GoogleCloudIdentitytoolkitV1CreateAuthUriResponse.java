@@ -91,9 +91,9 @@ public final class GoogleCloudIdentitytoolkitV1CreateAuthUriResponse extends com
   /**
    * The list of sign-in methods that the user has previously used. Each element is one of
    * `password`, `emailLink`, or the provider ID of an IdP. Present only when a registered email
-   * identifier is set in the request. If [email enumeration protection](https://cloud.google.com
-   * /identity-platform/docs/admin/email-enumeration-protection) is enabled, this method returns an
-   * empty list.
+   * identifier is set in the request. If [email enumeration
+   * protection](https://cloud.google.com/identity-platform/docs/admin/email-enumeration-protection)
+   * is enabled, this method returns an empty list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -244,9 +244,9 @@ public final class GoogleCloudIdentitytoolkitV1CreateAuthUriResponse extends com
   /**
    * The list of sign-in methods that the user has previously used. Each element is one of
    * `password`, `emailLink`, or the provider ID of an IdP. Present only when a registered email
-   * identifier is set in the request. If [email enumeration protection](https://cloud.google.com
-   * /identity-platform/docs/admin/email-enumeration-protection) is enabled, this method returns an
-   * empty list.
+   * identifier is set in the request. If [email enumeration
+   * protection](https://cloud.google.com/identity-platform/docs/admin/email-enumeration-protection)
+   * is enabled, this method returns an empty list.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSigninMethods() {
@@ -256,9 +256,9 @@ public final class GoogleCloudIdentitytoolkitV1CreateAuthUriResponse extends com
   /**
    * The list of sign-in methods that the user has previously used. Each element is one of
    * `password`, `emailLink`, or the provider ID of an IdP. Present only when a registered email
-   * identifier is set in the request. If [email enumeration protection](https://cloud.google.com
-   * /identity-platform/docs/admin/email-enumeration-protection) is enabled, this method returns an
-   * empty list.
+   * identifier is set in the request. If [email enumeration
+   * protection](https://cloud.google.com/identity-platform/docs/admin/email-enumeration-protection)
+   * is enabled, this method returns an empty list.
    * @param signinMethods signinMethods or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1CreateAuthUriResponse setSigninMethods(java.util.List<java.lang.String> signinMethods) {

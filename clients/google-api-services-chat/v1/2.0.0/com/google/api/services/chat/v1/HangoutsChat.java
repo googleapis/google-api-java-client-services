@@ -1644,12 +1644,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * the space](https://support.google.com/chat/answer/7664687) if [the organization allows
        * users to change their history setting](https://support.google.com/a/answer/7664184).
        * Warning: mutually exclusive with all other field paths.) `space_history_state` is not
-       * supported with admin access. - Developer Preview: `access_settings.audience` (Supports
-       * changing the [access setting](https://support.google.com/chat/answer/11971020) of a space.
-       * If no audience is specified in the access setting, the space's access setting is updated to
-       * restricted. Warning: mutually exclusive with all other field paths.)
-       * `access_settings.audience` is not supported with admin access. - Developer Preview:
-       * Supports changing the [permission
+       * supported with admin access. - `access_settings.audience` (Supports changing the [access
+       * setting](https://support.google.com/chat/answer/11971020) of who can discover the space,
+       * join the space, and preview the messages in space. If no audience is specified in the
+       * access setting, the space's access setting is updated to private. Warning: mutually
+       * exclusive with all other field paths.) `access_settings.audience` is not supported with
+       * admin access. - Developer Preview: Supports changing the [permission
        * settings](https://support.google.com/chat/answer/13340792) of a space, supported field
        * paths include: `permission_settings.manage_members_and_groups`,
        * `permission_settings.modify_space_details`, `permission_settings.toggle_history`,
@@ -1676,14 +1676,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      `space_history_state` (Supports [turning history on or off for the
      space](https://support.google.com/chat/answer/7664687) if [the organization allows users to change
      their history setting](https://support.google.com/a/answer/7664184). Warning: mutually exclusive
-     with all other field paths.) `space_history_state` is not supported with admin access. - Developer
-     Preview: `access_settings.audience` (Supports changing the [access
-     setting](https://support.google.com/chat/answer/11971020) of a space. If no audience is specified
-     in the access setting, the space's access setting is updated to restricted. Warning: mutually
-     exclusive with all other field paths.) `access_settings.audience` is not supported with admin
-     access. - Developer Preview: Supports changing the [permission
-     settings](https://support.google.com/chat/answer/13340792) of a space, supported field paths
-     include: `permission_settings.manage_members_and_groups`,
+     with all other field paths.) `space_history_state` is not supported with admin access. -
+     `access_settings.audience` (Supports changing the [access
+     setting](https://support.google.com/chat/answer/11971020) of who can discover the space, join the
+     space, and preview the messages in space. If no audience is specified in the access setting, the
+     space's access setting is updated to private. Warning: mutually exclusive with all other field
+     paths.) `access_settings.audience` is not supported with admin access. - Developer Preview:
+     Supports changing the [permission settings](https://support.google.com/chat/answer/13340792) of a
+     space, supported field paths include: `permission_settings.manage_members_and_groups`,
      `permission_settings.modify_space_details`, `permission_settings.toggle_history`,
      `permission_settings.use_at_mention_all`, `permission_settings.manage_apps`,
      `permission_settings.manage_webhooks`, `permission_settings.reply_messages` (Warning: mutually
@@ -1712,12 +1712,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * the space](https://support.google.com/chat/answer/7664687) if [the organization allows
        * users to change their history setting](https://support.google.com/a/answer/7664184).
        * Warning: mutually exclusive with all other field paths.) `space_history_state` is not
-       * supported with admin access. - Developer Preview: `access_settings.audience` (Supports
-       * changing the [access setting](https://support.google.com/chat/answer/11971020) of a space.
-       * If no audience is specified in the access setting, the space's access setting is updated to
-       * restricted. Warning: mutually exclusive with all other field paths.)
-       * `access_settings.audience` is not supported with admin access. - Developer Preview:
-       * Supports changing the [permission
+       * supported with admin access. - `access_settings.audience` (Supports changing the [access
+       * setting](https://support.google.com/chat/answer/11971020) of who can discover the space,
+       * join the space, and preview the messages in space. If no audience is specified in the
+       * access setting, the space's access setting is updated to private. Warning: mutually
+       * exclusive with all other field paths.) `access_settings.audience` is not supported with
+       * admin access. - Developer Preview: Supports changing the [permission
        * settings](https://support.google.com/chat/answer/13340792) of a space, supported field
        * paths include: `permission_settings.manage_members_and_groups`,
        * `permission_settings.modify_space_details`, `permission_settings.toggle_history`,
@@ -1745,22 +1745,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * For users in the same Workspace organization `{user}` can also be the `id` for the person from
      * the People API, or the `id` for the user in the Directory API. For example, if the People API
      * Person profile ID for `user@example.com` is `123456789`, you can add the user to the space by
-     * setting the `membership.member.name` to `users/user@example.com` or `users/123456789`. For a
-     * named space or group chat, if the caller blocks, or is blocked by some members, or doesn't have
-     * permission to add some members, then those members aren't added to the created space. To create a
-     * direct message (DM) between the calling user and another human user, specify exactly one
-     * membership to represent the human user. If one user blocks the other, the request fails and the
-     * DM isn't created. To create a DM between the calling user and the calling app, set
-     * `Space.singleUserBotDm` to `true` and don't specify any memberships. You can only use this method
-     * to set up a DM with the calling app. To add the calling app as a member of a space or an existing
-     * DM between two human users, see [Invite or add a user or app to a
-     * space](https://developers.google.com/workspace/chat/create-members). If a DM already exists
-     * between two users, even when one user blocks the other at the time a request is made, then the
-     * existing DM is returned. Spaces with threaded replies aren't supported. If you receive the error
-     * message `ALREADY_EXISTS` when setting up a space, try a different `displayName`. An existing
-     * space within the Google Workspace organization might already use this display name. Requires
-     * [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-     * user).
+     * setting the `membership.member.name` to `users/user@example.com` or `users/123456789`. To specify
+     * the Google groups to add, add memberships with the appropriate `membership.group_member.name`. To
+     * add or invite a Google group, use `groups/{group}`, where `{group}` is the `id` for the group
+     * from the Cloud Identity Groups API. For example, you can use [Cloud Identity Groups lookup
+     * API](https://cloud.google.com/identity/docs/reference/rest/v1/groups/lookup) to retrieve the ID
+     * `123456789` for group email `group@example.com`, then you can add the group to the space by
+     * setting the `membership.group_member.name` to `groups/123456789`. Group email is not supported,
+     * and Google groups can only be added as members in named spaces. For a named space or group chat,
+     * if the caller blocks, or is blocked by some members, or doesn't have permission to add some
+     * members, then those members aren't added to the created space. To create a direct message (DM)
+     * between the calling user and another human user, specify exactly one membership to represent the
+     * human user. If one user blocks the other, the request fails and the DM isn't created. To create a
+     * DM between the calling user and the calling app, set `Space.singleUserBotDm` to `true` and don't
+     * specify any memberships. You can only use this method to set up a DM with the calling app. To add
+     * the calling app as a member of a space or an existing DM between two human users, see [Invite or
+     * add a user or app to a space](https://developers.google.com/workspace/chat/create-members). If a
+     * DM already exists between two users, even when one user blocks the other at the time a request is
+     * made, then the existing DM is returned. Spaces with threaded replies aren't supported. If you
+     * receive the error message `ALREADY_EXISTS` when setting up a space, try a different
+     * `displayName`. An existing space within the Google Workspace organization might already use this
+     * display name. Requires [user
+     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
      *
      * Create a request for the method "spaces.setup".
      *
@@ -1790,14 +1796,22 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * the `id` for the person from the People API, or the `id` for the user in the Directory API. For
        * example, if the People API Person profile ID for `user@example.com` is `123456789`, you can add
        * the user to the space by setting the `membership.member.name` to `users/user@example.com` or
-       * `users/123456789`. For a named space or group chat, if the caller blocks, or is blocked by some
-       * members, or doesn't have permission to add some members, then those members aren't added to the
-       * created space. To create a direct message (DM) between the calling user and another human user,
-       * specify exactly one membership to represent the human user. If one user blocks the other, the
-       * request fails and the DM isn't created. To create a DM between the calling user and the calling
-       * app, set `Space.singleUserBotDm` to `true` and don't specify any memberships. You can only use
-       * this method to set up a DM with the calling app. To add the calling app as a member of a space
-       * or an existing DM between two human users, see [Invite or add a user or app to a
+       * `users/123456789`. To specify the Google groups to add, add memberships with the appropriate
+       * `membership.group_member.name`. To add or invite a Google group, use `groups/{group}`, where
+       * `{group}` is the `id` for the group from the Cloud Identity Groups API. For example, you can
+       * use [Cloud Identity Groups lookup
+       * API](https://cloud.google.com/identity/docs/reference/rest/v1/groups/lookup) to retrieve the ID
+       * `123456789` for group email `group@example.com`, then you can add the group to the space by
+       * setting the `membership.group_member.name` to `groups/123456789`. Group email is not supported,
+       * and Google groups can only be added as members in named spaces. For a named space or group
+       * chat, if the caller blocks, or is blocked by some members, or doesn't have permission to add
+       * some members, then those members aren't added to the created space. To create a direct message
+       * (DM) between the calling user and another human user, specify exactly one membership to
+       * represent the human user. If one user blocks the other, the request fails and the DM isn't
+       * created. To create a DM between the calling user and the calling app, set
+       * `Space.singleUserBotDm` to `true` and don't specify any memberships. You can only use this
+       * method to set up a DM with the calling app. To add the calling app as a member of a space or an
+       * existing DM between two human users, see [Invite or add a user or app to a
        * space](https://developers.google.com/workspace/chat/create-members). If a DM already exists
        * between two users, even when one user blocks the other at the time a request is made, then the
        * existing DM is returned. Spaces with threaded replies aren't supported. If you receive the
@@ -1909,14 +1923,20 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * accept the space invitation before joining. Otherwise, creating a membership adds the member
        * directly to the specified space. Requires [user
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
-       * To specify the member to add, set the `membership.member.name` for the human or app member. - To
-       * add the calling app to a space or a direct message between two human users, use `users/app`.
-       * Unable to add other apps to the space. - To add a human user, use `users/{user}`, where `{user}`
-       * can be the email address for the user. For users in the same Workspace organization `{user}` can
-       * also be the `id` for the person from the People API, or the `id` for the user in the Directory
-       * API. For example, if the People API Person profile ID for `user@example.com` is `123456789`, you
-       * can add the user to the space by setting the `membership.member.name` to `users/user@example.com`
-       * or `users/123456789`.
+       * To specify the member to add, set the `membership.member.name` for the human or app member, or
+       * set the `membership.group_member.name` for the group member. - To add the calling app to a space
+       * or a direct message between two human users, use `users/app`. Unable to add other apps to the
+       * space. - To add a human user, use `users/{user}`, where `{user}` can be the email address for the
+       * user. For users in the same Workspace organization `{user}` can also be the `id` for the person
+       * from the People API, or the `id` for the user in the Directory API. For example, if the People
+       * API Person profile ID for `user@example.com` is `123456789`, you can add the user to the space by
+       * setting the `membership.member.name` to `users/user@example.com` or `users/123456789`. - To add
+       * or invite a Google group in a named space, use `groups/{group}`, where `{group}` is the `id` for
+       * the group from the Cloud Identity Groups API. For example, you can use [Cloud Identity Groups
+       * lookup API](https://cloud.google.com/identity/docs/reference/rest/v1/groups/lookup) to retrieve
+       * the ID `123456789` for group email `group@example.com`, then you can add or invite the group to a
+       * named space by setting the `membership.group_member.name` to `groups/123456789`. Group email is
+       * not supported, and Google groups can only be added as members in named spaces.
        *
        * Create a request for the method "members.create".
        *
@@ -1948,14 +1968,21 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * invited, and must accept the space invitation before joining. Otherwise, creating a membership
          * adds the member directly to the specified space. Requires [user
          * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
-         * To specify the member to add, set the `membership.member.name` for the human or app member. -
-         * To add the calling app to a space or a direct message between two human users, use `users/app`.
-         * Unable to add other apps to the space. - To add a human user, use `users/{user}`, where
-         * `{user}` can be the email address for the user. For users in the same Workspace organization
-         * `{user}` can also be the `id` for the person from the People API, or the `id` for the user in
-         * the Directory API. For example, if the People API Person profile ID for `user@example.com` is
-         * `123456789`, you can add the user to the space by setting the `membership.member.name` to
-         * `users/user@example.com` or `users/123456789`.
+         * To specify the member to add, set the `membership.member.name` for the human or app member, or
+         * set the `membership.group_member.name` for the group member. - To add the calling app to a
+         * space or a direct message between two human users, use `users/app`. Unable to add other apps to
+         * the space. - To add a human user, use `users/{user}`, where `{user}` can be the email address
+         * for the user. For users in the same Workspace organization `{user}` can also be the `id` for
+         * the person from the People API, or the `id` for the user in the Directory API. For example, if
+         * the People API Person profile ID for `user@example.com` is `123456789`, you can add the user to
+         * the space by setting the `membership.member.name` to `users/user@example.com` or
+         * `users/123456789`. - To add or invite a Google group in a named space, use `groups/{group}`,
+         * where `{group}` is the `id` for the group from the Cloud Identity Groups API. For example, you
+         * can use [Cloud Identity Groups lookup
+         * API](https://cloud.google.com/identity/docs/reference/rest/v1/groups/lookup) to retrieve the ID
+         * `123456789` for group email `group@example.com`, then you can add or invite the group to a
+         * named space by setting the `membership.group_member.name` to `groups/123456789`. Group email is
+         * not supported, and Google groups can only be added as members in named spaces.
          *
          * Create a request for the method "members.create".
          *

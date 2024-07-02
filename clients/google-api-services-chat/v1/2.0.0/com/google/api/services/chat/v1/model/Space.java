@@ -31,6 +31,14 @@ package com.google.api.services.chat.v1.model;
 public final class Space extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Specifies the [access setting](https://support.google.com/chat/answer/11971020) of
+   * the space. Only populated when the `space_type` is `SPACE`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AccessSettings accessSettings;
+
+  /**
    * Output only. For direct message (DM) spaces with a Chat app, whether the space was created by a
    * Google Workspace administrator. Administrators can install and set up a direct message with a
    * Chat app on behalf of users in their organization. To support admin install, your Chat app must
@@ -132,6 +140,13 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private java.lang.String spaceType;
 
   /**
+   * Output only. The URI for a user to access the space.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String spaceUri;
+
+  /**
    * Output only. Deprecated: Use `spaceThreadingState` instead. Whether messages are threaded in
    * this space.
    * The value may be {@code null}.
@@ -145,6 +160,25 @@ public final class Space extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Optional. Specifies the [access setting](https://support.google.com/chat/answer/11971020) of
+   * the space. Only populated when the `space_type` is `SPACE`.
+   * @return value or {@code null} for none
+   */
+  public AccessSettings getAccessSettings() {
+    return accessSettings;
+  }
+
+  /**
+   * Optional. Specifies the [access setting](https://support.google.com/chat/answer/11971020) of
+   * the space. Only populated when the `space_type` is `SPACE`.
+   * @param accessSettings accessSettings or {@code null} for none
+   */
+  public Space setAccessSettings(AccessSettings accessSettings) {
+    this.accessSettings = accessSettings;
+    return this;
+  }
 
   /**
    * Output only. For direct message (DM) spaces with a Chat app, whether the space was created by a
@@ -378,6 +412,23 @@ public final class Space extends com.google.api.client.json.GenericJson {
    */
   public Space setSpaceType(java.lang.String spaceType) {
     this.spaceType = spaceType;
+    return this;
+  }
+
+  /**
+   * Output only. The URI for a user to access the space.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSpaceUri() {
+    return spaceUri;
+  }
+
+  /**
+   * Output only. The URI for a user to access the space.
+   * @param spaceUri spaceUri or {@code null} for none
+   */
+  public Space setSpaceUri(java.lang.String spaceUri) {
+    this.spaceUri = spaceUri;
     return this;
   }
 

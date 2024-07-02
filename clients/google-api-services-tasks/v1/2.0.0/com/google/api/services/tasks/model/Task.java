@@ -30,6 +30,16 @@ package com.google.api.services.tasks.model;
 public final class Task extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Context information for assigned tasks. A task can be assigned to a user,
+   * currently possible from surfaces like Docs and Chat Spaces. This field is populated for tasks
+   * assigned to the current user and identifies where the task was assigned from. This field is
+   * read-only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssignmentInfo assignmentInfo;
+
+  /**
    * Completion date of the task (as a RFC 3339 timestamp). This field is omitted if the task has
    * not been completed.
    * The value may be {@code null}.
@@ -38,7 +48,10 @@ public final class Task extends com.google.api.client.json.GenericJson {
   private java.lang.String completed;
 
   /**
-   * Flag indicating whether the task has been deleted. The default is False.
+   * Flag indicating whether the task has been deleted. For assigned tasks this field is read-only.
+   * They can only be deleted by calling tasks.delete, in which case both the assigned task and the
+   * original task (in Docs or Chat Spaces) are deleted. To delete the assigned task only, navigate
+   * to the assignment surface and unassign the task from there. The default is False.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,16 +109,17 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Notes describing the task. Optional. Maximum length allowed: 8192 characters.
+   * Notes describing the task. Tasks assigned from Google Docs cannot have notes. Optional. Maximum
+   * length allowed: 8192 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String notes;
 
   /**
-   * Output only. Parent task identifier. This field is omitted if it is a top-level task. This
-   * field is read-only. Use the "move" method to move the task under a different parent or to the
-   * top level.
+   * Output only. Parent task identifier. This field is omitted if it is a top-level task. Use the
+   * "move" method to move the task under a different parent or to the top level. A parent task can
+   * never be an assigned task (from Chat Spaces, Docs). This field is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,6 +172,29 @@ public final class Task extends com.google.api.client.json.GenericJson {
   private java.lang.String webViewLink;
 
   /**
+   * Output only. Context information for assigned tasks. A task can be assigned to a user,
+   * currently possible from surfaces like Docs and Chat Spaces. This field is populated for tasks
+   * assigned to the current user and identifies where the task was assigned from. This field is
+   * read-only.
+   * @return value or {@code null} for none
+   */
+  public AssignmentInfo getAssignmentInfo() {
+    return assignmentInfo;
+  }
+
+  /**
+   * Output only. Context information for assigned tasks. A task can be assigned to a user,
+   * currently possible from surfaces like Docs and Chat Spaces. This field is populated for tasks
+   * assigned to the current user and identifies where the task was assigned from. This field is
+   * read-only.
+   * @param assignmentInfo assignmentInfo or {@code null} for none
+   */
+  public Task setAssignmentInfo(AssignmentInfo assignmentInfo) {
+    this.assignmentInfo = assignmentInfo;
+    return this;
+  }
+
+  /**
    * Completion date of the task (as a RFC 3339 timestamp). This field is omitted if the task has
    * not been completed.
    * @return value or {@code null} for none
@@ -177,7 +214,10 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Flag indicating whether the task has been deleted. The default is False.
+   * Flag indicating whether the task has been deleted. For assigned tasks this field is read-only.
+   * They can only be deleted by calling tasks.delete, in which case both the assigned task and the
+   * original task (in Docs or Chat Spaces) are deleted. To delete the assigned task only, navigate
+   * to the assignment surface and unassign the task from there. The default is False.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDeleted() {
@@ -185,7 +225,10 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Flag indicating whether the task has been deleted. The default is False.
+   * Flag indicating whether the task has been deleted. For assigned tasks this field is read-only.
+   * They can only be deleted by calling tasks.delete, in which case both the assigned task and the
+   * original task (in Docs or Chat Spaces) are deleted. To delete the assigned task only, navigate
+   * to the assignment surface and unassign the task from there. The default is False.
    * @param deleted deleted or {@code null} for none
    */
   public Task setDeleted(java.lang.Boolean deleted) {
@@ -302,7 +345,8 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Notes describing the task. Optional. Maximum length allowed: 8192 characters.
+   * Notes describing the task. Tasks assigned from Google Docs cannot have notes. Optional. Maximum
+   * length allowed: 8192 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getNotes() {
@@ -310,7 +354,8 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Notes describing the task. Optional. Maximum length allowed: 8192 characters.
+   * Notes describing the task. Tasks assigned from Google Docs cannot have notes. Optional. Maximum
+   * length allowed: 8192 characters.
    * @param notes notes or {@code null} for none
    */
   public Task setNotes(java.lang.String notes) {
@@ -319,9 +364,9 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Parent task identifier. This field is omitted if it is a top-level task. This
-   * field is read-only. Use the "move" method to move the task under a different parent or to the
-   * top level.
+   * Output only. Parent task identifier. This field is omitted if it is a top-level task. Use the
+   * "move" method to move the task under a different parent or to the top level. A parent task can
+   * never be an assigned task (from Chat Spaces, Docs). This field is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -329,9 +374,9 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Parent task identifier. This field is omitted if it is a top-level task. This
-   * field is read-only. Use the "move" method to move the task under a different parent or to the
-   * top level.
+   * Output only. Parent task identifier. This field is omitted if it is a top-level task. Use the
+   * "move" method to move the task under a different parent or to the top level. A parent task can
+   * never be an assigned task (from Chat Spaces, Docs). This field is read-only.
    * @param parent parent or {@code null} for none
    */
   public Task setParent(java.lang.String parent) {

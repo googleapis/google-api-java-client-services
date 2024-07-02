@@ -45,6 +45,13 @@ public final class AuthorizationCodeLink extends com.google.api.client.json.Gene
   private java.lang.Boolean enablePkce;
 
   /**
+   * Optional. Omit query params from the redirect URI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String omitQueryParams;
+
+  /**
    * The scopes for which the user will authorize Google Cloud Connectors on the connector data
    * source.
    * The value may be {@code null}.
@@ -90,6 +97,23 @@ public final class AuthorizationCodeLink extends com.google.api.client.json.Gene
    */
   public AuthorizationCodeLink setEnablePkce(java.lang.Boolean enablePkce) {
     this.enablePkce = enablePkce;
+    return this;
+  }
+
+  /**
+   * Optional. Omit query params from the redirect URI.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOmitQueryParams() {
+    return omitQueryParams;
+  }
+
+  /**
+   * Optional. Omit query params from the redirect URI.
+   * @param omitQueryParams omitQueryParams or {@code null} for none
+   */
+  public AuthorizationCodeLink setOmitQueryParams(java.lang.String omitQueryParams) {
+    this.omitQueryParams = omitQueryParams;
     return this;
   }
 

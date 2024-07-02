@@ -154,7 +154,9 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
   public class Tasklists {
 
     /**
-     * Deletes the authenticated user's specified task list.
+     * Deletes the authenticated user's specified task list. If the list contains assigned tasks, both
+     * the assigned tasks and the original tasks in the assignment surface (Docs, Chat Spaces) are
+     * deleted.
      *
      * Create a request for the method "tasklists.delete".
      *
@@ -175,7 +177,9 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "tasks/v1/users/@me/lists/{tasklist}";
 
       /**
-       * Deletes the authenticated user's specified task list.
+       * Deletes the authenticated user's specified task list. If the list contains assigned tasks, both
+       * the assigned tasks and the original tasks in the assignment surface (Docs, Chat Spaces) are
+       * deleted.
        *
        * Create a request for the method "tasklists.delete".
        *
@@ -1012,7 +1016,9 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Deletes the specified task from the task list.
+     * Deletes the specified task from the task list. If the task is assigned, both the assigned task
+     * and the original task (in Docs, Chat Spaces) are deleted. To delete the assigned task only,
+     * navigate to the assignment surface and unassign the task from there.
      *
      * Create a request for the method "tasks.delete".
      *
@@ -1034,7 +1040,9 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "tasks/v1/lists/{tasklist}/tasks/{task}";
 
       /**
-       * Deletes the specified task from the task list.
+       * Deletes the specified task from the task list. If the task is assigned, both the assigned task
+       * and the original task (in Docs, Chat Spaces) are deleted. To delete the assigned task only,
+       * navigate to the assignment surface and unassign the task from there.
        *
        * Create a request for the method "tasks.delete".
        *
@@ -1290,8 +1298,10 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Creates a new task on the specified task list. A user can have up to 20,000 non-hidden tasks per
-     * list and up to 100,000 tasks in total at a time.
+     * Creates a new task on the specified task list. Tasks assigned from Docs or Chat Spaces cannot be
+     * inserted from Tasks Public API; they can only be created by assigning them from Docs or Chat
+     * Spaces. A user can have up to 20,000 non-hidden tasks per list and up to 100,000 tasks in total
+     * at a time.
      *
      * Create a request for the method "tasks.insert".
      *
@@ -1313,8 +1323,10 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "tasks/v1/lists/{tasklist}/tasks";
 
       /**
-       * Creates a new task on the specified task list. A user can have up to 20,000 non-hidden tasks
-       * per list and up to 100,000 tasks in total at a time.
+       * Creates a new task on the specified task list. Tasks assigned from Docs or Chat Spaces cannot
+       * be inserted from Tasks Public API; they can only be created by assigning them from Docs or Chat
+       * Spaces. A user can have up to 20,000 non-hidden tasks per list and up to 100,000 tasks in total
+       * at a time.
        *
        * Create a request for the method "tasks.insert".
        *
@@ -1405,13 +1417,15 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Parent task identifier. If the task is created at the top level, this parameter is omitted.
-       * Optional.
+       * An assigned task cannot be a parent task, nor can it have a parent. Setting the parent to
+       * an assigned task results in failure of the request. Optional.
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Parent task identifier. If the task is created at the top level, this parameter is omitted.
-     Optional.
+      /** Parent task identifier. If the task is created at the top level, this parameter is omitted. An
+     assigned task cannot be a parent task, nor can it have a parent. Setting the parent to an assigned
+     task results in failure of the request. Optional.
        */
       public java.lang.String getParent() {
         return parent;
@@ -1419,7 +1433,8 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Parent task identifier. If the task is created at the top level, this parameter is omitted.
-       * Optional.
+       * An assigned task cannot be a parent task, nor can it have a parent. Setting the parent to
+       * an assigned task results in failure of the request. Optional.
        */
       public Insert setParent(java.lang.String parent) {
         this.parent = parent;
@@ -1455,8 +1470,9 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Returns all tasks in the specified task list. A user can have up to 20,000 non-hidden tasks per
-     * list and up to 100,000 tasks in total at a time.
+     * Returns all tasks in the specified task list. Does not return assigned tasks be default (from
+     * Docs, Chat Spaces). A user can have up to 20,000 non-hidden tasks per list and up to 100,000
+     * tasks in total at a time.
      *
      * Create a request for the method "tasks.list".
      *
@@ -1477,8 +1493,9 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "tasks/v1/lists/{tasklist}/tasks";
 
       /**
-       * Returns all tasks in the specified task list. A user can have up to 20,000 non-hidden tasks per
-       * list and up to 100,000 tasks in total at a time.
+       * Returns all tasks in the specified task list. Does not return assigned tasks be default (from
+       * Docs, Chat Spaces). A user can have up to 20,000 non-hidden tasks per list and up to 100,000
+       * tasks in total at a time.
        *
        * Create a request for the method "tasks.list".
        *
@@ -1707,25 +1724,48 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Flag indicating whether completed tasks are returned in the result. Optional. The default
-       * is True. Note that showHidden must also be True to show tasks completed in first party
-       * clients, such as the web UI and Google's mobile apps.
+       * Optional. Flag indicating whether tasks assigned to the current user are returned in the
+       * result. Optional. The default is False.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean showAssigned;
+
+      /** Optional. Flag indicating whether tasks assigned to the current user are returned in the result.
+     Optional. The default is False.
+       */
+      public java.lang.Boolean getShowAssigned() {
+        return showAssigned;
+      }
+
+      /**
+       * Optional. Flag indicating whether tasks assigned to the current user are returned in the
+       * result. Optional. The default is False.
+       */
+      public List setShowAssigned(java.lang.Boolean showAssigned) {
+        this.showAssigned = showAssigned;
+        return this;
+      }
+
+      /**
+       * Flag indicating whether completed tasks are returned in the result. Note that showHidden
+       * must also be True to show tasks completed in first party clients, such as the web UI and
+       * Google's mobile apps. Optional. The default is True.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean showCompleted;
 
-      /** Flag indicating whether completed tasks are returned in the result. Optional. The default is True.
-     Note that showHidden must also be True to show tasks completed in first party clients, such as the
-     web UI and Google's mobile apps.
+      /** Flag indicating whether completed tasks are returned in the result. Note that showHidden must also
+     be True to show tasks completed in first party clients, such as the web UI and Google's mobile
+     apps. Optional. The default is True.
        */
       public java.lang.Boolean getShowCompleted() {
         return showCompleted;
       }
 
       /**
-       * Flag indicating whether completed tasks are returned in the result. Optional. The default
-       * is True. Note that showHidden must also be True to show tasks completed in first party
-       * clients, such as the web UI and Google's mobile apps.
+       * Flag indicating whether completed tasks are returned in the result. Note that showHidden
+       * must also be True to show tasks completed in first party clients, such as the web UI and
+       * Google's mobile apps. Optional. The default is True.
        */
       public List setShowCompleted(java.lang.Boolean showCompleted) {
         this.showCompleted = showCompleted;
@@ -1805,8 +1845,9 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Moves the specified task to another position in the task list. This can include putting it as a
-     * child task under a new parent and/or move it to a different position among its sibling tasks. A
+     * Moves the specified task to another position in the destination task list. If the destination
+     * list is not specified, the task is moved within its current list. This can include putting it as
+     * a child task under a new parent and/or move it to a different position among its sibling tasks. A
      * user can have up to 2,000 subtasks per task.
      *
      * Create a request for the method "tasks.move".
@@ -1829,9 +1870,10 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "tasks/v1/lists/{tasklist}/tasks/{task}/move";
 
       /**
-       * Moves the specified task to another position in the task list. This can include putting it as a
-       * child task under a new parent and/or move it to a different position among its sibling tasks. A
-       * user can have up to 2,000 subtasks per task.
+       * Moves the specified task to another position in the destination task list. If the destination
+       * list is not specified, the task is moved within its current list. This can include putting it
+       * as a child task under a new parent and/or move it to a different position among its sibling
+       * tasks. A user can have up to 2,000 subtasks per task.
        *
        * Create a request for the method "tasks.move".
        *
@@ -1938,14 +1980,42 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
+       * Optional. Destination task list identifier. If set, the task is moved from tasklist to the
+       * destinationTasklist list. Otherwise the task is moved within its current list. Recurrent
+       * tasks cannot currently be moved between lists. Optional.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String destinationTasklist;
+
+      /** Optional. Destination task list identifier. If set, the task is moved from tasklist to the
+     destinationTasklist list. Otherwise the task is moved within its current list. Recurrent tasks
+     cannot currently be moved between lists. Optional.
+       */
+      public java.lang.String getDestinationTasklist() {
+        return destinationTasklist;
+      }
+
+      /**
+       * Optional. Destination task list identifier. If set, the task is moved from tasklist to the
+       * destinationTasklist list. Otherwise the task is moved within its current list. Recurrent
+       * tasks cannot currently be moved between lists. Optional.
+       */
+      public Move setDestinationTasklist(java.lang.String destinationTasklist) {
+        this.destinationTasklist = destinationTasklist;
+        return this;
+      }
+
+      /**
        * New parent task identifier. If the task is moved to the top level, this parameter is
-       * omitted. Optional.
+       * omitted. Assigned tasks can not be set as parent task (have subtasks) or be moved under a
+       * parent task (become subtasks). Optional.
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
       /** New parent task identifier. If the task is moved to the top level, this parameter is omitted.
-     Optional.
+     Assigned tasks can not be set as parent task (have subtasks) or be moved under a parent task
+     (become subtasks). Optional.
        */
       public java.lang.String getParent() {
         return parent;
@@ -1953,7 +2023,8 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * New parent task identifier. If the task is moved to the top level, this parameter is
-       * omitted. Optional.
+       * omitted. Assigned tasks can not be set as parent task (have subtasks) or be moved under a
+       * parent task (become subtasks). Optional.
        */
       public Move setParent(java.lang.String parent) {
         this.parent = parent;

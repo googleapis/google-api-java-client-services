@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Log configuration for the connection.
+ * Response for a request to list templates
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -28,64 +28,64 @@ package com.google.api.services.integrations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudConnectorsV1LogConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudIntegrationsV1alphaListTemplatesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enabled represents whether logging is enabled or not for a connection.
+   * The token used to retrieve the next page results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean enabled;
+  private java.lang.String nextPageToken;
 
   /**
-   * Optional. Log configuration level.
+   * List of templates retrieved.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String level;
+  private java.util.List<GoogleCloudIntegrationsV1alphaTemplate> templates;
 
   /**
-   * Enabled represents whether logging is enabled or not for a connection.
+   * The token used to retrieve the next page results.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getEnabled() {
-    return enabled;
+  public java.lang.String getNextPageToken() {
+    return nextPageToken;
   }
 
   /**
-   * Enabled represents whether logging is enabled or not for a connection.
-   * @param enabled enabled or {@code null} for none
+   * The token used to retrieve the next page results.
+   * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public GoogleCloudConnectorsV1LogConfig setEnabled(java.lang.Boolean enabled) {
-    this.enabled = enabled;
+  public GoogleCloudIntegrationsV1alphaListTemplatesResponse setNextPageToken(java.lang.String nextPageToken) {
+    this.nextPageToken = nextPageToken;
     return this;
   }
 
   /**
-   * Optional. Log configuration level.
+   * List of templates retrieved.
    * @return value or {@code null} for none
    */
-  public java.lang.String getLevel() {
-    return level;
+  public java.util.List<GoogleCloudIntegrationsV1alphaTemplate> getTemplates() {
+    return templates;
   }
 
   /**
-   * Optional. Log configuration level.
-   * @param level level or {@code null} for none
+   * List of templates retrieved.
+   * @param templates templates or {@code null} for none
    */
-  public GoogleCloudConnectorsV1LogConfig setLevel(java.lang.String level) {
-    this.level = level;
+  public GoogleCloudIntegrationsV1alphaListTemplatesResponse setTemplates(java.util.List<GoogleCloudIntegrationsV1alphaTemplate> templates) {
+    this.templates = templates;
     return this;
   }
 
   @Override
-  public GoogleCloudConnectorsV1LogConfig set(String fieldName, Object value) {
-    return (GoogleCloudConnectorsV1LogConfig) super.set(fieldName, value);
+  public GoogleCloudIntegrationsV1alphaListTemplatesResponse set(String fieldName, Object value) {
+    return (GoogleCloudIntegrationsV1alphaListTemplatesResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudConnectorsV1LogConfig clone() {
-    return (GoogleCloudConnectorsV1LogConfig) super.clone();
+  public GoogleCloudIntegrationsV1alphaListTemplatesResponse clone() {
+    return (GoogleCloudIntegrationsV1alphaListTemplatesResponse) super.clone();
   }
 
 }

@@ -49,8 +49,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private String deleteTime;
 
   /**
-   * The Google Group the membership corresponds to. Only supports read operations. Other
-   * operations, like creating or updating a membership, aren't currently supported.
+   * The Google Group the membership corresponds to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,8 +132,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Google Group the membership corresponds to. Only supports read operations. Other
-   * operations, like creating or updating a membership, aren't currently supported.
+   * The Google Group the membership corresponds to.
    * @return value or {@code null} for none
    */
   public Group getGroupMember() {
@@ -142,8 +140,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Google Group the membership corresponds to. Only supports read operations. Other
-   * operations, like creating or updating a membership, aren't currently supported.
+   * The Google Group the membership corresponds to.
    * @param groupMember groupMember or {@code null} for none
    */
   public Membership setGroupMember(Group groupMember) {

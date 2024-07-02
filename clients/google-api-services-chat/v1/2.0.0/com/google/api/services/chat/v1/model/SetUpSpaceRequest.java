@@ -30,19 +30,21 @@ package com.google.api.services.chat.v1.model;
 public final class SetUpSpaceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The Google Chat users to invite to join the space. Omit the calling user, as they are
-   * added automatically. The set currently allows up to 20 memberships (in addition to the caller).
-   * For human membership, the `Membership.member` field must contain a `user` with `name` populated
-   * (format: `users/{user}`) and `type` set to `User.Type.HUMAN`. You can only add human users when
-   * setting up a space (adding Chat apps is only supported for direct message setup with the
-   * calling app). You can also add members using the user's email as an alias for {user}. For
-   * example, the `user.name` can be `users/example@gmail.com`. To invite Gmail users or users from
-   * external Google Workspace domains, user's email must be used for `{user}`. Optional when
-   * setting `Space.spaceType` to `SPACE`. Required when setting `Space.spaceType` to `GROUP_CHAT`,
-   * along with at least two memberships. Required when setting `Space.spaceType` to
-   * `DIRECT_MESSAGE` with a human user, along with exactly one membership. Must be empty when
-   * creating a 1:1 conversation between a human and the calling Chat app (when setting
-   * `Space.spaceType` to `DIRECT_MESSAGE` and `Space.singleUserBotDm` to `true`).
+   * Optional. The Google Chat users or groups to invite to join the space. Omit the calling user,
+   * as they are added automatically. The set currently allows up to 20 memberships (in addition to
+   * the caller). For human membership, the `Membership.member` field must contain a `user` with
+   * `name` populated (format: `users/{user}`) and `type` set to `User.Type.HUMAN`. You can only add
+   * human users when setting up a space (adding Chat apps is only supported for direct message
+   * setup with the calling app). You can also add members using the user's email as an alias for
+   * {user}. For example, the `user.name` can be `users/example@gmail.com`. To invite Gmail users or
+   * users from external Google Workspace domains, user's email must be used for `{user}`. For
+   * Google group membership, the `Membership.group_member` field must contain a `group` with `name`
+   * populated (format `groups/{group}`). You can only add Google groups when setting
+   * `Space.spaceType` to `SPACE`. Optional when setting `Space.spaceType` to `SPACE`. Required when
+   * setting `Space.spaceType` to `GROUP_CHAT`, along with at least two memberships. Required when
+   * setting `Space.spaceType` to `DIRECT_MESSAGE` with a human user, along with exactly one
+   * membership. Must be empty when creating a 1:1 conversation between a human and the calling Chat
+   * app (when setting `Space.spaceType` to `DIRECT_MESSAGE` and `Space.singleUserBotDm` to `true`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,19 +83,21 @@ public final class SetUpSpaceRequest extends com.google.api.client.json.GenericJ
   private Space space;
 
   /**
-   * Optional. The Google Chat users to invite to join the space. Omit the calling user, as they are
-   * added automatically. The set currently allows up to 20 memberships (in addition to the caller).
-   * For human membership, the `Membership.member` field must contain a `user` with `name` populated
-   * (format: `users/{user}`) and `type` set to `User.Type.HUMAN`. You can only add human users when
-   * setting up a space (adding Chat apps is only supported for direct message setup with the
-   * calling app). You can also add members using the user's email as an alias for {user}. For
-   * example, the `user.name` can be `users/example@gmail.com`. To invite Gmail users or users from
-   * external Google Workspace domains, user's email must be used for `{user}`. Optional when
-   * setting `Space.spaceType` to `SPACE`. Required when setting `Space.spaceType` to `GROUP_CHAT`,
-   * along with at least two memberships. Required when setting `Space.spaceType` to
-   * `DIRECT_MESSAGE` with a human user, along with exactly one membership. Must be empty when
-   * creating a 1:1 conversation between a human and the calling Chat app (when setting
-   * `Space.spaceType` to `DIRECT_MESSAGE` and `Space.singleUserBotDm` to `true`).
+   * Optional. The Google Chat users or groups to invite to join the space. Omit the calling user,
+   * as they are added automatically. The set currently allows up to 20 memberships (in addition to
+   * the caller). For human membership, the `Membership.member` field must contain a `user` with
+   * `name` populated (format: `users/{user}`) and `type` set to `User.Type.HUMAN`. You can only add
+   * human users when setting up a space (adding Chat apps is only supported for direct message
+   * setup with the calling app). You can also add members using the user's email as an alias for
+   * {user}. For example, the `user.name` can be `users/example@gmail.com`. To invite Gmail users or
+   * users from external Google Workspace domains, user's email must be used for `{user}`. For
+   * Google group membership, the `Membership.group_member` field must contain a `group` with `name`
+   * populated (format `groups/{group}`). You can only add Google groups when setting
+   * `Space.spaceType` to `SPACE`. Optional when setting `Space.spaceType` to `SPACE`. Required when
+   * setting `Space.spaceType` to `GROUP_CHAT`, along with at least two memberships. Required when
+   * setting `Space.spaceType` to `DIRECT_MESSAGE` with a human user, along with exactly one
+   * membership. Must be empty when creating a 1:1 conversation between a human and the calling Chat
+   * app (when setting `Space.spaceType` to `DIRECT_MESSAGE` and `Space.singleUserBotDm` to `true`).
    * @return value or {@code null} for none
    */
   public java.util.List<Membership> getMemberships() {
@@ -101,19 +105,21 @@ public final class SetUpSpaceRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The Google Chat users to invite to join the space. Omit the calling user, as they are
-   * added automatically. The set currently allows up to 20 memberships (in addition to the caller).
-   * For human membership, the `Membership.member` field must contain a `user` with `name` populated
-   * (format: `users/{user}`) and `type` set to `User.Type.HUMAN`. You can only add human users when
-   * setting up a space (adding Chat apps is only supported for direct message setup with the
-   * calling app). You can also add members using the user's email as an alias for {user}. For
-   * example, the `user.name` can be `users/example@gmail.com`. To invite Gmail users or users from
-   * external Google Workspace domains, user's email must be used for `{user}`. Optional when
-   * setting `Space.spaceType` to `SPACE`. Required when setting `Space.spaceType` to `GROUP_CHAT`,
-   * along with at least two memberships. Required when setting `Space.spaceType` to
-   * `DIRECT_MESSAGE` with a human user, along with exactly one membership. Must be empty when
-   * creating a 1:1 conversation between a human and the calling Chat app (when setting
-   * `Space.spaceType` to `DIRECT_MESSAGE` and `Space.singleUserBotDm` to `true`).
+   * Optional. The Google Chat users or groups to invite to join the space. Omit the calling user,
+   * as they are added automatically. The set currently allows up to 20 memberships (in addition to
+   * the caller). For human membership, the `Membership.member` field must contain a `user` with
+   * `name` populated (format: `users/{user}`) and `type` set to `User.Type.HUMAN`. You can only add
+   * human users when setting up a space (adding Chat apps is only supported for direct message
+   * setup with the calling app). You can also add members using the user's email as an alias for
+   * {user}. For example, the `user.name` can be `users/example@gmail.com`. To invite Gmail users or
+   * users from external Google Workspace domains, user's email must be used for `{user}`. For
+   * Google group membership, the `Membership.group_member` field must contain a `group` with `name`
+   * populated (format `groups/{group}`). You can only add Google groups when setting
+   * `Space.spaceType` to `SPACE`. Optional when setting `Space.spaceType` to `SPACE`. Required when
+   * setting `Space.spaceType` to `GROUP_CHAT`, along with at least two memberships. Required when
+   * setting `Space.spaceType` to `DIRECT_MESSAGE` with a human user, along with exactly one
+   * membership. Must be empty when creating a 1:1 conversation between a human and the calling Chat
+   * app (when setting `Space.spaceType` to `DIRECT_MESSAGE` and `Space.singleUserBotDm` to `true`).
    * @param memberships memberships or {@code null} for none
    */
   public SetUpSpaceRequest setMemberships(java.util.List<Membership> memberships) {

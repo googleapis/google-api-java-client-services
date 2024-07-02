@@ -23580,8 +23580,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
              * @param name Output only. Resource name of the Message, of the form `projects/{project_id}/locations/{location_id
-             *        }/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by
-             *        the server.
+             *        }/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1.model.Message}
              * @return the request
              */
@@ -23613,8 +23612,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Output only. Resource name of the Message, of the form `projects/{project_id}/locations/{location_id
-             *        }/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by
-             *        the server.
+             *        }/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`.
                * @param content the {@link com.google.api.services.healthcare.v1.model.Message}
                * @since 1.13
                */
@@ -23686,14 +23684,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Output only. Resource name of the Message, of the form `projects/{project_id}/locat
                * ions/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{me
-               * ssage_id}`. Assigned by the server.
+               * ssage_id}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Output only. Resource name of the Message, of the form `projects/{project_id}/locations/{location_i
-             d}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the
-             server.
+             d}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`.
                */
               public java.lang.String getName() {
                 return name;
@@ -23702,7 +23699,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Output only. Resource name of the Message, of the form `projects/{project_id}/locat
                * ions/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{me
-               * ssage_id}`. Assigned by the server.
+               * ssage_id}`.
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {

@@ -52,7 +52,7 @@ public final class GoogleCloudKmsV1CryptoKey extends com.google.api.client.json.
   /**
    * Immutable. The period of time that versions of this key spend in the DESTROY_SCHEDULED state
    * before transitioning to DESTROYED. If not specified at creation time, the default duration is
-   * 24 hours.
+   * 30 days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -185,7 +185,7 @@ public final class GoogleCloudKmsV1CryptoKey extends com.google.api.client.json.
   /**
    * Immutable. The period of time that versions of this key spend in the DESTROY_SCHEDULED state
    * before transitioning to DESTROYED. If not specified at creation time, the default duration is
-   * 24 hours.
+   * 30 days.
    * @return value or {@code null} for none
    */
   public String getDestroyScheduledDuration() {
@@ -195,7 +195,7 @@ public final class GoogleCloudKmsV1CryptoKey extends com.google.api.client.json.
   /**
    * Immutable. The period of time that versions of this key spend in the DESTROY_SCHEDULED state
    * before transitioning to DESTROYED. If not specified at creation time, the default duration is
-   * 24 hours.
+   * 30 days.
    * @param destroyScheduledDuration destroyScheduledDuration or {@code null} for none
    */
   public GoogleCloudKmsV1CryptoKey setDestroyScheduledDuration(String destroyScheduledDuration) {

@@ -36,7 +36,7 @@ public final class RetrieveGamesPlayerTokensResponse extends com.google.api.clie
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GamePlayerToken> applicationRecallTokens;
+  private java.util.List<GamePlayerToken> gamePlayerTokens;
 
   static {
     // hack to force ProGuard to consider GamePlayerToken used, since otherwise it would be stripped out
@@ -49,17 +49,17 @@ public final class RetrieveGamesPlayerTokensResponse extends com.google.api.clie
    * have recall tokens for an application, that application is not included in the response.
    * @return value or {@code null} for none
    */
-  public java.util.List<GamePlayerToken> getApplicationRecallTokens() {
-    return applicationRecallTokens;
+  public java.util.List<GamePlayerToken> getGamePlayerTokens() {
+    return gamePlayerTokens;
   }
 
   /**
    * The requested applications along with the recall tokens for the player. If the player does not
    * have recall tokens for an application, that application is not included in the response.
-   * @param applicationRecallTokens applicationRecallTokens or {@code null} for none
+   * @param gamePlayerTokens gamePlayerTokens or {@code null} for none
    */
-  public RetrieveGamesPlayerTokensResponse setApplicationRecallTokens(java.util.List<GamePlayerToken> applicationRecallTokens) {
-    this.applicationRecallTokens = applicationRecallTokens;
+  public RetrieveGamesPlayerTokensResponse setGamePlayerTokens(java.util.List<GamePlayerToken> gamePlayerTokens) {
+    this.gamePlayerTokens = gamePlayerTokens;
     return this;
   }
 

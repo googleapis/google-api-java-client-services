@@ -42,7 +42,7 @@ public final class GamePlayerToken extends com.google.api.client.json.GenericJso
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<RecallToken> token;
+  private RecallToken recallToken;
 
   /**
    * The application that this player identifier is for.
@@ -65,16 +65,16 @@ public final class GamePlayerToken extends com.google.api.client.json.GenericJso
    * Recall token data.
    * @return value or {@code null} for none
    */
-  public java.util.List<RecallToken> getToken() {
-    return token;
+  public RecallToken getRecallToken() {
+    return recallToken;
   }
 
   /**
    * Recall token data.
-   * @param token token or {@code null} for none
+   * @param recallToken recallToken or {@code null} for none
    */
-  public GamePlayerToken setToken(java.util.List<RecallToken> token) {
-    this.token = token;
+  public GamePlayerToken setRecallToken(RecallToken recallToken) {
+    this.recallToken = recallToken;
     return this;
   }
 

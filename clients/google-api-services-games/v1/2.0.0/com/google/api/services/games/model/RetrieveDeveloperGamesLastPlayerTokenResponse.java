@@ -36,24 +36,24 @@ public final class RetrieveDeveloperGamesLastPlayerTokenResponse extends com.goo
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private RecallToken token;
+  private GamePlayerToken gamePlayerToken;
 
   /**
    * The recall token associated with the requested PGS Player principal. It can be unset if there
    * is no recall token associated with the requested principal.
    * @return value or {@code null} for none
    */
-  public RecallToken getToken() {
-    return token;
+  public GamePlayerToken getGamePlayerToken() {
+    return gamePlayerToken;
   }
 
   /**
    * The recall token associated with the requested PGS Player principal. It can be unset if there
    * is no recall token associated with the requested principal.
-   * @param token token or {@code null} for none
+   * @param gamePlayerToken gamePlayerToken or {@code null} for none
    */
-  public RetrieveDeveloperGamesLastPlayerTokenResponse setToken(RecallToken token) {
-    this.token = token;
+  public RetrieveDeveloperGamesLastPlayerTokenResponse setGamePlayerToken(GamePlayerToken gamePlayerToken) {
+    this.gamePlayerToken = gamePlayerToken;
     return this;
   }
 

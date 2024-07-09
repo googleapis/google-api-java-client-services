@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2Deidentify extends com.google.api.client.js
 
   /**
    * Required. User settable Cloud Storage bucket and folders to store de-identified files. This
-   * field must be set for cloud storage deidentification. The output Cloud Storage bucket must be
+   * field must be set for Cloud Storage deidentification. The output Cloud Storage bucket must be
    * different from the input bucket. De-identified files will overwrite files in the output path.
    * Form of: gs://bucket/folder/ or gs://bucket
    * The value may be {@code null}.
@@ -49,10 +49,10 @@ public final class GooglePrivacyDlpV2Deidentify extends com.google.api.client.js
 
   /**
    * List of user-specified file type groups to transform. If specified, only the files with these
-   * filetypes will be transformed. If empty, all supported files will be transformed. Supported
+   * file types will be transformed. If empty, all supported files will be transformed. Supported
    * types may be automatically added over time. If a file type is set in this field that isn't
    * supported by the Deidentify action then the job will fail and will not be successfully
-   * created/started. Currently the only filetypes supported are: IMAGES, TEXT_FILES, CSV, TSV.
+   * created/started. Currently the only file types supported are: IMAGES, TEXT_FILES, CSV, TSV.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +78,7 @@ public final class GooglePrivacyDlpV2Deidentify extends com.google.api.client.js
 
   /**
    * Required. User settable Cloud Storage bucket and folders to store de-identified files. This
-   * field must be set for cloud storage deidentification. The output Cloud Storage bucket must be
+   * field must be set for Cloud Storage deidentification. The output Cloud Storage bucket must be
    * different from the input bucket. De-identified files will overwrite files in the output path.
    * Form of: gs://bucket/folder/ or gs://bucket
    * @return value or {@code null} for none
@@ -89,7 +89,7 @@ public final class GooglePrivacyDlpV2Deidentify extends com.google.api.client.js
 
   /**
    * Required. User settable Cloud Storage bucket and folders to store de-identified files. This
-   * field must be set for cloud storage deidentification. The output Cloud Storage bucket must be
+   * field must be set for Cloud Storage deidentification. The output Cloud Storage bucket must be
    * different from the input bucket. De-identified files will overwrite files in the output path.
    * Form of: gs://bucket/folder/ or gs://bucket
    * @param cloudStorageOutput cloudStorageOutput or {@code null} for none
@@ -101,10 +101,10 @@ public final class GooglePrivacyDlpV2Deidentify extends com.google.api.client.js
 
   /**
    * List of user-specified file type groups to transform. If specified, only the files with these
-   * filetypes will be transformed. If empty, all supported files will be transformed. Supported
+   * file types will be transformed. If empty, all supported files will be transformed. Supported
    * types may be automatically added over time. If a file type is set in this field that isn't
    * supported by the Deidentify action then the job will fail and will not be successfully
-   * created/started. Currently the only filetypes supported are: IMAGES, TEXT_FILES, CSV, TSV.
+   * created/started. Currently the only file types supported are: IMAGES, TEXT_FILES, CSV, TSV.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFileTypesToTransform() {
@@ -113,10 +113,10 @@ public final class GooglePrivacyDlpV2Deidentify extends com.google.api.client.js
 
   /**
    * List of user-specified file type groups to transform. If specified, only the files with these
-   * filetypes will be transformed. If empty, all supported files will be transformed. Supported
+   * file types will be transformed. If empty, all supported files will be transformed. Supported
    * types may be automatically added over time. If a file type is set in this field that isn't
    * supported by the Deidentify action then the job will fail and will not be successfully
-   * created/started. Currently the only filetypes supported are: IMAGES, TEXT_FILES, CSV, TSV.
+   * created/started. Currently the only file types supported are: IMAGES, TEXT_FILES, CSV, TSV.
    * @param fileTypesToTransform fileTypesToTransform or {@code null} for none
    */
   public GooglePrivacyDlpV2Deidentify setFileTypesToTransform(java.util.List<java.lang.String> fileTypesToTransform) {

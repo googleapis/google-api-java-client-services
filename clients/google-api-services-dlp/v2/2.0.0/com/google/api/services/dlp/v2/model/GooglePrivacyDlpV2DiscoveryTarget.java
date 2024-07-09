@@ -45,6 +45,13 @@ public final class GooglePrivacyDlpV2DiscoveryTarget extends com.google.api.clie
   private GooglePrivacyDlpV2CloudSqlDiscoveryTarget cloudSqlTarget;
 
   /**
+   * Cloud Storage target for Discovery. The first target to match a table will be the one applied.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2CloudStorageDiscoveryTarget cloudStorageTarget;
+
+  /**
    * Discovery target that looks for credentials and secrets stored in cloud resource metadata and
    * reports them as vulnerabilities to Security Command Center. Only one target of this type is
    * allowed.
@@ -84,6 +91,23 @@ public final class GooglePrivacyDlpV2DiscoveryTarget extends com.google.api.clie
    */
   public GooglePrivacyDlpV2DiscoveryTarget setCloudSqlTarget(GooglePrivacyDlpV2CloudSqlDiscoveryTarget cloudSqlTarget) {
     this.cloudSqlTarget = cloudSqlTarget;
+    return this;
+  }
+
+  /**
+   * Cloud Storage target for Discovery. The first target to match a table will be the one applied.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2CloudStorageDiscoveryTarget getCloudStorageTarget() {
+    return cloudStorageTarget;
+  }
+
+  /**
+   * Cloud Storage target for Discovery. The first target to match a table will be the one applied.
+   * @param cloudStorageTarget cloudStorageTarget or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DiscoveryTarget setCloudStorageTarget(GooglePrivacyDlpV2CloudStorageDiscoveryTarget cloudStorageTarget) {
+    this.cloudStorageTarget = cloudStorageTarget;
     return this;
   }
 

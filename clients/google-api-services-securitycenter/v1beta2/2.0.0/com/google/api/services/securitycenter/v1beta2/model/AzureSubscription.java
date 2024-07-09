@@ -38,7 +38,7 @@ public final class AzureSubscription extends com.google.api.client.json.GenericJ
   private java.lang.String displayName;
 
   /**
-   * The UUID of the Azure subscription, for example, "291bba3f-e0a5-47bc-a099-3bdcb2a50a05".
+   * The UUID of the Azure subscription, for example, `291bba3f-e0a5-47bc-a099-3bdcb2a50a05`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class AzureSubscription extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The UUID of the Azure subscription, for example, "291bba3f-e0a5-47bc-a099-3bdcb2a50a05".
+   * The UUID of the Azure subscription, for example, `291bba3f-e0a5-47bc-a099-3bdcb2a50a05`.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -70,7 +70,7 @@ public final class AzureSubscription extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The UUID of the Azure subscription, for example, "291bba3f-e0a5-47bc-a099-3bdcb2a50a05".
+   * The UUID of the Azure subscription, for example, `291bba3f-e0a5-47bc-a099-3bdcb2a50a05`.
    * @param id id or {@code null} for none
    */
   public AzureSubscription setId(java.lang.String id) {

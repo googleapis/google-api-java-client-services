@@ -43,7 +43,7 @@ public final class ToxicCombination extends com.google.api.client.json.GenericJs
 
   /**
    * List of resource names of findings associated with this toxic combination. For example,
-   * organizations/123/sources/456/findings/789.
+   * `organizations/123/sources/456/findings/789`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,7 @@ public final class ToxicCombination extends com.google.api.client.json.GenericJs
 
   /**
    * List of resource names of findings associated with this toxic combination. For example,
-   * organizations/123/sources/456/findings/789.
+   * `organizations/123/sources/456/findings/789`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRelatedFindings() {
@@ -81,7 +81,7 @@ public final class ToxicCombination extends com.google.api.client.json.GenericJs
 
   /**
    * List of resource names of findings associated with this toxic combination. For example,
-   * organizations/123/sources/456/findings/789.
+   * `organizations/123/sources/456/findings/789`.
    * @param relatedFindings relatedFindings or {@code null} for none
    */
   public ToxicCombination setRelatedFindings(java.util.List<java.lang.String> relatedFindings) {

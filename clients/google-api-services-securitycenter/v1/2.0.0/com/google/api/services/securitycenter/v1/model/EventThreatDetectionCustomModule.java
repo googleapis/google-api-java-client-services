@@ -79,9 +79,9 @@ public final class EventThreatDetectionCustomModule extends com.google.api.clien
 
   /**
    * Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
-   * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-   * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-   * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+   * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+   * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+   * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -209,9 +209,9 @@ public final class EventThreatDetectionCustomModule extends com.google.api.clien
 
   /**
    * Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
-   * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-   * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-   * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+   * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+   * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+   * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -220,9 +220,9 @@ public final class EventThreatDetectionCustomModule extends com.google.api.clien
 
   /**
    * Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
-   * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-   * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-   * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+   * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+   * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+   * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
    * @param name name or {@code null} for none
    */
   public EventThreatDetectionCustomModule setName(java.lang.String name) {

@@ -60,9 +60,9 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
   private java.lang.String name;
 
   /**
-   * List of resource labels to search for, evaluated with AND. For example,
-   * "resource_labels_selector": {"key": "value", "env": "prod"} will match resources with labels
-   * "key": "value" AND "env": "prod" https://cloud.google.com/resource-manager/docs/creating-
+   * List of resource labels to search for, evaluated with `AND`. For example,
+   * `"resource_labels_selector": {"key": "value", "env": "prod"}` will match resources with labels
+   * "key": "value" `AND` "env": "prod" https://cloud.google.com/resource-manager/docs/creating-
    * managing-labels
    * The value may be {@code null}.
    */
@@ -71,7 +71,7 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
 
   /**
    * Apply resource_value only to resources that match resource_type. resource_type will be checked
-   * with AND of other resources. For example, "storage.googleapis.com/Bucket" with resource_value
+   * with `AND` of other resources. For example, "storage.googleapis.com/Bucket" with resource_value
    * "HIGH" will apply "HIGH" value only to "storage.googleapis.com/Bucket" resources.
    * The value may be {@code null}.
    */
@@ -87,7 +87,7 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
 
   /**
    * Project or folder to scope this configuration to. For example, "project/456" would apply this
-   * configuration only to resources in "project/456" scope will be checked with AND of other
+   * configuration only to resources in "project/456" scope will be checked with `AND` of other
    * resources.
    * The value may be {@code null}.
    */
@@ -104,8 +104,8 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
   private GoogleCloudSecuritycenterV1SensitiveDataProtectionMapping sensitiveDataProtectionMapping;
 
   /**
-   * Required. Tag values combined with AND to check against. Values in the form "tagValues/123"
-   * Example: [ "tagValues/123", "tagValues/456", "tagValues/789" ]
+   * Required. Tag values combined with `AND` to check against. Values in the form "tagValues/123"
+   * Example: `[ "tagValues/123", "tagValues/456", "tagValues/789" ]`
    * https://cloud.google.com/resource-manager/docs/tags/tags-creating-and-managing
    * The value may be {@code null}.
    */
@@ -188,9 +188,9 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
   }
 
   /**
-   * List of resource labels to search for, evaluated with AND. For example,
-   * "resource_labels_selector": {"key": "value", "env": "prod"} will match resources with labels
-   * "key": "value" AND "env": "prod" https://cloud.google.com/resource-manager/docs/creating-
+   * List of resource labels to search for, evaluated with `AND`. For example,
+   * `"resource_labels_selector": {"key": "value", "env": "prod"}` will match resources with labels
+   * "key": "value" `AND` "env": "prod" https://cloud.google.com/resource-manager/docs/creating-
    * managing-labels
    * @return value or {@code null} for none
    */
@@ -199,9 +199,9 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
   }
 
   /**
-   * List of resource labels to search for, evaluated with AND. For example,
-   * "resource_labels_selector": {"key": "value", "env": "prod"} will match resources with labels
-   * "key": "value" AND "env": "prod" https://cloud.google.com/resource-manager/docs/creating-
+   * List of resource labels to search for, evaluated with `AND`. For example,
+   * `"resource_labels_selector": {"key": "value", "env": "prod"}` will match resources with labels
+   * "key": "value" `AND` "env": "prod" https://cloud.google.com/resource-manager/docs/creating-
    * managing-labels
    * @param resourceLabelsSelector resourceLabelsSelector or {@code null} for none
    */
@@ -212,7 +212,7 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
 
   /**
    * Apply resource_value only to resources that match resource_type. resource_type will be checked
-   * with AND of other resources. For example, "storage.googleapis.com/Bucket" with resource_value
+   * with `AND` of other resources. For example, "storage.googleapis.com/Bucket" with resource_value
    * "HIGH" will apply "HIGH" value only to "storage.googleapis.com/Bucket" resources.
    * @return value or {@code null} for none
    */
@@ -222,7 +222,7 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
 
   /**
    * Apply resource_value only to resources that match resource_type. resource_type will be checked
-   * with AND of other resources. For example, "storage.googleapis.com/Bucket" with resource_value
+   * with `AND` of other resources. For example, "storage.googleapis.com/Bucket" with resource_value
    * "HIGH" will apply "HIGH" value only to "storage.googleapis.com/Bucket" resources.
    * @param resourceType resourceType or {@code null} for none
    */
@@ -250,7 +250,7 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
 
   /**
    * Project or folder to scope this configuration to. For example, "project/456" would apply this
-   * configuration only to resources in "project/456" scope will be checked with AND of other
+   * configuration only to resources in "project/456" scope will be checked with `AND` of other
    * resources.
    * @return value or {@code null} for none
    */
@@ -260,7 +260,7 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
 
   /**
    * Project or folder to scope this configuration to. For example, "project/456" would apply this
-   * configuration only to resources in "project/456" scope will be checked with AND of other
+   * configuration only to resources in "project/456" scope will be checked with `AND` of other
    * resources.
    * @param scope scope or {@code null} for none
    */
@@ -291,8 +291,8 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
   }
 
   /**
-   * Required. Tag values combined with AND to check against. Values in the form "tagValues/123"
-   * Example: [ "tagValues/123", "tagValues/456", "tagValues/789" ]
+   * Required. Tag values combined with `AND` to check against. Values in the form "tagValues/123"
+   * Example: `[ "tagValues/123", "tagValues/456", "tagValues/789" ]`
    * https://cloud.google.com/resource-manager/docs/tags/tags-creating-and-managing
    * @return value or {@code null} for none
    */
@@ -301,8 +301,8 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
   }
 
   /**
-   * Required. Tag values combined with AND to check against. Values in the form "tagValues/123"
-   * Example: [ "tagValues/123", "tagValues/456", "tagValues/789" ]
+   * Required. Tag values combined with `AND` to check against. Values in the form "tagValues/123"
+   * Example: `[ "tagValues/123", "tagValues/456", "tagValues/789" ]`
    * https://cloud.google.com/resource-manager/docs/tags/tags-creating-and-managing
    * @param tagValues tagValues or {@code null} for none
    */

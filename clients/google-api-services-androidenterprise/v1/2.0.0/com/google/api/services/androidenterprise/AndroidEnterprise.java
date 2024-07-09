@@ -1891,6 +1891,29 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       /**
+       * Optional. Email address used to prefill the admin field of the enterprise signup form. This
+       * value is a hint only and can be altered by the user.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String adminEmail;
+
+      /** Optional. Email address used to prefill the admin field of the enterprise signup form. This value
+     is a hint only and can be altered by the user.
+       */
+      public java.lang.String getAdminEmail() {
+        return adminEmail;
+      }
+
+      /**
+       * Optional. Email address used to prefill the admin field of the enterprise signup form. This
+       * value is a hint only and can be altered by the user.
+       */
+      public GenerateSignupUrl setAdminEmail(java.lang.String adminEmail) {
+        this.adminEmail = adminEmail;
+        return this;
+      }
+
+      /**
        * The callback URL to which the Admin will be redirected after successfully creating an
        * enterprise. Before redirecting there the system will add a single query parameter to this
        * URL named "enterpriseToken" which will contain an opaque token to be used for the

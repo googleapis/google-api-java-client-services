@@ -17,7 +17,7 @@
 package com.google.api.services.gkebackup.v1.model;
 
 /**
- * A list of Kubernetes Namespaces
+ * A list of Kubernetes Namespaces.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Backup for GKE API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.gkebackup.v1.model;
 public final class Namespaces extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A list of Kubernetes Namespaces
+   * Optional. A list of Kubernetes Namespaces.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> namespaces;
 
   /**
-   * Optional. A list of Kubernetes Namespaces
+   * Optional. A list of Kubernetes Namespaces.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNamespaces() {
@@ -45,7 +45,7 @@ public final class Namespaces extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A list of Kubernetes Namespaces
+   * Optional. A list of Kubernetes Namespaces.
    * @param namespaces namespaces or {@code null} for none
    */
   public Namespaces setNamespaces(java.util.List<java.lang.String> namespaces) {

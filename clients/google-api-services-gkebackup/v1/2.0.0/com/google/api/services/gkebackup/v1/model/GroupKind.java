@@ -33,7 +33,7 @@ public final class GroupKind extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. API group string of a Kubernetes resource, e.g. "apiextensions.k8s.io",
-   * "storage.k8s.io", etc. Note: use empty string for core API group
+   * "storage.k8s.io", etc. Note: use empty string for core API group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +49,7 @@ public final class GroupKind extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. API group string of a Kubernetes resource, e.g. "apiextensions.k8s.io",
-   * "storage.k8s.io", etc. Note: use empty string for core API group
+   * "storage.k8s.io", etc. Note: use empty string for core API group.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceGroup() {
@@ -58,7 +58,7 @@ public final class GroupKind extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. API group string of a Kubernetes resource, e.g. "apiextensions.k8s.io",
-   * "storage.k8s.io", etc. Note: use empty string for core API group
+   * "storage.k8s.io", etc. Note: use empty string for core API group.
    * @param resourceGroup resourceGroup or {@code null} for none
    */
   public GroupKind setResourceGroup(java.lang.String resourceGroup) {

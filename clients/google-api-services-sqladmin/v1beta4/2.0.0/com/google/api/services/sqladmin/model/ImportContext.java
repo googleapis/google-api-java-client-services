@@ -726,6 +726,13 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
     private java.lang.Boolean parallel;
 
     /**
+     * Optional. Options for importing from a Cloud SQL for PostgreSQL instance.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private PostgresImportOptions postgresImportOptions;
+
+    /**
      * Optional. The number of threads to use for parallel import.
      * The value may be {@code null}.
      */
@@ -746,6 +753,23 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
      */
     public SqlImportOptions setParallel(java.lang.Boolean parallel) {
       this.parallel = parallel;
+      return this;
+    }
+
+    /**
+     * Optional. Options for importing from a Cloud SQL for PostgreSQL instance.
+     * @return value or {@code null} for none
+     */
+    public PostgresImportOptions getPostgresImportOptions() {
+      return postgresImportOptions;
+    }
+
+    /**
+     * Optional. Options for importing from a Cloud SQL for PostgreSQL instance.
+     * @param postgresImportOptions postgresImportOptions or {@code null} for none
+     */
+    public SqlImportOptions setPostgresImportOptions(PostgresImportOptions postgresImportOptions) {
+      this.postgresImportOptions = postgresImportOptions;
       return this;
     }
 
@@ -776,6 +800,76 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
       return (SqlImportOptions) super.clone();
     }
 
+    /**
+     * Optional. Options for importing from a Cloud SQL for PostgreSQL instance.
+     */
+    public static final class PostgresImportOptions extends com.google.api.client.json.GenericJson {
+
+      /**
+       * Optional. The --clean flag for the pg_restore utility. This flag applies only if you enabled
+       * Cloud SQL to import files in parallel.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean clean;
+
+      /**
+       * Optional. The --if-exists flag for the pg_restore utility. This flag applies only if you
+       * enabled Cloud SQL to import files in parallel.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean ifExists;
+
+      /**
+       * Optional. The --clean flag for the pg_restore utility. This flag applies only if you enabled
+       * Cloud SQL to import files in parallel.
+       * @return value or {@code null} for none
+       */
+      public java.lang.Boolean getClean() {
+        return clean;
+      }
+
+      /**
+       * Optional. The --clean flag for the pg_restore utility. This flag applies only if you enabled
+       * Cloud SQL to import files in parallel.
+       * @param clean clean or {@code null} for none
+       */
+      public PostgresImportOptions setClean(java.lang.Boolean clean) {
+        this.clean = clean;
+        return this;
+      }
+
+      /**
+       * Optional. The --if-exists flag for the pg_restore utility. This flag applies only if you
+       * enabled Cloud SQL to import files in parallel.
+       * @return value or {@code null} for none
+       */
+      public java.lang.Boolean getIfExists() {
+        return ifExists;
+      }
+
+      /**
+       * Optional. The --if-exists flag for the pg_restore utility. This flag applies only if you
+       * enabled Cloud SQL to import files in parallel.
+       * @param ifExists ifExists or {@code null} for none
+       */
+      public PostgresImportOptions setIfExists(java.lang.Boolean ifExists) {
+        this.ifExists = ifExists;
+        return this;
+      }
+
+      @Override
+      public PostgresImportOptions set(String fieldName, Object value) {
+        return (PostgresImportOptions) super.set(fieldName, value);
+      }
+
+      @Override
+      public PostgresImportOptions clone() {
+        return (PostgresImportOptions) super.clone();
+      }
+
+    }
   }
 
 }

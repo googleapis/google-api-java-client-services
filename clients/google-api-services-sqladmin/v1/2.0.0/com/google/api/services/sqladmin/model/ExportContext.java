@@ -561,6 +561,13 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
     private java.lang.Boolean parallel;
 
     /**
+     * Options for exporting from a Cloud SQL for PostgreSQL instance.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private PostgresExportOptions postgresExportOptions;
+
+    /**
      * Export only schemas.
      * The value may be {@code null}.
      */
@@ -613,6 +620,23 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
      */
     public SqlExportOptions setParallel(java.lang.Boolean parallel) {
       this.parallel = parallel;
+      return this;
+    }
+
+    /**
+     * Options for exporting from a Cloud SQL for PostgreSQL instance.
+     * @return value or {@code null} for none
+     */
+    public PostgresExportOptions getPostgresExportOptions() {
+      return postgresExportOptions;
+    }
+
+    /**
+     * Options for exporting from a Cloud SQL for PostgreSQL instance.
+     * @param postgresExportOptions postgresExportOptions or {@code null} for none
+     */
+    public SqlExportOptions setPostgresExportOptions(PostgresExportOptions postgresExportOptions) {
+      this.postgresExportOptions = postgresExportOptions;
       return this;
     }
 
@@ -725,6 +749,76 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
       @Override
       public MysqlExportOptions clone() {
         return (MysqlExportOptions) super.clone();
+      }
+
+    }
+    /**
+     * Options for exporting from a Cloud SQL for PostgreSQL instance.
+     */
+    public static final class PostgresExportOptions extends com.google.api.client.json.GenericJson {
+
+      /**
+       * Optional. Use this option to include DROP SQL statements. These statements are used to delete
+       * database objects before running the import operation.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean clean;
+
+      /**
+       * Optional. Option to include an IF EXISTS SQL statement with each DROP statement produced by
+       * clean.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean ifExists;
+
+      /**
+       * Optional. Use this option to include DROP SQL statements. These statements are used to delete
+       * database objects before running the import operation.
+       * @return value or {@code null} for none
+       */
+      public java.lang.Boolean getClean() {
+        return clean;
+      }
+
+      /**
+       * Optional. Use this option to include DROP SQL statements. These statements are used to delete
+       * database objects before running the import operation.
+       * @param clean clean or {@code null} for none
+       */
+      public PostgresExportOptions setClean(java.lang.Boolean clean) {
+        this.clean = clean;
+        return this;
+      }
+
+      /**
+       * Optional. Option to include an IF EXISTS SQL statement with each DROP statement produced by
+       * clean.
+       * @return value or {@code null} for none
+       */
+      public java.lang.Boolean getIfExists() {
+        return ifExists;
+      }
+
+      /**
+       * Optional. Option to include an IF EXISTS SQL statement with each DROP statement produced by
+       * clean.
+       * @param ifExists ifExists or {@code null} for none
+       */
+      public PostgresExportOptions setIfExists(java.lang.Boolean ifExists) {
+        this.ifExists = ifExists;
+        return this;
+      }
+
+      @Override
+      public PostgresExportOptions set(String fieldName, Object value) {
+        return (PostgresExportOptions) super.set(fieldName, value);
+      }
+
+      @Override
+      public PostgresExportOptions clone() {
+        return (PostgresExportOptions) super.clone();
       }
 
     }

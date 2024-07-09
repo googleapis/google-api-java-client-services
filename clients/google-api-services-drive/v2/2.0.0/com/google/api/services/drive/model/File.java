@@ -497,7 +497,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Shortcut file details. Only populated for shortcut files, which have the mimeType field set to
-   * `application/vnd.google-apps.shortcut`.
+   * `application/vnd.google-apps.shortcut`. Can only be set on `files.insert` requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1713,7 +1713,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Shortcut file details. Only populated for shortcut files, which have the mimeType field set to
-   * `application/vnd.google-apps.shortcut`.
+   * `application/vnd.google-apps.shortcut`. Can only be set on `files.insert` requests.
    * @return value or {@code null} for none
    */
   public ShortcutDetails getShortcutDetails() {
@@ -1722,7 +1722,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Shortcut file details. Only populated for shortcut files, which have the mimeType field set to
-   * `application/vnd.google-apps.shortcut`.
+   * `application/vnd.google-apps.shortcut`. Can only be set on `files.insert` requests.
    * @param shortcutDetails shortcutDetails or {@code null} for none
    */
   public File setShortcutDetails(ShortcutDetails shortcutDetails) {
@@ -4029,12 +4029,12 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Shortcut file details. Only populated for shortcut files, which have the mimeType field set to
-   * `application/vnd.google-apps.shortcut`.
+   * `application/vnd.google-apps.shortcut`. Can only be set on `files.insert` requests.
    */
   public static final class ShortcutDetails extends com.google.api.client.json.GenericJson {
 
     /**
-     * The ID of the file that this shortcut points to.
+     * The ID of the file that this shortcut points to. Can only be set on `files.insert` requests.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -4056,7 +4056,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.String targetResourceKey;
 
     /**
-     * The ID of the file that this shortcut points to.
+     * The ID of the file that this shortcut points to. Can only be set on `files.insert` requests.
      * @return value or {@code null} for none
      */
     public java.lang.String getTargetId() {
@@ -4064,7 +4064,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The ID of the file that this shortcut points to.
+     * The ID of the file that this shortcut points to. Can only be set on `files.insert` requests.
      * @param targetId targetId or {@code null} for none
      */
     public ShortcutDetails setTargetId(java.lang.String targetId) {

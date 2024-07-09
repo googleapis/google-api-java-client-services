@@ -30,12 +30,41 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class SpannerLocation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Set of backups used by the resource with name in the same format as what is available at
+   * http://table/spanner_automon.backup_metadata
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> backupName;
+
+  /**
+   * Set of databases used by the resource in format /span//
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> dbName;
 
   /**
+   * Set of backups used by the resource with name in the same format as what is available at
+   * http://table/spanner_automon.backup_metadata
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getBackupName() {
+    return backupName;
+  }
+
+  /**
+   * Set of backups used by the resource with name in the same format as what is available at
+   * http://table/spanner_automon.backup_metadata
+   * @param backupName backupName or {@code null} for none
+   */
+  public SpannerLocation setBackupName(java.util.List<java.lang.String> backupName) {
+    this.backupName = backupName;
+    return this;
+  }
+
+  /**
+   * Set of databases used by the resource in format /span//
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDbName() {
@@ -43,6 +72,7 @@ public final class SpannerLocation extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Set of databases used by the resource in format /span//
    * @param dbName dbName or {@code null} for none
    */
   public SpannerLocation setDbName(java.util.List<java.lang.String> dbName) {

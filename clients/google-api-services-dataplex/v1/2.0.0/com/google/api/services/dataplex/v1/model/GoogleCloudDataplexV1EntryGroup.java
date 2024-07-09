@@ -51,8 +51,8 @@ public final class GoogleCloudDataplexV1EntryGroup extends com.google.api.client
   private java.lang.String displayName;
 
   /**
-   * This checksum is computed by the server based on the value of other fields, and may be sent on
-   * update and delete requests to ensure the client has an up-to-date value before proceeding.
+   * This checksum is computed by the service, and might be sent on update and delete requests to
+   * ensure the client has an up-to-date value before proceeding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,16 +74,8 @@ public final class GoogleCloudDataplexV1EntryGroup extends com.google.api.client
   private java.lang.String name;
 
   /**
-   * Output only. Denotes the transfer status of the Entry Group. It is unspecified for Entry Group
-   * created from Dataplex API.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String transferStatus;
-
-  /**
-   * Output only. System generated globally unique ID for the EntryGroup. This ID will be different
-   * if the EntryGroup is deleted and re-created with the same name.
+   * Output only. System generated globally unique ID for the EntryGroup. If you delete and recreate
+   * the EntryGroup with the same name, this ID will be different.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,8 +140,8 @@ public final class GoogleCloudDataplexV1EntryGroup extends com.google.api.client
   }
 
   /**
-   * This checksum is computed by the server based on the value of other fields, and may be sent on
-   * update and delete requests to ensure the client has an up-to-date value before proceeding.
+   * This checksum is computed by the service, and might be sent on update and delete requests to
+   * ensure the client has an up-to-date value before proceeding.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -157,8 +149,8 @@ public final class GoogleCloudDataplexV1EntryGroup extends com.google.api.client
   }
 
   /**
-   * This checksum is computed by the server based on the value of other fields, and may be sent on
-   * update and delete requests to ensure the client has an up-to-date value before proceeding.
+   * This checksum is computed by the service, and might be sent on update and delete requests to
+   * ensure the client has an up-to-date value before proceeding.
    * @param etag etag or {@code null} for none
    */
   public GoogleCloudDataplexV1EntryGroup setEtag(java.lang.String etag) {
@@ -203,27 +195,8 @@ public final class GoogleCloudDataplexV1EntryGroup extends com.google.api.client
   }
 
   /**
-   * Output only. Denotes the transfer status of the Entry Group. It is unspecified for Entry Group
-   * created from Dataplex API.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getTransferStatus() {
-    return transferStatus;
-  }
-
-  /**
-   * Output only. Denotes the transfer status of the Entry Group. It is unspecified for Entry Group
-   * created from Dataplex API.
-   * @param transferStatus transferStatus or {@code null} for none
-   */
-  public GoogleCloudDataplexV1EntryGroup setTransferStatus(java.lang.String transferStatus) {
-    this.transferStatus = transferStatus;
-    return this;
-  }
-
-  /**
-   * Output only. System generated globally unique ID for the EntryGroup. This ID will be different
-   * if the EntryGroup is deleted and re-created with the same name.
+   * Output only. System generated globally unique ID for the EntryGroup. If you delete and recreate
+   * the EntryGroup with the same name, this ID will be different.
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -231,8 +204,8 @@ public final class GoogleCloudDataplexV1EntryGroup extends com.google.api.client
   }
 
   /**
-   * Output only. System generated globally unique ID for the EntryGroup. This ID will be different
-   * if the EntryGroup is deleted and re-created with the same name.
+   * Output only. System generated globally unique ID for the EntryGroup. If you delete and recreate
+   * the EntryGroup with the same name, this ID will be different.
    * @param uid uid or {@code null} for none
    */
   public GoogleCloudDataplexV1EntryGroup setUid(java.lang.String uid) {

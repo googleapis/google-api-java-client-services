@@ -17,8 +17,8 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Aspect Type is a template for creating Aspects, and represents the JSON-schema for a given Entry,
- * e.g., BigQuery Table Schema.
+ * AspectType is a template for creating Aspects, and represents the JSON-schema for a given Entry,
+ * for example, BigQuery Table Schema.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -31,7 +31,7 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1AspectType extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. Authorization defined for this type.
+   * Immutable. Defines the Authorization for this type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,8 +59,8 @@ public final class GoogleCloudDataplexV1AspectType extends com.google.api.client
   private java.lang.String displayName;
 
   /**
-   * This checksum is computed by the server based on the value of other fields, and may be sent on
-   * update and delete requests to ensure the client has an up-to-date value before proceeding.
+   * The service computes this checksum. The client may send it on update and delete requests to
+   * ensure it has an up-to-date value before proceeding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,16 +89,8 @@ public final class GoogleCloudDataplexV1AspectType extends com.google.api.client
   private java.lang.String name;
 
   /**
-   * Output only. Denotes the transfer status of the Aspect Type. It is unspecified for Aspect Types
-   * created from Dataplex API.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String transferStatus;
-
-  /**
-   * Output only. System generated globally unique ID for the AspectType. This ID will be different
-   * if the AspectType is deleted and re-created with the same name.
+   * Output only. System generated globally unique ID for the AspectType. If you delete and recreate
+   * the AspectType with the same name, then this ID will be different.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +104,7 @@ public final class GoogleCloudDataplexV1AspectType extends com.google.api.client
   private String updateTime;
 
   /**
-   * Immutable. Authorization defined for this type.
+   * Immutable. Defines the Authorization for this type.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectTypeAuthorization getAuthorization() {
@@ -120,7 +112,7 @@ public final class GoogleCloudDataplexV1AspectType extends com.google.api.client
   }
 
   /**
-   * Immutable. Authorization defined for this type.
+   * Immutable. Defines the Authorization for this type.
    * @param authorization authorization or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectType setAuthorization(GoogleCloudDataplexV1AspectTypeAuthorization authorization) {
@@ -180,8 +172,8 @@ public final class GoogleCloudDataplexV1AspectType extends com.google.api.client
   }
 
   /**
-   * This checksum is computed by the server based on the value of other fields, and may be sent on
-   * update and delete requests to ensure the client has an up-to-date value before proceeding.
+   * The service computes this checksum. The client may send it on update and delete requests to
+   * ensure it has an up-to-date value before proceeding.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -189,8 +181,8 @@ public final class GoogleCloudDataplexV1AspectType extends com.google.api.client
   }
 
   /**
-   * This checksum is computed by the server based on the value of other fields, and may be sent on
-   * update and delete requests to ensure the client has an up-to-date value before proceeding.
+   * The service computes this checksum. The client may send it on update and delete requests to
+   * ensure it has an up-to-date value before proceeding.
    * @param etag etag or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectType setEtag(java.lang.String etag) {
@@ -252,27 +244,8 @@ public final class GoogleCloudDataplexV1AspectType extends com.google.api.client
   }
 
   /**
-   * Output only. Denotes the transfer status of the Aspect Type. It is unspecified for Aspect Types
-   * created from Dataplex API.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getTransferStatus() {
-    return transferStatus;
-  }
-
-  /**
-   * Output only. Denotes the transfer status of the Aspect Type. It is unspecified for Aspect Types
-   * created from Dataplex API.
-   * @param transferStatus transferStatus or {@code null} for none
-   */
-  public GoogleCloudDataplexV1AspectType setTransferStatus(java.lang.String transferStatus) {
-    this.transferStatus = transferStatus;
-    return this;
-  }
-
-  /**
-   * Output only. System generated globally unique ID for the AspectType. This ID will be different
-   * if the AspectType is deleted and re-created with the same name.
+   * Output only. System generated globally unique ID for the AspectType. If you delete and recreate
+   * the AspectType with the same name, then this ID will be different.
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -280,8 +253,8 @@ public final class GoogleCloudDataplexV1AspectType extends com.google.api.client
   }
 
   /**
-   * Output only. System generated globally unique ID for the AspectType. This ID will be different
-   * if the AspectType is deleted and re-created with the same name.
+   * Output only. System generated globally unique ID for the AspectType. If you delete and recreate
+   * the AspectType with the same name, then this ID will be different.
    * @param uid uid or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectType setUid(java.lang.String uid) {

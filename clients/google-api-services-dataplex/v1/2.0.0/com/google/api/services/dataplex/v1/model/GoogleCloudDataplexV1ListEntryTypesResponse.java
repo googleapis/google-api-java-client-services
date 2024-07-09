@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * List EntryTypes response
+ * List EntryTypes response.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1ListEntryTypesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * ListEntryTypes under the given parent location.
+   * EntryTypes under the given parent location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,14 +50,14 @@ public final class GoogleCloudDataplexV1ListEntryTypesResponse extends com.googl
   private java.lang.String nextPageToken;
 
   /**
-   * Locations that could not be reached.
+   * Locations that the service couldn't reach.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> unreachableLocations;
 
   /**
-   * ListEntryTypes under the given parent location.
+   * EntryTypes under the given parent location.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDataplexV1EntryType> getEntryTypes() {
@@ -65,7 +65,7 @@ public final class GoogleCloudDataplexV1ListEntryTypesResponse extends com.googl
   }
 
   /**
-   * ListEntryTypes under the given parent location.
+   * EntryTypes under the given parent location.
    * @param entryTypes entryTypes or {@code null} for none
    */
   public GoogleCloudDataplexV1ListEntryTypesResponse setEntryTypes(java.util.List<GoogleCloudDataplexV1EntryType> entryTypes) {
@@ -91,7 +91,7 @@ public final class GoogleCloudDataplexV1ListEntryTypesResponse extends com.googl
   }
 
   /**
-   * Locations that could not be reached.
+   * Locations that the service couldn't reach.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachableLocations() {
@@ -99,7 +99,7 @@ public final class GoogleCloudDataplexV1ListEntryTypesResponse extends com.googl
   }
 
   /**
-   * Locations that could not be reached.
+   * Locations that the service couldn't reach.
    * @param unreachableLocations unreachableLocations or {@code null} for none
    */
   public GoogleCloudDataplexV1ListEntryTypesResponse setUnreachableLocations(java.util.List<java.lang.String> unreachableLocations) {

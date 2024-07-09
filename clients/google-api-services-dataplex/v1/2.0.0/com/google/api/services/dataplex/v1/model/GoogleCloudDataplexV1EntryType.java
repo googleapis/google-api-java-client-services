@@ -58,9 +58,8 @@ public final class GoogleCloudDataplexV1EntryType extends com.google.api.client.
   private java.lang.String displayName;
 
   /**
-   * Optional. This checksum is computed by the server based on the value of other fields, and may
-   * be sent on update and delete requests to ensure the client has an up-to-date value before
-   * proceeding.
+   * Optional. This checksum is computed by the service, and might be sent on update and delete
+   * requests to ensure the client has an up-to-date value before proceeding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +103,8 @@ public final class GoogleCloudDataplexV1EntryType extends com.google.api.client.
   private java.lang.String system;
 
   /**
-   * Optional. Indicates the class this Entry Type belongs to, for example, TABLE, DATABASE, MODEL.
+   * Optional. Indicates the classes this Entry Type belongs to, for example, TABLE, DATABASE,
+   * MODEL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -194,9 +194,8 @@ public final class GoogleCloudDataplexV1EntryType extends com.google.api.client.
   }
 
   /**
-   * Optional. This checksum is computed by the server based on the value of other fields, and may
-   * be sent on update and delete requests to ensure the client has an up-to-date value before
-   * proceeding.
+   * Optional. This checksum is computed by the service, and might be sent on update and delete
+   * requests to ensure the client has an up-to-date value before proceeding.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -204,9 +203,8 @@ public final class GoogleCloudDataplexV1EntryType extends com.google.api.client.
   }
 
   /**
-   * Optional. This checksum is computed by the server based on the value of other fields, and may
-   * be sent on update and delete requests to ensure the client has an up-to-date value before
-   * proceeding.
+   * Optional. This checksum is computed by the service, and might be sent on update and delete
+   * requests to ensure the client has an up-to-date value before proceeding.
    * @param etag etag or {@code null} for none
    */
   public GoogleCloudDataplexV1EntryType setEtag(java.lang.String etag) {
@@ -304,7 +302,8 @@ public final class GoogleCloudDataplexV1EntryType extends com.google.api.client.
   }
 
   /**
-   * Optional. Indicates the class this Entry Type belongs to, for example, TABLE, DATABASE, MODEL.
+   * Optional. Indicates the classes this Entry Type belongs to, for example, TABLE, DATABASE,
+   * MODEL.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTypeAliases() {
@@ -312,7 +311,8 @@ public final class GoogleCloudDataplexV1EntryType extends com.google.api.client.
   }
 
   /**
-   * Optional. Indicates the class this Entry Type belongs to, for example, TABLE, DATABASE, MODEL.
+   * Optional. Indicates the classes this Entry Type belongs to, for example, TABLE, DATABASE,
+   * MODEL.
    * @param typeAliases typeAliases or {@code null} for none
    */
   public GoogleCloudDataplexV1EntryType setTypeAliases(java.util.List<java.lang.String> typeAliases) {

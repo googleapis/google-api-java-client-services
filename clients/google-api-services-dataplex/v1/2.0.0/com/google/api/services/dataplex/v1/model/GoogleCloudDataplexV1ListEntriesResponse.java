@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Model definition for GoogleCloudDataplexV1ListEntriesResponse.
+ * List Entries response.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1ListEntriesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of entries.
+   * The list of entries under the given parent location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,14 +43,14 @@ public final class GoogleCloudDataplexV1ListEntriesResponse extends com.google.a
   }
 
   /**
-   * Pagination token.
+   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The list of entries.
+   * The list of entries under the given parent location.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDataplexV1Entry> getEntries() {
@@ -58,7 +58,7 @@ public final class GoogleCloudDataplexV1ListEntriesResponse extends com.google.a
   }
 
   /**
-   * The list of entries.
+   * The list of entries under the given parent location.
    * @param entries entries or {@code null} for none
    */
   public GoogleCloudDataplexV1ListEntriesResponse setEntries(java.util.List<GoogleCloudDataplexV1Entry> entries) {
@@ -67,7 +67,7 @@ public final class GoogleCloudDataplexV1ListEntriesResponse extends com.google.a
   }
 
   /**
-   * Pagination token.
+   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -75,7 +75,7 @@ public final class GoogleCloudDataplexV1ListEntriesResponse extends com.google.a
   }
 
   /**
-   * Pagination token.
+   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudDataplexV1ListEntriesResponse setNextPageToken(java.lang.String nextPageToken) {

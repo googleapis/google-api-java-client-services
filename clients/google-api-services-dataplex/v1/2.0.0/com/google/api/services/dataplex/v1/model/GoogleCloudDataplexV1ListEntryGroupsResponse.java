@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * List ListEntryGroups response.
+ * List entry groups response.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1ListEntryGroupsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * ListEntryGroups under the given parent location.
+   * Entry groups under the given parent location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,14 +50,14 @@ public final class GoogleCloudDataplexV1ListEntryGroupsResponse extends com.goog
   private java.lang.String nextPageToken;
 
   /**
-   * Locations that could not be reached.
+   * Locations that the service couldn't reach.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> unreachableLocations;
 
   /**
-   * ListEntryGroups under the given parent location.
+   * Entry groups under the given parent location.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDataplexV1EntryGroup> getEntryGroups() {
@@ -65,7 +65,7 @@ public final class GoogleCloudDataplexV1ListEntryGroupsResponse extends com.goog
   }
 
   /**
-   * ListEntryGroups under the given parent location.
+   * Entry groups under the given parent location.
    * @param entryGroups entryGroups or {@code null} for none
    */
   public GoogleCloudDataplexV1ListEntryGroupsResponse setEntryGroups(java.util.List<GoogleCloudDataplexV1EntryGroup> entryGroups) {
@@ -91,7 +91,7 @@ public final class GoogleCloudDataplexV1ListEntryGroupsResponse extends com.goog
   }
 
   /**
-   * Locations that could not be reached.
+   * Locations that the service couldn't reach.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachableLocations() {
@@ -99,7 +99,7 @@ public final class GoogleCloudDataplexV1ListEntryGroupsResponse extends com.goog
   }
 
   /**
-   * Locations that could not be reached.
+   * Locations that the service couldn't reach.
    * @param unreachableLocations unreachableLocations or {@code null} for none
    */
   public GoogleCloudDataplexV1ListEntryGroupsResponse setUnreachableLocations(java.util.List<java.lang.String> unreachableLocations) {

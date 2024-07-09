@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Definition of the annotations of a field
+ * Definition of the annotations of a field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -30,53 +30,52 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1AspectTypeMetadataTemplateAnnotations extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Marks a field as deprecated, a deprecation message can be included.
+   * Optional. Marks a field as deprecated. You can include a deprecation message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deprecated;
 
   /**
-   * Optional. Specify a description for a field
+   * Optional. Description for a field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Optional. Specify a displayname for a field.
+   * Optional. Display name for a field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Optional. Specify a display order for a field. Display order can be used to reorder where a
-   * field is rendered
+   * Optional. Display order for a field. You can use this to reorder where a field is rendered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer displayOrder;
 
   /**
-   * Optional. String Type annotations can be used to specify special meaning to string fields. The
+   * Optional. You can use String Type annotations to specify special meaning to string fields. The
    * following values are supported: richText: The field must be interpreted as a rich text field.
-   * url: A fully qualified url link. resource: A service qualified resource reference.
+   * url: A fully qualified URL link. resource: A service qualified resource reference.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String stringType;
 
   /**
-   * Optional. Suggested hints for string fields. These can be used to suggest values to users,
-   * through an UI for example.
+   * Optional. Suggested hints for string fields. You can use them to suggest values to users
+   * through console.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> stringValues;
 
   /**
-   * Optional. Marks a field as deprecated, a deprecation message can be included.
+   * Optional. Marks a field as deprecated. You can include a deprecation message.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeprecated() {
@@ -84,7 +83,7 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplateAnnotations ex
   }
 
   /**
-   * Optional. Marks a field as deprecated, a deprecation message can be included.
+   * Optional. Marks a field as deprecated. You can include a deprecation message.
    * @param deprecated deprecated or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectTypeMetadataTemplateAnnotations setDeprecated(java.lang.String deprecated) {
@@ -93,7 +92,7 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplateAnnotations ex
   }
 
   /**
-   * Optional. Specify a description for a field
+   * Optional. Description for a field.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -101,7 +100,7 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplateAnnotations ex
   }
 
   /**
-   * Optional. Specify a description for a field
+   * Optional. Description for a field.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectTypeMetadataTemplateAnnotations setDescription(java.lang.String description) {
@@ -110,7 +109,7 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplateAnnotations ex
   }
 
   /**
-   * Optional. Specify a displayname for a field.
+   * Optional. Display name for a field.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -118,7 +117,7 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplateAnnotations ex
   }
 
   /**
-   * Optional. Specify a displayname for a field.
+   * Optional. Display name for a field.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectTypeMetadataTemplateAnnotations setDisplayName(java.lang.String displayName) {
@@ -127,8 +126,7 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplateAnnotations ex
   }
 
   /**
-   * Optional. Specify a display order for a field. Display order can be used to reorder where a
-   * field is rendered
+   * Optional. Display order for a field. You can use this to reorder where a field is rendered.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDisplayOrder() {
@@ -136,8 +134,7 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplateAnnotations ex
   }
 
   /**
-   * Optional. Specify a display order for a field. Display order can be used to reorder where a
-   * field is rendered
+   * Optional. Display order for a field. You can use this to reorder where a field is rendered.
    * @param displayOrder displayOrder or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectTypeMetadataTemplateAnnotations setDisplayOrder(java.lang.Integer displayOrder) {
@@ -146,9 +143,9 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplateAnnotations ex
   }
 
   /**
-   * Optional. String Type annotations can be used to specify special meaning to string fields. The
+   * Optional. You can use String Type annotations to specify special meaning to string fields. The
    * following values are supported: richText: The field must be interpreted as a rich text field.
-   * url: A fully qualified url link. resource: A service qualified resource reference.
+   * url: A fully qualified URL link. resource: A service qualified resource reference.
    * @return value or {@code null} for none
    */
   public java.lang.String getStringType() {
@@ -156,9 +153,9 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplateAnnotations ex
   }
 
   /**
-   * Optional. String Type annotations can be used to specify special meaning to string fields. The
+   * Optional. You can use String Type annotations to specify special meaning to string fields. The
    * following values are supported: richText: The field must be interpreted as a rich text field.
-   * url: A fully qualified url link. resource: A service qualified resource reference.
+   * url: A fully qualified URL link. resource: A service qualified resource reference.
    * @param stringType stringType or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectTypeMetadataTemplateAnnotations setStringType(java.lang.String stringType) {
@@ -167,8 +164,8 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplateAnnotations ex
   }
 
   /**
-   * Optional. Suggested hints for string fields. These can be used to suggest values to users,
-   * through an UI for example.
+   * Optional. Suggested hints for string fields. You can use them to suggest values to users
+   * through console.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getStringValues() {
@@ -176,8 +173,8 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplateAnnotations ex
   }
 
   /**
-   * Optional. Suggested hints for string fields. These can be used to suggest values to users,
-   * through an UI for example.
+   * Optional. Suggested hints for string fields. You can use them to suggest values to users
+   * through console.
    * @param stringValues stringValues or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectTypeMetadataTemplateAnnotations setStringValues(java.util.List<java.lang.String> stringValues) {

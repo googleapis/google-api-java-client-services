@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Definition of the constraints of a field
+ * Definition of the constraints of a field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1AspectTypeMetadataTemplateConstraints extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Marks this as an optional/required field.
+   * Optional. Marks this field as optional or required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean required;
 
   /**
-   * Optional. Marks this as an optional/required field.
+   * Optional. Marks this field as optional or required.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequired() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplateConstraints ex
   }
 
   /**
-   * Optional. Marks this as an optional/required field.
+   * Optional. Marks this field as optional or required.
    * @param required required or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectTypeMetadataTemplateConstraints setRequired(java.lang.Boolean required) {

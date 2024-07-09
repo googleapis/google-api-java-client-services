@@ -514,7 +514,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * Looks up a single entry.
+       * Looks up a single Entry by name using the permission on the source system.
        *
        * Create a request for the method "locations.lookupEntry".
        *
@@ -539,7 +539,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
         /**
-         * Looks up a single entry.
+         * Looks up a single Entry by name using the permission on the source system.
          *
          * Create a request for the method "locations.lookupEntry".
          *
@@ -657,22 +657,21 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Optional. Limits the aspects returned to the provided aspect types. Only works if the
-         * CUSTOM view is selected.
+         * Optional. Limits the aspects returned to the provided aspect types. It only works for
+         * CUSTOM view.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> aspectTypes;
 
-        /** Optional. Limits the aspects returned to the provided aspect types. Only works if the CUSTOM view
-       is selected.
+        /** Optional. Limits the aspects returned to the provided aspect types. It only works for CUSTOM view.
          */
         public java.util.List<java.lang.String> getAspectTypes() {
           return aspectTypes;
         }
 
         /**
-         * Optional. Limits the aspects returned to the provided aspect types. Only works if the
-         * CUSTOM view is selected.
+         * Optional. Limits the aspects returned to the provided aspect types. It only works for
+         * CUSTOM view.
          */
         public LookupEntry setAspectTypes(java.util.List<java.lang.String> aspectTypes) {
           this.aspectTypes = aspectTypes;
@@ -704,13 +703,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
         /**
          * Optional. Limits the aspects returned to those associated with the provided paths within
-         * the Entry. Only works if the CUSTOM view is selected.
+         * the Entry. It only works for CUSTOM view.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> paths;
 
         /** Optional. Limits the aspects returned to those associated with the provided paths within the Entry.
-       Only works if the CUSTOM view is selected.
+       It only works for CUSTOM view.
          */
         public java.util.List<java.lang.String> getPaths() {
           return paths;
@@ -718,24 +717,24 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
         /**
          * Optional. Limits the aspects returned to those associated with the provided paths within
-         * the Entry. Only works if the CUSTOM view is selected.
+         * the Entry. It only works for CUSTOM view.
          */
         public LookupEntry setPaths(java.util.List<java.lang.String> paths) {
           this.paths = paths;
           return this;
         }
 
-        /** Optional. View for controlling which parts of an entry are to be returned. */
+        /** Optional. View to control which parts of an entry the service should return. */
         @com.google.api.client.util.Key
         private java.lang.String view;
 
-        /** Optional. View for controlling which parts of an entry are to be returned.
+        /** Optional. View to control which parts of an entry the service should return.
          */
         public java.lang.String getView() {
           return view;
         }
 
-        /** Optional. View for controlling which parts of an entry are to be returned. */
+        /** Optional. View to control which parts of an entry the service should return. */
         public LookupEntry setView(java.lang.String view) {
           this.view = view;
           return this;
@@ -747,7 +746,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * Searches for entries matching given query and scope.
+       * Searches for Entries matching the given query and scope.
        *
        * Create a request for the method "locations.searchEntries".
        *
@@ -772,7 +771,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
         /**
-         * Searches for entries matching given query and scope.
+         * Searches for Entries matching the given query and scope.
          *
          * Create a request for the method "locations.searchEntries".
          *
@@ -879,48 +878,63 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
-        /** Optional. Ordering of the results. Supported options to be added later. */
+        /** Optional. Specifies the ordering of results. */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Optional. Ordering of the results. Supported options to be added later.
+        /** Optional. Specifies the ordering of results.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
         }
 
-        /** Optional. Ordering of the results. Supported options to be added later. */
+        /** Optional. Specifies the ordering of results. */
         public SearchEntries setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
           return this;
         }
 
-        /** Optional. Pagination. */
+        /**
+         * Optional. Number of results in the search page. If <=0, then defaults to 10. Max limit
+         * for page_size is 1000. Throws an invalid argument for page_size > 1000.
+         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Optional. Pagination.
+        /** Optional. Number of results in the search page. If <=0, then defaults to 10. Max limit for
+       page_size is 1000. Throws an invalid argument for page_size > 1000.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** Optional. Pagination. */
+        /**
+         * Optional. Number of results in the search page. If <=0, then defaults to 10. Max limit
+         * for page_size is 1000. Throws an invalid argument for page_size > 1000.
+         */
         public SearchEntries setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
+        /**
+         * Optional. Page token received from a previous SearchEntries call. Provide this to
+         * retrieve the subsequent page.
+         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /**
-
+        /** Optional. Page token received from a previous SearchEntries call. Provide this to retrieve the
+       subsequent page.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
+        /**
+         * Optional. Page token received from a previous SearchEntries call. Provide this to
+         * retrieve the subsequent page.
+         */
         public SearchEntries setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -943,25 +957,25 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Optional. The scope under which the search should be operating. Should either be
-         * organizations/ or projects/. If left unspecified, it will default to the organization
-         * where the project provided in name is located.
+         * Optional. The scope under which the search should be operating. It must either be
+         * organizations/ or projects/. If it is unspecified, it defaults to the organization where
+         * the project provided in name is located.
          */
         @com.google.api.client.util.Key
         private java.lang.String scope;
 
-        /** Optional. The scope under which the search should be operating. Should either be organizations/ or
-       projects/. If left unspecified, it will default to the organization where the project provided in
-       name is located.
+        /** Optional. The scope under which the search should be operating. It must either be organizations/ or
+       projects/. If it is unspecified, it defaults to the organization where the project provided in name
+       is located.
          */
         public java.lang.String getScope() {
           return scope;
         }
 
         /**
-         * Optional. The scope under which the search should be operating. Should either be
-         * organizations/ or projects/. If left unspecified, it will default to the organization
-         * where the project provided in name is located.
+         * Optional. The scope under which the search should be operating. It must either be
+         * organizations/ or projects/. If it is unspecified, it defaults to the organization where
+         * the project provided in name is located.
          */
         public SearchEntries setScope(java.lang.String scope) {
           this.scope = scope;
@@ -995,7 +1009,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
       public class AspectTypes {
 
         /**
-         * Creates an AspectType
+         * Creates an AspectType.
          *
          * Create a request for the method "aspectTypes.create".
          *
@@ -1003,8 +1017,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the AspectType, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
          * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1AspectType}
          * @return the request
          */
@@ -1022,7 +1036,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates an AspectType
+           * Creates an AspectType.
            *
            * Create a request for the method "aspectTypes.create".
            *
@@ -1033,8 +1047,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the AspectType, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1AspectType}
            * @since 1.13
            */
@@ -1105,14 +1119,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the AspectType, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the AspectType, of the form:
-         projects/{project_number}/locations/{location_id} where location_id refers to a GCP region.
+         projects/{project_number}/locations/{location_id} where location_id refers to a Google Cloud
+         region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1120,8 +1135,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the AspectType, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1150,21 +1165,21 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Only validate the request, but do not perform mutations. The default is
-           * false.
+           * Optional. The service validates the request without performing any mutations. The
+           * default is false.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Optional. Only validate the request, but do not perform mutations. The default is false.
+          /** Optional. The service validates the request without performing any mutations. The default is false.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
           /**
-           * Optional. Only validate the request, but do not perform mutations. The default is
-           * false.
+           * Optional. The service validates the request without performing any mutations. The
+           * default is false.
            */
           public Create setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;
@@ -1177,7 +1192,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Deletes a AspectType resource.
+         * Deletes an AspectType.
          *
          * Create a request for the method "aspectTypes.delete".
          *
@@ -1202,7 +1217,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/aspectTypes/[^/]+$");
 
           /**
-           * Deletes a AspectType resource.
+           * Deletes an AspectType.
            *
            * Create a request for the method "aspectTypes.delete".
            *
@@ -1311,13 +1326,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. If the client provided etag value does not match the current etag value, the
-           * DeleteAspectTypeRequest method returns an ABORTED error response
+           * DeleteAspectTypeRequest method returns an ABORTED error response.
            */
           @com.google.api.client.util.Key
           private java.lang.String etag;
 
           /** Optional. If the client provided etag value does not match the current etag value, the
-         DeleteAspectTypeRequest method returns an ABORTED error response
+         DeleteAspectTypeRequest method returns an ABORTED error response.
            */
           public java.lang.String getEtag() {
             return etag;
@@ -1325,7 +1340,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. If the client provided etag value does not match the current etag value, the
-           * DeleteAspectTypeRequest method returns an ABORTED error response
+           * DeleteAspectTypeRequest method returns an ABORTED error response.
            */
           public Delete setEtag(java.lang.String etag) {
             this.etag = etag;
@@ -1338,7 +1353,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Retrieves a AspectType resource.
+         * Gets an AspectType.
          *
          * Create a request for the method "aspectTypes.get".
          *
@@ -1363,7 +1378,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/aspectTypes/[^/]+$");
 
           /**
-           * Retrieves a AspectType resource.
+           * Gets an AspectType.
            *
            * Create a request for the method "aspectTypes.get".
            *
@@ -1690,8 +1705,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the AspectType location, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1718,8 +1733,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the AspectType location, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1799,14 +1814,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the AspectType location, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the AspectType location, of the form:
-         projects/{project_number}/locations/{location_id} where location_id refers to a GCP region.
+         projects/{project_number}/locations/{location_id} where location_id refers to a Google Cloud
+         region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1814,8 +1830,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the AspectType location, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1828,25 +1844,25 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Filter request. Filters are case-sensitive. The following formats are
-           * supported:labels.key1 = "value1" labels:key1 name = "value" These restrictions can be
-           * coinjoined with AND, OR and NOT conjunctions.
+           * Optional. Filter request. Filters are case-sensitive. The service supports the
+           * following formats: labels.key1 = "value1" labels:key1 name = "value"These restrictions
+           * can be conjoined with AND, OR, and NOT conjunctions.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filter request. Filters are case-sensitive. The following formats are
-         supported:labels.key1 = "value1" labels:key1 name = "value" These restrictions can be coinjoined
-         with AND, OR and NOT conjunctions.
+          /** Optional. Filter request. Filters are case-sensitive. The service supports the following formats:
+         labels.key1 = "value1" labels:key1 name = "value"These restrictions can be conjoined with AND, OR,
+         and NOT conjunctions.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Optional. Filter request. Filters are case-sensitive. The following formats are
-           * supported:labels.key1 = "value1" labels:key1 name = "value" These restrictions can be
-           * coinjoined with AND, OR and NOT conjunctions.
+           * Optional. Filter request. Filters are case-sensitive. The service supports the
+           * following formats: labels.key1 = "value1" labels:key1 name = "value"These restrictions
+           * can be conjoined with AND, OR, and NOT conjunctions.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -1854,13 +1870,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Order by fields (name or create_time) for the result. If not specified, the
+           * Optional. Orders the result by name or create_time fields. If not specified, the
            * ordering is undefined.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. Order by fields (name or create_time) for the result. If not specified, the ordering is
+          /** Optional. Orders the result by name or create_time fields. If not specified, the ordering is
          undefined.
            */
           public java.lang.String getOrderBy() {
@@ -1868,7 +1884,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Order by fields (name or create_time) for the result. If not specified, the
+           * Optional. Orders the result by name or create_time fields. If not specified, the
            * ordering is undefined.
            */
           public List setOrderBy(java.lang.String orderBy) {
@@ -1878,15 +1894,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. Maximum number of AspectTypes to return. The service may return fewer than
-           * this value. If unspecified, at most 10 AspectTypes will be returned. The maximum value
-           * is 1000; values above 1000 will be coerced to 1000.
+           * this value. If unspecified, the service returns at most 10 AspectTypes. The maximum
+           * value is 1000; values above 1000 will be coerced to 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
           /** Optional. Maximum number of AspectTypes to return. The service may return fewer than this value. If
-         unspecified, at most 10 AspectTypes will be returned. The maximum value is 1000; values above 1000
-         will be coerced to 1000.
+         unspecified, the service returns at most 10 AspectTypes. The maximum value is 1000; values above
+         1000 will be coerced to 1000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
@@ -1894,8 +1910,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. Maximum number of AspectTypes to return. The service may return fewer than
-           * this value. If unspecified, at most 10 AspectTypes will be returned. The maximum value
-           * is 1000; values above 1000 will be coerced to 1000.
+           * this value. If unspecified, the service returns at most 10 AspectTypes. The maximum
+           * value is 1000; values above 1000 will be coerced to 1000.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -1904,15 +1920,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. Page token received from a previous ListAspectTypes call. Provide this to
-           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * retrieve the subsequent page. When paginating, all other parameters you provide to
            * ListAspectTypes must match the call that provided the page token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
           /** Optional. Page token received from a previous ListAspectTypes call. Provide this to retrieve the
-         subsequent page. When paginating, all other parameters provided to ListAspectTypes must match the
-         call that provided the page token.
+         subsequent page. When paginating, all other parameters you provide to ListAspectTypes must match
+         the call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
@@ -1920,7 +1936,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. Page token received from a previous ListAspectTypes call. Provide this to
-           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * retrieve the subsequent page. When paginating, all other parameters you provide to
            * ListAspectTypes must match the call that provided the page token.
            */
           public List setPageToken(java.lang.String pageToken) {
@@ -1934,7 +1950,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Updates a AspectType resource.
+         * Updates an AspectType.
          *
          * Create a request for the method "aspectTypes.patch".
          *
@@ -1960,7 +1976,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/aspectTypes/[^/]+$");
 
           /**
-           * Updates a AspectType resource.
+           * Updates an AspectType.
            *
            * Create a request for the method "aspectTypes.patch".
            *
@@ -9039,7 +9055,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
       public class EntryGroups {
 
         /**
-         * Creates an EntryGroup
+         * Creates an EntryGroup.
          *
          * Create a request for the method "entryGroups.create".
          *
@@ -9066,7 +9082,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates an EntryGroup
+           * Creates an EntryGroup.
            *
            * Create a request for the method "entryGroups.create".
            *
@@ -9194,21 +9210,21 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Only validate the request, but do not perform mutations. The default is
-           * false.
+           * Optional. The service validates the request without performing any mutations. The
+           * default is false.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Optional. Only validate the request, but do not perform mutations. The default is false.
+          /** Optional. The service validates the request without performing any mutations. The default is false.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
           /**
-           * Optional. Only validate the request, but do not perform mutations. The default is
-           * false.
+           * Optional. The service validates the request without performing any mutations. The
+           * default is false.
            */
           public Create setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;
@@ -9221,7 +9237,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Deletes a EntryGroup resource.
+         * Deletes an EntryGroup.
          *
          * Create a request for the method "entryGroups.delete".
          *
@@ -9246,7 +9262,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
 
           /**
-           * Deletes a EntryGroup resource.
+           * Deletes an EntryGroup.
            *
            * Create a request for the method "entryGroups.delete".
            *
@@ -9355,13 +9371,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. If the client provided etag value does not match the current etag value, the
-           * DeleteEntryGroupRequest method returns an ABORTED error response
+           * DeleteEntryGroupRequest method returns an ABORTED error response.
            */
           @com.google.api.client.util.Key
           private java.lang.String etag;
 
           /** Optional. If the client provided etag value does not match the current etag value, the
-         DeleteEntryGroupRequest method returns an ABORTED error response
+         DeleteEntryGroupRequest method returns an ABORTED error response.
            */
           public java.lang.String getEtag() {
             return etag;
@@ -9369,7 +9385,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. If the client provided etag value does not match the current etag value, the
-           * DeleteEntryGroupRequest method returns an ABORTED error response
+           * DeleteEntryGroupRequest method returns an ABORTED error response.
            */
           public Delete setEtag(java.lang.String etag) {
             this.etag = etag;
@@ -9382,7 +9398,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Retrieves a EntryGroup resource.
+         * Gets an EntryGroup.
          *
          * Create a request for the method "entryGroups.get".
          *
@@ -9407,7 +9423,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
 
           /**
-           * Retrieves a EntryGroup resource.
+           * Gets an EntryGroup.
            *
            * Create a request for the method "entryGroups.get".
            *
@@ -9734,8 +9750,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the entryGroup location, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -9762,8 +9778,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the entryGroup location, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -9843,14 +9859,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the entryGroup location, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the entryGroup location, of the form:
-         projects/{project_number}/locations/{location_id} where location_id refers to a GCP region.
+         projects/{project_number}/locations/{location_id} where location_id refers to a Google Cloud
+         region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -9858,8 +9875,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the entryGroup location, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -9905,15 +9922,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. Maximum number of EntryGroups to return. The service may return fewer than
-           * this value. If unspecified, at most 10 EntryGroups will be returned. The maximum value
-           * is 1000; values above 1000 will be coerced to 1000.
+           * this value. If unspecified, the service returns at most 10 EntryGroups. The maximum
+           * value is 1000; values above 1000 will be coerced to 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
           /** Optional. Maximum number of EntryGroups to return. The service may return fewer than this value. If
-         unspecified, at most 10 EntryGroups will be returned. The maximum value is 1000; values above 1000
-         will be coerced to 1000.
+         unspecified, the service returns at most 10 EntryGroups. The maximum value is 1000; values above
+         1000 will be coerced to 1000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
@@ -9921,8 +9938,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. Maximum number of EntryGroups to return. The service may return fewer than
-           * this value. If unspecified, at most 10 EntryGroups will be returned. The maximum value
-           * is 1000; values above 1000 will be coerced to 1000.
+           * this value. If unspecified, the service returns at most 10 EntryGroups. The maximum
+           * value is 1000; values above 1000 will be coerced to 1000.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -9931,15 +9948,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. Page token received from a previous ListEntryGroups call. Provide this to
-           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * retrieve the subsequent page. When paginating, all other parameters you provide to
            * ListEntryGroups must match the call that provided the page token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
           /** Optional. Page token received from a previous ListEntryGroups call. Provide this to retrieve the
-         subsequent page. When paginating, all other parameters provided to ListEntryGroups must match the
-         call that provided the page token.
+         subsequent page. When paginating, all other parameters you provide to ListEntryGroups must match
+         the call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
@@ -9947,7 +9964,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. Page token received from a previous ListEntryGroups call. Provide this to
-           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * retrieve the subsequent page. When paginating, all other parameters you provide to
            * ListEntryGroups must match the call that provided the page token.
            */
           public List setPageToken(java.lang.String pageToken) {
@@ -9961,7 +9978,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Updates a EntryGroup resource.
+         * Updates an EntryGroup.
          *
          * Create a request for the method "entryGroups.patch".
          *
@@ -9987,7 +10004,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
 
           /**
-           * Updates a EntryGroup resource.
+           * Updates an EntryGroup.
            *
            * Create a request for the method "entryGroups.patch".
            *
@@ -10112,21 +10129,22 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Only validate the request, but do not perform mutations. The default is
-           * false.
+           * Optional. The service validates the request, without performing any mutations. The
+           * default is false.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Optional. Only validate the request, but do not perform mutations. The default is false.
+          /** Optional. The service validates the request, without performing any mutations. The default is
+         false.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
           /**
-           * Optional. Only validate the request, but do not perform mutations. The default is
-           * false.
+           * Optional. The service validates the request, without performing any mutations. The
+           * default is false.
            */
           public Patch setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;
@@ -10592,29 +10610,28 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. Entry identifier. It has to be unique within an Entry Group.Entries
-             * corresponding to Google Cloud resources use Entry ID format based on Full Resource
-             * Names (https://cloud.google.com/apis/design/resource_names#full_resource_name). The
-             * format is a Full Resource Name of the resource without the prefix double slashes in
-             * the API Service Name part of Full Resource Name. This allows retrieval of entries
-             * using their associated resource name.For example if the Full Resource Name of a
+             * corresponding to Google Cloud resources use an Entry ID format based on full resource
+             * names (https://cloud.google.com/apis/design/resource_names#full_resource_name). The
+             * format is a full resource name of the resource without the prefix double slashes in
+             * the API service name part of the full resource name. This allows retrieval of entries
+             * using their associated resource name.For example, if the full resource name of a
              * resource is //library.googleapis.com/shelves/shelf1/books/book2, then the suggested
              * entry_id is library.googleapis.com/shelves/shelf1/books/book2.It is also suggested to
-             * follow the same convention for entries corresponding to resources from other
-             * providers or systems than Google Cloud.The maximum size of the field is 4000
-             * characters.
+             * follow the same convention for entries corresponding to resources from providers or
+             * systems other than Google Cloud.The maximum size of the field is 4000 characters.
              */
             @com.google.api.client.util.Key
             private java.lang.String entryId;
 
             /** Required. Entry identifier. It has to be unique within an Entry Group.Entries corresponding to
-           Google Cloud resources use Entry ID format based on Full Resource Names
-           (https://cloud.google.com/apis/design/resource_names#full_resource_name). The format is a Full
-           Resource Name of the resource without the prefix double slashes in the API Service Name part of
-           Full Resource Name. This allows retrieval of entries using their associated resource name.For
-           example if the Full Resource Name of a resource is
+           Google Cloud resources use an Entry ID format based on full resource names
+           (https://cloud.google.com/apis/design/resource_names#full_resource_name). The format is a full
+           resource name of the resource without the prefix double slashes in the API service name part of the
+           full resource name. This allows retrieval of entries using their associated resource name.For
+           example, if the full resource name of a resource is
            //library.googleapis.com/shelves/shelf1/books/book2, then the suggested entry_id is
            library.googleapis.com/shelves/shelf1/books/book2.It is also suggested to follow the same
-           convention for entries corresponding to resources from other providers or systems than Google
+           convention for entries corresponding to resources from providers or systems other than Google
            Cloud.The maximum size of the field is 4000 characters.
              */
             public java.lang.String getEntryId() {
@@ -10623,16 +10640,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. Entry identifier. It has to be unique within an Entry Group.Entries
-             * corresponding to Google Cloud resources use Entry ID format based on Full Resource
-             * Names (https://cloud.google.com/apis/design/resource_names#full_resource_name). The
-             * format is a Full Resource Name of the resource without the prefix double slashes in
-             * the API Service Name part of Full Resource Name. This allows retrieval of entries
-             * using their associated resource name.For example if the Full Resource Name of a
+             * corresponding to Google Cloud resources use an Entry ID format based on full resource
+             * names (https://cloud.google.com/apis/design/resource_names#full_resource_name). The
+             * format is a full resource name of the resource without the prefix double slashes in
+             * the API service name part of the full resource name. This allows retrieval of entries
+             * using their associated resource name.For example, if the full resource name of a
              * resource is //library.googleapis.com/shelves/shelf1/books/book2, then the suggested
              * entry_id is library.googleapis.com/shelves/shelf1/books/book2.It is also suggested to
-             * follow the same convention for entries corresponding to resources from other
-             * providers or systems than Google Cloud.The maximum size of the field is 4000
-             * characters.
+             * follow the same convention for entries corresponding to resources from providers or
+             * systems other than Google Cloud.The maximum size of the field is 4000 characters.
              */
             public Create setEntryId(java.lang.String entryId) {
               this.entryId = entryId;
@@ -10783,7 +10799,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Gets a single entry.
+           * Gets an Entry.
            *
            * Create a request for the method "entries.get".
            *
@@ -10808,7 +10824,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/.*$");
 
             /**
-             * Gets a single entry.
+             * Gets an Entry.
              *
              * Create a request for the method "entries.get".
              *
@@ -10925,22 +10941,21 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Optional. Limits the aspects returned to the provided aspect types. Only works if the
-             * CUSTOM view is selected.
+             * Optional. Limits the aspects returned to the provided aspect types. It only works for
+             * CUSTOM view.
              */
             @com.google.api.client.util.Key
             private java.util.List<java.lang.String> aspectTypes;
 
-            /** Optional. Limits the aspects returned to the provided aspect types. Only works if the CUSTOM view
-           is selected.
+            /** Optional. Limits the aspects returned to the provided aspect types. It only works for CUSTOM view.
              */
             public java.util.List<java.lang.String> getAspectTypes() {
               return aspectTypes;
             }
 
             /**
-             * Optional. Limits the aspects returned to the provided aspect types. Only works if the
-             * CUSTOM view is selected.
+             * Optional. Limits the aspects returned to the provided aspect types. It only works for
+             * CUSTOM view.
              */
             public Get setAspectTypes(java.util.List<java.lang.String> aspectTypes) {
               this.aspectTypes = aspectTypes;
@@ -10949,13 +10964,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Optional. Limits the aspects returned to those associated with the provided paths
-             * within the Entry. Only works if the CUSTOM view is selected.
+             * within the Entry. It only works for CUSTOM view.
              */
             @com.google.api.client.util.Key
             private java.util.List<java.lang.String> paths;
 
             /** Optional. Limits the aspects returned to those associated with the provided paths within the Entry.
-           Only works if the CUSTOM view is selected.
+           It only works for CUSTOM view.
              */
             public java.util.List<java.lang.String> getPaths() {
               return paths;
@@ -10963,24 +10978,24 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Optional. Limits the aspects returned to those associated with the provided paths
-             * within the Entry. Only works if the CUSTOM view is selected.
+             * within the Entry. It only works for CUSTOM view.
              */
             public Get setPaths(java.util.List<java.lang.String> paths) {
               this.paths = paths;
               return this;
             }
 
-            /** Optional. View for controlling which parts of an entry are to be returned. */
+            /** Optional. View to control which parts of an entry the service should return. */
             @com.google.api.client.util.Key
             private java.lang.String view;
 
-            /** Optional. View for controlling which parts of an entry are to be returned.
+            /** Optional. View to control which parts of an entry the service should return.
              */
             public java.lang.String getView() {
               return view;
             }
 
-            /** Optional. View for controlling which parts of an entry are to be returned. */
+            /** Optional. View to control which parts of an entry the service should return. */
             public Get setView(java.lang.String view) {
               this.view = view;
               return this;
@@ -10992,7 +11007,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Lists entries within an entry group.
+           * Lists Entries within an EntryGroup.
            *
            * Create a request for the method "entries.list".
            *
@@ -11017,7 +11032,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
 
             /**
-             * Lists entries within an entry group.
+             * Lists Entries within an EntryGroup.
              *
              * Create a request for the method "entries.list".
              *
@@ -11134,25 +11149,25 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Optional. A filter on the entries to return. Filters are case-sensitive. The request
-             * can be filtered by the following fields: entry_type, entry_source.display_name. The
-             * comparison operators are =, !=, <, >, <=, >= (strings are compared according to
-             * lexical order) The logical operators AND, OR, NOT can be used in the filter. Wildcard
-             * "*" can be used, but for entry_type the full project id or number needs to be
-             * provided. Example filter expressions:
-             * "entry_source.display_name=AnExampleDisplayName" "entry_type=projects/example-
-             * project/locations/global/entryTypes/example-entry_type" "entry_type=projects/example-
-             * project/locations/us/entryTypes/a* OR entry_type=projects/another-project/locations"
-             * "NOT entry_source.display_name=AnotherExampleDisplayName"
+             * Optional. A filter on the entries to return. Filters are case-sensitive. You can
+             * filter the request by the following fields: entry_type entry_source.display_nameThe
+             * comparison operators are =, !=, <, >, <=, >=. The service compares strings according
+             * to lexical order.You can use the logical operators AND, OR, NOT in the filter.You can
+             * use Wildcard "*", but for entry_type you need to provide the full project id or
+             * number.Example filter expressions: "entry_source.display_name=AnExampleDisplayName"
+             * "entry_type=projects/example-project/locations/global/entryTypes/example-entry_type"
+             * "entry_type=projects/example-project/locations/us/entryTypes/a* OR
+             * entry_type=projects/another-project/locations" "NOT
+             * entry_source.display_name=AnotherExampleDisplayName"
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. A filter on the entries to return. Filters are case-sensitive. The request can be
-           filtered by the following fields: entry_type, entry_source.display_name. The comparison operators
-           are =, !=, <, >, <=, >= (strings are compared according to lexical order) The logical operators
-           AND, OR, NOT can be used in the filter. Wildcard "*" can be used, but for entry_type the full
-           project id or number needs to be provided. Example filter expressions:
+            /** Optional. A filter on the entries to return. Filters are case-sensitive. You can filter the request
+           by the following fields: entry_type entry_source.display_nameThe comparison operators are =, !=, <,
+           >, <=, >=. The service compares strings according to lexical order.You can use the logical
+           operators AND, OR, NOT in the filter.You can use Wildcard "*", but for entry_type you need to
+           provide the full project id or number.Example filter expressions:
            "entry_source.display_name=AnExampleDisplayName" "entry_type=projects/example-
            project/locations/global/entryTypes/example-entry_type" "entry_type=projects/example-
            project/locations/us/entryTypes/a* OR entry_type=projects/another-project/locations" "NOT
@@ -11163,48 +11178,66 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Optional. A filter on the entries to return. Filters are case-sensitive. The request
-             * can be filtered by the following fields: entry_type, entry_source.display_name. The
-             * comparison operators are =, !=, <, >, <=, >= (strings are compared according to
-             * lexical order) The logical operators AND, OR, NOT can be used in the filter. Wildcard
-             * "*" can be used, but for entry_type the full project id or number needs to be
-             * provided. Example filter expressions:
-             * "entry_source.display_name=AnExampleDisplayName" "entry_type=projects/example-
-             * project/locations/global/entryTypes/example-entry_type" "entry_type=projects/example-
-             * project/locations/us/entryTypes/a* OR entry_type=projects/another-project/locations"
-             * "NOT entry_source.display_name=AnotherExampleDisplayName"
+             * Optional. A filter on the entries to return. Filters are case-sensitive. You can
+             * filter the request by the following fields: entry_type entry_source.display_nameThe
+             * comparison operators are =, !=, <, >, <=, >=. The service compares strings according
+             * to lexical order.You can use the logical operators AND, OR, NOT in the filter.You can
+             * use Wildcard "*", but for entry_type you need to provide the full project id or
+             * number.Example filter expressions: "entry_source.display_name=AnExampleDisplayName"
+             * "entry_type=projects/example-project/locations/global/entryTypes/example-entry_type"
+             * "entry_type=projects/example-project/locations/us/entryTypes/a* OR
+             * entry_type=projects/another-project/locations" "NOT
+             * entry_source.display_name=AnotherExampleDisplayName"
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
             }
 
+            /**
+             * Optional. Number of items to return per page. If there are remaining results, the
+             * service returns a next_page_token. If unspecified, the service returns at most 10
+             * Entries. The maximum value is 100; values above 100 will be coerced to 100.
+             */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /**
-
+            /** Optional. Number of items to return per page. If there are remaining results, the service returns a
+           next_page_token. If unspecified, the service returns at most 10 Entries. The maximum value is 100;
+           values above 100 will be coerced to 100.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
+            /**
+             * Optional. Number of items to return per page. If there are remaining results, the
+             * service returns a next_page_token. If unspecified, the service returns at most 10
+             * Entries. The maximum value is 100; values above 100 will be coerced to 100.
+             */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /** Optional. The pagination token returned by a previous request. */
+            /**
+             * Optional. Page token received from a previous ListEntries call. Provide this to
+             * retrieve the subsequent page.
+             */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** Optional. The pagination token returned by a previous request.
+            /** Optional. Page token received from a previous ListEntries call. Provide this to retrieve the
+           subsequent page.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /** Optional. The pagination token returned by a previous request. */
+            /**
+             * Optional. Page token received from a previous ListEntries call. Provide this to
+             * retrieve the subsequent page.
+             */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -11350,53 +11383,57 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               return this;
             }
 
-            /** Optional. If set to true and the entry does not exist, it will be created. */
+            /**
+             * Optional. If set to true and the entry doesn't exist, the service will create it.
+             */
             @com.google.api.client.util.Key
             private java.lang.Boolean allowMissing;
 
-            /** Optional. If set to true and the entry does not exist, it will be created.
+            /** Optional. If set to true and the entry doesn't exist, the service will create it.
              */
             public java.lang.Boolean getAllowMissing() {
               return allowMissing;
             }
 
-            /** Optional. If set to true and the entry does not exist, it will be created. */
+            /**
+             * Optional. If set to true and the entry doesn't exist, the service will create it.
+             */
             public Patch setAllowMissing(java.lang.Boolean allowMissing) {
               this.allowMissing = allowMissing;
               return this;
             }
 
             /**
-             * Optional. The map keys of the Aspects which should be modified. Supports the
-             * following syntaxes: * - matches aspect on given type and empty path * @path - matches
-             * aspect on given type and specified path * * - matches aspects on given type for all
-             * paths * *@path - matches aspects of all types on the given pathExisting aspects
-             * matching the syntax will not be removed unless delete_missing_aspects is set to
-             * true.If this field is left empty, it will be treated as specifying exactly those
-             * Aspects present in the request.
+             * Optional. The map keys of the Aspects which the service should modify. It supports
+             * the following syntaxes: - matches an aspect of the given type and empty path. @path -
+             * matches an aspect of the given type and specified path. * - matches aspects of the
+             * given type for all paths. *@path - matches aspects of all types on the given path.The
+             * service will not remove existing aspects matching the syntax unless
+             * delete_missing_aspects is set to true.If this field is left empty, the service treats
+             * it as specifying exactly those Aspects present in the request.
              */
             @com.google.api.client.util.Key
             private java.util.List<java.lang.String> aspectKeys;
 
-            /** Optional. The map keys of the Aspects which should be modified. Supports the following syntaxes: *
-           - matches aspect on given type and empty path * @path - matches aspect on given type and specified
-           path * * - matches aspects on given type for all paths * *@path - matches aspects of all types on
-           the given pathExisting aspects matching the syntax will not be removed unless
-           delete_missing_aspects is set to true.If this field is left empty, it will be treated as specifying
-           exactly those Aspects present in the request.
+            /** Optional. The map keys of the Aspects which the service should modify. It supports the following
+           syntaxes: - matches an aspect of the given type and empty path. @path - matches an aspect of the
+           given type and specified path. * - matches aspects of the given type for all paths. *@path -
+           matches aspects of all types on the given path.The service will not remove existing aspects
+           matching the syntax unless delete_missing_aspects is set to true.If this field is left empty, the
+           service treats it as specifying exactly those Aspects present in the request.
              */
             public java.util.List<java.lang.String> getAspectKeys() {
               return aspectKeys;
             }
 
             /**
-             * Optional. The map keys of the Aspects which should be modified. Supports the
-             * following syntaxes: * - matches aspect on given type and empty path * @path - matches
-             * aspect on given type and specified path * * - matches aspects on given type for all
-             * paths * *@path - matches aspects of all types on the given pathExisting aspects
-             * matching the syntax will not be removed unless delete_missing_aspects is set to
-             * true.If this field is left empty, it will be treated as specifying exactly those
-             * Aspects present in the request.
+             * Optional. The map keys of the Aspects which the service should modify. It supports
+             * the following syntaxes: - matches an aspect of the given type and empty path. @path -
+             * matches an aspect of the given type and specified path. * - matches aspects of the
+             * given type for all paths. *@path - matches aspects of all types on the given path.The
+             * service will not remove existing aspects matching the syntax unless
+             * delete_missing_aspects is set to true.If this field is left empty, the service treats
+             * it as specifying exactly those Aspects present in the request.
              */
             public Patch setAspectKeys(java.util.List<java.lang.String> aspectKeys) {
               this.aspectKeys = aspectKeys;
@@ -11404,22 +11441,22 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Optional. If set to true and the aspect_keys specify aspect ranges, any existing
-             * aspects from that range not provided in the request will be deleted.
+             * Optional. If set to true and the aspect_keys specify aspect ranges, the service
+             * deletes any existing aspects from that range that weren't provided in the request.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean deleteMissingAspects;
 
-            /** Optional. If set to true and the aspect_keys specify aspect ranges, any existing aspects from that
-           range not provided in the request will be deleted.
+            /** Optional. If set to true and the aspect_keys specify aspect ranges, the service deletes any
+           existing aspects from that range that weren't provided in the request.
              */
             public java.lang.Boolean getDeleteMissingAspects() {
               return deleteMissingAspects;
             }
 
             /**
-             * Optional. If set to true and the aspect_keys specify aspect ranges, any existing
-             * aspects from that range not provided in the request will be deleted.
+             * Optional. If set to true and the aspect_keys specify aspect ranges, the service
+             * deletes any existing aspects from that range that weren't provided in the request.
              */
             public Patch setDeleteMissingAspects(java.lang.Boolean deleteMissingAspects) {
               this.deleteMissingAspects = deleteMissingAspects;
@@ -11428,15 +11465,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Optional. Mask of fields to update. To update Aspects, the update_mask must contain
-             * the value "aspects".If the update_mask is empty, all modifiable fields present in the
-             * request will be updated.
+             * the value "aspects".If the update_mask is empty, the service will update all
+             * modifiable fields present in the request.
              */
             @com.google.api.client.util.Key
             private String updateMask;
 
             /** Optional. Mask of fields to update. To update Aspects, the update_mask must contain the value
-           "aspects".If the update_mask is empty, all modifiable fields present in the request will be
-           updated.
+           "aspects".If the update_mask is empty, the service will update all modifiable fields present in the
+           request.
              */
             public String getUpdateMask() {
               return updateMask;
@@ -11444,8 +11481,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Optional. Mask of fields to update. To update Aspects, the update_mask must contain
-             * the value "aspects".If the update_mask is empty, all modifiable fields present in the
-             * request will be updated.
+             * the value "aspects".If the update_mask is empty, the service will update all
+             * modifiable fields present in the request.
              */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
@@ -11481,7 +11518,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
       public class EntryTypes {
 
         /**
-         * Creates an EntryType
+         * Creates an EntryType.
          *
          * Create a request for the method "entryTypes.create".
          *
@@ -11489,8 +11526,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the EntryType, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
          * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryType}
          * @return the request
          */
@@ -11508,7 +11545,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates an EntryType
+           * Creates an EntryType.
            *
            * Create a request for the method "entryTypes.create".
            *
@@ -11519,8 +11556,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the EntryType, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryType}
            * @since 1.13
            */
@@ -11591,14 +11628,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the EntryType, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the EntryType, of the form:
-         projects/{project_number}/locations/{location_id} where location_id refers to a GCP region.
+         projects/{project_number}/locations/{location_id} where location_id refers to a Google Cloud
+         region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -11606,8 +11644,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the EntryType, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -11636,21 +11674,21 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Only validate the request, but do not perform mutations. The default is
-           * false.
+           * Optional. The service validates the request without performing any mutations. The
+           * default is false.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Optional. Only validate the request, but do not perform mutations. The default is false.
+          /** Optional. The service validates the request without performing any mutations. The default is false.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
           /**
-           * Optional. Only validate the request, but do not perform mutations. The default is
-           * false.
+           * Optional. The service validates the request without performing any mutations. The
+           * default is false.
            */
           public Create setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;
@@ -11663,7 +11701,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Deletes a EntryType resource.
+         * Deletes an EntryType.
          *
          * Create a request for the method "entryTypes.delete".
          *
@@ -11688,7 +11726,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryTypes/[^/]+$");
 
           /**
-           * Deletes a EntryType resource.
+           * Deletes an EntryType.
            *
            * Create a request for the method "entryTypes.delete".
            *
@@ -11797,13 +11835,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. If the client provided etag value does not match the current etag value, the
-           * DeleteEntryTypeRequest method returns an ABORTED error response
+           * DeleteEntryTypeRequest method returns an ABORTED error response.
            */
           @com.google.api.client.util.Key
           private java.lang.String etag;
 
           /** Optional. If the client provided etag value does not match the current etag value, the
-         DeleteEntryTypeRequest method returns an ABORTED error response
+         DeleteEntryTypeRequest method returns an ABORTED error response.
            */
           public java.lang.String getEtag() {
             return etag;
@@ -11811,7 +11849,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. If the client provided etag value does not match the current etag value, the
-           * DeleteEntryTypeRequest method returns an ABORTED error response
+           * DeleteEntryTypeRequest method returns an ABORTED error response.
            */
           public Delete setEtag(java.lang.String etag) {
             this.etag = etag;
@@ -11824,7 +11862,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Retrieves a EntryType resource.
+         * Gets an EntryType.
          *
          * Create a request for the method "entryTypes.get".
          *
@@ -11849,7 +11887,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryTypes/[^/]+$");
 
           /**
-           * Retrieves a EntryType resource.
+           * Gets an EntryType.
            *
            * Create a request for the method "entryTypes.get".
            *
@@ -12176,8 +12214,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the EntryType location, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -12204,8 +12242,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the EntryType location, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -12285,14 +12323,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the EntryType location, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the EntryType location, of the form:
-         projects/{project_number}/locations/{location_id} where location_id refers to a GCP region.
+         projects/{project_number}/locations/{location_id} where location_id refers to a Google Cloud
+         region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -12300,8 +12339,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the EntryType location, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -12314,25 +12353,25 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Filter request. Filters are case-sensitive. The following formats are
-           * supported:labels.key1 = "value1" labels:key1 name = "value" These restrictions can be
-           * coinjoined with AND, OR and NOT conjunctions.
+           * Optional. Filter request. Filters are case-sensitive. The service supports the
+           * following formats: labels.key1 = "value1" labels:key1 name = "value"These restrictions
+           * can be conjoined with AND, OR, and NOT conjunctions.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filter request. Filters are case-sensitive. The following formats are
-         supported:labels.key1 = "value1" labels:key1 name = "value" These restrictions can be coinjoined
-         with AND, OR and NOT conjunctions.
+          /** Optional. Filter request. Filters are case-sensitive. The service supports the following formats:
+         labels.key1 = "value1" labels:key1 name = "value"These restrictions can be conjoined with AND, OR,
+         and NOT conjunctions.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Optional. Filter request. Filters are case-sensitive. The following formats are
-           * supported:labels.key1 = "value1" labels:key1 name = "value" These restrictions can be
-           * coinjoined with AND, OR and NOT conjunctions.
+           * Optional. Filter request. Filters are case-sensitive. The service supports the
+           * following formats: labels.key1 = "value1" labels:key1 name = "value"These restrictions
+           * can be conjoined with AND, OR, and NOT conjunctions.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -12340,13 +12379,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Order by fields (name or create_time) for the result. If not specified, the
+           * Optional. Orders the result by name or create_time fields. If not specified, the
            * ordering is undefined.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. Order by fields (name or create_time) for the result. If not specified, the ordering is
+          /** Optional. Orders the result by name or create_time fields. If not specified, the ordering is
          undefined.
            */
           public java.lang.String getOrderBy() {
@@ -12354,7 +12393,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Order by fields (name or create_time) for the result. If not specified, the
+           * Optional. Orders the result by name or create_time fields. If not specified, the
            * ordering is undefined.
            */
           public List setOrderBy(java.lang.String orderBy) {
@@ -12364,15 +12403,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. Maximum number of EntryTypes to return. The service may return fewer than
-           * this value. If unspecified, at most 10 EntryTypes will be returned. The maximum value
-           * is 1000; values above 1000 will be coerced to 1000.
+           * this value. If unspecified, the service returns at most 10 EntryTypes. The maximum
+           * value is 1000; values above 1000 will be coerced to 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
           /** Optional. Maximum number of EntryTypes to return. The service may return fewer than this value. If
-         unspecified, at most 10 EntryTypes will be returned. The maximum value is 1000; values above 1000
-         will be coerced to 1000.
+         unspecified, the service returns at most 10 EntryTypes. The maximum value is 1000; values above
+         1000 will be coerced to 1000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
@@ -12380,8 +12419,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. Maximum number of EntryTypes to return. The service may return fewer than
-           * this value. If unspecified, at most 10 EntryTypes will be returned. The maximum value
-           * is 1000; values above 1000 will be coerced to 1000.
+           * this value. If unspecified, the service returns at most 10 EntryTypes. The maximum
+           * value is 1000; values above 1000 will be coerced to 1000.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -12390,15 +12429,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. Page token received from a previous ListEntryTypes call. Provide this to
-           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * retrieve the subsequent page. When paginating, all other parameters you provided to
            * ListEntryTypes must match the call that provided the page token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
           /** Optional. Page token received from a previous ListEntryTypes call. Provide this to retrieve the
-         subsequent page. When paginating, all other parameters provided to ListEntryTypes must match the
-         call that provided the page token.
+         subsequent page. When paginating, all other parameters you provided to ListEntryTypes must match
+         the call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
@@ -12406,7 +12445,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. Page token received from a previous ListEntryTypes call. Provide this to
-           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * retrieve the subsequent page. When paginating, all other parameters you provided to
            * ListEntryTypes must match the call that provided the page token.
            */
           public List setPageToken(java.lang.String pageToken) {
@@ -12420,7 +12459,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Updates a EntryType resource.
+         * Updates an EntryType.
          *
          * Create a request for the method "entryTypes.patch".
          *
@@ -12446,7 +12485,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryTypes/[^/]+$");
 
           /**
-           * Updates a EntryType resource.
+           * Updates an EntryType.
            *
            * Create a request for the method "entryTypes.patch".
            *
@@ -12571,21 +12610,21 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Only validate the request, but do not perform mutations. The default is
-           * false.
+           * Optional. The service validates the request without performing any mutations. The
+           * default is false.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Optional. Only validate the request, but do not perform mutations. The default is false.
+          /** Optional. The service validates the request without performing any mutations. The default is false.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
           /**
-           * Optional. Only validate the request, but do not perform mutations. The default is
-           * false.
+           * Optional. The service validates the request without performing any mutations. The
+           * default is false.
            */
           public Patch setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;

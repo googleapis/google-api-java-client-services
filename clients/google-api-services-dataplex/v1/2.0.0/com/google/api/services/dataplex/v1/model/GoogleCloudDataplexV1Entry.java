@@ -31,9 +31,9 @@ public final class GoogleCloudDataplexV1Entry extends com.google.api.client.json
 
   /**
    * Optional. The Aspects attached to the Entry. The format for the key can be one of the
-   * following: 1. {projectId}.{locationId}.{aspectTypeId} (if the aspect is attached directly to
-   * the entry) 2. {projectId}.{locationId}.{aspectTypeId}@{path} (if the aspect is attached to an
-   * entry's path)
+   * following: {projectId}.{locationId}.{aspectTypeId} (if the aspect is attached directly to the
+   * entry) {projectId}.{locationId}.{aspectTypeId}@{path} (if the aspect is attached to an entry's
+   * path)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class GoogleCloudDataplexV1Entry extends com.google.api.client.json
   private String createTime;
 
   /**
-   * Optional. Source system related information for an entry.
+   * Optional. Information related to the source system for an entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,9 +98,9 @@ public final class GoogleCloudDataplexV1Entry extends com.google.api.client.json
 
   /**
    * Optional. The Aspects attached to the Entry. The format for the key can be one of the
-   * following: 1. {projectId}.{locationId}.{aspectTypeId} (if the aspect is attached directly to
-   * the entry) 2. {projectId}.{locationId}.{aspectTypeId}@{path} (if the aspect is attached to an
-   * entry's path)
+   * following: {projectId}.{locationId}.{aspectTypeId} (if the aspect is attached directly to the
+   * entry) {projectId}.{locationId}.{aspectTypeId}@{path} (if the aspect is attached to an entry's
+   * path)
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudDataplexV1Aspect> getAspects() {
@@ -109,9 +109,9 @@ public final class GoogleCloudDataplexV1Entry extends com.google.api.client.json
 
   /**
    * Optional. The Aspects attached to the Entry. The format for the key can be one of the
-   * following: 1. {projectId}.{locationId}.{aspectTypeId} (if the aspect is attached directly to
-   * the entry) 2. {projectId}.{locationId}.{aspectTypeId}@{path} (if the aspect is attached to an
-   * entry's path)
+   * following: {projectId}.{locationId}.{aspectTypeId} (if the aspect is attached directly to the
+   * entry) {projectId}.{locationId}.{aspectTypeId}@{path} (if the aspect is attached to an entry's
+   * path)
    * @param aspects aspects or {@code null} for none
    */
   public GoogleCloudDataplexV1Entry setAspects(java.util.Map<String, GoogleCloudDataplexV1Aspect> aspects) {
@@ -137,7 +137,7 @@ public final class GoogleCloudDataplexV1Entry extends com.google.api.client.json
   }
 
   /**
-   * Optional. Source system related information for an entry.
+   * Optional. Information related to the source system for an entry.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1EntrySource getEntrySource() {
@@ -145,7 +145,7 @@ public final class GoogleCloudDataplexV1Entry extends com.google.api.client.json
   }
 
   /**
-   * Optional. Source system related information for an entry.
+   * Optional. Information related to the source system for an entry.
    * @param entrySource entrySource or {@code null} for none
    */
   public GoogleCloudDataplexV1Entry setEntrySource(GoogleCloudDataplexV1EntrySource entrySource) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Autorization for an Aspect Type.
+ * Autorization for an AspectType.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -30,16 +30,16 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1AspectTypeAuthorization extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. The IAM permission grantable on the Entry Group to allow access to instantiate
-   * Aspects of Dataplex owned Aspect Types, only settable for Dataplex owned Types.
+   * Immutable. The IAM permission grantable on the EntryGroup to allow access to instantiate
+   * Aspects of Dataplex owned AspectTypes, only settable for Dataplex owned Types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String alternateUsePermission;
 
   /**
-   * Immutable. The IAM permission grantable on the Entry Group to allow access to instantiate
-   * Aspects of Dataplex owned Aspect Types, only settable for Dataplex owned Types.
+   * Immutable. The IAM permission grantable on the EntryGroup to allow access to instantiate
+   * Aspects of Dataplex owned AspectTypes, only settable for Dataplex owned Types.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlternateUsePermission() {
@@ -47,8 +47,8 @@ public final class GoogleCloudDataplexV1AspectTypeAuthorization extends com.goog
   }
 
   /**
-   * Immutable. The IAM permission grantable on the Entry Group to allow access to instantiate
-   * Aspects of Dataplex owned Aspect Types, only settable for Dataplex owned Types.
+   * Immutable. The IAM permission grantable on the EntryGroup to allow access to instantiate
+   * Aspects of Dataplex owned AspectTypes, only settable for Dataplex owned Types.
    * @param alternateUsePermission alternateUsePermission or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectTypeAuthorization setAlternateUsePermission(java.lang.String alternateUsePermission) {

@@ -30,6 +30,13 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataScanJob extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The time when the DataScanJob was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Output only. The result of the data profile scan.
    * The value may be {@code null}.
    */
@@ -107,6 +114,23 @@ public final class GoogleCloudDataplexV1DataScanJob extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private java.lang.String uid;
+
+  /**
+   * Output only. The time when the DataScanJob was created.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. The time when the DataScanJob was created.
+   * @param createTime createTime or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanJob setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
 
   /**
    * Output only. The result of the data profile scan.

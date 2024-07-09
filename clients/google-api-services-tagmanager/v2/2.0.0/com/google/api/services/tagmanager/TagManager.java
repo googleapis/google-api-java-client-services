@@ -1354,7 +1354,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Looks up a Container by destination ID.
+       * Looks up a Container by destination ID or tag ID.
        *
        * Create a request for the method "containers.lookup".
        *
@@ -1374,7 +1374,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "tagmanager/v2/accounts/containers:lookup";
 
         /**
-         * Looks up a Container by destination ID.
+         * Looks up a Container by destination ID or tag ID.
          *
          * Create a request for the method "containers.lookup".
          *
@@ -1457,13 +1457,15 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Destination ID linked to a GTM Container, e.g. AW-123456789. Example:
-         * accounts/containers:lookup?destination_id={destination_id}.
+         * accounts/containers:lookup?destination_id={destination_id}. Only one of destination_id or
+         * tag_id should be set.
          */
         @com.google.api.client.util.Key
         private java.lang.String destinationId;
 
         /** Destination ID linked to a GTM Container, e.g. AW-123456789. Example:
-       accounts/containers:lookup?destination_id={destination_id}.
+       accounts/containers:lookup?destination_id={destination_id}. Only one of destination_id or tag_id
+       should be set.
          */
         public java.lang.String getDestinationId() {
           return destinationId;
@@ -1471,10 +1473,36 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Destination ID linked to a GTM Container, e.g. AW-123456789. Example:
-         * accounts/containers:lookup?destination_id={destination_id}.
+         * accounts/containers:lookup?destination_id={destination_id}. Only one of destination_id or
+         * tag_id should be set.
          */
         public Lookup setDestinationId(java.lang.String destinationId) {
           this.destinationId = destinationId;
+          return this;
+        }
+
+        /**
+         * Tag ID for a GTM Container, e.g. GTM-123456789. Example:
+         * accounts/containers:lookup?tag_id={tag_id}. Only one of destination_id or tag_id should
+         * be set.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String tagId;
+
+        /** Tag ID for a GTM Container, e.g. GTM-123456789. Example:
+       accounts/containers:lookup?tag_id={tag_id}. Only one of destination_id or tag_id should be set.
+         */
+        public java.lang.String getTagId() {
+          return tagId;
+        }
+
+        /**
+         * Tag ID for a GTM Container, e.g. GTM-123456789. Example:
+         * accounts/containers:lookup?tag_id={tag_id}. Only one of destination_id or tag_id should
+         * be set.
+         */
+        public Lookup setTagId(java.lang.String tagId) {
+          this.tagId = tagId;
           return this;
         }
 

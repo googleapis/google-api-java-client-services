@@ -44,15 +44,6 @@ public final class GoogleCloudRetailV2betaCatalogAttributeFacetConfigMergedFacet
   private java.lang.String mergedFacetKey;
 
   /**
-   * Each instance is a list of facet values that map into the same (possibly different) merged
-   * facet value. For the current attribute config, each facet value should map to at most one
-   * merged facet value.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudRetailV2betaCatalogAttributeFacetConfigMergedFacetValue> mergedFacetValues;
-
-  /**
    * The merged facet key should be a valid facet key that is different than the facet key of the
    * current catalog attribute. We refer this is merged facet key as the child of the current
    * catalog attribute. This merged facet key can't be a parent of another facet key (i.e. no
@@ -74,27 +65,6 @@ public final class GoogleCloudRetailV2betaCatalogAttributeFacetConfigMergedFacet
    */
   public GoogleCloudRetailV2betaCatalogAttributeFacetConfigMergedFacet setMergedFacetKey(java.lang.String mergedFacetKey) {
     this.mergedFacetKey = mergedFacetKey;
-    return this;
-  }
-
-  /**
-   * Each instance is a list of facet values that map into the same (possibly different) merged
-   * facet value. For the current attribute config, each facet value should map to at most one
-   * merged facet value.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<GoogleCloudRetailV2betaCatalogAttributeFacetConfigMergedFacetValue> getMergedFacetValues() {
-    return mergedFacetValues;
-  }
-
-  /**
-   * Each instance is a list of facet values that map into the same (possibly different) merged
-   * facet value. For the current attribute config, each facet value should map to at most one
-   * merged facet value.
-   * @param mergedFacetValues mergedFacetValues or {@code null} for none
-   */
-  public GoogleCloudRetailV2betaCatalogAttributeFacetConfigMergedFacet setMergedFacetValues(java.util.List<GoogleCloudRetailV2betaCatalogAttributeFacetConfigMergedFacetValue> mergedFacetValues) {
-    this.mergedFacetValues = mergedFacetValues;
     return this;
   }
 

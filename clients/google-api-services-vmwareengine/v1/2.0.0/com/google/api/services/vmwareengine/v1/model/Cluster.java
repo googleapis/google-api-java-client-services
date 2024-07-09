@@ -30,6 +30,13 @@ package com.google.api.services.vmwareengine.v1.model;
 public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Configuration of the autoscaling applied to this cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutoscalingSettings autoscalingSettings;
+
+  /**
    * Output only. Creation time of this resource.
    * The value may be {@code null}.
    */
@@ -89,6 +96,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. Configuration of the autoscaling applied to this cluster.
+   * @return value or {@code null} for none
+   */
+  public AutoscalingSettings getAutoscalingSettings() {
+    return autoscalingSettings;
+  }
+
+  /**
+   * Optional. Configuration of the autoscaling applied to this cluster.
+   * @param autoscalingSettings autoscalingSettings or {@code null} for none
+   */
+  public Cluster setAutoscalingSettings(AutoscalingSettings autoscalingSettings) {
+    this.autoscalingSettings = autoscalingSettings;
+    return this;
+  }
 
   /**
    * Output only. Creation time of this resource.

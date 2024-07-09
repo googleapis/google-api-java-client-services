@@ -62,8 +62,9 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
 
   /**
    * Optional. The connection specifying the credentials to be used to read external storage, such
-   * as Azure Blob, Cloud Storage, or S3. The connection_id can have the form ".." or
-   * "projects//locations//connections/".
+   * as Azure Blob, Cloud Storage, or S3. The connection_id can have the form
+   * `{project_id}.{location_id};{connection_id}` or
+   * `projects/{project_id}/locations/{location_id}/connections/{connection_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -301,8 +302,9 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
 
   /**
    * Optional. The connection specifying the credentials to be used to read external storage, such
-   * as Azure Blob, Cloud Storage, or S3. The connection_id can have the form ".." or
-   * "projects//locations//connections/".
+   * as Azure Blob, Cloud Storage, or S3. The connection_id can have the form
+   * `{project_id}.{location_id};{connection_id}` or
+   * `projects/{project_id}/locations/{location_id}/connections/{connection_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getConnectionId() {
@@ -311,8 +313,9 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
 
   /**
    * Optional. The connection specifying the credentials to be used to read external storage, such
-   * as Azure Blob, Cloud Storage, or S3. The connection_id can have the form ".." or
-   * "projects//locations//connections/".
+   * as Azure Blob, Cloud Storage, or S3. The connection_id can have the form
+   * `{project_id}.{location_id};{connection_id}` or
+   * `projects/{project_id}/locations/{location_id}/connections/{connection_id}`.
    * @param connectionId connectionId or {@code null} for none
    */
   public ExternalDataConfiguration setConnectionId(java.lang.String connectionId) {

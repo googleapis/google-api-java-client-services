@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for Dataset.
+ * Represents a BigQuery dataset.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -187,8 +187,9 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
 
   /**
    * The labels associated with this dataset. You can use these to organize and group your datasets.
-   * You can set this property when inserting or updating a dataset. See Creating and Updating
-   * Dataset Labels for more information.
+   * You can set this property when inserting or updating a dataset. See [Creating and Updating
+   * Dataset Labels](https://cloud.google.com/bigquery/docs/creating-managing-
+   * labels#creating_and_updating_dataset_labels) for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -655,8 +656,9 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
 
   /**
    * The labels associated with this dataset. You can use these to organize and group your datasets.
-   * You can set this property when inserting or updating a dataset. See Creating and Updating
-   * Dataset Labels for more information.
+   * You can set this property when inserting or updating a dataset. See [Creating and Updating
+   * Dataset Labels](https://cloud.google.com/bigquery/docs/creating-managing-
+   * labels#creating_and_updating_dataset_labels) for more information.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -665,8 +667,9 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
 
   /**
    * The labels associated with this dataset. You can use these to organize and group your datasets.
-   * You can set this property when inserting or updating a dataset. See Creating and Updating
-   * Dataset Labels for more information.
+   * You can set this property when inserting or updating a dataset. See [Creating and Updating
+   * Dataset Labels](https://cloud.google.com/bigquery/docs/creating-managing-
+   * labels#creating_and_updating_dataset_labels) for more information.
    * @param labels labels or {@code null} for none
    */
   public Dataset setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -975,10 +978,10 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
 
     /**
      * An IAM role ID that should be granted to the user, group, or domain specified in this access
-     * entry. The following legacy mappings will be applied: OWNER <=> roles/bigquery.dataOwner WRITER
-     * <=> roles/bigquery.dataEditor READER <=> roles/bigquery.dataViewer This field will accept any
-     * of the above formats, but will return only the legacy format. For example, if you set this
-     * field to "roles/bigquery.dataOwner", it will be returned back as "OWNER".
+     * entry. The following legacy mappings will be applied: * OWNER <=> roles/bigquery.dataOwner *
+     * WRITER <=> roles/bigquery.dataEditor * READER <=> roles/bigquery.dataViewer This field will
+     * accept any of the above formats, but will return only the legacy format. For example, if you
+     * set this field to "roles/bigquery.dataOwner", it will be returned back as "OWNER".
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1106,10 +1109,10 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
 
     /**
      * An IAM role ID that should be granted to the user, group, or domain specified in this access
-     * entry. The following legacy mappings will be applied: OWNER <=> roles/bigquery.dataOwner WRITER
-     * <=> roles/bigquery.dataEditor READER <=> roles/bigquery.dataViewer This field will accept any
-     * of the above formats, but will return only the legacy format. For example, if you set this
-     * field to "roles/bigquery.dataOwner", it will be returned back as "OWNER".
+     * entry. The following legacy mappings will be applied: * OWNER <=> roles/bigquery.dataOwner *
+     * WRITER <=> roles/bigquery.dataEditor * READER <=> roles/bigquery.dataViewer This field will
+     * accept any of the above formats, but will return only the legacy format. For example, if you
+     * set this field to "roles/bigquery.dataOwner", it will be returned back as "OWNER".
      * @return value or {@code null} for none
      */
     public java.lang.String getRole() {
@@ -1118,10 +1121,10 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
 
     /**
      * An IAM role ID that should be granted to the user, group, or domain specified in this access
-     * entry. The following legacy mappings will be applied: OWNER <=> roles/bigquery.dataOwner WRITER
-     * <=> roles/bigquery.dataEditor READER <=> roles/bigquery.dataViewer This field will accept any
-     * of the above formats, but will return only the legacy format. For example, if you set this
-     * field to "roles/bigquery.dataOwner", it will be returned back as "OWNER".
+     * entry. The following legacy mappings will be applied: * OWNER <=> roles/bigquery.dataOwner *
+     * WRITER <=> roles/bigquery.dataEditor * READER <=> roles/bigquery.dataViewer This field will
+     * accept any of the above formats, but will return only the legacy format. For example, if you
+     * set this field to "roles/bigquery.dataOwner", it will be returned back as "OWNER".
      * @param role role or {@code null} for none
      */
     public Access setRole(java.lang.String role) {

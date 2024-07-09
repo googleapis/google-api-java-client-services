@@ -818,17 +818,19 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * An expression for filtering the results of the request by label. The syntax is
-       * \"labels.[:]\". Multiple filters can be ANDed together by connecting with a space. Example:
-       * \"labels.department:receiving labels.active\". See [Filtering datasets using
-       * labels](/bigquery/docs/filtering-labels#filtering_datasets_using_labels) for details.
+       * `labels.[:]`. Multiple filters can be ANDed together by connecting with a space. Example:
+       * `labels.department:receiving labels.active`. See [Filtering datasets using
+       * labels](https://cloud.google.com/bigquery/docs/filtering-
+       * labels#filtering_datasets_using_labels) for details.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** An expression for filtering the results of the request by label. The syntax is \"labels.[:]\".
+      /** An expression for filtering the results of the request by label. The syntax is `labels.[:]`.
      Multiple filters can be ANDed together by connecting with a space. Example:
-     \"labels.department:receiving labels.active\". See [Filtering datasets using
-     labels](/bigquery/docs/filtering-labels#filtering_datasets_using_labels) for details.
+     `labels.department:receiving labels.active`. See [Filtering datasets using
+     labels](https://cloud.google.com/bigquery/docs/filtering-labels#filtering_datasets_using_labels)
+     for details.
        */
       public java.lang.String getFilter() {
         return filter;
@@ -836,9 +838,10 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * An expression for filtering the results of the request by label. The syntax is
-       * \"labels.[:]\". Multiple filters can be ANDed together by connecting with a space. Example:
-       * \"labels.department:receiving labels.active\". See [Filtering datasets using
-       * labels](/bigquery/docs/filtering-labels#filtering_datasets_using_labels) for details.
+       * `labels.[:]`. Multiple filters can be ANDed together by connecting with a space. Example:
+       * `labels.department:receiving labels.active`. See [Filtering datasets using
+       * labels](https://cloud.google.com/bigquery/docs/filtering-
+       * labels#filtering_datasets_using_labels) for details.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -1575,8 +1578,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * The geographic location of the job. You must specify the location to run the job for the
-       * following scenarios: - If the location to run a job is not in the `us` or the `eu` multi-
-       * regional location - If the job's location is in a single region (for example, `us-
+       * following scenarios: * If the location to run a job is not in the `us` or the `eu` multi-
+       * regional location * If the job's location is in a single region (for example, `us-
        * central1`) For more information, see
        * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
@@ -1584,7 +1587,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       private java.lang.String location;
 
       /** The geographic location of the job. You must specify the location to run the job for the following
-     scenarios: - If the location to run a job is not in the `us` or the `eu` multi-regional location -
+     scenarios: * If the location to run a job is not in the `us` or the `eu` multi-regional location *
      If the job's location is in a single region (for example, `us-central1`) For more information, see
      https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
@@ -1594,8 +1597,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * The geographic location of the job. You must specify the location to run the job for the
-       * following scenarios: - If the location to run a job is not in the `us` or the `eu` multi-
-       * regional location - If the job's location is in a single region (for example, `us-
+       * following scenarios: * If the location to run a job is not in the `us` or the `eu` multi-
+       * regional location * If the job's location is in a single region (for example, `us-
        * central1`) For more information, see
        * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
@@ -1980,8 +1983,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * The geographic location of the job. You must specify the location to run the job for the
-       * following scenarios: - If the location to run a job is not in the `us` or the `eu` multi-
-       * regional location - If the job's location is in a single region (for example, `us-
+       * following scenarios: * If the location to run a job is not in the `us` or the `eu` multi-
+       * regional location * If the job's location is in a single region (for example, `us-
        * central1`) For more information, see
        * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
@@ -1989,7 +1992,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       private java.lang.String location;
 
       /** The geographic location of the job. You must specify the location to run the job for the following
-     scenarios: - If the location to run a job is not in the `us` or the `eu` multi-regional location -
+     scenarios: * If the location to run a job is not in the `us` or the `eu` multi-regional location *
      If the job's location is in a single region (for example, `us-central1`) For more information, see
      https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
@@ -1999,8 +2002,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * The geographic location of the job. You must specify the location to run the job for the
-       * following scenarios: - If the location to run a job is not in the `us` or the `eu` multi-
-       * regional location - If the job's location is in a single region (for example, `us-
+       * following scenarios: * If the location to run a job is not in the `us` or the `eu` multi-
+       * regional location * If the job's location is in a single region (for example, `us-
        * central1`) For more information, see
        * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
@@ -2198,8 +2201,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * The geographic location of the job. You must specify the location to run the job for the
-       * following scenarios: - If the location to run a job is not in the `us` or the `eu` multi-
-       * regional location - If the job's location is in a single region (for example, `us-
+       * following scenarios: * If the location to run a job is not in the `us` or the `eu` multi-
+       * regional location * If the job's location is in a single region (for example, `us-
        * central1`) For more information, see
        * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
@@ -2207,7 +2210,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       private java.lang.String location;
 
       /** The geographic location of the job. You must specify the location to run the job for the following
-     scenarios: - If the location to run a job is not in the `us` or the `eu` multi-regional location -
+     scenarios: * If the location to run a job is not in the `us` or the `eu` multi-regional location *
      If the job's location is in a single region (for example, `us-central1`) For more information, see
      https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
@@ -2217,8 +2220,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * The geographic location of the job. You must specify the location to run the job for the
-       * following scenarios: - If the location to run a job is not in the `us` or the `eu` multi-
-       * regional location - If the job's location is in a single region (for example, `us-
+       * following scenarios: * If the location to run a job is not in the `us` or the `eu` multi-
+       * regional location * If the job's location is in a single region (for example, `us-
        * central1`) For more information, see
        * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */

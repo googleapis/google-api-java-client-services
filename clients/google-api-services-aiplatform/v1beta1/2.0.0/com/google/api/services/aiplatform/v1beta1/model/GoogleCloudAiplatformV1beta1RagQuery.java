@@ -44,13 +44,6 @@ public final class GoogleCloudAiplatformV1beta1RagQuery extends com.google.api.c
   private java.lang.String text;
 
   /**
-   * Optional. Only return contexts with vector distance smaller than the threshold.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Double vectorDistanceThreshold;
-
-  /**
    * Optional. The number of contexts to retrieve.
    * @return value or {@code null} for none
    */
@@ -81,23 +74,6 @@ public final class GoogleCloudAiplatformV1beta1RagQuery extends com.google.api.c
    */
   public GoogleCloudAiplatformV1beta1RagQuery setText(java.lang.String text) {
     this.text = text;
-    return this;
-  }
-
-  /**
-   * Optional. Only return contexts with vector distance smaller than the threshold.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Double getVectorDistanceThreshold() {
-    return vectorDistanceThreshold;
-  }
-
-  /**
-   * Optional. Only return contexts with vector distance smaller than the threshold.
-   * @param vectorDistanceThreshold vectorDistanceThreshold or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1RagQuery setVectorDistanceThreshold(java.lang.Double vectorDistanceThreshold) {
-    this.vectorDistanceThreshold = vectorDistanceThreshold;
     return this;
   }
 

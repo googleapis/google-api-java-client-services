@@ -62,6 +62,13 @@ public final class GoogleCloudAiplatformV1beta1PublisherModelCallToActionDeploy 
   private GoogleCloudAiplatformV1beta1DedicatedResources dedicatedResources;
 
   /**
+   * Optional. Metadata information about this deployment config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1PublisherModelCallToActionDeployDeployMetadata deployMetadata;
+
+  /**
    * Optional. The name of the deploy task (e.g., "text to image generation").
    * The value may be {@code null}.
    */
@@ -177,6 +184,23 @@ public final class GoogleCloudAiplatformV1beta1PublisherModelCallToActionDeploy 
    */
   public GoogleCloudAiplatformV1beta1PublisherModelCallToActionDeploy setDedicatedResources(GoogleCloudAiplatformV1beta1DedicatedResources dedicatedResources) {
     this.dedicatedResources = dedicatedResources;
+    return this;
+  }
+
+  /**
+   * Optional. Metadata information about this deployment config.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PublisherModelCallToActionDeployDeployMetadata getDeployMetadata() {
+    return deployMetadata;
+  }
+
+  /**
+   * Optional. Metadata information about this deployment config.
+   * @param deployMetadata deployMetadata or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PublisherModelCallToActionDeploy setDeployMetadata(GoogleCloudAiplatformV1beta1PublisherModelCallToActionDeployDeployMetadata deployMetadata) {
+    this.deployMetadata = deployMetadata;
     return this;
   }
 

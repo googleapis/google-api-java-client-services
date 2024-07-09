@@ -18,8 +18,7 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
  * A struct to define data stores to filter on in a search call and configurations for those data
- * stores. A maximum of 1 DataStoreSpec per data_store is allowed. Otherwise, an `INVALID_ARGUMENT`
- * error is returned.
+ * stores. Otherwise, an `INVALID_ARGUMENT` error is returned.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:

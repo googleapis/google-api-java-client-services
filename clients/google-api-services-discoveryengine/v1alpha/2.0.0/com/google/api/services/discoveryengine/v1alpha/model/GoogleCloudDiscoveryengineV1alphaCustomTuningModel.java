@@ -44,6 +44,13 @@ public final class GoogleCloudDiscoveryengineV1alphaCustomTuningModel extends co
   private java.lang.String displayName;
 
   /**
+   * The metrics of the trained model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Double> metrics;
+
+  /**
    * The state that the model is in (e.g.`TRAINING` or `TRAINING_FAILED`).
    * The value may be {@code null}.
    */
@@ -104,6 +111,23 @@ public final class GoogleCloudDiscoveryengineV1alphaCustomTuningModel extends co
    */
   public GoogleCloudDiscoveryengineV1alphaCustomTuningModel setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * The metrics of the trained model.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Double> getMetrics() {
+    return metrics;
+  }
+
+  /**
+   * The metrics of the trained model.
+   * @param metrics metrics or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaCustomTuningModel setMetrics(java.util.Map<String, java.lang.Double> metrics) {
+    this.metrics = metrics;
     return this;
   }
 

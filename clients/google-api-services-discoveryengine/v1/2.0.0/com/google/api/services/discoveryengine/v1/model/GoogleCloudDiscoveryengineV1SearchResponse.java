@@ -84,6 +84,14 @@ public final class GoogleCloudDiscoveryengineV1SearchResponse extends com.google
   private java.util.List<GoogleCloudDiscoveryengineV1SearchResponseSearchResult> results;
 
   /**
+   * Session information. Only set if SearchRequest.session is provided. See its description for
+   * more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1SearchResponseSessionInfo sessionInfo;
+
+  /**
    * A summary as part of the search results. This field is only returned if
    * SearchRequest.ContentSearchSpec.summary_spec is set.
    * The value may be {@code null}.
@@ -225,6 +233,25 @@ public final class GoogleCloudDiscoveryengineV1SearchResponse extends com.google
    */
   public GoogleCloudDiscoveryengineV1SearchResponse setResults(java.util.List<GoogleCloudDiscoveryengineV1SearchResponseSearchResult> results) {
     this.results = results;
+    return this;
+  }
+
+  /**
+   * Session information. Only set if SearchRequest.session is provided. See its description for
+   * more details.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchResponseSessionInfo getSessionInfo() {
+    return sessionInfo;
+  }
+
+  /**
+   * Session information. Only set if SearchRequest.session is provided. See its description for
+   * more details.
+   * @param sessionInfo sessionInfo or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchResponse setSessionInfo(GoogleCloudDiscoveryengineV1SearchResponseSessionInfo sessionInfo) {
+    this.sessionInfo = sessionInfo;
     return this;
   }
 

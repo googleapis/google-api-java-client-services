@@ -30,7 +30,8 @@ package com.google.api.services.firestore.v1.model;
 public final class GoogleFirestoreAdminV1RestoreDatabaseRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Backup to restore from. Must be from the same project as the parent. Format is:
+   * Backup to restore from. Must be from the same project as the parent. The restored database will
+   * be created in the same location as the source backup. Format is:
    * `projects/{project_id}/locations/{location}/backups/{backup}`
    * The value may be {@code null}.
    */
@@ -50,10 +51,10 @@ public final class GoogleFirestoreAdminV1RestoreDatabaseRequest extends com.goog
 
   /**
    * Use Customer Managed Encryption Keys (CMEK) for encryption. Only keys in the same location as
-   * this database are allowed to be used for encryption. For Firestore's nam5 multi-region, this
-   * corresponds to Cloud KMS multi-region us. For Firestore's eur3 multi-region, this corresponds
-   * to Cloud KMS multi-region europe. See https://cloud.google.com/kms/docs/locations. The expected
-   * format is
+   * the restored database are allowed to be used for encryption. For Firestore's nam5 multi-region,
+   * this corresponds to Cloud KMS multi-region us. For Firestore's eur3 multi-region, this
+   * corresponds to Cloud KMS multi-region europe. See https://cloud.google.com/kms/docs/locations.
+   * The expected format is
    * `projects/{project_id}/locations/{kms_location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
    * The value may be {@code null}.
    */
@@ -76,7 +77,8 @@ public final class GoogleFirestoreAdminV1RestoreDatabaseRequest extends com.goog
   private Empty useGoogleDefaultEncryption;
 
   /**
-   * Backup to restore from. Must be from the same project as the parent. Format is:
+   * Backup to restore from. Must be from the same project as the parent. The restored database will
+   * be created in the same location as the source backup. Format is:
    * `projects/{project_id}/locations/{location}/backups/{backup}`
    * @return value or {@code null} for none
    */
@@ -85,7 +87,8 @@ public final class GoogleFirestoreAdminV1RestoreDatabaseRequest extends com.goog
   }
 
   /**
-   * Backup to restore from. Must be from the same project as the parent. Format is:
+   * Backup to restore from. Must be from the same project as the parent. The restored database will
+   * be created in the same location as the source backup. Format is:
    * `projects/{project_id}/locations/{location}/backups/{backup}`
    * @param backup backup or {@code null} for none
    */
@@ -121,10 +124,10 @@ public final class GoogleFirestoreAdminV1RestoreDatabaseRequest extends com.goog
 
   /**
    * Use Customer Managed Encryption Keys (CMEK) for encryption. Only keys in the same location as
-   * this database are allowed to be used for encryption. For Firestore's nam5 multi-region, this
-   * corresponds to Cloud KMS multi-region us. For Firestore's eur3 multi-region, this corresponds
-   * to Cloud KMS multi-region europe. See https://cloud.google.com/kms/docs/locations. The expected
-   * format is
+   * the restored database are allowed to be used for encryption. For Firestore's nam5 multi-region,
+   * this corresponds to Cloud KMS multi-region us. For Firestore's eur3 multi-region, this
+   * corresponds to Cloud KMS multi-region europe. See https://cloud.google.com/kms/docs/locations.
+   * The expected format is
    * `projects/{project_id}/locations/{kms_location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
    * @return value or {@code null} for none
    */
@@ -134,10 +137,10 @@ public final class GoogleFirestoreAdminV1RestoreDatabaseRequest extends com.goog
 
   /**
    * Use Customer Managed Encryption Keys (CMEK) for encryption. Only keys in the same location as
-   * this database are allowed to be used for encryption. For Firestore's nam5 multi-region, this
-   * corresponds to Cloud KMS multi-region us. For Firestore's eur3 multi-region, this corresponds
-   * to Cloud KMS multi-region europe. See https://cloud.google.com/kms/docs/locations. The expected
-   * format is
+   * the restored database are allowed to be used for encryption. For Firestore's nam5 multi-region,
+   * this corresponds to Cloud KMS multi-region us. For Firestore's eur3 multi-region, this
+   * corresponds to Cloud KMS multi-region europe. See https://cloud.google.com/kms/docs/locations.
+   * The expected format is
    * `projects/{project_id}/locations/{kms_location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
    * @param kmsKeyName kmsKeyName or {@code null} for none
    */

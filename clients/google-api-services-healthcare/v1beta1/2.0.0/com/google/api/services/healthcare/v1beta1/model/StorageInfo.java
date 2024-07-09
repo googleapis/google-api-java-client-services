@@ -37,9 +37,9 @@ public final class StorageInfo extends com.google.api.client.json.GenericJson {
   private BlobStorageInfo blobStorageInfo;
 
   /**
-   * The resource whose storage info is returned. For example, to specify the resource path of a
-   * DICOM Instance: `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{
-   * dicom_store_id}/dicomWeb/studi/{study_uid}/series/{series_uid}/instances/{instance_uid}`
+   * The resource whose storage info is returned. For example: `projects/{projectID}/locations/{loca
+   * tionID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{ser
+   * iesUID}/instances/{instanceUID}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,9 +70,9 @@ public final class StorageInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource whose storage info is returned. For example, to specify the resource path of a
-   * DICOM Instance: `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{
-   * dicom_store_id}/dicomWeb/studi/{study_uid}/series/{series_uid}/instances/{instance_uid}`
+   * The resource whose storage info is returned. For example: `projects/{projectID}/locations/{loca
+   * tionID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{ser
+   * iesUID}/instances/{instanceUID}`
    * @return value or {@code null} for none
    */
   public java.lang.String getReferencedResource() {
@@ -80,9 +80,9 @@ public final class StorageInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource whose storage info is returned. For example, to specify the resource path of a
-   * DICOM Instance: `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{
-   * dicom_store_id}/dicomWeb/studi/{study_uid}/series/{series_uid}/instances/{instance_uid}`
+   * The resource whose storage info is returned. For example: `projects/{projectID}/locations/{loca
+   * tionID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{ser
+   * iesUID}/instances/{instanceUID}`
    * @param referencedResource referencedResource or {@code null} for none
    */
   public StorageInfo setReferencedResource(java.lang.String referencedResource) {

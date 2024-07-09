@@ -67,7 +67,8 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   private GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpec contentSearchSpec;
 
   /**
-   * Custom fine tuning configs.
+   * Custom fine tuning configs. If set, it has higher priority than the configs set in
+   * ServingConfig.custom_fine_tuning_spec.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,6 +133,14 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
+
+  /**
+   * If `naturalLanguageQueryUnderstandingSpec` is not specified, no additional natural language
+   * query understanding will be done.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguageQueryUnderstandingSpec naturalLanguageQueryUnderstandingSpec;
 
   /**
    * A 0-indexed integer that specifies the current offset (that is, starting result location,
@@ -206,13 +215,14 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   /**
    * The ranking expression controls the customized ranking on retrieval documents. This overrides
    * ServingConfig.ranking_expression. The ranking expression is a single function or multiple
-   * functions that are joint by "+". * ranking_expression = function, { " + ", function };
+   * functions that are joined by "+". * ranking_expression = function, { " + ", function };
    * Supported functions: * double * relevance_score * double * dotProduct(embedding_field_path)
-   * Function variables: `relevance_score`: pre-defined keywords, used for measure relevance between
-   * query and document. `embedding_field_path`: the document embedding field used with query
-   * embedding vector. `dotProduct`: embedding function between embedding_field_path and query
-   * embedding vector. Example ranking expression: If document has an embedding field doc_embedding,
-   * the ranking expression could be `0.5 * relevance_score + 0.3 * dotProduct(doc_embedding)`.
+   * Function variables: * `relevance_score`: pre-defined keywords, used for measure relevance
+   * between query and document. * `embedding_field_path`: the document embedding field used with
+   * query embedding vector. * `dotProduct`: embedding function between embedding_field_path and
+   * query embedding vector. Example ranking expression: If document has an embedding field
+   * doc_embedding, the ranking expression could be `0.5 * relevance_score + 0.3 *
+   * dotProduct(doc_embedding)`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -249,6 +259,33 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1alphaSearchRequestSearchAsYouTypeSpec searchAsYouTypeSpec;
+
+  /**
+   * The session resource name. Optional. Session allows users to do multi-turn /search API calls or
+   * coordination between /search API calls and /answer API calls. Example #1 (multi-turn /search
+   * API calls): 1. Call /search API with the auto-session mode (see below). 2. Call /search API
+   * with the session ID generated in the first call. Here, the previous search query gets
+   * considered in query standing. I.e., if the first query is "How did Alphabet do in 2022?" and
+   * the current query is "How about 2023?", the current query will be interpreted as "How did
+   * Alphabet do in 2023?". Example #2 (coordination between /search API calls and /answer API
+   * calls): 1. Call /search API with the auto-session mode (see below). 2. Call /answer API with
+   * the session ID generated in the first call. Here, the answer generation happens in the context
+   * of the search results from the first search call. Auto-session mode: when
+   * `projects/.../sessions/-` is used, a new session gets automatically created. Otherwise, users
+   * can use the create-session API to create a session manually. Multi-turn Search feature is
+   * currently at private GA stage. Please use v1alpha or v1beta version instead before we launch
+   * this feature to public GA. Or ask for allowlisting through Google Support team.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String session;
+
+  /**
+   * Session specification. Can be used only when `session` is set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaSearchRequestSessionSpec sessionSpec;
 
   /**
    * The spell correction specification that specifies the mode under which spell correction takes
@@ -382,7 +419,8 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   }
 
   /**
-   * Custom fine tuning configs.
+   * Custom fine tuning configs. If set, it has higher priority than the configs set in
+   * ServingConfig.custom_fine_tuning_spec.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaCustomFineTuningSpec getCustomFineTuningSpec() {
@@ -390,7 +428,8 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   }
 
   /**
-   * Custom fine tuning configs.
+   * Custom fine tuning configs. If set, it has higher priority than the configs set in
+   * ServingConfig.custom_fine_tuning_spec.
    * @param customFineTuningSpec customFineTuningSpec or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setCustomFineTuningSpec(GoogleCloudDiscoveryengineV1alphaCustomFineTuningSpec customFineTuningSpec) {
@@ -533,6 +572,25 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setLanguageCode(java.lang.String languageCode) {
     this.languageCode = languageCode;
+    return this;
+  }
+
+  /**
+   * If `naturalLanguageQueryUnderstandingSpec` is not specified, no additional natural language
+   * query understanding will be done.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguageQueryUnderstandingSpec getNaturalLanguageQueryUnderstandingSpec() {
+    return naturalLanguageQueryUnderstandingSpec;
+  }
+
+  /**
+   * If `naturalLanguageQueryUnderstandingSpec` is not specified, no additional natural language
+   * query understanding will be done.
+   * @param naturalLanguageQueryUnderstandingSpec naturalLanguageQueryUnderstandingSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequest setNaturalLanguageQueryUnderstandingSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguageQueryUnderstandingSpec naturalLanguageQueryUnderstandingSpec) {
+    this.naturalLanguageQueryUnderstandingSpec = naturalLanguageQueryUnderstandingSpec;
     return this;
   }
 
@@ -700,13 +758,14 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   /**
    * The ranking expression controls the customized ranking on retrieval documents. This overrides
    * ServingConfig.ranking_expression. The ranking expression is a single function or multiple
-   * functions that are joint by "+". * ranking_expression = function, { " + ", function };
+   * functions that are joined by "+". * ranking_expression = function, { " + ", function };
    * Supported functions: * double * relevance_score * double * dotProduct(embedding_field_path)
-   * Function variables: `relevance_score`: pre-defined keywords, used for measure relevance between
-   * query and document. `embedding_field_path`: the document embedding field used with query
-   * embedding vector. `dotProduct`: embedding function between embedding_field_path and query
-   * embedding vector. Example ranking expression: If document has an embedding field doc_embedding,
-   * the ranking expression could be `0.5 * relevance_score + 0.3 * dotProduct(doc_embedding)`.
+   * Function variables: * `relevance_score`: pre-defined keywords, used for measure relevance
+   * between query and document. * `embedding_field_path`: the document embedding field used with
+   * query embedding vector. * `dotProduct`: embedding function between embedding_field_path and
+   * query embedding vector. Example ranking expression: If document has an embedding field
+   * doc_embedding, the ranking expression could be `0.5 * relevance_score + 0.3 *
+   * dotProduct(doc_embedding)`.
    * @return value or {@code null} for none
    */
   public java.lang.String getRankingExpression() {
@@ -716,13 +775,14 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   /**
    * The ranking expression controls the customized ranking on retrieval documents. This overrides
    * ServingConfig.ranking_expression. The ranking expression is a single function or multiple
-   * functions that are joint by "+". * ranking_expression = function, { " + ", function };
+   * functions that are joined by "+". * ranking_expression = function, { " + ", function };
    * Supported functions: * double * relevance_score * double * dotProduct(embedding_field_path)
-   * Function variables: `relevance_score`: pre-defined keywords, used for measure relevance between
-   * query and document. `embedding_field_path`: the document embedding field used with query
-   * embedding vector. `dotProduct`: embedding function between embedding_field_path and query
-   * embedding vector. Example ranking expression: If document has an embedding field doc_embedding,
-   * the ranking expression could be `0.5 * relevance_score + 0.3 * dotProduct(doc_embedding)`.
+   * Function variables: * `relevance_score`: pre-defined keywords, used for measure relevance
+   * between query and document. * `embedding_field_path`: the document embedding field used with
+   * query embedding vector. * `dotProduct`: embedding function between embedding_field_path and
+   * query embedding vector. Example ranking expression: If document has an embedding field
+   * doc_embedding, the ranking expression could be `0.5 * relevance_score + 0.3 *
+   * dotProduct(doc_embedding)`.
    * @param rankingExpression rankingExpression or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setRankingExpression(java.lang.String rankingExpression) {
@@ -803,6 +863,66 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setSearchAsYouTypeSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestSearchAsYouTypeSpec searchAsYouTypeSpec) {
     this.searchAsYouTypeSpec = searchAsYouTypeSpec;
+    return this;
+  }
+
+  /**
+   * The session resource name. Optional. Session allows users to do multi-turn /search API calls or
+   * coordination between /search API calls and /answer API calls. Example #1 (multi-turn /search
+   * API calls): 1. Call /search API with the auto-session mode (see below). 2. Call /search API
+   * with the session ID generated in the first call. Here, the previous search query gets
+   * considered in query standing. I.e., if the first query is "How did Alphabet do in 2022?" and
+   * the current query is "How about 2023?", the current query will be interpreted as "How did
+   * Alphabet do in 2023?". Example #2 (coordination between /search API calls and /answer API
+   * calls): 1. Call /search API with the auto-session mode (see below). 2. Call /answer API with
+   * the session ID generated in the first call. Here, the answer generation happens in the context
+   * of the search results from the first search call. Auto-session mode: when
+   * `projects/.../sessions/-` is used, a new session gets automatically created. Otherwise, users
+   * can use the create-session API to create a session manually. Multi-turn Search feature is
+   * currently at private GA stage. Please use v1alpha or v1beta version instead before we launch
+   * this feature to public GA. Or ask for allowlisting through Google Support team.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSession() {
+    return session;
+  }
+
+  /**
+   * The session resource name. Optional. Session allows users to do multi-turn /search API calls or
+   * coordination between /search API calls and /answer API calls. Example #1 (multi-turn /search
+   * API calls): 1. Call /search API with the auto-session mode (see below). 2. Call /search API
+   * with the session ID generated in the first call. Here, the previous search query gets
+   * considered in query standing. I.e., if the first query is "How did Alphabet do in 2022?" and
+   * the current query is "How about 2023?", the current query will be interpreted as "How did
+   * Alphabet do in 2023?". Example #2 (coordination between /search API calls and /answer API
+   * calls): 1. Call /search API with the auto-session mode (see below). 2. Call /answer API with
+   * the session ID generated in the first call. Here, the answer generation happens in the context
+   * of the search results from the first search call. Auto-session mode: when
+   * `projects/.../sessions/-` is used, a new session gets automatically created. Otherwise, users
+   * can use the create-session API to create a session manually. Multi-turn Search feature is
+   * currently at private GA stage. Please use v1alpha or v1beta version instead before we launch
+   * this feature to public GA. Or ask for allowlisting through Google Support team.
+   * @param session session or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequest setSession(java.lang.String session) {
+    this.session = session;
+    return this;
+  }
+
+  /**
+   * Session specification. Can be used only when `session` is set.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestSessionSpec getSessionSpec() {
+    return sessionSpec;
+  }
+
+  /**
+   * Session specification. Can be used only when `session` is set.
+   * @param sessionSpec sessionSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequest setSessionSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestSessionSpec sessionSpec) {
+    this.sessionSpec = sessionSpec;
     return this;
   }
 

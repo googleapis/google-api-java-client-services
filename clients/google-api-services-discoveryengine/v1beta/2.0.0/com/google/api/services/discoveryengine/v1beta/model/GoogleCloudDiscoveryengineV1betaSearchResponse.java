@@ -74,6 +74,13 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponse extends com.go
   private GoogleCloudDiscoveryengineV1betaSearchResponseGuidedSearchResult guidedSearchResult;
 
   /**
+   * Natural language query understanding information for the returned results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaSearchResponseNaturalLanguageQueryUnderstandingInfo naturalLanguageQueryUnderstandingInfo;
+
+  /**
    * A token that can be sent as SearchRequest.page_token to retrieve the next page. If this field
    * is omitted, there are no subsequent pages.
    * The value may be {@code null}.
@@ -102,6 +109,14 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponse extends com.go
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult> results;
+
+  /**
+   * Session information. Only set if SearchRequest.session is provided. See its description for
+   * more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaSearchResponseSessionInfo sessionInfo;
 
   /**
    * A summary as part of the search results. This field is only returned if
@@ -226,6 +241,23 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponse extends com.go
   }
 
   /**
+   * Natural language query understanding information for the returned results.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchResponseNaturalLanguageQueryUnderstandingInfo getNaturalLanguageQueryUnderstandingInfo() {
+    return naturalLanguageQueryUnderstandingInfo;
+  }
+
+  /**
+   * Natural language query understanding information for the returned results.
+   * @param naturalLanguageQueryUnderstandingInfo naturalLanguageQueryUnderstandingInfo or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchResponse setNaturalLanguageQueryUnderstandingInfo(GoogleCloudDiscoveryengineV1betaSearchResponseNaturalLanguageQueryUnderstandingInfo naturalLanguageQueryUnderstandingInfo) {
+    this.naturalLanguageQueryUnderstandingInfo = naturalLanguageQueryUnderstandingInfo;
+    return this;
+  }
+
+  /**
    * A token that can be sent as SearchRequest.page_token to retrieve the next page. If this field
    * is omitted, there are no subsequent pages.
    * @return value or {@code null} for none
@@ -294,6 +326,25 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponse extends com.go
    */
   public GoogleCloudDiscoveryengineV1betaSearchResponse setResults(java.util.List<GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult> results) {
     this.results = results;
+    return this;
+  }
+
+  /**
+   * Session information. Only set if SearchRequest.session is provided. See its description for
+   * more details.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchResponseSessionInfo getSessionInfo() {
+    return sessionInfo;
+  }
+
+  /**
+   * Session information. Only set if SearchRequest.session is provided. See its description for
+   * more details.
+   * @param sessionInfo sessionInfo or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchResponse setSessionInfo(GoogleCloudDiscoveryengineV1betaSearchResponseSessionInfo sessionInfo) {
+    this.sessionInfo = sessionInfo;
     return this;
   }
 

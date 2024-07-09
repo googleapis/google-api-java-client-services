@@ -51,6 +51,15 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerStepActionObservationS
   private java.util.List<GoogleCloudDiscoveryengineV1alphaAnswerStepActionObservationSearchResultSnippetInfo> snippetInfo;
 
   /**
+   * Data representation. The structured JSON data for the document. It's populated from the struct
+   * data from the Document (code pointer: http://shortn/_objzAfIiHq), or the Chunk in search result
+   * (code pointer: http://shortn/_Ipo6KFFGBL).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> structData;
+
+  /**
    * Title.
    * The value may be {@code null}.
    */
@@ -112,6 +121,27 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerStepActionObservationS
    */
   public GoogleCloudDiscoveryengineV1alphaAnswerStepActionObservationSearchResult setSnippetInfo(java.util.List<GoogleCloudDiscoveryengineV1alphaAnswerStepActionObservationSearchResultSnippetInfo> snippetInfo) {
     this.snippetInfo = snippetInfo;
+    return this;
+  }
+
+  /**
+   * Data representation. The structured JSON data for the document. It's populated from the struct
+   * data from the Document (code pointer: http://shortn/_objzAfIiHq), or the Chunk in search result
+   * (code pointer: http://shortn/_Ipo6KFFGBL).
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getStructData() {
+    return structData;
+  }
+
+  /**
+   * Data representation. The structured JSON data for the document. It's populated from the struct
+   * data from the Document (code pointer: http://shortn/_objzAfIiHq), or the Chunk in search result
+   * (code pointer: http://shortn/_Ipo6KFFGBL).
+   * @param structData structData or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAnswerStepActionObservationSearchResult setStructData(java.util.Map<String, java.lang.Object> structData) {
+    this.structData = structData;
     return this;
   }
 

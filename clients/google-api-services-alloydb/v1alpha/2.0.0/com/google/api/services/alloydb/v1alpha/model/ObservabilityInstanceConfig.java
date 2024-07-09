@@ -30,8 +30,7 @@ package com.google.api.services.alloydb.v1alpha.model;
 public final class ObservabilityInstanceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Observability feature status for an instance. This is a read-only flag and modifiable only by
-   * producer API. This flag is turned "off" by default.
+   * Observability feature status for an instance. This flag is turned "off" by default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +52,7 @@ public final class ObservabilityInstanceConfig extends com.google.api.client.jso
 
   /**
    * Number of query execution plans captured by Insights per minute for all queries combined. The
-   * default value is 5. Any integer between 0 to 20 is considered valid.
+   * default value is 200. Any integer between 0 to 200 is considered valid.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,8 +90,7 @@ public final class ObservabilityInstanceConfig extends com.google.api.client.jso
   private java.lang.Boolean trackWaitEvents;
 
   /**
-   * Observability feature status for an instance. This is a read-only flag and modifiable only by
-   * producer API. This flag is turned "off" by default.
+   * Observability feature status for an instance. This flag is turned "off" by default.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -100,8 +98,7 @@ public final class ObservabilityInstanceConfig extends com.google.api.client.jso
   }
 
   /**
-   * Observability feature status for an instance. This is a read-only flag and modifiable only by
-   * producer API. This flag is turned "off" by default.
+   * Observability feature status for an instance. This flag is turned "off" by default.
    * @param enabled enabled or {@code null} for none
    */
   public ObservabilityInstanceConfig setEnabled(java.lang.Boolean enabled) {
@@ -145,7 +142,7 @@ public final class ObservabilityInstanceConfig extends com.google.api.client.jso
 
   /**
    * Number of query execution plans captured by Insights per minute for all queries combined. The
-   * default value is 5. Any integer between 0 to 20 is considered valid.
+   * default value is 200. Any integer between 0 to 200 is considered valid.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getQueryPlansPerMinute() {
@@ -154,7 +151,7 @@ public final class ObservabilityInstanceConfig extends com.google.api.client.jso
 
   /**
    * Number of query execution plans captured by Insights per minute for all queries combined. The
-   * default value is 5. Any integer between 0 to 20 is considered valid.
+   * default value is 200. Any integer between 0 to 200 is considered valid.
    * @param queryPlansPerMinute queryPlansPerMinute or {@code null} for none
    */
   public ObservabilityInstanceConfig setQueryPlansPerMinute(java.lang.Integer queryPlansPerMinute) {

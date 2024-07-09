@@ -38,11 +38,10 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryErrorCountMetricSetR
    * google/coral. * `deviceModel` (string): unique identifier of the user's device model. *
    * `deviceType` (string): identifier of the device's form factor, e.g., PHONE. * `reportType`
    * (string): the type of error. The value should correspond to one of the possible values in
-   * ErrorType. * `isUserPerceived` (string): denotes whether error is user perceived or not,
-   * USER_PERCEIVED or NOT_USER_PERCEIVED. * `issueId` (string): the id an error was assigned to.
-   * The value should correspond to the `{issue}` component of the issue name. * `deviceRamBucket`
-   * (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string):
-   * Make of the device's primary system-on-chip, e.g., Samsung.
+   * ErrorType. * `issueId` (string): the id an error was assigned to. The value should correspond
+   * to the `{issue}` component of the issue name. * `deviceRamBucket` (int64): RAM of the device,
+   * in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string): Make of the device's primary
+   * system-on-chip, e.g., Samsung.
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
    * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) *
@@ -62,7 +61,8 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryErrorCountMetricSetR
   /**
    * Filters to apply to data. The filtering expression follows
    * [AIP-160](https://google.aip.dev/160) standard and supports filtering by equality of all
-   * breakdown dimensions.
+   * breakdown dimensions and: * `isUserPerceived` (string): denotes whether error is user perceived
+   * or not, USER_PERCEIVED or NOT_USER_PERCEIVED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,11 +113,10 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryErrorCountMetricSetR
    * google/coral. * `deviceModel` (string): unique identifier of the user's device model. *
    * `deviceType` (string): identifier of the device's form factor, e.g., PHONE. * `reportType`
    * (string): the type of error. The value should correspond to one of the possible values in
-   * ErrorType. * `isUserPerceived` (string): denotes whether error is user perceived or not,
-   * USER_PERCEIVED or NOT_USER_PERCEIVED. * `issueId` (string): the id an error was assigned to.
-   * The value should correspond to the `{issue}` component of the issue name. * `deviceRamBucket`
-   * (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string):
-   * Make of the device's primary system-on-chip, e.g., Samsung.
+   * ErrorType. * `issueId` (string): the id an error was assigned to. The value should correspond
+   * to the `{issue}` component of the issue name. * `deviceRamBucket` (int64): RAM of the device,
+   * in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string): Make of the device's primary
+   * system-on-chip, e.g., Samsung.
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
    * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) *
@@ -143,11 +142,10 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryErrorCountMetricSetR
    * google/coral. * `deviceModel` (string): unique identifier of the user's device model. *
    * `deviceType` (string): identifier of the device's form factor, e.g., PHONE. * `reportType`
    * (string): the type of error. The value should correspond to one of the possible values in
-   * ErrorType. * `isUserPerceived` (string): denotes whether error is user perceived or not,
-   * USER_PERCEIVED or NOT_USER_PERCEIVED. * `issueId` (string): the id an error was assigned to.
-   * The value should correspond to the `{issue}` component of the issue name. * `deviceRamBucket`
-   * (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string):
-   * Make of the device's primary system-on-chip, e.g., Samsung.
+   * ErrorType. * `issueId` (string): the id an error was assigned to. The value should correspond
+   * to the `{issue}` component of the issue name. * `deviceRamBucket` (int64): RAM of the device,
+   * in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string): Make of the device's primary
+   * system-on-chip, e.g., Samsung.
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
    * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) *
@@ -169,7 +167,8 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryErrorCountMetricSetR
   /**
    * Filters to apply to data. The filtering expression follows
    * [AIP-160](https://google.aip.dev/160) standard and supports filtering by equality of all
-   * breakdown dimensions.
+   * breakdown dimensions and: * `isUserPerceived` (string): denotes whether error is user perceived
+   * or not, USER_PERCEIVED or NOT_USER_PERCEIVED.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -179,7 +178,8 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryErrorCountMetricSetR
   /**
    * Filters to apply to data. The filtering expression follows
    * [AIP-160](https://google.aip.dev/160) standard and supports filtering by equality of all
-   * breakdown dimensions.
+   * breakdown dimensions and: * `isUserPerceived` (string): denotes whether error is user perceived
+   * or not, USER_PERCEIVED or NOT_USER_PERCEIVED.
    * @param filter filter or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1alpha1QueryErrorCountMetricSetRequest setFilter(java.lang.String filter) {

@@ -14847,9 +14847,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * This request holds the parameters needed by the healthcare server.  After setting any optional
                    * parameters, call the {@link GetStorageInfo#execute()} method to invoke the remote operation.
                    *
-                   * @param resource Required. The path of the resource for which the storage info is requested (for exaxmple for a DICOM
-                   *        Instance: `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{d
-                   *        icomStoreId}/dicomWeb/studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`)
+                   * @param resource Required. The path of the instance to return storage info for, in the form: `projects/{projectID}/lo
+                   *        cations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{stu
+                   *        dyUID}/series/{seriesUID}/instances/{instanceUID}`
                    * @return the request
                    */
                   public GetStorageInfo getStorageInfo(java.lang.String resource) throws java.io.IOException {
@@ -14876,9 +14876,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                      * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
                      * the constructor. </p>
                      *
-                     * @param resource Required. The path of the resource for which the storage info is requested (for exaxmple for a DICOM
-                   *        Instance: `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{d
-                   *        icomStoreId}/dicomWeb/studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`)
+                     * @param resource Required. The path of the instance to return storage info for, in the form: `projects/{projectID}/lo
+                   *        cations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{stu
+                   *        dyUID}/series/{seriesUID}/instances/{instanceUID}`
                      * @since 1.13
                      */
                     protected GetStorageInfo(java.lang.String resource) {
@@ -14957,27 +14957,27 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     }
 
                     /**
-                     * Required. The path of the resource for which the storage info is requested
-                     * (for exaxmple for a DICOM Instance: `projects/{projectID}/locations/{location
-                     * ID}/datasets/{datasetID}/dicomStores/{dicomStoreId}/dicomWeb/studies/{study_u
-                     * id}/series/{series_uid}/instances/{instance_uid}`)
+                     * Required. The path of the instance to return storage info for, in the form: `
+                     * projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/
+                     * {dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/instances/{inst
+                     * anceUID}`
                      */
                     @com.google.api.client.util.Key
                     private java.lang.String resource;
 
-                    /** Required. The path of the resource for which the storage info is requested (for exaxmple for a
-                   DICOM Instance: `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dico
-                   mStoreId}/dicomWeb/studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`)
+                    /** Required. The path of the instance to return storage info for, in the form: `projects/{projectID}/l
+                   ocations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/s
+                   eries/{seriesUID}/instances/{instanceUID}`
                      */
                     public java.lang.String getResource() {
                       return resource;
                     }
 
                     /**
-                     * Required. The path of the resource for which the storage info is requested
-                     * (for exaxmple for a DICOM Instance: `projects/{projectID}/locations/{location
-                     * ID}/datasets/{datasetID}/dicomStores/{dicomStoreId}/dicomWeb/studies/{study_u
-                     * id}/series/{series_uid}/instances/{instance_uid}`)
+                     * Required. The path of the instance to return storage info for, in the form: `
+                     * projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/
+                     * {dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/instances/{inst
+                     * anceUID}`
                      */
                     public GetStorageInfo setResource(java.lang.String resource) {
                       if (!getSuppressPatternChecks()) {

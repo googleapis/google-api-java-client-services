@@ -12624,7 +12624,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the TlsRoute resource. It matches pattern
+         * @param name Identifier. Name of the TlsRoute resource. It matches pattern
          *        `projects/locations/global/tlsRoutes/tls_route_name>`.
          * @param content the {@link com.google.api.services.networkservices.v1beta1.model.TlsRoute}
          * @return the request
@@ -12653,7 +12653,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the TlsRoute resource. It matches pattern
+           * @param name Identifier. Name of the TlsRoute resource. It matches pattern
          *        `projects/locations/global/tlsRoutes/tls_route_name>`.
            * @param content the {@link com.google.api.services.networkservices.v1beta1.model.TlsRoute}
            * @since 1.13
@@ -12724,13 +12724,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Name of the TlsRoute resource. It matches pattern
+           * Identifier. Name of the TlsRoute resource. It matches pattern
            * `projects/locations/global/tlsRoutes/tls_route_name>`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the TlsRoute resource. It matches pattern
+          /** Identifier. Name of the TlsRoute resource. It matches pattern
          `projects/locations/global/tlsRoutes/tls_route_name>`.
            */
           public java.lang.String getName() {
@@ -12738,7 +12738,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Name of the TlsRoute resource. It matches pattern
+           * Identifier. Name of the TlsRoute resource. It matches pattern
            * `projects/locations/global/tlsRoutes/tls_route_name>`.
            */
           public Patch setName(java.lang.String name) {

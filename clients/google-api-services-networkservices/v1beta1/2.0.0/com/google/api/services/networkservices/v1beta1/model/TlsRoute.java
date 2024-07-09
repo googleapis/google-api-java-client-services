@@ -69,7 +69,7 @@ public final class TlsRoute extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> meshes;
 
   /**
-   * Required. Name of the TlsRoute resource. It matches pattern
+   * Identifier. Name of the TlsRoute resource. It matches pattern
    * `projects/locations/global/tlsRoutes/tls_route_name>`.
    * The value may be {@code null}.
    */
@@ -192,7 +192,7 @@ public final class TlsRoute extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Name of the TlsRoute resource. It matches pattern
+   * Identifier. Name of the TlsRoute resource. It matches pattern
    * `projects/locations/global/tlsRoutes/tls_route_name>`.
    * @return value or {@code null} for none
    */
@@ -201,7 +201,7 @@ public final class TlsRoute extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Name of the TlsRoute resource. It matches pattern
+   * Identifier. Name of the TlsRoute resource. It matches pattern
    * `projects/locations/global/tlsRoutes/tls_route_name>`.
    * @param name name or {@code null} for none
    */

@@ -17,7 +17,8 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * SecurityProfileGroup is a resource that defines the behavior for various ProfileTypes. Next ID: 9
+ * SecurityProfileGroup is a resource that defines the behavior for various ProfileTypes. Next ID:
+ * 10
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:

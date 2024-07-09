@@ -30,8 +30,8 @@ package com.google.api.services.networksecurity.v1.model;
 public final class MTLSPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required if the policy is to be used with Traffic Director. For external HTTPS load balancers
-   * it must be empty. Defines the mechanism to obtain the Certificate Authority certificate to
+   * Required if the policy is to be used with Traffic Director. For Application Load Balancers it
+   * must be empty. Defines the mechanism to obtain the Certificate Authority certificate to
    * validate the client certificate.
    * The value may be {@code null}.
    */
@@ -41,7 +41,7 @@ public final class MTLSPolicy extends com.google.api.client.json.GenericJson {
   /**
    * When the client presents an invalid certificate or no certificate to the load balancer, the
    * `client_validation_mode` specifies how the client connection is handled. Required if the policy
-   * is to be used with the external HTTPS load balancing. For Traffic Director it must be empty.
+   * is to be used with the Application Load Balancers. For Traffic Director it must be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,15 +50,15 @@ public final class MTLSPolicy extends com.google.api.client.json.GenericJson {
   /**
    * Reference to the TrustConfig from certificatemanager.googleapis.com namespace. If specified,
    * the chain validation will be performed against certificates configured in the given
-   * TrustConfig. Allowed only if the policy is to be used with external HTTPS load balancers.
+   * TrustConfig. Allowed only if the policy is to be used with Application Load Balancers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientValidationTrustConfig;
 
   /**
-   * Required if the policy is to be used with Traffic Director. For external HTTPS load balancers
-   * it must be empty. Defines the mechanism to obtain the Certificate Authority certificate to
+   * Required if the policy is to be used with Traffic Director. For Application Load Balancers it
+   * must be empty. Defines the mechanism to obtain the Certificate Authority certificate to
    * validate the client certificate.
    * @return value or {@code null} for none
    */
@@ -67,8 +67,8 @@ public final class MTLSPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required if the policy is to be used with Traffic Director. For external HTTPS load balancers
-   * it must be empty. Defines the mechanism to obtain the Certificate Authority certificate to
+   * Required if the policy is to be used with Traffic Director. For Application Load Balancers it
+   * must be empty. Defines the mechanism to obtain the Certificate Authority certificate to
    * validate the client certificate.
    * @param clientValidationCa clientValidationCa or {@code null} for none
    */
@@ -80,7 +80,7 @@ public final class MTLSPolicy extends com.google.api.client.json.GenericJson {
   /**
    * When the client presents an invalid certificate or no certificate to the load balancer, the
    * `client_validation_mode` specifies how the client connection is handled. Required if the policy
-   * is to be used with the external HTTPS load balancing. For Traffic Director it must be empty.
+   * is to be used with the Application Load Balancers. For Traffic Director it must be empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientValidationMode() {
@@ -90,7 +90,7 @@ public final class MTLSPolicy extends com.google.api.client.json.GenericJson {
   /**
    * When the client presents an invalid certificate or no certificate to the load balancer, the
    * `client_validation_mode` specifies how the client connection is handled. Required if the policy
-   * is to be used with the external HTTPS load balancing. For Traffic Director it must be empty.
+   * is to be used with the Application Load Balancers. For Traffic Director it must be empty.
    * @param clientValidationMode clientValidationMode or {@code null} for none
    */
   public MTLSPolicy setClientValidationMode(java.lang.String clientValidationMode) {
@@ -101,7 +101,7 @@ public final class MTLSPolicy extends com.google.api.client.json.GenericJson {
   /**
    * Reference to the TrustConfig from certificatemanager.googleapis.com namespace. If specified,
    * the chain validation will be performed against certificates configured in the given
-   * TrustConfig. Allowed only if the policy is to be used with external HTTPS load balancers.
+   * TrustConfig. Allowed only if the policy is to be used with Application Load Balancers.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientValidationTrustConfig() {
@@ -111,7 +111,7 @@ public final class MTLSPolicy extends com.google.api.client.json.GenericJson {
   /**
    * Reference to the TrustConfig from certificatemanager.googleapis.com namespace. If specified,
    * the chain validation will be performed against certificates configured in the given
-   * TrustConfig. Allowed only if the policy is to be used with external HTTPS load balancers.
+   * TrustConfig. Allowed only if the policy is to be used with Application Load Balancers.
    * @param clientValidationTrustConfig clientValidationTrustConfig or {@code null} for none
    */
   public MTLSPolicy setClientValidationTrustConfig(java.lang.String clientValidationTrustConfig) {

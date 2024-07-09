@@ -17,7 +17,7 @@
 package com.google.api.services.bigtableadmin.v2.model;
 
 /**
- * Encodes the value as an 8-byte big endian twos complement `Bytes` value. * Natural sort? No
+ * Encodes the value as an 8-byte big endian twos complement `Bytes` value. * Order-preserving? No
  * (positive values only) * Self-delimiting? Yes * Compatibility? - BigQuery Federation `BINARY`
  * encoding - HBase `Bytes.toBytes` - Java `ByteBuffer.putLong()` with `ByteOrder.BIG_ENDIAN`
  *
@@ -33,14 +33,14 @@ package com.google.api.services.bigtableadmin.v2.model;
 public final class GoogleBigtableAdminV2TypeInt64EncodingBigEndianBytes extends com.google.api.client.json.GenericJson {
 
   /**
-   * The underlying `Bytes` type, which may be able to encode further.
+   * Deprecated: ignored if set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleBigtableAdminV2TypeBytes bytesType;
 
   /**
-   * The underlying `Bytes` type, which may be able to encode further.
+   * Deprecated: ignored if set.
    * @return value or {@code null} for none
    */
   public GoogleBigtableAdminV2TypeBytes getBytesType() {
@@ -48,7 +48,7 @@ public final class GoogleBigtableAdminV2TypeInt64EncodingBigEndianBytes extends 
   }
 
   /**
-   * The underlying `Bytes` type, which may be able to encode further.
+   * Deprecated: ignored if set.
    * @param bytesType bytesType or {@code null} for none
    */
   public GoogleBigtableAdminV2TypeInt64EncodingBigEndianBytes setBytesType(GoogleBigtableAdminV2TypeBytes bytesType) {

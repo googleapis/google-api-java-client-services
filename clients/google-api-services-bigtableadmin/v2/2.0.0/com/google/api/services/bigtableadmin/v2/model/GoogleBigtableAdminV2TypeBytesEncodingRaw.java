@@ -17,7 +17,7 @@
 package com.google.api.services.bigtableadmin.v2.model;
 
 /**
- * Leaves the value "as-is" * Natural sort? Yes * Self-delimiting? No * Compatibility? N/A
+ * Leaves the value "as-is" * Order-preserving? Yes * Self-delimiting? No * Compatibility? N/A
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Bigtable Admin API. For a detailed explanation

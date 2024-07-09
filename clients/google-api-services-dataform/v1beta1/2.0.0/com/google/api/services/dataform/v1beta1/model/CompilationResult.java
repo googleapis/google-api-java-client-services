@@ -51,6 +51,13 @@ public final class CompilationResult extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Output only. The timestamp of when the compilation result was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Output only. Only set if the repository has a KMS Key.
    * The value may be {@code null}.
    */
@@ -137,6 +144,23 @@ public final class CompilationResult extends com.google.api.client.json.GenericJ
    */
   public CompilationResult setCompilationErrors(java.util.List<CompilationError> compilationErrors) {
     this.compilationErrors = compilationErrors;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp of when the compilation result was created.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. The timestamp of when the compilation result was created.
+   * @param createTime createTime or {@code null} for none
+   */
+  public CompilationResult setCreateTime(String createTime) {
+    this.createTime = createTime;
     return this;
   }
 

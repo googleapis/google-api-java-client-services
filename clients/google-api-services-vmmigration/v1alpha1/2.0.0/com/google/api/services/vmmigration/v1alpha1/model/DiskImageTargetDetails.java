@@ -30,7 +30,9 @@ package com.google.api.services.vmmigration.v1alpha1.model;
 public final class DiskImageTargetDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Additional licenses to assign to the image.
+   * Optional. Additional licenses to assign to the image. Format:
+   * https://www.googleapis.com/compute/v1/projects/PROJECT_ID/global/licenses/LICENSE_NAME Or
+   * https://www.googleapis.com/compute/beta/projects/PROJECT_ID/global/licenses/LICENSE_NAME
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +104,9 @@ public final class DiskImageTargetDetails extends com.google.api.client.json.Gen
   private java.lang.String targetProject;
 
   /**
-   * Optional. Additional licenses to assign to the image.
+   * Optional. Additional licenses to assign to the image. Format:
+   * https://www.googleapis.com/compute/v1/projects/PROJECT_ID/global/licenses/LICENSE_NAME Or
+   * https://www.googleapis.com/compute/beta/projects/PROJECT_ID/global/licenses/LICENSE_NAME
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAdditionalLicenses() {
@@ -110,7 +114,9 @@ public final class DiskImageTargetDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Additional licenses to assign to the image.
+   * Optional. Additional licenses to assign to the image. Format:
+   * https://www.googleapis.com/compute/v1/projects/PROJECT_ID/global/licenses/LICENSE_NAME Or
+   * https://www.googleapis.com/compute/beta/projects/PROJECT_ID/global/licenses/LICENSE_NAME
    * @param additionalLicenses additionalLicenses or {@code null} for none
    */
   public DiskImageTargetDetails setAdditionalLicenses(java.util.List<java.lang.String> additionalLicenses) {

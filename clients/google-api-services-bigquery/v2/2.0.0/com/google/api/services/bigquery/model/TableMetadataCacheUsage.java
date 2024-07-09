@@ -38,6 +38,14 @@ public final class TableMetadataCacheUsage extends com.google.api.client.json.Ge
   private java.lang.String explanation;
 
   /**
+   * Duration since last refresh as of this job for managed tables (indicates metadata cache
+   * staleness as seen by this job).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String staleness;
+
+  /**
    * Metadata caching eligible table referenced in the query.
    * The value may be {@code null}.
    */
@@ -72,6 +80,25 @@ public final class TableMetadataCacheUsage extends com.google.api.client.json.Ge
    */
   public TableMetadataCacheUsage setExplanation(java.lang.String explanation) {
     this.explanation = explanation;
+    return this;
+  }
+
+  /**
+   * Duration since last refresh as of this job for managed tables (indicates metadata cache
+   * staleness as seen by this job).
+   * @return value or {@code null} for none
+   */
+  public String getStaleness() {
+    return staleness;
+  }
+
+  /**
+   * Duration since last refresh as of this job for managed tables (indicates metadata cache
+   * staleness as seen by this job).
+   * @param staleness staleness or {@code null} for none
+   */
+  public TableMetadataCacheUsage setStaleness(String staleness) {
+    this.staleness = staleness;
     return this;
   }
 

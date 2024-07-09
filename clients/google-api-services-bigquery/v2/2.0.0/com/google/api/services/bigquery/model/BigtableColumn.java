@@ -60,7 +60,7 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
 
   /**
    * [Required] Qualifier of the column. Columns in the parent column family that has this exact
-   * qualifier are exposed as . field. If the qualifier is valid UTF-8 string, it can be specified
+   * qualifier are exposed as `.` field. If the qualifier is valid UTF-8 string, it can be specified
    * in the qualifier_string field. Otherwise, a base-64 encoded value must be set to
    * qualifier_encoded. The column field name is the same as the column qualifier. However, if the
    * qualifier is not a valid BigQuery field identifier i.e. does not match a-zA-Z*, a valid
@@ -157,7 +157,7 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
 
   /**
    * [Required] Qualifier of the column. Columns in the parent column family that has this exact
-   * qualifier are exposed as . field. If the qualifier is valid UTF-8 string, it can be specified
+   * qualifier are exposed as `.` field. If the qualifier is valid UTF-8 string, it can be specified
    * in the qualifier_string field. Otherwise, a base-64 encoded value must be set to
    * qualifier_encoded. The column field name is the same as the column qualifier. However, if the
    * qualifier is not a valid BigQuery field identifier i.e. does not match a-zA-Z*, a valid
@@ -171,7 +171,7 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
 
   /**
    * [Required] Qualifier of the column. Columns in the parent column family that has this exact
-   * qualifier are exposed as . field. If the qualifier is valid UTF-8 string, it can be specified
+   * qualifier are exposed as `.` field. If the qualifier is valid UTF-8 string, it can be specified
    * in the qualifier_string field. Otherwise, a base-64 encoded value must be set to
    * qualifier_encoded. The column field name is the same as the column qualifier. However, if the
    * qualifier is not a valid BigQuery field identifier i.e. does not match a-zA-Z*, a valid
@@ -187,7 +187,7 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
 
   /**
    * [Required] Qualifier of the column. Columns in the parent column family that has this exact
-   * qualifier are exposed as . field. If the qualifier is valid UTF-8 string, it can be specified
+   * qualifier are exposed as `.` field. If the qualifier is valid UTF-8 string, it can be specified
    * in the qualifier_string field. Otherwise, a base-64 encoded value must be set to
    * qualifier_encoded. The column field name is the same as the column qualifier. However, if the
    * qualifier is not a valid BigQuery field identifier i.e. does not match a-zA-Z*, a valid
@@ -202,7 +202,7 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
 
   /**
    * [Required] Qualifier of the column. Columns in the parent column family that has this exact
-   * qualifier are exposed as . field. If the qualifier is valid UTF-8 string, it can be specified
+   * qualifier are exposed as `.` field. If the qualifier is valid UTF-8 string, it can be specified
    * in the qualifier_string field. Otherwise, a base-64 encoded value must be set to
    * qualifier_encoded. The column field name is the same as the column qualifier. However, if the
    * qualifier is not a valid BigQuery field identifier i.e. does not match a-zA-Z*, a valid

@@ -165,7 +165,7 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   private GooglePrivacyDlpV2ProfileStatus profileStatus;
 
   /**
-   * The resource name to the project data profile for this table.
+   * The resource name of the project data profile for this table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -524,7 +524,7 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   }
 
   /**
-   * The resource name to the project data profile for this table.
+   * The resource name of the project data profile for this table.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectDataProfile() {
@@ -532,7 +532,7 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   }
 
   /**
-   * The resource name to the project data profile for this table.
+   * The resource name of the project data profile for this table.
    * @param projectDataProfile projectDataProfile or {@code null} for none
    */
   public GooglePrivacyDlpV2TableDataProfile setProjectDataProfile(java.lang.String projectDataProfile) {

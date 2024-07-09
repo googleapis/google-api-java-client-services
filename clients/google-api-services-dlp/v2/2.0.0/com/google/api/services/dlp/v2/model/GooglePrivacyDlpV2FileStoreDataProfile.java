@@ -17,7 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * The profile for a file store. * Google Cloud Storage: maps 1:1 with a bucket.
+ * The profile for a file store. * Cloud Storage: maps 1:1 with a bucket.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed
@@ -59,10 +59,10 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   private GooglePrivacyDlpV2DataSourceType dataSourceType;
 
   /**
-   * For resources that have multiple storage locations, these are those regions. For Google Cloud
-   * Storage this is the list of regions chosen for dual-region storage. `file_store_location` will
-   * normally be the corresponding multi-region for the list of individual locations. The first
-   * region is always picked as the processing and storage location for the data profile.
+   * For resources that have multiple storage locations, these are those regions. For Cloud Storage
+   * this is the list of regions chosen for dual-region storage. `file_store_location` will normally
+   * be the corresponding multi-region for the list of individual locations. The first region is
+   * always picked as the processing and storage location for the data profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +96,7 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   private java.lang.Boolean fileStoreIsEmpty;
 
   /**
-   * The location of the file store. * Google Cloud Storage:
+   * The location of the file store. * Cloud Storage:
    * https://cloud.google.com/storage/docs/locations#available-locations
    * The value may be {@code null}.
    */
@@ -104,7 +104,7 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   private java.lang.String fileStoreLocation;
 
   /**
-   * The file store path. * Google Cloud Storage: `gs://{bucket}`
+   * The file store path. * Cloud Storage: `gs://{bucket}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -156,7 +156,7 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   private GooglePrivacyDlpV2ProfileStatus profileStatus;
 
   /**
-   * The resource name to the project data profile for this file store.
+   * The resource name of the project data profile for this file store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -170,9 +170,9 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   private java.lang.String projectId;
 
   /**
-   * Attributes of the resource being profiled. Currently used attributes: -
-   * customer_managed_encryption: boolean true: the resource is encrypted with a customer-managed
-   * key. false: the resource is encrypted with a provider-managed key.
+   * Attributes of the resource being profiled. Currently used attributes: *
+   * customer_managed_encryption: boolean - true: the resource is encrypted with a customer-managed
+   * key. - false: the resource is encrypted with a provider-managed key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -275,10 +275,10 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   }
 
   /**
-   * For resources that have multiple storage locations, these are those regions. For Google Cloud
-   * Storage this is the list of regions chosen for dual-region storage. `file_store_location` will
-   * normally be the corresponding multi-region for the list of individual locations. The first
-   * region is always picked as the processing and storage location for the data profile.
+   * For resources that have multiple storage locations, these are those regions. For Cloud Storage
+   * this is the list of regions chosen for dual-region storage. `file_store_location` will normally
+   * be the corresponding multi-region for the list of individual locations. The first region is
+   * always picked as the processing and storage location for the data profile.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDataStorageLocations() {
@@ -286,10 +286,10 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   }
 
   /**
-   * For resources that have multiple storage locations, these are those regions. For Google Cloud
-   * Storage this is the list of regions chosen for dual-region storage. `file_store_location` will
-   * normally be the corresponding multi-region for the list of individual locations. The first
-   * region is always picked as the processing and storage location for the data profile.
+   * For resources that have multiple storage locations, these are those regions. For Cloud Storage
+   * this is the list of regions chosen for dual-region storage. `file_store_location` will normally
+   * be the corresponding multi-region for the list of individual locations. The first region is
+   * always picked as the processing and storage location for the data profile.
    * @param dataStorageLocations dataStorageLocations or {@code null} for none
    */
   public GooglePrivacyDlpV2FileStoreDataProfile setDataStorageLocations(java.util.List<java.lang.String> dataStorageLocations) {
@@ -349,7 +349,7 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   }
 
   /**
-   * The location of the file store. * Google Cloud Storage:
+   * The location of the file store. * Cloud Storage:
    * https://cloud.google.com/storage/docs/locations#available-locations
    * @return value or {@code null} for none
    */
@@ -358,7 +358,7 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   }
 
   /**
-   * The location of the file store. * Google Cloud Storage:
+   * The location of the file store. * Cloud Storage:
    * https://cloud.google.com/storage/docs/locations#available-locations
    * @param fileStoreLocation fileStoreLocation or {@code null} for none
    */
@@ -368,7 +368,7 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   }
 
   /**
-   * The file store path. * Google Cloud Storage: `gs://{bucket}`
+   * The file store path. * Cloud Storage: `gs://{bucket}`
    * @return value or {@code null} for none
    */
   public java.lang.String getFileStorePath() {
@@ -376,7 +376,7 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   }
 
   /**
-   * The file store path. * Google Cloud Storage: `gs://{bucket}`
+   * The file store path. * Cloud Storage: `gs://{bucket}`
    * @param fileStorePath fileStorePath or {@code null} for none
    */
   public GooglePrivacyDlpV2FileStoreDataProfile setFileStorePath(java.lang.String fileStorePath) {
@@ -493,7 +493,7 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   }
 
   /**
-   * The resource name to the project data profile for this file store.
+   * The resource name of the project data profile for this file store.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectDataProfile() {
@@ -501,7 +501,7 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   }
 
   /**
-   * The resource name to the project data profile for this file store.
+   * The resource name of the project data profile for this file store.
    * @param projectDataProfile projectDataProfile or {@code null} for none
    */
   public GooglePrivacyDlpV2FileStoreDataProfile setProjectDataProfile(java.lang.String projectDataProfile) {
@@ -527,9 +527,9 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   }
 
   /**
-   * Attributes of the resource being profiled. Currently used attributes: -
-   * customer_managed_encryption: boolean true: the resource is encrypted with a customer-managed
-   * key. false: the resource is encrypted with a provider-managed key.
+   * Attributes of the resource being profiled. Currently used attributes: *
+   * customer_managed_encryption: boolean - true: the resource is encrypted with a customer-managed
+   * key. - false: the resource is encrypted with a provider-managed key.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GooglePrivacyDlpV2Value> getResourceAttributes() {
@@ -537,9 +537,9 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   }
 
   /**
-   * Attributes of the resource being profiled. Currently used attributes: -
-   * customer_managed_encryption: boolean true: the resource is encrypted with a customer-managed
-   * key. false: the resource is encrypted with a provider-managed key.
+   * Attributes of the resource being profiled. Currently used attributes: *
+   * customer_managed_encryption: boolean - true: the resource is encrypted with a customer-managed
+   * key. - false: the resource is encrypted with a provider-managed key.
    * @param resourceAttributes resourceAttributes or {@code null} for none
    */
   public GooglePrivacyDlpV2FileStoreDataProfile setResourceAttributes(java.util.Map<String, GooglePrivacyDlpV2Value> resourceAttributes) {

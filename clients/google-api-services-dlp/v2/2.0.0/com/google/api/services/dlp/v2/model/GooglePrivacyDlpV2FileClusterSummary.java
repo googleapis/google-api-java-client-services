@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2FileClusterSummary extends com.google.api.c
   private GooglePrivacyDlpV2DataRiskLevel dataRiskLevel;
 
   /**
-   * A list of Errors detected while scanning this cluster. The list is truncated to 10 per cluster.
+   * A list of errors detected while scanning this cluster. The list is truncated to 10 per cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +112,7 @@ public final class GooglePrivacyDlpV2FileClusterSummary extends com.google.api.c
   }
 
   /**
-   * A list of Errors detected while scanning this cluster. The list is truncated to 10 per cluster.
+   * A list of errors detected while scanning this cluster. The list is truncated to 10 per cluster.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2Error> getErrors() {
@@ -120,7 +120,7 @@ public final class GooglePrivacyDlpV2FileClusterSummary extends com.google.api.c
   }
 
   /**
-   * A list of Errors detected while scanning this cluster. The list is truncated to 10 per cluster.
+   * A list of errors detected while scanning this cluster. The list is truncated to 10 per cluster.
    * @param errors errors or {@code null} for none
    */
   public GooglePrivacyDlpV2FileClusterSummary setErrors(java.util.List<GooglePrivacyDlpV2Error> errors) {

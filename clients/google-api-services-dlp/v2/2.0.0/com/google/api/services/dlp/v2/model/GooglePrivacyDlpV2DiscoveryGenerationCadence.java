@@ -32,6 +32,14 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2DiscoveryGenerationCadence extends com.google.api.client.json.GenericJson {
 
   /**
+   * Governs when to update data profiles when the inspection rules defined by the `InspectTemplate`
+   * change. If not set, changing the template will not cause a data profile to update.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2DiscoveryInspectTemplateModifiedCadence inspectTemplateModifiedCadence;
+
+  /**
    * Governs when to update data profiles when a schema is modified.
    * The value may be {@code null}.
    */
@@ -44,6 +52,25 @@ public final class GooglePrivacyDlpV2DiscoveryGenerationCadence extends com.goog
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2DiscoveryTableModifiedCadence tableModifiedCadence;
+
+  /**
+   * Governs when to update data profiles when the inspection rules defined by the `InspectTemplate`
+   * change. If not set, changing the template will not cause a data profile to update.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DiscoveryInspectTemplateModifiedCadence getInspectTemplateModifiedCadence() {
+    return inspectTemplateModifiedCadence;
+  }
+
+  /**
+   * Governs when to update data profiles when the inspection rules defined by the `InspectTemplate`
+   * change. If not set, changing the template will not cause a data profile to update.
+   * @param inspectTemplateModifiedCadence inspectTemplateModifiedCadence or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DiscoveryGenerationCadence setInspectTemplateModifiedCadence(GooglePrivacyDlpV2DiscoveryInspectTemplateModifiedCadence inspectTemplateModifiedCadence) {
+    this.inspectTemplateModifiedCadence = inspectTemplateModifiedCadence;
+    return this;
+  }
 
   /**
    * Governs when to update data profiles when a schema is modified.

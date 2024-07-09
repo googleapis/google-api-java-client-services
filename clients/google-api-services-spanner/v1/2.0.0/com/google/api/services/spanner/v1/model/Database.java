@@ -63,8 +63,8 @@ public final class Database extends com.google.api.client.json.GenericJson {
   private String earliestVersionTime;
 
   /**
-   * Whether drop protection is enabled for this database. Defaults to false, if not set. For more
-   * details, please see how to [prevent accidental database
+   * Optional. Whether drop protection is enabled for this database. Defaults to false, if not set.
+   * For more details, please see how to [prevent accidental database
    * deletion](https://cloud.google.com/spanner/docs/prevent-database-deletion).
    * The value may be {@code null}.
    */
@@ -220,8 +220,8 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether drop protection is enabled for this database. Defaults to false, if not set. For more
-   * details, please see how to [prevent accidental database
+   * Optional. Whether drop protection is enabled for this database. Defaults to false, if not set.
+   * For more details, please see how to [prevent accidental database
    * deletion](https://cloud.google.com/spanner/docs/prevent-database-deletion).
    * @return value or {@code null} for none
    */
@@ -230,8 +230,8 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether drop protection is enabled for this database. Defaults to false, if not set. For more
-   * details, please see how to [prevent accidental database
+   * Optional. Whether drop protection is enabled for this database. Defaults to false, if not set.
+   * For more details, please see how to [prevent accidental database
    * deletion](https://cloud.google.com/spanner/docs/prevent-database-deletion).
    * @param enableDropProtection enableDropProtection or {@code null} for none
    */

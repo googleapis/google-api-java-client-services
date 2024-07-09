@@ -49,7 +49,7 @@ public final class AuthorizationCodeLink extends com.google.api.client.json.Gene
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String omitQueryParams;
+  private java.lang.Boolean omitQueryParams;
 
   /**
    * The scopes for which the user will authorize Google Cloud Connectors on the connector data
@@ -104,7 +104,7 @@ public final class AuthorizationCodeLink extends com.google.api.client.json.Gene
    * Optional. Omit query params from the redirect URI.
    * @return value or {@code null} for none
    */
-  public java.lang.String getOmitQueryParams() {
+  public java.lang.Boolean getOmitQueryParams() {
     return omitQueryParams;
   }
 
@@ -112,7 +112,7 @@ public final class AuthorizationCodeLink extends com.google.api.client.json.Gene
    * Optional. Omit query params from the redirect URI.
    * @param omitQueryParams omitQueryParams or {@code null} for none
    */
-  public AuthorizationCodeLink setOmitQueryParams(java.lang.String omitQueryParams) {
+  public AuthorizationCodeLink setOmitQueryParams(java.lang.Boolean omitQueryParams) {
     this.omitQueryParams = omitQueryParams;
     return this;
   }

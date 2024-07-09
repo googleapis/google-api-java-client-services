@@ -30,6 +30,13 @@ package com.google.api.services.dataform.v1beta1.model;
 public final class WorkflowConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The timestamp of when the WorkflowConfig was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Optional. Optional schedule (in cron format) for automatic execution of this workflow config.
    * The value may be {@code null}.
    */
@@ -82,6 +89,30 @@ public final class WorkflowConfig extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String timeZone;
+
+  /**
+   * Output only. The timestamp of when the WorkflowConfig was last updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
+   * Output only. The timestamp of when the WorkflowConfig was created.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. The timestamp of when the WorkflowConfig was created.
+   * @param createTime createTime or {@code null} for none
+   */
+  public WorkflowConfig setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
 
   /**
    * Optional. Optional schedule (in cron format) for automatic execution of this workflow config.
@@ -194,6 +225,23 @@ public final class WorkflowConfig extends com.google.api.client.json.GenericJson
    */
   public WorkflowConfig setTimeZone(java.lang.String timeZone) {
     this.timeZone = timeZone;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp of when the WorkflowConfig was last updated.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. The timestamp of when the WorkflowConfig was last updated.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public WorkflowConfig setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * EntrySource contains source system related information for the entry.
+ * EntrySource contains information related to the source system of the Entry.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -65,9 +65,9 @@ public final class GoogleCloudDataplexV1EntrySource extends com.google.api.clien
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. Location of the resource in the source system. Entry will be searchable by this
+   * Output only. Location of the resource in the source system. You can search the Entry by this
    * location. By default, this should match the location of the EntryGroup containing this entry. A
-   * different value allows capturing source location for data external to GCP.
+   * different value allows capturing the source location for data external to Google Cloud.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -188,9 +188,9 @@ public final class GoogleCloudDataplexV1EntrySource extends com.google.api.clien
   }
 
   /**
-   * Output only. Location of the resource in the source system. Entry will be searchable by this
+   * Output only. Location of the resource in the source system. You can search the Entry by this
    * location. By default, this should match the location of the EntryGroup containing this entry. A
-   * different value allows capturing source location for data external to GCP.
+   * different value allows capturing the source location for data external to Google Cloud.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -198,9 +198,9 @@ public final class GoogleCloudDataplexV1EntrySource extends com.google.api.clien
   }
 
   /**
-   * Output only. Location of the resource in the source system. Entry will be searchable by this
+   * Output only. Location of the resource in the source system. You can search the Entry by this
    * location. By default, this should match the location of the EntryGroup containing this entry. A
-   * different value allows capturing source location for data external to GCP.
+   * different value allows capturing the source location for data external to Google Cloud.
    * @param location location or {@code null} for none
    */
   public GoogleCloudDataplexV1EntrySource setLocation(java.lang.String location) {

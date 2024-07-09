@@ -50,8 +50,8 @@ public final class GoogleCloudDataplexV1Aspect extends com.google.api.client.jso
   private String createTime;
 
   /**
-   * Required. The content of the aspect, according to its aspect type schema. This will replace
-   * content. The maximum size of the field is 120KB (encoded as UTF-8).
+   * Required. The content of the aspect, according to its aspect type schema. The maximum size of
+   * the field is 120KB (encoded as UTF-8).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,8 +121,8 @@ public final class GoogleCloudDataplexV1Aspect extends com.google.api.client.jso
   }
 
   /**
-   * Required. The content of the aspect, according to its aspect type schema. This will replace
-   * content. The maximum size of the field is 120KB (encoded as UTF-8).
+   * Required. The content of the aspect, according to its aspect type schema. The maximum size of
+   * the field is 120KB (encoded as UTF-8).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getData() {
@@ -130,8 +130,8 @@ public final class GoogleCloudDataplexV1Aspect extends com.google.api.client.jso
   }
 
   /**
-   * Required. The content of the aspect, according to its aspect type schema. This will replace
-   * content. The maximum size of the field is 120KB (encoded as UTF-8).
+   * Required. The content of the aspect, according to its aspect type schema. The maximum size of
+   * the field is 120KB (encoded as UTF-8).
    * @param data data or {@code null} for none
    */
   public GoogleCloudDataplexV1Aspect setData(java.util.Map<String, java.lang.Object> data) {

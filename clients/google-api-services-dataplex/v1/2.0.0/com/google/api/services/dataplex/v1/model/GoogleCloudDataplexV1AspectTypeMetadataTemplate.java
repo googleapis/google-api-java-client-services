@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * MetadataTemplate definition for AspectType
+ * MetadataTemplate definition for an AspectType.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -37,10 +37,10 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplate extends com.g
   private GoogleCloudDataplexV1AspectTypeMetadataTemplateAnnotations annotations;
 
   /**
-   * Optional. array_items needs to be set if the type is array. array_items can refer to a
-   * primitive field or a complex (record only) field. To specify a primitive field, just name and
-   * type needs to be set in the nested MetadataTemplate. The recommended value for the name field
-   * is item, as this is not used in the actual payload.
+   * Optional. If the type is array, set array_items. array_items can refer to a primitive field or
+   * a complex (record only) field. To specify a primitive field, you only need to set name and type
+   * in the nested MetadataTemplate. The recommended value for the name field is item, as this isn't
+   * used in the actual payload.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplate extends com.g
   private GoogleCloudDataplexV1AspectTypeMetadataTemplateConstraints constraints;
 
   /**
-   * Optional. The list of values for an enum type. Needs to be defined if the type is enum.
+   * Optional. The list of values for an enum type. You must define it if the type is enum.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,10 +72,10 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplate extends com.g
   private java.lang.Integer index;
 
   /**
-   * Optional. map_items needs to be set if the type is map. map_items can refer to a primitive
-   * field or a complex (record only) field. To specify a primitive field, just name and type needs
-   * to be set in the nested MetadataTemplate. The recommended value for the name field is item, as
-   * this is not used in the actual payload.
+   * Optional. If the type is map, set map_items. map_items can refer to a primitive field or a
+   * complex (record only) field. To specify a primitive field, you only need to set name and type
+   * in the nested MetadataTemplate. The recommended value for the name field is item, as this isn't
+   * used in the actual payload.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +89,7 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplate extends com.g
   private java.lang.String name;
 
   /**
-   * Optional. Field definition, needs to be specified if the type is record. Defines the nested
+   * Optional. Field definition. You must specify it if the type is record. It defines the nested
    * fields.
    * The value may be {@code null}.
    */
@@ -97,27 +97,28 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplate extends com.g
   private java.util.List<GoogleCloudDataplexV1AspectTypeMetadataTemplate> recordFields;
 
   /**
-   * Required. The datatype of this field. The following values are supported: Primitive types
-   * (string, integer, boolean, double, datetime); datetime must be of the format RFC3339 UTC "Zulu"
-   * (Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z"). Complex types (enum,
-   * array, map, record).
+   * Required. The datatype of this field. The following values are supported:Primitive types:
+   * string integer boolean double datetime. Must be of the format RFC3339 UTC "Zulu" (Examples:
+   * "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z").Complex types: enum array map
+   * record
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Optional. Id can be used if this definition of the field needs to be reused later. Id needs to
-   * be unique across the entire template. Id can only be specified if the field type is record.
+   * Optional. You can use type id if this definition of the field needs to be reused later. The
+   * type id must be unique across the entire template. You can only specify it if the field type is
+   * record.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String typeId;
 
   /**
-   * Optional. A reference to another field definition (instead of an inline definition). The value
-   * must be equal to the value of an id field defined elsewhere in the MetadataTemplate. Only
-   * fields with type as record can refer to other fields.
+   * Optional. A reference to another field definition (not an inline definition). The value must be
+   * equal to the value of an id field defined elsewhere in the MetadataTemplate. Only fields with
+   * record type can refer to other fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,10 +142,10 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplate extends com.g
   }
 
   /**
-   * Optional. array_items needs to be set if the type is array. array_items can refer to a
-   * primitive field or a complex (record only) field. To specify a primitive field, just name and
-   * type needs to be set in the nested MetadataTemplate. The recommended value for the name field
-   * is item, as this is not used in the actual payload.
+   * Optional. If the type is array, set array_items. array_items can refer to a primitive field or
+   * a complex (record only) field. To specify a primitive field, you only need to set name and type
+   * in the nested MetadataTemplate. The recommended value for the name field is item, as this isn't
+   * used in the actual payload.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectTypeMetadataTemplate getArrayItems() {
@@ -152,10 +153,10 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplate extends com.g
   }
 
   /**
-   * Optional. array_items needs to be set if the type is array. array_items can refer to a
-   * primitive field or a complex (record only) field. To specify a primitive field, just name and
-   * type needs to be set in the nested MetadataTemplate. The recommended value for the name field
-   * is item, as this is not used in the actual payload.
+   * Optional. If the type is array, set array_items. array_items can refer to a primitive field or
+   * a complex (record only) field. To specify a primitive field, you only need to set name and type
+   * in the nested MetadataTemplate. The recommended value for the name field is item, as this isn't
+   * used in the actual payload.
    * @param arrayItems arrayItems or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectTypeMetadataTemplate setArrayItems(GoogleCloudDataplexV1AspectTypeMetadataTemplate arrayItems) {
@@ -181,7 +182,7 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplate extends com.g
   }
 
   /**
-   * Optional. The list of values for an enum type. Needs to be defined if the type is enum.
+   * Optional. The list of values for an enum type. You must define it if the type is enum.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDataplexV1AspectTypeMetadataTemplateEnumValue> getEnumValues() {
@@ -189,7 +190,7 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplate extends com.g
   }
 
   /**
-   * Optional. The list of values for an enum type. Needs to be defined if the type is enum.
+   * Optional. The list of values for an enum type. You must define it if the type is enum.
    * @param enumValues enumValues or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectTypeMetadataTemplate setEnumValues(java.util.List<GoogleCloudDataplexV1AspectTypeMetadataTemplateEnumValue> enumValues) {
@@ -223,10 +224,10 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplate extends com.g
   }
 
   /**
-   * Optional. map_items needs to be set if the type is map. map_items can refer to a primitive
-   * field or a complex (record only) field. To specify a primitive field, just name and type needs
-   * to be set in the nested MetadataTemplate. The recommended value for the name field is item, as
-   * this is not used in the actual payload.
+   * Optional. If the type is map, set map_items. map_items can refer to a primitive field or a
+   * complex (record only) field. To specify a primitive field, you only need to set name and type
+   * in the nested MetadataTemplate. The recommended value for the name field is item, as this isn't
+   * used in the actual payload.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectTypeMetadataTemplate getMapItems() {
@@ -234,10 +235,10 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplate extends com.g
   }
 
   /**
-   * Optional. map_items needs to be set if the type is map. map_items can refer to a primitive
-   * field or a complex (record only) field. To specify a primitive field, just name and type needs
-   * to be set in the nested MetadataTemplate. The recommended value for the name field is item, as
-   * this is not used in the actual payload.
+   * Optional. If the type is map, set map_items. map_items can refer to a primitive field or a
+   * complex (record only) field. To specify a primitive field, you only need to set name and type
+   * in the nested MetadataTemplate. The recommended value for the name field is item, as this isn't
+   * used in the actual payload.
    * @param mapItems mapItems or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectTypeMetadataTemplate setMapItems(GoogleCloudDataplexV1AspectTypeMetadataTemplate mapItems) {
@@ -263,7 +264,7 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplate extends com.g
   }
 
   /**
-   * Optional. Field definition, needs to be specified if the type is record. Defines the nested
+   * Optional. Field definition. You must specify it if the type is record. It defines the nested
    * fields.
    * @return value or {@code null} for none
    */
@@ -272,7 +273,7 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplate extends com.g
   }
 
   /**
-   * Optional. Field definition, needs to be specified if the type is record. Defines the nested
+   * Optional. Field definition. You must specify it if the type is record. It defines the nested
    * fields.
    * @param recordFields recordFields or {@code null} for none
    */
@@ -282,10 +283,10 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplate extends com.g
   }
 
   /**
-   * Required. The datatype of this field. The following values are supported: Primitive types
-   * (string, integer, boolean, double, datetime); datetime must be of the format RFC3339 UTC "Zulu"
-   * (Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z"). Complex types (enum,
-   * array, map, record).
+   * Required. The datatype of this field. The following values are supported:Primitive types:
+   * string integer boolean double datetime. Must be of the format RFC3339 UTC "Zulu" (Examples:
+   * "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z").Complex types: enum array map
+   * record
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -293,10 +294,10 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplate extends com.g
   }
 
   /**
-   * Required. The datatype of this field. The following values are supported: Primitive types
-   * (string, integer, boolean, double, datetime); datetime must be of the format RFC3339 UTC "Zulu"
-   * (Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z"). Complex types (enum,
-   * array, map, record).
+   * Required. The datatype of this field. The following values are supported:Primitive types:
+   * string integer boolean double datetime. Must be of the format RFC3339 UTC "Zulu" (Examples:
+   * "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z").Complex types: enum array map
+   * record
    * @param type type or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectTypeMetadataTemplate setType(java.lang.String type) {
@@ -305,8 +306,9 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplate extends com.g
   }
 
   /**
-   * Optional. Id can be used if this definition of the field needs to be reused later. Id needs to
-   * be unique across the entire template. Id can only be specified if the field type is record.
+   * Optional. You can use type id if this definition of the field needs to be reused later. The
+   * type id must be unique across the entire template. You can only specify it if the field type is
+   * record.
    * @return value or {@code null} for none
    */
   public java.lang.String getTypeId() {
@@ -314,8 +316,9 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplate extends com.g
   }
 
   /**
-   * Optional. Id can be used if this definition of the field needs to be reused later. Id needs to
-   * be unique across the entire template. Id can only be specified if the field type is record.
+   * Optional. You can use type id if this definition of the field needs to be reused later. The
+   * type id must be unique across the entire template. You can only specify it if the field type is
+   * record.
    * @param typeId typeId or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectTypeMetadataTemplate setTypeId(java.lang.String typeId) {
@@ -324,9 +327,9 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplate extends com.g
   }
 
   /**
-   * Optional. A reference to another field definition (instead of an inline definition). The value
-   * must be equal to the value of an id field defined elsewhere in the MetadataTemplate. Only
-   * fields with type as record can refer to other fields.
+   * Optional. A reference to another field definition (not an inline definition). The value must be
+   * equal to the value of an id field defined elsewhere in the MetadataTemplate. Only fields with
+   * record type can refer to other fields.
    * @return value or {@code null} for none
    */
   public java.lang.String getTypeRef() {
@@ -334,9 +337,9 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplate extends com.g
   }
 
   /**
-   * Optional. A reference to another field definition (instead of an inline definition). The value
-   * must be equal to the value of an id field defined elsewhere in the MetadataTemplate. Only
-   * fields with type as record can refer to other fields.
+   * Optional. A reference to another field definition (not an inline definition). The value must be
+   * equal to the value of an id field defined elsewhere in the MetadataTemplate. Only fields with
+   * record type can refer to other fields.
    * @param typeRef typeRef or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectTypeMetadataTemplate setTypeRef(java.lang.String typeRef) {

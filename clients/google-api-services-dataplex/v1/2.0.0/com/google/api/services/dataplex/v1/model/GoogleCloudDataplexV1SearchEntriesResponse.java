@@ -30,7 +30,7 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1SearchEntriesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Pagination token.
+   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,21 +44,22 @@ public final class GoogleCloudDataplexV1SearchEntriesResponse extends com.google
   private java.util.List<GoogleCloudDataplexV1SearchEntriesResult> results;
 
   /**
-   * The estimated total number of matching entries. Not guaranteed to be accurate.
+   * The estimated total number of matching entries. This number isn't guaranteed to be accurate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer totalSize;
 
   /**
-   * Unreachable locations. Search results don't include data from those locations.
+   * Locations that the service couldn't reach. Search results don't include data from these
+   * locations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * Pagination token.
+   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -66,7 +67,7 @@ public final class GoogleCloudDataplexV1SearchEntriesResponse extends com.google
   }
 
   /**
-   * Pagination token.
+   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudDataplexV1SearchEntriesResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -92,7 +93,7 @@ public final class GoogleCloudDataplexV1SearchEntriesResponse extends com.google
   }
 
   /**
-   * The estimated total number of matching entries. Not guaranteed to be accurate.
+   * The estimated total number of matching entries. This number isn't guaranteed to be accurate.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalSize() {
@@ -100,7 +101,7 @@ public final class GoogleCloudDataplexV1SearchEntriesResponse extends com.google
   }
 
   /**
-   * The estimated total number of matching entries. Not guaranteed to be accurate.
+   * The estimated total number of matching entries. This number isn't guaranteed to be accurate.
    * @param totalSize totalSize or {@code null} for none
    */
   public GoogleCloudDataplexV1SearchEntriesResponse setTotalSize(java.lang.Integer totalSize) {
@@ -109,7 +110,8 @@ public final class GoogleCloudDataplexV1SearchEntriesResponse extends com.google
   }
 
   /**
-   * Unreachable locations. Search results don't include data from those locations.
+   * Locations that the service couldn't reach. Search results don't include data from these
+   * locations.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachable() {
@@ -117,7 +119,8 @@ public final class GoogleCloudDataplexV1SearchEntriesResponse extends com.google
   }
 
   /**
-   * Unreachable locations. Search results don't include data from those locations.
+   * Locations that the service couldn't reach. Search results don't include data from these
+   * locations.
    * @param unreachable unreachable or {@code null} for none
    */
   public GoogleCloudDataplexV1SearchEntriesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {

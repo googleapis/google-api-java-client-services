@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Definition of Enumvalue (to be used by enum fields)
+ * Definition of Enumvalue, to be used for enum fields.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -30,28 +30,28 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1AspectTypeMetadataTemplateEnumValue extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Optional deprecation message to be set if an enum value needs to be deprecated.
+   * Optional. You can set this message if you need to deprecate an enum value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deprecated;
 
   /**
-   * Required. Index for the enum. Cannot be modified.
+   * Required. Index for the enum value. It can't be modified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer index;
 
   /**
-   * Required. Name of the enumvalue. This is the actual value that the aspect will contain.
+   * Required. Name of the enumvalue. This is the actual value that the aspect can contain.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. Optional deprecation message to be set if an enum value needs to be deprecated.
+   * Optional. You can set this message if you need to deprecate an enum value.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeprecated() {
@@ -59,7 +59,7 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplateEnumValue exte
   }
 
   /**
-   * Optional. Optional deprecation message to be set if an enum value needs to be deprecated.
+   * Optional. You can set this message if you need to deprecate an enum value.
    * @param deprecated deprecated or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectTypeMetadataTemplateEnumValue setDeprecated(java.lang.String deprecated) {
@@ -68,7 +68,7 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplateEnumValue exte
   }
 
   /**
-   * Required. Index for the enum. Cannot be modified.
+   * Required. Index for the enum value. It can't be modified.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIndex() {
@@ -76,7 +76,7 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplateEnumValue exte
   }
 
   /**
-   * Required. Index for the enum. Cannot be modified.
+   * Required. Index for the enum value. It can't be modified.
    * @param index index or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectTypeMetadataTemplateEnumValue setIndex(java.lang.Integer index) {
@@ -85,7 +85,7 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplateEnumValue exte
   }
 
   /**
-   * Required. Name of the enumvalue. This is the actual value that the aspect will contain.
+   * Required. Name of the enumvalue. This is the actual value that the aspect can contain.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -93,7 +93,7 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplateEnumValue exte
   }
 
   /**
-   * Required. Name of the enumvalue. This is the actual value that the aspect will contain.
+   * Required. Name of the enumvalue. This is the actual value that the aspect can contain.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectTypeMetadataTemplateEnumValue setName(java.lang.String name) {

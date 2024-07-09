@@ -67,9 +67,9 @@ public final class EffectiveEventThreatDetectionCustomModule extends com.google.
 
   /**
    * Output only. The resource name of the effective ETD custom module. Its format is: *
-   * "organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}". *
-   * "folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}". *
-   * "projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}".
+   * `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
+   * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
+   * `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,9 +154,9 @@ public final class EffectiveEventThreatDetectionCustomModule extends com.google.
 
   /**
    * Output only. The resource name of the effective ETD custom module. Its format is: *
-   * "organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}". *
-   * "folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}". *
-   * "projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}".
+   * `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
+   * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
+   * `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -165,9 +165,9 @@ public final class EffectiveEventThreatDetectionCustomModule extends com.google.
 
   /**
    * Output only. The resource name of the effective ETD custom module. Its format is: *
-   * "organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}". *
-   * "folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}". *
-   * "projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}".
+   * `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
+   * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
+   * `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
    * @param name name or {@code null} for none
    */
   public EffectiveEventThreatDetectionCustomModule setName(java.lang.String name) {

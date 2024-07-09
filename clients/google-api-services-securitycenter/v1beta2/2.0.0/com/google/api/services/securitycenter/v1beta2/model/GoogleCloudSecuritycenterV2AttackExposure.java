@@ -32,7 +32,7 @@ public final class GoogleCloudSecuritycenterV2AttackExposure extends com.google.
 
   /**
    * The resource name of the attack path simulation result that contains the details regarding this
-   * attack exposure score. Example: organizations/123/simulations/456/attackExposureResults/789
+   * attack exposure score. Example: `organizations/123/simulations/456/attackExposureResults/789`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class GoogleCloudSecuritycenterV2AttackExposure extends com.google.
 
   /**
    * The resource name of the attack path simulation result that contains the details regarding this
-   * attack exposure score. Example: organizations/123/simulations/456/attackExposureResults/789
+   * attack exposure score. Example: `organizations/123/simulations/456/attackExposureResults/789`
    * @return value or {@code null} for none
    */
   public java.lang.String getAttackExposureResult() {
@@ -93,7 +93,7 @@ public final class GoogleCloudSecuritycenterV2AttackExposure extends com.google.
 
   /**
    * The resource name of the attack path simulation result that contains the details regarding this
-   * attack exposure score. Example: organizations/123/simulations/456/attackExposureResults/789
+   * attack exposure score. Example: `organizations/123/simulations/456/attackExposureResults/789`
    * @param attackExposureResult attackExposureResult or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2AttackExposure setAttackExposureResult(java.lang.String attackExposureResult) {

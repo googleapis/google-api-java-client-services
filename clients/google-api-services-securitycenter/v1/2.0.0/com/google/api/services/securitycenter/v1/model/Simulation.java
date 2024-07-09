@@ -45,7 +45,7 @@ public final class Simulation extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Full resource name of the Simulation: organizations/123/simulations/456
+   * Full resource name of the Simulation: `organizations/123/simulations/456`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +99,7 @@ public final class Simulation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Full resource name of the Simulation: organizations/123/simulations/456
+   * Full resource name of the Simulation: `organizations/123/simulations/456`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -107,7 +107,7 @@ public final class Simulation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Full resource name of the Simulation: organizations/123/simulations/456
+   * Full resource name of the Simulation: `organizations/123/simulations/456`
    * @param name name or {@code null} for none
    */
   public Simulation setName(java.lang.String name) {

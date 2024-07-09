@@ -182,7 +182,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The name of the parent to group the assets by. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
        * @return the request
        */
@@ -211,7 +211,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The name of the parent to group the assets by. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
          * @since 1.13
          */
@@ -282,13 +282,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The name of the parent to group the assets by. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The name of the parent to group the assets by. Its format is
-       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -296,7 +296,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The name of the parent to group the assets by. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public Group setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -323,8 +323,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        *
        * @param parent Required. The name of the parent resource that contains the assets. The value that you can specify
        *        on parent depends on the method in which you specify parent. You can specify one of the
-       *        following values: "organizations/[organization_id]", "folders/[folder_id]", or
-       *        "projects/[project_id]".
+       *        following values: `organizations/[organization_id]`, `folders/[folder_id]`, or
+       *        `projects/[project_id]`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -352,8 +352,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * @param parent Required. The name of the parent resource that contains the assets. The value that you can specify
        *        on parent depends on the method in which you specify parent. You can specify one of the
-       *        following values: "organizations/[organization_id]", "folders/[folder_id]", or
-       *        "projects/[project_id]".
+       *        following values: `organizations/[organization_id]`, `folders/[folder_id]`, or
+       *        `projects/[project_id]`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -434,15 +434,15 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * Required. The name of the parent resource that contains the assets. The value that you
          * can specify on parent depends on the method in which you specify parent. You can specify
-         * one of the following values: "organizations/[organization_id]", "folders/[folder_id]", or
-         * "projects/[project_id]".
+         * one of the following values: `organizations/[organization_id]`, `folders/[folder_id]`, or
+         * `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The name of the parent resource that contains the assets. The value that you can specify
        on parent depends on the method in which you specify parent. You can specify one of the following
-       values: "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       values: `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -451,8 +451,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * Required. The name of the parent resource that contains the assets. The value that you
          * can specify on parent depends on the method in which you specify parent. You can specify
-         * one of the following values: "organizations/[organization_id]", "folders/[folder_id]", or
-         * "projects/[project_id]".
+         * one of the following values: `organizations/[organization_id]`, `folders/[folder_id]`, or
+         * `projects/[project_id]`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1012,7 +1012,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The name of the parent resource of the new BigQuery export. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
        * @return the request
        */
@@ -1041,7 +1041,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The name of the parent resource of the new BigQuery export. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
          * @since 1.13
          */
@@ -1112,13 +1112,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The name of the parent resource of the new BigQuery export. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The name of the parent resource of the new BigQuery export. Its format is
-       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -1126,7 +1126,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The name of the parent resource of the new BigQuery export. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1178,9 +1178,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the BigQuery export to delete. Its format is
-       *        organizations/{organization}/bigQueryExports/{export_id},
-       *        folders/{folder}/bigQueryExports/{export_id}, or
-       *        projects/{project}/bigQueryExports/{export_id}
+       *        `organizations/{organization}/bigQueryExports/{export_id}`,
+       *        `folders/{folder}/bigQueryExports/{export_id}`, or
+       *        `projects/{project}/bigQueryExports/{export_id}`
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1208,9 +1208,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The name of the BigQuery export to delete. Its format is
-       *        organizations/{organization}/bigQueryExports/{export_id},
-       *        folders/{folder}/bigQueryExports/{export_id}, or
-       *        projects/{project}/bigQueryExports/{export_id}
+       *        `organizations/{organization}/bigQueryExports/{export_id}`,
+       *        `folders/{folder}/bigQueryExports/{export_id}`, or
+       *        `projects/{project}/bigQueryExports/{export_id}`
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -1280,16 +1280,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The name of the BigQuery export to delete. Its format is
-         * organizations/{organization}/bigQueryExports/{export_id},
-         * folders/{folder}/bigQueryExports/{export_id}, or
-         * projects/{project}/bigQueryExports/{export_id}
+         * `organizations/{organization}/bigQueryExports/{export_id}`,
+         * `folders/{folder}/bigQueryExports/{export_id}`, or
+         * `projects/{project}/bigQueryExports/{export_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the BigQuery export to delete. Its format is
-       organizations/{organization}/bigQueryExports/{export_id},
-       folders/{folder}/bigQueryExports/{export_id}, or projects/{project}/bigQueryExports/{export_id}
+       `organizations/{organization}/bigQueryExports/{export_id}`,
+       `folders/{folder}/bigQueryExports/{export_id}`, or `projects/{project}/bigQueryExports/{export_id}`
          */
         public java.lang.String getName() {
           return name;
@@ -1297,9 +1297,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The name of the BigQuery export to delete. Its format is
-         * organizations/{organization}/bigQueryExports/{export_id},
-         * folders/{folder}/bigQueryExports/{export_id}, or
-         * projects/{project}/bigQueryExports/{export_id}
+         * `organizations/{organization}/bigQueryExports/{export_id}`,
+         * `folders/{folder}/bigQueryExports/{export_id}`, or
+         * `projects/{project}/bigQueryExports/{export_id}`
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1325,9 +1325,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. Name of the BigQuery export to retrieve. Its format is
-       *        organizations/{organization}/bigQueryExports/{export_id},
-       *        folders/{folder}/bigQueryExports/{export_id}, or
-       *        projects/{project}/bigQueryExports/{export_id}
+       *        `organizations/{organization}/bigQueryExports/{export_id}`,
+       *        `folders/{folder}/bigQueryExports/{export_id}`, or
+       *        `projects/{project}/bigQueryExports/{export_id}`
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -1354,9 +1354,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Name of the BigQuery export to retrieve. Its format is
-       *        organizations/{organization}/bigQueryExports/{export_id},
-       *        folders/{folder}/bigQueryExports/{export_id}, or
-       *        projects/{project}/bigQueryExports/{export_id}
+       *        `organizations/{organization}/bigQueryExports/{export_id}`,
+       *        `folders/{folder}/bigQueryExports/{export_id}`, or
+       *        `projects/{project}/bigQueryExports/{export_id}`
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -1436,16 +1436,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the BigQuery export to retrieve. Its format is
-         * organizations/{organization}/bigQueryExports/{export_id},
-         * folders/{folder}/bigQueryExports/{export_id}, or
-         * projects/{project}/bigQueryExports/{export_id}
+         * `organizations/{organization}/bigQueryExports/{export_id}`,
+         * `folders/{folder}/bigQueryExports/{export_id}`, or
+         * `projects/{project}/bigQueryExports/{export_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the BigQuery export to retrieve. Its format is
-       organizations/{organization}/bigQueryExports/{export_id},
-       folders/{folder}/bigQueryExports/{export_id}, or projects/{project}/bigQueryExports/{export_id}
+       `organizations/{organization}/bigQueryExports/{export_id}`,
+       `folders/{folder}/bigQueryExports/{export_id}`, or `projects/{project}/bigQueryExports/{export_id}`
          */
         public java.lang.String getName() {
           return name;
@@ -1453,9 +1453,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the BigQuery export to retrieve. Its format is
-         * organizations/{organization}/bigQueryExports/{export_id},
-         * folders/{folder}/bigQueryExports/{export_id}, or
-         * projects/{project}/bigQueryExports/{export_id}
+         * `organizations/{organization}/bigQueryExports/{export_id}`,
+         * `folders/{folder}/bigQueryExports/{export_id}`, or
+         * `projects/{project}/bigQueryExports/{export_id}`
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1484,7 +1484,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The parent, which owns the collection of BigQuery exports. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1514,7 +1514,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The parent, which owns the collection of BigQuery exports. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1594,13 +1594,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The parent, which owns the collection of BigQuery exports. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The parent, which owns the collection of BigQuery exports. Its format is
-       "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -1608,7 +1608,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The parent, which owns the collection of BigQuery exports. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2953,9 +2953,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
          * @return the request
          */
@@ -2988,9 +2988,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
            * @since 1.13
            */
@@ -3062,17 +3062,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Immutable. The resource name of the Event Threat Detection custom module. Its format
            * is: *
-           * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-           * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-           * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
-         "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           public java.lang.String getName() {
             return name;
@@ -3081,9 +3081,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Immutable. The resource name of the Event Threat Detection custom module. Its format
            * is: *
-           * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-           * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-           * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3546,7 +3546,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link BulkMute#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The parent, at which bulk action needs to be applied. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
        * @param content the {@link com.google.api.services.securitycenter.v1.model.BulkMuteFindingsRequest}
        * @return the request
        */
@@ -3577,7 +3577,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The parent, at which bulk action needs to be applied. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.BulkMuteFindingsRequest}
          * @since 1.13
          */
@@ -3648,13 +3648,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The parent, at which bulk action needs to be applied. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The parent, at which bulk action needs to be applied. Its format is
-       "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -3662,7 +3662,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The parent, at which bulk action needs to be applied. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         public BulkMute setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -3730,7 +3730,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Resource name of the new mute configs's parent. Its format is
-         *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
          * @return the request
          */
@@ -3759,7 +3759,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Resource name of the new mute configs's parent. Its format is
-         *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
            * @since 1.13
            */
@@ -3830,13 +3830,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Resource name of the new mute configs's parent. Its format is
-           * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+           * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Resource name of the new mute configs's parent. Its format is
-         "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -3844,7 +3844,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Resource name of the new mute configs's parent. Its format is
-           * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+           * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3896,11 +3896,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the mute config to delete. Its format is
-         *        organizations/{organization}/muteConfigs/{config_id},
-         *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-         *        organizations/{organization}/locations/global/muteConfigs/{config_id},
-         *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         *        projects/{project}/locations/global/muteConfigs/{config_id}.
+         *        `organizations/{organization}/muteConfigs/{config_id}`,
+         *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+         *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3928,11 +3928,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the mute config to delete. Its format is
-         *        organizations/{organization}/muteConfigs/{config_id},
-         *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-         *        organizations/{organization}/locations/global/muteConfigs/{config_id},
-         *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         *        projects/{project}/locations/global/muteConfigs/{config_id}.
+         *        `organizations/{organization}/muteConfigs/{config_id}`,
+         *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+         *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -4002,21 +4002,22 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the mute config to delete. Its format is
-           * organizations/{organization}/muteConfigs/{config_id},
-           * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-           * organizations/{organization}/locations/global/muteConfigs/{config_id},
-           * folders/{folder}/locations/global/muteConfigs/{config_id}, or
-           * projects/{project}/locations/global/muteConfigs/{config_id}.
+           * `organizations/{organization}/muteConfigs/{config_id}`,
+           * `folders/{folder}/muteConfigs/{config_id}`,
+           * `projects/{project}/muteConfigs/{config_id}`,
+           * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+           * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+           * `projects/{project}/locations/global/muteConfigs/{config_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the mute config to delete. Its format is
-         organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id},
-         projects/{project}/muteConfigs/{config_id},
-         organizations/{organization}/locations/global/muteConfigs/{config_id},
-         folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         projects/{project}/locations/global/muteConfigs/{config_id}.
+         `organizations/{organization}/muteConfigs/{config_id}`, `folders/{folder}/muteConfigs/{config_id}`,
+         `projects/{project}/muteConfigs/{config_id}`,
+         `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         `projects/{project}/locations/global/muteConfigs/{config_id}`.
            */
           public java.lang.String getName() {
             return name;
@@ -4024,11 +4025,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the mute config to delete. Its format is
-           * organizations/{organization}/muteConfigs/{config_id},
-           * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-           * organizations/{organization}/locations/global/muteConfigs/{config_id},
-           * folders/{folder}/locations/global/muteConfigs/{config_id}, or
-           * projects/{project}/locations/global/muteConfigs/{config_id}.
+           * `organizations/{organization}/muteConfigs/{config_id}`,
+           * `folders/{folder}/muteConfigs/{config_id}`,
+           * `projects/{project}/muteConfigs/{config_id}`,
+           * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+           * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+           * `projects/{project}/locations/global/muteConfigs/{config_id}`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4054,11 +4056,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the mute config to retrieve. Its format is
-         *        organizations/{organization}/muteConfigs/{config_id},
-         *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-         *        organizations/{organization}/locations/global/muteConfigs/{config_id},
-         *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         *        projects/{project}/locations/global/muteConfigs/{config_id}.
+         *        `organizations/{organization}/muteConfigs/{config_id}`,
+         *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+         *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -4085,11 +4087,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the mute config to retrieve. Its format is
-         *        organizations/{organization}/muteConfigs/{config_id},
-         *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-         *        organizations/{organization}/locations/global/muteConfigs/{config_id},
-         *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         *        projects/{project}/locations/global/muteConfigs/{config_id}.
+         *        `organizations/{organization}/muteConfigs/{config_id}`,
+         *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+         *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -4169,21 +4171,22 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the mute config to retrieve. Its format is
-           * organizations/{organization}/muteConfigs/{config_id},
-           * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-           * organizations/{organization}/locations/global/muteConfigs/{config_id},
-           * folders/{folder}/locations/global/muteConfigs/{config_id}, or
-           * projects/{project}/locations/global/muteConfigs/{config_id}.
+           * `organizations/{organization}/muteConfigs/{config_id}`,
+           * `folders/{folder}/muteConfigs/{config_id}`,
+           * `projects/{project}/muteConfigs/{config_id}`,
+           * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+           * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+           * `projects/{project}/locations/global/muteConfigs/{config_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the mute config to retrieve. Its format is
-         organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id},
-         projects/{project}/muteConfigs/{config_id},
-         organizations/{organization}/locations/global/muteConfigs/{config_id},
-         folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         projects/{project}/locations/global/muteConfigs/{config_id}.
+         `organizations/{organization}/muteConfigs/{config_id}`, `folders/{folder}/muteConfigs/{config_id}`,
+         `projects/{project}/muteConfigs/{config_id}`,
+         `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         `projects/{project}/locations/global/muteConfigs/{config_id}`.
            */
           public java.lang.String getName() {
             return name;
@@ -4191,11 +4194,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the mute config to retrieve. Its format is
-           * organizations/{organization}/muteConfigs/{config_id},
-           * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-           * organizations/{organization}/locations/global/muteConfigs/{config_id},
-           * folders/{folder}/locations/global/muteConfigs/{config_id}, or
-           * projects/{project}/locations/global/muteConfigs/{config_id}.
+           * `organizations/{organization}/muteConfigs/{config_id}`,
+           * `folders/{folder}/muteConfigs/{config_id}`,
+           * `projects/{project}/muteConfigs/{config_id}`,
+           * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+           * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+           * `projects/{project}/locations/global/muteConfigs/{config_id}`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4221,7 +4225,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent, which owns the collection of mute configs. Its format is
-         *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -4248,7 +4252,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent, which owns the collection of mute configs. Its format is
-         *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -4328,13 +4332,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. The parent, which owns the collection of mute configs. Its format is
-           * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+           * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent, which owns the collection of mute configs. Its format is
-         "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -4342,7 +4346,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. The parent, which owns the collection of mute configs. Its format is
-           * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+           * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -4420,12 +4424,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name This field will be ignored if provided on config creation. Format
-         *        "organizations/{organization}/muteConfigs/{mute_config}"
-         *        "folders/{folder}/muteConfigs/{mute_config}"
-         *        "projects/{project}/muteConfigs/{mute_config}"
-         *        "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-         *        "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-         *        "projects/{project}/locations/global/muteConfigs/{mute_config}"
+         *        `organizations/{organization}/muteConfigs/{mute_config}`
+         *        `folders/{folder}/muteConfigs/{mute_config}`
+         *        `projects/{project}/muteConfigs/{mute_config}`
+         *        `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+         *        `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+         *        `projects/{project}/locations/global/muteConfigs/{mute_config}`
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
          * @return the request
          */
@@ -4454,12 +4458,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name This field will be ignored if provided on config creation. Format
-         *        "organizations/{organization}/muteConfigs/{mute_config}"
-         *        "folders/{folder}/muteConfigs/{mute_config}"
-         *        "projects/{project}/muteConfigs/{mute_config}"
-         *        "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-         *        "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-         *        "projects/{project}/locations/global/muteConfigs/{mute_config}"
+         *        `organizations/{organization}/muteConfigs/{mute_config}`
+         *        `folders/{folder}/muteConfigs/{mute_config}`
+         *        `projects/{project}/muteConfigs/{mute_config}`
+         *        `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+         *        `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+         *        `projects/{project}/locations/global/muteConfigs/{mute_config}`
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
            * @since 1.13
            */
@@ -4530,22 +4534,22 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * This field will be ignored if provided on config creation. Format
-           * "organizations/{organization}/muteConfigs/{mute_config}"
-           * "folders/{folder}/muteConfigs/{mute_config}"
-           * "projects/{project}/muteConfigs/{mute_config}"
-           * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-           * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-           * "projects/{project}/locations/global/muteConfigs/{mute_config}"
+           * `organizations/{organization}/muteConfigs/{mute_config}`
+           * `folders/{folder}/muteConfigs/{mute_config}`
+           * `projects/{project}/muteConfigs/{mute_config}`
+           * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+           * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+           * `projects/{project}/locations/global/muteConfigs/{mute_config}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** This field will be ignored if provided on config creation. Format
-         "organizations/{organization}/muteConfigs/{mute_config}"
-         "folders/{folder}/muteConfigs/{mute_config}" "projects/{project}/muteConfigs/{mute_config}"
-         "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-         "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-         "projects/{project}/locations/global/muteConfigs/{mute_config}"
+         `organizations/{organization}/muteConfigs/{mute_config}`
+         `folders/{folder}/muteConfigs/{mute_config}` `projects/{project}/muteConfigs/{mute_config}`
+         `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+         `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+         `projects/{project}/locations/global/muteConfigs/{mute_config}`
            */
           public java.lang.String getName() {
             return name;
@@ -4553,12 +4557,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * This field will be ignored if provided on config creation. Format
-           * "organizations/{organization}/muteConfigs/{mute_config}"
-           * "folders/{folder}/muteConfigs/{mute_config}"
-           * "projects/{project}/muteConfigs/{mute_config}"
-           * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-           * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-           * "projects/{project}/locations/global/muteConfigs/{mute_config}"
+           * `organizations/{organization}/muteConfigs/{mute_config}`
+           * `folders/{folder}/muteConfigs/{mute_config}`
+           * `projects/{project}/muteConfigs/{mute_config}`
+           * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+           * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+           * `projects/{project}/locations/global/muteConfigs/{mute_config}`
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4623,7 +4627,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Resource name of the new mute configs's parent. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
        * @return the request
        */
@@ -4652,7 +4656,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Resource name of the new mute configs's parent. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
          * @since 1.13
          */
@@ -4723,13 +4727,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the new mute configs's parent. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Resource name of the new mute configs's parent. Its format is
-       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -4737,7 +4741,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the new mute configs's parent. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -4789,11 +4793,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. Name of the mute config to delete. Its format is
-       *        organizations/{organization}/muteConfigs/{config_id},
-       *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-       *        organizations/{organization}/locations/global/muteConfigs/{config_id},
-       *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
-       *        projects/{project}/locations/global/muteConfigs/{config_id}.
+       *        `organizations/{organization}/muteConfigs/{config_id}`,
+       *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+       *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+       *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+       *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -4821,11 +4825,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Name of the mute config to delete. Its format is
-       *        organizations/{organization}/muteConfigs/{config_id},
-       *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-       *        organizations/{organization}/locations/global/muteConfigs/{config_id},
-       *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
-       *        projects/{project}/locations/global/muteConfigs/{config_id}.
+       *        `organizations/{organization}/muteConfigs/{config_id}`,
+       *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+       *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+       *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+       *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -4895,21 +4899,21 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the mute config to delete. Its format is
-         * organizations/{organization}/muteConfigs/{config_id},
-         * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-         * organizations/{organization}/locations/global/muteConfigs/{config_id},
-         * folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         * projects/{project}/locations/global/muteConfigs/{config_id}.
+         * `organizations/{organization}/muteConfigs/{config_id}`,
+         * `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+         * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         * `projects/{project}/locations/global/muteConfigs/{config_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the mute config to delete. Its format is
-       organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id},
-       projects/{project}/muteConfigs/{config_id},
-       organizations/{organization}/locations/global/muteConfigs/{config_id},
-       folders/{folder}/locations/global/muteConfigs/{config_id}, or
-       projects/{project}/locations/global/muteConfigs/{config_id}.
+       `organizations/{organization}/muteConfigs/{config_id}`, `folders/{folder}/muteConfigs/{config_id}`,
+       `projects/{project}/muteConfigs/{config_id}`,
+       `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+       `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+       `projects/{project}/locations/global/muteConfigs/{config_id}`.
          */
         public java.lang.String getName() {
           return name;
@@ -4917,11 +4921,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the mute config to delete. Its format is
-         * organizations/{organization}/muteConfigs/{config_id},
-         * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-         * organizations/{organization}/locations/global/muteConfigs/{config_id},
-         * folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         * projects/{project}/locations/global/muteConfigs/{config_id}.
+         * `organizations/{organization}/muteConfigs/{config_id}`,
+         * `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+         * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         * `projects/{project}/locations/global/muteConfigs/{config_id}`.
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -4947,11 +4951,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. Name of the mute config to retrieve. Its format is
-       *        organizations/{organization}/muteConfigs/{config_id},
-       *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-       *        organizations/{organization}/locations/global/muteConfigs/{config_id},
-       *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
-       *        projects/{project}/locations/global/muteConfigs/{config_id}.
+       *        `organizations/{organization}/muteConfigs/{config_id}`,
+       *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+       *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+       *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+       *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -4978,11 +4982,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Name of the mute config to retrieve. Its format is
-       *        organizations/{organization}/muteConfigs/{config_id},
-       *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-       *        organizations/{organization}/locations/global/muteConfigs/{config_id},
-       *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
-       *        projects/{project}/locations/global/muteConfigs/{config_id}.
+       *        `organizations/{organization}/muteConfigs/{config_id}`,
+       *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+       *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+       *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+       *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -5062,21 +5066,21 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the mute config to retrieve. Its format is
-         * organizations/{organization}/muteConfigs/{config_id},
-         * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-         * organizations/{organization}/locations/global/muteConfigs/{config_id},
-         * folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         * projects/{project}/locations/global/muteConfigs/{config_id}.
+         * `organizations/{organization}/muteConfigs/{config_id}`,
+         * `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+         * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         * `projects/{project}/locations/global/muteConfigs/{config_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the mute config to retrieve. Its format is
-       organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id},
-       projects/{project}/muteConfigs/{config_id},
-       organizations/{organization}/locations/global/muteConfigs/{config_id},
-       folders/{folder}/locations/global/muteConfigs/{config_id}, or
-       projects/{project}/locations/global/muteConfigs/{config_id}.
+       `organizations/{organization}/muteConfigs/{config_id}`, `folders/{folder}/muteConfigs/{config_id}`,
+       `projects/{project}/muteConfigs/{config_id}`,
+       `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+       `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+       `projects/{project}/locations/global/muteConfigs/{config_id}`.
          */
         public java.lang.String getName() {
           return name;
@@ -5084,11 +5088,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the mute config to retrieve. Its format is
-         * organizations/{organization}/muteConfigs/{config_id},
-         * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-         * organizations/{organization}/locations/global/muteConfigs/{config_id},
-         * folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         * projects/{project}/locations/global/muteConfigs/{config_id}.
+         * `organizations/{organization}/muteConfigs/{config_id}`,
+         * `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+         * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         * `projects/{project}/locations/global/muteConfigs/{config_id}`.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -5114,7 +5118,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The parent, which owns the collection of mute configs. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -5141,7 +5145,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The parent, which owns the collection of mute configs. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -5221,13 +5225,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The parent, which owns the collection of mute configs. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The parent, which owns the collection of mute configs. Its format is
-       "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -5235,7 +5239,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The parent, which owns the collection of mute configs. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -5313,12 +5317,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param name This field will be ignored if provided on config creation. Format
-       *        "organizations/{organization}/muteConfigs/{mute_config}"
-       *        "folders/{folder}/muteConfigs/{mute_config}"
-       *        "projects/{project}/muteConfigs/{mute_config}"
-       *        "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-       *        "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-       *        "projects/{project}/locations/global/muteConfigs/{mute_config}"
+       *        `organizations/{organization}/muteConfigs/{mute_config}`
+       *        `folders/{folder}/muteConfigs/{mute_config}`
+       *        `projects/{project}/muteConfigs/{mute_config}`
+       *        `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+       *        `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+       *        `projects/{project}/locations/global/muteConfigs/{mute_config}`
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
        * @return the request
        */
@@ -5347,12 +5351,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name This field will be ignored if provided on config creation. Format
-       *        "organizations/{organization}/muteConfigs/{mute_config}"
-       *        "folders/{folder}/muteConfigs/{mute_config}"
-       *        "projects/{project}/muteConfigs/{mute_config}"
-       *        "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-       *        "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-       *        "projects/{project}/locations/global/muteConfigs/{mute_config}"
+       *        `organizations/{organization}/muteConfigs/{mute_config}`
+       *        `folders/{folder}/muteConfigs/{mute_config}`
+       *        `projects/{project}/muteConfigs/{mute_config}`
+       *        `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+       *        `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+       *        `projects/{project}/locations/global/muteConfigs/{mute_config}`
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
          * @since 1.13
          */
@@ -5423,22 +5427,22 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * This field will be ignored if provided on config creation. Format
-         * "organizations/{organization}/muteConfigs/{mute_config}"
-         * "folders/{folder}/muteConfigs/{mute_config}"
-         * "projects/{project}/muteConfigs/{mute_config}"
-         * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-         * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-         * "projects/{project}/locations/global/muteConfigs/{mute_config}"
+         * `organizations/{organization}/muteConfigs/{mute_config}`
+         * `folders/{folder}/muteConfigs/{mute_config}`
+         * `projects/{project}/muteConfigs/{mute_config}`
+         * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+         * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+         * `projects/{project}/locations/global/muteConfigs/{mute_config}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** This field will be ignored if provided on config creation. Format
-       "organizations/{organization}/muteConfigs/{mute_config}"
-       "folders/{folder}/muteConfigs/{mute_config}" "projects/{project}/muteConfigs/{mute_config}"
-       "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-       "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-       "projects/{project}/locations/global/muteConfigs/{mute_config}"
+       `organizations/{organization}/muteConfigs/{mute_config}`
+       `folders/{folder}/muteConfigs/{mute_config}` `projects/{project}/muteConfigs/{mute_config}`
+       `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+       `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+       `projects/{project}/locations/global/muteConfigs/{mute_config}`
          */
         public java.lang.String getName() {
           return name;
@@ -5446,12 +5450,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * This field will be ignored if provided on config creation. Format
-         * "organizations/{organization}/muteConfigs/{mute_config}"
-         * "folders/{folder}/muteConfigs/{mute_config}"
-         * "projects/{project}/muteConfigs/{mute_config}"
-         * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-         * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-         * "projects/{project}/locations/global/muteConfigs/{mute_config}"
+         * `organizations/{organization}/muteConfigs/{mute_config}`
+         * `folders/{folder}/muteConfigs/{mute_config}`
+         * `projects/{project}/muteConfigs/{mute_config}`
+         * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+         * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+         * `projects/{project}/locations/global/muteConfigs/{mute_config}`
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -5515,7 +5519,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Resource name of the new notification config's parent. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
        * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
        * @return the request
        */
@@ -5544,7 +5548,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Resource name of the new notification config's parent. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
          * @since 1.13
          */
@@ -5615,13 +5619,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the new notification config's parent. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Resource name of the new notification config's parent. Its format is
-       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -5629,7 +5633,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the new notification config's parent. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -5680,9 +5684,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. Name of the notification config to delete. Its format is
-       *        "organizations/[organization_id]/notificationConfigs/[config_id]",
-       *        "folders/[folder_id]/notificationConfigs/[config_id]", or
-       *        "projects/[project_id]/notificationConfigs/[config_id]".
+       *        `organizations/[organization_id]/notificationConfigs/[config_id]`,
+       *        `folders/[folder_id]/notificationConfigs/[config_id]`, or
+       *        `projects/[project_id]/notificationConfigs/[config_id]`.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -5710,9 +5714,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Name of the notification config to delete. Its format is
-       *        "organizations/[organization_id]/notificationConfigs/[config_id]",
-       *        "folders/[folder_id]/notificationConfigs/[config_id]", or
-       *        "projects/[project_id]/notificationConfigs/[config_id]".
+       *        `organizations/[organization_id]/notificationConfigs/[config_id]`,
+       *        `folders/[folder_id]/notificationConfigs/[config_id]`, or
+       *        `projects/[project_id]/notificationConfigs/[config_id]`.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -5782,17 +5786,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the notification config to delete. Its format is
-         * "organizations/[organization_id]/notificationConfigs/[config_id]",
-         * "folders/[folder_id]/notificationConfigs/[config_id]", or
-         * "projects/[project_id]/notificationConfigs/[config_id]".
+         * `organizations/[organization_id]/notificationConfigs/[config_id]`,
+         * `folders/[folder_id]/notificationConfigs/[config_id]`, or
+         * `projects/[project_id]/notificationConfigs/[config_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the notification config to delete. Its format is
-       "organizations/[organization_id]/notificationConfigs/[config_id]",
-       "folders/[folder_id]/notificationConfigs/[config_id]", or
-       "projects/[project_id]/notificationConfigs/[config_id]".
+       `organizations/[organization_id]/notificationConfigs/[config_id]`,
+       `folders/[folder_id]/notificationConfigs/[config_id]`, or
+       `projects/[project_id]/notificationConfigs/[config_id]`.
          */
         public java.lang.String getName() {
           return name;
@@ -5800,9 +5804,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the notification config to delete. Its format is
-         * "organizations/[organization_id]/notificationConfigs/[config_id]",
-         * "folders/[folder_id]/notificationConfigs/[config_id]", or
-         * "projects/[project_id]/notificationConfigs/[config_id]".
+         * `organizations/[organization_id]/notificationConfigs/[config_id]`,
+         * `folders/[folder_id]/notificationConfigs/[config_id]`, or
+         * `projects/[project_id]/notificationConfigs/[config_id]`.
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -5828,9 +5832,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. Name of the notification config to get. Its format is
-       *        "organizations/[organization_id]/notificationConfigs/[config_id]",
-       *        "folders/[folder_id]/notificationConfigs/[config_id]", or
-       *        "projects/[project_id]/notificationConfigs/[config_id]".
+       *        `organizations/[organization_id]/notificationConfigs/[config_id]`,
+       *        `folders/[folder_id]/notificationConfigs/[config_id]`, or
+       *        `projects/[project_id]/notificationConfigs/[config_id]`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -5857,9 +5861,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Name of the notification config to get. Its format is
-       *        "organizations/[organization_id]/notificationConfigs/[config_id]",
-       *        "folders/[folder_id]/notificationConfigs/[config_id]", or
-       *        "projects/[project_id]/notificationConfigs/[config_id]".
+       *        `organizations/[organization_id]/notificationConfigs/[config_id]`,
+       *        `folders/[folder_id]/notificationConfigs/[config_id]`, or
+       *        `projects/[project_id]/notificationConfigs/[config_id]`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -5939,17 +5943,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the notification config to get. Its format is
-         * "organizations/[organization_id]/notificationConfigs/[config_id]",
-         * "folders/[folder_id]/notificationConfigs/[config_id]", or
-         * "projects/[project_id]/notificationConfigs/[config_id]".
+         * `organizations/[organization_id]/notificationConfigs/[config_id]`,
+         * `folders/[folder_id]/notificationConfigs/[config_id]`, or
+         * `projects/[project_id]/notificationConfigs/[config_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the notification config to get. Its format is
-       "organizations/[organization_id]/notificationConfigs/[config_id]",
-       "folders/[folder_id]/notificationConfigs/[config_id]", or
-       "projects/[project_id]/notificationConfigs/[config_id]".
+       `organizations/[organization_id]/notificationConfigs/[config_id]`,
+       `folders/[folder_id]/notificationConfigs/[config_id]`, or
+       `projects/[project_id]/notificationConfigs/[config_id]`.
          */
         public java.lang.String getName() {
           return name;
@@ -5957,9 +5961,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the notification config to get. Its format is
-         * "organizations/[organization_id]/notificationConfigs/[config_id]",
-         * "folders/[folder_id]/notificationConfigs/[config_id]", or
-         * "projects/[project_id]/notificationConfigs/[config_id]".
+         * `organizations/[organization_id]/notificationConfigs/[config_id]`,
+         * `folders/[folder_id]/notificationConfigs/[config_id]`, or
+         * `projects/[project_id]/notificationConfigs/[config_id]`.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -6407,9 +6411,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Resource name of the new custom module's parent. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings",
-         *        "folders/{folder}/securityHealthAnalyticsSettings", or
-         *        "projects/{project}/securityHealthAnalyticsSettings"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings`
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule}
          * @return the request
          */
@@ -6440,9 +6444,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Resource name of the new custom module's parent. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings",
-         *        "folders/{folder}/securityHealthAnalyticsSettings", or
-         *        "projects/{project}/securityHealthAnalyticsSettings"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings`
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule}
            * @since 1.13
            */
@@ -6513,17 +6517,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Resource name of the new custom module's parent. Its format is
-           * "organizations/{organization}/securityHealthAnalyticsSettings",
-           * "folders/{folder}/securityHealthAnalyticsSettings", or
-           * "projects/{project}/securityHealthAnalyticsSettings"
+           * `organizations/{organization}/securityHealthAnalyticsSettings`,
+           * `folders/{folder}/securityHealthAnalyticsSettings`, or
+           * `projects/{project}/securityHealthAnalyticsSettings`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Resource name of the new custom module's parent. Its format is
-         "organizations/{organization}/securityHealthAnalyticsSettings",
-         "folders/{folder}/securityHealthAnalyticsSettings", or
-         "projects/{project}/securityHealthAnalyticsSettings"
+         `organizations/{organization}/securityHealthAnalyticsSettings`,
+         `folders/{folder}/securityHealthAnalyticsSettings`, or
+         `projects/{project}/securityHealthAnalyticsSettings`
            */
           public java.lang.String getParent() {
             return parent;
@@ -6531,9 +6535,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Resource name of the new custom module's parent. Its format is
-           * "organizations/{organization}/securityHealthAnalyticsSettings",
-           * "folders/{folder}/securityHealthAnalyticsSettings", or
-           * "projects/{project}/securityHealthAnalyticsSettings"
+           * `organizations/{organization}/securityHealthAnalyticsSettings`,
+           * `folders/{folder}/securityHealthAnalyticsSettings`, or
+           * `projects/{project}/securityHealthAnalyticsSettings`
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -6560,9 +6564,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the custom module to delete. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        ", "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         *        "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
+         *        `, `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -6591,9 +6595,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the custom module to delete. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        ", "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         *        "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
+         *        `, `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -6662,28 +6666,28 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Required. Name of the custom module to delete. Its format is "organizations/{organizati
-           * on}/securityHealthAnalyticsSettings/customModules/{customModule}",
-           * "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-           * "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+           * Required. Name of the custom module to delete. Its format is `organizations/{organizati
+           * on}/securityHealthAnalyticsSettings/customModules/{customModule}`,
+           * `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+           * `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the custom module to delete. Its format is
-         "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
-         "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+         `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}`,
+         `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+         `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Name of the custom module to delete. Its format is "organizations/{organizati
-           * on}/securityHealthAnalyticsSettings/customModules/{customModule}",
-           * "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-           * "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+           * Required. Name of the custom module to delete. Its format is `organizations/{organizati
+           * on}/securityHealthAnalyticsSettings/customModules/{customModule}`,
+           * `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+           * `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -6709,9 +6713,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the custom module to get. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        ", "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         *        "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
+         *        `, `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -6738,9 +6742,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the custom module to get. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        ", "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         *        "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
+         *        `, `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -6819,28 +6823,28 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Required. Name of the custom module to get. Its format is "organizations/{organization}
-           * /securityHealthAnalyticsSettings/customModules/{customModule}",
-           * "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-           * "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+           * Required. Name of the custom module to get. Its format is `organizations/{organization}
+           * /securityHealthAnalyticsSettings/customModules/{customModule}`,
+           * `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+           * `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the custom module to get. Its format is
-         "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
-         "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+         `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}`,
+         `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+         `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Name of the custom module to get. Its format is "organizations/{organization}
-           * /securityHealthAnalyticsSettings/customModules/{customModule}",
-           * "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-           * "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+           * Required. Name of the custom module to get. Its format is `organizations/{organization}
+           * /securityHealthAnalyticsSettings/customModules/{customModule}`,
+           * `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+           * `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -6868,9 +6872,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Name of parent to list custom modules. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings",
-         *        "folders/{folder}/securityHealthAnalyticsSettings", or
-         *        "projects/{project}/securityHealthAnalyticsSettings"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -6899,9 +6903,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Name of parent to list custom modules. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings",
-         *        "folders/{folder}/securityHealthAnalyticsSettings", or
-         *        "projects/{project}/securityHealthAnalyticsSettings"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -6981,17 +6985,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of parent to list custom modules. Its format is
-           * "organizations/{organization}/securityHealthAnalyticsSettings",
-           * "folders/{folder}/securityHealthAnalyticsSettings", or
-           * "projects/{project}/securityHealthAnalyticsSettings"
+           * `organizations/{organization}/securityHealthAnalyticsSettings`,
+           * `folders/{folder}/securityHealthAnalyticsSettings`, or
+           * `projects/{project}/securityHealthAnalyticsSettings`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of parent to list custom modules. Its format is
-         "organizations/{organization}/securityHealthAnalyticsSettings",
-         "folders/{folder}/securityHealthAnalyticsSettings", or
-         "projects/{project}/securityHealthAnalyticsSettings"
+         `organizations/{organization}/securityHealthAnalyticsSettings`,
+         `folders/{folder}/securityHealthAnalyticsSettings`, or
+         `projects/{project}/securityHealthAnalyticsSettings`
            */
           public java.lang.String getParent() {
             return parent;
@@ -6999,9 +7003,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of parent to list custom modules. Its format is
-           * "organizations/{organization}/securityHealthAnalyticsSettings",
-           * "folders/{folder}/securityHealthAnalyticsSettings", or
-           * "projects/{project}/securityHealthAnalyticsSettings"
+           * `organizations/{organization}/securityHealthAnalyticsSettings`,
+           * `folders/{folder}/securityHealthAnalyticsSettings`, or
+           * `projects/{project}/securityHealthAnalyticsSettings`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -7068,9 +7072,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * operation.
          *
          * @param parent Required. Name of parent to list descendant custom modules. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings",
-         *        "folders/{folder}/securityHealthAnalyticsSettings", or
-         *        "projects/{project}/securityHealthAnalyticsSettings"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings`
          * @return the request
          */
         public ListDescendant listDescendant(java.lang.String parent) throws java.io.IOException {
@@ -7099,9 +7103,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * the constructor. </p>
            *
            * @param parent Required. Name of parent to list descendant custom modules. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings",
-         *        "folders/{folder}/securityHealthAnalyticsSettings", or
-         *        "projects/{project}/securityHealthAnalyticsSettings"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings`
            * @since 1.13
            */
           protected ListDescendant(java.lang.String parent) {
@@ -7181,17 +7185,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of parent to list descendant custom modules. Its format is
-           * "organizations/{organization}/securityHealthAnalyticsSettings",
-           * "folders/{folder}/securityHealthAnalyticsSettings", or
-           * "projects/{project}/securityHealthAnalyticsSettings"
+           * `organizations/{organization}/securityHealthAnalyticsSettings`,
+           * `folders/{folder}/securityHealthAnalyticsSettings`, or
+           * `projects/{project}/securityHealthAnalyticsSettings`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of parent to list descendant custom modules. Its format is
-         "organizations/{organization}/securityHealthAnalyticsSettings",
-         "folders/{folder}/securityHealthAnalyticsSettings", or
-         "projects/{project}/securityHealthAnalyticsSettings"
+         `organizations/{organization}/securityHealthAnalyticsSettings`,
+         `folders/{folder}/securityHealthAnalyticsSettings`, or
+         `projects/{project}/securityHealthAnalyticsSettings`
            */
           public java.lang.String getParent() {
             return parent;
@@ -7199,9 +7203,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of parent to list descendant custom modules. Its format is
-           * "organizations/{organization}/securityHealthAnalyticsSettings",
-           * "folders/{folder}/securityHealthAnalyticsSettings", or
-           * "projects/{project}/securityHealthAnalyticsSettings"
+           * `organizations/{organization}/securityHealthAnalyticsSettings`,
+           * `folders/{folder}/securityHealthAnalyticsSettings`, or
+           * `projects/{project}/securityHealthAnalyticsSettings`
            */
           public ListDescendant setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -7629,11 +7633,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the effective custom module to get. Its format is "organizations/{organization}/se
-         *        curityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
-         *        "folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
+         * @param name Required. Name of the effective custom module to get. Its format is `organizations/{organization}/se
+         *        curityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
          *        or
-         *        "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}"
+         *        `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -7659,11 +7663,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the effective custom module to get. Its format is "organizations/{organization}/se
-         *        curityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
-         *        "folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
+           * @param name Required. Name of the effective custom module to get. Its format is `organizations/{organization}/se
+         *        curityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
          *        or
-         *        "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}"
+         *        `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -7742,30 +7746,30 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Required. Name of the effective custom module to get. Its format is "organizations/{org
-           * anization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}", "fol
-           * ders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
-           * or "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customMo
-           * dule}"
+           * Required. Name of the effective custom module to get. Its format is `organizations/{org
+           * anization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`, `fol
+           * ders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
+           * or `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customMo
+           * dule}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the effective custom module to get. Its format is "organizations/{organization}/s
-         ecurityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
-         "folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}", or
-         "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}"
+          /** Required. Name of the effective custom module to get. Its format is `organizations/{organization}/s
+         ecurityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
+         `folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`, or
+         `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Name of the effective custom module to get. Its format is "organizations/{org
-           * anization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}", "fol
-           * ders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
-           * or "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customMo
-           * dule}"
+           * Required. Name of the effective custom module to get. Its format is `organizations/{org
+           * anization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`, `fol
+           * ders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
+           * or `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customMo
+           * dule}`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -7793,9 +7797,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Name of parent to list effective custom modules. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings",
-         *        "folders/{folder}/securityHealthAnalyticsSettings", or
-         *        "projects/{project}/securityHealthAnalyticsSettings"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -7824,9 +7828,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Name of parent to list effective custom modules. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings",
-         *        "folders/{folder}/securityHealthAnalyticsSettings", or
-         *        "projects/{project}/securityHealthAnalyticsSettings"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -7906,17 +7910,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of parent to list effective custom modules. Its format is
-           * "organizations/{organization}/securityHealthAnalyticsSettings",
-           * "folders/{folder}/securityHealthAnalyticsSettings", or
-           * "projects/{project}/securityHealthAnalyticsSettings"
+           * `organizations/{organization}/securityHealthAnalyticsSettings`,
+           * `folders/{folder}/securityHealthAnalyticsSettings`, or
+           * `projects/{project}/securityHealthAnalyticsSettings`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of parent to list effective custom modules. Its format is
-         "organizations/{organization}/securityHealthAnalyticsSettings",
-         "folders/{folder}/securityHealthAnalyticsSettings", or
-         "projects/{project}/securityHealthAnalyticsSettings"
+         `organizations/{organization}/securityHealthAnalyticsSettings`,
+         `folders/{folder}/securityHealthAnalyticsSettings`, or
+         `projects/{project}/securityHealthAnalyticsSettings`
            */
           public java.lang.String getParent() {
             return parent;
@@ -7924,9 +7928,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of parent to list effective custom modules. Its format is
-           * "organizations/{organization}/securityHealthAnalyticsSettings",
-           * "folders/{folder}/securityHealthAnalyticsSettings", or
-           * "projects/{project}/securityHealthAnalyticsSettings"
+           * `organizations/{organization}/securityHealthAnalyticsSettings`,
+           * `folders/{folder}/securityHealthAnalyticsSettings`, or
+           * `projects/{project}/securityHealthAnalyticsSettings`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -8014,7 +8018,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -8041,7 +8045,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -8121,13 +8125,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent of sources to list. Its format should be
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Resource name of the parent of sources to list. Its format should be
-       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -8135,7 +8139,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent of sources to list. Its format should be
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -8233,11 +8237,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Name of the source to groupBy. Its format is
-         *        "organizations/[organization_id]/sources/[source_id]",
-         *        folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]. To
-         *        groupBy across all sources provide a source_id of `-`. For example:
-         *        organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
-         *        projects/{project_id}/sources/-
+         *        `organizations/[organization_id]/sources/[source_id]`,
+         *        `folders/[folder_id]/sources/[source_id]`, or `projects/[project_id]/sources/[source_id]`.
+         *        To groupBy across all sources provide a source_id of `-`. For example:
+         *        `organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-`, or
+         *        `projects/{project_id}/sources/-`
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupFindingsRequest}
          * @return the request
          */
@@ -8269,11 +8273,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Name of the source to groupBy. Its format is
-         *        "organizations/[organization_id]/sources/[source_id]",
-         *        folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]. To
-         *        groupBy across all sources provide a source_id of `-`. For example:
-         *        organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
-         *        projects/{project_id}/sources/-
+         *        `organizations/[organization_id]/sources/[source_id]`,
+         *        `folders/[folder_id]/sources/[source_id]`, or `projects/[project_id]/sources/[source_id]`.
+         *        To groupBy across all sources provide a source_id of `-`. For example:
+         *        `organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-`, or
+         *        `projects/{project_id}/sources/-`
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupFindingsRequest}
            * @since 1.13
            */
@@ -8344,20 +8348,20 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the source to groupBy. Its format is
-           * "organizations/[organization_id]/sources/[source_id]",
-           * folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id].
-           * To groupBy across all sources provide a source_id of `-`. For example:
-           * organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
-           * projects/{project_id}/sources/-
+           * `organizations/[organization_id]/sources/[source_id]`,
+           * `folders/[folder_id]/sources/[source_id]`, or
+           * `projects/[project_id]/sources/[source_id]`. To groupBy across all sources provide a
+           * source_id of `-`. For example: `organizations/{organization_id}/sources/-,
+           * folders/{folder_id}/sources/-`, or `projects/{project_id}/sources/-`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of the source to groupBy. Its format is
-         "organizations/[organization_id]/sources/[source_id]", folders/[folder_id]/sources/[source_id], or
-         projects/[project_id]/sources/[source_id]. To groupBy across all sources provide a source_id of
-         `-`. For example: organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
-         projects/{project_id}/sources/-
+         `organizations/[organization_id]/sources/[source_id]`, `folders/[folder_id]/sources/[source_id]`,
+         or `projects/[project_id]/sources/[source_id]`. To groupBy across all sources provide a source_id
+         of `-`. For example: `organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-`, or
+         `projects/{project_id}/sources/-`
            */
           public java.lang.String getParent() {
             return parent;
@@ -8365,11 +8369,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the source to groupBy. Its format is
-           * "organizations/[organization_id]/sources/[source_id]",
-           * folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id].
-           * To groupBy across all sources provide a source_id of `-`. For example:
-           * organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
-           * projects/{project_id}/sources/-
+           * `organizations/[organization_id]/sources/[source_id]`,
+           * `folders/[folder_id]/sources/[source_id]`, or
+           * `projects/[project_id]/sources/[source_id]`. To groupBy across all sources provide a
+           * source_id of `-`. For example: `organizations/{organization_id}/sources/-,
+           * folders/{folder_id}/sources/-`, or `projects/{project_id}/sources/-`
            */
           public Group setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -8396,11 +8400,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Name of the source the findings belong to. Its format is
-         *        "organizations/[organization_id]/sources/[source_id],
-         *        folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]". To
-         *        list across all sources provide a source_id of `-`. For example:
-         *        organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
-         *        projects/{projects_id}/sources/-
+         *        `organizations/[organization_id]/sources/[source_id]`,
+         *        `folders/[folder_id]/sources/[source_id]`, or `projects/[project_id]/sources/[source_id]`.
+         *        To list across all sources provide a source_id of `-`. For example:
+         *        `organizations/{organization_id}/sources/-`, `folders/{folder_id}/sources/-` or
+         *        `projects/{projects_id}/sources/-`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -8428,11 +8432,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Name of the source the findings belong to. Its format is
-         *        "organizations/[organization_id]/sources/[source_id],
-         *        folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]". To
-         *        list across all sources provide a source_id of `-`. For example:
-         *        organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
-         *        projects/{projects_id}/sources/-
+         *        `organizations/[organization_id]/sources/[source_id]`,
+         *        `folders/[folder_id]/sources/[source_id]`, or `projects/[project_id]/sources/[source_id]`.
+         *        To list across all sources provide a source_id of `-`. For example:
+         *        `organizations/{organization_id}/sources/-`, `folders/{folder_id}/sources/-` or
+         *        `projects/{projects_id}/sources/-`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -8512,20 +8516,20 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the source the findings belong to. Its format is
-           * "organizations/[organization_id]/sources/[source_id],
-           * folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]".
-           * To list across all sources provide a source_id of `-`. For example:
-           * organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
-           * projects/{projects_id}/sources/-
+           * `organizations/[organization_id]/sources/[source_id]`,
+           * `folders/[folder_id]/sources/[source_id]`, or
+           * `projects/[project_id]/sources/[source_id]`. To list across all sources provide a
+           * source_id of `-`. For example: `organizations/{organization_id}/sources/-`,
+           * `folders/{folder_id}/sources/-` or `projects/{projects_id}/sources/-`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of the source the findings belong to. Its format is
-         "organizations/[organization_id]/sources/[source_id], folders/[folder_id]/sources/[source_id], or
-         projects/[project_id]/sources/[source_id]". To list across all sources provide a source_id of `-`.
-         For example: organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
-         projects/{projects_id}/sources/-
+         `organizations/[organization_id]/sources/[source_id]`, `folders/[folder_id]/sources/[source_id]`,
+         or `projects/[project_id]/sources/[source_id]`. To list across all sources provide a source_id of
+         `-`. For example: `organizations/{organization_id}/sources/-`, `folders/{folder_id}/sources/-` or
+         `projects/{projects_id}/sources/-`
            */
           public java.lang.String getParent() {
             return parent;
@@ -8533,11 +8537,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the source the findings belong to. Its format is
-           * "organizations/[organization_id]/sources/[source_id],
-           * folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]".
-           * To list across all sources provide a source_id of `-`. For example:
-           * organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
-           * projects/{projects_id}/sources/-
+           * `organizations/[organization_id]/sources/[source_id]`,
+           * `folders/[folder_id]/sources/[source_id]`, or
+           * `projects/[project_id]/sources/[source_id]`. To list across all sources provide a
+           * source_id of `-`. For example: `organizations/{organization_id}/sources/-`,
+           * `folders/{folder_id}/sources/-` or `projects/{projects_id}/sources/-`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -9044,9 +9048,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * @param name Required. The [relative resource
          *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
          *        finding. Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+         *        `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+         *        `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+         *        `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetMuteRequest}
          * @return the request
          */
@@ -9077,9 +9081,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * @param name Required. The [relative resource
          *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
          *        finding. Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+         *        `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+         *        `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+         *        `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SetMuteRequest}
            * @since 1.13
            */
@@ -9152,18 +9156,18 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Required. The [relative resource
            * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
            * the finding. Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+           * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+           * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+           * `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The [relative resource
          name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
-         Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+         Example: `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+         `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+         `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
            */
           public java.lang.String getName() {
             return name;
@@ -9173,9 +9177,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Required. The [relative resource
            * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
            * the finding. Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+           * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+           * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+           * `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
            */
           public SetMute setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -9203,9 +9207,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * @param name Required. The [relative resource
          *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
          *        finding. Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+         *        `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+         *        `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+         *        `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
          * @return the request
          */
@@ -9236,9 +9240,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * @param name Required. The [relative resource
          *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
          *        finding. Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+         *        `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+         *        `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+         *        `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
            * @since 1.13
            */
@@ -9311,18 +9315,18 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Required. The [relative resource
            * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
            * the finding. Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+           * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+           * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+           * `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The [relative resource
          name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
-         Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+         Example: `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+         `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+         `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
            */
           public java.lang.String getName() {
             return name;
@@ -9332,9 +9336,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Required. The [relative resource
            * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
            * the finding. Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+           * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+           * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+           * `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
            */
           public SetState setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -9784,7 +9788,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
      * remote operation.
      *
      * @param name Required. Name of the organization to get organization settings for. Its format is
-     *        "organizations/[organization_id]/organizationSettings".
+     *        `organizations/[organization_id]/organizationSettings`.
      * @return the request
      */
     public GetOrganizationSettings getOrganizationSettings(java.lang.String name) throws java.io.IOException {
@@ -9812,7 +9816,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * after invoking the constructor. </p>
        *
        * @param name Required. Name of the organization to get organization settings for. Its format is
-     *        "organizations/[organization_id]/organizationSettings".
+     *        `organizations/[organization_id]/organizationSettings`.
        * @since 1.13
        */
       protected GetOrganizationSettings(java.lang.String name) {
@@ -9892,13 +9896,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
       /**
        * Required. Name of the organization to get organization settings for. Its format is
-       * "organizations/[organization_id]/organizationSettings".
+       * `organizations/[organization_id]/organizationSettings`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. Name of the organization to get organization settings for. Its format is
-     "organizations/[organization_id]/organizationSettings".
+     `organizations/[organization_id]/organizationSettings`.
        */
       public java.lang.String getName() {
         return name;
@@ -9906,7 +9910,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
       /**
        * Required. Name of the organization to get organization settings for. Its format is
-       * "organizations/[organization_id]/organizationSettings".
+       * `organizations/[organization_id]/organizationSettings`.
        */
       public GetOrganizationSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -10122,7 +10126,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The name of the parent to group the assets by. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
        * @return the request
        */
@@ -10151,7 +10155,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The name of the parent to group the assets by. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
          * @since 1.13
          */
@@ -10222,13 +10226,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The name of the parent to group the assets by. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The name of the parent to group the assets by. Its format is
-       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -10236,7 +10240,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The name of the parent to group the assets by. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public Group setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -10263,8 +10267,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        *
        * @param parent Required. The name of the parent resource that contains the assets. The value that you can specify
        *        on parent depends on the method in which you specify parent. You can specify one of the
-       *        following values: "organizations/[organization_id]", "folders/[folder_id]", or
-       *        "projects/[project_id]".
+       *        following values: `organizations/[organization_id]`, `folders/[folder_id]`, or
+       *        `projects/[project_id]`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -10292,8 +10296,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * @param parent Required. The name of the parent resource that contains the assets. The value that you can specify
        *        on parent depends on the method in which you specify parent. You can specify one of the
-       *        following values: "organizations/[organization_id]", "folders/[folder_id]", or
-       *        "projects/[project_id]".
+       *        following values: `organizations/[organization_id]`, `folders/[folder_id]`, or
+       *        `projects/[project_id]`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -10374,15 +10378,15 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * Required. The name of the parent resource that contains the assets. The value that you
          * can specify on parent depends on the method in which you specify parent. You can specify
-         * one of the following values: "organizations/[organization_id]", "folders/[folder_id]", or
-         * "projects/[project_id]".
+         * one of the following values: `organizations/[organization_id]`, `folders/[folder_id]`, or
+         * `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The name of the parent resource that contains the assets. The value that you can specify
        on parent depends on the method in which you specify parent. You can specify one of the following
-       values: "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       values: `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -10391,8 +10395,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * Required. The name of the parent resource that contains the assets. The value that you
          * can specify on parent depends on the method in which you specify parent. You can specify
-         * one of the following values: "organizations/[organization_id]", "folders/[folder_id]", or
-         * "projects/[project_id]".
+         * one of the following values: `organizations/[organization_id]`, `folders/[folder_id]`, or
+         * `projects/[project_id]`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -10730,7 +10734,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * operation.
        *
        * @param parent Required. Name of the organization to run asset discovery for. Its format is
-       *        "organizations/[organization_id]".
+       *        `organizations/[organization_id]`.
        * @param content the {@link com.google.api.services.securitycenter.v1.model.RunAssetDiscoveryRequest}
        * @return the request
        */
@@ -10761,7 +10765,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Name of the organization to run asset discovery for. Its format is
-       *        "organizations/[organization_id]".
+       *        `organizations/[organization_id]`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.RunAssetDiscoveryRequest}
          * @since 1.13
          */
@@ -10832,13 +10836,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the organization to run asset discovery for. Its format is
-         * "organizations/[organization_id]".
+         * `organizations/[organization_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Name of the organization to run asset discovery for. Its format is
-       "organizations/[organization_id]".
+       `organizations/[organization_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -10846,7 +10850,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the organization to run asset discovery for. Its format is
-         * "organizations/[organization_id]".
+         * `organizations/[organization_id]`.
          */
         public RunDiscovery setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -11097,7 +11101,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The name of the parent resource of the new BigQuery export. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
        * @return the request
        */
@@ -11126,7 +11130,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The name of the parent resource of the new BigQuery export. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
          * @since 1.13
          */
@@ -11197,13 +11201,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The name of the parent resource of the new BigQuery export. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The name of the parent resource of the new BigQuery export. Its format is
-       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -11211,7 +11215,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The name of the parent resource of the new BigQuery export. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -11263,9 +11267,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the BigQuery export to delete. Its format is
-       *        organizations/{organization}/bigQueryExports/{export_id},
-       *        folders/{folder}/bigQueryExports/{export_id}, or
-       *        projects/{project}/bigQueryExports/{export_id}
+       *        `organizations/{organization}/bigQueryExports/{export_id}`,
+       *        `folders/{folder}/bigQueryExports/{export_id}`, or
+       *        `projects/{project}/bigQueryExports/{export_id}`
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -11293,9 +11297,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The name of the BigQuery export to delete. Its format is
-       *        organizations/{organization}/bigQueryExports/{export_id},
-       *        folders/{folder}/bigQueryExports/{export_id}, or
-       *        projects/{project}/bigQueryExports/{export_id}
+       *        `organizations/{organization}/bigQueryExports/{export_id}`,
+       *        `folders/{folder}/bigQueryExports/{export_id}`, or
+       *        `projects/{project}/bigQueryExports/{export_id}`
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -11365,16 +11369,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The name of the BigQuery export to delete. Its format is
-         * organizations/{organization}/bigQueryExports/{export_id},
-         * folders/{folder}/bigQueryExports/{export_id}, or
-         * projects/{project}/bigQueryExports/{export_id}
+         * `organizations/{organization}/bigQueryExports/{export_id}`,
+         * `folders/{folder}/bigQueryExports/{export_id}`, or
+         * `projects/{project}/bigQueryExports/{export_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the BigQuery export to delete. Its format is
-       organizations/{organization}/bigQueryExports/{export_id},
-       folders/{folder}/bigQueryExports/{export_id}, or projects/{project}/bigQueryExports/{export_id}
+       `organizations/{organization}/bigQueryExports/{export_id}`,
+       `folders/{folder}/bigQueryExports/{export_id}`, or `projects/{project}/bigQueryExports/{export_id}`
          */
         public java.lang.String getName() {
           return name;
@@ -11382,9 +11386,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The name of the BigQuery export to delete. Its format is
-         * organizations/{organization}/bigQueryExports/{export_id},
-         * folders/{folder}/bigQueryExports/{export_id}, or
-         * projects/{project}/bigQueryExports/{export_id}
+         * `organizations/{organization}/bigQueryExports/{export_id}`,
+         * `folders/{folder}/bigQueryExports/{export_id}`, or
+         * `projects/{project}/bigQueryExports/{export_id}`
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -11410,9 +11414,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. Name of the BigQuery export to retrieve. Its format is
-       *        organizations/{organization}/bigQueryExports/{export_id},
-       *        folders/{folder}/bigQueryExports/{export_id}, or
-       *        projects/{project}/bigQueryExports/{export_id}
+       *        `organizations/{organization}/bigQueryExports/{export_id}`,
+       *        `folders/{folder}/bigQueryExports/{export_id}`, or
+       *        `projects/{project}/bigQueryExports/{export_id}`
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -11439,9 +11443,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Name of the BigQuery export to retrieve. Its format is
-       *        organizations/{organization}/bigQueryExports/{export_id},
-       *        folders/{folder}/bigQueryExports/{export_id}, or
-       *        projects/{project}/bigQueryExports/{export_id}
+       *        `organizations/{organization}/bigQueryExports/{export_id}`,
+       *        `folders/{folder}/bigQueryExports/{export_id}`, or
+       *        `projects/{project}/bigQueryExports/{export_id}`
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -11521,16 +11525,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the BigQuery export to retrieve. Its format is
-         * organizations/{organization}/bigQueryExports/{export_id},
-         * folders/{folder}/bigQueryExports/{export_id}, or
-         * projects/{project}/bigQueryExports/{export_id}
+         * `organizations/{organization}/bigQueryExports/{export_id}`,
+         * `folders/{folder}/bigQueryExports/{export_id}`, or
+         * `projects/{project}/bigQueryExports/{export_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the BigQuery export to retrieve. Its format is
-       organizations/{organization}/bigQueryExports/{export_id},
-       folders/{folder}/bigQueryExports/{export_id}, or projects/{project}/bigQueryExports/{export_id}
+       `organizations/{organization}/bigQueryExports/{export_id}`,
+       `folders/{folder}/bigQueryExports/{export_id}`, or `projects/{project}/bigQueryExports/{export_id}`
          */
         public java.lang.String getName() {
           return name;
@@ -11538,9 +11542,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the BigQuery export to retrieve. Its format is
-         * organizations/{organization}/bigQueryExports/{export_id},
-         * folders/{folder}/bigQueryExports/{export_id}, or
-         * projects/{project}/bigQueryExports/{export_id}
+         * `organizations/{organization}/bigQueryExports/{export_id}`,
+         * `folders/{folder}/bigQueryExports/{export_id}`, or
+         * `projects/{project}/bigQueryExports/{export_id}`
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -11569,7 +11573,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The parent, which owns the collection of BigQuery exports. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -11599,7 +11603,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The parent, which owns the collection of BigQuery exports. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -11679,13 +11683,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The parent, which owns the collection of BigQuery exports. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The parent, which owns the collection of BigQuery exports. Its format is
-       "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -11693,7 +11697,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The parent, which owns the collection of BigQuery exports. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -13038,9 +13042,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
          * @return the request
          */
@@ -13073,9 +13077,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
            * @since 1.13
            */
@@ -13147,17 +13151,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Immutable. The resource name of the Event Threat Detection custom module. Its format
            * is: *
-           * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-           * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-           * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
-         "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           public java.lang.String getName() {
             return name;
@@ -13166,9 +13170,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Immutable. The resource name of the Event Threat Detection custom module. Its format
            * is: *
-           * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-           * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-           * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -13631,7 +13635,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link BulkMute#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The parent, at which bulk action needs to be applied. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
        * @param content the {@link com.google.api.services.securitycenter.v1.model.BulkMuteFindingsRequest}
        * @return the request
        */
@@ -13662,7 +13666,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The parent, at which bulk action needs to be applied. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.BulkMuteFindingsRequest}
          * @since 1.13
          */
@@ -13733,13 +13737,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The parent, at which bulk action needs to be applied. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The parent, at which bulk action needs to be applied. Its format is
-       "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -13747,7 +13751,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The parent, at which bulk action needs to be applied. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         public BulkMute setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -13815,7 +13819,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Resource name of the new mute configs's parent. Its format is
-         *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
          * @return the request
          */
@@ -13844,7 +13848,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Resource name of the new mute configs's parent. Its format is
-         *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
            * @since 1.13
            */
@@ -13915,13 +13919,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Resource name of the new mute configs's parent. Its format is
-           * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+           * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Resource name of the new mute configs's parent. Its format is
-         "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -13929,7 +13933,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Resource name of the new mute configs's parent. Its format is
-           * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+           * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -13981,11 +13985,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the mute config to delete. Its format is
-         *        organizations/{organization}/muteConfigs/{config_id},
-         *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-         *        organizations/{organization}/locations/global/muteConfigs/{config_id},
-         *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         *        projects/{project}/locations/global/muteConfigs/{config_id}.
+         *        `organizations/{organization}/muteConfigs/{config_id}`,
+         *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+         *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -14013,11 +14017,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the mute config to delete. Its format is
-         *        organizations/{organization}/muteConfigs/{config_id},
-         *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-         *        organizations/{organization}/locations/global/muteConfigs/{config_id},
-         *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         *        projects/{project}/locations/global/muteConfigs/{config_id}.
+         *        `organizations/{organization}/muteConfigs/{config_id}`,
+         *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+         *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -14087,21 +14091,22 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the mute config to delete. Its format is
-           * organizations/{organization}/muteConfigs/{config_id},
-           * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-           * organizations/{organization}/locations/global/muteConfigs/{config_id},
-           * folders/{folder}/locations/global/muteConfigs/{config_id}, or
-           * projects/{project}/locations/global/muteConfigs/{config_id}.
+           * `organizations/{organization}/muteConfigs/{config_id}`,
+           * `folders/{folder}/muteConfigs/{config_id}`,
+           * `projects/{project}/muteConfigs/{config_id}`,
+           * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+           * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+           * `projects/{project}/locations/global/muteConfigs/{config_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the mute config to delete. Its format is
-         organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id},
-         projects/{project}/muteConfigs/{config_id},
-         organizations/{organization}/locations/global/muteConfigs/{config_id},
-         folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         projects/{project}/locations/global/muteConfigs/{config_id}.
+         `organizations/{organization}/muteConfigs/{config_id}`, `folders/{folder}/muteConfigs/{config_id}`,
+         `projects/{project}/muteConfigs/{config_id}`,
+         `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         `projects/{project}/locations/global/muteConfigs/{config_id}`.
            */
           public java.lang.String getName() {
             return name;
@@ -14109,11 +14114,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the mute config to delete. Its format is
-           * organizations/{organization}/muteConfigs/{config_id},
-           * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-           * organizations/{organization}/locations/global/muteConfigs/{config_id},
-           * folders/{folder}/locations/global/muteConfigs/{config_id}, or
-           * projects/{project}/locations/global/muteConfigs/{config_id}.
+           * `organizations/{organization}/muteConfigs/{config_id}`,
+           * `folders/{folder}/muteConfigs/{config_id}`,
+           * `projects/{project}/muteConfigs/{config_id}`,
+           * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+           * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+           * `projects/{project}/locations/global/muteConfigs/{config_id}`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -14139,11 +14145,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the mute config to retrieve. Its format is
-         *        organizations/{organization}/muteConfigs/{config_id},
-         *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-         *        organizations/{organization}/locations/global/muteConfigs/{config_id},
-         *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         *        projects/{project}/locations/global/muteConfigs/{config_id}.
+         *        `organizations/{organization}/muteConfigs/{config_id}`,
+         *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+         *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -14170,11 +14176,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the mute config to retrieve. Its format is
-         *        organizations/{organization}/muteConfigs/{config_id},
-         *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-         *        organizations/{organization}/locations/global/muteConfigs/{config_id},
-         *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         *        projects/{project}/locations/global/muteConfigs/{config_id}.
+         *        `organizations/{organization}/muteConfigs/{config_id}`,
+         *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+         *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -14254,21 +14260,22 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the mute config to retrieve. Its format is
-           * organizations/{organization}/muteConfigs/{config_id},
-           * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-           * organizations/{organization}/locations/global/muteConfigs/{config_id},
-           * folders/{folder}/locations/global/muteConfigs/{config_id}, or
-           * projects/{project}/locations/global/muteConfigs/{config_id}.
+           * `organizations/{organization}/muteConfigs/{config_id}`,
+           * `folders/{folder}/muteConfigs/{config_id}`,
+           * `projects/{project}/muteConfigs/{config_id}`,
+           * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+           * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+           * `projects/{project}/locations/global/muteConfigs/{config_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the mute config to retrieve. Its format is
-         organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id},
-         projects/{project}/muteConfigs/{config_id},
-         organizations/{organization}/locations/global/muteConfigs/{config_id},
-         folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         projects/{project}/locations/global/muteConfigs/{config_id}.
+         `organizations/{organization}/muteConfigs/{config_id}`, `folders/{folder}/muteConfigs/{config_id}`,
+         `projects/{project}/muteConfigs/{config_id}`,
+         `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         `projects/{project}/locations/global/muteConfigs/{config_id}`.
            */
           public java.lang.String getName() {
             return name;
@@ -14276,11 +14283,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the mute config to retrieve. Its format is
-           * organizations/{organization}/muteConfigs/{config_id},
-           * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-           * organizations/{organization}/locations/global/muteConfigs/{config_id},
-           * folders/{folder}/locations/global/muteConfigs/{config_id}, or
-           * projects/{project}/locations/global/muteConfigs/{config_id}.
+           * `organizations/{organization}/muteConfigs/{config_id}`,
+           * `folders/{folder}/muteConfigs/{config_id}`,
+           * `projects/{project}/muteConfigs/{config_id}`,
+           * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+           * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+           * `projects/{project}/locations/global/muteConfigs/{config_id}`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -14306,7 +14314,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent, which owns the collection of mute configs. Its format is
-         *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -14333,7 +14341,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent, which owns the collection of mute configs. Its format is
-         *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -14413,13 +14421,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. The parent, which owns the collection of mute configs. Its format is
-           * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+           * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent, which owns the collection of mute configs. Its format is
-         "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -14427,7 +14435,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. The parent, which owns the collection of mute configs. Its format is
-           * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+           * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -14505,12 +14513,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name This field will be ignored if provided on config creation. Format
-         *        "organizations/{organization}/muteConfigs/{mute_config}"
-         *        "folders/{folder}/muteConfigs/{mute_config}"
-         *        "projects/{project}/muteConfigs/{mute_config}"
-         *        "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-         *        "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-         *        "projects/{project}/locations/global/muteConfigs/{mute_config}"
+         *        `organizations/{organization}/muteConfigs/{mute_config}`
+         *        `folders/{folder}/muteConfigs/{mute_config}`
+         *        `projects/{project}/muteConfigs/{mute_config}`
+         *        `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+         *        `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+         *        `projects/{project}/locations/global/muteConfigs/{mute_config}`
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
          * @return the request
          */
@@ -14539,12 +14547,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name This field will be ignored if provided on config creation. Format
-         *        "organizations/{organization}/muteConfigs/{mute_config}"
-         *        "folders/{folder}/muteConfigs/{mute_config}"
-         *        "projects/{project}/muteConfigs/{mute_config}"
-         *        "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-         *        "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-         *        "projects/{project}/locations/global/muteConfigs/{mute_config}"
+         *        `organizations/{organization}/muteConfigs/{mute_config}`
+         *        `folders/{folder}/muteConfigs/{mute_config}`
+         *        `projects/{project}/muteConfigs/{mute_config}`
+         *        `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+         *        `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+         *        `projects/{project}/locations/global/muteConfigs/{mute_config}`
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
            * @since 1.13
            */
@@ -14615,22 +14623,22 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * This field will be ignored if provided on config creation. Format
-           * "organizations/{organization}/muteConfigs/{mute_config}"
-           * "folders/{folder}/muteConfigs/{mute_config}"
-           * "projects/{project}/muteConfigs/{mute_config}"
-           * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-           * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-           * "projects/{project}/locations/global/muteConfigs/{mute_config}"
+           * `organizations/{organization}/muteConfigs/{mute_config}`
+           * `folders/{folder}/muteConfigs/{mute_config}`
+           * `projects/{project}/muteConfigs/{mute_config}`
+           * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+           * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+           * `projects/{project}/locations/global/muteConfigs/{mute_config}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** This field will be ignored if provided on config creation. Format
-         "organizations/{organization}/muteConfigs/{mute_config}"
-         "folders/{folder}/muteConfigs/{mute_config}" "projects/{project}/muteConfigs/{mute_config}"
-         "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-         "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-         "projects/{project}/locations/global/muteConfigs/{mute_config}"
+         `organizations/{organization}/muteConfigs/{mute_config}`
+         `folders/{folder}/muteConfigs/{mute_config}` `projects/{project}/muteConfigs/{mute_config}`
+         `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+         `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+         `projects/{project}/locations/global/muteConfigs/{mute_config}`
            */
           public java.lang.String getName() {
             return name;
@@ -14638,12 +14646,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * This field will be ignored if provided on config creation. Format
-           * "organizations/{organization}/muteConfigs/{mute_config}"
-           * "folders/{folder}/muteConfigs/{mute_config}"
-           * "projects/{project}/muteConfigs/{mute_config}"
-           * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-           * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-           * "projects/{project}/locations/global/muteConfigs/{mute_config}"
+           * `organizations/{organization}/muteConfigs/{mute_config}`
+           * `folders/{folder}/muteConfigs/{mute_config}`
+           * `projects/{project}/muteConfigs/{mute_config}`
+           * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+           * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+           * `projects/{project}/locations/global/muteConfigs/{mute_config}`
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -14708,7 +14716,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Resource name of the new mute configs's parent. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
        * @return the request
        */
@@ -14737,7 +14745,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Resource name of the new mute configs's parent. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
          * @since 1.13
          */
@@ -14808,13 +14816,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the new mute configs's parent. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Resource name of the new mute configs's parent. Its format is
-       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -14822,7 +14830,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the new mute configs's parent. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -14874,11 +14882,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. Name of the mute config to delete. Its format is
-       *        organizations/{organization}/muteConfigs/{config_id},
-       *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-       *        organizations/{organization}/locations/global/muteConfigs/{config_id},
-       *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
-       *        projects/{project}/locations/global/muteConfigs/{config_id}.
+       *        `organizations/{organization}/muteConfigs/{config_id}`,
+       *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+       *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+       *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+       *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -14906,11 +14914,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Name of the mute config to delete. Its format is
-       *        organizations/{organization}/muteConfigs/{config_id},
-       *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-       *        organizations/{organization}/locations/global/muteConfigs/{config_id},
-       *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
-       *        projects/{project}/locations/global/muteConfigs/{config_id}.
+       *        `organizations/{organization}/muteConfigs/{config_id}`,
+       *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+       *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+       *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+       *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -14980,21 +14988,21 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the mute config to delete. Its format is
-         * organizations/{organization}/muteConfigs/{config_id},
-         * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-         * organizations/{organization}/locations/global/muteConfigs/{config_id},
-         * folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         * projects/{project}/locations/global/muteConfigs/{config_id}.
+         * `organizations/{organization}/muteConfigs/{config_id}`,
+         * `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+         * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         * `projects/{project}/locations/global/muteConfigs/{config_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the mute config to delete. Its format is
-       organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id},
-       projects/{project}/muteConfigs/{config_id},
-       organizations/{organization}/locations/global/muteConfigs/{config_id},
-       folders/{folder}/locations/global/muteConfigs/{config_id}, or
-       projects/{project}/locations/global/muteConfigs/{config_id}.
+       `organizations/{organization}/muteConfigs/{config_id}`, `folders/{folder}/muteConfigs/{config_id}`,
+       `projects/{project}/muteConfigs/{config_id}`,
+       `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+       `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+       `projects/{project}/locations/global/muteConfigs/{config_id}`.
          */
         public java.lang.String getName() {
           return name;
@@ -15002,11 +15010,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the mute config to delete. Its format is
-         * organizations/{organization}/muteConfigs/{config_id},
-         * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-         * organizations/{organization}/locations/global/muteConfigs/{config_id},
-         * folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         * projects/{project}/locations/global/muteConfigs/{config_id}.
+         * `organizations/{organization}/muteConfigs/{config_id}`,
+         * `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+         * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         * `projects/{project}/locations/global/muteConfigs/{config_id}`.
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -15032,11 +15040,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. Name of the mute config to retrieve. Its format is
-       *        organizations/{organization}/muteConfigs/{config_id},
-       *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-       *        organizations/{organization}/locations/global/muteConfigs/{config_id},
-       *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
-       *        projects/{project}/locations/global/muteConfigs/{config_id}.
+       *        `organizations/{organization}/muteConfigs/{config_id}`,
+       *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+       *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+       *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+       *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -15063,11 +15071,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Name of the mute config to retrieve. Its format is
-       *        organizations/{organization}/muteConfigs/{config_id},
-       *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-       *        organizations/{organization}/locations/global/muteConfigs/{config_id},
-       *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
-       *        projects/{project}/locations/global/muteConfigs/{config_id}.
+       *        `organizations/{organization}/muteConfigs/{config_id}`,
+       *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+       *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+       *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+       *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -15147,21 +15155,21 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the mute config to retrieve. Its format is
-         * organizations/{organization}/muteConfigs/{config_id},
-         * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-         * organizations/{organization}/locations/global/muteConfigs/{config_id},
-         * folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         * projects/{project}/locations/global/muteConfigs/{config_id}.
+         * `organizations/{organization}/muteConfigs/{config_id}`,
+         * `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+         * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         * `projects/{project}/locations/global/muteConfigs/{config_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the mute config to retrieve. Its format is
-       organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id},
-       projects/{project}/muteConfigs/{config_id},
-       organizations/{organization}/locations/global/muteConfigs/{config_id},
-       folders/{folder}/locations/global/muteConfigs/{config_id}, or
-       projects/{project}/locations/global/muteConfigs/{config_id}.
+       `organizations/{organization}/muteConfigs/{config_id}`, `folders/{folder}/muteConfigs/{config_id}`,
+       `projects/{project}/muteConfigs/{config_id}`,
+       `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+       `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+       `projects/{project}/locations/global/muteConfigs/{config_id}`.
          */
         public java.lang.String getName() {
           return name;
@@ -15169,11 +15177,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the mute config to retrieve. Its format is
-         * organizations/{organization}/muteConfigs/{config_id},
-         * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-         * organizations/{organization}/locations/global/muteConfigs/{config_id},
-         * folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         * projects/{project}/locations/global/muteConfigs/{config_id}.
+         * `organizations/{organization}/muteConfigs/{config_id}`,
+         * `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+         * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         * `projects/{project}/locations/global/muteConfigs/{config_id}`.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -15199,7 +15207,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The parent, which owns the collection of mute configs. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -15226,7 +15234,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The parent, which owns the collection of mute configs. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -15306,13 +15314,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The parent, which owns the collection of mute configs. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The parent, which owns the collection of mute configs. Its format is
-       "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -15320,7 +15328,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The parent, which owns the collection of mute configs. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -15398,12 +15406,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param name This field will be ignored if provided on config creation. Format
-       *        "organizations/{organization}/muteConfigs/{mute_config}"
-       *        "folders/{folder}/muteConfigs/{mute_config}"
-       *        "projects/{project}/muteConfigs/{mute_config}"
-       *        "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-       *        "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-       *        "projects/{project}/locations/global/muteConfigs/{mute_config}"
+       *        `organizations/{organization}/muteConfigs/{mute_config}`
+       *        `folders/{folder}/muteConfigs/{mute_config}`
+       *        `projects/{project}/muteConfigs/{mute_config}`
+       *        `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+       *        `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+       *        `projects/{project}/locations/global/muteConfigs/{mute_config}`
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
        * @return the request
        */
@@ -15432,12 +15440,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name This field will be ignored if provided on config creation. Format
-       *        "organizations/{organization}/muteConfigs/{mute_config}"
-       *        "folders/{folder}/muteConfigs/{mute_config}"
-       *        "projects/{project}/muteConfigs/{mute_config}"
-       *        "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-       *        "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-       *        "projects/{project}/locations/global/muteConfigs/{mute_config}"
+       *        `organizations/{organization}/muteConfigs/{mute_config}`
+       *        `folders/{folder}/muteConfigs/{mute_config}`
+       *        `projects/{project}/muteConfigs/{mute_config}`
+       *        `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+       *        `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+       *        `projects/{project}/locations/global/muteConfigs/{mute_config}`
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
          * @since 1.13
          */
@@ -15508,22 +15516,22 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * This field will be ignored if provided on config creation. Format
-         * "organizations/{organization}/muteConfigs/{mute_config}"
-         * "folders/{folder}/muteConfigs/{mute_config}"
-         * "projects/{project}/muteConfigs/{mute_config}"
-         * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-         * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-         * "projects/{project}/locations/global/muteConfigs/{mute_config}"
+         * `organizations/{organization}/muteConfigs/{mute_config}`
+         * `folders/{folder}/muteConfigs/{mute_config}`
+         * `projects/{project}/muteConfigs/{mute_config}`
+         * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+         * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+         * `projects/{project}/locations/global/muteConfigs/{mute_config}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** This field will be ignored if provided on config creation. Format
-       "organizations/{organization}/muteConfigs/{mute_config}"
-       "folders/{folder}/muteConfigs/{mute_config}" "projects/{project}/muteConfigs/{mute_config}"
-       "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-       "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-       "projects/{project}/locations/global/muteConfigs/{mute_config}"
+       `organizations/{organization}/muteConfigs/{mute_config}`
+       `folders/{folder}/muteConfigs/{mute_config}` `projects/{project}/muteConfigs/{mute_config}`
+       `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+       `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+       `projects/{project}/locations/global/muteConfigs/{mute_config}`
          */
         public java.lang.String getName() {
           return name;
@@ -15531,12 +15539,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * This field will be ignored if provided on config creation. Format
-         * "organizations/{organization}/muteConfigs/{mute_config}"
-         * "folders/{folder}/muteConfigs/{mute_config}"
-         * "projects/{project}/muteConfigs/{mute_config}"
-         * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-         * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-         * "projects/{project}/locations/global/muteConfigs/{mute_config}"
+         * `organizations/{organization}/muteConfigs/{mute_config}`
+         * `folders/{folder}/muteConfigs/{mute_config}`
+         * `projects/{project}/muteConfigs/{mute_config}`
+         * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+         * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+         * `projects/{project}/locations/global/muteConfigs/{mute_config}`
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -15600,7 +15608,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Resource name of the new notification config's parent. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
        * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
        * @return the request
        */
@@ -15629,7 +15637,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Resource name of the new notification config's parent. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
          * @since 1.13
          */
@@ -15700,13 +15708,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the new notification config's parent. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Resource name of the new notification config's parent. Its format is
-       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -15714,7 +15722,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the new notification config's parent. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -15765,9 +15773,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. Name of the notification config to delete. Its format is
-       *        "organizations/[organization_id]/notificationConfigs/[config_id]",
-       *        "folders/[folder_id]/notificationConfigs/[config_id]", or
-       *        "projects/[project_id]/notificationConfigs/[config_id]".
+       *        `organizations/[organization_id]/notificationConfigs/[config_id]`,
+       *        `folders/[folder_id]/notificationConfigs/[config_id]`, or
+       *        `projects/[project_id]/notificationConfigs/[config_id]`.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -15795,9 +15803,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Name of the notification config to delete. Its format is
-       *        "organizations/[organization_id]/notificationConfigs/[config_id]",
-       *        "folders/[folder_id]/notificationConfigs/[config_id]", or
-       *        "projects/[project_id]/notificationConfigs/[config_id]".
+       *        `organizations/[organization_id]/notificationConfigs/[config_id]`,
+       *        `folders/[folder_id]/notificationConfigs/[config_id]`, or
+       *        `projects/[project_id]/notificationConfigs/[config_id]`.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -15867,17 +15875,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the notification config to delete. Its format is
-         * "organizations/[organization_id]/notificationConfigs/[config_id]",
-         * "folders/[folder_id]/notificationConfigs/[config_id]", or
-         * "projects/[project_id]/notificationConfigs/[config_id]".
+         * `organizations/[organization_id]/notificationConfigs/[config_id]`,
+         * `folders/[folder_id]/notificationConfigs/[config_id]`, or
+         * `projects/[project_id]/notificationConfigs/[config_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the notification config to delete. Its format is
-       "organizations/[organization_id]/notificationConfigs/[config_id]",
-       "folders/[folder_id]/notificationConfigs/[config_id]", or
-       "projects/[project_id]/notificationConfigs/[config_id]".
+       `organizations/[organization_id]/notificationConfigs/[config_id]`,
+       `folders/[folder_id]/notificationConfigs/[config_id]`, or
+       `projects/[project_id]/notificationConfigs/[config_id]`.
          */
         public java.lang.String getName() {
           return name;
@@ -15885,9 +15893,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the notification config to delete. Its format is
-         * "organizations/[organization_id]/notificationConfigs/[config_id]",
-         * "folders/[folder_id]/notificationConfigs/[config_id]", or
-         * "projects/[project_id]/notificationConfigs/[config_id]".
+         * `organizations/[organization_id]/notificationConfigs/[config_id]`,
+         * `folders/[folder_id]/notificationConfigs/[config_id]`, or
+         * `projects/[project_id]/notificationConfigs/[config_id]`.
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -15913,9 +15921,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. Name of the notification config to get. Its format is
-       *        "organizations/[organization_id]/notificationConfigs/[config_id]",
-       *        "folders/[folder_id]/notificationConfigs/[config_id]", or
-       *        "projects/[project_id]/notificationConfigs/[config_id]".
+       *        `organizations/[organization_id]/notificationConfigs/[config_id]`,
+       *        `folders/[folder_id]/notificationConfigs/[config_id]`, or
+       *        `projects/[project_id]/notificationConfigs/[config_id]`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -15942,9 +15950,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Name of the notification config to get. Its format is
-       *        "organizations/[organization_id]/notificationConfigs/[config_id]",
-       *        "folders/[folder_id]/notificationConfigs/[config_id]", or
-       *        "projects/[project_id]/notificationConfigs/[config_id]".
+       *        `organizations/[organization_id]/notificationConfigs/[config_id]`,
+       *        `folders/[folder_id]/notificationConfigs/[config_id]`, or
+       *        `projects/[project_id]/notificationConfigs/[config_id]`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -16024,17 +16032,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the notification config to get. Its format is
-         * "organizations/[organization_id]/notificationConfigs/[config_id]",
-         * "folders/[folder_id]/notificationConfigs/[config_id]", or
-         * "projects/[project_id]/notificationConfigs/[config_id]".
+         * `organizations/[organization_id]/notificationConfigs/[config_id]`,
+         * `folders/[folder_id]/notificationConfigs/[config_id]`, or
+         * `projects/[project_id]/notificationConfigs/[config_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the notification config to get. Its format is
-       "organizations/[organization_id]/notificationConfigs/[config_id]",
-       "folders/[folder_id]/notificationConfigs/[config_id]", or
-       "projects/[project_id]/notificationConfigs/[config_id]".
+       `organizations/[organization_id]/notificationConfigs/[config_id]`,
+       `folders/[folder_id]/notificationConfigs/[config_id]`, or
+       `projects/[project_id]/notificationConfigs/[config_id]`.
          */
         public java.lang.String getName() {
           return name;
@@ -16042,9 +16050,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the notification config to get. Its format is
-         * "organizations/[organization_id]/notificationConfigs/[config_id]",
-         * "folders/[folder_id]/notificationConfigs/[config_id]", or
-         * "projects/[project_id]/notificationConfigs/[config_id]".
+         * `organizations/[organization_id]/notificationConfigs/[config_id]`,
+         * `folders/[folder_id]/notificationConfigs/[config_id]`, or
+         * `projects/[project_id]/notificationConfigs/[config_id]`.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -17366,7 +17374,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. Name of the resource value config to retrieve. Its format is
-       *        organizations/{organization}/resourceValueConfigs/{config_id}.
+       *        `organizations/{organization}/resourceValueConfigs/{config_id}`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -17393,7 +17401,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Name of the resource value config to retrieve. Its format is
-       *        organizations/{organization}/resourceValueConfigs/{config_id}.
+       *        `organizations/{organization}/resourceValueConfigs/{config_id}`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -17473,13 +17481,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the resource value config to retrieve. Its format is
-         * organizations/{organization}/resourceValueConfigs/{config_id}.
+         * `organizations/{organization}/resourceValueConfigs/{config_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the resource value config to retrieve. Its format is
-       organizations/{organization}/resourceValueConfigs/{config_id}.
+       `organizations/{organization}/resourceValueConfigs/{config_id}`.
          */
         public java.lang.String getName() {
           return name;
@@ -17487,7 +17495,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the resource value config to retrieve. Its format is
-         * organizations/{organization}/resourceValueConfigs/{config_id}.
+         * `organizations/{organization}/resourceValueConfigs/{config_id}`.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -17513,7 +17521,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The parent, which owns the collection of resource value configs. Its format is
-       *        "organizations/[organization_id]"
+       *        `organizations/[organization_id]`
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -17540,7 +17548,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The parent, which owns the collection of resource value configs. Its format is
-       *        "organizations/[organization_id]"
+       *        `organizations/[organization_id]`
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -17620,13 +17628,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The parent, which owns the collection of resource value configs. Its format is
-         * "organizations/[organization_id]"
+         * `organizations/[organization_id]`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The parent, which owns the collection of resource value configs. Its format is
-       "organizations/[organization_id]"
+       `organizations/[organization_id]`
          */
         public java.lang.String getParent() {
           return parent;
@@ -17634,7 +17642,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The parent, which owns the collection of resource value configs. Its format is
-         * "organizations/[organization_id]"
+         * `organizations/[organization_id]`
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -17906,9 +17914,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Resource name of the new custom module's parent. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings",
-         *        "folders/{folder}/securityHealthAnalyticsSettings", or
-         *        "projects/{project}/securityHealthAnalyticsSettings"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings`
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule}
          * @return the request
          */
@@ -17939,9 +17947,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Resource name of the new custom module's parent. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings",
-         *        "folders/{folder}/securityHealthAnalyticsSettings", or
-         *        "projects/{project}/securityHealthAnalyticsSettings"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings`
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule}
            * @since 1.13
            */
@@ -18012,17 +18020,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Resource name of the new custom module's parent. Its format is
-           * "organizations/{organization}/securityHealthAnalyticsSettings",
-           * "folders/{folder}/securityHealthAnalyticsSettings", or
-           * "projects/{project}/securityHealthAnalyticsSettings"
+           * `organizations/{organization}/securityHealthAnalyticsSettings`,
+           * `folders/{folder}/securityHealthAnalyticsSettings`, or
+           * `projects/{project}/securityHealthAnalyticsSettings`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Resource name of the new custom module's parent. Its format is
-         "organizations/{organization}/securityHealthAnalyticsSettings",
-         "folders/{folder}/securityHealthAnalyticsSettings", or
-         "projects/{project}/securityHealthAnalyticsSettings"
+         `organizations/{organization}/securityHealthAnalyticsSettings`,
+         `folders/{folder}/securityHealthAnalyticsSettings`, or
+         `projects/{project}/securityHealthAnalyticsSettings`
            */
           public java.lang.String getParent() {
             return parent;
@@ -18030,9 +18038,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Resource name of the new custom module's parent. Its format is
-           * "organizations/{organization}/securityHealthAnalyticsSettings",
-           * "folders/{folder}/securityHealthAnalyticsSettings", or
-           * "projects/{project}/securityHealthAnalyticsSettings"
+           * `organizations/{organization}/securityHealthAnalyticsSettings`,
+           * `folders/{folder}/securityHealthAnalyticsSettings`, or
+           * `projects/{project}/securityHealthAnalyticsSettings`
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -18059,9 +18067,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the custom module to delete. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        ", "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         *        "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
+         *        `, `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -18090,9 +18098,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the custom module to delete. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        ", "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         *        "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
+         *        `, `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -18161,28 +18169,28 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Required. Name of the custom module to delete. Its format is "organizations/{organizati
-           * on}/securityHealthAnalyticsSettings/customModules/{customModule}",
-           * "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-           * "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+           * Required. Name of the custom module to delete. Its format is `organizations/{organizati
+           * on}/securityHealthAnalyticsSettings/customModules/{customModule}`,
+           * `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+           * `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the custom module to delete. Its format is
-         "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
-         "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+         `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}`,
+         `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+         `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Name of the custom module to delete. Its format is "organizations/{organizati
-           * on}/securityHealthAnalyticsSettings/customModules/{customModule}",
-           * "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-           * "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+           * Required. Name of the custom module to delete. Its format is `organizations/{organizati
+           * on}/securityHealthAnalyticsSettings/customModules/{customModule}`,
+           * `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+           * `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -18208,9 +18216,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the custom module to get. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        ", "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         *        "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
+         *        `, `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -18237,9 +18245,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the custom module to get. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        ", "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         *        "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
+         *        `, `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -18318,28 +18326,28 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Required. Name of the custom module to get. Its format is "organizations/{organization}
-           * /securityHealthAnalyticsSettings/customModules/{customModule}",
-           * "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-           * "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+           * Required. Name of the custom module to get. Its format is `organizations/{organization}
+           * /securityHealthAnalyticsSettings/customModules/{customModule}`,
+           * `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+           * `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the custom module to get. Its format is
-         "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
-         "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+         `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}`,
+         `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+         `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Name of the custom module to get. Its format is "organizations/{organization}
-           * /securityHealthAnalyticsSettings/customModules/{customModule}",
-           * "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-           * "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+           * Required. Name of the custom module to get. Its format is `organizations/{organization}
+           * /securityHealthAnalyticsSettings/customModules/{customModule}`,
+           * `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+           * `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -18367,9 +18375,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Name of parent to list custom modules. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings",
-         *        "folders/{folder}/securityHealthAnalyticsSettings", or
-         *        "projects/{project}/securityHealthAnalyticsSettings"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -18398,9 +18406,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Name of parent to list custom modules. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings",
-         *        "folders/{folder}/securityHealthAnalyticsSettings", or
-         *        "projects/{project}/securityHealthAnalyticsSettings"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -18480,17 +18488,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of parent to list custom modules. Its format is
-           * "organizations/{organization}/securityHealthAnalyticsSettings",
-           * "folders/{folder}/securityHealthAnalyticsSettings", or
-           * "projects/{project}/securityHealthAnalyticsSettings"
+           * `organizations/{organization}/securityHealthAnalyticsSettings`,
+           * `folders/{folder}/securityHealthAnalyticsSettings`, or
+           * `projects/{project}/securityHealthAnalyticsSettings`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of parent to list custom modules. Its format is
-         "organizations/{organization}/securityHealthAnalyticsSettings",
-         "folders/{folder}/securityHealthAnalyticsSettings", or
-         "projects/{project}/securityHealthAnalyticsSettings"
+         `organizations/{organization}/securityHealthAnalyticsSettings`,
+         `folders/{folder}/securityHealthAnalyticsSettings`, or
+         `projects/{project}/securityHealthAnalyticsSettings`
            */
           public java.lang.String getParent() {
             return parent;
@@ -18498,9 +18506,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of parent to list custom modules. Its format is
-           * "organizations/{organization}/securityHealthAnalyticsSettings",
-           * "folders/{folder}/securityHealthAnalyticsSettings", or
-           * "projects/{project}/securityHealthAnalyticsSettings"
+           * `organizations/{organization}/securityHealthAnalyticsSettings`,
+           * `folders/{folder}/securityHealthAnalyticsSettings`, or
+           * `projects/{project}/securityHealthAnalyticsSettings`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -18567,9 +18575,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * operation.
          *
          * @param parent Required. Name of parent to list descendant custom modules. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings",
-         *        "folders/{folder}/securityHealthAnalyticsSettings", or
-         *        "projects/{project}/securityHealthAnalyticsSettings"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings`
          * @return the request
          */
         public ListDescendant listDescendant(java.lang.String parent) throws java.io.IOException {
@@ -18598,9 +18606,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * the constructor. </p>
            *
            * @param parent Required. Name of parent to list descendant custom modules. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings",
-         *        "folders/{folder}/securityHealthAnalyticsSettings", or
-         *        "projects/{project}/securityHealthAnalyticsSettings"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings`
            * @since 1.13
            */
           protected ListDescendant(java.lang.String parent) {
@@ -18680,17 +18688,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of parent to list descendant custom modules. Its format is
-           * "organizations/{organization}/securityHealthAnalyticsSettings",
-           * "folders/{folder}/securityHealthAnalyticsSettings", or
-           * "projects/{project}/securityHealthAnalyticsSettings"
+           * `organizations/{organization}/securityHealthAnalyticsSettings`,
+           * `folders/{folder}/securityHealthAnalyticsSettings`, or
+           * `projects/{project}/securityHealthAnalyticsSettings`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of parent to list descendant custom modules. Its format is
-         "organizations/{organization}/securityHealthAnalyticsSettings",
-         "folders/{folder}/securityHealthAnalyticsSettings", or
-         "projects/{project}/securityHealthAnalyticsSettings"
+         `organizations/{organization}/securityHealthAnalyticsSettings`,
+         `folders/{folder}/securityHealthAnalyticsSettings`, or
+         `projects/{project}/securityHealthAnalyticsSettings`
            */
           public java.lang.String getParent() {
             return parent;
@@ -18698,9 +18706,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of parent to list descendant custom modules. Its format is
-           * "organizations/{organization}/securityHealthAnalyticsSettings",
-           * "folders/{folder}/securityHealthAnalyticsSettings", or
-           * "projects/{project}/securityHealthAnalyticsSettings"
+           * `organizations/{organization}/securityHealthAnalyticsSettings`,
+           * `folders/{folder}/securityHealthAnalyticsSettings`, or
+           * `projects/{project}/securityHealthAnalyticsSettings`
            */
           public ListDescendant setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -19128,11 +19136,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the effective custom module to get. Its format is "organizations/{organization}/se
-         *        curityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
-         *        "folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
+         * @param name Required. Name of the effective custom module to get. Its format is `organizations/{organization}/se
+         *        curityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
          *        or
-         *        "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}"
+         *        `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -19158,11 +19166,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the effective custom module to get. Its format is "organizations/{organization}/se
-         *        curityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
-         *        "folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
+           * @param name Required. Name of the effective custom module to get. Its format is `organizations/{organization}/se
+         *        curityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
          *        or
-         *        "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}"
+         *        `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -19241,30 +19249,30 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Required. Name of the effective custom module to get. Its format is "organizations/{org
-           * anization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}", "fol
-           * ders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
-           * or "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customMo
-           * dule}"
+           * Required. Name of the effective custom module to get. Its format is `organizations/{org
+           * anization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`, `fol
+           * ders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
+           * or `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customMo
+           * dule}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the effective custom module to get. Its format is "organizations/{organization}/s
-         ecurityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
-         "folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}", or
-         "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}"
+          /** Required. Name of the effective custom module to get. Its format is `organizations/{organization}/s
+         ecurityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
+         `folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`, or
+         `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Name of the effective custom module to get. Its format is "organizations/{org
-           * anization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}", "fol
-           * ders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
-           * or "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customMo
-           * dule}"
+           * Required. Name of the effective custom module to get. Its format is `organizations/{org
+           * anization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`, `fol
+           * ders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
+           * or `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customMo
+           * dule}`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -19292,9 +19300,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Name of parent to list effective custom modules. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings",
-         *        "folders/{folder}/securityHealthAnalyticsSettings", or
-         *        "projects/{project}/securityHealthAnalyticsSettings"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -19323,9 +19331,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Name of parent to list effective custom modules. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings",
-         *        "folders/{folder}/securityHealthAnalyticsSettings", or
-         *        "projects/{project}/securityHealthAnalyticsSettings"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -19405,17 +19413,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of parent to list effective custom modules. Its format is
-           * "organizations/{organization}/securityHealthAnalyticsSettings",
-           * "folders/{folder}/securityHealthAnalyticsSettings", or
-           * "projects/{project}/securityHealthAnalyticsSettings"
+           * `organizations/{organization}/securityHealthAnalyticsSettings`,
+           * `folders/{folder}/securityHealthAnalyticsSettings`, or
+           * `projects/{project}/securityHealthAnalyticsSettings`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of parent to list effective custom modules. Its format is
-         "organizations/{organization}/securityHealthAnalyticsSettings",
-         "folders/{folder}/securityHealthAnalyticsSettings", or
-         "projects/{project}/securityHealthAnalyticsSettings"
+         `organizations/{organization}/securityHealthAnalyticsSettings`,
+         `folders/{folder}/securityHealthAnalyticsSettings`, or
+         `projects/{project}/securityHealthAnalyticsSettings`
            */
           public java.lang.String getParent() {
             return parent;
@@ -19423,9 +19431,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of parent to list effective custom modules. Its format is
-           * "organizations/{organization}/securityHealthAnalyticsSettings",
-           * "folders/{folder}/securityHealthAnalyticsSettings", or
-           * "projects/{project}/securityHealthAnalyticsSettings"
+           * `organizations/{organization}/securityHealthAnalyticsSettings`,
+           * `folders/{folder}/securityHealthAnalyticsSettings`, or
+           * `projects/{project}/securityHealthAnalyticsSettings`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -19513,8 +19521,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. The organization name or simulation name of this simulation Valid format:
-       *        "organizations/{organization}/simulations/latest"
-       *        "organizations/{organization}/simulations/{simulation}"
+       *        `organizations/{organization}/simulations/latest`
+       *        `organizations/{organization}/simulations/{simulation}`
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -19541,8 +19549,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The organization name or simulation name of this simulation Valid format:
-       *        "organizations/{organization}/simulations/latest"
-       *        "organizations/{organization}/simulations/{simulation}"
+       *        `organizations/{organization}/simulations/latest`
+       *        `organizations/{organization}/simulations/{simulation}`
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -19622,15 +19630,15 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The organization name or simulation name of this simulation Valid format:
-         * "organizations/{organization}/simulations/latest"
-         * "organizations/{organization}/simulations/{simulation}"
+         * `organizations/{organization}/simulations/latest`
+         * `organizations/{organization}/simulations/{simulation}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The organization name or simulation name of this simulation Valid format:
-       "organizations/{organization}/simulations/latest"
-       "organizations/{organization}/simulations/{simulation}"
+       `organizations/{organization}/simulations/latest`
+       `organizations/{organization}/simulations/{simulation}`
          */
         public java.lang.String getName() {
           return name;
@@ -19638,8 +19646,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The organization name or simulation name of this simulation Valid format:
-         * "organizations/{organization}/simulations/latest"
-         * "organizations/{organization}/simulations/{simulation}"
+         * `organizations/{organization}/simulations/latest`
+         * `organizations/{organization}/simulations/{simulation}`
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -19705,10 +19713,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * This request holds the parameters needed by the securitycenter server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Name of parent to list attack paths. Valid formats: "organizations/{organization}",
-           *        "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simu
-           *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
-           *        "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+           * @param parent Required. Name of parent to list attack paths. Valid formats: `organizations/{organization}`,
+           *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
+           *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+           *        `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -19734,10 +19742,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Name of parent to list attack paths. Valid formats: "organizations/{organization}",
-           *        "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simu
-           *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
-           *        "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+             * @param parent Required. Name of parent to list attack paths. Valid formats: `organizations/{organization}`,
+           *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
+           *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+           *        `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -19817,18 +19825,18 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
             /**
              * Required. Name of parent to list attack paths. Valid formats:
-             * "organizations/{organization}",
-             * "organizations/{organization}/simulations/{simulation}" "organizations/{organization}
-             * /simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}" "organiz
-             * ations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+             * `organizations/{organization}`,
+             * `organizations/{organization}/simulations/{simulation}` `organizations/{organization}
+             * /simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}` `organiz
+             * ations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Name of parent to list attack paths. Valid formats: "organizations/{organization}",
-           "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simulations/{
-           simulation}/attackExposureResults/{attack_exposure_result_v2}"
-           "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+            /** Required. Name of parent to list attack paths. Valid formats: `organizations/{organization}`,
+           `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simulations/{
+           simulation}/attackExposureResults/{attack_exposure_result_v2}`
+           `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
              */
             public java.lang.String getParent() {
               return parent;
@@ -19836,10 +19844,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
             /**
              * Required. Name of parent to list attack paths. Valid formats:
-             * "organizations/{organization}",
-             * "organizations/{organization}/simulations/{simulation}" "organizations/{organization}
-             * /simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}" "organiz
-             * ations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+             * `organizations/{organization}`,
+             * `organizations/{organization}/simulations/{simulation}` `organizations/{organization}
+             * /simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}` `organiz
+             * ations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -19957,9 +19965,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * This request holds the parameters needed by the securitycenter server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Name of parent to list valued resources. Valid formats: "organizations/{organization}",
-           *        "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simu
-           *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
+           * @param parent Required. Name of parent to list valued resources. Valid formats: `organizations/{organization}`,
+           *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
+           *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -19985,9 +19993,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Name of parent to list valued resources. Valid formats: "organizations/{organization}",
-           *        "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simu
-           *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
+             * @param parent Required. Name of parent to list valued resources. Valid formats: `organizations/{organization}`,
+           *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
+           *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -20067,16 +20075,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
             /**
              * Required. Name of parent to list valued resources. Valid formats:
-             * "organizations/{organization}",
-             * "organizations/{organization}/simulations/{simulation}" "organizations/{organization}
-             * /simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
+             * `organizations/{organization}`,
+             * `organizations/{organization}/simulations/{simulation}` `organizations/{organization}
+             * /simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Name of parent to list valued resources. Valid formats: "organizations/{organization}",
-           "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simulations/{
-           simulation}/attackExposureResults/{attack_exposure_result_v2}"
+            /** Required. Name of parent to list valued resources. Valid formats: `organizations/{organization}`,
+           `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simulations/{
+           simulation}/attackExposureResults/{attack_exposure_result_v2}`
              */
             public java.lang.String getParent() {
               return parent;
@@ -20084,9 +20092,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
             /**
              * Required. Name of parent to list valued resources. Valid formats:
-             * "organizations/{organization}",
-             * "organizations/{organization}/simulations/{simulation}" "organizations/{organization}
-             * /simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
+             * `organizations/{organization}`,
+             * `organizations/{organization}/simulations/{simulation}` `organizations/{organization}
+             * /simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -20126,7 +20134,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
              * fields: * `exposed_score` * `resource_value` * `resource_type` * `resource` *
              * `display_name` Values should be a comma separated list of fields. For example:
              * `exposed_score,resource_value`. The default sorting order is descending. To specify
-             * ascending or descending order for a field, append a " ASC" or a " DESC" suffix,
+             * ascending or descending order for a field, append a ` ASC` or a ` DESC` suffix,
              * respectively; for example: `exposed_score DESC`.
              */
             @com.google.api.client.util.Key
@@ -20135,8 +20143,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             /** Optional. The fields by which to order the valued resources response. Supported fields: *
            `exposed_score` * `resource_value` * `resource_type` * `resource` * `display_name` Values should be
            a comma separated list of fields. For example: `exposed_score,resource_value`. The default sorting
-           order is descending. To specify ascending or descending order for a field, append a " ASC" or a "
-           DESC" suffix, respectively; for example: `exposed_score DESC`.
+           order is descending. To specify ascending or descending order for a field, append a ` ASC` or a `
+           DESC` suffix, respectively; for example: `exposed_score DESC`.
              */
             public java.lang.String getOrderBy() {
               return orderBy;
@@ -20147,7 +20155,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
              * fields: * `exposed_score` * `resource_value` * `resource_type` * `resource` *
              * `display_name` Values should be a comma separated list of fields. For example:
              * `exposed_score,resource_value`. The default sorting order is descending. To specify
-             * ascending or descending order for a field, append a " ASC" or a " DESC" suffix,
+             * ascending or descending order for a field, append a ` ASC` or a ` DESC` suffix,
              * respectively; for example: `exposed_score DESC`.
              */
             public List setOrderBy(java.lang.String orderBy) {
@@ -20239,10 +20247,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of parent to list attack paths. Valid formats: "organizations/{organization}",
-         *        "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simu
-         *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
-         *        "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+         * @param parent Required. Name of parent to list attack paths. Valid formats: `organizations/{organization}`,
+         *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
+         *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+         *        `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -20268,10 +20276,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of parent to list attack paths. Valid formats: "organizations/{organization}",
-         *        "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simu
-         *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
-         *        "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+           * @param parent Required. Name of parent to list attack paths. Valid formats: `organizations/{organization}`,
+         *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
+         *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+         *        `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -20351,18 +20359,18 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of parent to list attack paths. Valid formats:
-           * "organizations/{organization}", "organizations/{organization}/simulations/{simulation}"
-           * "organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_ex
-           * posure_result_v2}" "organizations/{organization}/simulations/{simulation}/valuedResourc
-           * es/{valued_resource}"
+           * `organizations/{organization}`, `organizations/{organization}/simulations/{simulation}`
+           * `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_ex
+           * posure_result_v2}` `organizations/{organization}/simulations/{simulation}/valuedResourc
+           * es/{valued_resource}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of parent to list attack paths. Valid formats: "organizations/{organization}",
-         "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simulations/{
-         simulation}/attackExposureResults/{attack_exposure_result_v2}"
-         "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+          /** Required. Name of parent to list attack paths. Valid formats: `organizations/{organization}`,
+         `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simulations/{
+         simulation}/attackExposureResults/{attack_exposure_result_v2}`
+         `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
            */
           public java.lang.String getParent() {
             return parent;
@@ -20370,10 +20378,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of parent to list attack paths. Valid formats:
-           * "organizations/{organization}", "organizations/{organization}/simulations/{simulation}"
-           * "organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_ex
-           * posure_result_v2}" "organizations/{organization}/simulations/{simulation}/valuedResourc
-           * es/{valued_resource}"
+           * `organizations/{organization}`, `organizations/{organization}/simulations/{simulation}`
+           * `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_ex
+           * posure_result_v2}` `organizations/{organization}/simulations/{simulation}/valuedResourc
+           * es/{valued_resource}`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -20492,7 +20500,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. The name of this valued resource Valid format:
-         *        "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+         *        `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -20519,7 +20527,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The name of this valued resource Valid format:
-         *        "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+         *        `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -20598,22 +20606,22 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Required. The name of this valued resource Valid format: "organizations/{organization}/
-           * simulations/{simulation}/valuedResources/{valued_resource}"
+           * Required. The name of this valued resource Valid format: `organizations/{organization}/
+           * simulations/{simulation}/valuedResources/{valued_resource}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The name of this valued resource Valid format:
-         "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+         `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The name of this valued resource Valid format: "organizations/{organization}/
-           * simulations/{simulation}/valuedResources/{valued_resource}"
+           * Required. The name of this valued resource Valid format: `organizations/{organization}/
+           * simulations/{simulation}/valuedResources/{valued_resource}`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -20638,9 +20646,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of parent to list valued resources. Valid formats: "organizations/{organization}",
-         *        "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simu
-         *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
+         * @param parent Required. Name of parent to list valued resources. Valid formats: `organizations/{organization}`,
+         *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
+         *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -20666,9 +20674,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of parent to list valued resources. Valid formats: "organizations/{organization}",
-         *        "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simu
-         *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
+           * @param parent Required. Name of parent to list valued resources. Valid formats: `organizations/{organization}`,
+         *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
+         *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -20748,16 +20756,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of parent to list valued resources. Valid formats:
-           * "organizations/{organization}", "organizations/{organization}/simulations/{simulation}"
-           * "organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_ex
-           * posure_result_v2}"
+           * `organizations/{organization}`, `organizations/{organization}/simulations/{simulation}`
+           * `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_ex
+           * posure_result_v2}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of parent to list valued resources. Valid formats: "organizations/{organization}",
-         "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simulations/{
-         simulation}/attackExposureResults/{attack_exposure_result_v2}"
+          /** Required. Name of parent to list valued resources. Valid formats: `organizations/{organization}`,
+         `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simulations/{
+         simulation}/attackExposureResults/{attack_exposure_result_v2}`
            */
           public java.lang.String getParent() {
             return parent;
@@ -20765,9 +20773,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of parent to list valued resources. Valid formats:
-           * "organizations/{organization}", "organizations/{organization}/simulations/{simulation}"
-           * "organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_ex
-           * posure_result_v2}"
+           * `organizations/{organization}`, `organizations/{organization}/simulations/{simulation}`
+           * `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_ex
+           * posure_result_v2}`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -20807,7 +20815,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * * `exposed_score` * `resource_value` * `resource_type` * `resource` * `display_name`
            * Values should be a comma separated list of fields. For example:
            * `exposed_score,resource_value`. The default sorting order is descending. To specify
-           * ascending or descending order for a field, append a " ASC" or a " DESC" suffix,
+           * ascending or descending order for a field, append a ` ASC` or a ` DESC` suffix,
            * respectively; for example: `exposed_score DESC`.
            */
           @com.google.api.client.util.Key
@@ -20816,8 +20824,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /** Optional. The fields by which to order the valued resources response. Supported fields: *
          `exposed_score` * `resource_value` * `resource_type` * `resource` * `display_name` Values should be
          a comma separated list of fields. For example: `exposed_score,resource_value`. The default sorting
-         order is descending. To specify ascending or descending order for a field, append a " ASC" or a "
-         DESC" suffix, respectively; for example: `exposed_score DESC`.
+         order is descending. To specify ascending or descending order for a field, append a ` ASC` or a `
+         DESC` suffix, respectively; for example: `exposed_score DESC`.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -20828,7 +20836,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * * `exposed_score` * `resource_value` * `resource_type` * `resource` * `display_name`
            * Values should be a comma separated list of fields. For example:
            * `exposed_score,resource_value`. The default sorting order is descending. To specify
-           * ascending or descending order for a field, append a " ASC" or a " DESC" suffix,
+           * ascending or descending order for a field, append a ` ASC` or a ` DESC` suffix,
            * respectively; for example: `exposed_score DESC`.
            */
           public List setOrderBy(java.lang.String orderBy) {
@@ -20918,10 +20926,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * This request holds the parameters needed by the securitycenter server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Name of parent to list attack paths. Valid formats: "organizations/{organization}",
-           *        "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simu
-           *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
-           *        "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+           * @param parent Required. Name of parent to list attack paths. Valid formats: `organizations/{organization}`,
+           *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
+           *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+           *        `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -20947,10 +20955,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Name of parent to list attack paths. Valid formats: "organizations/{organization}",
-           *        "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simu
-           *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
-           *        "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+             * @param parent Required. Name of parent to list attack paths. Valid formats: `organizations/{organization}`,
+           *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
+           *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+           *        `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -21030,18 +21038,18 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
             /**
              * Required. Name of parent to list attack paths. Valid formats:
-             * "organizations/{organization}",
-             * "organizations/{organization}/simulations/{simulation}" "organizations/{organization}
-             * /simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}" "organiz
-             * ations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+             * `organizations/{organization}`,
+             * `organizations/{organization}/simulations/{simulation}` `organizations/{organization}
+             * /simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}` `organiz
+             * ations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Name of parent to list attack paths. Valid formats: "organizations/{organization}",
-           "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simulations/{
-           simulation}/attackExposureResults/{attack_exposure_result_v2}"
-           "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+            /** Required. Name of parent to list attack paths. Valid formats: `organizations/{organization}`,
+           `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simulations/{
+           simulation}/attackExposureResults/{attack_exposure_result_v2}`
+           `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
              */
             public java.lang.String getParent() {
               return parent;
@@ -21049,10 +21057,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
             /**
              * Required. Name of parent to list attack paths. Valid formats:
-             * "organizations/{organization}",
-             * "organizations/{organization}/simulations/{simulation}" "organizations/{organization}
-             * /simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}" "organiz
-             * ations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+             * `organizations/{organization}`,
+             * `organizations/{organization}/simulations/{simulation}` `organizations/{organization}
+             * /simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}` `organiz
+             * ations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -21173,7 +21181,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Resource name of the new source's parent. Its format should be
-       *        "organizations/[organization_id]".
+       *        `organizations/[organization_id]`.
        * @param content the {@link com.google.api.services.securitycenter.v1.model.Source}
        * @return the request
        */
@@ -21202,7 +21210,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Resource name of the new source's parent. Its format should be
-       *        "organizations/[organization_id]".
+       *        `organizations/[organization_id]`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.Source}
          * @since 1.13
          */
@@ -21273,13 +21281,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the new source's parent. Its format should be
-         * "organizations/[organization_id]".
+         * `organizations/[organization_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Resource name of the new source's parent. Its format should be
-       "organizations/[organization_id]".
+       `organizations/[organization_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -21287,7 +21295,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the new source's parent. Its format should be
-         * "organizations/[organization_id]".
+         * `organizations/[organization_id]`.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -21313,7 +21321,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. Relative resource name of the source. Its format is
-       *        "organizations/[organization_id]/source/[source_id]".
+       *        `organizations/[organization_id]/source/[source_id]`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -21340,7 +21348,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Relative resource name of the source. Its format is
-       *        "organizations/[organization_id]/source/[source_id]".
+       *        `organizations/[organization_id]/source/[source_id]`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -21420,13 +21428,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Relative resource name of the source. Its format is
-         * "organizations/[organization_id]/source/[source_id]".
+         * `organizations/[organization_id]/source/[source_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Relative resource name of the source. Its format is
-       "organizations/[organization_id]/source/[source_id]".
+       `organizations/[organization_id]/source/[source_id]`.
          */
         public java.lang.String getName() {
           return name;
@@ -21434,7 +21442,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Relative resource name of the source. Its format is
-         * "organizations/[organization_id]/source/[source_id]".
+         * `organizations/[organization_id]/source/[source_id]`.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -21606,7 +21614,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -21633,7 +21641,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -21713,13 +21721,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent of sources to list. Its format should be
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Resource name of the parent of sources to list. Its format should be
-       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -21727,7 +21735,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent of sources to list. Its format should be
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -22282,7 +22290,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Resource name of the new finding's parent. Its format should be
-         *        "organizations/[organization_id]/sources/[source_id]".
+         *        `organizations/[organization_id]/sources/[source_id]`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.Finding}
          * @return the request
          */
@@ -22311,7 +22319,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Resource name of the new finding's parent. Its format should be
-         *        "organizations/[organization_id]/sources/[source_id]".
+         *        `organizations/[organization_id]/sources/[source_id]`.
            * @param content the {@link com.google.api.services.securitycenter.v1.model.Finding}
            * @since 1.13
            */
@@ -22382,13 +22390,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Resource name of the new finding's parent. Its format should be
-           * "organizations/[organization_id]/sources/[source_id]".
+           * `organizations/[organization_id]/sources/[source_id]`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Resource name of the new finding's parent. Its format should be
-         "organizations/[organization_id]/sources/[source_id]".
+         `organizations/[organization_id]/sources/[source_id]`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -22396,7 +22404,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Resource name of the new finding's parent. Its format should be
-           * "organizations/[organization_id]/sources/[source_id]".
+           * `organizations/[organization_id]/sources/[source_id]`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -22450,11 +22458,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Name of the source to groupBy. Its format is
-         *        "organizations/[organization_id]/sources/[source_id]",
-         *        folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]. To
-         *        groupBy across all sources provide a source_id of `-`. For example:
-         *        organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
-         *        projects/{project_id}/sources/-
+         *        `organizations/[organization_id]/sources/[source_id]`,
+         *        `folders/[folder_id]/sources/[source_id]`, or `projects/[project_id]/sources/[source_id]`.
+         *        To groupBy across all sources provide a source_id of `-`. For example:
+         *        `organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-`, or
+         *        `projects/{project_id}/sources/-`
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupFindingsRequest}
          * @return the request
          */
@@ -22486,11 +22494,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Name of the source to groupBy. Its format is
-         *        "organizations/[organization_id]/sources/[source_id]",
-         *        folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]. To
-         *        groupBy across all sources provide a source_id of `-`. For example:
-         *        organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
-         *        projects/{project_id}/sources/-
+         *        `organizations/[organization_id]/sources/[source_id]`,
+         *        `folders/[folder_id]/sources/[source_id]`, or `projects/[project_id]/sources/[source_id]`.
+         *        To groupBy across all sources provide a source_id of `-`. For example:
+         *        `organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-`, or
+         *        `projects/{project_id}/sources/-`
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupFindingsRequest}
            * @since 1.13
            */
@@ -22561,20 +22569,20 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the source to groupBy. Its format is
-           * "organizations/[organization_id]/sources/[source_id]",
-           * folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id].
-           * To groupBy across all sources provide a source_id of `-`. For example:
-           * organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
-           * projects/{project_id}/sources/-
+           * `organizations/[organization_id]/sources/[source_id]`,
+           * `folders/[folder_id]/sources/[source_id]`, or
+           * `projects/[project_id]/sources/[source_id]`. To groupBy across all sources provide a
+           * source_id of `-`. For example: `organizations/{organization_id}/sources/-,
+           * folders/{folder_id}/sources/-`, or `projects/{project_id}/sources/-`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of the source to groupBy. Its format is
-         "organizations/[organization_id]/sources/[source_id]", folders/[folder_id]/sources/[source_id], or
-         projects/[project_id]/sources/[source_id]. To groupBy across all sources provide a source_id of
-         `-`. For example: organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
-         projects/{project_id}/sources/-
+         `organizations/[organization_id]/sources/[source_id]`, `folders/[folder_id]/sources/[source_id]`,
+         or `projects/[project_id]/sources/[source_id]`. To groupBy across all sources provide a source_id
+         of `-`. For example: `organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-`, or
+         `projects/{project_id}/sources/-`
            */
           public java.lang.String getParent() {
             return parent;
@@ -22582,11 +22590,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the source to groupBy. Its format is
-           * "organizations/[organization_id]/sources/[source_id]",
-           * folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id].
-           * To groupBy across all sources provide a source_id of `-`. For example:
-           * organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
-           * projects/{project_id}/sources/-
+           * `organizations/[organization_id]/sources/[source_id]`,
+           * `folders/[folder_id]/sources/[source_id]`, or
+           * `projects/[project_id]/sources/[source_id]`. To groupBy across all sources provide a
+           * source_id of `-`. For example: `organizations/{organization_id}/sources/-,
+           * folders/{folder_id}/sources/-`, or `projects/{project_id}/sources/-`
            */
           public Group setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -22613,11 +22621,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Name of the source the findings belong to. Its format is
-         *        "organizations/[organization_id]/sources/[source_id],
-         *        folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]". To
-         *        list across all sources provide a source_id of `-`. For example:
-         *        organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
-         *        projects/{projects_id}/sources/-
+         *        `organizations/[organization_id]/sources/[source_id]`,
+         *        `folders/[folder_id]/sources/[source_id]`, or `projects/[project_id]/sources/[source_id]`.
+         *        To list across all sources provide a source_id of `-`. For example:
+         *        `organizations/{organization_id}/sources/-`, `folders/{folder_id}/sources/-` or
+         *        `projects/{projects_id}/sources/-`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -22645,11 +22653,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Name of the source the findings belong to. Its format is
-         *        "organizations/[organization_id]/sources/[source_id],
-         *        folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]". To
-         *        list across all sources provide a source_id of `-`. For example:
-         *        organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
-         *        projects/{projects_id}/sources/-
+         *        `organizations/[organization_id]/sources/[source_id]`,
+         *        `folders/[folder_id]/sources/[source_id]`, or `projects/[project_id]/sources/[source_id]`.
+         *        To list across all sources provide a source_id of `-`. For example:
+         *        `organizations/{organization_id}/sources/-`, `folders/{folder_id}/sources/-` or
+         *        `projects/{projects_id}/sources/-`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -22729,20 +22737,20 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the source the findings belong to. Its format is
-           * "organizations/[organization_id]/sources/[source_id],
-           * folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]".
-           * To list across all sources provide a source_id of `-`. For example:
-           * organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
-           * projects/{projects_id}/sources/-
+           * `organizations/[organization_id]/sources/[source_id]`,
+           * `folders/[folder_id]/sources/[source_id]`, or
+           * `projects/[project_id]/sources/[source_id]`. To list across all sources provide a
+           * source_id of `-`. For example: `organizations/{organization_id}/sources/-`,
+           * `folders/{folder_id}/sources/-` or `projects/{projects_id}/sources/-`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of the source the findings belong to. Its format is
-         "organizations/[organization_id]/sources/[source_id], folders/[folder_id]/sources/[source_id], or
-         projects/[project_id]/sources/[source_id]". To list across all sources provide a source_id of `-`.
-         For example: organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
-         projects/{projects_id}/sources/-
+         `organizations/[organization_id]/sources/[source_id]`, `folders/[folder_id]/sources/[source_id]`,
+         or `projects/[project_id]/sources/[source_id]`. To list across all sources provide a source_id of
+         `-`. For example: `organizations/{organization_id}/sources/-`, `folders/{folder_id}/sources/-` or
+         `projects/{projects_id}/sources/-`
            */
           public java.lang.String getParent() {
             return parent;
@@ -22750,11 +22758,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the source the findings belong to. Its format is
-           * "organizations/[organization_id]/sources/[source_id],
-           * folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]".
-           * To list across all sources provide a source_id of `-`. For example:
-           * organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
-           * projects/{projects_id}/sources/-
+           * `organizations/[organization_id]/sources/[source_id]`,
+           * `folders/[folder_id]/sources/[source_id]`, or
+           * `projects/[project_id]/sources/[source_id]`. To list across all sources provide a
+           * source_id of `-`. For example: `organizations/{organization_id}/sources/-`,
+           * `folders/{folder_id}/sources/-` or `projects/{projects_id}/sources/-`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -23261,9 +23269,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * @param name Required. The [relative resource
          *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
          *        finding. Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+         *        `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+         *        `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+         *        `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetMuteRequest}
          * @return the request
          */
@@ -23294,9 +23302,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * @param name Required. The [relative resource
          *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
          *        finding. Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+         *        `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+         *        `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+         *        `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SetMuteRequest}
            * @since 1.13
            */
@@ -23369,18 +23377,18 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Required. The [relative resource
            * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
            * the finding. Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+           * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+           * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+           * `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The [relative resource
          name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
-         Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+         Example: `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+         `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+         `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
            */
           public java.lang.String getName() {
             return name;
@@ -23390,9 +23398,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Required. The [relative resource
            * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
            * the finding. Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+           * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+           * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+           * `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
            */
           public SetMute setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -23420,9 +23428,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * @param name Required. The [relative resource
          *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
          *        finding. Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+         *        `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+         *        `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+         *        `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
          * @return the request
          */
@@ -23453,9 +23461,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * @param name Required. The [relative resource
          *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
          *        finding. Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+         *        `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+         *        `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+         *        `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
            * @since 1.13
            */
@@ -23528,18 +23536,18 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Required. The [relative resource
            * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
            * the finding. Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+           * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+           * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+           * `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The [relative resource
          name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
-         Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+         Example: `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+         `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+         `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
            */
           public java.lang.String getName() {
             return name;
@@ -23549,9 +23557,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Required. The [relative resource
            * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
            * the finding. Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+           * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+           * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+           * `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
            */
           public SetState setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -24020,7 +24028,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The name of the parent to group the assets by. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
        * @return the request
        */
@@ -24049,7 +24057,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The name of the parent to group the assets by. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
          * @since 1.13
          */
@@ -24120,13 +24128,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The name of the parent to group the assets by. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The name of the parent to group the assets by. Its format is
-       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -24134,7 +24142,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The name of the parent to group the assets by. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public Group setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -24161,8 +24169,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        *
        * @param parent Required. The name of the parent resource that contains the assets. The value that you can specify
        *        on parent depends on the method in which you specify parent. You can specify one of the
-       *        following values: "organizations/[organization_id]", "folders/[folder_id]", or
-       *        "projects/[project_id]".
+       *        following values: `organizations/[organization_id]`, `folders/[folder_id]`, or
+       *        `projects/[project_id]`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -24190,8 +24198,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * @param parent Required. The name of the parent resource that contains the assets. The value that you can specify
        *        on parent depends on the method in which you specify parent. You can specify one of the
-       *        following values: "organizations/[organization_id]", "folders/[folder_id]", or
-       *        "projects/[project_id]".
+       *        following values: `organizations/[organization_id]`, `folders/[folder_id]`, or
+       *        `projects/[project_id]`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -24272,15 +24280,15 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * Required. The name of the parent resource that contains the assets. The value that you
          * can specify on parent depends on the method in which you specify parent. You can specify
-         * one of the following values: "organizations/[organization_id]", "folders/[folder_id]", or
-         * "projects/[project_id]".
+         * one of the following values: `organizations/[organization_id]`, `folders/[folder_id]`, or
+         * `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The name of the parent resource that contains the assets. The value that you can specify
        on parent depends on the method in which you specify parent. You can specify one of the following
-       values: "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       values: `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -24289,8 +24297,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * Required. The name of the parent resource that contains the assets. The value that you
          * can specify on parent depends on the method in which you specify parent. You can specify
-         * one of the following values: "organizations/[organization_id]", "folders/[folder_id]", or
-         * "projects/[project_id]".
+         * one of the following values: `organizations/[organization_id]`, `folders/[folder_id]`, or
+         * `projects/[project_id]`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -24850,7 +24858,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The name of the parent resource of the new BigQuery export. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
        * @return the request
        */
@@ -24879,7 +24887,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The name of the parent resource of the new BigQuery export. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
          * @since 1.13
          */
@@ -24950,13 +24958,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The name of the parent resource of the new BigQuery export. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The name of the parent resource of the new BigQuery export. Its format is
-       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -24964,7 +24972,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The name of the parent resource of the new BigQuery export. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -25016,9 +25024,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the BigQuery export to delete. Its format is
-       *        organizations/{organization}/bigQueryExports/{export_id},
-       *        folders/{folder}/bigQueryExports/{export_id}, or
-       *        projects/{project}/bigQueryExports/{export_id}
+       *        `organizations/{organization}/bigQueryExports/{export_id}`,
+       *        `folders/{folder}/bigQueryExports/{export_id}`, or
+       *        `projects/{project}/bigQueryExports/{export_id}`
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -25046,9 +25054,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The name of the BigQuery export to delete. Its format is
-       *        organizations/{organization}/bigQueryExports/{export_id},
-       *        folders/{folder}/bigQueryExports/{export_id}, or
-       *        projects/{project}/bigQueryExports/{export_id}
+       *        `organizations/{organization}/bigQueryExports/{export_id}`,
+       *        `folders/{folder}/bigQueryExports/{export_id}`, or
+       *        `projects/{project}/bigQueryExports/{export_id}`
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -25118,16 +25126,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The name of the BigQuery export to delete. Its format is
-         * organizations/{organization}/bigQueryExports/{export_id},
-         * folders/{folder}/bigQueryExports/{export_id}, or
-         * projects/{project}/bigQueryExports/{export_id}
+         * `organizations/{organization}/bigQueryExports/{export_id}`,
+         * `folders/{folder}/bigQueryExports/{export_id}`, or
+         * `projects/{project}/bigQueryExports/{export_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the BigQuery export to delete. Its format is
-       organizations/{organization}/bigQueryExports/{export_id},
-       folders/{folder}/bigQueryExports/{export_id}, or projects/{project}/bigQueryExports/{export_id}
+       `organizations/{organization}/bigQueryExports/{export_id}`,
+       `folders/{folder}/bigQueryExports/{export_id}`, or `projects/{project}/bigQueryExports/{export_id}`
          */
         public java.lang.String getName() {
           return name;
@@ -25135,9 +25143,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The name of the BigQuery export to delete. Its format is
-         * organizations/{organization}/bigQueryExports/{export_id},
-         * folders/{folder}/bigQueryExports/{export_id}, or
-         * projects/{project}/bigQueryExports/{export_id}
+         * `organizations/{organization}/bigQueryExports/{export_id}`,
+         * `folders/{folder}/bigQueryExports/{export_id}`, or
+         * `projects/{project}/bigQueryExports/{export_id}`
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -25163,9 +25171,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. Name of the BigQuery export to retrieve. Its format is
-       *        organizations/{organization}/bigQueryExports/{export_id},
-       *        folders/{folder}/bigQueryExports/{export_id}, or
-       *        projects/{project}/bigQueryExports/{export_id}
+       *        `organizations/{organization}/bigQueryExports/{export_id}`,
+       *        `folders/{folder}/bigQueryExports/{export_id}`, or
+       *        `projects/{project}/bigQueryExports/{export_id}`
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -25192,9 +25200,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Name of the BigQuery export to retrieve. Its format is
-       *        organizations/{organization}/bigQueryExports/{export_id},
-       *        folders/{folder}/bigQueryExports/{export_id}, or
-       *        projects/{project}/bigQueryExports/{export_id}
+       *        `organizations/{organization}/bigQueryExports/{export_id}`,
+       *        `folders/{folder}/bigQueryExports/{export_id}`, or
+       *        `projects/{project}/bigQueryExports/{export_id}`
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -25274,16 +25282,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the BigQuery export to retrieve. Its format is
-         * organizations/{organization}/bigQueryExports/{export_id},
-         * folders/{folder}/bigQueryExports/{export_id}, or
-         * projects/{project}/bigQueryExports/{export_id}
+         * `organizations/{organization}/bigQueryExports/{export_id}`,
+         * `folders/{folder}/bigQueryExports/{export_id}`, or
+         * `projects/{project}/bigQueryExports/{export_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the BigQuery export to retrieve. Its format is
-       organizations/{organization}/bigQueryExports/{export_id},
-       folders/{folder}/bigQueryExports/{export_id}, or projects/{project}/bigQueryExports/{export_id}
+       `organizations/{organization}/bigQueryExports/{export_id}`,
+       `folders/{folder}/bigQueryExports/{export_id}`, or `projects/{project}/bigQueryExports/{export_id}`
          */
         public java.lang.String getName() {
           return name;
@@ -25291,9 +25299,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the BigQuery export to retrieve. Its format is
-         * organizations/{organization}/bigQueryExports/{export_id},
-         * folders/{folder}/bigQueryExports/{export_id}, or
-         * projects/{project}/bigQueryExports/{export_id}
+         * `organizations/{organization}/bigQueryExports/{export_id}`,
+         * `folders/{folder}/bigQueryExports/{export_id}`, or
+         * `projects/{project}/bigQueryExports/{export_id}`
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -25322,7 +25330,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The parent, which owns the collection of BigQuery exports. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -25352,7 +25360,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The parent, which owns the collection of BigQuery exports. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -25432,13 +25440,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The parent, which owns the collection of BigQuery exports. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The parent, which owns the collection of BigQuery exports. Its format is
-       "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -25446,7 +25454,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The parent, which owns the collection of BigQuery exports. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -26791,9 +26799,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
          * @return the request
          */
@@ -26826,9 +26834,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
            * @since 1.13
            */
@@ -26900,17 +26908,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Immutable. The resource name of the Event Threat Detection custom module. Its format
            * is: *
-           * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-           * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-           * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
-         "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           public java.lang.String getName() {
             return name;
@@ -26919,9 +26927,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Immutable. The resource name of the Event Threat Detection custom module. Its format
            * is: *
-           * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-           * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-           * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -27384,7 +27392,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link BulkMute#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The parent, at which bulk action needs to be applied. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
        * @param content the {@link com.google.api.services.securitycenter.v1.model.BulkMuteFindingsRequest}
        * @return the request
        */
@@ -27415,7 +27423,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The parent, at which bulk action needs to be applied. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.BulkMuteFindingsRequest}
          * @since 1.13
          */
@@ -27486,13 +27494,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The parent, at which bulk action needs to be applied. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The parent, at which bulk action needs to be applied. Its format is
-       "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -27500,7 +27508,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The parent, at which bulk action needs to be applied. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         public BulkMute setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -27568,7 +27576,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Resource name of the new mute configs's parent. Its format is
-         *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
          * @return the request
          */
@@ -27597,7 +27605,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Resource name of the new mute configs's parent. Its format is
-         *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
            * @since 1.13
            */
@@ -27668,13 +27676,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Resource name of the new mute configs's parent. Its format is
-           * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+           * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Resource name of the new mute configs's parent. Its format is
-         "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -27682,7 +27690,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Resource name of the new mute configs's parent. Its format is
-           * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+           * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -27734,11 +27742,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the mute config to delete. Its format is
-         *        organizations/{organization}/muteConfigs/{config_id},
-         *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-         *        organizations/{organization}/locations/global/muteConfigs/{config_id},
-         *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         *        projects/{project}/locations/global/muteConfigs/{config_id}.
+         *        `organizations/{organization}/muteConfigs/{config_id}`,
+         *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+         *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -27766,11 +27774,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the mute config to delete. Its format is
-         *        organizations/{organization}/muteConfigs/{config_id},
-         *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-         *        organizations/{organization}/locations/global/muteConfigs/{config_id},
-         *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         *        projects/{project}/locations/global/muteConfigs/{config_id}.
+         *        `organizations/{organization}/muteConfigs/{config_id}`,
+         *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+         *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -27840,21 +27848,22 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the mute config to delete. Its format is
-           * organizations/{organization}/muteConfigs/{config_id},
-           * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-           * organizations/{organization}/locations/global/muteConfigs/{config_id},
-           * folders/{folder}/locations/global/muteConfigs/{config_id}, or
-           * projects/{project}/locations/global/muteConfigs/{config_id}.
+           * `organizations/{organization}/muteConfigs/{config_id}`,
+           * `folders/{folder}/muteConfigs/{config_id}`,
+           * `projects/{project}/muteConfigs/{config_id}`,
+           * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+           * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+           * `projects/{project}/locations/global/muteConfigs/{config_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the mute config to delete. Its format is
-         organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id},
-         projects/{project}/muteConfigs/{config_id},
-         organizations/{organization}/locations/global/muteConfigs/{config_id},
-         folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         projects/{project}/locations/global/muteConfigs/{config_id}.
+         `organizations/{organization}/muteConfigs/{config_id}`, `folders/{folder}/muteConfigs/{config_id}`,
+         `projects/{project}/muteConfigs/{config_id}`,
+         `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         `projects/{project}/locations/global/muteConfigs/{config_id}`.
            */
           public java.lang.String getName() {
             return name;
@@ -27862,11 +27871,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the mute config to delete. Its format is
-           * organizations/{organization}/muteConfigs/{config_id},
-           * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-           * organizations/{organization}/locations/global/muteConfigs/{config_id},
-           * folders/{folder}/locations/global/muteConfigs/{config_id}, or
-           * projects/{project}/locations/global/muteConfigs/{config_id}.
+           * `organizations/{organization}/muteConfigs/{config_id}`,
+           * `folders/{folder}/muteConfigs/{config_id}`,
+           * `projects/{project}/muteConfigs/{config_id}`,
+           * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+           * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+           * `projects/{project}/locations/global/muteConfigs/{config_id}`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -27892,11 +27902,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the mute config to retrieve. Its format is
-         *        organizations/{organization}/muteConfigs/{config_id},
-         *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-         *        organizations/{organization}/locations/global/muteConfigs/{config_id},
-         *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         *        projects/{project}/locations/global/muteConfigs/{config_id}.
+         *        `organizations/{organization}/muteConfigs/{config_id}`,
+         *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+         *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -27923,11 +27933,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the mute config to retrieve. Its format is
-         *        organizations/{organization}/muteConfigs/{config_id},
-         *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-         *        organizations/{organization}/locations/global/muteConfigs/{config_id},
-         *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         *        projects/{project}/locations/global/muteConfigs/{config_id}.
+         *        `organizations/{organization}/muteConfigs/{config_id}`,
+         *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+         *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -28007,21 +28017,22 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the mute config to retrieve. Its format is
-           * organizations/{organization}/muteConfigs/{config_id},
-           * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-           * organizations/{organization}/locations/global/muteConfigs/{config_id},
-           * folders/{folder}/locations/global/muteConfigs/{config_id}, or
-           * projects/{project}/locations/global/muteConfigs/{config_id}.
+           * `organizations/{organization}/muteConfigs/{config_id}`,
+           * `folders/{folder}/muteConfigs/{config_id}`,
+           * `projects/{project}/muteConfigs/{config_id}`,
+           * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+           * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+           * `projects/{project}/locations/global/muteConfigs/{config_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the mute config to retrieve. Its format is
-         organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id},
-         projects/{project}/muteConfigs/{config_id},
-         organizations/{organization}/locations/global/muteConfigs/{config_id},
-         folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         projects/{project}/locations/global/muteConfigs/{config_id}.
+         `organizations/{organization}/muteConfigs/{config_id}`, `folders/{folder}/muteConfigs/{config_id}`,
+         `projects/{project}/muteConfigs/{config_id}`,
+         `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         `projects/{project}/locations/global/muteConfigs/{config_id}`.
            */
           public java.lang.String getName() {
             return name;
@@ -28029,11 +28040,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the mute config to retrieve. Its format is
-           * organizations/{organization}/muteConfigs/{config_id},
-           * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-           * organizations/{organization}/locations/global/muteConfigs/{config_id},
-           * folders/{folder}/locations/global/muteConfigs/{config_id}, or
-           * projects/{project}/locations/global/muteConfigs/{config_id}.
+           * `organizations/{organization}/muteConfigs/{config_id}`,
+           * `folders/{folder}/muteConfigs/{config_id}`,
+           * `projects/{project}/muteConfigs/{config_id}`,
+           * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+           * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+           * `projects/{project}/locations/global/muteConfigs/{config_id}`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -28059,7 +28071,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent, which owns the collection of mute configs. Its format is
-         *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -28086,7 +28098,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent, which owns the collection of mute configs. Its format is
-         *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -28166,13 +28178,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. The parent, which owns the collection of mute configs. Its format is
-           * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+           * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent, which owns the collection of mute configs. Its format is
-         "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -28180,7 +28192,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. The parent, which owns the collection of mute configs. Its format is
-           * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+           * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -28258,12 +28270,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name This field will be ignored if provided on config creation. Format
-         *        "organizations/{organization}/muteConfigs/{mute_config}"
-         *        "folders/{folder}/muteConfigs/{mute_config}"
-         *        "projects/{project}/muteConfigs/{mute_config}"
-         *        "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-         *        "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-         *        "projects/{project}/locations/global/muteConfigs/{mute_config}"
+         *        `organizations/{organization}/muteConfigs/{mute_config}`
+         *        `folders/{folder}/muteConfigs/{mute_config}`
+         *        `projects/{project}/muteConfigs/{mute_config}`
+         *        `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+         *        `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+         *        `projects/{project}/locations/global/muteConfigs/{mute_config}`
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
          * @return the request
          */
@@ -28292,12 +28304,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name This field will be ignored if provided on config creation. Format
-         *        "organizations/{organization}/muteConfigs/{mute_config}"
-         *        "folders/{folder}/muteConfigs/{mute_config}"
-         *        "projects/{project}/muteConfigs/{mute_config}"
-         *        "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-         *        "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-         *        "projects/{project}/locations/global/muteConfigs/{mute_config}"
+         *        `organizations/{organization}/muteConfigs/{mute_config}`
+         *        `folders/{folder}/muteConfigs/{mute_config}`
+         *        `projects/{project}/muteConfigs/{mute_config}`
+         *        `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+         *        `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+         *        `projects/{project}/locations/global/muteConfigs/{mute_config}`
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
            * @since 1.13
            */
@@ -28368,22 +28380,22 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * This field will be ignored if provided on config creation. Format
-           * "organizations/{organization}/muteConfigs/{mute_config}"
-           * "folders/{folder}/muteConfigs/{mute_config}"
-           * "projects/{project}/muteConfigs/{mute_config}"
-           * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-           * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-           * "projects/{project}/locations/global/muteConfigs/{mute_config}"
+           * `organizations/{organization}/muteConfigs/{mute_config}`
+           * `folders/{folder}/muteConfigs/{mute_config}`
+           * `projects/{project}/muteConfigs/{mute_config}`
+           * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+           * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+           * `projects/{project}/locations/global/muteConfigs/{mute_config}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** This field will be ignored if provided on config creation. Format
-         "organizations/{organization}/muteConfigs/{mute_config}"
-         "folders/{folder}/muteConfigs/{mute_config}" "projects/{project}/muteConfigs/{mute_config}"
-         "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-         "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-         "projects/{project}/locations/global/muteConfigs/{mute_config}"
+         `organizations/{organization}/muteConfigs/{mute_config}`
+         `folders/{folder}/muteConfigs/{mute_config}` `projects/{project}/muteConfigs/{mute_config}`
+         `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+         `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+         `projects/{project}/locations/global/muteConfigs/{mute_config}`
            */
           public java.lang.String getName() {
             return name;
@@ -28391,12 +28403,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * This field will be ignored if provided on config creation. Format
-           * "organizations/{organization}/muteConfigs/{mute_config}"
-           * "folders/{folder}/muteConfigs/{mute_config}"
-           * "projects/{project}/muteConfigs/{mute_config}"
-           * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-           * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-           * "projects/{project}/locations/global/muteConfigs/{mute_config}"
+           * `organizations/{organization}/muteConfigs/{mute_config}`
+           * `folders/{folder}/muteConfigs/{mute_config}`
+           * `projects/{project}/muteConfigs/{mute_config}`
+           * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+           * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+           * `projects/{project}/locations/global/muteConfigs/{mute_config}`
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -28461,7 +28473,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Resource name of the new mute configs's parent. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
        * @return the request
        */
@@ -28490,7 +28502,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Resource name of the new mute configs's parent. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
          * @since 1.13
          */
@@ -28561,13 +28573,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the new mute configs's parent. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Resource name of the new mute configs's parent. Its format is
-       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -28575,7 +28587,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the new mute configs's parent. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -28627,11 +28639,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. Name of the mute config to delete. Its format is
-       *        organizations/{organization}/muteConfigs/{config_id},
-       *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-       *        organizations/{organization}/locations/global/muteConfigs/{config_id},
-       *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
-       *        projects/{project}/locations/global/muteConfigs/{config_id}.
+       *        `organizations/{organization}/muteConfigs/{config_id}`,
+       *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+       *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+       *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+       *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -28659,11 +28671,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Name of the mute config to delete. Its format is
-       *        organizations/{organization}/muteConfigs/{config_id},
-       *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-       *        organizations/{organization}/locations/global/muteConfigs/{config_id},
-       *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
-       *        projects/{project}/locations/global/muteConfigs/{config_id}.
+       *        `organizations/{organization}/muteConfigs/{config_id}`,
+       *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+       *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+       *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+       *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -28733,21 +28745,21 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the mute config to delete. Its format is
-         * organizations/{organization}/muteConfigs/{config_id},
-         * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-         * organizations/{organization}/locations/global/muteConfigs/{config_id},
-         * folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         * projects/{project}/locations/global/muteConfigs/{config_id}.
+         * `organizations/{organization}/muteConfigs/{config_id}`,
+         * `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+         * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         * `projects/{project}/locations/global/muteConfigs/{config_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the mute config to delete. Its format is
-       organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id},
-       projects/{project}/muteConfigs/{config_id},
-       organizations/{organization}/locations/global/muteConfigs/{config_id},
-       folders/{folder}/locations/global/muteConfigs/{config_id}, or
-       projects/{project}/locations/global/muteConfigs/{config_id}.
+       `organizations/{organization}/muteConfigs/{config_id}`, `folders/{folder}/muteConfigs/{config_id}`,
+       `projects/{project}/muteConfigs/{config_id}`,
+       `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+       `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+       `projects/{project}/locations/global/muteConfigs/{config_id}`.
          */
         public java.lang.String getName() {
           return name;
@@ -28755,11 +28767,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the mute config to delete. Its format is
-         * organizations/{organization}/muteConfigs/{config_id},
-         * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-         * organizations/{organization}/locations/global/muteConfigs/{config_id},
-         * folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         * projects/{project}/locations/global/muteConfigs/{config_id}.
+         * `organizations/{organization}/muteConfigs/{config_id}`,
+         * `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+         * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         * `projects/{project}/locations/global/muteConfigs/{config_id}`.
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -28785,11 +28797,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. Name of the mute config to retrieve. Its format is
-       *        organizations/{organization}/muteConfigs/{config_id},
-       *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-       *        organizations/{organization}/locations/global/muteConfigs/{config_id},
-       *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
-       *        projects/{project}/locations/global/muteConfigs/{config_id}.
+       *        `organizations/{organization}/muteConfigs/{config_id}`,
+       *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+       *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+       *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+       *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -28816,11 +28828,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Name of the mute config to retrieve. Its format is
-       *        organizations/{organization}/muteConfigs/{config_id},
-       *        folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-       *        organizations/{organization}/locations/global/muteConfigs/{config_id},
-       *        folders/{folder}/locations/global/muteConfigs/{config_id}, or
-       *        projects/{project}/locations/global/muteConfigs/{config_id}.
+       *        `organizations/{organization}/muteConfigs/{config_id}`,
+       *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+       *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+       *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+       *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -28900,21 +28912,21 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the mute config to retrieve. Its format is
-         * organizations/{organization}/muteConfigs/{config_id},
-         * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-         * organizations/{organization}/locations/global/muteConfigs/{config_id},
-         * folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         * projects/{project}/locations/global/muteConfigs/{config_id}.
+         * `organizations/{organization}/muteConfigs/{config_id}`,
+         * `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+         * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         * `projects/{project}/locations/global/muteConfigs/{config_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the mute config to retrieve. Its format is
-       organizations/{organization}/muteConfigs/{config_id}, folders/{folder}/muteConfigs/{config_id},
-       projects/{project}/muteConfigs/{config_id},
-       organizations/{organization}/locations/global/muteConfigs/{config_id},
-       folders/{folder}/locations/global/muteConfigs/{config_id}, or
-       projects/{project}/locations/global/muteConfigs/{config_id}.
+       `organizations/{organization}/muteConfigs/{config_id}`, `folders/{folder}/muteConfigs/{config_id}`,
+       `projects/{project}/muteConfigs/{config_id}`,
+       `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+       `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+       `projects/{project}/locations/global/muteConfigs/{config_id}`.
          */
         public java.lang.String getName() {
           return name;
@@ -28922,11 +28934,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the mute config to retrieve. Its format is
-         * organizations/{organization}/muteConfigs/{config_id},
-         * folders/{folder}/muteConfigs/{config_id}, projects/{project}/muteConfigs/{config_id},
-         * organizations/{organization}/locations/global/muteConfigs/{config_id},
-         * folders/{folder}/locations/global/muteConfigs/{config_id}, or
-         * projects/{project}/locations/global/muteConfigs/{config_id}.
+         * `organizations/{organization}/muteConfigs/{config_id}`,
+         * `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
+         * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
+         * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
+         * `projects/{project}/locations/global/muteConfigs/{config_id}`.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -28952,7 +28964,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The parent, which owns the collection of mute configs. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -28979,7 +28991,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The parent, which owns the collection of mute configs. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -29059,13 +29071,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The parent, which owns the collection of mute configs. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The parent, which owns the collection of mute configs. Its format is
-       "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+       `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -29073,7 +29085,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. The parent, which owns the collection of mute configs. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -29151,12 +29163,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param name This field will be ignored if provided on config creation. Format
-       *        "organizations/{organization}/muteConfigs/{mute_config}"
-       *        "folders/{folder}/muteConfigs/{mute_config}"
-       *        "projects/{project}/muteConfigs/{mute_config}"
-       *        "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-       *        "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-       *        "projects/{project}/locations/global/muteConfigs/{mute_config}"
+       *        `organizations/{organization}/muteConfigs/{mute_config}`
+       *        `folders/{folder}/muteConfigs/{mute_config}`
+       *        `projects/{project}/muteConfigs/{mute_config}`
+       *        `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+       *        `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+       *        `projects/{project}/locations/global/muteConfigs/{mute_config}`
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
        * @return the request
        */
@@ -29185,12 +29197,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name This field will be ignored if provided on config creation. Format
-       *        "organizations/{organization}/muteConfigs/{mute_config}"
-       *        "folders/{folder}/muteConfigs/{mute_config}"
-       *        "projects/{project}/muteConfigs/{mute_config}"
-       *        "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-       *        "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-       *        "projects/{project}/locations/global/muteConfigs/{mute_config}"
+       *        `organizations/{organization}/muteConfigs/{mute_config}`
+       *        `folders/{folder}/muteConfigs/{mute_config}`
+       *        `projects/{project}/muteConfigs/{mute_config}`
+       *        `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+       *        `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+       *        `projects/{project}/locations/global/muteConfigs/{mute_config}`
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
          * @since 1.13
          */
@@ -29261,22 +29273,22 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * This field will be ignored if provided on config creation. Format
-         * "organizations/{organization}/muteConfigs/{mute_config}"
-         * "folders/{folder}/muteConfigs/{mute_config}"
-         * "projects/{project}/muteConfigs/{mute_config}"
-         * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-         * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-         * "projects/{project}/locations/global/muteConfigs/{mute_config}"
+         * `organizations/{organization}/muteConfigs/{mute_config}`
+         * `folders/{folder}/muteConfigs/{mute_config}`
+         * `projects/{project}/muteConfigs/{mute_config}`
+         * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+         * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+         * `projects/{project}/locations/global/muteConfigs/{mute_config}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** This field will be ignored if provided on config creation. Format
-       "organizations/{organization}/muteConfigs/{mute_config}"
-       "folders/{folder}/muteConfigs/{mute_config}" "projects/{project}/muteConfigs/{mute_config}"
-       "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-       "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-       "projects/{project}/locations/global/muteConfigs/{mute_config}"
+       `organizations/{organization}/muteConfigs/{mute_config}`
+       `folders/{folder}/muteConfigs/{mute_config}` `projects/{project}/muteConfigs/{mute_config}`
+       `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+       `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+       `projects/{project}/locations/global/muteConfigs/{mute_config}`
          */
         public java.lang.String getName() {
           return name;
@@ -29284,12 +29296,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * This field will be ignored if provided on config creation. Format
-         * "organizations/{organization}/muteConfigs/{mute_config}"
-         * "folders/{folder}/muteConfigs/{mute_config}"
-         * "projects/{project}/muteConfigs/{mute_config}"
-         * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
-         * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
-         * "projects/{project}/locations/global/muteConfigs/{mute_config}"
+         * `organizations/{organization}/muteConfigs/{mute_config}`
+         * `folders/{folder}/muteConfigs/{mute_config}`
+         * `projects/{project}/muteConfigs/{mute_config}`
+         * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
+         * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
+         * `projects/{project}/locations/global/muteConfigs/{mute_config}`
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -29353,7 +29365,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Resource name of the new notification config's parent. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
        * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
        * @return the request
        */
@@ -29382,7 +29394,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Resource name of the new notification config's parent. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
          * @since 1.13
          */
@@ -29453,13 +29465,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the new notification config's parent. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Resource name of the new notification config's parent. Its format is
-       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -29467,7 +29479,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the new notification config's parent. Its format is
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -29518,9 +29530,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. Name of the notification config to delete. Its format is
-       *        "organizations/[organization_id]/notificationConfigs/[config_id]",
-       *        "folders/[folder_id]/notificationConfigs/[config_id]", or
-       *        "projects/[project_id]/notificationConfigs/[config_id]".
+       *        `organizations/[organization_id]/notificationConfigs/[config_id]`,
+       *        `folders/[folder_id]/notificationConfigs/[config_id]`, or
+       *        `projects/[project_id]/notificationConfigs/[config_id]`.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -29548,9 +29560,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Name of the notification config to delete. Its format is
-       *        "organizations/[organization_id]/notificationConfigs/[config_id]",
-       *        "folders/[folder_id]/notificationConfigs/[config_id]", or
-       *        "projects/[project_id]/notificationConfigs/[config_id]".
+       *        `organizations/[organization_id]/notificationConfigs/[config_id]`,
+       *        `folders/[folder_id]/notificationConfigs/[config_id]`, or
+       *        `projects/[project_id]/notificationConfigs/[config_id]`.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -29620,17 +29632,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the notification config to delete. Its format is
-         * "organizations/[organization_id]/notificationConfigs/[config_id]",
-         * "folders/[folder_id]/notificationConfigs/[config_id]", or
-         * "projects/[project_id]/notificationConfigs/[config_id]".
+         * `organizations/[organization_id]/notificationConfigs/[config_id]`,
+         * `folders/[folder_id]/notificationConfigs/[config_id]`, or
+         * `projects/[project_id]/notificationConfigs/[config_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the notification config to delete. Its format is
-       "organizations/[organization_id]/notificationConfigs/[config_id]",
-       "folders/[folder_id]/notificationConfigs/[config_id]", or
-       "projects/[project_id]/notificationConfigs/[config_id]".
+       `organizations/[organization_id]/notificationConfigs/[config_id]`,
+       `folders/[folder_id]/notificationConfigs/[config_id]`, or
+       `projects/[project_id]/notificationConfigs/[config_id]`.
          */
         public java.lang.String getName() {
           return name;
@@ -29638,9 +29650,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the notification config to delete. Its format is
-         * "organizations/[organization_id]/notificationConfigs/[config_id]",
-         * "folders/[folder_id]/notificationConfigs/[config_id]", or
-         * "projects/[project_id]/notificationConfigs/[config_id]".
+         * `organizations/[organization_id]/notificationConfigs/[config_id]`,
+         * `folders/[folder_id]/notificationConfigs/[config_id]`, or
+         * `projects/[project_id]/notificationConfigs/[config_id]`.
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -29666,9 +29678,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. Name of the notification config to get. Its format is
-       *        "organizations/[organization_id]/notificationConfigs/[config_id]",
-       *        "folders/[folder_id]/notificationConfigs/[config_id]", or
-       *        "projects/[project_id]/notificationConfigs/[config_id]".
+       *        `organizations/[organization_id]/notificationConfigs/[config_id]`,
+       *        `folders/[folder_id]/notificationConfigs/[config_id]`, or
+       *        `projects/[project_id]/notificationConfigs/[config_id]`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -29695,9 +29707,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Name of the notification config to get. Its format is
-       *        "organizations/[organization_id]/notificationConfigs/[config_id]",
-       *        "folders/[folder_id]/notificationConfigs/[config_id]", or
-       *        "projects/[project_id]/notificationConfigs/[config_id]".
+       *        `organizations/[organization_id]/notificationConfigs/[config_id]`,
+       *        `folders/[folder_id]/notificationConfigs/[config_id]`, or
+       *        `projects/[project_id]/notificationConfigs/[config_id]`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -29777,17 +29789,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the notification config to get. Its format is
-         * "organizations/[organization_id]/notificationConfigs/[config_id]",
-         * "folders/[folder_id]/notificationConfigs/[config_id]", or
-         * "projects/[project_id]/notificationConfigs/[config_id]".
+         * `organizations/[organization_id]/notificationConfigs/[config_id]`,
+         * `folders/[folder_id]/notificationConfigs/[config_id]`, or
+         * `projects/[project_id]/notificationConfigs/[config_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the notification config to get. Its format is
-       "organizations/[organization_id]/notificationConfigs/[config_id]",
-       "folders/[folder_id]/notificationConfigs/[config_id]", or
-       "projects/[project_id]/notificationConfigs/[config_id]".
+       `organizations/[organization_id]/notificationConfigs/[config_id]`,
+       `folders/[folder_id]/notificationConfigs/[config_id]`, or
+       `projects/[project_id]/notificationConfigs/[config_id]`.
          */
         public java.lang.String getName() {
           return name;
@@ -29795,9 +29807,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Name of the notification config to get. Its format is
-         * "organizations/[organization_id]/notificationConfigs/[config_id]",
-         * "folders/[folder_id]/notificationConfigs/[config_id]", or
-         * "projects/[project_id]/notificationConfigs/[config_id]".
+         * `organizations/[organization_id]/notificationConfigs/[config_id]`,
+         * `folders/[folder_id]/notificationConfigs/[config_id]`, or
+         * `projects/[project_id]/notificationConfigs/[config_id]`.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -30245,9 +30257,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Resource name of the new custom module's parent. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings",
-         *        "folders/{folder}/securityHealthAnalyticsSettings", or
-         *        "projects/{project}/securityHealthAnalyticsSettings"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings`
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule}
          * @return the request
          */
@@ -30278,9 +30290,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Resource name of the new custom module's parent. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings",
-         *        "folders/{folder}/securityHealthAnalyticsSettings", or
-         *        "projects/{project}/securityHealthAnalyticsSettings"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings`
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule}
            * @since 1.13
            */
@@ -30351,17 +30363,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Resource name of the new custom module's parent. Its format is
-           * "organizations/{organization}/securityHealthAnalyticsSettings",
-           * "folders/{folder}/securityHealthAnalyticsSettings", or
-           * "projects/{project}/securityHealthAnalyticsSettings"
+           * `organizations/{organization}/securityHealthAnalyticsSettings`,
+           * `folders/{folder}/securityHealthAnalyticsSettings`, or
+           * `projects/{project}/securityHealthAnalyticsSettings`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Resource name of the new custom module's parent. Its format is
-         "organizations/{organization}/securityHealthAnalyticsSettings",
-         "folders/{folder}/securityHealthAnalyticsSettings", or
-         "projects/{project}/securityHealthAnalyticsSettings"
+         `organizations/{organization}/securityHealthAnalyticsSettings`,
+         `folders/{folder}/securityHealthAnalyticsSettings`, or
+         `projects/{project}/securityHealthAnalyticsSettings`
            */
           public java.lang.String getParent() {
             return parent;
@@ -30369,9 +30381,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Resource name of the new custom module's parent. Its format is
-           * "organizations/{organization}/securityHealthAnalyticsSettings",
-           * "folders/{folder}/securityHealthAnalyticsSettings", or
-           * "projects/{project}/securityHealthAnalyticsSettings"
+           * `organizations/{organization}/securityHealthAnalyticsSettings`,
+           * `folders/{folder}/securityHealthAnalyticsSettings`, or
+           * `projects/{project}/securityHealthAnalyticsSettings`
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -30398,9 +30410,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the custom module to delete. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        ", "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         *        "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
+         *        `, `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -30429,9 +30441,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the custom module to delete. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        ", "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         *        "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
+         *        `, `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -30500,28 +30512,28 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Required. Name of the custom module to delete. Its format is "organizations/{organizati
-           * on}/securityHealthAnalyticsSettings/customModules/{customModule}",
-           * "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-           * "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+           * Required. Name of the custom module to delete. Its format is `organizations/{organizati
+           * on}/securityHealthAnalyticsSettings/customModules/{customModule}`,
+           * `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+           * `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the custom module to delete. Its format is
-         "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
-         "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+         `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}`,
+         `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+         `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Name of the custom module to delete. Its format is "organizations/{organizati
-           * on}/securityHealthAnalyticsSettings/customModules/{customModule}",
-           * "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-           * "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+           * Required. Name of the custom module to delete. Its format is `organizations/{organizati
+           * on}/securityHealthAnalyticsSettings/customModules/{customModule}`,
+           * `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+           * `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -30547,9 +30559,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the custom module to get. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        ", "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         *        "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
+         *        `, `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -30576,9 +30588,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the custom module to get. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        ", "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         *        "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
+         *        `, `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -30657,28 +30669,28 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Required. Name of the custom module to get. Its format is "organizations/{organization}
-           * /securityHealthAnalyticsSettings/customModules/{customModule}",
-           * "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-           * "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+           * Required. Name of the custom module to get. Its format is `organizations/{organization}
+           * /securityHealthAnalyticsSettings/customModules/{customModule}`,
+           * `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+           * `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the custom module to get. Its format is
-         "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}",
-         "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+         `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}`,
+         `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+         `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Name of the custom module to get. Its format is "organizations/{organization}
-           * /securityHealthAnalyticsSettings/customModules/{customModule}",
-           * "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-           * "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}"
+           * Required. Name of the custom module to get. Its format is `organizations/{organization}
+           * /securityHealthAnalyticsSettings/customModules/{customModule}`,
+           * `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
+           * `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -30706,9 +30718,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Name of parent to list custom modules. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings",
-         *        "folders/{folder}/securityHealthAnalyticsSettings", or
-         *        "projects/{project}/securityHealthAnalyticsSettings"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -30737,9 +30749,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Name of parent to list custom modules. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings",
-         *        "folders/{folder}/securityHealthAnalyticsSettings", or
-         *        "projects/{project}/securityHealthAnalyticsSettings"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -30819,17 +30831,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of parent to list custom modules. Its format is
-           * "organizations/{organization}/securityHealthAnalyticsSettings",
-           * "folders/{folder}/securityHealthAnalyticsSettings", or
-           * "projects/{project}/securityHealthAnalyticsSettings"
+           * `organizations/{organization}/securityHealthAnalyticsSettings`,
+           * `folders/{folder}/securityHealthAnalyticsSettings`, or
+           * `projects/{project}/securityHealthAnalyticsSettings`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of parent to list custom modules. Its format is
-         "organizations/{organization}/securityHealthAnalyticsSettings",
-         "folders/{folder}/securityHealthAnalyticsSettings", or
-         "projects/{project}/securityHealthAnalyticsSettings"
+         `organizations/{organization}/securityHealthAnalyticsSettings`,
+         `folders/{folder}/securityHealthAnalyticsSettings`, or
+         `projects/{project}/securityHealthAnalyticsSettings`
            */
           public java.lang.String getParent() {
             return parent;
@@ -30837,9 +30849,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of parent to list custom modules. Its format is
-           * "organizations/{organization}/securityHealthAnalyticsSettings",
-           * "folders/{folder}/securityHealthAnalyticsSettings", or
-           * "projects/{project}/securityHealthAnalyticsSettings"
+           * `organizations/{organization}/securityHealthAnalyticsSettings`,
+           * `folders/{folder}/securityHealthAnalyticsSettings`, or
+           * `projects/{project}/securityHealthAnalyticsSettings`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -30906,9 +30918,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * operation.
          *
          * @param parent Required. Name of parent to list descendant custom modules. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings",
-         *        "folders/{folder}/securityHealthAnalyticsSettings", or
-         *        "projects/{project}/securityHealthAnalyticsSettings"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings`
          * @return the request
          */
         public ListDescendant listDescendant(java.lang.String parent) throws java.io.IOException {
@@ -30937,9 +30949,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * the constructor. </p>
            *
            * @param parent Required. Name of parent to list descendant custom modules. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings",
-         *        "folders/{folder}/securityHealthAnalyticsSettings", or
-         *        "projects/{project}/securityHealthAnalyticsSettings"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings`
            * @since 1.13
            */
           protected ListDescendant(java.lang.String parent) {
@@ -31019,17 +31031,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of parent to list descendant custom modules. Its format is
-           * "organizations/{organization}/securityHealthAnalyticsSettings",
-           * "folders/{folder}/securityHealthAnalyticsSettings", or
-           * "projects/{project}/securityHealthAnalyticsSettings"
+           * `organizations/{organization}/securityHealthAnalyticsSettings`,
+           * `folders/{folder}/securityHealthAnalyticsSettings`, or
+           * `projects/{project}/securityHealthAnalyticsSettings`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of parent to list descendant custom modules. Its format is
-         "organizations/{organization}/securityHealthAnalyticsSettings",
-         "folders/{folder}/securityHealthAnalyticsSettings", or
-         "projects/{project}/securityHealthAnalyticsSettings"
+         `organizations/{organization}/securityHealthAnalyticsSettings`,
+         `folders/{folder}/securityHealthAnalyticsSettings`, or
+         `projects/{project}/securityHealthAnalyticsSettings`
            */
           public java.lang.String getParent() {
             return parent;
@@ -31037,9 +31049,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of parent to list descendant custom modules. Its format is
-           * "organizations/{organization}/securityHealthAnalyticsSettings",
-           * "folders/{folder}/securityHealthAnalyticsSettings", or
-           * "projects/{project}/securityHealthAnalyticsSettings"
+           * `organizations/{organization}/securityHealthAnalyticsSettings`,
+           * `folders/{folder}/securityHealthAnalyticsSettings`, or
+           * `projects/{project}/securityHealthAnalyticsSettings`
            */
           public ListDescendant setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -31467,11 +31479,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the effective custom module to get. Its format is "organizations/{organization}/se
-         *        curityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
-         *        "folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
+         * @param name Required. Name of the effective custom module to get. Its format is `organizations/{organization}/se
+         *        curityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
          *        or
-         *        "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}"
+         *        `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -31497,11 +31509,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the effective custom module to get. Its format is "organizations/{organization}/se
-         *        curityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
-         *        "folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
+           * @param name Required. Name of the effective custom module to get. Its format is `organizations/{organization}/se
+         *        curityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
          *        or
-         *        "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}"
+         *        `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -31580,30 +31592,30 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Required. Name of the effective custom module to get. Its format is "organizations/{org
-           * anization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}", "fol
-           * ders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
-           * or "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customMo
-           * dule}"
+           * Required. Name of the effective custom module to get. Its format is `organizations/{org
+           * anization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`, `fol
+           * ders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
+           * or `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customMo
+           * dule}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the effective custom module to get. Its format is "organizations/{organization}/s
-         ecurityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
-         "folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}", or
-         "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}"
+          /** Required. Name of the effective custom module to get. Its format is `organizations/{organization}/s
+         ecurityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
+         `folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`, or
+         `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Name of the effective custom module to get. Its format is "organizations/{org
-           * anization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}", "fol
-           * ders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}",
-           * or "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customMo
-           * dule}"
+           * Required. Name of the effective custom module to get. Its format is `organizations/{org
+           * anization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`, `fol
+           * ders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
+           * or `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customMo
+           * dule}`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -31631,9 +31643,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Name of parent to list effective custom modules. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings",
-         *        "folders/{folder}/securityHealthAnalyticsSettings", or
-         *        "projects/{project}/securityHealthAnalyticsSettings"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -31662,9 +31674,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Name of parent to list effective custom modules. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings",
-         *        "folders/{folder}/securityHealthAnalyticsSettings", or
-         *        "projects/{project}/securityHealthAnalyticsSettings"
+         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
+         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
+         *        `projects/{project}/securityHealthAnalyticsSettings`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -31744,17 +31756,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of parent to list effective custom modules. Its format is
-           * "organizations/{organization}/securityHealthAnalyticsSettings",
-           * "folders/{folder}/securityHealthAnalyticsSettings", or
-           * "projects/{project}/securityHealthAnalyticsSettings"
+           * `organizations/{organization}/securityHealthAnalyticsSettings`,
+           * `folders/{folder}/securityHealthAnalyticsSettings`, or
+           * `projects/{project}/securityHealthAnalyticsSettings`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of parent to list effective custom modules. Its format is
-         "organizations/{organization}/securityHealthAnalyticsSettings",
-         "folders/{folder}/securityHealthAnalyticsSettings", or
-         "projects/{project}/securityHealthAnalyticsSettings"
+         `organizations/{organization}/securityHealthAnalyticsSettings`,
+         `folders/{folder}/securityHealthAnalyticsSettings`, or
+         `projects/{project}/securityHealthAnalyticsSettings`
            */
           public java.lang.String getParent() {
             return parent;
@@ -31762,9 +31774,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of parent to list effective custom modules. Its format is
-           * "organizations/{organization}/securityHealthAnalyticsSettings",
-           * "folders/{folder}/securityHealthAnalyticsSettings", or
-           * "projects/{project}/securityHealthAnalyticsSettings"
+           * `organizations/{organization}/securityHealthAnalyticsSettings`,
+           * `folders/{folder}/securityHealthAnalyticsSettings`, or
+           * `projects/{project}/securityHealthAnalyticsSettings`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -31852,7 +31864,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -31879,7 +31891,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -31959,13 +31971,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent of sources to list. Its format should be
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Resource name of the parent of sources to list. Its format should be
-       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -31973,7 +31985,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent of sources to list. Its format should be
-         * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -32071,11 +32083,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Name of the source to groupBy. Its format is
-         *        "organizations/[organization_id]/sources/[source_id]",
-         *        folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]. To
-         *        groupBy across all sources provide a source_id of `-`. For example:
-         *        organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
-         *        projects/{project_id}/sources/-
+         *        `organizations/[organization_id]/sources/[source_id]`,
+         *        `folders/[folder_id]/sources/[source_id]`, or `projects/[project_id]/sources/[source_id]`.
+         *        To groupBy across all sources provide a source_id of `-`. For example:
+         *        `organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-`, or
+         *        `projects/{project_id}/sources/-`
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupFindingsRequest}
          * @return the request
          */
@@ -32107,11 +32119,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Name of the source to groupBy. Its format is
-         *        "organizations/[organization_id]/sources/[source_id]",
-         *        folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]. To
-         *        groupBy across all sources provide a source_id of `-`. For example:
-         *        organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
-         *        projects/{project_id}/sources/-
+         *        `organizations/[organization_id]/sources/[source_id]`,
+         *        `folders/[folder_id]/sources/[source_id]`, or `projects/[project_id]/sources/[source_id]`.
+         *        To groupBy across all sources provide a source_id of `-`. For example:
+         *        `organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-`, or
+         *        `projects/{project_id}/sources/-`
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupFindingsRequest}
            * @since 1.13
            */
@@ -32182,20 +32194,20 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the source to groupBy. Its format is
-           * "organizations/[organization_id]/sources/[source_id]",
-           * folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id].
-           * To groupBy across all sources provide a source_id of `-`. For example:
-           * organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
-           * projects/{project_id}/sources/-
+           * `organizations/[organization_id]/sources/[source_id]`,
+           * `folders/[folder_id]/sources/[source_id]`, or
+           * `projects/[project_id]/sources/[source_id]`. To groupBy across all sources provide a
+           * source_id of `-`. For example: `organizations/{organization_id}/sources/-,
+           * folders/{folder_id}/sources/-`, or `projects/{project_id}/sources/-`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of the source to groupBy. Its format is
-         "organizations/[organization_id]/sources/[source_id]", folders/[folder_id]/sources/[source_id], or
-         projects/[project_id]/sources/[source_id]. To groupBy across all sources provide a source_id of
-         `-`. For example: organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
-         projects/{project_id}/sources/-
+         `organizations/[organization_id]/sources/[source_id]`, `folders/[folder_id]/sources/[source_id]`,
+         or `projects/[project_id]/sources/[source_id]`. To groupBy across all sources provide a source_id
+         of `-`. For example: `organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-`, or
+         `projects/{project_id}/sources/-`
            */
           public java.lang.String getParent() {
             return parent;
@@ -32203,11 +32215,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the source to groupBy. Its format is
-           * "organizations/[organization_id]/sources/[source_id]",
-           * folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id].
-           * To groupBy across all sources provide a source_id of `-`. For example:
-           * organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-, or
-           * projects/{project_id}/sources/-
+           * `organizations/[organization_id]/sources/[source_id]`,
+           * `folders/[folder_id]/sources/[source_id]`, or
+           * `projects/[project_id]/sources/[source_id]`. To groupBy across all sources provide a
+           * source_id of `-`. For example: `organizations/{organization_id}/sources/-,
+           * folders/{folder_id}/sources/-`, or `projects/{project_id}/sources/-`
            */
           public Group setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -32234,11 +32246,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Name of the source the findings belong to. Its format is
-         *        "organizations/[organization_id]/sources/[source_id],
-         *        folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]". To
-         *        list across all sources provide a source_id of `-`. For example:
-         *        organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
-         *        projects/{projects_id}/sources/-
+         *        `organizations/[organization_id]/sources/[source_id]`,
+         *        `folders/[folder_id]/sources/[source_id]`, or `projects/[project_id]/sources/[source_id]`.
+         *        To list across all sources provide a source_id of `-`. For example:
+         *        `organizations/{organization_id}/sources/-`, `folders/{folder_id}/sources/-` or
+         *        `projects/{projects_id}/sources/-`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -32266,11 +32278,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Name of the source the findings belong to. Its format is
-         *        "organizations/[organization_id]/sources/[source_id],
-         *        folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]". To
-         *        list across all sources provide a source_id of `-`. For example:
-         *        organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
-         *        projects/{projects_id}/sources/-
+         *        `organizations/[organization_id]/sources/[source_id]`,
+         *        `folders/[folder_id]/sources/[source_id]`, or `projects/[project_id]/sources/[source_id]`.
+         *        To list across all sources provide a source_id of `-`. For example:
+         *        `organizations/{organization_id}/sources/-`, `folders/{folder_id}/sources/-` or
+         *        `projects/{projects_id}/sources/-`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -32350,20 +32362,20 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the source the findings belong to. Its format is
-           * "organizations/[organization_id]/sources/[source_id],
-           * folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]".
-           * To list across all sources provide a source_id of `-`. For example:
-           * organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
-           * projects/{projects_id}/sources/-
+           * `organizations/[organization_id]/sources/[source_id]`,
+           * `folders/[folder_id]/sources/[source_id]`, or
+           * `projects/[project_id]/sources/[source_id]`. To list across all sources provide a
+           * source_id of `-`. For example: `organizations/{organization_id}/sources/-`,
+           * `folders/{folder_id}/sources/-` or `projects/{projects_id}/sources/-`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of the source the findings belong to. Its format is
-         "organizations/[organization_id]/sources/[source_id], folders/[folder_id]/sources/[source_id], or
-         projects/[project_id]/sources/[source_id]". To list across all sources provide a source_id of `-`.
-         For example: organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
-         projects/{projects_id}/sources/-
+         `organizations/[organization_id]/sources/[source_id]`, `folders/[folder_id]/sources/[source_id]`,
+         or `projects/[project_id]/sources/[source_id]`. To list across all sources provide a source_id of
+         `-`. For example: `organizations/{organization_id}/sources/-`, `folders/{folder_id}/sources/-` or
+         `projects/{projects_id}/sources/-`
            */
           public java.lang.String getParent() {
             return parent;
@@ -32371,11 +32383,11 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the source the findings belong to. Its format is
-           * "organizations/[organization_id]/sources/[source_id],
-           * folders/[folder_id]/sources/[source_id], or projects/[project_id]/sources/[source_id]".
-           * To list across all sources provide a source_id of `-`. For example:
-           * organizations/{organization_id}/sources/-, folders/{folder_id}/sources/- or
-           * projects/{projects_id}/sources/-
+           * `organizations/[organization_id]/sources/[source_id]`,
+           * `folders/[folder_id]/sources/[source_id]`, or
+           * `projects/[project_id]/sources/[source_id]`. To list across all sources provide a
+           * source_id of `-`. For example: `organizations/{organization_id}/sources/-`,
+           * `folders/{folder_id}/sources/-` or `projects/{projects_id}/sources/-`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -32882,9 +32894,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * @param name Required. The [relative resource
          *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
          *        finding. Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+         *        `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+         *        `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+         *        `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetMuteRequest}
          * @return the request
          */
@@ -32915,9 +32927,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * @param name Required. The [relative resource
          *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
          *        finding. Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+         *        `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+         *        `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+         *        `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SetMuteRequest}
            * @since 1.13
            */
@@ -32990,18 +33002,18 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Required. The [relative resource
            * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
            * the finding. Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+           * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+           * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+           * `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The [relative resource
          name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
-         Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+         Example: `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+         `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+         `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
            */
           public java.lang.String getName() {
             return name;
@@ -33011,9 +33023,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Required. The [relative resource
            * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
            * the finding. Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+           * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+           * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+           * `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
            */
           public SetMute setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -33041,9 +33053,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * @param name Required. The [relative resource
          *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
          *        finding. Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+         *        `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+         *        `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+         *        `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
          * @return the request
          */
@@ -33074,9 +33086,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * @param name Required. The [relative resource
          *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
          *        finding. Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+         *        `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+         *        `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+         *        `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
            * @since 1.13
            */
@@ -33149,18 +33161,18 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Required. The [relative resource
            * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
            * the finding. Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+           * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+           * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+           * `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The [relative resource
          name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
-         Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+         Example: `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+         `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+         `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
            */
           public java.lang.String getName() {
             return name;
@@ -33170,9 +33182,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Required. The [relative resource
            * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
            * the finding. Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+           * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
+           * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
+           * `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
            */
           public SetState setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

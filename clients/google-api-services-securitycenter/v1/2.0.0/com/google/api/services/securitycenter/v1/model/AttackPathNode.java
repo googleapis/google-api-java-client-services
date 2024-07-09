@@ -53,8 +53,8 @@ public final class AttackPathNode extends com.google.api.client.json.GenericJson
 
   /**
    * The name of the resource at this point in the attack path. The format of the name follows the
-   * Cloud Asset Inventory [resource name format]("https://cloud.google.com/asset-
-   * inventory/docs/resource-name-format")
+   * Cloud Asset Inventory [resource name format](https://cloud.google.com/asset-
+   * inventory/docs/resource-name-format)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class AttackPathNode extends com.google.api.client.json.GenericJson
 
   /**
    * The [supported resource type](https://cloud.google.com/asset-inventory/docs/supported-asset-
-   * types")
+   * types)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,8 +128,8 @@ public final class AttackPathNode extends com.google.api.client.json.GenericJson
 
   /**
    * The name of the resource at this point in the attack path. The format of the name follows the
-   * Cloud Asset Inventory [resource name format]("https://cloud.google.com/asset-
-   * inventory/docs/resource-name-format")
+   * Cloud Asset Inventory [resource name format](https://cloud.google.com/asset-
+   * inventory/docs/resource-name-format)
    * @return value or {@code null} for none
    */
   public java.lang.String getResource() {
@@ -138,8 +138,8 @@ public final class AttackPathNode extends com.google.api.client.json.GenericJson
 
   /**
    * The name of the resource at this point in the attack path. The format of the name follows the
-   * Cloud Asset Inventory [resource name format]("https://cloud.google.com/asset-
-   * inventory/docs/resource-name-format")
+   * Cloud Asset Inventory [resource name format](https://cloud.google.com/asset-
+   * inventory/docs/resource-name-format)
    * @param resource resource or {@code null} for none
    */
   public AttackPathNode setResource(java.lang.String resource) {
@@ -149,7 +149,7 @@ public final class AttackPathNode extends com.google.api.client.json.GenericJson
 
   /**
    * The [supported resource type](https://cloud.google.com/asset-inventory/docs/supported-asset-
-   * types")
+   * types)
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceType() {
@@ -158,7 +158,7 @@ public final class AttackPathNode extends com.google.api.client.json.GenericJson
 
   /**
    * The [supported resource type](https://cloud.google.com/asset-inventory/docs/supported-asset-
-   * types")
+   * types)
    * @param resourceType resourceType or {@code null} for none
    */
   public AttackPathNode setResourceType(java.lang.String resourceType) {

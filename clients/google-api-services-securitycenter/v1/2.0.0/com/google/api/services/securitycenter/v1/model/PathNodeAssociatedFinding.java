@@ -31,7 +31,8 @@ package com.google.api.services.securitycenter.v1.model;
 public final class PathNodeAssociatedFinding extends com.google.api.client.json.GenericJson {
 
   /**
-   * Canonical name of the associated findings. Example: organizations/123/sources/456/findings/789
+   * Canonical name of the associated findings. Example:
+   * `organizations/123/sources/456/findings/789`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +53,8 @@ public final class PathNodeAssociatedFinding extends com.google.api.client.json.
   private java.lang.String name;
 
   /**
-   * Canonical name of the associated findings. Example: organizations/123/sources/456/findings/789
+   * Canonical name of the associated findings. Example:
+   * `organizations/123/sources/456/findings/789`
    * @return value or {@code null} for none
    */
   public java.lang.String getCanonicalFinding() {
@@ -60,7 +62,8 @@ public final class PathNodeAssociatedFinding extends com.google.api.client.json.
   }
 
   /**
-   * Canonical name of the associated findings. Example: organizations/123/sources/456/findings/789
+   * Canonical name of the associated findings. Example:
+   * `organizations/123/sources/456/findings/789`
    * @param canonicalFinding canonicalFinding or {@code null} for none
    */
   public PathNodeAssociatedFinding setCanonicalFinding(java.lang.String canonicalFinding) {

@@ -89,12 +89,12 @@ public final class GoogleCloudSecuritycenterV2Resource extends com.google.api.cl
 
   /**
    * A string representation of the resource path. For Google Cloud, it has the format of
-   * organizations/{organization_id}/folders/{folder_id}/folders/{folder_id}/projects/{project_id}
-   * where there can be any number of folders. For AWS, it has the format of org/{organization_id}/o
-   * u/{organizational_unit_id}/ou/{organizational_unit_id}/account/{account_id} where there can be
-   * any number of organizational units. For Azure, it has the format of mg/{management_group_id}/mg
-   * /{management_group_id}/subscription/{subscription_id}/rg/{resource_group_name} where there can
-   * be any number of management groups.
+   * `organizations/{organization_id}/folders/{folder_id}/folders/{folder_id}/projects/{project_id}`
+   * where there can be any number of folders. For AWS, it has the format of `org/{organization_id}/
+   * ou/{organizational_unit_id}/ou/{organizational_unit_id}/account/{account_id}` where there can
+   * be any number of organizational units. For Azure, it has the format of `mg/{management_group_id
+   * }/mg/{management_group_id}/subscription/{subscription_id}/rg/{resource_group_name}` where there
+   * can be any number of management groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -254,12 +254,12 @@ public final class GoogleCloudSecuritycenterV2Resource extends com.google.api.cl
 
   /**
    * A string representation of the resource path. For Google Cloud, it has the format of
-   * organizations/{organization_id}/folders/{folder_id}/folders/{folder_id}/projects/{project_id}
-   * where there can be any number of folders. For AWS, it has the format of org/{organization_id}/o
-   * u/{organizational_unit_id}/ou/{organizational_unit_id}/account/{account_id} where there can be
-   * any number of organizational units. For Azure, it has the format of mg/{management_group_id}/mg
-   * /{management_group_id}/subscription/{subscription_id}/rg/{resource_group_name} where there can
-   * be any number of management groups.
+   * `organizations/{organization_id}/folders/{folder_id}/folders/{folder_id}/projects/{project_id}`
+   * where there can be any number of folders. For AWS, it has the format of `org/{organization_id}/
+   * ou/{organizational_unit_id}/ou/{organizational_unit_id}/account/{account_id}` where there can
+   * be any number of organizational units. For Azure, it has the format of `mg/{management_group_id
+   * }/mg/{management_group_id}/subscription/{subscription_id}/rg/{resource_group_name}` where there
+   * can be any number of management groups.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourcePathString() {
@@ -268,12 +268,12 @@ public final class GoogleCloudSecuritycenterV2Resource extends com.google.api.cl
 
   /**
    * A string representation of the resource path. For Google Cloud, it has the format of
-   * organizations/{organization_id}/folders/{folder_id}/folders/{folder_id}/projects/{project_id}
-   * where there can be any number of folders. For AWS, it has the format of org/{organization_id}/o
-   * u/{organizational_unit_id}/ou/{organizational_unit_id}/account/{account_id} where there can be
-   * any number of organizational units. For Azure, it has the format of mg/{management_group_id}/mg
-   * /{management_group_id}/subscription/{subscription_id}/rg/{resource_group_name} where there can
-   * be any number of management groups.
+   * `organizations/{organization_id}/folders/{folder_id}/folders/{folder_id}/projects/{project_id}`
+   * where there can be any number of folders. For AWS, it has the format of `org/{organization_id}/
+   * ou/{organizational_unit_id}/ou/{organizational_unit_id}/account/{account_id}` where there can
+   * be any number of organizational units. For Azure, it has the format of `mg/{management_group_id
+   * }/mg/{management_group_id}/subscription/{subscription_id}/rg/{resource_group_name}` where there
+   * can be any number of management groups.
    * @param resourcePathString resourcePathString or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Resource setResourcePathString(java.lang.String resourcePathString) {

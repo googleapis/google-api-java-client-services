@@ -38,7 +38,7 @@ public final class AzureManagementGroup extends com.google.api.client.json.Gener
   private java.lang.String displayName;
 
   /**
-   * The UUID of the Azure management group, for example, "20000000-0001-0000-0000-000000000000".
+   * The UUID of the Azure management group, for example, `20000000-0001-0000-0000-000000000000`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class AzureManagementGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * The UUID of the Azure management group, for example, "20000000-0001-0000-0000-000000000000".
+   * The UUID of the Azure management group, for example, `20000000-0001-0000-0000-000000000000`.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -70,7 +70,7 @@ public final class AzureManagementGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * The UUID of the Azure management group, for example, "20000000-0001-0000-0000-000000000000".
+   * The UUID of the Azure management group, for example, `20000000-0001-0000-0000-000000000000`.
    * @param id id or {@code null} for none
    */
   public AzureManagementGroup setId(java.lang.String id) {

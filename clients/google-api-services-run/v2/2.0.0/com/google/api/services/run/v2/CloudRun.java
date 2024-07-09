@@ -656,6 +656,155 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return (ExportMetadata) super.set(parameterName, value);
         }
       }
+      /**
+       * Export generated customer metadata for a given project.
+       *
+       * Create a request for the method "locations.exportProjectMetadata".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link ExportProjectMetadata#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The name of the project of which metadata should be exported. Format:
+       *        `projects/{project_id_or_number}/locations/{location}` for Project in a given location.
+       * @return the request
+       */
+      public ExportProjectMetadata exportProjectMetadata(java.lang.String name) throws java.io.IOException {
+        ExportProjectMetadata result = new ExportProjectMetadata(name);
+        initialize(result);
+        return result;
+      }
+
+      public class ExportProjectMetadata extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleCloudRunV2Metadata> {
+
+        private static final String REST_PATH = "v2/{+name}:exportProjectMetadata";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Export generated customer metadata for a given project.
+         *
+         * Create a request for the method "locations.exportProjectMetadata".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link ExportProjectMetadata#execute()} method to invoke the remote
+         * operation. <p> {@link ExportProjectMetadata#initialize(com.google.api.client.googleapis.service
+         * s.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. The name of the project of which metadata should be exported. Format:
+       *        `projects/{project_id_or_number}/locations/{location}` for Project in a given location.
+         * @since 1.13
+         */
+        protected ExportProjectMetadata(java.lang.String name) {
+          super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v2.model.GoogleCloudRunV2Metadata.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public ExportProjectMetadata set$Xgafv(java.lang.String $Xgafv) {
+          return (ExportProjectMetadata) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ExportProjectMetadata setAccessToken(java.lang.String accessToken) {
+          return (ExportProjectMetadata) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ExportProjectMetadata setAlt(java.lang.String alt) {
+          return (ExportProjectMetadata) super.setAlt(alt);
+        }
+
+        @Override
+        public ExportProjectMetadata setCallback(java.lang.String callback) {
+          return (ExportProjectMetadata) super.setCallback(callback);
+        }
+
+        @Override
+        public ExportProjectMetadata setFields(java.lang.String fields) {
+          return (ExportProjectMetadata) super.setFields(fields);
+        }
+
+        @Override
+        public ExportProjectMetadata setKey(java.lang.String key) {
+          return (ExportProjectMetadata) super.setKey(key);
+        }
+
+        @Override
+        public ExportProjectMetadata setOauthToken(java.lang.String oauthToken) {
+          return (ExportProjectMetadata) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ExportProjectMetadata setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ExportProjectMetadata) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ExportProjectMetadata setQuotaUser(java.lang.String quotaUser) {
+          return (ExportProjectMetadata) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ExportProjectMetadata setUploadType(java.lang.String uploadType) {
+          return (ExportProjectMetadata) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ExportProjectMetadata setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ExportProjectMetadata) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the project of which metadata should be exported. Format:
+         * `projects/{project_id_or_number}/locations/{location}` for Project in a given location.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the project of which metadata should be exported. Format:
+       `projects/{project_id_or_number}/locations/{location}` for Project in a given location.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the project of which metadata should be exported. Format:
+         * `projects/{project_id_or_number}/locations/{location}` for Project in a given location.
+         */
+        public ExportProjectMetadata setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public ExportProjectMetadata set(String parameterName, Object value) {
+          return (ExportProjectMetadata) super.set(parameterName, value);
+        }
+      }
 
       /**
        * An accessor for creating requests from the Jobs collection.

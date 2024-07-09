@@ -32,28 +32,28 @@ package com.google.api.services.container.v1beta1.model;
 public final class AdditionalPodNetworkConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The maximum number of pods per node which use this pod network
+   * The maximum number of pods per node which use this pod network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MaxPodsConstraint maxPodsPerNode;
 
   /**
-   * The name of the secondary range on the subnet which provides IP address for this pod range
+   * The name of the secondary range on the subnet which provides IP address for this pod range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String secondaryPodRange;
 
   /**
-   * Name of the subnetwork where the additional pod network belongs
+   * Name of the subnetwork where the additional pod network belongs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetwork;
 
   /**
-   * The maximum number of pods per node which use this pod network
+   * The maximum number of pods per node which use this pod network.
    * @return value or {@code null} for none
    */
   public MaxPodsConstraint getMaxPodsPerNode() {
@@ -61,7 +61,7 @@ public final class AdditionalPodNetworkConfig extends com.google.api.client.json
   }
 
   /**
-   * The maximum number of pods per node which use this pod network
+   * The maximum number of pods per node which use this pod network.
    * @param maxPodsPerNode maxPodsPerNode or {@code null} for none
    */
   public AdditionalPodNetworkConfig setMaxPodsPerNode(MaxPodsConstraint maxPodsPerNode) {
@@ -70,7 +70,7 @@ public final class AdditionalPodNetworkConfig extends com.google.api.client.json
   }
 
   /**
-   * The name of the secondary range on the subnet which provides IP address for this pod range
+   * The name of the secondary range on the subnet which provides IP address for this pod range.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecondaryPodRange() {
@@ -78,7 +78,7 @@ public final class AdditionalPodNetworkConfig extends com.google.api.client.json
   }
 
   /**
-   * The name of the secondary range on the subnet which provides IP address for this pod range
+   * The name of the secondary range on the subnet which provides IP address for this pod range.
    * @param secondaryPodRange secondaryPodRange or {@code null} for none
    */
   public AdditionalPodNetworkConfig setSecondaryPodRange(java.lang.String secondaryPodRange) {
@@ -87,7 +87,7 @@ public final class AdditionalPodNetworkConfig extends com.google.api.client.json
   }
 
   /**
-   * Name of the subnetwork where the additional pod network belongs
+   * Name of the subnetwork where the additional pod network belongs.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetwork() {
@@ -95,7 +95,7 @@ public final class AdditionalPodNetworkConfig extends com.google.api.client.json
   }
 
   /**
-   * Name of the subnetwork where the additional pod network belongs
+   * Name of the subnetwork where the additional pod network belongs.
    * @param subnetwork subnetwork or {@code null} for none
    */
   public AdditionalPodNetworkConfig setSubnetwork(java.lang.String subnetwork) {

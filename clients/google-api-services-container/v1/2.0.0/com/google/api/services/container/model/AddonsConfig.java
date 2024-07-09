@@ -117,6 +117,13 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   private NetworkPolicyConfig networkPolicyConfig;
 
   /**
+   * Optional. Configuration for Ray Operator addon.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RayOperatorConfig rayOperatorConfig;
+
+  /**
    * Optional. Configuration for the StatefulHA add-on.
    * The value may be {@code null}.
    */
@@ -323,6 +330,23 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    */
   public AddonsConfig setNetworkPolicyConfig(NetworkPolicyConfig networkPolicyConfig) {
     this.networkPolicyConfig = networkPolicyConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for Ray Operator addon.
+   * @return value or {@code null} for none
+   */
+  public RayOperatorConfig getRayOperatorConfig() {
+    return rayOperatorConfig;
+  }
+
+  /**
+   * Optional. Configuration for Ray Operator addon.
+   * @param rayOperatorConfig rayOperatorConfig or {@code null} for none
+   */
+  public AddonsConfig setRayOperatorConfig(RayOperatorConfig rayOperatorConfig) {
+    this.rayOperatorConfig = rayOperatorConfig;
     return this;
   }
 

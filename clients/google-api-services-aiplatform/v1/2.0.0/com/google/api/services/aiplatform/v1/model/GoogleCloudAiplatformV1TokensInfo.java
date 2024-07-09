@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1TokensInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Optional fields for the role from the corresponding Content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String role;
+
+  /**
    * A list of token ids from the input.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class GoogleCloudAiplatformV1TokensInfo extends com.google.api.clie
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> tokens;
+
+  /**
+   * Optional. Optional fields for the role from the corresponding Content.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRole() {
+    return role;
+  }
+
+  /**
+   * Optional. Optional fields for the role from the corresponding Content.
+   * @param role role or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1TokensInfo setRole(java.lang.String role) {
+    this.role = role;
+    return this;
+  }
 
   /**
    * A list of token ids from the input.

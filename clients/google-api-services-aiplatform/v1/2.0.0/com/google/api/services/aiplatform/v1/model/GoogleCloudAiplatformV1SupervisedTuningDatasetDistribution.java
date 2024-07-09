@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1SupervisedTuningDatasetDistribution extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Sum of a given population of values that are billable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long billableSum;
+
+  /**
    * Output only. Defines the histogram bucket.
    * The value may be {@code null}.
    */
@@ -84,6 +91,23 @@ public final class GoogleCloudAiplatformV1SupervisedTuningDatasetDistribution ex
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long sum;
+
+  /**
+   * Output only. Sum of a given population of values that are billable.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getBillableSum() {
+    return billableSum;
+  }
+
+  /**
+   * Output only. Sum of a given population of values that are billable.
+   * @param billableSum billableSum or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SupervisedTuningDatasetDistribution setBillableSum(java.lang.Long billableSum) {
+    this.billableSum = billableSum;
+    return this;
+  }
 
   /**
    * Output only. Defines the histogram bucket.

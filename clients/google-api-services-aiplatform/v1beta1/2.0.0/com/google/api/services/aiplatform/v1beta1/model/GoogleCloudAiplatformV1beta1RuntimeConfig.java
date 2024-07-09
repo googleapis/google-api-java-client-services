@@ -48,7 +48,7 @@ public final class GoogleCloudAiplatformV1beta1RuntimeConfig extends com.google.
   private java.util.Map<String, java.lang.Object> defaultParams;
 
   /**
-   * Runtime configuration for Vertext AI Search extension.
+   * Runtime configuration for Vertex AI Search extension.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +97,7 @@ public final class GoogleCloudAiplatformV1beta1RuntimeConfig extends com.google.
   }
 
   /**
-   * Runtime configuration for Vertext AI Search extension.
+   * Runtime configuration for Vertex AI Search extension.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RuntimeConfigVertexAISearchRuntimeConfig getVertexAiSearchRuntimeConfig() {
@@ -105,7 +105,7 @@ public final class GoogleCloudAiplatformV1beta1RuntimeConfig extends com.google.
   }
 
   /**
-   * Runtime configuration for Vertext AI Search extension.
+   * Runtime configuration for Vertex AI Search extension.
    * @param vertexAiSearchRuntimeConfig vertexAiSearchRuntimeConfig or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RuntimeConfig setVertexAiSearchRuntimeConfig(GoogleCloudAiplatformV1beta1RuntimeConfigVertexAISearchRuntimeConfig vertexAiSearchRuntimeConfig) {

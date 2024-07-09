@@ -31,12 +31,56 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Private service connect config. The private service connection is available only for
+   * Optimized storage type, not for embedding management now. If
+   * PrivateServiceConnectConfig.enable_private_service_connect set to true, customers will use
+   * private service connection to send request. Otherwise, the connection will set to public
+   * endpoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1PrivateServiceConnectConfig privateServiceConnectConfig;
+
+  /**
    * Output only. This field will be populated with the domain name to use for this
    * FeatureOnlineStore
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String publicEndpointDomainName;
+
+  /**
+   * Output only. The name of the service attachment resource. Populated if private service connect
+   * is enabled and after FeatureViewSync is created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAttachment;
+
+  /**
+   * Optional. Private service connect config. The private service connection is available only for
+   * Optimized storage type, not for embedding management now. If
+   * PrivateServiceConnectConfig.enable_private_service_connect set to true, customers will use
+   * private service connection to send request. Otherwise, the connection will set to public
+   * endpoint.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1PrivateServiceConnectConfig getPrivateServiceConnectConfig() {
+    return privateServiceConnectConfig;
+  }
+
+  /**
+   * Optional. Private service connect config. The private service connection is available only for
+   * Optimized storage type, not for embedding management now. If
+   * PrivateServiceConnectConfig.enable_private_service_connect set to true, customers will use
+   * private service connection to send request. Otherwise, the connection will set to public
+   * endpoint.
+   * @param privateServiceConnectConfig privateServiceConnectConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint setPrivateServiceConnectConfig(GoogleCloudAiplatformV1PrivateServiceConnectConfig privateServiceConnectConfig) {
+    this.privateServiceConnectConfig = privateServiceConnectConfig;
+    return this;
+  }
 
   /**
    * Output only. This field will be populated with the domain name to use for this
@@ -54,6 +98,25 @@ public final class GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndp
    */
   public GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint setPublicEndpointDomainName(java.lang.String publicEndpointDomainName) {
     this.publicEndpointDomainName = publicEndpointDomainName;
+    return this;
+  }
+
+  /**
+   * Output only. The name of the service attachment resource. Populated if private service connect
+   * is enabled and after FeatureViewSync is created.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAttachment() {
+    return serviceAttachment;
+  }
+
+  /**
+   * Output only. The name of the service attachment resource. Populated if private service connect
+   * is enabled and after FeatureViewSync is created.
+   * @param serviceAttachment serviceAttachment or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint setServiceAttachment(java.lang.String serviceAttachment) {
+    this.serviceAttachment = serviceAttachment;
     return this;
   }
 

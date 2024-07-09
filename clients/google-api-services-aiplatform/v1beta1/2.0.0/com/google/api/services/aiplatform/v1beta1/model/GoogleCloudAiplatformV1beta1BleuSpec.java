@@ -30,6 +30,30 @@ package com.google.api.services.aiplatform.v1beta1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudAiplatformV1beta1BleuSpec extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. Whether to use_effective_order to compute bleu score.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useEffectiveOrder;
+
+  /**
+   * Optional. Whether to use_effective_order to compute bleu score.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseEffectiveOrder() {
+    return useEffectiveOrder;
+  }
+
+  /**
+   * Optional. Whether to use_effective_order to compute bleu score.
+   * @param useEffectiveOrder useEffectiveOrder or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1BleuSpec setUseEffectiveOrder(java.lang.Boolean useEffectiveOrder) {
+    this.useEffectiveOrder = useEffectiveOrder;
+    return this;
+  }
+
   @Override
   public GoogleCloudAiplatformV1beta1BleuSpec set(String fieldName, Object value) {
     return (GoogleCloudAiplatformV1beta1BleuSpec) super.set(fieldName, value);

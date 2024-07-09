@@ -30,7 +30,9 @@ package com.google.api.services.run.v1.model;
 public final class GoogleDevtoolsCloudbuildV1HttpConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * SecretVersion resource of the HTTP proxy URL. The proxy URL should be in format
+   * SecretVersion resource of the HTTP proxy URL. The Service Account used in the build (either the
+   * default Service Account or user-specified Service Account) should have
+   * secretmanager.versions.access permissions on this secret. The proxy URL should be in format
    * protocol://@]proxyhost[:port].
    * The value may be {@code null}.
    */
@@ -38,14 +40,9 @@ public final class GoogleDevtoolsCloudbuildV1HttpConfig extends com.google.api.c
   private java.lang.String proxySecretVersionName;
 
   /**
-   * Optional. Cloud Storage object storing the certificate to use with the HTTP proxy.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleDevtoolsCloudbuildV1GCSLocation proxySslCaInfo;
-
-  /**
-   * SecretVersion resource of the HTTP proxy URL. The proxy URL should be in format
+   * SecretVersion resource of the HTTP proxy URL. The Service Account used in the build (either the
+   * default Service Account or user-specified Service Account) should have
+   * secretmanager.versions.access permissions on this secret. The proxy URL should be in format
    * protocol://@]proxyhost[:port].
    * @return value or {@code null} for none
    */
@@ -54,29 +51,14 @@ public final class GoogleDevtoolsCloudbuildV1HttpConfig extends com.google.api.c
   }
 
   /**
-   * SecretVersion resource of the HTTP proxy URL. The proxy URL should be in format
+   * SecretVersion resource of the HTTP proxy URL. The Service Account used in the build (either the
+   * default Service Account or user-specified Service Account) should have
+   * secretmanager.versions.access permissions on this secret. The proxy URL should be in format
    * protocol://@]proxyhost[:port].
    * @param proxySecretVersionName proxySecretVersionName or {@code null} for none
    */
   public GoogleDevtoolsCloudbuildV1HttpConfig setProxySecretVersionName(java.lang.String proxySecretVersionName) {
     this.proxySecretVersionName = proxySecretVersionName;
-    return this;
-  }
-
-  /**
-   * Optional. Cloud Storage object storing the certificate to use with the HTTP proxy.
-   * @return value or {@code null} for none
-   */
-  public GoogleDevtoolsCloudbuildV1GCSLocation getProxySslCaInfo() {
-    return proxySslCaInfo;
-  }
-
-  /**
-   * Optional. Cloud Storage object storing the certificate to use with the HTTP proxy.
-   * @param proxySslCaInfo proxySslCaInfo or {@code null} for none
-   */
-  public GoogleDevtoolsCloudbuildV1HttpConfig setProxySslCaInfo(GoogleDevtoolsCloudbuildV1GCSLocation proxySslCaInfo) {
-    this.proxySslCaInfo = proxySslCaInfo;
     return this;
   }
 

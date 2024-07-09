@@ -31,6 +31,13 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2ExecutionReference extends com.google.api.client.json.GenericJson {
 
   /**
+   * Status for the execution completion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String completionStatus;
+
+  /**
    * Creation timestamp of the execution.
    * The value may be {@code null}.
    */
@@ -45,11 +52,35 @@ public final class GoogleCloudRunV2ExecutionReference extends com.google.api.cli
   private String createTime;
 
   /**
+   * The deletion time of the execution. It is only populated as a response to a Delete request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String deleteTime;
+
+  /**
    * Name of the execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Status for the execution completion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCompletionStatus() {
+    return completionStatus;
+  }
+
+  /**
+   * Status for the execution completion.
+   * @param completionStatus completionStatus or {@code null} for none
+   */
+  public GoogleCloudRunV2ExecutionReference setCompletionStatus(java.lang.String completionStatus) {
+    this.completionStatus = completionStatus;
+    return this;
+  }
 
   /**
    * Creation timestamp of the execution.
@@ -82,6 +113,23 @@ public final class GoogleCloudRunV2ExecutionReference extends com.google.api.cli
    */
   public GoogleCloudRunV2ExecutionReference setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * The deletion time of the execution. It is only populated as a response to a Delete request.
+   * @return value or {@code null} for none
+   */
+  public String getDeleteTime() {
+    return deleteTime;
+  }
+
+  /**
+   * The deletion time of the execution. It is only populated as a response to a Delete request.
+   * @param deleteTime deleteTime or {@code null} for none
+   */
+  public GoogleCloudRunV2ExecutionReference setDeleteTime(String deleteTime) {
+    this.deleteTime = deleteTime;
     return this;
   }
 

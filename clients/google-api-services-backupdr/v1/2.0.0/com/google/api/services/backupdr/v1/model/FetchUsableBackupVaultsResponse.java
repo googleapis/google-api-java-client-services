@@ -17,7 +17,7 @@
 package com.google.api.services.backupdr.v1.model;
 
 /**
- * Response message for listing management servers.
+ * Response message for fetching usable BackupVaults.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Backup and DR Service API. For a detailed explanation
@@ -28,18 +28,24 @@ package com.google.api.services.backupdr.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ListManagementServersResponse extends com.google.api.client.json.GenericJson {
+public final class FetchUsableBackupVaultsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of ManagementServer instances in the project for the specified location. If the
+   * The list of BackupVault instances in the project for the specified location. If the
    * '{location}' value in the request is "-", the response contains a list of instances from all
-   * locations. In case any location is unreachable, the response will only return management
-   * servers in reachable locations and the 'unreachable' field will be populated with a list of
-   * unreachable locations.
+   * locations. In case any location is unreachable, the response will only return backup vaults in
+   * reachable locations and the 'unreachable' field will be populated with a list of unreachable
+   * locations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ManagementServer> managementServers;
+  private java.util.List<BackupVault> backupVaults;
+
+  static {
+    // hack to force ProGuard to consider BackupVault used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(BackupVault.class);
+  }
 
   /**
    * A token identifying a page of results the server should return.
@@ -56,27 +62,27 @@ public final class ListManagementServersResponse extends com.google.api.client.j
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The list of ManagementServer instances in the project for the specified location. If the
+   * The list of BackupVault instances in the project for the specified location. If the
    * '{location}' value in the request is "-", the response contains a list of instances from all
-   * locations. In case any location is unreachable, the response will only return management
-   * servers in reachable locations and the 'unreachable' field will be populated with a list of
-   * unreachable locations.
+   * locations. In case any location is unreachable, the response will only return backup vaults in
+   * reachable locations and the 'unreachable' field will be populated with a list of unreachable
+   * locations.
    * @return value or {@code null} for none
    */
-  public java.util.List<ManagementServer> getManagementServers() {
-    return managementServers;
+  public java.util.List<BackupVault> getBackupVaults() {
+    return backupVaults;
   }
 
   /**
-   * The list of ManagementServer instances in the project for the specified location. If the
+   * The list of BackupVault instances in the project for the specified location. If the
    * '{location}' value in the request is "-", the response contains a list of instances from all
-   * locations. In case any location is unreachable, the response will only return management
-   * servers in reachable locations and the 'unreachable' field will be populated with a list of
-   * unreachable locations.
-   * @param managementServers managementServers or {@code null} for none
+   * locations. In case any location is unreachable, the response will only return backup vaults in
+   * reachable locations and the 'unreachable' field will be populated with a list of unreachable
+   * locations.
+   * @param backupVaults backupVaults or {@code null} for none
    */
-  public ListManagementServersResponse setManagementServers(java.util.List<ManagementServer> managementServers) {
-    this.managementServers = managementServers;
+  public FetchUsableBackupVaultsResponse setBackupVaults(java.util.List<BackupVault> backupVaults) {
+    this.backupVaults = backupVaults;
     return this;
   }
 
@@ -92,7 +98,7 @@ public final class ListManagementServersResponse extends com.google.api.client.j
    * A token identifying a page of results the server should return.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public ListManagementServersResponse setNextPageToken(java.lang.String nextPageToken) {
+  public FetchUsableBackupVaultsResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
     return this;
   }
@@ -109,19 +115,19 @@ public final class ListManagementServersResponse extends com.google.api.client.j
    * Locations that could not be reached.
    * @param unreachable unreachable or {@code null} for none
    */
-  public ListManagementServersResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+  public FetchUsableBackupVaultsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
     this.unreachable = unreachable;
     return this;
   }
 
   @Override
-  public ListManagementServersResponse set(String fieldName, Object value) {
-    return (ListManagementServersResponse) super.set(fieldName, value);
+  public FetchUsableBackupVaultsResponse set(String fieldName, Object value) {
+    return (FetchUsableBackupVaultsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ListManagementServersResponse clone() {
-    return (ListManagementServersResponse) super.clone();
+  public FetchUsableBackupVaultsResponse clone() {
+    return (FetchUsableBackupVaultsResponse) super.clone();
   }
 
 }

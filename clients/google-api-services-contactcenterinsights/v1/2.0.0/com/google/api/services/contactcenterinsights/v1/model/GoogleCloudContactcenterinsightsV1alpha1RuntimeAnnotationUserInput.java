@@ -46,6 +46,13 @@ public final class GoogleCloudContactcenterinsightsV1alpha1RuntimeAnnotationUser
   private java.lang.String query;
 
   /**
+   * Query source for the answer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String querySource;
+
+  /**
    * The resource name of associated generator. Format: `projects//locations//generators/`
    * @return value or {@code null} for none
    */
@@ -78,6 +85,23 @@ public final class GoogleCloudContactcenterinsightsV1alpha1RuntimeAnnotationUser
    */
   public GoogleCloudContactcenterinsightsV1alpha1RuntimeAnnotationUserInput setQuery(java.lang.String query) {
     this.query = query;
+    return this;
+  }
+
+  /**
+   * Query source for the answer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getQuerySource() {
+    return querySource;
+  }
+
+  /**
+   * Query source for the answer.
+   * @param querySource querySource or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1RuntimeAnnotationUserInput setQuerySource(java.lang.String querySource) {
+    this.querySource = querySource;
     return this;
   }
 

@@ -41,12 +41,15 @@ public final class ErrorGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String groupId;
 
   /**
-   * The group resource name. Written as `projects/{projectID}/groups/{group_id}`. Example:
-   * `projects/my-project-123/groups/my-group` In the group resource name, the `group_id` is a
-   * unique identifier for a particular error group. The identifier is derived from key parts of the
-   * error-log content and is treated as Service Data. For information about how Service Data is
-   * handled, see [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-privacy-
-   * notice).
+   * The group resource name. Written as `projects/{projectID}/groups/{group_id}` or
+   * `projects/{projectID}/locations/{location}/groups/{group_id}` Examples: `projects/my-
+   * project-123/groups/my-group`, `projects/my-project-123/locations/us-central1/groups/my-group`
+   * In the group resource name, the `group_id` is a unique identifier for a particular error group.
+   * The identifier is derived from key parts of the error-log content and is treated as Service
+   * Data. For information about how Service Data is handled, see [Google Cloud Privacy
+   * Notice](https://cloud.google.com/terms/cloud-privacy-notice). For a list of supported
+   * locations, see [Supported Regions](https://cloud.google.com/logging/docs/region-support).
+   * `global` is the default when unspecified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,12 +95,15 @@ public final class ErrorGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The group resource name. Written as `projects/{projectID}/groups/{group_id}`. Example:
-   * `projects/my-project-123/groups/my-group` In the group resource name, the `group_id` is a
-   * unique identifier for a particular error group. The identifier is derived from key parts of the
-   * error-log content and is treated as Service Data. For information about how Service Data is
-   * handled, see [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-privacy-
-   * notice).
+   * The group resource name. Written as `projects/{projectID}/groups/{group_id}` or
+   * `projects/{projectID}/locations/{location}/groups/{group_id}` Examples: `projects/my-
+   * project-123/groups/my-group`, `projects/my-project-123/locations/us-central1/groups/my-group`
+   * In the group resource name, the `group_id` is a unique identifier for a particular error group.
+   * The identifier is derived from key parts of the error-log content and is treated as Service
+   * Data. For information about how Service Data is handled, see [Google Cloud Privacy
+   * Notice](https://cloud.google.com/terms/cloud-privacy-notice). For a list of supported
+   * locations, see [Supported Regions](https://cloud.google.com/logging/docs/region-support).
+   * `global` is the default when unspecified.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -105,12 +111,15 @@ public final class ErrorGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The group resource name. Written as `projects/{projectID}/groups/{group_id}`. Example:
-   * `projects/my-project-123/groups/my-group` In the group resource name, the `group_id` is a
-   * unique identifier for a particular error group. The identifier is derived from key parts of the
-   * error-log content and is treated as Service Data. For information about how Service Data is
-   * handled, see [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-privacy-
-   * notice).
+   * The group resource name. Written as `projects/{projectID}/groups/{group_id}` or
+   * `projects/{projectID}/locations/{location}/groups/{group_id}` Examples: `projects/my-
+   * project-123/groups/my-group`, `projects/my-project-123/locations/us-central1/groups/my-group`
+   * In the group resource name, the `group_id` is a unique identifier for a particular error group.
+   * The identifier is derived from key parts of the error-log content and is treated as Service
+   * Data. For information about how Service Data is handled, see [Google Cloud Privacy
+   * Notice](https://cloud.google.com/terms/cloud-privacy-notice). For a list of supported
+   * locations, see [Supported Regions](https://cloud.google.com/logging/docs/region-support).
+   * `global` is the default when unspecified.
    * @param name name or {@code null} for none
    */
   public ErrorGroup setName(java.lang.String name) {

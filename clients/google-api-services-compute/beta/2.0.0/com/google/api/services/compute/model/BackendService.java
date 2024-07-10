@@ -446,6 +446,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String sessionAffinity;
 
   /**
+   * Describes the HTTP cookie used for stateful session affinity. This field is applicable and
+   * required if the sessionAffinity is set to STRONG_COOKIE_AFFINITY.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackendServiceHttpCookie strongSessionAffinityCookie;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -464,6 +472,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.Integer timeoutSec;
 
   /**
+   * [Output Only] List of resources referencing given backend service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1430,6 +1439,25 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Describes the HTTP cookie used for stateful session affinity. This field is applicable and
+   * required if the sessionAffinity is set to STRONG_COOKIE_AFFINITY.
+   * @return value or {@code null} for none
+   */
+  public BackendServiceHttpCookie getStrongSessionAffinityCookie() {
+    return strongSessionAffinityCookie;
+  }
+
+  /**
+   * Describes the HTTP cookie used for stateful session affinity. This field is applicable and
+   * required if the sessionAffinity is set to STRONG_COOKIE_AFFINITY.
+   * @param strongSessionAffinityCookie strongSessionAffinityCookie or {@code null} for none
+   */
+  public BackendService setStrongSessionAffinityCookie(BackendServiceHttpCookie strongSessionAffinityCookie) {
+    this.strongSessionAffinityCookie = strongSessionAffinityCookie;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public Subsetting getSubsetting() {
@@ -1472,6 +1500,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * [Output Only] List of resources referencing given backend service.
    * @return value or {@code null} for none
    */
   public java.util.List<BackendServiceUsedBy> getUsedBy() {
@@ -1479,6 +1508,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * [Output Only] List of resources referencing given backend service.
    * @param usedBy usedBy or {@code null} for none
    */
   public BackendService setUsedBy(java.util.List<BackendServiceUsedBy> usedBy) {

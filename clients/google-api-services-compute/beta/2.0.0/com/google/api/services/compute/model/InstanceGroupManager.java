@@ -47,9 +47,14 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.util.List<InstanceGroupManagerAutoHealingPolicy> autoHealingPolicies;
 
   /**
-   * The base instance name to use for instances in this group. The value must be 1-58 characters
-   * long. Instances are named by appending a hyphen and a random four-character string to the base
-   * instance name. The base instance name must comply with RFC1035.
+   * The base instance name is a prefix that you want to attach to the names of all VMs in a MIG.
+   * The maximum character length is 58 and the name must comply with RFC1035 format. When a VM is
+   * created in the group, the MIG appends a hyphen and a random four-character string to the base
+   * instance name. If you want the MIG to assign sequential numbers instead of a random string,
+   * then end the base instance name with a hyphen followed by one or more hash symbols. The hash
+   * symbols indicate the number of digits. For example, a base instance name of "vm-###" results in
+   * "vm-001" as a VM name. @pattern
+   * [a-z](([-a-z0-9]{0,57})|([-a-z0-9]{0,52}-#{1,10}(\\[[0-9]{1,10}\\])?))
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -338,9 +343,14 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * The base instance name to use for instances in this group. The value must be 1-58 characters
-   * long. Instances are named by appending a hyphen and a random four-character string to the base
-   * instance name. The base instance name must comply with RFC1035.
+   * The base instance name is a prefix that you want to attach to the names of all VMs in a MIG.
+   * The maximum character length is 58 and the name must comply with RFC1035 format. When a VM is
+   * created in the group, the MIG appends a hyphen and a random four-character string to the base
+   * instance name. If you want the MIG to assign sequential numbers instead of a random string,
+   * then end the base instance name with a hyphen followed by one or more hash symbols. The hash
+   * symbols indicate the number of digits. For example, a base instance name of "vm-###" results in
+   * "vm-001" as a VM name. @pattern
+   * [a-z](([-a-z0-9]{0,57})|([-a-z0-9]{0,52}-#{1,10}(\\[[0-9]{1,10}\\])?))
    * @return value or {@code null} for none
    */
   public java.lang.String getBaseInstanceName() {
@@ -348,9 +358,14 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * The base instance name to use for instances in this group. The value must be 1-58 characters
-   * long. Instances are named by appending a hyphen and a random four-character string to the base
-   * instance name. The base instance name must comply with RFC1035.
+   * The base instance name is a prefix that you want to attach to the names of all VMs in a MIG.
+   * The maximum character length is 58 and the name must comply with RFC1035 format. When a VM is
+   * created in the group, the MIG appends a hyphen and a random four-character string to the base
+   * instance name. If you want the MIG to assign sequential numbers instead of a random string,
+   * then end the base instance name with a hyphen followed by one or more hash symbols. The hash
+   * symbols indicate the number of digits. For example, a base instance name of "vm-###" results in
+   * "vm-001" as a VM name. @pattern
+   * [a-z](([-a-z0-9]{0,57})|([-a-z0-9]{0,52}-#{1,10}(\\[[0-9]{1,10}\\])?))
    * @param baseInstanceName baseInstanceName or {@code null} for none
    */
   public InstanceGroupManager setBaseInstanceName(java.lang.String baseInstanceName) {

@@ -30,12 +30,16 @@ package com.google.api.services.compute.model;
 public final class BackendServiceUsedBy extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output Only] Server-defined URL for resources referencing given BackendService like UrlMaps,
+   * TargetTcpProxies, TargetSslProxies and ForwardingRule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reference;
 
   /**
+   * [Output Only] Server-defined URL for resources referencing given BackendService like UrlMaps,
+   * TargetTcpProxies, TargetSslProxies and ForwardingRule.
    * @return value or {@code null} for none
    */
   public java.lang.String getReference() {
@@ -43,6 +47,8 @@ public final class BackendServiceUsedBy extends com.google.api.client.json.Gener
   }
 
   /**
+   * [Output Only] Server-defined URL for resources referencing given BackendService like UrlMaps,
+   * TargetTcpProxies, TargetSslProxies and ForwardingRule.
    * @param reference reference or {@code null} for none
    */
   public BackendServiceUsedBy setReference(java.lang.String reference) {

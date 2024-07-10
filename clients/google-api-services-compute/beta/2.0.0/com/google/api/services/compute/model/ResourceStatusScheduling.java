@@ -30,11 +30,41 @@ package com.google.api.services.compute.model;
 public final class ResourceStatusScheduling extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies the availability domain to place the instance in. The value must be a number between
+   * 1 and the number of availability domains specified in the spread placement policy attached to
+   * the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer availabilityDomain;
+
+  /**
    * Time in future when the instance will be terminated in RFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String terminationTimestamp;
+
+  /**
+   * Specifies the availability domain to place the instance in. The value must be a number between
+   * 1 and the number of availability domains specified in the spread placement policy attached to
+   * the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAvailabilityDomain() {
+    return availabilityDomain;
+  }
+
+  /**
+   * Specifies the availability domain to place the instance in. The value must be a number between
+   * 1 and the number of availability domains specified in the spread placement policy attached to
+   * the instance.
+   * @param availabilityDomain availabilityDomain or {@code null} for none
+   */
+  public ResourceStatusScheduling setAvailabilityDomain(java.lang.Integer availabilityDomain) {
+    this.availabilityDomain = availabilityDomain;
+    return this;
+  }
 
   /**
    * Time in future when the instance will be terminated in RFC3339 text format.

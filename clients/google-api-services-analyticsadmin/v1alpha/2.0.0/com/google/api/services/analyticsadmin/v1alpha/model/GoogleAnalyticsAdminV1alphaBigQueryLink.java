@@ -45,6 +45,14 @@ public final class GoogleAnalyticsAdminV1alphaBigQueryLink extends com.google.ap
   private java.lang.Boolean dailyExportEnabled;
 
   /**
+   * Required. Immutable. The geographic location where the created BigQuery dataset should reside.
+   * See https://cloud.google.com/bigquery/docs/locations for supported locations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String datasetLocation;
+
+  /**
    * The list of event names that will be excluded from exports.
    * The value may be {@code null}.
    */
@@ -130,6 +138,25 @@ public final class GoogleAnalyticsAdminV1alphaBigQueryLink extends com.google.ap
    */
   public GoogleAnalyticsAdminV1alphaBigQueryLink setDailyExportEnabled(java.lang.Boolean dailyExportEnabled) {
     this.dailyExportEnabled = dailyExportEnabled;
+    return this;
+  }
+
+  /**
+   * Required. Immutable. The geographic location where the created BigQuery dataset should reside.
+   * See https://cloud.google.com/bigquery/docs/locations for supported locations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatasetLocation() {
+    return datasetLocation;
+  }
+
+  /**
+   * Required. Immutable. The geographic location where the created BigQuery dataset should reside.
+   * See https://cloud.google.com/bigquery/docs/locations for supported locations.
+   * @param datasetLocation datasetLocation or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaBigQueryLink setDatasetLocation(java.lang.String datasetLocation) {
+    this.datasetLocation = datasetLocation;
     return this;
   }
 

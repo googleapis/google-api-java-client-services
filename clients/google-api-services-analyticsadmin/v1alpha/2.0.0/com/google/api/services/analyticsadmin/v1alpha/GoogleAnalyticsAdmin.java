@@ -8711,6 +8711,270 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
     public class BigQueryLinks {
 
       /**
+       * Creates a BigQueryLink.
+       *
+       * Create a request for the method "bigQueryLinks.create".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Example format: properties/1234
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBigQueryLink}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBigQueryLink content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBigQueryLink> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/bigQueryLinks";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+$");
+
+        /**
+         * Creates a BigQueryLink.
+         *
+         * Create a request for the method "bigQueryLinks.create".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Example format: properties/1234
+         * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBigQueryLink}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBigQueryLink content) {
+          super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBigQueryLink.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Example format: properties/1234 */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Example format: properties/1234
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. Example format: properties/1234 */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^properties/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a BigQueryLink on a property.
+       *
+       * Create a request for the method "bigQueryLinks.delete".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The BigQueryLink to delete. Example format: properties/1234/bigQueryLinks/5678
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/bigQueryLinks/[^/]+$");
+
+        /**
+         * Deletes a BigQueryLink on a property.
+         *
+         * Create a request for the method "bigQueryLinks.delete".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The BigQueryLink to delete. Example format: properties/1234/bigQueryLinks/5678
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(GoogleAnalyticsAdmin.this, "DELETE", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/bigQueryLinks/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The BigQueryLink to delete. Example format: properties/1234/bigQueryLinks/5678
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The BigQueryLink to delete. Example format: properties/1234/bigQueryLinks/5678
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The BigQueryLink to delete. Example format: properties/1234/bigQueryLinks/5678
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/bigQueryLinks/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
        * Lookup for a single BigQuery Link.
        *
        * Create a request for the method "bigQueryLinks.get".
@@ -9058,6 +9322,177 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a BigQueryLink.
+       *
+       * Create a request for the method "bigQueryLinks.patch".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Output only. Resource name of this BigQuery link. Format:
+       *        'properties/{property_id}/bigQueryLinks/{bigquery_link_id}' Format:
+       *        'properties/1234/bigQueryLinks/abc567'
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBigQueryLink}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBigQueryLink content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBigQueryLink> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/bigQueryLinks/[^/]+$");
+
+        /**
+         * Updates a BigQueryLink.
+         *
+         * Create a request for the method "bigQueryLinks.patch".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Output only. Resource name of this BigQuery link. Format:
+       *        'properties/{property_id}/bigQueryLinks/{bigquery_link_id}' Format:
+       *        'properties/1234/bigQueryLinks/abc567'
+         * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBigQueryLink}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBigQueryLink content) {
+          super(GoogleAnalyticsAdmin.this, "PATCH", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaBigQueryLink.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/bigQueryLinks/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Output only. Resource name of this BigQuery link. Format:
+         * 'properties/{property_id}/bigQueryLinks/{bigquery_link_id}' Format:
+         * 'properties/1234/bigQueryLinks/abc567'
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Output only. Resource name of this BigQuery link. Format:
+       'properties/{property_id}/bigQueryLinks/{bigquery_link_id}' Format:
+       'properties/1234/bigQueryLinks/abc567'
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Output only. Resource name of this BigQuery link. Format:
+         * 'properties/{property_id}/bigQueryLinks/{bigquery_link_id}' Format:
+         * 'properties/1234/bigQueryLinks/abc567'
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/bigQueryLinks/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+         * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+         * one path with the string "*" to match all fields.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+       "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use one path
+       with the string "*" to match all fields.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+         * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+         * one path with the string "*" to match all fields.
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
         }
       }
 

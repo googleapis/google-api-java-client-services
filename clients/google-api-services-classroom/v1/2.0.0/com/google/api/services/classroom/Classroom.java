@@ -5083,8 +5083,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * `PERMISSION_DENIED` if the requesting developer project did not create the corresponding course
        * work, if the user is not permitted to make the requested modification to the student submission,
        * or for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `FAILED_PRECONDITION`
-       * if the requested course work has already been deleted. * `NOT_FOUND` if the requested course,
-       * course work, or student submission does not exist.
+       * if the requested course work has already been deleted. * `NOT_FOUND` if the requested course or
+       * course work does not exist.
        *
        * Create a request for the method "courseWork.patch".
        *
@@ -5116,7 +5116,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * work, if the user is not permitted to make the requested modification to the student
          * submission, or for access errors. * `INVALID_ARGUMENT` if the request is malformed. *
          * `FAILED_PRECONDITION` if the requested course work has already been deleted. * `NOT_FOUND` if
-         * the requested course, course work, or student submission does not exist.
+         * the requested course or course work does not exist.
          *
          * Create a request for the method "courseWork.patch".
          *
@@ -5240,7 +5240,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * not set in the `CourseWork` object, an `INVALID_ARGUMENT` error is returned. The
          * following fields may be specified by teachers: * `title` * `description` * `state` *
          * `due_date` * `due_time` * `max_points` * `scheduled_time` *
-         * `submission_modification_mode` * `topic_id`
+         * `submission_modification_mode` * `topic_id` * `grading_period_id` Available in
+         * [V1_20240401_PREVIEW](https://developers.google.com/classroom/reference/preview) and
+         * later.
          */
         @com.google.api.client.util.Key
         private String updateMask;
@@ -5251,7 +5253,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        does not support empty values is included in the update mask and not set in the `CourseWork`
        object, an `INVALID_ARGUMENT` error is returned. The following fields may be specified by teachers:
        * `title` * `description` * `state` * `due_date` * `due_time` * `max_points` * `scheduled_time` *
-       `submission_modification_mode` * `topic_id`
+       `submission_modification_mode` * `topic_id` * `grading_period_id` Available in
+       [V1_20240401_PREVIEW](https://developers.google.com/classroom/reference/preview) and later.
          */
         public String getUpdateMask() {
           return updateMask;
@@ -5265,7 +5268,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * not set in the `CourseWork` object, an `INVALID_ARGUMENT` error is returned. The
          * following fields may be specified by teachers: * `title` * `description` * `state` *
          * `due_date` * `due_time` * `max_points` * `scheduled_time` *
-         * `submission_modification_mode` * `topic_id`
+         * `submission_modification_mode` * `topic_id` * `grading_period_id` Available in
+         * [V1_20240401_PREVIEW](https://developers.google.com/classroom/reference/preview) and
+         * later.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;

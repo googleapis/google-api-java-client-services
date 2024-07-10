@@ -162,9 +162,13 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
      * optional parameters, call the {@link DeleteEvents#execute()} method to invoke the remote
      * operation.
      *
-     * @param projectName Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`,
-     *        where `{projectID}` is the [Google Cloud Platform project
-     *        ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`.
+     * @param projectName Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`
+     *        or `projects/{projectID}/locations/{location}`, where `{projectID}` is the [Google Cloud
+     *        Platform project ID](https://support.google.com/cloud/answer/6158840) and `{location}` is
+     *        a Cloud region. Examples: `projects/my-project-123`, `projects/my-
+     *        project-123/locations/global`. For a list of supported locations, see [Supported
+     *        Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+     *        when unspecified.
      * @return the request
      */
     public DeleteEvents deleteEvents(java.lang.String projectName) throws java.io.IOException {
@@ -191,9 +195,13 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
        * DeleteEvents#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectName Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`,
-     *        where `{projectID}` is the [Google Cloud Platform project
-     *        ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`.
+       * @param projectName Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`
+     *        or `projects/{projectID}/locations/{location}`, where `{projectID}` is the [Google Cloud
+     *        Platform project ID](https://support.google.com/cloud/answer/6158840) and `{location}` is
+     *        a Cloud region. Examples: `projects/my-project-123`, `projects/my-
+     *        project-123/locations/global`. For a list of supported locations, see [Supported
+     *        Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+     *        when unspecified.
        * @since 1.13
        */
       protected DeleteEvents(java.lang.String projectName) {
@@ -263,15 +271,22 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
 
       /**
        * Required. The resource name of the Google Cloud Platform project. Written as
-       * `projects/{projectID}`, where `{projectID}` is the [Google Cloud Platform project
-       * ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`.
+       * `projects/{projectID}` or `projects/{projectID}/locations/{location}`, where `{projectID}`
+       * is the [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840)
+       * and `{location}` is a Cloud region. Examples: `projects/my-project-123`, `projects/my-
+       * project-123/locations/global`. For a list of supported locations, see [Supported
+       * Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+       * when unspecified.
        */
       @com.google.api.client.util.Key
       private java.lang.String projectName;
 
-      /** Required. The resource name of the Google Cloud Platform project. Written as
-     `projects/{projectID}`, where `{projectID}` is the [Google Cloud Platform project
-     ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`.
+      /** Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`
+     or `projects/{projectID}/locations/{location}`, where `{projectID}` is the [Google Cloud Platform
+     project ID](https://support.google.com/cloud/answer/6158840) and `{location}` is a Cloud region.
+     Examples: `projects/my-project-123`, `projects/my-project-123/locations/global`. For a list of
+     supported locations, see [Supported Regions](https://cloud.google.com/logging/docs/region-support).
+     `global` is the default when unspecified.
        */
       public java.lang.String getProjectName() {
         return projectName;
@@ -279,8 +294,12 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
 
       /**
        * Required. The resource name of the Google Cloud Platform project. Written as
-       * `projects/{projectID}`, where `{projectID}` is the [Google Cloud Platform project
-       * ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`.
+       * `projects/{projectID}` or `projects/{projectID}/locations/{location}`, where `{projectID}`
+       * is the [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840)
+       * and `{location}` is a Cloud region. Examples: `projects/my-project-123`, `projects/my-
+       * project-123/locations/global`. For a list of supported locations, see [Supported
+       * Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+       * when unspecified.
        */
       public DeleteEvents setProjectName(java.lang.String projectName) {
         if (!getSuppressPatternChecks()) {
@@ -326,9 +345,13 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the clouderrorreporting server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param projectName Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`,
-       *        where `{projectID}` is the [Google Cloud Platform project
-       *        ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`.
+       * @param projectName Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`
+       *        or `projects/{projectID}/locations/{location}`, where `{projectID}` is the [Google Cloud
+       *        Platform project ID](https://support.google.com/cloud/answer/6158840) and `{location}` is
+       *        a Cloud region. Examples: `projects/my-project-123`, `projects/my-
+       *        project-123/locations/global`. For a list of supported locations, see [Supported
+       *        Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+       *        when unspecified.
        * @return the request
        */
       public List list(java.lang.String projectName) throws java.io.IOException {
@@ -355,9 +378,13 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param projectName Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`,
-       *        where `{projectID}` is the [Google Cloud Platform project
-       *        ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`.
+         * @param projectName Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`
+       *        or `projects/{projectID}/locations/{location}`, where `{projectID}` is the [Google Cloud
+       *        Platform project ID](https://support.google.com/cloud/answer/6158840) and `{location}` is
+       *        a Cloud region. Examples: `projects/my-project-123`, `projects/my-
+       *        project-123/locations/global`. For a list of supported locations, see [Supported
+       *        Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+       *        when unspecified.
          * @since 1.13
          */
         protected List(java.lang.String projectName) {
@@ -437,15 +464,23 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
 
         /**
          * Required. The resource name of the Google Cloud Platform project. Written as
-         * `projects/{projectID}`, where `{projectID}` is the [Google Cloud Platform project
-         * ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`.
+         * `projects/{projectID}` or `projects/{projectID}/locations/{location}`, where
+         * `{projectID}` is the [Google Cloud Platform project
+         * ID](https://support.google.com/cloud/answer/6158840) and `{location}` is a Cloud region.
+         * Examples: `projects/my-project-123`, `projects/my-project-123/locations/global`. For a
+         * list of supported locations, see [Supported
+         * Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+         * when unspecified.
          */
         @com.google.api.client.util.Key
         private java.lang.String projectName;
 
-        /** Required. The resource name of the Google Cloud Platform project. Written as
-       `projects/{projectID}`, where `{projectID}` is the [Google Cloud Platform project
-       ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`.
+        /** Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`
+       or `projects/{projectID}/locations/{location}`, where `{projectID}` is the [Google Cloud Platform
+       project ID](https://support.google.com/cloud/answer/6158840) and `{location}` is a Cloud region.
+       Examples: `projects/my-project-123`, `projects/my-project-123/locations/global`. For a list of
+       supported locations, see [Supported Regions](https://cloud.google.com/logging/docs/region-support).
+       `global` is the default when unspecified.
          */
         public java.lang.String getProjectName() {
           return projectName;
@@ -453,8 +488,13 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
 
         /**
          * Required. The resource name of the Google Cloud Platform project. Written as
-         * `projects/{projectID}`, where `{projectID}` is the [Google Cloud Platform project
-         * ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`.
+         * `projects/{projectID}` or `projects/{projectID}/locations/{location}`, where
+         * `{projectID}` is the [Google Cloud Platform project
+         * ID](https://support.google.com/cloud/answer/6158840) and `{location}` is a Cloud region.
+         * Examples: `projects/my-project-123`, `projects/my-project-123/locations/global`. For a
+         * list of supported locations, see [Supported
+         * Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+         * when unspecified.
          */
         public List setProjectName(java.lang.String projectName) {
           if (!getSuppressPatternChecks()) {
@@ -625,12 +665,11 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
        * authentication. To use an API key, append it to the URL as the value of a `key` parameter. For
        * example: `POST
        * https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
-       * **Note:** [Error Reporting] (https://cloud.google.com/error-reporting) is a global service built
-       * on Cloud Logging and can analyze log entries when all of the following are true: * The log
-       * entries are stored in a log bucket in the `global` location. * Customer-managed encryption keys
-       * (CMEK) are disabled on the log bucket. * The log bucket satisfies one of the following: * The log
-       * bucket is stored in the same project where the logs originated. * The logs were routed to a
-       * project, and then that project stored those logs in a log bucket that it owns.
+       * **Note:** [Error Reporting] (https://cloud.google.com/error-reporting) is a service built on
+       * Cloud Logging and can analyze log entries when all of the following are true: * Customer-managed
+       * encryption keys (CMEK) are disabled on the log bucket. * The log bucket satisfies one of the
+       * following: * The log bucket is stored in the same project where the logs originated. * The logs
+       * were routed to a project, and then that project stored those logs in a log bucket that it owns.
        *
        * Create a request for the method "events.report".
        *
@@ -663,12 +702,12 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          * for authentication. To use an API key, append it to the URL as the value of a `key` parameter.
          * For example: `POST
          * https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
-         * **Note:** [Error Reporting] (https://cloud.google.com/error-reporting) is a global service
-         * built on Cloud Logging and can analyze log entries when all of the following are true: * The
-         * log entries are stored in a log bucket in the `global` location. * Customer-managed encryption
-         * keys (CMEK) are disabled on the log bucket. * The log bucket satisfies one of the following: *
-         * The log bucket is stored in the same project where the logs originated. * The logs were routed
-         * to a project, and then that project stored those logs in a log bucket that it owns.
+         * **Note:** [Error Reporting] (https://cloud.google.com/error-reporting) is a service built on
+         * Cloud Logging and can analyze log entries when all of the following are true: * Customer-
+         * managed encryption keys (CMEK) are disabled on the log bucket. * The log bucket satisfies one
+         * of the following: * The log bucket is stored in the same project where the logs originated. *
+         * The logs were routed to a project, and then that project stored those logs in a log bucket that
+         * it owns.
          *
          * Create a request for the method "events.report".
          *
@@ -820,8 +859,13 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
        *
        * @param projectName Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`
        *        or `projects/{projectNumber}`, where `{projectID}` and `{projectNumber}` can be found in
-       *        the [Google Cloud console](https://support.google.com/cloud/answer/6158840). Examples:
-       *        `projects/my-project-123`, `projects/5551234`.
+       *        the [Google Cloud console](https://support.google.com/cloud/answer/6158840). It may also
+       *        include a location, such as `projects/{projectID}/locations/{location}` where `{location}`
+       *        is a cloud region. Examples: `projects/my-project-123`, `projects/5551234`, `projects/my-
+       *        project-123/locations/us-central1`, `projects/5551234/locations/us-central1`. For a list
+       *        of supported locations, see [Supported
+       *        Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+       *        when unspecified. Use `-` as a wildcard to request group stats from all regions.
        * @return the request
        */
       public List list(java.lang.String projectName) throws java.io.IOException {
@@ -850,8 +894,13 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          *
          * @param projectName Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`
        *        or `projects/{projectNumber}`, where `{projectID}` and `{projectNumber}` can be found in
-       *        the [Google Cloud console](https://support.google.com/cloud/answer/6158840). Examples:
-       *        `projects/my-project-123`, `projects/5551234`.
+       *        the [Google Cloud console](https://support.google.com/cloud/answer/6158840). It may also
+       *        include a location, such as `projects/{projectID}/locations/{location}` where `{location}`
+       *        is a cloud region. Examples: `projects/my-project-123`, `projects/5551234`, `projects/my-
+       *        project-123/locations/us-central1`, `projects/5551234/locations/us-central1`. For a list
+       *        of supported locations, see [Supported
+       *        Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+       *        when unspecified. Use `-` as a wildcard to request group stats from all regions.
          * @since 1.13
          */
         protected List(java.lang.String projectName) {
@@ -933,16 +982,25 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          * Required. The resource name of the Google Cloud Platform project. Written as
          * `projects/{projectID}` or `projects/{projectNumber}`, where `{projectID}` and
          * `{projectNumber}` can be found in the [Google Cloud
-         * console](https://support.google.com/cloud/answer/6158840). Examples: `projects/my-
-         * project-123`, `projects/5551234`.
+         * console](https://support.google.com/cloud/answer/6158840). It may also include a
+         * location, such as `projects/{projectID}/locations/{location}` where `{location}` is a
+         * cloud region. Examples: `projects/my-project-123`, `projects/5551234`, `projects/my-
+         * project-123/locations/us-central1`, `projects/5551234/locations/us-central1`. For a list
+         * of supported locations, see [Supported
+         * Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+         * when unspecified. Use `-` as a wildcard to request group stats from all regions.
          */
         @com.google.api.client.util.Key
         private java.lang.String projectName;
 
         /** Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`
        or `projects/{projectNumber}`, where `{projectID}` and `{projectNumber}` can be found in the
-       [Google Cloud console](https://support.google.com/cloud/answer/6158840). Examples: `projects/my-
-       project-123`, `projects/5551234`.
+       [Google Cloud console](https://support.google.com/cloud/answer/6158840). It may also include a
+       location, such as `projects/{projectID}/locations/{location}` where `{location}` is a cloud region.
+       Examples: `projects/my-project-123`, `projects/5551234`, `projects/my-project-123/locations/us-
+       central1`, `projects/5551234/locations/us-central1`. For a list of supported locations, see
+       [Supported Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+       when unspecified. Use `-` as a wildcard to request group stats from all regions.
          */
         public java.lang.String getProjectName() {
           return projectName;
@@ -952,8 +1010,13 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          * Required. The resource name of the Google Cloud Platform project. Written as
          * `projects/{projectID}` or `projects/{projectNumber}`, where `{projectID}` and
          * `{projectNumber}` can be found in the [Google Cloud
-         * console](https://support.google.com/cloud/answer/6158840). Examples: `projects/my-
-         * project-123`, `projects/5551234`.
+         * console](https://support.google.com/cloud/answer/6158840). It may also include a
+         * location, such as `projects/{projectID}/locations/{location}` where `{location}` is a
+         * cloud region. Examples: `projects/my-project-123`, `projects/5551234`, `projects/my-
+         * project-123/locations/us-central1`, `projects/5551234/locations/us-central1`. For a list
+         * of supported locations, see [Supported
+         * Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+         * when unspecified. Use `-` as a wildcard to request group stats from all regions.
          */
         public List setProjectName(java.lang.String projectName) {
           if (!getSuppressPatternChecks()) {
@@ -1239,13 +1302,16 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the clouderrorreporting server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param groupName Required. The group resource name. Written as `projects/{projectID}/groups/{group_id}`. Call
-       *        groupStats.list to return a list of groups belonging to this project. Example:
-       *        `projects/my-project-123/groups/my-group` In the group resource name, the `group_id` is a
-       *        unique identifier for a particular error group. The identifier is derived from key parts
-       *        of the error-log content and is treated as Service Data. For information about how Service
-       *        Data is handled, see [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-
-       *        privacy-notice).
+       * @param groupName Required. The group resource name. Written as either `projects/{projectID}/groups/{group_id}` or
+       *        `projects/{projectID}/locations/{location}/groups/{group_id}`. Call groupStats.list to
+       *        return a list of groups belonging to this project. Examples: `projects/my-
+       *        project-123/groups/my-group`, `projects/my-project-123/locations/global/groups/my-group`
+       *        In the group resource name, the `group_id` is a unique identifier for a particular error
+       *        group. The identifier is derived from key parts of the error-log content and is treated as
+       *        Service Data. For information about how Service Data is handled, see [Google Cloud Privacy
+       *        Notice](https://cloud.google.com/terms/cloud-privacy-notice). For a list of supported
+       *        locations, see [Supported Regions](https://cloud.google.com/logging/docs/region-support).
+       *        `global` is the default when unspecified.
        * @return the request
        */
       public Get get(java.lang.String groupName) throws java.io.IOException {
@@ -1272,13 +1338,16 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param groupName Required. The group resource name. Written as `projects/{projectID}/groups/{group_id}`. Call
-       *        groupStats.list to return a list of groups belonging to this project. Example:
-       *        `projects/my-project-123/groups/my-group` In the group resource name, the `group_id` is a
-       *        unique identifier for a particular error group. The identifier is derived from key parts
-       *        of the error-log content and is treated as Service Data. For information about how Service
-       *        Data is handled, see [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-
-       *        privacy-notice).
+         * @param groupName Required. The group resource name. Written as either `projects/{projectID}/groups/{group_id}` or
+       *        `projects/{projectID}/locations/{location}/groups/{group_id}`. Call groupStats.list to
+       *        return a list of groups belonging to this project. Examples: `projects/my-
+       *        project-123/groups/my-group`, `projects/my-project-123/locations/global/groups/my-group`
+       *        In the group resource name, the `group_id` is a unique identifier for a particular error
+       *        group. The identifier is derived from key parts of the error-log content and is treated as
+       *        Service Data. For information about how Service Data is handled, see [Google Cloud Privacy
+       *        Notice](https://cloud.google.com/terms/cloud-privacy-notice). For a list of supported
+       *        locations, see [Supported Regions](https://cloud.google.com/logging/docs/region-support).
+       *        `global` is the default when unspecified.
          * @since 1.13
          */
         protected Get(java.lang.String groupName) {
@@ -1357,36 +1426,50 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The group resource name. Written as `projects/{projectID}/groups/{group_id}`.
-         * Call groupStats.list to return a list of groups belonging to this project. Example:
-         * `projects/my-project-123/groups/my-group` In the group resource name, the `group_id` is a
-         * unique identifier for a particular error group. The identifier is derived from key parts
-         * of the error-log content and is treated as Service Data. For information about how
-         * Service Data is handled, see [Google Cloud Privacy
-         * Notice](https://cloud.google.com/terms/cloud-privacy-notice).
+         * Required. The group resource name. Written as either
+         * `projects/{projectID}/groups/{group_id}` or
+         * `projects/{projectID}/locations/{location}/groups/{group_id}`. Call groupStats.list to
+         * return a list of groups belonging to this project. Examples: `projects/my-
+         * project-123/groups/my-group`, `projects/my-project-123/locations/global/groups/my-group`
+         * In the group resource name, the `group_id` is a unique identifier for a particular error
+         * group. The identifier is derived from key parts of the error-log content and is treated
+         * as Service Data. For information about how Service Data is handled, see [Google Cloud
+         * Privacy Notice](https://cloud.google.com/terms/cloud-privacy-notice). For a list of
+         * supported locations, see [Supported
+         * Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+         * when unspecified.
          */
         @com.google.api.client.util.Key
         private java.lang.String groupName;
 
-        /** Required. The group resource name. Written as `projects/{projectID}/groups/{group_id}`. Call
-       groupStats.list to return a list of groups belonging to this project. Example: `projects/my-
-       project-123/groups/my-group` In the group resource name, the `group_id` is a unique identifier for
-       a particular error group. The identifier is derived from key parts of the error-log content and is
-       treated as Service Data. For information about how Service Data is handled, see [Google Cloud
-       Privacy Notice](https://cloud.google.com/terms/cloud-privacy-notice).
+        /** Required. The group resource name. Written as either `projects/{projectID}/groups/{group_id}` or
+       `projects/{projectID}/locations/{location}/groups/{group_id}`. Call groupStats.list to return a
+       list of groups belonging to this project. Examples: `projects/my-project-123/groups/my-group`,
+       `projects/my-project-123/locations/global/groups/my-group` In the group resource name, the
+       `group_id` is a unique identifier for a particular error group. The identifier is derived from key
+       parts of the error-log content and is treated as Service Data. For information about how Service
+       Data is handled, see [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-privacy-
+       notice). For a list of supported locations, see [Supported
+       Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default when
+       unspecified.
          */
         public java.lang.String getGroupName() {
           return groupName;
         }
 
         /**
-         * Required. The group resource name. Written as `projects/{projectID}/groups/{group_id}`.
-         * Call groupStats.list to return a list of groups belonging to this project. Example:
-         * `projects/my-project-123/groups/my-group` In the group resource name, the `group_id` is a
-         * unique identifier for a particular error group. The identifier is derived from key parts
-         * of the error-log content and is treated as Service Data. For information about how
-         * Service Data is handled, see [Google Cloud Privacy
-         * Notice](https://cloud.google.com/terms/cloud-privacy-notice).
+         * Required. The group resource name. Written as either
+         * `projects/{projectID}/groups/{group_id}` or
+         * `projects/{projectID}/locations/{location}/groups/{group_id}`. Call groupStats.list to
+         * return a list of groups belonging to this project. Examples: `projects/my-
+         * project-123/groups/my-group`, `projects/my-project-123/locations/global/groups/my-group`
+         * In the group resource name, the `group_id` is a unique identifier for a particular error
+         * group. The identifier is derived from key parts of the error-log content and is treated
+         * as Service Data. For information about how Service Data is handled, see [Google Cloud
+         * Privacy Notice](https://cloud.google.com/terms/cloud-privacy-notice). For a list of
+         * supported locations, see [Supported
+         * Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+         * when unspecified.
          */
         public Get setGroupName(java.lang.String groupName) {
           if (!getSuppressPatternChecks()) {
@@ -1411,12 +1494,15 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the clouderrorreporting server.  After setting any
        * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param name The group resource name. Written as `projects/{projectID}/groups/{group_id}`. Example: `projects/my-
-       *        project-123/groups/my-group` In the group resource name, the `group_id` is a unique
-       *        identifier for a particular error group. The identifier is derived from key parts of the
-       *        error-log content and is treated as Service Data. For information about how Service Data
-       *        is handled, see [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-
-       *        privacy-notice).
+       * @param name The group resource name. Written as `projects/{projectID}/groups/{group_id}` or
+       *        `projects/{projectID}/locations/{location}/groups/{group_id}` Examples: `projects/my-
+       *        project-123/groups/my-group`, `projects/my-project-123/locations/us-central1/groups/my-
+       *        group` In the group resource name, the `group_id` is a unique identifier for a particular
+       *        error group. The identifier is derived from key parts of the error-log content and is
+       *        treated as Service Data. For information about how Service Data is handled, see [Google
+       *        Cloud Privacy Notice](https://cloud.google.com/terms/cloud-privacy-notice). For a list of
+       *        supported locations, see [Supported Regions](https://cloud.google.com/logging/docs/region-
+       *        support). `global` is the default when unspecified.
        * @param content the {@link com.google.api.services.clouderrorreporting.v1beta1.model.ErrorGroup}
        * @return the request
        */
@@ -1444,12 +1530,15 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The group resource name. Written as `projects/{projectID}/groups/{group_id}`. Example: `projects/my-
-       *        project-123/groups/my-group` In the group resource name, the `group_id` is a unique
-       *        identifier for a particular error group. The identifier is derived from key parts of the
-       *        error-log content and is treated as Service Data. For information about how Service Data
-       *        is handled, see [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-
-       *        privacy-notice).
+         * @param name The group resource name. Written as `projects/{projectID}/groups/{group_id}` or
+       *        `projects/{projectID}/locations/{location}/groups/{group_id}` Examples: `projects/my-
+       *        project-123/groups/my-group`, `projects/my-project-123/locations/us-central1/groups/my-
+       *        group` In the group resource name, the `group_id` is a unique identifier for a particular
+       *        error group. The identifier is derived from key parts of the error-log content and is
+       *        treated as Service Data. For information about how Service Data is handled, see [Google
+       *        Cloud Privacy Notice](https://cloud.google.com/terms/cloud-privacy-notice). For a list of
+       *        supported locations, see [Supported Regions](https://cloud.google.com/logging/docs/region-
+       *        support). `global` is the default when unspecified.
          * @param content the {@link com.google.api.services.clouderrorreporting.v1beta1.model.ErrorGroup}
          * @since 1.13
          */
@@ -1519,33 +1608,45 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * The group resource name. Written as `projects/{projectID}/groups/{group_id}`. Example:
-         * `projects/my-project-123/groups/my-group` In the group resource name, the `group_id` is a
-         * unique identifier for a particular error group. The identifier is derived from key parts
-         * of the error-log content and is treated as Service Data. For information about how
-         * Service Data is handled, see [Google Cloud Privacy
-         * Notice](https://cloud.google.com/terms/cloud-privacy-notice).
+         * The group resource name. Written as `projects/{projectID}/groups/{group_id}` or
+         * `projects/{projectID}/locations/{location}/groups/{group_id}` Examples: `projects/my-
+         * project-123/groups/my-group`, `projects/my-project-123/locations/us-central1/groups/my-
+         * group` In the group resource name, the `group_id` is a unique identifier for a particular
+         * error group. The identifier is derived from key parts of the error-log content and is
+         * treated as Service Data. For information about how Service Data is handled, see [Google
+         * Cloud Privacy Notice](https://cloud.google.com/terms/cloud-privacy-notice). For a list of
+         * supported locations, see [Supported
+         * Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+         * when unspecified.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The group resource name. Written as `projects/{projectID}/groups/{group_id}`. Example:
-       `projects/my-project-123/groups/my-group` In the group resource name, the `group_id` is a unique
-       identifier for a particular error group. The identifier is derived from key parts of the error-log
-       content and is treated as Service Data. For information about how Service Data is handled, see
-       [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-privacy-notice).
+        /** The group resource name. Written as `projects/{projectID}/groups/{group_id}` or
+       `projects/{projectID}/locations/{location}/groups/{group_id}` Examples: `projects/my-
+       project-123/groups/my-group`, `projects/my-project-123/locations/us-central1/groups/my-group` In
+       the group resource name, the `group_id` is a unique identifier for a particular error group. The
+       identifier is derived from key parts of the error-log content and is treated as Service Data. For
+       information about how Service Data is handled, see [Google Cloud Privacy
+       Notice](https://cloud.google.com/terms/cloud-privacy-notice). For a list of supported locations,
+       see [Supported Regions](https://cloud.google.com/logging/docs/region-support). `global` is the
+       default when unspecified.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The group resource name. Written as `projects/{projectID}/groups/{group_id}`. Example:
-         * `projects/my-project-123/groups/my-group` In the group resource name, the `group_id` is a
-         * unique identifier for a particular error group. The identifier is derived from key parts
-         * of the error-log content and is treated as Service Data. For information about how
-         * Service Data is handled, see [Google Cloud Privacy
-         * Notice](https://cloud.google.com/terms/cloud-privacy-notice).
+         * The group resource name. Written as `projects/{projectID}/groups/{group_id}` or
+         * `projects/{projectID}/locations/{location}/groups/{group_id}` Examples: `projects/my-
+         * project-123/groups/my-group`, `projects/my-project-123/locations/us-central1/groups/my-
+         * group` In the group resource name, the `group_id` is a unique identifier for a particular
+         * error group. The identifier is derived from key parts of the error-log content and is
+         * treated as Service Data. For information about how Service Data is handled, see [Google
+         * Cloud Privacy Notice](https://cloud.google.com/terms/cloud-privacy-notice). For a list of
+         * supported locations, see [Supported
+         * Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+         * when unspecified.
          */
         public Update setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1563,6 +1664,1379 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         }
       }
 
+    }
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Clouderrorreporting clouderrorreporting = new Clouderrorreporting(...);}
+     *   {@code Clouderrorreporting.Locations.List request = clouderrorreporting.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * Deletes all error events of a given project.
+       *
+       * Create a request for the method "locations.deleteEvents".
+       *
+       * This request holds the parameters needed by the clouderrorreporting server.  After setting any
+       * optional parameters, call the {@link DeleteEvents#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param projectName Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`
+       *        or `projects/{projectID}/locations/{location}`, where `{projectID}` is the [Google Cloud
+       *        Platform project ID](https://support.google.com/cloud/answer/6158840) and `{location}` is
+       *        a Cloud region. Examples: `projects/my-project-123`, `projects/my-
+       *        project-123/locations/global`. For a list of supported locations, see [Supported
+       *        Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+       *        when unspecified.
+       * @return the request
+       */
+      public DeleteEvents deleteEvents(java.lang.String projectName) throws java.io.IOException {
+        DeleteEvents result = new DeleteEvents(projectName);
+        initialize(result);
+        return result;
+      }
+
+      public class DeleteEvents extends ClouderrorreportingRequest<com.google.api.services.clouderrorreporting.v1beta1.model.DeleteEventsResponse> {
+
+        private static final String REST_PATH = "v1beta1/{+projectName}/events";
+
+        private final java.util.regex.Pattern PROJECT_NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Deletes all error events of a given project.
+         *
+         * Create a request for the method "locations.deleteEvents".
+         *
+         * This request holds the parameters needed by the the clouderrorreporting server.  After setting
+         * any optional parameters, call the {@link DeleteEvents#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * DeleteEvents#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param projectName Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`
+       *        or `projects/{projectID}/locations/{location}`, where `{projectID}` is the [Google Cloud
+       *        Platform project ID](https://support.google.com/cloud/answer/6158840) and `{location}` is
+       *        a Cloud region. Examples: `projects/my-project-123`, `projects/my-
+       *        project-123/locations/global`. For a list of supported locations, see [Supported
+       *        Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+       *        when unspecified.
+         * @since 1.13
+         */
+        protected DeleteEvents(java.lang.String projectName) {
+          super(Clouderrorreporting.this, "DELETE", REST_PATH, null, com.google.api.services.clouderrorreporting.v1beta1.model.DeleteEventsResponse.class);
+          this.projectName = com.google.api.client.util.Preconditions.checkNotNull(projectName, "Required parameter projectName must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PROJECT_NAME_PATTERN.matcher(projectName).matches(),
+                "Parameter projectName must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public DeleteEvents set$Xgafv(java.lang.String $Xgafv) {
+          return (DeleteEvents) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public DeleteEvents setAccessToken(java.lang.String accessToken) {
+          return (DeleteEvents) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public DeleteEvents setAlt(java.lang.String alt) {
+          return (DeleteEvents) super.setAlt(alt);
+        }
+
+        @Override
+        public DeleteEvents setCallback(java.lang.String callback) {
+          return (DeleteEvents) super.setCallback(callback);
+        }
+
+        @Override
+        public DeleteEvents setFields(java.lang.String fields) {
+          return (DeleteEvents) super.setFields(fields);
+        }
+
+        @Override
+        public DeleteEvents setKey(java.lang.String key) {
+          return (DeleteEvents) super.setKey(key);
+        }
+
+        @Override
+        public DeleteEvents setOauthToken(java.lang.String oauthToken) {
+          return (DeleteEvents) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public DeleteEvents setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (DeleteEvents) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public DeleteEvents setQuotaUser(java.lang.String quotaUser) {
+          return (DeleteEvents) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public DeleteEvents setUploadType(java.lang.String uploadType) {
+          return (DeleteEvents) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public DeleteEvents setUploadProtocol(java.lang.String uploadProtocol) {
+          return (DeleteEvents) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the Google Cloud Platform project. Written as
+         * `projects/{projectID}` or `projects/{projectID}/locations/{location}`, where
+         * `{projectID}` is the [Google Cloud Platform project
+         * ID](https://support.google.com/cloud/answer/6158840) and `{location}` is a Cloud region.
+         * Examples: `projects/my-project-123`, `projects/my-project-123/locations/global`. For a
+         * list of supported locations, see [Supported
+         * Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+         * when unspecified.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String projectName;
+
+        /** Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`
+       or `projects/{projectID}/locations/{location}`, where `{projectID}` is the [Google Cloud Platform
+       project ID](https://support.google.com/cloud/answer/6158840) and `{location}` is a Cloud region.
+       Examples: `projects/my-project-123`, `projects/my-project-123/locations/global`. For a list of
+       supported locations, see [Supported Regions](https://cloud.google.com/logging/docs/region-support).
+       `global` is the default when unspecified.
+         */
+        public java.lang.String getProjectName() {
+          return projectName;
+        }
+
+        /**
+         * Required. The resource name of the Google Cloud Platform project. Written as
+         * `projects/{projectID}` or `projects/{projectID}/locations/{location}`, where
+         * `{projectID}` is the [Google Cloud Platform project
+         * ID](https://support.google.com/cloud/answer/6158840) and `{location}` is a Cloud region.
+         * Examples: `projects/my-project-123`, `projects/my-project-123/locations/global`. For a
+         * list of supported locations, see [Supported
+         * Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+         * when unspecified.
+         */
+        public DeleteEvents setProjectName(java.lang.String projectName) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PROJECT_NAME_PATTERN.matcher(projectName).matches(),
+                "Parameter projectName must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.projectName = projectName;
+          return this;
+        }
+
+        @Override
+        public DeleteEvents set(String parameterName, Object value) {
+          return (DeleteEvents) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the Events collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Clouderrorreporting clouderrorreporting = new Clouderrorreporting(...);}
+       *   {@code Clouderrorreporting.Events.List request = clouderrorreporting.events().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Events events() {
+        return new Events();
+      }
+
+      /**
+       * The "events" collection of methods.
+       */
+      public class Events {
+
+        /**
+         * Lists the specified events.
+         *
+         * Create a request for the method "events.list".
+         *
+         * This request holds the parameters needed by the clouderrorreporting server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param projectName Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`
+         *        or `projects/{projectID}/locations/{location}`, where `{projectID}` is the [Google Cloud
+         *        Platform project ID](https://support.google.com/cloud/answer/6158840) and `{location}` is
+         *        a Cloud region. Examples: `projects/my-project-123`, `projects/my-
+         *        project-123/locations/global`. For a list of supported locations, see [Supported
+         *        Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+         *        when unspecified.
+         * @return the request
+         */
+        public List list(java.lang.String projectName) throws java.io.IOException {
+          List result = new List(projectName);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ClouderrorreportingRequest<com.google.api.services.clouderrorreporting.v1beta1.model.ListEventsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+projectName}/events";
+
+          private final java.util.regex.Pattern PROJECT_NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists the specified events.
+           *
+           * Create a request for the method "events.list".
+           *
+           * This request holds the parameters needed by the the clouderrorreporting server.  After setting
+           * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param projectName Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`
+         *        or `projects/{projectID}/locations/{location}`, where `{projectID}` is the [Google Cloud
+         *        Platform project ID](https://support.google.com/cloud/answer/6158840) and `{location}` is
+         *        a Cloud region. Examples: `projects/my-project-123`, `projects/my-
+         *        project-123/locations/global`. For a list of supported locations, see [Supported
+         *        Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+         *        when unspecified.
+           * @since 1.13
+           */
+          protected List(java.lang.String projectName) {
+            super(Clouderrorreporting.this, "GET", REST_PATH, null, com.google.api.services.clouderrorreporting.v1beta1.model.ListEventsResponse.class);
+            this.projectName = com.google.api.client.util.Preconditions.checkNotNull(projectName, "Required parameter projectName must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_NAME_PATTERN.matcher(projectName).matches(),
+                  "Parameter projectName must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the Google Cloud Platform project. Written as
+           * `projects/{projectID}` or `projects/{projectID}/locations/{location}`, where
+           * `{projectID}` is the [Google Cloud Platform project
+           * ID](https://support.google.com/cloud/answer/6158840) and `{location}` is a Cloud
+           * region. Examples: `projects/my-project-123`, `projects/my-
+           * project-123/locations/global`. For a list of supported locations, see [Supported
+           * Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+           * when unspecified.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String projectName;
+
+          /** Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`
+         or `projects/{projectID}/locations/{location}`, where `{projectID}` is the [Google Cloud Platform
+         project ID](https://support.google.com/cloud/answer/6158840) and `{location}` is a Cloud region.
+         Examples: `projects/my-project-123`, `projects/my-project-123/locations/global`. For a list of
+         supported locations, see [Supported Regions](https://cloud.google.com/logging/docs/region-support).
+         `global` is the default when unspecified.
+           */
+          public java.lang.String getProjectName() {
+            return projectName;
+          }
+
+          /**
+           * Required. The resource name of the Google Cloud Platform project. Written as
+           * `projects/{projectID}` or `projects/{projectID}/locations/{location}`, where
+           * `{projectID}` is the [Google Cloud Platform project
+           * ID](https://support.google.com/cloud/answer/6158840) and `{location}` is a Cloud
+           * region. Examples: `projects/my-project-123`, `projects/my-
+           * project-123/locations/global`. For a list of supported locations, see [Supported
+           * Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+           * when unspecified.
+           */
+          public List setProjectName(java.lang.String projectName) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_NAME_PATTERN.matcher(projectName).matches(),
+                  "Parameter projectName must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.projectName = projectName;
+            return this;
+          }
+
+          /**
+           * Required. The group for which events shall be returned. The `group_id` is a unique
+           * identifier for a particular error group. The identifier is derived from key parts of
+           * the error-log content and is treated as Service Data. For information about how Service
+           * Data is handled, see [Google Cloud Privacy
+           * Notice](https://cloud.google.com/terms/cloud-privacy-notice).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String groupId;
+
+          /** Required. The group for which events shall be returned. The `group_id` is a unique identifier for a
+         particular error group. The identifier is derived from key parts of the error-log content and is
+         treated as Service Data. For information about how Service Data is handled, see [Google Cloud
+         Privacy Notice](https://cloud.google.com/terms/cloud-privacy-notice).
+           */
+          public java.lang.String getGroupId() {
+            return groupId;
+          }
+
+          /**
+           * Required. The group for which events shall be returned. The `group_id` is a unique
+           * identifier for a particular error group. The identifier is derived from key parts of
+           * the error-log content and is treated as Service Data. For information about how Service
+           * Data is handled, see [Google Cloud Privacy
+           * Notice](https://cloud.google.com/terms/cloud-privacy-notice).
+           */
+          public List setGroupId(java.lang.String groupId) {
+            this.groupId = groupId;
+            return this;
+          }
+
+          /** Optional. The maximum number of results to return per response. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return per response.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. The maximum number of results to return per response. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. A `next_page_token` provided by a previous response. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A `next_page_token` provided by a previous response.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. A `next_page_token` provided by a previous response. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. The exact value to match against [`ServiceContext.resource_type`](/error-
+           * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
+           */
+          @com.google.api.client.util.Key("serviceFilter.resourceType")
+          private java.lang.String serviceFilterResourceType;
+
+          /** Optional. The exact value to match against [`ServiceContext.resource_type`](/error-
+         reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
+           */
+          public java.lang.String getServiceFilterResourceType() {
+            return serviceFilterResourceType;
+          }
+
+          /**
+           * Optional. The exact value to match against [`ServiceContext.resource_type`](/error-
+           * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
+           */
+          public List setServiceFilterResourceType(java.lang.String serviceFilterResourceType) {
+            this.serviceFilterResourceType = serviceFilterResourceType;
+            return this;
+          }
+
+          /**
+           * Optional. The exact value to match against [`ServiceContext.service`](/error-
+           * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
+           */
+          @com.google.api.client.util.Key("serviceFilter.service")
+          private java.lang.String serviceFilterService;
+
+          /** Optional. The exact value to match against [`ServiceContext.service`](/error-
+         reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
+           */
+          public java.lang.String getServiceFilterService() {
+            return serviceFilterService;
+          }
+
+          /**
+           * Optional. The exact value to match against [`ServiceContext.service`](/error-
+           * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
+           */
+          public List setServiceFilterService(java.lang.String serviceFilterService) {
+            this.serviceFilterService = serviceFilterService;
+            return this;
+          }
+
+          /**
+           * Optional. The exact value to match against [`ServiceContext.version`](/error-
+           * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
+           */
+          @com.google.api.client.util.Key("serviceFilter.version")
+          private java.lang.String serviceFilterVersion;
+
+          /** Optional. The exact value to match against [`ServiceContext.version`](/error-
+         reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
+           */
+          public java.lang.String getServiceFilterVersion() {
+            return serviceFilterVersion;
+          }
+
+          /**
+           * Optional. The exact value to match against [`ServiceContext.version`](/error-
+           * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
+           */
+          public List setServiceFilterVersion(java.lang.String serviceFilterVersion) {
+            this.serviceFilterVersion = serviceFilterVersion;
+            return this;
+          }
+
+          /** Restricts the query to the specified time range. */
+          @com.google.api.client.util.Key("timeRange.period")
+          private java.lang.String timeRangePeriod;
+
+          /** Restricts the query to the specified time range.
+           */
+          public java.lang.String getTimeRangePeriod() {
+            return timeRangePeriod;
+          }
+
+          /** Restricts the query to the specified time range. */
+          public List setTimeRangePeriod(java.lang.String timeRangePeriod) {
+            this.timeRangePeriod = timeRangePeriod;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the GroupStats collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Clouderrorreporting clouderrorreporting = new Clouderrorreporting(...);}
+       *   {@code Clouderrorreporting.GroupStats.List request = clouderrorreporting.groupStats().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public GroupStats groupStats() {
+        return new GroupStats();
+      }
+
+      /**
+       * The "groupStats" collection of methods.
+       */
+      public class GroupStats {
+
+        /**
+         * Lists the specified groups.
+         *
+         * Create a request for the method "groupStats.list".
+         *
+         * This request holds the parameters needed by the clouderrorreporting server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param projectName Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`
+         *        or `projects/{projectNumber}`, where `{projectID}` and `{projectNumber}` can be found in
+         *        the [Google Cloud console](https://support.google.com/cloud/answer/6158840). It may also
+         *        include a location, such as `projects/{projectID}/locations/{location}` where `{location}`
+         *        is a cloud region. Examples: `projects/my-project-123`, `projects/5551234`, `projects/my-
+         *        project-123/locations/us-central1`, `projects/5551234/locations/us-central1`. For a list
+         *        of supported locations, see [Supported
+         *        Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+         *        when unspecified. Use `-` as a wildcard to request group stats from all regions.
+         * @return the request
+         */
+        public List list(java.lang.String projectName) throws java.io.IOException {
+          List result = new List(projectName);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ClouderrorreportingRequest<com.google.api.services.clouderrorreporting.v1beta1.model.ListGroupStatsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+projectName}/groupStats";
+
+          private final java.util.regex.Pattern PROJECT_NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists the specified groups.
+           *
+           * Create a request for the method "groupStats.list".
+           *
+           * This request holds the parameters needed by the the clouderrorreporting server.  After setting
+           * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param projectName Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`
+         *        or `projects/{projectNumber}`, where `{projectID}` and `{projectNumber}` can be found in
+         *        the [Google Cloud console](https://support.google.com/cloud/answer/6158840). It may also
+         *        include a location, such as `projects/{projectID}/locations/{location}` where `{location}`
+         *        is a cloud region. Examples: `projects/my-project-123`, `projects/5551234`, `projects/my-
+         *        project-123/locations/us-central1`, `projects/5551234/locations/us-central1`. For a list
+         *        of supported locations, see [Supported
+         *        Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+         *        when unspecified. Use `-` as a wildcard to request group stats from all regions.
+           * @since 1.13
+           */
+          protected List(java.lang.String projectName) {
+            super(Clouderrorreporting.this, "GET", REST_PATH, null, com.google.api.services.clouderrorreporting.v1beta1.model.ListGroupStatsResponse.class);
+            this.projectName = com.google.api.client.util.Preconditions.checkNotNull(projectName, "Required parameter projectName must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_NAME_PATTERN.matcher(projectName).matches(),
+                  "Parameter projectName must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the Google Cloud Platform project. Written as
+           * `projects/{projectID}` or `projects/{projectNumber}`, where `{projectID}` and
+           * `{projectNumber}` can be found in the [Google Cloud
+           * console](https://support.google.com/cloud/answer/6158840). It may also include a
+           * location, such as `projects/{projectID}/locations/{location}` where `{location}` is a
+           * cloud region. Examples: `projects/my-project-123`, `projects/5551234`, `projects/my-
+           * project-123/locations/us-central1`, `projects/5551234/locations/us-central1`. For a
+           * list of supported locations, see [Supported
+           * Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+           * when unspecified. Use `-` as a wildcard to request group stats from all regions.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String projectName;
+
+          /** Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`
+         or `projects/{projectNumber}`, where `{projectID}` and `{projectNumber}` can be found in the
+         [Google Cloud console](https://support.google.com/cloud/answer/6158840). It may also include a
+         location, such as `projects/{projectID}/locations/{location}` where `{location}` is a cloud region.
+         Examples: `projects/my-project-123`, `projects/5551234`, `projects/my-project-123/locations/us-
+         central1`, `projects/5551234/locations/us-central1`. For a list of supported locations, see
+         [Supported Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+         when unspecified. Use `-` as a wildcard to request group stats from all regions.
+           */
+          public java.lang.String getProjectName() {
+            return projectName;
+          }
+
+          /**
+           * Required. The resource name of the Google Cloud Platform project. Written as
+           * `projects/{projectID}` or `projects/{projectNumber}`, where `{projectID}` and
+           * `{projectNumber}` can be found in the [Google Cloud
+           * console](https://support.google.com/cloud/answer/6158840). It may also include a
+           * location, such as `projects/{projectID}/locations/{location}` where `{location}` is a
+           * cloud region. Examples: `projects/my-project-123`, `projects/5551234`, `projects/my-
+           * project-123/locations/us-central1`, `projects/5551234/locations/us-central1`. For a
+           * list of supported locations, see [Supported
+           * Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+           * when unspecified. Use `-` as a wildcard to request group stats from all regions.
+           */
+          public List setProjectName(java.lang.String projectName) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PROJECT_NAME_PATTERN.matcher(projectName).matches(),
+                  "Parameter projectName must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.projectName = projectName;
+            return this;
+          }
+
+          /**
+           * Optional. The alignment of the timed counts to be returned. Default is
+           * `ALIGNMENT_EQUAL_AT_END`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String alignment;
+
+          /** Optional. The alignment of the timed counts to be returned. Default is `ALIGNMENT_EQUAL_AT_END`.
+           */
+          public java.lang.String getAlignment() {
+            return alignment;
+          }
+
+          /**
+           * Optional. The alignment of the timed counts to be returned. Default is
+           * `ALIGNMENT_EQUAL_AT_END`.
+           */
+          public List setAlignment(java.lang.String alignment) {
+            this.alignment = alignment;
+            return this;
+          }
+
+          /**
+           * Optional. Time where the timed counts shall be aligned if rounded alignment is chosen.
+           * Default is 00:00 UTC.
+           */
+          @com.google.api.client.util.Key
+          private String alignmentTime;
+
+          /** Optional. Time where the timed counts shall be aligned if rounded alignment is chosen. Default is
+         00:00 UTC.
+           */
+          public String getAlignmentTime() {
+            return alignmentTime;
+          }
+
+          /**
+           * Optional. Time where the timed counts shall be aligned if rounded alignment is chosen.
+           * Default is 00:00 UTC.
+           */
+          public List setAlignmentTime(String alignmentTime) {
+            this.alignmentTime = alignmentTime;
+            return this;
+          }
+
+          /**
+           * Optional. List all ErrorGroupStats with these IDs. The `group_id` is a unique
+           * identifier for a particular error group. The identifier is derived from key parts of
+           * the error-log content and is treated as Service Data. For information about how Service
+           * Data is handled, see [Google Cloud Privacy Notice]
+           * (https://cloud.google.com/terms/cloud-privacy-notice).
+           */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> groupId;
+
+          /** Optional. List all ErrorGroupStats with these IDs. The `group_id` is a unique identifier for a
+         particular error group. The identifier is derived from key parts of the error-log content and is
+         treated as Service Data. For information about how Service Data is handled, see [Google Cloud
+         Privacy Notice] (https://cloud.google.com/terms/cloud-privacy-notice).
+           */
+          public java.util.List<java.lang.String> getGroupId() {
+            return groupId;
+          }
+
+          /**
+           * Optional. List all ErrorGroupStats with these IDs. The `group_id` is a unique
+           * identifier for a particular error group. The identifier is derived from key parts of
+           * the error-log content and is treated as Service Data. For information about how Service
+           * Data is handled, see [Google Cloud Privacy Notice]
+           * (https://cloud.google.com/terms/cloud-privacy-notice).
+           */
+          public List setGroupId(java.util.List<java.lang.String> groupId) {
+            this.groupId = groupId;
+            return this;
+          }
+
+          /**
+           * Optional. The sort order in which the results are returned. Default is `COUNT_DESC`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String order;
+
+          /** Optional. The sort order in which the results are returned. Default is `COUNT_DESC`.
+           */
+          public java.lang.String getOrder() {
+            return order;
+          }
+
+          /**
+           * Optional. The sort order in which the results are returned. Default is `COUNT_DESC`.
+           */
+          public List setOrder(java.lang.String order) {
+            this.order = order;
+            return this;
+          }
+
+          /** Optional. The maximum number of results to return per response. Default is 20. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return per response. Default is 20.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. The maximum number of results to return per response. Default is 20. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A next_page_token provided by a previous response. To view additional
+           * results, pass this token along with the identical query parameters as the first
+           * request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A next_page_token provided by a previous response. To view additional results, pass this
+         token along with the identical query parameters as the first request.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A next_page_token provided by a previous response. To view additional
+           * results, pass this token along with the identical query parameters as the first
+           * request.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. The exact value to match against [`ServiceContext.resource_type`](/error-
+           * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
+           */
+          @com.google.api.client.util.Key("serviceFilter.resourceType")
+          private java.lang.String serviceFilterResourceType;
+
+          /** Optional. The exact value to match against [`ServiceContext.resource_type`](/error-
+         reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
+           */
+          public java.lang.String getServiceFilterResourceType() {
+            return serviceFilterResourceType;
+          }
+
+          /**
+           * Optional. The exact value to match against [`ServiceContext.resource_type`](/error-
+           * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
+           */
+          public List setServiceFilterResourceType(java.lang.String serviceFilterResourceType) {
+            this.serviceFilterResourceType = serviceFilterResourceType;
+            return this;
+          }
+
+          /**
+           * Optional. The exact value to match against [`ServiceContext.service`](/error-
+           * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
+           */
+          @com.google.api.client.util.Key("serviceFilter.service")
+          private java.lang.String serviceFilterService;
+
+          /** Optional. The exact value to match against [`ServiceContext.service`](/error-
+         reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
+           */
+          public java.lang.String getServiceFilterService() {
+            return serviceFilterService;
+          }
+
+          /**
+           * Optional. The exact value to match against [`ServiceContext.service`](/error-
+           * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
+           */
+          public List setServiceFilterService(java.lang.String serviceFilterService) {
+            this.serviceFilterService = serviceFilterService;
+            return this;
+          }
+
+          /**
+           * Optional. The exact value to match against [`ServiceContext.version`](/error-
+           * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
+           */
+          @com.google.api.client.util.Key("serviceFilter.version")
+          private java.lang.String serviceFilterVersion;
+
+          /** Optional. The exact value to match against [`ServiceContext.version`](/error-
+         reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
+           */
+          public java.lang.String getServiceFilterVersion() {
+            return serviceFilterVersion;
+          }
+
+          /**
+           * Optional. The exact value to match against [`ServiceContext.version`](/error-
+           * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
+           */
+          public List setServiceFilterVersion(java.lang.String serviceFilterVersion) {
+            this.serviceFilterVersion = serviceFilterVersion;
+            return this;
+          }
+
+          /** Restricts the query to the specified time range. */
+          @com.google.api.client.util.Key("timeRange.period")
+          private java.lang.String timeRangePeriod;
+
+          /** Restricts the query to the specified time range.
+           */
+          public java.lang.String getTimeRangePeriod() {
+            return timeRangePeriod;
+          }
+
+          /** Restricts the query to the specified time range. */
+          public List setTimeRangePeriod(java.lang.String timeRangePeriod) {
+            this.timeRangePeriod = timeRangePeriod;
+            return this;
+          }
+
+          /**
+           * Optional. The preferred duration for a single returned TimedCount. If not set, no timed
+           * counts are returned.
+           */
+          @com.google.api.client.util.Key
+          private String timedCountDuration;
+
+          /** Optional. The preferred duration for a single returned TimedCount. If not set, no timed counts are
+         returned.
+           */
+          public String getTimedCountDuration() {
+            return timedCountDuration;
+          }
+
+          /**
+           * Optional. The preferred duration for a single returned TimedCount. If not set, no timed
+           * counts are returned.
+           */
+          public List setTimedCountDuration(String timedCountDuration) {
+            this.timedCountDuration = timedCountDuration;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Groups collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Clouderrorreporting clouderrorreporting = new Clouderrorreporting(...);}
+       *   {@code Clouderrorreporting.Groups.List request = clouderrorreporting.groups().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Groups groups() {
+        return new Groups();
+      }
+
+      /**
+       * The "groups" collection of methods.
+       */
+      public class Groups {
+
+        /**
+         * Get the specified group.
+         *
+         * Create a request for the method "groups.get".
+         *
+         * This request holds the parameters needed by the clouderrorreporting server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param groupName Required. The group resource name. Written as either `projects/{projectID}/groups/{group_id}` or
+         *        `projects/{projectID}/locations/{location}/groups/{group_id}`. Call groupStats.list to
+         *        return a list of groups belonging to this project. Examples: `projects/my-
+         *        project-123/groups/my-group`, `projects/my-project-123/locations/global/groups/my-group`
+         *        In the group resource name, the `group_id` is a unique identifier for a particular error
+         *        group. The identifier is derived from key parts of the error-log content and is treated as
+         *        Service Data. For information about how Service Data is handled, see [Google Cloud Privacy
+         *        Notice](https://cloud.google.com/terms/cloud-privacy-notice). For a list of supported
+         *        locations, see [Supported Regions](https://cloud.google.com/logging/docs/region-support).
+         *        `global` is the default when unspecified.
+         * @return the request
+         */
+        public Get get(java.lang.String groupName) throws java.io.IOException {
+          Get result = new Get(groupName);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ClouderrorreportingRequest<com.google.api.services.clouderrorreporting.v1beta1.model.ErrorGroup> {
+
+          private static final String REST_PATH = "v1beta1/{+groupName}";
+
+          private final java.util.regex.Pattern GROUP_NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/groups/[^/]+$");
+
+          /**
+           * Get the specified group.
+           *
+           * Create a request for the method "groups.get".
+           *
+           * This request holds the parameters needed by the the clouderrorreporting server.  After setting
+           * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param groupName Required. The group resource name. Written as either `projects/{projectID}/groups/{group_id}` or
+         *        `projects/{projectID}/locations/{location}/groups/{group_id}`. Call groupStats.list to
+         *        return a list of groups belonging to this project. Examples: `projects/my-
+         *        project-123/groups/my-group`, `projects/my-project-123/locations/global/groups/my-group`
+         *        In the group resource name, the `group_id` is a unique identifier for a particular error
+         *        group. The identifier is derived from key parts of the error-log content and is treated as
+         *        Service Data. For information about how Service Data is handled, see [Google Cloud Privacy
+         *        Notice](https://cloud.google.com/terms/cloud-privacy-notice). For a list of supported
+         *        locations, see [Supported Regions](https://cloud.google.com/logging/docs/region-support).
+         *        `global` is the default when unspecified.
+           * @since 1.13
+           */
+          protected Get(java.lang.String groupName) {
+            super(Clouderrorreporting.this, "GET", REST_PATH, null, com.google.api.services.clouderrorreporting.v1beta1.model.ErrorGroup.class);
+            this.groupName = com.google.api.client.util.Preconditions.checkNotNull(groupName, "Required parameter groupName must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(GROUP_NAME_PATTERN.matcher(groupName).matches(),
+                  "Parameter groupName must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/groups/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The group resource name. Written as either
+           * `projects/{projectID}/groups/{group_id}` or
+           * `projects/{projectID}/locations/{location}/groups/{group_id}`. Call groupStats.list to
+           * return a list of groups belonging to this project. Examples: `projects/my-
+           * project-123/groups/my-group`, `projects/my-project-123/locations/global/groups/my-
+           * group` In the group resource name, the `group_id` is a unique identifier for a
+           * particular error group. The identifier is derived from key parts of the error-log
+           * content and is treated as Service Data. For information about how Service Data is
+           * handled, see [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-
+           * privacy-notice). For a list of supported locations, see [Supported
+           * Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+           * when unspecified.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String groupName;
+
+          /** Required. The group resource name. Written as either `projects/{projectID}/groups/{group_id}` or
+         `projects/{projectID}/locations/{location}/groups/{group_id}`. Call groupStats.list to return a
+         list of groups belonging to this project. Examples: `projects/my-project-123/groups/my-group`,
+         `projects/my-project-123/locations/global/groups/my-group` In the group resource name, the
+         `group_id` is a unique identifier for a particular error group. The identifier is derived from key
+         parts of the error-log content and is treated as Service Data. For information about how Service
+         Data is handled, see [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-privacy-
+         notice). For a list of supported locations, see [Supported
+         Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default when
+         unspecified.
+           */
+          public java.lang.String getGroupName() {
+            return groupName;
+          }
+
+          /**
+           * Required. The group resource name. Written as either
+           * `projects/{projectID}/groups/{group_id}` or
+           * `projects/{projectID}/locations/{location}/groups/{group_id}`. Call groupStats.list to
+           * return a list of groups belonging to this project. Examples: `projects/my-
+           * project-123/groups/my-group`, `projects/my-project-123/locations/global/groups/my-
+           * group` In the group resource name, the `group_id` is a unique identifier for a
+           * particular error group. The identifier is derived from key parts of the error-log
+           * content and is treated as Service Data. For information about how Service Data is
+           * handled, see [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-
+           * privacy-notice). For a list of supported locations, see [Supported
+           * Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+           * when unspecified.
+           */
+          public Get setGroupName(java.lang.String groupName) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(GROUP_NAME_PATTERN.matcher(groupName).matches(),
+                  "Parameter groupName must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/groups/[^/]+$");
+            }
+            this.groupName = groupName;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Replace the data for the specified group. Fails if the group does not exist.
+         *
+         * Create a request for the method "groups.update".
+         *
+         * This request holds the parameters needed by the clouderrorreporting server.  After setting any
+         * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+         *
+         * @param name The group resource name. Written as `projects/{projectID}/groups/{group_id}` or
+         *        `projects/{projectID}/locations/{location}/groups/{group_id}` Examples: `projects/my-
+         *        project-123/groups/my-group`, `projects/my-project-123/locations/us-central1/groups/my-
+         *        group` In the group resource name, the `group_id` is a unique identifier for a particular
+         *        error group. The identifier is derived from key parts of the error-log content and is
+         *        treated as Service Data. For information about how Service Data is handled, see [Google
+         *        Cloud Privacy Notice](https://cloud.google.com/terms/cloud-privacy-notice). For a list of
+         *        supported locations, see [Supported Regions](https://cloud.google.com/logging/docs/region-
+         *        support). `global` is the default when unspecified.
+         * @param content the {@link com.google.api.services.clouderrorreporting.v1beta1.model.ErrorGroup}
+         * @return the request
+         */
+        public Update update(java.lang.String name, com.google.api.services.clouderrorreporting.v1beta1.model.ErrorGroup content) throws java.io.IOException {
+          Update result = new Update(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Update extends ClouderrorreportingRequest<com.google.api.services.clouderrorreporting.v1beta1.model.ErrorGroup> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/groups/[^/]+$");
+
+          /**
+           * Replace the data for the specified group. Fails if the group does not exist.
+           *
+           * Create a request for the method "groups.update".
+           *
+           * This request holds the parameters needed by the the clouderrorreporting server.  After setting
+           * any optional parameters, call the {@link Update#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The group resource name. Written as `projects/{projectID}/groups/{group_id}` or
+         *        `projects/{projectID}/locations/{location}/groups/{group_id}` Examples: `projects/my-
+         *        project-123/groups/my-group`, `projects/my-project-123/locations/us-central1/groups/my-
+         *        group` In the group resource name, the `group_id` is a unique identifier for a particular
+         *        error group. The identifier is derived from key parts of the error-log content and is
+         *        treated as Service Data. For information about how Service Data is handled, see [Google
+         *        Cloud Privacy Notice](https://cloud.google.com/terms/cloud-privacy-notice). For a list of
+         *        supported locations, see [Supported Regions](https://cloud.google.com/logging/docs/region-
+         *        support). `global` is the default when unspecified.
+           * @param content the {@link com.google.api.services.clouderrorreporting.v1beta1.model.ErrorGroup}
+           * @since 1.13
+           */
+          protected Update(java.lang.String name, com.google.api.services.clouderrorreporting.v1beta1.model.ErrorGroup content) {
+            super(Clouderrorreporting.this, "PUT", REST_PATH, content, com.google.api.services.clouderrorreporting.v1beta1.model.ErrorGroup.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/groups/[^/]+$");
+            }
+          }
+
+          @Override
+          public Update set$Xgafv(java.lang.String $Xgafv) {
+            return (Update) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Update setAccessToken(java.lang.String accessToken) {
+            return (Update) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Update setAlt(java.lang.String alt) {
+            return (Update) super.setAlt(alt);
+          }
+
+          @Override
+          public Update setCallback(java.lang.String callback) {
+            return (Update) super.setCallback(callback);
+          }
+
+          @Override
+          public Update setFields(java.lang.String fields) {
+            return (Update) super.setFields(fields);
+          }
+
+          @Override
+          public Update setKey(java.lang.String key) {
+            return (Update) super.setKey(key);
+          }
+
+          @Override
+          public Update setOauthToken(java.lang.String oauthToken) {
+            return (Update) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Update) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Update setQuotaUser(java.lang.String quotaUser) {
+            return (Update) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Update setUploadType(java.lang.String uploadType) {
+            return (Update) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Update setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Update) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The group resource name. Written as `projects/{projectID}/groups/{group_id}` or
+           * `projects/{projectID}/locations/{location}/groups/{group_id}` Examples: `projects/my-
+           * project-123/groups/my-group`, `projects/my-project-123/locations/us-central1/groups/my-
+           * group` In the group resource name, the `group_id` is a unique identifier for a
+           * particular error group. The identifier is derived from key parts of the error-log
+           * content and is treated as Service Data. For information about how Service Data is
+           * handled, see [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-
+           * privacy-notice). For a list of supported locations, see [Supported
+           * Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+           * when unspecified.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The group resource name. Written as `projects/{projectID}/groups/{group_id}` or
+         `projects/{projectID}/locations/{location}/groups/{group_id}` Examples: `projects/my-
+         project-123/groups/my-group`, `projects/my-project-123/locations/us-central1/groups/my-group` In
+         the group resource name, the `group_id` is a unique identifier for a particular error group. The
+         identifier is derived from key parts of the error-log content and is treated as Service Data. For
+         information about how Service Data is handled, see [Google Cloud Privacy
+         Notice](https://cloud.google.com/terms/cloud-privacy-notice). For a list of supported locations,
+         see [Supported Regions](https://cloud.google.com/logging/docs/region-support). `global` is the
+         default when unspecified.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The group resource name. Written as `projects/{projectID}/groups/{group_id}` or
+           * `projects/{projectID}/locations/{location}/groups/{group_id}` Examples: `projects/my-
+           * project-123/groups/my-group`, `projects/my-project-123/locations/us-central1/groups/my-
+           * group` In the group resource name, the `group_id` is a unique identifier for a
+           * particular error group. The identifier is derived from key parts of the error-log
+           * content and is treated as Service Data. For information about how Service Data is
+           * handled, see [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-
+           * privacy-notice). For a list of supported locations, see [Supported
+           * Regions](https://cloud.google.com/logging/docs/region-support). `global` is the default
+           * when unspecified.
+           */
+          public Update setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/groups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Update set(String parameterName, Object value) {
+            return (Update) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
   }
 

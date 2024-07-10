@@ -4623,7 +4623,7 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
            * audio_severe_underrun_event - usb_peripherals_event - https_latency_change_event -
            * network_state_change_event - wifi_signal_strength_event -
            * vpn_connection_state_change_event - app_install_event - app_uninstall_event -
-           * app_launch_event
+           * app_launch_event - os_crash_event
            */
           @com.google.api.client.util.Key
           private String readMask;
@@ -4632,7 +4632,8 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
          become optional, while the filter parameter with an event type will be come required. Supported
          read_mask paths are: - device - user - audio_severe_underrun_event - usb_peripherals_event -
          https_latency_change_event - network_state_change_event - wifi_signal_strength_event -
-         vpn_connection_state_change_event - app_install_event - app_uninstall_event - app_launch_event
+         vpn_connection_state_change_event - app_install_event - app_uninstall_event - app_launch_event -
+         os_crash_event
            */
           public String getReadMask() {
             return readMask;
@@ -4645,7 +4646,7 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
            * audio_severe_underrun_event - usb_peripherals_event - https_latency_change_event -
            * network_state_change_event - wifi_signal_strength_event -
            * vpn_connection_state_change_event - app_install_event - app_uninstall_event -
-           * app_launch_event
+           * app_launch_event - os_crash_event
            */
           public List setReadMask(String readMask) {
             this.readMask = readMask;

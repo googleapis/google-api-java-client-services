@@ -39,7 +39,12 @@ public final class GoogleCloudAiplatformV1beta1ResourcePoolAutoscalingSpec exten
 
   /**
    * Optional. min replicas in the node pool, must be ≤ replica_count and < max_replica_count or
-   * will throw error
+   * will throw error. For autoscaling enabled Ray-on-Vertex, we allow min_replica_count of a
+   * resource_pool to be 0 to match the OSS Ray
+   * behavior(https://docs.ray.io/en/latest/cluster/vms/user-guides/configuring-
+   * autoscaling.html#cluster-config-parameters). As for Persistent Resource, the min_replica_count
+   * must be > 0, we added a corresponding validation inside
+   * CreatePersistentResourceRequestValidator.java.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -66,7 +71,12 @@ public final class GoogleCloudAiplatformV1beta1ResourcePoolAutoscalingSpec exten
 
   /**
    * Optional. min replicas in the node pool, must be ≤ replica_count and < max_replica_count or
-   * will throw error
+   * will throw error. For autoscaling enabled Ray-on-Vertex, we allow min_replica_count of a
+   * resource_pool to be 0 to match the OSS Ray
+   * behavior(https://docs.ray.io/en/latest/cluster/vms/user-guides/configuring-
+   * autoscaling.html#cluster-config-parameters). As for Persistent Resource, the min_replica_count
+   * must be > 0, we added a corresponding validation inside
+   * CreatePersistentResourceRequestValidator.java.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinReplicaCount() {
@@ -75,7 +85,12 @@ public final class GoogleCloudAiplatformV1beta1ResourcePoolAutoscalingSpec exten
 
   /**
    * Optional. min replicas in the node pool, must be ≤ replica_count and < max_replica_count or
-   * will throw error
+   * will throw error. For autoscaling enabled Ray-on-Vertex, we allow min_replica_count of a
+   * resource_pool to be 0 to match the OSS Ray
+   * behavior(https://docs.ray.io/en/latest/cluster/vms/user-guides/configuring-
+   * autoscaling.html#cluster-config-parameters). As for Persistent Resource, the min_replica_count
+   * must be > 0, we added a corresponding validation inside
+   * CreatePersistentResourceRequestValidator.java.
    * @param minReplicaCount minReplicaCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ResourcePoolAutoscalingSpec setMinReplicaCount(java.lang.Long minReplicaCount) {

@@ -207,18 +207,14 @@ public final class GoogleCloudAiplatformV1Model extends com.google.api.client.js
   private GoogleCloudAiplatformV1PredictSchemata predictSchemata;
 
   /**
-   * Output only. A read only boolean field reflecting Zone Isolation status of the model. It's
-   * false by default. Since Model is a type ZICY 4.2 resource, the field is an aggregated value of
-   * ZI status of its underlying dependencies.
+   * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzi;
 
   /**
-   * Output only. A read only boolean field reflecting ZS status of the model. It's false by
-   * default. Since Model is a type ZICY 4.2 resource, the field is an aggregated value of ZS status
-   * of its underlying dependencies.
+   * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -743,9 +739,7 @@ public final class GoogleCloudAiplatformV1Model extends com.google.api.client.js
   }
 
   /**
-   * Output only. A read only boolean field reflecting Zone Isolation status of the model. It's
-   * false by default. Since Model is a type ZICY 4.2 resource, the field is an aggregated value of
-   * ZI status of its underlying dependencies.
+   * Output only. Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzi() {
@@ -753,9 +747,7 @@ public final class GoogleCloudAiplatformV1Model extends com.google.api.client.js
   }
 
   /**
-   * Output only. A read only boolean field reflecting Zone Isolation status of the model. It's
-   * false by default. Since Model is a type ZICY 4.2 resource, the field is an aggregated value of
-   * ZI status of its underlying dependencies.
+   * Output only. Reserved for future use.
    * @param satisfiesPzi satisfiesPzi or {@code null} for none
    */
   public GoogleCloudAiplatformV1Model setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
@@ -764,9 +756,7 @@ public final class GoogleCloudAiplatformV1Model extends com.google.api.client.js
   }
 
   /**
-   * Output only. A read only boolean field reflecting ZS status of the model. It's false by
-   * default. Since Model is a type ZICY 4.2 resource, the field is an aggregated value of ZS status
-   * of its underlying dependencies.
+   * Output only. Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -774,9 +764,7 @@ public final class GoogleCloudAiplatformV1Model extends com.google.api.client.js
   }
 
   /**
-   * Output only. A read only boolean field reflecting ZS status of the model. It's false by
-   * default. Since Model is a type ZICY 4.2 resource, the field is an aggregated value of ZS status
-   * of its underlying dependencies.
+   * Output only. Reserved for future use.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public GoogleCloudAiplatformV1Model setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {

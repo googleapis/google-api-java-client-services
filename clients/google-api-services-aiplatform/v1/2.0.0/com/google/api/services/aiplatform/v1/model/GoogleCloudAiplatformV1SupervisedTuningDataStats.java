@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1SupervisedTuningDataStats extends com.
   private java.lang.Long totalBillableCharacterCount;
 
   /**
+   * Output only. Number of billable tokens in the tuning dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long totalBillableTokenCount;
+
+  /**
    * Output only. Number of tuning characters in the tuning dataset.
    * The value may be {@code null}.
    */
@@ -105,6 +112,23 @@ public final class GoogleCloudAiplatformV1SupervisedTuningDataStats extends com.
    */
   public GoogleCloudAiplatformV1SupervisedTuningDataStats setTotalBillableCharacterCount(java.lang.Long totalBillableCharacterCount) {
     this.totalBillableCharacterCount = totalBillableCharacterCount;
+    return this;
+  }
+
+  /**
+   * Output only. Number of billable tokens in the tuning dataset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTotalBillableTokenCount() {
+    return totalBillableTokenCount;
+  }
+
+  /**
+   * Output only. Number of billable tokens in the tuning dataset.
+   * @param totalBillableTokenCount totalBillableTokenCount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SupervisedTuningDataStats setTotalBillableTokenCount(java.lang.Long totalBillableTokenCount) {
+    this.totalBillableTokenCount = totalBillableTokenCount;
     return this;
   }
 

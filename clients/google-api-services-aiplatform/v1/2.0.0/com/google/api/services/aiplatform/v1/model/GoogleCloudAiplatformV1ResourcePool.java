@@ -31,7 +31,7 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1ResourcePool extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Optional spec to configure GKE autoscaling
+   * Optional. Optional spec to configure GKE or Ray-on-Vertex autoscaling
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +75,7 @@ public final class GoogleCloudAiplatformV1ResourcePool extends com.google.api.cl
   private java.lang.Long usedReplicaCount;
 
   /**
-   * Optional. Optional spec to configure GKE autoscaling
+   * Optional. Optional spec to configure GKE or Ray-on-Vertex autoscaling
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1ResourcePoolAutoscalingSpec getAutoscalingSpec() {
@@ -83,7 +83,7 @@ public final class GoogleCloudAiplatformV1ResourcePool extends com.google.api.cl
   }
 
   /**
-   * Optional. Optional spec to configure GKE autoscaling
+   * Optional. Optional spec to configure GKE or Ray-on-Vertex autoscaling
    * @param autoscalingSpec autoscalingSpec or {@code null} for none
    */
   public GoogleCloudAiplatformV1ResourcePool setAutoscalingSpec(GoogleCloudAiplatformV1ResourcePoolAutoscalingSpec autoscalingSpec) {

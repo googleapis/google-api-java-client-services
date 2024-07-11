@@ -3775,7 +3775,7 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
            * parameters, call the {@link Copy#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The name of the destination cluster that will contain the backup copy. The cluster must
-           *        already exists. Values are of the form:
+           *        already exist. Values are of the form:
            *        `projects/{project}/instances/{instance}/clusters/{cluster}`.
            * @param content the {@link com.google.api.services.bigtableadmin.v2.model.CopyBackupRequest}
            * @return the request
@@ -3805,7 +3805,7 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The name of the destination cluster that will contain the backup copy. The cluster must
-           *        already exists. Values are of the form:
+           *        already exist. Values are of the form:
            *        `projects/{project}/instances/{instance}/clusters/{cluster}`.
              * @param content the {@link com.google.api.services.bigtableadmin.v2.model.CopyBackupRequest}
              * @since 1.13
@@ -3877,14 +3877,14 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The name of the destination cluster that will contain the backup copy. The
-             * cluster must already exists. Values are of the form:
+             * cluster must already exist. Values are of the form:
              * `projects/{project}/instances/{instance}/clusters/{cluster}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The name of the destination cluster that will contain the backup copy. The cluster must
-           already exists. Values are of the form:
+           already exist. Values are of the form:
            `projects/{project}/instances/{instance}/clusters/{cluster}`.
              */
             public java.lang.String getParent() {
@@ -3893,7 +3893,7 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The name of the destination cluster that will contain the backup copy. The
-             * cluster must already exists. Values are of the form:
+             * cluster must already exist. Values are of the form:
              * `projects/{project}/instances/{instance}/clusters/{cluster}`.
              */
             public Copy setParent(java.lang.String parent) {

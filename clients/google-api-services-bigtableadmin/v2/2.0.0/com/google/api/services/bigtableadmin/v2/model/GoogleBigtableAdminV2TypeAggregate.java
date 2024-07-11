@@ -33,12 +33,33 @@ package com.google.api.services.bigtableadmin.v2.model;
 public final class GoogleBigtableAdminV2TypeAggregate extends com.google.api.client.json.GenericJson {
 
   /**
+   * HyperLogLogPlusPlusUniqueCount aggregator.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleBigtableAdminV2TypeAggregateHyperLogLogPlusPlusUniqueCount hllppUniqueCount;
+
+  /**
    * Type of the inputs that are accumulated by this `Aggregate`, which must specify a full
    * encoding. Use `AddInput` mutations to accumulate new inputs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Type inputType;
+
+  /**
+   * Max aggregator.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleBigtableAdminV2TypeAggregateMax max;
+
+  /**
+   * Min aggregator.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleBigtableAdminV2TypeAggregateMin min;
 
   /**
    * Output only. Type that holds the internal accumulator state for the `Aggregate`. This is a
@@ -56,6 +77,23 @@ public final class GoogleBigtableAdminV2TypeAggregate extends com.google.api.cli
   private GoogleBigtableAdminV2TypeAggregateSum sum;
 
   /**
+   * HyperLogLogPlusPlusUniqueCount aggregator.
+   * @return value or {@code null} for none
+   */
+  public GoogleBigtableAdminV2TypeAggregateHyperLogLogPlusPlusUniqueCount getHllppUniqueCount() {
+    return hllppUniqueCount;
+  }
+
+  /**
+   * HyperLogLogPlusPlusUniqueCount aggregator.
+   * @param hllppUniqueCount hllppUniqueCount or {@code null} for none
+   */
+  public GoogleBigtableAdminV2TypeAggregate setHllppUniqueCount(GoogleBigtableAdminV2TypeAggregateHyperLogLogPlusPlusUniqueCount hllppUniqueCount) {
+    this.hllppUniqueCount = hllppUniqueCount;
+    return this;
+  }
+
+  /**
    * Type of the inputs that are accumulated by this `Aggregate`, which must specify a full
    * encoding. Use `AddInput` mutations to accumulate new inputs.
    * @return value or {@code null} for none
@@ -71,6 +109,40 @@ public final class GoogleBigtableAdminV2TypeAggregate extends com.google.api.cli
    */
   public GoogleBigtableAdminV2TypeAggregate setInputType(Type inputType) {
     this.inputType = inputType;
+    return this;
+  }
+
+  /**
+   * Max aggregator.
+   * @return value or {@code null} for none
+   */
+  public GoogleBigtableAdminV2TypeAggregateMax getMax() {
+    return max;
+  }
+
+  /**
+   * Max aggregator.
+   * @param max max or {@code null} for none
+   */
+  public GoogleBigtableAdminV2TypeAggregate setMax(GoogleBigtableAdminV2TypeAggregateMax max) {
+    this.max = max;
+    return this;
+  }
+
+  /**
+   * Min aggregator.
+   * @return value or {@code null} for none
+   */
+  public GoogleBigtableAdminV2TypeAggregateMin getMin() {
+    return min;
+  }
+
+  /**
+   * Min aggregator.
+   * @param min min or {@code null} for none
+   */
+  public GoogleBigtableAdminV2TypeAggregate setMin(GoogleBigtableAdminV2TypeAggregateMin min) {
+    this.min = min;
     return this;
   }
 

@@ -19,7 +19,8 @@ package com.google.api.services.sheets.v4.model;
 /**
  * Adds a data source. After the data source is added successfully, an associated DATA_SOURCE sheet
  * is created and an execution is triggered to refresh the sheet to read data from the data source.
- * The request requires an additional `bigquery.readonly` OAuth scope.
+ * The request requires an additional `bigquery.readonly` OAuth scope if you are adding a BigQuery
+ * data source.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:

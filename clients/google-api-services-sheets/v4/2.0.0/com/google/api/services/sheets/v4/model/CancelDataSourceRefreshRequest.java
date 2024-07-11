@@ -18,7 +18,8 @@ package com.google.api.services.sheets.v4.model;
 
 /**
  * Cancels one or multiple refreshes of data source objects in the spreadsheet by the specified
- * references.
+ * references. The request requires an additional `bigquery.readonly` OAuth scope if you are
+ * cancelling a refresh on a BigQuery data source.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:

@@ -25,7 +25,7 @@ package com.google.api.services.searchconsole.v1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/webmaster-tools/search-console-api/" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/webmaster-tools/about" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

@@ -130,6 +130,15 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
+   * The bucket's IP filter configuration. Specifies the network sources that are allowed to access
+   * the operations on the bucket, as well as its underlying objects. Only enforced when the mode is
+   * set to 'Enabled'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IpFilter ipFilter;
+
+  /**
    * The kind of item this is. For buckets, this is always storage#bucket.
    * The value may be {@code null}.
    */
@@ -510,6 +519,27 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
    */
   public Bucket setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * The bucket's IP filter configuration. Specifies the network sources that are allowed to access
+   * the operations on the bucket, as well as its underlying objects. Only enforced when the mode is
+   * set to 'Enabled'.
+   * @return value or {@code null} for none
+   */
+  public IpFilter getIpFilter() {
+    return ipFilter;
+  }
+
+  /**
+   * The bucket's IP filter configuration. Specifies the network sources that are allowed to access
+   * the operations on the bucket, as well as its underlying objects. Only enforced when the mode is
+   * set to 'Enabled'.
+   * @param ipFilter ipFilter or {@code null} for none
+   */
+  public Bucket setIpFilter(IpFilter ipFilter) {
+    this.ipFilter = ipFilter;
     return this;
   }
 
@@ -1563,6 +1593,210 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
       @Override
       public UniformBucketLevelAccess clone() {
         return (UniformBucketLevelAccess) super.clone();
+      }
+
+    }
+  }
+
+  /**
+   * The bucket's IP filter configuration. Specifies the network sources that are allowed to access
+   * the operations on the bucket, as well as its underlying objects. Only enforced when the mode is
+   * set to 'Enabled'.
+   */
+  public static final class IpFilter extends com.google.api.client.json.GenericJson {
+
+    /**
+     * The mode of the IP filter. Valid values are 'Enabled' and 'Disabled'.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String mode;
+
+    /**
+     * The public network source of the bucket's IP filter.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private PublicNetworkSource publicNetworkSource;
+
+    /**
+     * The list of [VPC network](https://cloud.google.com/vpc/docs/vpc) sources of the bucket's IP
+     * filter.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.util.List<VpcNetworkSources> vpcNetworkSources;
+
+    static {
+      // hack to force ProGuard to consider VpcNetworkSources used, since otherwise it would be stripped out
+      // see https://github.com/google/google-api-java-client/issues/543
+      com.google.api.client.util.Data.nullOf(VpcNetworkSources.class);
+    }
+
+    /**
+     * The mode of the IP filter. Valid values are 'Enabled' and 'Disabled'.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getMode() {
+      return mode;
+    }
+
+    /**
+     * The mode of the IP filter. Valid values are 'Enabled' and 'Disabled'.
+     * @param mode mode or {@code null} for none
+     */
+    public IpFilter setMode(java.lang.String mode) {
+      this.mode = mode;
+      return this;
+    }
+
+    /**
+     * The public network source of the bucket's IP filter.
+     * @return value or {@code null} for none
+     */
+    public PublicNetworkSource getPublicNetworkSource() {
+      return publicNetworkSource;
+    }
+
+    /**
+     * The public network source of the bucket's IP filter.
+     * @param publicNetworkSource publicNetworkSource or {@code null} for none
+     */
+    public IpFilter setPublicNetworkSource(PublicNetworkSource publicNetworkSource) {
+      this.publicNetworkSource = publicNetworkSource;
+      return this;
+    }
+
+    /**
+     * The list of [VPC network](https://cloud.google.com/vpc/docs/vpc) sources of the bucket's IP
+     * filter.
+     * @return value or {@code null} for none
+     */
+    public java.util.List<VpcNetworkSources> getVpcNetworkSources() {
+      return vpcNetworkSources;
+    }
+
+    /**
+     * The list of [VPC network](https://cloud.google.com/vpc/docs/vpc) sources of the bucket's IP
+     * filter.
+     * @param vpcNetworkSources vpcNetworkSources or {@code null} for none
+     */
+    public IpFilter setVpcNetworkSources(java.util.List<VpcNetworkSources> vpcNetworkSources) {
+      this.vpcNetworkSources = vpcNetworkSources;
+      return this;
+    }
+
+    @Override
+    public IpFilter set(String fieldName, Object value) {
+      return (IpFilter) super.set(fieldName, value);
+    }
+
+    @Override
+    public IpFilter clone() {
+      return (IpFilter) super.clone();
+    }
+
+    /**
+     * The public network source of the bucket's IP filter.
+     */
+    public static final class PublicNetworkSource extends com.google.api.client.json.GenericJson {
+
+      /**
+       * The list of public IPv4, IPv6 cidr ranges that are allowed to access the bucket.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> allowedIpCidrRanges;
+
+      /**
+       * The list of public IPv4, IPv6 cidr ranges that are allowed to access the bucket.
+       * @return value or {@code null} for none
+       */
+      public java.util.List<java.lang.String> getAllowedIpCidrRanges() {
+        return allowedIpCidrRanges;
+      }
+
+      /**
+       * The list of public IPv4, IPv6 cidr ranges that are allowed to access the bucket.
+       * @param allowedIpCidrRanges allowedIpCidrRanges or {@code null} for none
+       */
+      public PublicNetworkSource setAllowedIpCidrRanges(java.util.List<java.lang.String> allowedIpCidrRanges) {
+        this.allowedIpCidrRanges = allowedIpCidrRanges;
+        return this;
+      }
+
+      @Override
+      public PublicNetworkSource set(String fieldName, Object value) {
+        return (PublicNetworkSource) super.set(fieldName, value);
+      }
+
+      @Override
+      public PublicNetworkSource clone() {
+        return (PublicNetworkSource) super.clone();
+      }
+
+    }
+    /**
+     * Model definition for BucketIpFilterVpcNetworkSources.
+     */
+    public static final class VpcNetworkSources extends com.google.api.client.json.GenericJson {
+
+      /**
+       * The list of IPv4, IPv6 cidr ranges subnetworks that are allowed to access the bucket.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> allowedIpCidrRanges;
+
+      /**
+       * Name of the network. Format: projects/{PROJECT_ID}/global/networks/{NETWORK_NAME}
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String network;
+
+      /**
+       * The list of IPv4, IPv6 cidr ranges subnetworks that are allowed to access the bucket.
+       * @return value or {@code null} for none
+       */
+      public java.util.List<java.lang.String> getAllowedIpCidrRanges() {
+        return allowedIpCidrRanges;
+      }
+
+      /**
+       * The list of IPv4, IPv6 cidr ranges subnetworks that are allowed to access the bucket.
+       * @param allowedIpCidrRanges allowedIpCidrRanges or {@code null} for none
+       */
+      public VpcNetworkSources setAllowedIpCidrRanges(java.util.List<java.lang.String> allowedIpCidrRanges) {
+        this.allowedIpCidrRanges = allowedIpCidrRanges;
+        return this;
+      }
+
+      /**
+       * Name of the network. Format: projects/{PROJECT_ID}/global/networks/{NETWORK_NAME}
+       * @return value or {@code null} for none
+       */
+      public java.lang.String getNetwork() {
+        return network;
+      }
+
+      /**
+       * Name of the network. Format: projects/{PROJECT_ID}/global/networks/{NETWORK_NAME}
+       * @param network network or {@code null} for none
+       */
+      public VpcNetworkSources setNetwork(java.lang.String network) {
+        this.network = network;
+        return this;
+      }
+
+      @Override
+      public VpcNetworkSources set(String fieldName, Object value) {
+        return (VpcNetworkSources) super.set(fieldName, value);
+      }
+
+      @Override
+      public VpcNetworkSources clone() {
+        return (VpcNetworkSources) super.clone();
       }
 
     }

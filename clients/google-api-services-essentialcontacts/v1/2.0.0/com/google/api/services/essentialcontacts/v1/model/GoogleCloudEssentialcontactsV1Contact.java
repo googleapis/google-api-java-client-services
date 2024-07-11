@@ -71,8 +71,8 @@ public final class GoogleCloudEssentialcontactsV1Contact extends com.google.api.
   private String validateTime;
 
   /**
-   * The validity of the contact. A contact is considered valid if it is the correct recipient for
-   * notifications for a particular resource.
+   * Output only. The validity of the contact. A contact is considered valid if it is the correct
+   * recipient for notifications for a particular resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,8 +174,8 @@ public final class GoogleCloudEssentialcontactsV1Contact extends com.google.api.
   }
 
   /**
-   * The validity of the contact. A contact is considered valid if it is the correct recipient for
-   * notifications for a particular resource.
+   * Output only. The validity of the contact. A contact is considered valid if it is the correct
+   * recipient for notifications for a particular resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getValidationState() {
@@ -183,8 +183,8 @@ public final class GoogleCloudEssentialcontactsV1Contact extends com.google.api.
   }
 
   /**
-   * The validity of the contact. A contact is considered valid if it is the correct recipient for
-   * notifications for a particular resource.
+   * Output only. The validity of the contact. A contact is considered valid if it is the correct
+   * recipient for notifications for a particular resource.
    * @param validationState validationState or {@code null} for none
    */
   public GoogleCloudEssentialcontactsV1Contact setValidationState(java.lang.String validationState) {

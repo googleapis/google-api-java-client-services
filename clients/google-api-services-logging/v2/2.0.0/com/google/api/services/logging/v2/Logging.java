@@ -6561,6 +6561,48 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
+           * Optional. Specifies the type ("Logging" or "OpsAnalytics") and the visibility (PRIVATE
+           * or SHARED) of the saved queries to list. If provided, the filter must contain either
+           * the type function or a visibility token, or both. If both are chosen, they can be
+           * placed in any order, but they must be joined by the AND operator or the empty
+           * character.The two supported type function calls are: type("Logging")
+           * type("OpsAnalytics")The two supported visibility tokens are: visibility = PRIVATE
+           * visibility = SHAREDFor example:type("Logging") AND visibility = PRIVATE
+           * visibility=SHARED type("OpsAnalytics") type("OpsAnalytics)" visibility = PRIVATE
+           * visibility = SHARED
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Specifies the type ("Logging" or "OpsAnalytics") and the visibility (PRIVATE or SHARED)
+         of the saved queries to list. If provided, the filter must contain either the type function or a
+         visibility token, or both. If both are chosen, they can be placed in any order, but they must be
+         joined by the AND operator or the empty character.The two supported type function calls are:
+         type("Logging") type("OpsAnalytics")The two supported visibility tokens are: visibility = PRIVATE
+         visibility = SHAREDFor example:type("Logging") AND visibility = PRIVATE visibility=SHARED
+         type("OpsAnalytics") type("OpsAnalytics)" visibility = PRIVATE visibility = SHARED
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Specifies the type ("Logging" or "OpsAnalytics") and the visibility (PRIVATE
+           * or SHARED) of the saved queries to list. If provided, the filter must contain either
+           * the type function or a visibility token, or both. If both are chosen, they can be
+           * placed in any order, but they must be joined by the AND operator or the empty
+           * character.The two supported type function calls are: type("Logging")
+           * type("OpsAnalytics")The two supported visibility tokens are: visibility = PRIVATE
+           * visibility = SHAREDFor example:type("Logging") AND visibility = PRIVATE
+           * visibility=SHARED type("OpsAnalytics") type("OpsAnalytics)" visibility = PRIVATE
+           * visibility = SHARED
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
            * Optional. The maximum number of results to return from this request.Non-positive values
            * are ignored. The presence of nextPageToken in the response indicates that more results
            * might be available.
@@ -10266,7 +10308,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * parameters, call the {@link UpdateSettings#execute()} method to invoke the remote operation.
      *
      * @param name Required. The resource name for the settings to update. "organizations/[ORGANIZATION_ID]/settings"
-     *        For example:"organizations/12345/settings"
+     *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"
      * @param content the {@link com.google.api.services.logging.v2.model.Settings}
      * @return the request
      */
@@ -10302,7 +10344,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * constructor. </p>
        *
        * @param name Required. The resource name for the settings to update. "organizations/[ORGANIZATION_ID]/settings"
-     *        For example:"organizations/12345/settings"
+     *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"
        * @param content the {@link com.google.api.services.logging.v2.model.Settings}
        * @since 1.13
        */
@@ -10373,13 +10415,14 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Required. The resource name for the settings to update.
-       * "organizations/[ORGANIZATION_ID]/settings" For example:"organizations/12345/settings"
+       * "organizations/[ORGANIZATION_ID]/settings" "folders/[FOLDER_ID]/settings" For
+       * example:"organizations/12345/settings"
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. The resource name for the settings to update. "organizations/[ORGANIZATION_ID]/settings"
-     For example:"organizations/12345/settings"
+     "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"
        */
       public java.lang.String getName() {
         return name;
@@ -10387,7 +10430,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Required. The resource name for the settings to update.
-       * "organizations/[ORGANIZATION_ID]/settings" For example:"organizations/12345/settings"
+       * "organizations/[ORGANIZATION_ID]/settings" "folders/[FOLDER_ID]/settings" For
+       * example:"organizations/12345/settings"
        */
       public UpdateSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -16932,6 +16976,48 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                   "^folders/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Specifies the type ("Logging" or "OpsAnalytics") and the visibility (PRIVATE
+           * or SHARED) of the saved queries to list. If provided, the filter must contain either
+           * the type function or a visibility token, or both. If both are chosen, they can be
+           * placed in any order, but they must be joined by the AND operator or the empty
+           * character.The two supported type function calls are: type("Logging")
+           * type("OpsAnalytics")The two supported visibility tokens are: visibility = PRIVATE
+           * visibility = SHAREDFor example:type("Logging") AND visibility = PRIVATE
+           * visibility=SHARED type("OpsAnalytics") type("OpsAnalytics)" visibility = PRIVATE
+           * visibility = SHARED
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Specifies the type ("Logging" or "OpsAnalytics") and the visibility (PRIVATE or SHARED)
+         of the saved queries to list. If provided, the filter must contain either the type function or a
+         visibility token, or both. If both are chosen, they can be placed in any order, but they must be
+         joined by the AND operator or the empty character.The two supported type function calls are:
+         type("Logging") type("OpsAnalytics")The two supported visibility tokens are: visibility = PRIVATE
+         visibility = SHAREDFor example:type("Logging") AND visibility = PRIVATE visibility=SHARED
+         type("OpsAnalytics") type("OpsAnalytics)" visibility = PRIVATE visibility = SHARED
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Specifies the type ("Logging" or "OpsAnalytics") and the visibility (PRIVATE
+           * or SHARED) of the saved queries to list. If provided, the filter must contain either
+           * the type function or a visibility token, or both. If both are chosen, they can be
+           * placed in any order, but they must be joined by the AND operator or the empty
+           * character.The two supported type function calls are: type("Logging")
+           * type("OpsAnalytics")The two supported visibility tokens are: visibility = PRIVATE
+           * visibility = SHAREDFor example:type("Logging") AND visibility = PRIVATE
+           * visibility=SHARED type("OpsAnalytics") type("OpsAnalytics)" visibility = PRIVATE
+           * visibility = SHARED
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
             return this;
           }
 
@@ -24493,7 +24579,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * parameters, call the {@link UpdateSettings#execute()} method to invoke the remote operation.
      *
      * @param name Required. The resource name for the settings to update. "organizations/[ORGANIZATION_ID]/settings"
-     *        For example:"organizations/12345/settings"
+     *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"
      * @param content the {@link com.google.api.services.logging.v2.model.Settings}
      * @return the request
      */
@@ -24529,7 +24615,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * constructor. </p>
        *
        * @param name Required. The resource name for the settings to update. "organizations/[ORGANIZATION_ID]/settings"
-     *        For example:"organizations/12345/settings"
+     *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"
        * @param content the {@link com.google.api.services.logging.v2.model.Settings}
        * @since 1.13
        */
@@ -24600,13 +24686,14 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Required. The resource name for the settings to update.
-       * "organizations/[ORGANIZATION_ID]/settings" For example:"organizations/12345/settings"
+       * "organizations/[ORGANIZATION_ID]/settings" "folders/[FOLDER_ID]/settings" For
+       * example:"organizations/12345/settings"
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. The resource name for the settings to update. "organizations/[ORGANIZATION_ID]/settings"
-     For example:"organizations/12345/settings"
+     "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"
        */
       public java.lang.String getName() {
         return name;
@@ -24614,7 +24701,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Required. The resource name for the settings to update.
-       * "organizations/[ORGANIZATION_ID]/settings" For example:"organizations/12345/settings"
+       * "organizations/[ORGANIZATION_ID]/settings" "folders/[FOLDER_ID]/settings" For
+       * example:"organizations/12345/settings"
        */
       public UpdateSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -31159,6 +31247,48 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                   "^organizations/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Specifies the type ("Logging" or "OpsAnalytics") and the visibility (PRIVATE
+           * or SHARED) of the saved queries to list. If provided, the filter must contain either
+           * the type function or a visibility token, or both. If both are chosen, they can be
+           * placed in any order, but they must be joined by the AND operator or the empty
+           * character.The two supported type function calls are: type("Logging")
+           * type("OpsAnalytics")The two supported visibility tokens are: visibility = PRIVATE
+           * visibility = SHAREDFor example:type("Logging") AND visibility = PRIVATE
+           * visibility=SHARED type("OpsAnalytics") type("OpsAnalytics)" visibility = PRIVATE
+           * visibility = SHARED
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Specifies the type ("Logging" or "OpsAnalytics") and the visibility (PRIVATE or SHARED)
+         of the saved queries to list. If provided, the filter must contain either the type function or a
+         visibility token, or both. If both are chosen, they can be placed in any order, but they must be
+         joined by the AND operator or the empty character.The two supported type function calls are:
+         type("Logging") type("OpsAnalytics")The two supported visibility tokens are: visibility = PRIVATE
+         visibility = SHAREDFor example:type("Logging") AND visibility = PRIVATE visibility=SHARED
+         type("OpsAnalytics") type("OpsAnalytics)" visibility = PRIVATE visibility = SHARED
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Specifies the type ("Logging" or "OpsAnalytics") and the visibility (PRIVATE
+           * or SHARED) of the saved queries to list. If provided, the filter must contain either
+           * the type function or a visibility token, or both. If both are chosen, they can be
+           * placed in any order, but they must be joined by the AND operator or the empty
+           * character.The two supported type function calls are: type("Logging")
+           * type("OpsAnalytics")The two supported visibility tokens are: visibility = PRIVATE
+           * visibility = SHAREDFor example:type("Logging") AND visibility = PRIVATE
+           * visibility=SHARED type("OpsAnalytics") type("OpsAnalytics)" visibility = PRIVATE
+           * visibility = SHARED
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
             return this;
           }
 
@@ -40043,6 +40173,48 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
+           * Optional. Specifies the type ("Logging" or "OpsAnalytics") and the visibility (PRIVATE
+           * or SHARED) of the saved queries to list. If provided, the filter must contain either
+           * the type function or a visibility token, or both. If both are chosen, they can be
+           * placed in any order, but they must be joined by the AND operator or the empty
+           * character.The two supported type function calls are: type("Logging")
+           * type("OpsAnalytics")The two supported visibility tokens are: visibility = PRIVATE
+           * visibility = SHAREDFor example:type("Logging") AND visibility = PRIVATE
+           * visibility=SHARED type("OpsAnalytics") type("OpsAnalytics)" visibility = PRIVATE
+           * visibility = SHARED
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Specifies the type ("Logging" or "OpsAnalytics") and the visibility (PRIVATE or SHARED)
+         of the saved queries to list. If provided, the filter must contain either the type function or a
+         visibility token, or both. If both are chosen, they can be placed in any order, but they must be
+         joined by the AND operator or the empty character.The two supported type function calls are:
+         type("Logging") type("OpsAnalytics")The two supported visibility tokens are: visibility = PRIVATE
+         visibility = SHAREDFor example:type("Logging") AND visibility = PRIVATE visibility=SHARED
+         type("OpsAnalytics") type("OpsAnalytics)" visibility = PRIVATE visibility = SHARED
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Specifies the type ("Logging" or "OpsAnalytics") and the visibility (PRIVATE
+           * or SHARED) of the saved queries to list. If provided, the filter must contain either
+           * the type function or a visibility token, or both. If both are chosen, they can be
+           * placed in any order, but they must be joined by the AND operator or the empty
+           * character.The two supported type function calls are: type("Logging")
+           * type("OpsAnalytics")The two supported visibility tokens are: visibility = PRIVATE
+           * visibility = SHAREDFor example:type("Logging") AND visibility = PRIVATE
+           * visibility=SHARED type("OpsAnalytics") type("OpsAnalytics)" visibility = PRIVATE
+           * visibility = SHARED
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
            * Optional. The maximum number of results to return from this request.Non-positive values
            * are ignored. The presence of nextPageToken in the response indicates that more results
            * might be available.
@@ -44463,7 +44635,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * parameters, call the {@link UpdateSettings#execute()} method to invoke the remote operation.
      *
      * @param name Required. The resource name for the settings to update. "organizations/[ORGANIZATION_ID]/settings"
-     *        For example:"organizations/12345/settings"
+     *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"
      * @param content the {@link com.google.api.services.logging.v2.model.Settings}
      * @return the request
      */
@@ -44499,7 +44671,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * constructor. </p>
        *
        * @param name Required. The resource name for the settings to update. "organizations/[ORGANIZATION_ID]/settings"
-     *        For example:"organizations/12345/settings"
+     *        "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"
        * @param content the {@link com.google.api.services.logging.v2.model.Settings}
        * @since 1.13
        */
@@ -44570,13 +44742,14 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Required. The resource name for the settings to update.
-       * "organizations/[ORGANIZATION_ID]/settings" For example:"organizations/12345/settings"
+       * "organizations/[ORGANIZATION_ID]/settings" "folders/[FOLDER_ID]/settings" For
+       * example:"organizations/12345/settings"
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. The resource name for the settings to update. "organizations/[ORGANIZATION_ID]/settings"
-     For example:"organizations/12345/settings"
+     "folders/[FOLDER_ID]/settings" For example:"organizations/12345/settings"
        */
       public java.lang.String getName() {
         return name;
@@ -44584,7 +44757,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Required. The resource name for the settings to update.
-       * "organizations/[ORGANIZATION_ID]/settings" For example:"organizations/12345/settings"
+       * "organizations/[ORGANIZATION_ID]/settings" "folders/[FOLDER_ID]/settings" For
+       * example:"organizations/12345/settings"
        */
       public UpdateSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {

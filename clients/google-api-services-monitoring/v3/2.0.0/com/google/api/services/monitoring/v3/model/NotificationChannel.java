@@ -91,7 +91,7 @@ public final class NotificationChannel extends com.google.api.client.json.Generi
   }
 
   /**
-   * The full REST resource name for this channel. The format is:
+   * Identifier. The full REST resource name for this channel. The format is:
    * projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID] The [CHANNEL_ID] is
    * automatically assigned by the server on creation.
    * The value may be {@code null}.
@@ -257,7 +257,7 @@ public final class NotificationChannel extends com.google.api.client.json.Generi
   }
 
   /**
-   * The full REST resource name for this channel. The format is:
+   * Identifier. The full REST resource name for this channel. The format is:
    * projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID] The [CHANNEL_ID] is
    * automatically assigned by the server on creation.
    * @return value or {@code null} for none
@@ -267,7 +267,7 @@ public final class NotificationChannel extends com.google.api.client.json.Generi
   }
 
   /**
-   * The full REST resource name for this channel. The format is:
+   * Identifier. The full REST resource name for this channel. The format is:
    * projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID] The [CHANNEL_ID] is
    * automatically assigned by the server on creation.
    * @param name name or {@code null} for none

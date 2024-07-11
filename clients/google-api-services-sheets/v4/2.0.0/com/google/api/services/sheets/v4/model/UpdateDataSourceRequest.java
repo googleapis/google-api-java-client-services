@@ -19,7 +19,8 @@ package com.google.api.services.sheets.v4.model;
 /**
  * Updates a data source. After the data source is updated successfully, an execution is triggered
  * to refresh the associated DATA_SOURCE sheet to read data from the updated data source. The
- * request requires an additional `bigquery.readonly` OAuth scope.
+ * request requires an additional `bigquery.readonly` OAuth scope if you are updating a BigQuery
+ * data source.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:

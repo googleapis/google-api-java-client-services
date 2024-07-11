@@ -18,9 +18,10 @@ package com.google.api.services.sheets.v4.model;
 
 /**
  * Refreshes one or multiple data source objects in the spreadsheet by the specified references. The
- * request requires an additional `bigquery.readonly` OAuth scope. If there are multiple refresh
- * requests referencing the same data source objects in one batch, only the last refresh request is
- * processed, and all those requests will have the same response accordingly.
+ * request requires an additional `bigquery.readonly` OAuth scope if you are refreshing a BigQuery
+ * data source. If there are multiple refresh requests referencing the same data source objects in
+ * one batch, only the last refresh request is processed, and all those requests will have the same
+ * response accordingly.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:

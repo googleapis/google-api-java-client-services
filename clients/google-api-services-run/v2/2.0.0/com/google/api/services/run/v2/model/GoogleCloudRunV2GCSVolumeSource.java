@@ -30,8 +30,7 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2GCSVolumeSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Cloud Storage Bucket name. TODO (b/344678062) Fix the error validation once dynamic mounting is
-   * public.
+   * Cloud Storage Bucket name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +44,7 @@ public final class GoogleCloudRunV2GCSVolumeSource extends com.google.api.client
   private java.lang.Boolean readOnly;
 
   /**
-   * Cloud Storage Bucket name. TODO (b/344678062) Fix the error validation once dynamic mounting is
-   * public.
+   * Cloud Storage Bucket name.
    * @return value or {@code null} for none
    */
   public java.lang.String getBucket() {
@@ -54,8 +52,7 @@ public final class GoogleCloudRunV2GCSVolumeSource extends com.google.api.client
   }
 
   /**
-   * Cloud Storage Bucket name. TODO (b/344678062) Fix the error validation once dynamic mounting is
-   * public.
+   * Cloud Storage Bucket name.
    * @param bucket bucket or {@code null} for none
    */
   public GoogleCloudRunV2GCSVolumeSource setBucket(java.lang.String bucket) {

@@ -52,6 +52,20 @@ public final class Type extends com.google.api.client.json.GenericJson {
   private GoogleBigtableAdminV2TypeAggregate aggregateType;
 
   /**
+   * Array
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleBigtableAdminV2TypeArray arrayType;
+
+  /**
+   * Bool
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleBigtableAdminV2TypeBool boolType;
+
+  /**
    * Bytes
    * The value may be {@code null}.
    */
@@ -59,11 +73,60 @@ public final class Type extends com.google.api.client.json.GenericJson {
   private GoogleBigtableAdminV2TypeBytes bytesType;
 
   /**
+   * Date
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleBigtableAdminV2TypeDate dateType;
+
+  /**
+   * Float32
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleBigtableAdminV2TypeFloat32 float32Type;
+
+  /**
+   * Float64
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleBigtableAdminV2TypeFloat64 float64Type;
+
+  /**
    * Int64
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleBigtableAdminV2TypeInt64 int64Type;
+
+  /**
+   * Map
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleBigtableAdminV2TypeMap mapType;
+
+  /**
+   * String
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleBigtableAdminV2TypeString stringType;
+
+  /**
+   * Struct
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleBigtableAdminV2TypeStruct structType;
+
+  /**
+   * Timestamp
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleBigtableAdminV2TypeTimestamp timestampType;
 
   /**
    * Aggregate
@@ -79,6 +142,40 @@ public final class Type extends com.google.api.client.json.GenericJson {
    */
   public Type setAggregateType(GoogleBigtableAdminV2TypeAggregate aggregateType) {
     this.aggregateType = aggregateType;
+    return this;
+  }
+
+  /**
+   * Array
+   * @return value or {@code null} for none
+   */
+  public GoogleBigtableAdminV2TypeArray getArrayType() {
+    return arrayType;
+  }
+
+  /**
+   * Array
+   * @param arrayType arrayType or {@code null} for none
+   */
+  public Type setArrayType(GoogleBigtableAdminV2TypeArray arrayType) {
+    this.arrayType = arrayType;
+    return this;
+  }
+
+  /**
+   * Bool
+   * @return value or {@code null} for none
+   */
+  public GoogleBigtableAdminV2TypeBool getBoolType() {
+    return boolType;
+  }
+
+  /**
+   * Bool
+   * @param boolType boolType or {@code null} for none
+   */
+  public Type setBoolType(GoogleBigtableAdminV2TypeBool boolType) {
+    this.boolType = boolType;
     return this;
   }
 
@@ -100,6 +197,57 @@ public final class Type extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Date
+   * @return value or {@code null} for none
+   */
+  public GoogleBigtableAdminV2TypeDate getDateType() {
+    return dateType;
+  }
+
+  /**
+   * Date
+   * @param dateType dateType or {@code null} for none
+   */
+  public Type setDateType(GoogleBigtableAdminV2TypeDate dateType) {
+    this.dateType = dateType;
+    return this;
+  }
+
+  /**
+   * Float32
+   * @return value or {@code null} for none
+   */
+  public GoogleBigtableAdminV2TypeFloat32 getFloat32Type() {
+    return float32Type;
+  }
+
+  /**
+   * Float32
+   * @param float32Type float32Type or {@code null} for none
+   */
+  public Type setFloat32Type(GoogleBigtableAdminV2TypeFloat32 float32Type) {
+    this.float32Type = float32Type;
+    return this;
+  }
+
+  /**
+   * Float64
+   * @return value or {@code null} for none
+   */
+  public GoogleBigtableAdminV2TypeFloat64 getFloat64Type() {
+    return float64Type;
+  }
+
+  /**
+   * Float64
+   * @param float64Type float64Type or {@code null} for none
+   */
+  public Type setFloat64Type(GoogleBigtableAdminV2TypeFloat64 float64Type) {
+    this.float64Type = float64Type;
+    return this;
+  }
+
+  /**
    * Int64
    * @return value or {@code null} for none
    */
@@ -113,6 +261,74 @@ public final class Type extends com.google.api.client.json.GenericJson {
    */
   public Type setInt64Type(GoogleBigtableAdminV2TypeInt64 int64Type) {
     this.int64Type = int64Type;
+    return this;
+  }
+
+  /**
+   * Map
+   * @return value or {@code null} for none
+   */
+  public GoogleBigtableAdminV2TypeMap getMapType() {
+    return mapType;
+  }
+
+  /**
+   * Map
+   * @param mapType mapType or {@code null} for none
+   */
+  public Type setMapType(GoogleBigtableAdminV2TypeMap mapType) {
+    this.mapType = mapType;
+    return this;
+  }
+
+  /**
+   * String
+   * @return value or {@code null} for none
+   */
+  public GoogleBigtableAdminV2TypeString getStringType() {
+    return stringType;
+  }
+
+  /**
+   * String
+   * @param stringType stringType or {@code null} for none
+   */
+  public Type setStringType(GoogleBigtableAdminV2TypeString stringType) {
+    this.stringType = stringType;
+    return this;
+  }
+
+  /**
+   * Struct
+   * @return value or {@code null} for none
+   */
+  public GoogleBigtableAdminV2TypeStruct getStructType() {
+    return structType;
+  }
+
+  /**
+   * Struct
+   * @param structType structType or {@code null} for none
+   */
+  public Type setStructType(GoogleBigtableAdminV2TypeStruct structType) {
+    this.structType = structType;
+    return this;
+  }
+
+  /**
+   * Timestamp
+   * @return value or {@code null} for none
+   */
+  public GoogleBigtableAdminV2TypeTimestamp getTimestampType() {
+    return timestampType;
+  }
+
+  /**
+   * Timestamp
+   * @param timestampType timestampType or {@code null} for none
+   */
+  public Type setTimestampType(GoogleBigtableAdminV2TypeTimestamp timestampType) {
+    this.timestampType = timestampType;
     return this;
   }
 

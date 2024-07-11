@@ -32,8 +32,8 @@ public final class GoogleDevtoolsCloudbuildV1HttpConfig extends com.google.api.c
   /**
    * SecretVersion resource of the HTTP proxy URL. The Service Account used in the build (either the
    * default Service Account or user-specified Service Account) should have
-   * secretmanager.versions.access permissions on this secret. The proxy URL should be in format
-   * protocol://@]proxyhost[:port].
+   * `secretmanager.versions.access` permissions on this secret. The proxy URL should be in format
+   * `protocol://@]proxyhost[:port]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,8 +42,8 @@ public final class GoogleDevtoolsCloudbuildV1HttpConfig extends com.google.api.c
   /**
    * SecretVersion resource of the HTTP proxy URL. The Service Account used in the build (either the
    * default Service Account or user-specified Service Account) should have
-   * secretmanager.versions.access permissions on this secret. The proxy URL should be in format
-   * protocol://@]proxyhost[:port].
+   * `secretmanager.versions.access` permissions on this secret. The proxy URL should be in format
+   * `protocol://@]proxyhost[:port]`.
    * @return value or {@code null} for none
    */
   public java.lang.String getProxySecretVersionName() {
@@ -53,8 +53,8 @@ public final class GoogleDevtoolsCloudbuildV1HttpConfig extends com.google.api.c
   /**
    * SecretVersion resource of the HTTP proxy URL. The Service Account used in the build (either the
    * default Service Account or user-specified Service Account) should have
-   * secretmanager.versions.access permissions on this secret. The proxy URL should be in format
-   * protocol://@]proxyhost[:port].
+   * `secretmanager.versions.access` permissions on this secret. The proxy URL should be in format
+   * `protocol://@]proxyhost[:port]`.
    * @param proxySecretVersionName proxySecretVersionName or {@code null} for none
    */
   public GoogleDevtoolsCloudbuildV1HttpConfig setProxySecretVersionName(java.lang.String proxySecretVersionName) {

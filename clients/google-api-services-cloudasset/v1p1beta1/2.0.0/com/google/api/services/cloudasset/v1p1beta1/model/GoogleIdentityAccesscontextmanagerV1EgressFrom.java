@@ -60,7 +60,8 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressFrom extends com.go
 
   /**
    * Sources that this EgressPolicy authorizes access from. If this field is not empty, then
-   * `source_restriction` must be set to `SOURCE_RESTRICTION_ENABLED`.
+   * `source_restriction` must be set to `SOURCE_RESTRICTION_ENABLED`. TODO (b/332744441): annotate
+   * this field with custom_org_policy_accessibility when cl/640698580 will be rolled out.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,7 +130,8 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressFrom extends com.go
 
   /**
    * Sources that this EgressPolicy authorizes access from. If this field is not empty, then
-   * `source_restriction` must be set to `SOURCE_RESTRICTION_ENABLED`.
+   * `source_restriction` must be set to `SOURCE_RESTRICTION_ENABLED`. TODO (b/332744441): annotate
+   * this field with custom_org_policy_accessibility when cl/640698580 will be rolled out.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleIdentityAccesscontextmanagerV1EgressSource> getSources() {
@@ -138,7 +140,8 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressFrom extends com.go
 
   /**
    * Sources that this EgressPolicy authorizes access from. If this field is not empty, then
-   * `source_restriction` must be set to `SOURCE_RESTRICTION_ENABLED`.
+   * `source_restriction` must be set to `SOURCE_RESTRICTION_ENABLED`. TODO (b/332744441): annotate
+   * this field with custom_org_policy_accessibility when cl/640698580 will be rolled out.
    * @param sources sources or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1EgressFrom setSources(java.util.List<GoogleIdentityAccesscontextmanagerV1EgressSource> sources) {

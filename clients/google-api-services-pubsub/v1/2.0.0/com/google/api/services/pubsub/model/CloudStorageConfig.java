@@ -89,6 +89,14 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
   private String maxDuration;
 
   /**
+   * Optional. The maximum number of messages that can be written to a Cloud Storage file before a
+   * new file is created. Min 1000 messages.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxMessages;
+
+  /**
    * Optional. The service account to use to write to Cloud Storage. The subscription creator or
    * updater that specifies this field must have `iam.serviceAccounts.actAs` permission on the
    * service account. If not specified, the Pub/Sub [service
@@ -250,6 +258,25 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
    */
   public CloudStorageConfig setMaxDuration(String maxDuration) {
     this.maxDuration = maxDuration;
+    return this;
+  }
+
+  /**
+   * Optional. The maximum number of messages that can be written to a Cloud Storage file before a
+   * new file is created. Min 1000 messages.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxMessages() {
+    return maxMessages;
+  }
+
+  /**
+   * Optional. The maximum number of messages that can be written to a Cloud Storage file before a
+   * new file is created. Min 1000 messages.
+   * @param maxMessages maxMessages or {@code null} for none
+   */
+  public CloudStorageConfig setMaxMessages(java.lang.Long maxMessages) {
+    this.maxMessages = maxMessages;
     return this;
   }
 

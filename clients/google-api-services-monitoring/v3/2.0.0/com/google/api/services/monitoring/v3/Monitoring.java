@@ -6316,7 +6316,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The full REST resource name for this channel. The format is:
+       * @param name Identifier. The full REST resource name for this channel. The format is:
        *        projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID] The [CHANNEL_ID] is
        *        automatically assigned by the server on creation.
        * @param content the {@link com.google.api.services.monitoring.v3.model.NotificationChannel}
@@ -6349,7 +6349,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The full REST resource name for this channel. The format is:
+         * @param name Identifier. The full REST resource name for this channel. The format is:
        *        projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID] The [CHANNEL_ID] is
        *        automatically assigned by the server on creation.
          * @param content the {@link com.google.api.services.monitoring.v3.model.NotificationChannel}
@@ -6421,14 +6421,14 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The full REST resource name for this channel. The format is:
+         * Identifier. The full REST resource name for this channel. The format is:
          * projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID] The [CHANNEL_ID] is
          * automatically assigned by the server on creation.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The full REST resource name for this channel. The format is:
+        /** Identifier. The full REST resource name for this channel. The format is:
        projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID] The [CHANNEL_ID] is automatically
        assigned by the server on creation.
          */
@@ -6437,7 +6437,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The full REST resource name for this channel. The format is:
+         * Identifier. The full REST resource name for this channel. The format is:
          * projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID] The [CHANNEL_ID] is
          * automatically assigned by the server on creation.
          */

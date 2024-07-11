@@ -18771,7 +18771,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * not the full request. A field will be overwritten if it is in the mask. If the user
            * does not provide a mask then only the non-empty fields present in the request will be
            * overwritten. Set the update_mask to `*` to override all fields. Updatable fields: *
-           * `labels`
+           * `labels` * `description` * `big_query` * `big_query.entity_id_columns`
            */
           @com.google.api.client.util.Key
           private String updateMask;
@@ -18780,7 +18780,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
          update. The fields specified in the update_mask are relative to the resource, not the full request.
          A field will be overwritten if it is in the mask. If the user does not provide a mask then only the
          non-empty fields present in the request will be overwritten. Set the update_mask to `*` to override
-         all fields. Updatable fields: * `labels`
+         all fields. Updatable fields: * `labels` * `description` * `big_query` *
+         `big_query.entity_id_columns`
            */
           public String getUpdateMask() {
             return updateMask;
@@ -18792,7 +18793,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * not the full request. A field will be overwritten if it is in the mask. If the user
            * does not provide a mask then only the non-empty fields present in the request will be
            * overwritten. Set the update_mask to `*` to override all fields. Updatable fields: *
-           * `labels`
+           * `labels` * `description` * `big_query` * `big_query.entity_id_columns`
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -19797,8 +19798,9 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * not the full request. A field will be overwritten if it is in the mask. If the user
              * does not provide a mask then only the non-empty fields present in the request will be
              * overwritten. Set the update_mask to `*` to override all fields. Updatable fields: *
-             * `description` * `labels` * `disable_monitoring` (Not supported for FeatureRegistry
-             * Feature)
+             * `description` * `labels` * `disable_monitoring` (Not supported for
+             * FeatureRegistryService Feature) * `point_of_contact` (Not supported for
+             * FeaturestoreService FeatureStore)
              */
             @com.google.api.client.util.Key
             private String updateMask;
@@ -19808,7 +19810,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            will be overwritten if it is in the mask. If the user does not provide a mask then only the non-
            empty fields present in the request will be overwritten. Set the update_mask to `*` to override all
            fields. Updatable fields: * `description` * `labels` * `disable_monitoring` (Not supported for
-           FeatureRegistry Feature)
+           FeatureRegistryService Feature) * `point_of_contact` (Not supported for FeaturestoreService
+           FeatureStore)
              */
             public String getUpdateMask() {
               return updateMask;
@@ -19820,8 +19823,9 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * not the full request. A field will be overwritten if it is in the mask. If the user
              * does not provide a mask then only the non-empty fields present in the request will be
              * overwritten. Set the update_mask to `*` to override all fields. Updatable fields: *
-             * `description` * `labels` * `disable_monitoring` (Not supported for FeatureRegistry
-             * Feature)
+             * `description` * `labels` * `disable_monitoring` (Not supported for
+             * FeatureRegistryService Feature) * `point_of_contact` (Not supported for
+             * FeaturestoreService FeatureStore)
              */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
@@ -22031,7 +22035,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * resource, not the full request. A field will be overwritten if it is in the mask. If
            * the user does not provide a mask then only the non-empty fields present in the request
            * will be overwritten. Set the update_mask to `*` to override all fields. Updatable
-           * fields: * `big_query_source` * `bigtable` * `labels` * `sync_config`
+           * fields: * `labels` * `description` * `bigtable` * `bigtable.auto_scaling` *
+           * `bigtable.enable_multi_region_replica`
            */
           @com.google.api.client.util.Key
           private String updateMask;
@@ -22040,7 +22045,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
          the update. The fields specified in the update_mask are relative to the resource, not the full
          request. A field will be overwritten if it is in the mask. If the user does not provide a mask then
          only the non-empty fields present in the request will be overwritten. Set the update_mask to `*` to
-         override all fields. Updatable fields: * `big_query_source` * `bigtable` * `labels` * `sync_config`
+         override all fields. Updatable fields: * `labels` * `description` * `bigtable` *
+         `bigtable.auto_scaling` * `bigtable.enable_multi_region_replica`
            */
           public String getUpdateMask() {
             return updateMask;
@@ -22052,7 +22058,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * resource, not the full request. A field will be overwritten if it is in the mask. If
            * the user does not provide a mask then only the non-empty fields present in the request
            * will be overwritten. Set the update_mask to `*` to override all fields. Updatable
-           * fields: * `big_query_source` * `bigtable` * `labels` * `sync_config`
+           * fields: * `labels` * `description` * `bigtable` * `bigtable.auto_scaling` *
+           * `bigtable.enable_multi_region_replica`
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -23118,7 +23125,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * resource, not the full request. A field will be overwritten if it is in the mask. If
              * the user does not provide a mask then only the non-empty fields present in the
              * request will be overwritten. Set the update_mask to `*` to override all fields.
-             * Updatable fields: * `labels` * `serviceAgentType`
+             * Updatable fields: * `labels` * `service_agent_type` * `big_query_source` *
+             * `big_query_source.uri` * `big_query_source.entity_id_columns` *
+             * `feature_registry_source` * `feature_registry_source.feature_groups` * `sync_config`
+             * * `sync_config.cron`
              */
             @com.google.api.client.util.Key
             private String updateMask;
@@ -23127,7 +23137,9 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            update. The fields specified in the update_mask are relative to the resource, not the full request.
            A field will be overwritten if it is in the mask. If the user does not provide a mask then only the
            non-empty fields present in the request will be overwritten. Set the update_mask to `*` to override
-           all fields. Updatable fields: * `labels` * `serviceAgentType`
+           all fields. Updatable fields: * `labels` * `service_agent_type` * `big_query_source` *
+           `big_query_source.uri` * `big_query_source.entity_id_columns` * `feature_registry_source` *
+           `feature_registry_source.feature_groups` * `sync_config` * `sync_config.cron`
              */
             public String getUpdateMask() {
               return updateMask;
@@ -23139,7 +23151,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * resource, not the full request. A field will be overwritten if it is in the mask. If
              * the user does not provide a mask then only the non-empty fields present in the
              * request will be overwritten. Set the update_mask to `*` to override all fields.
-             * Updatable fields: * `labels` * `serviceAgentType`
+             * Updatable fields: * `labels` * `service_agent_type` * `big_query_source` *
+             * `big_query_source.uri` * `big_query_source.entity_id_columns` *
+             * `feature_registry_source` * `feature_registry_source.feature_groups` * `sync_config`
+             * * `sync_config.cron`
              */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
@@ -30660,7 +30675,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * If the user does not provide a mask then only the non-empty fields present in the
                * request will be overwritten. Set the update_mask to `*` to override all fields.
                * Updatable fields: * `description` * `labels` * `disable_monitoring` (Not supported
-               * for FeatureRegistry Feature)
+               * for FeatureRegistryService Feature) * `point_of_contact` (Not supported for
+               * FeaturestoreService FeatureStore)
                */
               @com.google.api.client.util.Key
               private String updateMask;
@@ -30670,7 +30686,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              will be overwritten if it is in the mask. If the user does not provide a mask then only the non-
              empty fields present in the request will be overwritten. Set the update_mask to `*` to override all
              fields. Updatable fields: * `description` * `labels` * `disable_monitoring` (Not supported for
-             FeatureRegistry Feature)
+             FeatureRegistryService Feature) * `point_of_contact` (Not supported for FeaturestoreService
+             FeatureStore)
                */
               public String getUpdateMask() {
                 return updateMask;
@@ -30683,7 +30700,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * If the user does not provide a mask then only the non-empty fields present in the
                * request will be overwritten. Set the update_mask to `*` to override all fields.
                * Updatable fields: * `description` * `labels` * `disable_monitoring` (Not supported
-               * for FeatureRegistry Feature)
+               * for FeatureRegistryService Feature) * `point_of_contact` (Not supported for
+               * FeaturestoreService FeatureStore)
                */
               public Patch setUpdateMask(String updateMask) {
                 this.updateMask = updateMask;

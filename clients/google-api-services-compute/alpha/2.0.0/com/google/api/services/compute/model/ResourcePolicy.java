@@ -138,6 +138,12 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   private ResourcePolicyVmMaintenancePolicy vmMaintenancePolicy;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourcePolicyWorkloadPolicy workloadPolicy;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * @return value or {@code null} for none
    */
@@ -393,6 +399,21 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
    */
   public ResourcePolicy setVmMaintenancePolicy(ResourcePolicyVmMaintenancePolicy vmMaintenancePolicy) {
     this.vmMaintenancePolicy = vmMaintenancePolicy;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public ResourcePolicyWorkloadPolicy getWorkloadPolicy() {
+    return workloadPolicy;
+  }
+
+  /**
+   * @param workloadPolicy workloadPolicy or {@code null} for none
+   */
+  public ResourcePolicy setWorkloadPolicy(ResourcePolicyWorkloadPolicy workloadPolicy) {
+    this.workloadPolicy = workloadPolicy;
     return this;
   }
 

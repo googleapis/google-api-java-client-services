@@ -37,6 +37,13 @@ public final class AllocationResourceStatusSpecificSKUAllocation extends com.goo
   private java.lang.String sourceInstanceTemplateId;
 
   /**
+   * Per service utilization breakdown. The Key is the Google Cloud managed service name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.Map<String, java.lang.Long> utilizations;
+
+  /**
    * ID of the instance template used to populate reservation properties.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class AllocationResourceStatusSpecificSKUAllocation extends com.goo
    */
   public AllocationResourceStatusSpecificSKUAllocation setSourceInstanceTemplateId(java.lang.String sourceInstanceTemplateId) {
     this.sourceInstanceTemplateId = sourceInstanceTemplateId;
+    return this;
+  }
+
+  /**
+   * Per service utilization breakdown. The Key is the Google Cloud managed service name.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Long> getUtilizations() {
+    return utilizations;
+  }
+
+  /**
+   * Per service utilization breakdown. The Key is the Google Cloud managed service name.
+   * @param utilizations utilizations or {@code null} for none
+   */
+  public AllocationResourceStatusSpecificSKUAllocation setUtilizations(java.util.Map<String, java.lang.Long> utilizations) {
+    this.utilizations = utilizations;
     return this;
   }
 

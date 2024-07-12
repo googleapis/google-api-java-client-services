@@ -17,7 +17,7 @@
 package com.google.api.services.firebaseappdistribution.v1alpha.model;
 
 /**
- * Instructions for AI driven test
+ * Captures the results of an AiStep
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase App Distribution API. For a detailed
@@ -28,64 +28,64 @@ package com.google.api.services.firebaseappdistribution.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleFirebaseAppdistroV1alphaAiInstructions extends com.google.api.client.json.GenericJson {
+public final class GoogleFirebaseAppdistroV1alphaAiStepResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Describes the app to give the AI some context
+   * Output only. The current state of the step
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String appDescription;
+  private java.lang.String state;
 
   /**
-   * Required. Steps to be accomplished by the AI
+   * Required. The step performed by the AI
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleFirebaseAppdistroV1alphaAiStep> steps;
+  private GoogleFirebaseAppdistroV1alphaAiStep step;
 
   /**
-   * Optional. Describes the app to give the AI some context
+   * Output only. The current state of the step
    * @return value or {@code null} for none
    */
-  public java.lang.String getAppDescription() {
-    return appDescription;
+  public java.lang.String getState() {
+    return state;
   }
 
   /**
-   * Optional. Describes the app to give the AI some context
-   * @param appDescription appDescription or {@code null} for none
+   * Output only. The current state of the step
+   * @param state state or {@code null} for none
    */
-  public GoogleFirebaseAppdistroV1alphaAiInstructions setAppDescription(java.lang.String appDescription) {
-    this.appDescription = appDescription;
+  public GoogleFirebaseAppdistroV1alphaAiStepResult setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 
   /**
-   * Required. Steps to be accomplished by the AI
+   * Required. The step performed by the AI
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleFirebaseAppdistroV1alphaAiStep> getSteps() {
-    return steps;
+  public GoogleFirebaseAppdistroV1alphaAiStep getStep() {
+    return step;
   }
 
   /**
-   * Required. Steps to be accomplished by the AI
-   * @param steps steps or {@code null} for none
+   * Required. The step performed by the AI
+   * @param step step or {@code null} for none
    */
-  public GoogleFirebaseAppdistroV1alphaAiInstructions setSteps(java.util.List<GoogleFirebaseAppdistroV1alphaAiStep> steps) {
-    this.steps = steps;
+  public GoogleFirebaseAppdistroV1alphaAiStepResult setStep(GoogleFirebaseAppdistroV1alphaAiStep step) {
+    this.step = step;
     return this;
   }
 
   @Override
-  public GoogleFirebaseAppdistroV1alphaAiInstructions set(String fieldName, Object value) {
-    return (GoogleFirebaseAppdistroV1alphaAiInstructions) super.set(fieldName, value);
+  public GoogleFirebaseAppdistroV1alphaAiStepResult set(String fieldName, Object value) {
+    return (GoogleFirebaseAppdistroV1alphaAiStepResult) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleFirebaseAppdistroV1alphaAiInstructions clone() {
-    return (GoogleFirebaseAppdistroV1alphaAiInstructions) super.clone();
+  public GoogleFirebaseAppdistroV1alphaAiStepResult clone() {
+    return (GoogleFirebaseAppdistroV1alphaAiStepResult) super.clone();
   }
 
 }

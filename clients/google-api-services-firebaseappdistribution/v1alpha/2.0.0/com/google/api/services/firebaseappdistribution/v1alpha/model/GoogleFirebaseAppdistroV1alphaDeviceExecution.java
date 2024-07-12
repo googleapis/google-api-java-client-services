@@ -31,6 +31,19 @@ package com.google.api.services.firebaseappdistribution.v1alpha.model;
 public final class GoogleFirebaseAppdistroV1alphaDeviceExecution extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Results of the AI steps if passed in
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleFirebaseAppdistroV1alphaAiStepResult> aiStepResults;
+
+  static {
+    // hack to force ProGuard to consider GoogleFirebaseAppdistroV1alphaAiStepResult used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleFirebaseAppdistroV1alphaAiStepResult.class);
+  }
+
+  /**
    * Output only. An app crash, if any occurred during the test.
    * The value may be {@code null}.
    */
@@ -101,6 +114,23 @@ public final class GoogleFirebaseAppdistroV1alphaDeviceExecution extends com.goo
    */
   @com.google.api.client.util.Key
   private java.lang.String videoUri;
+
+  /**
+   * Output only. Results of the AI steps if passed in
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleFirebaseAppdistroV1alphaAiStepResult> getAiStepResults() {
+    return aiStepResults;
+  }
+
+  /**
+   * Output only. Results of the AI steps if passed in
+   * @param aiStepResults aiStepResults or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaDeviceExecution setAiStepResults(java.util.List<GoogleFirebaseAppdistroV1alphaAiStepResult> aiStepResults) {
+    this.aiStepResults = aiStepResults;
+    return this;
+  }
 
   /**
    * Output only. An app crash, if any occurred during the test.

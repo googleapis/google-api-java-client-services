@@ -300,7 +300,8 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private java.lang.String recurringEventId;
 
   /**
-   * Information about the event's reminders for the authenticated user.
+   * Information about the event's reminders for the authenticated user. Note that changing
+   * reminders does not also change the updated property of the enclosing event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -373,7 +374,8 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private java.lang.String transparency;
 
   /**
-   * Last modification time of the event (as a RFC3339 timestamp). Read-only.
+   * Last modification time of the main event data (as a RFC3339 timestamp). Updating event
+   * reminders will not cause this to change. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1258,7 +1260,8 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information about the event's reminders for the authenticated user.
+   * Information about the event's reminders for the authenticated user. Note that changing
+   * reminders does not also change the updated property of the enclosing event.
    * @return value or {@code null} for none
    */
   public Reminders getReminders() {
@@ -1266,7 +1269,8 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information about the event's reminders for the authenticated user.
+   * Information about the event's reminders for the authenticated user. Note that changing
+   * reminders does not also change the updated property of the enclosing event.
    * @param reminders reminders or {@code null} for none
    */
   public Event setReminders(Reminders reminders) {
@@ -1425,7 +1429,8 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Last modification time of the event (as a RFC3339 timestamp). Read-only.
+   * Last modification time of the main event data (as a RFC3339 timestamp). Updating event
+   * reminders will not cause this to change. Read-only.
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getUpdated() {
@@ -1433,7 +1438,8 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Last modification time of the event (as a RFC3339 timestamp). Read-only.
+   * Last modification time of the main event data (as a RFC3339 timestamp). Updating event
+   * reminders will not cause this to change. Read-only.
    * @param updated updated or {@code null} for none
    */
   public Event setUpdated(com.google.api.client.util.DateTime updated) {
@@ -2071,7 +2077,8 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information about the event's reminders for the authenticated user.
+   * Information about the event's reminders for the authenticated user. Note that changing reminders
+   * does not also change the updated property of the enclosing event.
    */
   public static final class Reminders extends com.google.api.client.json.GenericJson {
 

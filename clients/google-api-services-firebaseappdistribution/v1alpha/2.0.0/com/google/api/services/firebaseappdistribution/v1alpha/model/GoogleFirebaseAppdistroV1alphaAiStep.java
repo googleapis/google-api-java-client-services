@@ -28,7 +28,7 @@ package com.google.api.services.firebaseappdistribution.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleFirebaseAppdistroV1alphaAiInstructionsStep extends com.google.api.client.json.GenericJson {
+public final class GoogleFirebaseAppdistroV1alphaAiStep extends com.google.api.client.json.GenericJson {
 
   /**
    * An assertion to be checked by the AI
@@ -56,7 +56,7 @@ public final class GoogleFirebaseAppdistroV1alphaAiInstructionsStep extends com.
    * An assertion to be checked by the AI
    * @param assertion assertion or {@code null} for none
    */
-  public GoogleFirebaseAppdistroV1alphaAiInstructionsStep setAssertion(java.lang.String assertion) {
+  public GoogleFirebaseAppdistroV1alphaAiStep setAssertion(java.lang.String assertion) {
     this.assertion = assertion;
     return this;
   }
@@ -73,19 +73,19 @@ public final class GoogleFirebaseAppdistroV1alphaAiInstructionsStep extends com.
    * A goal to be accomplished by the AI
    * @param goal goal or {@code null} for none
    */
-  public GoogleFirebaseAppdistroV1alphaAiInstructionsStep setGoal(java.lang.String goal) {
+  public GoogleFirebaseAppdistroV1alphaAiStep setGoal(java.lang.String goal) {
     this.goal = goal;
     return this;
   }
 
   @Override
-  public GoogleFirebaseAppdistroV1alphaAiInstructionsStep set(String fieldName, Object value) {
-    return (GoogleFirebaseAppdistroV1alphaAiInstructionsStep) super.set(fieldName, value);
+  public GoogleFirebaseAppdistroV1alphaAiStep set(String fieldName, Object value) {
+    return (GoogleFirebaseAppdistroV1alphaAiStep) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleFirebaseAppdistroV1alphaAiInstructionsStep clone() {
-    return (GoogleFirebaseAppdistroV1alphaAiInstructionsStep) super.clone();
+  public GoogleFirebaseAppdistroV1alphaAiStep clone() {
+    return (GoogleFirebaseAppdistroV1alphaAiStep) super.clone();
   }
 
 }

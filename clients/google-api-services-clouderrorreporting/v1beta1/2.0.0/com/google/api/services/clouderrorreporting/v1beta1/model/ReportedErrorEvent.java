@@ -63,7 +63,7 @@ public final class ReportedErrorEvent extends com.google.api.client.json.Generic
    * us/library/system.exception.tostring.aspx). * **PHP**: Must be prefixed with `"PHP
    * (Notice|Parse error|Fatal error|Warning): "` and contain the result of
    * [`(string)$exception`](https://php.net/manual/en/exception.tostring.php). * **Go**: Must be the
-   * return value of [`runtime.Stack()`](https://golang.org/pkg/runtime/debug/#Stack).
+   * return value of [`debug.Stack()`](https://pkg.go.dev/runtime/debug#Stack).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,7 +134,7 @@ public final class ReportedErrorEvent extends com.google.api.client.json.Generic
    * us/library/system.exception.tostring.aspx). * **PHP**: Must be prefixed with `"PHP
    * (Notice|Parse error|Fatal error|Warning): "` and contain the result of
    * [`(string)$exception`](https://php.net/manual/en/exception.tostring.php). * **Go**: Must be the
-   * return value of [`runtime.Stack()`](https://golang.org/pkg/runtime/debug/#Stack).
+   * return value of [`debug.Stack()`](https://pkg.go.dev/runtime/debug#Stack).
    * @return value or {@code null} for none
    */
   public java.lang.String getMessage() {
@@ -157,7 +157,7 @@ public final class ReportedErrorEvent extends com.google.api.client.json.Generic
    * us/library/system.exception.tostring.aspx). * **PHP**: Must be prefixed with `"PHP
    * (Notice|Parse error|Fatal error|Warning): "` and contain the result of
    * [`(string)$exception`](https://php.net/manual/en/exception.tostring.php). * **Go**: Must be the
-   * return value of [`runtime.Stack()`](https://golang.org/pkg/runtime/debug/#Stack).
+   * return value of [`debug.Stack()`](https://pkg.go.dev/runtime/debug#Stack).
    * @param message message or {@code null} for none
    */
   public ReportedErrorEvent setMessage(java.lang.String message) {

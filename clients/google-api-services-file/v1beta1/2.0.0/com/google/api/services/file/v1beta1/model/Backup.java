@@ -59,6 +59,14 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.Long downloadBytes;
 
   /**
+   * Output only. The file system protocol of the source Filestore instance that this backup is
+   * created from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fileSystemProtocol;
+
+  /**
    * Immutable. KMS key name used for data encryption.
    * The value may be {@code null}.
    */
@@ -208,6 +216,25 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setDownloadBytes(java.lang.Long downloadBytes) {
     this.downloadBytes = downloadBytes;
+    return this;
+  }
+
+  /**
+   * Output only. The file system protocol of the source Filestore instance that this backup is
+   * created from.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFileSystemProtocol() {
+    return fileSystemProtocol;
+  }
+
+  /**
+   * Output only. The file system protocol of the source Filestore instance that this backup is
+   * created from.
+   * @param fileSystemProtocol fileSystemProtocol or {@code null} for none
+   */
+  public Backup setFileSystemProtocol(java.lang.String fileSystemProtocol) {
+    this.fileSystemProtocol = fileSystemProtocol;
     return this;
   }
 

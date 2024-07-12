@@ -444,6 +444,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.Integer timeoutSec;
 
   /**
+   * [Output Only] List of resources referencing given backend service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1409,6 +1410,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * [Output Only] List of resources referencing given backend service.
    * @return value or {@code null} for none
    */
   public java.util.List<BackendServiceUsedBy> getUsedBy() {
@@ -1416,6 +1418,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * [Output Only] List of resources referencing given backend service.
    * @param usedBy usedBy or {@code null} for none
    */
   public BackendService setUsedBy(java.util.List<BackendServiceUsedBy> usedBy) {

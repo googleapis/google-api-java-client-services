@@ -30,10 +30,9 @@ package com.google.api.services.compute.model;
 public final class ResourceStatusScheduling extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies the availability domain (AD), which this instance should be scheduled on. The AD
-   * belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the
-   * instance. Specify a value between 1-max count of availability domains in your
-   * GroupPlacementPolicy. See go/placement-policy-extension for more details.
+   * Specifies the availability domain to place the instance in. The value must be a number between
+   * 1 and the number of availability domains specified in the spread placement policy attached to
+   * the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,10 +46,9 @@ public final class ResourceStatusScheduling extends com.google.api.client.json.G
   private java.lang.String terminationTimestamp;
 
   /**
-   * Specifies the availability domain (AD), which this instance should be scheduled on. The AD
-   * belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the
-   * instance. Specify a value between 1-max count of availability domains in your
-   * GroupPlacementPolicy. See go/placement-policy-extension for more details.
+   * Specifies the availability domain to place the instance in. The value must be a number between
+   * 1 and the number of availability domains specified in the spread placement policy attached to
+   * the instance.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAvailabilityDomain() {
@@ -58,10 +56,9 @@ public final class ResourceStatusScheduling extends com.google.api.client.json.G
   }
 
   /**
-   * Specifies the availability domain (AD), which this instance should be scheduled on. The AD
-   * belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the
-   * instance. Specify a value between 1-max count of availability domains in your
-   * GroupPlacementPolicy. See go/placement-policy-extension for more details.
+   * Specifies the availability domain to place the instance in. The value must be a number between
+   * 1 and the number of availability domains specified in the spread placement policy attached to
+   * the instance.
    * @param availabilityDomain availabilityDomain or {@code null} for none
    */
   public ResourceStatusScheduling setAvailabilityDomain(java.lang.Integer availabilityDomain) {

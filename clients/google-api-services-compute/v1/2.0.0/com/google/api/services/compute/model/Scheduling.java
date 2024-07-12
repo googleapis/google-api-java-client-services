@@ -40,6 +40,15 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean automaticRestart;
 
   /**
+   * Specifies the availability domain to place the instance in. The value must be a number between
+   * 1 and the number of availability domains specified in the spread placement policy attached to
+   * the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer availabilityDomain;
+
+  /**
    * Specifies the termination action for the instance.
    * The value may be {@code null}.
    */
@@ -146,6 +155,27 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setAutomaticRestart(java.lang.Boolean automaticRestart) {
     this.automaticRestart = automaticRestart;
+    return this;
+  }
+
+  /**
+   * Specifies the availability domain to place the instance in. The value must be a number between
+   * 1 and the number of availability domains specified in the spread placement policy attached to
+   * the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAvailabilityDomain() {
+    return availabilityDomain;
+  }
+
+  /**
+   * Specifies the availability domain to place the instance in. The value must be a number between
+   * 1 and the number of availability domains specified in the spread placement policy attached to
+   * the instance.
+   * @param availabilityDomain availabilityDomain or {@code null} for none
+   */
+  public Scheduling setAvailabilityDomain(java.lang.Integer availabilityDomain) {
+    this.availabilityDomain = availabilityDomain;
     return this;
   }
 

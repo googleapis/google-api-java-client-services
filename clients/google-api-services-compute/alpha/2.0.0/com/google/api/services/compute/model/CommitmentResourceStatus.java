@@ -37,6 +37,15 @@ public final class CommitmentResourceStatus extends com.google.api.client.json.G
   private CommitmentResourceStatusCancellationInformation cancellationInformation;
 
   /**
+   * [Output Only] Indicates the end time of customer's eligibility to send custom term requests in
+   * RFC3339 text format. Term extension requests that (not the end time in the request) after this
+   * time will be rejected.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customTermEligibilityEndTimestamp;
+
+  /**
    * [Output Only] An optional, contains all the needed information of cancellation.
    * @return value or {@code null} for none
    */
@@ -50,6 +59,27 @@ public final class CommitmentResourceStatus extends com.google.api.client.json.G
    */
   public CommitmentResourceStatus setCancellationInformation(CommitmentResourceStatusCancellationInformation cancellationInformation) {
     this.cancellationInformation = cancellationInformation;
+    return this;
+  }
+
+  /**
+   * [Output Only] Indicates the end time of customer's eligibility to send custom term requests in
+   * RFC3339 text format. Term extension requests that (not the end time in the request) after this
+   * time will be rejected.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomTermEligibilityEndTimestamp() {
+    return customTermEligibilityEndTimestamp;
+  }
+
+  /**
+   * [Output Only] Indicates the end time of customer's eligibility to send custom term requests in
+   * RFC3339 text format. Term extension requests that (not the end time in the request) after this
+   * time will be rejected.
+   * @param customTermEligibilityEndTimestamp customTermEligibilityEndTimestamp or {@code null} for none
+   */
+  public CommitmentResourceStatus setCustomTermEligibilityEndTimestamp(java.lang.String customTermEligibilityEndTimestamp) {
+    this.customTermEligibilityEndTimestamp = customTermEligibilityEndTimestamp;
     return this;
   }
 

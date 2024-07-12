@@ -528,579 +528,6 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Retrieves the business identity of an account.
-     *
-     * Create a request for the method "accounts.getBusinessIdentity".
-     *
-     * This request holds the parameters needed by the merchantapi server.  After setting any optional
-     * parameters, call the {@link GetBusinessIdentity#execute()} method to invoke the remote operation.
-     *
-     * @param name Required. The resource name of the business identity. Format: `accounts/{account}/businessIdentity`
-     * @return the request
-     */
-    public GetBusinessIdentity getBusinessIdentity(java.lang.String name) throws java.io.IOException {
-      GetBusinessIdentity result = new GetBusinessIdentity(name);
-      initialize(result);
-      return result;
-    }
-
-    public class GetBusinessIdentity extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.BusinessIdentity> {
-
-      private static final String REST_PATH = "accounts/v1beta/{+name}";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^accounts/[^/]+/businessIdentity$");
-
-      /**
-       * Retrieves the business identity of an account.
-       *
-       * Create a request for the method "accounts.getBusinessIdentity".
-       *
-       * This request holds the parameters needed by the the merchantapi server.  After setting any
-       * optional parameters, call the {@link GetBusinessIdentity#execute()} method to invoke the remote
-       * operation. <p> {@link GetBusinessIdentity#initialize(com.google.api.client.googleapis.services.
-       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
-       * invoking the constructor. </p>
-       *
-       * @param name Required. The resource name of the business identity. Format: `accounts/{account}/businessIdentity`
-       * @since 1.13
-       */
-      protected GetBusinessIdentity(java.lang.String name) {
-        super(Merchant.this, "GET", REST_PATH, null, com.google.api.services.merchantapi.accounts_v1beta.model.BusinessIdentity.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^accounts/[^/]+/businessIdentity$");
-        }
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public GetBusinessIdentity set$Xgafv(java.lang.String $Xgafv) {
-        return (GetBusinessIdentity) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public GetBusinessIdentity setAccessToken(java.lang.String accessToken) {
-        return (GetBusinessIdentity) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public GetBusinessIdentity setAlt(java.lang.String alt) {
-        return (GetBusinessIdentity) super.setAlt(alt);
-      }
-
-      @Override
-      public GetBusinessIdentity setCallback(java.lang.String callback) {
-        return (GetBusinessIdentity) super.setCallback(callback);
-      }
-
-      @Override
-      public GetBusinessIdentity setFields(java.lang.String fields) {
-        return (GetBusinessIdentity) super.setFields(fields);
-      }
-
-      @Override
-      public GetBusinessIdentity setKey(java.lang.String key) {
-        return (GetBusinessIdentity) super.setKey(key);
-      }
-
-      @Override
-      public GetBusinessIdentity setOauthToken(java.lang.String oauthToken) {
-        return (GetBusinessIdentity) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public GetBusinessIdentity setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (GetBusinessIdentity) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public GetBusinessIdentity setQuotaUser(java.lang.String quotaUser) {
-        return (GetBusinessIdentity) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public GetBusinessIdentity setUploadType(java.lang.String uploadType) {
-        return (GetBusinessIdentity) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public GetBusinessIdentity setUploadProtocol(java.lang.String uploadProtocol) {
-        return (GetBusinessIdentity) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Required. The resource name of the business identity. Format:
-       * `accounts/{account}/businessIdentity`
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** Required. The resource name of the business identity. Format: `accounts/{account}/businessIdentity`
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /**
-       * Required. The resource name of the business identity. Format:
-       * `accounts/{account}/businessIdentity`
-       */
-      public GetBusinessIdentity setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^accounts/[^/]+/businessIdentity$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      @Override
-      public GetBusinessIdentity set(String parameterName, Object value) {
-        return (GetBusinessIdentity) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Retrieves the business info of an account.
-     *
-     * Create a request for the method "accounts.getBusinessInfo".
-     *
-     * This request holds the parameters needed by the merchantapi server.  After setting any optional
-     * parameters, call the {@link GetBusinessInfo#execute()} method to invoke the remote operation.
-     *
-     * @param name Required. The resource name of the business info. Format: `accounts/{account}/businessInfo`
-     * @return the request
-     */
-    public GetBusinessInfo getBusinessInfo(java.lang.String name) throws java.io.IOException {
-      GetBusinessInfo result = new GetBusinessInfo(name);
-      initialize(result);
-      return result;
-    }
-
-    public class GetBusinessInfo extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.BusinessInfo> {
-
-      private static final String REST_PATH = "accounts/v1beta/{+name}";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^accounts/[^/]+/businessInfo$");
-
-      /**
-       * Retrieves the business info of an account.
-       *
-       * Create a request for the method "accounts.getBusinessInfo".
-       *
-       * This request holds the parameters needed by the the merchantapi server.  After setting any
-       * optional parameters, call the {@link GetBusinessInfo#execute()} method to invoke the remote
-       * operation. <p> {@link GetBusinessInfo#initialize(com.google.api.client.googleapis.services.Abst
-       * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
-       * the constructor. </p>
-       *
-       * @param name Required. The resource name of the business info. Format: `accounts/{account}/businessInfo`
-       * @since 1.13
-       */
-      protected GetBusinessInfo(java.lang.String name) {
-        super(Merchant.this, "GET", REST_PATH, null, com.google.api.services.merchantapi.accounts_v1beta.model.BusinessInfo.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^accounts/[^/]+/businessInfo$");
-        }
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public GetBusinessInfo set$Xgafv(java.lang.String $Xgafv) {
-        return (GetBusinessInfo) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public GetBusinessInfo setAccessToken(java.lang.String accessToken) {
-        return (GetBusinessInfo) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public GetBusinessInfo setAlt(java.lang.String alt) {
-        return (GetBusinessInfo) super.setAlt(alt);
-      }
-
-      @Override
-      public GetBusinessInfo setCallback(java.lang.String callback) {
-        return (GetBusinessInfo) super.setCallback(callback);
-      }
-
-      @Override
-      public GetBusinessInfo setFields(java.lang.String fields) {
-        return (GetBusinessInfo) super.setFields(fields);
-      }
-
-      @Override
-      public GetBusinessInfo setKey(java.lang.String key) {
-        return (GetBusinessInfo) super.setKey(key);
-      }
-
-      @Override
-      public GetBusinessInfo setOauthToken(java.lang.String oauthToken) {
-        return (GetBusinessInfo) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public GetBusinessInfo setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (GetBusinessInfo) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public GetBusinessInfo setQuotaUser(java.lang.String quotaUser) {
-        return (GetBusinessInfo) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public GetBusinessInfo setUploadType(java.lang.String uploadType) {
-        return (GetBusinessInfo) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public GetBusinessInfo setUploadProtocol(java.lang.String uploadProtocol) {
-        return (GetBusinessInfo) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Required. The resource name of the business info. Format: `accounts/{account}/businessInfo`
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** Required. The resource name of the business info. Format: `accounts/{account}/businessInfo`
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /**
-       * Required. The resource name of the business info. Format: `accounts/{account}/businessInfo`
-       */
-      public GetBusinessInfo setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^accounts/[^/]+/businessInfo$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      @Override
-      public GetBusinessInfo set(String parameterName, Object value) {
-        return (GetBusinessInfo) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Retrieves a store's homepage.
-     *
-     * Create a request for the method "accounts.getHomepage".
-     *
-     * This request holds the parameters needed by the merchantapi server.  After setting any optional
-     * parameters, call the {@link GetHomepage#execute()} method to invoke the remote operation.
-     *
-     * @param name Required. The name of the homepage to retrieve. Format: `accounts/{account}/homepage`
-     * @return the request
-     */
-    public GetHomepage getHomepage(java.lang.String name) throws java.io.IOException {
-      GetHomepage result = new GetHomepage(name);
-      initialize(result);
-      return result;
-    }
-
-    public class GetHomepage extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.Homepage> {
-
-      private static final String REST_PATH = "accounts/v1beta/{+name}";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^accounts/[^/]+/homepage$");
-
-      /**
-       * Retrieves a store's homepage.
-       *
-       * Create a request for the method "accounts.getHomepage".
-       *
-       * This request holds the parameters needed by the the merchantapi server.  After setting any
-       * optional parameters, call the {@link GetHomepage#execute()} method to invoke the remote
-       * operation. <p> {@link
-       * GetHomepage#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param name Required. The name of the homepage to retrieve. Format: `accounts/{account}/homepage`
-       * @since 1.13
-       */
-      protected GetHomepage(java.lang.String name) {
-        super(Merchant.this, "GET", REST_PATH, null, com.google.api.services.merchantapi.accounts_v1beta.model.Homepage.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^accounts/[^/]+/homepage$");
-        }
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public GetHomepage set$Xgafv(java.lang.String $Xgafv) {
-        return (GetHomepage) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public GetHomepage setAccessToken(java.lang.String accessToken) {
-        return (GetHomepage) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public GetHomepage setAlt(java.lang.String alt) {
-        return (GetHomepage) super.setAlt(alt);
-      }
-
-      @Override
-      public GetHomepage setCallback(java.lang.String callback) {
-        return (GetHomepage) super.setCallback(callback);
-      }
-
-      @Override
-      public GetHomepage setFields(java.lang.String fields) {
-        return (GetHomepage) super.setFields(fields);
-      }
-
-      @Override
-      public GetHomepage setKey(java.lang.String key) {
-        return (GetHomepage) super.setKey(key);
-      }
-
-      @Override
-      public GetHomepage setOauthToken(java.lang.String oauthToken) {
-        return (GetHomepage) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public GetHomepage setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (GetHomepage) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public GetHomepage setQuotaUser(java.lang.String quotaUser) {
-        return (GetHomepage) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public GetHomepage setUploadType(java.lang.String uploadType) {
-        return (GetHomepage) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public GetHomepage setUploadProtocol(java.lang.String uploadProtocol) {
-        return (GetHomepage) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /** Required. The name of the homepage to retrieve. Format: `accounts/{account}/homepage` */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** Required. The name of the homepage to retrieve. Format: `accounts/{account}/homepage`
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /** Required. The name of the homepage to retrieve. Format: `accounts/{account}/homepage` */
-      public GetHomepage setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^accounts/[^/]+/homepage$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      @Override
-      public GetHomepage set(String parameterName, Object value) {
-        return (GetHomepage) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Retrieve shipping setting information.
-     *
-     * Create a request for the method "accounts.getShippingSettings".
-     *
-     * This request holds the parameters needed by the merchantapi server.  After setting any optional
-     * parameters, call the {@link GetShippingSettings#execute()} method to invoke the remote operation.
-     *
-     * @param name Required. The name of the shipping setting to retrieve. Format: `accounts/{account}/shippingsetting`
-     * @return the request
-     */
-    public GetShippingSettings getShippingSettings(java.lang.String name) throws java.io.IOException {
-      GetShippingSettings result = new GetShippingSettings(name);
-      initialize(result);
-      return result;
-    }
-
-    public class GetShippingSettings extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.ShippingSettings> {
-
-      private static final String REST_PATH = "accounts/v1beta/{+name}";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^accounts/[^/]+/shippingSettings$");
-
-      /**
-       * Retrieve shipping setting information.
-       *
-       * Create a request for the method "accounts.getShippingSettings".
-       *
-       * This request holds the parameters needed by the the merchantapi server.  After setting any
-       * optional parameters, call the {@link GetShippingSettings#execute()} method to invoke the remote
-       * operation. <p> {@link GetShippingSettings#initialize(com.google.api.client.googleapis.services.
-       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
-       * invoking the constructor. </p>
-       *
-       * @param name Required. The name of the shipping setting to retrieve. Format: `accounts/{account}/shippingsetting`
-       * @since 1.13
-       */
-      protected GetShippingSettings(java.lang.String name) {
-        super(Merchant.this, "GET", REST_PATH, null, com.google.api.services.merchantapi.accounts_v1beta.model.ShippingSettings.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^accounts/[^/]+/shippingSettings$");
-        }
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public GetShippingSettings set$Xgafv(java.lang.String $Xgafv) {
-        return (GetShippingSettings) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public GetShippingSettings setAccessToken(java.lang.String accessToken) {
-        return (GetShippingSettings) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public GetShippingSettings setAlt(java.lang.String alt) {
-        return (GetShippingSettings) super.setAlt(alt);
-      }
-
-      @Override
-      public GetShippingSettings setCallback(java.lang.String callback) {
-        return (GetShippingSettings) super.setCallback(callback);
-      }
-
-      @Override
-      public GetShippingSettings setFields(java.lang.String fields) {
-        return (GetShippingSettings) super.setFields(fields);
-      }
-
-      @Override
-      public GetShippingSettings setKey(java.lang.String key) {
-        return (GetShippingSettings) super.setKey(key);
-      }
-
-      @Override
-      public GetShippingSettings setOauthToken(java.lang.String oauthToken) {
-        return (GetShippingSettings) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public GetShippingSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (GetShippingSettings) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public GetShippingSettings setQuotaUser(java.lang.String quotaUser) {
-        return (GetShippingSettings) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public GetShippingSettings setUploadType(java.lang.String uploadType) {
-        return (GetShippingSettings) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public GetShippingSettings setUploadProtocol(java.lang.String uploadProtocol) {
-        return (GetShippingSettings) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Required. The name of the shipping setting to retrieve. Format:
-       * `accounts/{account}/shippingsetting`
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** Required. The name of the shipping setting to retrieve. Format:
-     `accounts/{account}/shippingsetting`
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /**
-       * Required. The name of the shipping setting to retrieve. Format:
-       * `accounts/{account}/shippingsetting`
-       */
-      public GetShippingSettings setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^accounts/[^/]+/shippingSettings$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      @Override
-      public GetShippingSettings set(String parameterName, Object value) {
-        return (GetShippingSettings) super.set(parameterName, value);
-      }
-    }
-    /**
      * Lists accounts accessible to the calling user and matching the constraints of the request such as
      * page size or filters. This is not just listing the sub-accounts of an MCA, but all accounts the
      * calling user has access to including other MCAs, linked accounts, standalone accounts and so on.
@@ -1634,469 +1061,6 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         return (Patch) super.set(parameterName, value);
       }
     }
-    /**
-     * Updates the business identity of an account. Executing this method requires admin access.
-     *
-     * Create a request for the method "accounts.updateBusinessIdentity".
-     *
-     * This request holds the parameters needed by the merchantapi server.  After setting any optional
-     * parameters, call the {@link UpdateBusinessIdentity#execute()} method to invoke the remote
-     * operation.
-     *
-     * @param name Identifier. The resource name of the business identity. Format:
-     *        `accounts/{account}/businessIdentity`
-     * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.BusinessIdentity}
-     * @return the request
-     */
-    public UpdateBusinessIdentity updateBusinessIdentity(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.BusinessIdentity content) throws java.io.IOException {
-      UpdateBusinessIdentity result = new UpdateBusinessIdentity(name, content);
-      initialize(result);
-      return result;
-    }
-
-    public class UpdateBusinessIdentity extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.BusinessIdentity> {
-
-      private static final String REST_PATH = "accounts/v1beta/{+name}";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^accounts/[^/]+/businessIdentity$");
-
-      /**
-       * Updates the business identity of an account. Executing this method requires admin access.
-       *
-       * Create a request for the method "accounts.updateBusinessIdentity".
-       *
-       * This request holds the parameters needed by the the merchantapi server.  After setting any
-       * optional parameters, call the {@link UpdateBusinessIdentity#execute()} method to invoke the
-       * remote operation. <p> {@link UpdateBusinessIdentity#initialize(com.google.api.client.googleapis
-       * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
-       * after invoking the constructor. </p>
-       *
-       * @param name Identifier. The resource name of the business identity. Format:
-     *        `accounts/{account}/businessIdentity`
-       * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.BusinessIdentity}
-       * @since 1.13
-       */
-      protected UpdateBusinessIdentity(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.BusinessIdentity content) {
-        super(Merchant.this, "PATCH", REST_PATH, content, com.google.api.services.merchantapi.accounts_v1beta.model.BusinessIdentity.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^accounts/[^/]+/businessIdentity$");
-        }
-      }
-
-      @Override
-      public UpdateBusinessIdentity set$Xgafv(java.lang.String $Xgafv) {
-        return (UpdateBusinessIdentity) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public UpdateBusinessIdentity setAccessToken(java.lang.String accessToken) {
-        return (UpdateBusinessIdentity) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public UpdateBusinessIdentity setAlt(java.lang.String alt) {
-        return (UpdateBusinessIdentity) super.setAlt(alt);
-      }
-
-      @Override
-      public UpdateBusinessIdentity setCallback(java.lang.String callback) {
-        return (UpdateBusinessIdentity) super.setCallback(callback);
-      }
-
-      @Override
-      public UpdateBusinessIdentity setFields(java.lang.String fields) {
-        return (UpdateBusinessIdentity) super.setFields(fields);
-      }
-
-      @Override
-      public UpdateBusinessIdentity setKey(java.lang.String key) {
-        return (UpdateBusinessIdentity) super.setKey(key);
-      }
-
-      @Override
-      public UpdateBusinessIdentity setOauthToken(java.lang.String oauthToken) {
-        return (UpdateBusinessIdentity) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public UpdateBusinessIdentity setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (UpdateBusinessIdentity) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public UpdateBusinessIdentity setQuotaUser(java.lang.String quotaUser) {
-        return (UpdateBusinessIdentity) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public UpdateBusinessIdentity setUploadType(java.lang.String uploadType) {
-        return (UpdateBusinessIdentity) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public UpdateBusinessIdentity setUploadProtocol(java.lang.String uploadProtocol) {
-        return (UpdateBusinessIdentity) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Identifier. The resource name of the business identity. Format:
-       * `accounts/{account}/businessIdentity`
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** Identifier. The resource name of the business identity. Format:
-     `accounts/{account}/businessIdentity`
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /**
-       * Identifier. The resource name of the business identity. Format:
-       * `accounts/{account}/businessIdentity`
-       */
-      public UpdateBusinessIdentity setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^accounts/[^/]+/businessIdentity$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      /** Required. List of fields being updated. */
-      @com.google.api.client.util.Key
-      private String updateMask;
-
-      /** Required. List of fields being updated.
-       */
-      public String getUpdateMask() {
-        return updateMask;
-      }
-
-      /** Required. List of fields being updated. */
-      public UpdateBusinessIdentity setUpdateMask(String updateMask) {
-        this.updateMask = updateMask;
-        return this;
-      }
-
-      @Override
-      public UpdateBusinessIdentity set(String parameterName, Object value) {
-        return (UpdateBusinessIdentity) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Updates the business info of an account. Executing this method requires admin access.
-     *
-     * Create a request for the method "accounts.updateBusinessInfo".
-     *
-     * This request holds the parameters needed by the merchantapi server.  After setting any optional
-     * parameters, call the {@link UpdateBusinessInfo#execute()} method to invoke the remote operation.
-     *
-     * @param name Identifier. The resource name of the business info. Format: `accounts/{account}/businessInfo`
-     * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.BusinessInfo}
-     * @return the request
-     */
-    public UpdateBusinessInfo updateBusinessInfo(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.BusinessInfo content) throws java.io.IOException {
-      UpdateBusinessInfo result = new UpdateBusinessInfo(name, content);
-      initialize(result);
-      return result;
-    }
-
-    public class UpdateBusinessInfo extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.BusinessInfo> {
-
-      private static final String REST_PATH = "accounts/v1beta/{+name}";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^accounts/[^/]+/businessInfo$");
-
-      /**
-       * Updates the business info of an account. Executing this method requires admin access.
-       *
-       * Create a request for the method "accounts.updateBusinessInfo".
-       *
-       * This request holds the parameters needed by the the merchantapi server.  After setting any
-       * optional parameters, call the {@link UpdateBusinessInfo#execute()} method to invoke the remote
-       * operation. <p> {@link UpdateBusinessInfo#initialize(com.google.api.client.googleapis.services.A
-       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
-       * invoking the constructor. </p>
-       *
-       * @param name Identifier. The resource name of the business info. Format: `accounts/{account}/businessInfo`
-       * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.BusinessInfo}
-       * @since 1.13
-       */
-      protected UpdateBusinessInfo(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.BusinessInfo content) {
-        super(Merchant.this, "PATCH", REST_PATH, content, com.google.api.services.merchantapi.accounts_v1beta.model.BusinessInfo.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^accounts/[^/]+/businessInfo$");
-        }
-      }
-
-      @Override
-      public UpdateBusinessInfo set$Xgafv(java.lang.String $Xgafv) {
-        return (UpdateBusinessInfo) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public UpdateBusinessInfo setAccessToken(java.lang.String accessToken) {
-        return (UpdateBusinessInfo) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public UpdateBusinessInfo setAlt(java.lang.String alt) {
-        return (UpdateBusinessInfo) super.setAlt(alt);
-      }
-
-      @Override
-      public UpdateBusinessInfo setCallback(java.lang.String callback) {
-        return (UpdateBusinessInfo) super.setCallback(callback);
-      }
-
-      @Override
-      public UpdateBusinessInfo setFields(java.lang.String fields) {
-        return (UpdateBusinessInfo) super.setFields(fields);
-      }
-
-      @Override
-      public UpdateBusinessInfo setKey(java.lang.String key) {
-        return (UpdateBusinessInfo) super.setKey(key);
-      }
-
-      @Override
-      public UpdateBusinessInfo setOauthToken(java.lang.String oauthToken) {
-        return (UpdateBusinessInfo) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public UpdateBusinessInfo setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (UpdateBusinessInfo) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public UpdateBusinessInfo setQuotaUser(java.lang.String quotaUser) {
-        return (UpdateBusinessInfo) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public UpdateBusinessInfo setUploadType(java.lang.String uploadType) {
-        return (UpdateBusinessInfo) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public UpdateBusinessInfo setUploadProtocol(java.lang.String uploadProtocol) {
-        return (UpdateBusinessInfo) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Identifier. The resource name of the business info. Format:
-       * `accounts/{account}/businessInfo`
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** Identifier. The resource name of the business info. Format: `accounts/{account}/businessInfo`
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /**
-       * Identifier. The resource name of the business info. Format:
-       * `accounts/{account}/businessInfo`
-       */
-      public UpdateBusinessInfo setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^accounts/[^/]+/businessInfo$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      /** Required. List of fields being updated. */
-      @com.google.api.client.util.Key
-      private String updateMask;
-
-      /** Required. List of fields being updated.
-       */
-      public String getUpdateMask() {
-        return updateMask;
-      }
-
-      /** Required. List of fields being updated. */
-      public UpdateBusinessInfo setUpdateMask(String updateMask) {
-        this.updateMask = updateMask;
-        return this;
-      }
-
-      @Override
-      public UpdateBusinessInfo set(String parameterName, Object value) {
-        return (UpdateBusinessInfo) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Updates a store's homepage. Executing this method requires admin access.
-     *
-     * Create a request for the method "accounts.updateHomepage".
-     *
-     * This request holds the parameters needed by the merchantapi server.  After setting any optional
-     * parameters, call the {@link UpdateHomepage#execute()} method to invoke the remote operation.
-     *
-     * @param name Identifier. The resource name of the store's homepage. Format: `accounts/{account}/homepage`
-     * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.Homepage}
-     * @return the request
-     */
-    public UpdateHomepage updateHomepage(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.Homepage content) throws java.io.IOException {
-      UpdateHomepage result = new UpdateHomepage(name, content);
-      initialize(result);
-      return result;
-    }
-
-    public class UpdateHomepage extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.Homepage> {
-
-      private static final String REST_PATH = "accounts/v1beta/{+name}";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^accounts/[^/]+/homepage$");
-
-      /**
-       * Updates a store's homepage. Executing this method requires admin access.
-       *
-       * Create a request for the method "accounts.updateHomepage".
-       *
-       * This request holds the parameters needed by the the merchantapi server.  After setting any
-       * optional parameters, call the {@link UpdateHomepage#execute()} method to invoke the remote
-       * operation. <p> {@link UpdateHomepage#initialize(com.google.api.client.googleapis.services.Abstr
-       * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
-       * the constructor. </p>
-       *
-       * @param name Identifier. The resource name of the store's homepage. Format: `accounts/{account}/homepage`
-       * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.Homepage}
-       * @since 1.13
-       */
-      protected UpdateHomepage(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.Homepage content) {
-        super(Merchant.this, "PATCH", REST_PATH, content, com.google.api.services.merchantapi.accounts_v1beta.model.Homepage.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^accounts/[^/]+/homepage$");
-        }
-      }
-
-      @Override
-      public UpdateHomepage set$Xgafv(java.lang.String $Xgafv) {
-        return (UpdateHomepage) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public UpdateHomepage setAccessToken(java.lang.String accessToken) {
-        return (UpdateHomepage) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public UpdateHomepage setAlt(java.lang.String alt) {
-        return (UpdateHomepage) super.setAlt(alt);
-      }
-
-      @Override
-      public UpdateHomepage setCallback(java.lang.String callback) {
-        return (UpdateHomepage) super.setCallback(callback);
-      }
-
-      @Override
-      public UpdateHomepage setFields(java.lang.String fields) {
-        return (UpdateHomepage) super.setFields(fields);
-      }
-
-      @Override
-      public UpdateHomepage setKey(java.lang.String key) {
-        return (UpdateHomepage) super.setKey(key);
-      }
-
-      @Override
-      public UpdateHomepage setOauthToken(java.lang.String oauthToken) {
-        return (UpdateHomepage) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public UpdateHomepage setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (UpdateHomepage) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public UpdateHomepage setQuotaUser(java.lang.String quotaUser) {
-        return (UpdateHomepage) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public UpdateHomepage setUploadType(java.lang.String uploadType) {
-        return (UpdateHomepage) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public UpdateHomepage setUploadProtocol(java.lang.String uploadProtocol) {
-        return (UpdateHomepage) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Identifier. The resource name of the store's homepage. Format:
-       * `accounts/{account}/homepage`
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** Identifier. The resource name of the store's homepage. Format: `accounts/{account}/homepage`
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /**
-       * Identifier. The resource name of the store's homepage. Format:
-       * `accounts/{account}/homepage`
-       */
-      public UpdateHomepage setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^accounts/[^/]+/homepage$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      /** Required. List of fields being updated. */
-      @com.google.api.client.util.Key
-      private String updateMask;
-
-      /** Required. List of fields being updated.
-       */
-      public String getUpdateMask() {
-        return updateMask;
-      }
-
-      /** Required. List of fields being updated. */
-      public UpdateHomepage setUpdateMask(String updateMask) {
-        this.updateMask = updateMask;
-        return this;
-      }
-
-      @Override
-      public UpdateHomepage set(String parameterName, Object value) {
-        return (UpdateHomepage) super.set(parameterName, value);
-      }
-    }
 
     /**
      * An accessor for creating requests from the Accounttax collection.
@@ -2588,6 +1552,987 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
     }
     /**
+     * An accessor for creating requests from the BusinessIdentity collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Merchant merchantapi = new Merchant(...);}
+     *   {@code Merchant.BusinessIdentity.List request = merchantapi.businessIdentity().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public BusinessIdentity businessIdentity() {
+      return new BusinessIdentity();
+    }
+
+    /**
+     * The "businessIdentity" collection of methods.
+     */
+    public class BusinessIdentity {
+
+      /**
+       * Retrieves the business identity of an account.
+       *
+       * Create a request for the method "businessIdentity.getBusinessIdentity".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link GetBusinessIdentity#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the business identity. Format: `accounts/{account}/businessIdentity`
+       * @return the request
+       */
+      public GetBusinessIdentity getBusinessIdentity(java.lang.String name) throws java.io.IOException {
+        GetBusinessIdentity result = new GetBusinessIdentity(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetBusinessIdentity extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.BusinessIdentity> {
+
+        private static final String REST_PATH = "accounts/v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/businessIdentity$");
+
+        /**
+         * Retrieves the business identity of an account.
+         *
+         * Create a request for the method "businessIdentity.getBusinessIdentity".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link GetBusinessIdentity#execute()} method to invoke the remote
+         * operation. <p> {@link GetBusinessIdentity#initialize(com.google.api.client.googleapis.services.
+         * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the business identity. Format: `accounts/{account}/businessIdentity`
+         * @since 1.13
+         */
+        protected GetBusinessIdentity(java.lang.String name) {
+          super(Merchant.this, "GET", REST_PATH, null, com.google.api.services.merchantapi.accounts_v1beta.model.BusinessIdentity.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/businessIdentity$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetBusinessIdentity set$Xgafv(java.lang.String $Xgafv) {
+          return (GetBusinessIdentity) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetBusinessIdentity setAccessToken(java.lang.String accessToken) {
+          return (GetBusinessIdentity) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetBusinessIdentity setAlt(java.lang.String alt) {
+          return (GetBusinessIdentity) super.setAlt(alt);
+        }
+
+        @Override
+        public GetBusinessIdentity setCallback(java.lang.String callback) {
+          return (GetBusinessIdentity) super.setCallback(callback);
+        }
+
+        @Override
+        public GetBusinessIdentity setFields(java.lang.String fields) {
+          return (GetBusinessIdentity) super.setFields(fields);
+        }
+
+        @Override
+        public GetBusinessIdentity setKey(java.lang.String key) {
+          return (GetBusinessIdentity) super.setKey(key);
+        }
+
+        @Override
+        public GetBusinessIdentity setOauthToken(java.lang.String oauthToken) {
+          return (GetBusinessIdentity) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetBusinessIdentity setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetBusinessIdentity) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetBusinessIdentity setQuotaUser(java.lang.String quotaUser) {
+          return (GetBusinessIdentity) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetBusinessIdentity setUploadType(java.lang.String uploadType) {
+          return (GetBusinessIdentity) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetBusinessIdentity setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetBusinessIdentity) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the business identity. Format:
+         * `accounts/{account}/businessIdentity`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the business identity. Format: `accounts/{account}/businessIdentity`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the business identity. Format:
+         * `accounts/{account}/businessIdentity`
+         */
+        public GetBusinessIdentity setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/businessIdentity$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetBusinessIdentity set(String parameterName, Object value) {
+          return (GetBusinessIdentity) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the business identity of an account. Executing this method requires admin access.
+       *
+       * Create a request for the method "businessIdentity.updateBusinessIdentity".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link UpdateBusinessIdentity#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Identifier. The resource name of the business identity. Format:
+       *        `accounts/{account}/businessIdentity`
+       * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.BusinessIdentity}
+       * @return the request
+       */
+      public UpdateBusinessIdentity updateBusinessIdentity(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.BusinessIdentity content) throws java.io.IOException {
+        UpdateBusinessIdentity result = new UpdateBusinessIdentity(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateBusinessIdentity extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.BusinessIdentity> {
+
+        private static final String REST_PATH = "accounts/v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/businessIdentity$");
+
+        /**
+         * Updates the business identity of an account. Executing this method requires admin access.
+         *
+         * Create a request for the method "businessIdentity.updateBusinessIdentity".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link UpdateBusinessIdentity#execute()} method to invoke the
+         * remote operation. <p> {@link UpdateBusinessIdentity#initialize(com.google.api.client.googleapis
+         * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param name Identifier. The resource name of the business identity. Format:
+       *        `accounts/{account}/businessIdentity`
+         * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.BusinessIdentity}
+         * @since 1.13
+         */
+        protected UpdateBusinessIdentity(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.BusinessIdentity content) {
+          super(Merchant.this, "PATCH", REST_PATH, content, com.google.api.services.merchantapi.accounts_v1beta.model.BusinessIdentity.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/businessIdentity$");
+          }
+        }
+
+        @Override
+        public UpdateBusinessIdentity set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateBusinessIdentity) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateBusinessIdentity setAccessToken(java.lang.String accessToken) {
+          return (UpdateBusinessIdentity) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateBusinessIdentity setAlt(java.lang.String alt) {
+          return (UpdateBusinessIdentity) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateBusinessIdentity setCallback(java.lang.String callback) {
+          return (UpdateBusinessIdentity) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateBusinessIdentity setFields(java.lang.String fields) {
+          return (UpdateBusinessIdentity) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateBusinessIdentity setKey(java.lang.String key) {
+          return (UpdateBusinessIdentity) super.setKey(key);
+        }
+
+        @Override
+        public UpdateBusinessIdentity setOauthToken(java.lang.String oauthToken) {
+          return (UpdateBusinessIdentity) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateBusinessIdentity setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateBusinessIdentity) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateBusinessIdentity setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateBusinessIdentity) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateBusinessIdentity setUploadType(java.lang.String uploadType) {
+          return (UpdateBusinessIdentity) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateBusinessIdentity setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateBusinessIdentity) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. The resource name of the business identity. Format:
+         * `accounts/{account}/businessIdentity`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. The resource name of the business identity. Format:
+       `accounts/{account}/businessIdentity`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. The resource name of the business identity. Format:
+         * `accounts/{account}/businessIdentity`
+         */
+        public UpdateBusinessIdentity setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/businessIdentity$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Required. List of fields being updated. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. List of fields being updated.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Required. List of fields being updated. */
+        public UpdateBusinessIdentity setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateBusinessIdentity set(String parameterName, Object value) {
+          return (UpdateBusinessIdentity) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the BusinessInfo collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Merchant merchantapi = new Merchant(...);}
+     *   {@code Merchant.BusinessInfo.List request = merchantapi.businessInfo().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public BusinessInfo businessInfo() {
+      return new BusinessInfo();
+    }
+
+    /**
+     * The "businessInfo" collection of methods.
+     */
+    public class BusinessInfo {
+
+      /**
+       * Retrieves the business info of an account.
+       *
+       * Create a request for the method "businessInfo.getBusinessInfo".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link GetBusinessInfo#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the business info. Format: `accounts/{account}/businessInfo`
+       * @return the request
+       */
+      public GetBusinessInfo getBusinessInfo(java.lang.String name) throws java.io.IOException {
+        GetBusinessInfo result = new GetBusinessInfo(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetBusinessInfo extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.BusinessInfo> {
+
+        private static final String REST_PATH = "accounts/v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/businessInfo$");
+
+        /**
+         * Retrieves the business info of an account.
+         *
+         * Create a request for the method "businessInfo.getBusinessInfo".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link GetBusinessInfo#execute()} method to invoke the remote
+         * operation. <p> {@link GetBusinessInfo#initialize(com.google.api.client.googleapis.services.Abst
+         * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param name Required. The resource name of the business info. Format: `accounts/{account}/businessInfo`
+         * @since 1.13
+         */
+        protected GetBusinessInfo(java.lang.String name) {
+          super(Merchant.this, "GET", REST_PATH, null, com.google.api.services.merchantapi.accounts_v1beta.model.BusinessInfo.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/businessInfo$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetBusinessInfo set$Xgafv(java.lang.String $Xgafv) {
+          return (GetBusinessInfo) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetBusinessInfo setAccessToken(java.lang.String accessToken) {
+          return (GetBusinessInfo) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetBusinessInfo setAlt(java.lang.String alt) {
+          return (GetBusinessInfo) super.setAlt(alt);
+        }
+
+        @Override
+        public GetBusinessInfo setCallback(java.lang.String callback) {
+          return (GetBusinessInfo) super.setCallback(callback);
+        }
+
+        @Override
+        public GetBusinessInfo setFields(java.lang.String fields) {
+          return (GetBusinessInfo) super.setFields(fields);
+        }
+
+        @Override
+        public GetBusinessInfo setKey(java.lang.String key) {
+          return (GetBusinessInfo) super.setKey(key);
+        }
+
+        @Override
+        public GetBusinessInfo setOauthToken(java.lang.String oauthToken) {
+          return (GetBusinessInfo) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetBusinessInfo setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetBusinessInfo) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetBusinessInfo setQuotaUser(java.lang.String quotaUser) {
+          return (GetBusinessInfo) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetBusinessInfo setUploadType(java.lang.String uploadType) {
+          return (GetBusinessInfo) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetBusinessInfo setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetBusinessInfo) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the business info. Format:
+         * `accounts/{account}/businessInfo`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the business info. Format: `accounts/{account}/businessInfo`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the business info. Format:
+         * `accounts/{account}/businessInfo`
+         */
+        public GetBusinessInfo setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/businessInfo$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetBusinessInfo set(String parameterName, Object value) {
+          return (GetBusinessInfo) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the business info of an account. Executing this method requires admin access.
+       *
+       * Create a request for the method "businessInfo.updateBusinessInfo".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link UpdateBusinessInfo#execute()} method to invoke the remote operation.
+       *
+       * @param name Identifier. The resource name of the business info. Format: `accounts/{account}/businessInfo`
+       * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.BusinessInfo}
+       * @return the request
+       */
+      public UpdateBusinessInfo updateBusinessInfo(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.BusinessInfo content) throws java.io.IOException {
+        UpdateBusinessInfo result = new UpdateBusinessInfo(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateBusinessInfo extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.BusinessInfo> {
+
+        private static final String REST_PATH = "accounts/v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/businessInfo$");
+
+        /**
+         * Updates the business info of an account. Executing this method requires admin access.
+         *
+         * Create a request for the method "businessInfo.updateBusinessInfo".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link UpdateBusinessInfo#execute()} method to invoke the remote
+         * operation. <p> {@link UpdateBusinessInfo#initialize(com.google.api.client.googleapis.services.A
+         * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Identifier. The resource name of the business info. Format: `accounts/{account}/businessInfo`
+         * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.BusinessInfo}
+         * @since 1.13
+         */
+        protected UpdateBusinessInfo(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.BusinessInfo content) {
+          super(Merchant.this, "PATCH", REST_PATH, content, com.google.api.services.merchantapi.accounts_v1beta.model.BusinessInfo.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/businessInfo$");
+          }
+        }
+
+        @Override
+        public UpdateBusinessInfo set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateBusinessInfo) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateBusinessInfo setAccessToken(java.lang.String accessToken) {
+          return (UpdateBusinessInfo) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateBusinessInfo setAlt(java.lang.String alt) {
+          return (UpdateBusinessInfo) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateBusinessInfo setCallback(java.lang.String callback) {
+          return (UpdateBusinessInfo) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateBusinessInfo setFields(java.lang.String fields) {
+          return (UpdateBusinessInfo) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateBusinessInfo setKey(java.lang.String key) {
+          return (UpdateBusinessInfo) super.setKey(key);
+        }
+
+        @Override
+        public UpdateBusinessInfo setOauthToken(java.lang.String oauthToken) {
+          return (UpdateBusinessInfo) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateBusinessInfo setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateBusinessInfo) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateBusinessInfo setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateBusinessInfo) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateBusinessInfo setUploadType(java.lang.String uploadType) {
+          return (UpdateBusinessInfo) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateBusinessInfo setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateBusinessInfo) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. The resource name of the business info. Format:
+         * `accounts/{account}/businessInfo`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. The resource name of the business info. Format: `accounts/{account}/businessInfo`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. The resource name of the business info. Format:
+         * `accounts/{account}/businessInfo`
+         */
+        public UpdateBusinessInfo setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/businessInfo$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Required. List of fields being updated. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. List of fields being updated.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Required. List of fields being updated. */
+        public UpdateBusinessInfo setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateBusinessInfo set(String parameterName, Object value) {
+          return (UpdateBusinessInfo) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the Emailpreferences collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Merchant merchantapi = new Merchant(...);}
+     *   {@code Merchant.Emailpreferences.List request = merchantapi.emailpreferences().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Emailpreferences emailpreferences() {
+      return new Emailpreferences();
+    }
+
+    /**
+     * The "emailpreferences" collection of methods.
+     */
+    public class Emailpreferences {
+
+      /**
+       * Returns the email preferences for a Merchant Center account user. Use the
+       * name=accounts/users/me/emailPreferences alias to get preferences for the authenticated user.
+       *
+       * Create a request for the method "emailpreferences.getEmailPreferences".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link GetEmailPreferences#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the `EmailPreferences` resource. Format:
+       *        `accounts/{account}/users/{email}/emailPreferences`
+       * @return the request
+       */
+      public GetEmailPreferences getEmailPreferences(java.lang.String name) throws java.io.IOException {
+        GetEmailPreferences result = new GetEmailPreferences(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetEmailPreferences extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.EmailPreferences> {
+
+        private static final String REST_PATH = "accounts/v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/users/[^/]+/emailPreferences$");
+
+        /**
+         * Returns the email preferences for a Merchant Center account user. Use the
+         * name=accounts/users/me/emailPreferences alias to get preferences for the authenticated user.
+         *
+         * Create a request for the method "emailpreferences.getEmailPreferences".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link GetEmailPreferences#execute()} method to invoke the remote
+         * operation. <p> {@link GetEmailPreferences#initialize(com.google.api.client.googleapis.services.
+         * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. The name of the `EmailPreferences` resource. Format:
+       *        `accounts/{account}/users/{email}/emailPreferences`
+         * @since 1.13
+         */
+        protected GetEmailPreferences(java.lang.String name) {
+          super(Merchant.this, "GET", REST_PATH, null, com.google.api.services.merchantapi.accounts_v1beta.model.EmailPreferences.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/users/[^/]+/emailPreferences$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetEmailPreferences set$Xgafv(java.lang.String $Xgafv) {
+          return (GetEmailPreferences) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetEmailPreferences setAccessToken(java.lang.String accessToken) {
+          return (GetEmailPreferences) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetEmailPreferences setAlt(java.lang.String alt) {
+          return (GetEmailPreferences) super.setAlt(alt);
+        }
+
+        @Override
+        public GetEmailPreferences setCallback(java.lang.String callback) {
+          return (GetEmailPreferences) super.setCallback(callback);
+        }
+
+        @Override
+        public GetEmailPreferences setFields(java.lang.String fields) {
+          return (GetEmailPreferences) super.setFields(fields);
+        }
+
+        @Override
+        public GetEmailPreferences setKey(java.lang.String key) {
+          return (GetEmailPreferences) super.setKey(key);
+        }
+
+        @Override
+        public GetEmailPreferences setOauthToken(java.lang.String oauthToken) {
+          return (GetEmailPreferences) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetEmailPreferences setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetEmailPreferences) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetEmailPreferences setQuotaUser(java.lang.String quotaUser) {
+          return (GetEmailPreferences) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetEmailPreferences setUploadType(java.lang.String uploadType) {
+          return (GetEmailPreferences) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetEmailPreferences setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetEmailPreferences) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the `EmailPreferences` resource. Format:
+         * `accounts/{account}/users/{email}/emailPreferences`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the `EmailPreferences` resource. Format:
+       `accounts/{account}/users/{email}/emailPreferences`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the `EmailPreferences` resource. Format:
+         * `accounts/{account}/users/{email}/emailPreferences`
+         */
+        public GetEmailPreferences setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/users/[^/]+/emailPreferences$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetEmailPreferences set(String parameterName, Object value) {
+          return (GetEmailPreferences) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the email preferences for a Merchant Center account user. MCA users should specify the
+       * MCA account rather than a sub-account of the MCA. Preferences which are not explicitly selected
+       * in the update mask will not be updated. It is invalid for updates to specify an UNCONFIRMED opt-
+       * in status value. Use the name=accounts/users/me/emailPreferences alias to update preferences for
+       * the authenticated user.
+       *
+       * Create a request for the method "emailpreferences.updateEmailPreferences".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link UpdateEmailPreferences#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Identifier. The name of the EmailPreferences. The endpoint is only supported for the authenticated
+       *        user.
+       * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.EmailPreferences}
+       * @return the request
+       */
+      public UpdateEmailPreferences updateEmailPreferences(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.EmailPreferences content) throws java.io.IOException {
+        UpdateEmailPreferences result = new UpdateEmailPreferences(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateEmailPreferences extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.EmailPreferences> {
+
+        private static final String REST_PATH = "accounts/v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/users/[^/]+/emailPreferences$");
+
+        /**
+         * Updates the email preferences for a Merchant Center account user. MCA users should specify the
+         * MCA account rather than a sub-account of the MCA. Preferences which are not explicitly selected
+         * in the update mask will not be updated. It is invalid for updates to specify an UNCONFIRMED
+         * opt-in status value. Use the name=accounts/users/me/emailPreferences alias to update
+         * preferences for the authenticated user.
+         *
+         * Create a request for the method "emailpreferences.updateEmailPreferences".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link UpdateEmailPreferences#execute()} method to invoke the
+         * remote operation. <p> {@link UpdateEmailPreferences#initialize(com.google.api.client.googleapis
+         * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param name Identifier. The name of the EmailPreferences. The endpoint is only supported for the authenticated
+       *        user.
+         * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.EmailPreferences}
+         * @since 1.13
+         */
+        protected UpdateEmailPreferences(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.EmailPreferences content) {
+          super(Merchant.this, "PATCH", REST_PATH, content, com.google.api.services.merchantapi.accounts_v1beta.model.EmailPreferences.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/users/[^/]+/emailPreferences$");
+          }
+        }
+
+        @Override
+        public UpdateEmailPreferences set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateEmailPreferences) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateEmailPreferences setAccessToken(java.lang.String accessToken) {
+          return (UpdateEmailPreferences) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateEmailPreferences setAlt(java.lang.String alt) {
+          return (UpdateEmailPreferences) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateEmailPreferences setCallback(java.lang.String callback) {
+          return (UpdateEmailPreferences) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateEmailPreferences setFields(java.lang.String fields) {
+          return (UpdateEmailPreferences) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateEmailPreferences setKey(java.lang.String key) {
+          return (UpdateEmailPreferences) super.setKey(key);
+        }
+
+        @Override
+        public UpdateEmailPreferences setOauthToken(java.lang.String oauthToken) {
+          return (UpdateEmailPreferences) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateEmailPreferences setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateEmailPreferences) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateEmailPreferences setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateEmailPreferences) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateEmailPreferences setUploadType(java.lang.String uploadType) {
+          return (UpdateEmailPreferences) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateEmailPreferences setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateEmailPreferences) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. The name of the EmailPreferences. The endpoint is only supported for the
+         * authenticated user.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. The name of the EmailPreferences. The endpoint is only supported for the authenticated
+       user.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. The name of the EmailPreferences. The endpoint is only supported for the
+         * authenticated user.
+         */
+        public UpdateEmailPreferences setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/users/[^/]+/emailPreferences$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Required. List of fields being updated. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. List of fields being updated.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Required. List of fields being updated. */
+        public UpdateEmailPreferences setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateEmailPreferences set(String parameterName, Object value) {
+          return (UpdateEmailPreferences) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Homepage collection.
      *
      * <p>The typical use is:</p>
@@ -2753,6 +2698,149 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
+       * Retrieves a store's homepage.
+       *
+       * Create a request for the method "homepage.getHomepage".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link GetHomepage#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the homepage to retrieve. Format: `accounts/{account}/homepage`
+       * @return the request
+       */
+      public GetHomepage getHomepage(java.lang.String name) throws java.io.IOException {
+        GetHomepage result = new GetHomepage(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetHomepage extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.Homepage> {
+
+        private static final String REST_PATH = "accounts/v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/homepage$");
+
+        /**
+         * Retrieves a store's homepage.
+         *
+         * Create a request for the method "homepage.getHomepage".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link GetHomepage#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * GetHomepage#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the homepage to retrieve. Format: `accounts/{account}/homepage`
+         * @since 1.13
+         */
+        protected GetHomepage(java.lang.String name) {
+          super(Merchant.this, "GET", REST_PATH, null, com.google.api.services.merchantapi.accounts_v1beta.model.Homepage.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/homepage$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetHomepage set$Xgafv(java.lang.String $Xgafv) {
+          return (GetHomepage) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetHomepage setAccessToken(java.lang.String accessToken) {
+          return (GetHomepage) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetHomepage setAlt(java.lang.String alt) {
+          return (GetHomepage) super.setAlt(alt);
+        }
+
+        @Override
+        public GetHomepage setCallback(java.lang.String callback) {
+          return (GetHomepage) super.setCallback(callback);
+        }
+
+        @Override
+        public GetHomepage setFields(java.lang.String fields) {
+          return (GetHomepage) super.setFields(fields);
+        }
+
+        @Override
+        public GetHomepage setKey(java.lang.String key) {
+          return (GetHomepage) super.setKey(key);
+        }
+
+        @Override
+        public GetHomepage setOauthToken(java.lang.String oauthToken) {
+          return (GetHomepage) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetHomepage setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetHomepage) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetHomepage setQuotaUser(java.lang.String quotaUser) {
+          return (GetHomepage) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetHomepage setUploadType(java.lang.String uploadType) {
+          return (GetHomepage) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetHomepage setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetHomepage) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the homepage to retrieve. Format: `accounts/{account}/homepage`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the homepage to retrieve. Format: `accounts/{account}/homepage`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the homepage to retrieve. Format: `accounts/{account}/homepage`
+         */
+        public GetHomepage setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/homepage$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetHomepage set(String parameterName, Object value) {
+          return (GetHomepage) super.set(parameterName, value);
+        }
+      }
+      /**
        * Unclaims a store's homepage. Executing this method requires admin access.
        *
        * Create a request for the method "homepage.unclaim".
@@ -2881,6 +2969,159 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         @Override
         public Unclaim set(String parameterName, Object value) {
           return (Unclaim) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a store's homepage. Executing this method requires admin access.
+       *
+       * Create a request for the method "homepage.updateHomepage".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link UpdateHomepage#execute()} method to invoke the remote operation.
+       *
+       * @param name Identifier. The resource name of the store's homepage. Format: `accounts/{account}/homepage`
+       * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.Homepage}
+       * @return the request
+       */
+      public UpdateHomepage updateHomepage(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.Homepage content) throws java.io.IOException {
+        UpdateHomepage result = new UpdateHomepage(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateHomepage extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.Homepage> {
+
+        private static final String REST_PATH = "accounts/v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/homepage$");
+
+        /**
+         * Updates a store's homepage. Executing this method requires admin access.
+         *
+         * Create a request for the method "homepage.updateHomepage".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link UpdateHomepage#execute()} method to invoke the remote
+         * operation. <p> {@link UpdateHomepage#initialize(com.google.api.client.googleapis.services.Abstr
+         * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param name Identifier. The resource name of the store's homepage. Format: `accounts/{account}/homepage`
+         * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.Homepage}
+         * @since 1.13
+         */
+        protected UpdateHomepage(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.Homepage content) {
+          super(Merchant.this, "PATCH", REST_PATH, content, com.google.api.services.merchantapi.accounts_v1beta.model.Homepage.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/homepage$");
+          }
+        }
+
+        @Override
+        public UpdateHomepage set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateHomepage) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateHomepage setAccessToken(java.lang.String accessToken) {
+          return (UpdateHomepage) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateHomepage setAlt(java.lang.String alt) {
+          return (UpdateHomepage) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateHomepage setCallback(java.lang.String callback) {
+          return (UpdateHomepage) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateHomepage setFields(java.lang.String fields) {
+          return (UpdateHomepage) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateHomepage setKey(java.lang.String key) {
+          return (UpdateHomepage) super.setKey(key);
+        }
+
+        @Override
+        public UpdateHomepage setOauthToken(java.lang.String oauthToken) {
+          return (UpdateHomepage) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateHomepage setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateHomepage) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateHomepage setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateHomepage) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateHomepage setUploadType(java.lang.String uploadType) {
+          return (UpdateHomepage) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateHomepage setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateHomepage) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. The resource name of the store's homepage. Format:
+         * `accounts/{account}/homepage`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. The resource name of the store's homepage. Format: `accounts/{account}/homepage`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. The resource name of the store's homepage. Format:
+         * `accounts/{account}/homepage`
+         */
+        public UpdateHomepage setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/homepage$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Required. List of fields being updated. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. List of fields being updated.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Required. List of fields being updated. */
+        public UpdateHomepage setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateHomepage set(String parameterName, Object value) {
+          return (UpdateHomepage) super.set(parameterName, value);
         }
       }
 
@@ -5001,6 +5242,152 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
     public class ShippingSettings {
 
       /**
+       * Retrieve shipping setting information.
+       *
+       * Create a request for the method "shippingSettings.getShippingSettings".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link GetShippingSettings#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the shipping setting to retrieve. Format: `accounts/{account}/shippingsetting`
+       * @return the request
+       */
+      public GetShippingSettings getShippingSettings(java.lang.String name) throws java.io.IOException {
+        GetShippingSettings result = new GetShippingSettings(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetShippingSettings extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.ShippingSettings> {
+
+        private static final String REST_PATH = "accounts/v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/shippingSettings$");
+
+        /**
+         * Retrieve shipping setting information.
+         *
+         * Create a request for the method "shippingSettings.getShippingSettings".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link GetShippingSettings#execute()} method to invoke the remote
+         * operation. <p> {@link GetShippingSettings#initialize(com.google.api.client.googleapis.services.
+         * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. The name of the shipping setting to retrieve. Format: `accounts/{account}/shippingsetting`
+         * @since 1.13
+         */
+        protected GetShippingSettings(java.lang.String name) {
+          super(Merchant.this, "GET", REST_PATH, null, com.google.api.services.merchantapi.accounts_v1beta.model.ShippingSettings.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/shippingSettings$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetShippingSettings set$Xgafv(java.lang.String $Xgafv) {
+          return (GetShippingSettings) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetShippingSettings setAccessToken(java.lang.String accessToken) {
+          return (GetShippingSettings) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetShippingSettings setAlt(java.lang.String alt) {
+          return (GetShippingSettings) super.setAlt(alt);
+        }
+
+        @Override
+        public GetShippingSettings setCallback(java.lang.String callback) {
+          return (GetShippingSettings) super.setCallback(callback);
+        }
+
+        @Override
+        public GetShippingSettings setFields(java.lang.String fields) {
+          return (GetShippingSettings) super.setFields(fields);
+        }
+
+        @Override
+        public GetShippingSettings setKey(java.lang.String key) {
+          return (GetShippingSettings) super.setKey(key);
+        }
+
+        @Override
+        public GetShippingSettings setOauthToken(java.lang.String oauthToken) {
+          return (GetShippingSettings) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetShippingSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetShippingSettings) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetShippingSettings setQuotaUser(java.lang.String quotaUser) {
+          return (GetShippingSettings) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetShippingSettings setUploadType(java.lang.String uploadType) {
+          return (GetShippingSettings) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetShippingSettings setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetShippingSettings) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the shipping setting to retrieve. Format:
+         * `accounts/{account}/shippingsetting`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the shipping setting to retrieve. Format:
+       `accounts/{account}/shippingsetting`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the shipping setting to retrieve. Format:
+         * `accounts/{account}/shippingsetting`
+         */
+        public GetShippingSettings setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/shippingSettings$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetShippingSettings set(String parameterName, Object value) {
+          return (GetShippingSettings) super.set(parameterName, value);
+        }
+      }
+      /**
        * Replace the shipping setting of a merchant with the request shipping setting. Executing this
        * method requires admin access.
        *
@@ -5926,156 +6313,6 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * Returns the email preferences for a Merchant Center account user. Use the
-       * name=accounts/users/me/emailPreferences alias to get preferences for the authenticated user.
-       *
-       * Create a request for the method "users.getEmailPreferences".
-       *
-       * This request holds the parameters needed by the merchantapi server.  After setting any optional
-       * parameters, call the {@link GetEmailPreferences#execute()} method to invoke the remote operation.
-       *
-       * @param name Required. The name of the `EmailPreferences` resource. Format:
-       *        `accounts/{account}/users/{email}/emailPreferences`
-       * @return the request
-       */
-      public GetEmailPreferences getEmailPreferences(java.lang.String name) throws java.io.IOException {
-        GetEmailPreferences result = new GetEmailPreferences(name);
-        initialize(result);
-        return result;
-      }
-
-      public class GetEmailPreferences extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.EmailPreferences> {
-
-        private static final String REST_PATH = "accounts/v1beta/{+name}";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^accounts/[^/]+/users/[^/]+/emailPreferences$");
-
-        /**
-         * Returns the email preferences for a Merchant Center account user. Use the
-         * name=accounts/users/me/emailPreferences alias to get preferences for the authenticated user.
-         *
-         * Create a request for the method "users.getEmailPreferences".
-         *
-         * This request holds the parameters needed by the the merchantapi server.  After setting any
-         * optional parameters, call the {@link GetEmailPreferences#execute()} method to invoke the remote
-         * operation. <p> {@link GetEmailPreferences#initialize(com.google.api.client.googleapis.services.
-         * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
-         * invoking the constructor. </p>
-         *
-         * @param name Required. The name of the `EmailPreferences` resource. Format:
-       *        `accounts/{account}/users/{email}/emailPreferences`
-         * @since 1.13
-         */
-        protected GetEmailPreferences(java.lang.String name) {
-          super(Merchant.this, "GET", REST_PATH, null, com.google.api.services.merchantapi.accounts_v1beta.model.EmailPreferences.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^accounts/[^/]+/users/[^/]+/emailPreferences$");
-          }
-        }
-
-        @Override
-        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-          return super.executeUsingHead();
-        }
-
-        @Override
-        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-          return super.buildHttpRequestUsingHead();
-        }
-
-        @Override
-        public GetEmailPreferences set$Xgafv(java.lang.String $Xgafv) {
-          return (GetEmailPreferences) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public GetEmailPreferences setAccessToken(java.lang.String accessToken) {
-          return (GetEmailPreferences) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public GetEmailPreferences setAlt(java.lang.String alt) {
-          return (GetEmailPreferences) super.setAlt(alt);
-        }
-
-        @Override
-        public GetEmailPreferences setCallback(java.lang.String callback) {
-          return (GetEmailPreferences) super.setCallback(callback);
-        }
-
-        @Override
-        public GetEmailPreferences setFields(java.lang.String fields) {
-          return (GetEmailPreferences) super.setFields(fields);
-        }
-
-        @Override
-        public GetEmailPreferences setKey(java.lang.String key) {
-          return (GetEmailPreferences) super.setKey(key);
-        }
-
-        @Override
-        public GetEmailPreferences setOauthToken(java.lang.String oauthToken) {
-          return (GetEmailPreferences) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public GetEmailPreferences setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (GetEmailPreferences) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public GetEmailPreferences setQuotaUser(java.lang.String quotaUser) {
-          return (GetEmailPreferences) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public GetEmailPreferences setUploadType(java.lang.String uploadType) {
-          return (GetEmailPreferences) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public GetEmailPreferences setUploadProtocol(java.lang.String uploadProtocol) {
-          return (GetEmailPreferences) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * Required. The name of the `EmailPreferences` resource. Format:
-         * `accounts/{account}/users/{email}/emailPreferences`
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** Required. The name of the `EmailPreferences` resource. Format:
-       `accounts/{account}/users/{email}/emailPreferences`
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /**
-         * Required. The name of the `EmailPreferences` resource. Format:
-         * `accounts/{account}/users/{email}/emailPreferences`
-         */
-        public GetEmailPreferences setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^accounts/[^/]+/users/[^/]+/emailPreferences$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        @Override
-        public GetEmailPreferences set(String parameterName, Object value) {
-          return (GetEmailPreferences) super.set(parameterName, value);
-        }
-      }
-      /**
        * Lists all users of a Merchant Center account.
        *
        * Create a request for the method "users.list".
@@ -6423,171 +6660,6 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         @Override
         public Patch set(String parameterName, Object value) {
           return (Patch) super.set(parameterName, value);
-        }
-      }
-      /**
-       * Updates the email preferences for a Merchant Center account user. MCA users should specify the
-       * MCA account rather than a sub-account of the MCA. Preferences which are not explicitly selected
-       * in the update mask will not be updated. It is invalid for updates to specify an UNCONFIRMED opt-
-       * in status value. Use the name=accounts/users/me/emailPreferences alias to update preferences for
-       * the authenticated user.
-       *
-       * Create a request for the method "users.updateEmailPreferences".
-       *
-       * This request holds the parameters needed by the merchantapi server.  After setting any optional
-       * parameters, call the {@link UpdateEmailPreferences#execute()} method to invoke the remote
-       * operation.
-       *
-       * @param name Identifier. The name of the EmailPreferences. The endpoint is only supported for the authenticated
-       *        user.
-       * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.EmailPreferences}
-       * @return the request
-       */
-      public UpdateEmailPreferences updateEmailPreferences(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.EmailPreferences content) throws java.io.IOException {
-        UpdateEmailPreferences result = new UpdateEmailPreferences(name, content);
-        initialize(result);
-        return result;
-      }
-
-      public class UpdateEmailPreferences extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.EmailPreferences> {
-
-        private static final String REST_PATH = "accounts/v1beta/{+name}";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^accounts/[^/]+/users/[^/]+/emailPreferences$");
-
-        /**
-         * Updates the email preferences for a Merchant Center account user. MCA users should specify the
-         * MCA account rather than a sub-account of the MCA. Preferences which are not explicitly selected
-         * in the update mask will not be updated. It is invalid for updates to specify an UNCONFIRMED
-         * opt-in status value. Use the name=accounts/users/me/emailPreferences alias to update
-         * preferences for the authenticated user.
-         *
-         * Create a request for the method "users.updateEmailPreferences".
-         *
-         * This request holds the parameters needed by the the merchantapi server.  After setting any
-         * optional parameters, call the {@link UpdateEmailPreferences#execute()} method to invoke the
-         * remote operation. <p> {@link UpdateEmailPreferences#initialize(com.google.api.client.googleapis
-         * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
-         * after invoking the constructor. </p>
-         *
-         * @param name Identifier. The name of the EmailPreferences. The endpoint is only supported for the authenticated
-       *        user.
-         * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.EmailPreferences}
-         * @since 1.13
-         */
-        protected UpdateEmailPreferences(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.EmailPreferences content) {
-          super(Merchant.this, "PATCH", REST_PATH, content, com.google.api.services.merchantapi.accounts_v1beta.model.EmailPreferences.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^accounts/[^/]+/users/[^/]+/emailPreferences$");
-          }
-        }
-
-        @Override
-        public UpdateEmailPreferences set$Xgafv(java.lang.String $Xgafv) {
-          return (UpdateEmailPreferences) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public UpdateEmailPreferences setAccessToken(java.lang.String accessToken) {
-          return (UpdateEmailPreferences) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public UpdateEmailPreferences setAlt(java.lang.String alt) {
-          return (UpdateEmailPreferences) super.setAlt(alt);
-        }
-
-        @Override
-        public UpdateEmailPreferences setCallback(java.lang.String callback) {
-          return (UpdateEmailPreferences) super.setCallback(callback);
-        }
-
-        @Override
-        public UpdateEmailPreferences setFields(java.lang.String fields) {
-          return (UpdateEmailPreferences) super.setFields(fields);
-        }
-
-        @Override
-        public UpdateEmailPreferences setKey(java.lang.String key) {
-          return (UpdateEmailPreferences) super.setKey(key);
-        }
-
-        @Override
-        public UpdateEmailPreferences setOauthToken(java.lang.String oauthToken) {
-          return (UpdateEmailPreferences) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public UpdateEmailPreferences setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (UpdateEmailPreferences) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public UpdateEmailPreferences setQuotaUser(java.lang.String quotaUser) {
-          return (UpdateEmailPreferences) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public UpdateEmailPreferences setUploadType(java.lang.String uploadType) {
-          return (UpdateEmailPreferences) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public UpdateEmailPreferences setUploadProtocol(java.lang.String uploadProtocol) {
-          return (UpdateEmailPreferences) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * Identifier. The name of the EmailPreferences. The endpoint is only supported for the
-         * authenticated user.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** Identifier. The name of the EmailPreferences. The endpoint is only supported for the authenticated
-       user.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /**
-         * Identifier. The name of the EmailPreferences. The endpoint is only supported for the
-         * authenticated user.
-         */
-        public UpdateEmailPreferences setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^accounts/[^/]+/users/[^/]+/emailPreferences$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        /** Required. List of fields being updated. */
-        @com.google.api.client.util.Key
-        private String updateMask;
-
-        /** Required. List of fields being updated.
-         */
-        public String getUpdateMask() {
-          return updateMask;
-        }
-
-        /** Required. List of fields being updated. */
-        public UpdateEmailPreferences setUpdateMask(String updateMask) {
-          this.updateMask = updateMask;
-          return this;
-        }
-
-        @Override
-        public UpdateEmailPreferences set(String parameterName, Object value) {
-          return (UpdateEmailPreferences) super.set(parameterName, value);
         }
       }
 

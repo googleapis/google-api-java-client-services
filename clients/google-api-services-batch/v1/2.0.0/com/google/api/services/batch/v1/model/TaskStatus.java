@@ -17,7 +17,7 @@
 package com.google.api.services.batch.v1.model;
 
 /**
- * Status of a task
+ * Status of a task.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Batch API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.batch.v1.model;
 public final class TaskStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Task state
+   * Task state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Task state
+   * Task state.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -58,7 +58,7 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Task state
+   * Task state.
    * @param state state or {@code null} for none
    */
   public TaskStatus setState(java.lang.String state) {

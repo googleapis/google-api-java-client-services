@@ -17,7 +17,7 @@
 package com.google.api.services.batch.v1.model;
 
 /**
- * Status event
+ * Status event.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Batch API. For a detailed explanation see:
@@ -44,14 +44,14 @@ public final class StatusEvent extends com.google.api.client.json.GenericJson {
   private String eventTime;
 
   /**
-   * Task Execution
+   * Task Execution. This field is only defined for task-level status events where the task fails.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TaskExecution taskExecution;
 
   /**
-   * Task State
+   * Task State. This field is only defined for task-level status events.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +99,7 @@ public final class StatusEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Task Execution
+   * Task Execution. This field is only defined for task-level status events where the task fails.
    * @return value or {@code null} for none
    */
   public TaskExecution getTaskExecution() {
@@ -107,7 +107,7 @@ public final class StatusEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Task Execution
+   * Task Execution. This field is only defined for task-level status events where the task fails.
    * @param taskExecution taskExecution or {@code null} for none
    */
   public StatusEvent setTaskExecution(TaskExecution taskExecution) {
@@ -116,7 +116,7 @@ public final class StatusEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Task State
+   * Task State. This field is only defined for task-level status events.
    * @return value or {@code null} for none
    */
   public java.lang.String getTaskState() {
@@ -124,7 +124,7 @@ public final class StatusEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Task State
+   * Task State. This field is only defined for task-level status events.
    * @param taskState taskState or {@code null} for none
    */
   public StatusEvent setTaskState(java.lang.String taskState) {

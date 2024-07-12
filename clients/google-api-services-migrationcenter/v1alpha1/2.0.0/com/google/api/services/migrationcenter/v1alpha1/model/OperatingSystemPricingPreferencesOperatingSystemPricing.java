@@ -37,7 +37,8 @@ public final class OperatingSystemPricingPreferencesOperatingSystemPricing exten
   private java.lang.String commitmentPlan;
 
   /**
-   * Optional. License type of the OS image.
+   * Optional. License type for premium images (RHEL, RHEL for SAP, SLES, SLES for SAP, Windows
+   * Server).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +62,8 @@ public final class OperatingSystemPricingPreferencesOperatingSystemPricing exten
   }
 
   /**
-   * Optional. License type of the OS image.
+   * Optional. License type for premium images (RHEL, RHEL for SAP, SLES, SLES for SAP, Windows
+   * Server).
    * @return value or {@code null} for none
    */
   public java.lang.String getLicenseType() {
@@ -69,7 +71,8 @@ public final class OperatingSystemPricingPreferencesOperatingSystemPricing exten
   }
 
   /**
-   * Optional. License type of the OS image.
+   * Optional. License type for premium images (RHEL, RHEL for SAP, SLES, SLES for SAP, Windows
+   * Server).
    * @param licenseType licenseType or {@code null} for none
    */
   public OperatingSystemPricingPreferencesOperatingSystemPricing setLicenseType(java.lang.String licenseType) {

@@ -37,7 +37,7 @@ public final class ServiceMeshMembershipSpec extends com.google.api.client.json.
   private java.lang.String controlPlane;
 
   /**
-   * Enables automatic Service Mesh management.
+   * Optional. Enables automatic Service Mesh management.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class ServiceMeshMembershipSpec extends com.google.api.client.json.
   }
 
   /**
-   * Enables automatic Service Mesh management.
+   * Optional. Enables automatic Service Mesh management.
    * @return value or {@code null} for none
    */
   public java.lang.String getManagement() {
@@ -69,7 +69,7 @@ public final class ServiceMeshMembershipSpec extends com.google.api.client.json.
   }
 
   /**
-   * Enables automatic Service Mesh management.
+   * Optional. Enables automatic Service Mesh management.
    * @param management management or {@code null} for none
    */
   public ServiceMeshMembershipSpec setManagement(java.lang.String management) {

@@ -37,6 +37,13 @@ public final class ParamValue extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> arrayVal;
 
   /**
+   * Optional. Value of the parameter if type is object.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> objectVal;
+
+  /**
    * Value of the parameter if type is string.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class ParamValue extends com.google.api.client.json.GenericJson {
    */
   public ParamValue setArrayVal(java.util.List<java.lang.String> arrayVal) {
     this.arrayVal = arrayVal;
+    return this;
+  }
+
+  /**
+   * Optional. Value of the parameter if type is object.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getObjectVal() {
+    return objectVal;
+  }
+
+  /**
+   * Optional. Value of the parameter if type is object.
+   * @param objectVal objectVal or {@code null} for none
+   */
+  public ParamValue setObjectVal(java.util.Map<String, java.lang.String> objectVal) {
+    this.objectVal = objectVal;
     return this;
   }
 

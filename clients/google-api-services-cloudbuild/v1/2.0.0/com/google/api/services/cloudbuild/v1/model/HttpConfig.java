@@ -30,16 +30,20 @@ package com.google.api.services.cloudbuild.v1.model;
 public final class HttpConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * SecretVersion resource of the HTTP proxy URL. The Service Account should have accessor
-   * permissions on this secret. The proxy URL should be in format protocol://@]proxyhost[:port].
+   * SecretVersion resource of the HTTP proxy URL. The Service Account used in the build (either the
+   * default Service Account or user-specified Service Account) should have
+   * `secretmanager.versions.access` permissions on this secret. The proxy URL should be in format
+   * `protocol://@]proxyhost[:port]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String proxySecretVersionName;
 
   /**
-   * SecretVersion resource of the HTTP proxy URL. The Service Account should have accessor
-   * permissions on this secret. The proxy URL should be in format protocol://@]proxyhost[:port].
+   * SecretVersion resource of the HTTP proxy URL. The Service Account used in the build (either the
+   * default Service Account or user-specified Service Account) should have
+   * `secretmanager.versions.access` permissions on this secret. The proxy URL should be in format
+   * `protocol://@]proxyhost[:port]`.
    * @return value or {@code null} for none
    */
   public java.lang.String getProxySecretVersionName() {
@@ -47,8 +51,10 @@ public final class HttpConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * SecretVersion resource of the HTTP proxy URL. The Service Account should have accessor
-   * permissions on this secret. The proxy URL should be in format protocol://@]proxyhost[:port].
+   * SecretVersion resource of the HTTP proxy URL. The Service Account used in the build (either the
+   * default Service Account or user-specified Service Account) should have
+   * `secretmanager.versions.access` permissions on this secret. The proxy URL should be in format
+   * `protocol://@]proxyhost[:port]`.
    * @param proxySecretVersionName proxySecretVersionName or {@code null} for none
    */
   public HttpConfig setProxySecretVersionName(java.lang.String proxySecretVersionName) {

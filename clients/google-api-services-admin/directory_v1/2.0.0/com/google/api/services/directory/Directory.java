@@ -17399,7 +17399,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * Creates a user. Mutate calls immediately following user creation might sometimes fail as the user
      * isn't fully created due to propagation delay in our backends. Check the error details for the
      * "User creation is not complete" message to see if this is the case. Retrying the calls after some
-     * time can help in this case.
+     * time can help in this case. If `resolveConflictAccount` is set to `true`, a `202` response code
+     * means that a conflicting unmanaged account exists and was invited to join the organization. A
+     * `409` response code means that a conflicting account exists so the user wasn't created based on
+     * the [handling unmanaged user accounts](https://support.google.com/a/answer/11112794) option
+     * selected.
      *
      * Create a request for the method "users.insert".
      *
@@ -17423,7 +17427,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Creates a user. Mutate calls immediately following user creation might sometimes fail as the
        * user isn't fully created due to propagation delay in our backends. Check the error details for
        * the "User creation is not complete" message to see if this is the case. Retrying the calls
-       * after some time can help in this case.
+       * after some time can help in this case. If `resolveConflictAccount` is set to `true`, a `202`
+       * response code means that a conflicting unmanaged account exists and was invited to join the
+       * organization. A `409` response code means that a conflicting account exists so the user wasn't
+       * created based on the [handling unmanaged user
+       * accounts](https://support.google.com/a/answer/11112794) option selected.
        *
        * Create a request for the method "users.insert".
        *

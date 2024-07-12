@@ -52,7 +52,7 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   private java.lang.String network;
 
   /**
-   * The subnetwork to connect the NIC to.
+   * Optional. The subnetwork to connect the NIC to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +112,7 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The subnetwork to connect the NIC to.
+   * Optional. The subnetwork to connect the NIC to.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetwork() {
@@ -120,7 +120,7 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The subnetwork to connect the NIC to.
+   * Optional. The subnetwork to connect the NIC to.
    * @param subnetwork subnetwork or {@code null} for none
    */
   public NetworkInterface setSubnetwork(java.lang.String subnetwork) {

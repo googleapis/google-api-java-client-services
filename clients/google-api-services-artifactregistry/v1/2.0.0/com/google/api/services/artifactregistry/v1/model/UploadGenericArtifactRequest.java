@@ -42,9 +42,8 @@ public final class UploadGenericArtifactRequest extends com.google.api.client.js
 
   /**
    * The ID of the package of the generic artifact. If the package does not exist, a new package
-   * will be created. The `package_id` must start with a letter, end with a letter or number, only
-   * contain letters, numbers, hyphens and periods i.e. [a-z0-9-.], and cannot exceed 256
-   * characters.
+   * will be created. The `package_id` should start and end with a letter or number, only contain
+   * letters, numbers, hyphens, underscores, and periods, and not exceed 256 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,9 +80,8 @@ public final class UploadGenericArtifactRequest extends com.google.api.client.js
 
   /**
    * The ID of the package of the generic artifact. If the package does not exist, a new package
-   * will be created. The `package_id` must start with a letter, end with a letter or number, only
-   * contain letters, numbers, hyphens and periods i.e. [a-z0-9-.], and cannot exceed 256
-   * characters.
+   * will be created. The `package_id` should start and end with a letter or number, only contain
+   * letters, numbers, hyphens, underscores, and periods, and not exceed 256 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getPackageId() {
@@ -92,9 +90,8 @@ public final class UploadGenericArtifactRequest extends com.google.api.client.js
 
   /**
    * The ID of the package of the generic artifact. If the package does not exist, a new package
-   * will be created. The `package_id` must start with a letter, end with a letter or number, only
-   * contain letters, numbers, hyphens and periods i.e. [a-z0-9-.], and cannot exceed 256
-   * characters.
+   * will be created. The `package_id` should start and end with a letter or number, only contain
+   * letters, numbers, hyphens, underscores, and periods, and not exceed 256 characters.
    * @param packageId packageId or {@code null} for none
    */
   public UploadGenericArtifactRequest setPackageId(java.lang.String packageId) {

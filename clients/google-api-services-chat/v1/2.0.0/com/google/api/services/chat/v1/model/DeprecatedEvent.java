@@ -17,13 +17,12 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A Google Chat app interaction event. To learn about interaction events, see [Receive and respond
- * to interactions with your Google Chat
- * app](https://developers.google.com/workspace/chat/api/guides/message-formats). To learn about
- * event types and for example event payloads, see [Types of Google Chat app interaction
- * events](https://developers.google.com/workspace/chat/events). In addition to receiving events
- * from user interactions, Chat apps can receive events about changes to spaces, such as when a new
- * member is added to a space. To learn about space events, see [Work with events from Google
+ * A Google Chat app interaction event that represents and contains data about a user's interaction
+ * with a Chat app. To configure your Chat app to receive interaction events, see [Receive and
+ * respond to user interactions](https://developers.google.com/workspace/chat/receive-respond-
+ * interactions). In addition to receiving events from user interactions, Chat apps can receive
+ * events about changes to spaces, such as when a new member is added to a space. To learn about
+ * space events, see [Work with events from Google
  * Chat](https://developers.google.com/workspace/chat/events-overview).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -46,10 +45,9 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   private FormAction action;
 
   /**
-   * Represents informatmessage_visibilityion about the user's client, such as locale, host app, and
-   * platform. For Chat apps, `CommonEventObject` includes information submitted by users
-   * interacting with [dialogs](https://developers.google.com/workspace/chat/dialogs), like data
-   * entered on a card.
+   * Represents information about the user's client, such as locale, host app, and platform. For
+   * Chat apps, `CommonEventObject` includes information submitted by users interacting with
+   * [dialogs](https://developers.google.com/workspace/chat/dialogs), like data entered on a card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +94,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   private Message message;
 
   /**
-   * The space in which the interaction event occurred.
+   * The space in which the user interacted with the Chat app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,15 +123,15 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   private java.lang.String token;
 
   /**
-   * The type of interaction event. For details, see [Types of Google Chat app interaction
-   * events](https://developers.google.com/workspace/chat/events).
+   * The [type](/workspace/chat/api/reference/rest/v1/EventType) of user interaction with the Chat
+   * app, such as `MESSAGE` or `ADDED_TO_SPACE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The user that triggered the interaction event.
+   * The user that interacted with the Chat app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,10 +159,9 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Represents informatmessage_visibilityion about the user's client, such as locale, host app, and
-   * platform. For Chat apps, `CommonEventObject` includes information submitted by users
-   * interacting with [dialogs](https://developers.google.com/workspace/chat/dialogs), like data
-   * entered on a card.
+   * Represents information about the user's client, such as locale, host app, and platform. For
+   * Chat apps, `CommonEventObject` includes information submitted by users interacting with
+   * [dialogs](https://developers.google.com/workspace/chat/dialogs), like data entered on a card.
    * @return value or {@code null} for none
    */
   public CommonEventObject getCommon() {
@@ -172,10 +169,9 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Represents informatmessage_visibilityion about the user's client, such as locale, host app, and
-   * platform. For Chat apps, `CommonEventObject` includes information submitted by users
-   * interacting with [dialogs](https://developers.google.com/workspace/chat/dialogs), like data
-   * entered on a card.
+   * Represents information about the user's client, such as locale, host app, and platform. For
+   * Chat apps, `CommonEventObject` includes information submitted by users interacting with
+   * [dialogs](https://developers.google.com/workspace/chat/dialogs), like data entered on a card.
    * @param common common or {@code null} for none
    */
   public DeprecatedEvent setCommon(CommonEventObject common) {
@@ -279,7 +275,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The space in which the interaction event occurred.
+   * The space in which the user interacted with the Chat app.
    * @return value or {@code null} for none
    */
   public Space getSpace() {
@@ -287,7 +283,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The space in which the interaction event occurred.
+   * The space in which the user interacted with the Chat app.
    * @param space space or {@code null} for none
    */
   public DeprecatedEvent setSpace(Space space) {
@@ -346,8 +342,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The type of interaction event. For details, see [Types of Google Chat app interaction
-   * events](https://developers.google.com/workspace/chat/events).
+   * The [type](/workspace/chat/api/reference/rest/v1/EventType) of user interaction with the Chat
+   * app, such as `MESSAGE` or `ADDED_TO_SPACE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -355,8 +351,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The type of interaction event. For details, see [Types of Google Chat app interaction
-   * events](https://developers.google.com/workspace/chat/events).
+   * The [type](/workspace/chat/api/reference/rest/v1/EventType) of user interaction with the Chat
+   * app, such as `MESSAGE` or `ADDED_TO_SPACE`.
    * @param type type or {@code null} for none
    */
   public DeprecatedEvent setType(java.lang.String type) {
@@ -365,7 +361,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The user that triggered the interaction event.
+   * The user that interacted with the Chat app.
    * @return value or {@code null} for none
    */
   public User getUser() {
@@ -373,7 +369,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The user that triggered the interaction event.
+   * The user that interacted with the Chat app.
    * @param user user or {@code null} for none
    */
   public DeprecatedEvent setUser(User user) {

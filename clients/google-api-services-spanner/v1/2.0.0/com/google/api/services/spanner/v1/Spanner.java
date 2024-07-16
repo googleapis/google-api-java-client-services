@@ -174,19 +174,20 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
     public class InstanceConfigOperations {
 
       /**
-       * Lists the user-managed instance config long-running operations in the given project. An instance
-       * config operation has a name of the form `projects//instanceConfigs//operations/`. The long-
-       * running operation metadata field type `metadata.type_url` describes the type of the metadata.
-       * Operations returned include those that have completed/failed/canceled within the last 7 days, and
-       * pending operations. Operations returned are ordered by `operation.metadata.value.start_time` in
-       * descending order starting from the most recently started operation.
+       * Lists the user-managed instance configuration long-running operations in the given project. An
+       * instance configuration operation has a name of the form `projects//instanceConfigs//operations/`.
+       * The long-running operation metadata field type `metadata.type_url` describes the type of the
+       * metadata. Operations returned include those that have completed/failed/canceled within the last 7
+       * days, and pending operations. Operations returned are ordered by
+       * `operation.metadata.value.start_time` in descending order starting from the most recently started
+       * operation.
        *
        * Create a request for the method "instanceConfigOperations.list".
        *
        * This request holds the parameters needed by the spanner server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The project of the instance config operations. Values are of the form `projects/`.
+       * @param parent Required. The project of the instance configuration operations. Values are of the form `projects/`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -203,13 +204,13 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists the user-managed instance config long-running operations in the given project. An
-         * instance config operation has a name of the form `projects//instanceConfigs//operations/`. The
-         * long-running operation metadata field type `metadata.type_url` describes the type of the
-         * metadata. Operations returned include those that have completed/failed/canceled within the last
-         * 7 days, and pending operations. Operations returned are ordered by
-         * `operation.metadata.value.start_time` in descending order starting from the most recently
-         * started operation.
+         * Lists the user-managed instance configuration long-running operations in the given project. An
+         * instance configuration operation has a name of the form
+         * `projects//instanceConfigs//operations/`. The long-running operation metadata field type
+         * `metadata.type_url` describes the type of the metadata. Operations returned include those that
+         * have completed/failed/canceled within the last 7 days, and pending operations. Operations
+         * returned are ordered by `operation.metadata.value.start_time` in descending order starting from
+         * the most recently started operation.
          *
          * Create a request for the method "instanceConfigOperations.list".
          *
@@ -218,7 +219,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The project of the instance config operations. Values are of the form `projects/`.
+         * @param parent Required. The project of the instance configuration operations. Values are of the form `projects/`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -297,20 +298,20 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Required. The project of the instance config operations. Values are of the form
+         * Required. The project of the instance configuration operations. Values are of the form
          * `projects/`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The project of the instance config operations. Values are of the form `projects/`.
+        /** Required. The project of the instance configuration operations. Values are of the form `projects/`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The project of the instance config operations. Values are of the form
+         * Required. The project of the instance configuration operations. Values are of the form
          * `projects/`.
          */
         public List setParent(java.lang.String parent) {
@@ -343,7 +344,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * `type.googleapis.com/google.spanner.admin.instance.v1.CreateInstanceConfigMetadata) AND`
          * \ `(metadata.instance_config.name:custom-config) AND` \ `(metadata.progress.start_time <
          * \"2021-03-28T14:50:00Z\") AND` \ `(error:*)` - Return operations where: * The operation's
-         * metadata type is CreateInstanceConfigMetadata. * The instance config name contains
+         * metadata type is CreateInstanceConfigMetadata. * The instance configuration name contains
          * "custom-config". * The operation started before 2021-03-28T14:50:00Z. * The operation
          * resulted in an error.
          */
@@ -367,8 +368,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
        `type.googleapis.com/google.spanner.admin.instance.v1.CreateInstanceConfigMetadata) AND` \
        `(metadata.instance_config.name:custom-config) AND` \ `(metadata.progress.start_time <
        \"2021-03-28T14:50:00Z\") AND` \ `(error:*)` - Return operations where: * The operation's metadata
-       type is CreateInstanceConfigMetadata. * The instance config name contains "custom-config". * The
-       operation started before 2021-03-28T14:50:00Z. * The operation resulted in an error.
+       type is CreateInstanceConfigMetadata. * The instance configuration name contains "custom-config". *
+       The operation started before 2021-03-28T14:50:00Z. * The operation resulted in an error.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -394,7 +395,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * `type.googleapis.com/google.spanner.admin.instance.v1.CreateInstanceConfigMetadata) AND`
          * \ `(metadata.instance_config.name:custom-config) AND` \ `(metadata.progress.start_time <
          * \"2021-03-28T14:50:00Z\") AND` \ `(error:*)` - Return operations where: * The operation's
-         * metadata type is CreateInstanceConfigMetadata. * The instance config name contains
+         * metadata type is CreateInstanceConfigMetadata. * The instance configuration name contains
          * "custom-config". * The operation started before 2021-03-28T14:50:00Z. * The operation
          * resulted in an error.
          */
@@ -477,17 +478,17 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
     public class InstanceConfigs {
 
       /**
-       * Creates an instance config and begins preparing it to be used. The returned long-running
+       * Creates an instance configuration and begins preparing it to be used. The returned long-running
        * operation can be used to track the progress of preparing the new instance config. The instance
-       * config name is assigned by the caller. If the named instance config already exists,
+       * configuration name is assigned by the caller. If the named instance configuration already exists,
        * `CreateInstanceConfig` returns `ALREADY_EXISTS`. Immediately after the request returns: * The
-       * instance config is readable via the API, with all requested attributes. The instance config's
-       * reconciling field is set to true. Its state is `CREATING`. While the operation is pending: *
-       * Cancelling the operation renders the instance config immediately unreadable via the API. * Except
-       * for deleting the creating resource, all other attempts to modify the instance config are
-       * rejected. Upon completion of the returned operation: * Instances can be created using the
-       * instance configuration. * The instance config's reconciling field becomes false. Its state
-       * becomes `READY`. The returned long-running operation will have a name of the format
+       * instance configuration is readable via the API, with all requested attributes. The instance
+       * config's reconciling field is set to true. Its state is `CREATING`. While the operation is
+       * pending: * Cancelling the operation renders the instance configuration immediately unreadable via
+       * the API. * Except for deleting the creating resource, all other attempts to modify the instance
+       * configuration are rejected. Upon completion of the returned operation: * Instances can be created
+       * using the instance configuration. * The instance config's reconciling field becomes false. Its
+       * state becomes `READY`. The returned long-running operation will have a name of the format
        * `/operations/` and can be used to track creation of the instance config. The metadata field type
        * is CreateInstanceConfigMetadata. The response field type is InstanceConfig, if successful.
        * Authorization requires `spanner.instanceConfigs.create` permission on the resource parent.
@@ -516,20 +517,21 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Creates an instance config and begins preparing it to be used. The returned long-running
+         * Creates an instance configuration and begins preparing it to be used. The returned long-running
          * operation can be used to track the progress of preparing the new instance config. The instance
-         * config name is assigned by the caller. If the named instance config already exists,
-         * `CreateInstanceConfig` returns `ALREADY_EXISTS`. Immediately after the request returns: * The
-         * instance config is readable via the API, with all requested attributes. The instance config's
-         * reconciling field is set to true. Its state is `CREATING`. While the operation is pending: *
-         * Cancelling the operation renders the instance config immediately unreadable via the API. *
-         * Except for deleting the creating resource, all other attempts to modify the instance config are
-         * rejected. Upon completion of the returned operation: * Instances can be created using the
-         * instance configuration. * The instance config's reconciling field becomes false. Its state
-         * becomes `READY`. The returned long-running operation will have a name of the format
-         * `/operations/` and can be used to track creation of the instance config. The metadata field
-         * type is CreateInstanceConfigMetadata. The response field type is InstanceConfig, if successful.
-         * Authorization requires `spanner.instanceConfigs.create` permission on the resource parent.
+         * configuration name is assigned by the caller. If the named instance configuration already
+         * exists, `CreateInstanceConfig` returns `ALREADY_EXISTS`. Immediately after the request returns:
+         * * The instance configuration is readable via the API, with all requested attributes. The
+         * instance config's reconciling field is set to true. Its state is `CREATING`. While the
+         * operation is pending: * Cancelling the operation renders the instance configuration immediately
+         * unreadable via the API. * Except for deleting the creating resource, all other attempts to
+         * modify the instance configuration are rejected. Upon completion of the returned operation: *
+         * Instances can be created using the instance configuration. * The instance config's reconciling
+         * field becomes false. Its state becomes `READY`. The returned long-running operation will have a
+         * name of the format `/operations/` and can be used to track creation of the instance config. The
+         * metadata field type is CreateInstanceConfigMetadata. The response field type is InstanceConfig,
+         * if successful. Authorization requires `spanner.instanceConfigs.create` permission on the
+         * resource parent.
          *
          * Create a request for the method "instanceConfigs.create".
          *
@@ -643,7 +645,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
       }
       /**
        * Deletes the instance config. Deletion is only allowed when no instances are using the
-       * configuration. If any instances are using the config, returns `FAILED_PRECONDITION`. Only user
+       * configuration. If any instances are using the config, returns `FAILED_PRECONDITION`. Only user-
        * managed configurations can be deleted. Authorization requires `spanner.instanceConfigs.delete`
        * permission on the resource name.
        *
@@ -671,7 +673,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Deletes the instance config. Deletion is only allowed when no instances are using the
-         * configuration. If any instances are using the config, returns `FAILED_PRECONDITION`. Only user
+         * configuration. If any instances are using the config, returns `FAILED_PRECONDITION`. Only user-
          * managed configurations can be deleted. Authorization requires `spanner.instanceConfigs.delete`
          * permission on the resource name.
          *
@@ -781,18 +783,19 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Used for optimistic concurrency control as a way to help prevent simultaneous deletes of
-         * an instance config from overwriting each other. If not empty, the API only deletes the
-         * instance config when the etag provided matches the current status of the requested
-         * instance config. Otherwise, deletes the instance config without checking the current
-         * status of the requested instance config.
+         * an instance configuration from overwriting each other. If not empty, the API only deletes
+         * the instance configuration when the etag provided matches the current status of the
+         * requested instance config. Otherwise, deletes the instance configuration without checking
+         * the current status of the requested instance config.
          */
         @com.google.api.client.util.Key
         private java.lang.String etag;
 
         /** Used for optimistic concurrency control as a way to help prevent simultaneous deletes of an
-       instance config from overwriting each other. If not empty, the API only deletes the instance config
-       when the etag provided matches the current status of the requested instance config. Otherwise,
-       deletes the instance config without checking the current status of the requested instance config.
+       instance configuration from overwriting each other. If not empty, the API only deletes the instance
+       configuration when the etag provided matches the current status of the requested instance config.
+       Otherwise, deletes the instance configuration without checking the current status of the requested
+       instance config.
          */
         public java.lang.String getEtag() {
           return etag;
@@ -800,10 +803,10 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Used for optimistic concurrency control as a way to help prevent simultaneous deletes of
-         * an instance config from overwriting each other. If not empty, the API only deletes the
-         * instance config when the etag provided matches the current status of the requested
-         * instance config. Otherwise, deletes the instance config without checking the current
-         * status of the requested instance config.
+         * an instance configuration from overwriting each other. If not empty, the API only deletes
+         * the instance configuration when the etag provided matches the current status of the
+         * requested instance config. Otherwise, deletes the instance configuration without checking
+         * the current status of the requested instance config.
          */
         public Delete setEtag(java.lang.String etag) {
           this.etag = etag;
@@ -985,8 +988,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Lists the supported instance configurations for a given project. Returns both Google managed
-       * configs and user managed configs.
+       * Lists the supported instance configurations for a given project. Returns both Google-managed
+       * configurations and user-managed configurations.
        *
        * Create a request for the method "instanceConfigs.list".
        *
@@ -1011,8 +1014,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists the supported instance configurations for a given project. Returns both Google managed
-         * configs and user managed configs.
+         * Lists the supported instance configurations for a given project. Returns both Google-managed
+         * configurations and user-managed configurations.
          *
          * Create a request for the method "instanceConfigs.list".
          *
@@ -1181,19 +1184,20 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
       }
       /**
        * Updates an instance config. The returned long-running operation can be used to track the progress
-       * of updating the instance. If the named instance config does not exist, returns `NOT_FOUND`. Only
-       * user managed configurations can be updated. Immediately after the request returns: * The instance
-       * config's reconciling field is set to true. While the operation is pending: * Cancelling the
-       * operation sets its metadata's cancel_time. The operation is guaranteed to succeed at undoing all
-       * changes, after which point it terminates with a `CANCELLED` status. * All other attempts to
-       * modify the instance config are rejected. * Reading the instance config via the API continues to
-       * give the pre-request values. Upon completion of the returned operation: * Creating instances
-       * using the instance configuration uses the new values. * The instance config's new values are
-       * readable via the API. * The instance config's reconciling field becomes false. The returned long-
-       * running operation will have a name of the format `/operations/` and can be used to track the
-       * instance config modification. The metadata field type is UpdateInstanceConfigMetadata. The
-       * response field type is InstanceConfig, if successful. Authorization requires
-       * `spanner.instanceConfigs.update` permission on the resource name.
+       * of updating the instance. If the named instance configuration does not exist, returns
+       * `NOT_FOUND`. Only user-managed configurations can be updated. Immediately after the request
+       * returns: * The instance config's reconciling field is set to true. While the operation is
+       * pending: * Cancelling the operation sets its metadata's cancel_time. The operation is guaranteed
+       * to succeed at undoing all changes, after which point it terminates with a `CANCELLED` status. *
+       * All other attempts to modify the instance configuration are rejected. * Reading the instance
+       * configuration via the API continues to give the pre-request values. Upon completion of the
+       * returned operation: * Creating instances using the instance configuration uses the new values. *
+       * The instance config's new values are readable via the API. * The instance config's reconciling
+       * field becomes false. The returned long-running operation will have a name of the format
+       * `/operations/` and can be used to track the instance configuration modification. The metadata
+       * field type is UpdateInstanceConfigMetadata. The response field type is InstanceConfig, if
+       * successful. Authorization requires `spanner.instanceConfigs.update` permission on the resource
+       * name.
        *
        * Create a request for the method "instanceConfigs.patch".
        *
@@ -1201,7 +1205,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param name A unique identifier for the instance configuration. Values are of the form
-       *        `projects//instanceConfigs/a-z*`. User instance config must start with `custom-`.
+       *        `projects//instanceConfigs/a-z*`. User instance configuration must start with `custom-`.
        * @param content the {@link com.google.api.services.spanner.v1.model.UpdateInstanceConfigRequest}
        * @return the request
        */
@@ -1220,20 +1224,20 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Updates an instance config. The returned long-running operation can be used to track the
-         * progress of updating the instance. If the named instance config does not exist, returns
-         * `NOT_FOUND`. Only user managed configurations can be updated. Immediately after the request
+         * progress of updating the instance. If the named instance configuration does not exist, returns
+         * `NOT_FOUND`. Only user-managed configurations can be updated. Immediately after the request
          * returns: * The instance config's reconciling field is set to true. While the operation is
          * pending: * Cancelling the operation sets its metadata's cancel_time. The operation is
          * guaranteed to succeed at undoing all changes, after which point it terminates with a
-         * `CANCELLED` status. * All other attempts to modify the instance config are rejected. * Reading
-         * the instance config via the API continues to give the pre-request values. Upon completion of
-         * the returned operation: * Creating instances using the instance configuration uses the new
-         * values. * The instance config's new values are readable via the API. * The instance config's
-         * reconciling field becomes false. The returned long-running operation will have a name of the
-         * format `/operations/` and can be used to track the instance config modification. The metadata
-         * field type is UpdateInstanceConfigMetadata. The response field type is InstanceConfig, if
-         * successful. Authorization requires `spanner.instanceConfigs.update` permission on the resource
-         * name.
+         * `CANCELLED` status. * All other attempts to modify the instance configuration are rejected. *
+         * Reading the instance configuration via the API continues to give the pre-request values. Upon
+         * completion of the returned operation: * Creating instances using the instance configuration
+         * uses the new values. * The instance config's new values are readable via the API. * The
+         * instance config's reconciling field becomes false. The returned long-running operation will
+         * have a name of the format `/operations/` and can be used to track the instance configuration
+         * modification. The metadata field type is UpdateInstanceConfigMetadata. The response field type
+         * is InstanceConfig, if successful. Authorization requires `spanner.instanceConfigs.update`
+         * permission on the resource name.
          *
          * Create a request for the method "instanceConfigs.patch".
          *
@@ -1243,7 +1247,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name A unique identifier for the instance configuration. Values are of the form
-       *        `projects//instanceConfigs/a-z*`. User instance config must start with `custom-`.
+       *        `projects//instanceConfigs/a-z*`. User instance configuration must start with `custom-`.
          * @param content the {@link com.google.api.services.spanner.v1.model.UpdateInstanceConfigRequest}
          * @since 1.13
          */
@@ -1314,13 +1318,13 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * A unique identifier for the instance configuration. Values are of the form
-         * `projects//instanceConfigs/a-z*`. User instance config must start with `custom-`.
+         * `projects//instanceConfigs/a-z*`. User instance configuration must start with `custom-`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** A unique identifier for the instance configuration. Values are of the form
-       `projects//instanceConfigs/a-z*`. User instance config must start with `custom-`.
+       `projects//instanceConfigs/a-z*`. User instance configuration must start with `custom-`.
          */
         public java.lang.String getName() {
           return name;
@@ -1328,7 +1332,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * A unique identifier for the instance configuration. Values are of the form
-         * `projects//instanceConfigs/a-z*`. User instance config must start with `custom-`.
+         * `projects//instanceConfigs/a-z*`. User instance configuration must start with `custom-`.
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -3520,17 +3524,17 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
        * operations are rejected: * DatabaseAdmin.CreateDatabase, * DatabaseAdmin.UpdateDatabaseDdl
        * (Disabled if default_leader is specified in the request.) * DatabaseAdmin.RestoreDatabase *
        * DatabaseAdmin.CreateBackup * DatabaseAdmin.CopyBackup * Both the source and target instance
-       * configs are subject to hourly compute and storage charges. * The instance may experience higher
-       * read-write latencies and a higher transaction abort rate. However, moving an instance does not
-       * cause any downtime. The returned long-running operation will have a name of the format
+       * configurations are subject to hourly compute and storage charges. * The instance may experience
+       * higher read-write latencies and a higher transaction abort rate. However, moving an instance does
+       * not cause any downtime. The returned long-running operation will have a name of the format
        * `/operations/` and can be used to track the move instance operation. The metadata field type is
        * MoveInstanceMetadata. The response field type is Instance, if successful. Cancelling the
        * operation sets its metadata's cancel_time. Cancellation is not immediate since it involves moving
-       * any data previously moved to target instance config back to the original instance config. The
-       * same operation can be used to track the progress of the cancellation. Upon successful completion
-       * of the cancellation, the operation terminates with CANCELLED status. Upon completion(if not
-       * cancelled) of the returned operation: * Instance would be successfully moved to the target
-       * instance config. * You are billed for compute and storage in target instance config.
+       * any data previously moved to target instance configuration back to the original instance config.
+       * The same operation can be used to track the progress of the cancellation. Upon successful
+       * completion of the cancellation, the operation terminates with `CANCELLED` status. Upon
+       * completion(if not cancelled) of the returned operation: * Instance would be successfully moved to
+       * the target instance config. * You are billed for compute and storage in target instance config.
        * Authorization requires `spanner.instances.update` permission on the resource instance. For more
        * details, please see [documentation](https://cloud.google.com/spanner/docs/move-instance).
        *
@@ -3566,19 +3570,19 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * backup admin operations are rejected: * DatabaseAdmin.CreateDatabase, *
          * DatabaseAdmin.UpdateDatabaseDdl (Disabled if default_leader is specified in the request.) *
          * DatabaseAdmin.RestoreDatabase * DatabaseAdmin.CreateBackup * DatabaseAdmin.CopyBackup * Both
-         * the source and target instance configs are subject to hourly compute and storage charges. * The
-         * instance may experience higher read-write latencies and a higher transaction abort rate.
-         * However, moving an instance does not cause any downtime. The returned long-running operation
-         * will have a name of the format `/operations/` and can be used to track the move instance
-         * operation. The metadata field type is MoveInstanceMetadata. The response field type is
+         * the source and target instance configurations are subject to hourly compute and storage
+         * charges. * The instance may experience higher read-write latencies and a higher transaction
+         * abort rate. However, moving an instance does not cause any downtime. The returned long-running
+         * operation will have a name of the format `/operations/` and can be used to track the move
+         * instance operation. The metadata field type is MoveInstanceMetadata. The response field type is
          * Instance, if successful. Cancelling the operation sets its metadata's cancel_time. Cancellation
-         * is not immediate since it involves moving any data previously moved to target instance config
-         * back to the original instance config. The same operation can be used to track the progress of
-         * the cancellation. Upon successful completion of the cancellation, the operation terminates with
-         * CANCELLED status. Upon completion(if not cancelled) of the returned operation: * Instance would
-         * be successfully moved to the target instance config. * You are billed for compute and storage
-         * in target instance config. Authorization requires `spanner.instances.update` permission on the
-         * resource instance. For more details, please see
+         * is not immediate since it involves moving any data previously moved to target instance
+         * configuration back to the original instance config. The same operation can be used to track the
+         * progress of the cancellation. Upon successful completion of the cancellation, the operation
+         * terminates with `CANCELLED` status. Upon completion(if not cancelled) of the returned
+         * operation: * Instance would be successfully moved to the target instance config. * You are
+         * billed for compute and storage in target instance config. Authorization requires
+         * `spanner.instances.update` permission on the resource instance. For more details, please see
          * [documentation](https://cloud.google.com/spanner/docs/move-instance).
          *
          * Create a request for the method "instances.move".
@@ -7220,10 +7224,10 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Creates a new Cloud Spanner database and starts to prepare it for serving. The returned long-
-         * running operation will have a name of the format `/operations/` and can be used to track
-         * preparation of the database. The metadata field type is CreateDatabaseMetadata. The response
-         * field type is Database, if successful.
+         * Creates a new Spanner database and starts to prepare it for serving. The returned long-running
+         * operation will have a name of the format `/operations/` and can be used to track preparation of
+         * the database. The metadata field type is CreateDatabaseMetadata. The response field type is
+         * Database, if successful.
          *
          * Create a request for the method "databases.create".
          *
@@ -7249,10 +7253,10 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+$");
 
           /**
-           * Creates a new Cloud Spanner database and starts to prepare it for serving. The returned long-
-           * running operation will have a name of the format `/operations/` and can be used to track
-           * preparation of the database. The metadata field type is CreateDatabaseMetadata. The response
-           * field type is Database, if successful.
+           * Creates a new Spanner database and starts to prepare it for serving. The returned long-running
+           * operation will have a name of the format `/operations/` and can be used to track preparation of
+           * the database. The metadata field type is CreateDatabaseMetadata. The response field type is
+           * Database, if successful.
            *
            * Create a request for the method "databases.create".
            *
@@ -9145,6 +9149,483 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
         }
 
+        /**
+         * An accessor for creating requests from the BackupSchedules collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Spanner spanner = new Spanner(...);}
+         *   {@code Spanner.BackupSchedules.List request = spanner.backupSchedules().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public BackupSchedules backupSchedules() {
+          return new BackupSchedules();
+        }
+
+        /**
+         * The "backupSchedules" collection of methods.
+         */
+        public class BackupSchedules {
+
+          /**
+           * Gets the access control policy for a database or backup resource. Returns an empty policy if a
+           * database or backup exists but does not have a policy set. Authorization requires
+           * `spanner.databases.getIamPolicy` permission on resource. For backups, authorization requires
+           * `spanner.backups.getIamPolicy` permission on resource.
+           *
+           * Create a request for the method "backupSchedules.getIamPolicy".
+           *
+           * This request holds the parameters needed by the spanner server.  After setting any optional
+           * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
+           *
+           * @param resource REQUIRED: The Cloud Spanner resource for which the policy is being retrieved. The format is
+           *        `projects//instances/` for instance resources and `projects//instances//databases/` for
+           *        database resources.
+           * @param content the {@link com.google.api.services.spanner.v1.model.GetIamPolicyRequest}
+           * @return the request
+           */
+          public GetIamPolicy getIamPolicy(java.lang.String resource, com.google.api.services.spanner.v1.model.GetIamPolicyRequest content) throws java.io.IOException {
+            GetIamPolicy result = new GetIamPolicy(resource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class GetIamPolicy extends SpannerRequest<com.google.api.services.spanner.v1.model.Policy> {
+
+            private static final String REST_PATH = "v1/{+resource}:getIamPolicy";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+
+            /**
+             * Gets the access control policy for a database or backup resource. Returns an empty policy if a
+             * database or backup exists but does not have a policy set. Authorization requires
+             * `spanner.databases.getIamPolicy` permission on resource. For backups, authorization requires
+             * `spanner.backups.getIamPolicy` permission on resource.
+             *
+             * Create a request for the method "backupSchedules.getIamPolicy".
+             *
+             * This request holds the parameters needed by the the spanner server.  After setting any optional
+             * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The Cloud Spanner resource for which the policy is being retrieved. The format is
+           *        `projects//instances/` for instance resources and `projects//instances//databases/` for
+           *        database resources.
+             * @param content the {@link com.google.api.services.spanner.v1.model.GetIamPolicyRequest}
+             * @since 1.13
+             */
+            protected GetIamPolicy(java.lang.String resource, com.google.api.services.spanner.v1.model.GetIamPolicyRequest content) {
+              super(Spanner.this, "POST", REST_PATH, content, com.google.api.services.spanner.v1.model.Policy.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+              }
+            }
+
+            @Override
+            public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+              return (GetIamPolicy) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+              return (GetIamPolicy) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetIamPolicy setAlt(java.lang.String alt) {
+              return (GetIamPolicy) super.setAlt(alt);
+            }
+
+            @Override
+            public GetIamPolicy setCallback(java.lang.String callback) {
+              return (GetIamPolicy) super.setCallback(callback);
+            }
+
+            @Override
+            public GetIamPolicy setFields(java.lang.String fields) {
+              return (GetIamPolicy) super.setFields(fields);
+            }
+
+            @Override
+            public GetIamPolicy setKey(java.lang.String key) {
+              return (GetIamPolicy) super.setKey(key);
+            }
+
+            @Override
+            public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+              return (GetIamPolicy) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+              return (GetIamPolicy) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetIamPolicy setUploadType(java.lang.String uploadType) {
+              return (GetIamPolicy) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The Cloud Spanner resource for which the policy is being retrieved. The
+             * format is `projects//instances/` for instance resources and
+             * `projects//instances//databases/` for database resources.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The Cloud Spanner resource for which the policy is being retrieved. The format is
+           `projects//instances/` for instance resources and `projects//instances//databases/` for database
+           resources.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The Cloud Spanner resource for which the policy is being retrieved. The
+             * format is `projects//instances/` for instance resources and
+             * `projects//instances//databases/` for database resources.
+             */
+            public GetIamPolicy setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            @Override
+            public GetIamPolicy set(String parameterName, Object value) {
+              return (GetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Sets the access control policy on a database or backup resource. Replaces any existing policy.
+           * Authorization requires `spanner.databases.setIamPolicy` permission on resource. For backups,
+           * authorization requires `spanner.backups.setIamPolicy` permission on resource.
+           *
+           * Create a request for the method "backupSchedules.setIamPolicy".
+           *
+           * This request holds the parameters needed by the spanner server.  After setting any optional
+           * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+           *
+           * @param resource REQUIRED: The Cloud Spanner resource for which the policy is being set. The format is
+           *        `projects//instances/` for instance resources and `projects//instances//databases/` for
+           *        databases resources.
+           * @param content the {@link com.google.api.services.spanner.v1.model.SetIamPolicyRequest}
+           * @return the request
+           */
+          public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.spanner.v1.model.SetIamPolicyRequest content) throws java.io.IOException {
+            SetIamPolicy result = new SetIamPolicy(resource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class SetIamPolicy extends SpannerRequest<com.google.api.services.spanner.v1.model.Policy> {
+
+            private static final String REST_PATH = "v1/{+resource}:setIamPolicy";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+
+            /**
+             * Sets the access control policy on a database or backup resource. Replaces any existing policy.
+             * Authorization requires `spanner.databases.setIamPolicy` permission on resource. For backups,
+             * authorization requires `spanner.backups.setIamPolicy` permission on resource.
+             *
+             * Create a request for the method "backupSchedules.setIamPolicy".
+             *
+             * This request holds the parameters needed by the the spanner server.  After setting any optional
+             * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The Cloud Spanner resource for which the policy is being set. The format is
+           *        `projects//instances/` for instance resources and `projects//instances//databases/` for
+           *        databases resources.
+             * @param content the {@link com.google.api.services.spanner.v1.model.SetIamPolicyRequest}
+             * @since 1.13
+             */
+            protected SetIamPolicy(java.lang.String resource, com.google.api.services.spanner.v1.model.SetIamPolicyRequest content) {
+              super(Spanner.this, "POST", REST_PATH, content, com.google.api.services.spanner.v1.model.Policy.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+              }
+            }
+
+            @Override
+            public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+              return (SetIamPolicy) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+              return (SetIamPolicy) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SetIamPolicy setAlt(java.lang.String alt) {
+              return (SetIamPolicy) super.setAlt(alt);
+            }
+
+            @Override
+            public SetIamPolicy setCallback(java.lang.String callback) {
+              return (SetIamPolicy) super.setCallback(callback);
+            }
+
+            @Override
+            public SetIamPolicy setFields(java.lang.String fields) {
+              return (SetIamPolicy) super.setFields(fields);
+            }
+
+            @Override
+            public SetIamPolicy setKey(java.lang.String key) {
+              return (SetIamPolicy) super.setKey(key);
+            }
+
+            @Override
+            public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+              return (SetIamPolicy) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+              return (SetIamPolicy) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SetIamPolicy setUploadType(java.lang.String uploadType) {
+              return (SetIamPolicy) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The Cloud Spanner resource for which the policy is being set. The format is
+             * `projects//instances/` for instance resources and `projects//instances//databases/`
+             * for databases resources.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The Cloud Spanner resource for which the policy is being set. The format is
+           `projects//instances/` for instance resources and `projects//instances//databases/` for databases
+           resources.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The Cloud Spanner resource for which the policy is being set. The format is
+             * `projects//instances/` for instance resources and `projects//instances//databases/`
+             * for databases resources.
+             */
+            public SetIamPolicy setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            @Override
+            public SetIamPolicy set(String parameterName, Object value) {
+              return (SetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Returns permissions that the caller has on the specified database or backup resource. Attempting
+           * this RPC on a non-existent Cloud Spanner database will result in a NOT_FOUND error if the user
+           * has `spanner.databases.list` permission on the containing Cloud Spanner instance. Otherwise
+           * returns an empty set of permissions. Calling this method on a backup that does not exist will
+           * result in a NOT_FOUND error if the user has `spanner.backups.list` permission on the containing
+           * instance.
+           *
+           * Create a request for the method "backupSchedules.testIamPermissions".
+           *
+           * This request holds the parameters needed by the spanner server.  After setting any optional
+           * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+           *
+           * @param resource REQUIRED: The Cloud Spanner resource for which permissions are being tested. The format is
+           *        `projects//instances/` for instance resources and `projects//instances//databases/` for
+           *        database resources.
+           * @param content the {@link com.google.api.services.spanner.v1.model.TestIamPermissionsRequest}
+           * @return the request
+           */
+          public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.spanner.v1.model.TestIamPermissionsRequest content) throws java.io.IOException {
+            TestIamPermissions result = new TestIamPermissions(resource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class TestIamPermissions extends SpannerRequest<com.google.api.services.spanner.v1.model.TestIamPermissionsResponse> {
+
+            private static final String REST_PATH = "v1/{+resource}:testIamPermissions";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+
+            /**
+             * Returns permissions that the caller has on the specified database or backup resource.
+             * Attempting this RPC on a non-existent Cloud Spanner database will result in a NOT_FOUND error
+             * if the user has `spanner.databases.list` permission on the containing Cloud Spanner instance.
+             * Otherwise returns an empty set of permissions. Calling this method on a backup that does not
+             * exist will result in a NOT_FOUND error if the user has `spanner.backups.list` permission on the
+             * containing instance.
+             *
+             * Create a request for the method "backupSchedules.testIamPermissions".
+             *
+             * This request holds the parameters needed by the the spanner server.  After setting any optional
+             * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+             * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+             * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The Cloud Spanner resource for which permissions are being tested. The format is
+           *        `projects//instances/` for instance resources and `projects//instances//databases/` for
+           *        database resources.
+             * @param content the {@link com.google.api.services.spanner.v1.model.TestIamPermissionsRequest}
+             * @since 1.13
+             */
+            protected TestIamPermissions(java.lang.String resource, com.google.api.services.spanner.v1.model.TestIamPermissionsRequest content) {
+              super(Spanner.this, "POST", REST_PATH, content, com.google.api.services.spanner.v1.model.TestIamPermissionsResponse.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+              }
+            }
+
+            @Override
+            public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+              return (TestIamPermissions) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+              return (TestIamPermissions) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public TestIamPermissions setAlt(java.lang.String alt) {
+              return (TestIamPermissions) super.setAlt(alt);
+            }
+
+            @Override
+            public TestIamPermissions setCallback(java.lang.String callback) {
+              return (TestIamPermissions) super.setCallback(callback);
+            }
+
+            @Override
+            public TestIamPermissions setFields(java.lang.String fields) {
+              return (TestIamPermissions) super.setFields(fields);
+            }
+
+            @Override
+            public TestIamPermissions setKey(java.lang.String key) {
+              return (TestIamPermissions) super.setKey(key);
+            }
+
+            @Override
+            public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+              return (TestIamPermissions) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+              return (TestIamPermissions) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public TestIamPermissions setUploadType(java.lang.String uploadType) {
+              return (TestIamPermissions) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+              return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The Cloud Spanner resource for which permissions are being tested. The
+             * format is `projects//instances/` for instance resources and
+             * `projects//instances//databases/` for database resources.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The Cloud Spanner resource for which permissions are being tested. The format is
+           `projects//instances/` for instance resources and `projects//instances//databases/` for database
+           resources.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The Cloud Spanner resource for which permissions are being tested. The
+             * format is `projects//instances/` for instance resources and
+             * `projects//instances//databases/` for database resources.
+             */
+            public TestIamPermissions setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            @Override
+            public TestIamPermissions set(String parameterName, Object value) {
+              return (TestIamPermissions) super.set(parameterName, value);
+            }
+          }
+
+        }
         /**
          * An accessor for creating requests from the DatabaseRoles collection.
          *

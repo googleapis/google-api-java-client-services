@@ -31,7 +31,7 @@ public final class CreateInstanceConfigRequest extends com.google.api.client.jso
 
   /**
    * Required. The InstanceConfig proto of the configuration to create. instance_config.name must be
-   * `/instanceConfigs/`. instance_config.base_config must be a Google managed configuration name,
+   * `/instanceConfigs/`. instance_config.base_config must be a Google-managed configuration name,
    * e.g. /instanceConfigs/us-east1, /instanceConfigs/nam3.
    * The value may be {@code null}.
    */
@@ -39,9 +39,9 @@ public final class CreateInstanceConfigRequest extends com.google.api.client.jso
   private InstanceConfig instanceConfig;
 
   /**
-   * Required. The ID of the instance config to create. Valid identifiers are of the form
+   * Required. The ID of the instance configuration to create. Valid identifiers are of the form
    * `custom-[-a-z0-9]*[a-z0-9]` and must be between 2 and 64 characters in length. The `custom-`
-   * prefix is required to avoid name conflicts with Google managed configurations.
+   * prefix is required to avoid name conflicts with Google-managed configurations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +56,7 @@ public final class CreateInstanceConfigRequest extends com.google.api.client.jso
 
   /**
    * Required. The InstanceConfig proto of the configuration to create. instance_config.name must be
-   * `/instanceConfigs/`. instance_config.base_config must be a Google managed configuration name,
+   * `/instanceConfigs/`. instance_config.base_config must be a Google-managed configuration name,
    * e.g. /instanceConfigs/us-east1, /instanceConfigs/nam3.
    * @return value or {@code null} for none
    */
@@ -66,7 +66,7 @@ public final class CreateInstanceConfigRequest extends com.google.api.client.jso
 
   /**
    * Required. The InstanceConfig proto of the configuration to create. instance_config.name must be
-   * `/instanceConfigs/`. instance_config.base_config must be a Google managed configuration name,
+   * `/instanceConfigs/`. instance_config.base_config must be a Google-managed configuration name,
    * e.g. /instanceConfigs/us-east1, /instanceConfigs/nam3.
    * @param instanceConfig instanceConfig or {@code null} for none
    */
@@ -76,9 +76,9 @@ public final class CreateInstanceConfigRequest extends com.google.api.client.jso
   }
 
   /**
-   * Required. The ID of the instance config to create. Valid identifiers are of the form
+   * Required. The ID of the instance configuration to create. Valid identifiers are of the form
    * `custom-[-a-z0-9]*[a-z0-9]` and must be between 2 and 64 characters in length. The `custom-`
-   * prefix is required to avoid name conflicts with Google managed configurations.
+   * prefix is required to avoid name conflicts with Google-managed configurations.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstanceConfigId() {
@@ -86,9 +86,9 @@ public final class CreateInstanceConfigRequest extends com.google.api.client.jso
   }
 
   /**
-   * Required. The ID of the instance config to create. Valid identifiers are of the form
+   * Required. The ID of the instance configuration to create. Valid identifiers are of the form
    * `custom-[-a-z0-9]*[a-z0-9]` and must be between 2 and 64 characters in length. The `custom-`
-   * prefix is required to avoid name conflicts with Google managed configurations.
+   * prefix is required to avoid name conflicts with Google-managed configurations.
    * @param instanceConfigId instanceConfigId or {@code null} for none
    */
   public CreateInstanceConfigRequest setInstanceConfigId(java.lang.String instanceConfigId) {

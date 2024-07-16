@@ -30,7 +30,7 @@ package com.google.api.services.spanner.v1.model;
 public final class MoveInstanceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The target instance config for the instance to move. Values are of the form
+   * Required. The target instance configuration for the instance to move. Values are of the form
    * `projects//instanceConfigs/`.
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class MoveInstanceRequest extends com.google.api.client.json.Generi
   private java.lang.String targetConfig;
 
   /**
-   * Required. The target instance config for the instance to move. Values are of the form
+   * Required. The target instance configuration for the instance to move. Values are of the form
    * `projects//instanceConfigs/`.
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class MoveInstanceRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The target instance config for the instance to move. Values are of the form
+   * Required. The target instance configuration for the instance to move. Values are of the form
    * `projects//instanceConfigs/`.
    * @param targetConfig targetConfig or {@code null} for none
    */

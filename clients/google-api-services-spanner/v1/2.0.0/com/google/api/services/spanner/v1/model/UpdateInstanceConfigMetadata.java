@@ -37,7 +37,7 @@ public final class UpdateInstanceConfigMetadata extends com.google.api.client.js
   private String cancelTime;
 
   /**
-   * The desired instance config after updating.
+   * The desired instance configuration after updating.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class UpdateInstanceConfigMetadata extends com.google.api.client.js
   }
 
   /**
-   * The desired instance config after updating.
+   * The desired instance configuration after updating.
    * @return value or {@code null} for none
    */
   public InstanceConfig getInstanceConfig() {
@@ -76,7 +76,7 @@ public final class UpdateInstanceConfigMetadata extends com.google.api.client.js
   }
 
   /**
-   * The desired instance config after updating.
+   * The desired instance configuration after updating.
    * @param instanceConfig instanceConfig or {@code null} for none
    */
   public UpdateInstanceConfigMetadata setInstanceConfig(InstanceConfig instanceConfig) {

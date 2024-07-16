@@ -60,13 +60,13 @@ public final class PartitionQueryRequest extends com.google.api.client.json.Gene
   private PartitionOptions partitionOptions;
 
   /**
-   * Required. The query request to generate partitions for. The request will fail if the query is
-   * not root partitionable. For a query to be root partitionable, it needs to satisfy a few
-   * conditions. For example, if the query execution plan contains a distributed union operator,
-   * then it must be the first operator in the plan. For more information about other conditions,
-   * see [Read data in parallel](https://cloud.google.com/spanner/docs/reads#read_data_in_parallel).
-   * The query request must not contain DML commands, such as INSERT, UPDATE, or DELETE. Use
-   * ExecuteStreamingSql with a PartitionedDml transaction for large, partition-friendly DML
+   * Required. The query request to generate partitions for. The request fails if the query is not
+   * root partitionable. For a query to be root partitionable, it needs to satisfy a few conditions.
+   * For example, if the query execution plan contains a distributed union operator, then it must be
+   * the first operator in the plan. For more information about other conditions, see [Read data in
+   * parallel](https://cloud.google.com/spanner/docs/reads#read_data_in_parallel). The query request
+   * must not contain DML commands, such as `INSERT`, `UPDATE`, or `DELETE`. Use
+   * `ExecuteStreamingSql` with a PartitionedDml transaction for large, partition-friendly DML
    * operations.
    * The value may be {@code null}.
    */
@@ -150,13 +150,13 @@ public final class PartitionQueryRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. The query request to generate partitions for. The request will fail if the query is
-   * not root partitionable. For a query to be root partitionable, it needs to satisfy a few
-   * conditions. For example, if the query execution plan contains a distributed union operator,
-   * then it must be the first operator in the plan. For more information about other conditions,
-   * see [Read data in parallel](https://cloud.google.com/spanner/docs/reads#read_data_in_parallel).
-   * The query request must not contain DML commands, such as INSERT, UPDATE, or DELETE. Use
-   * ExecuteStreamingSql with a PartitionedDml transaction for large, partition-friendly DML
+   * Required. The query request to generate partitions for. The request fails if the query is not
+   * root partitionable. For a query to be root partitionable, it needs to satisfy a few conditions.
+   * For example, if the query execution plan contains a distributed union operator, then it must be
+   * the first operator in the plan. For more information about other conditions, see [Read data in
+   * parallel](https://cloud.google.com/spanner/docs/reads#read_data_in_parallel). The query request
+   * must not contain DML commands, such as `INSERT`, `UPDATE`, or `DELETE`. Use
+   * `ExecuteStreamingSql` with a PartitionedDml transaction for large, partition-friendly DML
    * operations.
    * @return value or {@code null} for none
    */
@@ -165,13 +165,13 @@ public final class PartitionQueryRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. The query request to generate partitions for. The request will fail if the query is
-   * not root partitionable. For a query to be root partitionable, it needs to satisfy a few
-   * conditions. For example, if the query execution plan contains a distributed union operator,
-   * then it must be the first operator in the plan. For more information about other conditions,
-   * see [Read data in parallel](https://cloud.google.com/spanner/docs/reads#read_data_in_parallel).
-   * The query request must not contain DML commands, such as INSERT, UPDATE, or DELETE. Use
-   * ExecuteStreamingSql with a PartitionedDml transaction for large, partition-friendly DML
+   * Required. The query request to generate partitions for. The request fails if the query is not
+   * root partitionable. For a query to be root partitionable, it needs to satisfy a few conditions.
+   * For example, if the query execution plan contains a distributed union operator, then it must be
+   * the first operator in the plan. For more information about other conditions, see [Read data in
+   * parallel](https://cloud.google.com/spanner/docs/reads#read_data_in_parallel). The query request
+   * must not contain DML commands, such as `INSERT`, `UPDATE`, or `DELETE`. Use
+   * `ExecuteStreamingSql` with a PartitionedDml transaction for large, partition-friendly DML
    * operations.
    * @param sql sql or {@code null} for none
    */

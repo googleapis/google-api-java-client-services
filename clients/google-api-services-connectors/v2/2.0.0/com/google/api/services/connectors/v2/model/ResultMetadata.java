@@ -37,6 +37,14 @@ public final class ResultMetadata extends com.google.api.client.json.GenericJson
   private java.lang.String dataType;
 
   /**
+   * The following field specifies the default value of the Parameter provided by the external
+   * system if a value is not provided.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Object defaultValue;
+
+  /**
    * A brief description of the metadata field.
    * The value may be {@code null}.
    */
@@ -58,6 +66,13 @@ public final class ResultMetadata extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
+   * Specifies whether a null value is allowed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean nullable;
+
+  /**
    * The data type of the metadata field
    * @return value or {@code null} for none
    */
@@ -71,6 +86,25 @@ public final class ResultMetadata extends com.google.api.client.json.GenericJson
    */
   public ResultMetadata setDataType(java.lang.String dataType) {
     this.dataType = dataType;
+    return this;
+  }
+
+  /**
+   * The following field specifies the default value of the Parameter provided by the external
+   * system if a value is not provided.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Object getDefaultValue() {
+    return defaultValue;
+  }
+
+  /**
+   * The following field specifies the default value of the Parameter provided by the external
+   * system if a value is not provided.
+   * @param defaultValue defaultValue or {@code null} for none
+   */
+  public ResultMetadata setDefaultValue(java.lang.Object defaultValue) {
+    this.defaultValue = defaultValue;
     return this;
   }
 
@@ -122,6 +156,23 @@ public final class ResultMetadata extends com.google.api.client.json.GenericJson
    */
   public ResultMetadata setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Specifies whether a null value is allowed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getNullable() {
+    return nullable;
+  }
+
+  /**
+   * Specifies whether a null value is allowed.
+   * @param nullable nullable or {@code null} for none
+   */
+  public ResultMetadata setNullable(java.lang.Boolean nullable) {
+    this.nullable = nullable;
     return this;
   }
 

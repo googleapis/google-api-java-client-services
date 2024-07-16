@@ -113,6 +113,13 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private MetadataManagementActivity metadataManagementActivity;
 
   /**
+   * Optional. Specifies the multi-region configuration information for the Hive metastore service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MultiRegionConfig multiRegionConfig;
+
+  /**
    * Immutable. The relative resource name of the metastore service, in the following
    * format:projects/{project_number}/locations/{location_id}/services/{service_id}.
    * The value may be {@code null}.
@@ -401,6 +408,23 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   public Service setMetadataManagementActivity(MetadataManagementActivity metadataManagementActivity) {
     this.metadataManagementActivity = metadataManagementActivity;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the multi-region configuration information for the Hive metastore service.
+   * @return value or {@code null} for none
+   */
+  public MultiRegionConfig getMultiRegionConfig() {
+    return multiRegionConfig;
+  }
+
+  /**
+   * Optional. Specifies the multi-region configuration information for the Hive metastore service.
+   * @param multiRegionConfig multiRegionConfig or {@code null} for none
+   */
+  public Service setMultiRegionConfig(MultiRegionConfig multiRegionConfig) {
+    this.multiRegionConfig = multiRegionConfig;
     return this;
   }
 

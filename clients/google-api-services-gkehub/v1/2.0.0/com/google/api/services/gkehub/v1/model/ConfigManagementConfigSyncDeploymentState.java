@@ -58,11 +58,25 @@ public final class ConfigManagementConfigSyncDeploymentState extends com.google.
   private java.lang.String monitor;
 
   /**
+   * Deployment state of otel-collector
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String otelCollector;
+
+  /**
    * Deployment state of reconciler-manager pod
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reconcilerManager;
+
+  /**
+   * Deployment state of resource-group-controller-manager
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceGroupControllerManager;
 
   /**
    * Deployment state of root-reconciler
@@ -147,6 +161,23 @@ public final class ConfigManagementConfigSyncDeploymentState extends com.google.
   }
 
   /**
+   * Deployment state of otel-collector
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOtelCollector() {
+    return otelCollector;
+  }
+
+  /**
+   * Deployment state of otel-collector
+   * @param otelCollector otelCollector or {@code null} for none
+   */
+  public ConfigManagementConfigSyncDeploymentState setOtelCollector(java.lang.String otelCollector) {
+    this.otelCollector = otelCollector;
+    return this;
+  }
+
+  /**
    * Deployment state of reconciler-manager pod
    * @return value or {@code null} for none
    */
@@ -160,6 +191,23 @@ public final class ConfigManagementConfigSyncDeploymentState extends com.google.
    */
   public ConfigManagementConfigSyncDeploymentState setReconcilerManager(java.lang.String reconcilerManager) {
     this.reconcilerManager = reconcilerManager;
+    return this;
+  }
+
+  /**
+   * Deployment state of resource-group-controller-manager
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceGroupControllerManager() {
+    return resourceGroupControllerManager;
+  }
+
+  /**
+   * Deployment state of resource-group-controller-manager
+   * @param resourceGroupControllerManager resourceGroupControllerManager or {@code null} for none
+   */
+  public ConfigManagementConfigSyncDeploymentState setResourceGroupControllerManager(java.lang.String resourceGroupControllerManager) {
+    this.resourceGroupControllerManager = resourceGroupControllerManager;
     return this;
   }
 

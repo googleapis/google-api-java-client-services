@@ -5713,6 +5713,634 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
         public class Rbacrolebindings {
 
           /**
+           * Creates a Membership RBACRoleBinding.
+           *
+           * Create a request for the method "rbacrolebindings.create".
+           *
+           * This request holds the parameters needed by the gkehub server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent (project and location) where the RBACRoleBinding will be created. Specified in
+           *        the format `projects/locations/memberships`.
+           * @param content the {@link com.google.api.services.gkehub.v1.model.RBACRoleBinding}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.gkehub.v1.model.RBACRoleBinding content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends GKEHubRequest<com.google.api.services.gkehub.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+parent}/rbacrolebindings";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/memberships/[^/]+$");
+
+            /**
+             * Creates a Membership RBACRoleBinding.
+             *
+             * Create a request for the method "rbacrolebindings.create".
+             *
+             * This request holds the parameters needed by the the gkehub server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent (project and location) where the RBACRoleBinding will be created. Specified in
+           *        the format `projects/locations/memberships`.
+             * @param content the {@link com.google.api.services.gkehub.v1.model.RBACRoleBinding}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.gkehub.v1.model.RBACRoleBinding content) {
+              super(GKEHub.this, "POST", REST_PATH, content, com.google.api.services.gkehub.v1.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/memberships/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent (project and location) where the RBACRoleBinding will be
+             * created. Specified in the format `projects/locations/memberships`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent (project and location) where the RBACRoleBinding will be created. Specified in
+           the format `projects/locations/memberships`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent (project and location) where the RBACRoleBinding will be
+             * created. Specified in the format `projects/locations/memberships`.
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/memberships/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. Client chosen ID for the RBACRoleBinding. `rbacrolebinding_id` must be a
+             * valid RFC 1123 compliant DNS label: 1. At most 63 characters in length 2. It must
+             * consist of lower case alphanumeric characters or `-` 3. It must start and end with an
+             * alphanumeric character Which can be expressed as the regex:
+             * `[a-z0-9]([-a-z0-9]*[a-z0-9])?`, with a maximum length of 63 characters.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String rbacrolebindingId;
+
+            /** Required. Client chosen ID for the RBACRoleBinding. `rbacrolebinding_id` must be a valid RFC 1123
+           compliant DNS label: 1. At most 63 characters in length 2. It must consist of lower case
+           alphanumeric characters or `-` 3. It must start and end with an alphanumeric character Which can be
+           expressed as the regex: `[a-z0-9]([-a-z0-9]*[a-z0-9])?`, with a maximum length of 63 characters.
+             */
+            public java.lang.String getRbacrolebindingId() {
+              return rbacrolebindingId;
+            }
+
+            /**
+             * Required. Client chosen ID for the RBACRoleBinding. `rbacrolebinding_id` must be a
+             * valid RFC 1123 compliant DNS label: 1. At most 63 characters in length 2. It must
+             * consist of lower case alphanumeric characters or `-` 3. It must start and end with an
+             * alphanumeric character Which can be expressed as the regex:
+             * `[a-z0-9]([-a-z0-9]*[a-z0-9])?`, with a maximum length of 63 characters.
+             */
+            public Create setRbacrolebindingId(java.lang.String rbacrolebindingId) {
+              this.rbacrolebindingId = rbacrolebindingId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a Membership RBACRoleBinding.
+           *
+           * Create a request for the method "rbacrolebindings.delete".
+           *
+           * This request holds the parameters needed by the gkehub server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The RBACRoleBinding resource name in the format
+           *        `projects/locations/memberships/rbacrolebindings`.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends GKEHubRequest<com.google.api.services.gkehub.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/memberships/[^/]+/rbacrolebindings/[^/]+$");
+
+            /**
+             * Deletes a Membership RBACRoleBinding.
+             *
+             * Create a request for the method "rbacrolebindings.delete".
+             *
+             * This request holds the parameters needed by the the gkehub server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The RBACRoleBinding resource name in the format
+           *        `projects/locations/memberships/rbacrolebindings`.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(GKEHub.this, "DELETE", REST_PATH, null, com.google.api.services.gkehub.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/memberships/[^/]+/rbacrolebindings/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The RBACRoleBinding resource name in the format
+             * `projects/locations/memberships/rbacrolebindings`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The RBACRoleBinding resource name in the format
+           `projects/locations/memberships/rbacrolebindings`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The RBACRoleBinding resource name in the format
+             * `projects/locations/memberships/rbacrolebindings`.
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/memberships/[^/]+/rbacrolebindings/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Generates a YAML of the RBAC policies for the specified RoleBinding and its associated
+           * impersonation resources.
+           *
+           * Create a request for the method "rbacrolebindings.generateMembershipRBACRoleBindingYAML".
+           *
+           * This request holds the parameters needed by the gkehub server.  After setting any optional
+           * parameters, call the {@link GenerateMembershipRBACRoleBindingYAML#execute()} method to invoke the
+           * remote operation.
+           *
+           * @param parent Required. The parent (project and location) where the RBACRoleBinding will be created. Specified in
+           *        the format `projects/locations/memberships`.
+           * @param content the {@link com.google.api.services.gkehub.v1.model.RBACRoleBinding}
+           * @return the request
+           */
+          public GenerateMembershipRBACRoleBindingYAML generateMembershipRBACRoleBindingYAML(java.lang.String parent, com.google.api.services.gkehub.v1.model.RBACRoleBinding content) throws java.io.IOException {
+            GenerateMembershipRBACRoleBindingYAML result = new GenerateMembershipRBACRoleBindingYAML(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class GenerateMembershipRBACRoleBindingYAML extends GKEHubRequest<com.google.api.services.gkehub.v1.model.GenerateMembershipRBACRoleBindingYAMLResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/rbacrolebindings:generateMembershipRBACRoleBindingYAML";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/memberships/[^/]+$");
+
+            /**
+             * Generates a YAML of the RBAC policies for the specified RoleBinding and its associated
+             * impersonation resources.
+             *
+             * Create a request for the method "rbacrolebindings.generateMembershipRBACRoleBindingYAML".
+             *
+             * This request holds the parameters needed by the the gkehub server.  After setting any optional
+             * parameters, call the {@link GenerateMembershipRBACRoleBindingYAML#execute()} method to invoke
+             * the remote operation. <p> {@link GenerateMembershipRBACRoleBindingYAML#initialize(com.google.ap
+             * i.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+             * instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent (project and location) where the RBACRoleBinding will be created. Specified in
+           *        the format `projects/locations/memberships`.
+             * @param content the {@link com.google.api.services.gkehub.v1.model.RBACRoleBinding}
+             * @since 1.13
+             */
+            protected GenerateMembershipRBACRoleBindingYAML(java.lang.String parent, com.google.api.services.gkehub.v1.model.RBACRoleBinding content) {
+              super(GKEHub.this, "POST", REST_PATH, content, com.google.api.services.gkehub.v1.model.GenerateMembershipRBACRoleBindingYAMLResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/memberships/[^/]+$");
+              }
+            }
+
+            @Override
+            public GenerateMembershipRBACRoleBindingYAML set$Xgafv(java.lang.String $Xgafv) {
+              return (GenerateMembershipRBACRoleBindingYAML) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GenerateMembershipRBACRoleBindingYAML setAccessToken(java.lang.String accessToken) {
+              return (GenerateMembershipRBACRoleBindingYAML) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GenerateMembershipRBACRoleBindingYAML setAlt(java.lang.String alt) {
+              return (GenerateMembershipRBACRoleBindingYAML) super.setAlt(alt);
+            }
+
+            @Override
+            public GenerateMembershipRBACRoleBindingYAML setCallback(java.lang.String callback) {
+              return (GenerateMembershipRBACRoleBindingYAML) super.setCallback(callback);
+            }
+
+            @Override
+            public GenerateMembershipRBACRoleBindingYAML setFields(java.lang.String fields) {
+              return (GenerateMembershipRBACRoleBindingYAML) super.setFields(fields);
+            }
+
+            @Override
+            public GenerateMembershipRBACRoleBindingYAML setKey(java.lang.String key) {
+              return (GenerateMembershipRBACRoleBindingYAML) super.setKey(key);
+            }
+
+            @Override
+            public GenerateMembershipRBACRoleBindingYAML setOauthToken(java.lang.String oauthToken) {
+              return (GenerateMembershipRBACRoleBindingYAML) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GenerateMembershipRBACRoleBindingYAML setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GenerateMembershipRBACRoleBindingYAML) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GenerateMembershipRBACRoleBindingYAML setQuotaUser(java.lang.String quotaUser) {
+              return (GenerateMembershipRBACRoleBindingYAML) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GenerateMembershipRBACRoleBindingYAML setUploadType(java.lang.String uploadType) {
+              return (GenerateMembershipRBACRoleBindingYAML) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GenerateMembershipRBACRoleBindingYAML setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GenerateMembershipRBACRoleBindingYAML) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent (project and location) where the RBACRoleBinding will be
+             * created. Specified in the format `projects/locations/memberships`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent (project and location) where the RBACRoleBinding will be created. Specified in
+           the format `projects/locations/memberships`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent (project and location) where the RBACRoleBinding will be
+             * created. Specified in the format `projects/locations/memberships`.
+             */
+            public GenerateMembershipRBACRoleBindingYAML setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/memberships/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. Client chosen ID for the RBACRoleBinding. `rbacrolebinding_id` must be a
+             * valid RFC 1123 compliant DNS label: 1. At most 63 characters in length 2. It must
+             * consist of lower case alphanumeric characters or `-` 3. It must start and end with an
+             * alphanumeric character Which can be expressed as the regex:
+             * `[a-z0-9]([-a-z0-9]*[a-z0-9])?`, with a maximum length of 63 characters.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String rbacrolebindingId;
+
+            /** Required. Client chosen ID for the RBACRoleBinding. `rbacrolebinding_id` must be a valid RFC 1123
+           compliant DNS label: 1. At most 63 characters in length 2. It must consist of lower case
+           alphanumeric characters or `-` 3. It must start and end with an alphanumeric character Which can be
+           expressed as the regex: `[a-z0-9]([-a-z0-9]*[a-z0-9])?`, with a maximum length of 63 characters.
+             */
+            public java.lang.String getRbacrolebindingId() {
+              return rbacrolebindingId;
+            }
+
+            /**
+             * Required. Client chosen ID for the RBACRoleBinding. `rbacrolebinding_id` must be a
+             * valid RFC 1123 compliant DNS label: 1. At most 63 characters in length 2. It must
+             * consist of lower case alphanumeric characters or `-` 3. It must start and end with an
+             * alphanumeric character Which can be expressed as the regex:
+             * `[a-z0-9]([-a-z0-9]*[a-z0-9])?`, with a maximum length of 63 characters.
+             */
+            public GenerateMembershipRBACRoleBindingYAML setRbacrolebindingId(java.lang.String rbacrolebindingId) {
+              this.rbacrolebindingId = rbacrolebindingId;
+              return this;
+            }
+
+            @Override
+            public GenerateMembershipRBACRoleBindingYAML set(String parameterName, Object value) {
+              return (GenerateMembershipRBACRoleBindingYAML) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Returns the details of a Membership RBACRoleBinding.
+           *
+           * Create a request for the method "rbacrolebindings.get".
+           *
+           * This request holds the parameters needed by the gkehub server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The RBACRoleBinding resource name in the format
+           *        `projects/locations/memberships/rbacrolebindings`.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends GKEHubRequest<com.google.api.services.gkehub.v1.model.RBACRoleBinding> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/memberships/[^/]+/rbacrolebindings/[^/]+$");
+
+            /**
+             * Returns the details of a Membership RBACRoleBinding.
+             *
+             * Create a request for the method "rbacrolebindings.get".
+             *
+             * This request holds the parameters needed by the the gkehub server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The RBACRoleBinding resource name in the format
+           *        `projects/locations/memberships/rbacrolebindings`.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(GKEHub.this, "GET", REST_PATH, null, com.google.api.services.gkehub.v1.model.RBACRoleBinding.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/memberships/[^/]+/rbacrolebindings/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The RBACRoleBinding resource name in the format
+             * `projects/locations/memberships/rbacrolebindings`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The RBACRoleBinding resource name in the format
+           `projects/locations/memberships/rbacrolebindings`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The RBACRoleBinding resource name in the format
+             * `projects/locations/memberships/rbacrolebindings`.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/memberships/[^/]+/rbacrolebindings/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
            * Lists all Membership RBACRoleBindings.
            *
            * Create a request for the method "rbacrolebindings.list".
@@ -5903,6 +6531,168 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates a Membership RBACRoleBinding.
+           *
+           * Create a request for the method "rbacrolebindings.patch".
+           *
+           * This request holds the parameters needed by the gkehub server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name The resource name for the rbacrolebinding
+           *        `projects/{project}/locations/{location}/scopes/{scope}/rbacrolebindings/{rbacrolebinding}
+           *        ` or `projects/{project}/locations/{location}/memberships/{membership}/rbacrolebindings/{r
+           *        bacrolebinding}`
+           * @param content the {@link com.google.api.services.gkehub.v1.model.RBACRoleBinding}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.gkehub.v1.model.RBACRoleBinding content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends GKEHubRequest<com.google.api.services.gkehub.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/memberships/[^/]+/rbacrolebindings/[^/]+$");
+
+            /**
+             * Updates a Membership RBACRoleBinding.
+             *
+             * Create a request for the method "rbacrolebindings.patch".
+             *
+             * This request holds the parameters needed by the the gkehub server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The resource name for the rbacrolebinding
+           *        `projects/{project}/locations/{location}/scopes/{scope}/rbacrolebindings/{rbacrolebinding}
+           *        ` or `projects/{project}/locations/{location}/memberships/{membership}/rbacrolebindings/{r
+           *        bacrolebinding}`
+             * @param content the {@link com.google.api.services.gkehub.v1.model.RBACRoleBinding}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.gkehub.v1.model.RBACRoleBinding content) {
+              super(GKEHub.this, "PATCH", REST_PATH, content, com.google.api.services.gkehub.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/memberships/[^/]+/rbacrolebindings/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The resource name for the rbacrolebinding `projects/{project}/locations/{location}/sc
+             * opes/{scope}/rbacrolebindings/{rbacrolebinding}` or `projects/{project}/locations/{lo
+             * cation}/memberships/{membership}/rbacrolebindings/{rbacrolebinding}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The resource name for the rbacrolebinding
+           `projects/{project}/locations/{location}/scopes/{scope}/rbacrolebindings/{rbacrolebinding}` or `pro
+           jects/{project}/locations/{location}/memberships/{membership}/rbacrolebindings/{rbacrolebinding}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The resource name for the rbacrolebinding `projects/{project}/locations/{location}/sc
+             * opes/{scope}/rbacrolebindings/{rbacrolebinding}` or `projects/{project}/locations/{lo
+             * cation}/memberships/{membership}/rbacrolebindings/{rbacrolebinding}`
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/memberships/[^/]+/rbacrolebindings/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. The fields to be updated. */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Required. The fields to be updated.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /** Required. The fields to be updated. */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
             }
           }
 

@@ -44,7 +44,7 @@ public final class MultipleSelectConfig extends com.google.api.client.json.Gener
   private java.util.List<MultipleSelectOption> multipleSelectOptions;
 
   /**
-   * Required. Value separator.
+   * Required. Value separator. Only "," can be used for OAuth auth code flow scope field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class MultipleSelectConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Value separator.
+   * Required. Value separator. Only "," can be used for OAuth auth code flow scope field.
    * @return value or {@code null} for none
    */
   public java.lang.String getValueSeparator() {
@@ -93,7 +93,7 @@ public final class MultipleSelectConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Value separator.
+   * Required. Value separator. Only "," can be used for OAuth auth code flow scope field.
    * @param valueSeparator valueSeparator or {@code null} for none
    */
   public MultipleSelectConfig setValueSeparator(java.lang.String valueSeparator) {

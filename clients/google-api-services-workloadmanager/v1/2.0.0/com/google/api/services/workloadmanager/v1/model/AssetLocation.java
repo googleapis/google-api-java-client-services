@@ -31,6 +31,14 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class AssetLocation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Spanner path of the CCFE RMS database. It is only applicable for CCFE tenants that use CCFE RMS
+   * for storing resource metadata.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ccfeRmsPath;
+
+  /**
    * Defines the customer expectation around ZI/ZS for this asset and ZI/ZS state of the region at
    * the time of asset creation.
    * The value may be {@code null}.
@@ -59,6 +67,25 @@ public final class AssetLocation extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.util.List<CloudAsset> parentAsset;
+
+  /**
+   * Spanner path of the CCFE RMS database. It is only applicable for CCFE tenants that use CCFE RMS
+   * for storing resource metadata.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCcfeRmsPath() {
+    return ccfeRmsPath;
+  }
+
+  /**
+   * Spanner path of the CCFE RMS database. It is only applicable for CCFE tenants that use CCFE RMS
+   * for storing resource metadata.
+   * @param ccfeRmsPath ccfeRmsPath or {@code null} for none
+   */
+  public AssetLocation setCcfeRmsPath(java.lang.String ccfeRmsPath) {
+    this.ccfeRmsPath = ccfeRmsPath;
+    return this;
+  }
 
   /**
    * Defines the customer expectation around ZI/ZS for this asset and ZI/ZS state of the region at

@@ -32,7 +32,7 @@ public final class BigtableColumnFamily extends com.google.api.client.json.Gener
   /**
    * Optional. Lists of columns that should be exposed as individual fields as opposed to a list of
    * (column name, value) pairs. All columns whose qualifier matches a qualifier in this list can be
-   * accessed as `.`. Other columns can be accessed as a list through `.Column` field.
+   * accessed as `.`. Other columns can be accessed as a list through the `.Column` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class BigtableColumnFamily extends com.google.api.client.json.Gener
   /**
    * Optional. Lists of columns that should be exposed as individual fields as opposed to a list of
    * (column name, value) pairs. All columns whose qualifier matches a qualifier in this list can be
-   * accessed as `.`. Other columns can be accessed as a list through `.Column` field.
+   * accessed as `.`. Other columns can be accessed as a list through the `.Column` field.
    * @return value or {@code null} for none
    */
   public java.util.List<BigtableColumn> getColumns() {
@@ -94,7 +94,7 @@ public final class BigtableColumnFamily extends com.google.api.client.json.Gener
   /**
    * Optional. Lists of columns that should be exposed as individual fields as opposed to a list of
    * (column name, value) pairs. All columns whose qualifier matches a qualifier in this list can be
-   * accessed as `.`. Other columns can be accessed as a list through `.Column` field.
+   * accessed as `.`. Other columns can be accessed as a list through the `.Column` field.
    * @param columns columns or {@code null} for none
    */
   public BigtableColumnFamily setColumns(java.util.List<BigtableColumn> columns) {

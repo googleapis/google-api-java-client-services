@@ -978,8 +978,8 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
 
     /**
      * An IAM role ID that should be granted to the user, group, or domain specified in this access
-     * entry. The following legacy mappings will be applied: * OWNER <=> roles/bigquery.dataOwner *
-     * WRITER <=> roles/bigquery.dataEditor * READER <=> roles/bigquery.dataViewer This field will
+     * entry. The following legacy mappings will be applied: * `OWNER`: `roles/bigquery.dataOwner` *
+     * `WRITER`: `roles/bigquery.dataEditor` * `READER`: `roles/bigquery.dataViewer` This field will
      * accept any of the above formats, but will return only the legacy format. For example, if you
      * set this field to "roles/bigquery.dataOwner", it will be returned back as "OWNER".
      * The value may be {@code null}.
@@ -998,10 +998,10 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
     private RoutineReference routine;
 
     /**
-     * [Pick one] A special group to grant access to. Possible values include: projectOwners: Owners
-     * of the enclosing project. projectReaders: Readers of the enclosing project. projectWriters:
-     * Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users. Maps
-     * to similarly-named IAM members.
+     * [Pick one] A special group to grant access to. Possible values include: * projectOwners: Owners
+     * of the enclosing project. * projectReaders: Readers of the enclosing project. * projectWriters:
+     * Writers of the enclosing project. * allAuthenticatedUsers: All authenticated BigQuery users.
+     * Maps to similarly-named IAM members.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1109,8 +1109,8 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
 
     /**
      * An IAM role ID that should be granted to the user, group, or domain specified in this access
-     * entry. The following legacy mappings will be applied: * OWNER <=> roles/bigquery.dataOwner *
-     * WRITER <=> roles/bigquery.dataEditor * READER <=> roles/bigquery.dataViewer This field will
+     * entry. The following legacy mappings will be applied: * `OWNER`: `roles/bigquery.dataOwner` *
+     * `WRITER`: `roles/bigquery.dataEditor` * `READER`: `roles/bigquery.dataViewer` This field will
      * accept any of the above formats, but will return only the legacy format. For example, if you
      * set this field to "roles/bigquery.dataOwner", it will be returned back as "OWNER".
      * @return value or {@code null} for none
@@ -1121,8 +1121,8 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
 
     /**
      * An IAM role ID that should be granted to the user, group, or domain specified in this access
-     * entry. The following legacy mappings will be applied: * OWNER <=> roles/bigquery.dataOwner *
-     * WRITER <=> roles/bigquery.dataEditor * READER <=> roles/bigquery.dataViewer This field will
+     * entry. The following legacy mappings will be applied: * `OWNER`: `roles/bigquery.dataOwner` *
+     * `WRITER`: `roles/bigquery.dataEditor` * `READER`: `roles/bigquery.dataViewer` This field will
      * accept any of the above formats, but will return only the legacy format. For example, if you
      * set this field to "roles/bigquery.dataOwner", it will be returned back as "OWNER".
      * @param role role or {@code null} for none
@@ -1156,10 +1156,10 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Pick one] A special group to grant access to. Possible values include: projectOwners: Owners
-     * of the enclosing project. projectReaders: Readers of the enclosing project. projectWriters:
-     * Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users. Maps
-     * to similarly-named IAM members.
+     * [Pick one] A special group to grant access to. Possible values include: * projectOwners: Owners
+     * of the enclosing project. * projectReaders: Readers of the enclosing project. * projectWriters:
+     * Writers of the enclosing project. * allAuthenticatedUsers: All authenticated BigQuery users.
+     * Maps to similarly-named IAM members.
      * @return value or {@code null} for none
      */
     public java.lang.String getSpecialGroup() {
@@ -1167,10 +1167,10 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Pick one] A special group to grant access to. Possible values include: projectOwners: Owners
-     * of the enclosing project. projectReaders: Readers of the enclosing project. projectWriters:
-     * Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users. Maps
-     * to similarly-named IAM members.
+     * [Pick one] A special group to grant access to. Possible values include: * projectOwners: Owners
+     * of the enclosing project. * projectReaders: Readers of the enclosing project. * projectWriters:
+     * Writers of the enclosing project. * allAuthenticatedUsers: All authenticated BigQuery users.
+     * Maps to similarly-named IAM members.
      * @param specialGroup specialGroup or {@code null} for none
      */
     public Access setSpecialGroup(java.lang.String specialGroup) {

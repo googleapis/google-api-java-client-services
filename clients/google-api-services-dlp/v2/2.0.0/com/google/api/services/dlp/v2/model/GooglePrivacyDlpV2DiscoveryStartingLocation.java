@@ -32,7 +32,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2DiscoveryStartingLocation extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the Folder within an organization to scan.
+   * The ID of the folder within an organization to scan.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2DiscoveryStartingLocation extends com.googl
   private java.lang.Long organizationId;
 
   /**
-   * The ID of the Folder within an organization to scan.
+   * The ID of the folder within an organization to scan.
    * @return value or {@code null} for none
    */
   public java.lang.Long getFolderId() {
@@ -54,7 +54,7 @@ public final class GooglePrivacyDlpV2DiscoveryStartingLocation extends com.googl
   }
 
   /**
-   * The ID of the Folder within an organization to scan.
+   * The ID of the folder within an organization to scan.
    * @param folderId folderId or {@code null} for none
    */
   public GooglePrivacyDlpV2DiscoveryStartingLocation setFolderId(java.lang.Long folderId) {

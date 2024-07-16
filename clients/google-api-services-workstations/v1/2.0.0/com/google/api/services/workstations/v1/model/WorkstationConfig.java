@@ -36,6 +36,20 @@ package com.google.api.services.workstations.v1.model;
 public final class WorkstationConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. A Single or Range of ports externally accessible in the workstation. If not specified
+   * defaults to ports 22, 80 and ports 1024-65535.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PortRange> allowedPorts;
+
+  static {
+    // hack to force ProGuard to consider PortRange used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(PortRange.class);
+  }
+
+  /**
    * Optional. Client-specified annotations.
    * The value may be {@code null}.
    */
@@ -260,6 +274,25 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. A Single or Range of ports externally accessible in the workstation. If not specified
+   * defaults to ports 22, 80 and ports 1024-65535.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PortRange> getAllowedPorts() {
+    return allowedPorts;
+  }
+
+  /**
+   * Optional. A Single or Range of ports externally accessible in the workstation. If not specified
+   * defaults to ports 22, 80 and ports 1024-65535.
+   * @param allowedPorts allowedPorts or {@code null} for none
+   */
+  public WorkstationConfig setAllowedPorts(java.util.List<PortRange> allowedPorts) {
+    this.allowedPorts = allowedPorts;
+    return this;
+  }
 
   /**
    * Optional. Client-specified annotations.

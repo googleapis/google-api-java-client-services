@@ -30,7 +30,7 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class ConfigManagementConfigSyncVersion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Version of the deployed admission_webhook pod
+   * Version of the deployed admission-webhook pod
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,11 +58,25 @@ public final class ConfigManagementConfigSyncVersion extends com.google.api.clie
   private java.lang.String monitor;
 
   /**
+   * Version of the deployed otel-collector pod
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String otelCollector;
+
+  /**
    * Version of the deployed reconciler-manager pod
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reconcilerManager;
+
+  /**
+   * Version of the deployed resource-group-controller-manager pod
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceGroupControllerManager;
 
   /**
    * Version of the deployed reconciler container in root-reconciler pod
@@ -79,7 +93,7 @@ public final class ConfigManagementConfigSyncVersion extends com.google.api.clie
   private java.lang.String syncer;
 
   /**
-   * Version of the deployed admission_webhook pod
+   * Version of the deployed admission-webhook pod
    * @return value or {@code null} for none
    */
   public java.lang.String getAdmissionWebhook() {
@@ -87,7 +101,7 @@ public final class ConfigManagementConfigSyncVersion extends com.google.api.clie
   }
 
   /**
-   * Version of the deployed admission_webhook pod
+   * Version of the deployed admission-webhook pod
    * @param admissionWebhook admissionWebhook or {@code null} for none
    */
   public ConfigManagementConfigSyncVersion setAdmissionWebhook(java.lang.String admissionWebhook) {
@@ -147,6 +161,23 @@ public final class ConfigManagementConfigSyncVersion extends com.google.api.clie
   }
 
   /**
+   * Version of the deployed otel-collector pod
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOtelCollector() {
+    return otelCollector;
+  }
+
+  /**
+   * Version of the deployed otel-collector pod
+   * @param otelCollector otelCollector or {@code null} for none
+   */
+  public ConfigManagementConfigSyncVersion setOtelCollector(java.lang.String otelCollector) {
+    this.otelCollector = otelCollector;
+    return this;
+  }
+
+  /**
    * Version of the deployed reconciler-manager pod
    * @return value or {@code null} for none
    */
@@ -160,6 +191,23 @@ public final class ConfigManagementConfigSyncVersion extends com.google.api.clie
    */
   public ConfigManagementConfigSyncVersion setReconcilerManager(java.lang.String reconcilerManager) {
     this.reconcilerManager = reconcilerManager;
+    return this;
+  }
+
+  /**
+   * Version of the deployed resource-group-controller-manager pod
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceGroupControllerManager() {
+    return resourceGroupControllerManager;
+  }
+
+  /**
+   * Version of the deployed resource-group-controller-manager pod
+   * @param resourceGroupControllerManager resourceGroupControllerManager or {@code null} for none
+   */
+  public ConfigManagementConfigSyncVersion setResourceGroupControllerManager(java.lang.String resourceGroupControllerManager) {
+    this.resourceGroupControllerManager = resourceGroupControllerManager;
     return this;
   }
 

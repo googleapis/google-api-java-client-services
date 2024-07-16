@@ -30,6 +30,13 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class ServiceMeshMembershipSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Specifies the API that will be used for configuring the mesh workloads.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String configApi;
+
+  /**
    * Deprecated: use `management` instead Enables automatic control plane management.
    * The value may be {@code null}.
    */
@@ -44,11 +51,28 @@ public final class ServiceMeshMembershipSpec extends com.google.api.client.json.
   private java.lang.String defaultChannel;
 
   /**
-   * Enables automatic Service Mesh management.
+   * Optional. Enables automatic Service Mesh management.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String management;
+
+  /**
+   * Optional. Specifies the API that will be used for configuring the mesh workloads.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConfigApi() {
+    return configApi;
+  }
+
+  /**
+   * Optional. Specifies the API that will be used for configuring the mesh workloads.
+   * @param configApi configApi or {@code null} for none
+   */
+  public ServiceMeshMembershipSpec setConfigApi(java.lang.String configApi) {
+    this.configApi = configApi;
+    return this;
+  }
 
   /**
    * Deprecated: use `management` instead Enables automatic control plane management.
@@ -85,7 +109,7 @@ public final class ServiceMeshMembershipSpec extends com.google.api.client.json.
   }
 
   /**
-   * Enables automatic Service Mesh management.
+   * Optional. Enables automatic Service Mesh management.
    * @return value or {@code null} for none
    */
   public java.lang.String getManagement() {
@@ -93,7 +117,7 @@ public final class ServiceMeshMembershipSpec extends com.google.api.client.json.
   }
 
   /**
-   * Enables automatic Service Mesh management.
+   * Optional. Enables automatic Service Mesh management.
    * @param management management or {@code null} for none
    */
   public ServiceMeshMembershipSpec setManagement(java.lang.String management) {

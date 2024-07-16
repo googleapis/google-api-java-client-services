@@ -111,25 +111,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The number of nodes allocated to this instance. At most one of either node_count or
-   * processing_units should be present in the message. Users can set the node_count field to
+   * The number of nodes allocated to this instance. At most, one of either `node_count` or
+   * `processing_units` should be present in the message. Users can set the node_count field to
    * specify the target number of nodes allocated to the instance. If autoscaling is enabled,
    * node_count is treated as an OUTPUT_ONLY field and reflects the current number of nodes
-   * allocated to the instance. This may be zero in API responses for instances that are not yet in
-   * state `READY`. See [the documentation](https://cloud.google.com/spanner/docs/compute-capacity)
-   * for more information about nodes and processing units.
+   * allocated to the instance. This might be zero in API responses for instances that are not yet
+   * in the `READY` state. For more information, see [Compute capacity, nodes, and processing
+   * units](https://cloud.google.com/spanner/docs/compute-capacity).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer nodeCount;
 
   /**
-   * The number of processing units allocated to this instance. At most one of processing_units or
-   * node_count should be present in the message. Users can set the processing_units field to
-   * specify the target number of processing units allocated to the instance. If autoscaling is
-   * enabled, processing_units is treated as an OUTPUT_ONLY field and reflects the current number of
-   * processing units allocated to the instance. This may be zero in API responses for instances
-   * that are not yet in state `READY`. See [the
+   * The number of processing units allocated to this instance. At most, one of either
+   * `processing_units` or `node_count` should be present in the message. Users can set the
+   * `processing_units` field to specify the target number of processing units allocated to the
+   * instance. If autoscaling is enabled, `processing_units` is treated as an `OUTPUT_ONLY` field
+   * and reflects the current number of processing units allocated to the instance. This might be
+   * zero in API responses for instances that are not yet in the `READY` state. See [the
    * documentation](https://cloud.google.com/spanner/docs/compute-capacity) for more information
    * about nodes and processing units.
    * The value may be {@code null}.
@@ -342,13 +342,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of nodes allocated to this instance. At most one of either node_count or
-   * processing_units should be present in the message. Users can set the node_count field to
+   * The number of nodes allocated to this instance. At most, one of either `node_count` or
+   * `processing_units` should be present in the message. Users can set the node_count field to
    * specify the target number of nodes allocated to the instance. If autoscaling is enabled,
    * node_count is treated as an OUTPUT_ONLY field and reflects the current number of nodes
-   * allocated to the instance. This may be zero in API responses for instances that are not yet in
-   * state `READY`. See [the documentation](https://cloud.google.com/spanner/docs/compute-capacity)
-   * for more information about nodes and processing units.
+   * allocated to the instance. This might be zero in API responses for instances that are not yet
+   * in the `READY` state. For more information, see [Compute capacity, nodes, and processing
+   * units](https://cloud.google.com/spanner/docs/compute-capacity).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNodeCount() {
@@ -356,13 +356,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of nodes allocated to this instance. At most one of either node_count or
-   * processing_units should be present in the message. Users can set the node_count field to
+   * The number of nodes allocated to this instance. At most, one of either `node_count` or
+   * `processing_units` should be present in the message. Users can set the node_count field to
    * specify the target number of nodes allocated to the instance. If autoscaling is enabled,
    * node_count is treated as an OUTPUT_ONLY field and reflects the current number of nodes
-   * allocated to the instance. This may be zero in API responses for instances that are not yet in
-   * state `READY`. See [the documentation](https://cloud.google.com/spanner/docs/compute-capacity)
-   * for more information about nodes and processing units.
+   * allocated to the instance. This might be zero in API responses for instances that are not yet
+   * in the `READY` state. For more information, see [Compute capacity, nodes, and processing
+   * units](https://cloud.google.com/spanner/docs/compute-capacity).
    * @param nodeCount nodeCount or {@code null} for none
    */
   public Instance setNodeCount(java.lang.Integer nodeCount) {
@@ -371,12 +371,12 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of processing units allocated to this instance. At most one of processing_units or
-   * node_count should be present in the message. Users can set the processing_units field to
-   * specify the target number of processing units allocated to the instance. If autoscaling is
-   * enabled, processing_units is treated as an OUTPUT_ONLY field and reflects the current number of
-   * processing units allocated to the instance. This may be zero in API responses for instances
-   * that are not yet in state `READY`. See [the
+   * The number of processing units allocated to this instance. At most, one of either
+   * `processing_units` or `node_count` should be present in the message. Users can set the
+   * `processing_units` field to specify the target number of processing units allocated to the
+   * instance. If autoscaling is enabled, `processing_units` is treated as an `OUTPUT_ONLY` field
+   * and reflects the current number of processing units allocated to the instance. This might be
+   * zero in API responses for instances that are not yet in the `READY` state. See [the
    * documentation](https://cloud.google.com/spanner/docs/compute-capacity) for more information
    * about nodes and processing units.
    * @return value or {@code null} for none
@@ -386,12 +386,12 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of processing units allocated to this instance. At most one of processing_units or
-   * node_count should be present in the message. Users can set the processing_units field to
-   * specify the target number of processing units allocated to the instance. If autoscaling is
-   * enabled, processing_units is treated as an OUTPUT_ONLY field and reflects the current number of
-   * processing units allocated to the instance. This may be zero in API responses for instances
-   * that are not yet in state `READY`. See [the
+   * The number of processing units allocated to this instance. At most, one of either
+   * `processing_units` or `node_count` should be present in the message. Users can set the
+   * `processing_units` field to specify the target number of processing units allocated to the
+   * instance. If autoscaling is enabled, `processing_units` is treated as an `OUTPUT_ONLY` field
+   * and reflects the current number of processing units allocated to the instance. This might be
+   * zero in API responses for instances that are not yet in the `READY` state. See [the
    * documentation](https://cloud.google.com/spanner/docs/compute-capacity) for more information
    * about nodes and processing units.
    * @param processingUnits processingUnits or {@code null} for none

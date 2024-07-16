@@ -32,15 +32,15 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Base configuration name, e.g. projects//instanceConfigs/nam3, based on which this configuration
-   * is created. Only set for user managed configurations. `base_config` must refer to a
-   * configuration of type GOOGLE_MANAGED in the same project as this configuration.
+   * is created. Only set for user-managed configurations. `base_config` must refer to a
+   * configuration of type `GOOGLE_MANAGED` in the same project as this configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String baseConfig;
 
   /**
-   * Output only. Whether this instance config is a Google or User Managed Configuration.
+   * Output only. Whether this instance configuration is a Google- or user-managed configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,13 +55,13 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * etag is used for optimistic concurrency control as a way to help prevent simultaneous updates
-   * of a instance config from overwriting each other. It is strongly suggested that systems make
-   * use of the etag in the read-modify-write cycle to perform instance config updates in order to
-   * avoid race conditions: An etag is returned in the response which contains instance configs, and
-   * systems are expected to put that etag in the request to update instance config to ensure that
-   * their change will be applied to the same version of the instance config. If no etag is provided
-   * in the call to update instance config, then the existing instance config is overwritten
-   * blindly.
+   * of a instance configuration from overwriting each other. It is strongly suggested that systems
+   * make use of the etag in the read-modify-write cycle to perform instance configuration updates
+   * in order to avoid race conditions: An etag is returned in the response which contains instance
+   * configurations, and systems are expected to put that etag in the request to update instance
+   * configuration to ensure that their change is applied to the same version of the instance
+   * configuration. If no etag is provided in the call to update the instance configuration, then
+   * the existing instance configuration is overwritten blindly.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,15 +104,15 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * A unique identifier for the instance configuration. Values are of the form
-   * `projects//instanceConfigs/a-z*`. User instance config must start with `custom-`.
+   * `projects//instanceConfigs/a-z*`. User instance configuration must start with `custom-`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. The available optional replicas to choose from for user managed configurations.
-   * Populated for Google managed configurations.
+   * Output only. The available optional replicas to choose from for user-managed configurations.
+   * Populated for Google-managed configurations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,8 +126,8 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   private java.lang.String quorumType;
 
   /**
-   * Output only. If true, the instance config is being created or updated. If false, there are no
-   * ongoing operations for the instance config.
+   * Output only. If true, the instance configuration is being created or updated. If false, there
+   * are no ongoing operations for the instance config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,7 +135,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * The geographic placement of nodes in this instance configuration and their replication
-   * properties. To create user managed configurations, input `replicas` must include all replicas
+   * properties. To create user-managed configurations, input `replicas` must include all replicas
    * in `replicas` of the `base_config` and include one or more replicas in the `optional_replicas`
    * of the `base_config`.
    * The value may be {@code null}.
@@ -144,7 +144,8 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   private java.util.List<ReplicaInfo> replicas;
 
   /**
-   * Output only. The current instance config state. Applicable only for USER_MANAGED configs.
+   * Output only. The current instance configuration state. Applicable only for `USER_MANAGED`
+   * configurations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,8 +160,8 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Base configuration name, e.g. projects//instanceConfigs/nam3, based on which this configuration
-   * is created. Only set for user managed configurations. `base_config` must refer to a
-   * configuration of type GOOGLE_MANAGED in the same project as this configuration.
+   * is created. Only set for user-managed configurations. `base_config` must refer to a
+   * configuration of type `GOOGLE_MANAGED` in the same project as this configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getBaseConfig() {
@@ -169,8 +170,8 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Base configuration name, e.g. projects//instanceConfigs/nam3, based on which this configuration
-   * is created. Only set for user managed configurations. `base_config` must refer to a
-   * configuration of type GOOGLE_MANAGED in the same project as this configuration.
+   * is created. Only set for user-managed configurations. `base_config` must refer to a
+   * configuration of type `GOOGLE_MANAGED` in the same project as this configuration.
    * @param baseConfig baseConfig or {@code null} for none
    */
   public InstanceConfig setBaseConfig(java.lang.String baseConfig) {
@@ -179,7 +180,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Whether this instance config is a Google or User Managed Configuration.
+   * Output only. Whether this instance configuration is a Google- or user-managed configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getConfigType() {
@@ -187,7 +188,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Whether this instance config is a Google or User Managed Configuration.
+   * Output only. Whether this instance configuration is a Google- or user-managed configuration.
    * @param configType configType or {@code null} for none
    */
   public InstanceConfig setConfigType(java.lang.String configType) {
@@ -214,13 +215,13 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * etag is used for optimistic concurrency control as a way to help prevent simultaneous updates
-   * of a instance config from overwriting each other. It is strongly suggested that systems make
-   * use of the etag in the read-modify-write cycle to perform instance config updates in order to
-   * avoid race conditions: An etag is returned in the response which contains instance configs, and
-   * systems are expected to put that etag in the request to update instance config to ensure that
-   * their change will be applied to the same version of the instance config. If no etag is provided
-   * in the call to update instance config, then the existing instance config is overwritten
-   * blindly.
+   * of a instance configuration from overwriting each other. It is strongly suggested that systems
+   * make use of the etag in the read-modify-write cycle to perform instance configuration updates
+   * in order to avoid race conditions: An etag is returned in the response which contains instance
+   * configurations, and systems are expected to put that etag in the request to update instance
+   * configuration to ensure that their change is applied to the same version of the instance
+   * configuration. If no etag is provided in the call to update the instance configuration, then
+   * the existing instance configuration is overwritten blindly.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -229,13 +230,13 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * etag is used for optimistic concurrency control as a way to help prevent simultaneous updates
-   * of a instance config from overwriting each other. It is strongly suggested that systems make
-   * use of the etag in the read-modify-write cycle to perform instance config updates in order to
-   * avoid race conditions: An etag is returned in the response which contains instance configs, and
-   * systems are expected to put that etag in the request to update instance config to ensure that
-   * their change will be applied to the same version of the instance config. If no etag is provided
-   * in the call to update instance config, then the existing instance config is overwritten
-   * blindly.
+   * of a instance configuration from overwriting each other. It is strongly suggested that systems
+   * make use of the etag in the read-modify-write cycle to perform instance configuration updates
+   * in order to avoid race conditions: An etag is returned in the response which contains instance
+   * configurations, and systems are expected to put that etag in the request to update instance
+   * configuration to ensure that their change is applied to the same version of the instance
+   * configuration. If no etag is provided in the call to update the instance configuration, then
+   * the existing instance configuration is overwritten blindly.
    * @param etag etag or {@code null} for none
    */
   public InstanceConfig setEtag(java.lang.String etag) {
@@ -324,7 +325,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * A unique identifier for the instance configuration. Values are of the form
-   * `projects//instanceConfigs/a-z*`. User instance config must start with `custom-`.
+   * `projects//instanceConfigs/a-z*`. User instance configuration must start with `custom-`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -333,7 +334,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * A unique identifier for the instance configuration. Values are of the form
-   * `projects//instanceConfigs/a-z*`. User instance config must start with `custom-`.
+   * `projects//instanceConfigs/a-z*`. User instance configuration must start with `custom-`.
    * @param name name or {@code null} for none
    */
   public InstanceConfig setName(java.lang.String name) {
@@ -342,8 +343,8 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The available optional replicas to choose from for user managed configurations.
-   * Populated for Google managed configurations.
+   * Output only. The available optional replicas to choose from for user-managed configurations.
+   * Populated for Google-managed configurations.
    * @return value or {@code null} for none
    */
   public java.util.List<ReplicaInfo> getOptionalReplicas() {
@@ -351,8 +352,8 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The available optional replicas to choose from for user managed configurations.
-   * Populated for Google managed configurations.
+   * Output only. The available optional replicas to choose from for user-managed configurations.
+   * Populated for Google-managed configurations.
    * @param optionalReplicas optionalReplicas or {@code null} for none
    */
   public InstanceConfig setOptionalReplicas(java.util.List<ReplicaInfo> optionalReplicas) {
@@ -378,8 +379,8 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. If true, the instance config is being created or updated. If false, there are no
-   * ongoing operations for the instance config.
+   * Output only. If true, the instance configuration is being created or updated. If false, there
+   * are no ongoing operations for the instance config.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReconciling() {
@@ -387,8 +388,8 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. If true, the instance config is being created or updated. If false, there are no
-   * ongoing operations for the instance config.
+   * Output only. If true, the instance configuration is being created or updated. If false, there
+   * are no ongoing operations for the instance config.
    * @param reconciling reconciling or {@code null} for none
    */
   public InstanceConfig setReconciling(java.lang.Boolean reconciling) {
@@ -398,7 +399,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * The geographic placement of nodes in this instance configuration and their replication
-   * properties. To create user managed configurations, input `replicas` must include all replicas
+   * properties. To create user-managed configurations, input `replicas` must include all replicas
    * in `replicas` of the `base_config` and include one or more replicas in the `optional_replicas`
    * of the `base_config`.
    * @return value or {@code null} for none
@@ -409,7 +410,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * The geographic placement of nodes in this instance configuration and their replication
-   * properties. To create user managed configurations, input `replicas` must include all replicas
+   * properties. To create user-managed configurations, input `replicas` must include all replicas
    * in `replicas` of the `base_config` and include one or more replicas in the `optional_replicas`
    * of the `base_config`.
    * @param replicas replicas or {@code null} for none
@@ -420,7 +421,8 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The current instance config state. Applicable only for USER_MANAGED configs.
+   * Output only. The current instance configuration state. Applicable only for `USER_MANAGED`
+   * configurations.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -428,7 +430,8 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The current instance config state. Applicable only for USER_MANAGED configs.
+   * Output only. The current instance configuration state. Applicable only for `USER_MANAGED`
+   * configurations.
    * @param state state or {@code null} for none
    */
   public InstanceConfig setState(java.lang.String state) {

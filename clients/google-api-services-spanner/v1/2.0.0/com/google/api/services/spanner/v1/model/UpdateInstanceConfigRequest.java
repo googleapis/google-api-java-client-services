@@ -30,9 +30,9 @@ package com.google.api.services.spanner.v1.model;
 public final class UpdateInstanceConfigRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The user instance config to update, which must always include the instance config
-   * name. Otherwise, only fields mentioned in update_mask need be included. To prevent conflicts of
-   * concurrent updates, etag can be used.
+   * Required. The user instance configuration to update, which must always include the instance
+   * configuration name. Otherwise, only fields mentioned in update_mask need be included. To
+   * prevent conflicts of concurrent updates, etag can be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,9 +56,9 @@ public final class UpdateInstanceConfigRequest extends com.google.api.client.jso
   private java.lang.Boolean validateOnly;
 
   /**
-   * Required. The user instance config to update, which must always include the instance config
-   * name. Otherwise, only fields mentioned in update_mask need be included. To prevent conflicts of
-   * concurrent updates, etag can be used.
+   * Required. The user instance configuration to update, which must always include the instance
+   * configuration name. Otherwise, only fields mentioned in update_mask need be included. To
+   * prevent conflicts of concurrent updates, etag can be used.
    * @return value or {@code null} for none
    */
   public InstanceConfig getInstanceConfig() {
@@ -66,9 +66,9 @@ public final class UpdateInstanceConfigRequest extends com.google.api.client.jso
   }
 
   /**
-   * Required. The user instance config to update, which must always include the instance config
-   * name. Otherwise, only fields mentioned in update_mask need be included. To prevent conflicts of
-   * concurrent updates, etag can be used.
+   * Required. The user instance configuration to update, which must always include the instance
+   * configuration name. Otherwise, only fields mentioned in update_mask need be included. To
+   * prevent conflicts of concurrent updates, etag can be used.
    * @param instanceConfig instanceConfig or {@code null} for none
    */
   public UpdateInstanceConfigRequest setInstanceConfig(InstanceConfig instanceConfig) {

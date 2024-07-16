@@ -134,6 +134,162 @@ public class PlayIntegrity extends com.google.api.client.googleapis.services.jso
   }
 
   /**
+   * An accessor for creating requests from the DeviceRecall collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code PlayIntegrity playintegrity = new PlayIntegrity(...);}
+   *   {@code PlayIntegrity.DeviceRecall.List request = playintegrity.deviceRecall().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public DeviceRecall deviceRecall() {
+    return new DeviceRecall();
+  }
+
+  /**
+   * The "deviceRecall" collection of methods.
+   */
+  public class DeviceRecall {
+
+    /**
+     * Writes recall bits for the device where Play Integrity API token is obtained. The endpoint is
+     * available to select Play partners in an early access program (EAP).
+     *
+     * Create a request for the method "deviceRecall.write".
+     *
+     * This request holds the parameters needed by the playintegrity server.  After setting any optional
+     * parameters, call the {@link Write#execute()} method to invoke the remote operation.
+     *
+     * @param packageName Required. Package name of the app the attached integrity token belongs to.
+     * @param content the {@link com.google.api.services.playintegrity.v1.model.WriteDeviceRecallRequest}
+     * @return the request
+     */
+    public Write write(java.lang.String packageName, com.google.api.services.playintegrity.v1.model.WriteDeviceRecallRequest content) throws java.io.IOException {
+      Write result = new Write(packageName, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Write extends PlayIntegrityRequest<com.google.api.services.playintegrity.v1.model.WriteDeviceRecallResponse> {
+
+      private static final String REST_PATH = "v1/{+packageName}/deviceRecall:write";
+
+      private final java.util.regex.Pattern PACKAGE_NAME_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Writes recall bits for the device where Play Integrity API token is obtained. The endpoint is
+       * available to select Play partners in an early access program (EAP).
+       *
+       * Create a request for the method "deviceRecall.write".
+       *
+       * This request holds the parameters needed by the the playintegrity server.  After setting any
+       * optional parameters, call the {@link Write#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Write#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param packageName Required. Package name of the app the attached integrity token belongs to.
+       * @param content the {@link com.google.api.services.playintegrity.v1.model.WriteDeviceRecallRequest}
+       * @since 1.13
+       */
+      protected Write(java.lang.String packageName, com.google.api.services.playintegrity.v1.model.WriteDeviceRecallRequest content) {
+        super(PlayIntegrity.this, "POST", REST_PATH, content, com.google.api.services.playintegrity.v1.model.WriteDeviceRecallResponse.class);
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PACKAGE_NAME_PATTERN.matcher(packageName).matches(),
+              "Parameter packageName must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public Write set$Xgafv(java.lang.String $Xgafv) {
+        return (Write) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Write setAccessToken(java.lang.String accessToken) {
+        return (Write) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Write setAlt(java.lang.String alt) {
+        return (Write) super.setAlt(alt);
+      }
+
+      @Override
+      public Write setCallback(java.lang.String callback) {
+        return (Write) super.setCallback(callback);
+      }
+
+      @Override
+      public Write setFields(java.lang.String fields) {
+        return (Write) super.setFields(fields);
+      }
+
+      @Override
+      public Write setKey(java.lang.String key) {
+        return (Write) super.setKey(key);
+      }
+
+      @Override
+      public Write setOauthToken(java.lang.String oauthToken) {
+        return (Write) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Write setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Write) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Write setQuotaUser(java.lang.String quotaUser) {
+        return (Write) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Write setUploadType(java.lang.String uploadType) {
+        return (Write) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Write setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Write) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Package name of the app the attached integrity token belongs to. */
+      @com.google.api.client.util.Key
+      private java.lang.String packageName;
+
+      /** Required. Package name of the app the attached integrity token belongs to.
+       */
+      public java.lang.String getPackageName() {
+        return packageName;
+      }
+
+      /** Required. Package name of the app the attached integrity token belongs to. */
+      public Write setPackageName(java.lang.String packageName) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PACKAGE_NAME_PATTERN.matcher(packageName).matches(),
+              "Parameter packageName must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.packageName = packageName;
+        return this;
+      }
+
+      @Override
+      public Write set(String parameterName, Object value) {
+        return (Write) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the V1 collection.
    *
    * <p>The typical use is:</p>

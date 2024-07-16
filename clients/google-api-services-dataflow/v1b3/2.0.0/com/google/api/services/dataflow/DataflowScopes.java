@@ -29,9 +29,6 @@ public class DataflowScopes {
   /** View and manage your Google Compute Engine resources. */
   public static final String COMPUTE = "https://www.googleapis.com/auth/compute";
 
-  /** View your Google Compute Engine resources. */
-  public static final String COMPUTE_READONLY = "https://www.googleapis.com/auth/compute.readonly";
-
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -41,7 +38,6 @@ public class DataflowScopes {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CLOUD_PLATFORM);
     set.add(COMPUTE);
-    set.add(COMPUTE_READONLY);
     return java.util.Collections.unmodifiableSet(set);
   }
 

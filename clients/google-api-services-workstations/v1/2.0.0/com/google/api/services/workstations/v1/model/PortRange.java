@@ -17,7 +17,8 @@
 package com.google.api.services.workstations.v1.model;
 
 /**
- * Configuration options for a custom domain.
+ * A PortRange defines a range of ports. Both first and last are inclusive. To specify a single
+ * port, both first and last should be the same.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Workstations API. For a detailed explanation
@@ -28,40 +29,64 @@ package com.google.api.services.workstations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DomainConfig extends com.google.api.client.json.GenericJson {
+public final class PortRange extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. Domain used by Workstations for HTTP ingress.
+   * Required. Starting port number for the current range of ports.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String domain;
+  private java.lang.Integer first;
 
   /**
-   * Immutable. Domain used by Workstations for HTTP ingress.
+   * Required. Ending port number for the current range of ports.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer last;
+
+  /**
+   * Required. Starting port number for the current range of ports.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDomain() {
-    return domain;
+  public java.lang.Integer getFirst() {
+    return first;
   }
 
   /**
-   * Immutable. Domain used by Workstations for HTTP ingress.
-   * @param domain domain or {@code null} for none
+   * Required. Starting port number for the current range of ports.
+   * @param first first or {@code null} for none
    */
-  public DomainConfig setDomain(java.lang.String domain) {
-    this.domain = domain;
+  public PortRange setFirst(java.lang.Integer first) {
+    this.first = first;
+    return this;
+  }
+
+  /**
+   * Required. Ending port number for the current range of ports.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getLast() {
+    return last;
+  }
+
+  /**
+   * Required. Ending port number for the current range of ports.
+   * @param last last or {@code null} for none
+   */
+  public PortRange setLast(java.lang.Integer last) {
+    this.last = last;
     return this;
   }
 
   @Override
-  public DomainConfig set(String fieldName, Object value) {
-    return (DomainConfig) super.set(fieldName, value);
+  public PortRange set(String fieldName, Object value) {
+    return (PortRange) super.set(fieldName, value);
   }
 
   @Override
-  public DomainConfig clone() {
-    return (DomainConfig) super.clone();
+  public PortRange clone() {
+    return (PortRange) super.clone();
   }
 
 }

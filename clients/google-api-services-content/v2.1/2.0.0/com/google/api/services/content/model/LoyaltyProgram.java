@@ -46,6 +46,15 @@ public final class LoyaltyProgram extends com.google.api.client.json.GenericJson
   private java.lang.Long loyaltyPoints;
 
   /**
+   * Optional. A date range during which the item is eligible for member price. If not specified,
+   * the member price is always applicable. The date range is represented by a pair of ISO 8601
+   * dates separated by a space, comma, or slash.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String memberPriceEffectiveDate;
+
+  /**
    * Optional. The price for members of the given tier (instant discount price). Must be smaller or
    * equal to the regular price.
    * The value may be {@code null}.
@@ -102,6 +111,27 @@ public final class LoyaltyProgram extends com.google.api.client.json.GenericJson
    */
   public LoyaltyProgram setLoyaltyPoints(java.lang.Long loyaltyPoints) {
     this.loyaltyPoints = loyaltyPoints;
+    return this;
+  }
+
+  /**
+   * Optional. A date range during which the item is eligible for member price. If not specified,
+   * the member price is always applicable. The date range is represented by a pair of ISO 8601
+   * dates separated by a space, comma, or slash.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMemberPriceEffectiveDate() {
+    return memberPriceEffectiveDate;
+  }
+
+  /**
+   * Optional. A date range during which the item is eligible for member price. If not specified,
+   * the member price is always applicable. The date range is represented by a pair of ISO 8601
+   * dates separated by a space, comma, or slash.
+   * @param memberPriceEffectiveDate memberPriceEffectiveDate or {@code null} for none
+   */
+  public LoyaltyProgram setMemberPriceEffectiveDate(java.lang.String memberPriceEffectiveDate) {
+    this.memberPriceEffectiveDate = memberPriceEffectiveDate;
     return this;
   }
 

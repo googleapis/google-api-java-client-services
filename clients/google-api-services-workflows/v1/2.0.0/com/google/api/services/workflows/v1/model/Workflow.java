@@ -17,7 +17,7 @@
 package com.google.api.services.workflows.v1.model;
 
 /**
- * Workflow program to be executed by Workflows.
+ * LINT.IfChange Workflow program to be executed by Workflows.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workflows API. For a detailed explanation see:

@@ -9170,6 +9170,445 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         public class BackupSchedules {
 
           /**
+           * Creates a new backup schedule.
+           *
+           * Create a request for the method "backupSchedules.create".
+           *
+           * This request holds the parameters needed by the spanner server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The name of the database that this backup schedule applies to.
+           * @param content the {@link com.google.api.services.spanner.v1.model.BackupSchedule}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.spanner.v1.model.BackupSchedule content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends SpannerRequest<com.google.api.services.spanner.v1.model.BackupSchedule> {
+
+            private static final String REST_PATH = "v1/{+parent}/backupSchedules";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+
+            /**
+             * Creates a new backup schedule.
+             *
+             * Create a request for the method "backupSchedules.create".
+             *
+             * This request holds the parameters needed by the the spanner server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The name of the database that this backup schedule applies to.
+             * @param content the {@link com.google.api.services.spanner.v1.model.BackupSchedule}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.spanner.v1.model.BackupSchedule content) {
+              super(Spanner.this, "POST", REST_PATH, content, com.google.api.services.spanner.v1.model.BackupSchedule.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the database that this backup schedule applies to. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The name of the database that this backup schedule applies to.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The name of the database that this backup schedule applies to. */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The Id to use for the backup schedule. The `backup_schedule_id` appended to
+             * `parent` forms the full backup schedule name of the form
+             * `projects//instances//databases//backupSchedules/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String backupScheduleId;
+
+            /** Required. The Id to use for the backup schedule. The `backup_schedule_id` appended to `parent`
+           forms the full backup schedule name of the form `projects//instances//databases//backupSchedules/`.
+             */
+            public java.lang.String getBackupScheduleId() {
+              return backupScheduleId;
+            }
+
+            /**
+             * Required. The Id to use for the backup schedule. The `backup_schedule_id` appended to
+             * `parent` forms the full backup schedule name of the form
+             * `projects//instances//databases//backupSchedules/`.
+             */
+            public Create setBackupScheduleId(java.lang.String backupScheduleId) {
+              this.backupScheduleId = backupScheduleId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a backup schedule.
+           *
+           * Create a request for the method "backupSchedules.delete".
+           *
+           * This request holds the parameters needed by the spanner server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the schedule to delete. Values are of the form
+           *        `projects//instances//databases//backupSchedules/`.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends SpannerRequest<com.google.api.services.spanner.v1.model.Empty> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+
+            /**
+             * Deletes a backup schedule.
+             *
+             * Create a request for the method "backupSchedules.delete".
+             *
+             * This request holds the parameters needed by the the spanner server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the schedule to delete. Values are of the form
+           *        `projects//instances//databases//backupSchedules/`.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(Spanner.this, "DELETE", REST_PATH, null, com.google.api.services.spanner.v1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the schedule to delete. Values are of the form
+             * `projects//instances//databases//backupSchedules/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the schedule to delete. Values are of the form
+           `projects//instances//databases//backupSchedules/`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the schedule to delete. Values are of the form
+             * `projects//instances//databases//backupSchedules/`.
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets backup schedule for the input schedule name.
+           *
+           * Create a request for the method "backupSchedules.get".
+           *
+           * This request holds the parameters needed by the spanner server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the schedule to retrieve. Values are of the form
+           *        `projects//instances//databases//backupSchedules/`.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends SpannerRequest<com.google.api.services.spanner.v1.model.BackupSchedule> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+
+            /**
+             * Gets backup schedule for the input schedule name.
+             *
+             * Create a request for the method "backupSchedules.get".
+             *
+             * This request holds the parameters needed by the the spanner server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the schedule to retrieve. Values are of the form
+           *        `projects//instances//databases//backupSchedules/`.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Spanner.this, "GET", REST_PATH, null, com.google.api.services.spanner.v1.model.BackupSchedule.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the schedule to retrieve. Values are of the form
+             * `projects//instances//databases//backupSchedules/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the schedule to retrieve. Values are of the form
+           `projects//instances//databases//backupSchedules/`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the schedule to retrieve. Values are of the form
+             * `projects//instances//databases//backupSchedules/`.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets the access control policy for a database or backup resource. Returns an empty policy if a
            * database or backup exists but does not have a policy set. Authorization requires
            * `spanner.databases.getIamPolicy` permission on resource. For backups, authorization requires
@@ -9318,6 +9757,380 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             @Override
             public GetIamPolicy set(String parameterName, Object value) {
               return (GetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all the backup schedules for the database.
+           *
+           * Create a request for the method "backupSchedules.list".
+           *
+           * This request holds the parameters needed by the spanner server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Database is the parent resource whose backup schedules should be listed. Values are of the
+           *        form projects//instances//databases/
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends SpannerRequest<com.google.api.services.spanner.v1.model.ListBackupSchedulesResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/backupSchedules";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+
+            /**
+             * Lists all the backup schedules for the database.
+             *
+             * Create a request for the method "backupSchedules.list".
+             *
+             * This request holds the parameters needed by the the spanner server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Database is the parent resource whose backup schedules should be listed. Values are of the
+           *        form projects//instances//databases/
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Spanner.this, "GET", REST_PATH, null, com.google.api.services.spanner.v1.model.ListBackupSchedulesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Database is the parent resource whose backup schedules should be listed.
+             * Values are of the form projects//instances//databases/
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Database is the parent resource whose backup schedules should be listed. Values are of
+           the form projects//instances//databases/
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Database is the parent resource whose backup schedules should be listed.
+             * Values are of the form projects//instances//databases/
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Number of backup schedules to be returned in the response. If 0 or less,
+             * defaults to the server's maximum allowed page size.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Number of backup schedules to be returned in the response. If 0 or less, defaults to the
+           server's maximum allowed page size.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Number of backup schedules to be returned in the response. If 0 or less,
+             * defaults to the server's maximum allowed page size.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. If non-empty, `page_token` should contain a next_page_token from a previous
+             * ListBackupSchedulesResponse to the same `parent`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. If non-empty, `page_token` should contain a next_page_token from a previous
+           ListBackupSchedulesResponse to the same `parent`.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. If non-empty, `page_token` should contain a next_page_token from a previous
+             * ListBackupSchedulesResponse to the same `parent`.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates a backup schedule.
+           *
+           * Create a request for the method "backupSchedules.patch".
+           *
+           * This request holds the parameters needed by the spanner server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Identifier. Output only for the CreateBackupSchedule operation. Required for the
+           *        UpdateBackupSchedule operation. A globally unique identifier for the backup schedule which
+           *        cannot be changed. Values are of the form
+           *        `projects//instances//databases//backupSchedules/a-z*[a-z0-9]` The final segment of the
+           *        name must be between 2 and 60 characters in length.
+           * @param content the {@link com.google.api.services.spanner.v1.model.BackupSchedule}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.spanner.v1.model.BackupSchedule content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends SpannerRequest<com.google.api.services.spanner.v1.model.BackupSchedule> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+
+            /**
+             * Updates a backup schedule.
+             *
+             * Create a request for the method "backupSchedules.patch".
+             *
+             * This request holds the parameters needed by the the spanner server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Identifier. Output only for the CreateBackupSchedule operation. Required for the
+           *        UpdateBackupSchedule operation. A globally unique identifier for the backup schedule which
+           *        cannot be changed. Values are of the form
+           *        `projects//instances//databases//backupSchedules/a-z*[a-z0-9]` The final segment of the
+           *        name must be between 2 and 60 characters in length.
+             * @param content the {@link com.google.api.services.spanner.v1.model.BackupSchedule}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.spanner.v1.model.BackupSchedule content) {
+              super(Spanner.this, "PATCH", REST_PATH, content, com.google.api.services.spanner.v1.model.BackupSchedule.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Identifier. Output only for the CreateBackupSchedule operation. Required for the
+             * UpdateBackupSchedule operation. A globally unique identifier for the backup schedule
+             * which cannot be changed. Values are of the form
+             * `projects//instances//databases//backupSchedules/a-z*[a-z0-9]` The final segment of
+             * the name must be between 2 and 60 characters in length.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Identifier. Output only for the CreateBackupSchedule operation. Required for the
+           UpdateBackupSchedule operation. A globally unique identifier for the backup schedule which cannot
+           be changed. Values are of the form `projects//instances//databases//backupSchedules/a-z*[a-z0-9]`
+           The final segment of the name must be between 2 and 60 characters in length.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Identifier. Output only for the CreateBackupSchedule operation. Required for the
+             * UpdateBackupSchedule operation. A globally unique identifier for the backup schedule
+             * which cannot be changed. Values are of the form
+             * `projects//instances//databases//backupSchedules/a-z*[a-z0-9]` The final segment of
+             * the name must be between 2 and 60 characters in length.
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Required. A mask specifying which fields in the BackupSchedule resource should be
+             * updated. This mask is relative to the BackupSchedule resource, not to the request
+             * message. The field mask must always be specified; this prevents any future fields
+             * from being erased accidentally.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Required. A mask specifying which fields in the BackupSchedule resource should be updated. This
+           mask is relative to the BackupSchedule resource, not to the request message. The field mask must
+           always be specified; this prevents any future fields from being erased accidentally.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Required. A mask specifying which fields in the BackupSchedule resource should be
+             * updated. This mask is relative to the BackupSchedule resource, not to the request
+             * message. The field mask must always be specified; this prevents any future fields
+             * from being erased accidentally.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
             }
           }
           /**

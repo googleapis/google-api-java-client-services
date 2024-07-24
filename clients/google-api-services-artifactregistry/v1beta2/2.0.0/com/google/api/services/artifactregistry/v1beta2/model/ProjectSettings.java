@@ -46,6 +46,13 @@ public final class ProjectSettings extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
+   * The percentage of pull traffic to redirect from GCR to AR when using partial redirection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer pullPercent;
+
+  /**
    * The redirection state of the legacy repositories in this project.
    * @return value or {@code null} for none
    */
@@ -78,6 +85,23 @@ public final class ProjectSettings extends com.google.api.client.json.GenericJso
    */
   public ProjectSettings setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The percentage of pull traffic to redirect from GCR to AR when using partial redirection.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPullPercent() {
+    return pullPercent;
+  }
+
+  /**
+   * The percentage of pull traffic to redirect from GCR to AR when using partial redirection.
+   * @param pullPercent pullPercent or {@code null} for none
+   */
+  public ProjectSettings setPullPercent(java.lang.Integer pullPercent) {
+    this.pullPercent = pullPercent;
     return this;
   }
 

@@ -46,7 +46,7 @@ public final class ComputeEnginePreferences extends com.google.api.client.json.G
   private MachinePreferences machinePreferences;
 
   /**
-   * Optional. Preferences for multithreading support.
+   * Optional. Preferences for multithreading support on Windows Server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,7 +106,7 @@ public final class ComputeEnginePreferences extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. Preferences for multithreading support.
+   * Optional. Preferences for multithreading support on Windows Server.
    * @return value or {@code null} for none
    */
   public java.lang.String getMultithreading() {
@@ -114,7 +114,7 @@ public final class ComputeEnginePreferences extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. Preferences for multithreading support.
+   * Optional. Preferences for multithreading support on Windows Server.
    * @param multithreading multithreading or {@code null} for none
    */
   public ComputeEnginePreferences setMultithreading(java.lang.String multithreading) {

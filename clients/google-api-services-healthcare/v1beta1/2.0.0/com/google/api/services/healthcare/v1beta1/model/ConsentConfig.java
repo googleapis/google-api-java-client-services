@@ -39,9 +39,9 @@ public final class ConsentConfig extends com.google.api.client.json.GenericJson 
   private AccessDeterminationLogConfig accessDeterminationLogConfig;
 
   /**
-   * Optional. If set to true, when accessing FHIR resources, the consent headers will be verified
-   * against consents given by patients. See the ConsentEnforcementVersion for the supported consent
-   * headers.
+   * Optional. The default value is false. If set to true, when accessing FHIR resources, the
+   * consent headers will be verified against consents given by patients. See the
+   * ConsentEnforcementVersion for the supported consent headers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,9 +95,9 @@ public final class ConsentConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. If set to true, when accessing FHIR resources, the consent headers will be verified
-   * against consents given by patients. See the ConsentEnforcementVersion for the supported consent
-   * headers.
+   * Optional. The default value is false. If set to true, when accessing FHIR resources, the
+   * consent headers will be verified against consents given by patients. See the
+   * ConsentEnforcementVersion for the supported consent headers.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAccessEnforced() {
@@ -105,9 +105,9 @@ public final class ConsentConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. If set to true, when accessing FHIR resources, the consent headers will be verified
-   * against consents given by patients. See the ConsentEnforcementVersion for the supported consent
-   * headers.
+   * Optional. The default value is false. If set to true, when accessing FHIR resources, the
+   * consent headers will be verified against consents given by patients. See the
+   * ConsentEnforcementVersion for the supported consent headers.
    * @param accessEnforced accessEnforced or {@code null} for none
    */
   public ConsentConfig setAccessEnforced(java.lang.Boolean accessEnforced) {

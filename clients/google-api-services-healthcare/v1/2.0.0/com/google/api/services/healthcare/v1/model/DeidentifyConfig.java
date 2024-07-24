@@ -60,10 +60,10 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   private TextConfig text;
 
   /**
-   * Ensures in-flight data remains in the region of origin during de-identification. Using this
-   * option results in a significant reduction of throughput, and is not compatible with `LOCATION`
-   * or `ORGANIZATION_NAME` infoTypes. `LOCATION` must be excluded within TextConfig, and must also
-   * be excluded within ImageConfig if image redaction is required.
+   * Ensures in-flight data remains in the region of origin during de-identification. The default
+   * value is false. Using this option results in a significant reduction of throughput, and is not
+   * compatible with `LOCATION` or `ORGANIZATION_NAME` infoTypes. `LOCATION` must be excluded within
+   * TextConfig, and must also be excluded within ImageConfig if image redaction is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,10 +138,10 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Ensures in-flight data remains in the region of origin during de-identification. Using this
-   * option results in a significant reduction of throughput, and is not compatible with `LOCATION`
-   * or `ORGANIZATION_NAME` infoTypes. `LOCATION` must be excluded within TextConfig, and must also
-   * be excluded within ImageConfig if image redaction is required.
+   * Ensures in-flight data remains in the region of origin during de-identification. The default
+   * value is false. Using this option results in a significant reduction of throughput, and is not
+   * compatible with `LOCATION` or `ORGANIZATION_NAME` infoTypes. `LOCATION` must be excluded within
+   * TextConfig, and must also be excluded within ImageConfig if image redaction is required.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseRegionalDataProcessing() {
@@ -149,10 +149,10 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Ensures in-flight data remains in the region of origin during de-identification. Using this
-   * option results in a significant reduction of throughput, and is not compatible with `LOCATION`
-   * or `ORGANIZATION_NAME` infoTypes. `LOCATION` must be excluded within TextConfig, and must also
-   * be excluded within ImageConfig if image redaction is required.
+   * Ensures in-flight data remains in the region of origin during de-identification. The default
+   * value is false. Using this option results in a significant reduction of throughput, and is not
+   * compatible with `LOCATION` or `ORGANIZATION_NAME` infoTypes. `LOCATION` must be excluded within
+   * TextConfig, and must also be excluded within ImageConfig if image redaction is required.
    * @param useRegionalDataProcessing useRegionalDataProcessing or {@code null} for none
    */
   public DeidentifyConfig setUseRegionalDataProcessing(java.lang.Boolean useRegionalDataProcessing) {

@@ -31,8 +31,7 @@ package com.google.api.services.translate.v3.model;
 public final class AdaptiveMtTranslateRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The content of the input in string format. For now only one sentence per request is
-   * supported.
+   * Required. The content of the input in string format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +46,22 @@ public final class AdaptiveMtTranslateRequest extends com.google.api.client.json
   private java.lang.String dataset;
 
   /**
-   * Required. The content of the input in string format. For now only one sentence per request is
-   * supported.
+   * Optional. Glossary to be applied. The glossary must be within the same region (have the same
+   * location-id) as the model, otherwise an INVALID_ARGUMENT (400) error is returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TranslateTextGlossaryConfig glossaryConfig;
+
+  /**
+   * Configuration for caller provided reference sentences.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReferenceSentenceConfig referenceSentenceConfig;
+
+  /**
+   * Required. The content of the input in string format.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getContent() {
@@ -56,8 +69,7 @@ public final class AdaptiveMtTranslateRequest extends com.google.api.client.json
   }
 
   /**
-   * Required. The content of the input in string format. For now only one sentence per request is
-   * supported.
+   * Required. The content of the input in string format.
    * @param content content or {@code null} for none
    */
   public AdaptiveMtTranslateRequest setContent(java.util.List<java.lang.String> content) {
@@ -81,6 +93,42 @@ public final class AdaptiveMtTranslateRequest extends com.google.api.client.json
    */
   public AdaptiveMtTranslateRequest setDataset(java.lang.String dataset) {
     this.dataset = dataset;
+    return this;
+  }
+
+  /**
+   * Optional. Glossary to be applied. The glossary must be within the same region (have the same
+   * location-id) as the model, otherwise an INVALID_ARGUMENT (400) error is returned.
+   * @return value or {@code null} for none
+   */
+  public TranslateTextGlossaryConfig getGlossaryConfig() {
+    return glossaryConfig;
+  }
+
+  /**
+   * Optional. Glossary to be applied. The glossary must be within the same region (have the same
+   * location-id) as the model, otherwise an INVALID_ARGUMENT (400) error is returned.
+   * @param glossaryConfig glossaryConfig or {@code null} for none
+   */
+  public AdaptiveMtTranslateRequest setGlossaryConfig(TranslateTextGlossaryConfig glossaryConfig) {
+    this.glossaryConfig = glossaryConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for caller provided reference sentences.
+   * @return value or {@code null} for none
+   */
+  public ReferenceSentenceConfig getReferenceSentenceConfig() {
+    return referenceSentenceConfig;
+  }
+
+  /**
+   * Configuration for caller provided reference sentences.
+   * @param referenceSentenceConfig referenceSentenceConfig or {@code null} for none
+   */
+  public AdaptiveMtTranslateRequest setReferenceSentenceConfig(ReferenceSentenceConfig referenceSentenceConfig) {
+    this.referenceSentenceConfig = referenceSentenceConfig;
     return this;
   }
 

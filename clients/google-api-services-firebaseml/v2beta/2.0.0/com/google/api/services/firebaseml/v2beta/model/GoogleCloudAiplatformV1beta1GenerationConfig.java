@@ -79,6 +79,13 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
   private GoogleCloudAiplatformV1beta1Schema responseSchema;
 
   /**
+   * Optional. Seed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer seed;
+
+  /**
    * Optional. Stop sequences.
    * The value may be {@code null}.
    */
@@ -219,6 +226,23 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
    */
   public GoogleCloudAiplatformV1beta1GenerationConfig setResponseSchema(GoogleCloudAiplatformV1beta1Schema responseSchema) {
     this.responseSchema = responseSchema;
+    return this;
+  }
+
+  /**
+   * Optional. Seed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getSeed() {
+    return seed;
+  }
+
+  /**
+   * Optional. Seed.
+   * @param seed seed or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfig setSeed(java.lang.Integer seed) {
+    this.seed = seed;
     return this;
   }
 

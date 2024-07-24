@@ -45,23 +45,27 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private SpaceConfig config;
 
   /**
-   * Output only. Type friendly code to join the meeting. Format: `[a-z]+-[a-z]+-[a-z]+` such as
-   * `abc-mnop-xyz`. The maximum length is 128 characters. Can only be used as an alias of the space
-   * ID to get the space.
+   * Output only. Type friendly unique string used to join the meeting. Format:
+   * `[a-z]+-[a-z]+-[a-z]+`. For example, `abc-mnop-xyz`. The maximum length is 128 characters. Can
+   * only be used as an alias of the space name to get the space.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String meetingCode;
 
   /**
-   * Output only. URI used to join meetings, such as `https://meet.google.com/abc-mnop-xyz`.
+   * Output only. URI used to join meetings consisting of `https://meet.google.com/` followed by the
+   * `meeting_code`. For example, `https://meet.google.com/abc-mnop-xyz`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String meetingUri;
 
   /**
-   * Immutable. Resource name of the space. Format: `spaces/{space}`
+   * Immutable. Resource name of the space. Format: `spaces/{space}`. `{space}` is the resource
+   * identifier for the space. It's a unique, server-generated ID and is case sensitive. For
+   * example, `jQCFfuBOdN5z`. For more information, see [How Meet identifies a meeting
+   * space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,9 +106,9 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Type friendly code to join the meeting. Format: `[a-z]+-[a-z]+-[a-z]+` such as
-   * `abc-mnop-xyz`. The maximum length is 128 characters. Can only be used as an alias of the space
-   * ID to get the space.
+   * Output only. Type friendly unique string used to join the meeting. Format:
+   * `[a-z]+-[a-z]+-[a-z]+`. For example, `abc-mnop-xyz`. The maximum length is 128 characters. Can
+   * only be used as an alias of the space name to get the space.
    * @return value or {@code null} for none
    */
   public java.lang.String getMeetingCode() {
@@ -112,9 +116,9 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Type friendly code to join the meeting. Format: `[a-z]+-[a-z]+-[a-z]+` such as
-   * `abc-mnop-xyz`. The maximum length is 128 characters. Can only be used as an alias of the space
-   * ID to get the space.
+   * Output only. Type friendly unique string used to join the meeting. Format:
+   * `[a-z]+-[a-z]+-[a-z]+`. For example, `abc-mnop-xyz`. The maximum length is 128 characters. Can
+   * only be used as an alias of the space name to get the space.
    * @param meetingCode meetingCode or {@code null} for none
    */
   public Space setMeetingCode(java.lang.String meetingCode) {
@@ -123,7 +127,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. URI used to join meetings, such as `https://meet.google.com/abc-mnop-xyz`.
+   * Output only. URI used to join meetings consisting of `https://meet.google.com/` followed by the
+   * `meeting_code`. For example, `https://meet.google.com/abc-mnop-xyz`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMeetingUri() {
@@ -131,7 +136,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. URI used to join meetings, such as `https://meet.google.com/abc-mnop-xyz`.
+   * Output only. URI used to join meetings consisting of `https://meet.google.com/` followed by the
+   * `meeting_code`. For example, `https://meet.google.com/abc-mnop-xyz`.
    * @param meetingUri meetingUri or {@code null} for none
    */
   public Space setMeetingUri(java.lang.String meetingUri) {
@@ -140,7 +146,10 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. Resource name of the space. Format: `spaces/{space}`
+   * Immutable. Resource name of the space. Format: `spaces/{space}`. `{space}` is the resource
+   * identifier for the space. It's a unique, server-generated ID and is case sensitive. For
+   * example, `jQCFfuBOdN5z`. For more information, see [How Meet identifies a meeting
+   * space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -148,7 +157,10 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. Resource name of the space. Format: `spaces/{space}`
+   * Immutable. Resource name of the space. Format: `spaces/{space}`. `{space}` is the resource
+   * identifier for the space. It's a unique, server-generated ID and is case sensitive. For
+   * example, `jQCFfuBOdN5z`. For more information, see [How Meet identifies a meeting
+   * space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
    * @param name name or {@code null} for none
    */
   public Space setName(java.lang.String name) {

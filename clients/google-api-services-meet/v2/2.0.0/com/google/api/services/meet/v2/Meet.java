@@ -2385,14 +2385,19 @@ public class Meet extends com.google.api.client.googleapis.services.json.Abstrac
       }
     }
     /**
-     * Ends an active conference (if there's one).
+     * Ends an active conference (if there's one). For an example, see [End active
+     * conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
      *
      * Create a request for the method "spaces.endActiveConference".
      *
      * This request holds the parameters needed by the meet server.  After setting any optional
      * parameters, call the {@link EndActiveConference#execute()} method to invoke the remote operation.
      *
-     * @param name Required. Resource name of the space.
+     * @param name Required. Resource name of the space. Format: `spaces/{space}`. `{space}` is the resource identifier
+     *        for the space. It's a unique, server-generated ID and is case sensitive. For example,
+     *        `jQCFfuBOdN5z`. For more information, see [How Meet identifies a meeting
+     *        space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-
+     *        space).
      * @param content the {@link com.google.api.services.meet.v2.model.EndActiveConferenceRequest}
      * @return the request
      */
@@ -2410,7 +2415,9 @@ public class Meet extends com.google.api.client.googleapis.services.json.Abstrac
           java.util.regex.Pattern.compile("^spaces/[^/]+$");
 
       /**
-       * Ends an active conference (if there's one).
+       * Ends an active conference (if there's one). For an example, see [End active
+       * conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-
+       * conference).
        *
        * Create a request for the method "spaces.endActiveConference".
        *
@@ -2420,7 +2427,11 @@ public class Meet extends com.google.api.client.googleapis.services.json.Abstrac
        * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param name Required. Resource name of the space.
+       * @param name Required. Resource name of the space. Format: `spaces/{space}`. `{space}` is the resource identifier
+     *        for the space. It's a unique, server-generated ID and is case sensitive. For example,
+     *        `jQCFfuBOdN5z`. For more information, see [How Meet identifies a meeting
+     *        space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-
+     *        space).
        * @param content the {@link com.google.api.services.meet.v2.model.EndActiveConferenceRequest}
        * @since 1.13
        */
@@ -2489,17 +2500,32 @@ public class Meet extends com.google.api.client.googleapis.services.json.Abstrac
         return (EndActiveConference) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. Resource name of the space. */
+      /**
+       * Required. Resource name of the space. Format: `spaces/{space}`. `{space}` is the resource
+       * identifier for the space. It's a unique, server-generated ID and is case sensitive. For
+       * example, `jQCFfuBOdN5z`. For more information, see [How Meet identifies a meeting
+       * space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-
+       * space).
+       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. Resource name of the space.
+      /** Required. Resource name of the space. Format: `spaces/{space}`. `{space}` is the resource
+     identifier for the space. It's a unique, server-generated ID and is case sensitive. For example,
+     `jQCFfuBOdN5z`. For more information, see [How Meet identifies a meeting
+     space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Required. Resource name of the space. */
+      /**
+       * Required. Resource name of the space. Format: `spaces/{space}`. `{space}` is the resource
+       * identifier for the space. It's a unique, server-generated ID and is case sensitive. For
+       * example, `jQCFfuBOdN5z`. For more information, see [How Meet identifies a meeting
+       * space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-
+       * space).
+       */
       public EndActiveConference setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2516,14 +2542,25 @@ public class Meet extends com.google.api.client.googleapis.services.json.Abstrac
       }
     }
     /**
-     * Gets a space by `space_id` or `meeting_code`.
+     * Gets details about a meeting space. For an example, see [Get a meeting
+     * space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
      *
      * Create a request for the method "spaces.get".
      *
      * This request holds the parameters needed by the meet server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Required. Resource name of the space.
+     * @param name Required. Resource name of the space. Format: `spaces/{space}` or `spaces/{meetingCode}`. `{space}`
+     *        is the resource identifier for the space. It's a unique, server-generated ID and is case
+     *        sensitive. For example, `jQCFfuBOdN5z`. `{meetingCode}` is an alias for the space. It's a
+     *        typeable, unique character string and is non-case sensitive. For example, `abc-mnop-xyz`.
+     *        The maximum length is 128 characters. A `meetingCode` shouldn't be stored long term as it
+     *        can become dissociated from a meeting space and can be reused for different meeting spaces
+     *        in the future. Generally, a `meetingCode` expires 365 days after last use. For more
+     *        information, see [Learn about meeting codes in Google
+     *        Meet](https://support.google.com/meet/answer/10710509). For more information, see [How
+     *        Meet identifies a meeting space](https://developers.google.com/meet/api/guides/meeting-
+     *        spaces#identify-meeting-space).
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -2540,7 +2577,8 @@ public class Meet extends com.google.api.client.googleapis.services.json.Abstrac
           java.util.regex.Pattern.compile("^spaces/[^/]+$");
 
       /**
-       * Gets a space by `space_id` or `meeting_code`.
+       * Gets details about a meeting space. For an example, see [Get a meeting
+       * space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
        *
        * Create a request for the method "spaces.get".
        *
@@ -2549,7 +2587,17 @@ public class Meet extends com.google.api.client.googleapis.services.json.Abstrac
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. Resource name of the space.
+       * @param name Required. Resource name of the space. Format: `spaces/{space}` or `spaces/{meetingCode}`. `{space}`
+     *        is the resource identifier for the space. It's a unique, server-generated ID and is case
+     *        sensitive. For example, `jQCFfuBOdN5z`. `{meetingCode}` is an alias for the space. It's a
+     *        typeable, unique character string and is non-case sensitive. For example, `abc-mnop-xyz`.
+     *        The maximum length is 128 characters. A `meetingCode` shouldn't be stored long term as it
+     *        can become dissociated from a meeting space and can be reused for different meeting spaces
+     *        in the future. Generally, a `meetingCode` expires 365 days after last use. For more
+     *        information, see [Learn about meeting codes in Google
+     *        Meet](https://support.google.com/meet/answer/10710509). For more information, see [How
+     *        Meet identifies a meeting space](https://developers.google.com/meet/api/guides/meeting-
+     *        spaces#identify-meeting-space).
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -2627,17 +2675,50 @@ public class Meet extends com.google.api.client.googleapis.services.json.Abstrac
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. Resource name of the space. */
+      /**
+       * Required. Resource name of the space. Format: `spaces/{space}` or `spaces/{meetingCode}`.
+       * `{space}` is the resource identifier for the space. It's a unique, server-generated ID and
+       * is case sensitive. For example, `jQCFfuBOdN5z`. `{meetingCode}` is an alias for the space.
+       * It's a typeable, unique character string and is non-case sensitive. For example, `abc-mnop-
+       * xyz`. The maximum length is 128 characters. A `meetingCode` shouldn't be stored long term
+       * as it can become dissociated from a meeting space and can be reused for different meeting
+       * spaces in the future. Generally, a `meetingCode` expires 365 days after last use. For more
+       * information, see [Learn about meeting codes in Google
+       * Meet](https://support.google.com/meet/answer/10710509). For more information, see [How Meet
+       * identifies a meeting space](https://developers.google.com/meet/api/guides/meeting-
+       * spaces#identify-meeting-space).
+       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. Resource name of the space.
+      /** Required. Resource name of the space. Format: `spaces/{space}` or `spaces/{meetingCode}`. `{space}`
+     is the resource identifier for the space. It's a unique, server-generated ID and is case sensitive.
+     For example, `jQCFfuBOdN5z`. `{meetingCode}` is an alias for the space. It's a typeable, unique
+     character string and is non-case sensitive. For example, `abc-mnop-xyz`. The maximum length is 128
+     characters. A `meetingCode` shouldn't be stored long term as it can become dissociated from a
+     meeting space and can be reused for different meeting spaces in the future. Generally, a
+     `meetingCode` expires 365 days after last use. For more information, see [Learn about meeting codes
+     in Google Meet](https://support.google.com/meet/answer/10710509). For more information, see [How
+     Meet identifies a meeting space](https://developers.google.com/meet/api/guides/meeting-
+     spaces#identify-meeting-space).
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Required. Resource name of the space. */
+      /**
+       * Required. Resource name of the space. Format: `spaces/{space}` or `spaces/{meetingCode}`.
+       * `{space}` is the resource identifier for the space. It's a unique, server-generated ID and
+       * is case sensitive. For example, `jQCFfuBOdN5z`. `{meetingCode}` is an alias for the space.
+       * It's a typeable, unique character string and is non-case sensitive. For example, `abc-mnop-
+       * xyz`. The maximum length is 128 characters. A `meetingCode` shouldn't be stored long term
+       * as it can become dissociated from a meeting space and can be reused for different meeting
+       * spaces in the future. Generally, a `meetingCode` expires 365 days after last use. For more
+       * information, see [Learn about meeting codes in Google
+       * Meet](https://support.google.com/meet/answer/10710509). For more information, see [How Meet
+       * identifies a meeting space](https://developers.google.com/meet/api/guides/meeting-
+       * spaces#identify-meeting-space).
+       */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2654,14 +2735,19 @@ public class Meet extends com.google.api.client.googleapis.services.json.Abstrac
       }
     }
     /**
-     * Updates a space.
+     * Updates details about a meeting space. For an example, see [Update a meeting
+     * space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
      *
      * Create a request for the method "spaces.patch".
      *
      * This request holds the parameters needed by the meet server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param name Immutable. Resource name of the space. Format: `spaces/{space}`
+     * @param name Immutable. Resource name of the space. Format: `spaces/{space}`. `{space}` is the resource
+     *        identifier for the space. It's a unique, server-generated ID and is case sensitive. For
+     *        example, `jQCFfuBOdN5z`. For more information, see [How Meet identifies a meeting
+     *        space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-
+     *        space).
      * @param content the {@link com.google.api.services.meet.v2.model.Space}
      * @return the request
      */
@@ -2679,7 +2765,8 @@ public class Meet extends com.google.api.client.googleapis.services.json.Abstrac
           java.util.regex.Pattern.compile("^spaces/[^/]+$");
 
       /**
-       * Updates a space.
+       * Updates details about a meeting space. For an example, see [Update a meeting
+       * space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
        *
        * Create a request for the method "spaces.patch".
        *
@@ -2688,7 +2775,11 @@ public class Meet extends com.google.api.client.googleapis.services.json.Abstrac
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Immutable. Resource name of the space. Format: `spaces/{space}`
+       * @param name Immutable. Resource name of the space. Format: `spaces/{space}`. `{space}` is the resource
+     *        identifier for the space. It's a unique, server-generated ID and is case sensitive. For
+     *        example, `jQCFfuBOdN5z`. For more information, see [How Meet identifies a meeting
+     *        space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-
+     *        space).
        * @param content the {@link com.google.api.services.meet.v2.model.Space}
        * @since 1.13
        */
@@ -2757,17 +2848,32 @@ public class Meet extends com.google.api.client.googleapis.services.json.Abstrac
         return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable. Resource name of the space. Format: `spaces/{space}` */
+      /**
+       * Immutable. Resource name of the space. Format: `spaces/{space}`. `{space}` is the resource
+       * identifier for the space. It's a unique, server-generated ID and is case sensitive. For
+       * example, `jQCFfuBOdN5z`. For more information, see [How Meet identifies a meeting
+       * space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-
+       * space).
+       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Immutable. Resource name of the space. Format: `spaces/{space}`
+      /** Immutable. Resource name of the space. Format: `spaces/{space}`. `{space}` is the resource
+     identifier for the space. It's a unique, server-generated ID and is case sensitive. For example,
+     `jQCFfuBOdN5z`. For more information, see [How Meet identifies a meeting
+     space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Immutable. Resource name of the space. Format: `spaces/{space}` */
+      /**
+       * Immutable. Resource name of the space. Format: `spaces/{space}`. `{space}` is the resource
+       * identifier for the space. It's a unique, server-generated ID and is case sensitive. For
+       * example, `jQCFfuBOdN5z`. For more information, see [How Meet identifies a meeting
+       * space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-
+       * space).
+       */
       public Patch setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

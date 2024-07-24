@@ -56,7 +56,7 @@ public final class GoogleFirestoreAdminV1BackupSchedule extends com.google.api.c
 
   /**
    * At what relative time in the future, compared to its creation time, the backup should be
-   * deleted, e.g. keep backups for 7 days. The maximum supported retention is 14 weeks.
+   * deleted, e.g. keep backups for 7 days. The maximum supported retention period is 14 weeks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,7 +136,7 @@ public final class GoogleFirestoreAdminV1BackupSchedule extends com.google.api.c
 
   /**
    * At what relative time in the future, compared to its creation time, the backup should be
-   * deleted, e.g. keep backups for 7 days. The maximum supported retention is 14 weeks.
+   * deleted, e.g. keep backups for 7 days. The maximum supported retention period is 14 weeks.
    * @return value or {@code null} for none
    */
   public String getRetention() {
@@ -145,7 +145,7 @@ public final class GoogleFirestoreAdminV1BackupSchedule extends com.google.api.c
 
   /**
    * At what relative time in the future, compared to its creation time, the backup should be
-   * deleted, e.g. keep backups for 7 days. The maximum supported retention is 14 weeks.
+   * deleted, e.g. keep backups for 7 days. The maximum supported retention period is 14 weeks.
    * @param retention retention or {@code null} for none
    */
   public GoogleFirestoreAdminV1BackupSchedule setRetention(String retention) {

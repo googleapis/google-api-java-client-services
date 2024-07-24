@@ -17,7 +17,9 @@
 package com.google.api.services.firestore.v1.model;
 
 /**
- * Nearest Neighbors search config.
+ * Nearest Neighbors search config. The ordering provided by FindNearest supersedes the order_by
+ * stage. If multiple documents have the same vector distance, the returned document order is not
+ * guaranteed to be stable between queries.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:

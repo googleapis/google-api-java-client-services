@@ -29,33 +29,6 @@ package com.google.api.services.firestore.v1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleFirestoreAdminV1DailyRecurrence extends com.google.api.client.json.GenericJson {
 
-  /**
-   * Time of the day. The first run scheduled will be either on the same day if schedule creation
-   * time precedes time_of_day or the next day otherwise.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private TimeOfDay time;
-
-  /**
-   * Time of the day. The first run scheduled will be either on the same day if schedule creation
-   * time precedes time_of_day or the next day otherwise.
-   * @return value or {@code null} for none
-   */
-  public TimeOfDay getTime() {
-    return time;
-  }
-
-  /**
-   * Time of the day. The first run scheduled will be either on the same day if schedule creation
-   * time precedes time_of_day or the next day otherwise.
-   * @param time time or {@code null} for none
-   */
-  public GoogleFirestoreAdminV1DailyRecurrence setTime(TimeOfDay time) {
-    this.time = time;
-    return this;
-  }
-
   @Override
   public GoogleFirestoreAdminV1DailyRecurrence set(String fieldName, Object value) {
     return (GoogleFirestoreAdminV1DailyRecurrence) super.set(fieldName, value);

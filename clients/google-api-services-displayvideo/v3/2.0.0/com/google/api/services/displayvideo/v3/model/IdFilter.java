@@ -47,8 +47,8 @@ public final class IdFilter extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Long> adGroupIds;
 
   /**
-   * Optional. YouTube Ad Groups QA to download by ID. All IDs must belong to the same Advertiser or
-   * Partner specified in CreateSdfDownloadTaskRequest.
+   * Optional. YouTube Ad Groups, by ID, to download in QA format. All IDs must belong to the same
+   * Advertiser or Partner specified in CreateSdfDownloadTaskRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -79,8 +79,8 @@ public final class IdFilter extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Long> lineItemIds;
 
   /**
-   * Optional. Line Items QA to download by ID. All IDs must belong to the same Advertiser or
-   * Partner specified in CreateSdfDownloadTaskRequest.
+   * Optional. Line Items, by ID, to download in QA format. All IDs must belong to the same
+   * Advertiser or Partner specified in CreateSdfDownloadTaskRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -133,8 +133,8 @@ public final class IdFilter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. YouTube Ad Groups QA to download by ID. All IDs must belong to the same Advertiser or
-   * Partner specified in CreateSdfDownloadTaskRequest.
+   * Optional. YouTube Ad Groups, by ID, to download in QA format. All IDs must belong to the same
+   * Advertiser or Partner specified in CreateSdfDownloadTaskRequest.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getAdGroupQaIds() {
@@ -142,8 +142,8 @@ public final class IdFilter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. YouTube Ad Groups QA to download by ID. All IDs must belong to the same Advertiser or
-   * Partner specified in CreateSdfDownloadTaskRequest.
+   * Optional. YouTube Ad Groups, by ID, to download in QA format. All IDs must belong to the same
+   * Advertiser or Partner specified in CreateSdfDownloadTaskRequest.
    * @param adGroupQaIds adGroupQaIds or {@code null} for none
    */
   public IdFilter setAdGroupQaIds(java.util.List<java.lang.Long> adGroupQaIds) {
@@ -209,8 +209,8 @@ public final class IdFilter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Line Items QA to download by ID. All IDs must belong to the same Advertiser or
-   * Partner specified in CreateSdfDownloadTaskRequest.
+   * Optional. Line Items, by ID, to download in QA format. All IDs must belong to the same
+   * Advertiser or Partner specified in CreateSdfDownloadTaskRequest.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getLineItemQaIds() {
@@ -218,8 +218,8 @@ public final class IdFilter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Line Items QA to download by ID. All IDs must belong to the same Advertiser or
-   * Partner specified in CreateSdfDownloadTaskRequest.
+   * Optional. Line Items, by ID, to download in QA format. All IDs must belong to the same
+   * Advertiser or Partner specified in CreateSdfDownloadTaskRequest.
    * @param lineItemQaIds lineItemQaIds or {@code null} for none
    */
   public IdFilter setLineItemQaIds(java.util.List<java.lang.Long> lineItemQaIds) {

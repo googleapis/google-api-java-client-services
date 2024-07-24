@@ -11767,6 +11767,147 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
+           * Exports user events. `Operation.response` is of type `ExportResponse`. `Operation.metadata` is of
+           * type `ExportMetadata`.
+           *
+           * Create a request for the method "userEvents.export".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link Export#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Resource name of a Catalog. For example
+           *        `projects/1234/locations/global/catalogs/default_catalog`
+           * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaExportUserEventsRequest}
+           * @return the request
+           */
+          public Export export(java.lang.String parent, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaExportUserEventsRequest content) throws java.io.IOException {
+            Export result = new Export(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Export extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v2alpha/{+parent}/userEvents:export";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+
+            /**
+             * Exports user events. `Operation.response` is of type `ExportResponse`. `Operation.metadata` is
+             * of type `ExportMetadata`.
+             *
+             * Create a request for the method "userEvents.export".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link Export#execute()} method to invoke the remote operation. <p> {@link
+             * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Resource name of a Catalog. For example
+           *        `projects/1234/locations/global/catalogs/default_catalog`
+             * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaExportUserEventsRequest}
+             * @since 1.13
+             */
+            protected Export(java.lang.String parent, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaExportUserEventsRequest content) {
+              super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleLongrunningOperation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
+            }
+
+            @Override
+            public Export set$Xgafv(java.lang.String $Xgafv) {
+              return (Export) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Export setAccessToken(java.lang.String accessToken) {
+              return (Export) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Export setAlt(java.lang.String alt) {
+              return (Export) super.setAlt(alt);
+            }
+
+            @Override
+            public Export setCallback(java.lang.String callback) {
+              return (Export) super.setCallback(callback);
+            }
+
+            @Override
+            public Export setFields(java.lang.String fields) {
+              return (Export) super.setFields(fields);
+            }
+
+            @Override
+            public Export setKey(java.lang.String key) {
+              return (Export) super.setKey(key);
+            }
+
+            @Override
+            public Export setOauthToken(java.lang.String oauthToken) {
+              return (Export) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Export setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Export) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Export setQuotaUser(java.lang.String quotaUser) {
+              return (Export) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Export setUploadType(java.lang.String uploadType) {
+              return (Export) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Export setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Export) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Resource name of a Catalog. For example
+             * `projects/1234/locations/global/catalogs/default_catalog`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Resource name of a Catalog. For example
+           `projects/1234/locations/global/catalogs/default_catalog`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Resource name of a Catalog. For example
+             * `projects/1234/locations/global/catalogs/default_catalog`
+             */
+            public Export setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Export set(String parameterName, Object value) {
+              return (Export) super.set(parameterName, value);
+            }
+          }
+          /**
            * Bulk import of User events. Request processing might be synchronous. Events that already exist
            * are skipped. Use this method for backfilling historical user events. `Operation.response` is of
            * type `ImportResponse`. Note that it is possible for a subset of the items to be successfully

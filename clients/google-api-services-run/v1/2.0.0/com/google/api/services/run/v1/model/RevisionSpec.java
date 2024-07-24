@@ -31,7 +31,8 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per
-   * container instance of the Revision. If not specified, defaults to 80.
+   * container instance of the Revision. If not specified or 0, defaults to 80 when requested CPU >=
+   * 1 and defaults to 1 when requested CPU < 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +113,8 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per
-   * container instance of the Revision. If not specified, defaults to 80.
+   * container instance of the Revision. If not specified or 0, defaults to 80 when requested CPU >=
+   * 1 and defaults to 1 when requested CPU < 1.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getContainerConcurrency() {
@@ -121,7 +123,8 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per
-   * container instance of the Revision. If not specified, defaults to 80.
+   * container instance of the Revision. If not specified or 0, defaults to 80 when requested CPU >=
+   * 1 and defaults to 1 when requested CPU < 1.
    * @param containerConcurrency containerConcurrency or {@code null} for none
    */
   public RevisionSpec setContainerConcurrency(java.lang.Integer containerConcurrency) {

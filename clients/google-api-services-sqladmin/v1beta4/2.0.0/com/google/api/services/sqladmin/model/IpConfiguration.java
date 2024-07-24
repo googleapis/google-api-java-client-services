@@ -97,6 +97,13 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
   private java.lang.Boolean requireSsl;
 
   /**
+   * Specify what type of CA is used for the server certificate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serverCaMode;
+
+  /**
    * Specify how SSL/TLS is enforced in database connections. If you must use the `require_ssl` flag
    * for backward compatibility, then only the following value pairs are valid: For PostgreSQL and
    * MySQL: * `ssl_mode=ALLOW_UNENCRYPTED_AND_ENCRYPTED` and `require_ssl=false` *
@@ -253,6 +260,23 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
    */
   public IpConfiguration setRequireSsl(java.lang.Boolean requireSsl) {
     this.requireSsl = requireSsl;
+    return this;
+  }
+
+  /**
+   * Specify what type of CA is used for the server certificate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServerCaMode() {
+    return serverCaMode;
+  }
+
+  /**
+   * Specify what type of CA is used for the server certificate.
+   * @param serverCaMode serverCaMode or {@code null} for none
+   */
+  public IpConfiguration setServerCaMode(java.lang.String serverCaMode) {
+    this.serverCaMode = serverCaMode;
     return this;
   }
 

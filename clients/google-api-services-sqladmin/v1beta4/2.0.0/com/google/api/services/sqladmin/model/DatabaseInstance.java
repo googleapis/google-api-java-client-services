@@ -348,6 +348,14 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> suspensionReason;
 
   /**
+   * Input only. Whether Cloud SQL is enabled to switch storing point-in-time recovery log files
+   * from a data disk to Cloud Storage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean switchTransactionLogsToCloudStorageEnabled;
+
+  /**
    * Output only. All database versions that are available for upgrade.
    * The value may be {@code null}.
    */
@@ -1126,6 +1134,25 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setSuspensionReason(java.util.List<java.lang.String> suspensionReason) {
     this.suspensionReason = suspensionReason;
+    return this;
+  }
+
+  /**
+   * Input only. Whether Cloud SQL is enabled to switch storing point-in-time recovery log files
+   * from a data disk to Cloud Storage.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSwitchTransactionLogsToCloudStorageEnabled() {
+    return switchTransactionLogsToCloudStorageEnabled;
+  }
+
+  /**
+   * Input only. Whether Cloud SQL is enabled to switch storing point-in-time recovery log files
+   * from a data disk to Cloud Storage.
+   * @param switchTransactionLogsToCloudStorageEnabled switchTransactionLogsToCloudStorageEnabled or {@code null} for none
+   */
+  public DatabaseInstance setSwitchTransactionLogsToCloudStorageEnabled(java.lang.Boolean switchTransactionLogsToCloudStorageEnabled) {
+    this.switchTransactionLogsToCloudStorageEnabled = switchTransactionLogsToCloudStorageEnabled;
     return this;
   }
 

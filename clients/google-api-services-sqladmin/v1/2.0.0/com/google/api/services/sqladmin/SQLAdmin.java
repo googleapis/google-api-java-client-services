@@ -2390,7 +2390,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      * Adds a new trusted Certificate Authority (CA) version for the specified instance. Required to
      * prepare for a certificate rotation. If a CA version was previously added but never used in a
      * certificate rotation, this operation replaces that version. There cannot be more than one CA
-     * version waiting to be rotated in.
+     * version waiting to be rotated in. For instances that have enabled Certificate Authority Service
+     * (CAS) based server CA, please use AddServerCertificate to add a new server certificate.
      *
      * Create a request for the method "instances.addServerCa".
      *
@@ -2415,7 +2416,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        * Adds a new trusted Certificate Authority (CA) version for the specified instance. Required to
        * prepare for a certificate rotation. If a CA version was previously added but never used in a
        * certificate rotation, this operation replaces that version. There cannot be more than one CA
-       * version waiting to be rotated in.
+       * version waiting to be rotated in. For instances that have enabled Certificate Authority Service
+       * (CAS) based server CA, please use AddServerCertificate to add a new server certificate.
        *
        * Create a request for the method "instances.addServerCa".
        *
@@ -5132,7 +5134,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
     }
     /**
      * Rotates the server certificate to one signed by the Certificate Authority (CA) version previously
-     * added with the addServerCA method.
+     * added with the addServerCA method. For instances that have enabled Certificate Authority Service
+     * (CAS) based server CA, please use RotateServerCertificate to rotate the server certificate.
      *
      * Create a request for the method "instances.rotateServerCa".
      *
@@ -5156,7 +5159,9 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Rotates the server certificate to one signed by the Certificate Authority (CA) version
-       * previously added with the addServerCA method.
+       * previously added with the addServerCA method. For instances that have enabled Certificate
+       * Authority Service (CAS) based server CA, please use RotateServerCertificate to rotate the
+       * server certificate.
        *
        * Create a request for the method "instances.rotateServerCa".
        *

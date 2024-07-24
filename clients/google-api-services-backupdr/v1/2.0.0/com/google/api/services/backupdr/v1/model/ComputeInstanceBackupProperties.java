@@ -134,12 +134,14 @@ public final class ComputeInstanceBackupProperties extends com.google.api.client
   private java.util.List<ServiceAccount> serviceAccount;
 
   /**
-   * Name of the source instance at the time of backup. The name is 1-63 characters long, and
-   * complies with RFC1035.
+   * The source instance used to create this backup. This can be a partial or full URL to the
+   * resource. For example, the following are valid values:
+   * -https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance
+   * -projects/project/zones/zone/instances/instance
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String sourceInstanceName;
+  private java.lang.String sourceInstance;
 
   /**
    * A list of tags to apply to the instances that are created from these properties. The tags
@@ -367,21 +369,25 @@ public final class ComputeInstanceBackupProperties extends com.google.api.client
   }
 
   /**
-   * Name of the source instance at the time of backup. The name is 1-63 characters long, and
-   * complies with RFC1035.
+   * The source instance used to create this backup. This can be a partial or full URL to the
+   * resource. For example, the following are valid values:
+   * -https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance
+   * -projects/project/zones/zone/instances/instance
    * @return value or {@code null} for none
    */
-  public java.lang.String getSourceInstanceName() {
-    return sourceInstanceName;
+  public java.lang.String getSourceInstance() {
+    return sourceInstance;
   }
 
   /**
-   * Name of the source instance at the time of backup. The name is 1-63 characters long, and
-   * complies with RFC1035.
-   * @param sourceInstanceName sourceInstanceName or {@code null} for none
+   * The source instance used to create this backup. This can be a partial or full URL to the
+   * resource. For example, the following are valid values:
+   * -https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance
+   * -projects/project/zones/zone/instances/instance
+   * @param sourceInstance sourceInstance or {@code null} for none
    */
-  public ComputeInstanceBackupProperties setSourceInstanceName(java.lang.String sourceInstanceName) {
-    this.sourceInstanceName = sourceInstanceName;
+  public ComputeInstanceBackupProperties setSourceInstance(java.lang.String sourceInstance) {
+    this.sourceInstance = sourceInstance;
     return this;
   }
 

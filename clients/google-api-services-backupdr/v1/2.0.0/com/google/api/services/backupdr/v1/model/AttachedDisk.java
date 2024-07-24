@@ -83,6 +83,14 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   private java.lang.String diskType;
 
   /**
+   * Optional. Output only. The URI of the disk type resource. For example:
+   * projects/project/zones/zone/diskTypes/pd-standard or pd-ssd
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String diskTypeUri;
+
+  /**
    * Optional. A list of features to enable on the guest operating system. Applicable only for
    * bootable images.
    * The value may be {@code null}.
@@ -261,6 +269,25 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
    */
   public AttachedDisk setDiskType(java.lang.String diskType) {
     this.diskType = diskType;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. The URI of the disk type resource. For example:
+   * projects/project/zones/zone/diskTypes/pd-standard or pd-ssd
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDiskTypeUri() {
+    return diskTypeUri;
+  }
+
+  /**
+   * Optional. Output only. The URI of the disk type resource. For example:
+   * projects/project/zones/zone/diskTypes/pd-standard or pd-ssd
+   * @param diskTypeUri diskTypeUri or {@code null} for none
+   */
+  public AttachedDisk setDiskTypeUri(java.lang.String diskTypeUri) {
+    this.diskTypeUri = diskTypeUri;
     return this;
   }
 

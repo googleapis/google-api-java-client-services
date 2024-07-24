@@ -30,6 +30,18 @@ package com.google.api.services.spanner.v1.model;
 public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. List of backup schedule URIs that are associated with creating this backup. This
+   * is only applicable for scheduled backups, and is empty for on-demand backups. To optimize for
+   * storage, whenever possible, multiple schedules are collapsed together to create one backup. In
+   * such cases, this field captures the list of all backup schedule URIs that are associated with
+   * creating this backup. If collapsing is not done, then this field captures the single backup
+   * schedule URI associated with creating this backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> backupSchedules;
+
+  /**
    * Output only. The time the CreateBackup request is received. If the request does not specify
    * `version_time`, the `version_time` of the backup will be equivalent to the `create_time`.
    * The value may be {@code null}.
@@ -147,6 +159,33 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String versionTime;
+
+  /**
+   * Output only. List of backup schedule URIs that are associated with creating this backup. This
+   * is only applicable for scheduled backups, and is empty for on-demand backups. To optimize for
+   * storage, whenever possible, multiple schedules are collapsed together to create one backup. In
+   * such cases, this field captures the list of all backup schedule URIs that are associated with
+   * creating this backup. If collapsing is not done, then this field captures the single backup
+   * schedule URI associated with creating this backup.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getBackupSchedules() {
+    return backupSchedules;
+  }
+
+  /**
+   * Output only. List of backup schedule URIs that are associated with creating this backup. This
+   * is only applicable for scheduled backups, and is empty for on-demand backups. To optimize for
+   * storage, whenever possible, multiple schedules are collapsed together to create one backup. In
+   * such cases, this field captures the list of all backup schedule URIs that are associated with
+   * creating this backup. If collapsing is not done, then this field captures the single backup
+   * schedule URI associated with creating this backup.
+   * @param backupSchedules backupSchedules or {@code null} for none
+   */
+  public Backup setBackupSchedules(java.util.List<java.lang.String> backupSchedules) {
+    this.backupSchedules = backupSchedules;
+    return this;
+  }
 
   /**
    * Output only. The time the CreateBackup request is received. If the request does not specify

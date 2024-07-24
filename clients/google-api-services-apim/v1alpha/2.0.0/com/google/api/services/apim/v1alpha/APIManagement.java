@@ -513,6 +513,207 @@ public class APIManagement extends com.google.api.client.googleapis.services.jso
           return (List) super.set(parameterName, value);
         }
       }
+      /**
+       * ListApiObservationTags lists all extant tags on any observation in the given project.
+       *
+       * Create a request for the method "locations.listApiObservationTags".
+       *
+       * This request holds the parameters needed by the apim server.  After setting any optional
+       * parameters, call the {@link ListApiObservationTags#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. The parent, which owns this collection of tags. Format:
+       *        projects/{project}/locations/{location}
+       * @return the request
+       */
+      public ListApiObservationTags listApiObservationTags(java.lang.String parent) throws java.io.IOException {
+        ListApiObservationTags result = new ListApiObservationTags(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class ListApiObservationTags extends APIManagementRequest<com.google.api.services.apim.v1alpha.model.ListApiObservationTagsResponse> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}:listApiObservationTags";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * ListApiObservationTags lists all extant tags on any observation in the given project.
+         *
+         * Create a request for the method "locations.listApiObservationTags".
+         *
+         * This request holds the parameters needed by the the apim server.  After setting any optional
+         * parameters, call the {@link ListApiObservationTags#execute()} method to invoke the remote
+         * operation. <p> {@link ListApiObservationTags#initialize(com.google.api.client.googleapis.servic
+         * es.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param parent Required. The parent, which owns this collection of tags. Format:
+       *        projects/{project}/locations/{location}
+         * @since 1.13
+         */
+        protected ListApiObservationTags(java.lang.String parent) {
+          super(APIManagement.this, "GET", REST_PATH, null, com.google.api.services.apim.v1alpha.model.ListApiObservationTagsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public ListApiObservationTags set$Xgafv(java.lang.String $Xgafv) {
+          return (ListApiObservationTags) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ListApiObservationTags setAccessToken(java.lang.String accessToken) {
+          return (ListApiObservationTags) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ListApiObservationTags setAlt(java.lang.String alt) {
+          return (ListApiObservationTags) super.setAlt(alt);
+        }
+
+        @Override
+        public ListApiObservationTags setCallback(java.lang.String callback) {
+          return (ListApiObservationTags) super.setCallback(callback);
+        }
+
+        @Override
+        public ListApiObservationTags setFields(java.lang.String fields) {
+          return (ListApiObservationTags) super.setFields(fields);
+        }
+
+        @Override
+        public ListApiObservationTags setKey(java.lang.String key) {
+          return (ListApiObservationTags) super.setKey(key);
+        }
+
+        @Override
+        public ListApiObservationTags setOauthToken(java.lang.String oauthToken) {
+          return (ListApiObservationTags) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ListApiObservationTags setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ListApiObservationTags) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ListApiObservationTags setQuotaUser(java.lang.String quotaUser) {
+          return (ListApiObservationTags) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ListApiObservationTags setUploadType(java.lang.String uploadType) {
+          return (ListApiObservationTags) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ListApiObservationTags setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ListApiObservationTags) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent, which owns this collection of tags. Format:
+         * projects/{project}/locations/{location}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent, which owns this collection of tags. Format:
+       projects/{project}/locations/{location}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent, which owns this collection of tags. Format:
+         * projects/{project}/locations/{location}
+         */
+        public ListApiObservationTags setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of tags to return. The service may return fewer than this
+         * value. If unspecified, at most 10 tags will be returned. The maximum value is 1000;
+         * values above 1000 will be coerced to 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of tags to return. The service may return fewer than this value. If
+       unspecified, at most 10 tags will be returned. The maximum value is 1000; values above 1000 will be
+       coerced to 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of tags to return. The service may return fewer than this
+         * value. If unspecified, at most 10 tags will be returned. The maximum value is 1000;
+         * values above 1000 will be coerced to 1000.
+         */
+        public ListApiObservationTags setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListApiObservationTags` call. Provide
+         * this to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListApiObservationTags` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous `ListApiObservationTags` call. Provide this to
+       retrieve the subsequent page. When paginating, all other parameters provided to
+       `ListApiObservationTags` must match the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListApiObservationTags` call. Provide
+         * this to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListApiObservationTags` must match the call that provided the page token.
+         */
+        public ListApiObservationTags setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public ListApiObservationTags set(String parameterName, Object value) {
+          return (ListApiObservationTags) super.set(parameterName, value);
+        }
+      }
 
       /**
        * An accessor for creating requests from the ObservationJobs collection.
@@ -1307,7 +1508,7 @@ public class APIManagement extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * ListObservationJobs gets all ObservationJobs for a given project and location
+         * ListObservationJobs gets all ObservationJobs for a given project and location.
          *
          * Create a request for the method "observationJobs.list".
          *
@@ -1332,7 +1533,7 @@ public class APIManagement extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * ListObservationJobs gets all ObservationJobs for a given project and location
+           * ListObservationJobs gets all ObservationJobs for a given project and location.
            *
            * Create a request for the method "observationJobs.list".
            *
@@ -1527,6 +1728,146 @@ public class APIManagement extends com.google.api.client.googleapis.services.jso
         public class ApiObservations {
 
           /**
+           * BatchEditTagsApiObservations adds or removes Tags for ApiObservations.
+           *
+           * Create a request for the method "apiObservations.batchEditTags".
+           *
+           * This request holds the parameters needed by the apim server.  After setting any optional
+           * parameters, call the {@link BatchEditTags#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource shared by all ApiObservations being edited. Format:
+           *        projects/{project}/locations/{location}/observationJobs/{observation_job}
+           * @param content the {@link com.google.api.services.apim.v1alpha.model.BatchEditTagsApiObservationsRequest}
+           * @return the request
+           */
+          public BatchEditTags batchEditTags(java.lang.String parent, com.google.api.services.apim.v1alpha.model.BatchEditTagsApiObservationsRequest content) throws java.io.IOException {
+            BatchEditTags result = new BatchEditTags(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BatchEditTags extends APIManagementRequest<com.google.api.services.apim.v1alpha.model.BatchEditTagsApiObservationsResponse> {
+
+            private static final String REST_PATH = "v1alpha/{+parent}/apiObservations:batchEditTags";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/observationJobs/[^/]+$");
+
+            /**
+             * BatchEditTagsApiObservations adds or removes Tags for ApiObservations.
+             *
+             * Create a request for the method "apiObservations.batchEditTags".
+             *
+             * This request holds the parameters needed by the the apim server.  After setting any optional
+             * parameters, call the {@link BatchEditTags#execute()} method to invoke the remote operation. <p>
+             * {@link BatchEditTags#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
+             * equest)} must be called to initialize this instance immediately after invoking the constructor.
+             * </p>
+             *
+             * @param parent Required. The parent resource shared by all ApiObservations being edited. Format:
+           *        projects/{project}/locations/{location}/observationJobs/{observation_job}
+             * @param content the {@link com.google.api.services.apim.v1alpha.model.BatchEditTagsApiObservationsRequest}
+             * @since 1.13
+             */
+            protected BatchEditTags(java.lang.String parent, com.google.api.services.apim.v1alpha.model.BatchEditTagsApiObservationsRequest content) {
+              super(APIManagement.this, "POST", REST_PATH, content, com.google.api.services.apim.v1alpha.model.BatchEditTagsApiObservationsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/observationJobs/[^/]+$");
+              }
+            }
+
+            @Override
+            public BatchEditTags set$Xgafv(java.lang.String $Xgafv) {
+              return (BatchEditTags) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BatchEditTags setAccessToken(java.lang.String accessToken) {
+              return (BatchEditTags) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BatchEditTags setAlt(java.lang.String alt) {
+              return (BatchEditTags) super.setAlt(alt);
+            }
+
+            @Override
+            public BatchEditTags setCallback(java.lang.String callback) {
+              return (BatchEditTags) super.setCallback(callback);
+            }
+
+            @Override
+            public BatchEditTags setFields(java.lang.String fields) {
+              return (BatchEditTags) super.setFields(fields);
+            }
+
+            @Override
+            public BatchEditTags setKey(java.lang.String key) {
+              return (BatchEditTags) super.setKey(key);
+            }
+
+            @Override
+            public BatchEditTags setOauthToken(java.lang.String oauthToken) {
+              return (BatchEditTags) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BatchEditTags setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BatchEditTags) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BatchEditTags setQuotaUser(java.lang.String quotaUser) {
+              return (BatchEditTags) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BatchEditTags setUploadType(java.lang.String uploadType) {
+              return (BatchEditTags) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BatchEditTags setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BatchEditTags) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource shared by all ApiObservations being edited. Format:
+             * projects/{project}/locations/{location}/observationJobs/{observation_job}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource shared by all ApiObservations being edited. Format:
+           projects/{project}/locations/{location}/observationJobs/{observation_job}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource shared by all ApiObservations being edited. Format:
+             * projects/{project}/locations/{location}/observationJobs/{observation_job}
+             */
+            public BatchEditTags setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/observationJobs/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public BatchEditTags set(String parameterName, Object value) {
+              return (BatchEditTags) super.set(parameterName, value);
+            }
+          }
+          /**
            * GetApiObservation retrieves a single ApiObservation by name.
            *
            * Create a request for the method "apiObservations.get".
@@ -1674,7 +2015,7 @@ public class APIManagement extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * ListApiObservations gets all ApiObservations for a given project and location and ObservationJob
+           * ListApiObservations gets all ApiObservations for a given project and location and ObservationJob.
            *
            * Create a request for the method "apiObservations.list".
            *
@@ -1700,7 +2041,7 @@ public class APIManagement extends com.google.api.client.googleapis.services.jso
 
             /**
              * ListApiObservations gets all ApiObservations for a given project and location and
-             * ObservationJob
+             * ObservationJob.
              *
              * Create a request for the method "apiObservations.list".
              *
@@ -2047,7 +2388,7 @@ public class APIManagement extends com.google.api.client.googleapis.services.jso
             }
             /**
              * ListApiOperations gets all ApiOperations for a given project and location and ObservationJob and
-             * ApiObservation
+             * ApiObservation.
              *
              * Create a request for the method "apiOperations.list".
              *
@@ -2073,7 +2414,7 @@ public class APIManagement extends com.google.api.client.googleapis.services.jso
 
               /**
                * ListApiOperations gets all ApiOperations for a given project and location and ObservationJob
-               * and ApiObservation
+               * and ApiObservation.
                *
                * Create a request for the method "apiOperations.list".
                *
@@ -2761,7 +3102,7 @@ public class APIManagement extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * ListObservationSources gets all ObservationSources for a given project and location
+         * ListObservationSources gets all ObservationSources for a given project and location.
          *
          * Create a request for the method "observationSources.list".
          *
@@ -2786,7 +3127,7 @@ public class APIManagement extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * ListObservationSources gets all ObservationSources for a given project and location
+           * ListObservationSources gets all ObservationSources for a given project and location.
            *
            * Create a request for the method "observationSources.list".
            *

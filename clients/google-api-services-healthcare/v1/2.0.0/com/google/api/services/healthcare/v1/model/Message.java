@@ -57,7 +57,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The message type for this message. MSH-9.1.
+   * Output only. The message type for this message. MSH-9.1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,29 +79,29 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private ParsedData parsedData;
 
   /**
-   * All patient IDs listed in the PID-2, PID-3, and PID-4 segments of this message.
+   * Output only. All patient IDs listed in the PID-2, PID-3, and PID-4 segments of this message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<PatientId> patientIds;
 
   /**
-   * The parsed version of the raw message data schematized according to this store's schemas and
-   * type definitions.
+   * Output only. The parsed version of the raw message data schematized according to this store's
+   * schemas and type definitions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SchematizedData schematizedData;
 
   /**
-   * The hospital that this message came from. MSH-4.
+   * Output only. The hospital that this message came from. MSH-4.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sendFacility;
 
   /**
-   * The datetime the sending application sent this message. MSH-7.
+   * Output only. The datetime the sending application sent this message. MSH-7.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -197,7 +197,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The message type for this message. MSH-9.1.
+   * Output only. The message type for this message. MSH-9.1.
    * @return value or {@code null} for none
    */
   public java.lang.String getMessageType() {
@@ -205,7 +205,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The message type for this message. MSH-9.1.
+   * Output only. The message type for this message. MSH-9.1.
    * @param messageType messageType or {@code null} for none
    */
   public Message setMessageType(java.lang.String messageType) {
@@ -250,7 +250,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * All patient IDs listed in the PID-2, PID-3, and PID-4 segments of this message.
+   * Output only. All patient IDs listed in the PID-2, PID-3, and PID-4 segments of this message.
    * @return value or {@code null} for none
    */
   public java.util.List<PatientId> getPatientIds() {
@@ -258,7 +258,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * All patient IDs listed in the PID-2, PID-3, and PID-4 segments of this message.
+   * Output only. All patient IDs listed in the PID-2, PID-3, and PID-4 segments of this message.
    * @param patientIds patientIds or {@code null} for none
    */
   public Message setPatientIds(java.util.List<PatientId> patientIds) {
@@ -267,8 +267,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The parsed version of the raw message data schematized according to this store's schemas and
-   * type definitions.
+   * Output only. The parsed version of the raw message data schematized according to this store's
+   * schemas and type definitions.
    * @return value or {@code null} for none
    */
   public SchematizedData getSchematizedData() {
@@ -276,8 +276,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The parsed version of the raw message data schematized according to this store's schemas and
-   * type definitions.
+   * Output only. The parsed version of the raw message data schematized according to this store's
+   * schemas and type definitions.
    * @param schematizedData schematizedData or {@code null} for none
    */
   public Message setSchematizedData(SchematizedData schematizedData) {
@@ -286,7 +286,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The hospital that this message came from. MSH-4.
+   * Output only. The hospital that this message came from. MSH-4.
    * @return value or {@code null} for none
    */
   public java.lang.String getSendFacility() {
@@ -294,7 +294,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The hospital that this message came from. MSH-4.
+   * Output only. The hospital that this message came from. MSH-4.
    * @param sendFacility sendFacility or {@code null} for none
    */
   public Message setSendFacility(java.lang.String sendFacility) {
@@ -303,7 +303,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The datetime the sending application sent this message. MSH-7.
+   * Output only. The datetime the sending application sent this message. MSH-7.
    * @return value or {@code null} for none
    */
   public String getSendTime() {
@@ -311,7 +311,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The datetime the sending application sent this message. MSH-7.
+   * Output only. The datetime the sending application sent this message. MSH-7.
    * @param sendTime sendTime or {@code null} for none
    */
   public Message setSendTime(String sendTime) {

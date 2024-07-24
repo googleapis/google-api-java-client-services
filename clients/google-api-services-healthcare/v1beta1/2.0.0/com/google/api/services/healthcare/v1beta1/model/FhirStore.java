@@ -54,7 +54,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    * returns an error for unrecognized search parameters. If false, uses the FHIR specification
    * default `handling=lenient` which ignores unrecognized search parameters. The handling can
    * always be changed from the default on an individual API call by setting the HTTP header
-   * `Prefer: handling=strict` or `Prefer: handling=lenient`.
+   * `Prefer: handling=strict` or `Prefer: handling=lenient`. Defaults to false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,11 +74,10 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. Whether to disable resource versioning for this FHIR store. This field can not be
-   * changed after the creation of FHIR store. If set to false, which is the default behavior, all
-   * write operations cause historical versions to be recorded automatically. The historical
-   * versions can be fetched through the history APIs, but cannot be updated. If set to true, no
-   * historical versions are kept. The server sends errors for attempts to read the historical
-   * versions.
+   * changed after the creation of FHIR store. If set to false, all write operations cause
+   * historical versions to be recorded automatically. The historical versions can be fetched
+   * through the history APIs, but cannot be updated. If set to true, no historical versions are
+   * kept. The server sends errors for attempts to read the historical versions. Defaults to false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +86,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Whether to allow ExecuteBundle to accept history bundles, and directly insert and
    * overwrite historical resource versions into the FHIR store. If set to false, using history
-   * bundles fails with an error.
+   * bundles fails with an error. Defaults to false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +101,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    * resource return errors. It is strongly advised not to include or encode any sensitive data such
    * as patient identifiers in client-specified resource IDs. Those IDs are part of the FHIR
    * resource path recorded in Cloud audit logs and Pub/Sub notifications. Those IDs can also be
-   * contained in reference fields within other resources.
+   * contained in reference fields within other resources. Defaults to false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -240,7 +239,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    * returns an error for unrecognized search parameters. If false, uses the FHIR specification
    * default `handling=lenient` which ignores unrecognized search parameters. The handling can
    * always be changed from the default on an individual API call by setting the HTTP header
-   * `Prefer: handling=strict` or `Prefer: handling=lenient`.
+   * `Prefer: handling=strict` or `Prefer: handling=lenient`. Defaults to false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDefaultSearchHandlingStrict() {
@@ -252,7 +251,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    * returns an error for unrecognized search parameters. If false, uses the FHIR specification
    * default `handling=lenient` which ignores unrecognized search parameters. The handling can
    * always be changed from the default on an individual API call by setting the HTTP header
-   * `Prefer: handling=strict` or `Prefer: handling=lenient`.
+   * `Prefer: handling=strict` or `Prefer: handling=lenient`. Defaults to false.
    * @param defaultSearchHandlingStrict defaultSearchHandlingStrict or {@code null} for none
    */
   public FhirStore setDefaultSearchHandlingStrict(java.lang.Boolean defaultSearchHandlingStrict) {
@@ -289,11 +288,10 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. Whether to disable resource versioning for this FHIR store. This field can not be
-   * changed after the creation of FHIR store. If set to false, which is the default behavior, all
-   * write operations cause historical versions to be recorded automatically. The historical
-   * versions can be fetched through the history APIs, but cannot be updated. If set to true, no
-   * historical versions are kept. The server sends errors for attempts to read the historical
-   * versions.
+   * changed after the creation of FHIR store. If set to false, all write operations cause
+   * historical versions to be recorded automatically. The historical versions can be fetched
+   * through the history APIs, but cannot be updated. If set to true, no historical versions are
+   * kept. The server sends errors for attempts to read the historical versions. Defaults to false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableResourceVersioning() {
@@ -302,11 +300,10 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. Whether to disable resource versioning for this FHIR store. This field can not be
-   * changed after the creation of FHIR store. If set to false, which is the default behavior, all
-   * write operations cause historical versions to be recorded automatically. The historical
-   * versions can be fetched through the history APIs, but cannot be updated. If set to true, no
-   * historical versions are kept. The server sends errors for attempts to read the historical
-   * versions.
+   * changed after the creation of FHIR store. If set to false, all write operations cause
+   * historical versions to be recorded automatically. The historical versions can be fetched
+   * through the history APIs, but cannot be updated. If set to true, no historical versions are
+   * kept. The server sends errors for attempts to read the historical versions. Defaults to false.
    * @param disableResourceVersioning disableResourceVersioning or {@code null} for none
    */
   public FhirStore setDisableResourceVersioning(java.lang.Boolean disableResourceVersioning) {
@@ -317,7 +314,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Whether to allow ExecuteBundle to accept history bundles, and directly insert and
    * overwrite historical resource versions into the FHIR store. If set to false, using history
-   * bundles fails with an error.
+   * bundles fails with an error. Defaults to false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableHistoryModifications() {
@@ -327,7 +324,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Whether to allow ExecuteBundle to accept history bundles, and directly insert and
    * overwrite historical resource versions into the FHIR store. If set to false, using history
-   * bundles fails with an error.
+   * bundles fails with an error. Defaults to false.
    * @param enableHistoryModifications enableHistoryModifications or {@code null} for none
    */
   public FhirStore setEnableHistoryModifications(java.lang.Boolean enableHistoryModifications) {
@@ -344,7 +341,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    * resource return errors. It is strongly advised not to include or encode any sensitive data such
    * as patient identifiers in client-specified resource IDs. Those IDs are part of the FHIR
    * resource path recorded in Cloud audit logs and Pub/Sub notifications. Those IDs can also be
-   * contained in reference fields within other resources.
+   * contained in reference fields within other resources. Defaults to false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableUpdateCreate() {
@@ -360,7 +357,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    * resource return errors. It is strongly advised not to include or encode any sensitive data such
    * as patient identifiers in client-specified resource IDs. Those IDs are part of the FHIR
    * resource path recorded in Cloud audit logs and Pub/Sub notifications. Those IDs can also be
-   * contained in reference fields within other resources.
+   * contained in reference fields within other resources. Defaults to false.
    * @param enableUpdateCreate enableUpdateCreate or {@code null} for none
    */
   public FhirStore setEnableUpdateCreate(java.lang.Boolean enableUpdateCreate) {

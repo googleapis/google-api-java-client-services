@@ -61,6 +61,13 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorVersion extends com.goog
   private GoogleCloudDocumentaiV1beta3DocumentSchema documentSchema;
 
   /**
+   * Output only. Information about Generative AI model-based processor versions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3ProcessorVersionGenAiModelInfo genAiModelInfo;
+
+  /**
    * Output only. Denotes that this `ProcessorVersion` is managed by Google.
    * The value may be {@code null}.
    */
@@ -189,6 +196,23 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorVersion extends com.goog
    */
   public GoogleCloudDocumentaiV1beta3ProcessorVersion setDocumentSchema(GoogleCloudDocumentaiV1beta3DocumentSchema documentSchema) {
     this.documentSchema = documentSchema;
+    return this;
+  }
+
+  /**
+   * Output only. Information about Generative AI model-based processor versions.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ProcessorVersionGenAiModelInfo getGenAiModelInfo() {
+    return genAiModelInfo;
+  }
+
+  /**
+   * Output only. Information about Generative AI model-based processor versions.
+   * @param genAiModelInfo genAiModelInfo or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ProcessorVersion setGenAiModelInfo(GoogleCloudDocumentaiV1beta3ProcessorVersionGenAiModelInfo genAiModelInfo) {
+    this.genAiModelInfo = genAiModelInfo;
     return this;
   }
 

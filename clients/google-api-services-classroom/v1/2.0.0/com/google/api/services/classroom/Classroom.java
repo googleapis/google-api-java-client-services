@@ -2249,22 +2249,27 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Optional. The identifier of the attachment. This field is required for student users and
-         * optional for teacher users. If not provided in the student case, an error is returned.
+         * Optional. The identifier of the attachment. This field is required for all requests
+         * except when the user is in the [Attachment Discovery
+         * iframe](https://developers.google.com/classroom/add-ons/get-started/iframes/attachment-
+         * discovery-iframe).
          */
         @com.google.api.client.util.Key
         private java.lang.String attachmentId;
 
-        /** Optional. The identifier of the attachment. This field is required for student users and optional
-       for teacher users. If not provided in the student case, an error is returned.
+        /** Optional. The identifier of the attachment. This field is required for all requests except when the
+       user is in the [Attachment Discovery iframe](https://developers.google.com/classroom/add-ons/get-
+       started/iframes/attachment-discovery-iframe).
          */
         public java.lang.String getAttachmentId() {
           return attachmentId;
         }
 
         /**
-         * Optional. The identifier of the attachment. This field is required for student users and
-         * optional for teacher users. If not provided in the student case, an error is returned.
+         * Optional. The identifier of the attachment. This field is required for all requests
+         * except when the user is in the [Attachment Discovery
+         * iframe](https://developers.google.com/classroom/add-ons/get-started/iframes/attachment-
+         * discovery-iframe).
          */
         public GetAddOnContext setAttachmentId(java.lang.String attachmentId) {
           this.attachmentId = attachmentId;
@@ -4635,22 +4640,27 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Optional. The identifier of the attachment. This field is required for student users and
-         * optional for teacher users. If not provided in the student case, an error is returned.
+         * Optional. The identifier of the attachment. This field is required for all requests
+         * except when the user is in the [Attachment Discovery
+         * iframe](https://developers.google.com/classroom/add-ons/get-started/iframes/attachment-
+         * discovery-iframe).
          */
         @com.google.api.client.util.Key
         private java.lang.String attachmentId;
 
-        /** Optional. The identifier of the attachment. This field is required for student users and optional
-       for teacher users. If not provided in the student case, an error is returned.
+        /** Optional. The identifier of the attachment. This field is required for all requests except when the
+       user is in the [Attachment Discovery iframe](https://developers.google.com/classroom/add-ons/get-
+       started/iframes/attachment-discovery-iframe).
          */
         public java.lang.String getAttachmentId() {
           return attachmentId;
         }
 
         /**
-         * Optional. The identifier of the attachment. This field is required for student users and
-         * optional for teacher users. If not provided in the student case, an error is returned.
+         * Optional. The identifier of the attachment. This field is required for all requests
+         * except when the user is in the [Attachment Discovery
+         * iframe](https://developers.google.com/classroom/add-ons/get-started/iframes/attachment-
+         * discovery-iframe).
          */
         public GetAddOnContext setAttachmentId(java.lang.String attachmentId) {
           this.attachmentId = attachmentId;
@@ -8950,22 +8960,27 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Optional. The identifier of the attachment. This field is required for student users and
-         * optional for teacher users. If not provided in the student case, an error is returned.
+         * Optional. The identifier of the attachment. This field is required for all requests
+         * except when the user is in the [Attachment Discovery
+         * iframe](https://developers.google.com/classroom/add-ons/get-started/iframes/attachment-
+         * discovery-iframe).
          */
         @com.google.api.client.util.Key
         private java.lang.String attachmentId;
 
-        /** Optional. The identifier of the attachment. This field is required for student users and optional
-       for teacher users. If not provided in the student case, an error is returned.
+        /** Optional. The identifier of the attachment. This field is required for all requests except when the
+       user is in the [Attachment Discovery iframe](https://developers.google.com/classroom/add-ons/get-
+       started/iframes/attachment-discovery-iframe).
          */
         public java.lang.String getAttachmentId() {
           return attachmentId;
         }
 
         /**
-         * Optional. The identifier of the attachment. This field is required for student users and
-         * optional for teacher users. If not provided in the student case, an error is returned.
+         * Optional. The identifier of the attachment. This field is required for all requests
+         * except when the user is in the [Attachment Discovery
+         * iframe](https://developers.google.com/classroom/add-ons/get-started/iframes/attachment-
+         * discovery-iframe).
          */
         public GetAddOnContext setAttachmentId(java.lang.String attachmentId) {
           this.attachmentId = attachmentId;
@@ -10754,22 +10769,27 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Optional. The identifier of the attachment. This field is required for student users and
-         * optional for teacher users. If not provided in the student case, an error is returned.
+         * Optional. The identifier of the attachment. This field is required for all requests
+         * except when the user is in the [Attachment Discovery
+         * iframe](https://developers.google.com/classroom/add-ons/get-started/iframes/attachment-
+         * discovery-iframe).
          */
         @com.google.api.client.util.Key
         private java.lang.String attachmentId;
 
-        /** Optional. The identifier of the attachment. This field is required for student users and optional
-       for teacher users. If not provided in the student case, an error is returned.
+        /** Optional. The identifier of the attachment. This field is required for all requests except when the
+       user is in the [Attachment Discovery iframe](https://developers.google.com/classroom/add-ons/get-
+       started/iframes/attachment-discovery-iframe).
          */
         public java.lang.String getAttachmentId() {
           return attachmentId;
         }
 
         /**
-         * Optional. The identifier of the attachment. This field is required for student users and
-         * optional for teacher users. If not provided in the student case, an error is returned.
+         * Optional. The identifier of the attachment. This field is required for all requests
+         * except when the user is in the [Attachment Discovery
+         * iframe](https://developers.google.com/classroom/add-ons/get-started/iframes/attachment-
+         * discovery-iframe).
          */
         public GetAddOnContext setAttachmentId(java.lang.String attachmentId) {
           this.attachmentId = attachmentId;

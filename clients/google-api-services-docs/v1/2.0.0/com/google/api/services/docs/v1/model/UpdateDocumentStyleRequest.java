@@ -49,6 +49,17 @@ public final class UpdateDocumentStyleRequest extends com.google.api.client.json
   private String fields;
 
   /**
+   * The tab that contains the style to update. When omitted, the request applies to the first tab.
+   * In a document containing a single tab: - If provided, must match the singular tab's ID. - If
+   * omitted, the request applies to the singular tab. In a document containing multiple tabs: - If
+   * provided, the request applies to the specified tab. - If not provided, the request applies to
+   * the first tab in the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tabId;
+
+  /**
    * The styles to set on the document. Certain document style changes may cause other changes in
    * order to mirror the behavior of the Docs editor. See the documentation of DocumentStyle for
    * more information.
@@ -89,6 +100,31 @@ public final class UpdateDocumentStyleRequest extends com.google.api.client.json
    */
   public UpdateDocumentStyleRequest setFields(String fields) {
     this.fields = fields;
+    return this;
+  }
+
+  /**
+   * The tab that contains the style to update. When omitted, the request applies to the first tab.
+   * In a document containing a single tab: - If provided, must match the singular tab's ID. - If
+   * omitted, the request applies to the singular tab. In a document containing multiple tabs: - If
+   * provided, the request applies to the specified tab. - If not provided, the request applies to
+   * the first tab in the document.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTabId() {
+    return tabId;
+  }
+
+  /**
+   * The tab that contains the style to update. When omitted, the request applies to the first tab.
+   * In a document containing a single tab: - If provided, must match the singular tab's ID. - If
+   * omitted, the request applies to the singular tab. In a document containing multiple tabs: - If
+   * provided, the request applies to the specified tab. - If not provided, the request applies to
+   * the first tab in the document.
+   * @param tabId tabId or {@code null} for none
+   */
+  public UpdateDocumentStyleRequest setTabId(java.lang.String tabId) {
+    this.tabId = tabId;
     return this;
   }
 

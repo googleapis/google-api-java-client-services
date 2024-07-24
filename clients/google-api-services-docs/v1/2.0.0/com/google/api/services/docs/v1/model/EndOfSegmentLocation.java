@@ -39,6 +39,17 @@ public final class EndOfSegmentLocation extends com.google.api.client.json.Gener
   private java.lang.String segmentId;
 
   /**
+   * The tab that the location is in. When omitted, the request is applied to the first tab. In a
+   * document containing a single tab: - If provided, must match the singular tab's ID. - If
+   * omitted, the request applies to the singular tab. In a document containing multiple tabs: - If
+   * provided, the request applies to the specified tab. - If omitted, the request applies to the
+   * first tab in the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tabId;
+
+  /**
    * The ID of the header, footer or footnote the location is in. An empty segment ID signifies the
    * document's body.
    * @return value or {@code null} for none
@@ -54,6 +65,31 @@ public final class EndOfSegmentLocation extends com.google.api.client.json.Gener
    */
   public EndOfSegmentLocation setSegmentId(java.lang.String segmentId) {
     this.segmentId = segmentId;
+    return this;
+  }
+
+  /**
+   * The tab that the location is in. When omitted, the request is applied to the first tab. In a
+   * document containing a single tab: - If provided, must match the singular tab's ID. - If
+   * omitted, the request applies to the singular tab. In a document containing multiple tabs: - If
+   * provided, the request applies to the specified tab. - If omitted, the request applies to the
+   * first tab in the document.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTabId() {
+    return tabId;
+  }
+
+  /**
+   * The tab that the location is in. When omitted, the request is applied to the first tab. In a
+   * document containing a single tab: - If provided, must match the singular tab's ID. - If
+   * omitted, the request applies to the singular tab. In a document containing multiple tabs: - If
+   * provided, the request applies to the specified tab. - If omitted, the request applies to the
+   * first tab in the document.
+   * @param tabId tabId or {@code null} for none
+   */
+  public EndOfSegmentLocation setTabId(java.lang.String tabId) {
+    this.tabId = tabId;
     return this;
   }
 

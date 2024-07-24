@@ -56,6 +56,17 @@ public final class Range extends com.google.api.client.json.GenericJson {
   private java.lang.Integer startIndex;
 
   /**
+   * The tab that contains this range. When omitted, the request applies to the first tab. In a
+   * document containing a single tab: - If provided, must match the singular tab's ID. - If
+   * omitted, the request applies to the singular tab. In a document containing multiple tabs: - If
+   * provided, the request applies to the specified tab. - If omitted, the request applies to the
+   * first tab in the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tabId;
+
+  /**
    * The zero-based end index of this range, exclusive, in UTF-16 code units. In all current uses,
    * an end index must be provided. This field is an Int32Value in order to accommodate future use
    * cases with open-ended ranges.
@@ -113,6 +124,31 @@ public final class Range extends com.google.api.client.json.GenericJson {
    */
   public Range setStartIndex(java.lang.Integer startIndex) {
     this.startIndex = startIndex;
+    return this;
+  }
+
+  /**
+   * The tab that contains this range. When omitted, the request applies to the first tab. In a
+   * document containing a single tab: - If provided, must match the singular tab's ID. - If
+   * omitted, the request applies to the singular tab. In a document containing multiple tabs: - If
+   * provided, the request applies to the specified tab. - If omitted, the request applies to the
+   * first tab in the document.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTabId() {
+    return tabId;
+  }
+
+  /**
+   * The tab that contains this range. When omitted, the request applies to the first tab. In a
+   * document containing a single tab: - If provided, must match the singular tab's ID. - If
+   * omitted, the request applies to the singular tab. In a document containing multiple tabs: - If
+   * provided, the request applies to the specified tab. - If omitted, the request applies to the
+   * first tab in the document.
+   * @param tabId tabId or {@code null} for none
+   */
+  public Range setTabId(java.lang.String tabId) {
+    this.tabId = tabId;
     return this;
   }
 

@@ -46,6 +46,17 @@ public final class ReplaceImageRequest extends com.google.api.client.json.Generi
   private java.lang.String imageReplaceMethod;
 
   /**
+   * The tab that the image to be replaced is in. When omitted, the request is applied to the first
+   * tab. In a document containing a single tab: - If provided, must match the singular tab's ID. -
+   * If omitted, the request applies to the singular tab. In a document containing multiple tabs: -
+   * If provided, the request applies to the specified tab. - If omitted, the request applies to the
+   * first tab in the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tabId;
+
+  /**
    * The URI of the new image. The image is fetched once at insertion time and a copy is stored for
    * display inside the document. Images must be less than 50MB, cannot exceed 25 megapixels, and
    * must be in PNG, JPEG, or GIF format. The provided URI can't surpass 2 KB in length. The URI is
@@ -88,6 +99,31 @@ public final class ReplaceImageRequest extends com.google.api.client.json.Generi
    */
   public ReplaceImageRequest setImageReplaceMethod(java.lang.String imageReplaceMethod) {
     this.imageReplaceMethod = imageReplaceMethod;
+    return this;
+  }
+
+  /**
+   * The tab that the image to be replaced is in. When omitted, the request is applied to the first
+   * tab. In a document containing a single tab: - If provided, must match the singular tab's ID. -
+   * If omitted, the request applies to the singular tab. In a document containing multiple tabs: -
+   * If provided, the request applies to the specified tab. - If omitted, the request applies to the
+   * first tab in the document.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTabId() {
+    return tabId;
+  }
+
+  /**
+   * The tab that the image to be replaced is in. When omitted, the request is applied to the first
+   * tab. In a document containing a single tab: - If provided, must match the singular tab's ID. -
+   * If omitted, the request applies to the singular tab. In a document containing multiple tabs: -
+   * If provided, the request applies to the specified tab. - If omitted, the request applies to the
+   * first tab in the document.
+   * @param tabId tabId or {@code null} for none
+   */
+  public ReplaceImageRequest setTabId(java.lang.String tabId) {
+    this.tabId = tabId;
     return this;
   }
 

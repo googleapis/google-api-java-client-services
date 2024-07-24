@@ -30,7 +30,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1CountTokensRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Input content.
+   * Optional. Input content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +43,7 @@ public final class GoogleCloudAiplatformV1beta1CountTokensRequest extends com.go
   }
 
   /**
-   * Required. The instances that are the input to token counting call. Schema is identical to the
+   * Optional. The instances that are the input to token counting call. Schema is identical to the
    * prediction schema of the underlying model.
    * The value may be {@code null}.
    */
@@ -51,7 +51,7 @@ public final class GoogleCloudAiplatformV1beta1CountTokensRequest extends com.go
   private java.util.List<java.lang.Object> instances;
 
   /**
-   * Required. The name of the publisher model requested to serve the prediction. Format:
+   * Optional. The name of the publisher model requested to serve the prediction. Format:
    * `projects/{project}/locations/{location}/publishers/models`
    * The value may be {@code null}.
    */
@@ -59,7 +59,24 @@ public final class GoogleCloudAiplatformV1beta1CountTokensRequest extends com.go
   private java.lang.String model;
 
   /**
-   * Required. Input content.
+   * Optional. The user provided system instructions for the model. Note: only text should be used
+   * in parts and content in each part will be in a separate paragraph.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1Content systemInstruction;
+
+  /**
+   * Optional. A list of `Tools` the model may use to generate the next response. A `Tool` is a
+   * piece of code that enables the system to interact with external systems to perform an action,
+   * or set of actions, outside of knowledge and scope of the model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1Tool> tools;
+
+  /**
+   * Optional. Input content.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1Content> getContents() {
@@ -67,7 +84,7 @@ public final class GoogleCloudAiplatformV1beta1CountTokensRequest extends com.go
   }
 
   /**
-   * Required. Input content.
+   * Optional. Input content.
    * @param contents contents or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1CountTokensRequest setContents(java.util.List<GoogleCloudAiplatformV1beta1Content> contents) {
@@ -76,7 +93,7 @@ public final class GoogleCloudAiplatformV1beta1CountTokensRequest extends com.go
   }
 
   /**
-   * Required. The instances that are the input to token counting call. Schema is identical to the
+   * Optional. The instances that are the input to token counting call. Schema is identical to the
    * prediction schema of the underlying model.
    * @return value or {@code null} for none
    */
@@ -85,7 +102,7 @@ public final class GoogleCloudAiplatformV1beta1CountTokensRequest extends com.go
   }
 
   /**
-   * Required. The instances that are the input to token counting call. Schema is identical to the
+   * Optional. The instances that are the input to token counting call. Schema is identical to the
    * prediction schema of the underlying model.
    * @param instances instances or {@code null} for none
    */
@@ -95,7 +112,7 @@ public final class GoogleCloudAiplatformV1beta1CountTokensRequest extends com.go
   }
 
   /**
-   * Required. The name of the publisher model requested to serve the prediction. Format:
+   * Optional. The name of the publisher model requested to serve the prediction. Format:
    * `projects/{project}/locations/{location}/publishers/models`
    * @return value or {@code null} for none
    */
@@ -104,12 +121,52 @@ public final class GoogleCloudAiplatformV1beta1CountTokensRequest extends com.go
   }
 
   /**
-   * Required. The name of the publisher model requested to serve the prediction. Format:
+   * Optional. The name of the publisher model requested to serve the prediction. Format:
    * `projects/{project}/locations/{location}/publishers/models`
    * @param model model or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1CountTokensRequest setModel(java.lang.String model) {
     this.model = model;
+    return this;
+  }
+
+  /**
+   * Optional. The user provided system instructions for the model. Note: only text should be used
+   * in parts and content in each part will be in a separate paragraph.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Content getSystemInstruction() {
+    return systemInstruction;
+  }
+
+  /**
+   * Optional. The user provided system instructions for the model. Note: only text should be used
+   * in parts and content in each part will be in a separate paragraph.
+   * @param systemInstruction systemInstruction or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1CountTokensRequest setSystemInstruction(GoogleCloudAiplatformV1beta1Content systemInstruction) {
+    this.systemInstruction = systemInstruction;
+    return this;
+  }
+
+  /**
+   * Optional. A list of `Tools` the model may use to generate the next response. A `Tool` is a
+   * piece of code that enables the system to interact with external systems to perform an action,
+   * or set of actions, outside of knowledge and scope of the model.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1Tool> getTools() {
+    return tools;
+  }
+
+  /**
+   * Optional. A list of `Tools` the model may use to generate the next response. A `Tool` is a
+   * piece of code that enables the system to interact with external systems to perform an action,
+   * or set of actions, outside of knowledge and scope of the model.
+   * @param tools tools or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1CountTokensRequest setTools(java.util.List<GoogleCloudAiplatformV1beta1Tool> tools) {
+    this.tools = tools;
     return this;
   }
 

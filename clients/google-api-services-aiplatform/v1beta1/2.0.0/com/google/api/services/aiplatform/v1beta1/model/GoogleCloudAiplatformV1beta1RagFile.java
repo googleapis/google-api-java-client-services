@@ -75,6 +75,13 @@ public final class GoogleCloudAiplatformV1beta1RagFile extends com.google.api.cl
   private GoogleCloudAiplatformV1beta1GoogleDriveSource googleDriveSource;
 
   /**
+   * The RagFile is imported from a Jira query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1JiraSource jiraSource;
+
+  /**
    * Output only. The resource name of the RagFile.
    * The value may be {@code null}.
    */
@@ -94,6 +101,13 @@ public final class GoogleCloudAiplatformV1beta1RagFile extends com.google.api.cl
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long sizeBytes;
+
+  /**
+   * The RagFile is imported from a Slack channel.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1SlackSource slackSource;
 
   /**
    * Output only. Timestamp when this RagFile was last updated.
@@ -211,6 +225,23 @@ public final class GoogleCloudAiplatformV1beta1RagFile extends com.google.api.cl
   }
 
   /**
+   * The RagFile is imported from a Jira query.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1JiraSource getJiraSource() {
+    return jiraSource;
+  }
+
+  /**
+   * The RagFile is imported from a Jira query.
+   * @param jiraSource jiraSource or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagFile setJiraSource(GoogleCloudAiplatformV1beta1JiraSource jiraSource) {
+    this.jiraSource = jiraSource;
+    return this;
+  }
+
+  /**
    * Output only. The resource name of the RagFile.
    * @return value or {@code null} for none
    */
@@ -258,6 +289,23 @@ public final class GoogleCloudAiplatformV1beta1RagFile extends com.google.api.cl
    */
   public GoogleCloudAiplatformV1beta1RagFile setSizeBytes(java.lang.Long sizeBytes) {
     this.sizeBytes = sizeBytes;
+    return this;
+  }
+
+  /**
+   * The RagFile is imported from a Slack channel.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SlackSource getSlackSource() {
+    return slackSource;
+  }
+
+  /**
+   * The RagFile is imported from a Slack channel.
+   * @param slackSource slackSource or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagFile setSlackSource(GoogleCloudAiplatformV1beta1SlackSource slackSource) {
+    this.slackSource = slackSource;
     return this;
   }
 

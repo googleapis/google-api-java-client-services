@@ -30,8 +30,7 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1Retrieval extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Disable using the result from this tool in detecting grounding attribution. This does
-   * not affect how the result is given to the model for generation.
+   * Optional. Deprecated. This option is no longer supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +44,7 @@ public final class GoogleCloudAiplatformV1Retrieval extends com.google.api.clien
   private GoogleCloudAiplatformV1VertexAISearch vertexAiSearch;
 
   /**
-   * Optional. Disable using the result from this tool in detecting grounding attribution. This does
-   * not affect how the result is given to the model for generation.
+   * Optional. Deprecated. This option is no longer supported.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableAttribution() {
@@ -54,8 +52,7 @@ public final class GoogleCloudAiplatformV1Retrieval extends com.google.api.clien
   }
 
   /**
-   * Optional. Disable using the result from this tool in detecting grounding attribution. This does
-   * not affect how the result is given to the model for generation.
+   * Optional. Deprecated. This option is no longer supported.
    * @param disableAttribution disableAttribution or {@code null} for none
    */
   public GoogleCloudAiplatformV1Retrieval setDisableAttribution(java.lang.Boolean disableAttribution) {

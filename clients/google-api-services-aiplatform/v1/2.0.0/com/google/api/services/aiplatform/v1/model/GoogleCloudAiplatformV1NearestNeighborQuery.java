@@ -52,6 +52,13 @@ public final class GoogleCloudAiplatformV1NearestNeighborQuery extends com.googl
   private java.lang.Integer neighborCount;
 
   /**
+   * Optional. The list of numeric filters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1NearestNeighborQueryNumericFilter> numericFilters;
+
+  /**
    * Optional. Parameters that can be set to tune query on the fly.
    * The value may be {@code null}.
    */
@@ -124,6 +131,23 @@ public final class GoogleCloudAiplatformV1NearestNeighborQuery extends com.googl
    */
   public GoogleCloudAiplatformV1NearestNeighborQuery setNeighborCount(java.lang.Integer neighborCount) {
     this.neighborCount = neighborCount;
+    return this;
+  }
+
+  /**
+   * Optional. The list of numeric filters.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1NearestNeighborQueryNumericFilter> getNumericFilters() {
+    return numericFilters;
+  }
+
+  /**
+   * Optional. The list of numeric filters.
+   * @param numericFilters numericFilters or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1NearestNeighborQuery setNumericFilters(java.util.List<GoogleCloudAiplatformV1NearestNeighborQueryNumericFilter> numericFilters) {
+    this.numericFilters = numericFilters;
     return this;
   }
 

@@ -37,15 +37,14 @@ public final class DayInfo extends com.google.api.client.json.GenericJson {
   private Date date;
 
   /**
-   * This list will include (up to) 15 pollen species affecting the location specified in the
-   * request.
+   * This list will include up to 15 pollen species affecting the location specified in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<PlantInfo> plantInfo;
 
   /**
-   * This list will include (up to) three pollen types (grass, weed, tree) affecting the location
+   * This list will include up to three pollen types (GRASS, WEED, TREE) affecting the location
    * specified in the request.
    * The value may be {@code null}.
    */
@@ -70,8 +69,7 @@ public final class DayInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This list will include (up to) 15 pollen species affecting the location specified in the
-   * request.
+   * This list will include up to 15 pollen species affecting the location specified in the request.
    * @return value or {@code null} for none
    */
   public java.util.List<PlantInfo> getPlantInfo() {
@@ -79,8 +77,7 @@ public final class DayInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This list will include (up to) 15 pollen species affecting the location specified in the
-   * request.
+   * This list will include up to 15 pollen species affecting the location specified in the request.
    * @param plantInfo plantInfo or {@code null} for none
    */
   public DayInfo setPlantInfo(java.util.List<PlantInfo> plantInfo) {
@@ -89,7 +86,7 @@ public final class DayInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This list will include (up to) three pollen types (grass, weed, tree) affecting the location
+   * This list will include up to three pollen types (GRASS, WEED, TREE) affecting the location
    * specified in the request.
    * @return value or {@code null} for none
    */
@@ -98,7 +95,7 @@ public final class DayInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This list will include (up to) three pollen types (grass, weed, tree) affecting the location
+   * This list will include up to three pollen types (GRASS, WEED, TREE) affecting the location
    * specified in the request.
    * @param pollenTypeInfo pollenTypeInfo or {@code null} for none
    */

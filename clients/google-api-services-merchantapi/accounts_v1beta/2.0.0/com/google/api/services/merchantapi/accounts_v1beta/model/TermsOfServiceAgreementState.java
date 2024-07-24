@@ -51,7 +51,8 @@ public final class TermsOfServiceAgreementState extends com.google.api.client.js
 
   /**
    * Identifier. The resource name of the terms of service version. Format:
-   * `accounts/{account}/termsOfServiceAgreementState/{identifier}`
+   * `accounts/{account}/termsOfServiceAgreementState/{identifier}` The identifier format is:
+   * `{TermsOfServiceKind}-{country}` For example, an identifier could be: `MERCHANT_CENTER-US`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +99,8 @@ public final class TermsOfServiceAgreementState extends com.google.api.client.js
 
   /**
    * Identifier. The resource name of the terms of service version. Format:
-   * `accounts/{account}/termsOfServiceAgreementState/{identifier}`
+   * `accounts/{account}/termsOfServiceAgreementState/{identifier}` The identifier format is:
+   * `{TermsOfServiceKind}-{country}` For example, an identifier could be: `MERCHANT_CENTER-US`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -107,7 +109,8 @@ public final class TermsOfServiceAgreementState extends com.google.api.client.js
 
   /**
    * Identifier. The resource name of the terms of service version. Format:
-   * `accounts/{account}/termsOfServiceAgreementState/{identifier}`
+   * `accounts/{account}/termsOfServiceAgreementState/{identifier}` The identifier format is:
+   * `{TermsOfServiceKind}-{country}` For example, an identifier could be: `MERCHANT_CENTER-US`
    * @param name name or {@code null} for none
    */
   public TermsOfServiceAgreementState setName(java.lang.String name) {

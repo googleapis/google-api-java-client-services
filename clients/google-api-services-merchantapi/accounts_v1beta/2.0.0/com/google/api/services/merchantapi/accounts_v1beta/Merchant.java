@@ -5555,7 +5555,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. The resource name of the terms of service version. Format:
-       *        `accounts/{account}/termsOfServiceAgreementState/{identifier}`
+       *        `accounts/{account}/termsOfServiceAgreementState/{identifier}` The identifier format is:
+       *        `{TermsOfServiceKind}-{country}`
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -5582,7 +5583,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The resource name of the terms of service version. Format:
-       *        `accounts/{account}/termsOfServiceAgreementState/{identifier}`
+       *        `accounts/{account}/termsOfServiceAgreementState/{identifier}` The identifier format is:
+       *        `{TermsOfServiceKind}-{country}`
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -5662,13 +5664,15 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The resource name of the terms of service version. Format:
-         * `accounts/{account}/termsOfServiceAgreementState/{identifier}`
+         * `accounts/{account}/termsOfServiceAgreementState/{identifier}` The identifier format is:
+         * `{TermsOfServiceKind}-{country}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The resource name of the terms of service version. Format:
-       `accounts/{account}/termsOfServiceAgreementState/{identifier}`
+       `accounts/{account}/termsOfServiceAgreementState/{identifier}` The identifier format is:
+       `{TermsOfServiceKind}-{country}`
          */
         public java.lang.String getName() {
           return name;
@@ -5676,7 +5680,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The resource name of the terms of service version. Format:
-         * `accounts/{account}/termsOfServiceAgreementState/{identifier}`
+         * `accounts/{account}/termsOfServiceAgreementState/{identifier}` The identifier format is:
+         * `{TermsOfServiceKind}-{country}`
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

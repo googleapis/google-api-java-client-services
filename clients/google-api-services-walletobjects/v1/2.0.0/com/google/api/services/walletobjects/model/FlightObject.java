@@ -203,6 +203,15 @@ public final class FlightObject extends com.google.api.client.json.GenericJson {
   private RotatingBarcode rotatingBarcode;
 
   /**
+   * Restrictions on the object that needs to be verified before the user tries to save the pass.
+   * Note that this restrictions will only be applied during save time. If the restrictions changed
+   * after a user saves the pass, the new restrictions will not be applied to an already saved pass.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SaveRestrictions saveRestrictions;
+
+  /**
    * An image for the security program that applies to the passenger.
    * The value may be {@code null}.
    */
@@ -658,6 +667,27 @@ public final class FlightObject extends com.google.api.client.json.GenericJson {
    */
   public FlightObject setRotatingBarcode(RotatingBarcode rotatingBarcode) {
     this.rotatingBarcode = rotatingBarcode;
+    return this;
+  }
+
+  /**
+   * Restrictions on the object that needs to be verified before the user tries to save the pass.
+   * Note that this restrictions will only be applied during save time. If the restrictions changed
+   * after a user saves the pass, the new restrictions will not be applied to an already saved pass.
+   * @return value or {@code null} for none
+   */
+  public SaveRestrictions getSaveRestrictions() {
+    return saveRestrictions;
+  }
+
+  /**
+   * Restrictions on the object that needs to be verified before the user tries to save the pass.
+   * Note that this restrictions will only be applied during save time. If the restrictions changed
+   * after a user saves the pass, the new restrictions will not be applied to an already saved pass.
+   * @param saveRestrictions saveRestrictions or {@code null} for none
+   */
+  public FlightObject setSaveRestrictions(SaveRestrictions saveRestrictions) {
+    this.saveRestrictions = saveRestrictions;
     return this;
   }
 

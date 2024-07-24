@@ -31,6 +31,14 @@ package com.google.api.services.manufacturers.v1.model;
 public final class Issue extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. List of country codes (ISO 3166-1 alpha-2) where issue applies to the manufacturer
+   * product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> applicableCountries;
+
+  /**
    * If present, the attribute that triggered the issue. For more information about attributes, see
    * https://support.google.com/manufacturers/answer/6124116.
    * The value may be {@code null}.
@@ -87,6 +95,25 @@ public final class Issue extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Output only. List of country codes (ISO 3166-1 alpha-2) where issue applies to the manufacturer
+   * product.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getApplicableCountries() {
+    return applicableCountries;
+  }
+
+  /**
+   * Output only. List of country codes (ISO 3166-1 alpha-2) where issue applies to the manufacturer
+   * product.
+   * @param applicableCountries applicableCountries or {@code null} for none
+   */
+  public Issue setApplicableCountries(java.util.List<java.lang.String> applicableCountries) {
+    this.applicableCountries = applicableCountries;
+    return this;
+  }
 
   /**
    * If present, the attribute that triggered the issue. For more information about attributes, see

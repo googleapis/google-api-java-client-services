@@ -59,6 +59,13 @@ public final class ImageImport extends com.google.api.client.json.GenericJson {
   private Encryption encryption;
 
   /**
+   * Immutable. Target details for importing a machine image, will be used by ImageImportJob.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MachineImageTargetDetails machineImageTargetDefaults;
+
+  /**
    * Output only. The resource path of the ImageImport.
    * The value may be {@code null}.
    */
@@ -140,6 +147,23 @@ public final class ImageImport extends com.google.api.client.json.GenericJson {
    */
   public ImageImport setEncryption(Encryption encryption) {
     this.encryption = encryption;
+    return this;
+  }
+
+  /**
+   * Immutable. Target details for importing a machine image, will be used by ImageImportJob.
+   * @return value or {@code null} for none
+   */
+  public MachineImageTargetDetails getMachineImageTargetDefaults() {
+    return machineImageTargetDefaults;
+  }
+
+  /**
+   * Immutable. Target details for importing a machine image, will be used by ImageImportJob.
+   * @param machineImageTargetDefaults machineImageTargetDefaults or {@code null} for none
+   */
+  public ImageImport setMachineImageTargetDefaults(MachineImageTargetDetails machineImageTargetDefaults) {
+    this.machineImageTargetDefaults = machineImageTargetDefaults;
     return this;
   }
 

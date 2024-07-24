@@ -52,6 +52,14 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   private java.lang.String network;
 
   /**
+   * Optional. The networking tier used for configuring network access configuration. If left empty,
+   * will default to PREMIUM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String networkTier;
+
+  /**
    * Optional. The subnetwork to connect the NIC to.
    * The value may be {@code null}.
    */
@@ -108,6 +116,25 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   public NetworkInterface setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Optional. The networking tier used for configuring network access configuration. If left empty,
+   * will default to PREMIUM.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetworkTier() {
+    return networkTier;
+  }
+
+  /**
+   * Optional. The networking tier used for configuring network access configuration. If left empty,
+   * will default to PREMIUM.
+   * @param networkTier networkTier or {@code null} for none
+   */
+  public NetworkInterface setNetworkTier(java.lang.String networkTier) {
+    this.networkTier = networkTier;
     return this;
   }
 

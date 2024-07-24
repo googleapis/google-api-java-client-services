@@ -74,6 +74,13 @@ public final class ImageImportJob extends com.google.api.client.json.GenericJson
   private java.util.List<Status> errors;
 
   /**
+   * Output only. Target details used to import a machine image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MachineImageTargetDetails machineImageTargetDetails;
+
+  /**
    * Output only. The resource path of the ImageImportJob.
    * The value may be {@code null}.
    */
@@ -204,6 +211,23 @@ public final class ImageImportJob extends com.google.api.client.json.GenericJson
    */
   public ImageImportJob setErrors(java.util.List<Status> errors) {
     this.errors = errors;
+    return this;
+  }
+
+  /**
+   * Output only. Target details used to import a machine image.
+   * @return value or {@code null} for none
+   */
+  public MachineImageTargetDetails getMachineImageTargetDetails() {
+    return machineImageTargetDetails;
+  }
+
+  /**
+   * Output only. Target details used to import a machine image.
+   * @param machineImageTargetDetails machineImageTargetDetails or {@code null} for none
+   */
+  public ImageImportJob setMachineImageTargetDetails(MachineImageTargetDetails machineImageTargetDetails) {
+    this.machineImageTargetDetails = machineImageTargetDetails;
     return this;
   }
 

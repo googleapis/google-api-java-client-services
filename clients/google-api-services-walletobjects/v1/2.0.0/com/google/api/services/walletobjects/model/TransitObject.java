@@ -250,6 +250,15 @@ public final class TransitObject extends com.google.api.client.json.GenericJson 
   private RotatingBarcode rotatingBarcode;
 
   /**
+   * Restrictions on the object that needs to be verified before the user tries to save the pass.
+   * Note that this restrictions will only be applied during save time. If the restrictions changed
+   * after a user saves the pass, the new restrictions will not be applied to an already saved pass.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SaveRestrictions saveRestrictions;
+
+  /**
    * The value that will be transmitted to a Smart Tap certified terminal over NFC for this object.
    * The class level fields `enableSmartTap` and `redemptionIssuers` must also be set up correctly
    * in order for the pass to support Smart Tap. Only ASCII characters are supported.
@@ -837,6 +846,27 @@ public final class TransitObject extends com.google.api.client.json.GenericJson 
    */
   public TransitObject setRotatingBarcode(RotatingBarcode rotatingBarcode) {
     this.rotatingBarcode = rotatingBarcode;
+    return this;
+  }
+
+  /**
+   * Restrictions on the object that needs to be verified before the user tries to save the pass.
+   * Note that this restrictions will only be applied during save time. If the restrictions changed
+   * after a user saves the pass, the new restrictions will not be applied to an already saved pass.
+   * @return value or {@code null} for none
+   */
+  public SaveRestrictions getSaveRestrictions() {
+    return saveRestrictions;
+  }
+
+  /**
+   * Restrictions on the object that needs to be verified before the user tries to save the pass.
+   * Note that this restrictions will only be applied during save time. If the restrictions changed
+   * after a user saves the pass, the new restrictions will not be applied to an already saved pass.
+   * @param saveRestrictions saveRestrictions or {@code null} for none
+   */
+  public TransitObject setSaveRestrictions(SaveRestrictions saveRestrictions) {
+    this.saveRestrictions = saveRestrictions;
     return this;
   }
 

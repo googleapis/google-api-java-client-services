@@ -196,8 +196,7 @@ public final class FlightClass extends com.google.api.client.json.GenericJson {
    * format date/time without an offset. Time may be specified up to millisecond precision. eg:
    * `2027-03-05T06:30:00` This should be the local date/time at the airport (not a UTC time).
    * Google will reject the request if UTC offset is provided. Time zones will be calculated by
-   * Google based on departure airport. If this is not set, Google will set it based on data from
-   * other sources.
+   * Google based on departure airport.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,8 +210,7 @@ public final class FlightClass extends com.google.api.client.json.GenericJson {
    * at the gate. This is an ISO 8601 extended format date/time without an offset. Time may be
    * specified up to millisecond precision. eg: `2027-03-05T06:30:00` This should be the local
    * date/time at the airport (not a UTC time). Google will reject the request if UTC offset is
-   * provided. Time zones will be calculated by Google based on arrival airport. If this is not set,
-   * Google will set it based on data from other sources.
+   * provided. Time zones will be calculated by Google based on arrival airport.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -227,7 +225,7 @@ public final class FlightClass extends com.google.api.client.json.GenericJson {
    * without an offset. Time may be specified up to millisecond precision. eg: `2027-03-05T06:30:00`
    * This should be the local date/time at the airport (not a UTC time). Google will reject the
    * request if UTC offset is provided. Time zones will be calculated by Google based on departure
-   * airport. If this is not set, Google will set it based on data from other sources.
+   * airport.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -252,8 +250,7 @@ public final class FlightClass extends com.google.api.client.json.GenericJson {
    * format date/time without an offset. Time may be specified up to millisecond precision. eg:
    * `2027-03-05T06:30:00` This should be the local date/time at the airport (not a UTC time).
    * Google will reject the request if UTC offset is provided. Time zones will be calculated by
-   * Google based on arrival airport. If this is not set, Google will set it based on data from
-   * other sources.
+   * Google based on arrival airport.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -765,8 +762,7 @@ public final class FlightClass extends com.google.api.client.json.GenericJson {
    * format date/time without an offset. Time may be specified up to millisecond precision. eg:
    * `2027-03-05T06:30:00` This should be the local date/time at the airport (not a UTC time).
    * Google will reject the request if UTC offset is provided. Time zones will be calculated by
-   * Google based on departure airport. If this is not set, Google will set it based on data from
-   * other sources.
+   * Google based on departure airport.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocalBoardingDateTime() {
@@ -778,8 +774,7 @@ public final class FlightClass extends com.google.api.client.json.GenericJson {
    * format date/time without an offset. Time may be specified up to millisecond precision. eg:
    * `2027-03-05T06:30:00` This should be the local date/time at the airport (not a UTC time).
    * Google will reject the request if UTC offset is provided. Time zones will be calculated by
-   * Google based on departure airport. If this is not set, Google will set it based on data from
-   * other sources.
+   * Google based on departure airport.
    * @param localBoardingDateTime localBoardingDateTime or {@code null} for none
    */
   public FlightClass setLocalBoardingDateTime(java.lang.String localBoardingDateTime) {
@@ -795,8 +790,7 @@ public final class FlightClass extends com.google.api.client.json.GenericJson {
    * at the gate. This is an ISO 8601 extended format date/time without an offset. Time may be
    * specified up to millisecond precision. eg: `2027-03-05T06:30:00` This should be the local
    * date/time at the airport (not a UTC time). Google will reject the request if UTC offset is
-   * provided. Time zones will be calculated by Google based on arrival airport. If this is not set,
-   * Google will set it based on data from other sources.
+   * provided. Time zones will be calculated by Google based on arrival airport.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocalEstimatedOrActualArrivalDateTime() {
@@ -811,8 +805,7 @@ public final class FlightClass extends com.google.api.client.json.GenericJson {
    * at the gate. This is an ISO 8601 extended format date/time without an offset. Time may be
    * specified up to millisecond precision. eg: `2027-03-05T06:30:00` This should be the local
    * date/time at the airport (not a UTC time). Google will reject the request if UTC offset is
-   * provided. Time zones will be calculated by Google based on arrival airport. If this is not set,
-   * Google will set it based on data from other sources.
+   * provided. Time zones will be calculated by Google based on arrival airport.
    * @param localEstimatedOrActualArrivalDateTime localEstimatedOrActualArrivalDateTime or {@code null} for none
    */
   public FlightClass setLocalEstimatedOrActualArrivalDateTime(java.lang.String localEstimatedOrActualArrivalDateTime) {
@@ -829,7 +822,7 @@ public final class FlightClass extends com.google.api.client.json.GenericJson {
    * without an offset. Time may be specified up to millisecond precision. eg: `2027-03-05T06:30:00`
    * This should be the local date/time at the airport (not a UTC time). Google will reject the
    * request if UTC offset is provided. Time zones will be calculated by Google based on departure
-   * airport. If this is not set, Google will set it based on data from other sources.
+   * airport.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocalEstimatedOrActualDepartureDateTime() {
@@ -845,7 +838,7 @@ public final class FlightClass extends com.google.api.client.json.GenericJson {
    * without an offset. Time may be specified up to millisecond precision. eg: `2027-03-05T06:30:00`
    * This should be the local date/time at the airport (not a UTC time). Google will reject the
    * request if UTC offset is provided. Time zones will be calculated by Google based on departure
-   * airport. If this is not set, Google will set it based on data from other sources.
+   * airport.
    * @param localEstimatedOrActualDepartureDateTime localEstimatedOrActualDepartureDateTime or {@code null} for none
    */
   public FlightClass setLocalEstimatedOrActualDepartureDateTime(java.lang.String localEstimatedOrActualDepartureDateTime) {
@@ -887,8 +880,7 @@ public final class FlightClass extends com.google.api.client.json.GenericJson {
    * format date/time without an offset. Time may be specified up to millisecond precision. eg:
    * `2027-03-05T06:30:00` This should be the local date/time at the airport (not a UTC time).
    * Google will reject the request if UTC offset is provided. Time zones will be calculated by
-   * Google based on arrival airport. If this is not set, Google will set it based on data from
-   * other sources.
+   * Google based on arrival airport.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocalScheduledArrivalDateTime() {
@@ -902,8 +894,7 @@ public final class FlightClass extends com.google.api.client.json.GenericJson {
    * format date/time without an offset. Time may be specified up to millisecond precision. eg:
    * `2027-03-05T06:30:00` This should be the local date/time at the airport (not a UTC time).
    * Google will reject the request if UTC offset is provided. Time zones will be calculated by
-   * Google based on arrival airport. If this is not set, Google will set it based on data from
-   * other sources.
+   * Google based on arrival airport.
    * @param localScheduledArrivalDateTime localScheduledArrivalDateTime or {@code null} for none
    */
   public FlightClass setLocalScheduledArrivalDateTime(java.lang.String localScheduledArrivalDateTime) {

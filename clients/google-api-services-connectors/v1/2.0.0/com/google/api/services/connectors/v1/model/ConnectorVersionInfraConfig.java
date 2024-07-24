@@ -45,6 +45,13 @@ public final class ConnectorVersionInfraConfig extends com.google.api.client.jso
   private java.lang.String deploymentModel;
 
   /**
+   * Output only. Status of the deployment model migration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deploymentModelMigrationState;
+
+  /**
    * Output only. HPA autoscaling config.
    * The value may be {@code null}.
    */
@@ -117,6 +124,23 @@ public final class ConnectorVersionInfraConfig extends com.google.api.client.jso
    */
   public ConnectorVersionInfraConfig setDeploymentModel(java.lang.String deploymentModel) {
     this.deploymentModel = deploymentModel;
+    return this;
+  }
+
+  /**
+   * Output only. Status of the deployment model migration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeploymentModelMigrationState() {
+    return deploymentModelMigrationState;
+  }
+
+  /**
+   * Output only. Status of the deployment model migration.
+   * @param deploymentModelMigrationState deploymentModelMigrationState or {@code null} for none
+   */
+  public ConnectorVersionInfraConfig setDeploymentModelMigrationState(java.lang.String deploymentModelMigrationState) {
+    this.deploymentModelMigrationState = deploymentModelMigrationState;
     return this;
   }
 

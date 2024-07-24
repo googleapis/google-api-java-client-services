@@ -59,6 +59,13 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
   private java.lang.Long internalclientRatelimitThreshold;
 
   /**
+   * Indicate whether connector is being migrated to cloud run deployment model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean migrateDeploymentModel;
+
+  /**
    * Max QPS supported by the connector version before throttling of requests.
    * The value may be {@code null}.
    */
@@ -151,6 +158,23 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
    */
   public ConnectorInfraConfig setInternalclientRatelimitThreshold(java.lang.Long internalclientRatelimitThreshold) {
     this.internalclientRatelimitThreshold = internalclientRatelimitThreshold;
+    return this;
+  }
+
+  /**
+   * Indicate whether connector is being migrated to cloud run deployment model.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMigrateDeploymentModel() {
+    return migrateDeploymentModel;
+  }
+
+  /**
+   * Indicate whether connector is being migrated to cloud run deployment model.
+   * @param migrateDeploymentModel migrateDeploymentModel or {@code null} for none
+   */
+  public ConnectorInfraConfig setMigrateDeploymentModel(java.lang.Boolean migrateDeploymentModel) {
+    this.migrateDeploymentModel = migrateDeploymentModel;
     return this;
   }
 

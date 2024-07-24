@@ -112,7 +112,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private CostManagementConfig costManagementConfig;
 
   /**
-   * [Output only] The time the cluster was created, in
+   * Output only. The time the cluster was created, in
    * [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
    * The value may be {@code null}.
    */
@@ -120,14 +120,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String createTime;
 
   /**
-   * [Output only] The current software version of the master endpoint.
+   * Output only. The current software version of the master endpoint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String currentMasterVersion;
 
   /**
-   * [Output only] The number of nodes currently in the cluster. Deprecated. Call Kubernetes API
+   * Output only. The number of nodes currently in the cluster. Deprecated. Call Kubernetes API
    * directly to retrieve node information.
    * The value may be {@code null}.
    */
@@ -135,7 +135,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.Integer currentNodeCount;
 
   /**
-   * [Output only] Deprecated, use [NodePool.version](https://cloud.google.com/kubernetes-
+   * Output only. Deprecated, use [NodePool.version](https://cloud.google.com/kubernetes-
    * engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools) instead. The current
    * version of the node software components. If they are currently at multiple versions because
    * they're in the process of being upgraded, this reflects the minimum version of all nodes.
@@ -192,7 +192,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enableTpu;
 
   /**
-   * [Output only] The IP address of this cluster's master endpoint. The endpoint can be accessed
+   * Output only. The IP address of this cluster's master endpoint. The endpoint can be accessed
    * from the internet at `https://username:password@endpoint/`. See the `masterAuth` property of
    * this resource for username and password information.
    * The value may be {@code null}.
@@ -216,7 +216,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * [Output only] The time the cluster will be automatically deleted in
+   * Output only. The time the cluster will be automatically deleted in
    * [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
    * The value may be {@code null}.
    */
@@ -272,7 +272,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.Integer initialNodeCount;
 
   /**
-   * Deprecated. Use node_pools.instance_group_urls.
+   * Output only. Deprecated. Use node_pools.instance_group_urls.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -300,7 +300,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private LegacyAbac legacyAbac;
 
   /**
-   * [Output only] The name of the Google Compute Engine
+   * Output only. The name of the Google Compute Engine
    * [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or
    * [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which
    * the cluster resides.
@@ -455,7 +455,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private NodeConfig nodeConfig;
 
   /**
-   * [Output only] The size of the address space on each node for hosting containers. This is
+   * Output only. The size of the address space on each node for hosting containers. This is
    * provisioned from within the `container_ipv4_cidr` range. This field will only be set when
    * cluster is in route-based network mode.
    * The value may be {@code null}.
@@ -589,14 +589,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private SecurityPostureConfig securityPostureConfig;
 
   /**
-   * [Output only] Server-defined URL for the resource.
+   * Output only. Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output only] The IP address range of the Kubernetes services in this cluster, in
+   * Output only. The IP address range of the Kubernetes services in this cluster, in
    * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `1.2.3.4/29`). Service addresses are typically put in the last `/16` from the container CIDR.
    * The value may be {@code null}.
@@ -612,14 +612,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private ShieldedNodes shieldedNodes;
 
   /**
-   * [Output only] The current status of this cluster.
+   * Output only. The current status of this cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * [Output only] Deprecated. Use conditions instead. Additional information about the current
+   * Output only. Deprecated. Use conditions instead. Additional information about the current
    * status of this cluster, if available.
    * The value may be {@code null}.
    */
@@ -643,7 +643,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private TpuConfig tpuConfig;
 
   /**
-   * [Output only] The IP address range of the Cloud TPUs in this cluster, in
+   * Output only. The IP address range of the Cloud TPUs in this cluster, in
    * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `1.2.3.4/29`).
    * The value may be {@code null}.
@@ -680,7 +680,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private WorkloadIdentityConfig workloadIdentityConfig;
 
   /**
-   * [Output only] The name of the Google Compute Engine
+   * Output only. The name of the Google Compute Engine
    * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
    * This field is deprecated, use location instead.
    * The value may be {@code null}.
@@ -884,7 +884,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The time the cluster was created, in
+   * Output only. The time the cluster was created, in
    * [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
    * @return value or {@code null} for none
    */
@@ -893,7 +893,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The time the cluster was created, in
+   * Output only. The time the cluster was created, in
    * [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
    * @param createTime createTime or {@code null} for none
    */
@@ -903,7 +903,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The current software version of the master endpoint.
+   * Output only. The current software version of the master endpoint.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrentMasterVersion() {
@@ -911,7 +911,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The current software version of the master endpoint.
+   * Output only. The current software version of the master endpoint.
    * @param currentMasterVersion currentMasterVersion or {@code null} for none
    */
   public Cluster setCurrentMasterVersion(java.lang.String currentMasterVersion) {
@@ -920,7 +920,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The number of nodes currently in the cluster. Deprecated. Call Kubernetes API
+   * Output only. The number of nodes currently in the cluster. Deprecated. Call Kubernetes API
    * directly to retrieve node information.
    * @return value or {@code null} for none
    */
@@ -929,7 +929,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The number of nodes currently in the cluster. Deprecated. Call Kubernetes API
+   * Output only. The number of nodes currently in the cluster. Deprecated. Call Kubernetes API
    * directly to retrieve node information.
    * @param currentNodeCount currentNodeCount or {@code null} for none
    */
@@ -939,7 +939,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] Deprecated, use [NodePool.version](https://cloud.google.com/kubernetes-
+   * Output only. Deprecated, use [NodePool.version](https://cloud.google.com/kubernetes-
    * engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools) instead. The current
    * version of the node software components. If they are currently at multiple versions because
    * they're in the process of being upgraded, this reflects the minimum version of all nodes.
@@ -950,7 +950,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] Deprecated, use [NodePool.version](https://cloud.google.com/kubernetes-
+   * Output only. Deprecated, use [NodePool.version](https://cloud.google.com/kubernetes-
    * engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools) instead. The current
    * version of the node software components. If they are currently at multiple versions because
    * they're in the process of being upgraded, this reflects the minimum version of all nodes.
@@ -1074,7 +1074,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The IP address of this cluster's master endpoint. The endpoint can be accessed
+   * Output only. The IP address of this cluster's master endpoint. The endpoint can be accessed
    * from the internet at `https://username:password@endpoint/`. See the `masterAuth` property of
    * this resource for username and password information.
    * @return value or {@code null} for none
@@ -1084,7 +1084,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The IP address of this cluster's master endpoint. The endpoint can be accessed
+   * Output only. The IP address of this cluster's master endpoint. The endpoint can be accessed
    * from the internet at `https://username:password@endpoint/`. See the `masterAuth` property of
    * this resource for username and password information.
    * @param endpoint endpoint or {@code null} for none
@@ -1131,7 +1131,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The time the cluster will be automatically deleted in
+   * Output only. The time the cluster will be automatically deleted in
    * [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
    * @return value or {@code null} for none
    */
@@ -1140,7 +1140,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The time the cluster will be automatically deleted in
+   * Output only. The time the cluster will be automatically deleted in
    * [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
    * @param expireTime expireTime or {@code null} for none
    */
@@ -1261,7 +1261,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated. Use node_pools.instance_group_urls.
+   * Output only. Deprecated. Use node_pools.instance_group_urls.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInstanceGroupUrls() {
@@ -1269,7 +1269,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated. Use node_pools.instance_group_urls.
+   * Output only. Deprecated. Use node_pools.instance_group_urls.
    * @param instanceGroupUrls instanceGroupUrls or {@code null} for none
    */
   public Cluster setInstanceGroupUrls(java.util.List<java.lang.String> instanceGroupUrls) {
@@ -1329,7 +1329,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The name of the Google Compute Engine
+   * Output only. The name of the Google Compute Engine
    * [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or
    * [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which
    * the cluster resides.
@@ -1340,7 +1340,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The name of the Google Compute Engine
+   * Output only. The name of the Google Compute Engine
    * [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or
    * [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which
    * the cluster resides.
@@ -1690,7 +1690,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The size of the address space on each node for hosting containers. This is
+   * Output only. The size of the address space on each node for hosting containers. This is
    * provisioned from within the `container_ipv4_cidr` range. This field will only be set when
    * cluster is in route-based network mode.
    * @return value or {@code null} for none
@@ -1700,7 +1700,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The size of the address space on each node for hosting containers. This is
+   * Output only. The size of the address space on each node for hosting containers. This is
    * provisioned from within the `container_ipv4_cidr` range. This field will only be set when
    * cluster is in route-based network mode.
    * @param nodeIpv4CidrSize nodeIpv4CidrSize or {@code null} for none
@@ -2009,7 +2009,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] Server-defined URL for the resource.
+   * Output only. Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -2017,7 +2017,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] Server-defined URL for the resource.
+   * Output only. Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public Cluster setSelfLink(java.lang.String selfLink) {
@@ -2026,7 +2026,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The IP address range of the Kubernetes services in this cluster, in
+   * Output only. The IP address range of the Kubernetes services in this cluster, in
    * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `1.2.3.4/29`). Service addresses are typically put in the last `/16` from the container CIDR.
    * @return value or {@code null} for none
@@ -2036,7 +2036,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The IP address range of the Kubernetes services in this cluster, in
+   * Output only. The IP address range of the Kubernetes services in this cluster, in
    * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `1.2.3.4/29`). Service addresses are typically put in the last `/16` from the container CIDR.
    * @param servicesIpv4Cidr servicesIpv4Cidr or {@code null} for none
@@ -2064,7 +2064,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The current status of this cluster.
+   * Output only. The current status of this cluster.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -2072,7 +2072,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The current status of this cluster.
+   * Output only. The current status of this cluster.
    * @param status status or {@code null} for none
    */
   public Cluster setStatus(java.lang.String status) {
@@ -2081,7 +2081,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] Deprecated. Use conditions instead. Additional information about the current
+   * Output only. Deprecated. Use conditions instead. Additional information about the current
    * status of this cluster, if available.
    * @return value or {@code null} for none
    */
@@ -2090,7 +2090,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] Deprecated. Use conditions instead. Additional information about the current
+   * Output only. Deprecated. Use conditions instead. Additional information about the current
    * status of this cluster, if available.
    * @param statusMessage statusMessage or {@code null} for none
    */
@@ -2138,7 +2138,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The IP address range of the Cloud TPUs in this cluster, in
+   * Output only. The IP address range of the Cloud TPUs in this cluster, in
    * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `1.2.3.4/29`).
    * @return value or {@code null} for none
@@ -2148,7 +2148,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The IP address range of the Cloud TPUs in this cluster, in
+   * Output only. The IP address range of the Cloud TPUs in this cluster, in
    * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `1.2.3.4/29`).
    * @param tpuIpv4CidrBlock tpuIpv4CidrBlock or {@code null} for none
@@ -2227,7 +2227,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The name of the Google Compute Engine
+   * Output only. The name of the Google Compute Engine
    * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
    * This field is deprecated, use location instead.
    * @return value or {@code null} for none
@@ -2237,7 +2237,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The name of the Google Compute Engine
+   * Output only. The name of the Google Compute Engine
    * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
    * This field is deprecated, use location instead.
    * @param zone zone or {@code null} for none

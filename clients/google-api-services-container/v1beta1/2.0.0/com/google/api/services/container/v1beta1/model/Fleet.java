@@ -31,7 +31,7 @@ package com.google.api.services.container.v1beta1.model;
 public final class Fleet extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output only] The full resource name of the registered fleet membership of the cluster, in the
+   * Output only. The full resource name of the registered fleet membership of the cluster, in the
    * format `//gkehub.googleapis.com/projects/locations/memberships`.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class Fleet extends com.google.api.client.json.GenericJson {
   private java.lang.String membership;
 
   /**
-   * [Output only] Whether the cluster has been registered through the fleet API.
+   * Output only. Whether the cluster has been registered through the fleet API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class Fleet extends com.google.api.client.json.GenericJson {
   private java.lang.String project;
 
   /**
-   * [Output only] The full resource name of the registered fleet membership of the cluster, in the
+   * Output only. The full resource name of the registered fleet membership of the cluster, in the
    * format `//gkehub.googleapis.com/projects/locations/memberships`.
    * @return value or {@code null} for none
    */
@@ -63,7 +63,7 @@ public final class Fleet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The full resource name of the registered fleet membership of the cluster, in the
+   * Output only. The full resource name of the registered fleet membership of the cluster, in the
    * format `//gkehub.googleapis.com/projects/locations/memberships`.
    * @param membership membership or {@code null} for none
    */
@@ -73,7 +73,7 @@ public final class Fleet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] Whether the cluster has been registered through the fleet API.
+   * Output only. Whether the cluster has been registered through the fleet API.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPreRegistered() {
@@ -81,7 +81,7 @@ public final class Fleet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] Whether the cluster has been registered through the fleet API.
+   * Output only. Whether the cluster has been registered through the fleet API.
    * @param preRegistered preRegistered or {@code null} for none
    */
   public Fleet setPreRegistered(java.lang.Boolean preRegistered) {

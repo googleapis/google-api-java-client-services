@@ -31,7 +31,7 @@ package com.google.api.services.container.v1beta1.model;
 public final class DailyMaintenanceWindow extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output only] Duration of the time window, automatically chosen to be smallest possible in the
+   * Output only. Duration of the time window, automatically chosen to be smallest possible in the
    * given scenario.
    * The value may be {@code null}.
    */
@@ -47,7 +47,7 @@ public final class DailyMaintenanceWindow extends com.google.api.client.json.Gen
   private java.lang.String startTime;
 
   /**
-   * [Output only] Duration of the time window, automatically chosen to be smallest possible in the
+   * Output only. Duration of the time window, automatically chosen to be smallest possible in the
    * given scenario.
    * @return value or {@code null} for none
    */
@@ -56,7 +56,7 @@ public final class DailyMaintenanceWindow extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output only] Duration of the time window, automatically chosen to be smallest possible in the
+   * Output only. Duration of the time window, automatically chosen to be smallest possible in the
    * given scenario.
    * @param duration duration or {@code null} for none
    */

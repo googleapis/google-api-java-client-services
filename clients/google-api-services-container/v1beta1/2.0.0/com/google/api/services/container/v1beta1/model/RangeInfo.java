@@ -31,21 +31,21 @@ package com.google.api.services.container.v1beta1.model;
 public final class RangeInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output only] Name of a range.
+   * Output only. Name of a range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rangeName;
 
   /**
-   * Output only. [Output only] The utilization of the range.
+   * Output only. The utilization of the range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double utilization;
 
   /**
-   * Output only. [Output only] Name of a range.
+   * Output only. Name of a range.
    * @return value or {@code null} for none
    */
   public java.lang.String getRangeName() {
@@ -53,7 +53,7 @@ public final class RangeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Name of a range.
+   * Output only. Name of a range.
    * @param rangeName rangeName or {@code null} for none
    */
   public RangeInfo setRangeName(java.lang.String rangeName) {
@@ -62,7 +62,7 @@ public final class RangeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] The utilization of the range.
+   * Output only. The utilization of the range.
    * @return value or {@code null} for none
    */
   public java.lang.Double getUtilization() {
@@ -70,7 +70,7 @@ public final class RangeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] The utilization of the range.
+   * Output only. The utilization of the range.
    * @param utilization utilization or {@code null} for none
    */
   public RangeInfo setUtilization(java.lang.Double utilization) {

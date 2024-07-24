@@ -111,8 +111,8 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   private java.lang.String podIpv4CidrBlock;
 
   /**
-   * Output only. [Output only] The utilization of the IPv4 range for the pod. The ratio is
-   * Usage/[Total number of IPs in the secondary range], Usage=numNodes*numZones*podIPsPerNode.
+   * Output only. The utilization of the IPv4 range for the pod. The ratio is Usage/[Total number of
+   * IPs in the secondary range], Usage=numNodes*numZones*podIPsPerNode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -286,8 +286,8 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output only] The utilization of the IPv4 range for the pod. The ratio is
-   * Usage/[Total number of IPs in the secondary range], Usage=numNodes*numZones*podIPsPerNode.
+   * Output only. The utilization of the IPv4 range for the pod. The ratio is Usage/[Total number of
+   * IPs in the secondary range], Usage=numNodes*numZones*podIPsPerNode.
    * @return value or {@code null} for none
    */
   public java.lang.Double getPodIpv4RangeUtilization() {
@@ -295,8 +295,8 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output only] The utilization of the IPv4 range for the pod. The ratio is
-   * Usage/[Total number of IPs in the secondary range], Usage=numNodes*numZones*podIPsPerNode.
+   * Output only. The utilization of the IPv4 range for the pod. The ratio is Usage/[Total number of
+   * IPs in the secondary range], Usage=numNodes*numZones*podIPsPerNode.
    * @param podIpv4RangeUtilization podIpv4RangeUtilization or {@code null} for none
    */
   public NodeNetworkConfig setPodIpv4RangeUtilization(java.lang.Double podIpv4RangeUtilization) {

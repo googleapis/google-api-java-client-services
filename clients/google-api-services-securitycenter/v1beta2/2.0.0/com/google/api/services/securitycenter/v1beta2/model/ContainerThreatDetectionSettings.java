@@ -32,7 +32,8 @@ public final class ContainerThreatDetectionSettings extends com.google.api.clien
 
   /**
    * The configurations including the state of enablement for the service's different modules. The
-   * absence of a module in the map implies its configuration is inherited from its parent's.
+   * absence of a module in the map implies its configuration is inherited from its parent's
+   * configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +46,7 @@ public final class ContainerThreatDetectionSettings extends com.google.api.clien
   }
 
   /**
-   * The resource name of the ContainerThreatDetectionSettings. Formats: *
+   * Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
    * organizations/{organization}/containerThreatDetectionSettings *
    * folders/{folder}/containerThreatDetectionSettings *
    * projects/{project}/containerThreatDetectionSettings *
@@ -81,7 +82,8 @@ public final class ContainerThreatDetectionSettings extends com.google.api.clien
 
   /**
    * The configurations including the state of enablement for the service's different modules. The
-   * absence of a module in the map implies its configuration is inherited from its parent's.
+   * absence of a module in the map implies its configuration is inherited from its parent's
+   * configuration.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Config> getModules() {
@@ -90,7 +92,8 @@ public final class ContainerThreatDetectionSettings extends com.google.api.clien
 
   /**
    * The configurations including the state of enablement for the service's different modules. The
-   * absence of a module in the map implies its configuration is inherited from its parent's.
+   * absence of a module in the map implies its configuration is inherited from its parent's
+   * configuration.
    * @param modules modules or {@code null} for none
    */
   public ContainerThreatDetectionSettings setModules(java.util.Map<String, Config> modules) {
@@ -99,7 +102,7 @@ public final class ContainerThreatDetectionSettings extends com.google.api.clien
   }
 
   /**
-   * The resource name of the ContainerThreatDetectionSettings. Formats: *
+   * Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
    * organizations/{organization}/containerThreatDetectionSettings *
    * folders/{folder}/containerThreatDetectionSettings *
    * projects/{project}/containerThreatDetectionSettings *
@@ -111,7 +114,7 @@ public final class ContainerThreatDetectionSettings extends com.google.api.clien
   }
 
   /**
-   * The resource name of the ContainerThreatDetectionSettings. Formats: *
+   * Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
    * organizations/{organization}/containerThreatDetectionSettings *
    * folders/{folder}/containerThreatDetectionSettings *
    * projects/{project}/containerThreatDetectionSettings *

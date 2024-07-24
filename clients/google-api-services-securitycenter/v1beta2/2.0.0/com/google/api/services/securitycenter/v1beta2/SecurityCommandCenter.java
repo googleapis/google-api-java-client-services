@@ -1319,7 +1319,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
      * optional parameters, call the {@link UpdateContainerThreatDetectionSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name The resource name of the ContainerThreatDetectionSettings. Formats: *
+     * @param name Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
      *        organizations/{organization}/containerThreatDetectionSettings *
      *        folders/{folder}/containerThreatDetectionSettings *
      *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
@@ -1351,7 +1351,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * m.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
        * initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the ContainerThreatDetectionSettings. Formats: *
+       * @param name Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
      *        organizations/{organization}/containerThreatDetectionSettings *
      *        folders/{folder}/containerThreatDetectionSettings *
      *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
@@ -1425,7 +1425,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the ContainerThreatDetectionSettings. Formats: *
+       * Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
        * organizations/{organization}/containerThreatDetectionSettings *
        * folders/{folder}/containerThreatDetectionSettings *
        * projects/{project}/containerThreatDetectionSettings *
@@ -1434,7 +1434,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the ContainerThreatDetectionSettings. Formats: *
+      /** Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
      organizations/{organization}/containerThreatDetectionSettings *
      folders/{folder}/containerThreatDetectionSettings *
      projects/{project}/containerThreatDetectionSettings *
@@ -1445,7 +1445,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the ContainerThreatDetectionSettings. Formats: *
+       * Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
        * organizations/{organization}/containerThreatDetectionSettings *
        * folders/{folder}/containerThreatDetectionSettings *
        * projects/{project}/containerThreatDetectionSettings *
@@ -1491,7 +1491,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
      * optional parameters, call the {@link UpdateEventThreatDetectionSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name The resource name of the EventThreatDetectionSettings. Formats: *
+     * @param name Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
      *        organizations/{organization}/eventThreatDetectionSettings *
      *        folders/{folder}/eventThreatDetectionSettings *
      *        projects/{project}/eventThreatDetectionSettings
@@ -1522,7 +1522,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * e.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
        * this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the EventThreatDetectionSettings. Formats: *
+       * @param name Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
      *        organizations/{organization}/eventThreatDetectionSettings *
      *        folders/{folder}/eventThreatDetectionSettings *
      *        projects/{project}/eventThreatDetectionSettings
@@ -1595,7 +1595,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the EventThreatDetectionSettings. Formats: *
+       * Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
        * organizations/{organization}/eventThreatDetectionSettings *
        * folders/{folder}/eventThreatDetectionSettings *
        * projects/{project}/eventThreatDetectionSettings
@@ -1603,7 +1603,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the EventThreatDetectionSettings. Formats: *
+      /** Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
      organizations/{organization}/eventThreatDetectionSettings *
      folders/{folder}/eventThreatDetectionSettings * projects/{project}/eventThreatDetectionSettings
        */
@@ -1612,7 +1612,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the EventThreatDetectionSettings. Formats: *
+       * Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
        * organizations/{organization}/eventThreatDetectionSettings *
        * folders/{folder}/eventThreatDetectionSettings *
        * projects/{project}/eventThreatDetectionSettings
@@ -1824,7 +1824,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
      * optional parameters, call the {@link UpdateSecurityHealthAnalyticsSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name The resource name of the SecurityHealthAnalyticsSettings. Formats: *
+     * @param name Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
      *        organizations/{organization}/securityHealthAnalyticsSettings *
      *        folders/{folder}/securityHealthAnalyticsSettings *
      *        projects/{project}/securityHealthAnalyticsSettings
@@ -1855,7 +1855,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * ogle.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
        * this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the SecurityHealthAnalyticsSettings. Formats: *
+       * @param name Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
      *        organizations/{organization}/securityHealthAnalyticsSettings *
      *        folders/{folder}/securityHealthAnalyticsSettings *
      *        projects/{project}/securityHealthAnalyticsSettings
@@ -1928,7 +1928,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the SecurityHealthAnalyticsSettings. Formats: *
+       * Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
        * organizations/{organization}/securityHealthAnalyticsSettings *
        * folders/{folder}/securityHealthAnalyticsSettings *
        * projects/{project}/securityHealthAnalyticsSettings
@@ -1936,7 +1936,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the SecurityHealthAnalyticsSettings. Formats: *
+      /** Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
      organizations/{organization}/securityHealthAnalyticsSettings *
      folders/{folder}/securityHealthAnalyticsSettings *
      projects/{project}/securityHealthAnalyticsSettings
@@ -1946,7 +1946,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the SecurityHealthAnalyticsSettings. Formats: *
+       * Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
        * organizations/{organization}/securityHealthAnalyticsSettings *
        * folders/{folder}/securityHealthAnalyticsSettings *
        * projects/{project}/securityHealthAnalyticsSettings
@@ -1991,7 +1991,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
      * optional parameters, call the {@link UpdateVirtualMachineThreatDetectionSettings#execute()}
      * method to invoke the remote operation.
      *
-     * @param name The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+     * @param name Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
      *        organizations/{organization}/virtualMachineThreatDetectionSettings *
      *        folders/{folder}/virtualMachineThreatDetectionSettings *
      *        projects/{project}/virtualMachineThreatDetectionSettings
@@ -2022,7 +2022,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * nitialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+       * @param name Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
      *        organizations/{organization}/virtualMachineThreatDetectionSettings *
      *        folders/{folder}/virtualMachineThreatDetectionSettings *
      *        projects/{project}/virtualMachineThreatDetectionSettings
@@ -2095,7 +2095,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+       * Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
        * organizations/{organization}/virtualMachineThreatDetectionSettings *
        * folders/{folder}/virtualMachineThreatDetectionSettings *
        * projects/{project}/virtualMachineThreatDetectionSettings
@@ -2103,7 +2103,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+      /** Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
      organizations/{organization}/virtualMachineThreatDetectionSettings *
      folders/{folder}/virtualMachineThreatDetectionSettings *
      projects/{project}/virtualMachineThreatDetectionSettings
@@ -2113,7 +2113,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+       * Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
        * organizations/{organization}/virtualMachineThreatDetectionSettings *
        * folders/{folder}/virtualMachineThreatDetectionSettings *
        * projects/{project}/virtualMachineThreatDetectionSettings
@@ -2158,7 +2158,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
      * optional parameters, call the {@link UpdateWebSecurityScannerSettings#execute()} method to invoke
      * the remote operation.
      *
-     * @param name The resource name of the WebSecurityScannerSettings. Formats: *
+     * @param name Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
      *        organizations/{organization}/webSecurityScannerSettings *
      *        folders/{folder}/webSecurityScannerSettings *
      *        projects/{project}/webSecurityScannerSettings
@@ -2189,7 +2189,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
        * instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the WebSecurityScannerSettings. Formats: *
+       * @param name Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
      *        organizations/{organization}/webSecurityScannerSettings *
      *        folders/{folder}/webSecurityScannerSettings *
      *        projects/{project}/webSecurityScannerSettings
@@ -2262,14 +2262,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the WebSecurityScannerSettings. Formats: *
+       * Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
        * organizations/{organization}/webSecurityScannerSettings *
        * folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the WebSecurityScannerSettings. Formats: *
+      /** Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
      organizations/{organization}/webSecurityScannerSettings *
      folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
        */
@@ -2278,7 +2278,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the WebSecurityScannerSettings. Formats: *
+       * Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
        * organizations/{organization}/webSecurityScannerSettings *
        * folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
        */
@@ -4794,7 +4794,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
      * optional parameters, call the {@link UpdateContainerThreatDetectionSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name The resource name of the ContainerThreatDetectionSettings. Formats: *
+     * @param name Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
      *        organizations/{organization}/containerThreatDetectionSettings *
      *        folders/{folder}/containerThreatDetectionSettings *
      *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
@@ -4826,7 +4826,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * m.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
        * initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the ContainerThreatDetectionSettings. Formats: *
+       * @param name Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
      *        organizations/{organization}/containerThreatDetectionSettings *
      *        folders/{folder}/containerThreatDetectionSettings *
      *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
@@ -4900,7 +4900,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the ContainerThreatDetectionSettings. Formats: *
+       * Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
        * organizations/{organization}/containerThreatDetectionSettings *
        * folders/{folder}/containerThreatDetectionSettings *
        * projects/{project}/containerThreatDetectionSettings *
@@ -4909,7 +4909,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the ContainerThreatDetectionSettings. Formats: *
+      /** Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
      organizations/{organization}/containerThreatDetectionSettings *
      folders/{folder}/containerThreatDetectionSettings *
      projects/{project}/containerThreatDetectionSettings *
@@ -4920,7 +4920,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the ContainerThreatDetectionSettings. Formats: *
+       * Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
        * organizations/{organization}/containerThreatDetectionSettings *
        * folders/{folder}/containerThreatDetectionSettings *
        * projects/{project}/containerThreatDetectionSettings *
@@ -4966,7 +4966,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
      * optional parameters, call the {@link UpdateEventThreatDetectionSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name The resource name of the EventThreatDetectionSettings. Formats: *
+     * @param name Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
      *        organizations/{organization}/eventThreatDetectionSettings *
      *        folders/{folder}/eventThreatDetectionSettings *
      *        projects/{project}/eventThreatDetectionSettings
@@ -4997,7 +4997,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * e.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
        * this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the EventThreatDetectionSettings. Formats: *
+       * @param name Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
      *        organizations/{organization}/eventThreatDetectionSettings *
      *        folders/{folder}/eventThreatDetectionSettings *
      *        projects/{project}/eventThreatDetectionSettings
@@ -5070,7 +5070,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the EventThreatDetectionSettings. Formats: *
+       * Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
        * organizations/{organization}/eventThreatDetectionSettings *
        * folders/{folder}/eventThreatDetectionSettings *
        * projects/{project}/eventThreatDetectionSettings
@@ -5078,7 +5078,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the EventThreatDetectionSettings. Formats: *
+      /** Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
      organizations/{organization}/eventThreatDetectionSettings *
      folders/{folder}/eventThreatDetectionSettings * projects/{project}/eventThreatDetectionSettings
        */
@@ -5087,7 +5087,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the EventThreatDetectionSettings. Formats: *
+       * Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
        * organizations/{organization}/eventThreatDetectionSettings *
        * folders/{folder}/eventThreatDetectionSettings *
        * projects/{project}/eventThreatDetectionSettings
@@ -5299,7 +5299,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
      * optional parameters, call the {@link UpdateSecurityHealthAnalyticsSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name The resource name of the SecurityHealthAnalyticsSettings. Formats: *
+     * @param name Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
      *        organizations/{organization}/securityHealthAnalyticsSettings *
      *        folders/{folder}/securityHealthAnalyticsSettings *
      *        projects/{project}/securityHealthAnalyticsSettings
@@ -5330,7 +5330,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * ogle.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
        * this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the SecurityHealthAnalyticsSettings. Formats: *
+       * @param name Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
      *        organizations/{organization}/securityHealthAnalyticsSettings *
      *        folders/{folder}/securityHealthAnalyticsSettings *
      *        projects/{project}/securityHealthAnalyticsSettings
@@ -5403,7 +5403,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the SecurityHealthAnalyticsSettings. Formats: *
+       * Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
        * organizations/{organization}/securityHealthAnalyticsSettings *
        * folders/{folder}/securityHealthAnalyticsSettings *
        * projects/{project}/securityHealthAnalyticsSettings
@@ -5411,7 +5411,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the SecurityHealthAnalyticsSettings. Formats: *
+      /** Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
      organizations/{organization}/securityHealthAnalyticsSettings *
      folders/{folder}/securityHealthAnalyticsSettings *
      projects/{project}/securityHealthAnalyticsSettings
@@ -5421,7 +5421,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the SecurityHealthAnalyticsSettings. Formats: *
+       * Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
        * organizations/{organization}/securityHealthAnalyticsSettings *
        * folders/{folder}/securityHealthAnalyticsSettings *
        * projects/{project}/securityHealthAnalyticsSettings
@@ -5466,7 +5466,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
      * optional parameters, call the {@link UpdateVirtualMachineThreatDetectionSettings#execute()}
      * method to invoke the remote operation.
      *
-     * @param name The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+     * @param name Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
      *        organizations/{organization}/virtualMachineThreatDetectionSettings *
      *        folders/{folder}/virtualMachineThreatDetectionSettings *
      *        projects/{project}/virtualMachineThreatDetectionSettings
@@ -5497,7 +5497,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * nitialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+       * @param name Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
      *        organizations/{organization}/virtualMachineThreatDetectionSettings *
      *        folders/{folder}/virtualMachineThreatDetectionSettings *
      *        projects/{project}/virtualMachineThreatDetectionSettings
@@ -5570,7 +5570,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+       * Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
        * organizations/{organization}/virtualMachineThreatDetectionSettings *
        * folders/{folder}/virtualMachineThreatDetectionSettings *
        * projects/{project}/virtualMachineThreatDetectionSettings
@@ -5578,7 +5578,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+      /** Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
      organizations/{organization}/virtualMachineThreatDetectionSettings *
      folders/{folder}/virtualMachineThreatDetectionSettings *
      projects/{project}/virtualMachineThreatDetectionSettings
@@ -5588,7 +5588,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+       * Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
        * organizations/{organization}/virtualMachineThreatDetectionSettings *
        * folders/{folder}/virtualMachineThreatDetectionSettings *
        * projects/{project}/virtualMachineThreatDetectionSettings
@@ -5633,7 +5633,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
      * optional parameters, call the {@link UpdateWebSecurityScannerSettings#execute()} method to invoke
      * the remote operation.
      *
-     * @param name The resource name of the WebSecurityScannerSettings. Formats: *
+     * @param name Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
      *        organizations/{organization}/webSecurityScannerSettings *
      *        folders/{folder}/webSecurityScannerSettings *
      *        projects/{project}/webSecurityScannerSettings
@@ -5664,7 +5664,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
        * instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the WebSecurityScannerSettings. Formats: *
+       * @param name Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
      *        organizations/{organization}/webSecurityScannerSettings *
      *        folders/{folder}/webSecurityScannerSettings *
      *        projects/{project}/webSecurityScannerSettings
@@ -5737,14 +5737,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the WebSecurityScannerSettings. Formats: *
+       * Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
        * organizations/{organization}/webSecurityScannerSettings *
        * folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the WebSecurityScannerSettings. Formats: *
+      /** Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
      organizations/{organization}/webSecurityScannerSettings *
      folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
        */
@@ -5753,7 +5753,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the WebSecurityScannerSettings. Formats: *
+       * Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
        * organizations/{organization}/webSecurityScannerSettings *
        * folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
        */
@@ -8120,7 +8120,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
      * optional parameters, call the {@link UpdateContainerThreatDetectionSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name The resource name of the ContainerThreatDetectionSettings. Formats: *
+     * @param name Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
      *        organizations/{organization}/containerThreatDetectionSettings *
      *        folders/{folder}/containerThreatDetectionSettings *
      *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
@@ -8152,7 +8152,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * m.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
        * initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the ContainerThreatDetectionSettings. Formats: *
+       * @param name Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
      *        organizations/{organization}/containerThreatDetectionSettings *
      *        folders/{folder}/containerThreatDetectionSettings *
      *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
@@ -8226,7 +8226,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the ContainerThreatDetectionSettings. Formats: *
+       * Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
        * organizations/{organization}/containerThreatDetectionSettings *
        * folders/{folder}/containerThreatDetectionSettings *
        * projects/{project}/containerThreatDetectionSettings *
@@ -8235,7 +8235,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the ContainerThreatDetectionSettings. Formats: *
+      /** Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
      organizations/{organization}/containerThreatDetectionSettings *
      folders/{folder}/containerThreatDetectionSettings *
      projects/{project}/containerThreatDetectionSettings *
@@ -8246,7 +8246,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the ContainerThreatDetectionSettings. Formats: *
+       * Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
        * organizations/{organization}/containerThreatDetectionSettings *
        * folders/{folder}/containerThreatDetectionSettings *
        * projects/{project}/containerThreatDetectionSettings *
@@ -8292,7 +8292,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
      * optional parameters, call the {@link UpdateEventThreatDetectionSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name The resource name of the EventThreatDetectionSettings. Formats: *
+     * @param name Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
      *        organizations/{organization}/eventThreatDetectionSettings *
      *        folders/{folder}/eventThreatDetectionSettings *
      *        projects/{project}/eventThreatDetectionSettings
@@ -8323,7 +8323,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * e.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
        * this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the EventThreatDetectionSettings. Formats: *
+       * @param name Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
      *        organizations/{organization}/eventThreatDetectionSettings *
      *        folders/{folder}/eventThreatDetectionSettings *
      *        projects/{project}/eventThreatDetectionSettings
@@ -8396,7 +8396,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the EventThreatDetectionSettings. Formats: *
+       * Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
        * organizations/{organization}/eventThreatDetectionSettings *
        * folders/{folder}/eventThreatDetectionSettings *
        * projects/{project}/eventThreatDetectionSettings
@@ -8404,7 +8404,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the EventThreatDetectionSettings. Formats: *
+      /** Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
      organizations/{organization}/eventThreatDetectionSettings *
      folders/{folder}/eventThreatDetectionSettings * projects/{project}/eventThreatDetectionSettings
        */
@@ -8413,7 +8413,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the EventThreatDetectionSettings. Formats: *
+       * Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
        * organizations/{organization}/eventThreatDetectionSettings *
        * folders/{folder}/eventThreatDetectionSettings *
        * projects/{project}/eventThreatDetectionSettings
@@ -8625,7 +8625,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
      * optional parameters, call the {@link UpdateSecurityHealthAnalyticsSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name The resource name of the SecurityHealthAnalyticsSettings. Formats: *
+     * @param name Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
      *        organizations/{organization}/securityHealthAnalyticsSettings *
      *        folders/{folder}/securityHealthAnalyticsSettings *
      *        projects/{project}/securityHealthAnalyticsSettings
@@ -8656,7 +8656,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * ogle.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
        * this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the SecurityHealthAnalyticsSettings. Formats: *
+       * @param name Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
      *        organizations/{organization}/securityHealthAnalyticsSettings *
      *        folders/{folder}/securityHealthAnalyticsSettings *
      *        projects/{project}/securityHealthAnalyticsSettings
@@ -8729,7 +8729,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the SecurityHealthAnalyticsSettings. Formats: *
+       * Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
        * organizations/{organization}/securityHealthAnalyticsSettings *
        * folders/{folder}/securityHealthAnalyticsSettings *
        * projects/{project}/securityHealthAnalyticsSettings
@@ -8737,7 +8737,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the SecurityHealthAnalyticsSettings. Formats: *
+      /** Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
      organizations/{organization}/securityHealthAnalyticsSettings *
      folders/{folder}/securityHealthAnalyticsSettings *
      projects/{project}/securityHealthAnalyticsSettings
@@ -8747,7 +8747,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the SecurityHealthAnalyticsSettings. Formats: *
+       * Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
        * organizations/{organization}/securityHealthAnalyticsSettings *
        * folders/{folder}/securityHealthAnalyticsSettings *
        * projects/{project}/securityHealthAnalyticsSettings
@@ -8792,7 +8792,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
      * optional parameters, call the {@link UpdateVirtualMachineThreatDetectionSettings#execute()}
      * method to invoke the remote operation.
      *
-     * @param name The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+     * @param name Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
      *        organizations/{organization}/virtualMachineThreatDetectionSettings *
      *        folders/{folder}/virtualMachineThreatDetectionSettings *
      *        projects/{project}/virtualMachineThreatDetectionSettings
@@ -8823,7 +8823,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * nitialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+       * @param name Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
      *        organizations/{organization}/virtualMachineThreatDetectionSettings *
      *        folders/{folder}/virtualMachineThreatDetectionSettings *
      *        projects/{project}/virtualMachineThreatDetectionSettings
@@ -8896,7 +8896,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+       * Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
        * organizations/{organization}/virtualMachineThreatDetectionSettings *
        * folders/{folder}/virtualMachineThreatDetectionSettings *
        * projects/{project}/virtualMachineThreatDetectionSettings
@@ -8904,7 +8904,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+      /** Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
      organizations/{organization}/virtualMachineThreatDetectionSettings *
      folders/{folder}/virtualMachineThreatDetectionSettings *
      projects/{project}/virtualMachineThreatDetectionSettings
@@ -8914,7 +8914,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
+       * Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
        * organizations/{organization}/virtualMachineThreatDetectionSettings *
        * folders/{folder}/virtualMachineThreatDetectionSettings *
        * projects/{project}/virtualMachineThreatDetectionSettings
@@ -8959,7 +8959,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
      * optional parameters, call the {@link UpdateWebSecurityScannerSettings#execute()} method to invoke
      * the remote operation.
      *
-     * @param name The resource name of the WebSecurityScannerSettings. Formats: *
+     * @param name Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
      *        organizations/{organization}/webSecurityScannerSettings *
      *        folders/{folder}/webSecurityScannerSettings *
      *        projects/{project}/webSecurityScannerSettings
@@ -8990,7 +8990,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
        * instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the WebSecurityScannerSettings. Formats: *
+       * @param name Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
      *        organizations/{organization}/webSecurityScannerSettings *
      *        folders/{folder}/webSecurityScannerSettings *
      *        projects/{project}/webSecurityScannerSettings
@@ -9063,14 +9063,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the WebSecurityScannerSettings. Formats: *
+       * Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
        * organizations/{organization}/webSecurityScannerSettings *
        * folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the WebSecurityScannerSettings. Formats: *
+      /** Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
      organizations/{organization}/webSecurityScannerSettings *
      folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
        */
@@ -9079,7 +9079,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
 
       /**
-       * The resource name of the WebSecurityScannerSettings. Formats: *
+       * Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
        * organizations/{organization}/webSecurityScannerSettings *
        * folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
        */
@@ -9720,7 +9720,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link UpdateContainerThreatDetectionSettings#execute()} method to
          * invoke the remote operation.
          *
-         * @param name The resource name of the ContainerThreatDetectionSettings. Formats: *
+         * @param name Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
          *        organizations/{organization}/containerThreatDetectionSettings *
          *        folders/{folder}/containerThreatDetectionSettings *
          *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
@@ -9752,7 +9752,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * m.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
            * initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name of the ContainerThreatDetectionSettings. Formats: *
+           * @param name Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
          *        organizations/{organization}/containerThreatDetectionSettings *
          *        folders/{folder}/containerThreatDetectionSettings *
          *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
@@ -9826,7 +9826,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * The resource name of the ContainerThreatDetectionSettings. Formats: *
+           * Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
            * organizations/{organization}/containerThreatDetectionSettings *
            * folders/{folder}/containerThreatDetectionSettings *
            * projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{loc
@@ -9835,7 +9835,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the ContainerThreatDetectionSettings. Formats: *
+          /** Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
          organizations/{organization}/containerThreatDetectionSettings *
          folders/{folder}/containerThreatDetectionSettings *
          projects/{project}/containerThreatDetectionSettings *
@@ -9846,7 +9846,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * The resource name of the ContainerThreatDetectionSettings. Formats: *
+           * Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
            * organizations/{organization}/containerThreatDetectionSettings *
            * folders/{folder}/containerThreatDetectionSettings *
            * projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{loc

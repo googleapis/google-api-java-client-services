@@ -32,7 +32,8 @@ public final class SecurityHealthAnalyticsSettings extends com.google.api.client
 
   /**
    * The configurations including the state of enablement for the service's different modules. The
-   * absence of a module in the map implies its configuration is inherited from its parent's.
+   * absence of a module in the map implies its configuration is inherited from its parent's
+   * configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +46,7 @@ public final class SecurityHealthAnalyticsSettings extends com.google.api.client
   }
 
   /**
-   * The resource name of the SecurityHealthAnalyticsSettings. Formats: *
+   * Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
    * organizations/{organization}/securityHealthAnalyticsSettings *
    * folders/{folder}/securityHealthAnalyticsSettings *
    * projects/{project}/securityHealthAnalyticsSettings
@@ -78,7 +79,8 @@ public final class SecurityHealthAnalyticsSettings extends com.google.api.client
 
   /**
    * The configurations including the state of enablement for the service's different modules. The
-   * absence of a module in the map implies its configuration is inherited from its parent's.
+   * absence of a module in the map implies its configuration is inherited from its parent's
+   * configuration.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Config> getModules() {
@@ -87,7 +89,8 @@ public final class SecurityHealthAnalyticsSettings extends com.google.api.client
 
   /**
    * The configurations including the state of enablement for the service's different modules. The
-   * absence of a module in the map implies its configuration is inherited from its parent's.
+   * absence of a module in the map implies its configuration is inherited from its parent's
+   * configuration.
    * @param modules modules or {@code null} for none
    */
   public SecurityHealthAnalyticsSettings setModules(java.util.Map<String, Config> modules) {
@@ -96,7 +99,7 @@ public final class SecurityHealthAnalyticsSettings extends com.google.api.client
   }
 
   /**
-   * The resource name of the SecurityHealthAnalyticsSettings. Formats: *
+   * Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
    * organizations/{organization}/securityHealthAnalyticsSettings *
    * folders/{folder}/securityHealthAnalyticsSettings *
    * projects/{project}/securityHealthAnalyticsSettings
@@ -107,7 +110,7 @@ public final class SecurityHealthAnalyticsSettings extends com.google.api.client
   }
 
   /**
-   * The resource name of the SecurityHealthAnalyticsSettings. Formats: *
+   * Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
    * organizations/{organization}/securityHealthAnalyticsSettings *
    * folders/{folder}/securityHealthAnalyticsSettings *
    * projects/{project}/securityHealthAnalyticsSettings

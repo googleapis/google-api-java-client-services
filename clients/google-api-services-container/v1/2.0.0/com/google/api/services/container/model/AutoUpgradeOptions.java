@@ -32,7 +32,7 @@ package com.google.api.services.container.model;
 public final class AutoUpgradeOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output only] This field is set when upgrades are about to commence with the approximate start
+   * Output only. This field is set when upgrades are about to commence with the approximate start
    * time for the upgrades, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
    * The value may be {@code null}.
    */
@@ -40,7 +40,7 @@ public final class AutoUpgradeOptions extends com.google.api.client.json.Generic
   private java.lang.String autoUpgradeStartTime;
 
   /**
-   * [Output only] This field is set when upgrades are about to commence with the description of the
+   * Output only. This field is set when upgrades are about to commence with the description of the
    * upgrade.
    * The value may be {@code null}.
    */
@@ -48,7 +48,7 @@ public final class AutoUpgradeOptions extends com.google.api.client.json.Generic
   private java.lang.String description;
 
   /**
-   * [Output only] This field is set when upgrades are about to commence with the approximate start
+   * Output only. This field is set when upgrades are about to commence with the approximate start
    * time for the upgrades, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
    * @return value or {@code null} for none
    */
@@ -57,7 +57,7 @@ public final class AutoUpgradeOptions extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output only] This field is set when upgrades are about to commence with the approximate start
+   * Output only. This field is set when upgrades are about to commence with the approximate start
    * time for the upgrades, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
    * @param autoUpgradeStartTime autoUpgradeStartTime or {@code null} for none
    */
@@ -67,7 +67,7 @@ public final class AutoUpgradeOptions extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output only] This field is set when upgrades are about to commence with the description of the
+   * Output only. This field is set when upgrades are about to commence with the description of the
    * upgrade.
    * @return value or {@code null} for none
    */
@@ -76,7 +76,7 @@ public final class AutoUpgradeOptions extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output only] This field is set when upgrades are about to commence with the description of the
+   * Output only. This field is set when upgrades are about to commence with the description of the
    * upgrade.
    * @param description description or {@code null} for none
    */

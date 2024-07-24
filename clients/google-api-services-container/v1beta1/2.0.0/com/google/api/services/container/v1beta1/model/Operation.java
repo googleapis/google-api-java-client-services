@@ -39,14 +39,14 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.util.List<StatusCondition> clusterConditions;
 
   /**
-   * Detailed operation progress, if available.
+   * Output only. Detailed operation progress, if available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String detail;
 
   /**
-   * [Output only] The time the operation completed, in
+   * Output only. The time the operation completed, in
    * [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
    * The value may be {@code null}.
    */
@@ -61,7 +61,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private Status error;
 
   /**
-   * [Output only] The name of the Google Compute Engine
+   * Output only. The name of the Google Compute Engine
    * [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or
    * [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which
    * the cluster resides.
@@ -71,7 +71,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String location;
 
   /**
-   * The server-assigned ID for the operation.
+   * Output only. The server-assigned ID for the operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,21 +85,21 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.util.List<StatusCondition> nodepoolConditions;
 
   /**
-   * The operation type.
+   * Output only. The operation type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String operationType;
 
   /**
-   * Output only. [Output only] Progress information for an operation.
+   * Output only. Progress information for an operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private OperationProgress progress;
 
   /**
-   * Server-defined URI for the operation. Example:
+   * Output only. Server-defined URI for the operation. Example:
    * `https://container.googleapis.com/v1alpha1/projects/123/locations/us-
    * central1/operations/operation-123`.
    * The value may be {@code null}.
@@ -108,15 +108,15 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * [Output only] The time the operation started, in
-   * [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+   * Output only. The time the operation started, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String startTime;
 
   /**
-   * The current status of the operation.
+   * Output only. The current status of the operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,9 +131,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String statusMessage;
 
   /**
-   * Server-defined URI for the target of the operation. The format of this is a URI to the resource
-   * being modified (such as a cluster, node pool, or node). For node pool repairs, there may be
-   * multiple nodes being repaired, but only one will be the target. Examples: - ##
+   * Output only. Server-defined URI for the target of the operation. The format of this is a URI to
+   * the resource being modified (such as a cluster, node pool, or node). For node pool repairs,
+   * there may be multiple nodes being repaired, but only one will be the target. Examples: - ##
    * `https://container.googleapis.com/v1/projects/123/locations/us-central1/clusters/my-cluster` ##
    * `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-
    * cluster/nodePools/my-np` `https://container.googleapis.com/v1/projects/123/zones/us-
@@ -144,7 +144,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String targetLink;
 
   /**
-   * The name of the Google Compute Engine
+   * Output only. The name of the Google Compute Engine
    * [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation is taking
    * place. This field is deprecated, use location instead.
    * The value may be {@code null}.
@@ -170,7 +170,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Detailed operation progress, if available.
+   * Output only. Detailed operation progress, if available.
    * @return value or {@code null} for none
    */
   public java.lang.String getDetail() {
@@ -178,7 +178,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Detailed operation progress, if available.
+   * Output only. Detailed operation progress, if available.
    * @param detail detail or {@code null} for none
    */
   public Operation setDetail(java.lang.String detail) {
@@ -187,7 +187,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The time the operation completed, in
+   * Output only. The time the operation completed, in
    * [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
    * @return value or {@code null} for none
    */
@@ -196,7 +196,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The time the operation completed, in
+   * Output only. The time the operation completed, in
    * [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
    * @param endTime endTime or {@code null} for none
    */
@@ -223,7 +223,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The name of the Google Compute Engine
+   * Output only. The name of the Google Compute Engine
    * [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or
    * [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which
    * the cluster resides.
@@ -234,7 +234,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The name of the Google Compute Engine
+   * Output only. The name of the Google Compute Engine
    * [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or
    * [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which
    * the cluster resides.
@@ -246,7 +246,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The server-assigned ID for the operation.
+   * Output only. The server-assigned ID for the operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -254,7 +254,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The server-assigned ID for the operation.
+   * Output only. The server-assigned ID for the operation.
    * @param name name or {@code null} for none
    */
   public Operation setName(java.lang.String name) {
@@ -280,7 +280,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The operation type.
+   * Output only. The operation type.
    * @return value or {@code null} for none
    */
   public java.lang.String getOperationType() {
@@ -288,7 +288,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The operation type.
+   * Output only. The operation type.
    * @param operationType operationType or {@code null} for none
    */
   public Operation setOperationType(java.lang.String operationType) {
@@ -297,7 +297,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Progress information for an operation.
+   * Output only. Progress information for an operation.
    * @return value or {@code null} for none
    */
   public OperationProgress getProgress() {
@@ -305,7 +305,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Progress information for an operation.
+   * Output only. Progress information for an operation.
    * @param progress progress or {@code null} for none
    */
   public Operation setProgress(OperationProgress progress) {
@@ -314,7 +314,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Server-defined URI for the operation. Example:
+   * Output only. Server-defined URI for the operation. Example:
    * `https://container.googleapis.com/v1alpha1/projects/123/locations/us-
    * central1/operations/operation-123`.
    * @return value or {@code null} for none
@@ -324,7 +324,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Server-defined URI for the operation. Example:
+   * Output only. Server-defined URI for the operation. Example:
    * `https://container.googleapis.com/v1alpha1/projects/123/locations/us-
    * central1/operations/operation-123`.
    * @param selfLink selfLink or {@code null} for none
@@ -335,8 +335,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The time the operation started, in
-   * [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+   * Output only. The time the operation started, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getStartTime() {
@@ -344,8 +344,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The time the operation started, in
-   * [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+   * Output only. The time the operation started, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+   * text format.
    * @param startTime startTime or {@code null} for none
    */
   public Operation setStartTime(java.lang.String startTime) {
@@ -354,7 +354,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The current status of the operation.
+   * Output only. The current status of the operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -362,7 +362,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The current status of the operation.
+   * Output only. The current status of the operation.
    * @param status status or {@code null} for none
    */
   public Operation setStatus(java.lang.String status) {
@@ -390,9 +390,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Server-defined URI for the target of the operation. The format of this is a URI to the resource
-   * being modified (such as a cluster, node pool, or node). For node pool repairs, there may be
-   * multiple nodes being repaired, but only one will be the target. Examples: - ##
+   * Output only. Server-defined URI for the target of the operation. The format of this is a URI to
+   * the resource being modified (such as a cluster, node pool, or node). For node pool repairs,
+   * there may be multiple nodes being repaired, but only one will be the target. Examples: - ##
    * `https://container.googleapis.com/v1/projects/123/locations/us-central1/clusters/my-cluster` ##
    * `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-
    * cluster/nodePools/my-np` `https://container.googleapis.com/v1/projects/123/zones/us-
@@ -404,9 +404,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Server-defined URI for the target of the operation. The format of this is a URI to the resource
-   * being modified (such as a cluster, node pool, or node). For node pool repairs, there may be
-   * multiple nodes being repaired, but only one will be the target. Examples: - ##
+   * Output only. Server-defined URI for the target of the operation. The format of this is a URI to
+   * the resource being modified (such as a cluster, node pool, or node). For node pool repairs,
+   * there may be multiple nodes being repaired, but only one will be the target. Examples: - ##
    * `https://container.googleapis.com/v1/projects/123/locations/us-central1/clusters/my-cluster` ##
    * `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-
    * cluster/nodePools/my-np` `https://container.googleapis.com/v1/projects/123/zones/us-
@@ -419,7 +419,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the Google Compute Engine
+   * Output only. The name of the Google Compute Engine
    * [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation is taking
    * place. This field is deprecated, use location instead.
    * @return value or {@code null} for none
@@ -429,7 +429,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the Google Compute Engine
+   * Output only. The name of the Google Compute Engine
    * [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation is taking
    * place. This field is deprecated, use location instead.
    * @param zone zone or {@code null} for none

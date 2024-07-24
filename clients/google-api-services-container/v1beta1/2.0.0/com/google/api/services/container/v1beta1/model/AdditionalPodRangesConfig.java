@@ -32,7 +32,7 @@ package com.google.api.services.container.v1beta1.model;
 public final class AdditionalPodRangesConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output only] Information for additional pod range.
+   * Output only. Information for additional pod range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class AdditionalPodRangesConfig extends com.google.api.client.json.
   private java.util.List<java.lang.String> podRangeNames;
 
   /**
-   * Output only. [Output only] Information for additional pod range.
+   * Output only. Information for additional pod range.
    * @return value or {@code null} for none
    */
   public java.util.List<RangeInfo> getPodRangeInfo() {
@@ -54,7 +54,7 @@ public final class AdditionalPodRangesConfig extends com.google.api.client.json.
   }
 
   /**
-   * Output only. [Output only] Information for additional pod range.
+   * Output only. Information for additional pod range.
    * @param podRangeInfo podRangeInfo or {@code null} for none
    */
   public AdditionalPodRangesConfig setPodRangeInfo(java.util.List<RangeInfo> podRangeInfo) {

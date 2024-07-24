@@ -31,9 +31,9 @@ package com.google.api.services.container.v1beta1.model;
 public final class IPAllocationPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output only] The additional pod ranges that are added to the cluster. These pod
-   * ranges can be used by new node pools to allocate pod IPs automatically. Once the range is
-   * removed it will not show up in IPAllocationPolicy.
+   * Output only. The additional pod ranges that are added to the cluster. These pod ranges can be
+   * used by new node pools to allocate pod IPs automatically. Once the range is removed it will not
+   * show up in IPAllocationPolicy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,9 +91,8 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   private java.lang.Boolean createSubnetwork;
 
   /**
-   * Output only. [Output only] The utilization of the cluster default IPv4 range for the pod. The
-   * ratio is Usage/[Total number of IPs in the secondary range],
-   * Usage=numNodes*numZones*podIPsPerNode.
+   * Output only. The utilization of the cluster default IPv4 range for the pod. The ratio is
+   * Usage/[Total number of IPs in the secondary range], Usage=numNodes*numZones*podIPsPerNode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,7 +157,7 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   private java.lang.String servicesIpv4CidrBlock;
 
   /**
-   * Output only. [Output only] The services IPv6 CIDR block for the cluster.
+   * Output only. The services IPv6 CIDR block for the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,7 +181,7 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   private java.lang.String stackType;
 
   /**
-   * Output only. [Output only] The subnet's IPv6 CIDR block used by nodes and pods.
+   * Output only. The subnet's IPv6 CIDR block used by nodes and pods.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -229,9 +228,9 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   private java.lang.Boolean useRoutes;
 
   /**
-   * Output only. [Output only] The additional pod ranges that are added to the cluster. These pod
-   * ranges can be used by new node pools to allocate pod IPs automatically. Once the range is
-   * removed it will not show up in IPAllocationPolicy.
+   * Output only. The additional pod ranges that are added to the cluster. These pod ranges can be
+   * used by new node pools to allocate pod IPs automatically. Once the range is removed it will not
+   * show up in IPAllocationPolicy.
    * @return value or {@code null} for none
    */
   public AdditionalPodRangesConfig getAdditionalPodRangesConfig() {
@@ -239,9 +238,9 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output only] The additional pod ranges that are added to the cluster. These pod
-   * ranges can be used by new node pools to allocate pod IPs automatically. Once the range is
-   * removed it will not show up in IPAllocationPolicy.
+   * Output only. The additional pod ranges that are added to the cluster. These pod ranges can be
+   * used by new node pools to allocate pod IPs automatically. Once the range is removed it will not
+   * show up in IPAllocationPolicy.
    * @param additionalPodRangesConfig additionalPodRangesConfig or {@code null} for none
    */
   public IPAllocationPolicy setAdditionalPodRangesConfig(AdditionalPodRangesConfig additionalPodRangesConfig) {
@@ -367,9 +366,8 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output only] The utilization of the cluster default IPv4 range for the pod. The
-   * ratio is Usage/[Total number of IPs in the secondary range],
-   * Usage=numNodes*numZones*podIPsPerNode.
+   * Output only. The utilization of the cluster default IPv4 range for the pod. The ratio is
+   * Usage/[Total number of IPs in the secondary range], Usage=numNodes*numZones*podIPsPerNode.
    * @return value or {@code null} for none
    */
   public java.lang.Double getDefaultPodIpv4RangeUtilization() {
@@ -377,9 +375,8 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output only] The utilization of the cluster default IPv4 range for the pod. The
-   * ratio is Usage/[Total number of IPs in the secondary range],
-   * Usage=numNodes*numZones*podIPsPerNode.
+   * Output only. The utilization of the cluster default IPv4 range for the pod. The ratio is
+   * Usage/[Total number of IPs in the secondary range], Usage=numNodes*numZones*podIPsPerNode.
    * @param defaultPodIpv4RangeUtilization defaultPodIpv4RangeUtilization or {@code null} for none
    */
   public IPAllocationPolicy setDefaultPodIpv4RangeUtilization(java.lang.Double defaultPodIpv4RangeUtilization) {
@@ -522,7 +519,7 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output only] The services IPv6 CIDR block for the cluster.
+   * Output only. The services IPv6 CIDR block for the cluster.
    * @return value or {@code null} for none
    */
   public java.lang.String getServicesIpv6CidrBlock() {
@@ -530,7 +527,7 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output only] The services IPv6 CIDR block for the cluster.
+   * Output only. The services IPv6 CIDR block for the cluster.
    * @param servicesIpv6CidrBlock servicesIpv6CidrBlock or {@code null} for none
    */
   public IPAllocationPolicy setServicesIpv6CidrBlock(java.lang.String servicesIpv6CidrBlock) {
@@ -579,7 +576,7 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output only] The subnet's IPv6 CIDR block used by nodes and pods.
+   * Output only. The subnet's IPv6 CIDR block used by nodes and pods.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetIpv6CidrBlock() {
@@ -587,7 +584,7 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output only] The subnet's IPv6 CIDR block used by nodes and pods.
+   * Output only. The subnet's IPv6 CIDR block used by nodes and pods.
    * @param subnetIpv6CidrBlock subnetIpv6CidrBlock or {@code null} for none
    */
   public IPAllocationPolicy setSubnetIpv6CidrBlock(java.lang.String subnetIpv6CidrBlock) {

@@ -81,7 +81,7 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private java.lang.Integer initialNodeCount;
 
   /**
-   * [Output only] The resource URLs of the [managed instance
+   * Output only. The resource URLs of the [managed instance
    * groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-
    * instances) associated with this node pool. During the node pool blue-green upgrade operation,
    * the URLs contain both blue and green resources.
@@ -141,7 +141,7 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private PlacementPolicy placementPolicy;
 
   /**
-   * [Output only] The pod CIDR block size per node in this node pool.
+   * Output only. The pod CIDR block size per node in this node pool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,21 +155,21 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private QueuedProvisioning queuedProvisioning;
 
   /**
-   * [Output only] Server-defined URL for the resource.
+   * Output only. Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output only] The status of the nodes in this pool instance.
+   * Output only. The status of the nodes in this pool instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * [Output only] Deprecated. Use conditions instead. Additional information about the current
+   * Output only. Deprecated. Use conditions instead. Additional information about the current
    * status of this node pool instance, if available.
    * The value may be {@code null}.
    */
@@ -177,7 +177,7 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private java.lang.String statusMessage;
 
   /**
-   * Output only. [Output only] Update info contains relevant information during a node pool update.
+   * Output only. Update info contains relevant information during a node pool update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -310,7 +310,7 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The resource URLs of the [managed instance
+   * Output only. The resource URLs of the [managed instance
    * groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-
    * instances) associated with this node pool. During the node pool blue-green upgrade operation,
    * the URLs contain both blue and green resources.
@@ -321,7 +321,7 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The resource URLs of the [managed instance
+   * Output only. The resource URLs of the [managed instance
    * groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-
    * instances) associated with this node pool. During the node pool blue-green upgrade operation,
    * the URLs contain both blue and green resources.
@@ -451,7 +451,7 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The pod CIDR block size per node in this node pool.
+   * Output only. The pod CIDR block size per node in this node pool.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPodIpv4CidrSize() {
@@ -459,7 +459,7 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The pod CIDR block size per node in this node pool.
+   * Output only. The pod CIDR block size per node in this node pool.
    * @param podIpv4CidrSize podIpv4CidrSize or {@code null} for none
    */
   public NodePool setPodIpv4CidrSize(java.lang.Integer podIpv4CidrSize) {
@@ -485,7 +485,7 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] Server-defined URL for the resource.
+   * Output only. Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -493,7 +493,7 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] Server-defined URL for the resource.
+   * Output only. Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public NodePool setSelfLink(java.lang.String selfLink) {
@@ -502,7 +502,7 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The status of the nodes in this pool instance.
+   * Output only. The status of the nodes in this pool instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -510,7 +510,7 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The status of the nodes in this pool instance.
+   * Output only. The status of the nodes in this pool instance.
    * @param status status or {@code null} for none
    */
   public NodePool setStatus(java.lang.String status) {
@@ -519,7 +519,7 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] Deprecated. Use conditions instead. Additional information about the current
+   * Output only. Deprecated. Use conditions instead. Additional information about the current
    * status of this node pool instance, if available.
    * @return value or {@code null} for none
    */
@@ -528,7 +528,7 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] Deprecated. Use conditions instead. Additional information about the current
+   * Output only. Deprecated. Use conditions instead. Additional information about the current
    * status of this node pool instance, if available.
    * @param statusMessage statusMessage or {@code null} for none
    */
@@ -538,7 +538,7 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Update info contains relevant information during a node pool update.
+   * Output only. Update info contains relevant information during a node pool update.
    * @return value or {@code null} for none
    */
   public UpdateInfo getUpdateInfo() {
@@ -546,7 +546,7 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Update info contains relevant information during a node pool update.
+   * Output only. Update info contains relevant information during a node pool update.
    * @param updateInfo updateInfo or {@code null} for none
    */
   public NodePool setUpdateInfo(UpdateInfo updateInfo) {

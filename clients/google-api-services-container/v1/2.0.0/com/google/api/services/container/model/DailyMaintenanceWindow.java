@@ -31,7 +31,7 @@ package com.google.api.services.container.model;
 public final class DailyMaintenanceWindow extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output only] Duration of the time window, automatically chosen to be smallest possible in the
+   * Output only. Duration of the time window, automatically chosen to be smallest possible in the
    * given scenario. Duration will be in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format
    * "PTnHnMnS".
    * The value may be {@code null}.
@@ -49,7 +49,7 @@ public final class DailyMaintenanceWindow extends com.google.api.client.json.Gen
   private java.lang.String startTime;
 
   /**
-   * [Output only] Duration of the time window, automatically chosen to be smallest possible in the
+   * Output only. Duration of the time window, automatically chosen to be smallest possible in the
    * given scenario. Duration will be in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format
    * "PTnHnMnS".
    * @return value or {@code null} for none
@@ -59,7 +59,7 @@ public final class DailyMaintenanceWindow extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output only] Duration of the time window, automatically chosen to be smallest possible in the
+   * Output only. Duration of the time window, automatically chosen to be smallest possible in the
    * given scenario. Duration will be in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format
    * "PTnHnMnS".
    * @param duration duration or {@code null} for none

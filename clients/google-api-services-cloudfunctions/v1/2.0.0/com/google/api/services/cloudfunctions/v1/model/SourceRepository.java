@@ -45,7 +45,8 @@ public final class SourceRepository extends com.google.api.client.json.GenericJs
    * alias (branch): `https://source.developers.google.com/projects/repos/moveable-aliases/paths` In
    * particular, to refer to HEAD use `master` moveable alias. To refer to a specific fixed alias
    * (tag): `https://source.developers.google.com/projects/repos/fixed-aliases/paths` You may omit
-   * `paths` if you want to use the main directory.
+   * `paths` if you want to use the main directory. The function response may add an empty `/paths/`
+   * to the URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +78,8 @@ public final class SourceRepository extends com.google.api.client.json.GenericJs
    * alias (branch): `https://source.developers.google.com/projects/repos/moveable-aliases/paths` In
    * particular, to refer to HEAD use `master` moveable alias. To refer to a specific fixed alias
    * (tag): `https://source.developers.google.com/projects/repos/fixed-aliases/paths` You may omit
-   * `paths` if you want to use the main directory.
+   * `paths` if you want to use the main directory. The function response may add an empty `/paths/`
+   * to the URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -91,7 +93,8 @@ public final class SourceRepository extends com.google.api.client.json.GenericJs
    * alias (branch): `https://source.developers.google.com/projects/repos/moveable-aliases/paths` In
    * particular, to refer to HEAD use `master` moveable alias. To refer to a specific fixed alias
    * (tag): `https://source.developers.google.com/projects/repos/fixed-aliases/paths` You may omit
-   * `paths` if you want to use the main directory.
+   * `paths` if you want to use the main directory. The function response may add an empty `/paths/`
+   * to the URL.
    * @param url url or {@code null} for none
    */
   public SourceRepository setUrl(java.lang.String url) {

@@ -38,7 +38,7 @@ public final class GlossaryEntry extends com.google.api.client.json.GenericJson 
   private java.lang.String description;
 
   /**
-   * Required. The resource name of the entry. Format:
+   * Identifier. The resource name of the entry. Format:
    * "projects/locations/glossaries/glossaryEntries"
    * The value may be {@code null}.
    */
@@ -77,7 +77,7 @@ public final class GlossaryEntry extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. The resource name of the entry. Format:
+   * Identifier. The resource name of the entry. Format:
    * "projects/locations/glossaries/glossaryEntries"
    * @return value or {@code null} for none
    */
@@ -86,7 +86,7 @@ public final class GlossaryEntry extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. The resource name of the entry. Format:
+   * Identifier. The resource name of the entry. Format:
    * "projects/locations/glossaries/glossaryEntries"
    * @param name name or {@code null} for none
    */

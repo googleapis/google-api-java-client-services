@@ -31,6 +31,14 @@ package com.google.api.services.translate.v3.model;
 public final class AdaptiveMtTranslateResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Text translation response if a glossary is provided in the request. This could be the same as
+   * 'translation' above if no terms apply.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AdaptiveMtTranslation> glossaryTranslations;
+
+  /**
    * Output only. The translation's language code.
    * The value may be {@code null}.
    */
@@ -43,6 +51,25 @@ public final class AdaptiveMtTranslateResponse extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.util.List<AdaptiveMtTranslation> translations;
+
+  /**
+   * Text translation response if a glossary is provided in the request. This could be the same as
+   * 'translation' above if no terms apply.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AdaptiveMtTranslation> getGlossaryTranslations() {
+    return glossaryTranslations;
+  }
+
+  /**
+   * Text translation response if a glossary is provided in the request. This could be the same as
+   * 'translation' above if no terms apply.
+   * @param glossaryTranslations glossaryTranslations or {@code null} for none
+   */
+  public AdaptiveMtTranslateResponse setGlossaryTranslations(java.util.List<AdaptiveMtTranslation> glossaryTranslations) {
+    this.glossaryTranslations = glossaryTranslations;
+    return this;
+  }
 
   /**
    * Output only. The translation's language code.

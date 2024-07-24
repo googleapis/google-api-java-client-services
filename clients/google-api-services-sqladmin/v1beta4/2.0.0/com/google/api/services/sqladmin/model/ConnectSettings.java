@@ -95,6 +95,13 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
   private SslCert serverCaCert;
 
   /**
+   * Specify what type of CA is used for the server certificate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serverCaMode;
+
+  /**
    * `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that is not managed by
    * Google. This property is read-only; use the `tier` property in the `settings` object to
    * determine the database type.
@@ -245,6 +252,23 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
    */
   public ConnectSettings setServerCaCert(SslCert serverCaCert) {
     this.serverCaCert = serverCaCert;
+    return this;
+  }
+
+  /**
+   * Specify what type of CA is used for the server certificate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServerCaMode() {
+    return serverCaMode;
+  }
+
+  /**
+   * Specify what type of CA is used for the server certificate.
+   * @param serverCaMode serverCaMode or {@code null} for none
+   */
+  public ConnectSettings setServerCaMode(java.lang.String serverCaMode) {
+    this.serverCaMode = serverCaMode;
     return this;
   }
 

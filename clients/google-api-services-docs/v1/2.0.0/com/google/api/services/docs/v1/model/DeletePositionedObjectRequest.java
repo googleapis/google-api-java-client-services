@@ -37,6 +37,17 @@ public final class DeletePositionedObjectRequest extends com.google.api.client.j
   private java.lang.String objectId;
 
   /**
+   * The tab that the positioned object to delete is in. When omitted, the request is applied to the
+   * first tab. In a document containing a single tab: - If provided, must match the singular tab's
+   * ID. - If omitted, the request applies to the singular tab. In a document containing multiple
+   * tabs: - If provided, the request applies to the specified tab. - If omitted, the request
+   * applies to the first tab in the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tabId;
+
+  /**
    * The ID of the positioned object to delete.
    * @return value or {@code null} for none
    */
@@ -50,6 +61,31 @@ public final class DeletePositionedObjectRequest extends com.google.api.client.j
    */
   public DeletePositionedObjectRequest setObjectId(java.lang.String objectId) {
     this.objectId = objectId;
+    return this;
+  }
+
+  /**
+   * The tab that the positioned object to delete is in. When omitted, the request is applied to the
+   * first tab. In a document containing a single tab: - If provided, must match the singular tab's
+   * ID. - If omitted, the request applies to the singular tab. In a document containing multiple
+   * tabs: - If provided, the request applies to the specified tab. - If omitted, the request
+   * applies to the first tab in the document.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTabId() {
+    return tabId;
+  }
+
+  /**
+   * The tab that the positioned object to delete is in. When omitted, the request is applied to the
+   * first tab. In a document containing a single tab: - If provided, must match the singular tab's
+   * ID. - If omitted, the request applies to the singular tab. In a document containing multiple
+   * tabs: - If provided, the request applies to the specified tab. - If omitted, the request
+   * applies to the first tab in the document.
+   * @param tabId tabId or {@code null} for none
+   */
+  public DeletePositionedObjectRequest setTabId(java.lang.String tabId) {
+    this.tabId = tabId;
     return this;
   }
 

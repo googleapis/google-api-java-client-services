@@ -40,6 +40,17 @@ public final class DeleteHeaderRequest extends com.google.api.client.json.Generi
   private java.lang.String headerId;
 
   /**
+   * The tab containing the header to delete. When omitted, the request is applied to the first tab.
+   * In a document containing a single tab: - If provided, must match the singular tab's ID. - If
+   * omitted, the request applies to the singular tab. In a document containing multiple tabs: - If
+   * provided, the request applies to the specified tab. - If omitted, the request applies to the
+   * first tab in the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tabId;
+
+  /**
    * The id of the header to delete. If this header is defined on DocumentStyle, the reference to
    * this header is removed, resulting in no header of that type for the first section of the
    * document. If this header is defined on a SectionStyle, the reference to this header is removed
@@ -59,6 +70,31 @@ public final class DeleteHeaderRequest extends com.google.api.client.json.Generi
    */
   public DeleteHeaderRequest setHeaderId(java.lang.String headerId) {
     this.headerId = headerId;
+    return this;
+  }
+
+  /**
+   * The tab containing the header to delete. When omitted, the request is applied to the first tab.
+   * In a document containing a single tab: - If provided, must match the singular tab's ID. - If
+   * omitted, the request applies to the singular tab. In a document containing multiple tabs: - If
+   * provided, the request applies to the specified tab. - If omitted, the request applies to the
+   * first tab in the document.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTabId() {
+    return tabId;
+  }
+
+  /**
+   * The tab containing the header to delete. When omitted, the request is applied to the first tab.
+   * In a document containing a single tab: - If provided, must match the singular tab's ID. - If
+   * omitted, the request applies to the singular tab. In a document containing multiple tabs: - If
+   * provided, the request applies to the specified tab. - If omitted, the request applies to the
+   * first tab in the document.
+   * @param tabId tabId or {@code null} for none
+   */
+  public DeleteHeaderRequest setTabId(java.lang.String tabId) {
+    this.tabId = tabId;
     return this;
   }
 

@@ -51,6 +51,17 @@ public final class ReplaceNamedRangeContentRequest extends com.google.api.client
   private java.lang.String namedRangeName;
 
   /**
+   * Optional. The criteria used to specify in which tabs the replacement occurs. When omitted, the
+   * replacement applies to all tabs. In a document containing a single tab: - If provided, must
+   * match the singular tab's ID. - If omitted, the replacement applies to the singular tab. In a
+   * document containing multiple tabs: - If provided, the replacement applies to the specified
+   * tabs. - If omitted, the replacement applies to all tabs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TabsCriteria tabsCriteria;
+
+  /**
    * Replaces the content of the specified named range(s) with the given text.
    * The value may be {@code null}.
    */
@@ -94,6 +105,31 @@ public final class ReplaceNamedRangeContentRequest extends com.google.api.client
    */
   public ReplaceNamedRangeContentRequest setNamedRangeName(java.lang.String namedRangeName) {
     this.namedRangeName = namedRangeName;
+    return this;
+  }
+
+  /**
+   * Optional. The criteria used to specify in which tabs the replacement occurs. When omitted, the
+   * replacement applies to all tabs. In a document containing a single tab: - If provided, must
+   * match the singular tab's ID. - If omitted, the replacement applies to the singular tab. In a
+   * document containing multiple tabs: - If provided, the replacement applies to the specified
+   * tabs. - If omitted, the replacement applies to all tabs.
+   * @return value or {@code null} for none
+   */
+  public TabsCriteria getTabsCriteria() {
+    return tabsCriteria;
+  }
+
+  /**
+   * Optional. The criteria used to specify in which tabs the replacement occurs. When omitted, the
+   * replacement applies to all tabs. In a document containing a single tab: - If provided, must
+   * match the singular tab's ID. - If omitted, the replacement applies to the singular tab. In a
+   * document containing multiple tabs: - If provided, the replacement applies to the specified
+   * tabs. - If omitted, the replacement applies to all tabs.
+   * @param tabsCriteria tabsCriteria or {@code null} for none
+   */
+  public ReplaceNamedRangeContentRequest setTabsCriteria(TabsCriteria tabsCriteria) {
+    this.tabsCriteria = tabsCriteria;
     return this;
   }
 

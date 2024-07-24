@@ -30,11 +30,29 @@ package com.google.api.services.docs.v1.model;
 public final class Link extends com.google.api.client.json.GenericJson {
 
   /**
+   * A bookmark in this document. In documents containing a single tab, links to bookmarks within
+   * the singular tab continue to return Link.bookmark_id when the includeTabsContent parameter is
+   * set to `false` or unset. Otherwise, this field is returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BookmarkLink bookmark;
+
+  /**
    * The ID of a bookmark in this document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String bookmarkId;
+
+  /**
+   * A heading in this document. In documents containing a single tab, links to headings within the
+   * singular tab continue to return Link.heading_id when the includeTabsContent parameter is set to
+   * `false` or unset. Otherwise, this field is returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HeadingLink heading;
 
   /**
    * The ID of a heading in this document.
@@ -44,11 +62,39 @@ public final class Link extends com.google.api.client.json.GenericJson {
   private java.lang.String headingId;
 
   /**
+   * The ID of a tab in this document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tabId;
+
+  /**
    * An external URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String url;
+
+  /**
+   * A bookmark in this document. In documents containing a single tab, links to bookmarks within
+   * the singular tab continue to return Link.bookmark_id when the includeTabsContent parameter is
+   * set to `false` or unset. Otherwise, this field is returned.
+   * @return value or {@code null} for none
+   */
+  public BookmarkLink getBookmark() {
+    return bookmark;
+  }
+
+  /**
+   * A bookmark in this document. In documents containing a single tab, links to bookmarks within
+   * the singular tab continue to return Link.bookmark_id when the includeTabsContent parameter is
+   * set to `false` or unset. Otherwise, this field is returned.
+   * @param bookmark bookmark or {@code null} for none
+   */
+  public Link setBookmark(BookmarkLink bookmark) {
+    this.bookmark = bookmark;
+    return this;
+  }
 
   /**
    * The ID of a bookmark in this document.
@@ -68,6 +114,27 @@ public final class Link extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A heading in this document. In documents containing a single tab, links to headings within the
+   * singular tab continue to return Link.heading_id when the includeTabsContent parameter is set to
+   * `false` or unset. Otherwise, this field is returned.
+   * @return value or {@code null} for none
+   */
+  public HeadingLink getHeading() {
+    return heading;
+  }
+
+  /**
+   * A heading in this document. In documents containing a single tab, links to headings within the
+   * singular tab continue to return Link.heading_id when the includeTabsContent parameter is set to
+   * `false` or unset. Otherwise, this field is returned.
+   * @param heading heading or {@code null} for none
+   */
+  public Link setHeading(HeadingLink heading) {
+    this.heading = heading;
+    return this;
+  }
+
+  /**
    * The ID of a heading in this document.
    * @return value or {@code null} for none
    */
@@ -81,6 +148,23 @@ public final class Link extends com.google.api.client.json.GenericJson {
    */
   public Link setHeadingId(java.lang.String headingId) {
     this.headingId = headingId;
+    return this;
+  }
+
+  /**
+   * The ID of a tab in this document.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTabId() {
+    return tabId;
+  }
+
+  /**
+   * The ID of a tab in this document.
+   * @param tabId tabId or {@code null} for none
+   */
+  public Link setTabId(java.lang.String tabId) {
+    this.tabId = tabId;
     return this;
   }
 

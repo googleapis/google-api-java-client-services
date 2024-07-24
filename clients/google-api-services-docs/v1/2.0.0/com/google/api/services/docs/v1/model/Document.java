@@ -144,6 +144,14 @@ public final class Document extends com.google.api.client.json.GenericJson {
   private java.lang.String suggestionsViewMode;
 
   /**
+   * Tabs that are part of a document. Tabs can contain child tabs, a tab nested within another tab.
+   * Child tabs are represented by the Tab.child_tabs field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Tab> tabs;
+
+  /**
    * The title of the document.
    * The value may be {@code null}.
    */
@@ -420,6 +428,25 @@ public final class Document extends com.google.api.client.json.GenericJson {
    */
   public Document setSuggestionsViewMode(java.lang.String suggestionsViewMode) {
     this.suggestionsViewMode = suggestionsViewMode;
+    return this;
+  }
+
+  /**
+   * Tabs that are part of a document. Tabs can contain child tabs, a tab nested within another tab.
+   * Child tabs are represented by the Tab.child_tabs field.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Tab> getTabs() {
+    return tabs;
+  }
+
+  /**
+   * Tabs that are part of a document. Tabs can contain child tabs, a tab nested within another tab.
+   * Child tabs are represented by the Tab.child_tabs field.
+   * @param tabs tabs or {@code null} for none
+   */
+  public Document setTabs(java.util.List<Tab> tabs) {
+    this.tabs = tabs;
     return this;
   }
 

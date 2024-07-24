@@ -44,6 +44,17 @@ public final class DeleteNamedRangeRequest extends com.google.api.client.json.Ge
   private java.lang.String namedRangeId;
 
   /**
+   * Optional. The criteria used to specify which tab(s) the range deletion should occur in. When
+   * omitted, the range deletion is applied to all tabs. In a document containing a single tab: - If
+   * provided, must match the singular tab's ID. - If omitted, the range deletion applies to the
+   * singular tab. In a document containing multiple tabs: - If provided, the range deletion applies
+   * to the specified tabs. - If not provided, the range deletion applies to all tabs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TabsCriteria tabsCriteria;
+
+  /**
    * The name of the range(s) to delete. All named ranges with the given name will be deleted.
    * @return value or {@code null} for none
    */
@@ -74,6 +85,31 @@ public final class DeleteNamedRangeRequest extends com.google.api.client.json.Ge
    */
   public DeleteNamedRangeRequest setNamedRangeId(java.lang.String namedRangeId) {
     this.namedRangeId = namedRangeId;
+    return this;
+  }
+
+  /**
+   * Optional. The criteria used to specify which tab(s) the range deletion should occur in. When
+   * omitted, the range deletion is applied to all tabs. In a document containing a single tab: - If
+   * provided, must match the singular tab's ID. - If omitted, the range deletion applies to the
+   * singular tab. In a document containing multiple tabs: - If provided, the range deletion applies
+   * to the specified tabs. - If not provided, the range deletion applies to all tabs.
+   * @return value or {@code null} for none
+   */
+  public TabsCriteria getTabsCriteria() {
+    return tabsCriteria;
+  }
+
+  /**
+   * Optional. The criteria used to specify which tab(s) the range deletion should occur in. When
+   * omitted, the range deletion is applied to all tabs. In a document containing a single tab: - If
+   * provided, must match the singular tab's ID. - If omitted, the range deletion applies to the
+   * singular tab. In a document containing multiple tabs: - If provided, the range deletion applies
+   * to the specified tabs. - If not provided, the range deletion applies to all tabs.
+   * @param tabsCriteria tabsCriteria or {@code null} for none
+   */
+  public DeleteNamedRangeRequest setTabsCriteria(TabsCriteria tabsCriteria) {
+    this.tabsCriteria = tabsCriteria;
     return this;
   }
 

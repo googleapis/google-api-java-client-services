@@ -40,7 +40,7 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
 
   /**
    * The dataset to write findings' updates to. Its format is
-   * "projects/[project_id]/datasets/[bigquery_dataset_id]". BigQuery Dataset unique ID must contain
+   * "projects/[project_id]/datasets/[bigquery_dataset_id]". BigQuery dataset unique ID must contain
    * only letters (a-z, A-Z), numbers (0-9), or underscores (_).
    * The value may be {@code null}.
    */
@@ -77,7 +77,7 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
   private java.lang.String mostRecentEditor;
 
   /**
-   * The relative resource name of this export. See:
+   * Identifier. The relative resource name of this export. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name. The following list
    * shows some examples: +
    * `organizations/{organization_id}/locations/{location_id}/bigQueryExports/{export_id}` +
@@ -126,7 +126,7 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
 
   /**
    * The dataset to write findings' updates to. Its format is
-   * "projects/[project_id]/datasets/[bigquery_dataset_id]". BigQuery Dataset unique ID must contain
+   * "projects/[project_id]/datasets/[bigquery_dataset_id]". BigQuery dataset unique ID must contain
    * only letters (a-z, A-Z), numbers (0-9), or underscores (_).
    * @return value or {@code null} for none
    */
@@ -136,7 +136,7 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
 
   /**
    * The dataset to write findings' updates to. Its format is
-   * "projects/[project_id]/datasets/[bigquery_dataset_id]". BigQuery Dataset unique ID must contain
+   * "projects/[project_id]/datasets/[bigquery_dataset_id]". BigQuery dataset unique ID must contain
    * only letters (a-z, A-Z), numbers (0-9), or underscores (_).
    * @param dataset dataset or {@code null} for none
    */
@@ -213,7 +213,7 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
   }
 
   /**
-   * The relative resource name of this export. See:
+   * Identifier. The relative resource name of this export. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name. The following list
    * shows some examples: +
    * `organizations/{organization_id}/locations/{location_id}/bigQueryExports/{export_id}` +
@@ -227,7 +227,7 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
   }
 
   /**
-   * The relative resource name of this export. See:
+   * Identifier. The relative resource name of this export. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name. The following list
    * shows some examples: +
    * `organizations/{organization_id}/locations/{location_id}/bigQueryExports/{export_id}` +

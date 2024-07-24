@@ -1885,9 +1885,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * operation.
        *
        * @param parent Required. Resource name of the parent to validate the Custom Module under. Its format is: *
-       *        "organizations/{organization}/eventThreatDetectionSettings". *
-       *        "folders/{folder}/eventThreatDetectionSettings". *
-       *        "projects/{project}/eventThreatDetectionSettings".
+       *        `organizations/{organization}/eventThreatDetectionSettings`. *
+       *        `folders/{folder}/eventThreatDetectionSettings`. *
+       *        `projects/{project}/eventThreatDetectionSettings`.
        * @param content the {@link com.google.api.services.securitycenter.v1.model.ValidateEventThreatDetectionCustomModuleRequest}
        * @return the request
        */
@@ -1916,9 +1916,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * after invoking the constructor. </p>
          *
          * @param parent Required. Resource name of the parent to validate the Custom Module under. Its format is: *
-       *        "organizations/{organization}/eventThreatDetectionSettings". *
-       *        "folders/{folder}/eventThreatDetectionSettings". *
-       *        "projects/{project}/eventThreatDetectionSettings".
+       *        `organizations/{organization}/eventThreatDetectionSettings`. *
+       *        `folders/{folder}/eventThreatDetectionSettings`. *
+       *        `projects/{project}/eventThreatDetectionSettings`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.ValidateEventThreatDetectionCustomModuleRequest}
          * @since 1.13
          */
@@ -1989,17 +1989,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent to validate the Custom Module under. Its format is:
-         * * "organizations/{organization}/eventThreatDetectionSettings". *
-         * "folders/{folder}/eventThreatDetectionSettings". *
-         * "projects/{project}/eventThreatDetectionSettings".
+         * * `organizations/{organization}/eventThreatDetectionSettings`. *
+         * `folders/{folder}/eventThreatDetectionSettings`. *
+         * `projects/{project}/eventThreatDetectionSettings`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Resource name of the parent to validate the Custom Module under. Its format is: *
-       "organizations/{organization}/eventThreatDetectionSettings". *
-       "folders/{folder}/eventThreatDetectionSettings". *
-       "projects/{project}/eventThreatDetectionSettings".
+       `organizations/{organization}/eventThreatDetectionSettings`. *
+       `folders/{folder}/eventThreatDetectionSettings`. *
+       `projects/{project}/eventThreatDetectionSettings`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -2007,9 +2007,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent to validate the Custom Module under. Its format is:
-         * * "organizations/{organization}/eventThreatDetectionSettings". *
-         * "folders/{folder}/eventThreatDetectionSettings". *
-         * "projects/{project}/eventThreatDetectionSettings".
+         * * `organizations/{organization}/eventThreatDetectionSettings`. *
+         * `folders/{folder}/eventThreatDetectionSettings`. *
+         * `projects/{project}/eventThreatDetectionSettings`.
          */
         public ValidateCustomModule setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2058,9 +2058,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The new custom module's parent. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings". *
-         *        "folders/{folder}/eventThreatDetectionSettings". *
-         *        "projects/{project}/eventThreatDetectionSettings".
+         *        `organizations/{organization}/eventThreatDetectionSettings`. *
+         *        `folders/{folder}/eventThreatDetectionSettings`. *
+         *        `projects/{project}/eventThreatDetectionSettings`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
          * @return the request
          */
@@ -2091,9 +2091,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The new custom module's parent. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings". *
-         *        "folders/{folder}/eventThreatDetectionSettings". *
-         *        "projects/{project}/eventThreatDetectionSettings".
+         *        `organizations/{organization}/eventThreatDetectionSettings`. *
+         *        `folders/{folder}/eventThreatDetectionSettings`. *
+         *        `projects/{project}/eventThreatDetectionSettings`.
            * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
            * @since 1.13
            */
@@ -2164,17 +2164,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. The new custom module's parent. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings". *
-           * "folders/{folder}/eventThreatDetectionSettings". *
-           * "projects/{project}/eventThreatDetectionSettings".
+           * `organizations/{organization}/eventThreatDetectionSettings`. *
+           * `folders/{folder}/eventThreatDetectionSettings`. *
+           * `projects/{project}/eventThreatDetectionSettings`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The new custom module's parent. Its format is: *
-         "organizations/{organization}/eventThreatDetectionSettings". *
-         "folders/{folder}/eventThreatDetectionSettings". *
-         "projects/{project}/eventThreatDetectionSettings".
+         `organizations/{organization}/eventThreatDetectionSettings`. *
+         `folders/{folder}/eventThreatDetectionSettings`. *
+         `projects/{project}/eventThreatDetectionSettings`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -2182,9 +2182,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. The new custom module's parent. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings". *
-           * "folders/{folder}/eventThreatDetectionSettings". *
-           * "projects/{project}/eventThreatDetectionSettings".
+           * `organizations/{organization}/eventThreatDetectionSettings`. *
+           * `folders/{folder}/eventThreatDetectionSettings`. *
+           * `projects/{project}/eventThreatDetectionSettings`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -2211,9 +2211,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the custom module to delete. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2242,9 +2242,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the custom module to delete. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -2314,17 +2314,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the custom module to delete. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-           * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-           * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the custom module to delete. Its format is: *
-         "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           public java.lang.String getName() {
             return name;
@@ -2332,9 +2332,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the custom module to delete. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-           * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-           * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2360,9 +2360,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the custom module to get. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -2389,9 +2389,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the custom module to get. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -2471,17 +2471,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the custom module to get. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-           * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-           * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the custom module to get. Its format is: *
-         "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           public java.lang.String getName() {
             return name;
@@ -2489,9 +2489,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the custom module to get. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-           * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-           * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2519,9 +2519,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Name of the parent to list custom modules under. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings". *
-         *        "folders/{folder}/eventThreatDetectionSettings". *
-         *        "projects/{project}/eventThreatDetectionSettings".
+         *        `organizations/{organization}/eventThreatDetectionSettings`. *
+         *        `folders/{folder}/eventThreatDetectionSettings`. *
+         *        `projects/{project}/eventThreatDetectionSettings`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -2550,9 +2550,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Name of the parent to list custom modules under. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings". *
-         *        "folders/{folder}/eventThreatDetectionSettings". *
-         *        "projects/{project}/eventThreatDetectionSettings".
+         *        `organizations/{organization}/eventThreatDetectionSettings`. *
+         *        `folders/{folder}/eventThreatDetectionSettings`. *
+         *        `projects/{project}/eventThreatDetectionSettings`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -2632,17 +2632,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the parent to list custom modules under. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings". *
-           * "folders/{folder}/eventThreatDetectionSettings". *
-           * "projects/{project}/eventThreatDetectionSettings".
+           * `organizations/{organization}/eventThreatDetectionSettings`. *
+           * `folders/{folder}/eventThreatDetectionSettings`. *
+           * `projects/{project}/eventThreatDetectionSettings`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of the parent to list custom modules under. Its format is: *
-         "organizations/{organization}/eventThreatDetectionSettings". *
-         "folders/{folder}/eventThreatDetectionSettings". *
-         "projects/{project}/eventThreatDetectionSettings".
+         `organizations/{organization}/eventThreatDetectionSettings`. *
+         `folders/{folder}/eventThreatDetectionSettings`. *
+         `projects/{project}/eventThreatDetectionSettings`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -2650,9 +2650,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the parent to list custom modules under. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings". *
-           * "folders/{folder}/eventThreatDetectionSettings". *
-           * "projects/{project}/eventThreatDetectionSettings".
+           * `organizations/{organization}/eventThreatDetectionSettings`. *
+           * `folders/{folder}/eventThreatDetectionSettings`. *
+           * `projects/{project}/eventThreatDetectionSettings`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -2734,9 +2734,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * operation.
          *
          * @param parent Required. Name of the parent to list custom modules under. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings". *
-         *        "folders/{folder}/eventThreatDetectionSettings". *
-         *        "projects/{project}/eventThreatDetectionSettings".
+         *        `organizations/{organization}/eventThreatDetectionSettings`. *
+         *        `folders/{folder}/eventThreatDetectionSettings`. *
+         *        `projects/{project}/eventThreatDetectionSettings`.
          * @return the request
          */
         public ListDescendant listDescendant(java.lang.String parent) throws java.io.IOException {
@@ -2765,9 +2765,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * the constructor. </p>
            *
            * @param parent Required. Name of the parent to list custom modules under. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings". *
-         *        "folders/{folder}/eventThreatDetectionSettings". *
-         *        "projects/{project}/eventThreatDetectionSettings".
+         *        `organizations/{organization}/eventThreatDetectionSettings`. *
+         *        `folders/{folder}/eventThreatDetectionSettings`. *
+         *        `projects/{project}/eventThreatDetectionSettings`.
            * @since 1.13
            */
           protected ListDescendant(java.lang.String parent) {
@@ -2847,17 +2847,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the parent to list custom modules under. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings". *
-           * "folders/{folder}/eventThreatDetectionSettings". *
-           * "projects/{project}/eventThreatDetectionSettings".
+           * `organizations/{organization}/eventThreatDetectionSettings`. *
+           * `folders/{folder}/eventThreatDetectionSettings`. *
+           * `projects/{project}/eventThreatDetectionSettings`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of the parent to list custom modules under. Its format is: *
-         "organizations/{organization}/eventThreatDetectionSettings". *
-         "folders/{folder}/eventThreatDetectionSettings". *
-         "projects/{project}/eventThreatDetectionSettings".
+         `organizations/{organization}/eventThreatDetectionSettings`. *
+         `folders/{folder}/eventThreatDetectionSettings`. *
+         `projects/{project}/eventThreatDetectionSettings`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -2865,9 +2865,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the parent to list custom modules under. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings". *
-           * "folders/{folder}/eventThreatDetectionSettings". *
-           * "projects/{project}/eventThreatDetectionSettings".
+           * `organizations/{organization}/eventThreatDetectionSettings`. *
+           * `folders/{folder}/eventThreatDetectionSettings`. *
+           * `projects/{project}/eventThreatDetectionSettings`.
            */
           public ListDescendant setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3147,9 +3147,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the effective Event Threat Detection custom module. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}
-         *        ". * "folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}". *
-         *        "projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}".
+         *        `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}
+         *        `. * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
+         *        `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -3176,9 +3176,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the effective Event Threat Detection custom module. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}
-         *        ". * "folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}". *
-         *        "projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}".
+         *        `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}
+         *        `. * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
+         *        `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -3258,18 +3258,18 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. The resource name of the effective Event Threat Detection custom module. Its
-           * format is: * "organizations/{organization}/eventThreatDetectionSettings/effectiveCustom
-           * Modules/{module}". *
-           * "folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}". *
-           * "projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}".
+           * format is: * `organizations/{organization}/eventThreatDetectionSettings/effectiveCustom
+           * Modules/{module}`. *
+           * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
+           * `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the effective Event Threat Detection custom module. Its format is: *
-         "organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}". *
-         "folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}". *
-         "projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}".
+         `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
+         `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
+         `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
            */
           public java.lang.String getName() {
             return name;
@@ -3277,10 +3277,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. The resource name of the effective Event Threat Detection custom module. Its
-           * format is: * "organizations/{organization}/eventThreatDetectionSettings/effectiveCustom
-           * Modules/{module}". *
-           * "folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}". *
-           * "projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}".
+           * format is: * `organizations/{organization}/eventThreatDetectionSettings/effectiveCustom
+           * Modules/{module}`. *
+           * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
+           * `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3308,9 +3308,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Name of the parent to list custom modules for. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings". *
-         *        "folders/{folder}/eventThreatDetectionSettings". *
-         *        "projects/{project}/eventThreatDetectionSettings".
+         *        `organizations/{organization}/eventThreatDetectionSettings`. *
+         *        `folders/{folder}/eventThreatDetectionSettings`. *
+         *        `projects/{project}/eventThreatDetectionSettings`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3339,9 +3339,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Name of the parent to list custom modules for. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings". *
-         *        "folders/{folder}/eventThreatDetectionSettings". *
-         *        "projects/{project}/eventThreatDetectionSettings".
+         *        `organizations/{organization}/eventThreatDetectionSettings`. *
+         *        `folders/{folder}/eventThreatDetectionSettings`. *
+         *        `projects/{project}/eventThreatDetectionSettings`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -3421,17 +3421,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the parent to list custom modules for. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings". *
-           * "folders/{folder}/eventThreatDetectionSettings". *
-           * "projects/{project}/eventThreatDetectionSettings".
+           * `organizations/{organization}/eventThreatDetectionSettings`. *
+           * `folders/{folder}/eventThreatDetectionSettings`. *
+           * `projects/{project}/eventThreatDetectionSettings`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of the parent to list custom modules for. Its format is: *
-         "organizations/{organization}/eventThreatDetectionSettings". *
-         "folders/{folder}/eventThreatDetectionSettings". *
-         "projects/{project}/eventThreatDetectionSettings".
+         `organizations/{organization}/eventThreatDetectionSettings`. *
+         `folders/{folder}/eventThreatDetectionSettings`. *
+         `projects/{project}/eventThreatDetectionSettings`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -3439,9 +3439,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the parent to list custom modules for. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings". *
-           * "folders/{folder}/eventThreatDetectionSettings". *
-           * "projects/{project}/eventThreatDetectionSettings".
+           * `organizations/{organization}/eventThreatDetectionSettings`. *
+           * `folders/{folder}/eventThreatDetectionSettings`. *
+           * `projects/{project}/eventThreatDetectionSettings`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -11974,9 +11974,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * operation.
        *
        * @param parent Required. Resource name of the parent to validate the Custom Module under. Its format is: *
-       *        "organizations/{organization}/eventThreatDetectionSettings". *
-       *        "folders/{folder}/eventThreatDetectionSettings". *
-       *        "projects/{project}/eventThreatDetectionSettings".
+       *        `organizations/{organization}/eventThreatDetectionSettings`. *
+       *        `folders/{folder}/eventThreatDetectionSettings`. *
+       *        `projects/{project}/eventThreatDetectionSettings`.
        * @param content the {@link com.google.api.services.securitycenter.v1.model.ValidateEventThreatDetectionCustomModuleRequest}
        * @return the request
        */
@@ -12005,9 +12005,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * after invoking the constructor. </p>
          *
          * @param parent Required. Resource name of the parent to validate the Custom Module under. Its format is: *
-       *        "organizations/{organization}/eventThreatDetectionSettings". *
-       *        "folders/{folder}/eventThreatDetectionSettings". *
-       *        "projects/{project}/eventThreatDetectionSettings".
+       *        `organizations/{organization}/eventThreatDetectionSettings`. *
+       *        `folders/{folder}/eventThreatDetectionSettings`. *
+       *        `projects/{project}/eventThreatDetectionSettings`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.ValidateEventThreatDetectionCustomModuleRequest}
          * @since 1.13
          */
@@ -12078,17 +12078,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent to validate the Custom Module under. Its format is:
-         * * "organizations/{organization}/eventThreatDetectionSettings". *
-         * "folders/{folder}/eventThreatDetectionSettings". *
-         * "projects/{project}/eventThreatDetectionSettings".
+         * * `organizations/{organization}/eventThreatDetectionSettings`. *
+         * `folders/{folder}/eventThreatDetectionSettings`. *
+         * `projects/{project}/eventThreatDetectionSettings`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Resource name of the parent to validate the Custom Module under. Its format is: *
-       "organizations/{organization}/eventThreatDetectionSettings". *
-       "folders/{folder}/eventThreatDetectionSettings". *
-       "projects/{project}/eventThreatDetectionSettings".
+       `organizations/{organization}/eventThreatDetectionSettings`. *
+       `folders/{folder}/eventThreatDetectionSettings`. *
+       `projects/{project}/eventThreatDetectionSettings`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -12096,9 +12096,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent to validate the Custom Module under. Its format is:
-         * * "organizations/{organization}/eventThreatDetectionSettings". *
-         * "folders/{folder}/eventThreatDetectionSettings". *
-         * "projects/{project}/eventThreatDetectionSettings".
+         * * `organizations/{organization}/eventThreatDetectionSettings`. *
+         * `folders/{folder}/eventThreatDetectionSettings`. *
+         * `projects/{project}/eventThreatDetectionSettings`.
          */
         public ValidateCustomModule setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -12147,9 +12147,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The new custom module's parent. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings". *
-         *        "folders/{folder}/eventThreatDetectionSettings". *
-         *        "projects/{project}/eventThreatDetectionSettings".
+         *        `organizations/{organization}/eventThreatDetectionSettings`. *
+         *        `folders/{folder}/eventThreatDetectionSettings`. *
+         *        `projects/{project}/eventThreatDetectionSettings`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
          * @return the request
          */
@@ -12180,9 +12180,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The new custom module's parent. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings". *
-         *        "folders/{folder}/eventThreatDetectionSettings". *
-         *        "projects/{project}/eventThreatDetectionSettings".
+         *        `organizations/{organization}/eventThreatDetectionSettings`. *
+         *        `folders/{folder}/eventThreatDetectionSettings`. *
+         *        `projects/{project}/eventThreatDetectionSettings`.
            * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
            * @since 1.13
            */
@@ -12253,17 +12253,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. The new custom module's parent. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings". *
-           * "folders/{folder}/eventThreatDetectionSettings". *
-           * "projects/{project}/eventThreatDetectionSettings".
+           * `organizations/{organization}/eventThreatDetectionSettings`. *
+           * `folders/{folder}/eventThreatDetectionSettings`. *
+           * `projects/{project}/eventThreatDetectionSettings`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The new custom module's parent. Its format is: *
-         "organizations/{organization}/eventThreatDetectionSettings". *
-         "folders/{folder}/eventThreatDetectionSettings". *
-         "projects/{project}/eventThreatDetectionSettings".
+         `organizations/{organization}/eventThreatDetectionSettings`. *
+         `folders/{folder}/eventThreatDetectionSettings`. *
+         `projects/{project}/eventThreatDetectionSettings`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -12271,9 +12271,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. The new custom module's parent. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings". *
-           * "folders/{folder}/eventThreatDetectionSettings". *
-           * "projects/{project}/eventThreatDetectionSettings".
+           * `organizations/{organization}/eventThreatDetectionSettings`. *
+           * `folders/{folder}/eventThreatDetectionSettings`. *
+           * `projects/{project}/eventThreatDetectionSettings`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -12300,9 +12300,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the custom module to delete. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -12331,9 +12331,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the custom module to delete. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -12403,17 +12403,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the custom module to delete. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-           * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-           * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the custom module to delete. Its format is: *
-         "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           public java.lang.String getName() {
             return name;
@@ -12421,9 +12421,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the custom module to delete. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-           * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-           * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -12449,9 +12449,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the custom module to get. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -12478,9 +12478,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the custom module to get. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -12560,17 +12560,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the custom module to get. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-           * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-           * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the custom module to get. Its format is: *
-         "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           public java.lang.String getName() {
             return name;
@@ -12578,9 +12578,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the custom module to get. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-           * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-           * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -12608,9 +12608,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Name of the parent to list custom modules under. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings". *
-         *        "folders/{folder}/eventThreatDetectionSettings". *
-         *        "projects/{project}/eventThreatDetectionSettings".
+         *        `organizations/{organization}/eventThreatDetectionSettings`. *
+         *        `folders/{folder}/eventThreatDetectionSettings`. *
+         *        `projects/{project}/eventThreatDetectionSettings`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -12639,9 +12639,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Name of the parent to list custom modules under. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings". *
-         *        "folders/{folder}/eventThreatDetectionSettings". *
-         *        "projects/{project}/eventThreatDetectionSettings".
+         *        `organizations/{organization}/eventThreatDetectionSettings`. *
+         *        `folders/{folder}/eventThreatDetectionSettings`. *
+         *        `projects/{project}/eventThreatDetectionSettings`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -12721,17 +12721,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the parent to list custom modules under. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings". *
-           * "folders/{folder}/eventThreatDetectionSettings". *
-           * "projects/{project}/eventThreatDetectionSettings".
+           * `organizations/{organization}/eventThreatDetectionSettings`. *
+           * `folders/{folder}/eventThreatDetectionSettings`. *
+           * `projects/{project}/eventThreatDetectionSettings`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of the parent to list custom modules under. Its format is: *
-         "organizations/{organization}/eventThreatDetectionSettings". *
-         "folders/{folder}/eventThreatDetectionSettings". *
-         "projects/{project}/eventThreatDetectionSettings".
+         `organizations/{organization}/eventThreatDetectionSettings`. *
+         `folders/{folder}/eventThreatDetectionSettings`. *
+         `projects/{project}/eventThreatDetectionSettings`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -12739,9 +12739,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the parent to list custom modules under. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings". *
-           * "folders/{folder}/eventThreatDetectionSettings". *
-           * "projects/{project}/eventThreatDetectionSettings".
+           * `organizations/{organization}/eventThreatDetectionSettings`. *
+           * `folders/{folder}/eventThreatDetectionSettings`. *
+           * `projects/{project}/eventThreatDetectionSettings`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -12823,9 +12823,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * operation.
          *
          * @param parent Required. Name of the parent to list custom modules under. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings". *
-         *        "folders/{folder}/eventThreatDetectionSettings". *
-         *        "projects/{project}/eventThreatDetectionSettings".
+         *        `organizations/{organization}/eventThreatDetectionSettings`. *
+         *        `folders/{folder}/eventThreatDetectionSettings`. *
+         *        `projects/{project}/eventThreatDetectionSettings`.
          * @return the request
          */
         public ListDescendant listDescendant(java.lang.String parent) throws java.io.IOException {
@@ -12854,9 +12854,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * the constructor. </p>
            *
            * @param parent Required. Name of the parent to list custom modules under. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings". *
-         *        "folders/{folder}/eventThreatDetectionSettings". *
-         *        "projects/{project}/eventThreatDetectionSettings".
+         *        `organizations/{organization}/eventThreatDetectionSettings`. *
+         *        `folders/{folder}/eventThreatDetectionSettings`. *
+         *        `projects/{project}/eventThreatDetectionSettings`.
            * @since 1.13
            */
           protected ListDescendant(java.lang.String parent) {
@@ -12936,17 +12936,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the parent to list custom modules under. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings". *
-           * "folders/{folder}/eventThreatDetectionSettings". *
-           * "projects/{project}/eventThreatDetectionSettings".
+           * `organizations/{organization}/eventThreatDetectionSettings`. *
+           * `folders/{folder}/eventThreatDetectionSettings`. *
+           * `projects/{project}/eventThreatDetectionSettings`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of the parent to list custom modules under. Its format is: *
-         "organizations/{organization}/eventThreatDetectionSettings". *
-         "folders/{folder}/eventThreatDetectionSettings". *
-         "projects/{project}/eventThreatDetectionSettings".
+         `organizations/{organization}/eventThreatDetectionSettings`. *
+         `folders/{folder}/eventThreatDetectionSettings`. *
+         `projects/{project}/eventThreatDetectionSettings`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -12954,9 +12954,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the parent to list custom modules under. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings". *
-           * "folders/{folder}/eventThreatDetectionSettings". *
-           * "projects/{project}/eventThreatDetectionSettings".
+           * `organizations/{organization}/eventThreatDetectionSettings`. *
+           * `folders/{folder}/eventThreatDetectionSettings`. *
+           * `projects/{project}/eventThreatDetectionSettings`.
            */
           public ListDescendant setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -13236,9 +13236,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the effective Event Threat Detection custom module. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}
-         *        ". * "folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}". *
-         *        "projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}".
+         *        `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}
+         *        `. * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
+         *        `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -13265,9 +13265,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the effective Event Threat Detection custom module. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}
-         *        ". * "folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}". *
-         *        "projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}".
+         *        `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}
+         *        `. * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
+         *        `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -13347,18 +13347,18 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. The resource name of the effective Event Threat Detection custom module. Its
-           * format is: * "organizations/{organization}/eventThreatDetectionSettings/effectiveCustom
-           * Modules/{module}". *
-           * "folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}". *
-           * "projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}".
+           * format is: * `organizations/{organization}/eventThreatDetectionSettings/effectiveCustom
+           * Modules/{module}`. *
+           * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
+           * `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the effective Event Threat Detection custom module. Its format is: *
-         "organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}". *
-         "folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}". *
-         "projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}".
+         `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
+         `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
+         `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
            */
           public java.lang.String getName() {
             return name;
@@ -13366,10 +13366,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. The resource name of the effective Event Threat Detection custom module. Its
-           * format is: * "organizations/{organization}/eventThreatDetectionSettings/effectiveCustom
-           * Modules/{module}". *
-           * "folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}". *
-           * "projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}".
+           * format is: * `organizations/{organization}/eventThreatDetectionSettings/effectiveCustom
+           * Modules/{module}`. *
+           * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
+           * `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -13397,9 +13397,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Name of the parent to list custom modules for. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings". *
-         *        "folders/{folder}/eventThreatDetectionSettings". *
-         *        "projects/{project}/eventThreatDetectionSettings".
+         *        `organizations/{organization}/eventThreatDetectionSettings`. *
+         *        `folders/{folder}/eventThreatDetectionSettings`. *
+         *        `projects/{project}/eventThreatDetectionSettings`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -13428,9 +13428,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Name of the parent to list custom modules for. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings". *
-         *        "folders/{folder}/eventThreatDetectionSettings". *
-         *        "projects/{project}/eventThreatDetectionSettings".
+         *        `organizations/{organization}/eventThreatDetectionSettings`. *
+         *        `folders/{folder}/eventThreatDetectionSettings`. *
+         *        `projects/{project}/eventThreatDetectionSettings`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -13510,17 +13510,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the parent to list custom modules for. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings". *
-           * "folders/{folder}/eventThreatDetectionSettings". *
-           * "projects/{project}/eventThreatDetectionSettings".
+           * `organizations/{organization}/eventThreatDetectionSettings`. *
+           * `folders/{folder}/eventThreatDetectionSettings`. *
+           * `projects/{project}/eventThreatDetectionSettings`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of the parent to list custom modules for. Its format is: *
-         "organizations/{organization}/eventThreatDetectionSettings". *
-         "folders/{folder}/eventThreatDetectionSettings". *
-         "projects/{project}/eventThreatDetectionSettings".
+         `organizations/{organization}/eventThreatDetectionSettings`. *
+         `folders/{folder}/eventThreatDetectionSettings`. *
+         `projects/{project}/eventThreatDetectionSettings`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -13528,9 +13528,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the parent to list custom modules for. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings". *
-           * "folders/{folder}/eventThreatDetectionSettings". *
-           * "projects/{project}/eventThreatDetectionSettings".
+           * `organizations/{organization}/eventThreatDetectionSettings`. *
+           * `folders/{folder}/eventThreatDetectionSettings`. *
+           * `projects/{project}/eventThreatDetectionSettings`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -25731,9 +25731,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * operation.
        *
        * @param parent Required. Resource name of the parent to validate the Custom Module under. Its format is: *
-       *        "organizations/{organization}/eventThreatDetectionSettings". *
-       *        "folders/{folder}/eventThreatDetectionSettings". *
-       *        "projects/{project}/eventThreatDetectionSettings".
+       *        `organizations/{organization}/eventThreatDetectionSettings`. *
+       *        `folders/{folder}/eventThreatDetectionSettings`. *
+       *        `projects/{project}/eventThreatDetectionSettings`.
        * @param content the {@link com.google.api.services.securitycenter.v1.model.ValidateEventThreatDetectionCustomModuleRequest}
        * @return the request
        */
@@ -25762,9 +25762,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * after invoking the constructor. </p>
          *
          * @param parent Required. Resource name of the parent to validate the Custom Module under. Its format is: *
-       *        "organizations/{organization}/eventThreatDetectionSettings". *
-       *        "folders/{folder}/eventThreatDetectionSettings". *
-       *        "projects/{project}/eventThreatDetectionSettings".
+       *        `organizations/{organization}/eventThreatDetectionSettings`. *
+       *        `folders/{folder}/eventThreatDetectionSettings`. *
+       *        `projects/{project}/eventThreatDetectionSettings`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.ValidateEventThreatDetectionCustomModuleRequest}
          * @since 1.13
          */
@@ -25835,17 +25835,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent to validate the Custom Module under. Its format is:
-         * * "organizations/{organization}/eventThreatDetectionSettings". *
-         * "folders/{folder}/eventThreatDetectionSettings". *
-         * "projects/{project}/eventThreatDetectionSettings".
+         * * `organizations/{organization}/eventThreatDetectionSettings`. *
+         * `folders/{folder}/eventThreatDetectionSettings`. *
+         * `projects/{project}/eventThreatDetectionSettings`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Resource name of the parent to validate the Custom Module under. Its format is: *
-       "organizations/{organization}/eventThreatDetectionSettings". *
-       "folders/{folder}/eventThreatDetectionSettings". *
-       "projects/{project}/eventThreatDetectionSettings".
+       `organizations/{organization}/eventThreatDetectionSettings`. *
+       `folders/{folder}/eventThreatDetectionSettings`. *
+       `projects/{project}/eventThreatDetectionSettings`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -25853,9 +25853,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Resource name of the parent to validate the Custom Module under. Its format is:
-         * * "organizations/{organization}/eventThreatDetectionSettings". *
-         * "folders/{folder}/eventThreatDetectionSettings". *
-         * "projects/{project}/eventThreatDetectionSettings".
+         * * `organizations/{organization}/eventThreatDetectionSettings`. *
+         * `folders/{folder}/eventThreatDetectionSettings`. *
+         * `projects/{project}/eventThreatDetectionSettings`.
          */
         public ValidateCustomModule setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -25904,9 +25904,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The new custom module's parent. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings". *
-         *        "folders/{folder}/eventThreatDetectionSettings". *
-         *        "projects/{project}/eventThreatDetectionSettings".
+         *        `organizations/{organization}/eventThreatDetectionSettings`. *
+         *        `folders/{folder}/eventThreatDetectionSettings`. *
+         *        `projects/{project}/eventThreatDetectionSettings`.
          * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
          * @return the request
          */
@@ -25937,9 +25937,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The new custom module's parent. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings". *
-         *        "folders/{folder}/eventThreatDetectionSettings". *
-         *        "projects/{project}/eventThreatDetectionSettings".
+         *        `organizations/{organization}/eventThreatDetectionSettings`. *
+         *        `folders/{folder}/eventThreatDetectionSettings`. *
+         *        `projects/{project}/eventThreatDetectionSettings`.
            * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
            * @since 1.13
            */
@@ -26010,17 +26010,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. The new custom module's parent. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings". *
-           * "folders/{folder}/eventThreatDetectionSettings". *
-           * "projects/{project}/eventThreatDetectionSettings".
+           * `organizations/{organization}/eventThreatDetectionSettings`. *
+           * `folders/{folder}/eventThreatDetectionSettings`. *
+           * `projects/{project}/eventThreatDetectionSettings`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The new custom module's parent. Its format is: *
-         "organizations/{organization}/eventThreatDetectionSettings". *
-         "folders/{folder}/eventThreatDetectionSettings". *
-         "projects/{project}/eventThreatDetectionSettings".
+         `organizations/{organization}/eventThreatDetectionSettings`. *
+         `folders/{folder}/eventThreatDetectionSettings`. *
+         `projects/{project}/eventThreatDetectionSettings`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -26028,9 +26028,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. The new custom module's parent. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings". *
-           * "folders/{folder}/eventThreatDetectionSettings". *
-           * "projects/{project}/eventThreatDetectionSettings".
+           * `organizations/{organization}/eventThreatDetectionSettings`. *
+           * `folders/{folder}/eventThreatDetectionSettings`. *
+           * `projects/{project}/eventThreatDetectionSettings`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -26057,9 +26057,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the custom module to delete. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -26088,9 +26088,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the custom module to delete. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -26160,17 +26160,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the custom module to delete. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-           * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-           * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the custom module to delete. Its format is: *
-         "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           public java.lang.String getName() {
             return name;
@@ -26178,9 +26178,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the custom module to delete. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-           * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-           * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -26206,9 +26206,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the custom module to get. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -26235,9 +26235,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the custom module to get. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         *        "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -26317,17 +26317,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the custom module to get. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-           * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-           * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the custom module to get. Its format is: *
-         "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-         "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-         "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+         `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+         `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           public java.lang.String getName() {
             return name;
@@ -26335,9 +26335,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the custom module to get. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
-           * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-           * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
+           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -26365,9 +26365,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Name of the parent to list custom modules under. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings". *
-         *        "folders/{folder}/eventThreatDetectionSettings". *
-         *        "projects/{project}/eventThreatDetectionSettings".
+         *        `organizations/{organization}/eventThreatDetectionSettings`. *
+         *        `folders/{folder}/eventThreatDetectionSettings`. *
+         *        `projects/{project}/eventThreatDetectionSettings`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -26396,9 +26396,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Name of the parent to list custom modules under. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings". *
-         *        "folders/{folder}/eventThreatDetectionSettings". *
-         *        "projects/{project}/eventThreatDetectionSettings".
+         *        `organizations/{organization}/eventThreatDetectionSettings`. *
+         *        `folders/{folder}/eventThreatDetectionSettings`. *
+         *        `projects/{project}/eventThreatDetectionSettings`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -26478,17 +26478,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the parent to list custom modules under. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings". *
-           * "folders/{folder}/eventThreatDetectionSettings". *
-           * "projects/{project}/eventThreatDetectionSettings".
+           * `organizations/{organization}/eventThreatDetectionSettings`. *
+           * `folders/{folder}/eventThreatDetectionSettings`. *
+           * `projects/{project}/eventThreatDetectionSettings`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of the parent to list custom modules under. Its format is: *
-         "organizations/{organization}/eventThreatDetectionSettings". *
-         "folders/{folder}/eventThreatDetectionSettings". *
-         "projects/{project}/eventThreatDetectionSettings".
+         `organizations/{organization}/eventThreatDetectionSettings`. *
+         `folders/{folder}/eventThreatDetectionSettings`. *
+         `projects/{project}/eventThreatDetectionSettings`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -26496,9 +26496,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the parent to list custom modules under. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings". *
-           * "folders/{folder}/eventThreatDetectionSettings". *
-           * "projects/{project}/eventThreatDetectionSettings".
+           * `organizations/{organization}/eventThreatDetectionSettings`. *
+           * `folders/{folder}/eventThreatDetectionSettings`. *
+           * `projects/{project}/eventThreatDetectionSettings`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -26580,9 +26580,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * operation.
          *
          * @param parent Required. Name of the parent to list custom modules under. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings". *
-         *        "folders/{folder}/eventThreatDetectionSettings". *
-         *        "projects/{project}/eventThreatDetectionSettings".
+         *        `organizations/{organization}/eventThreatDetectionSettings`. *
+         *        `folders/{folder}/eventThreatDetectionSettings`. *
+         *        `projects/{project}/eventThreatDetectionSettings`.
          * @return the request
          */
         public ListDescendant listDescendant(java.lang.String parent) throws java.io.IOException {
@@ -26611,9 +26611,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * the constructor. </p>
            *
            * @param parent Required. Name of the parent to list custom modules under. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings". *
-         *        "folders/{folder}/eventThreatDetectionSettings". *
-         *        "projects/{project}/eventThreatDetectionSettings".
+         *        `organizations/{organization}/eventThreatDetectionSettings`. *
+         *        `folders/{folder}/eventThreatDetectionSettings`. *
+         *        `projects/{project}/eventThreatDetectionSettings`.
            * @since 1.13
            */
           protected ListDescendant(java.lang.String parent) {
@@ -26693,17 +26693,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the parent to list custom modules under. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings". *
-           * "folders/{folder}/eventThreatDetectionSettings". *
-           * "projects/{project}/eventThreatDetectionSettings".
+           * `organizations/{organization}/eventThreatDetectionSettings`. *
+           * `folders/{folder}/eventThreatDetectionSettings`. *
+           * `projects/{project}/eventThreatDetectionSettings`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of the parent to list custom modules under. Its format is: *
-         "organizations/{organization}/eventThreatDetectionSettings". *
-         "folders/{folder}/eventThreatDetectionSettings". *
-         "projects/{project}/eventThreatDetectionSettings".
+         `organizations/{organization}/eventThreatDetectionSettings`. *
+         `folders/{folder}/eventThreatDetectionSettings`. *
+         `projects/{project}/eventThreatDetectionSettings`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -26711,9 +26711,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the parent to list custom modules under. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings". *
-           * "folders/{folder}/eventThreatDetectionSettings". *
-           * "projects/{project}/eventThreatDetectionSettings".
+           * `organizations/{organization}/eventThreatDetectionSettings`. *
+           * `folders/{folder}/eventThreatDetectionSettings`. *
+           * `projects/{project}/eventThreatDetectionSettings`.
            */
           public ListDescendant setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -26993,9 +26993,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the effective Event Threat Detection custom module. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}
-         *        ". * "folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}". *
-         *        "projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}".
+         *        `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}
+         *        `. * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
+         *        `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -27022,9 +27022,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the effective Event Threat Detection custom module. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}
-         *        ". * "folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}". *
-         *        "projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}".
+         *        `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}
+         *        `. * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
+         *        `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -27104,18 +27104,18 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. The resource name of the effective Event Threat Detection custom module. Its
-           * format is: * "organizations/{organization}/eventThreatDetectionSettings/effectiveCustom
-           * Modules/{module}". *
-           * "folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}". *
-           * "projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}".
+           * format is: * `organizations/{organization}/eventThreatDetectionSettings/effectiveCustom
+           * Modules/{module}`. *
+           * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
+           * `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the effective Event Threat Detection custom module. Its format is: *
-         "organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}". *
-         "folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}". *
-         "projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}".
+         `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
+         `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
+         `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
            */
           public java.lang.String getName() {
             return name;
@@ -27123,10 +27123,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. The resource name of the effective Event Threat Detection custom module. Its
-           * format is: * "organizations/{organization}/eventThreatDetectionSettings/effectiveCustom
-           * Modules/{module}". *
-           * "folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}". *
-           * "projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}".
+           * format is: * `organizations/{organization}/eventThreatDetectionSettings/effectiveCustom
+           * Modules/{module}`. *
+           * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
+           * `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -27154,9 +27154,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Name of the parent to list custom modules for. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings". *
-         *        "folders/{folder}/eventThreatDetectionSettings". *
-         *        "projects/{project}/eventThreatDetectionSettings".
+         *        `organizations/{organization}/eventThreatDetectionSettings`. *
+         *        `folders/{folder}/eventThreatDetectionSettings`. *
+         *        `projects/{project}/eventThreatDetectionSettings`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -27185,9 +27185,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Name of the parent to list custom modules for. Its format is: *
-         *        "organizations/{organization}/eventThreatDetectionSettings". *
-         *        "folders/{folder}/eventThreatDetectionSettings". *
-         *        "projects/{project}/eventThreatDetectionSettings".
+         *        `organizations/{organization}/eventThreatDetectionSettings`. *
+         *        `folders/{folder}/eventThreatDetectionSettings`. *
+         *        `projects/{project}/eventThreatDetectionSettings`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -27267,17 +27267,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the parent to list custom modules for. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings". *
-           * "folders/{folder}/eventThreatDetectionSettings". *
-           * "projects/{project}/eventThreatDetectionSettings".
+           * `organizations/{organization}/eventThreatDetectionSettings`. *
+           * `folders/{folder}/eventThreatDetectionSettings`. *
+           * `projects/{project}/eventThreatDetectionSettings`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of the parent to list custom modules for. Its format is: *
-         "organizations/{organization}/eventThreatDetectionSettings". *
-         "folders/{folder}/eventThreatDetectionSettings". *
-         "projects/{project}/eventThreatDetectionSettings".
+         `organizations/{organization}/eventThreatDetectionSettings`. *
+         `folders/{folder}/eventThreatDetectionSettings`. *
+         `projects/{project}/eventThreatDetectionSettings`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -27285,9 +27285,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
           /**
            * Required. Name of the parent to list custom modules for. Its format is: *
-           * "organizations/{organization}/eventThreatDetectionSettings". *
-           * "folders/{folder}/eventThreatDetectionSettings". *
-           * "projects/{project}/eventThreatDetectionSettings".
+           * `organizations/{organization}/eventThreatDetectionSettings`. *
+           * `folders/{folder}/eventThreatDetectionSettings`. *
+           * `projects/{project}/eventThreatDetectionSettings`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

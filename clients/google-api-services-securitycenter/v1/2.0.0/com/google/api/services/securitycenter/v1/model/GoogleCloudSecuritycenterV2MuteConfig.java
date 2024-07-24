@@ -70,8 +70,8 @@ public final class GoogleCloudSecuritycenterV2MuteConfig extends com.google.api.
   private java.lang.String mostRecentEditor;
 
   /**
-   * This field will be ignored if provided on config creation. The following list shows some
-   * examples of the format: + `organizations/{organization}/muteConfigs/{mute_config}` +
+   * Identifier. This field will be ignored if provided on config creation. The following list shows
+   * some examples of the format: + `organizations/{organization}/muteConfigs/{mute_config}` +
    * `organizations/{organization}locations/{location}//muteConfigs/{mute_config}` +
    * `folders/{folder}/muteConfigs/{mute_config}` +
    * `folders/{folder}/locations/{location}/muteConfigs/{mute_config}` +
@@ -187,8 +187,8 @@ public final class GoogleCloudSecuritycenterV2MuteConfig extends com.google.api.
   }
 
   /**
-   * This field will be ignored if provided on config creation. The following list shows some
-   * examples of the format: + `organizations/{organization}/muteConfigs/{mute_config}` +
+   * Identifier. This field will be ignored if provided on config creation. The following list shows
+   * some examples of the format: + `organizations/{organization}/muteConfigs/{mute_config}` +
    * `organizations/{organization}locations/{location}//muteConfigs/{mute_config}` +
    * `folders/{folder}/muteConfigs/{mute_config}` +
    * `folders/{folder}/locations/{location}/muteConfigs/{mute_config}` +
@@ -201,8 +201,8 @@ public final class GoogleCloudSecuritycenterV2MuteConfig extends com.google.api.
   }
 
   /**
-   * This field will be ignored if provided on config creation. The following list shows some
-   * examples of the format: + `organizations/{organization}/muteConfigs/{mute_config}` +
+   * Identifier. This field will be ignored if provided on config creation. The following list shows
+   * some examples of the format: + `organizations/{organization}/muteConfigs/{mute_config}` +
    * `organizations/{organization}locations/{location}//muteConfigs/{mute_config}` +
    * `folders/{folder}/muteConfigs/{mute_config}` +
    * `folders/{folder}/locations/{location}/muteConfigs/{mute_config}` +

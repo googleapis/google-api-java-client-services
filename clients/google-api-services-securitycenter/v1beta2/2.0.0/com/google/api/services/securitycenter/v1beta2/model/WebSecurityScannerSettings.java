@@ -32,7 +32,8 @@ public final class WebSecurityScannerSettings extends com.google.api.client.json
 
   /**
    * The configurations including the state of enablement for the service's different modules. The
-   * absence of a module in the map implies its configuration is inherited from its parent's.
+   * absence of a module in the map implies its configuration is inherited from its parent's
+   * configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +46,7 @@ public final class WebSecurityScannerSettings extends com.google.api.client.json
   }
 
   /**
-   * The resource name of the WebSecurityScannerSettings. Formats: *
+   * Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
    * organizations/{organization}/webSecurityScannerSettings *
    * folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
    * The value may be {@code null}.
@@ -70,7 +71,8 @@ public final class WebSecurityScannerSettings extends com.google.api.client.json
 
   /**
    * The configurations including the state of enablement for the service's different modules. The
-   * absence of a module in the map implies its configuration is inherited from its parent's.
+   * absence of a module in the map implies its configuration is inherited from its parent's
+   * configuration.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Config> getModules() {
@@ -79,7 +81,8 @@ public final class WebSecurityScannerSettings extends com.google.api.client.json
 
   /**
    * The configurations including the state of enablement for the service's different modules. The
-   * absence of a module in the map implies its configuration is inherited from its parent's.
+   * absence of a module in the map implies its configuration is inherited from its parent's
+   * configuration.
    * @param modules modules or {@code null} for none
    */
   public WebSecurityScannerSettings setModules(java.util.Map<String, Config> modules) {
@@ -88,7 +91,7 @@ public final class WebSecurityScannerSettings extends com.google.api.client.json
   }
 
   /**
-   * The resource name of the WebSecurityScannerSettings. Formats: *
+   * Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
    * organizations/{organization}/webSecurityScannerSettings *
    * folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
    * @return value or {@code null} for none
@@ -98,7 +101,7 @@ public final class WebSecurityScannerSettings extends com.google.api.client.json
   }
 
   /**
-   * The resource name of the WebSecurityScannerSettings. Formats: *
+   * Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
    * organizations/{organization}/webSecurityScannerSettings *
    * folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
    * @param name name or {@code null} for none

@@ -53,7 +53,7 @@ public final class GoogleCloudSecuritycenterV2ResourceValueConfig extends com.go
   private java.lang.String description;
 
   /**
-   * Name for the resource value configuration
+   * Identifier. Name for the resource value configuration
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,8 +79,8 @@ public final class GoogleCloudSecuritycenterV2ResourceValueConfig extends com.go
   private java.lang.String resourceType;
 
   /**
-   * Resource value level this expression represents Only required when there is no SDP mapping in
-   * the request
+   * Resource value level this expression represents Only required when there is no Sensitive Data
+   * Protection mapping in the request
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +88,7 @@ public final class GoogleCloudSecuritycenterV2ResourceValueConfig extends com.go
 
   /**
    * Project or folder to scope this configuration to. For example, "project/456" would apply this
-   * configuration only to resources in "project/456" scope will be checked with `AND` of other
+   * configuration only to resources in "project/456" scope and will be checked with `AND` of other
    * resources.
    * The value may be {@code null}.
    */
@@ -105,9 +105,9 @@ public final class GoogleCloudSecuritycenterV2ResourceValueConfig extends com.go
   private GoogleCloudSecuritycenterV2SensitiveDataProtectionMapping sensitiveDataProtectionMapping;
 
   /**
-   * Required. Tag values combined with `AND` to check against. Values in the form "tagValues/123"
-   * Example: `[ "tagValues/123", "tagValues/456", "tagValues/789" ]`
-   * https://cloud.google.com/resource-manager/docs/tags/tags-creating-and-managing
+   * Tag values combined with `AND` to check against. Values in the form "tagValues/123" Example: `[
+   * "tagValues/123", "tagValues/456", "tagValues/789" ]` https://cloud.google.com/resource-
+   * manager/docs/tags/tags-creating-and-managing
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,7 +172,7 @@ public final class GoogleCloudSecuritycenterV2ResourceValueConfig extends com.go
   }
 
   /**
-   * Name for the resource value configuration
+   * Identifier. Name for the resource value configuration
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -180,7 +180,7 @@ public final class GoogleCloudSecuritycenterV2ResourceValueConfig extends com.go
   }
 
   /**
-   * Name for the resource value configuration
+   * Identifier. Name for the resource value configuration
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ResourceValueConfig setName(java.lang.String name) {
@@ -233,8 +233,8 @@ public final class GoogleCloudSecuritycenterV2ResourceValueConfig extends com.go
   }
 
   /**
-   * Resource value level this expression represents Only required when there is no SDP mapping in
-   * the request
+   * Resource value level this expression represents Only required when there is no Sensitive Data
+   * Protection mapping in the request
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceValue() {
@@ -242,8 +242,8 @@ public final class GoogleCloudSecuritycenterV2ResourceValueConfig extends com.go
   }
 
   /**
-   * Resource value level this expression represents Only required when there is no SDP mapping in
-   * the request
+   * Resource value level this expression represents Only required when there is no Sensitive Data
+   * Protection mapping in the request
    * @param resourceValue resourceValue or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ResourceValueConfig setResourceValue(java.lang.String resourceValue) {
@@ -253,7 +253,7 @@ public final class GoogleCloudSecuritycenterV2ResourceValueConfig extends com.go
 
   /**
    * Project or folder to scope this configuration to. For example, "project/456" would apply this
-   * configuration only to resources in "project/456" scope will be checked with `AND` of other
+   * configuration only to resources in "project/456" scope and will be checked with `AND` of other
    * resources.
    * @return value or {@code null} for none
    */
@@ -263,7 +263,7 @@ public final class GoogleCloudSecuritycenterV2ResourceValueConfig extends com.go
 
   /**
    * Project or folder to scope this configuration to. For example, "project/456" would apply this
-   * configuration only to resources in "project/456" scope will be checked with `AND` of other
+   * configuration only to resources in "project/456" scope and will be checked with `AND` of other
    * resources.
    * @param scope scope or {@code null} for none
    */
@@ -294,9 +294,9 @@ public final class GoogleCloudSecuritycenterV2ResourceValueConfig extends com.go
   }
 
   /**
-   * Required. Tag values combined with `AND` to check against. Values in the form "tagValues/123"
-   * Example: `[ "tagValues/123", "tagValues/456", "tagValues/789" ]`
-   * https://cloud.google.com/resource-manager/docs/tags/tags-creating-and-managing
+   * Tag values combined with `AND` to check against. Values in the form "tagValues/123" Example: `[
+   * "tagValues/123", "tagValues/456", "tagValues/789" ]` https://cloud.google.com/resource-
+   * manager/docs/tags/tags-creating-and-managing
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTagValues() {
@@ -304,9 +304,9 @@ public final class GoogleCloudSecuritycenterV2ResourceValueConfig extends com.go
   }
 
   /**
-   * Required. Tag values combined with `AND` to check against. Values in the form "tagValues/123"
-   * Example: `[ "tagValues/123", "tagValues/456", "tagValues/789" ]`
-   * https://cloud.google.com/resource-manager/docs/tags/tags-creating-and-managing
+   * Tag values combined with `AND` to check against. Values in the form "tagValues/123" Example: `[
+   * "tagValues/123", "tagValues/456", "tagValues/789" ]` https://cloud.google.com/resource-
+   * manager/docs/tags/tags-creating-and-managing
    * @param tagValues tagValues or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ResourceValueConfig setTagValues(java.util.List<java.lang.String> tagValues) {

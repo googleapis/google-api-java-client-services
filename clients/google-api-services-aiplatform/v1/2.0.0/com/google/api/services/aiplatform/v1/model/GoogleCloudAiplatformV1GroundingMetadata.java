@@ -30,19 +30,6 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1GroundingMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. List of grounding attributions.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudAiplatformV1GroundingAttribution> groundingAttributions;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudAiplatformV1GroundingAttribution used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1GroundingAttribution.class);
-  }
-
-  /**
    * List of supporting references retrieved from specified grounding source.
    * The value may be {@code null}.
    */
@@ -75,23 +62,6 @@ public final class GoogleCloudAiplatformV1GroundingMetadata extends com.google.a
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> webSearchQueries;
-
-  /**
-   * Optional. List of grounding attributions.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<GoogleCloudAiplatformV1GroundingAttribution> getGroundingAttributions() {
-    return groundingAttributions;
-  }
-
-  /**
-   * Optional. List of grounding attributions.
-   * @param groundingAttributions groundingAttributions or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1GroundingMetadata setGroundingAttributions(java.util.List<GoogleCloudAiplatformV1GroundingAttribution> groundingAttributions) {
-    this.groundingAttributions = groundingAttributions;
-    return this;
-  }
 
   /**
    * List of supporting references retrieved from specified grounding source.

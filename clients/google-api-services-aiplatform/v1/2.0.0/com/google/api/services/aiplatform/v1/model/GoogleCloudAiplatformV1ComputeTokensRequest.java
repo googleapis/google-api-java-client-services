@@ -30,14 +30,14 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1ComputeTokensRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Input content.
+   * Optional. Input content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1Content> contents;
 
   /**
-   * Required. The instances that are the input to token computing API call. Schema is identical to
+   * Optional. The instances that are the input to token computing API call. Schema is identical to
    * the prediction schema of the text model, even for the non-text models, like chat models, or
    * Codey models.
    * The value may be {@code null}.
@@ -46,7 +46,7 @@ public final class GoogleCloudAiplatformV1ComputeTokensRequest extends com.googl
   private java.util.List<java.lang.Object> instances;
 
   /**
-   * Required. The name of the publisher model requested to serve the prediction. Format:
+   * Optional. The name of the publisher model requested to serve the prediction. Format:
    * projects/{project}/locations/{location}/publishers/models
    * The value may be {@code null}.
    */
@@ -54,7 +54,7 @@ public final class GoogleCloudAiplatformV1ComputeTokensRequest extends com.googl
   private java.lang.String model;
 
   /**
-   * Required. Input content.
+   * Optional. Input content.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1Content> getContents() {
@@ -62,7 +62,7 @@ public final class GoogleCloudAiplatformV1ComputeTokensRequest extends com.googl
   }
 
   /**
-   * Required. Input content.
+   * Optional. Input content.
    * @param contents contents or {@code null} for none
    */
   public GoogleCloudAiplatformV1ComputeTokensRequest setContents(java.util.List<GoogleCloudAiplatformV1Content> contents) {
@@ -71,7 +71,7 @@ public final class GoogleCloudAiplatformV1ComputeTokensRequest extends com.googl
   }
 
   /**
-   * Required. The instances that are the input to token computing API call. Schema is identical to
+   * Optional. The instances that are the input to token computing API call. Schema is identical to
    * the prediction schema of the text model, even for the non-text models, like chat models, or
    * Codey models.
    * @return value or {@code null} for none
@@ -81,7 +81,7 @@ public final class GoogleCloudAiplatformV1ComputeTokensRequest extends com.googl
   }
 
   /**
-   * Required. The instances that are the input to token computing API call. Schema is identical to
+   * Optional. The instances that are the input to token computing API call. Schema is identical to
    * the prediction schema of the text model, even for the non-text models, like chat models, or
    * Codey models.
    * @param instances instances or {@code null} for none
@@ -92,7 +92,7 @@ public final class GoogleCloudAiplatformV1ComputeTokensRequest extends com.googl
   }
 
   /**
-   * Required. The name of the publisher model requested to serve the prediction. Format:
+   * Optional. The name of the publisher model requested to serve the prediction. Format:
    * projects/{project}/locations/{location}/publishers/models
    * @return value or {@code null} for none
    */
@@ -101,7 +101,7 @@ public final class GoogleCloudAiplatformV1ComputeTokensRequest extends com.googl
   }
 
   /**
-   * Required. The name of the publisher model requested to serve the prediction. Format:
+   * Optional. The name of the publisher model requested to serve the prediction. Format:
    * projects/{project}/locations/{location}/publishers/models
    * @param model model or {@code null} for none
    */

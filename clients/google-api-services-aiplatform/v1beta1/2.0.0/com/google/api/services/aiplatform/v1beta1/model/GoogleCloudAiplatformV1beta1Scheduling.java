@@ -46,6 +46,13 @@ public final class GoogleCloudAiplatformV1beta1Scheduling extends com.google.api
   private java.lang.Boolean restartJobOnWorkerRestart;
 
   /**
+   * Optional. This determines which type of scheduling strategy to use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String strategy;
+
+  /**
    * The maximum job running time. The default is 7 days.
    * The value may be {@code null}.
    */
@@ -87,6 +94,23 @@ public final class GoogleCloudAiplatformV1beta1Scheduling extends com.google.api
    */
   public GoogleCloudAiplatformV1beta1Scheduling setRestartJobOnWorkerRestart(java.lang.Boolean restartJobOnWorkerRestart) {
     this.restartJobOnWorkerRestart = restartJobOnWorkerRestart;
+    return this;
+  }
+
+  /**
+   * Optional. This determines which type of scheduling strategy to use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStrategy() {
+    return strategy;
+  }
+
+  /**
+   * Optional. This determines which type of scheduling strategy to use.
+   * @param strategy strategy or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Scheduling setStrategy(java.lang.String strategy) {
+    this.strategy = strategy;
     return this;
   }
 

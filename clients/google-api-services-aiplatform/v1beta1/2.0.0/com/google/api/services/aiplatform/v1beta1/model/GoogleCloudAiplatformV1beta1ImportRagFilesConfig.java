@@ -46,6 +46,13 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
   private GoogleCloudAiplatformV1beta1GoogleDriveSource googleDriveSource;
 
   /**
+   * Jira queries with their corresponding authentication.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1JiraSource jiraSource;
+
+  /**
    * Optional. The max number of queries per minute that this job is allowed to make to the
    * embedding model specified on the corpus. This value is specific to this job and not shared
    * across other import jobs. Consult the Quotas page on the project to set an appropriate value
@@ -61,6 +68,13 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1RagFileChunkingConfig ragFileChunkingConfig;
+
+  /**
+   * Slack channels with their corresponding access tokens.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1SlackSource slackSource;
 
   /**
    * Google Cloud Storage location. Supports importing individual files as well as entire Google
@@ -101,6 +115,23 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
   }
 
   /**
+   * Jira queries with their corresponding authentication.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1JiraSource getJiraSource() {
+    return jiraSource;
+  }
+
+  /**
+   * Jira queries with their corresponding authentication.
+   * @param jiraSource jiraSource or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setJiraSource(GoogleCloudAiplatformV1beta1JiraSource jiraSource) {
+    this.jiraSource = jiraSource;
+    return this;
+  }
+
+  /**
    * Optional. The max number of queries per minute that this job is allowed to make to the
    * embedding model specified on the corpus. This value is specific to this job and not shared
    * across other import jobs. Consult the Quotas page on the project to set an appropriate value
@@ -137,6 +168,23 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
    */
   public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setRagFileChunkingConfig(GoogleCloudAiplatformV1beta1RagFileChunkingConfig ragFileChunkingConfig) {
     this.ragFileChunkingConfig = ragFileChunkingConfig;
+    return this;
+  }
+
+  /**
+   * Slack channels with their corresponding access tokens.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SlackSource getSlackSource() {
+    return slackSource;
+  }
+
+  /**
+   * Slack channels with their corresponding access tokens.
+   * @param slackSource slackSource or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setSlackSource(GoogleCloudAiplatformV1beta1SlackSource slackSource) {
+    this.slackSource = slackSource;
     return this;
   }
 

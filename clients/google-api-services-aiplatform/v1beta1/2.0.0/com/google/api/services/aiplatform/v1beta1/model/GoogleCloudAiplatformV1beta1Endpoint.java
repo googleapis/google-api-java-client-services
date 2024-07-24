@@ -38,6 +38,26 @@ public final class GoogleCloudAiplatformV1beta1Endpoint extends com.google.api.c
   private String createTime;
 
   /**
+   * Output only. DNS of the dedicated endpoint. Will only be populated if
+   * dedicated_endpoint_enabled is true. Format:
+   * `https://{endpoint_id}.{region}-{project_number}.prediction.vertexai.goog`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dedicatedEndpointDns;
+
+  /**
+   * If true, the endpoint will be exposed through a dedicated DNS
+   * [Endpoint.dedicated_endpoint_dns]. Your request to the dedicated DNS will be isolated from
+   * other users' traffic and will have better performance and reliability. Note: Once you enabled
+   * dedicated endpoint, you won't be able to send request to the shared DNS
+   * {region}-aiplatform.googleapis.com. The limitation will be removed soon.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean dedicatedEndpointEnabled;
+
+  /**
    * Output only. The models deployed in this Endpoint. To add or remove DeployedModels use
    * EndpointService.DeployModel and EndpointService.UndeployModel respectively.
    * The value may be {@code null}.
@@ -176,6 +196,52 @@ public final class GoogleCloudAiplatformV1beta1Endpoint extends com.google.api.c
    */
   public GoogleCloudAiplatformV1beta1Endpoint setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. DNS of the dedicated endpoint. Will only be populated if
+   * dedicated_endpoint_enabled is true. Format:
+   * `https://{endpoint_id}.{region}-{project_number}.prediction.vertexai.goog`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDedicatedEndpointDns() {
+    return dedicatedEndpointDns;
+  }
+
+  /**
+   * Output only. DNS of the dedicated endpoint. Will only be populated if
+   * dedicated_endpoint_enabled is true. Format:
+   * `https://{endpoint_id}.{region}-{project_number}.prediction.vertexai.goog`.
+   * @param dedicatedEndpointDns dedicatedEndpointDns or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Endpoint setDedicatedEndpointDns(java.lang.String dedicatedEndpointDns) {
+    this.dedicatedEndpointDns = dedicatedEndpointDns;
+    return this;
+  }
+
+  /**
+   * If true, the endpoint will be exposed through a dedicated DNS
+   * [Endpoint.dedicated_endpoint_dns]. Your request to the dedicated DNS will be isolated from
+   * other users' traffic and will have better performance and reliability. Note: Once you enabled
+   * dedicated endpoint, you won't be able to send request to the shared DNS
+   * {region}-aiplatform.googleapis.com. The limitation will be removed soon.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDedicatedEndpointEnabled() {
+    return dedicatedEndpointEnabled;
+  }
+
+  /**
+   * If true, the endpoint will be exposed through a dedicated DNS
+   * [Endpoint.dedicated_endpoint_dns]. Your request to the dedicated DNS will be isolated from
+   * other users' traffic and will have better performance and reliability. Note: Once you enabled
+   * dedicated endpoint, you won't be able to send request to the shared DNS
+   * {region}-aiplatform.googleapis.com. The limitation will be removed soon.
+   * @param dedicatedEndpointEnabled dedicatedEndpointEnabled or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Endpoint setDedicatedEndpointEnabled(java.lang.Boolean dedicatedEndpointEnabled) {
+    this.dedicatedEndpointEnabled = dedicatedEndpointEnabled;
     return this;
   }
 

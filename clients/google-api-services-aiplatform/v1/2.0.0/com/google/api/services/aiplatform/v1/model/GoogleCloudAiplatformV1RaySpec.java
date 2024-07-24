@@ -52,6 +52,13 @@ public final class GoogleCloudAiplatformV1RaySpec extends com.google.api.client.
   private java.lang.String imageUri;
 
   /**
+   * Optional. OSS Ray logging configurations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1RayLogsSpec rayLogsSpec;
+
+  /**
    * Optional. Ray metrics configurations.
    * The value may be {@code null}.
    */
@@ -111,6 +118,23 @@ public final class GoogleCloudAiplatformV1RaySpec extends com.google.api.client.
    */
   public GoogleCloudAiplatformV1RaySpec setImageUri(java.lang.String imageUri) {
     this.imageUri = imageUri;
+    return this;
+  }
+
+  /**
+   * Optional. OSS Ray logging configurations.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RayLogsSpec getRayLogsSpec() {
+    return rayLogsSpec;
+  }
+
+  /**
+   * Optional. OSS Ray logging configurations.
+   * @param rayLogsSpec rayLogsSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RaySpec setRayLogsSpec(GoogleCloudAiplatformV1RayLogsSpec rayLogsSpec) {
+    this.rayLogsSpec = rayLogsSpec;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Next ID: 8 Generate video response.
+ * Generate video response.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -49,13 +49,6 @@ public final class CloudAiLargeModelsVisionGenerateVideoResponse extends com.goo
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> raiMediaFilteredReasons;
-
-  /**
-   * Billable prediction metrics.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private IntelligenceCloudAutomlXpsReportingMetrics reportingMetrics;
 
   /**
    * The generates samples.
@@ -105,23 +98,6 @@ public final class CloudAiLargeModelsVisionGenerateVideoResponse extends com.goo
    */
   public CloudAiLargeModelsVisionGenerateVideoResponse setRaiMediaFilteredReasons(java.util.List<java.lang.String> raiMediaFilteredReasons) {
     this.raiMediaFilteredReasons = raiMediaFilteredReasons;
-    return this;
-  }
-
-  /**
-   * Billable prediction metrics.
-   * @return value or {@code null} for none
-   */
-  public IntelligenceCloudAutomlXpsReportingMetrics getReportingMetrics() {
-    return reportingMetrics;
-  }
-
-  /**
-   * Billable prediction metrics.
-   * @param reportingMetrics reportingMetrics or {@code null} for none
-   */
-  public CloudAiLargeModelsVisionGenerateVideoResponse setReportingMetrics(IntelligenceCloudAutomlXpsReportingMetrics reportingMetrics) {
-    this.reportingMetrics = reportingMetrics;
     return this;
   }
 

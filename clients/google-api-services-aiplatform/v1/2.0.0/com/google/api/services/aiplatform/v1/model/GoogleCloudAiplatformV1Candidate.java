@@ -82,6 +82,13 @@ public final class GoogleCloudAiplatformV1Candidate extends com.google.api.clien
   private java.util.List<GoogleCloudAiplatformV1SafetyRating> safetyRatings;
 
   /**
+   * Output only. Confidence score of the candidate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double score;
+
+  /**
    * Output only. Source attribution of the generated content.
    * @return value or {@code null} for none
    */
@@ -203,6 +210,23 @@ public final class GoogleCloudAiplatformV1Candidate extends com.google.api.clien
    */
   public GoogleCloudAiplatformV1Candidate setSafetyRatings(java.util.List<GoogleCloudAiplatformV1SafetyRating> safetyRatings) {
     this.safetyRatings = safetyRatings;
+    return this;
+  }
+
+  /**
+   * Output only. Confidence score of the candidate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getScore() {
+    return score;
+  }
+
+  /**
+   * Output only. Confidence score of the candidate.
+   * @param score score or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Candidate setScore(java.lang.Double score) {
+    this.score = score;
     return this;
   }
 

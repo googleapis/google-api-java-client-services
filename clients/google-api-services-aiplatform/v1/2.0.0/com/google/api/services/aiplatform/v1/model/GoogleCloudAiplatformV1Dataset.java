@@ -123,7 +123,7 @@ public final class GoogleCloudAiplatformV1Dataset extends com.google.api.client.
   private java.lang.String modelReference;
 
   /**
-   * Output only. The resource name of the Dataset.
+   * Output only. Identifier. The resource name of the Dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -367,7 +367,7 @@ public final class GoogleCloudAiplatformV1Dataset extends com.google.api.client.
   }
 
   /**
-   * Output only. The resource name of the Dataset.
+   * Output only. Identifier. The resource name of the Dataset.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -375,7 +375,7 @@ public final class GoogleCloudAiplatformV1Dataset extends com.google.api.client.
   }
 
   /**
-   * Output only. The resource name of the Dataset.
+   * Output only. Identifier. The resource name of the Dataset.
    * @param name name or {@code null} for none
    */
   public GoogleCloudAiplatformV1Dataset setName(java.lang.String name) {

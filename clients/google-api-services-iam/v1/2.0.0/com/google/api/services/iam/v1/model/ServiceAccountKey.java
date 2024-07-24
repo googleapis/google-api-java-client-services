@@ -42,29 +42,6 @@ package com.google.api.services.iam.v1.model;
 public final class ServiceAccountKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A user provided email address as the point of contact for this service account key.
-   * Must be an email address. Limit 64 characters.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String contact;
-
-  /**
-   * Output only. The cloud identity that created this service account key. Populated automatically
-   * when the key is created and not editable by the user.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String creator;
-
-  /**
-   * Optional. A user provided description of this service account key.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String description;
-
-  /**
    * Output only. optional. If the key is disabled, it may have a DisableReason describing why it
    * was disabled.
    * The value may be {@code null}.
@@ -164,61 +141,6 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private String validBeforeTime;
-
-  /**
-   * Optional. A user provided email address as the point of contact for this service account key.
-   * Must be an email address. Limit 64 characters.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getContact() {
-    return contact;
-  }
-
-  /**
-   * Optional. A user provided email address as the point of contact for this service account key.
-   * Must be an email address. Limit 64 characters.
-   * @param contact contact or {@code null} for none
-   */
-  public ServiceAccountKey setContact(java.lang.String contact) {
-    this.contact = contact;
-    return this;
-  }
-
-  /**
-   * Output only. The cloud identity that created this service account key. Populated automatically
-   * when the key is created and not editable by the user.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getCreator() {
-    return creator;
-  }
-
-  /**
-   * Output only. The cloud identity that created this service account key. Populated automatically
-   * when the key is created and not editable by the user.
-   * @param creator creator or {@code null} for none
-   */
-  public ServiceAccountKey setCreator(java.lang.String creator) {
-    this.creator = creator;
-    return this;
-  }
-
-  /**
-   * Optional. A user provided description of this service account key.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDescription() {
-    return description;
-  }
-
-  /**
-   * Optional. A user provided description of this service account key.
-   * @param description description or {@code null} for none
-   */
-  public ServiceAccountKey setDescription(java.lang.String description) {
-    this.description = description;
-    return this;
-  }
 
   /**
    * Output only. optional. If the key is disabled, it may have a DisableReason describing why it

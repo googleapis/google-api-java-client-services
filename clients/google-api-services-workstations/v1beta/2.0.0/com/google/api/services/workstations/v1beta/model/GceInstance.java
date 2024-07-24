@@ -92,10 +92,11 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Whether to enable nested virtualization on Cloud Workstations VMs created using this
-   * workstation configuration. Nested virtualization lets you run virtual machine (VM) instances
-   * inside your workstation. Before enabling nested virtualization, consider the following
-   * important considerations. Cloud Workstations instances are subject to the [same restrictions as
-   * Compute Engine instances](https://cloud.google.com/compute/docs/instances/nested-
+   * workstation configuration. Defaults to false. Nested virtualization lets you run virtual
+   * machine (VM) instances inside your workstation. Before enabling nested virtualization, consider
+   * the following important considerations. Cloud Workstations instances are subject to the [same
+   * restrictions as Compute Engine
+   * instances](https://cloud.google.com/compute/docs/instances/nested-
    * virtualization/overview#restrictions): * **Organization policy**: projects, folders, or
    * organizations may be restricted from creating nested VMs if the **Disable VM nested
    * virtualization** constraint is enforced in the organization policy. For more information, see
@@ -105,12 +106,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
    * might experience a 10% or greater decrease in performance for workloads that are CPU-bound and
    * possibly greater than a 10% decrease for workloads that are input/output bound. * **Machine
    * Type**: nested virtualization can only be enabled on workstation configurations that specify a
-   * machine_type in the N1 or N2 machine series. * **GPUs**: nested virtualization may not be
-   * enabled on workstation configurations with accelerators. * **Operating System**: because
-   * [Container-Optimized OS](https://cloud.google.com/compute/docs/images/os-details#container-
-   * optimized_os_cos) does not support nested virtualization, when nested virtualization is
-   * enabled, the underlying Compute Engine VM instances boot from an [Ubuntu
-   * LTS](https://cloud.google.com/compute/docs/images/os-details#ubuntu_lts) image.
+   * machine_type in the N1 or N2 machine series.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -308,10 +304,11 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Whether to enable nested virtualization on Cloud Workstations VMs created using this
-   * workstation configuration. Nested virtualization lets you run virtual machine (VM) instances
-   * inside your workstation. Before enabling nested virtualization, consider the following
-   * important considerations. Cloud Workstations instances are subject to the [same restrictions as
-   * Compute Engine instances](https://cloud.google.com/compute/docs/instances/nested-
+   * workstation configuration. Defaults to false. Nested virtualization lets you run virtual
+   * machine (VM) instances inside your workstation. Before enabling nested virtualization, consider
+   * the following important considerations. Cloud Workstations instances are subject to the [same
+   * restrictions as Compute Engine
+   * instances](https://cloud.google.com/compute/docs/instances/nested-
    * virtualization/overview#restrictions): * **Organization policy**: projects, folders, or
    * organizations may be restricted from creating nested VMs if the **Disable VM nested
    * virtualization** constraint is enforced in the organization policy. For more information, see
@@ -321,12 +318,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
    * might experience a 10% or greater decrease in performance for workloads that are CPU-bound and
    * possibly greater than a 10% decrease for workloads that are input/output bound. * **Machine
    * Type**: nested virtualization can only be enabled on workstation configurations that specify a
-   * machine_type in the N1 or N2 machine series. * **GPUs**: nested virtualization may not be
-   * enabled on workstation configurations with accelerators. * **Operating System**: because
-   * [Container-Optimized OS](https://cloud.google.com/compute/docs/images/os-details#container-
-   * optimized_os_cos) does not support nested virtualization, when nested virtualization is
-   * enabled, the underlying Compute Engine VM instances boot from an [Ubuntu
-   * LTS](https://cloud.google.com/compute/docs/images/os-details#ubuntu_lts) image.
+   * machine_type in the N1 or N2 machine series.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableNestedVirtualization() {
@@ -335,10 +327,11 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Whether to enable nested virtualization on Cloud Workstations VMs created using this
-   * workstation configuration. Nested virtualization lets you run virtual machine (VM) instances
-   * inside your workstation. Before enabling nested virtualization, consider the following
-   * important considerations. Cloud Workstations instances are subject to the [same restrictions as
-   * Compute Engine instances](https://cloud.google.com/compute/docs/instances/nested-
+   * workstation configuration. Defaults to false. Nested virtualization lets you run virtual
+   * machine (VM) instances inside your workstation. Before enabling nested virtualization, consider
+   * the following important considerations. Cloud Workstations instances are subject to the [same
+   * restrictions as Compute Engine
+   * instances](https://cloud.google.com/compute/docs/instances/nested-
    * virtualization/overview#restrictions): * **Organization policy**: projects, folders, or
    * organizations may be restricted from creating nested VMs if the **Disable VM nested
    * virtualization** constraint is enforced in the organization policy. For more information, see
@@ -348,12 +341,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
    * might experience a 10% or greater decrease in performance for workloads that are CPU-bound and
    * possibly greater than a 10% decrease for workloads that are input/output bound. * **Machine
    * Type**: nested virtualization can only be enabled on workstation configurations that specify a
-   * machine_type in the N1 or N2 machine series. * **GPUs**: nested virtualization may not be
-   * enabled on workstation configurations with accelerators. * **Operating System**: because
-   * [Container-Optimized OS](https://cloud.google.com/compute/docs/images/os-details#container-
-   * optimized_os_cos) does not support nested virtualization, when nested virtualization is
-   * enabled, the underlying Compute Engine VM instances boot from an [Ubuntu
-   * LTS](https://cloud.google.com/compute/docs/images/os-details#ubuntu_lts) image.
+   * machine_type in the N1 or N2 machine series.
    * @param enableNestedVirtualization enableNestedVirtualization or {@code null} for none
    */
   public GceInstance setEnableNestedVirtualization(java.lang.Boolean enableNestedVirtualization) {

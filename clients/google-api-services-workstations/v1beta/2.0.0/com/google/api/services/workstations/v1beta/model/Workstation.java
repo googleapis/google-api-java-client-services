@@ -38,6 +38,14 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
+   * Output only. List of available boost configuration ids that this workstation can be boosted up
+   * to
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<WorkstationBoostConfig> boostConfigs;
+
+  /**
    * Output only. Time when this workstation was created.
    * The value may be {@code null}.
    */
@@ -180,6 +188,25 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
    */
   public Workstation setAnnotations(java.util.Map<String, java.lang.String> annotations) {
     this.annotations = annotations;
+    return this;
+  }
+
+  /**
+   * Output only. List of available boost configuration ids that this workstation can be boosted up
+   * to
+   * @return value or {@code null} for none
+   */
+  public java.util.List<WorkstationBoostConfig> getBoostConfigs() {
+    return boostConfigs;
+  }
+
+  /**
+   * Output only. List of available boost configuration ids that this workstation can be boosted up
+   * to
+   * @param boostConfigs boostConfigs or {@code null} for none
+   */
+  public Workstation setBoostConfigs(java.util.List<WorkstationBoostConfig> boostConfigs) {
+    this.boostConfigs = boostConfigs;
     return this;
   }
 

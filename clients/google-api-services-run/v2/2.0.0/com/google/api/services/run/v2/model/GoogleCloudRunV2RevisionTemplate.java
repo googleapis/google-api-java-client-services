@@ -91,7 +91,9 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Optional. Sets the maximum number of requests that each serving instance can receive.
+   * Optional. Sets the maximum number of requests that each serving instance can receive. If not
+   * specified or 0, defaults to 80 when requested CPU >= 1 and defaults to 1 when requested CPU <
+   * 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -287,7 +289,9 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * Optional. Sets the maximum number of requests that each serving instance can receive.
+   * Optional. Sets the maximum number of requests that each serving instance can receive. If not
+   * specified or 0, defaults to 80 when requested CPU >= 1 and defaults to 1 when requested CPU <
+   * 1.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxInstanceRequestConcurrency() {
@@ -295,7 +299,9 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * Optional. Sets the maximum number of requests that each serving instance can receive.
+   * Optional. Sets the maximum number of requests that each serving instance can receive. If not
+   * specified or 0, defaults to 80 when requested CPU >= 1 and defaults to 1 when requested CPU <
+   * 1.
    * @param maxInstanceRequestConcurrency maxInstanceRequestConcurrency or {@code null} for none
    */
   public GoogleCloudRunV2RevisionTemplate setMaxInstanceRequestConcurrency(java.lang.Integer maxInstanceRequestConcurrency) {

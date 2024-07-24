@@ -66,7 +66,7 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   private VirtualMachinePreferences machinePreferences;
 
   /**
-   * Compute monthly cost for this preference set.
+   * Output only. Compute monthly cost for this preference set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,36 +88,37 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   private Money monthlyCostDatabaseLicensing;
 
   /**
-   * Network Egress monthly cost for this preference set. Only present for virtual machines.
+   * Output only. Network Egress monthly cost for this preference set. Only present for virtual
+   * machines.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Money monthlyCostNetworkEgress;
 
   /**
-   * Operating system licensing monthly cost for this preference set. Only present for virtual
-   * machines.
+   * Output only. Operating system licensing monthly cost for this preference set. Only present for
+   * virtual machines.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Money monthlyCostOsLicense;
 
   /**
-   * Miscellaneous monthly cost for this preference set.
+   * Output only. Miscellaneous monthly cost for this preference set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Money monthlyCostOther;
 
   /**
-   * Storage monthly cost for this preference set.
+   * Output only. Storage monthly cost for this preference set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Money monthlyCostStorage;
 
   /**
-   * Total monthly cost for this preference set.
+   * Output only. Total monthly cost for this preference set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -255,7 +256,7 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * Compute monthly cost for this preference set.
+   * Output only. Compute monthly cost for this preference set.
    * @return value or {@code null} for none
    */
   public Money getMonthlyCostCompute() {
@@ -263,7 +264,7 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * Compute monthly cost for this preference set.
+   * Output only. Compute monthly cost for this preference set.
    * @param monthlyCostCompute monthlyCostCompute or {@code null} for none
    */
   public ReportSummaryGroupPreferenceSetFinding setMonthlyCostCompute(Money monthlyCostCompute) {
@@ -308,7 +309,8 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * Network Egress monthly cost for this preference set. Only present for virtual machines.
+   * Output only. Network Egress monthly cost for this preference set. Only present for virtual
+   * machines.
    * @return value or {@code null} for none
    */
   public Money getMonthlyCostNetworkEgress() {
@@ -316,7 +318,8 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * Network Egress monthly cost for this preference set. Only present for virtual machines.
+   * Output only. Network Egress monthly cost for this preference set. Only present for virtual
+   * machines.
    * @param monthlyCostNetworkEgress monthlyCostNetworkEgress or {@code null} for none
    */
   public ReportSummaryGroupPreferenceSetFinding setMonthlyCostNetworkEgress(Money monthlyCostNetworkEgress) {
@@ -325,8 +328,8 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * Operating system licensing monthly cost for this preference set. Only present for virtual
-   * machines.
+   * Output only. Operating system licensing monthly cost for this preference set. Only present for
+   * virtual machines.
    * @return value or {@code null} for none
    */
   public Money getMonthlyCostOsLicense() {
@@ -334,8 +337,8 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * Operating system licensing monthly cost for this preference set. Only present for virtual
-   * machines.
+   * Output only. Operating system licensing monthly cost for this preference set. Only present for
+   * virtual machines.
    * @param monthlyCostOsLicense monthlyCostOsLicense or {@code null} for none
    */
   public ReportSummaryGroupPreferenceSetFinding setMonthlyCostOsLicense(Money monthlyCostOsLicense) {
@@ -344,7 +347,7 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * Miscellaneous monthly cost for this preference set.
+   * Output only. Miscellaneous monthly cost for this preference set.
    * @return value or {@code null} for none
    */
   public Money getMonthlyCostOther() {
@@ -352,7 +355,7 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * Miscellaneous monthly cost for this preference set.
+   * Output only. Miscellaneous monthly cost for this preference set.
    * @param monthlyCostOther monthlyCostOther or {@code null} for none
    */
   public ReportSummaryGroupPreferenceSetFinding setMonthlyCostOther(Money monthlyCostOther) {
@@ -361,7 +364,7 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * Storage monthly cost for this preference set.
+   * Output only. Storage monthly cost for this preference set.
    * @return value or {@code null} for none
    */
   public Money getMonthlyCostStorage() {
@@ -369,7 +372,7 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * Storage monthly cost for this preference set.
+   * Output only. Storage monthly cost for this preference set.
    * @param monthlyCostStorage monthlyCostStorage or {@code null} for none
    */
   public ReportSummaryGroupPreferenceSetFinding setMonthlyCostStorage(Money monthlyCostStorage) {
@@ -378,7 +381,7 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * Total monthly cost for this preference set.
+   * Output only. Total monthly cost for this preference set.
    * @return value or {@code null} for none
    */
   public Money getMonthlyCostTotal() {
@@ -386,7 +389,7 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * Total monthly cost for this preference set.
+   * Output only. Total monthly cost for this preference set.
    * @param monthlyCostTotal monthlyCostTotal or {@code null} for none
    */
   public ReportSummaryGroupPreferenceSetFinding setMonthlyCostTotal(Money monthlyCostTotal) {

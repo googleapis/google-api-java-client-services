@@ -633,7 +633,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
      * remote operation.
      *
      * @param name Required. The name of the settings to lookup. Format: accounts/{account}/dataSharingSettings
-     *        Example: "accounts/1000/dataSharingSettings"
+     *        Example: `accounts/1000/dataSharingSettings`
      * @return the request
      */
     public GetDataSharingSettings getDataSharingSettings(java.lang.String name) throws java.io.IOException {
@@ -661,7 +661,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * after invoking the constructor. </p>
        *
        * @param name Required. The name of the settings to lookup. Format: accounts/{account}/dataSharingSettings
-     *        Example: "accounts/1000/dataSharingSettings"
+     *        Example: `accounts/1000/dataSharingSettings`
        * @since 1.13
        */
       protected GetDataSharingSettings(java.lang.String name) {
@@ -741,13 +741,13 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
 
       /**
        * Required. The name of the settings to lookup. Format:
-       * accounts/{account}/dataSharingSettings Example: "accounts/1000/dataSharingSettings"
+       * accounts/{account}/dataSharingSettings Example: `accounts/1000/dataSharingSettings`
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. The name of the settings to lookup. Format: accounts/{account}/dataSharingSettings
-     Example: "accounts/1000/dataSharingSettings"
+     Example: `accounts/1000/dataSharingSettings`
        */
       public java.lang.String getName() {
         return name;
@@ -755,7 +755,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
 
       /**
        * Required. The name of the settings to lookup. Format:
-       * accounts/{account}/dataSharingSettings Example: "accounts/1000/dataSharingSettings"
+       * accounts/{account}/dataSharingSettings Example: `accounts/1000/dataSharingSettings`
        */
       public GetDataSharingSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1404,7 +1404,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
      * remote operation.
      *
      * @param account Required. The account resource for which to return change history resources. Format:
-     *        accounts/{account} Example: "accounts/100"
+     *        accounts/{account} Example: `accounts/100`
      * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequest}
      * @return the request
      */
@@ -1433,7 +1433,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * immediately after invoking the constructor. </p>
        *
        * @param account Required. The account resource for which to return change history resources. Format:
-     *        accounts/{account} Example: "accounts/100"
+     *        accounts/{account} Example: `accounts/100`
        * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequest}
        * @since 1.13
        */
@@ -1504,13 +1504,13 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
 
       /**
        * Required. The account resource for which to return change history resources. Format:
-       * accounts/{account} Example: "accounts/100"
+       * accounts/{account} Example: `accounts/100`
        */
       @com.google.api.client.util.Key
       private java.lang.String account;
 
       /** Required. The account resource for which to return change history resources. Format:
-     accounts/{account} Example: "accounts/100"
+     accounts/{account} Example: `accounts/100`
        */
       public java.lang.String getAccount() {
         return account;
@@ -1518,7 +1518,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
 
       /**
        * Required. The account resource for which to return change history resources. Format:
-       * accounts/{account} Example: "accounts/100"
+       * accounts/{account} Example: `accounts/100`
        */
       public SearchChangeHistoryEvents setAccount(java.lang.String account) {
         if (!getSuppressPatternChecks()) {
@@ -11143,7 +11143,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
     public class ConversionEvents {
 
       /**
-       * Creates a conversion event with the specified attributes.
+       * Deprecated: Use `CreateKeyEvent` instead. Creates a conversion event with the specified
+       * attributes.
        *
        * Create a request for the method "conversionEvents.create".
        *
@@ -11169,7 +11170,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^properties/[^/]+$");
 
         /**
-         * Creates a conversion event with the specified attributes.
+         * Deprecated: Use `CreateKeyEvent` instead. Creates a conversion event with the specified
+         * attributes.
          *
          * Create a request for the method "conversionEvents.create".
          *
@@ -11283,7 +11285,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Deletes a conversion event in a property.
+       * Deprecated: Use `DeleteKeyEvent` instead. Deletes a conversion event in a property.
        *
        * Create a request for the method "conversionEvents.delete".
        *
@@ -11309,7 +11311,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^properties/[^/]+/conversionEvents/[^/]+$");
 
         /**
-         * Deletes a conversion event in a property.
+         * Deprecated: Use `DeleteKeyEvent` instead. Deletes a conversion event in a property.
          *
          * Create a request for the method "conversionEvents.delete".
          *
@@ -11426,7 +11428,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Retrieve a single conversion event.
+       * Deprecated: Use `GetKeyEvent` instead. Retrieve a single conversion event.
        *
        * Create a request for the method "conversionEvents.get".
        *
@@ -11452,7 +11454,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^properties/[^/]+/conversionEvents/[^/]+$");
 
         /**
-         * Retrieve a single conversion event.
+         * Deprecated: Use `GetKeyEvent` instead. Retrieve a single conversion event.
          *
          * Create a request for the method "conversionEvents.get".
          *
@@ -11578,8 +11580,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Returns a list of conversion events in the specified parent property. Returns an empty list if no
-       * conversion events are found.
+       * Deprecated: Use `ListKeyEvents` instead. Returns a list of conversion events in the specified
+       * parent property. Returns an empty list if no conversion events are found.
        *
        * Create a request for the method "conversionEvents.list".
        *
@@ -11603,8 +11605,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^properties/[^/]+$");
 
         /**
-         * Returns a list of conversion events in the specified parent property. Returns an empty list if
-         * no conversion events are found.
+         * Deprecated: Use `ListKeyEvents` instead. Returns a list of conversion events in the specified
+         * parent property. Returns an empty list if no conversion events are found.
          *
          * Create a request for the method "conversionEvents.list".
          *
@@ -11767,7 +11769,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Updates a conversion event with the specified attributes.
+       * Deprecated: Use `UpdateKeyEvent` instead. Updates a conversion event with the specified
+       * attributes.
        *
        * Create a request for the method "conversionEvents.patch".
        *
@@ -11793,7 +11796,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^properties/[^/]+/conversionEvents/[^/]+$");
 
         /**
-         * Updates a conversion event with the specified attributes.
+         * Deprecated: Use `UpdateKeyEvent` instead. Updates a conversion event with the specified
+         * attributes.
          *
          * Create a request for the method "conversionEvents.patch".
          *
@@ -14262,7 +14266,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        *
        * @param name Required. The name of the site tag to lookup. Note that site tags are singletons and do not have
        *        unique IDs. Format: properties/{property_id}/dataStreams/{stream_id}/globalSiteTag
-       *        Example: "properties/123/dataStreams/456/globalSiteTag"
+       *        Example: `properties/123/dataStreams/456/globalSiteTag`
        * @return the request
        */
       public GetGlobalSiteTag getGlobalSiteTag(java.lang.String name) throws java.io.IOException {
@@ -14291,7 +14295,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
          *
          * @param name Required. The name of the site tag to lookup. Note that site tags are singletons and do not have
        *        unique IDs. Format: properties/{property_id}/dataStreams/{stream_id}/globalSiteTag
-       *        Example: "properties/123/dataStreams/456/globalSiteTag"
+       *        Example: `properties/123/dataStreams/456/globalSiteTag`
          * @since 1.13
          */
         protected GetGlobalSiteTag(java.lang.String name) {
@@ -14373,14 +14377,14 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
          * Required. The name of the site tag to lookup. Note that site tags are singletons and do
          * not have unique IDs. Format:
          * properties/{property_id}/dataStreams/{stream_id}/globalSiteTag Example:
-         * "properties/123/dataStreams/456/globalSiteTag"
+         * `properties/123/dataStreams/456/globalSiteTag`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the site tag to lookup. Note that site tags are singletons and do not have
        unique IDs. Format: properties/{property_id}/dataStreams/{stream_id}/globalSiteTag Example:
-       "properties/123/dataStreams/456/globalSiteTag"
+       `properties/123/dataStreams/456/globalSiteTag`
          */
         public java.lang.String getName() {
           return name;
@@ -14390,7 +14394,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
          * Required. The name of the site tag to lookup. Note that site tags are singletons and do
          * not have unique IDs. Format:
          * properties/{property_id}/dataStreams/{stream_id}/globalSiteTag Example:
-         * "properties/123/dataStreams/456/globalSiteTag"
+         * `properties/123/dataStreams/456/globalSiteTag`
          */
         public GetGlobalSiteTag setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -15886,159 +15890,6 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
-          }
-        }
-
-      }
-      /**
-       * An accessor for creating requests from the EventEditRules collection.
-       *
-       * <p>The typical use is:</p>
-       * <pre>
-       *   {@code GoogleAnalyticsAdmin analyticsadmin = new GoogleAnalyticsAdmin(...);}
-       *   {@code GoogleAnalyticsAdmin.EventEditRules.List request = analyticsadmin.eventEditRules().list(parameters ...)}
-       * </pre>
-       *
-       * @return the resource collection
-       */
-      public EventEditRules eventEditRules() {
-        return new EventEditRules();
-      }
-
-      /**
-       * The "eventEditRules" collection of methods.
-       */
-      public class EventEditRules {
-
-        /**
-         * Changes the processing order of event edit rules on the specified stream.
-         *
-         * Create a request for the method "eventEditRules.reorder".
-         *
-         * This request holds the parameters needed by the analyticsadmin server.  After setting any
-         * optional parameters, call the {@link Reorder#execute()} method to invoke the remote operation.
-         *
-         * @param parent Required. Example format: properties/123/dataStreams/456
-         * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaReorderEventEditRulesRequest}
-         * @return the request
-         */
-        public Reorder reorder(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaReorderEventEditRulesRequest content) throws java.io.IOException {
-          Reorder result = new Reorder(parent, content);
-          initialize(result);
-          return result;
-        }
-
-        public class Reorder extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty> {
-
-          private static final String REST_PATH = "v1alpha/{+parent}/eventEditRules:reorder";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^properties/[^/]+/dataStreams/[^/]+$");
-
-          /**
-           * Changes the processing order of event edit rules on the specified stream.
-           *
-           * Create a request for the method "eventEditRules.reorder".
-           *
-           * This request holds the parameters needed by the the analyticsadmin server.  After setting any
-           * optional parameters, call the {@link Reorder#execute()} method to invoke the remote operation.
-           * <p> {@link
-           * Reorder#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent Required. Example format: properties/123/dataStreams/456
-           * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaReorderEventEditRulesRequest}
-           * @since 1.13
-           */
-          protected Reorder(java.lang.String parent, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaReorderEventEditRulesRequest content) {
-            super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleProtobufEmpty.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^properties/[^/]+/dataStreams/[^/]+$");
-            }
-          }
-
-          @Override
-          public Reorder set$Xgafv(java.lang.String $Xgafv) {
-            return (Reorder) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Reorder setAccessToken(java.lang.String accessToken) {
-            return (Reorder) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Reorder setAlt(java.lang.String alt) {
-            return (Reorder) super.setAlt(alt);
-          }
-
-          @Override
-          public Reorder setCallback(java.lang.String callback) {
-            return (Reorder) super.setCallback(callback);
-          }
-
-          @Override
-          public Reorder setFields(java.lang.String fields) {
-            return (Reorder) super.setFields(fields);
-          }
-
-          @Override
-          public Reorder setKey(java.lang.String key) {
-            return (Reorder) super.setKey(key);
-          }
-
-          @Override
-          public Reorder setOauthToken(java.lang.String oauthToken) {
-            return (Reorder) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Reorder setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Reorder) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Reorder setQuotaUser(java.lang.String quotaUser) {
-            return (Reorder) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Reorder setUploadType(java.lang.String uploadType) {
-            return (Reorder) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Reorder setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Reorder) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /** Required. Example format: properties/123/dataStreams/456 */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** Required. Example format: properties/123/dataStreams/456
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /** Required. Example format: properties/123/dataStreams/456 */
-          public Reorder setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^properties/[^/]+/dataStreams/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          @Override
-          public Reorder set(String parameterName, Object value) {
-            return (Reorder) super.set(parameterName, value);
           }
         }
 
@@ -20196,7 +20047,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the analyticsadmin server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Format: properties/{property_id} Example: properties/1234
+       * @param parent Required. Format: properties/{property_id} Example: `properties/1234`
        * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaFirebaseLink}
        * @return the request
        */
@@ -20224,7 +20075,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Format: properties/{property_id} Example: properties/1234
+         * @param parent Required. Format: properties/{property_id} Example: `properties/1234`
          * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaFirebaseLink}
          * @since 1.13
          */
@@ -20293,17 +20144,17 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. Format: properties/{property_id} Example: properties/1234 */
+        /** Required. Format: properties/{property_id} Example: `properties/1234` */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Format: properties/{property_id} Example: properties/1234
+        /** Required. Format: properties/{property_id} Example: `properties/1234`
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. Format: properties/{property_id} Example: properties/1234 */
+        /** Required. Format: properties/{property_id} Example: `properties/1234` */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -20328,7 +20179,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. Format: properties/{property_id}/firebaseLinks/{firebase_link_id} Example:
-       *        properties/1234/firebaseLinks/5678
+       *        `properties/1234/firebaseLinks/5678`
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -20356,7 +20207,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Format: properties/{property_id}/firebaseLinks/{firebase_link_id} Example:
-       *        properties/1234/firebaseLinks/5678
+       *        `properties/1234/firebaseLinks/5678`
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -20426,13 +20277,13 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
 
         /**
          * Required. Format: properties/{property_id}/firebaseLinks/{firebase_link_id} Example:
-         * properties/1234/firebaseLinks/5678
+         * `properties/1234/firebaseLinks/5678`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Format: properties/{property_id}/firebaseLinks/{firebase_link_id} Example:
-       properties/1234/firebaseLinks/5678
+       `properties/1234/firebaseLinks/5678`
          */
         public java.lang.String getName() {
           return name;
@@ -20440,7 +20291,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
 
         /**
          * Required. Format: properties/{property_id}/firebaseLinks/{firebase_link_id} Example:
-         * properties/1234/firebaseLinks/5678
+         * `properties/1234/firebaseLinks/5678`
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -20465,7 +20316,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the analyticsadmin server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Format: properties/{property_id} Example: properties/1234
+       * @param parent Required. Format: properties/{property_id} Example: `properties/1234`
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -20491,7 +20342,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Format: properties/{property_id} Example: properties/1234
+         * @param parent Required. Format: properties/{property_id} Example: `properties/1234`
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -20569,17 +20420,17 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. Format: properties/{property_id} Example: properties/1234 */
+        /** Required. Format: properties/{property_id} Example: `properties/1234` */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Format: properties/{property_id} Example: properties/1234
+        /** Required. Format: properties/{property_id} Example: `properties/1234`
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. Format: properties/{property_id} Example: properties/1234 */
+        /** Required. Format: properties/{property_id} Example: `properties/1234` */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),

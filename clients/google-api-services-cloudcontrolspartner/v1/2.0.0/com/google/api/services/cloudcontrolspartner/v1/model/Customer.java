@@ -31,21 +31,21 @@ package com.google.api.services.cloudcontrolspartner.v1.model;
 public final class Customer extends com.google.api.client.json.GenericJson {
 
   /**
-   * Container for customer onboarding steps
+   * Output only. Container for customer onboarding steps
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CustomerOnboardingState customerOnboardingState;
 
   /**
-   * The customer organization's display name. E.g. "google.com".
+   * Output only. The customer organization's display name. E.g. "google.com".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Indicates whether a customer is fully onboarded
+   * Output only. Indicates whether a customer is fully onboarded
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Container for customer onboarding steps
+   * Output only. Container for customer onboarding steps
    * @return value or {@code null} for none
    */
   public CustomerOnboardingState getCustomerOnboardingState() {
@@ -67,7 +67,7 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Container for customer onboarding steps
+   * Output only. Container for customer onboarding steps
    * @param customerOnboardingState customerOnboardingState or {@code null} for none
    */
   public Customer setCustomerOnboardingState(CustomerOnboardingState customerOnboardingState) {
@@ -76,7 +76,7 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The customer organization's display name. E.g. "google.com".
+   * Output only. The customer organization's display name. E.g. "google.com".
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -84,7 +84,7 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The customer organization's display name. E.g. "google.com".
+   * Output only. The customer organization's display name. E.g. "google.com".
    * @param displayName displayName or {@code null} for none
    */
   public Customer setDisplayName(java.lang.String displayName) {
@@ -93,7 +93,7 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether a customer is fully onboarded
+   * Output only. Indicates whether a customer is fully onboarded
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsOnboarded() {
@@ -101,7 +101,7 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether a customer is fully onboarded
+   * Output only. Indicates whether a customer is fully onboarded
    * @param isOnboarded isOnboarded or {@code null} for none
    */
   public Customer setIsOnboarded(java.lang.Boolean isOnboarded) {

@@ -280,15 +280,15 @@ public class Pollen extends com.google.api.client.googleapis.services.json.Abstr
 
       /**
        * Optional. Allows the client to choose the language for the response. If data cannot be
-       * provided for that language the API uses the closest match. Allowed values rely on the IETF
-       * BCP-47 standard. Default value is "en".
+       * provided for that language, the API uses the closest match. Allowed values rely on the IETF
+       * BCP-47 standard. The default value is "en".
        */
       @com.google.api.client.util.Key
       private java.lang.String languageCode;
 
       /** Optional. Allows the client to choose the language for the response. If data cannot be provided for
-     that language the API uses the closest match. Allowed values rely on the IETF BCP-47 standard.
-     Default value is "en".
+     that language, the API uses the closest match. Allowed values rely on the IETF BCP-47 standard. The
+     default value is "en".
        */
       public java.lang.String getLanguageCode() {
         return languageCode;
@@ -296,8 +296,8 @@ public class Pollen extends com.google.api.client.googleapis.services.json.Abstr
 
       /**
        * Optional. Allows the client to choose the language for the response. If data cannot be
-       * provided for that language the API uses the closest match. Allowed values rely on the IETF
-       * BCP-47 standard. Default value is "en".
+       * provided for that language, the API uses the closest match. Allowed values rely on the IETF
+       * BCP-47 standard. The default value is "en".
        */
       public Lookup setLanguageCode(java.lang.String languageCode) {
         this.languageCode = languageCode;
@@ -338,13 +338,13 @@ public class Pollen extends com.google.api.client.googleapis.services.json.Abstr
 
       /**
        * Optional. The maximum number of daily info records to return per page. The default and max
-       * value is 5 (5 days of data).
+       * value is 5, indicating 5 days of data.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
       /** Optional. The maximum number of daily info records to return per page. The default and max value is
-     5 (5 days of data).
+     5, indicating 5 days of data.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
@@ -352,7 +352,7 @@ public class Pollen extends com.google.api.client.googleapis.services.json.Abstr
 
       /**
        * Optional. The maximum number of daily info records to return per page. The default and max
-       * value is 5 (5 days of data).
+       * value is 5, indicating 5 days of data.
        */
       public Lookup setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -361,14 +361,14 @@ public class Pollen extends com.google.api.client.googleapis.services.json.Abstr
 
       /**
        * Optional. A page token received from a previous daily call. It is used to retrieve the
-       * subsequent page. Note that when providing a value for the page token all other request
+       * subsequent page. Note that when providing a value for the page token, all other request
        * parameters provided must match the previous call that provided the page token.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
       /** Optional. A page token received from a previous daily call. It is used to retrieve the subsequent
-     page. Note that when providing a value for the page token all other request parameters provided
+     page. Note that when providing a value for the page token, all other request parameters provided
      must match the previous call that provided the page token.
        */
       public java.lang.String getPageToken() {
@@ -377,7 +377,7 @@ public class Pollen extends com.google.api.client.googleapis.services.json.Abstr
 
       /**
        * Optional. A page token received from a previous daily call. It is used to retrieve the
-       * subsequent page. Note that when providing a value for the page token all other request
+       * subsequent page. Note that when providing a value for the page token, all other request
        * parameters provided must match the previous call that provided the page token.
        */
       public Lookup setPageToken(java.lang.String pageToken) {
@@ -388,13 +388,14 @@ public class Pollen extends com.google.api.client.googleapis.services.json.Abstr
       /**
        * Optional. Contains general information about plants, including details on their
        * seasonality, special shapes and colors, information about allergic cross-reactions, and
-       * plant photos.
+       * plant photos. The default value is "true".
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean plantsDescription;
 
       /** Optional. Contains general information about plants, including details on their seasonality,
-     special shapes and colors, information about allergic cross-reactions, and plant photos.
+     special shapes and colors, information about allergic cross-reactions, and plant photos. The
+     default value is "true".
        */
       public java.lang.Boolean getPlantsDescription() {
         return plantsDescription;
@@ -403,7 +404,7 @@ public class Pollen extends com.google.api.client.googleapis.services.json.Abstr
       /**
        * Optional. Contains general information about plants, including details on their
        * seasonality, special shapes and colors, information about allergic cross-reactions, and
-       * plant photos.
+       * plant photos. The default value is "true".
        */
       public Lookup setPlantsDescription(java.lang.Boolean plantsDescription) {
         this.plantsDescription = plantsDescription;

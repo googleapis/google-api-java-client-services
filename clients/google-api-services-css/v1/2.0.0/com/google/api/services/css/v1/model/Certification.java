@@ -17,7 +17,8 @@
 package com.google.api.services.css.v1.model;
 
 /**
- * The certification for the product.
+ * The certification for the product. Use the this attribute to describe certifications, such as
+ * energy efficiency ratings, associated with a product.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the CSS API. For a detailed explanation see:
@@ -30,28 +31,34 @@ package com.google.api.services.css.v1.model;
 public final class Certification extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the certification body.
+   * The authority or certification body responsible for issuing the certification. At this time,
+   * the most common value is "EC" or “European_Commission” for energy labels in the EU.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String authority;
 
   /**
-   * A unique code to identify the certification.
+   * The code of the certification. For example, for the EPREL certificate with the link
+   * https://eprel.ec.europa.eu/screen/product/dishwashers2019/123456 the code is 123456. The code
+   * is required for European Energy Labels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String code;
 
   /**
-   * Name of the certification.
+   * The name of the certification. At this time, the most common value is "EPREL", which represents
+   * energy efficiency certifications in the EU European Registry for Energy Labeling (EPREL)
+   * database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Name of the certification body.
+   * The authority or certification body responsible for issuing the certification. At this time,
+   * the most common value is "EC" or “European_Commission” for energy labels in the EU.
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthority() {
@@ -59,7 +66,8 @@ public final class Certification extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Name of the certification body.
+   * The authority or certification body responsible for issuing the certification. At this time,
+   * the most common value is "EC" or “European_Commission” for energy labels in the EU.
    * @param authority authority or {@code null} for none
    */
   public Certification setAuthority(java.lang.String authority) {
@@ -68,7 +76,9 @@ public final class Certification extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A unique code to identify the certification.
+   * The code of the certification. For example, for the EPREL certificate with the link
+   * https://eprel.ec.europa.eu/screen/product/dishwashers2019/123456 the code is 123456. The code
+   * is required for European Energy Labels.
    * @return value or {@code null} for none
    */
   public java.lang.String getCode() {
@@ -76,7 +86,9 @@ public final class Certification extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A unique code to identify the certification.
+   * The code of the certification. For example, for the EPREL certificate with the link
+   * https://eprel.ec.europa.eu/screen/product/dishwashers2019/123456 the code is 123456. The code
+   * is required for European Energy Labels.
    * @param code code or {@code null} for none
    */
   public Certification setCode(java.lang.String code) {
@@ -85,7 +97,9 @@ public final class Certification extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Name of the certification.
+   * The name of the certification. At this time, the most common value is "EPREL", which represents
+   * energy efficiency certifications in the EU European Registry for Energy Labeling (EPREL)
+   * database.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -93,7 +107,9 @@ public final class Certification extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Name of the certification.
+   * The name of the certification. At this time, the most common value is "EPREL", which represents
+   * energy efficiency certifications in the EU European Registry for Energy Labeling (EPREL)
+   * database.
    * @param name name or {@code null} for none
    */
   public Certification setName(java.lang.String name) {

@@ -30,7 +30,7 @@ package com.google.api.services.cloudtrace.v2beta1.model;
 public final class OutputConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The destination for writing trace data. Supported formats include:
+   * Required. The destination for writing trace data. Supported formats include:
    * "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class OutputConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String destination;
 
   /**
-   * The destination for writing trace data. Supported formats include:
+   * Required. The destination for writing trace data. Supported formats include:
    * "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class OutputConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The destination for writing trace data. Supported formats include:
+   * Required. The destination for writing trace data. Supported formats include:
    * "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
    * @param destination destination or {@code null} for none
    */

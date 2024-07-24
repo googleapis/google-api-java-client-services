@@ -38,6 +38,13 @@ public final class DataSourceSpec extends com.google.api.client.json.GenericJson
   private BigQueryDataSourceSpec bigQuery;
 
   /**
+   * A LookerDatasourceSpec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LookerDataSourceSpec looker;
+
+  /**
    * The parameters of the data source, used when querying the data source.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class DataSourceSpec extends com.google.api.client.json.GenericJson
    */
   public DataSourceSpec setBigQuery(BigQueryDataSourceSpec bigQuery) {
     this.bigQuery = bigQuery;
+    return this;
+  }
+
+  /**
+   * A LookerDatasourceSpec.
+   * @return value or {@code null} for none
+   */
+  public LookerDataSourceSpec getLooker() {
+    return looker;
+  }
+
+  /**
+   * A LookerDatasourceSpec.
+   * @param looker looker or {@code null} for none
+   */
+  public DataSourceSpec setLooker(LookerDataSourceSpec looker) {
+    this.looker = looker;
     return this;
   }
 

@@ -32,15 +32,15 @@ package com.google.api.services.config.v1.model;
 public final class TerraformBlueprint extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. URI of an object in Google Cloud Storage. Format: `gs://{bucket}/{object}` URI may
-   * also specify an object version for zipped objects. Format: `gs://{bucket}/{object}#{version}`
+   * URI of an object in Google Cloud Storage. Format: `gs://{bucket}/{object}` URI may also specify
+   * an object version for zipped objects. Format: `gs://{bucket}/{object}#{version}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gcsSource;
 
   /**
-   * Required. URI of a public Git repo.
+   * URI of a public Git repo.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +54,8 @@ public final class TerraformBlueprint extends com.google.api.client.json.Generic
   private java.util.Map<String, TerraformVariable> inputValues;
 
   /**
-   * Required. URI of an object in Google Cloud Storage. Format: `gs://{bucket}/{object}` URI may
-   * also specify an object version for zipped objects. Format: `gs://{bucket}/{object}#{version}`
+   * URI of an object in Google Cloud Storage. Format: `gs://{bucket}/{object}` URI may also specify
+   * an object version for zipped objects. Format: `gs://{bucket}/{object}#{version}`
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsSource() {
@@ -63,8 +63,8 @@ public final class TerraformBlueprint extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. URI of an object in Google Cloud Storage. Format: `gs://{bucket}/{object}` URI may
-   * also specify an object version for zipped objects. Format: `gs://{bucket}/{object}#{version}`
+   * URI of an object in Google Cloud Storage. Format: `gs://{bucket}/{object}` URI may also specify
+   * an object version for zipped objects. Format: `gs://{bucket}/{object}#{version}`
    * @param gcsSource gcsSource or {@code null} for none
    */
   public TerraformBlueprint setGcsSource(java.lang.String gcsSource) {
@@ -73,7 +73,7 @@ public final class TerraformBlueprint extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. URI of a public Git repo.
+   * URI of a public Git repo.
    * @return value or {@code null} for none
    */
   public GitSource getGitSource() {
@@ -81,7 +81,7 @@ public final class TerraformBlueprint extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. URI of a public Git repo.
+   * URI of a public Git repo.
    * @param gitSource gitSource or {@code null} for none
    */
   public TerraformBlueprint setGitSource(GitSource gitSource) {

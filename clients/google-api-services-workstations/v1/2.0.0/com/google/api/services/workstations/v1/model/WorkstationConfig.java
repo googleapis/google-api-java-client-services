@@ -117,10 +117,13 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private java.lang.String displayName;
 
   /**
-   * Optional. Whether to enable Linux `auditd` logging on the workstation. When enabled, a service
-   * account must also be specified that has `logging.buckets.write` permission on the project.
-   * Operating system audit logging is distinct from [Cloud Audit
-   * Logs](https://cloud.google.com/workstations/docs/audit-logging).
+   * Optional. Whether to enable Linux `auditd` logging on the workstation. When enabled, a
+   * service_account must also be specified that has `roles/logging.logWriter` and
+   * `roles/monitoring.metricWriter` on the project. Operating system audit logging is distinct from
+   * [Cloud Audit Logs](https://cloud.google.com/workstations/docs/audit-logging) and [Container
+   * output logging](http://cloud/workstations/docs/container-output-logging#overview). Operating
+   * system audit logs are available in the [Cloud Logging](https://cloud.google.com/logging/docs)
+   * console by querying: resource.type="gce_instance" log_name:"/logs/linux-auditd"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -441,10 +444,13 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Whether to enable Linux `auditd` logging on the workstation. When enabled, a service
-   * account must also be specified that has `logging.buckets.write` permission on the project.
-   * Operating system audit logging is distinct from [Cloud Audit
-   * Logs](https://cloud.google.com/workstations/docs/audit-logging).
+   * Optional. Whether to enable Linux `auditd` logging on the workstation. When enabled, a
+   * service_account must also be specified that has `roles/logging.logWriter` and
+   * `roles/monitoring.metricWriter` on the project. Operating system audit logging is distinct from
+   * [Cloud Audit Logs](https://cloud.google.com/workstations/docs/audit-logging) and [Container
+   * output logging](http://cloud/workstations/docs/container-output-logging#overview). Operating
+   * system audit logs are available in the [Cloud Logging](https://cloud.google.com/logging/docs)
+   * console by querying: resource.type="gce_instance" log_name:"/logs/linux-auditd"
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableAuditAgent() {
@@ -452,10 +458,13 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Whether to enable Linux `auditd` logging on the workstation. When enabled, a service
-   * account must also be specified that has `logging.buckets.write` permission on the project.
-   * Operating system audit logging is distinct from [Cloud Audit
-   * Logs](https://cloud.google.com/workstations/docs/audit-logging).
+   * Optional. Whether to enable Linux `auditd` logging on the workstation. When enabled, a
+   * service_account must also be specified that has `roles/logging.logWriter` and
+   * `roles/monitoring.metricWriter` on the project. Operating system audit logging is distinct from
+   * [Cloud Audit Logs](https://cloud.google.com/workstations/docs/audit-logging) and [Container
+   * output logging](http://cloud/workstations/docs/container-output-logging#overview). Operating
+   * system audit logs are available in the [Cloud Logging](https://cloud.google.com/logging/docs)
+   * console by querying: resource.type="gce_instance" log_name:"/logs/linux-auditd"
    * @param enableAuditAgent enableAuditAgent or {@code null} for none
    */
   public WorkstationConfig setEnableAuditAgent(java.lang.Boolean enableAuditAgent) {

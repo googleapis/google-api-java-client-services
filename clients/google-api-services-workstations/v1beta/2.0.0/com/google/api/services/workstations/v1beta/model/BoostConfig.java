@@ -54,9 +54,9 @@ public final class BoostConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Whether to enable nested virtualization on boosted Cloud Workstations VMs running
-   * using this boost configuration. Nested virtualization lets you run virtual machine (VM)
-   * instances inside your workstation. Before enabling nested virtualization, consider the
-   * following important considerations. Cloud Workstations instances are subject to the [same
+   * using this boost configuration. Defaults to false. Nested virtualization lets you run virtual
+   * machine (VM) instances inside your workstation. Before enabling nested virtualization, consider
+   * the following important considerations. Cloud Workstations instances are subject to the [same
    * restrictions as Compute Engine
    * instances](https://cloud.google.com/compute/docs/instances/nested-
    * virtualization/overview#restrictions): * **Organization policy**: projects, folders, or
@@ -68,13 +68,7 @@ public final class BoostConfig extends com.google.api.client.json.GenericJson {
    * might experience a 10% or greater decrease in performance for workloads that are CPU-bound and
    * possibly greater than a 10% decrease for workloads that are input/output bound. * **Machine
    * Type**: nested virtualization can only be enabled on boost configurations that specify a
-   * machine_type in the N1 or N2 machine series. * **GPUs**: nested virtualization may not be
-   * enabled on boost configurations with accelerators. * **Operating System**: Because [Container-
-   * Optimized OS](https://cloud.google.com/compute/docs/images/os-details#container-
-   * optimized_os_cos) does not support nested virtualization, when nested virtualization is
-   * enabled, the underlying Compute Engine VM instances boot from an [Ubuntu
-   * LTS](https://cloud.google.com/compute/docs/images/os-details#ubuntu_lts) image. Defaults to
-   * false.
+   * machine_type in the N1 or N2 machine series.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,9 +139,9 @@ public final class BoostConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Whether to enable nested virtualization on boosted Cloud Workstations VMs running
-   * using this boost configuration. Nested virtualization lets you run virtual machine (VM)
-   * instances inside your workstation. Before enabling nested virtualization, consider the
-   * following important considerations. Cloud Workstations instances are subject to the [same
+   * using this boost configuration. Defaults to false. Nested virtualization lets you run virtual
+   * machine (VM) instances inside your workstation. Before enabling nested virtualization, consider
+   * the following important considerations. Cloud Workstations instances are subject to the [same
    * restrictions as Compute Engine
    * instances](https://cloud.google.com/compute/docs/instances/nested-
    * virtualization/overview#restrictions): * **Organization policy**: projects, folders, or
@@ -159,13 +153,7 @@ public final class BoostConfig extends com.google.api.client.json.GenericJson {
    * might experience a 10% or greater decrease in performance for workloads that are CPU-bound and
    * possibly greater than a 10% decrease for workloads that are input/output bound. * **Machine
    * Type**: nested virtualization can only be enabled on boost configurations that specify a
-   * machine_type in the N1 or N2 machine series. * **GPUs**: nested virtualization may not be
-   * enabled on boost configurations with accelerators. * **Operating System**: Because [Container-
-   * Optimized OS](https://cloud.google.com/compute/docs/images/os-details#container-
-   * optimized_os_cos) does not support nested virtualization, when nested virtualization is
-   * enabled, the underlying Compute Engine VM instances boot from an [Ubuntu
-   * LTS](https://cloud.google.com/compute/docs/images/os-details#ubuntu_lts) image. Defaults to
-   * false.
+   * machine_type in the N1 or N2 machine series.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableNestedVirtualization() {
@@ -174,9 +162,9 @@ public final class BoostConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Whether to enable nested virtualization on boosted Cloud Workstations VMs running
-   * using this boost configuration. Nested virtualization lets you run virtual machine (VM)
-   * instances inside your workstation. Before enabling nested virtualization, consider the
-   * following important considerations. Cloud Workstations instances are subject to the [same
+   * using this boost configuration. Defaults to false. Nested virtualization lets you run virtual
+   * machine (VM) instances inside your workstation. Before enabling nested virtualization, consider
+   * the following important considerations. Cloud Workstations instances are subject to the [same
    * restrictions as Compute Engine
    * instances](https://cloud.google.com/compute/docs/instances/nested-
    * virtualization/overview#restrictions): * **Organization policy**: projects, folders, or
@@ -188,13 +176,7 @@ public final class BoostConfig extends com.google.api.client.json.GenericJson {
    * might experience a 10% or greater decrease in performance for workloads that are CPU-bound and
    * possibly greater than a 10% decrease for workloads that are input/output bound. * **Machine
    * Type**: nested virtualization can only be enabled on boost configurations that specify a
-   * machine_type in the N1 or N2 machine series. * **GPUs**: nested virtualization may not be
-   * enabled on boost configurations with accelerators. * **Operating System**: Because [Container-
-   * Optimized OS](https://cloud.google.com/compute/docs/images/os-details#container-
-   * optimized_os_cos) does not support nested virtualization, when nested virtualization is
-   * enabled, the underlying Compute Engine VM instances boot from an [Ubuntu
-   * LTS](https://cloud.google.com/compute/docs/images/os-details#ubuntu_lts) image. Defaults to
-   * false.
+   * machine_type in the N1 or N2 machine series.
    * @param enableNestedVirtualization enableNestedVirtualization or {@code null} for none
    */
   public BoostConfig setEnableNestedVirtualization(java.lang.Boolean enableNestedVirtualization) {

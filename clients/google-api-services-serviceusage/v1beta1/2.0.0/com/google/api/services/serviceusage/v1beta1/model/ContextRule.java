@@ -46,14 +46,16 @@ public final class ContextRule extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> allowedResponseExtensions;
 
   /**
-   * A list of full type names of provided contexts.
+   * A list of full type names of provided contexts. It is used to support propagating HTTP headers
+   * and ETags from the response extension.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> provided;
 
   /**
-   * A list of full type names of requested contexts.
+   * A list of full type names of requested contexts, only the requested context will be made
+   * available to the backend.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +107,8 @@ public final class ContextRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of full type names of provided contexts.
+   * A list of full type names of provided contexts. It is used to support propagating HTTP headers
+   * and ETags from the response extension.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProvided() {
@@ -113,7 +116,8 @@ public final class ContextRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of full type names of provided contexts.
+   * A list of full type names of provided contexts. It is used to support propagating HTTP headers
+   * and ETags from the response extension.
    * @param provided provided or {@code null} for none
    */
   public ContextRule setProvided(java.util.List<java.lang.String> provided) {
@@ -122,7 +126,8 @@ public final class ContextRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of full type names of requested contexts.
+   * A list of full type names of requested contexts, only the requested context will be made
+   * available to the backend.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRequested() {
@@ -130,7 +135,8 @@ public final class ContextRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of full type names of requested contexts.
+   * A list of full type names of requested contexts, only the requested context will be made
+   * available to the backend.
    * @param requested requested or {@code null} for none
    */
   public ContextRule setRequested(java.util.List<java.lang.String> requested) {

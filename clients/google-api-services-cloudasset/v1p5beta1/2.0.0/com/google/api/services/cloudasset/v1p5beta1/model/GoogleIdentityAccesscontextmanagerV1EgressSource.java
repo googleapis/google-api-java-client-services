@@ -37,8 +37,7 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressSource extends com.
    * AccessLevel name is not specified, only resources within the perimeter can be accessed through
    * Google Cloud calls with request origins within the perimeter. Example:
    * `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL`. If a single `*` is specified for
-   * `access_level`, then all EgressSources will be allowed. TODO (b/332744441): annotate this field
-   * with custom_org_policy_accessibility when cl/640698580 will be rolled out.
+   * `access_level`, then all EgressSources will be allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,8 +50,7 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressSource extends com.
    * AccessLevel name is not specified, only resources within the perimeter can be accessed through
    * Google Cloud calls with request origins within the perimeter. Example:
    * `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL`. If a single `*` is specified for
-   * `access_level`, then all EgressSources will be allowed. TODO (b/332744441): annotate this field
-   * with custom_org_policy_accessibility when cl/640698580 will be rolled out.
+   * `access_level`, then all EgressSources will be allowed.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccessLevel() {
@@ -66,8 +64,7 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressSource extends com.
    * AccessLevel name is not specified, only resources within the perimeter can be accessed through
    * Google Cloud calls with request origins within the perimeter. Example:
    * `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL`. If a single `*` is specified for
-   * `access_level`, then all EgressSources will be allowed. TODO (b/332744441): annotate this field
-   * with custom_org_policy_accessibility when cl/640698580 will be rolled out.
+   * `access_level`, then all EgressSources will be allowed.
    * @param accessLevel accessLevel or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1EgressSource setAccessLevel(java.lang.String accessLevel) {

@@ -31,16 +31,14 @@ package com.google.api.services.accesscontextmanager.v1.model;
 public final class VpcNetworkSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Sub-segment ranges of a VPC network. TODO (b/332744441): annotate this field with
-   * custom_org_policy_accessibility when cl/640698580 will be rolled out.
+   * Sub-segment ranges of a VPC network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private VpcSubNetwork vpcSubnetwork;
 
   /**
-   * Sub-segment ranges of a VPC network. TODO (b/332744441): annotate this field with
-   * custom_org_policy_accessibility when cl/640698580 will be rolled out.
+   * Sub-segment ranges of a VPC network.
    * @return value or {@code null} for none
    */
   public VpcSubNetwork getVpcSubnetwork() {
@@ -48,8 +46,7 @@ public final class VpcNetworkSource extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Sub-segment ranges of a VPC network. TODO (b/332744441): annotate this field with
-   * custom_org_policy_accessibility when cl/640698580 will be rolled out.
+   * Sub-segment ranges of a VPC network.
    * @param vpcSubnetwork vpcSubnetwork or {@code null} for none
    */
   public VpcNetworkSource setVpcSubnetwork(VpcSubNetwork vpcSubnetwork) {

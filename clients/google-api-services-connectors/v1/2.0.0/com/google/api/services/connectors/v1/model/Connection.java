@@ -30,6 +30,15 @@ package com.google.api.services.connectors.v1.model;
 public final class Connection extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Async operations enabled for the connection. If Async Operations is enabled,
+   * Connection allows the customers to initiate async long running operations using the actions
+   * API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean asyncOperationsEnabled;
+
+  /**
    * Optional. Configuration for establishing the connection's authentication with an external
    * system.
    * The value may be {@code null}.
@@ -241,6 +250,27 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. Async operations enabled for the connection. If Async Operations is enabled,
+   * Connection allows the customers to initiate async long running operations using the actions
+   * API.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAsyncOperationsEnabled() {
+    return asyncOperationsEnabled;
+  }
+
+  /**
+   * Optional. Async operations enabled for the connection. If Async Operations is enabled,
+   * Connection allows the customers to initiate async long running operations using the actions
+   * API.
+   * @param asyncOperationsEnabled asyncOperationsEnabled or {@code null} for none
+   */
+  public Connection setAsyncOperationsEnabled(java.lang.Boolean asyncOperationsEnabled) {
+    this.asyncOperationsEnabled = asyncOperationsEnabled;
+    return this;
+  }
 
   /**
    * Optional. Configuration for establishing the connection's authentication with an external

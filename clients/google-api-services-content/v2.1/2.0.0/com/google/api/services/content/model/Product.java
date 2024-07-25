@@ -732,8 +732,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> sizes;
 
   /**
-   * The source of the offer, that is, how the offer was created. Acceptable values are: - "`api`" -
-   * "`crawl`" - "`feed`"
+   * Output only. The source of the offer, that is, how the offer was created. Acceptable values
+   * are: - "`api`" - "`crawl`" - "`feed`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -2440,8 +2440,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The source of the offer, that is, how the offer was created. Acceptable values are: - "`api`" -
-   * "`crawl`" - "`feed`"
+   * Output only. The source of the offer, that is, how the offer was created. Acceptable values
+   * are: - "`api`" - "`crawl`" - "`feed`"
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -2449,8 +2449,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The source of the offer, that is, how the offer was created. Acceptable values are: - "`api`" -
-   * "`crawl`" - "`feed`"
+   * Output only. The source of the offer, that is, how the offer was created. Acceptable values
+   * are: - "`api`" - "`crawl`" - "`feed`"
    * @param source source or {@code null} for none
    */
   public Product setSource(java.lang.String source) {

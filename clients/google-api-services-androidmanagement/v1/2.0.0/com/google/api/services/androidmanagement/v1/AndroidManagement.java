@@ -2460,9 +2460,7 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
       /**
        * Creates an enrollment token for a given enterprise. It's up to the caller's responsibility to
        * manage the lifecycle of newly created tokens and deleting them when they're not intended to be
-       * used anymore. Once an enrollment token has been created, it's not possible to retrieve the
-       * token's content anymore using AM API. It is recommended for EMMs to securely store the token if
-       * it's intended to be reused.
+       * used anymore.
        *
        * Create a request for the method "enrollmentTokens.create".
        *
@@ -2489,9 +2487,7 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
         /**
          * Creates an enrollment token for a given enterprise. It's up to the caller's responsibility to
          * manage the lifecycle of newly created tokens and deleting them when they're not intended to be
-         * used anymore. Once an enrollment token has been created, it's not possible to retrieve the
-         * token's content anymore using AM API. It is recommended for EMMs to securely store the token if
-         * it's intended to be reused.
+         * used anymore.
          *
          * Create a request for the method "enrollmentTokens.create".
          *

@@ -37,7 +37,7 @@ public final class SecretVolumeSource extends com.google.api.client.json.Generic
   private java.lang.String secretName;
 
   /**
-   * Output only. Resource name of the SecretVersion. In format: projects/secrets/versions
+   * Optional. Resource name of the SecretVersion. In format: projects/secrets/versions
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class SecretVolumeSource extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Resource name of the SecretVersion. In format: projects/secrets/versions
+   * Optional. Resource name of the SecretVersion. In format: projects/secrets/versions
    * @return value or {@code null} for none
    */
   public java.lang.String getSecretVersion() {
@@ -69,7 +69,7 @@ public final class SecretVolumeSource extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Resource name of the SecretVersion. In format: projects/secrets/versions
+   * Optional. Resource name of the SecretVersion. In format: projects/secrets/versions
    * @param secretVersion secretVersion or {@code null} for none
    */
   public SecretVolumeSource setSecretVersion(java.lang.String secretVersion) {

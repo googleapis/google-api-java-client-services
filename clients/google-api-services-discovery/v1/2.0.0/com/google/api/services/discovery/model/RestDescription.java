@@ -88,6 +88,20 @@ public final class RestDescription extends com.google.api.client.json.GenericJso
   private java.lang.String documentationLink;
 
   /**
+   * A list of location-based endpoint objects for this API. Each object contains the endpoint URL,
+   * location, description and deprecation status.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Endpoints> endpoints;
+
+  static {
+    // hack to force ProGuard to consider Endpoints used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Endpoints.class);
+  }
+
+  /**
    * The ETag for this response.
    * The value may be {@code null}.
    */
@@ -388,6 +402,25 @@ public final class RestDescription extends com.google.api.client.json.GenericJso
    */
   public RestDescription setDocumentationLink(java.lang.String documentationLink) {
     this.documentationLink = documentationLink;
+    return this;
+  }
+
+  /**
+   * A list of location-based endpoint objects for this API. Each object contains the endpoint URL,
+   * location, description and deprecation status.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Endpoints> getEndpoints() {
+    return endpoints;
+  }
+
+  /**
+   * A list of location-based endpoint objects for this API. Each object contains the endpoint URL,
+   * location, description and deprecation status.
+   * @param endpoints endpoints or {@code null} for none
+   */
+  public RestDescription setEndpoints(java.util.List<Endpoints> endpoints) {
+    this.endpoints = endpoints;
     return this;
   }
 
@@ -900,6 +933,119 @@ public final class RestDescription extends com.google.api.client.json.GenericJso
 
       }
     }
+  }
+
+  /**
+   * A single endpoint object
+   */
+  public static final class Endpoints extends com.google.api.client.json.GenericJson {
+
+    /**
+     * Whether this endpoint is deprecated
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean deprecated;
+
+    /**
+     * A string describing the host designated by the URL
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String description;
+
+    /**
+     * The URL of the endpoint target host
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String endpointUrl;
+
+    /**
+     * The location of the endpoint
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String location;
+
+    /**
+     * Whether this endpoint is deprecated
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getDeprecated() {
+      return deprecated;
+    }
+
+    /**
+     * Whether this endpoint is deprecated
+     * @param deprecated deprecated or {@code null} for none
+     */
+    public Endpoints setDeprecated(java.lang.Boolean deprecated) {
+      this.deprecated = deprecated;
+      return this;
+    }
+
+    /**
+     * A string describing the host designated by the URL
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getDescription() {
+      return description;
+    }
+
+    /**
+     * A string describing the host designated by the URL
+     * @param description description or {@code null} for none
+     */
+    public Endpoints setDescription(java.lang.String description) {
+      this.description = description;
+      return this;
+    }
+
+    /**
+     * The URL of the endpoint target host
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getEndpointUrl() {
+      return endpointUrl;
+    }
+
+    /**
+     * The URL of the endpoint target host
+     * @param endpointUrl endpointUrl or {@code null} for none
+     */
+    public Endpoints setEndpointUrl(java.lang.String endpointUrl) {
+      this.endpointUrl = endpointUrl;
+      return this;
+    }
+
+    /**
+     * The location of the endpoint
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getLocation() {
+      return location;
+    }
+
+    /**
+     * The location of the endpoint
+     * @param location location or {@code null} for none
+     */
+    public Endpoints setLocation(java.lang.String location) {
+      this.location = location;
+      return this;
+    }
+
+    @Override
+    public Endpoints set(String fieldName, Object value) {
+      return (Endpoints) super.set(fieldName, value);
+    }
+
+    @Override
+    public Endpoints clone() {
+      return (Endpoints) super.clone();
+    }
+
   }
 
   /**

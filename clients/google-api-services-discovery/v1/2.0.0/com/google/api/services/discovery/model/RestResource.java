@@ -31,6 +31,13 @@ package com.google.api.services.discovery.model;
 public final class RestResource extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether this resource is deprecated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean deprecated;
+
+  /**
    * Methods on this resource.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class RestResource extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, RestResource> resources;
+
+  /**
+   * Whether this resource is deprecated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDeprecated() {
+    return deprecated;
+  }
+
+  /**
+   * Whether this resource is deprecated.
+   * @param deprecated deprecated or {@code null} for none
+   */
+  public RestResource setDeprecated(java.lang.Boolean deprecated) {
+    this.deprecated = deprecated;
+    return this;
+  }
 
   /**
    * Methods on this resource.

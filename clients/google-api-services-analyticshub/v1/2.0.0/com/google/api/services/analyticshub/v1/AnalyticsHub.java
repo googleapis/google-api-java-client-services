@@ -1738,8 +1738,8 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
           }
         }
         /**
-         * Creates a Subscription to a Data Exchange. This is a long-running operation as it will create one
-         * or more linked datasets.
+         * Creates a Subscription to a Data Clean Room. This is a long-running operation as it will create
+         * one or more linked datasets.
          *
          * Create a request for the method "dataExchanges.subscribe".
          *
@@ -1765,7 +1765,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+$");
 
           /**
-           * Creates a Subscription to a Data Exchange. This is a long-running operation as it will create
+           * Creates a Subscription to a Data Clean Room. This is a long-running operation as it will create
            * one or more linked datasets.
            *
            * Create a request for the method "dataExchanges.subscribe".

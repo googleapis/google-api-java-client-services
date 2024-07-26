@@ -60,6 +60,13 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
   private java.lang.String default__;
 
   /**
+   * Whether the parameter is deprecated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean deprecated;
+
+  /**
    * A description of this object.
    * The value may be {@code null}.
    */
@@ -72,6 +79,14 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key("enum")
   private java.util.List<java.lang.String> enum__;
+
+  /**
+   * The deprecation status for the enums. Each position maps to the corresponding value in the
+   * "enum" array.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Boolean> enumDeprecated;
 
   /**
    * The descriptions for the enums. Each position maps to the corresponding value in the "enum"
@@ -248,6 +263,23 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Whether the parameter is deprecated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDeprecated() {
+    return deprecated;
+  }
+
+  /**
+   * Whether the parameter is deprecated.
+   * @param deprecated deprecated or {@code null} for none
+   */
+  public JsonSchema setDeprecated(java.lang.Boolean deprecated) {
+    this.deprecated = deprecated;
+    return this;
+  }
+
+  /**
    * A description of this object.
    * @return value or {@code null} for none
    */
@@ -278,6 +310,25 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
    */
   public JsonSchema setEnum(java.util.List<java.lang.String> enum__) {
     this.enum__ = enum__;
+    return this;
+  }
+
+  /**
+   * The deprecation status for the enums. Each position maps to the corresponding value in the
+   * "enum" array.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Boolean> getEnumDeprecated() {
+    return enumDeprecated;
+  }
+
+  /**
+   * The deprecation status for the enums. Each position maps to the corresponding value in the
+   * "enum" array.
+   * @param enumDeprecated enumDeprecated or {@code null} for none
+   */
+  public JsonSchema setEnumDeprecated(java.util.List<java.lang.Boolean> enumDeprecated) {
+    this.enumDeprecated = enumDeprecated;
     return this;
   }
 

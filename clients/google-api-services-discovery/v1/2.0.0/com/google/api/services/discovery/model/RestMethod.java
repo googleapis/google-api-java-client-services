@@ -31,6 +31,21 @@ package com.google.api.services.discovery.model;
 public final class RestMethod extends com.google.api.client.json.GenericJson {
 
   /**
+   * The API Version of this method, as passed in via the `X-Goog-Api-Version` header or
+   * `$apiVersion` query parameter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String apiVersion;
+
+  /**
+   * Whether this method is deprecated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean deprecated;
+
+  /**
    * Description of this method.
    * The value may be {@code null}.
    */
@@ -154,6 +169,42 @@ public final class RestMethod extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useMediaDownloadService;
+
+  /**
+   * The API Version of this method, as passed in via the `X-Goog-Api-Version` header or
+   * `$apiVersion` query parameter.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getApiVersion() {
+    return apiVersion;
+  }
+
+  /**
+   * The API Version of this method, as passed in via the `X-Goog-Api-Version` header or
+   * `$apiVersion` query parameter.
+   * @param apiVersion apiVersion or {@code null} for none
+   */
+  public RestMethod setApiVersion(java.lang.String apiVersion) {
+    this.apiVersion = apiVersion;
+    return this;
+  }
+
+  /**
+   * Whether this method is deprecated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDeprecated() {
+    return deprecated;
+  }
+
+  /**
+   * Whether this method is deprecated.
+   * @param deprecated deprecated or {@code null} for none
+   */
+  public RestMethod setDeprecated(java.lang.Boolean deprecated) {
+    this.deprecated = deprecated;
+    return this;
+  }
 
   /**
    * Description of this method.

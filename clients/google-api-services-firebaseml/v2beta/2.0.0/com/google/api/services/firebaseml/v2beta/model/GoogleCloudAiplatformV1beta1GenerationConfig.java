@@ -79,6 +79,13 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
   private GoogleCloudAiplatformV1beta1Schema responseSchema;
 
   /**
+   * Optional. Routing configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1GenerationConfigRoutingConfig routingConfig;
+
+  /**
    * Optional. Stop sequences.
    * The value may be {@code null}.
    */
@@ -219,6 +226,23 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
    */
   public GoogleCloudAiplatformV1beta1GenerationConfig setResponseSchema(GoogleCloudAiplatformV1beta1Schema responseSchema) {
     this.responseSchema = responseSchema;
+    return this;
+  }
+
+  /**
+   * Optional. Routing configuration.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfigRoutingConfig getRoutingConfig() {
+    return routingConfig;
+  }
+
+  /**
+   * Optional. Routing configuration.
+   * @param routingConfig routingConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfig setRoutingConfig(GoogleCloudAiplatformV1beta1GenerationConfigRoutingConfig routingConfig) {
+    this.routingConfig = routingConfig;
     return this;
   }
 

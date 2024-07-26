@@ -58,6 +58,12 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   private java.lang.Integer gkeClustersPerResponsePolicy;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer internetHealthChecksPerManagedZone;
+
+  /**
    * Maximum allowed number of items per routing policy.
    * The value may be {@code null}.
    */
@@ -275,6 +281,21 @@ public final class Quota extends com.google.api.client.json.GenericJson {
    */
   public Quota setGkeClustersPerResponsePolicy(java.lang.Integer gkeClustersPerResponsePolicy) {
     this.gkeClustersPerResponsePolicy = gkeClustersPerResponsePolicy;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getInternetHealthChecksPerManagedZone() {
+    return internetHealthChecksPerManagedZone;
+  }
+
+  /**
+   * @param internetHealthChecksPerManagedZone internetHealthChecksPerManagedZone or {@code null} for none
+   */
+  public Quota setInternetHealthChecksPerManagedZone(java.lang.Integer internetHealthChecksPerManagedZone) {
+    this.internetHealthChecksPerManagedZone = internetHealthChecksPerManagedZone;
     return this;
   }
 

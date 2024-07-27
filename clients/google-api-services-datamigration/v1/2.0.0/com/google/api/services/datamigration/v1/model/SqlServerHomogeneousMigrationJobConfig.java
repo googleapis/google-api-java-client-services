@@ -58,6 +58,13 @@ public final class SqlServerHomogeneousMigrationJobConfig extends com.google.api
   }
 
   /**
+   * Optional. Promote databases when ready.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean promoteWhenReady;
+
+  /**
    * Optional. Enable differential backups.
    * The value may be {@code null}.
    */
@@ -109,6 +116,23 @@ public final class SqlServerHomogeneousMigrationJobConfig extends com.google.api
    */
   public SqlServerHomogeneousMigrationJobConfig setDatabaseBackups(java.util.List<SqlServerDatabaseBackup> databaseBackups) {
     this.databaseBackups = databaseBackups;
+    return this;
+  }
+
+  /**
+   * Optional. Promote databases when ready.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPromoteWhenReady() {
+    return promoteWhenReady;
+  }
+
+  /**
+   * Optional. Promote databases when ready.
+   * @param promoteWhenReady promoteWhenReady or {@code null} for none
+   */
+  public SqlServerHomogeneousMigrationJobConfig setPromoteWhenReady(java.lang.Boolean promoteWhenReady) {
+    this.promoteWhenReady = promoteWhenReady;
     return this;
   }
 

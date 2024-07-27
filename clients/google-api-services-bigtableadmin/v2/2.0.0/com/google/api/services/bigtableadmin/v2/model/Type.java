@@ -25,8 +25,8 @@ package com.google.api.services.bigtableadmin.v2.model;
  * consistently with the original typed value? Note that Bigtable will always sort data based on the
  * raw encoded value, *not* the decoded type. - Example: BYTES values sort in the same order as
  * their raw encodings. - Counterexample: Encoding INT64 as a fixed-width decimal string does *not*
- * preserve sort order when dealing with negative numbers. INT64(1) > INT64(-1), but
- * STRING("-00001") > STRING("00001). * Self-delimiting: If we concatenate two encoded values, can
+ * preserve sort order when dealing with negative numbers. `INT64(1) > INT64(-1)`, but
+ * `STRING("-00001") > STRING("00001)`. * Self-delimiting: If we concatenate two encoded values, can
  * we always tell where the first one ends and the second one begins? - Example: If we encode INT64s
  * to fixed-width STRINGs, the first value will always contain exactly N digits, possibly preceded
  * by a sign. - Counterexample: If we concatenate two UTF-8 encoded STRINGs, we have no way to tell

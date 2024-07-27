@@ -106,8 +106,9 @@ public final class ServiceConnectionPolicy extends com.google.api.client.json.Ge
   /**
    * The service class identifier for which this ServiceConnectionPolicy is for. The service class
    * identifier is a unique, symbolic representation of a ServiceClass. It is provided by the
-   * Service Producer. Google services have a prefix of gcp. For example, gcp-cloud-sql. 3rd party
-   * services do not. For example, test-service-a3dfcx.
+   * Service Producer. Google services have a prefix of gcp or google-cloud. For example, gcp-
+   * memorystore-redis or google-cloud-sql. 3rd party services do not. For example, test-
+   * service-a3dfcx.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -284,8 +285,9 @@ public final class ServiceConnectionPolicy extends com.google.api.client.json.Ge
   /**
    * The service class identifier for which this ServiceConnectionPolicy is for. The service class
    * identifier is a unique, symbolic representation of a ServiceClass. It is provided by the
-   * Service Producer. Google services have a prefix of gcp. For example, gcp-cloud-sql. 3rd party
-   * services do not. For example, test-service-a3dfcx.
+   * Service Producer. Google services have a prefix of gcp or google-cloud. For example, gcp-
+   * memorystore-redis or google-cloud-sql. 3rd party services do not. For example, test-
+   * service-a3dfcx.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceClass() {
@@ -295,8 +297,9 @@ public final class ServiceConnectionPolicy extends com.google.api.client.json.Ge
   /**
    * The service class identifier for which this ServiceConnectionPolicy is for. The service class
    * identifier is a unique, symbolic representation of a ServiceClass. It is provided by the
-   * Service Producer. Google services have a prefix of gcp. For example, gcp-cloud-sql. 3rd party
-   * services do not. For example, test-service-a3dfcx.
+   * Service Producer. Google services have a prefix of gcp or google-cloud. For example, gcp-
+   * memorystore-redis or google-cloud-sql. 3rd party services do not. For example, test-
+   * service-a3dfcx.
    * @param serviceClass serviceClass or {@code null} for none
    */
   public ServiceConnectionPolicy setServiceClass(java.lang.String serviceClass) {

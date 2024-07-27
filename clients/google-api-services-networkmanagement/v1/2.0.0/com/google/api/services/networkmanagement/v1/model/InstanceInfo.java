@@ -73,6 +73,13 @@ public final class InstanceInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String networkUri;
 
   /**
+   * URI of the PSC network attachment the NIC is attached to (if relevant).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pscNetworkAttachmentUri;
+
+  /**
    * Service account authorized for the instance.
    * The value may be {@code null}.
    */
@@ -185,6 +192,23 @@ public final class InstanceInfo extends com.google.api.client.json.GenericJson {
    */
   public InstanceInfo setNetworkUri(java.lang.String networkUri) {
     this.networkUri = networkUri;
+    return this;
+  }
+
+  /**
+   * URI of the PSC network attachment the NIC is attached to (if relevant).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPscNetworkAttachmentUri() {
+    return pscNetworkAttachmentUri;
+  }
+
+  /**
+   * URI of the PSC network attachment the NIC is attached to (if relevant).
+   * @param pscNetworkAttachmentUri pscNetworkAttachmentUri or {@code null} for none
+   */
+  public InstanceInfo setPscNetworkAttachmentUri(java.lang.String pscNetworkAttachmentUri) {
+    this.pscNetworkAttachmentUri = pscNetworkAttachmentUri;
     return this;
   }
 

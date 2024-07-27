@@ -3412,6 +3412,210 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
+         * Lists Connections in a parent. Use SearchConnections to see all connections within an
+         * organization.
+         *
+         * Create a request for the method "connections.list".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Resource name of the organization or project, for example
+         *        `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListConnectionsResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/connections";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists Connections in a parent. Use SearchConnections to see all connections within an
+           * organization.
+           *
+           * Create a request for the method "connections.list".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Resource name of the organization or project, for example
+         *        `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListConnectionsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the organization or project, for example
+           * `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Resource name of the organization or project, for example
+         `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Resource name of the organization or project, for example
+           * `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Supported field/value: `state` - MISSING|AVAILABLE|ERROR */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Supported field/value: `state` - MISSING|AVAILABLE|ERROR
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Supported field/value: `state` - MISSING|AVAILABLE|ERROR */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Number of results per page, max 1000. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Number of results per page, max 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. Number of results per page, max 1000. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Page token from a previous page to return the next set of results. If set,
+           * all other request fields must match the original request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Page token from a previous page to return the next set of results. If set, all other
+         request fields must match the original request.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Page token from a previous page to return the next set of results. If set,
+           * all other request fields must match the original request.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
          * Update a Connection.
          *
          * Create a request for the method "connections.patch".
@@ -3558,8 +3762,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Search#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent name, typically an organization, without location. For example:
-         *        `organizations/12345678`.
+         * @param parent Required. Resource name of the organization or project with a wildcard location, for example
+         *        `organizations/433245324/locations/-` or `projects/project-id/locations/-`.
          * @return the request
          */
         public Search search(java.lang.String parent) throws java.io.IOException {
@@ -3585,8 +3789,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent name, typically an organization, without location. For example:
-         *        `organizations/12345678`.
+           * @param parent Required. Resource name of the organization or project with a wildcard location, for example
+         *        `organizations/433245324/locations/-` or `projects/project-id/locations/-`.
            * @since 1.13
            */
           protected Search(java.lang.String parent) {
@@ -3665,22 +3869,22 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. Parent name, typically an organization, without location. For example:
-           * `organizations/12345678`.
+           * Required. Resource name of the organization or project with a wildcard location, for
+           * example `organizations/433245324/locations/-` or `projects/project-id/locations/-`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Parent name, typically an organization, without location. For example:
-         `organizations/12345678`.
+          /** Required. Resource name of the organization or project with a wildcard location, for example
+         `organizations/433245324/locations/-` or `projects/project-id/locations/-`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. Parent name, typically an organization, without location. For example:
-           * `organizations/12345678`.
+           * Required. Resource name of the organization or project with a wildcard location, for
+           * example `organizations/433245324/locations/-` or `projects/project-id/locations/-`.
            */
           public Search setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -16844,14 +17048,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Lists Connections in a parent.
+         * Lists Connections in a parent. Use SearchConnections to see all connections within an
+         * organization.
          *
          * Create a request for the method "connections.list".
          *
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent name, for example: `projects/project-id/locations/global`.
+         * @param parent Required. Resource name of the organization or project, for example
+         *        `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -16868,7 +17074,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists Connections in a parent.
+           * Lists Connections in a parent. Use SearchConnections to see all connections within an
+           * organization.
            *
            * Create a request for the method "connections.list".
            *
@@ -16877,7 +17084,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent name, for example: `projects/project-id/locations/global`.
+           * @param parent Required. Resource name of the organization or project, for example
+         *        `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -16955,17 +17163,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Parent name, for example: `projects/project-id/locations/global`. */
+          /**
+           * Required. Resource name of the organization or project, for example
+           * `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Parent name, for example: `projects/project-id/locations/global`.
+          /** Required. Resource name of the organization or project, for example
+         `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Parent name, for example: `projects/project-id/locations/global`. */
+          /**
+           * Required. Resource name of the organization or project, for example
+           * `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -17183,8 +17398,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Search#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent name, typically an organization, without location. For example:
-         *        `organizations/12345678`.
+         * @param parent Required. Resource name of the organization or project with a wildcard location, for example
+         *        `organizations/433245324/locations/-` or `projects/project-id/locations/-`.
          * @return the request
          */
         public Search search(java.lang.String parent) throws java.io.IOException {
@@ -17210,8 +17425,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent name, typically an organization, without location. For example:
-         *        `organizations/12345678`.
+           * @param parent Required. Resource name of the organization or project with a wildcard location, for example
+         *        `organizations/433245324/locations/-` or `projects/project-id/locations/-`.
            * @since 1.13
            */
           protected Search(java.lang.String parent) {
@@ -17290,22 +17505,22 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. Parent name, typically an organization, without location. For example:
-           * `organizations/12345678`.
+           * Required. Resource name of the organization or project with a wildcard location, for
+           * example `organizations/433245324/locations/-` or `projects/project-id/locations/-`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Parent name, typically an organization, without location. For example:
-         `organizations/12345678`.
+          /** Required. Resource name of the organization or project with a wildcard location, for example
+         `organizations/433245324/locations/-` or `projects/project-id/locations/-`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. Parent name, typically an organization, without location. For example:
-           * `organizations/12345678`.
+           * Required. Resource name of the organization or project with a wildcard location, for
+           * example `organizations/433245324/locations/-` or `projects/project-id/locations/-`.
            */
           public Search setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

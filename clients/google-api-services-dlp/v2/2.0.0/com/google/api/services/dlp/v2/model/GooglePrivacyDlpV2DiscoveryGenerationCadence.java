@@ -40,6 +40,14 @@ public final class GooglePrivacyDlpV2DiscoveryGenerationCadence extends com.goog
   private GooglePrivacyDlpV2DiscoveryInspectTemplateModifiedCadence inspectTemplateModifiedCadence;
 
   /**
+   * Frequency to update profiles regardless of whether the underlying resource has changed.
+   * Defaults to never.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String refreshFrequency;
+
+  /**
    * Governs when to update data profiles when a schema is modified.
    * The value may be {@code null}.
    */
@@ -69,6 +77,25 @@ public final class GooglePrivacyDlpV2DiscoveryGenerationCadence extends com.goog
    */
   public GooglePrivacyDlpV2DiscoveryGenerationCadence setInspectTemplateModifiedCadence(GooglePrivacyDlpV2DiscoveryInspectTemplateModifiedCadence inspectTemplateModifiedCadence) {
     this.inspectTemplateModifiedCadence = inspectTemplateModifiedCadence;
+    return this;
+  }
+
+  /**
+   * Frequency to update profiles regardless of whether the underlying resource has changed.
+   * Defaults to never.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRefreshFrequency() {
+    return refreshFrequency;
+  }
+
+  /**
+   * Frequency to update profiles regardless of whether the underlying resource has changed.
+   * Defaults to never.
+   * @param refreshFrequency refreshFrequency or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DiscoveryGenerationCadence setRefreshFrequency(java.lang.String refreshFrequency) {
+    this.refreshFrequency = refreshFrequency;
     return this;
   }
 

@@ -30,6 +30,7 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1Aspect extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Information related to the source system of the aspect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,6 +73,7 @@ public final class GoogleCloudDataplexV1Aspect extends com.google.api.client.jso
   private String updateTime;
 
   /**
+   * Optional. Information related to the source system of the aspect.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectSource getAspectSource() {
@@ -79,6 +81,7 @@ public final class GoogleCloudDataplexV1Aspect extends com.google.api.client.jso
   }
 
   /**
+   * Optional. Information related to the source system of the aspect.
    * @param aspectSource aspectSource or {@code null} for none
    */
   public GoogleCloudDataplexV1Aspect setAspectSource(GoogleCloudDataplexV1AspectSource aspectSource) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * EntrySource contains information related to the source system of the Entry.
+ * Information related to the source system of the data resource that is represented by the entry.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -30,28 +30,28 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1EntrySource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. The ancestors of the Entry in the source system.
+   * Immutable. The entries representing the ancestors of the data resource in the source system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDataplexV1EntrySourceAncestor> ancestors;
 
   /**
-   * The create time of the resource in the source system.
+   * The time when the resource was created in the source system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Description of the Entry. The maximum size of the field is 2000 characters.
+   * A description of the data resource. Maximum length is 2,000 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * User friendly display name. The maximum size of the field is 500 characters.
+   * A user-friendly display name. Maximum length is 500 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,45 +65,46 @@ public final class GoogleCloudDataplexV1EntrySource extends com.google.api.clien
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. Location of the resource in the source system. You can search the Entry by this
-   * location. By default, this should match the location of the EntryGroup containing this entry. A
-   * different value allows capturing the source location for data external to Google Cloud.
+   * Output only. Location of the resource in the source system. You can search the entry by this
+   * location. By default, this should match the location of the entry group containing this entry.
+   * A different value allows capturing the source location for data external to Google Cloud.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String location;
 
   /**
-   * The platform containing the source system. The maximum size of the field is 64 characters.
+   * The platform containing the source system. Maximum length is 64 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String platform;
 
   /**
-   * The name of the resource in the source system. The maximum size of the field is 4000
-   * characters.
+   * The name of the resource in the source system. Maximum length is 4,000 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resource;
 
   /**
-   * The name of the source system. The maximum size of the field is 64 characters.
+   * The name of the source system. Maximum length is 64 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String system;
 
   /**
-   * The update time of the resource in the source system.
+   * The time when the resource was last updated in the source system. If the entry exists in the
+   * system and its EntrySource has update_time populated, further updates to the EntrySource of the
+   * entry must provide incremental updates to its update_time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Immutable. The ancestors of the Entry in the source system.
+   * Immutable. The entries representing the ancestors of the data resource in the source system.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDataplexV1EntrySourceAncestor> getAncestors() {
@@ -111,7 +112,7 @@ public final class GoogleCloudDataplexV1EntrySource extends com.google.api.clien
   }
 
   /**
-   * Immutable. The ancestors of the Entry in the source system.
+   * Immutable. The entries representing the ancestors of the data resource in the source system.
    * @param ancestors ancestors or {@code null} for none
    */
   public GoogleCloudDataplexV1EntrySource setAncestors(java.util.List<GoogleCloudDataplexV1EntrySourceAncestor> ancestors) {
@@ -120,7 +121,7 @@ public final class GoogleCloudDataplexV1EntrySource extends com.google.api.clien
   }
 
   /**
-   * The create time of the resource in the source system.
+   * The time when the resource was created in the source system.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -128,7 +129,7 @@ public final class GoogleCloudDataplexV1EntrySource extends com.google.api.clien
   }
 
   /**
-   * The create time of the resource in the source system.
+   * The time when the resource was created in the source system.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDataplexV1EntrySource setCreateTime(String createTime) {
@@ -137,7 +138,7 @@ public final class GoogleCloudDataplexV1EntrySource extends com.google.api.clien
   }
 
   /**
-   * Description of the Entry. The maximum size of the field is 2000 characters.
+   * A description of the data resource. Maximum length is 2,000 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -145,7 +146,7 @@ public final class GoogleCloudDataplexV1EntrySource extends com.google.api.clien
   }
 
   /**
-   * Description of the Entry. The maximum size of the field is 2000 characters.
+   * A description of the data resource. Maximum length is 2,000 characters.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDataplexV1EntrySource setDescription(java.lang.String description) {
@@ -154,7 +155,7 @@ public final class GoogleCloudDataplexV1EntrySource extends com.google.api.clien
   }
 
   /**
-   * User friendly display name. The maximum size of the field is 500 characters.
+   * A user-friendly display name. Maximum length is 500 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -162,7 +163,7 @@ public final class GoogleCloudDataplexV1EntrySource extends com.google.api.clien
   }
 
   /**
-   * User friendly display name. The maximum size of the field is 500 characters.
+   * A user-friendly display name. Maximum length is 500 characters.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDataplexV1EntrySource setDisplayName(java.lang.String displayName) {
@@ -188,9 +189,9 @@ public final class GoogleCloudDataplexV1EntrySource extends com.google.api.clien
   }
 
   /**
-   * Output only. Location of the resource in the source system. You can search the Entry by this
-   * location. By default, this should match the location of the EntryGroup containing this entry. A
-   * different value allows capturing the source location for data external to Google Cloud.
+   * Output only. Location of the resource in the source system. You can search the entry by this
+   * location. By default, this should match the location of the entry group containing this entry.
+   * A different value allows capturing the source location for data external to Google Cloud.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -198,9 +199,9 @@ public final class GoogleCloudDataplexV1EntrySource extends com.google.api.clien
   }
 
   /**
-   * Output only. Location of the resource in the source system. You can search the Entry by this
-   * location. By default, this should match the location of the EntryGroup containing this entry. A
-   * different value allows capturing the source location for data external to Google Cloud.
+   * Output only. Location of the resource in the source system. You can search the entry by this
+   * location. By default, this should match the location of the entry group containing this entry.
+   * A different value allows capturing the source location for data external to Google Cloud.
    * @param location location or {@code null} for none
    */
   public GoogleCloudDataplexV1EntrySource setLocation(java.lang.String location) {
@@ -209,7 +210,7 @@ public final class GoogleCloudDataplexV1EntrySource extends com.google.api.clien
   }
 
   /**
-   * The platform containing the source system. The maximum size of the field is 64 characters.
+   * The platform containing the source system. Maximum length is 64 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlatform() {
@@ -217,7 +218,7 @@ public final class GoogleCloudDataplexV1EntrySource extends com.google.api.clien
   }
 
   /**
-   * The platform containing the source system. The maximum size of the field is 64 characters.
+   * The platform containing the source system. Maximum length is 64 characters.
    * @param platform platform or {@code null} for none
    */
   public GoogleCloudDataplexV1EntrySource setPlatform(java.lang.String platform) {
@@ -226,8 +227,7 @@ public final class GoogleCloudDataplexV1EntrySource extends com.google.api.clien
   }
 
   /**
-   * The name of the resource in the source system. The maximum size of the field is 4000
-   * characters.
+   * The name of the resource in the source system. Maximum length is 4,000 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getResource() {
@@ -235,8 +235,7 @@ public final class GoogleCloudDataplexV1EntrySource extends com.google.api.clien
   }
 
   /**
-   * The name of the resource in the source system. The maximum size of the field is 4000
-   * characters.
+   * The name of the resource in the source system. Maximum length is 4,000 characters.
    * @param resource resource or {@code null} for none
    */
   public GoogleCloudDataplexV1EntrySource setResource(java.lang.String resource) {
@@ -245,7 +244,7 @@ public final class GoogleCloudDataplexV1EntrySource extends com.google.api.clien
   }
 
   /**
-   * The name of the source system. The maximum size of the field is 64 characters.
+   * The name of the source system. Maximum length is 64 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getSystem() {
@@ -253,7 +252,7 @@ public final class GoogleCloudDataplexV1EntrySource extends com.google.api.clien
   }
 
   /**
-   * The name of the source system. The maximum size of the field is 64 characters.
+   * The name of the source system. Maximum length is 64 characters.
    * @param system system or {@code null} for none
    */
   public GoogleCloudDataplexV1EntrySource setSystem(java.lang.String system) {
@@ -262,7 +261,9 @@ public final class GoogleCloudDataplexV1EntrySource extends com.google.api.clien
   }
 
   /**
-   * The update time of the resource in the source system.
+   * The time when the resource was last updated in the source system. If the entry exists in the
+   * system and its EntrySource has update_time populated, further updates to the EntrySource of the
+   * entry must provide incremental updates to its update_time.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -270,7 +271,9 @@ public final class GoogleCloudDataplexV1EntrySource extends com.google.api.clien
   }
 
   /**
-   * The update time of the resource in the source system.
+   * The time when the resource was last updated in the source system. If the entry exists in the
+   * system and its EntrySource has update_time populated, further updates to the EntrySource of the
+   * entry must provide incremental updates to its update_time.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudDataplexV1EntrySource setUpdateTime(String updateTime) {

@@ -66,8 +66,8 @@ public final class GoogleCloudDataplexV1EntryGroup extends com.google.api.client
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. The relative resource name of the EntryGroup, of the form:
-   * projects/{project_number}/locations/{location_id}/entryGroups/{entry_group_id}.
+   * Output only. The relative resource name of the EntryGroup, in the format
+   * projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,8 +176,8 @@ public final class GoogleCloudDataplexV1EntryGroup extends com.google.api.client
   }
 
   /**
-   * Output only. The relative resource name of the EntryGroup, of the form:
-   * projects/{project_number}/locations/{location_id}/entryGroups/{entry_group_id}.
+   * Output only. The relative resource name of the EntryGroup, in the format
+   * projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -185,8 +185,8 @@ public final class GoogleCloudDataplexV1EntryGroup extends com.google.api.client
   }
 
   /**
-   * Output only. The relative resource name of the EntryGroup, of the form:
-   * projects/{project_number}/locations/{location_id}/entryGroups/{entry_group_id}.
+   * Output only. The relative resource name of the EntryGroup, in the format
+   * projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDataplexV1EntryGroup setName(java.lang.String name) {

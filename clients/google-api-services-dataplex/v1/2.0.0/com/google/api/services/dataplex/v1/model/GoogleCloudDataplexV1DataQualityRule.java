@@ -122,6 +122,13 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   private GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation statisticRangeExpectation;
 
   /**
+   * Optional. Whether the Rule is active or suspended. Default is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean suspended;
+
+  /**
    * Aggregate rule which evaluates whether the provided expression is true for a table.
    * The value may be {@code null}.
    */
@@ -361,6 +368,23 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
    */
   public GoogleCloudDataplexV1DataQualityRule setStatisticRangeExpectation(GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation statisticRangeExpectation) {
     this.statisticRangeExpectation = statisticRangeExpectation;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the Rule is active or suspended. Default is false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSuspended() {
+    return suspended;
+  }
+
+  /**
+   * Optional. Whether the Rule is active or suspended. Default is false.
+   * @param suspended suspended or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualityRule setSuspended(java.lang.Boolean suspended) {
+    this.suspended = suspended;
     return this;
   }
 

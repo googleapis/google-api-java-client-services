@@ -31,6 +31,13 @@ package com.google.api.services.playintegrity.v1.model;
 public final class DeviceIntegrity extends com.google.api.client.json.GenericJson {
 
   /**
+   * Details about the device recall bits set by the developer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeviceRecall deviceRecall;
+
+  /**
    * Details about the integrity of the device the app is running on.
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class DeviceIntegrity extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private RecentDeviceActivity recentDeviceActivity;
+
+  /**
+   * Details about the device recall bits set by the developer.
+   * @return value or {@code null} for none
+   */
+  public DeviceRecall getDeviceRecall() {
+    return deviceRecall;
+  }
+
+  /**
+   * Details about the device recall bits set by the developer.
+   * @param deviceRecall deviceRecall or {@code null} for none
+   */
+  public DeviceIntegrity setDeviceRecall(DeviceRecall deviceRecall) {
+    this.deviceRecall = deviceRecall;
+    return this;
+  }
 
   /**
    * Details about the integrity of the device the app is running on.

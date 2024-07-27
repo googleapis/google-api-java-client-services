@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * AspectSource contains information related to the source system of the Aspect.
+ * Information related to the source system of the aspect.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1AspectSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * The create time of the aspect in the source system.
+   * The time the aspect was created in the source system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * The update time of the aspect in the source system.
+   * The time the aspect was last updated in the source system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * The create time of the aspect in the source system.
+   * The time the aspect was created in the source system.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -52,7 +52,7 @@ public final class GoogleCloudDataplexV1AspectSource extends com.google.api.clie
   }
 
   /**
-   * The create time of the aspect in the source system.
+   * The time the aspect was created in the source system.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectSource setCreateTime(String createTime) {
@@ -61,7 +61,7 @@ public final class GoogleCloudDataplexV1AspectSource extends com.google.api.clie
   }
 
   /**
-   * The update time of the aspect in the source system.
+   * The time the aspect was last updated in the source system.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -69,7 +69,7 @@ public final class GoogleCloudDataplexV1AspectSource extends com.google.api.clie
   }
 
   /**
-   * The update time of the aspect in the source system.
+   * The time the aspect was last updated in the source system.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectSource setUpdateTime(String updateTime) {

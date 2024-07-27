@@ -38,6 +38,13 @@ public final class GoogleBigtableAdminV2TypeStringEncoding extends com.google.ap
   private GoogleBigtableAdminV2TypeStringEncodingUtf8Bytes utf8Bytes;
 
   /**
+   * Deprecated: if set, converts to an empty `utf8_bytes`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleBigtableAdminV2TypeStringEncodingUtf8Raw utf8Raw;
+
+  /**
    * Use `Utf8Bytes` encoding.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class GoogleBigtableAdminV2TypeStringEncoding extends com.google.ap
    */
   public GoogleBigtableAdminV2TypeStringEncoding setUtf8Bytes(GoogleBigtableAdminV2TypeStringEncodingUtf8Bytes utf8Bytes) {
     this.utf8Bytes = utf8Bytes;
+    return this;
+  }
+
+  /**
+   * Deprecated: if set, converts to an empty `utf8_bytes`.
+   * @return value or {@code null} for none
+   */
+  public GoogleBigtableAdminV2TypeStringEncodingUtf8Raw getUtf8Raw() {
+    return utf8Raw;
+  }
+
+  /**
+   * Deprecated: if set, converts to an empty `utf8_bytes`.
+   * @param utf8Raw utf8Raw or {@code null} for none
+   */
+  public GoogleBigtableAdminV2TypeStringEncoding setUtf8Raw(GoogleBigtableAdminV2TypeStringEncodingUtf8Raw utf8Raw) {
+    this.utf8Raw = utf8Raw;
     return this;
   }
 

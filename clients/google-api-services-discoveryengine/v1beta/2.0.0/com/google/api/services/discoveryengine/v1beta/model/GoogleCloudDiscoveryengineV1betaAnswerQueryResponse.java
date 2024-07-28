@@ -30,8 +30,9 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaAnswerQueryResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Answer resource object. If AnswerQueryRequest.StepSpec.max_step_count is greater than 1, use
-   * Answer.name to fetch answer information using ConversationalSearchService.GetAnswer API.
+   * Answer resource object. If
+   * AnswerQueryRequest.QueryUnderstandingSpec.QueryRephraserSpec.max_rephrase_steps is greater than
+   * 1, use Answer.name to fetch answer information using ConversationalSearchService.GetAnswer API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +54,9 @@ public final class GoogleCloudDiscoveryengineV1betaAnswerQueryResponse extends c
   private GoogleCloudDiscoveryengineV1betaSession session;
 
   /**
-   * Answer resource object. If AnswerQueryRequest.StepSpec.max_step_count is greater than 1, use
-   * Answer.name to fetch answer information using ConversationalSearchService.GetAnswer API.
+   * Answer resource object. If
+   * AnswerQueryRequest.QueryUnderstandingSpec.QueryRephraserSpec.max_rephrase_steps is greater than
+   * 1, use Answer.name to fetch answer information using ConversationalSearchService.GetAnswer API.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaAnswer getAnswer() {
@@ -62,8 +64,9 @@ public final class GoogleCloudDiscoveryengineV1betaAnswerQueryResponse extends c
   }
 
   /**
-   * Answer resource object. If AnswerQueryRequest.StepSpec.max_step_count is greater than 1, use
-   * Answer.name to fetch answer information using ConversationalSearchService.GetAnswer API.
+   * Answer resource object. If
+   * AnswerQueryRequest.QueryUnderstandingSpec.QueryRephraserSpec.max_rephrase_steps is greater than
+   * 1, use Answer.name to fetch answer information using ConversationalSearchService.GetAnswer API.
    * @param answer answer or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaAnswerQueryResponse setAnswer(GoogleCloudDiscoveryengineV1betaAnswer answer) {

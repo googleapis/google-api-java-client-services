@@ -30833,6 +30833,732 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
       public class Evaluations {
 
         /**
+         * Creates a Evaluation. Upon creation, the evaluation will be automatically triggered and begin
+         * execution.
+         *
+         * Create a request for the method "evaluations.create".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource name, such as `projects/{project}/locations/{location}`.
+         * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaEvaluation}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaEvaluation content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/evaluations";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a Evaluation. Upon creation, the evaluation will be automatically triggered and begin
+           * execution.
+           *
+           * Create a request for the method "evaluations.create".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource name, such as `projects/{project}/locations/{location}`.
+           * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaEvaluation}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaEvaluation content) {
+            super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1beta.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource name, such as `projects/{project}/locations/{location}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource name, such as `projects/{project}/locations/{location}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource name, such as `projects/{project}/locations/{location}`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a Evaluation.
+         *
+         * Create a request for the method "evaluations.get".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Full resource name of Evaluation, such as
+         *        `projects/{project}/locations/{location}/evaluations/{evaluation}`. If the caller does not
+         *        have permission to access the Evaluation, regardless of whether or not it exists, a
+         *        PERMISSION_DENIED error is returned. If the requested Evaluation does not exist, a
+         *        NOT_FOUND error is returned.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaEvaluation> {
+
+          private static final String REST_PATH = "v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/evaluations/[^/]+$");
+
+          /**
+           * Gets a Evaluation.
+           *
+           * Create a request for the method "evaluations.get".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Full resource name of Evaluation, such as
+         *        `projects/{project}/locations/{location}/evaluations/{evaluation}`. If the caller does not
+         *        have permission to access the Evaluation, regardless of whether or not it exists, a
+         *        PERMISSION_DENIED error is returned. If the requested Evaluation does not exist, a
+         *        NOT_FOUND error is returned.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaEvaluation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/evaluations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Full resource name of Evaluation, such as
+           * `projects/{project}/locations/{location}/evaluations/{evaluation}`. If the caller does
+           * not have permission to access the Evaluation, regardless of whether or not it exists, a
+           * PERMISSION_DENIED error is returned. If the requested Evaluation does not exist, a
+           * NOT_FOUND error is returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Full resource name of Evaluation, such as
+         `projects/{project}/locations/{location}/evaluations/{evaluation}`. If the caller does not have
+         permission to access the Evaluation, regardless of whether or not it exists, a PERMISSION_DENIED
+         error is returned. If the requested Evaluation does not exist, a NOT_FOUND error is returned.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Full resource name of Evaluation, such as
+           * `projects/{project}/locations/{location}/evaluations/{evaluation}`. If the caller does
+           * not have permission to access the Evaluation, regardless of whether or not it exists, a
+           * PERMISSION_DENIED error is returned. If the requested Evaluation does not exist, a
+           * NOT_FOUND error is returned.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/evaluations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a list of Evaluations.
+         *
+         * Create a request for the method "evaluations.list".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent location resource name, such as `projects/{project}/locations/{location}`. If
+         *        the caller does not have permission to list Evaluations under this location, regardless of
+         *        whether or not this location exists, a `PERMISSION_DENIED` error is returned.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaListEvaluationsResponse> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/evaluations";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Gets a list of Evaluations.
+           *
+           * Create a request for the method "evaluations.list".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent location resource name, such as `projects/{project}/locations/{location}`. If
+         *        the caller does not have permission to list Evaluations under this location, regardless of
+         *        whether or not this location exists, a `PERMISSION_DENIED` error is returned.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaListEvaluationsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent location resource name, such as
+           * `projects/{project}/locations/{location}`. If the caller does not have permission to
+           * list Evaluations under this location, regardless of whether or not this location
+           * exists, a `PERMISSION_DENIED` error is returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent location resource name, such as `projects/{project}/locations/{location}`. If
+         the caller does not have permission to list Evaluations under this location, regardless of whether
+         or not this location exists, a `PERMISSION_DENIED` error is returned.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent location resource name, such as
+           * `projects/{project}/locations/{location}`. If the caller does not have permission to
+           * list Evaluations under this location, regardless of whether or not this location
+           * exists, a `PERMISSION_DENIED` error is returned.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Maximum number of Evaluations to return. If unspecified, defaults to 100. The maximum
+           * allowed value is 1000. Values above 1000 will be coerced to 1000. If this field is
+           * negative, an `INVALID_ARGUMENT` error is returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Maximum number of Evaluations to return. If unspecified, defaults to 100. The maximum allowed value
+         is 1000. Values above 1000 will be coerced to 1000. If this field is negative, an
+         `INVALID_ARGUMENT` error is returned.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Maximum number of Evaluations to return. If unspecified, defaults to 100. The maximum
+           * allowed value is 1000. Values above 1000 will be coerced to 1000. If this field is
+           * negative, an `INVALID_ARGUMENT` error is returned.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token ListEvaluationsResponse.next_page_token, received from a previous
+           * EvaluationService.ListEvaluations call. Provide this to retrieve the subsequent page.
+           * When paginating, all other parameters provided to EvaluationService.ListEvaluations
+           * must match the call that provided the page token. Otherwise, an `INVALID_ARGUMENT`
+           * error is returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token ListEvaluationsResponse.next_page_token, received from a previous
+         EvaluationService.ListEvaluations call. Provide this to retrieve the subsequent page. When
+         paginating, all other parameters provided to EvaluationService.ListEvaluations must match the call
+         that provided the page token. Otherwise, an `INVALID_ARGUMENT` error is returned.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token ListEvaluationsResponse.next_page_token, received from a previous
+           * EvaluationService.ListEvaluations call. Provide this to retrieve the subsequent page.
+           * When paginating, all other parameters provided to EvaluationService.ListEvaluations
+           * must match the call that provided the page token. Otherwise, an `INVALID_ARGUMENT`
+           * error is returned.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a list of results for a given a Evaluation.
+         *
+         * Create a request for the method "evaluations.listResults".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link ListResults#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param evaluation Required. The evaluation resource name, such as
+         *        `projects/{project}/locations/{location}/evaluations/{evaluation}`. If the caller does not
+         *        have permission to list EvaluationResult under this evaluation, regardless of whether or
+         *        not this evaluation set exists, a `PERMISSION_DENIED` error is returned.
+         * @return the request
+         */
+        public ListResults listResults(java.lang.String evaluation) throws java.io.IOException {
+          ListResults result = new ListResults(evaluation);
+          initialize(result);
+          return result;
+        }
+
+        public class ListResults extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaListEvaluationResultsResponse> {
+
+          private static final String REST_PATH = "v1beta/{+evaluation}:listResults";
+
+          private final java.util.regex.Pattern EVALUATION_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/evaluations/[^/]+$");
+
+          /**
+           * Gets a list of results for a given a Evaluation.
+           *
+           * Create a request for the method "evaluations.listResults".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link ListResults#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * ListResults#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param evaluation Required. The evaluation resource name, such as
+         *        `projects/{project}/locations/{location}/evaluations/{evaluation}`. If the caller does not
+         *        have permission to list EvaluationResult under this evaluation, regardless of whether or
+         *        not this evaluation set exists, a `PERMISSION_DENIED` error is returned.
+           * @since 1.13
+           */
+          protected ListResults(java.lang.String evaluation) {
+            super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaListEvaluationResultsResponse.class);
+            this.evaluation = com.google.api.client.util.Preconditions.checkNotNull(evaluation, "Required parameter evaluation must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(EVALUATION_PATTERN.matcher(evaluation).matches(),
+                  "Parameter evaluation must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/evaluations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ListResults set$Xgafv(java.lang.String $Xgafv) {
+            return (ListResults) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ListResults setAccessToken(java.lang.String accessToken) {
+            return (ListResults) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ListResults setAlt(java.lang.String alt) {
+            return (ListResults) super.setAlt(alt);
+          }
+
+          @Override
+          public ListResults setCallback(java.lang.String callback) {
+            return (ListResults) super.setCallback(callback);
+          }
+
+          @Override
+          public ListResults setFields(java.lang.String fields) {
+            return (ListResults) super.setFields(fields);
+          }
+
+          @Override
+          public ListResults setKey(java.lang.String key) {
+            return (ListResults) super.setKey(key);
+          }
+
+          @Override
+          public ListResults setOauthToken(java.lang.String oauthToken) {
+            return (ListResults) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ListResults setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ListResults) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ListResults setQuotaUser(java.lang.String quotaUser) {
+            return (ListResults) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ListResults setUploadType(java.lang.String uploadType) {
+            return (ListResults) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ListResults setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ListResults) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The evaluation resource name, such as
+           * `projects/{project}/locations/{location}/evaluations/{evaluation}`. If the caller does
+           * not have permission to list EvaluationResult under this evaluation, regardless of
+           * whether or not this evaluation set exists, a `PERMISSION_DENIED` error is returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String evaluation;
+
+          /** Required. The evaluation resource name, such as
+         `projects/{project}/locations/{location}/evaluations/{evaluation}`. If the caller does not have
+         permission to list EvaluationResult under this evaluation, regardless of whether or not this
+         evaluation set exists, a `PERMISSION_DENIED` error is returned.
+           */
+          public java.lang.String getEvaluation() {
+            return evaluation;
+          }
+
+          /**
+           * Required. The evaluation resource name, such as
+           * `projects/{project}/locations/{location}/evaluations/{evaluation}`. If the caller does
+           * not have permission to list EvaluationResult under this evaluation, regardless of
+           * whether or not this evaluation set exists, a `PERMISSION_DENIED` error is returned.
+           */
+          public ListResults setEvaluation(java.lang.String evaluation) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(EVALUATION_PATTERN.matcher(evaluation).matches(),
+                  "Parameter evaluation must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/evaluations/[^/]+$");
+            }
+            this.evaluation = evaluation;
+            return this;
+          }
+
+          /**
+           * Maximum number of EvaluationResult to return. If unspecified, defaults to 100. The
+           * maximum allowed value is 1000. Values above 1000 will be coerced to 1000. If this field
+           * is negative, an `INVALID_ARGUMENT` error is returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Maximum number of EvaluationResult to return. If unspecified, defaults to 100. The maximum allowed
+         value is 1000. Values above 1000 will be coerced to 1000. If this field is negative, an
+         `INVALID_ARGUMENT` error is returned.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Maximum number of EvaluationResult to return. If unspecified, defaults to 100. The
+           * maximum allowed value is 1000. Values above 1000 will be coerced to 1000. If this field
+           * is negative, an `INVALID_ARGUMENT` error is returned.
+           */
+          public ListResults setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token ListEvaluationResultsResponse.next_page_token, received from a previous
+           * EvaluationService.ListEvaluationResults call. Provide this to retrieve the subsequent
+           * page. When paginating, all other parameters provided to
+           * EvaluationService.ListEvaluationResults must match the call that provided the page
+           * token. Otherwise, an `INVALID_ARGUMENT` error is returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token ListEvaluationResultsResponse.next_page_token, received from a previous
+         EvaluationService.ListEvaluationResults call. Provide this to retrieve the subsequent page. When
+         paginating, all other parameters provided to EvaluationService.ListEvaluationResults must match the
+         call that provided the page token. Otherwise, an `INVALID_ARGUMENT` error is returned.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token ListEvaluationResultsResponse.next_page_token, received from a previous
+           * EvaluationService.ListEvaluationResults call. Provide this to retrieve the subsequent
+           * page. When paginating, all other parameters provided to
+           * EvaluationService.ListEvaluationResults must match the call that provided the page
+           * token. Otherwise, an `INVALID_ARGUMENT` error is returned.
+           */
+          public ListResults setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public ListResults set(String parameterName, Object value) {
+            return (ListResults) super.set(parameterName, value);
+          }
+        }
+
+        /**
          * An accessor for creating requests from the Operations collection.
          *
          * <p>The typical use is:</p>
@@ -31689,6 +32415,875 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
       public class SampleQuerySets {
 
         /**
+         * Creates a SampleQuerySet
+         *
+         * Create a request for the method "sampleQuerySets.create".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource name, such as `projects/{project}/locations/{location}`.
+         * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuerySet}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuerySet content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuerySet> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/sampleQuerySets";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a SampleQuerySet
+           *
+           * Create a request for the method "sampleQuerySets.create".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource name, such as `projects/{project}/locations/{location}`.
+           * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuerySet}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuerySet content) {
+            super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuerySet.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource name, such as `projects/{project}/locations/{location}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource name, such as `projects/{project}/locations/{location}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource name, such as `projects/{project}/locations/{location}`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The ID to use for the SampleQuerySet, which will become the final component
+           * of the SampleQuerySet.name. If the caller does not have permission to create the
+           * SampleQuerySet, regardless of whether or not it exists, a `PERMISSION_DENIED` error is
+           * returned. This field must be unique among all SampleQuerySets with the same parent.
+           * Otherwise, an `ALREADY_EXISTS` error is returned. This field must conform to
+           * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63
+           * characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String sampleQuerySetId;
+
+          /** Required. The ID to use for the SampleQuerySet, which will become the final component of the
+         SampleQuerySet.name. If the caller does not have permission to create the SampleQuerySet,
+         regardless of whether or not it exists, a `PERMISSION_DENIED` error is returned. This field must be
+         unique among all SampleQuerySets with the same parent. Otherwise, an `ALREADY_EXISTS` error is
+         returned. This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with
+         a length limit of 63 characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
+           */
+          public java.lang.String getSampleQuerySetId() {
+            return sampleQuerySetId;
+          }
+
+          /**
+           * Required. The ID to use for the SampleQuerySet, which will become the final component
+           * of the SampleQuerySet.name. If the caller does not have permission to create the
+           * SampleQuerySet, regardless of whether or not it exists, a `PERMISSION_DENIED` error is
+           * returned. This field must be unique among all SampleQuerySets with the same parent.
+           * Otherwise, an `ALREADY_EXISTS` error is returned. This field must conform to
+           * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63
+           * characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
+           */
+          public Create setSampleQuerySetId(java.lang.String sampleQuerySetId) {
+            this.sampleQuerySetId = sampleQuerySetId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a SampleQuerySet.
+         *
+         * Create a request for the method "sampleQuerySets.delete".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Full resource name of SampleQuerySet, such as
+         *        `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the caller
+         *        does not have permission to delete the SampleQuerySet, regardless of whether or not it
+         *        exists, a `PERMISSION_DENIED` error is returned. If the SampleQuerySet to delete does not
+         *        exist, a `NOT_FOUND` error is returned.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+$");
+
+          /**
+           * Deletes a SampleQuerySet.
+           *
+           * Create a request for the method "sampleQuerySets.delete".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Full resource name of SampleQuerySet, such as
+         *        `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the caller
+         *        does not have permission to delete the SampleQuerySet, regardless of whether or not it
+         *        exists, a `PERMISSION_DENIED` error is returned. If the SampleQuerySet to delete does not
+         *        exist, a `NOT_FOUND` error is returned.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(DiscoveryEngine.this, "DELETE", REST_PATH, null, com.google.api.services.discoveryengine.v1beta.model.GoogleProtobufEmpty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Full resource name of SampleQuerySet, such as
+           * `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the
+           * caller does not have permission to delete the SampleQuerySet, regardless of whether or
+           * not it exists, a `PERMISSION_DENIED` error is returned. If the SampleQuerySet to delete
+           * does not exist, a `NOT_FOUND` error is returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Full resource name of SampleQuerySet, such as
+         `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the caller does not
+         have permission to delete the SampleQuerySet, regardless of whether or not it exists, a
+         `PERMISSION_DENIED` error is returned. If the SampleQuerySet to delete does not exist, a
+         `NOT_FOUND` error is returned.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Full resource name of SampleQuerySet, such as
+           * `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the
+           * caller does not have permission to delete the SampleQuerySet, regardless of whether or
+           * not it exists, a `PERMISSION_DENIED` error is returned. If the SampleQuerySet to delete
+           * does not exist, a `NOT_FOUND` error is returned.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a SampleQuerySet.
+         *
+         * Create a request for the method "sampleQuerySets.get".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Full resource name of SampleQuerySet, such as
+         *        `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the caller
+         *        does not have permission to access the SampleQuerySet, regardless of whether or not it
+         *        exists, a PERMISSION_DENIED error is returned. If the requested SampleQuerySet does not
+         *        exist, a NOT_FOUND error is returned.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuerySet> {
+
+          private static final String REST_PATH = "v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+$");
+
+          /**
+           * Gets a SampleQuerySet.
+           *
+           * Create a request for the method "sampleQuerySets.get".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Full resource name of SampleQuerySet, such as
+         *        `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the caller
+         *        does not have permission to access the SampleQuerySet, regardless of whether or not it
+         *        exists, a PERMISSION_DENIED error is returned. If the requested SampleQuerySet does not
+         *        exist, a NOT_FOUND error is returned.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuerySet.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Full resource name of SampleQuerySet, such as
+           * `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the
+           * caller does not have permission to access the SampleQuerySet, regardless of whether or
+           * not it exists, a PERMISSION_DENIED error is returned. If the requested SampleQuerySet
+           * does not exist, a NOT_FOUND error is returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Full resource name of SampleQuerySet, such as
+         `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the caller does not
+         have permission to access the SampleQuerySet, regardless of whether or not it exists, a
+         PERMISSION_DENIED error is returned. If the requested SampleQuerySet does not exist, a NOT_FOUND
+         error is returned.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Full resource name of SampleQuerySet, such as
+           * `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the
+           * caller does not have permission to access the SampleQuerySet, regardless of whether or
+           * not it exists, a PERMISSION_DENIED error is returned. If the requested SampleQuerySet
+           * does not exist, a NOT_FOUND error is returned.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a list of SampleQuerySets.
+         *
+         * Create a request for the method "sampleQuerySets.list".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent location resource name, such as `projects/{project}/locations/{location}`. If
+         *        the caller does not have permission to list SampleQuerySets under this location,
+         *        regardless of whether or not this location exists, a `PERMISSION_DENIED` error is
+         *        returned.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaListSampleQuerySetsResponse> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/sampleQuerySets";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Gets a list of SampleQuerySets.
+           *
+           * Create a request for the method "sampleQuerySets.list".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent location resource name, such as `projects/{project}/locations/{location}`. If
+         *        the caller does not have permission to list SampleQuerySets under this location,
+         *        regardless of whether or not this location exists, a `PERMISSION_DENIED` error is
+         *        returned.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaListSampleQuerySetsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent location resource name, such as
+           * `projects/{project}/locations/{location}`. If the caller does not have permission to
+           * list SampleQuerySets under this location, regardless of whether or not this location
+           * exists, a `PERMISSION_DENIED` error is returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent location resource name, such as `projects/{project}/locations/{location}`. If
+         the caller does not have permission to list SampleQuerySets under this location, regardless of
+         whether or not this location exists, a `PERMISSION_DENIED` error is returned.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent location resource name, such as
+           * `projects/{project}/locations/{location}`. If the caller does not have permission to
+           * list SampleQuerySets under this location, regardless of whether or not this location
+           * exists, a `PERMISSION_DENIED` error is returned.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Maximum number of SampleQuerySets to return. If unspecified, defaults to 100. The
+           * maximum allowed value is 1000. Values above 1000 will be coerced to 1000. If this field
+           * is negative, an `INVALID_ARGUMENT` error is returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Maximum number of SampleQuerySets to return. If unspecified, defaults to 100. The maximum allowed
+         value is 1000. Values above 1000 will be coerced to 1000. If this field is negative, an
+         `INVALID_ARGUMENT` error is returned.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Maximum number of SampleQuerySets to return. If unspecified, defaults to 100. The
+           * maximum allowed value is 1000. Values above 1000 will be coerced to 1000. If this field
+           * is negative, an `INVALID_ARGUMENT` error is returned.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token ListSampleQuerySetsResponse.next_page_token, received from a previous
+           * SampleQuerySetService.ListSampleQuerySets call. Provide this to retrieve the subsequent
+           * page. When paginating, all other parameters provided to
+           * SampleQuerySetService.ListSampleQuerySets must match the call that provided the page
+           * token. Otherwise, an `INVALID_ARGUMENT` error is returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token ListSampleQuerySetsResponse.next_page_token, received from a previous
+         SampleQuerySetService.ListSampleQuerySets call. Provide this to retrieve the subsequent page. When
+         paginating, all other parameters provided to SampleQuerySetService.ListSampleQuerySets must match
+         the call that provided the page token. Otherwise, an `INVALID_ARGUMENT` error is returned.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token ListSampleQuerySetsResponse.next_page_token, received from a previous
+           * SampleQuerySetService.ListSampleQuerySets call. Provide this to retrieve the subsequent
+           * page. When paginating, all other parameters provided to
+           * SampleQuerySetService.ListSampleQuerySets must match the call that provided the page
+           * token. Otherwise, an `INVALID_ARGUMENT` error is returned.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a SampleQuerySet.
+         *
+         * Create a request for the method "sampleQuerySets.patch".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Immutable. The full resource name of the SampleQuerySet, in the format of
+         *        `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. This field
+         *        must be a UTF-8 encoded string with a length limit of 1024 characters.
+         * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuerySet}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuerySet content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuerySet> {
+
+          private static final String REST_PATH = "v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+$");
+
+          /**
+           * Updates a SampleQuerySet.
+           *
+           * Create a request for the method "sampleQuerySets.patch".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Immutable. The full resource name of the SampleQuerySet, in the format of
+         *        `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. This field
+         *        must be a UTF-8 encoded string with a length limit of 1024 characters.
+           * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuerySet}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuerySet content) {
+            super(DiscoveryEngine.this, "PATCH", REST_PATH, content, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuerySet.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Immutable. The full resource name of the SampleQuerySet, in the format of
+           * `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. This field
+           * must be a UTF-8 encoded string with a length limit of 1024 characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Immutable. The full resource name of the SampleQuerySet, in the format of
+         `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. This field must be a
+         UTF-8 encoded string with a length limit of 1024 characters.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Immutable. The full resource name of the SampleQuerySet, in the format of
+           * `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. This field
+           * must be a UTF-8 encoded string with a length limit of 1024 characters.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Indicates which fields in the provided imported 'sample query set' to update. If not
+           * set, will by default update all fields.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Indicates which fields in the provided imported 'sample query set' to update. If not set, will by
+         default update all fields.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Indicates which fields in the provided imported 'sample query set' to update. If not
+           * set, will by default update all fields.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+        /**
          * An accessor for creating requests from the Operations collection.
          *
          * <p>The typical use is:</p>
@@ -31846,6 +33441,1059 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             @Override
             public Get set(String parameterName, Object value) {
               return (Get) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the SampleQueries collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+         *   {@code DiscoveryEngine.SampleQueries.List request = discoveryengine.sampleQueries().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public SampleQueries sampleQueries() {
+          return new SampleQueries();
+        }
+
+        /**
+         * The "sampleQueries" collection of methods.
+         */
+        public class SampleQueries {
+
+          /**
+           * Creates a SampleQuery
+           *
+           * Create a request for the method "sampleQueries.create".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource name, such as
+           *        `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`.
+           * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuery}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuery content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuery> {
+
+            private static final String REST_PATH = "v1beta/{+parent}/sampleQueries";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+$");
+
+            /**
+             * Creates a SampleQuery
+             *
+             * Create a request for the method "sampleQueries.create".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource name, such as
+           *        `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`.
+             * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuery}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuery content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuery.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource name, such as
+             * `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource name, such as
+           `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource name, such as
+             * `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`.
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The ID to use for the SampleQuery, which will become the final component of
+             * the SampleQuery.name. If the caller does not have permission to create the
+             * SampleQuery, regardless of whether or not it exists, a `PERMISSION_DENIED` error is
+             * returned. This field must be unique among all SampleQuerys with the same parent.
+             * Otherwise, an `ALREADY_EXISTS` error is returned. This field must conform to
+             * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63
+             * characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String sampleQueryId;
+
+            /** Required. The ID to use for the SampleQuery, which will become the final component of the
+           SampleQuery.name. If the caller does not have permission to create the SampleQuery, regardless of
+           whether or not it exists, a `PERMISSION_DENIED` error is returned. This field must be unique among
+           all SampleQuerys with the same parent. Otherwise, an `ALREADY_EXISTS` error is returned. This field
+           must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63
+           characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
+             */
+            public java.lang.String getSampleQueryId() {
+              return sampleQueryId;
+            }
+
+            /**
+             * Required. The ID to use for the SampleQuery, which will become the final component of
+             * the SampleQuery.name. If the caller does not have permission to create the
+             * SampleQuery, regardless of whether or not it exists, a `PERMISSION_DENIED` error is
+             * returned. This field must be unique among all SampleQuerys with the same parent.
+             * Otherwise, an `ALREADY_EXISTS` error is returned. This field must conform to
+             * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63
+             * characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
+             */
+            public Create setSampleQueryId(java.lang.String sampleQueryId) {
+              this.sampleQueryId = sampleQueryId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a SampleQuery.
+           *
+           * Create a request for the method "sampleQueries.delete".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Full resource name of SampleQuery, such as `projects/{project}/locations/{location}/sample
+           *        QuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. If the caller does not have
+           *        permission to delete the SampleQuery, regardless of whether or not it exists, a
+           *        `PERMISSION_DENIED` error is returned. If the SampleQuery to delete does not exist, a
+           *        `NOT_FOUND` error is returned.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleProtobufEmpty> {
+
+            private static final String REST_PATH = "v1beta/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+/sampleQueries/[^/]+$");
+
+            /**
+             * Deletes a SampleQuery.
+             *
+             * Create a request for the method "sampleQueries.delete".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Full resource name of SampleQuery, such as `projects/{project}/locations/{location}/sample
+           *        QuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. If the caller does not have
+           *        permission to delete the SampleQuery, regardless of whether or not it exists, a
+           *        `PERMISSION_DENIED` error is returned. If the SampleQuery to delete does not exist, a
+           *        `NOT_FOUND` error is returned.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(DiscoveryEngine.this, "DELETE", REST_PATH, null, com.google.api.services.discoveryengine.v1beta.model.GoogleProtobufEmpty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+/sampleQueries/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Full resource name of SampleQuery, such as `projects/{project}/locations/{l
+             * ocation}/sampleQuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. If the caller
+             * does not have permission to delete the SampleQuery, regardless of whether or not it
+             * exists, a `PERMISSION_DENIED` error is returned. If the SampleQuery to delete does
+             * not exist, a `NOT_FOUND` error is returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Full resource name of SampleQuery, such as `projects/{project}/locations/{location}/sampl
+           eQuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. If the caller does not have permission to
+           delete the SampleQuery, regardless of whether or not it exists, a `PERMISSION_DENIED` error is
+           returned. If the SampleQuery to delete does not exist, a `NOT_FOUND` error is returned.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Full resource name of SampleQuery, such as `projects/{project}/locations/{l
+             * ocation}/sampleQuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. If the caller
+             * does not have permission to delete the SampleQuery, regardless of whether or not it
+             * exists, a `PERMISSION_DENIED` error is returned. If the SampleQuery to delete does
+             * not exist, a `NOT_FOUND` error is returned.
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+/sampleQueries/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets a SampleQuery.
+           *
+           * Create a request for the method "sampleQueries.get".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Full resource name of SampleQuery, such as `projects/{project}/locations/{location}/sample
+           *        QuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. If the caller does not have
+           *        permission to access the SampleQuery, regardless of whether or not it exists, a
+           *        PERMISSION_DENIED error is returned. If the requested SampleQuery does not exist, a
+           *        NOT_FOUND error is returned.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuery> {
+
+            private static final String REST_PATH = "v1beta/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+/sampleQueries/[^/]+$");
+
+            /**
+             * Gets a SampleQuery.
+             *
+             * Create a request for the method "sampleQueries.get".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Full resource name of SampleQuery, such as `projects/{project}/locations/{location}/sample
+           *        QuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. If the caller does not have
+           *        permission to access the SampleQuery, regardless of whether or not it exists, a
+           *        PERMISSION_DENIED error is returned. If the requested SampleQuery does not exist, a
+           *        NOT_FOUND error is returned.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuery.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+/sampleQueries/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Full resource name of SampleQuery, such as `projects/{project}/locations/{l
+             * ocation}/sampleQuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. If the caller
+             * does not have permission to access the SampleQuery, regardless of whether or not it
+             * exists, a PERMISSION_DENIED error is returned. If the requested SampleQuery does not
+             * exist, a NOT_FOUND error is returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Full resource name of SampleQuery, such as `projects/{project}/locations/{location}/sampl
+           eQuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. If the caller does not have permission to
+           access the SampleQuery, regardless of whether or not it exists, a PERMISSION_DENIED error is
+           returned. If the requested SampleQuery does not exist, a NOT_FOUND error is returned.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Full resource name of SampleQuery, such as `projects/{project}/locations/{l
+             * ocation}/sampleQuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. If the caller
+             * does not have permission to access the SampleQuery, regardless of whether or not it
+             * exists, a PERMISSION_DENIED error is returned. If the requested SampleQuery does not
+             * exist, a NOT_FOUND error is returned.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+/sampleQueries/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Bulk import of multiple SampleQuerys. Sample queries that already exist may be deleted. Note: It
+           * is possible for a subset of the SampleQuerys to be successfully imported.
+           *
+           * Create a request for the method "sampleQueries.import".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link DiscoveryEngineImport#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param parent Required. The parent sample query set resource name, such as
+           *        `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the caller
+           *        does not have permission to list SampleQuerys under this sample query set, regardless of
+           *        whether or not this sample query set exists, a `PERMISSION_DENIED` error is returned.
+           * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaImportSampleQueriesRequest}
+           * @return the request
+           */
+          public DiscoveryEngineImport discoveryengineImport(java.lang.String parent, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaImportSampleQueriesRequest content) throws java.io.IOException {
+            DiscoveryEngineImport result = new DiscoveryEngineImport(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class DiscoveryEngineImport extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1beta/{+parent}/sampleQueries:import";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+$");
+
+            /**
+             * Bulk import of multiple SampleQuerys. Sample queries that already exist may be deleted. Note:
+             * It is possible for a subset of the SampleQuerys to be successfully imported.
+             *
+             * Create a request for the method "sampleQueries.import".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link DiscoveryEngineImport#execute()} method to invoke the
+             * remote operation. <p> {@link DiscoveryEngineImport#initialize(com.google.api.client.googleapis.
+             * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent sample query set resource name, such as
+           *        `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the caller
+           *        does not have permission to list SampleQuerys under this sample query set, regardless of
+           *        whether or not this sample query set exists, a `PERMISSION_DENIED` error is returned.
+             * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaImportSampleQueriesRequest}
+             * @since 1.13
+             */
+            protected DiscoveryEngineImport(java.lang.String parent, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaImportSampleQueriesRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1beta.model.GoogleLongrunningOperation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+$");
+              }
+            }
+
+            @Override
+            public DiscoveryEngineImport set$Xgafv(java.lang.String $Xgafv) {
+              return (DiscoveryEngineImport) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public DiscoveryEngineImport setAccessToken(java.lang.String accessToken) {
+              return (DiscoveryEngineImport) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public DiscoveryEngineImport setAlt(java.lang.String alt) {
+              return (DiscoveryEngineImport) super.setAlt(alt);
+            }
+
+            @Override
+            public DiscoveryEngineImport setCallback(java.lang.String callback) {
+              return (DiscoveryEngineImport) super.setCallback(callback);
+            }
+
+            @Override
+            public DiscoveryEngineImport setFields(java.lang.String fields) {
+              return (DiscoveryEngineImport) super.setFields(fields);
+            }
+
+            @Override
+            public DiscoveryEngineImport setKey(java.lang.String key) {
+              return (DiscoveryEngineImport) super.setKey(key);
+            }
+
+            @Override
+            public DiscoveryEngineImport setOauthToken(java.lang.String oauthToken) {
+              return (DiscoveryEngineImport) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public DiscoveryEngineImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (DiscoveryEngineImport) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public DiscoveryEngineImport setQuotaUser(java.lang.String quotaUser) {
+              return (DiscoveryEngineImport) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public DiscoveryEngineImport setUploadType(java.lang.String uploadType) {
+              return (DiscoveryEngineImport) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public DiscoveryEngineImport setUploadProtocol(java.lang.String uploadProtocol) {
+              return (DiscoveryEngineImport) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent sample query set resource name, such as
+             * `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the
+             * caller does not have permission to list SampleQuerys under this sample query set,
+             * regardless of whether or not this sample query set exists, a `PERMISSION_DENIED`
+             * error is returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent sample query set resource name, such as
+           `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the caller does not
+           have permission to list SampleQuerys under this sample query set, regardless of whether or not this
+           sample query set exists, a `PERMISSION_DENIED` error is returned.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent sample query set resource name, such as
+             * `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the
+             * caller does not have permission to list SampleQuerys under this sample query set,
+             * regardless of whether or not this sample query set exists, a `PERMISSION_DENIED`
+             * error is returned.
+             */
+            public DiscoveryEngineImport setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public DiscoveryEngineImport set(String parameterName, Object value) {
+              return (DiscoveryEngineImport) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets a list of SampleQuerys.
+           *
+           * Create a request for the method "sampleQueries.list".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent sample query set resource name, such as
+           *        `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the caller
+           *        does not have permission to list SampleQuerys under this sample query set, regardless of
+           *        whether or not this sample query set exists, a `PERMISSION_DENIED` error is returned.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaListSampleQueriesResponse> {
+
+            private static final String REST_PATH = "v1beta/{+parent}/sampleQueries";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+$");
+
+            /**
+             * Gets a list of SampleQuerys.
+             *
+             * Create a request for the method "sampleQueries.list".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent sample query set resource name, such as
+           *        `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the caller
+           *        does not have permission to list SampleQuerys under this sample query set, regardless of
+           *        whether or not this sample query set exists, a `PERMISSION_DENIED` error is returned.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaListSampleQueriesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent sample query set resource name, such as
+             * `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the
+             * caller does not have permission to list SampleQuerys under this sample query set,
+             * regardless of whether or not this sample query set exists, a `PERMISSION_DENIED`
+             * error is returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent sample query set resource name, such as
+           `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the caller does not
+           have permission to list SampleQuerys under this sample query set, regardless of whether or not this
+           sample query set exists, a `PERMISSION_DENIED` error is returned.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent sample query set resource name, such as
+             * `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the
+             * caller does not have permission to list SampleQuerys under this sample query set,
+             * regardless of whether or not this sample query set exists, a `PERMISSION_DENIED`
+             * error is returned.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Maximum number of SampleQuerys to return. If unspecified, defaults to 100. The
+             * maximum allowed value is 1000. Values above 1000 will be coerced to 1000. If this
+             * field is negative, an `INVALID_ARGUMENT` error is returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Maximum number of SampleQuerys to return. If unspecified, defaults to 100. The maximum allowed
+           value is 1000. Values above 1000 will be coerced to 1000. If this field is negative, an
+           `INVALID_ARGUMENT` error is returned.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Maximum number of SampleQuerys to return. If unspecified, defaults to 100. The
+             * maximum allowed value is 1000. Values above 1000 will be coerced to 1000. If this
+             * field is negative, an `INVALID_ARGUMENT` error is returned.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A page token ListSampleQueriesResponse.next_page_token, received from a previous
+             * SampleQueryService.ListSampleQueries call. Provide this to retrieve the subsequent
+             * page. When paginating, all other parameters provided to
+             * SampleQueryService.ListSampleQueries must match the call that provided the page
+             * token. Otherwise, an `INVALID_ARGUMENT` error is returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A page token ListSampleQueriesResponse.next_page_token, received from a previous
+           SampleQueryService.ListSampleQueries call. Provide this to retrieve the subsequent page. When
+           paginating, all other parameters provided to SampleQueryService.ListSampleQueries must match the
+           call that provided the page token. Otherwise, an `INVALID_ARGUMENT` error is returned.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A page token ListSampleQueriesResponse.next_page_token, received from a previous
+             * SampleQueryService.ListSampleQueries call. Provide this to retrieve the subsequent
+             * page. When paginating, all other parameters provided to
+             * SampleQueryService.ListSampleQueries must match the call that provided the page
+             * token. Otherwise, an `INVALID_ARGUMENT` error is returned.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates a SampleQuery.
+           *
+           * Create a request for the method "sampleQueries.patch".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Immutable. The full resource name of the sample query, in the format of `projects/{project}/location
+           *        s/{location}/sampleQuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. This field
+           *        must be a UTF-8 encoded string with a length limit of 1024 characters.
+           * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuery}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuery content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuery> {
+
+            private static final String REST_PATH = "v1beta/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+/sampleQueries/[^/]+$");
+
+            /**
+             * Updates a SampleQuery.
+             *
+             * Create a request for the method "sampleQueries.patch".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Immutable. The full resource name of the sample query, in the format of `projects/{project}/location
+           *        s/{location}/sampleQuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. This field
+           *        must be a UTF-8 encoded string with a length limit of 1024 characters.
+             * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuery}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuery content) {
+              super(DiscoveryEngine.this, "PATCH", REST_PATH, content, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuery.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+/sampleQueries/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Immutable. The full resource name of the sample query, in the format of `projects/{pr
+             * oject}/locations/{location}/sampleQuerySets/{sampleQuerySet}/sampleQueries/{sampleQue
+             * ry}`. This field must be a UTF-8 encoded string with a length limit of 1024
+             * characters.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Immutable. The full resource name of the sample query, in the format of `projects/{project}/locatio
+           ns/{location}/sampleQuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. This field must be a
+           UTF-8 encoded string with a length limit of 1024 characters.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Immutable. The full resource name of the sample query, in the format of `projects/{pr
+             * oject}/locations/{location}/sampleQuerySets/{sampleQuerySet}/sampleQueries/{sampleQue
+             * ry}`. This field must be a UTF-8 encoded string with a length limit of 1024
+             * characters.
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+/sampleQueries/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Indicates which fields in the provided imported 'simple query' to update. If not set,
+             * will by default update all fields.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Indicates which fields in the provided imported 'simple query' to update. If not set, will by
+           default update all fields.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Indicates which fields in the provided imported 'simple query' to update. If not set,
+             * will by default update all fields.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
             }
           }
 

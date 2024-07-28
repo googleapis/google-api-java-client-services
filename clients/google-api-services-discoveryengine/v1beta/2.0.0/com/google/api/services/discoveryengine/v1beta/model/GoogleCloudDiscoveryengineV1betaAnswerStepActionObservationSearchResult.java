@@ -52,8 +52,7 @@ public final class GoogleCloudDiscoveryengineV1betaAnswerStepActionObservationSe
 
   /**
    * Data representation. The structured JSON data for the document. It's populated from the struct
-   * data from the Document (code pointer: http://shortn/_objzAfIiHq), or the Chunk in search result
-   * (code pointer: http://shortn/_Ipo6KFFGBL).
+   * data from the Document , or the Chunk in search result .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,8 +125,7 @@ public final class GoogleCloudDiscoveryengineV1betaAnswerStepActionObservationSe
 
   /**
    * Data representation. The structured JSON data for the document. It's populated from the struct
-   * data from the Document (code pointer: http://shortn/_objzAfIiHq), or the Chunk in search result
-   * (code pointer: http://shortn/_Ipo6KFFGBL).
+   * data from the Document , or the Chunk in search result .
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getStructData() {
@@ -136,8 +134,7 @@ public final class GoogleCloudDiscoveryengineV1betaAnswerStepActionObservationSe
 
   /**
    * Data representation. The structured JSON data for the document. It's populated from the struct
-   * data from the Document (code pointer: http://shortn/_objzAfIiHq), or the Chunk in search result
-   * (code pointer: http://shortn/_Ipo6KFFGBL).
+   * data from the Document , or the Chunk in search result .
    * @param structData structData or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaAnswerStepActionObservationSearchResult setStructData(java.util.Map<String, java.lang.Object> structData) {

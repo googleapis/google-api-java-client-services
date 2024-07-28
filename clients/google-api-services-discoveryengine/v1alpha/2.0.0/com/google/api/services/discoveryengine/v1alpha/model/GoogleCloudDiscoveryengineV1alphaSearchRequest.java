@@ -261,6 +261,17 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   private GoogleCloudDiscoveryengineV1alphaSearchRequestSearchAsYouTypeSpec searchAsYouTypeSpec;
 
   /**
+   * Required. The resource name of the Search serving config, such as `projects/locations/global/co
+   * llections/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
+   * ions/global/collections/default_collection/dataStores/default_data_store/servingConfigs/default
+   * _serving_config`. This field is used to identify the serving configuration name, set of models
+   * used to make the search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String servingConfig;
+
+  /**
    * The session resource name. Optional. Session allows users to do multi-turn /search API calls or
    * coordination between /search API calls and /answer API calls. Example #1 (multi-turn /search
    * API calls): 1. Call /search API with the auto-session mode (see below). 2. Call /search API
@@ -863,6 +874,31 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setSearchAsYouTypeSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestSearchAsYouTypeSpec searchAsYouTypeSpec) {
     this.searchAsYouTypeSpec = searchAsYouTypeSpec;
+    return this;
+  }
+
+  /**
+   * Required. The resource name of the Search serving config, such as `projects/locations/global/co
+   * llections/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
+   * ions/global/collections/default_collection/dataStores/default_data_store/servingConfigs/default
+   * _serving_config`. This field is used to identify the serving configuration name, set of models
+   * used to make the search.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServingConfig() {
+    return servingConfig;
+  }
+
+  /**
+   * Required. The resource name of the Search serving config, such as `projects/locations/global/co
+   * llections/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
+   * ions/global/collections/default_collection/dataStores/default_data_store/servingConfigs/default
+   * _serving_config`. This field is used to identify the serving configuration name, set of models
+   * used to make the search.
+   * @param servingConfig servingConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequest setServingConfig(java.lang.String servingConfig) {
+    this.servingConfig = servingConfig;
     return this;
   }
 

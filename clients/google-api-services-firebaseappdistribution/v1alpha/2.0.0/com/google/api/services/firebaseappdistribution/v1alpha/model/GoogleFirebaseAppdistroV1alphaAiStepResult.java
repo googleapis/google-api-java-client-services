@@ -31,6 +31,20 @@ package com.google.api.services.firebaseappdistribution.v1alpha.model;
 public final class GoogleFirebaseAppdistroV1alphaAiStepResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Details for an assertion step.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleFirebaseAppdistroV1alphaAssertionDetails assertionDetails;
+
+  /**
+   * Output only. Details for a goal step.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleFirebaseAppdistroV1alphaGoalDetails goalDetails;
+
+  /**
    * Output only. The current state of the step
    * The value may be {@code null}.
    */
@@ -43,6 +57,40 @@ public final class GoogleFirebaseAppdistroV1alphaAiStepResult extends com.google
    */
   @com.google.api.client.util.Key
   private GoogleFirebaseAppdistroV1alphaAiStep step;
+
+  /**
+   * Output only. Details for an assertion step.
+   * @return value or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaAssertionDetails getAssertionDetails() {
+    return assertionDetails;
+  }
+
+  /**
+   * Output only. Details for an assertion step.
+   * @param assertionDetails assertionDetails or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaAiStepResult setAssertionDetails(GoogleFirebaseAppdistroV1alphaAssertionDetails assertionDetails) {
+    this.assertionDetails = assertionDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Details for a goal step.
+   * @return value or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaGoalDetails getGoalDetails() {
+    return goalDetails;
+  }
+
+  /**
+   * Output only. Details for a goal step.
+   * @param goalDetails goalDetails or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaAiStepResult setGoalDetails(GoogleFirebaseAppdistroV1alphaGoalDetails goalDetails) {
+    this.goalDetails = goalDetails;
+    return this;
+  }
 
   /**
    * Output only. The current state of the step

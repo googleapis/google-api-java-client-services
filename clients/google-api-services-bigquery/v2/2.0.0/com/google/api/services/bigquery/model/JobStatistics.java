@@ -59,6 +59,14 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   private DataMaskingStatistics dataMaskingStatistics;
 
   /**
+   * Output only. Name of edition corresponding to the reservation for this job at the time of this
+   * update.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String edition;
+
+  /**
    * Output only. End time of this job, in milliseconds since the epoch. This field will be present
    * whenever a job is in the DONE state.
    * The value may be {@code null}.
@@ -259,6 +267,25 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
    */
   public JobStatistics setDataMaskingStatistics(DataMaskingStatistics dataMaskingStatistics) {
     this.dataMaskingStatistics = dataMaskingStatistics;
+    return this;
+  }
+
+  /**
+   * Output only. Name of edition corresponding to the reservation for this job at the time of this
+   * update.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEdition() {
+    return edition;
+  }
+
+  /**
+   * Output only. Name of edition corresponding to the reservation for this job at the time of this
+   * update.
+   * @param edition edition or {@code null} for none
+   */
+  public JobStatistics setEdition(java.lang.String edition) {
+    this.edition = edition;
     return this;
   }
 

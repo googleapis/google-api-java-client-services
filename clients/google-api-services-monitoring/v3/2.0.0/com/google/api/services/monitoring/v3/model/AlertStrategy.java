@@ -45,8 +45,8 @@ public final class AlertStrategy extends com.google.api.client.json.GenericJson 
   private java.util.List<NotificationChannelStrategy> notificationChannelStrategy;
 
   /**
-   * Required for alert policies with a LogMatch condition.This limit is not implemented for alert
-   * policies that are not log-based.
+   * Required for log-based alert policies, i.e. policies with a LogMatch condition.This limit is
+   * not implemented for alert policies that do not have a LogMatch condition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,8 +87,8 @@ public final class AlertStrategy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required for alert policies with a LogMatch condition.This limit is not implemented for alert
-   * policies that are not log-based.
+   * Required for log-based alert policies, i.e. policies with a LogMatch condition.This limit is
+   * not implemented for alert policies that do not have a LogMatch condition.
    * @return value or {@code null} for none
    */
   public NotificationRateLimit getNotificationRateLimit() {
@@ -96,8 +96,8 @@ public final class AlertStrategy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required for alert policies with a LogMatch condition.This limit is not implemented for alert
-   * policies that are not log-based.
+   * Required for log-based alert policies, i.e. policies with a LogMatch condition.This limit is
+   * not implemented for alert policies that do not have a LogMatch condition.
    * @param notificationRateLimit notificationRateLimit or {@code null} for none
    */
   public AlertStrategy setNotificationRateLimit(NotificationRateLimit notificationRateLimit) {

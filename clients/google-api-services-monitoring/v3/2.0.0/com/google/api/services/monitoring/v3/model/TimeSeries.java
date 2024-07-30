@@ -32,6 +32,15 @@ package com.google.api.services.monitoring.v3.model;
 public final class TimeSeries extends com.google.api.client.json.GenericJson {
 
   /**
+   * Input only. A detailed description of the time series that will be associated with the
+   * google.api.MetricDescriptor for the metric. Once set, this field cannot be changed through
+   * CreateTimeSeries.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
    * Output only. The associated monitored resource metadata. When reading a time series, this field
    * will include metadata labels that are explicitly named in the reduction. When creating a time
    * series, this field is ignored.
@@ -88,7 +97,7 @@ public final class TimeSeries extends com.google.api.client.json.GenericJson {
   /**
    * The units in which the metric value is reported. It is only applicable if the value_type is
    * INT64, DOUBLE, or DISTRIBUTION. The unit defines the representation of the stored metric
-   * values.
+   * values. This field can only be changed through CreateTimeSeries when it is empty or "1".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,6 +112,27 @@ public final class TimeSeries extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String valueType;
+
+  /**
+   * Input only. A detailed description of the time series that will be associated with the
+   * google.api.MetricDescriptor for the metric. Once set, this field cannot be changed through
+   * CreateTimeSeries.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Input only. A detailed description of the time series that will be associated with the
+   * google.api.MetricDescriptor for the metric. Once set, this field cannot be changed through
+   * CreateTimeSeries.
+   * @param description description or {@code null} for none
+   */
+  public TimeSeries setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
 
   /**
    * Output only. The associated monitored resource metadata. When reading a time series, this field
@@ -218,7 +248,7 @@ public final class TimeSeries extends com.google.api.client.json.GenericJson {
   /**
    * The units in which the metric value is reported. It is only applicable if the value_type is
    * INT64, DOUBLE, or DISTRIBUTION. The unit defines the representation of the stored metric
-   * values.
+   * values. This field can only be changed through CreateTimeSeries when it is empty or "1".
    * @return value or {@code null} for none
    */
   public java.lang.String getUnit() {
@@ -228,7 +258,7 @@ public final class TimeSeries extends com.google.api.client.json.GenericJson {
   /**
    * The units in which the metric value is reported. It is only applicable if the value_type is
    * INT64, DOUBLE, or DISTRIBUTION. The unit defines the representation of the stored metric
-   * values.
+   * values. This field can only be changed through CreateTimeSeries when it is empty or "1".
    * @param unit unit or {@code null} for none
    */
   public TimeSeries setUnit(java.lang.String unit) {

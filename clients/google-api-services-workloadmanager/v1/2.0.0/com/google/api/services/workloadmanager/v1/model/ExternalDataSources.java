@@ -30,7 +30,9 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class ExternalDataSources extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The asset type of the external data source must be one of go/cai-asset-types
+   * Required. The asset type of the external data source this can be one of go/cai-asset-types to
+   * override the default asset type or it can be a custom type defined by the user custom type must
+   * match the asset type in the rule
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +61,9 @@ public final class ExternalDataSources extends com.google.api.client.json.Generi
   private java.lang.String uri;
 
   /**
-   * Required. The asset type of the external data source must be one of go/cai-asset-types
+   * Required. The asset type of the external data source this can be one of go/cai-asset-types to
+   * override the default asset type or it can be a custom type defined by the user custom type must
+   * match the asset type in the rule
    * @return value or {@code null} for none
    */
   public java.lang.String getAssetType() {
@@ -67,7 +71,9 @@ public final class ExternalDataSources extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The asset type of the external data source must be one of go/cai-asset-types
+   * Required. The asset type of the external data source this can be one of go/cai-asset-types to
+   * override the default asset type or it can be a custom type defined by the user custom type must
+   * match the asset type in the rule
    * @param assetType assetType or {@code null} for none
    */
   public ExternalDataSources setAssetType(java.lang.String assetType) {

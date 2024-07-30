@@ -41,28 +41,28 @@ public class HangoutsChatScopes {
   /** Private Service: https://www.googleapis.com/auth/chat.bot. */
   public static final String CHAT_BOT = "https://www.googleapis.com/auth/chat.bot";
 
-  /** Delete conversations and spaces & remove access to associated files in Google Chat. */
+  /** Delete conversations and spaces and remove access to associated files in Google Chat. */
   public static final String CHAT_DELETE = "https://www.googleapis.com/auth/chat.delete";
 
   /** Import spaces, messages, and memberships into Google Chat.. */
   public static final String CHAT_IMPORT = "https://www.googleapis.com/auth/chat.import";
 
-  /** View, add, update, and remove members from conversations in Google Chat. */
+  /** See, add, update, and remove members from conversations and spaces in Google Chat. */
   public static final String CHAT_MEMBERSHIPS = "https://www.googleapis.com/auth/chat.memberships";
 
-  /** Add and remove itself from conversations in Google Chat. */
+  /** Add and remove itself from conversations and spaces in Google Chat. */
   public static final String CHAT_MEMBERSHIPS_APP = "https://www.googleapis.com/auth/chat.memberships.app";
 
   /** View members in Google Chat conversations.. */
   public static final String CHAT_MEMBERSHIPS_READONLY = "https://www.googleapis.com/auth/chat.memberships.readonly";
 
-  /** View, compose, send, update, and delete messages, and add, view, and delete reactions to messages.. */
+  /** See, compose, send, update, and delete messages and their associated attachments, and add, see, and delete reactions to messages.. */
   public static final String CHAT_MESSAGES = "https://www.googleapis.com/auth/chat.messages";
 
   /** Compose and send messages in Google Chat. */
   public static final String CHAT_MESSAGES_CREATE = "https://www.googleapis.com/auth/chat.messages.create";
 
-  /** View, add, and delete reactions to messages in Google Chat. */
+  /** See, add, and delete reactions to messages in Google Chat. */
   public static final String CHAT_MESSAGES_REACTIONS = "https://www.googleapis.com/auth/chat.messages.reactions";
 
   /** Add reactions to messages in Google Chat. */
@@ -71,13 +71,13 @@ public class HangoutsChatScopes {
   /** View reactions to messages in Google Chat. */
   public static final String CHAT_MESSAGES_REACTIONS_READONLY = "https://www.googleapis.com/auth/chat.messages.reactions.readonly";
 
-  /** View messages and reactions in Google Chat. */
+  /** See messages and their associated reactions and attachments in Google Chat. */
   public static final String CHAT_MESSAGES_READONLY = "https://www.googleapis.com/auth/chat.messages.readonly";
 
-  /** Create conversations and spaces and see or edit metadata (including history settings and access settings) in Google Chat. */
+  /** Create conversations and spaces and see or update metadata (including history settings and access settings) in Google Chat. */
   public static final String CHAT_SPACES = "https://www.googleapis.com/auth/chat.spaces";
 
-  /** Create new conversations in Google Chat. */
+  /** Create new conversations and spaces in Google Chat. */
   public static final String CHAT_SPACES_CREATE = "https://www.googleapis.com/auth/chat.spaces.create";
 
   /** View chat and spaces in Google Chat. */

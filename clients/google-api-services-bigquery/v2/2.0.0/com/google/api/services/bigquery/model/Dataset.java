@@ -35,7 +35,10 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
    * the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the
    * following entities: access.specialGroup: projectReaders; access.role: READER;
    * access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners;
-   * access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;
+   * access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER; If you
+   * patch a dataset, then this field is overwritten by the patched dataset's access field. To add
+   * entities, you must supply the entire existing access array in addition to any new entities that
+   * you want to add.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -285,7 +288,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private java.lang.String storageBillingModel;
 
   /**
-   * Output only. Tags for the Dataset.
+   * Output only. Tags for the dataset. To provide tags as inputs, use the `resourceTags` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -312,7 +315,10 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
    * the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the
    * following entities: access.specialGroup: projectReaders; access.role: READER;
    * access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners;
-   * access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;
+   * access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER; If you
+   * patch a dataset, then this field is overwritten by the patched dataset's access field. To add
+   * entities, you must supply the entire existing access array in addition to any new entities that
+   * you want to add.
    * @return value or {@code null} for none
    */
   public java.util.List<Access> getAccess() {
@@ -325,7 +331,10 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
    * the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the
    * following entities: access.specialGroup: projectReaders; access.role: READER;
    * access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners;
-   * access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;
+   * access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER; If you
+   * patch a dataset, then this field is overwritten by the patched dataset's access field. To add
+   * entities, you must supply the entire existing access array in addition to any new entities that
+   * you want to add.
    * @param access access or {@code null} for none
    */
   public Dataset setAccess(java.util.List<Access> access) {
@@ -889,7 +898,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Tags for the Dataset.
+   * Output only. Tags for the dataset. To provide tags as inputs, use the `resourceTags` field.
    * @return value or {@code null} for none
    */
   public java.util.List<Tags> getTags() {
@@ -897,7 +906,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Tags for the Dataset.
+   * Output only. Tags for the dataset. To provide tags as inputs, use the `resourceTags` field.
    * @param tags tags or {@code null} for none
    */
   public Dataset setTags(java.util.List<Tags> tags) {

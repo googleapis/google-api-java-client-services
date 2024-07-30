@@ -30,6 +30,14 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class IsolationExpectations extends com.google.api.client.json.GenericJson {
 
   /**
+   * Explicit overrides for ZI and ZS requirements to be used for resources that should be excluded
+   * from ZI/ZS verification logic.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RequirementOverride requirementOverride;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,6 +82,25 @@ public final class IsolationExpectations extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.String zsRegionState;
+
+  /**
+   * Explicit overrides for ZI and ZS requirements to be used for resources that should be excluded
+   * from ZI/ZS verification logic.
+   * @return value or {@code null} for none
+   */
+  public RequirementOverride getRequirementOverride() {
+    return requirementOverride;
+  }
+
+  /**
+   * Explicit overrides for ZI and ZS requirements to be used for resources that should be excluded
+   * from ZI/ZS verification logic.
+   * @param requirementOverride requirementOverride or {@code null} for none
+   */
+  public IsolationExpectations setRequirementOverride(RequirementOverride requirementOverride) {
+    this.requirementOverride = requirementOverride;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

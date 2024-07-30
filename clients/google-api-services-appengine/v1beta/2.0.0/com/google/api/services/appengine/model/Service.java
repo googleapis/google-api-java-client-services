@@ -42,7 +42,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.Object> generatedCustomerMetadata;
 
   /**
-   * Relative name of the service within the application. Example: default.@OutputOnly
+   * Output only. Relative name of the service within the application. Example: default.@OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Full path to the Service resource in the API. Example: apps/myapp/services/default.@OutputOnly
+   * Output only. Full path to the Service resource in the API. Example:
+   * apps/myapp/services/default.@OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +105,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Relative name of the service within the application. Example: default.@OutputOnly
+   * Output only. Relative name of the service within the application. Example: default.@OutputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -112,7 +113,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Relative name of the service within the application. Example: default.@OutputOnly
+   * Output only. Relative name of the service within the application. Example: default.@OutputOnly
    * @param id id or {@code null} for none
    */
   public Service setId(java.lang.String id) {
@@ -152,7 +153,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Full path to the Service resource in the API. Example: apps/myapp/services/default.@OutputOnly
+   * Output only. Full path to the Service resource in the API. Example:
+   * apps/myapp/services/default.@OutputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -160,7 +162,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Full path to the Service resource in the API. Example: apps/myapp/services/default.@OutputOnly
+   * Output only. Full path to the Service resource in the API. Example:
+   * apps/myapp/services/default.@OutputOnly
    * @param name name or {@code null} for none
    */
   public Service setName(java.lang.String name) {

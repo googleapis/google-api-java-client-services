@@ -85,7 +85,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Email address of the user who created this version.@OutputOnly
+   * Output only. Email address of the user who created this version.@OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,8 +110,8 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private Deployment deployment;
 
   /**
-   * Total size in bytes of all the files that are included in this version and currently hosted on
-   * the App Engine disk.@OutputOnly
+   * Output only. Total size in bytes of all the files that are included in this version and
+   * currently hosted on the App Engine disk.@OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -257,7 +257,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private ManualScaling manualScaling;
 
   /**
-   * Full path to the Version resource in the API. Example:
+   * Output only. Full path to the Version resource in the API. Example:
    * apps/myapp/services/default/versions/v1.@OutputOnly
    * The value may be {@code null}.
    */
@@ -350,7 +350,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean threadsafe;
 
   /**
-   * Serving URL for this version. Example: "https://myversion-dot-myservice-dot-
+   * Output only. Serving URL for this version. Example: "https://myversion-dot-myservice-dot-
    * myapp.appspot.com"@OutputOnly
    * The value may be {@code null}.
    */
@@ -509,7 +509,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Email address of the user who created this version.@OutputOnly
+   * Output only. Email address of the user who created this version.@OutputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getCreatedBy() {
@@ -517,7 +517,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Email address of the user who created this version.@OutputOnly
+   * Output only. Email address of the user who created this version.@OutputOnly
    * @param createdBy createdBy or {@code null} for none
    */
   public Version setCreatedBy(java.lang.String createdBy) {
@@ -568,8 +568,8 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Total size in bytes of all the files that are included in this version and currently hosted on
-   * the App Engine disk.@OutputOnly
+   * Output only. Total size in bytes of all the files that are included in this version and
+   * currently hosted on the App Engine disk.@OutputOnly
    * @return value or {@code null} for none
    */
   public java.lang.Long getDiskUsageBytes() {
@@ -577,8 +577,8 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Total size in bytes of all the files that are included in this version and currently hosted on
-   * the App Engine disk.@OutputOnly
+   * Output only. Total size in bytes of all the files that are included in this version and
+   * currently hosted on the App Engine disk.@OutputOnly
    * @param diskUsageBytes diskUsageBytes or {@code null} for none
    */
   public Version setDiskUsageBytes(java.lang.Long diskUsageBytes) {
@@ -874,7 +874,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Full path to the Version resource in the API. Example:
+   * Output only. Full path to the Version resource in the API. Example:
    * apps/myapp/services/default/versions/v1.@OutputOnly
    * @return value or {@code null} for none
    */
@@ -883,7 +883,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Full path to the Version resource in the API. Example:
+   * Output only. Full path to the Version resource in the API. Example:
    * apps/myapp/services/default/versions/v1.@OutputOnly
    * @param name name or {@code null} for none
    */
@@ -1096,7 +1096,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Serving URL for this version. Example: "https://myversion-dot-myservice-dot-
+   * Output only. Serving URL for this version. Example: "https://myversion-dot-myservice-dot-
    * myapp.appspot.com"@OutputOnly
    * @return value or {@code null} for none
    */
@@ -1105,7 +1105,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Serving URL for this version. Example: "https://myversion-dot-myservice-dot-
+   * Output only. Serving URL for this version. Example: "https://myversion-dot-myservice-dot-
    * myapp.appspot.com"@OutputOnly
    * @param versionUrl versionUrl or {@code null} for none
    */

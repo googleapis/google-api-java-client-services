@@ -144,6 +144,14 @@ public final class GenericObject extends com.google.api.client.json.GenericJson 
   private Image logo;
 
   /**
+   * An array of messages displayed in the app. All users of this object will receive its associated
+   * messages. The maximum number of these fields is 10.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Message> messages;
+
+  /**
    * The notification settings that are enabled for this object.
    * The value may be {@code null}.
    */
@@ -490,6 +498,25 @@ public final class GenericObject extends com.google.api.client.json.GenericJson 
    */
   public GenericObject setLogo(Image logo) {
     this.logo = logo;
+    return this;
+  }
+
+  /**
+   * An array of messages displayed in the app. All users of this object will receive its associated
+   * messages. The maximum number of these fields is 10.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Message> getMessages() {
+    return messages;
+  }
+
+  /**
+   * An array of messages displayed in the app. All users of this object will receive its associated
+   * messages. The maximum number of these fields is 10.
+   * @param messages messages or {@code null} for none
+   */
+  public GenericObject setMessages(java.util.List<Message> messages) {
+    this.messages = messages;
     return this;
   }
 

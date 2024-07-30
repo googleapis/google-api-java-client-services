@@ -6905,13 +6905,15 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether the user is acknowledging the risk of downloading known malware or other abusive
-       * files.
+       * files. This is only applicable when the `alt` parameter is set to `media` and the user is
+       * the owner of the file or an organizer of the shared drive in which the file resides.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean acknowledgeAbuse;
 
       /** Whether the user is acknowledging the risk of downloading known malware or other abusive files.
-     [default: false]
+     This is only applicable when the `alt` parameter is set to `media` and the user is the owner of the
+     file or an organizer of the shared drive in which the file resides. [default: false]
        */
       public java.lang.Boolean getAcknowledgeAbuse() {
         return acknowledgeAbuse;
@@ -6919,7 +6921,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether the user is acknowledging the risk of downloading known malware or other abusive
-       * files.
+       * files. This is only applicable when the `alt` parameter is set to `media` and the user is
+       * the owner of the file or an organizer of the shared drive in which the file resides.
        */
       public Get setAcknowledgeAbuse(java.lang.Boolean acknowledgeAbuse) {
         this.acknowledgeAbuse = acknowledgeAbuse;
@@ -6944,6 +6947,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Whether the user is acknowledging the risk of downloading known malware or other abusive files.
+     This is only applicable when the `alt` parameter is set to `media` and the user is the owner of the
+     file or an organizer of the shared drive in which the file resides.
        * </p>
        */
       public boolean isAcknowledgeAbuse() {
@@ -11032,13 +11037,15 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether the user is acknowledging the risk of downloading known malware or other abusive
-       * files.
+       * files. This is only applicable when the `alt` parameter is set to `media` and the user is
+       * the owner of the file or an organizer of the shared drive in which the file resides.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean acknowledgeAbuse;
 
       /** Whether the user is acknowledging the risk of downloading known malware or other abusive files.
-     [default: false]
+     This is only applicable when the `alt` parameter is set to `media` and the user is the owner of the
+     file or an organizer of the shared drive in which the file resides. [default: false]
        */
       public java.lang.Boolean getAcknowledgeAbuse() {
         return acknowledgeAbuse;
@@ -11046,7 +11053,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether the user is acknowledging the risk of downloading known malware or other abusive
-       * files.
+       * files. This is only applicable when the `alt` parameter is set to `media` and the user is
+       * the owner of the file or an organizer of the shared drive in which the file resides.
        */
       public Watch setAcknowledgeAbuse(java.lang.Boolean acknowledgeAbuse) {
         this.acknowledgeAbuse = acknowledgeAbuse;
@@ -11071,6 +11079,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Whether the user is acknowledging the risk of downloading known malware or other abusive files.
+     This is only applicable when the `alt` parameter is set to `media` and the user is the owner of the
+     file or an organizer of the shared drive in which the file resides.
        * </p>
        */
       public boolean isAcknowledgeAbuse() {

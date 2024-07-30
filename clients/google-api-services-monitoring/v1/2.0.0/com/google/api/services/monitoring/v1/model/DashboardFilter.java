@@ -37,14 +37,31 @@ public final class DashboardFilter extends com.google.api.client.json.GenericJso
   private java.lang.String filterType;
 
   /**
-   * Required. The key for the label
+   * Optional. The key for the label. This must be omitted if the filter_type is VALUE_ONLY but is
+   * required otherwise.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String labelKey;
 
   /**
-   * A variable-length string value.
+   * A list of possible string values for the filter
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StringArray stringArray;
+
+  /**
+   * An array of variable-length string values. If this field is set, value_type must be set to
+   * STRING_ARRAY or VALUE_TYPE_UNSPECIFIED
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StringArray stringArrayValue;
+
+  /**
+   * A variable-length string value. If this field is set, value_type must be set to STRING or
+   * VALUE_TYPE_UNSPECIFIED
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,6 +74,22 @@ public final class DashboardFilter extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String templateVariable;
+
+  /**
+   * A query to run to fetch possible values for the filter. Only OpsAnalyticsQueries are supported
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TimeSeriesQuery timeSeriesQuery;
+
+  /**
+   * The type of the filter value. If value_type is not provided, it will be inferred from the
+   * default_value. If neither value_type nor default_value is provided, value_type will be set to
+   * STRING by default.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String valueType;
 
   /**
    * The specified filter type
@@ -76,7 +109,8 @@ public final class DashboardFilter extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. The key for the label
+   * Optional. The key for the label. This must be omitted if the filter_type is VALUE_ONLY but is
+   * required otherwise.
    * @return value or {@code null} for none
    */
   public java.lang.String getLabelKey() {
@@ -84,7 +118,8 @@ public final class DashboardFilter extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. The key for the label
+   * Optional. The key for the label. This must be omitted if the filter_type is VALUE_ONLY but is
+   * required otherwise.
    * @param labelKey labelKey or {@code null} for none
    */
   public DashboardFilter setLabelKey(java.lang.String labelKey) {
@@ -93,7 +128,44 @@ public final class DashboardFilter extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A variable-length string value.
+   * A list of possible string values for the filter
+   * @return value or {@code null} for none
+   */
+  public StringArray getStringArray() {
+    return stringArray;
+  }
+
+  /**
+   * A list of possible string values for the filter
+   * @param stringArray stringArray or {@code null} for none
+   */
+  public DashboardFilter setStringArray(StringArray stringArray) {
+    this.stringArray = stringArray;
+    return this;
+  }
+
+  /**
+   * An array of variable-length string values. If this field is set, value_type must be set to
+   * STRING_ARRAY or VALUE_TYPE_UNSPECIFIED
+   * @return value or {@code null} for none
+   */
+  public StringArray getStringArrayValue() {
+    return stringArrayValue;
+  }
+
+  /**
+   * An array of variable-length string values. If this field is set, value_type must be set to
+   * STRING_ARRAY or VALUE_TYPE_UNSPECIFIED
+   * @param stringArrayValue stringArrayValue or {@code null} for none
+   */
+  public DashboardFilter setStringArrayValue(StringArray stringArrayValue) {
+    this.stringArrayValue = stringArrayValue;
+    return this;
+  }
+
+  /**
+   * A variable-length string value. If this field is set, value_type must be set to STRING or
+   * VALUE_TYPE_UNSPECIFIED
    * @return value or {@code null} for none
    */
   public java.lang.String getStringValue() {
@@ -101,7 +173,8 @@ public final class DashboardFilter extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A variable-length string value.
+   * A variable-length string value. If this field is set, value_type must be set to STRING or
+   * VALUE_TYPE_UNSPECIFIED
    * @param stringValue stringValue or {@code null} for none
    */
   public DashboardFilter setStringValue(java.lang.String stringValue) {
@@ -125,6 +198,44 @@ public final class DashboardFilter extends com.google.api.client.json.GenericJso
    */
   public DashboardFilter setTemplateVariable(java.lang.String templateVariable) {
     this.templateVariable = templateVariable;
+    return this;
+  }
+
+  /**
+   * A query to run to fetch possible values for the filter. Only OpsAnalyticsQueries are supported
+   * @return value or {@code null} for none
+   */
+  public TimeSeriesQuery getTimeSeriesQuery() {
+    return timeSeriesQuery;
+  }
+
+  /**
+   * A query to run to fetch possible values for the filter. Only OpsAnalyticsQueries are supported
+   * @param timeSeriesQuery timeSeriesQuery or {@code null} for none
+   */
+  public DashboardFilter setTimeSeriesQuery(TimeSeriesQuery timeSeriesQuery) {
+    this.timeSeriesQuery = timeSeriesQuery;
+    return this;
+  }
+
+  /**
+   * The type of the filter value. If value_type is not provided, it will be inferred from the
+   * default_value. If neither value_type nor default_value is provided, value_type will be set to
+   * STRING by default.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getValueType() {
+    return valueType;
+  }
+
+  /**
+   * The type of the filter value. If value_type is not provided, it will be inferred from the
+   * default_value. If neither value_type nor default_value is provided, value_type will be set to
+   * STRING by default.
+   * @param valueType valueType or {@code null} for none
+   */
+  public DashboardFilter setValueType(java.lang.String valueType) {
+    this.valueType = valueType;
     return this;
   }
 

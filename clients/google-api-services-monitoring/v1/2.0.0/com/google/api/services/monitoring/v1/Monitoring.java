@@ -1899,9 +1899,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
              * This request holds the parameters needed by the monitoring server.  After setting any optional
              * parameters, call the {@link Labels#execute()} method to invoke the remote operation.
              *
-             * @param name The workspace on which to execute the request. It is not part of the open source API but used as a
-             *        request path prefix to distinguish different virtual Prometheus instances of Google
-             *        Prometheus Engine. The format is: projects/PROJECT_ID_OR_NUMBER.
+             * @param name Required. The workspace on which to execute the request. It is not part of the open source API but
+             *        used as a request path prefix to distinguish different virtual Prometheus instances of
+             *        Google Prometheus Engine. The format is: projects/PROJECT_ID_OR_NUMBER.
              * @param location Location of the resource information. Has to be "global" now.
              * @param content the {@link com.google.api.services.monitoring.v1.model.QueryLabelsRequest}
              * @return the request
@@ -1930,9 +1930,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
                * Labels#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The workspace on which to execute the request. It is not part of the open source API but used as a
-             *        request path prefix to distinguish different virtual Prometheus instances of Google
-             *        Prometheus Engine. The format is: projects/PROJECT_ID_OR_NUMBER.
+               * @param name Required. The workspace on which to execute the request. It is not part of the open source API but
+             *        used as a request path prefix to distinguish different virtual Prometheus instances of
+             *        Google Prometheus Engine. The format is: projects/PROJECT_ID_OR_NUMBER.
                * @param location Location of the resource information. Has to be "global" now.
                * @param content the {@link com.google.api.services.monitoring.v1.model.QueryLabelsRequest}
                * @since 1.13
@@ -2004,26 +2004,26 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
               }
 
               /**
-               * The workspace on which to execute the request. It is not part of the open source
-               * API but used as a request path prefix to distinguish different virtual Prometheus
-               * instances of Google Prometheus Engine. The format is:
+               * Required. The workspace on which to execute the request. It is not part of the open
+               * source API but used as a request path prefix to distinguish different virtual
+               * Prometheus instances of Google Prometheus Engine. The format is:
                * projects/PROJECT_ID_OR_NUMBER.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The workspace on which to execute the request. It is not part of the open source API but used as a
-             request path prefix to distinguish different virtual Prometheus instances of Google Prometheus
-             Engine. The format is: projects/PROJECT_ID_OR_NUMBER.
+              /** Required. The workspace on which to execute the request. It is not part of the open source API but
+             used as a request path prefix to distinguish different virtual Prometheus instances of Google
+             Prometheus Engine. The format is: projects/PROJECT_ID_OR_NUMBER.
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * The workspace on which to execute the request. It is not part of the open source
-               * API but used as a request path prefix to distinguish different virtual Prometheus
-               * instances of Google Prometheus Engine. The format is:
+               * Required. The workspace on which to execute the request. It is not part of the open
+               * source API but used as a request path prefix to distinguish different virtual
+               * Prometheus instances of Google Prometheus Engine. The format is:
                * projects/PROJECT_ID_OR_NUMBER.
                */
               public Labels setName(java.lang.String name) {
@@ -2065,9 +2065,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
              * This request holds the parameters needed by the monitoring server.  After setting any optional
              * parameters, call the {@link Query#execute()} method to invoke the remote operation.
              *
-             * @param name The project on which to execute the request. Data associcated with the project's workspace stored
-             *        under the The format is: projects/PROJECT_ID_OR_NUMBER. Open source API but used as a
-             *        request path prefix to distinguish different virtual Prometheus instances of Google
+             * @param name Required. The project on which to execute the request. Data associcated with the project's workspace
+             *        stored under the The format is: projects/PROJECT_ID_OR_NUMBER. Open source API but used as
+             *        a request path prefix to distinguish different virtual Prometheus instances of Google
              *        Prometheus Engine.
              * @param location Location of the resource information. Has to be "global" now.
              * @param content the {@link com.google.api.services.monitoring.v1.model.QueryInstantRequest}
@@ -2097,9 +2097,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
                * Query#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The project on which to execute the request. Data associcated with the project's workspace stored
-             *        under the The format is: projects/PROJECT_ID_OR_NUMBER. Open source API but used as a
-             *        request path prefix to distinguish different virtual Prometheus instances of Google
+               * @param name Required. The project on which to execute the request. Data associcated with the project's workspace
+             *        stored under the The format is: projects/PROJECT_ID_OR_NUMBER. Open source API but used as
+             *        a request path prefix to distinguish different virtual Prometheus instances of Google
              *        Prometheus Engine.
                * @param location Location of the resource information. Has to be "global" now.
                * @param content the {@link com.google.api.services.monitoring.v1.model.QueryInstantRequest}
@@ -2172,26 +2172,27 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
               }
 
               /**
-               * The project on which to execute the request. Data associcated with the project's
-               * workspace stored under the The format is: projects/PROJECT_ID_OR_NUMBER. Open
-               * source API but used as a request path prefix to distinguish different virtual
+               * Required. The project on which to execute the request. Data associcated with the
+               * project's workspace stored under the The format is: projects/PROJECT_ID_OR_NUMBER.
+               * Open source API but used as a request path prefix to distinguish different virtual
                * Prometheus instances of Google Prometheus Engine.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The project on which to execute the request. Data associcated with the project's workspace stored
-             under the The format is: projects/PROJECT_ID_OR_NUMBER. Open source API but used as a request path
-             prefix to distinguish different virtual Prometheus instances of Google Prometheus Engine.
+              /** Required. The project on which to execute the request. Data associcated with the project's
+             workspace stored under the The format is: projects/PROJECT_ID_OR_NUMBER. Open source API but used
+             as a request path prefix to distinguish different virtual Prometheus instances of Google Prometheus
+             Engine.
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * The project on which to execute the request. Data associcated with the project's
-               * workspace stored under the The format is: projects/PROJECT_ID_OR_NUMBER. Open
-               * source API but used as a request path prefix to distinguish different virtual
+               * Required. The project on which to execute the request. Data associcated with the
+               * project's workspace stored under the The format is: projects/PROJECT_ID_OR_NUMBER.
+               * Open source API but used as a request path prefix to distinguish different virtual
                * Prometheus instances of Google Prometheus Engine.
                */
               public Query setName(java.lang.String name) {
@@ -2233,9 +2234,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
              * This request holds the parameters needed by the monitoring server.  After setting any optional
              * parameters, call the {@link QueryExemplars#execute()} method to invoke the remote operation.
              *
-             * @param name The project on which to execute the request. Data associcated with the project's workspace stored
-             *        under the The format is: projects/PROJECT_ID_OR_NUMBER. Open source API but used as a
-             *        request path prefix to distinguish different virtual Prometheus instances of Google
+             * @param name Required. The project on which to execute the request. Data associcated with the project's workspace
+             *        stored under the The format is: projects/PROJECT_ID_OR_NUMBER. Open source API but used as
+             *        a request path prefix to distinguish different virtual Prometheus instances of Google
              *        Prometheus Engine.
              * @param location Location of the resource information. Has to be "global" now.
              * @param content the {@link com.google.api.services.monitoring.v1.model.QueryExemplarsRequest}
@@ -2265,9 +2266,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
                * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
                * the constructor. </p>
                *
-               * @param name The project on which to execute the request. Data associcated with the project's workspace stored
-             *        under the The format is: projects/PROJECT_ID_OR_NUMBER. Open source API but used as a
-             *        request path prefix to distinguish different virtual Prometheus instances of Google
+               * @param name Required. The project on which to execute the request. Data associcated with the project's workspace
+             *        stored under the The format is: projects/PROJECT_ID_OR_NUMBER. Open source API but used as
+             *        a request path prefix to distinguish different virtual Prometheus instances of Google
              *        Prometheus Engine.
                * @param location Location of the resource information. Has to be "global" now.
                * @param content the {@link com.google.api.services.monitoring.v1.model.QueryExemplarsRequest}
@@ -2340,26 +2341,27 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
               }
 
               /**
-               * The project on which to execute the request. Data associcated with the project's
-               * workspace stored under the The format is: projects/PROJECT_ID_OR_NUMBER. Open
-               * source API but used as a request path prefix to distinguish different virtual
+               * Required. The project on which to execute the request. Data associcated with the
+               * project's workspace stored under the The format is: projects/PROJECT_ID_OR_NUMBER.
+               * Open source API but used as a request path prefix to distinguish different virtual
                * Prometheus instances of Google Prometheus Engine.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The project on which to execute the request. Data associcated with the project's workspace stored
-             under the The format is: projects/PROJECT_ID_OR_NUMBER. Open source API but used as a request path
-             prefix to distinguish different virtual Prometheus instances of Google Prometheus Engine.
+              /** Required. The project on which to execute the request. Data associcated with the project's
+             workspace stored under the The format is: projects/PROJECT_ID_OR_NUMBER. Open source API but used
+             as a request path prefix to distinguish different virtual Prometheus instances of Google Prometheus
+             Engine.
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * The project on which to execute the request. Data associcated with the project's
-               * workspace stored under the The format is: projects/PROJECT_ID_OR_NUMBER. Open
-               * source API but used as a request path prefix to distinguish different virtual
+               * Required. The project on which to execute the request. Data associcated with the
+               * project's workspace stored under the The format is: projects/PROJECT_ID_OR_NUMBER.
+               * Open source API but used as a request path prefix to distinguish different virtual
                * Prometheus instances of Google Prometheus Engine.
                */
               public QueryExemplars setName(java.lang.String name) {
@@ -2401,9 +2403,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
              * This request holds the parameters needed by the monitoring server.  After setting any optional
              * parameters, call the {@link QueryRange#execute()} method to invoke the remote operation.
              *
-             * @param name The project on which to execute the request. Data associcated with the project's workspace stored
-             *        under the The format is: projects/PROJECT_ID_OR_NUMBER. Open source API but used as a
-             *        request path prefix to distinguish different virtual Prometheus instances of Google
+             * @param name Required. The project on which to execute the request. Data associcated with the project's workspace
+             *        stored under the The format is: projects/PROJECT_ID_OR_NUMBER. Open source API but used as
+             *        a request path prefix to distinguish different virtual Prometheus instances of Google
              *        Prometheus Engine.
              * @param location Location of the resource information. Has to be "global" now.
              * @param content the {@link com.google.api.services.monitoring.v1.model.QueryRangeRequest}
@@ -2433,9 +2435,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
                * QueryRange#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The project on which to execute the request. Data associcated with the project's workspace stored
-             *        under the The format is: projects/PROJECT_ID_OR_NUMBER. Open source API but used as a
-             *        request path prefix to distinguish different virtual Prometheus instances of Google
+               * @param name Required. The project on which to execute the request. Data associcated with the project's workspace
+             *        stored under the The format is: projects/PROJECT_ID_OR_NUMBER. Open source API but used as
+             *        a request path prefix to distinguish different virtual Prometheus instances of Google
              *        Prometheus Engine.
                * @param location Location of the resource information. Has to be "global" now.
                * @param content the {@link com.google.api.services.monitoring.v1.model.QueryRangeRequest}
@@ -2508,26 +2510,27 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
               }
 
               /**
-               * The project on which to execute the request. Data associcated with the project's
-               * workspace stored under the The format is: projects/PROJECT_ID_OR_NUMBER. Open
-               * source API but used as a request path prefix to distinguish different virtual
+               * Required. The project on which to execute the request. Data associcated with the
+               * project's workspace stored under the The format is: projects/PROJECT_ID_OR_NUMBER.
+               * Open source API but used as a request path prefix to distinguish different virtual
                * Prometheus instances of Google Prometheus Engine.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The project on which to execute the request. Data associcated with the project's workspace stored
-             under the The format is: projects/PROJECT_ID_OR_NUMBER. Open source API but used as a request path
-             prefix to distinguish different virtual Prometheus instances of Google Prometheus Engine.
+              /** Required. The project on which to execute the request. Data associcated with the project's
+             workspace stored under the The format is: projects/PROJECT_ID_OR_NUMBER. Open source API but used
+             as a request path prefix to distinguish different virtual Prometheus instances of Google Prometheus
+             Engine.
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * The project on which to execute the request. Data associcated with the project's
-               * workspace stored under the The format is: projects/PROJECT_ID_OR_NUMBER. Open
-               * source API but used as a request path prefix to distinguish different virtual
+               * Required. The project on which to execute the request. Data associcated with the
+               * project's workspace stored under the The format is: projects/PROJECT_ID_OR_NUMBER.
+               * Open source API but used as a request path prefix to distinguish different virtual
                * Prometheus instances of Google Prometheus Engine.
                */
               public QueryRange setName(java.lang.String name) {
@@ -2756,9 +2759,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
                * This request holds the parameters needed by the monitoring server.  After setting any optional
                * parameters, call the {@link Values#execute()} method to invoke the remote operation.
                *
-               * @param name The workspace on which to execute the request. It is not part of the open source API but used as a
-               *        request path prefix to distinguish different virtual Prometheus instances of Google
-               *        Prometheus Engine. The format is: projects/PROJECT_ID_OR_NUMBER.
+               * @param name Required. The workspace on which to execute the request. It is not part of the open source API but
+               *        used as a request path prefix to distinguish different virtual Prometheus instances of
+               *        Google Prometheus Engine. The format is: projects/PROJECT_ID_OR_NUMBER.
                * @param location Location of the resource information. Has to be "global" now.
                * @param label The label name for which values are queried.
                * @return the request
@@ -2787,9 +2790,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
                  * Values#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                  * be called to initialize this instance immediately after invoking the constructor. </p>
                  *
-                 * @param name The workspace on which to execute the request. It is not part of the open source API but used as a
-               *        request path prefix to distinguish different virtual Prometheus instances of Google
-               *        Prometheus Engine. The format is: projects/PROJECT_ID_OR_NUMBER.
+                 * @param name Required. The workspace on which to execute the request. It is not part of the open source API but
+               *        used as a request path prefix to distinguish different virtual Prometheus instances of
+               *        Google Prometheus Engine. The format is: projects/PROJECT_ID_OR_NUMBER.
                  * @param location Location of the resource information. Has to be "global" now.
                  * @param label The label name for which values are queried.
                  * @since 1.13
@@ -2872,26 +2875,26 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
                 }
 
                 /**
-                 * The workspace on which to execute the request. It is not part of the open source
-                 * API but used as a request path prefix to distinguish different virtual Prometheus
-                 * instances of Google Prometheus Engine. The format is:
+                 * Required. The workspace on which to execute the request. It is not part of the
+                 * open source API but used as a request path prefix to distinguish different
+                 * virtual Prometheus instances of Google Prometheus Engine. The format is:
                  * projects/PROJECT_ID_OR_NUMBER.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String name;
 
-                /** The workspace on which to execute the request. It is not part of the open source API but used as a
-               request path prefix to distinguish different virtual Prometheus instances of Google Prometheus
-               Engine. The format is: projects/PROJECT_ID_OR_NUMBER.
+                /** Required. The workspace on which to execute the request. It is not part of the open source API but
+               used as a request path prefix to distinguish different virtual Prometheus instances of Google
+               Prometheus Engine. The format is: projects/PROJECT_ID_OR_NUMBER.
                  */
                 public java.lang.String getName() {
                   return name;
                 }
 
                 /**
-                 * The workspace on which to execute the request. It is not part of the open source
-                 * API but used as a request path prefix to distinguish different virtual Prometheus
-                 * instances of Google Prometheus Engine. The format is:
+                 * Required. The workspace on which to execute the request. It is not part of the
+                 * open source API but used as a request path prefix to distinguish different
+                 * virtual Prometheus instances of Google Prometheus Engine. The format is:
                  * projects/PROJECT_ID_OR_NUMBER.
                  */
                 public Values setName(java.lang.String name) {

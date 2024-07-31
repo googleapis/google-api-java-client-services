@@ -38,6 +38,13 @@ public final class GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeploy
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Optional. Sample request for deployed endpoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sampleRequest;
+
+  /**
    * Optional. Labels for the deployment. For managing deployment config like verifying, source of
    * deployment config, etc.
    * @return value or {@code null} for none
@@ -53,6 +60,23 @@ public final class GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeploy
    */
   public GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Optional. Sample request for deployed endpoint.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSampleRequest() {
+    return sampleRequest;
+  }
+
+  /**
+   * Optional. Sample request for deployed endpoint.
+   * @param sampleRequest sampleRequest or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata setSampleRequest(java.lang.String sampleRequest) {
+    this.sampleRequest = sampleRequest;
     return this;
   }
 

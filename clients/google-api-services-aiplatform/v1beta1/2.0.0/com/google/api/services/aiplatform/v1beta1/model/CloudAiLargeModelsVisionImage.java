@@ -37,6 +37,15 @@ public final class CloudAiLargeModelsVisionImage extends com.google.api.client.j
   private java.lang.String encoding;
 
   /**
+   * Generation seed for the sampled image. This parameter is exposed to the user only if one of the
+   * following is true: 1. The user specified per-example seeds in the request. 2. The user doesn't
+   * specify the generation seed in the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer generationSeed;
+
+  /**
    * Raw bytes.
    * The value may be {@code null}.
    */
@@ -92,6 +101,27 @@ public final class CloudAiLargeModelsVisionImage extends com.google.api.client.j
    */
   public CloudAiLargeModelsVisionImage setEncoding(java.lang.String encoding) {
     this.encoding = encoding;
+    return this;
+  }
+
+  /**
+   * Generation seed for the sampled image. This parameter is exposed to the user only if one of the
+   * following is true: 1. The user specified per-example seeds in the request. 2. The user doesn't
+   * specify the generation seed in the request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getGenerationSeed() {
+    return generationSeed;
+  }
+
+  /**
+   * Generation seed for the sampled image. This parameter is exposed to the user only if one of the
+   * following is true: 1. The user specified per-example seeds in the request. 2. The user doesn't
+   * specify the generation seed in the request.
+   * @param generationSeed generationSeed or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionImage setGenerationSeed(java.lang.Integer generationSeed) {
+    this.generationSeed = generationSeed;
     return this;
   }
 

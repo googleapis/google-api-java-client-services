@@ -166,6 +166,20 @@ public final class GoogleCloudAiplatformV1beta1Endpoint extends com.google.api.c
   private GoogleCloudAiplatformV1beta1PrivateServiceConnectConfig privateServiceConnectConfig;
 
   /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * A map from a DeployedModel's ID to the percentage of this Endpoint's traffic that should be
    * forwarded to that DeployedModel. If a DeployedModel's ID is not listed in this map, then it
    * receives no traffic. The traffic percentage values must add up to 100, or map must be empty if
@@ -482,6 +496,40 @@ public final class GoogleCloudAiplatformV1beta1Endpoint extends com.google.api.c
    */
   public GoogleCloudAiplatformV1beta1Endpoint setPrivateServiceConnectConfig(GoogleCloudAiplatformV1beta1PrivateServiceConnectConfig privateServiceConnectConfig) {
     this.privateServiceConnectConfig = privateServiceConnectConfig;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Endpoint setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Endpoint setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

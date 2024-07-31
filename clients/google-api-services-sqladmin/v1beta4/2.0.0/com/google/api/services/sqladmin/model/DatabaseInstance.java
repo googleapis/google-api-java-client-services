@@ -275,6 +275,14 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String rootPassword;
 
   /**
+   * Output only. This status indicates whether the instance satisfies PZI. The status is reserved
+   * for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
    * This status indicates whether the instance satisfies PZS. The status is reserved for future
    * use.
    * The value may be {@code null}.
@@ -958,6 +966,25 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setRootPassword(java.lang.String rootPassword) {
     this.rootPassword = rootPassword;
+    return this;
+  }
+
+  /**
+   * Output only. This status indicates whether the instance satisfies PZI. The status is reserved
+   * for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. This status indicates whether the instance satisfies PZI. The status is reserved
+   * for future use.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public DatabaseInstance setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
     return this;
   }
 

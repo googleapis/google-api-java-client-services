@@ -110,6 +110,13 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
   private java.lang.String location;
 
   /**
+   * Output only. The maximum chargeable bytes for the backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxChargeableBytes;
+
+  /**
    * The URI of this resource.
    * The value may be {@code null}.
    */
@@ -345,6 +352,23 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
    */
   public BackupRun setLocation(java.lang.String location) {
     this.location = location;
+    return this;
+  }
+
+  /**
+   * Output only. The maximum chargeable bytes for the backup.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxChargeableBytes() {
+    return maxChargeableBytes;
+  }
+
+  /**
+   * Output only. The maximum chargeable bytes for the backup.
+   * @param maxChargeableBytes maxChargeableBytes or {@code null} for none
+   */
+  public BackupRun setMaxChargeableBytes(java.lang.Long maxChargeableBytes) {
+    this.maxChargeableBytes = maxChargeableBytes;
     return this;
   }
 

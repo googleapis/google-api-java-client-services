@@ -511,8 +511,8 @@ public class Docs extends com.google.api.client.googleapis.services.json.Abstrac
       }
 
       /**
-       * Whether to populate the Document.tabs field instead of the text content fields like body
-       * and documentStyle on Document. - When `True`: Document content populates in the
+       * Whether to populate the Document.tabs field instead of the text content fields like `body`
+       * and `documentStyle` on Document. - When `True`: Document content populates in the
        * Document.tabs field instead of the text content fields in Document. - When `False`: The
        * content of the document's first tab populates the content fields in Document excluding
        * Document.tabs. If a document has only one tab, then that tab is used to populate the
@@ -521,8 +521,8 @@ public class Docs extends com.google.api.client.googleapis.services.json.Abstrac
       @com.google.api.client.util.Key
       private java.lang.Boolean includeTabsContent;
 
-      /** Whether to populate the Document.tabs field instead of the text content fields like body and
-     documentStyle on Document. - When `True`: Document content populates in the Document.tabs field
+      /** Whether to populate the Document.tabs field instead of the text content fields like `body` and
+     `documentStyle` on Document. - When `True`: Document content populates in the Document.tabs field
      instead of the text content fields in Document. - When `False`: The content of the document's first
      tab populates the content fields in Document excluding Document.tabs. If a document has only one
      tab, then that tab is used to populate the document content. Document.tabs will be empty.
@@ -532,8 +532,8 @@ public class Docs extends com.google.api.client.googleapis.services.json.Abstrac
       }
 
       /**
-       * Whether to populate the Document.tabs field instead of the text content fields like body
-       * and documentStyle on Document. - When `True`: Document content populates in the
+       * Whether to populate the Document.tabs field instead of the text content fields like `body`
+       * and `documentStyle` on Document. - When `True`: Document content populates in the
        * Document.tabs field instead of the text content fields in Document. - When `False`: The
        * content of the document's first tab populates the content fields in Document excluding
        * Document.tabs. If a document has only one tab, then that tab is used to populate the

@@ -318,7 +318,7 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the cloudchannel server.  After setting any optional
      * parameters, call the {@link ListSubscribers#execute()} method to invoke the remote operation.
      *
-     * @param account Required. Resource name of the account.
+     * @param account Optional. Resource name of the account.
      * @return the request
      */
     public ListSubscribers listSubscribers(java.lang.String account) throws java.io.IOException {
@@ -352,7 +352,7 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
        * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
        * the constructor. </p>
        *
-       * @param account Required. Resource name of the account.
+       * @param account Optional. Resource name of the account.
        * @since 1.13
        */
       protected ListSubscribers(java.lang.String account) {
@@ -430,17 +430,17 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
         return (ListSubscribers) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. Resource name of the account. */
+      /** Optional. Resource name of the account. */
       @com.google.api.client.util.Key
       private java.lang.String account;
 
-      /** Required. Resource name of the account.
+      /** Optional. Resource name of the account.
        */
       public java.lang.String getAccount() {
         return account;
       }
 
-      /** Required. Resource name of the account. */
+      /** Optional. Resource name of the account. */
       public ListSubscribers setAccount(java.lang.String account) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(ACCOUNT_PATTERN.matcher(account).matches(),
@@ -448,6 +448,22 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
               "^accounts/[^/]+$");
         }
         this.account = account;
+        return this;
+      }
+
+      /** Optional. Resource name of the integrator. */
+      @com.google.api.client.util.Key
+      private java.lang.String integrator;
+
+      /** Optional. Resource name of the integrator.
+       */
+      public java.lang.String getIntegrator() {
+        return integrator;
+      }
+
+      /** Optional. Resource name of the integrator. */
+      public ListSubscribers setIntegrator(java.lang.String integrator) {
+        this.integrator = integrator;
         return this;
       }
 
@@ -823,7 +839,7 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the cloudchannel server.  After setting any optional
      * parameters, call the {@link Register#execute()} method to invoke the remote operation.
      *
-     * @param account Required. Resource name of the account.
+     * @param account Optional. Resource name of the account.
      * @param content the {@link com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1RegisterSubscriberRequest}
      * @return the request
      */
@@ -858,7 +874,7 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
        * Register#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param account Required. Resource name of the account.
+       * @param account Optional. Resource name of the account.
        * @param content the {@link com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1RegisterSubscriberRequest}
        * @since 1.13
        */
@@ -927,17 +943,17 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
         return (Register) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. Resource name of the account. */
+      /** Optional. Resource name of the account. */
       @com.google.api.client.util.Key
       private java.lang.String account;
 
-      /** Required. Resource name of the account.
+      /** Optional. Resource name of the account.
        */
       public java.lang.String getAccount() {
         return account;
       }
 
-      /** Required. Resource name of the account. */
+      /** Optional. Resource name of the account. */
       public Register setAccount(java.lang.String account) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(ACCOUNT_PATTERN.matcher(account).matches(),
@@ -971,7 +987,7 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the cloudchannel server.  After setting any optional
      * parameters, call the {@link Unregister#execute()} method to invoke the remote operation.
      *
-     * @param account Required. Resource name of the account.
+     * @param account Optional. Resource name of the account.
      * @param content the {@link com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1UnregisterSubscriberRequest}
      * @return the request
      */
@@ -1009,7 +1025,7 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
        * Unregister#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param account Required. Resource name of the account.
+       * @param account Optional. Resource name of the account.
        * @param content the {@link com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1UnregisterSubscriberRequest}
        * @since 1.13
        */
@@ -1078,17 +1094,17 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
         return (Unregister) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. Resource name of the account. */
+      /** Optional. Resource name of the account. */
       @com.google.api.client.util.Key
       private java.lang.String account;
 
-      /** Required. Resource name of the account.
+      /** Optional. Resource name of the account.
        */
       public java.lang.String getAccount() {
         return account;
       }
 
-      /** Required. Resource name of the account. */
+      /** Optional. Resource name of the account. */
       public Unregister setAccount(java.lang.String account) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(ACCOUNT_PATTERN.matcher(account).matches(),
@@ -10389,6 +10405,606 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
 
       }
     }
+  }
+
+  /**
+   * An accessor for creating requests from the Integrators collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Cloudchannel cloudchannel = new Cloudchannel(...);}
+   *   {@code Cloudchannel.Integrators.List request = cloudchannel.integrators().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Integrators integrators() {
+    return new Integrators();
+  }
+
+  /**
+   * The "integrators" collection of methods.
+   */
+  public class Integrators {
+
+    /**
+     * Lists service accounts with subscriber privileges on the Cloud Pub/Sub topic created for this
+     * Channel Services account. Possible error codes: * PERMISSION_DENIED: The reseller account making
+     * the request and the provided reseller account are different, or the impersonated user is not a
+     * super admin. * INVALID_ARGUMENT: Required request parameters are missing or invalid. * NOT_FOUND:
+     * The topic resource doesn't exist. * INTERNAL: Any non-user error related to a technical issue in
+     * the backend. Contact Cloud Channel support. * UNKNOWN: Any non-user error related to a technical
+     * issue in the backend. Contact Cloud Channel support. Return value: A list of service email
+     * addresses.
+     *
+     * Create a request for the method "integrators.listSubscribers".
+     *
+     * This request holds the parameters needed by the cloudchannel server.  After setting any optional
+     * parameters, call the {@link ListSubscribers#execute()} method to invoke the remote operation.
+     *
+     * @param integrator Optional. Resource name of the integrator.
+     * @return the request
+     */
+    public ListSubscribers listSubscribers(java.lang.String integrator) throws java.io.IOException {
+      ListSubscribers result = new ListSubscribers(integrator);
+      initialize(result);
+      return result;
+    }
+
+    public class ListSubscribers extends CloudchannelRequest<com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ListSubscribersResponse> {
+
+      private static final String REST_PATH = "v1/{+integrator}:listSubscribers";
+
+      private final java.util.regex.Pattern INTEGRATOR_PATTERN =
+          java.util.regex.Pattern.compile("^integrators/[^/]+$");
+
+      /**
+       * Lists service accounts with subscriber privileges on the Cloud Pub/Sub topic created for this
+       * Channel Services account. Possible error codes: * PERMISSION_DENIED: The reseller account
+       * making the request and the provided reseller account are different, or the impersonated user is
+       * not a super admin. * INVALID_ARGUMENT: Required request parameters are missing or invalid. *
+       * NOT_FOUND: The topic resource doesn't exist. * INTERNAL: Any non-user error related to a
+       * technical issue in the backend. Contact Cloud Channel support. * UNKNOWN: Any non-user error
+       * related to a technical issue in the backend. Contact Cloud Channel support. Return value: A
+       * list of service email addresses.
+       *
+       * Create a request for the method "integrators.listSubscribers".
+       *
+       * This request holds the parameters needed by the the cloudchannel server.  After setting any
+       * optional parameters, call the {@link ListSubscribers#execute()} method to invoke the remote
+       * operation. <p> {@link ListSubscribers#initialize(com.google.api.client.googleapis.services.Abst
+       * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+       * the constructor. </p>
+       *
+       * @param integrator Optional. Resource name of the integrator.
+       * @since 1.13
+       */
+      protected ListSubscribers(java.lang.String integrator) {
+        super(Cloudchannel.this, "GET", REST_PATH, null, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ListSubscribersResponse.class);
+        this.integrator = com.google.api.client.util.Preconditions.checkNotNull(integrator, "Required parameter integrator must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(INTEGRATOR_PATTERN.matcher(integrator).matches(),
+              "Parameter integrator must conform to the pattern " +
+              "^integrators/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public ListSubscribers set$Xgafv(java.lang.String $Xgafv) {
+        return (ListSubscribers) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ListSubscribers setAccessToken(java.lang.String accessToken) {
+        return (ListSubscribers) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ListSubscribers setAlt(java.lang.String alt) {
+        return (ListSubscribers) super.setAlt(alt);
+      }
+
+      @Override
+      public ListSubscribers setCallback(java.lang.String callback) {
+        return (ListSubscribers) super.setCallback(callback);
+      }
+
+      @Override
+      public ListSubscribers setFields(java.lang.String fields) {
+        return (ListSubscribers) super.setFields(fields);
+      }
+
+      @Override
+      public ListSubscribers setKey(java.lang.String key) {
+        return (ListSubscribers) super.setKey(key);
+      }
+
+      @Override
+      public ListSubscribers setOauthToken(java.lang.String oauthToken) {
+        return (ListSubscribers) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ListSubscribers setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ListSubscribers) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ListSubscribers setQuotaUser(java.lang.String quotaUser) {
+        return (ListSubscribers) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ListSubscribers setUploadType(java.lang.String uploadType) {
+        return (ListSubscribers) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ListSubscribers setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ListSubscribers) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Optional. Resource name of the integrator. */
+      @com.google.api.client.util.Key
+      private java.lang.String integrator;
+
+      /** Optional. Resource name of the integrator.
+       */
+      public java.lang.String getIntegrator() {
+        return integrator;
+      }
+
+      /** Optional. Resource name of the integrator. */
+      public ListSubscribers setIntegrator(java.lang.String integrator) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(INTEGRATOR_PATTERN.matcher(integrator).matches(),
+              "Parameter integrator must conform to the pattern " +
+              "^integrators/[^/]+$");
+        }
+        this.integrator = integrator;
+        return this;
+      }
+
+      /** Optional. Resource name of the account. */
+      @com.google.api.client.util.Key
+      private java.lang.String account;
+
+      /** Optional. Resource name of the account.
+       */
+      public java.lang.String getAccount() {
+        return account;
+      }
+
+      /** Optional. Resource name of the account. */
+      public ListSubscribers setAccount(java.lang.String account) {
+        this.account = account;
+        return this;
+      }
+
+      /**
+       * Optional. The maximum number of service accounts to return. The service may return fewer
+       * than this value. If unspecified, returns at most 100 service accounts. The maximum value is
+       * 1000; the server will coerce values above 1000.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The maximum number of service accounts to return. The service may return fewer than this
+     value. If unspecified, returns at most 100 service accounts. The maximum value is 1000; the server
+     will coerce values above 1000.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The maximum number of service accounts to return. The service may return fewer
+       * than this value. If unspecified, returns at most 100 service accounts. The maximum value is
+       * 1000; the server will coerce values above 1000.
+       */
+      public ListSubscribers setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. A page token, received from a previous `ListSubscribers` call. Provide this to
+       * retrieve the subsequent page. When paginating, all other parameters provided to
+       * `ListSubscribers` must match the call that provided the page token.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. A page token, received from a previous `ListSubscribers` call. Provide this to retrieve
+     the subsequent page. When paginating, all other parameters provided to `ListSubscribers` must match
+     the call that provided the page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. A page token, received from a previous `ListSubscribers` call. Provide this to
+       * retrieve the subsequent page. When paginating, all other parameters provided to
+       * `ListSubscribers` must match the call that provided the page token.
+       */
+      public ListSubscribers setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public ListSubscribers set(String parameterName, Object value) {
+        return (ListSubscribers) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Registers a service account with subscriber privileges on the Cloud Pub/Sub topic for this
+     * Channel Services account. After you create a subscriber, you get the events through
+     * SubscriberEvent Possible error codes: * PERMISSION_DENIED: The reseller account making the
+     * request and the provided reseller account are different, or the impersonated user is not a super
+     * admin. * INVALID_ARGUMENT: Required request parameters are missing or invalid. * INTERNAL: Any
+     * non-user error related to a technical issue in the backend. Contact Cloud Channel support. *
+     * UNKNOWN: Any non-user error related to a technical issue in the backend. Contact Cloud Channel
+     * support. Return value: The topic name with the registered service email address.
+     *
+     * Create a request for the method "integrators.register".
+     *
+     * This request holds the parameters needed by the cloudchannel server.  After setting any optional
+     * parameters, call the {@link Register#execute()} method to invoke the remote operation.
+     *
+     * @param integrator Optional. Resource name of the integrator.
+     * @return the request
+     */
+    public Register register(java.lang.String integrator) throws java.io.IOException {
+      Register result = new Register(integrator);
+      initialize(result);
+      return result;
+    }
+
+    public class Register extends CloudchannelRequest<com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1RegisterSubscriberResponse> {
+
+      private static final String REST_PATH = "v1/{+integrator}:register";
+
+      private final java.util.regex.Pattern INTEGRATOR_PATTERN =
+          java.util.regex.Pattern.compile("^integrators/[^/]+$");
+
+      /**
+       * Registers a service account with subscriber privileges on the Cloud Pub/Sub topic for this
+       * Channel Services account. After you create a subscriber, you get the events through
+       * SubscriberEvent Possible error codes: * PERMISSION_DENIED: The reseller account making the
+       * request and the provided reseller account are different, or the impersonated user is not a
+       * super admin. * INVALID_ARGUMENT: Required request parameters are missing or invalid. *
+       * INTERNAL: Any non-user error related to a technical issue in the backend. Contact Cloud Channel
+       * support. * UNKNOWN: Any non-user error related to a technical issue in the backend. Contact
+       * Cloud Channel support. Return value: The topic name with the registered service email address.
+       *
+       * Create a request for the method "integrators.register".
+       *
+       * This request holds the parameters needed by the the cloudchannel server.  After setting any
+       * optional parameters, call the {@link Register#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Register#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param integrator Optional. Resource name of the integrator.
+       * @since 1.13
+       */
+      protected Register(java.lang.String integrator) {
+        super(Cloudchannel.this, "POST", REST_PATH, null, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1RegisterSubscriberResponse.class);
+        this.integrator = com.google.api.client.util.Preconditions.checkNotNull(integrator, "Required parameter integrator must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(INTEGRATOR_PATTERN.matcher(integrator).matches(),
+              "Parameter integrator must conform to the pattern " +
+              "^integrators/[^/]+$");
+        }
+      }
+
+      @Override
+      public Register set$Xgafv(java.lang.String $Xgafv) {
+        return (Register) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Register setAccessToken(java.lang.String accessToken) {
+        return (Register) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Register setAlt(java.lang.String alt) {
+        return (Register) super.setAlt(alt);
+      }
+
+      @Override
+      public Register setCallback(java.lang.String callback) {
+        return (Register) super.setCallback(callback);
+      }
+
+      @Override
+      public Register setFields(java.lang.String fields) {
+        return (Register) super.setFields(fields);
+      }
+
+      @Override
+      public Register setKey(java.lang.String key) {
+        return (Register) super.setKey(key);
+      }
+
+      @Override
+      public Register setOauthToken(java.lang.String oauthToken) {
+        return (Register) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Register setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Register) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Register setQuotaUser(java.lang.String quotaUser) {
+        return (Register) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Register setUploadType(java.lang.String uploadType) {
+        return (Register) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Register setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Register) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Optional. Resource name of the integrator. */
+      @com.google.api.client.util.Key
+      private java.lang.String integrator;
+
+      /** Optional. Resource name of the integrator.
+       */
+      public java.lang.String getIntegrator() {
+        return integrator;
+      }
+
+      /** Optional. Resource name of the integrator. */
+      public Register setIntegrator(java.lang.String integrator) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(INTEGRATOR_PATTERN.matcher(integrator).matches(),
+              "Parameter integrator must conform to the pattern " +
+              "^integrators/[^/]+$");
+        }
+        this.integrator = integrator;
+        return this;
+      }
+
+      /** Optional. Resource name of the account. */
+      @com.google.api.client.util.Key
+      private java.lang.String account;
+
+      /** Optional. Resource name of the account.
+       */
+      public java.lang.String getAccount() {
+        return account;
+      }
+
+      /** Optional. Resource name of the account. */
+      public Register setAccount(java.lang.String account) {
+        this.account = account;
+        return this;
+      }
+
+      /** Required. Service account that provides subscriber access to the registered topic. */
+      @com.google.api.client.util.Key
+      private java.lang.String serviceAccount;
+
+      /** Required. Service account that provides subscriber access to the registered topic.
+       */
+      public java.lang.String getServiceAccount() {
+        return serviceAccount;
+      }
+
+      /** Required. Service account that provides subscriber access to the registered topic. */
+      public Register setServiceAccount(java.lang.String serviceAccount) {
+        this.serviceAccount = serviceAccount;
+        return this;
+      }
+
+      @Override
+      public Register set(String parameterName, Object value) {
+        return (Register) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Unregisters a service account with subscriber privileges on the Cloud Pub/Sub topic created for
+     * this Channel Services account. If there are no service accounts left with subscriber privileges,
+     * this deletes the topic. You can call ListSubscribers to check for these accounts. Possible error
+     * codes: * PERMISSION_DENIED: The reseller account making the request and the provided reseller
+     * account are different, or the impersonated user is not a super admin. * INVALID_ARGUMENT:
+     * Required request parameters are missing or invalid. * NOT_FOUND: The topic resource doesn't
+     * exist. * INTERNAL: Any non-user error related to a technical issue in the backend. Contact Cloud
+     * Channel support. * UNKNOWN: Any non-user error related to a technical issue in the backend.
+     * Contact Cloud Channel support. Return value: The topic name that unregistered the service email
+     * address. Returns a success response if the service email address wasn't registered with the
+     * topic.
+     *
+     * Create a request for the method "integrators.unregister".
+     *
+     * This request holds the parameters needed by the cloudchannel server.  After setting any optional
+     * parameters, call the {@link Unregister#execute()} method to invoke the remote operation.
+     *
+     * @param integrator Optional. Resource name of the integrator.
+     * @return the request
+     */
+    public Unregister unregister(java.lang.String integrator) throws java.io.IOException {
+      Unregister result = new Unregister(integrator);
+      initialize(result);
+      return result;
+    }
+
+    public class Unregister extends CloudchannelRequest<com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1UnregisterSubscriberResponse> {
+
+      private static final String REST_PATH = "v1/{+integrator}:unregister";
+
+      private final java.util.regex.Pattern INTEGRATOR_PATTERN =
+          java.util.regex.Pattern.compile("^integrators/[^/]+$");
+
+      /**
+       * Unregisters a service account with subscriber privileges on the Cloud Pub/Sub topic created for
+       * this Channel Services account. If there are no service accounts left with subscriber
+       * privileges, this deletes the topic. You can call ListSubscribers to check for these accounts.
+       * Possible error codes: * PERMISSION_DENIED: The reseller account making the request and the
+       * provided reseller account are different, or the impersonated user is not a super admin. *
+       * INVALID_ARGUMENT: Required request parameters are missing or invalid. * NOT_FOUND: The topic
+       * resource doesn't exist. * INTERNAL: Any non-user error related to a technical issue in the
+       * backend. Contact Cloud Channel support. * UNKNOWN: Any non-user error related to a technical
+       * issue in the backend. Contact Cloud Channel support. Return value: The topic name that
+       * unregistered the service email address. Returns a success response if the service email address
+       * wasn't registered with the topic.
+       *
+       * Create a request for the method "integrators.unregister".
+       *
+       * This request holds the parameters needed by the the cloudchannel server.  After setting any
+       * optional parameters, call the {@link Unregister#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Unregister#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param integrator Optional. Resource name of the integrator.
+       * @since 1.13
+       */
+      protected Unregister(java.lang.String integrator) {
+        super(Cloudchannel.this, "POST", REST_PATH, null, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1UnregisterSubscriberResponse.class);
+        this.integrator = com.google.api.client.util.Preconditions.checkNotNull(integrator, "Required parameter integrator must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(INTEGRATOR_PATTERN.matcher(integrator).matches(),
+              "Parameter integrator must conform to the pattern " +
+              "^integrators/[^/]+$");
+        }
+      }
+
+      @Override
+      public Unregister set$Xgafv(java.lang.String $Xgafv) {
+        return (Unregister) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Unregister setAccessToken(java.lang.String accessToken) {
+        return (Unregister) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Unregister setAlt(java.lang.String alt) {
+        return (Unregister) super.setAlt(alt);
+      }
+
+      @Override
+      public Unregister setCallback(java.lang.String callback) {
+        return (Unregister) super.setCallback(callback);
+      }
+
+      @Override
+      public Unregister setFields(java.lang.String fields) {
+        return (Unregister) super.setFields(fields);
+      }
+
+      @Override
+      public Unregister setKey(java.lang.String key) {
+        return (Unregister) super.setKey(key);
+      }
+
+      @Override
+      public Unregister setOauthToken(java.lang.String oauthToken) {
+        return (Unregister) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Unregister setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Unregister) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Unregister setQuotaUser(java.lang.String quotaUser) {
+        return (Unregister) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Unregister setUploadType(java.lang.String uploadType) {
+        return (Unregister) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Unregister setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Unregister) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Optional. Resource name of the integrator. */
+      @com.google.api.client.util.Key
+      private java.lang.String integrator;
+
+      /** Optional. Resource name of the integrator.
+       */
+      public java.lang.String getIntegrator() {
+        return integrator;
+      }
+
+      /** Optional. Resource name of the integrator. */
+      public Unregister setIntegrator(java.lang.String integrator) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(INTEGRATOR_PATTERN.matcher(integrator).matches(),
+              "Parameter integrator must conform to the pattern " +
+              "^integrators/[^/]+$");
+        }
+        this.integrator = integrator;
+        return this;
+      }
+
+      /** Optional. Resource name of the account. */
+      @com.google.api.client.util.Key
+      private java.lang.String account;
+
+      /** Optional. Resource name of the account.
+       */
+      public java.lang.String getAccount() {
+        return account;
+      }
+
+      /** Optional. Resource name of the account. */
+      public Unregister setAccount(java.lang.String account) {
+        this.account = account;
+        return this;
+      }
+
+      /** Required. Service account to unregister from subscriber access to the topic. */
+      @com.google.api.client.util.Key
+      private java.lang.String serviceAccount;
+
+      /** Required. Service account to unregister from subscriber access to the topic.
+       */
+      public java.lang.String getServiceAccount() {
+        return serviceAccount;
+      }
+
+      /** Required. Service account to unregister from subscriber access to the topic. */
+      public Unregister setServiceAccount(java.lang.String serviceAccount) {
+        this.serviceAccount = serviceAccount;
+        return this;
+      }
+
+      @Override
+      public Unregister set(String parameterName, Object value) {
+        return (Unregister) super.set(parameterName, value);
+      }
+    }
+
   }
 
   /**

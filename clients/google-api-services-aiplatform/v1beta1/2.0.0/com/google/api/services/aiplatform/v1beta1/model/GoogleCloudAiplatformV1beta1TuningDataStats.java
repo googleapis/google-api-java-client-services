@@ -30,11 +30,35 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1TuningDataStats extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Statistics for distillation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1DistillationDataStats distillationDataStats;
+
+  /**
    * The SFT Tuning data stats.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1SupervisedTuningDataStats supervisedTuningDataStats;
+
+  /**
+   * Output only. Statistics for distillation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DistillationDataStats getDistillationDataStats() {
+    return distillationDataStats;
+  }
+
+  /**
+   * Output only. Statistics for distillation.
+   * @param distillationDataStats distillationDataStats or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningDataStats setDistillationDataStats(GoogleCloudAiplatformV1beta1DistillationDataStats distillationDataStats) {
+    this.distillationDataStats = distillationDataStats;
+    return this;
+  }
 
   /**
    * The SFT Tuning data stats.

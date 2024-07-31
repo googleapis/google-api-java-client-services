@@ -226,6 +226,20 @@ public final class GoogleCloudAiplatformV1BatchPredictionJob extends com.google.
   private GoogleCloudAiplatformV1ResourcesConsumed resourcesConsumed;
 
   /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * The service account that the DeployedModel's container runs as. If not specified, a system
    * generated one will be used, which has minimal permissions and the custom container, if used,
    * may not have enough permission to access other Google Cloud resources. Users deploying the
@@ -716,6 +730,40 @@ public final class GoogleCloudAiplatformV1BatchPredictionJob extends com.google.
    */
   public GoogleCloudAiplatformV1BatchPredictionJob setResourcesConsumed(GoogleCloudAiplatformV1ResourcesConsumed resourcesConsumed) {
     this.resourcesConsumed = resourcesConsumed;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1BatchPredictionJob setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1BatchPredictionJob setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

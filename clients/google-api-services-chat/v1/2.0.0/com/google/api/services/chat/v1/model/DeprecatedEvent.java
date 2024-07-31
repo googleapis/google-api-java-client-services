@@ -87,7 +87,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   private java.lang.Boolean isDialogEvent;
 
   /**
-   * The message that triggered the interaction event, if applicable.
+   * For `ADDED_TO_SPACE`, `CARD_CLICKED`, and `MESSAGE` interaction events, the message that
+   * triggered the interaction event, if applicable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -258,7 +259,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The message that triggered the interaction event, if applicable.
+   * For `ADDED_TO_SPACE`, `CARD_CLICKED`, and `MESSAGE` interaction events, the message that
+   * triggered the interaction event, if applicable.
    * @return value or {@code null} for none
    */
   public Message getMessage() {
@@ -266,7 +268,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The message that triggered the interaction event, if applicable.
+   * For `ADDED_TO_SPACE`, `CARD_CLICKED`, and `MESSAGE` interaction events, the message that
+   * triggered the interaction event, if applicable.
    * @param message message or {@code null} for none
    */
   public DeprecatedEvent setMessage(Message message) {

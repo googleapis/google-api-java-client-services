@@ -52,7 +52,7 @@ public final class ServiceBinding extends com.google.api.client.json.GenericJson
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. Name of the ServiceBinding resource. It matches pattern
+   * Identifier. Name of the ServiceBinding resource. It matches pattern
    * `projects/locations/global/serviceBindings/service_binding_name`.
    * The value may be {@code null}.
    */
@@ -135,7 +135,7 @@ public final class ServiceBinding extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Name of the ServiceBinding resource. It matches pattern
+   * Identifier. Name of the ServiceBinding resource. It matches pattern
    * `projects/locations/global/serviceBindings/service_binding_name`.
    * @return value or {@code null} for none
    */
@@ -144,7 +144,7 @@ public final class ServiceBinding extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Name of the ServiceBinding resource. It matches pattern
+   * Identifier. Name of the ServiceBinding resource. It matches pattern
    * `projects/locations/global/serviceBindings/service_binding_name`.
    * @param name name or {@code null} for none
    */

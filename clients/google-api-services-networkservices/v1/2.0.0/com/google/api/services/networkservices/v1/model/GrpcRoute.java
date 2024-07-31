@@ -91,7 +91,7 @@ public final class GrpcRoute extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> meshes;
 
   /**
-   * Required. Name of the GrpcRoute resource. It matches pattern
+   * Identifier. Name of the GrpcRoute resource. It matches pattern
    * `projects/locations/global/grpcRoutes/`
    * The value may be {@code null}.
    */
@@ -260,7 +260,7 @@ public final class GrpcRoute extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Name of the GrpcRoute resource. It matches pattern
+   * Identifier. Name of the GrpcRoute resource. It matches pattern
    * `projects/locations/global/grpcRoutes/`
    * @return value or {@code null} for none
    */
@@ -269,7 +269,7 @@ public final class GrpcRoute extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Name of the GrpcRoute resource. It matches pattern
+   * Identifier. Name of the GrpcRoute resource. It matches pattern
    * `projects/locations/global/grpcRoutes/`
    * @param name name or {@code null} for none
    */

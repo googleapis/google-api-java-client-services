@@ -2738,7 +2738,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the EndpointPolicy resource. It matches pattern
+         * @param name Identifier. Name of the EndpointPolicy resource. It matches pattern
          *        `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
          * @param content the {@link com.google.api.services.networkservices.v1.model.EndpointPolicy}
          * @return the request
@@ -2767,7 +2767,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the EndpointPolicy resource. It matches pattern
+           * @param name Identifier. Name of the EndpointPolicy resource. It matches pattern
          *        `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
            * @param content the {@link com.google.api.services.networkservices.v1.model.EndpointPolicy}
            * @since 1.13
@@ -2838,13 +2838,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Name of the EndpointPolicy resource. It matches pattern
+           * Identifier. Name of the EndpointPolicy resource. It matches pattern
            * `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the EndpointPolicy resource. It matches pattern
+          /** Identifier. Name of the EndpointPolicy resource. It matches pattern
          `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
            */
           public java.lang.String getName() {
@@ -2852,7 +2852,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Name of the EndpointPolicy resource. It matches pattern
+           * Identifier. Name of the EndpointPolicy resource. It matches pattern
            * `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
            */
           public Patch setName(java.lang.String name) {
@@ -3549,7 +3549,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the Gateway resource. It matches pattern `projects/locations/gateways/`.
+         * @param name Identifier. Name of the Gateway resource. It matches pattern `projects/locations/gateways/`.
          * @param content the {@link com.google.api.services.networkservices.v1.model.Gateway}
          * @return the request
          */
@@ -3577,7 +3577,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the Gateway resource. It matches pattern `projects/locations/gateways/`.
+           * @param name Identifier. Name of the Gateway resource. It matches pattern `projects/locations/gateways/`.
            * @param content the {@link com.google.api.services.networkservices.v1.model.Gateway}
            * @since 1.13
            */
@@ -3647,20 +3647,20 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Name of the Gateway resource. It matches pattern
+           * Identifier. Name of the Gateway resource. It matches pattern
            * `projects/locations/gateways/`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the Gateway resource. It matches pattern `projects/locations/gateways/`.
+          /** Identifier. Name of the Gateway resource. It matches pattern `projects/locations/gateways/`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Name of the Gateway resource. It matches pattern
+           * Identifier. Name of the Gateway resource. It matches pattern
            * `projects/locations/gateways/`.
            */
           public Patch setName(java.lang.String name) {
@@ -4363,7 +4363,8 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the GrpcRoute resource. It matches pattern `projects/locations/global/grpcRoutes/`
+         * @param name Identifier. Name of the GrpcRoute resource. It matches pattern
+         *        `projects/locations/global/grpcRoutes/`
          * @param content the {@link com.google.api.services.networkservices.v1.model.GrpcRoute}
          * @return the request
          */
@@ -4391,7 +4392,8 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the GrpcRoute resource. It matches pattern `projects/locations/global/grpcRoutes/`
+           * @param name Identifier. Name of the GrpcRoute resource. It matches pattern
+         *        `projects/locations/global/grpcRoutes/`
            * @param content the {@link com.google.api.services.networkservices.v1.model.GrpcRoute}
            * @since 1.13
            */
@@ -4461,13 +4463,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Name of the GrpcRoute resource. It matches pattern
+           * Identifier. Name of the GrpcRoute resource. It matches pattern
            * `projects/locations/global/grpcRoutes/`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the GrpcRoute resource. It matches pattern
+          /** Identifier. Name of the GrpcRoute resource. It matches pattern
          `projects/locations/global/grpcRoutes/`
            */
           public java.lang.String getName() {
@@ -4475,7 +4477,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Name of the GrpcRoute resource. It matches pattern
+           * Identifier. Name of the GrpcRoute resource. It matches pattern
            * `projects/locations/global/grpcRoutes/`
            */
           public Patch setName(java.lang.String name) {
@@ -5178,7 +5180,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the HttpRoute resource. It matches pattern
+         * @param name Identifier. Name of the HttpRoute resource. It matches pattern
          *        `projects/locations/global/httpRoutes/http_route_name>`.
          * @param content the {@link com.google.api.services.networkservices.v1.model.HttpRoute}
          * @return the request
@@ -5207,7 +5209,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the HttpRoute resource. It matches pattern
+           * @param name Identifier. Name of the HttpRoute resource. It matches pattern
          *        `projects/locations/global/httpRoutes/http_route_name>`.
            * @param content the {@link com.google.api.services.networkservices.v1.model.HttpRoute}
            * @since 1.13
@@ -5278,13 +5280,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Name of the HttpRoute resource. It matches pattern
+           * Identifier. Name of the HttpRoute resource. It matches pattern
            * `projects/locations/global/httpRoutes/http_route_name>`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the HttpRoute resource. It matches pattern
+          /** Identifier. Name of the HttpRoute resource. It matches pattern
          `projects/locations/global/httpRoutes/http_route_name>`.
            */
           public java.lang.String getName() {
@@ -5292,7 +5294,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Name of the HttpRoute resource. It matches pattern
+           * Identifier. Name of the HttpRoute resource. It matches pattern
            * `projects/locations/global/httpRoutes/http_route_name>`.
            */
           public Patch setName(java.lang.String name) {
@@ -7951,7 +7953,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the Mesh resource. It matches pattern `projects/locations/global/meshes/`.
+         * @param name Identifier. Name of the Mesh resource. It matches pattern `projects/locations/global/meshes/`.
          * @param content the {@link com.google.api.services.networkservices.v1.model.Mesh}
          * @return the request
          */
@@ -7979,7 +7981,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the Mesh resource. It matches pattern `projects/locations/global/meshes/`.
+           * @param name Identifier. Name of the Mesh resource. It matches pattern `projects/locations/global/meshes/`.
            * @param content the {@link com.google.api.services.networkservices.v1.model.Mesh}
            * @since 1.13
            */
@@ -8049,20 +8051,20 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Name of the Mesh resource. It matches pattern
+           * Identifier. Name of the Mesh resource. It matches pattern
            * `projects/locations/global/meshes/`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the Mesh resource. It matches pattern `projects/locations/global/meshes/`.
+          /** Identifier. Name of the Mesh resource. It matches pattern `projects/locations/global/meshes/`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Name of the Mesh resource. It matches pattern
+           * Identifier. Name of the Mesh resource. It matches pattern
            * `projects/locations/global/meshes/`.
            */
           public Patch setName(java.lang.String name) {
@@ -11374,7 +11376,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the TcpRoute resource. It matches pattern
+         * @param name Identifier. Name of the TcpRoute resource. It matches pattern
          *        `projects/locations/global/tcpRoutes/tcp_route_name>`.
          * @param content the {@link com.google.api.services.networkservices.v1.model.TcpRoute}
          * @return the request
@@ -11403,7 +11405,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the TcpRoute resource. It matches pattern
+           * @param name Identifier. Name of the TcpRoute resource. It matches pattern
          *        `projects/locations/global/tcpRoutes/tcp_route_name>`.
            * @param content the {@link com.google.api.services.networkservices.v1.model.TcpRoute}
            * @since 1.13
@@ -11474,13 +11476,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Name of the TcpRoute resource. It matches pattern
+           * Identifier. Name of the TcpRoute resource. It matches pattern
            * `projects/locations/global/tcpRoutes/tcp_route_name>`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the TcpRoute resource. It matches pattern
+          /** Identifier. Name of the TcpRoute resource. It matches pattern
          `projects/locations/global/tcpRoutes/tcp_route_name>`.
            */
           public java.lang.String getName() {
@@ -11488,7 +11490,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Name of the TcpRoute resource. It matches pattern
+           * Identifier. Name of the TcpRoute resource. It matches pattern
            * `projects/locations/global/tcpRoutes/tcp_route_name>`.
            */
           public Patch setName(java.lang.String name) {

@@ -81,7 +81,7 @@ public final class EndpointPolicy extends com.google.api.client.json.GenericJson
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. Name of the EndpointPolicy resource. It matches pattern
+   * Identifier. Name of the EndpointPolicy resource. It matches pattern
    * `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
    * The value may be {@code null}.
    */
@@ -236,7 +236,7 @@ public final class EndpointPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Name of the EndpointPolicy resource. It matches pattern
+   * Identifier. Name of the EndpointPolicy resource. It matches pattern
    * `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
    * @return value or {@code null} for none
    */
@@ -245,7 +245,7 @@ public final class EndpointPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Name of the EndpointPolicy resource. It matches pattern
+   * Identifier. Name of the EndpointPolicy resource. It matches pattern
    * `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
    * @param name name or {@code null} for none
    */

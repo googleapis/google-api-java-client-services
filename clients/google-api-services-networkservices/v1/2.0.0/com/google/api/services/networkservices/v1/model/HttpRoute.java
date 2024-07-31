@@ -90,7 +90,7 @@ public final class HttpRoute extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> meshes;
 
   /**
-   * Required. Name of the HttpRoute resource. It matches pattern
+   * Identifier. Name of the HttpRoute resource. It matches pattern
    * `projects/locations/global/httpRoutes/http_route_name>`.
    * The value may be {@code null}.
    */
@@ -256,7 +256,7 @@ public final class HttpRoute extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Name of the HttpRoute resource. It matches pattern
+   * Identifier. Name of the HttpRoute resource. It matches pattern
    * `projects/locations/global/httpRoutes/http_route_name>`.
    * @return value or {@code null} for none
    */
@@ -265,7 +265,7 @@ public final class HttpRoute extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Name of the HttpRoute resource. It matches pattern
+   * Identifier. Name of the HttpRoute resource. It matches pattern
    * `projects/locations/global/httpRoutes/http_route_name>`.
    * @param name name or {@code null} for none
    */

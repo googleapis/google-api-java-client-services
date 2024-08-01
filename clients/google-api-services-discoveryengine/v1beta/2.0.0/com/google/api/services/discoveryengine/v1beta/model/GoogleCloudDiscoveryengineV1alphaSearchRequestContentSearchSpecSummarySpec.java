@@ -42,6 +42,16 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSp
   private java.lang.Boolean ignoreAdversarialQuery;
 
   /**
+   * Specifies whether to filter out queries that have low relevance. The default value is `false`.
+   * If this field is set to `false`, all search results are used regardless of relevance to
+   * generate answers. If set to `true`, only queries with high relevance search results will
+   * generate answers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean ignoreLowRelevantContent;
+
+  /**
    * Specifies whether to filter out queries that are not summary-seeking. The default value is
    * `false`. Google employs search-query classification to detect summary-seeking queries. No
    * summary is returned if the search query is classified as a non-summary seeking query. For
@@ -134,6 +144,29 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSp
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecSummarySpec setIgnoreAdversarialQuery(java.lang.Boolean ignoreAdversarialQuery) {
     this.ignoreAdversarialQuery = ignoreAdversarialQuery;
+    return this;
+  }
+
+  /**
+   * Specifies whether to filter out queries that have low relevance. The default value is `false`.
+   * If this field is set to `false`, all search results are used regardless of relevance to
+   * generate answers. If set to `true`, only queries with high relevance search results will
+   * generate answers.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIgnoreLowRelevantContent() {
+    return ignoreLowRelevantContent;
+  }
+
+  /**
+   * Specifies whether to filter out queries that have low relevance. The default value is `false`.
+   * If this field is set to `false`, all search results are used regardless of relevance to
+   * generate answers. If set to `true`, only queries with high relevance search results will
+   * generate answers.
+   * @param ignoreLowRelevantContent ignoreLowRelevantContent or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecSummarySpec setIgnoreLowRelevantContent(java.lang.Boolean ignoreLowRelevantContent) {
+    this.ignoreLowRelevantContent = ignoreLowRelevantContent;
     return this;
   }
 

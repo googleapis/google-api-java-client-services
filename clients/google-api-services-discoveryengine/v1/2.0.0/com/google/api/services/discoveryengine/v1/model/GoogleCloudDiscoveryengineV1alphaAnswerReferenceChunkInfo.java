@@ -51,7 +51,9 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerReferenceChunkInfo ext
   private GoogleCloudDiscoveryengineV1alphaAnswerReferenceChunkInfoDocumentMetadata documentMetadata;
 
   /**
-   * Relevance score.
+   * The relevance of the chunk for a given query. Values range from 0.0 (completely irrelevant) to
+   * 1.0 (completely relevant). This value is for informational purpose only. It may change for the
+   * same query and chunk at any time due to a model retraining or change in implementation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +111,9 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerReferenceChunkInfo ext
   }
 
   /**
-   * Relevance score.
+   * The relevance of the chunk for a given query. Values range from 0.0 (completely irrelevant) to
+   * 1.0 (completely relevant). This value is for informational purpose only. It may change for the
+   * same query and chunk at any time due to a model retraining or change in implementation.
    * @return value or {@code null} for none
    */
   public java.lang.Float getRelevanceScore() {
@@ -117,7 +121,9 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerReferenceChunkInfo ext
   }
 
   /**
-   * Relevance score.
+   * The relevance of the chunk for a given query. Values range from 0.0 (completely irrelevant) to
+   * 1.0 (completely relevant). This value is for informational purpose only. It may change for the
+   * same query and chunk at any time due to a model retraining or change in implementation.
    * @param relevanceScore relevanceScore or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaAnswerReferenceChunkInfo setRelevanceScore(java.lang.Float relevanceScore) {

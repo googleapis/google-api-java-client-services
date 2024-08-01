@@ -37,11 +37,35 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaDocumentAclInfoAccessRestriction extends com.google.api.client.json.GenericJson {
 
   /**
+   * All users within the Identity Provider.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean idpWide;
+
+  /**
    * List of principals.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDiscoveryengineV1alphaPrincipal> principals;
+
+  /**
+   * All users within the Identity Provider.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIdpWide() {
+    return idpWide;
+  }
+
+  /**
+   * All users within the Identity Provider.
+   * @param idpWide idpWide or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDocumentAclInfoAccessRestriction setIdpWide(java.lang.Boolean idpWide) {
+    this.idpWide = idpWide;
+    return this;
+  }
 
   /**
    * List of principals.

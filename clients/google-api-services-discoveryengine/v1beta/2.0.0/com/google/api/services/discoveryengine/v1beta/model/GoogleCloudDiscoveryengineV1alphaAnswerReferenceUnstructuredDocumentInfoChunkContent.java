@@ -44,6 +44,15 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerReferenceUnstructuredD
   private java.lang.String pageIdentifier;
 
   /**
+   * The relevance of the chunk for a given query. Values range from 0.0 (completely irrelevant) to
+   * 1.0 (completely relevant). This value is for informational purpose only. It may change for the
+   * same query and chunk at any time due to a model retraining or change in implementation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float relevanceScore;
+
+  /**
    * Chunk textual content.
    * @return value or {@code null} for none
    */
@@ -74,6 +83,27 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerReferenceUnstructuredD
    */
   public GoogleCloudDiscoveryengineV1alphaAnswerReferenceUnstructuredDocumentInfoChunkContent setPageIdentifier(java.lang.String pageIdentifier) {
     this.pageIdentifier = pageIdentifier;
+    return this;
+  }
+
+  /**
+   * The relevance of the chunk for a given query. Values range from 0.0 (completely irrelevant) to
+   * 1.0 (completely relevant). This value is for informational purpose only. It may change for the
+   * same query and chunk at any time due to a model retraining or change in implementation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getRelevanceScore() {
+    return relevanceScore;
+  }
+
+  /**
+   * The relevance of the chunk for a given query. Values range from 0.0 (completely irrelevant) to
+   * 1.0 (completely relevant). This value is for informational purpose only. It may change for the
+   * same query and chunk at any time due to a model retraining or change in implementation.
+   * @param relevanceScore relevanceScore or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAnswerReferenceUnstructuredDocumentInfoChunkContent setRelevanceScore(java.lang.Float relevanceScore) {
+    this.relevanceScore = relevanceScore;
     return this;
   }
 

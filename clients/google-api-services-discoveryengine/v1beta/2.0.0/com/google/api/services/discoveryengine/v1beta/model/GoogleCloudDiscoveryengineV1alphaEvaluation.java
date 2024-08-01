@@ -67,7 +67,7 @@ public final class GoogleCloudDiscoveryengineV1alphaEvaluation extends com.googl
   private GoogleCloudDiscoveryengineV1alphaEvaluationEvaluationSpec evaluationSpec;
 
   /**
-   * Immutable. The full resource name of the Evaluation, in the format of
+   * Identifier. The full resource name of the Evaluation, in the format of
    * `projects/{project}/locations/{location}/evaluations/{evaluation}`. This field must be a UTF-8
    * encoded string with a length limit of 1024 characters.
    * The value may be {@code null}.
@@ -178,7 +178,7 @@ public final class GoogleCloudDiscoveryengineV1alphaEvaluation extends com.googl
   }
 
   /**
-   * Immutable. The full resource name of the Evaluation, in the format of
+   * Identifier. The full resource name of the Evaluation, in the format of
    * `projects/{project}/locations/{location}/evaluations/{evaluation}`. This field must be a UTF-8
    * encoded string with a length limit of 1024 characters.
    * @return value or {@code null} for none
@@ -188,7 +188,7 @@ public final class GoogleCloudDiscoveryengineV1alphaEvaluation extends com.googl
   }
 
   /**
-   * Immutable. The full resource name of the Evaluation, in the format of
+   * Identifier. The full resource name of the Evaluation, in the format of
    * `projects/{project}/locations/{location}/evaluations/{evaluation}`. This field must be a UTF-8
    * encoded string with a length limit of 1024 characters.
    * @param name name or {@code null} for none

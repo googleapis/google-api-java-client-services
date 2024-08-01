@@ -37,8 +37,8 @@ public final class GoogleCloudDiscoveryengineV1alphaSampleQuery extends com.goog
   private String createTime;
 
   /**
-   * Immutable. The full resource name of the sample query, in the format of `projects/{project}/loc
-   * ations/{location}/sampleQuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. This field
+   * Identifier. The full resource name of the sample query, in the format of `projects/{project}/lo
+   * cations/{location}/sampleQuerySets/{sample_query_set}/sampleQueries/{sample_query}`. This field
    * must be a UTF-8 encoded string with a length limit of 1024 characters.
    * The value may be {@code null}.
    */
@@ -70,8 +70,8 @@ public final class GoogleCloudDiscoveryengineV1alphaSampleQuery extends com.goog
   }
 
   /**
-   * Immutable. The full resource name of the sample query, in the format of `projects/{project}/loc
-   * ations/{location}/sampleQuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. This field
+   * Identifier. The full resource name of the sample query, in the format of `projects/{project}/lo
+   * cations/{location}/sampleQuerySets/{sample_query_set}/sampleQueries/{sample_query}`. This field
    * must be a UTF-8 encoded string with a length limit of 1024 characters.
    * @return value or {@code null} for none
    */
@@ -80,8 +80,8 @@ public final class GoogleCloudDiscoveryengineV1alphaSampleQuery extends com.goog
   }
 
   /**
-   * Immutable. The full resource name of the sample query, in the format of `projects/{project}/loc
-   * ations/{location}/sampleQuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. This field
+   * Identifier. The full resource name of the sample query, in the format of `projects/{project}/lo
+   * cations/{location}/sampleQuerySets/{sample_query_set}/sampleQueries/{sample_query}`. This field
    * must be a UTF-8 encoded string with a length limit of 1024 characters.
    * @param name name or {@code null} for none
    */

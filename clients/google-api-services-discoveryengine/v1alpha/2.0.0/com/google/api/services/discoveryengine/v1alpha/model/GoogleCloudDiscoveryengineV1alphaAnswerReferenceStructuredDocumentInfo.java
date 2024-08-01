@@ -17,7 +17,7 @@
 package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
- * A BigQuery output result.
+ * Structured search information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.discoveryengine.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1alphaOutputResultBigQueryOutputResult extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1alphaAnswerReferenceStructuredDocumentInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of a BigQuery Dataset.
+   * Document resource name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String datasetId;
+  private java.lang.String document;
 
   /**
-   * The ID of a BigQuery Table.
+   * Structured search data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String tableId;
+  private java.util.Map<String, java.lang.Object> structData;
 
   /**
-   * The ID of a BigQuery Dataset.
+   * Document resource name.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDatasetId() {
-    return datasetId;
+  public java.lang.String getDocument() {
+    return document;
   }
 
   /**
-   * The ID of a BigQuery Dataset.
-   * @param datasetId datasetId or {@code null} for none
+   * Document resource name.
+   * @param document document or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaOutputResultBigQueryOutputResult setDatasetId(java.lang.String datasetId) {
-    this.datasetId = datasetId;
+  public GoogleCloudDiscoveryengineV1alphaAnswerReferenceStructuredDocumentInfo setDocument(java.lang.String document) {
+    this.document = document;
     return this;
   }
 
   /**
-   * The ID of a BigQuery Table.
+   * Structured search data.
    * @return value or {@code null} for none
    */
-  public java.lang.String getTableId() {
-    return tableId;
+  public java.util.Map<String, java.lang.Object> getStructData() {
+    return structData;
   }
 
   /**
-   * The ID of a BigQuery Table.
-   * @param tableId tableId or {@code null} for none
+   * Structured search data.
+   * @param structData structData or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaOutputResultBigQueryOutputResult setTableId(java.lang.String tableId) {
-    this.tableId = tableId;
+  public GoogleCloudDiscoveryengineV1alphaAnswerReferenceStructuredDocumentInfo setStructData(java.util.Map<String, java.lang.Object> structData) {
+    this.structData = structData;
     return this;
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaOutputResultBigQueryOutputResult set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1alphaOutputResultBigQueryOutputResult) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1alphaAnswerReferenceStructuredDocumentInfo set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1alphaAnswerReferenceStructuredDocumentInfo) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaOutputResultBigQueryOutputResult clone() {
-    return (GoogleCloudDiscoveryengineV1alphaOutputResultBigQueryOutputResult) super.clone();
+  public GoogleCloudDiscoveryengineV1alphaAnswerReferenceStructuredDocumentInfo clone() {
+    return (GoogleCloudDiscoveryengineV1alphaAnswerReferenceStructuredDocumentInfo) super.clone();
   }
 
 }

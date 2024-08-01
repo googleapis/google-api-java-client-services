@@ -89,6 +89,13 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchResponse extends com.g
   private java.lang.String nextPageToken;
 
   /**
+   * A list of One Box results. There can be multiple One Box results of different types.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1alphaSearchResponseOneBoxResult> oneBoxResults;
+
+  /**
    * Query expansion information for the returned results.
    * The value may be {@code null}.
    */
@@ -273,6 +280,23 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchResponse extends com.g
    */
   public GoogleCloudDiscoveryengineV1alphaSearchResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * A list of One Box results. There can be multiple One Box results of different types.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1alphaSearchResponseOneBoxResult> getOneBoxResults() {
+    return oneBoxResults;
+  }
+
+  /**
+   * A list of One Box results. There can be multiple One Box results of different types.
+   * @param oneBoxResults oneBoxResults or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchResponse setOneBoxResults(java.util.List<GoogleCloudDiscoveryengineV1alphaSearchResponseOneBoxResult> oneBoxResults) {
+    this.oneBoxResults = oneBoxResults;
     return this;
   }
 

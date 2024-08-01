@@ -53,9 +53,9 @@ public final class GoogleCloudDiscoveryengineV1betaSampleQuerySet extends com.go
   private java.lang.String displayName;
 
   /**
-   * Immutable. The full resource name of the SampleQuerySet, in the format of
-   * `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. This field must be
-   * a UTF-8 encoded string with a length limit of 1024 characters.
+   * Identifier. The full resource name of the SampleQuerySet, in the format of
+   * `projects/{project}/locations/{location}/sampleQuerySets/{sample_query_set}`. This field must
+   * be a UTF-8 encoded string with a length limit of 1024 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,9 +115,9 @@ public final class GoogleCloudDiscoveryengineV1betaSampleQuerySet extends com.go
   }
 
   /**
-   * Immutable. The full resource name of the SampleQuerySet, in the format of
-   * `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. This field must be
-   * a UTF-8 encoded string with a length limit of 1024 characters.
+   * Identifier. The full resource name of the SampleQuerySet, in the format of
+   * `projects/{project}/locations/{location}/sampleQuerySets/{sample_query_set}`. This field must
+   * be a UTF-8 encoded string with a length limit of 1024 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -125,9 +125,9 @@ public final class GoogleCloudDiscoveryengineV1betaSampleQuerySet extends com.go
   }
 
   /**
-   * Immutable. The full resource name of the SampleQuerySet, in the format of
-   * `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. This field must be
-   * a UTF-8 encoded string with a length limit of 1024 characters.
+   * Identifier. The full resource name of the SampleQuerySet, in the format of
+   * `projects/{project}/locations/{location}/sampleQuerySets/{sample_query_set}`. This field must
+   * be a UTF-8 encoded string with a length limit of 1024 characters.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSampleQuerySet setName(java.lang.String name) {

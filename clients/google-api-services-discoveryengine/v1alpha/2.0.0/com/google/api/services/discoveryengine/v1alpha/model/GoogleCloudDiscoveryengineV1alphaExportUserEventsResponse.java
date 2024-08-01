@@ -31,35 +31,11 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaExportUserEventsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output result indicating where the data were exported to.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudDiscoveryengineV1alphaOutputResult outputResult;
-
-  /**
    * The status of the export operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleRpcStatus status;
-
-  /**
-   * Output result indicating where the data were exported to.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1alphaOutputResult getOutputResult() {
-    return outputResult;
-  }
-
-  /**
-   * Output result indicating where the data were exported to.
-   * @param outputResult outputResult or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1alphaExportUserEventsResponse setOutputResult(GoogleCloudDiscoveryengineV1alphaOutputResult outputResult) {
-    this.outputResult = outputResult;
-    return this;
-  }
 
   /**
    * The status of the export operation.

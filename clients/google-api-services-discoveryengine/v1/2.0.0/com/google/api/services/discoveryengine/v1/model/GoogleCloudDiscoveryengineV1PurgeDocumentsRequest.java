@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1PurgeDocumentsRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * The desired location of errors incurred during the purge.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1PurgeErrorConfig errorConfig;
+
+  /**
    * Required. Filter matching documents to purge. Only currently supported value is `*` (all
    * items).
    * The value may be {@code null}.
@@ -44,6 +51,38 @@ public final class GoogleCloudDiscoveryengineV1PurgeDocumentsRequest extends com
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean force;
+
+  /**
+   * Cloud Storage location for the input content. Supported `data_schema`: * `document_id`: One
+   * valid Document.id per line.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1GcsSource gcsSource;
+
+  /**
+   * Inline source for the input content for purge.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1PurgeDocumentsRequestInlineSource inlineSource;
+
+  /**
+   * The desired location of errors incurred during the purge.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1PurgeErrorConfig getErrorConfig() {
+    return errorConfig;
+  }
+
+  /**
+   * The desired location of errors incurred during the purge.
+   * @param errorConfig errorConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1PurgeDocumentsRequest setErrorConfig(GoogleCloudDiscoveryengineV1PurgeErrorConfig errorConfig) {
+    this.errorConfig = errorConfig;
+    return this;
+  }
 
   /**
    * Required. Filter matching documents to purge. Only currently supported value is `*` (all
@@ -80,6 +119,42 @@ public final class GoogleCloudDiscoveryengineV1PurgeDocumentsRequest extends com
    */
   public GoogleCloudDiscoveryengineV1PurgeDocumentsRequest setForce(java.lang.Boolean force) {
     this.force = force;
+    return this;
+  }
+
+  /**
+   * Cloud Storage location for the input content. Supported `data_schema`: * `document_id`: One
+   * valid Document.id per line.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1GcsSource getGcsSource() {
+    return gcsSource;
+  }
+
+  /**
+   * Cloud Storage location for the input content. Supported `data_schema`: * `document_id`: One
+   * valid Document.id per line.
+   * @param gcsSource gcsSource or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1PurgeDocumentsRequest setGcsSource(GoogleCloudDiscoveryengineV1GcsSource gcsSource) {
+    this.gcsSource = gcsSource;
+    return this;
+  }
+
+  /**
+   * Inline source for the input content for purge.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1PurgeDocumentsRequestInlineSource getInlineSource() {
+    return inlineSource;
+  }
+
+  /**
+   * Inline source for the input content for purge.
+   * @param inlineSource inlineSource or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1PurgeDocumentsRequest setInlineSource(GoogleCloudDiscoveryengineV1PurgeDocumentsRequestInlineSource inlineSource) {
+    this.inlineSource = inlineSource;
     return this;
   }
 

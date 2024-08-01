@@ -63,8 +63,7 @@ public final class GoogleChromePolicyVersionsV1PolicyApiLifecycle extends com.go
 
   /**
    * Corresponding to deprecated_in_favor_of, the fully qualified namespace(s) of the old policies
-   * that will be deprecated because of introduction of this policy. This field should not be
-   * manually set but will be set and exposed through PolicyAPI automatically.
+   * that will be deprecated because of introduction of this policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,8 +147,7 @@ public final class GoogleChromePolicyVersionsV1PolicyApiLifecycle extends com.go
 
   /**
    * Corresponding to deprecated_in_favor_of, the fully qualified namespace(s) of the old policies
-   * that will be deprecated because of introduction of this policy. This field should not be
-   * manually set but will be set and exposed through PolicyAPI automatically.
+   * that will be deprecated because of introduction of this policy.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getScheduledToDeprecatePolicies() {
@@ -158,8 +156,7 @@ public final class GoogleChromePolicyVersionsV1PolicyApiLifecycle extends com.go
 
   /**
    * Corresponding to deprecated_in_favor_of, the fully qualified namespace(s) of the old policies
-   * that will be deprecated because of introduction of this policy. This field should not be
-   * manually set but will be set and exposed through PolicyAPI automatically.
+   * that will be deprecated because of introduction of this policy.
    * @param scheduledToDeprecatePolicies scheduledToDeprecatePolicies or {@code null} for none
    */
   public GoogleChromePolicyVersionsV1PolicyApiLifecycle setScheduledToDeprecatePolicies(java.util.List<java.lang.String> scheduledToDeprecatePolicies) {

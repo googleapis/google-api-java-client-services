@@ -101,6 +101,14 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Specify the reservation sharing policy. If unspecified, the reservation will not be shared with
+   * Google Cloud managed services.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AllocationReservationSharingPolicy reservationSharingPolicy;
+
+  /**
    * Resource policies to be added to this reservation. The key is defined by user, and the value is
    * resource policy url. This is to define placement policy with reservation.
    * The value may be {@code null}.
@@ -333,6 +341,25 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Specify the reservation sharing policy. If unspecified, the reservation will not be shared with
+   * Google Cloud managed services.
+   * @return value or {@code null} for none
+   */
+  public AllocationReservationSharingPolicy getReservationSharingPolicy() {
+    return reservationSharingPolicy;
+  }
+
+  /**
+   * Specify the reservation sharing policy. If unspecified, the reservation will not be shared with
+   * Google Cloud managed services.
+   * @param reservationSharingPolicy reservationSharingPolicy or {@code null} for none
+   */
+  public Reservation setReservationSharingPolicy(AllocationReservationSharingPolicy reservationSharingPolicy) {
+    this.reservationSharingPolicy = reservationSharingPolicy;
     return this;
   }
 

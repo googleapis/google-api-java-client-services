@@ -63,6 +63,14 @@ public final class AdvancedMachineFeatures extends com.google.api.client.json.Ge
   private java.lang.Integer threadsPerCore;
 
   /**
+   * Turbo frequency mode to use for the instance. Supported modes include: * ALL_CORE_MAX Using
+   * empty string or not setting this field will use the platform-specific default turbo mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String turboMode;
+
+  /**
    * The number of physical cores to expose to an instance. Multiply by the number of threads per
    * core to compute the total number of virtual CPUs to expose to the instance. If unset, the
    * number of cores is inferred from the instance's nominal CPU count and the underlying platform's
@@ -141,6 +149,25 @@ public final class AdvancedMachineFeatures extends com.google.api.client.json.Ge
    */
   public AdvancedMachineFeatures setThreadsPerCore(java.lang.Integer threadsPerCore) {
     this.threadsPerCore = threadsPerCore;
+    return this;
+  }
+
+  /**
+   * Turbo frequency mode to use for the instance. Supported modes include: * ALL_CORE_MAX Using
+   * empty string or not setting this field will use the platform-specific default turbo mode.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTurboMode() {
+    return turboMode;
+  }
+
+  /**
+   * Turbo frequency mode to use for the instance. Supported modes include: * ALL_CORE_MAX Using
+   * empty string or not setting this field will use the platform-specific default turbo mode.
+   * @param turboMode turboMode or {@code null} for none
+   */
+  public AdvancedMachineFeatures setTurboMode(java.lang.String turboMode) {
+    this.turboMode = turboMode;
     return this;
   }
 

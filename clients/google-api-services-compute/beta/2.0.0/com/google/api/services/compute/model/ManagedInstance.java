@@ -74,13 +74,6 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   private java.lang.String instance;
 
   /**
-   * [Output Only] The overrides to instance properties resulting from InstanceFlexibilityPolicy.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ManagedInstanceInstanceFlexibilityOverride instanceFlexibilityOverride;
-
-  /**
    * [Output Only] Health state of the instance per health-check.
    * The value may be {@code null}.
    */
@@ -243,23 +236,6 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
    */
   public ManagedInstance setInstance(java.lang.String instance) {
     this.instance = instance;
-    return this;
-  }
-
-  /**
-   * [Output Only] The overrides to instance properties resulting from InstanceFlexibilityPolicy.
-   * @return value or {@code null} for none
-   */
-  public ManagedInstanceInstanceFlexibilityOverride getInstanceFlexibilityOverride() {
-    return instanceFlexibilityOverride;
-  }
-
-  /**
-   * [Output Only] The overrides to instance properties resulting from InstanceFlexibilityPolicy.
-   * @param instanceFlexibilityOverride instanceFlexibilityOverride or {@code null} for none
-   */
-  public ManagedInstance setInstanceFlexibilityOverride(ManagedInstanceInstanceFlexibilityOverride instanceFlexibilityOverride) {
-    this.instanceFlexibilityOverride = instanceFlexibilityOverride;
     return this;
   }
 

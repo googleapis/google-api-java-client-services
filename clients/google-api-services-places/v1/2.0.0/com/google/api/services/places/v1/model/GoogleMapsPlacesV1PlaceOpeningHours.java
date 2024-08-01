@@ -30,8 +30,10 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1PlaceOpeningHours extends com.google.api.client.json.GenericJson {
 
   /**
-   * Is this place open right now? Always present unless we lack time-of-day or timezone data for
-   * these opening hours.
+   * Whether the opening hours period is currently active. For regular opening hours and current
+   * opening hours, this field means whether the place is open. For secondary opening hours and
+   * current secondary opening hours, this field means whether the secondary hours of this place is
+   * active.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,8 +75,10 @@ public final class GoogleMapsPlacesV1PlaceOpeningHours extends com.google.api.cl
   private java.util.List<java.lang.String> weekdayDescriptions;
 
   /**
-   * Is this place open right now? Always present unless we lack time-of-day or timezone data for
-   * these opening hours.
+   * Whether the opening hours period is currently active. For regular opening hours and current
+   * opening hours, this field means whether the place is open. For secondary opening hours and
+   * current secondary opening hours, this field means whether the secondary hours of this place is
+   * active.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOpenNow() {
@@ -82,8 +86,10 @@ public final class GoogleMapsPlacesV1PlaceOpeningHours extends com.google.api.cl
   }
 
   /**
-   * Is this place open right now? Always present unless we lack time-of-day or timezone data for
-   * these opening hours.
+   * Whether the opening hours period is currently active. For regular opening hours and current
+   * opening hours, this field means whether the place is open. For secondary opening hours and
+   * current secondary opening hours, this field means whether the secondary hours of this place is
+   * active.
    * @param openNow openNow or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceOpeningHours setOpenNow(java.lang.Boolean openNow) {

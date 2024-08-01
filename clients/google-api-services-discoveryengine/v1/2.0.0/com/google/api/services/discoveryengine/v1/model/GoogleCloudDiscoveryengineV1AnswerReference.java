@@ -37,6 +37,13 @@ public final class GoogleCloudDiscoveryengineV1AnswerReference extends com.googl
   private GoogleCloudDiscoveryengineV1AnswerReferenceChunkInfo chunkInfo;
 
   /**
+   * Structured document information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1AnswerReferenceStructuredDocumentInfo structuredDocumentInfo;
+
+  /**
    * Unstructured document information.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class GoogleCloudDiscoveryengineV1AnswerReference extends com.googl
    */
   public GoogleCloudDiscoveryengineV1AnswerReference setChunkInfo(GoogleCloudDiscoveryengineV1AnswerReferenceChunkInfo chunkInfo) {
     this.chunkInfo = chunkInfo;
+    return this;
+  }
+
+  /**
+   * Structured document information.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1AnswerReferenceStructuredDocumentInfo getStructuredDocumentInfo() {
+    return structuredDocumentInfo;
+  }
+
+  /**
+   * Structured document information.
+   * @param structuredDocumentInfo structuredDocumentInfo or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1AnswerReference setStructuredDocumentInfo(GoogleCloudDiscoveryengineV1AnswerReferenceStructuredDocumentInfo structuredDocumentInfo) {
+    this.structuredDocumentInfo = structuredDocumentInfo;
     return this;
   }
 

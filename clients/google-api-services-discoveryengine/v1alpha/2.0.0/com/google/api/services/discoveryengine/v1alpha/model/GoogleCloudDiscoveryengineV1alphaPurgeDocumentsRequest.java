@@ -61,6 +61,13 @@ public final class GoogleCloudDiscoveryengineV1alphaPurgeDocumentsRequest extend
   private GoogleCloudDiscoveryengineV1alphaGcsSource gcsSource;
 
   /**
+   * Inline source for the input content for purge.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaPurgeDocumentsRequestInlineSource inlineSource;
+
+  /**
    * The desired location of errors incurred during the purge.
    * @return value or {@code null} for none
    */
@@ -131,6 +138,23 @@ public final class GoogleCloudDiscoveryengineV1alphaPurgeDocumentsRequest extend
    */
   public GoogleCloudDiscoveryengineV1alphaPurgeDocumentsRequest setGcsSource(GoogleCloudDiscoveryengineV1alphaGcsSource gcsSource) {
     this.gcsSource = gcsSource;
+    return this;
+  }
+
+  /**
+   * Inline source for the input content for purge.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaPurgeDocumentsRequestInlineSource getInlineSource() {
+    return inlineSource;
+  }
+
+  /**
+   * Inline source for the input content for purge.
+   * @param inlineSource inlineSource or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaPurgeDocumentsRequest setInlineSource(GoogleCloudDiscoveryengineV1alphaPurgeDocumentsRequestInlineSource inlineSource) {
+    this.inlineSource = inlineSource;
     return this;
   }
 

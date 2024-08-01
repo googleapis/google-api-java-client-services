@@ -1192,6 +1192,37 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               return this;
             }
 
+            /**
+             * A boolean flag indicating whether to skip the default schema creation for the data
+             * store. Only enable this flag if you are certain that the default schema is
+             * incompatible with your use case. If set to true, you must manually create a schema
+             * for the data store before any documents can be ingested. This flag cannot be
+             * specified if `data_store.starting_schema` is specified.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean skipDefaultSchemaCreation;
+
+            /** A boolean flag indicating whether to skip the default schema creation for the data store. Only
+           enable this flag if you are certain that the default schema is incompatible with your use case. If
+           set to true, you must manually create a schema for the data store before any documents can be
+           ingested. This flag cannot be specified if `data_store.starting_schema` is specified.
+             */
+            public java.lang.Boolean getSkipDefaultSchemaCreation() {
+              return skipDefaultSchemaCreation;
+            }
+
+            /**
+             * A boolean flag indicating whether to skip the default schema creation for the data
+             * store. Only enable this flag if you are certain that the default schema is
+             * incompatible with your use case. If set to true, you must manually create a schema
+             * for the data store before any documents can be ingested. This flag cannot be
+             * specified if `data_store.starting_schema` is specified.
+             */
+            public Create setSkipDefaultSchemaCreation(java.lang.Boolean skipDefaultSchemaCreation) {
+              this.skipDefaultSchemaCreation = skipDefaultSchemaCreation;
+              return this;
+            }
+
             @Override
             public Create set(String parameterName, Object value) {
               return (Create) super.set(parameterName, value);
@@ -13479,6 +13510,154 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
             }
             /**
+             * Deletes permanently all user events specified by the filter provided. Depending on the number of
+             * events specified by the filter, this operation could take hours or days to complete. To test a
+             * filter, use the list command first.
+             *
+             * Create a request for the method "userEvents.purge".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Purge#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The resource name of the catalog under which the events are created. The format is
+             *        `projects/${projectId}/locations/global/collections/{$collectionId}/dataStores/${dataStore
+             *        Id}`
+             * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaPurgeUserEventsRequest}
+             * @return the request
+             */
+            public Purge purge(java.lang.String parent, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaPurgeUserEventsRequest content) throws java.io.IOException {
+              Purge result = new Purge(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Purge extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleLongrunningOperation> {
+
+              private static final String REST_PATH = "v1beta/{+parent}/userEvents:purge";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+
+              /**
+               * Deletes permanently all user events specified by the filter provided. Depending on the number
+               * of events specified by the filter, this operation could take hours or days to complete. To test
+               * a filter, use the list command first.
+               *
+               * Create a request for the method "userEvents.purge".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Purge#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Purge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The resource name of the catalog under which the events are created. The format is
+             *        `projects/${projectId}/locations/global/collections/{$collectionId}/dataStores/${dataStore
+             *        Id}`
+               * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaPurgeUserEventsRequest}
+               * @since 1.13
+               */
+              protected Purge(java.lang.String parent, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaPurgeUserEventsRequest content) {
+                super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1beta.model.GoogleLongrunningOperation.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public Purge set$Xgafv(java.lang.String $Xgafv) {
+                return (Purge) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Purge setAccessToken(java.lang.String accessToken) {
+                return (Purge) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Purge setAlt(java.lang.String alt) {
+                return (Purge) super.setAlt(alt);
+              }
+
+              @Override
+              public Purge setCallback(java.lang.String callback) {
+                return (Purge) super.setCallback(callback);
+              }
+
+              @Override
+              public Purge setFields(java.lang.String fields) {
+                return (Purge) super.setFields(fields);
+              }
+
+              @Override
+              public Purge setKey(java.lang.String key) {
+                return (Purge) super.setKey(key);
+              }
+
+              @Override
+              public Purge setOauthToken(java.lang.String oauthToken) {
+                return (Purge) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Purge setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Purge) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Purge setQuotaUser(java.lang.String quotaUser) {
+                return (Purge) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Purge setUploadType(java.lang.String uploadType) {
+                return (Purge) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Purge setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Purge) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the catalog under which the events are created. The
+               * format is `projects/${projectId}/locations/global/collections/{$collectionId}/dataS
+               * tores/${dataStoreId}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The resource name of the catalog under which the events are created. The format is
+             `projects/${projectId}/locations/global/collections/{$collectionId}/dataStores/${dataStoreId}`
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The resource name of the catalog under which the events are created. The
+               * format is `projects/${projectId}/locations/global/collections/{$collectionId}/dataS
+               * tores/${dataStoreId}`
+               */
+              public Purge setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public Purge set(String parameterName, Object value) {
+                return (Purge) super.set(parameterName, value);
+              }
+            }
+            /**
              * Writes a single user event.
              *
              * Create a request for the method "userEvents.write".
@@ -20081,6 +20260,37 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            */
           public Create setDataStoreId(java.lang.String dataStoreId) {
             this.dataStoreId = dataStoreId;
+            return this;
+          }
+
+          /**
+           * A boolean flag indicating whether to skip the default schema creation for the data
+           * store. Only enable this flag if you are certain that the default schema is incompatible
+           * with your use case. If set to true, you must manually create a schema for the data
+           * store before any documents can be ingested. This flag cannot be specified if
+           * `data_store.starting_schema` is specified.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean skipDefaultSchemaCreation;
+
+          /** A boolean flag indicating whether to skip the default schema creation for the data store. Only
+         enable this flag if you are certain that the default schema is incompatible with your use case. If
+         set to true, you must manually create a schema for the data store before any documents can be
+         ingested. This flag cannot be specified if `data_store.starting_schema` is specified.
+           */
+          public java.lang.Boolean getSkipDefaultSchemaCreation() {
+            return skipDefaultSchemaCreation;
+          }
+
+          /**
+           * A boolean flag indicating whether to skip the default schema creation for the data
+           * store. Only enable this flag if you are certain that the default schema is incompatible
+           * with your use case. If set to true, you must manually create a schema for the data
+           * store before any documents can be ingested. This flag cannot be specified if
+           * `data_store.starting_schema` is specified.
+           */
+          public Create setSkipDefaultSchemaCreation(java.lang.Boolean skipDefaultSchemaCreation) {
+            this.skipDefaultSchemaCreation = skipDefaultSchemaCreation;
             return this;
           }
 
@@ -30632,6 +30842,154 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
           }
           /**
+           * Deletes permanently all user events specified by the filter provided. Depending on the number of
+           * events specified by the filter, this operation could take hours or days to complete. To test a
+           * filter, use the list command first.
+           *
+           * Create a request for the method "userEvents.purge".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Purge#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the catalog under which the events are created. The format is
+           *        `projects/${projectId}/locations/global/collections/{$collectionId}/dataStores/${dataStore
+           *        Id}`
+           * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaPurgeUserEventsRequest}
+           * @return the request
+           */
+          public Purge purge(java.lang.String parent, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaPurgeUserEventsRequest content) throws java.io.IOException {
+            Purge result = new Purge(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Purge extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1beta/{+parent}/userEvents:purge";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
+
+            /**
+             * Deletes permanently all user events specified by the filter provided. Depending on the number
+             * of events specified by the filter, this operation could take hours or days to complete. To test
+             * a filter, use the list command first.
+             *
+             * Create a request for the method "userEvents.purge".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Purge#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Purge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the catalog under which the events are created. The format is
+           *        `projects/${projectId}/locations/global/collections/{$collectionId}/dataStores/${dataStore
+           *        Id}`
+             * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaPurgeUserEventsRequest}
+             * @since 1.13
+             */
+            protected Purge(java.lang.String parent, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaPurgeUserEventsRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1beta.model.GoogleLongrunningOperation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public Purge set$Xgafv(java.lang.String $Xgafv) {
+              return (Purge) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Purge setAccessToken(java.lang.String accessToken) {
+              return (Purge) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Purge setAlt(java.lang.String alt) {
+              return (Purge) super.setAlt(alt);
+            }
+
+            @Override
+            public Purge setCallback(java.lang.String callback) {
+              return (Purge) super.setCallback(callback);
+            }
+
+            @Override
+            public Purge setFields(java.lang.String fields) {
+              return (Purge) super.setFields(fields);
+            }
+
+            @Override
+            public Purge setKey(java.lang.String key) {
+              return (Purge) super.setKey(key);
+            }
+
+            @Override
+            public Purge setOauthToken(java.lang.String oauthToken) {
+              return (Purge) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Purge setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Purge) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Purge setQuotaUser(java.lang.String quotaUser) {
+              return (Purge) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Purge setUploadType(java.lang.String uploadType) {
+              return (Purge) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Purge setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Purge) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the catalog under which the events are created. The
+             * format is `projects/${projectId}/locations/global/collections/{$collectionId}/dataSto
+             * res/${dataStoreId}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the catalog under which the events are created. The format is
+           `projects/${projectId}/locations/global/collections/{$collectionId}/dataStores/${dataStoreId}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the catalog under which the events are created. The
+             * format is `projects/${projectId}/locations/global/collections/{$collectionId}/dataSto
+             * res/${dataStoreId}`
+             */
+            public Purge setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Purge set(String parameterName, Object value) {
+              return (Purge) super.set(parameterName, value);
+            }
+          }
+          /**
            * Writes a single user event.
            *
            * Create a request for the method "userEvents.write".
@@ -32595,10 +32953,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. Full resource name of SampleQuerySet, such as
-         *        `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the caller
-         *        does not have permission to delete the SampleQuerySet, regardless of whether or not it
-         *        exists, a `PERMISSION_DENIED` error is returned. If the SampleQuerySet to delete does not
-         *        exist, a `NOT_FOUND` error is returned.
+         *        `projects/{project}/locations/{location}/sampleQuerySets/{sample_query_set}`. If the
+         *        caller does not have permission to delete the SampleQuerySet, regardless of whether or not
+         *        it exists, a `PERMISSION_DENIED` error is returned. If the SampleQuerySet to delete does
+         *        not exist, a `NOT_FOUND` error is returned.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -32626,10 +32984,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Full resource name of SampleQuerySet, such as
-         *        `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the caller
-         *        does not have permission to delete the SampleQuerySet, regardless of whether or not it
-         *        exists, a `PERMISSION_DENIED` error is returned. If the SampleQuerySet to delete does not
-         *        exist, a `NOT_FOUND` error is returned.
+         *        `projects/{project}/locations/{location}/sampleQuerySets/{sample_query_set}`. If the
+         *        caller does not have permission to delete the SampleQuerySet, regardless of whether or not
+         *        it exists, a `PERMISSION_DENIED` error is returned. If the SampleQuerySet to delete does
+         *        not exist, a `NOT_FOUND` error is returned.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -32699,7 +33057,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. Full resource name of SampleQuerySet, such as
-           * `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the
+           * `projects/{project}/locations/{location}/sampleQuerySets/{sample_query_set}`. If the
            * caller does not have permission to delete the SampleQuerySet, regardless of whether or
            * not it exists, a `PERMISSION_DENIED` error is returned. If the SampleQuerySet to delete
            * does not exist, a `NOT_FOUND` error is returned.
@@ -32708,8 +33066,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           private java.lang.String name;
 
           /** Required. Full resource name of SampleQuerySet, such as
-         `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the caller does not
-         have permission to delete the SampleQuerySet, regardless of whether or not it exists, a
+         `projects/{project}/locations/{location}/sampleQuerySets/{sample_query_set}`. If the caller does
+         not have permission to delete the SampleQuerySet, regardless of whether or not it exists, a
          `PERMISSION_DENIED` error is returned. If the SampleQuerySet to delete does not exist, a
          `NOT_FOUND` error is returned.
            */
@@ -32719,7 +33077,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. Full resource name of SampleQuerySet, such as
-           * `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the
+           * `projects/{project}/locations/{location}/sampleQuerySets/{sample_query_set}`. If the
            * caller does not have permission to delete the SampleQuerySet, regardless of whether or
            * not it exists, a `PERMISSION_DENIED` error is returned. If the SampleQuerySet to delete
            * does not exist, a `NOT_FOUND` error is returned.
@@ -32748,9 +33106,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. Full resource name of SampleQuerySet, such as
-         *        `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the caller
-         *        does not have permission to access the SampleQuerySet, regardless of whether or not it
-         *        exists, a PERMISSION_DENIED error is returned. If the requested SampleQuerySet does not
+         *        `projects/{project}/locations/{location}/sampleQuerySets/{sample_query_set}`. If the
+         *        caller does not have permission to access the SampleQuerySet, regardless of whether or not
+         *        it exists, a PERMISSION_DENIED error is returned. If the requested SampleQuerySet does not
          *        exist, a NOT_FOUND error is returned.
          * @return the request
          */
@@ -32778,9 +33136,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Full resource name of SampleQuerySet, such as
-         *        `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the caller
-         *        does not have permission to access the SampleQuerySet, regardless of whether or not it
-         *        exists, a PERMISSION_DENIED error is returned. If the requested SampleQuerySet does not
+         *        `projects/{project}/locations/{location}/sampleQuerySets/{sample_query_set}`. If the
+         *        caller does not have permission to access the SampleQuerySet, regardless of whether or not
+         *        it exists, a PERMISSION_DENIED error is returned. If the requested SampleQuerySet does not
          *        exist, a NOT_FOUND error is returned.
            * @since 1.13
            */
@@ -32861,7 +33219,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. Full resource name of SampleQuerySet, such as
-           * `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the
+           * `projects/{project}/locations/{location}/sampleQuerySets/{sample_query_set}`. If the
            * caller does not have permission to access the SampleQuerySet, regardless of whether or
            * not it exists, a PERMISSION_DENIED error is returned. If the requested SampleQuerySet
            * does not exist, a NOT_FOUND error is returned.
@@ -32870,8 +33228,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           private java.lang.String name;
 
           /** Required. Full resource name of SampleQuerySet, such as
-         `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the caller does not
-         have permission to access the SampleQuerySet, regardless of whether or not it exists, a
+         `projects/{project}/locations/{location}/sampleQuerySets/{sample_query_set}`. If the caller does
+         not have permission to access the SampleQuerySet, regardless of whether or not it exists, a
          PERMISSION_DENIED error is returned. If the requested SampleQuerySet does not exist, a NOT_FOUND
          error is returned.
            */
@@ -32881,7 +33239,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. Full resource name of SampleQuerySet, such as
-           * `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. If the
+           * `projects/{project}/locations/{location}/sampleQuerySets/{sample_query_set}`. If the
            * caller does not have permission to access the SampleQuerySet, regardless of whether or
            * not it exists, a PERMISSION_DENIED error is returned. If the requested SampleQuerySet
            * does not exist, a NOT_FOUND error is returned.
@@ -33122,8 +33480,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the discoveryengine server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. The full resource name of the SampleQuerySet, in the format of
-         *        `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. This field
+         * @param name Identifier. The full resource name of the SampleQuerySet, in the format of
+         *        `projects/{project}/locations/{location}/sampleQuerySets/{sample_query_set}`. This field
          *        must be a UTF-8 encoded string with a length limit of 1024 characters.
          * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuerySet}
          * @return the request
@@ -33152,8 +33510,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. The full resource name of the SampleQuerySet, in the format of
-         *        `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. This field
+           * @param name Identifier. The full resource name of the SampleQuerySet, in the format of
+         *        `projects/{project}/locations/{location}/sampleQuerySets/{sample_query_set}`. This field
          *        must be a UTF-8 encoded string with a length limit of 1024 characters.
            * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuerySet}
            * @since 1.13
@@ -33224,15 +33582,15 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Immutable. The full resource name of the SampleQuerySet, in the format of
-           * `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. This field
-           * must be a UTF-8 encoded string with a length limit of 1024 characters.
+           * Identifier. The full resource name of the SampleQuerySet, in the format of
+           * `projects/{project}/locations/{location}/sampleQuerySets/{sample_query_set}`. This
+           * field must be a UTF-8 encoded string with a length limit of 1024 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. The full resource name of the SampleQuerySet, in the format of
-         `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. This field must be a
+          /** Identifier. The full resource name of the SampleQuerySet, in the format of
+         `projects/{project}/locations/{location}/sampleQuerySets/{sample_query_set}`. This field must be a
          UTF-8 encoded string with a length limit of 1024 characters.
            */
           public java.lang.String getName() {
@@ -33240,9 +33598,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Immutable. The full resource name of the SampleQuerySet, in the format of
-           * `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`. This field
-           * must be a UTF-8 encoded string with a length limit of 1024 characters.
+           * Identifier. The full resource name of the SampleQuerySet, in the format of
+           * `projects/{project}/locations/{location}/sampleQuerySets/{sample_query_set}`. This
+           * field must be a UTF-8 encoded string with a length limit of 1024 characters.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -33651,7 +34009,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
            * @param name Required. Full resource name of SampleQuery, such as `projects/{project}/locations/{location}/sample
-           *        QuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. If the caller does not have
+           *        QuerySets/{sample_query_set}/sampleQueries/{sample_query}`. If the caller does not have
            *        permission to delete the SampleQuery, regardless of whether or not it exists, a
            *        `PERMISSION_DENIED` error is returned. If the SampleQuery to delete does not exist, a
            *        `NOT_FOUND` error is returned.
@@ -33682,7 +34040,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. Full resource name of SampleQuery, such as `projects/{project}/locations/{location}/sample
-           *        QuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. If the caller does not have
+           *        QuerySets/{sample_query_set}/sampleQueries/{sample_query}`. If the caller does not have
            *        permission to delete the SampleQuery, regardless of whether or not it exists, a
            *        `PERMISSION_DENIED` error is returned. If the SampleQuery to delete does not exist, a
            *        `NOT_FOUND` error is returned.
@@ -33755,17 +34113,17 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. Full resource name of SampleQuery, such as `projects/{project}/locations/{l
-             * ocation}/sampleQuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. If the caller
-             * does not have permission to delete the SampleQuery, regardless of whether or not it
-             * exists, a `PERMISSION_DENIED` error is returned. If the SampleQuery to delete does
-             * not exist, a `NOT_FOUND` error is returned.
+             * ocation}/sampleQuerySets/{sample_query_set}/sampleQueries/{sample_query}`. If the
+             * caller does not have permission to delete the SampleQuery, regardless of whether or
+             * not it exists, a `PERMISSION_DENIED` error is returned. If the SampleQuery to delete
+             * does not exist, a `NOT_FOUND` error is returned.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. Full resource name of SampleQuery, such as `projects/{project}/locations/{location}/sampl
-           eQuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. If the caller does not have permission to
-           delete the SampleQuery, regardless of whether or not it exists, a `PERMISSION_DENIED` error is
+           eQuerySets/{sample_query_set}/sampleQueries/{sample_query}`. If the caller does not have permission
+           to delete the SampleQuery, regardless of whether or not it exists, a `PERMISSION_DENIED` error is
            returned. If the SampleQuery to delete does not exist, a `NOT_FOUND` error is returned.
              */
             public java.lang.String getName() {
@@ -33774,10 +34132,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. Full resource name of SampleQuery, such as `projects/{project}/locations/{l
-             * ocation}/sampleQuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. If the caller
-             * does not have permission to delete the SampleQuery, regardless of whether or not it
-             * exists, a `PERMISSION_DENIED` error is returned. If the SampleQuery to delete does
-             * not exist, a `NOT_FOUND` error is returned.
+             * ocation}/sampleQuerySets/{sample_query_set}/sampleQueries/{sample_query}`. If the
+             * caller does not have permission to delete the SampleQuery, regardless of whether or
+             * not it exists, a `PERMISSION_DENIED` error is returned. If the SampleQuery to delete
+             * does not exist, a `NOT_FOUND` error is returned.
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -33803,7 +34161,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
            * @param name Required. Full resource name of SampleQuery, such as `projects/{project}/locations/{location}/sample
-           *        QuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. If the caller does not have
+           *        QuerySets/{sample_query_set}/sampleQueries/{sample_query}`. If the caller does not have
            *        permission to access the SampleQuery, regardless of whether or not it exists, a
            *        PERMISSION_DENIED error is returned. If the requested SampleQuery does not exist, a
            *        NOT_FOUND error is returned.
@@ -33833,7 +34191,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. Full resource name of SampleQuery, such as `projects/{project}/locations/{location}/sample
-           *        QuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. If the caller does not have
+           *        QuerySets/{sample_query_set}/sampleQueries/{sample_query}`. If the caller does not have
            *        permission to access the SampleQuery, regardless of whether or not it exists, a
            *        PERMISSION_DENIED error is returned. If the requested SampleQuery does not exist, a
            *        NOT_FOUND error is returned.
@@ -33916,17 +34274,17 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. Full resource name of SampleQuery, such as `projects/{project}/locations/{l
-             * ocation}/sampleQuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. If the caller
-             * does not have permission to access the SampleQuery, regardless of whether or not it
-             * exists, a PERMISSION_DENIED error is returned. If the requested SampleQuery does not
-             * exist, a NOT_FOUND error is returned.
+             * ocation}/sampleQuerySets/{sample_query_set}/sampleQueries/{sample_query}`. If the
+             * caller does not have permission to access the SampleQuery, regardless of whether or
+             * not it exists, a PERMISSION_DENIED error is returned. If the requested SampleQuery
+             * does not exist, a NOT_FOUND error is returned.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. Full resource name of SampleQuery, such as `projects/{project}/locations/{location}/sampl
-           eQuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. If the caller does not have permission to
-           access the SampleQuery, regardless of whether or not it exists, a PERMISSION_DENIED error is
+           eQuerySets/{sample_query_set}/sampleQueries/{sample_query}`. If the caller does not have permission
+           to access the SampleQuery, regardless of whether or not it exists, a PERMISSION_DENIED error is
            returned. If the requested SampleQuery does not exist, a NOT_FOUND error is returned.
              */
             public java.lang.String getName() {
@@ -33935,10 +34293,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. Full resource name of SampleQuery, such as `projects/{project}/locations/{l
-             * ocation}/sampleQuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. If the caller
-             * does not have permission to access the SampleQuery, regardless of whether or not it
-             * exists, a PERMISSION_DENIED error is returned. If the requested SampleQuery does not
-             * exist, a NOT_FOUND error is returned.
+             * ocation}/sampleQuerySets/{sample_query_set}/sampleQueries/{sample_query}`. If the
+             * caller does not have permission to access the SampleQuery, regardless of whether or
+             * not it exists, a PERMISSION_DENIED error is returned. If the requested SampleQuery
+             * does not exist, a NOT_FOUND error is returned.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -34334,8 +34692,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the discoveryengine server.  After setting any
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Immutable. The full resource name of the sample query, in the format of `projects/{project}/location
-           *        s/{location}/sampleQuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. This field
+           * @param name Identifier. The full resource name of the sample query, in the format of `projects/{project}/locatio
+           *        ns/{location}/sampleQuerySets/{sample_query_set}/sampleQueries/{sample_query}`. This field
            *        must be a UTF-8 encoded string with a length limit of 1024 characters.
            * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuery}
            * @return the request
@@ -34364,8 +34722,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Immutable. The full resource name of the sample query, in the format of `projects/{project}/location
-           *        s/{location}/sampleQuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. This field
+             * @param name Identifier. The full resource name of the sample query, in the format of `projects/{project}/locatio
+           *        ns/{location}/sampleQuerySets/{sample_query_set}/sampleQueries/{sample_query}`. This field
            *        must be a UTF-8 encoded string with a length limit of 1024 characters.
              * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaSampleQuery}
              * @since 1.13
@@ -34436,26 +34794,26 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Immutable. The full resource name of the sample query, in the format of `projects/{pr
-             * oject}/locations/{location}/sampleQuerySets/{sampleQuerySet}/sampleQueries/{sampleQue
-             * ry}`. This field must be a UTF-8 encoded string with a length limit of 1024
+             * Identifier. The full resource name of the sample query, in the format of `projects/{p
+             * roject}/locations/{location}/sampleQuerySets/{sample_query_set}/sampleQueries/{sample
+             * _query}`. This field must be a UTF-8 encoded string with a length limit of 1024
              * characters.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Immutable. The full resource name of the sample query, in the format of `projects/{project}/locatio
-           ns/{location}/sampleQuerySets/{sampleQuerySet}/sampleQueries/{sampleQuery}`. This field must be a
-           UTF-8 encoded string with a length limit of 1024 characters.
+            /** Identifier. The full resource name of the sample query, in the format of `projects/{project}/locati
+           ons/{location}/sampleQuerySets/{sample_query_set}/sampleQueries/{sample_query}`. This field must be
+           a UTF-8 encoded string with a length limit of 1024 characters.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Immutable. The full resource name of the sample query, in the format of `projects/{pr
-             * oject}/locations/{location}/sampleQuerySets/{sampleQuerySet}/sampleQueries/{sampleQue
-             * ry}`. This field must be a UTF-8 encoded string with a length limit of 1024
+             * Identifier. The full resource name of the sample query, in the format of `projects/{p
+             * roject}/locations/{location}/sampleQuerySets/{sample_query_set}/sampleQueries/{sample
+             * _query}`. This field must be a UTF-8 encoded string with a length limit of 1024
              * characters.
              */
             public Patch setName(java.lang.String name) {

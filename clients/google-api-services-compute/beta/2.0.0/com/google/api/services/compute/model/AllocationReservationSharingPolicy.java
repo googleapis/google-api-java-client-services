@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for ManagedInstanceInstanceFlexibilityOverride.
+ * Model definition for AllocationReservationSharingPolicy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.compute.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ManagedInstanceInstanceFlexibilityOverride extends com.google.api.client.json.GenericJson {
+public final class AllocationReservationSharingPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * The machine type to be used for this instance.
+   * Sharing config for all Google Cloud services.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String machineType;
+  private java.lang.String serviceShareType;
 
   /**
-   * The machine type to be used for this instance.
+   * Sharing config for all Google Cloud services.
    * @return value or {@code null} for none
    */
-  public java.lang.String getMachineType() {
-    return machineType;
+  public java.lang.String getServiceShareType() {
+    return serviceShareType;
   }
 
   /**
-   * The machine type to be used for this instance.
-   * @param machineType machineType or {@code null} for none
+   * Sharing config for all Google Cloud services.
+   * @param serviceShareType serviceShareType or {@code null} for none
    */
-  public ManagedInstanceInstanceFlexibilityOverride setMachineType(java.lang.String machineType) {
-    this.machineType = machineType;
+  public AllocationReservationSharingPolicy setServiceShareType(java.lang.String serviceShareType) {
+    this.serviceShareType = serviceShareType;
     return this;
   }
 
   @Override
-  public ManagedInstanceInstanceFlexibilityOverride set(String fieldName, Object value) {
-    return (ManagedInstanceInstanceFlexibilityOverride) super.set(fieldName, value);
+  public AllocationReservationSharingPolicy set(String fieldName, Object value) {
+    return (AllocationReservationSharingPolicy) super.set(fieldName, value);
   }
 
   @Override
-  public ManagedInstanceInstanceFlexibilityOverride clone() {
-    return (ManagedInstanceInstanceFlexibilityOverride) super.clone();
+  public AllocationReservationSharingPolicy clone() {
+    return (AllocationReservationSharingPolicy) super.clone();
   }
 
 }

@@ -31,8 +31,7 @@ package com.google.api.services.chat.v1.model;
  * second column wraps if the screen width is less than or equal to 300 pt. * On Android devices,
  * the second column wraps if the screen width is less than or equal to 320 dp. To include more than
  * 2 columns, or to use rows, use the `Grid` widget. [Google Workspace Add-ons and Chat
- * apps](https://developers.google.com/workspace/extend): Columns for Google Workspace Add-ons are
- * in Developer Preview.
+ * apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

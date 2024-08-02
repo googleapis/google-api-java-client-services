@@ -28137,6 +28137,162 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
+           * Rolls back messages from the HL7 store to the specified time. This method returns an Operation
+           * that can be used to track the status of the rollback by calling GetOperation. Immediate fatal
+           * errors appear in the error field, errors are also logged to Cloud Logging (see [Viewing error
+           * logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). Otherwise,
+           * when the operation finishes, a detailed response of type RollbackHl7V2MessagesResponse is
+           * returned in the response field. The metadata field type for this operation is OperationMetadata.
+           *
+           * Create a request for the method "hl7V2Stores.rollback".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Rollback#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the HL7v2 store to rollback, in the format of
+           *        "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
+           *        /hl7V2Stores/{hl7v2_store_id}".
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.RollbackHl7V2MessagesRequest}
+           * @return the request
+           */
+          public Rollback rollback(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.RollbackHl7V2MessagesRequest content) throws java.io.IOException {
+            Rollback result = new Rollback(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Rollback extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:rollback";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
+
+            /**
+             * Rolls back messages from the HL7 store to the specified time. This method returns an Operation
+             * that can be used to track the status of the rollback by calling GetOperation. Immediate fatal
+             * errors appear in the error field, errors are also logged to Cloud Logging (see [Viewing error
+             * logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). Otherwise,
+             * when the operation finishes, a detailed response of type RollbackHl7V2MessagesResponse is
+             * returned in the response field. The metadata field type for this operation is
+             * OperationMetadata.
+             *
+             * Create a request for the method "hl7V2Stores.rollback".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Rollback#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Rollback#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the HL7v2 store to rollback, in the format of
+           *        "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
+           *        /hl7V2Stores/{hl7v2_store_id}".
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.RollbackHl7V2MessagesRequest}
+             * @since 1.13
+             */
+            protected Rollback(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.RollbackHl7V2MessagesRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
+              }
+            }
+
+            @Override
+            public Rollback set$Xgafv(java.lang.String $Xgafv) {
+              return (Rollback) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Rollback setAccessToken(java.lang.String accessToken) {
+              return (Rollback) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Rollback setAlt(java.lang.String alt) {
+              return (Rollback) super.setAlt(alt);
+            }
+
+            @Override
+            public Rollback setCallback(java.lang.String callback) {
+              return (Rollback) super.setCallback(callback);
+            }
+
+            @Override
+            public Rollback setFields(java.lang.String fields) {
+              return (Rollback) super.setFields(fields);
+            }
+
+            @Override
+            public Rollback setKey(java.lang.String key) {
+              return (Rollback) super.setKey(key);
+            }
+
+            @Override
+            public Rollback setOauthToken(java.lang.String oauthToken) {
+              return (Rollback) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Rollback setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Rollback) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Rollback setQuotaUser(java.lang.String quotaUser) {
+              return (Rollback) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Rollback setUploadType(java.lang.String uploadType) {
+              return (Rollback) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Rollback setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Rollback) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the HL7v2 store to rollback, in the format of
+             * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
+             * /hl7V2Stores/{hl7v2_store_id}".
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the HL7v2 store to rollback, in the format of
+           "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
+           /hl7V2Stores/{hl7v2_store_id}".
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the HL7v2 store to rollback, in the format of
+             * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
+             * /hl7V2Stores/{hl7v2_store_id}".
+             */
+            public Rollback setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Rollback set(String parameterName, Object value) {
+              return (Rollback) super.set(parameterName, value);
+            }
+          }
+          /**
            * Sets the access control policy on the specified resource. Replaces any existing policy. Can
            * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *

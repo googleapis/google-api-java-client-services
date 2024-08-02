@@ -4810,10 +4810,11 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * You cannot bind a principal to the custom role in an IAM Policy. * Existing bindings to the
        * custom role are not changed, but they have no effect. * By default, the response from ListRoles
        * does not include the custom role. A deleted custom role still counts toward the [custom role
-       * limit](/iam/quotas#limits) until it is permanently deleted. You have 7 days to undelete the
-       * custom role. After 7 days, the following changes occur: * The custom role is permanently deleted
-       * and cannot be recovered. * If an IAM policy contains a binding to the custom role, the binding is
-       * permanently removed. * The custom role no longer counts toward your custom role limit.
+       * limit](https://cloud.google.com/iam/help/limits) until it is permanently deleted. You have 7 days
+       * to undelete the custom role. After 7 days, the following changes occur: * The custom role is
+       * permanently deleted and cannot be recovered. * If an IAM policy contains a binding to the custom
+       * role, the binding is permanently removed. * The custom role no longer counts toward your custom
+       * role limit.
        *
        * Create a request for the method "roles.delete".
        *
@@ -4856,11 +4857,11 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * * You cannot bind a principal to the custom role in an IAM Policy. * Existing bindings to the
          * custom role are not changed, but they have no effect. * By default, the response from ListRoles
          * does not include the custom role. A deleted custom role still counts toward the [custom role
-         * limit](/iam/quotas#limits) until it is permanently deleted. You have 7 days to undelete the
-         * custom role. After 7 days, the following changes occur: * The custom role is permanently
-         * deleted and cannot be recovered. * If an IAM policy contains a binding to the custom role, the
-         * binding is permanently removed. * The custom role no longer counts toward your custom role
-         * limit.
+         * limit](https://cloud.google.com/iam/help/limits) until it is permanently deleted. You have 7
+         * days to undelete the custom role. After 7 days, the following changes occur: * The custom role
+         * is permanently deleted and cannot be recovered. * If an IAM policy contains a binding to the
+         * custom role, the binding is permanently removed. * The custom role no longer counts toward your
+         * custom role limit.
          *
          * Create a request for the method "roles.delete".
          *
@@ -11850,10 +11851,11 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * You cannot bind a principal to the custom role in an IAM Policy. * Existing bindings to the
        * custom role are not changed, but they have no effect. * By default, the response from ListRoles
        * does not include the custom role. A deleted custom role still counts toward the [custom role
-       * limit](/iam/quotas#limits) until it is permanently deleted. You have 7 days to undelete the
-       * custom role. After 7 days, the following changes occur: * The custom role is permanently deleted
-       * and cannot be recovered. * If an IAM policy contains a binding to the custom role, the binding is
-       * permanently removed. * The custom role no longer counts toward your custom role limit.
+       * limit](https://cloud.google.com/iam/help/limits) until it is permanently deleted. You have 7 days
+       * to undelete the custom role. After 7 days, the following changes occur: * The custom role is
+       * permanently deleted and cannot be recovered. * If an IAM policy contains a binding to the custom
+       * role, the binding is permanently removed. * The custom role no longer counts toward your custom
+       * role limit.
        *
        * Create a request for the method "roles.delete".
        *
@@ -11896,11 +11898,11 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * * You cannot bind a principal to the custom role in an IAM Policy. * Existing bindings to the
          * custom role are not changed, but they have no effect. * By default, the response from ListRoles
          * does not include the custom role. A deleted custom role still counts toward the [custom role
-         * limit](/iam/quotas#limits) until it is permanently deleted. You have 7 days to undelete the
-         * custom role. After 7 days, the following changes occur: * The custom role is permanently
-         * deleted and cannot be recovered. * If an IAM policy contains a binding to the custom role, the
-         * binding is permanently removed. * The custom role no longer counts toward your custom role
-         * limit.
+         * limit](https://cloud.google.com/iam/help/limits) until it is permanently deleted. You have 7
+         * days to undelete the custom role. After 7 days, the following changes occur: * The custom role
+         * is permanently deleted and cannot be recovered. * If an IAM policy contains a binding to the
+         * custom role, the binding is permanently removed. * The custom role no longer counts toward your
+         * custom role limit.
          *
          * Create a request for the method "roles.delete".
          *

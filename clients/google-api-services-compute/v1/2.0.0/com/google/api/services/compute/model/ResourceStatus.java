@@ -41,6 +41,12 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private ResourceStatusScheduling scheduling;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private UpcomingMaintenance upcomingMaintenance;
 
   /**
@@ -57,6 +63,21 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
    */
   public ResourceStatus setPhysicalHost(java.lang.String physicalHost) {
     this.physicalHost = physicalHost;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public ResourceStatusScheduling getScheduling() {
+    return scheduling;
+  }
+
+  /**
+   * @param scheduling scheduling or {@code null} for none
+   */
+  public ResourceStatus setScheduling(ResourceStatusScheduling scheduling) {
+    this.scheduling = scheduling;
     return this;
   }
 

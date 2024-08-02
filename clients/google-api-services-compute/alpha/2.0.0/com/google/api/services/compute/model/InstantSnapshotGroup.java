@@ -17,7 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for InstantSnapshotGroup.
+ * Represents an InstantSnapshotGroup resource. An instant snapshot group is a set of instant
+ * snapshots that represents a point in time state of a consistency group.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -97,6 +98,12 @@ public final class InstantSnapshotGroup extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLinkWithId;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceConsistencyGroup;
 
   /**
    * [Output Only]
@@ -275,6 +282,21 @@ public final class InstantSnapshotGroup extends com.google.api.client.json.Gener
    */
   public InstantSnapshotGroup setSelfLinkWithId(java.lang.String selfLinkWithId) {
     this.selfLinkWithId = selfLinkWithId;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceConsistencyGroup() {
+    return sourceConsistencyGroup;
+  }
+
+  /**
+   * @param sourceConsistencyGroup sourceConsistencyGroup or {@code null} for none
+   */
+  public InstantSnapshotGroup setSourceConsistencyGroup(java.lang.String sourceConsistencyGroup) {
+    this.sourceConsistencyGroup = sourceConsistencyGroup;
     return this;
   }
 

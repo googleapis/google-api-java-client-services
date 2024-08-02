@@ -54,7 +54,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    * then end the base instance name with a hyphen followed by one or more hash symbols. The hash
    * symbols indicate the number of digits. For example, a base instance name of "vm-###" results in
    * "vm-001" as a VM name. @pattern
-   * [a-z](([-a-z0-9]{0,57})|([-a-z0-9]{0,52}-#{1,10}(\\[[0-9]{1,10}\\])?))
+   * [a-z](([-a-z0-9]{0,57})|([-a-z0-9]{0,51}-#{1,10}(\\[[0-9]{1,10}\\])?))
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -291,7 +291,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    * then end the base instance name with a hyphen followed by one or more hash symbols. The hash
    * symbols indicate the number of digits. For example, a base instance name of "vm-###" results in
    * "vm-001" as a VM name. @pattern
-   * [a-z](([-a-z0-9]{0,57})|([-a-z0-9]{0,52}-#{1,10}(\\[[0-9]{1,10}\\])?))
+   * [a-z](([-a-z0-9]{0,57})|([-a-z0-9]{0,51}-#{1,10}(\\[[0-9]{1,10}\\])?))
    * @return value or {@code null} for none
    */
   public java.lang.String getBaseInstanceName() {
@@ -306,7 +306,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    * then end the base instance name with a hyphen followed by one or more hash symbols. The hash
    * symbols indicate the number of digits. For example, a base instance name of "vm-###" results in
    * "vm-001" as a VM name. @pattern
-   * [a-z](([-a-z0-9]{0,57})|([-a-z0-9]{0,52}-#{1,10}(\\[[0-9]{1,10}\\])?))
+   * [a-z](([-a-z0-9]{0,57})|([-a-z0-9]{0,51}-#{1,10}(\\[[0-9]{1,10}\\])?))
    * @param baseInstanceName baseInstanceName or {@code null} for none
    */
   public InstanceGroupManager setBaseInstanceName(java.lang.String baseInstanceName) {

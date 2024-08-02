@@ -194,6 +194,436 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
       public class Notes {
 
         /**
+         * Creates new notes in batch.
+         *
+         * Create a request for the method "notes.batchCreate".
+         *
+         * This request holds the parameters needed by the containeranalysis server.  After setting any
+         * optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the notes are
+         *        to be created.
+         * @param content the {@link com.google.api.services.containeranalysis.v1.model.BatchCreateNotesRequest}
+         * @return the request
+         */
+        public BatchCreate batchCreate(java.lang.String parent, com.google.api.services.containeranalysis.v1.model.BatchCreateNotesRequest content) throws java.io.IOException {
+          BatchCreate result = new BatchCreate(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchCreate extends ContainerAnalysisRequest<com.google.api.services.containeranalysis.v1.model.BatchCreateNotesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/notes:batchCreate";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates new notes in batch.
+           *
+           * Create a request for the method "notes.batchCreate".
+           *
+           * This request holds the parameters needed by the the containeranalysis server.  After setting
+           * any optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * BatchCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the notes are
+         *        to be created.
+           * @param content the {@link com.google.api.services.containeranalysis.v1.model.BatchCreateNotesRequest}
+           * @since 1.13
+           */
+          protected BatchCreate(java.lang.String parent, com.google.api.services.containeranalysis.v1.model.BatchCreateNotesRequest content) {
+            super(ContainerAnalysis.this, "POST", REST_PATH, content, com.google.api.services.containeranalysis.v1.model.BatchCreateNotesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public BatchCreate set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchCreate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchCreate setAccessToken(java.lang.String accessToken) {
+            return (BatchCreate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchCreate setAlt(java.lang.String alt) {
+            return (BatchCreate) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchCreate setCallback(java.lang.String callback) {
+            return (BatchCreate) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchCreate setFields(java.lang.String fields) {
+            return (BatchCreate) super.setFields(fields);
+          }
+
+          @Override
+          public BatchCreate setKey(java.lang.String key) {
+            return (BatchCreate) super.setKey(key);
+          }
+
+          @Override
+          public BatchCreate setOauthToken(java.lang.String oauthToken) {
+            return (BatchCreate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchCreate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchCreate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchCreate setQuotaUser(java.lang.String quotaUser) {
+            return (BatchCreate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchCreate setUploadType(java.lang.String uploadType) {
+            return (BatchCreate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchCreate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchCreate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which
+           * the notes are to be created.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the notes are
+         to be created.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which
+           * the notes are to be created.
+           */
+          public BatchCreate setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public BatchCreate set(String parameterName, Object value) {
+            return (BatchCreate) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates a new note.
+         *
+         * Create a request for the method "notes.create".
+         *
+         * This request holds the parameters needed by the containeranalysis server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the note is to
+         *        be created.
+         * @param content the {@link com.google.api.services.containeranalysis.v1.model.Note}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.containeranalysis.v1.model.Note content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends ContainerAnalysisRequest<com.google.api.services.containeranalysis.v1.model.Note> {
+
+          private static final String REST_PATH = "v1/{+parent}/notes";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new note.
+           *
+           * Create a request for the method "notes.create".
+           *
+           * This request holds the parameters needed by the the containeranalysis server.  After setting
+           * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the note is to
+         *        be created.
+           * @param content the {@link com.google.api.services.containeranalysis.v1.model.Note}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.containeranalysis.v1.model.Note content) {
+            super(ContainerAnalysis.this, "POST", REST_PATH, content, com.google.api.services.containeranalysis.v1.model.Note.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which
+           * the note is to be created.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the note is
+         to be created.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which
+           * the note is to be created.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. The ID to use for this note. */
+          @com.google.api.client.util.Key
+          private java.lang.String noteId;
+
+          /** Required. The ID to use for this note.
+           */
+          public java.lang.String getNoteId() {
+            return noteId;
+          }
+
+          /** Required. The ID to use for this note. */
+          public Create setNoteId(java.lang.String noteId) {
+            this.noteId = noteId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes the specified note.
+         *
+         * Create a request for the method "notes.delete".
+         *
+         * This request holds the parameters needed by the containeranalysis server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends ContainerAnalysisRequest<com.google.api.services.containeranalysis.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/notes/[^/]+$");
+
+          /**
+           * Deletes the specified note.
+           *
+           * Create a request for the method "notes.delete".
+           *
+           * This request holds the parameters needed by the the containeranalysis server.  After setting
+           * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(ContainerAnalysis.this, "DELETE", REST_PATH, null, com.google.api.services.containeranalysis.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/notes/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/notes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the specified note.
          *
          * Create a request for the method "notes.get".
@@ -536,6 +966,157 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
             return (List) super.set(parameterName, value);
           }
         }
+        /**
+         * Updates the specified note.
+         *
+         * Create a request for the method "notes.patch".
+         *
+         * This request holds the parameters needed by the containeranalysis server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+         * @param content the {@link com.google.api.services.containeranalysis.v1.model.Note}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.containeranalysis.v1.model.Note content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends ContainerAnalysisRequest<com.google.api.services.containeranalysis.v1.model.Note> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/notes/[^/]+$");
+
+          /**
+           * Updates the specified note.
+           *
+           * Create a request for the method "notes.patch".
+           *
+           * This request holds the parameters needed by the the containeranalysis server.  After setting
+           * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+           * @param content the {@link com.google.api.services.containeranalysis.v1.model.Note}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.containeranalysis.v1.model.Note content) {
+            super(ContainerAnalysis.this, "PATCH", REST_PATH, content, com.google.api.services.containeranalysis.v1.model.Note.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/notes/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/notes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** The fields to update. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The fields to update.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** The fields to update. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
 
         /**
          * An accessor for creating requests from the Occurrences collection.
@@ -778,6 +1359,427 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        */
       public class Occurrences {
 
+        /**
+         * Creates new occurrences in batch.
+         *
+         * Create a request for the method "occurrences.batchCreate".
+         *
+         * This request holds the parameters needed by the containeranalysis server.  After setting any
+         * optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the
+         *        occurrences are to be created.
+         * @param content the {@link com.google.api.services.containeranalysis.v1.model.BatchCreateOccurrencesRequest}
+         * @return the request
+         */
+        public BatchCreate batchCreate(java.lang.String parent, com.google.api.services.containeranalysis.v1.model.BatchCreateOccurrencesRequest content) throws java.io.IOException {
+          BatchCreate result = new BatchCreate(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchCreate extends ContainerAnalysisRequest<com.google.api.services.containeranalysis.v1.model.BatchCreateOccurrencesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/occurrences:batchCreate";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates new occurrences in batch.
+           *
+           * Create a request for the method "occurrences.batchCreate".
+           *
+           * This request holds the parameters needed by the the containeranalysis server.  After setting
+           * any optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * BatchCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the
+         *        occurrences are to be created.
+           * @param content the {@link com.google.api.services.containeranalysis.v1.model.BatchCreateOccurrencesRequest}
+           * @since 1.13
+           */
+          protected BatchCreate(java.lang.String parent, com.google.api.services.containeranalysis.v1.model.BatchCreateOccurrencesRequest content) {
+            super(ContainerAnalysis.this, "POST", REST_PATH, content, com.google.api.services.containeranalysis.v1.model.BatchCreateOccurrencesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public BatchCreate set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchCreate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchCreate setAccessToken(java.lang.String accessToken) {
+            return (BatchCreate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchCreate setAlt(java.lang.String alt) {
+            return (BatchCreate) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchCreate setCallback(java.lang.String callback) {
+            return (BatchCreate) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchCreate setFields(java.lang.String fields) {
+            return (BatchCreate) super.setFields(fields);
+          }
+
+          @Override
+          public BatchCreate setKey(java.lang.String key) {
+            return (BatchCreate) super.setKey(key);
+          }
+
+          @Override
+          public BatchCreate setOauthToken(java.lang.String oauthToken) {
+            return (BatchCreate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchCreate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchCreate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchCreate setQuotaUser(java.lang.String quotaUser) {
+            return (BatchCreate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchCreate setUploadType(java.lang.String uploadType) {
+            return (BatchCreate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchCreate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchCreate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which
+           * the occurrences are to be created.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the
+         occurrences are to be created.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which
+           * the occurrences are to be created.
+           */
+          public BatchCreate setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public BatchCreate set(String parameterName, Object value) {
+            return (BatchCreate) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates a new occurrence.
+         *
+         * Create a request for the method "occurrences.create".
+         *
+         * This request holds the parameters needed by the containeranalysis server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the occurrence
+         *        is to be created.
+         * @param content the {@link com.google.api.services.containeranalysis.v1.model.Occurrence}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.containeranalysis.v1.model.Occurrence content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends ContainerAnalysisRequest<com.google.api.services.containeranalysis.v1.model.Occurrence> {
+
+          private static final String REST_PATH = "v1/{+parent}/occurrences";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new occurrence.
+           *
+           * Create a request for the method "occurrences.create".
+           *
+           * This request holds the parameters needed by the the containeranalysis server.  After setting
+           * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the occurrence
+         *        is to be created.
+           * @param content the {@link com.google.api.services.containeranalysis.v1.model.Occurrence}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.containeranalysis.v1.model.Occurrence content) {
+            super(ContainerAnalysis.this, "POST", REST_PATH, content, com.google.api.services.containeranalysis.v1.model.Occurrence.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which
+           * the occurrence is to be created.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the
+         occurrence is to be created.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which
+           * the occurrence is to be created.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes the specified occurrence. For example, use this method to delete an occurrence when the
+         * occurrence is no longer applicable for the given resource.
+         *
+         * Create a request for the method "occurrences.delete".
+         *
+         * This request holds the parameters needed by the containeranalysis server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the occurrence in the form of
+         *        `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends ContainerAnalysisRequest<com.google.api.services.containeranalysis.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/occurrences/[^/]+$");
+
+          /**
+           * Deletes the specified occurrence. For example, use this method to delete an occurrence when the
+           * occurrence is no longer applicable for the given resource.
+           *
+           * Create a request for the method "occurrences.delete".
+           *
+           * This request holds the parameters needed by the the containeranalysis server.  After setting
+           * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the occurrence in the form of
+         *        `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(ContainerAnalysis.this, "DELETE", REST_PATH, null, com.google.api.services.containeranalysis.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/occurrences/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the occurrence in the form of
+           * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the occurrence in the form of
+         `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the occurrence in the form of
+           * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/occurrences/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
         /**
          * Gets the specified occurrence.
          *
@@ -1439,6 +2441,162 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the specified occurrence.
+         *
+         * Create a request for the method "occurrences.patch".
+         *
+         * This request holds the parameters needed by the containeranalysis server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the occurrence in the form of
+         *        `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+         * @param content the {@link com.google.api.services.containeranalysis.v1.model.Occurrence}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.containeranalysis.v1.model.Occurrence content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends ContainerAnalysisRequest<com.google.api.services.containeranalysis.v1.model.Occurrence> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/occurrences/[^/]+$");
+
+          /**
+           * Updates the specified occurrence.
+           *
+           * Create a request for the method "occurrences.patch".
+           *
+           * This request holds the parameters needed by the the containeranalysis server.  After setting
+           * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the occurrence in the form of
+         *        `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+           * @param content the {@link com.google.api.services.containeranalysis.v1.model.Occurrence}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.containeranalysis.v1.model.Occurrence content) {
+            super(ContainerAnalysis.this, "PATCH", REST_PATH, content, com.google.api.services.containeranalysis.v1.model.Occurrence.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/occurrences/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the occurrence in the form of
+           * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the occurrence in the form of
+         `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the occurrence in the form of
+           * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/occurrences/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** The fields to update. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The fields to update.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** The fields to update. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
 

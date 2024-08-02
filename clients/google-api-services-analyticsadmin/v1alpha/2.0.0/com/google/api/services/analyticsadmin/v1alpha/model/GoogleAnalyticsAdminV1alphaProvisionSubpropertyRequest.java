@@ -28,7 +28,7 @@ package com.google.api.services.analyticsadmin.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleAnalyticsAdminV1alphaCreateSubpropertyRequest extends com.google.api.client.json.GenericJson {
+public final class GoogleAnalyticsAdminV1alphaProvisionSubpropertyRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The subproperty to create.
@@ -56,7 +56,7 @@ public final class GoogleAnalyticsAdminV1alphaCreateSubpropertyRequest extends c
    * Required. The subproperty to create.
    * @param subproperty subproperty or {@code null} for none
    */
-  public GoogleAnalyticsAdminV1alphaCreateSubpropertyRequest setSubproperty(GoogleAnalyticsAdminV1alphaProperty subproperty) {
+  public GoogleAnalyticsAdminV1alphaProvisionSubpropertyRequest setSubproperty(GoogleAnalyticsAdminV1alphaProperty subproperty) {
     this.subproperty = subproperty;
     return this;
   }
@@ -73,19 +73,19 @@ public final class GoogleAnalyticsAdminV1alphaCreateSubpropertyRequest extends c
    * Optional. The subproperty event filter to create on an ordinary property.
    * @param subpropertyEventFilter subpropertyEventFilter or {@code null} for none
    */
-  public GoogleAnalyticsAdminV1alphaCreateSubpropertyRequest setSubpropertyEventFilter(GoogleAnalyticsAdminV1alphaSubpropertyEventFilter subpropertyEventFilter) {
+  public GoogleAnalyticsAdminV1alphaProvisionSubpropertyRequest setSubpropertyEventFilter(GoogleAnalyticsAdminV1alphaSubpropertyEventFilter subpropertyEventFilter) {
     this.subpropertyEventFilter = subpropertyEventFilter;
     return this;
   }
 
   @Override
-  public GoogleAnalyticsAdminV1alphaCreateSubpropertyRequest set(String fieldName, Object value) {
-    return (GoogleAnalyticsAdminV1alphaCreateSubpropertyRequest) super.set(fieldName, value);
+  public GoogleAnalyticsAdminV1alphaProvisionSubpropertyRequest set(String fieldName, Object value) {
+    return (GoogleAnalyticsAdminV1alphaProvisionSubpropertyRequest) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleAnalyticsAdminV1alphaCreateSubpropertyRequest clone() {
-    return (GoogleAnalyticsAdminV1alphaCreateSubpropertyRequest) super.clone();
+  public GoogleAnalyticsAdminV1alphaProvisionSubpropertyRequest clone() {
+    return (GoogleAnalyticsAdminV1alphaProvisionSubpropertyRequest) super.clone();
   }
 
 }

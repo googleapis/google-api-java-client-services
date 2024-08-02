@@ -3398,106 +3398,6 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * Create a subproperty and a subproperty event filter that applies to the created subproperty.
-     *
-     * Create a request for the method "properties.createSubproperty".
-     *
-     * This request holds the parameters needed by the analyticsadmin server.  After setting any
-     * optional parameters, call the {@link CreateSubproperty#execute()} method to invoke the remote
-     * operation.
-     *
-     * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateSubpropertyRequest}
-     * @return the request
-     */
-    public CreateSubproperty createSubproperty(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateSubpropertyRequest content) throws java.io.IOException {
-      CreateSubproperty result = new CreateSubproperty(content);
-      initialize(result);
-      return result;
-    }
-
-    public class CreateSubproperty extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateSubpropertyResponse> {
-
-      private static final String REST_PATH = "v1alpha/properties:createSubproperty";
-
-      /**
-       * Create a subproperty and a subproperty event filter that applies to the created subproperty.
-       *
-       * Create a request for the method "properties.createSubproperty".
-       *
-       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
-       * optional parameters, call the {@link CreateSubproperty#execute()} method to invoke the remote
-       * operation. <p> {@link CreateSubproperty#initialize(com.google.api.client.googleapis.services.Ab
-       * stractGoogleClientRequest)} must be called to initialize this instance immediately after
-       * invoking the constructor. </p>
-       *
-       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateSubpropertyRequest}
-       * @since 1.13
-       */
-      protected CreateSubproperty(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateSubpropertyRequest content) {
-        super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaCreateSubpropertyResponse.class);
-      }
-
-      @Override
-      public CreateSubproperty set$Xgafv(java.lang.String $Xgafv) {
-        return (CreateSubproperty) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public CreateSubproperty setAccessToken(java.lang.String accessToken) {
-        return (CreateSubproperty) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public CreateSubproperty setAlt(java.lang.String alt) {
-        return (CreateSubproperty) super.setAlt(alt);
-      }
-
-      @Override
-      public CreateSubproperty setCallback(java.lang.String callback) {
-        return (CreateSubproperty) super.setCallback(callback);
-      }
-
-      @Override
-      public CreateSubproperty setFields(java.lang.String fields) {
-        return (CreateSubproperty) super.setFields(fields);
-      }
-
-      @Override
-      public CreateSubproperty setKey(java.lang.String key) {
-        return (CreateSubproperty) super.setKey(key);
-      }
-
-      @Override
-      public CreateSubproperty setOauthToken(java.lang.String oauthToken) {
-        return (CreateSubproperty) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public CreateSubproperty setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (CreateSubproperty) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public CreateSubproperty setQuotaUser(java.lang.String quotaUser) {
-        return (CreateSubproperty) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public CreateSubproperty setUploadType(java.lang.String uploadType) {
-        return (CreateSubproperty) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public CreateSubproperty setUploadProtocol(java.lang.String uploadProtocol) {
-        return (CreateSubproperty) super.setUploadProtocol(uploadProtocol);
-      }
-
-      @Override
-      public CreateSubproperty set(String parameterName, Object value) {
-        return (CreateSubproperty) super.set(parameterName, value);
-      }
-    }
-    /**
      * Marks target Property as soft-deleted (ie: "trashed") and returns it. This API does not have a
      * method to restore soft-deleted properties. However, they can be restored using the Trash Can UI.
      * If the properties are not restored before the expiration time, the Property and all child
@@ -5078,6 +4978,106 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       @Override
       public Patch set(String parameterName, Object value) {
         return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Create a subproperty and a subproperty event filter that applies to the created subproperty.
+     *
+     * Create a request for the method "properties.provisionSubproperty".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link ProvisionSubproperty#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaProvisionSubpropertyRequest}
+     * @return the request
+     */
+    public ProvisionSubproperty provisionSubproperty(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaProvisionSubpropertyRequest content) throws java.io.IOException {
+      ProvisionSubproperty result = new ProvisionSubproperty(content);
+      initialize(result);
+      return result;
+    }
+
+    public class ProvisionSubproperty extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaProvisionSubpropertyResponse> {
+
+      private static final String REST_PATH = "v1alpha/properties:provisionSubproperty";
+
+      /**
+       * Create a subproperty and a subproperty event filter that applies to the created subproperty.
+       *
+       * Create a request for the method "properties.provisionSubproperty".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link ProvisionSubproperty#execute()} method to invoke the
+       * remote operation. <p> {@link ProvisionSubproperty#initialize(com.google.api.client.googleapis.s
+       * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaProvisionSubpropertyRequest}
+       * @since 1.13
+       */
+      protected ProvisionSubproperty(com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaProvisionSubpropertyRequest content) {
+        super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaProvisionSubpropertyResponse.class);
+      }
+
+      @Override
+      public ProvisionSubproperty set$Xgafv(java.lang.String $Xgafv) {
+        return (ProvisionSubproperty) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ProvisionSubproperty setAccessToken(java.lang.String accessToken) {
+        return (ProvisionSubproperty) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ProvisionSubproperty setAlt(java.lang.String alt) {
+        return (ProvisionSubproperty) super.setAlt(alt);
+      }
+
+      @Override
+      public ProvisionSubproperty setCallback(java.lang.String callback) {
+        return (ProvisionSubproperty) super.setCallback(callback);
+      }
+
+      @Override
+      public ProvisionSubproperty setFields(java.lang.String fields) {
+        return (ProvisionSubproperty) super.setFields(fields);
+      }
+
+      @Override
+      public ProvisionSubproperty setKey(java.lang.String key) {
+        return (ProvisionSubproperty) super.setKey(key);
+      }
+
+      @Override
+      public ProvisionSubproperty setOauthToken(java.lang.String oauthToken) {
+        return (ProvisionSubproperty) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ProvisionSubproperty setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ProvisionSubproperty) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ProvisionSubproperty setQuotaUser(java.lang.String quotaUser) {
+        return (ProvisionSubproperty) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ProvisionSubproperty setUploadType(java.lang.String uploadType) {
+        return (ProvisionSubproperty) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ProvisionSubproperty setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ProvisionSubproperty) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public ProvisionSubproperty set(String parameterName, Object value) {
+        return (ProvisionSubproperty) super.set(parameterName, value);
       }
     }
     /**

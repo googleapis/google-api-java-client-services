@@ -30,6 +30,13 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Average log probability score of the candidate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double avgLogprobs;
+
+  /**
    * Output only. Source attribution of the generated content.
    * The value may be {@code null}.
    */
@@ -80,6 +87,23 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1beta1SafetyRating> safetyRatings;
+
+  /**
+   * Output only. Average log probability score of the candidate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getAvgLogprobs() {
+    return avgLogprobs;
+  }
+
+  /**
+   * Output only. Average log probability score of the candidate.
+   * @param avgLogprobs avgLogprobs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Candidate setAvgLogprobs(java.lang.Double avgLogprobs) {
+    this.avgLogprobs = avgLogprobs;
+    return this;
+  }
 
   /**
    * Output only. Source attribution of the generated content.

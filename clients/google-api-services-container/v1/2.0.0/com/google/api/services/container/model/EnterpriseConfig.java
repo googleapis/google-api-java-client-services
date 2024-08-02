@@ -31,14 +31,14 @@ package com.google.api.services.container.model;
 public final class EnterpriseConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. cluster_tier specifies the premium tier of the cluster.
+   * Output only. cluster_tier indicates the effective tier of the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clusterTier;
 
   /**
-   * Output only. cluster_tier specifies the premium tier of the cluster.
+   * Output only. cluster_tier indicates the effective tier of the cluster.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterTier() {
@@ -46,7 +46,7 @@ public final class EnterpriseConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. cluster_tier specifies the premium tier of the cluster.
+   * Output only. cluster_tier indicates the effective tier of the cluster.
    * @param clusterTier clusterTier or {@code null} for none
    */
   public EnterpriseConfig setClusterTier(java.lang.String clusterTier) {

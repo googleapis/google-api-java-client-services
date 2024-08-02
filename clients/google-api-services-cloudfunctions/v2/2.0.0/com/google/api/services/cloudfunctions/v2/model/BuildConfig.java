@@ -98,7 +98,8 @@ public final class BuildConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String runtime;
 
   /**
-   * [Preview] Service account to be used for building the container
+   * Service account to be used for building the container. The format of this field is
+   * `projects/{projectId}/serviceAccounts/{serviceAccountEmail}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -300,7 +301,8 @@ public final class BuildConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Preview] Service account to be used for building the container
+   * Service account to be used for building the container. The format of this field is
+   * `projects/{projectId}/serviceAccounts/{serviceAccountEmail}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -308,7 +310,8 @@ public final class BuildConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Preview] Service account to be used for building the container
+   * Service account to be used for building the container. The format of this field is
+   * `projects/{projectId}/serviceAccounts/{serviceAccountEmail}`.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public BuildConfig setServiceAccount(java.lang.String serviceAccount) {

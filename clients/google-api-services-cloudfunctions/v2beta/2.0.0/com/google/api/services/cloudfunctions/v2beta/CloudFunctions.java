@@ -2033,22 +2033,21 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * The list of fields to be updated. If no field mask is provided, all provided fields in
-           * the request will be updated.
+           * The list of fields to be updated. If no field mask is provided, all fields will be
+           * updated.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The list of fields to be updated. If no field mask is provided, all provided fields in the request
-         will be updated.
+          /** The list of fields to be updated. If no field mask is provided, all fields will be updated.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * The list of fields to be updated. If no field mask is provided, all provided fields in
-           * the request will be updated.
+           * The list of fields to be updated. If no field mask is provided, all fields will be
+           * updated.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

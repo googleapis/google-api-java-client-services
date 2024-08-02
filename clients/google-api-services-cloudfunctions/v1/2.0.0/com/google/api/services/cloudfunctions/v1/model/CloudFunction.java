@@ -65,7 +65,8 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   private java.lang.String buildName;
 
   /**
-   * Optional. A service account the user provides for use with Cloud Build.
+   * A service account the user provides for use with Cloud Build. The format of this field is
+   * `projects/{projectId}/serviceAccounts/{serviceAccountEmail}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -414,7 +415,8 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. A service account the user provides for use with Cloud Build.
+   * A service account the user provides for use with Cloud Build. The format of this field is
+   * `projects/{projectId}/serviceAccounts/{serviceAccountEmail}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getBuildServiceAccount() {
@@ -422,7 +424,8 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. A service account the user provides for use with Cloud Build.
+   * A service account the user provides for use with Cloud Build. The format of this field is
+   * `projects/{projectId}/serviceAccounts/{serviceAccountEmail}`.
    * @param buildServiceAccount buildServiceAccount or {@code null} for none
    */
   public CloudFunction setBuildServiceAccount(java.lang.String buildServiceAccount) {

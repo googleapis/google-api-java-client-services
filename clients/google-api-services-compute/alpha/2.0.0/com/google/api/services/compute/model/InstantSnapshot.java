@@ -178,6 +178,24 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   private java.lang.String sourceDiskId;
 
   /**
+   * [Output Only] URL of the source instant snapshot this instant snapshot is part of. Note that
+   * the source instant snapshot group must be in the same zone/region as the instant snapshot to be
+   * created. This can be a full or valid partial URL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceInstantSnapshotGroup;
+
+  /**
+   * [Output Only] The ID value of the source instant snapshot group this InstantSnapshot is part
+   * of. This value may be used to determine whether the InstantSnapshot was created as part of an
+   * InstantSnapshotGroup creation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceInstantSnapshotGroupId;
+
+  /**
    * [Output Only] The status of the instantSnapshot. This can be CREATING, DELETING, FAILED, or
    * READY.
    * The value may be {@code null}.
@@ -576,6 +594,48 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
    */
   public InstantSnapshot setSourceDiskId(java.lang.String sourceDiskId) {
     this.sourceDiskId = sourceDiskId;
+    return this;
+  }
+
+  /**
+   * [Output Only] URL of the source instant snapshot this instant snapshot is part of. Note that
+   * the source instant snapshot group must be in the same zone/region as the instant snapshot to be
+   * created. This can be a full or valid partial URL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceInstantSnapshotGroup() {
+    return sourceInstantSnapshotGroup;
+  }
+
+  /**
+   * [Output Only] URL of the source instant snapshot this instant snapshot is part of. Note that
+   * the source instant snapshot group must be in the same zone/region as the instant snapshot to be
+   * created. This can be a full or valid partial URL.
+   * @param sourceInstantSnapshotGroup sourceInstantSnapshotGroup or {@code null} for none
+   */
+  public InstantSnapshot setSourceInstantSnapshotGroup(java.lang.String sourceInstantSnapshotGroup) {
+    this.sourceInstantSnapshotGroup = sourceInstantSnapshotGroup;
+    return this;
+  }
+
+  /**
+   * [Output Only] The ID value of the source instant snapshot group this InstantSnapshot is part
+   * of. This value may be used to determine whether the InstantSnapshot was created as part of an
+   * InstantSnapshotGroup creation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceInstantSnapshotGroupId() {
+    return sourceInstantSnapshotGroupId;
+  }
+
+  /**
+   * [Output Only] The ID value of the source instant snapshot group this InstantSnapshot is part
+   * of. This value may be used to determine whether the InstantSnapshot was created as part of an
+   * InstantSnapshotGroup creation.
+   * @param sourceInstantSnapshotGroupId sourceInstantSnapshotGroupId or {@code null} for none
+   */
+  public InstantSnapshot setSourceInstantSnapshotGroupId(java.lang.String sourceInstantSnapshotGroupId) {
+    this.sourceInstantSnapshotGroupId = sourceInstantSnapshotGroupId;
     return this;
   }
 

@@ -138,6 +138,13 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
   private java.lang.String selfLinkWithId;
 
   /**
+   * [Output Only] List of resources referencing that backend bucket.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<BackendBucketUsedBy> usedBy;
+
+  /**
    * Cloud Storage bucket name.
    * @return value or {@code null} for none
    */
@@ -390,6 +397,23 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
    */
   public BackendBucket setSelfLinkWithId(java.lang.String selfLinkWithId) {
     this.selfLinkWithId = selfLinkWithId;
+    return this;
+  }
+
+  /**
+   * [Output Only] List of resources referencing that backend bucket.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<BackendBucketUsedBy> getUsedBy() {
+    return usedBy;
+  }
+
+  /**
+   * [Output Only] List of resources referencing that backend bucket.
+   * @param usedBy usedBy or {@code null} for none
+   */
+  public BackendBucket setUsedBy(java.util.List<BackendBucketUsedBy> usedBy) {
+    this.usedBy = usedBy;
     return this;
   }
 

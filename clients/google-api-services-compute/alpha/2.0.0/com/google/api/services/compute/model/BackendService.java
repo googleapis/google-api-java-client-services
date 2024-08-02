@@ -308,10 +308,11 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
    * load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the
    * load_balancing_scheme set to INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or EXTERNAL_MANAGED. If
-   * sessionAffinity is not NONE, and this field is not set to MAGLEV or RING_HASH, session affinity
-   * settings will not take effect. Only ROUND_ROBIN and RING_HASH are supported when the backend
-   * service is referenced by a URL map that is bound to target gRPC proxy that has
-   * validateForProxyless field set to true.
+   * sessionAffinity is not configured—that is, if session affinity remains at the default value of
+   * NONE—then the default value for localityLbPolicy is ROUND_ROBIN. If session affinity is set to
+   * a value other than NONE, then the default value for localityLbPolicy is MAGLEV. Only
+   * ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL map
+   * that is bound to target gRPC proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -518,6 +519,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.Integer timeoutSec;
+
+  /**
+   * Configuration for Backend Authenticated TLS and mTLS. May only be specified when the backend
+   * protocol is SSL, HTTPS or HTTP2.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackendServiceTlsSettings tlsSettings;
 
   /**
    * [Output Only] List of resources referencing given backend service.
@@ -1165,10 +1174,11 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
    * load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the
    * load_balancing_scheme set to INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or EXTERNAL_MANAGED. If
-   * sessionAffinity is not NONE, and this field is not set to MAGLEV or RING_HASH, session affinity
-   * settings will not take effect. Only ROUND_ROBIN and RING_HASH are supported when the backend
-   * service is referenced by a URL map that is bound to target gRPC proxy that has
-   * validateForProxyless field set to true.
+   * sessionAffinity is not configured—that is, if session affinity remains at the default value of
+   * NONE—then the default value for localityLbPolicy is ROUND_ROBIN. If session affinity is set to
+   * a value other than NONE, then the default value for localityLbPolicy is MAGLEV. Only
+   * ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL map
+   * that is bound to target gRPC proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocalityLbPolicy() {
@@ -1192,10 +1202,11 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
    * load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the
    * load_balancing_scheme set to INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or EXTERNAL_MANAGED. If
-   * sessionAffinity is not NONE, and this field is not set to MAGLEV or RING_HASH, session affinity
-   * settings will not take effect. Only ROUND_ROBIN and RING_HASH are supported when the backend
-   * service is referenced by a URL map that is bound to target gRPC proxy that has
-   * validateForProxyless field set to true.
+   * sessionAffinity is not configured—that is, if session affinity remains at the default value of
+   * NONE—then the default value for localityLbPolicy is ROUND_ROBIN. If session affinity is set to
+   * a value other than NONE, then the default value for localityLbPolicy is MAGLEV. Only
+   * ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL map
+   * that is bound to target gRPC proxy that has validateForProxyless field set to true.
    * @param localityLbPolicy localityLbPolicy or {@code null} for none
    */
   public BackendService setLocalityLbPolicy(java.lang.String localityLbPolicy) {
@@ -1667,6 +1678,25 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   public BackendService setTimeoutSec(java.lang.Integer timeoutSec) {
     this.timeoutSec = timeoutSec;
+    return this;
+  }
+
+  /**
+   * Configuration for Backend Authenticated TLS and mTLS. May only be specified when the backend
+   * protocol is SSL, HTTPS or HTTP2.
+   * @return value or {@code null} for none
+   */
+  public BackendServiceTlsSettings getTlsSettings() {
+    return tlsSettings;
+  }
+
+  /**
+   * Configuration for Backend Authenticated TLS and mTLS. May only be specified when the backend
+   * protocol is SSL, HTTPS or HTTP2.
+   * @param tlsSettings tlsSettings or {@code null} for none
+   */
+  public BackendService setTlsSettings(BackendServiceTlsSettings tlsSettings) {
+    this.tlsSettings = tlsSettings;
     return this;
   }
 

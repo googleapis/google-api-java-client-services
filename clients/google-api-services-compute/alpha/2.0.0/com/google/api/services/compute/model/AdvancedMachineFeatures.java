@@ -77,8 +77,8 @@ public final class AdvancedMachineFeatures extends com.google.api.client.json.Ge
   private java.lang.Integer threadsPerCore;
 
   /**
-   * Turbo mode to use for the instance. Supported modes include: * ALL_CORE_MAX Using empty string
-   * or not setting this field will use the default turbo mode.
+   * Turbo frequency mode to use for the instance. Supported modes include: * ALL_CORE_MAX Using
+   * empty string or not setting this field will use the platform-specific default turbo mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -201,8 +201,8 @@ public final class AdvancedMachineFeatures extends com.google.api.client.json.Ge
   }
 
   /**
-   * Turbo mode to use for the instance. Supported modes include: * ALL_CORE_MAX Using empty string
-   * or not setting this field will use the default turbo mode.
+   * Turbo frequency mode to use for the instance. Supported modes include: * ALL_CORE_MAX Using
+   * empty string or not setting this field will use the platform-specific default turbo mode.
    * @return value or {@code null} for none
    */
   public java.lang.String getTurboMode() {
@@ -210,8 +210,8 @@ public final class AdvancedMachineFeatures extends com.google.api.client.json.Ge
   }
 
   /**
-   * Turbo mode to use for the instance. Supported modes include: * ALL_CORE_MAX Using empty string
-   * or not setting this field will use the default turbo mode.
+   * Turbo frequency mode to use for the instance. Supported modes include: * ALL_CORE_MAX Using
+   * empty string or not setting this field will use the platform-specific default turbo mode.
    * @param turboMode turboMode or {@code null} for none
    */
   public AdvancedMachineFeatures setTurboMode(java.lang.String turboMode) {

@@ -37,6 +37,13 @@ public final class GoogleCloudFunctionsV2alphaOperationMetadata extends com.goog
   private java.lang.String apiVersion;
 
   /**
+   * The build name of the function for create and update operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String buildName;
+
+  /**
    * Identifies whether the user has requested cancellation of the operation. Operations that have
    * successfully been cancelled have google.longrunning.Operation.error value with a
    * google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
@@ -123,6 +130,23 @@ public final class GoogleCloudFunctionsV2alphaOperationMetadata extends com.goog
    */
   public GoogleCloudFunctionsV2alphaOperationMetadata setApiVersion(java.lang.String apiVersion) {
     this.apiVersion = apiVersion;
+    return this;
+  }
+
+  /**
+   * The build name of the function for create and update operations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBuildName() {
+    return buildName;
+  }
+
+  /**
+   * The build name of the function for create and update operations.
+   * @param buildName buildName or {@code null} for none
+   */
+  public GoogleCloudFunctionsV2alphaOperationMetadata setBuildName(java.lang.String buildName) {
+    this.buildName = buildName;
     return this;
   }
 

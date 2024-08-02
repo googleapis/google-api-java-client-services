@@ -40,8 +40,8 @@ public final class IndexConfig extends com.google.api.client.json.GenericJson {
   /**
    * Required. The LogEntry field path to index.Note that some paths are automatically indexed, and
    * other paths are not eligible for indexing. See indexing documentation(
-   * https://cloud.google.com/logging/docs/view/advanced-queries#indexed-fields) for details.For
-   * example: jsonPayload.request.status
+   * https://cloud.google.com/logging/docs/analyze/custom-index) for details.For example:
+   * jsonPayload.request.status
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,8 +76,8 @@ public final class IndexConfig extends com.google.api.client.json.GenericJson {
   /**
    * Required. The LogEntry field path to index.Note that some paths are automatically indexed, and
    * other paths are not eligible for indexing. See indexing documentation(
-   * https://cloud.google.com/logging/docs/view/advanced-queries#indexed-fields) for details.For
-   * example: jsonPayload.request.status
+   * https://cloud.google.com/logging/docs/analyze/custom-index) for details.For example:
+   * jsonPayload.request.status
    * @return value or {@code null} for none
    */
   public java.lang.String getFieldPath() {
@@ -87,8 +87,8 @@ public final class IndexConfig extends com.google.api.client.json.GenericJson {
   /**
    * Required. The LogEntry field path to index.Note that some paths are automatically indexed, and
    * other paths are not eligible for indexing. See indexing documentation(
-   * https://cloud.google.com/logging/docs/view/advanced-queries#indexed-fields) for details.For
-   * example: jsonPayload.request.status
+   * https://cloud.google.com/logging/docs/analyze/custom-index) for details.For example:
+   * jsonPayload.request.status
    * @param fieldPath fieldPath or {@code null} for none
    */
   public IndexConfig setFieldPath(java.lang.String fieldPath) {

@@ -17,7 +17,7 @@
 package com.google.api.services.analyticsadmin.v1alpha.model;
 
 /**
- * Response message for CreateSubproperty RPC.
+ * Response message for ProvisionSubproperty RPC.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Analytics Admin API. For a detailed
@@ -28,7 +28,7 @@ package com.google.api.services.analyticsadmin.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleAnalyticsAdminV1alphaCreateSubpropertyResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleAnalyticsAdminV1alphaProvisionSubpropertyResponse extends com.google.api.client.json.GenericJson {
 
   /**
    * The created subproperty.
@@ -56,7 +56,7 @@ public final class GoogleAnalyticsAdminV1alphaCreateSubpropertyResponse extends 
    * The created subproperty.
    * @param subproperty subproperty or {@code null} for none
    */
-  public GoogleAnalyticsAdminV1alphaCreateSubpropertyResponse setSubproperty(GoogleAnalyticsAdminV1alphaProperty subproperty) {
+  public GoogleAnalyticsAdminV1alphaProvisionSubpropertyResponse setSubproperty(GoogleAnalyticsAdminV1alphaProperty subproperty) {
     this.subproperty = subproperty;
     return this;
   }
@@ -73,19 +73,19 @@ public final class GoogleAnalyticsAdminV1alphaCreateSubpropertyResponse extends 
    * The created subproperty event filter.
    * @param subpropertyEventFilter subpropertyEventFilter or {@code null} for none
    */
-  public GoogleAnalyticsAdminV1alphaCreateSubpropertyResponse setSubpropertyEventFilter(GoogleAnalyticsAdminV1alphaSubpropertyEventFilter subpropertyEventFilter) {
+  public GoogleAnalyticsAdminV1alphaProvisionSubpropertyResponse setSubpropertyEventFilter(GoogleAnalyticsAdminV1alphaSubpropertyEventFilter subpropertyEventFilter) {
     this.subpropertyEventFilter = subpropertyEventFilter;
     return this;
   }
 
   @Override
-  public GoogleAnalyticsAdminV1alphaCreateSubpropertyResponse set(String fieldName, Object value) {
-    return (GoogleAnalyticsAdminV1alphaCreateSubpropertyResponse) super.set(fieldName, value);
+  public GoogleAnalyticsAdminV1alphaProvisionSubpropertyResponse set(String fieldName, Object value) {
+    return (GoogleAnalyticsAdminV1alphaProvisionSubpropertyResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleAnalyticsAdminV1alphaCreateSubpropertyResponse clone() {
-    return (GoogleAnalyticsAdminV1alphaCreateSubpropertyResponse) super.clone();
+  public GoogleAnalyticsAdminV1alphaProvisionSubpropertyResponse clone() {
+    return (GoogleAnalyticsAdminV1alphaProvisionSubpropertyResponse) super.clone();
   }
 
 }

@@ -126,7 +126,8 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
 
   /**
    * Aggregation of metrics. Aggregated metric values will be shown in rows where the
-   * dimension_values are set to "RESERVED_(MetricAggregation)".
+   * dimension_values are set to "RESERVED_(MetricAggregation)". Aggregates including both
+   * comparisons and multiple date ranges will be aggregated based on the date ranges.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -166,7 +167,8 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   private java.lang.Long offset;
 
   /**
-   * Specifies how rows are ordered in the response.
+   * Specifies how rows are ordered in the response. Requests including both comparisons and
+   * multiple date ranges will have order bys applied on the comparisons.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -375,7 +377,8 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
 
   /**
    * Aggregation of metrics. Aggregated metric values will be shown in rows where the
-   * dimension_values are set to "RESERVED_(MetricAggregation)".
+   * dimension_values are set to "RESERVED_(MetricAggregation)". Aggregates including both
+   * comparisons and multiple date ranges will be aggregated based on the date ranges.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMetricAggregations() {
@@ -384,7 +387,8 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
 
   /**
    * Aggregation of metrics. Aggregated metric values will be shown in rows where the
-   * dimension_values are set to "RESERVED_(MetricAggregation)".
+   * dimension_values are set to "RESERVED_(MetricAggregation)". Aggregates including both
+   * comparisons and multiple date ranges will be aggregated based on the date ranges.
    * @param metricAggregations metricAggregations or {@code null} for none
    */
   public RunReportRequest setMetricAggregations(java.util.List<java.lang.String> metricAggregations) {
@@ -456,7 +460,8 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Specifies how rows are ordered in the response.
+   * Specifies how rows are ordered in the response. Requests including both comparisons and
+   * multiple date ranges will have order bys applied on the comparisons.
    * @return value or {@code null} for none
    */
   public java.util.List<OrderBy> getOrderBys() {
@@ -464,7 +469,8 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Specifies how rows are ordered in the response.
+   * Specifies how rows are ordered in the response. Requests including both comparisons and
+   * multiple date ranges will have order bys applied on the comparisons.
    * @param orderBys orderBys or {@code null} for none
    */
   public RunReportRequest setOrderBys(java.util.List<OrderBy> orderBys) {

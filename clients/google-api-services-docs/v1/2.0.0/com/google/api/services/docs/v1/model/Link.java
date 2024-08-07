@@ -31,7 +31,7 @@ public final class Link extends com.google.api.client.json.GenericJson {
 
   /**
    * A bookmark in this document. In documents containing a single tab, links to bookmarks within
-   * the singular tab continue to return Link.bookmark_id when the includeTabsContent parameter is
+   * the singular tab continue to return Link.bookmarkId when the includeTabsContent parameter is
    * set to `false` or unset. Otherwise, this field is returned.
    * The value may be {@code null}.
    */
@@ -39,7 +39,13 @@ public final class Link extends com.google.api.client.json.GenericJson {
   private BookmarkLink bookmark;
 
   /**
-   * The ID of a bookmark in this document.
+   * The ID of a bookmark in this document. Legacy field: Instead, set includeTabsContent to `true`
+   * and use Link.bookmark for read and write operations. This field is only returned when
+   * includeTabsContent is set to `false` in documents containing a single tab and links to a
+   * bookmark within the singular tab. Otherwise, Link.bookmark is returned. If this field is used
+   * in a write request, the bookmark is considered to be from the tab ID specified in the request.
+   * If a tab ID is not specified in the request, it is considered to be from the first tab in the
+   * document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +53,7 @@ public final class Link extends com.google.api.client.json.GenericJson {
 
   /**
    * A heading in this document. In documents containing a single tab, links to headings within the
-   * singular tab continue to return Link.heading_id when the includeTabsContent parameter is set to
+   * singular tab continue to return Link.headingId when the includeTabsContent parameter is set to
    * `false` or unset. Otherwise, this field is returned.
    * The value may be {@code null}.
    */
@@ -55,7 +61,13 @@ public final class Link extends com.google.api.client.json.GenericJson {
   private HeadingLink heading;
 
   /**
-   * The ID of a heading in this document.
+   * The ID of a heading in this document. Legacy field: Instead, set includeTabsContent to `true`
+   * and use Link.heading for read and write operations. This field is only returned when
+   * includeTabsContent is set to `false` in documents containing a single tab and links to a
+   * heading within the singular tab. Otherwise, Link.heading is returned. If this field is used in
+   * a write request, the heading is considered to be from the tab ID specified in the request. If a
+   * tab ID is not specified in the request, it is considered to be from the first tab in the
+   * document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +89,7 @@ public final class Link extends com.google.api.client.json.GenericJson {
 
   /**
    * A bookmark in this document. In documents containing a single tab, links to bookmarks within
-   * the singular tab continue to return Link.bookmark_id when the includeTabsContent parameter is
+   * the singular tab continue to return Link.bookmarkId when the includeTabsContent parameter is
    * set to `false` or unset. Otherwise, this field is returned.
    * @return value or {@code null} for none
    */
@@ -87,7 +99,7 @@ public final class Link extends com.google.api.client.json.GenericJson {
 
   /**
    * A bookmark in this document. In documents containing a single tab, links to bookmarks within
-   * the singular tab continue to return Link.bookmark_id when the includeTabsContent parameter is
+   * the singular tab continue to return Link.bookmarkId when the includeTabsContent parameter is
    * set to `false` or unset. Otherwise, this field is returned.
    * @param bookmark bookmark or {@code null} for none
    */
@@ -97,7 +109,13 @@ public final class Link extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of a bookmark in this document.
+   * The ID of a bookmark in this document. Legacy field: Instead, set includeTabsContent to `true`
+   * and use Link.bookmark for read and write operations. This field is only returned when
+   * includeTabsContent is set to `false` in documents containing a single tab and links to a
+   * bookmark within the singular tab. Otherwise, Link.bookmark is returned. If this field is used
+   * in a write request, the bookmark is considered to be from the tab ID specified in the request.
+   * If a tab ID is not specified in the request, it is considered to be from the first tab in the
+   * document.
    * @return value or {@code null} for none
    */
   public java.lang.String getBookmarkId() {
@@ -105,7 +123,13 @@ public final class Link extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of a bookmark in this document.
+   * The ID of a bookmark in this document. Legacy field: Instead, set includeTabsContent to `true`
+   * and use Link.bookmark for read and write operations. This field is only returned when
+   * includeTabsContent is set to `false` in documents containing a single tab and links to a
+   * bookmark within the singular tab. Otherwise, Link.bookmark is returned. If this field is used
+   * in a write request, the bookmark is considered to be from the tab ID specified in the request.
+   * If a tab ID is not specified in the request, it is considered to be from the first tab in the
+   * document.
    * @param bookmarkId bookmarkId or {@code null} for none
    */
   public Link setBookmarkId(java.lang.String bookmarkId) {
@@ -115,7 +139,7 @@ public final class Link extends com.google.api.client.json.GenericJson {
 
   /**
    * A heading in this document. In documents containing a single tab, links to headings within the
-   * singular tab continue to return Link.heading_id when the includeTabsContent parameter is set to
+   * singular tab continue to return Link.headingId when the includeTabsContent parameter is set to
    * `false` or unset. Otherwise, this field is returned.
    * @return value or {@code null} for none
    */
@@ -125,7 +149,7 @@ public final class Link extends com.google.api.client.json.GenericJson {
 
   /**
    * A heading in this document. In documents containing a single tab, links to headings within the
-   * singular tab continue to return Link.heading_id when the includeTabsContent parameter is set to
+   * singular tab continue to return Link.headingId when the includeTabsContent parameter is set to
    * `false` or unset. Otherwise, this field is returned.
    * @param heading heading or {@code null} for none
    */
@@ -135,7 +159,13 @@ public final class Link extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of a heading in this document.
+   * The ID of a heading in this document. Legacy field: Instead, set includeTabsContent to `true`
+   * and use Link.heading for read and write operations. This field is only returned when
+   * includeTabsContent is set to `false` in documents containing a single tab and links to a
+   * heading within the singular tab. Otherwise, Link.heading is returned. If this field is used in
+   * a write request, the heading is considered to be from the tab ID specified in the request. If a
+   * tab ID is not specified in the request, it is considered to be from the first tab in the
+   * document.
    * @return value or {@code null} for none
    */
   public java.lang.String getHeadingId() {
@@ -143,7 +173,13 @@ public final class Link extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of a heading in this document.
+   * The ID of a heading in this document. Legacy field: Instead, set includeTabsContent to `true`
+   * and use Link.heading for read and write operations. This field is only returned when
+   * includeTabsContent is set to `false` in documents containing a single tab and links to a
+   * heading within the singular tab. Otherwise, Link.heading is returned. If this field is used in
+   * a write request, the heading is considered to be from the tab ID specified in the request. If a
+   * tab ID is not specified in the request, it is considered to be from the first tab in the
+   * document.
    * @param headingId headingId or {@code null} for none
    */
   public Link setHeadingId(java.lang.String headingId) {

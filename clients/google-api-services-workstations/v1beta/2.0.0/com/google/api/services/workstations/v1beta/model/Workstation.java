@@ -138,7 +138,7 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * Optional. The source workstation from which this workstations persistent directories were
+   * Optional. The source workstation from which this workstation's persistent directories were
    * cloned on creation.
    * The value may be {@code null}.
    */
@@ -431,7 +431,7 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The source workstation from which this workstations persistent directories were
+   * Optional. The source workstation from which this workstation's persistent directories were
    * cloned on creation.
    * @return value or {@code null} for none
    */
@@ -440,7 +440,7 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The source workstation from which this workstations persistent directories were
+   * Optional. The source workstation from which this workstation's persistent directories were
    * cloned on creation.
    * @param sourceWorkstation sourceWorkstation or {@code null} for none
    */

@@ -32,21 +32,24 @@ package com.google.api.services.workstations.v1beta.model;
 public final class PortRange extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Starting port number for the current range of ports.
+   * Required. Starting port number for the current range of ports. Valid ports are 22, 80, and
+   * ports within the range 1024-65535.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer first;
 
   /**
-   * Required. Ending port number for the current range of ports.
+   * Required. Ending port number for the current range of ports. Valid ports are 22, 80, and ports
+   * within the range 1024-65535.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer last;
 
   /**
-   * Required. Starting port number for the current range of ports.
+   * Required. Starting port number for the current range of ports. Valid ports are 22, 80, and
+   * ports within the range 1024-65535.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getFirst() {
@@ -54,7 +57,8 @@ public final class PortRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Starting port number for the current range of ports.
+   * Required. Starting port number for the current range of ports. Valid ports are 22, 80, and
+   * ports within the range 1024-65535.
    * @param first first or {@code null} for none
    */
   public PortRange setFirst(java.lang.Integer first) {
@@ -63,7 +67,8 @@ public final class PortRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Ending port number for the current range of ports.
+   * Required. Ending port number for the current range of ports. Valid ports are 22, 80, and ports
+   * within the range 1024-65535.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getLast() {
@@ -71,7 +76,8 @@ public final class PortRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Ending port number for the current range of ports.
+   * Required. Ending port number for the current range of ports. Valid ports are 22, 80, and ports
+   * within the range 1024-65535.
    * @param last last or {@code null} for none
    */
   public PortRange setLast(java.lang.Integer last) {

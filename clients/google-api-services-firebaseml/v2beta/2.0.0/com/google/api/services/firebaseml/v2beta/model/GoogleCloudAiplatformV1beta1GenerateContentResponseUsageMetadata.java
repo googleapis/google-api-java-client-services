@@ -37,7 +37,8 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetad
   private java.lang.Integer candidatesTokenCount;
 
   /**
-   * Number of tokens in the request.
+   * Number of tokens in the request. When `cached_content` is set, this is still the total
+   * effective prompt size meaning this includes the number of tokens in the cached content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +68,8 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetad
   }
 
   /**
-   * Number of tokens in the request.
+   * Number of tokens in the request. When `cached_content` is set, this is still the total
+   * effective prompt size meaning this includes the number of tokens in the cached content.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPromptTokenCount() {
@@ -75,7 +77,8 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetad
   }
 
   /**
-   * Number of tokens in the request.
+   * Number of tokens in the request. When `cached_content` is set, this is still the total
+   * effective prompt size meaning this includes the number of tokens in the cached content.
    * @param promptTokenCount promptTokenCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetadata setPromptTokenCount(java.lang.Integer promptTokenCount) {

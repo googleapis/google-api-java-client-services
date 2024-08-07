@@ -87,6 +87,14 @@ public final class GoogleCloudAiplatformV1beta1DedicatedResources extends com.go
   private java.lang.Integer minReplicaCount;
 
   /**
+   * Optional. If true, schedule the deployment workload on [spot
+   * VMs](https://cloud.google.com/kubernetes-engine/docs/concepts/spot-vms).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean spot;
+
+  /**
    * Immutable. The metric specifications that overrides a resource utilization metric (CPU
    * utilization, accelerator's duty cycle, and so on) target value (default to 60 if not set). At
    * most one entry is allowed per metric. If machine_spec.accelerator_count is above 0, the
@@ -195,6 +203,25 @@ public final class GoogleCloudAiplatformV1beta1DedicatedResources extends com.go
    */
   public GoogleCloudAiplatformV1beta1DedicatedResources setMinReplicaCount(java.lang.Integer minReplicaCount) {
     this.minReplicaCount = minReplicaCount;
+    return this;
+  }
+
+  /**
+   * Optional. If true, schedule the deployment workload on [spot
+   * VMs](https://cloud.google.com/kubernetes-engine/docs/concepts/spot-vms).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSpot() {
+    return spot;
+  }
+
+  /**
+   * Optional. If true, schedule the deployment workload on [spot
+   * VMs](https://cloud.google.com/kubernetes-engine/docs/concepts/spot-vms).
+   * @param spot spot or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DedicatedResources setSpot(java.lang.Boolean spot) {
+    this.spot = spot;
     return this;
   }
 

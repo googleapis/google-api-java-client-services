@@ -79,11 +79,11 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
   private GoogleCloudAiplatformV1Schema responseSchema;
 
   /**
-   * Optional. Seed.
+   * Optional. Routing configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer seed;
+  private GoogleCloudAiplatformV1GenerationConfigRoutingConfig routingConfig;
 
   /**
    * Optional. Stop sequences.
@@ -230,19 +230,19 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
   }
 
   /**
-   * Optional. Seed.
+   * Optional. Routing configuration.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getSeed() {
-    return seed;
+  public GoogleCloudAiplatformV1GenerationConfigRoutingConfig getRoutingConfig() {
+    return routingConfig;
   }
 
   /**
-   * Optional. Seed.
-   * @param seed seed or {@code null} for none
+   * Optional. Routing configuration.
+   * @param routingConfig routingConfig or {@code null} for none
    */
-  public GoogleCloudAiplatformV1GenerationConfig setSeed(java.lang.Integer seed) {
-    this.seed = seed;
+  public GoogleCloudAiplatformV1GenerationConfig setRoutingConfig(GoogleCloudAiplatformV1GenerationConfigRoutingConfig routingConfig) {
+    this.routingConfig = routingConfig;
     return this;
   }
 

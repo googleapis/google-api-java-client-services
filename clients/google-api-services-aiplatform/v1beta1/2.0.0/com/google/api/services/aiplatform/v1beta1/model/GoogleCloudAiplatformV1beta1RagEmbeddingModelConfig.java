@@ -30,18 +30,42 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1RagEmbeddingModelConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Configuration for hybrid search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RagEmbeddingModelConfigHybridSearchConfig hybridSearchConfig;
+
+  /**
    * The Vertex AI Prediction Endpoint that either refers to a publisher model or an endpoint that
    * is hosting a 1P fine-tuned text embedding model. Endpoints hosting non-1P fine-tuned text
-   * embedding models are currently not supported.
+   * embedding models are currently not supported. This is used for dense vector search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1RagEmbeddingModelConfigVertexPredictionEndpoint vertexPredictionEndpoint;
 
   /**
+   * Configuration for hybrid search.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagEmbeddingModelConfigHybridSearchConfig getHybridSearchConfig() {
+    return hybridSearchConfig;
+  }
+
+  /**
+   * Configuration for hybrid search.
+   * @param hybridSearchConfig hybridSearchConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagEmbeddingModelConfig setHybridSearchConfig(GoogleCloudAiplatformV1beta1RagEmbeddingModelConfigHybridSearchConfig hybridSearchConfig) {
+    this.hybridSearchConfig = hybridSearchConfig;
+    return this;
+  }
+
+  /**
    * The Vertex AI Prediction Endpoint that either refers to a publisher model or an endpoint that
    * is hosting a 1P fine-tuned text embedding model. Endpoints hosting non-1P fine-tuned text
-   * embedding models are currently not supported.
+   * embedding models are currently not supported. This is used for dense vector search.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RagEmbeddingModelConfigVertexPredictionEndpoint getVertexPredictionEndpoint() {
@@ -51,7 +75,7 @@ public final class GoogleCloudAiplatformV1beta1RagEmbeddingModelConfig extends c
   /**
    * The Vertex AI Prediction Endpoint that either refers to a publisher model or an endpoint that
    * is hosting a 1P fine-tuned text embedding model. Endpoints hosting non-1P fine-tuned text
-   * embedding models are currently not supported.
+   * embedding models are currently not supported. This is used for dense vector search.
    * @param vertexPredictionEndpoint vertexPredictionEndpoint or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RagEmbeddingModelConfig setVertexPredictionEndpoint(GoogleCloudAiplatformV1beta1RagEmbeddingModelConfigVertexPredictionEndpoint vertexPredictionEndpoint) {

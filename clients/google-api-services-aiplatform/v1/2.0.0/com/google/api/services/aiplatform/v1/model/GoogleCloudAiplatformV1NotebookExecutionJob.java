@@ -59,6 +59,14 @@ public final class GoogleCloudAiplatformV1NotebookExecutionJob extends com.googl
   private java.lang.String displayName;
 
   /**
+   * Customer-managed encryption key spec for the notebook execution job. This field is auto-
+   * populated if the NotebookRuntimeTemplate has an encryption spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1EncryptionSpec encryptionSpec;
+
+  /**
    * Max running time of the execution job in seconds (default 86400s / 24 hrs).
    * The value may be {@code null}.
    */
@@ -216,6 +224,25 @@ public final class GoogleCloudAiplatformV1NotebookExecutionJob extends com.googl
    */
   public GoogleCloudAiplatformV1NotebookExecutionJob setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Customer-managed encryption key spec for the notebook execution job. This field is auto-
+   * populated if the NotebookRuntimeTemplate has an encryption spec.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EncryptionSpec getEncryptionSpec() {
+    return encryptionSpec;
+  }
+
+  /**
+   * Customer-managed encryption key spec for the notebook execution job. This field is auto-
+   * populated if the NotebookRuntimeTemplate has an encryption spec.
+   * @param encryptionSpec encryptionSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1NotebookExecutionJob setEncryptionSpec(GoogleCloudAiplatformV1EncryptionSpec encryptionSpec) {
+    this.encryptionSpec = encryptionSpec;
     return this;
   }
 

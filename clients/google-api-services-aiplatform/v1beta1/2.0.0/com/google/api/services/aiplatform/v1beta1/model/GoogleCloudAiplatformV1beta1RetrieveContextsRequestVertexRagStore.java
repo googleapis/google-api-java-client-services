@@ -46,6 +46,13 @@ public final class GoogleCloudAiplatformV1beta1RetrieveContextsRequestVertexRagS
   private java.util.List<GoogleCloudAiplatformV1beta1RetrieveContextsRequestVertexRagStoreRagResource> ragResources;
 
   /**
+   * Optional. Configurations for hybrid search results ranking.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RetrieveContextsRequestVertexRagStoreRanking ranking;
+
+  /**
    * Optional. Only return contexts with vector distance smaller than the threshold.
    * The value may be {@code null}.
    */
@@ -87,6 +94,23 @@ public final class GoogleCloudAiplatformV1beta1RetrieveContextsRequestVertexRagS
    */
   public GoogleCloudAiplatformV1beta1RetrieveContextsRequestVertexRagStore setRagResources(java.util.List<GoogleCloudAiplatformV1beta1RetrieveContextsRequestVertexRagStoreRagResource> ragResources) {
     this.ragResources = ragResources;
+    return this;
+  }
+
+  /**
+   * Optional. Configurations for hybrid search results ranking.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RetrieveContextsRequestVertexRagStoreRanking getRanking() {
+    return ranking;
+  }
+
+  /**
+   * Optional. Configurations for hybrid search results ranking.
+   * @param ranking ranking or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RetrieveContextsRequestVertexRagStore setRanking(GoogleCloudAiplatformV1beta1RetrieveContextsRequestVertexRagStoreRanking ranking) {
+    this.ranking = ranking;
     return this;
   }
 

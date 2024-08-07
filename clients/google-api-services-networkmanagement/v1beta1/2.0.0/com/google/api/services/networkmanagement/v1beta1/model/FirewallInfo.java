@@ -18,7 +18,7 @@ package com.google.api.services.networkmanagement.v1beta1.model;
 
 /**
  * For display only. Metadata associated with a VPC firewall rule, an implied VPC firewall rule, or
- * a hierarchical firewall policy rule.
+ * a firewall policy rule.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Management API. For a detailed explanation
@@ -46,8 +46,7 @@ public final class FirewallInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String direction;
 
   /**
-   * The display name of the VPC firewall rule. This field is not applicable to hierarchical
-   * firewall policy rules.
+   * The display name of the firewall rule. This field might be empty for firewall policy rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,12 +68,20 @@ public final class FirewallInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String networkUri;
 
   /**
-   * The hierarchical firewall policy that this rule is associated with. This field is not
-   * applicable to VPC firewall rules.
+   * The name of the firewall policy that this rule is associated with. This field is not applicable
+   * to VPC firewall rules and implied VPC firewall rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String policy;
+
+  /**
+   * The URI of the firewall policy that this rule is associated with. This field is not applicable
+   * to VPC firewall rules and implied VPC firewall rules.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String policyUri;
 
   /**
    * The priority of the firewall rule.
@@ -91,16 +98,15 @@ public final class FirewallInfo extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> targetServiceAccounts;
 
   /**
-   * The target tags defined by the VPC firewall rule. This field is not applicable to hierarchical
-   * firewall policy rules.
+   * The target tags defined by the VPC firewall rule. This field is not applicable to firewall
+   * policy rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> targetTags;
 
   /**
-   * The URI of the VPC firewall rule. This field is not applicable to implied firewall rules or
-   * hierarchical firewall policy rules.
+   * The URI of the firewall rule. This field is not applicable to implied VPC firewall rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,8 +147,7 @@ public final class FirewallInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The display name of the VPC firewall rule. This field is not applicable to hierarchical
-   * firewall policy rules.
+   * The display name of the firewall rule. This field might be empty for firewall policy rules.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -150,8 +155,7 @@ public final class FirewallInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The display name of the VPC firewall rule. This field is not applicable to hierarchical
-   * firewall policy rules.
+   * The display name of the firewall rule. This field might be empty for firewall policy rules.
    * @param displayName displayName or {@code null} for none
    */
   public FirewallInfo setDisplayName(java.lang.String displayName) {
@@ -196,8 +200,8 @@ public final class FirewallInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The hierarchical firewall policy that this rule is associated with. This field is not
-   * applicable to VPC firewall rules.
+   * The name of the firewall policy that this rule is associated with. This field is not applicable
+   * to VPC firewall rules and implied VPC firewall rules.
    * @return value or {@code null} for none
    */
   public java.lang.String getPolicy() {
@@ -205,12 +209,31 @@ public final class FirewallInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The hierarchical firewall policy that this rule is associated with. This field is not
-   * applicable to VPC firewall rules.
+   * The name of the firewall policy that this rule is associated with. This field is not applicable
+   * to VPC firewall rules and implied VPC firewall rules.
    * @param policy policy or {@code null} for none
    */
   public FirewallInfo setPolicy(java.lang.String policy) {
     this.policy = policy;
+    return this;
+  }
+
+  /**
+   * The URI of the firewall policy that this rule is associated with. This field is not applicable
+   * to VPC firewall rules and implied VPC firewall rules.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPolicyUri() {
+    return policyUri;
+  }
+
+  /**
+   * The URI of the firewall policy that this rule is associated with. This field is not applicable
+   * to VPC firewall rules and implied VPC firewall rules.
+   * @param policyUri policyUri or {@code null} for none
+   */
+  public FirewallInfo setPolicyUri(java.lang.String policyUri) {
+    this.policyUri = policyUri;
     return this;
   }
 
@@ -249,8 +272,8 @@ public final class FirewallInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The target tags defined by the VPC firewall rule. This field is not applicable to hierarchical
-   * firewall policy rules.
+   * The target tags defined by the VPC firewall rule. This field is not applicable to firewall
+   * policy rules.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTargetTags() {
@@ -258,8 +281,8 @@ public final class FirewallInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The target tags defined by the VPC firewall rule. This field is not applicable to hierarchical
-   * firewall policy rules.
+   * The target tags defined by the VPC firewall rule. This field is not applicable to firewall
+   * policy rules.
    * @param targetTags targetTags or {@code null} for none
    */
   public FirewallInfo setTargetTags(java.util.List<java.lang.String> targetTags) {
@@ -268,8 +291,7 @@ public final class FirewallInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URI of the VPC firewall rule. This field is not applicable to implied firewall rules or
-   * hierarchical firewall policy rules.
+   * The URI of the firewall rule. This field is not applicable to implied VPC firewall rules.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -277,8 +299,7 @@ public final class FirewallInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URI of the VPC firewall rule. This field is not applicable to implied firewall rules or
-   * hierarchical firewall policy rules.
+   * The URI of the firewall rule. This field is not applicable to implied VPC firewall rules.
    * @param uri uri or {@code null} for none
    */
   public FirewallInfo setUri(java.lang.String uri) {

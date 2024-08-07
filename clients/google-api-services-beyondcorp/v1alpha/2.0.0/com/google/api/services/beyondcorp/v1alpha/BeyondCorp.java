@@ -5304,6 +5304,45 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
+          /** Optional. Aggregation type. The default is 'DAILY'. */
+          @com.google.api.client.util.Key
+          private java.lang.String aggregation;
+
+          /** Optional. Aggregation type. The default is 'DAILY'.
+           */
+          public java.lang.String getAggregation() {
+            return aggregation;
+          }
+
+          /** Optional. Aggregation type. The default is 'DAILY'. */
+          public List setAggregation(java.lang.String aggregation) {
+            this.aggregation = aggregation;
+            return this;
+          }
+
+          /**
+           * Optional. Ending time for the duration for which insights are to be pulled. The default
+           * is the current time.
+           */
+          @com.google.api.client.util.Key
+          private String endTime;
+
+          /** Optional. Ending time for the duration for which insights are to be pulled. The default is the
+         current time.
+           */
+          public String getEndTime() {
+            return endTime;
+          }
+
+          /**
+           * Optional. Ending time for the duration for which insights are to be pulled. The default
+           * is the current time.
+           */
+          public List setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+          }
+
           /**
            * Optional. Filter expression to restrict the insights returned. Supported filter fields:
            * * `type` * `category` * `subCategory` Examples: * "category = application AND type =
@@ -5399,6 +5438,29 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
           /** Optional. A token identifying a page of results the server should return. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. Starting time for the duration for which insights are to be pulled. The
+           * default is 7 days before the current time.
+           */
+          @com.google.api.client.util.Key
+          private String startTime;
+
+          /** Optional. Starting time for the duration for which insights are to be pulled. The default is 7 days
+         before the current time.
+           */
+          public String getStartTime() {
+            return startTime;
+          }
+
+          /**
+           * Optional. Starting time for the duration for which insights are to be pulled. The
+           * default is 7 days before the current time.
+           */
+          public List setStartTime(String startTime) {
+            this.startTime = startTime;
             return this;
           }
 
@@ -19008,6 +19070,45 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
+          /** Optional. Aggregation type. The default is 'DAILY'. */
+          @com.google.api.client.util.Key
+          private java.lang.String aggregation;
+
+          /** Optional. Aggregation type. The default is 'DAILY'.
+           */
+          public java.lang.String getAggregation() {
+            return aggregation;
+          }
+
+          /** Optional. Aggregation type. The default is 'DAILY'. */
+          public List setAggregation(java.lang.String aggregation) {
+            this.aggregation = aggregation;
+            return this;
+          }
+
+          /**
+           * Optional. Ending time for the duration for which insights are to be pulled. The default
+           * is the current time.
+           */
+          @com.google.api.client.util.Key
+          private String endTime;
+
+          /** Optional. Ending time for the duration for which insights are to be pulled. The default is the
+         current time.
+           */
+          public String getEndTime() {
+            return endTime;
+          }
+
+          /**
+           * Optional. Ending time for the duration for which insights are to be pulled. The default
+           * is the current time.
+           */
+          public List setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+          }
+
           /**
            * Optional. Filter expression to restrict the insights returned. Supported filter fields:
            * * `type` * `category` * `subCategory` Examples: * "category = application AND type =
@@ -19103,6 +19204,29 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
           /** Optional. A token identifying a page of results the server should return. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. Starting time for the duration for which insights are to be pulled. The
+           * default is 7 days before the current time.
+           */
+          @com.google.api.client.util.Key
+          private String startTime;
+
+          /** Optional. Starting time for the duration for which insights are to be pulled. The default is 7 days
+         before the current time.
+           */
+          public String getStartTime() {
+            return startTime;
+          }
+
+          /**
+           * Optional. Starting time for the duration for which insights are to be pulled. The
+           * default is 7 days before the current time.
+           */
+          public List setStartTime(String startTime) {
+            this.startTime = startTime;
             return this;
           }
 

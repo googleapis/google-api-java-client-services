@@ -31,11 +31,38 @@ package com.google.api.services.domains.v1alpha2.model;
 public final class HealthCheckTargets extends com.google.api.client.json.GenericJson {
 
   /**
+   * The Internet IP addresses to be health checked. The format matches the format of
+   * ResourceRecordSet.rrdata as defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> externalEndpoints;
+
+  /**
    * Configuration for internal load balancers to be health checked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<LoadBalancerTarget> internalLoadBalancer;
+
+  /**
+   * The Internet IP addresses to be health checked. The format matches the format of
+   * ResourceRecordSet.rrdata as defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1)
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExternalEndpoints() {
+    return externalEndpoints;
+  }
+
+  /**
+   * The Internet IP addresses to be health checked. The format matches the format of
+   * ResourceRecordSet.rrdata as defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1)
+   * @param externalEndpoints externalEndpoints or {@code null} for none
+   */
+  public HealthCheckTargets setExternalEndpoints(java.util.List<java.lang.String> externalEndpoints) {
+    this.externalEndpoints = externalEndpoints;
+    return this;
+  }
 
   /**
    * Configuration for internal load balancers to be health checked.

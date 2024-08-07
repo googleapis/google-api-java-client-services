@@ -107,7 +107,7 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
   private MutationRecord mutationRecord;
 
   /**
-   * Required if the policy exists. The resource name for this policy. The format is:
+   * Identifier. Required if the policy exists. The resource name for this policy. The format is:
    * projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID] [ALERT_POLICY_ID] is assigned
    * by Cloud Monitoring when the policy is created. When calling the alertPolicies.create method,
    * do not include the name field in the alerting policy passed as part of the request.
@@ -333,7 +333,7 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required if the policy exists. The resource name for this policy. The format is:
+   * Identifier. Required if the policy exists. The resource name for this policy. The format is:
    * projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID] [ALERT_POLICY_ID] is assigned
    * by Cloud Monitoring when the policy is created. When calling the alertPolicies.create method,
    * do not include the name field in the alerting policy passed as part of the request.
@@ -344,7 +344,7 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required if the policy exists. The resource name for this policy. The format is:
+   * Identifier. Required if the policy exists. The resource name for this policy. The format is:
    * projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID] [ALERT_POLICY_ID] is assigned
    * by Cloud Monitoring when the policy is created. When calling the alertPolicies.create method,
    * do not include the name field in the alerting policy passed as part of the request.

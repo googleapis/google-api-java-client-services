@@ -2219,15 +2219,15 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * If provided, this field specifies the criteria that must be met by alert policies to be
-         * included in the response.For more details, see sorting and filtering
+         * Optional. If provided, this field specifies the criteria that must be met by alert
+         * policies to be included in the response.For more details, see sorting and filtering
          * (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** If provided, this field specifies the criteria that must be met by alert policies to be included in
-       the response.For more details, see sorting and filtering
+        /** Optional. If provided, this field specifies the criteria that must be met by alert policies to be
+       included in the response.For more details, see sorting and filtering
        (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
          */
         public java.lang.String getFilter() {
@@ -2235,8 +2235,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * If provided, this field specifies the criteria that must be met by alert policies to be
-         * included in the response.For more details, see sorting and filtering
+         * Optional. If provided, this field specifies the criteria that must be met by alert
+         * policies to be included in the response.For more details, see sorting and filtering
          * (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
          */
         public List setFilter(java.lang.String filter) {
@@ -2245,17 +2245,17 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * A comma-separated list of fields by which to sort the result. Supports the same set of
-         * field references as the filter field. Entries can be prefixed with a minus sign to sort
-         * by the field in descending order.For more details, see sorting and filtering
+         * Optional. A comma-separated list of fields by which to sort the result. Supports the same
+         * set of field references as the filter field. Entries can be prefixed with a minus sign to
+         * sort by the field in descending order.For more details, see sorting and filtering
          * (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** A comma-separated list of fields by which to sort the result. Supports the same set of field
-       references as the filter field. Entries can be prefixed with a minus sign to sort by the field in
-       descending order.For more details, see sorting and filtering
+        /** Optional. A comma-separated list of fields by which to sort the result. Supports the same set of
+       field references as the filter field. Entries can be prefixed with a minus sign to sort by the
+       field in descending order.For more details, see sorting and filtering
        (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
          */
         public java.lang.String getOrderBy() {
@@ -2263,9 +2263,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * A comma-separated list of fields by which to sort the result. Supports the same set of
-         * field references as the filter field. Entries can be prefixed with a minus sign to sort
-         * by the field in descending order.For more details, see sorting and filtering
+         * Optional. A comma-separated list of fields by which to sort the result. Supports the same
+         * set of field references as the filter field. Entries can be prefixed with a minus sign to
+         * sort by the field in descending order.For more details, see sorting and filtering
          * (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
          */
         public List setOrderBy(java.lang.String orderBy) {
@@ -2273,42 +2273,42 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
-        /** The maximum number of results to return in a single response. */
+        /** Optional. The maximum number of results to return in a single response. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return in a single response.
+        /** Optional. The maximum number of results to return in a single response.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** The maximum number of results to return in a single response. */
+        /** Optional. The maximum number of results to return in a single response. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
         /**
-         * If this field is not empty then it must contain the nextPageToken value returned by a
-         * previous call to this method. Using this field causes the method to return more results
-         * from the previous method call.
+         * Optional. If this field is not empty then it must contain the nextPageToken value
+         * returned by a previous call to this method. Using this field causes the method to return
+         * more results from the previous method call.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** If this field is not empty then it must contain the nextPageToken value returned by a previous call
-       to this method. Using this field causes the method to return more results from the previous method
-       call.
+        /** Optional. If this field is not empty then it must contain the nextPageToken value returned by a
+       previous call to this method. Using this field causes the method to return more results from the
+       previous method call.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * If this field is not empty then it must contain the nextPageToken value returned by a
-         * previous call to this method. Using this field causes the method to return more results
-         * from the previous method call.
+         * Optional. If this field is not empty then it must contain the nextPageToken value
+         * returned by a previous call to this method. Using this field causes the method to return
+         * more results from the previous method call.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -2332,7 +2332,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required if the policy exists. The resource name for this policy. The format is:
+       * @param name Identifier. Required if the policy exists. The resource name for this policy. The format is:
        *        projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID] [ALERT_POLICY_ID] is
        *        assigned by Cloud Monitoring when the policy is created. When calling the
        *        alertPolicies.create method, do not include the name field in the alerting policy passed
@@ -2368,7 +2368,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required if the policy exists. The resource name for this policy. The format is:
+         * @param name Identifier. Required if the policy exists. The resource name for this policy. The format is:
        *        projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID] [ALERT_POLICY_ID] is
        *        assigned by Cloud Monitoring when the policy is created. When calling the
        *        alertPolicies.create method, do not include the name field in the alerting policy passed
@@ -2442,8 +2442,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required if the policy exists. The resource name for this policy. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID] [ALERT_POLICY_ID] is
+         * Identifier. Required if the policy exists. The resource name for this policy. The format
+         * is: projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID] [ALERT_POLICY_ID] is
          * assigned by Cloud Monitoring when the policy is created. When calling the
          * alertPolicies.create method, do not include the name field in the alerting policy passed
          * as part of the request.
@@ -2451,7 +2451,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required if the policy exists. The resource name for this policy. The format is:
+        /** Identifier. Required if the policy exists. The resource name for this policy. The format is:
        projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID] [ALERT_POLICY_ID] is assigned by
        Cloud Monitoring when the policy is created. When calling the alertPolicies.create method, do not
        include the name field in the alerting policy passed as part of the request.
@@ -2461,8 +2461,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required if the policy exists. The resource name for this policy. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID] [ALERT_POLICY_ID] is
+         * Identifier. Required if the policy exists. The resource name for this policy. The format
+         * is: projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID] [ALERT_POLICY_ID] is
          * assigned by Cloud Monitoring when the policy is created. When calling the
          * alertPolicies.create method, do not include the name field in the alerting policy passed
          * as part of the request.

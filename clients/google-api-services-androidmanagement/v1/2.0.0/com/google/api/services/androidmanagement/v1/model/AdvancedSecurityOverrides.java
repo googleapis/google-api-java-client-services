@@ -34,7 +34,8 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
    * Controls Common Criteria Mode—security standards defined in the Common Criteria for Information
    * Technology Security Evaluation (https://www.commoncriteriaportal.org/) (CC). Enabling Common
    * Criteria Mode increases certain security components on a device, including AES-GCM encryption
-   * of Bluetooth Long Term Keys, and Wi-Fi configuration stores.Warning: Common Criteria Mode
+   * of Bluetooth Long Term Keys, and Wi-Fi configuration stores.Common Criteria Mode is only
+   * supported on company-owned devices running Android 11 or above.Warning: Common Criteria Mode
    * enforces a strict security model typically only required for IT products used in national
    * security systems and other highly sensitive organizations. Standard device use may be affected.
    * Only enabled if required.
@@ -90,7 +91,8 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
    * Controls Common Criteria Mode—security standards defined in the Common Criteria for Information
    * Technology Security Evaluation (https://www.commoncriteriaportal.org/) (CC). Enabling Common
    * Criteria Mode increases certain security components on a device, including AES-GCM encryption
-   * of Bluetooth Long Term Keys, and Wi-Fi configuration stores.Warning: Common Criteria Mode
+   * of Bluetooth Long Term Keys, and Wi-Fi configuration stores.Common Criteria Mode is only
+   * supported on company-owned devices running Android 11 or above.Warning: Common Criteria Mode
    * enforces a strict security model typically only required for IT products used in national
    * security systems and other highly sensitive organizations. Standard device use may be affected.
    * Only enabled if required.
@@ -104,7 +106,8 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
    * Controls Common Criteria Mode—security standards defined in the Common Criteria for Information
    * Technology Security Evaluation (https://www.commoncriteriaportal.org/) (CC). Enabling Common
    * Criteria Mode increases certain security components on a device, including AES-GCM encryption
-   * of Bluetooth Long Term Keys, and Wi-Fi configuration stores.Warning: Common Criteria Mode
+   * of Bluetooth Long Term Keys, and Wi-Fi configuration stores.Common Criteria Mode is only
+   * supported on company-owned devices running Android 11 or above.Warning: Common Criteria Mode
    * enforces a strict security model typically only required for IT products used in national
    * security systems and other highly sensitive organizations. Standard device use may be affected.
    * Only enabled if required.

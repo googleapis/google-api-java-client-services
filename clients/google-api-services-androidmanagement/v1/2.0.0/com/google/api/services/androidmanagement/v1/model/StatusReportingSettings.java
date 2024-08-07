@@ -45,7 +45,8 @@ public final class StatusReportingSettings extends com.google.api.client.json.Ge
   private java.lang.Boolean applicationReportsEnabled;
 
   /**
-   * Whether Common Criteria Mode reporting is enabled.
+   * Whether Common Criteria Mode reporting is enabled. This is supported only on company-owned
+   * devices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,7 +146,8 @@ public final class StatusReportingSettings extends com.google.api.client.json.Ge
   }
 
   /**
-   * Whether Common Criteria Mode reporting is enabled.
+   * Whether Common Criteria Mode reporting is enabled. This is supported only on company-owned
+   * devices.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCommonCriteriaModeEnabled() {
@@ -153,7 +155,8 @@ public final class StatusReportingSettings extends com.google.api.client.json.Ge
   }
 
   /**
-   * Whether Common Criteria Mode reporting is enabled.
+   * Whether Common Criteria Mode reporting is enabled. This is supported only on company-owned
+   * devices.
    * @param commonCriteriaModeEnabled commonCriteriaModeEnabled or {@code null} for none
    */
   public StatusReportingSettings setCommonCriteriaModeEnabled(java.lang.Boolean commonCriteriaModeEnabled) {

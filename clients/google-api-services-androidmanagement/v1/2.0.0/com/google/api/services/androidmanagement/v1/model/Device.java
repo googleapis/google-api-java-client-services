@@ -86,7 +86,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
    * Information about Common Criteria Mode—security standards defined in the Common Criteria for
    * Information Technology Security Evaluation (https://www.commoncriteriaportal.org/) (CC).This
    * information is only available if statusReportingSettings.commonCriteriaModeEnabled is true in
-   * the device's policy.
+   * the device's policy the device is company-owned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -429,7 +429,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
    * Information about Common Criteria Mode—security standards defined in the Common Criteria for
    * Information Technology Security Evaluation (https://www.commoncriteriaportal.org/) (CC).This
    * information is only available if statusReportingSettings.commonCriteriaModeEnabled is true in
-   * the device's policy.
+   * the device's policy the device is company-owned.
    * @return value or {@code null} for none
    */
   public CommonCriteriaModeInfo getCommonCriteriaModeInfo() {
@@ -440,7 +440,7 @@ public final class Device extends com.google.api.client.json.GenericJson {
    * Information about Common Criteria Mode—security standards defined in the Common Criteria for
    * Information Technology Security Evaluation (https://www.commoncriteriaportal.org/) (CC).This
    * information is only available if statusReportingSettings.commonCriteriaModeEnabled is true in
-   * the device's policy.
+   * the device's policy the device is company-owned.
    * @param commonCriteriaModeInfo commonCriteriaModeInfo or {@code null} for none
    */
   public Device setCommonCriteriaModeInfo(CommonCriteriaModeInfo commonCriteriaModeInfo) {

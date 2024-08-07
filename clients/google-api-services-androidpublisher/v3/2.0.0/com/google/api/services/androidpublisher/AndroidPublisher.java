@@ -13323,11 +13323,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           }
         }
         /**
-         * Migrates subscribers who are receiving an historical subscription price to the currently-offered
-         * price for the specified region. Requests will cause price change notifications to be sent to
-         * users who are currently receiving an historical price older than the supplied timestamp.
-         * Subscribers who do not agree to the new price will have their subscription ended at the next
-         * renewal.
+         * Migrates subscribers from one or more legacy price cohorts to the current price. Requests result
+         * in Google Play notifying affected subscribers. Only up to 250 simultaneous legacy price cohorts
+         * are supported.
          *
          * Create a request for the method "basePlans.migratePrices".
          *
@@ -13354,11 +13352,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}:migratePrices";
 
           /**
-           * Migrates subscribers who are receiving an historical subscription price to the currently-
-           * offered price for the specified region. Requests will cause price change notifications to be
-           * sent to users who are currently receiving an historical price older than the supplied
-           * timestamp. Subscribers who do not agree to the new price will have their subscription ended at
-           * the next renewal.
+           * Migrates subscribers from one or more legacy price cohorts to the current price. Requests
+           * result in Google Play notifying affected subscribers. Only up to 250 simultaneous legacy price
+           * cohorts are supported.
            *
            * Create a request for the method "basePlans.migratePrices".
            *

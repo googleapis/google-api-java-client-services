@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.retail.v2alpha.model;
+package com.google.api.services.retail.v2beta.model;
 
 /**
  * Alert policy for a customer.
@@ -28,7 +28,7 @@ package com.google.api.services.retail.v2alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudRetailV2alphaAlertConfigAlertPolicy extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudRetailV2betaAlertConfigAlertPolicy extends com.google.api.client.json.GenericJson {
 
   /**
    * The feature that provides alerting capability. Supported value: - `search-data-quality` for
@@ -50,7 +50,7 @@ public final class GoogleCloudRetailV2alphaAlertConfigAlertPolicy extends com.go
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudRetailV2alphaAlertConfigAlertPolicyRecipient> recipients;
+  private java.util.List<GoogleCloudRetailV2betaAlertConfigAlertPolicyRecipient> recipients;
 
   /**
    * The feature that provides alerting capability. Supported value: - `search-data-quality` for
@@ -66,7 +66,7 @@ public final class GoogleCloudRetailV2alphaAlertConfigAlertPolicy extends com.go
    * retail search customers. - `conv-data-quality` for retail conversation customers.
    * @param alertGroup alertGroup or {@code null} for none
    */
-  public GoogleCloudRetailV2alphaAlertConfigAlertPolicy setAlertGroup(java.lang.String alertGroup) {
+  public GoogleCloudRetailV2betaAlertConfigAlertPolicy setAlertGroup(java.lang.String alertGroup) {
     this.alertGroup = alertGroup;
     return this;
   }
@@ -83,7 +83,7 @@ public final class GoogleCloudRetailV2alphaAlertConfigAlertPolicy extends com.go
    * The enrollment status of a customer.
    * @param enrollStatus enrollStatus or {@code null} for none
    */
-  public GoogleCloudRetailV2alphaAlertConfigAlertPolicy setEnrollStatus(java.lang.String enrollStatus) {
+  public GoogleCloudRetailV2betaAlertConfigAlertPolicy setEnrollStatus(java.lang.String enrollStatus) {
     this.enrollStatus = enrollStatus;
     return this;
   }
@@ -92,7 +92,7 @@ public final class GoogleCloudRetailV2alphaAlertConfigAlertPolicy extends com.go
    * Recipients for the alert policy. One alert policy should not exceed 20 recipients.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudRetailV2alphaAlertConfigAlertPolicyRecipient> getRecipients() {
+  public java.util.List<GoogleCloudRetailV2betaAlertConfigAlertPolicyRecipient> getRecipients() {
     return recipients;
   }
 
@@ -100,19 +100,19 @@ public final class GoogleCloudRetailV2alphaAlertConfigAlertPolicy extends com.go
    * Recipients for the alert policy. One alert policy should not exceed 20 recipients.
    * @param recipients recipients or {@code null} for none
    */
-  public GoogleCloudRetailV2alphaAlertConfigAlertPolicy setRecipients(java.util.List<GoogleCloudRetailV2alphaAlertConfigAlertPolicyRecipient> recipients) {
+  public GoogleCloudRetailV2betaAlertConfigAlertPolicy setRecipients(java.util.List<GoogleCloudRetailV2betaAlertConfigAlertPolicyRecipient> recipients) {
     this.recipients = recipients;
     return this;
   }
 
   @Override
-  public GoogleCloudRetailV2alphaAlertConfigAlertPolicy set(String fieldName, Object value) {
-    return (GoogleCloudRetailV2alphaAlertConfigAlertPolicy) super.set(fieldName, value);
+  public GoogleCloudRetailV2betaAlertConfigAlertPolicy set(String fieldName, Object value) {
+    return (GoogleCloudRetailV2betaAlertConfigAlertPolicy) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudRetailV2alphaAlertConfigAlertPolicy clone() {
-    return (GoogleCloudRetailV2alphaAlertConfigAlertPolicy) super.clone();
+  public GoogleCloudRetailV2betaAlertConfigAlertPolicy clone() {
+    return (GoogleCloudRetailV2betaAlertConfigAlertPolicy) super.clone();
   }
 
 }

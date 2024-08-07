@@ -31,6 +31,14 @@ package com.google.api.services.retail.v2.model;
 public final class GoogleCloudRetailV2CompleteQueryResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * A map of matched attribute suggestions. This field is only available for "cloud-retail"
+   * dataset. Current supported keys: * `brands` * `categories`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudRetailV2CompleteQueryResponseAttributeResult> attributeResults;
+
+  /**
    * A unique complete token. This should be included in the UserEvent.completion_detail for search
    * events resulting from this completion, which enables accurate attribution of complete model
    * performance.
@@ -59,6 +67,25 @@ public final class GoogleCloudRetailV2CompleteQueryResponse extends com.google.a
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudRetailV2CompleteQueryResponseRecentSearchResult> recentSearchResults;
+
+  /**
+   * A map of matched attribute suggestions. This field is only available for "cloud-retail"
+   * dataset. Current supported keys: * `brands` * `categories`
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudRetailV2CompleteQueryResponseAttributeResult> getAttributeResults() {
+    return attributeResults;
+  }
+
+  /**
+   * A map of matched attribute suggestions. This field is only available for "cloud-retail"
+   * dataset. Current supported keys: * `brands` * `categories`
+   * @param attributeResults attributeResults or {@code null} for none
+   */
+  public GoogleCloudRetailV2CompleteQueryResponse setAttributeResults(java.util.Map<String, GoogleCloudRetailV2CompleteQueryResponseAttributeResult> attributeResults) {
+    this.attributeResults = attributeResults;
+    return this;
+  }
 
   /**
    * A unique complete token. This should be included in the UserEvent.completion_detail for search

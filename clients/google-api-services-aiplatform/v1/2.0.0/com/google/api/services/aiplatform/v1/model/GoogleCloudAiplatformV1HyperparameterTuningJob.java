@@ -109,6 +109,20 @@ public final class GoogleCloudAiplatformV1HyperparameterTuningJob extends com.go
   private java.lang.Integer parallelTrialCount;
 
   /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Output only. Time when the HyperparameterTuningJob for the first time entered the
    * `JOB_STATE_RUNNING` state.
    * The value may be {@code null}.
@@ -335,6 +349,40 @@ public final class GoogleCloudAiplatformV1HyperparameterTuningJob extends com.go
    */
   public GoogleCloudAiplatformV1HyperparameterTuningJob setParallelTrialCount(java.lang.Integer parallelTrialCount) {
     this.parallelTrialCount = parallelTrialCount;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1HyperparameterTuningJob setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1HyperparameterTuningJob setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

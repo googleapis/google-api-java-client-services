@@ -44,6 +44,14 @@ public final class GoogleCloudAiplatformV1beta1PrivateServiceConnectConfig exten
   private java.util.List<java.lang.String> projectAllowlist;
 
   /**
+   * Output only. The name of the generated service attachment resource. This is only populated if
+   * the endpoint is deployed with PrivateServiceConnect.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAttachment;
+
+  /**
    * Required. If true, expose the IndexEndpoint via private service connect.
    * @return value or {@code null} for none
    */
@@ -74,6 +82,25 @@ public final class GoogleCloudAiplatformV1beta1PrivateServiceConnectConfig exten
    */
   public GoogleCloudAiplatformV1beta1PrivateServiceConnectConfig setProjectAllowlist(java.util.List<java.lang.String> projectAllowlist) {
     this.projectAllowlist = projectAllowlist;
+    return this;
+  }
+
+  /**
+   * Output only. The name of the generated service attachment resource. This is only populated if
+   * the endpoint is deployed with PrivateServiceConnect.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAttachment() {
+    return serviceAttachment;
+  }
+
+  /**
+   * Output only. The name of the generated service attachment resource. This is only populated if
+   * the endpoint is deployed with PrivateServiceConnect.
+   * @param serviceAttachment serviceAttachment or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PrivateServiceConnectConfig setServiceAttachment(java.lang.String serviceAttachment) {
+    this.serviceAttachment = serviceAttachment;
     return this;
   }
 

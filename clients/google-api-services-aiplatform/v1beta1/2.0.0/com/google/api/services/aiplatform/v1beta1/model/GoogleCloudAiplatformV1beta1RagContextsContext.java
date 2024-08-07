@@ -30,7 +30,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1RagContextsContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * The distance between the query vector and the context text vector.
+   * The distance between the query dense embedding vector and the context text vector.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,6 +46,13 @@ public final class GoogleCloudAiplatformV1beta1RagContextsContext extends com.go
   private java.lang.String sourceUri;
 
   /**
+   * The distance between the query sparse embedding vector and the context text vector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double sparseDistance;
+
+  /**
    * The text chunk.
    * The value may be {@code null}.
    */
@@ -53,7 +60,7 @@ public final class GoogleCloudAiplatformV1beta1RagContextsContext extends com.go
   private java.lang.String text;
 
   /**
-   * The distance between the query vector and the context text vector.
+   * The distance between the query dense embedding vector and the context text vector.
    * @return value or {@code null} for none
    */
   public java.lang.Double getDistance() {
@@ -61,7 +68,7 @@ public final class GoogleCloudAiplatformV1beta1RagContextsContext extends com.go
   }
 
   /**
-   * The distance between the query vector and the context text vector.
+   * The distance between the query dense embedding vector and the context text vector.
    * @param distance distance or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RagContextsContext setDistance(java.lang.Double distance) {
@@ -87,6 +94,23 @@ public final class GoogleCloudAiplatformV1beta1RagContextsContext extends com.go
    */
   public GoogleCloudAiplatformV1beta1RagContextsContext setSourceUri(java.lang.String sourceUri) {
     this.sourceUri = sourceUri;
+    return this;
+  }
+
+  /**
+   * The distance between the query sparse embedding vector and the context text vector.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getSparseDistance() {
+    return sparseDistance;
+  }
+
+  /**
+   * The distance between the query sparse embedding vector and the context text vector.
+   * @param sparseDistance sparseDistance or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagContextsContext setSparseDistance(java.lang.Double sparseDistance) {
+    this.sparseDistance = sparseDistance;
     return this;
   }
 

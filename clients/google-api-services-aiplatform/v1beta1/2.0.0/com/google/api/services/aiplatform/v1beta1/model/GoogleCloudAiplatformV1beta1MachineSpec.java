@@ -57,6 +57,13 @@ public final class GoogleCloudAiplatformV1beta1MachineSpec extends com.google.ap
   private java.lang.String machineType;
 
   /**
+   * Optional. Immutable. Configuration controlling how this resource pool consumes reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ReservationAffinity reservationAffinity;
+
+  /**
    * Immutable. The topology of the TPUs. Corresponds to the TPU topologies available from GKE.
    * (Example: tpu_topology: "2x2x1").
    * The value may be {@code null}.
@@ -124,6 +131,23 @@ public final class GoogleCloudAiplatformV1beta1MachineSpec extends com.google.ap
    */
   public GoogleCloudAiplatformV1beta1MachineSpec setMachineType(java.lang.String machineType) {
     this.machineType = machineType;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. Configuration controlling how this resource pool consumes reservation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReservationAffinity getReservationAffinity() {
+    return reservationAffinity;
+  }
+
+  /**
+   * Optional. Immutable. Configuration controlling how this resource pool consumes reservation.
+   * @param reservationAffinity reservationAffinity or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1MachineSpec setReservationAffinity(GoogleCloudAiplatformV1beta1ReservationAffinity reservationAffinity) {
+    this.reservationAffinity = reservationAffinity;
     return this;
   }
 

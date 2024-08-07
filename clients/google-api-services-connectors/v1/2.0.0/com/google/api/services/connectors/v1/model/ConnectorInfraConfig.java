@@ -59,6 +59,13 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
   private java.lang.Long internalclientRatelimitThreshold;
 
   /**
+   * Max Instance Request Conncurrency for Cloud Run service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxInstanceRequestConcurrency;
+
+  /**
    * Indicate whether connector is being migrated to cloud run deployment model.
    * The value may be {@code null}.
    */
@@ -158,6 +165,23 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
    */
   public ConnectorInfraConfig setInternalclientRatelimitThreshold(java.lang.Long internalclientRatelimitThreshold) {
     this.internalclientRatelimitThreshold = internalclientRatelimitThreshold;
+    return this;
+  }
+
+  /**
+   * Max Instance Request Conncurrency for Cloud Run service.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxInstanceRequestConcurrency() {
+    return maxInstanceRequestConcurrency;
+  }
+
+  /**
+   * Max Instance Request Conncurrency for Cloud Run service.
+   * @param maxInstanceRequestConcurrency maxInstanceRequestConcurrency or {@code null} for none
+   */
+  public ConnectorInfraConfig setMaxInstanceRequestConcurrency(java.lang.Integer maxInstanceRequestConcurrency) {
+    this.maxInstanceRequestConcurrency = maxInstanceRequestConcurrency;
     return this;
   }
 

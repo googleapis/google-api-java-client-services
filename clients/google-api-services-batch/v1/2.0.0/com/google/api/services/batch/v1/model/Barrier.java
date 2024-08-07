@@ -17,7 +17,8 @@
 package com.google.api.services.batch.v1.model;
 
 /**
- * Barrier runnable blocks until all tasks in a taskgroup reach it.
+ * A barrier runnable automatically blocks the execution of subsequent runnables until all the tasks
+ * in the task group reach the barrier.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Batch API. For a detailed explanation see:

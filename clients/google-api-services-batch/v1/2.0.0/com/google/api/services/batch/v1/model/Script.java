@@ -30,32 +30,36 @@ package com.google.api.services.batch.v1.model;
 public final class Script extends com.google.api.client.json.GenericJson {
 
   /**
-   * Script file path on the host VM. To specify an interpreter, please add a `#!`(also known as
-   * [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix))) as the first line of the
-   * file.(For example, to execute the script using bash, `#!/bin/bash` should be the first line of
-   * the file. To execute the script using`Python3`, `#!/usr/bin/env python3` should be the first
-   * line of the file.) Otherwise, the file will by default be executed by `/bin/sh`.
+   * The path to a script file that is accessible from the host VM(s). Unless the script file
+   * supports the default `#!/bin/sh` shell interpreter, you must specify an interpreter by
+   * including a [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix) as the first line of
+   * the file. For example, to execute the script using bash, include `#!/bin/bash` as the first
+   * line of the file. Alternatively, to execute the script using Python3, include `#!/usr/bin/env
+   * python3` as the first line of the file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
 
   /**
-   * Shell script text. To specify an interpreter, please add a `#!\n` at the beginning of the
-   * text.(For example, to execute the script using bash, `#!/bin/bash\n` should be added. To
-   * execute the script using`Python3`, `#!/usr/bin/env python3\n` should be added.) Otherwise, the
-   * script will by default be executed by `/bin/sh`.
+   * The text for a script. Unless the script text supports the default `#!/bin/sh` shell
+   * interpreter, you must specify an interpreter by including a [shebang
+   * line](https://en.wikipedia.org/wiki/Shebang_(Unix) at the beginning of the text. For example,
+   * to execute the script using bash, include `#!/bin/bash\n` at the beginning of the text.
+   * Alternatively, to execute the script using Python3, include `#!/usr/bin/env python3\n` at the
+   * beginning of the text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * Script file path on the host VM. To specify an interpreter, please add a `#!`(also known as
-   * [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix))) as the first line of the
-   * file.(For example, to execute the script using bash, `#!/bin/bash` should be the first line of
-   * the file. To execute the script using`Python3`, `#!/usr/bin/env python3` should be the first
-   * line of the file.) Otherwise, the file will by default be executed by `/bin/sh`.
+   * The path to a script file that is accessible from the host VM(s). Unless the script file
+   * supports the default `#!/bin/sh` shell interpreter, you must specify an interpreter by
+   * including a [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix) as the first line of
+   * the file. For example, to execute the script using bash, include `#!/bin/bash` as the first
+   * line of the file. Alternatively, to execute the script using Python3, include `#!/usr/bin/env
+   * python3` as the first line of the file.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -63,11 +67,12 @@ public final class Script extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Script file path on the host VM. To specify an interpreter, please add a `#!`(also known as
-   * [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix))) as the first line of the
-   * file.(For example, to execute the script using bash, `#!/bin/bash` should be the first line of
-   * the file. To execute the script using`Python3`, `#!/usr/bin/env python3` should be the first
-   * line of the file.) Otherwise, the file will by default be executed by `/bin/sh`.
+   * The path to a script file that is accessible from the host VM(s). Unless the script file
+   * supports the default `#!/bin/sh` shell interpreter, you must specify an interpreter by
+   * including a [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix) as the first line of
+   * the file. For example, to execute the script using bash, include `#!/bin/bash` as the first
+   * line of the file. Alternatively, to execute the script using Python3, include `#!/usr/bin/env
+   * python3` as the first line of the file.
    * @param path path or {@code null} for none
    */
   public Script setPath(java.lang.String path) {
@@ -76,10 +81,12 @@ public final class Script extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Shell script text. To specify an interpreter, please add a `#!\n` at the beginning of the
-   * text.(For example, to execute the script using bash, `#!/bin/bash\n` should be added. To
-   * execute the script using`Python3`, `#!/usr/bin/env python3\n` should be added.) Otherwise, the
-   * script will by default be executed by `/bin/sh`.
+   * The text for a script. Unless the script text supports the default `#!/bin/sh` shell
+   * interpreter, you must specify an interpreter by including a [shebang
+   * line](https://en.wikipedia.org/wiki/Shebang_(Unix) at the beginning of the text. For example,
+   * to execute the script using bash, include `#!/bin/bash\n` at the beginning of the text.
+   * Alternatively, to execute the script using Python3, include `#!/usr/bin/env python3\n` at the
+   * beginning of the text.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -87,10 +94,12 @@ public final class Script extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Shell script text. To specify an interpreter, please add a `#!\n` at the beginning of the
-   * text.(For example, to execute the script using bash, `#!/bin/bash\n` should be added. To
-   * execute the script using`Python3`, `#!/usr/bin/env python3\n` should be added.) Otherwise, the
-   * script will by default be executed by `/bin/sh`.
+   * The text for a script. Unless the script text supports the default `#!/bin/sh` shell
+   * interpreter, you must specify an interpreter by including a [shebang
+   * line](https://en.wikipedia.org/wiki/Shebang_(Unix) at the beginning of the text. For example,
+   * to execute the script using bash, include `#!/bin/bash\n` at the beginning of the text.
+   * Alternatively, to execute the script using Python3, include `#!/usr/bin/env python3\n` at the
+   * beginning of the text.
    * @param text text or {@code null} for none
    */
   public Script setText(java.lang.String text) {

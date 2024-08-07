@@ -39,9 +39,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean blockExternalNetwork;
 
   /**
-   * Overrides the `CMD` specified in the container. If there is an ENTRYPOINT (either in the
-   * container image or with the entrypoint field below) then commands are appended as arguments to
-   * the ENTRYPOINT.
+   * Required for some container images. Overrides the `CMD` specified in the container. If there is
+   * an `ENTRYPOINT` (either in the container image or with the `entrypoint` field below) then these
+   * commands are appended as arguments to the `ENTRYPOINT`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,22 +64,23 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enableImageStreaming;
 
   /**
-   * Overrides the `ENTRYPOINT` specified in the container.
+   * Required for some container images. Overrides the `ENTRYPOINT` specified in the container.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String entrypoint;
 
   /**
-   * The URI to pull the container image from.
+   * Required. The URI to pull the container image from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String imageUri;
 
   /**
-   * Arbitrary additional options to include in the "docker run" command when running this
-   * container, e.g. "--network host".
+   * Required for some container images. Arbitrary additional options to include in the `docker run`
+   * command when running this container—for example, `--network host`. For the `--volume` option,
+   * use the `volumes` field for the container.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,13 +117,13 @@ public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
    * Volumes to mount (bind mount) from the host machine files or directories into the container,
-   * formatted to match docker run's --volume option, e.g. /foo:/bar, or /foo:/bar:ro If the
-   * `TaskSpec.Volumes` field is specified but this field is not, Batch will mount each volume from
-   * the host machine to the container with the same mount path by default. In this case, the
-   * default mount option for containers will be read-only (ro) for existing persistent disks and
-   * read-write (rw) for other volume types, regardless of the original mount options specified in
-   * `TaskSpec.Volumes`. If you need different mount settings, you can explicitly configure them in
-   * this field.
+   * formatted to match `--volume` option for the `docker run` command—for example, `/foo:/bar` or
+   * `/foo:/bar:ro`. If the `TaskSpec.Volumes` field is specified but this field is not, Batch will
+   * mount each volume from the host machine to the container with the same mount path by default.
+   * In this case, the default mount option for containers will be read-only (`ro`) for existing
+   * persistent disks and read-write (`rw`) for other volume types, regardless of the original mount
+   * options specified in `TaskSpec.Volumes`. If you need different mount settings, you can
+   * explicitly configure them in this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,9 +151,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Overrides the `CMD` specified in the container. If there is an ENTRYPOINT (either in the
-   * container image or with the entrypoint field below) then commands are appended as arguments to
-   * the ENTRYPOINT.
+   * Required for some container images. Overrides the `CMD` specified in the container. If there is
+   * an `ENTRYPOINT` (either in the container image or with the `entrypoint` field below) then these
+   * commands are appended as arguments to the `ENTRYPOINT`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCommands() {
@@ -160,9 +161,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Overrides the `CMD` specified in the container. If there is an ENTRYPOINT (either in the
-   * container image or with the entrypoint field below) then commands are appended as arguments to
-   * the ENTRYPOINT.
+   * Required for some container images. Overrides the `CMD` specified in the container. If there is
+   * an `ENTRYPOINT` (either in the container image or with the `entrypoint` field below) then these
+   * commands are appended as arguments to the `ENTRYPOINT`.
    * @param commands commands or {@code null} for none
    */
   public Container setCommands(java.util.List<java.lang.String> commands) {
@@ -206,7 +207,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Overrides the `ENTRYPOINT` specified in the container.
+   * Required for some container images. Overrides the `ENTRYPOINT` specified in the container.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntrypoint() {
@@ -214,7 +215,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Overrides the `ENTRYPOINT` specified in the container.
+   * Required for some container images. Overrides the `ENTRYPOINT` specified in the container.
    * @param entrypoint entrypoint or {@code null} for none
    */
   public Container setEntrypoint(java.lang.String entrypoint) {
@@ -223,7 +224,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URI to pull the container image from.
+   * Required. The URI to pull the container image from.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageUri() {
@@ -231,7 +232,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URI to pull the container image from.
+   * Required. The URI to pull the container image from.
    * @param imageUri imageUri or {@code null} for none
    */
   public Container setImageUri(java.lang.String imageUri) {
@@ -240,8 +241,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Arbitrary additional options to include in the "docker run" command when running this
-   * container, e.g. "--network host".
+   * Required for some container images. Arbitrary additional options to include in the `docker run`
+   * command when running this container—for example, `--network host`. For the `--volume` option,
+   * use the `volumes` field for the container.
    * @return value or {@code null} for none
    */
   public java.lang.String getOptions() {
@@ -249,8 +251,9 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Arbitrary additional options to include in the "docker run" command when running this
-   * container, e.g. "--network host".
+   * Required for some container images. Arbitrary additional options to include in the `docker run`
+   * command when running this container—for example, `--network host`. For the `--volume` option,
+   * use the `volumes` field for the container.
    * @param options options or {@code null} for none
    */
   public Container setOptions(java.lang.String options) {
@@ -324,13 +327,13 @@ public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
    * Volumes to mount (bind mount) from the host machine files or directories into the container,
-   * formatted to match docker run's --volume option, e.g. /foo:/bar, or /foo:/bar:ro If the
-   * `TaskSpec.Volumes` field is specified but this field is not, Batch will mount each volume from
-   * the host machine to the container with the same mount path by default. In this case, the
-   * default mount option for containers will be read-only (ro) for existing persistent disks and
-   * read-write (rw) for other volume types, regardless of the original mount options specified in
-   * `TaskSpec.Volumes`. If you need different mount settings, you can explicitly configure them in
-   * this field.
+   * formatted to match `--volume` option for the `docker run` command—for example, `/foo:/bar` or
+   * `/foo:/bar:ro`. If the `TaskSpec.Volumes` field is specified but this field is not, Batch will
+   * mount each volume from the host machine to the container with the same mount path by default.
+   * In this case, the default mount option for containers will be read-only (`ro`) for existing
+   * persistent disks and read-write (`rw`) for other volume types, regardless of the original mount
+   * options specified in `TaskSpec.Volumes`. If you need different mount settings, you can
+   * explicitly configure them in this field.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getVolumes() {
@@ -339,13 +342,13 @@ public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
    * Volumes to mount (bind mount) from the host machine files or directories into the container,
-   * formatted to match docker run's --volume option, e.g. /foo:/bar, or /foo:/bar:ro If the
-   * `TaskSpec.Volumes` field is specified but this field is not, Batch will mount each volume from
-   * the host machine to the container with the same mount path by default. In this case, the
-   * default mount option for containers will be read-only (ro) for existing persistent disks and
-   * read-write (rw) for other volume types, regardless of the original mount options specified in
-   * `TaskSpec.Volumes`. If you need different mount settings, you can explicitly configure them in
-   * this field.
+   * formatted to match `--volume` option for the `docker run` command—for example, `/foo:/bar` or
+   * `/foo:/bar:ro`. If the `TaskSpec.Volumes` field is specified but this field is not, Batch will
+   * mount each volume from the host machine to the container with the same mount path by default.
+   * In this case, the default mount option for containers will be read-only (`ro`) for existing
+   * persistent disks and read-write (`rw`) for other volume types, regardless of the original mount
+   * options specified in `TaskSpec.Volumes`. If you need different mount settings, you can
+   * explicitly configure them in this field.
    * @param volumes volumes or {@code null} for none
    */
   public Container setVolumes(java.util.List<java.lang.String> volumes) {

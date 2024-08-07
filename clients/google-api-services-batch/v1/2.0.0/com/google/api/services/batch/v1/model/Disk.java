@@ -47,9 +47,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    * projects/{project}/global/images/family/{image_family} * Specify the image version:
    * projects/{project}/global/images/{image_version} You can also use Batch customized image in
    * short names. The following image values are supported for a boot disk: * `batch-debian`: use
-   * Batch Debian images. * `batch-centos`: use Batch CentOS images. * `batch-cos`: use Batch
-   * Container-Optimized images. * `batch-hpc-centos`: use Batch HPC CentOS images. * `batch-hpc-
-   * rocky`: use Batch HPC Rocky Linux images.
+   * Batch Debian images. * `batch-cos`: use Batch Container-Optimized images. * `batch-hpc-rocky`:
+   * use Batch HPC Rocky Linux images.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,9 +116,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    * projects/{project}/global/images/family/{image_family} * Specify the image version:
    * projects/{project}/global/images/{image_version} You can also use Batch customized image in
    * short names. The following image values are supported for a boot disk: * `batch-debian`: use
-   * Batch Debian images. * `batch-centos`: use Batch CentOS images. * `batch-cos`: use Batch
-   * Container-Optimized images. * `batch-hpc-centos`: use Batch HPC CentOS images. * `batch-hpc-
-   * rocky`: use Batch HPC Rocky Linux images.
+   * Batch Debian images. * `batch-cos`: use Batch Container-Optimized images. * `batch-hpc-rocky`:
+   * use Batch HPC Rocky Linux images.
    * @return value or {@code null} for none
    */
   public java.lang.String getImage() {
@@ -132,9 +130,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    * projects/{project}/global/images/family/{image_family} * Specify the image version:
    * projects/{project}/global/images/{image_version} You can also use Batch customized image in
    * short names. The following image values are supported for a boot disk: * `batch-debian`: use
-   * Batch Debian images. * `batch-centos`: use Batch CentOS images. * `batch-cos`: use Batch
-   * Container-Optimized images. * `batch-hpc-centos`: use Batch HPC CentOS images. * `batch-hpc-
-   * rocky`: use Batch HPC Rocky Linux images.
+   * Batch Debian images. * `batch-cos`: use Batch Container-Optimized images. * `batch-hpc-rocky`:
+   * use Batch HPC Rocky Linux images.
    * @param image image or {@code null} for none
    */
   public Disk setImage(java.lang.String image) {

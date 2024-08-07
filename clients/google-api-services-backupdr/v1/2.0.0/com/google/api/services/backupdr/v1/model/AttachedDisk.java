@@ -76,19 +76,19 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   private java.lang.Long diskSizeGb;
 
   /**
-   * Optional. Specifies the type of the disk.
+   * Optional. Output only. The URI of the disk type resource. For example:
+   * projects/project/zones/zone/diskTypes/pd-standard or pd-ssd
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String diskType;
 
   /**
-   * Optional. Output only. The URI of the disk type resource. For example:
-   * projects/project/zones/zone/diskTypes/pd-standard or pd-ssd
+   * Specifies the type of the disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String diskTypeUri;
+  private java.lang.String diskTypeDeprecated;
 
   /**
    * Optional. A list of features to enable on the guest operating system. Applicable only for
@@ -146,6 +146,13 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String source;
+
+  /**
+   * Optional. Specifies the type of the disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
 
   /**
    * Optional. Specifies whether the disk will be auto-deleted when the instance is deleted (but not
@@ -256,7 +263,8 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Specifies the type of the disk.
+   * Optional. Output only. The URI of the disk type resource. For example:
+   * projects/project/zones/zone/diskTypes/pd-standard or pd-ssd
    * @return value or {@code null} for none
    */
   public java.lang.String getDiskType() {
@@ -264,7 +272,8 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Specifies the type of the disk.
+   * Optional. Output only. The URI of the disk type resource. For example:
+   * projects/project/zones/zone/diskTypes/pd-standard or pd-ssd
    * @param diskType diskType or {@code null} for none
    */
   public AttachedDisk setDiskType(java.lang.String diskType) {
@@ -273,21 +282,19 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Output only. The URI of the disk type resource. For example:
-   * projects/project/zones/zone/diskTypes/pd-standard or pd-ssd
+   * Specifies the type of the disk.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDiskTypeUri() {
-    return diskTypeUri;
+  public java.lang.String getDiskTypeDeprecated() {
+    return diskTypeDeprecated;
   }
 
   /**
-   * Optional. Output only. The URI of the disk type resource. For example:
-   * projects/project/zones/zone/diskTypes/pd-standard or pd-ssd
-   * @param diskTypeUri diskTypeUri or {@code null} for none
+   * Specifies the type of the disk.
+   * @param diskTypeDeprecated diskTypeDeprecated or {@code null} for none
    */
-  public AttachedDisk setDiskTypeUri(java.lang.String diskTypeUri) {
-    this.diskTypeUri = diskTypeUri;
+  public AttachedDisk setDiskTypeDeprecated(java.lang.String diskTypeDeprecated) {
+    this.diskTypeDeprecated = diskTypeDeprecated;
     return this;
   }
 
@@ -426,6 +433,23 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
    */
   public AttachedDisk setSource(java.lang.String source) {
     this.source = source;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the type of the disk.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Optional. Specifies the type of the disk.
+   * @param type type or {@code null} for none
+   */
+  public AttachedDisk setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

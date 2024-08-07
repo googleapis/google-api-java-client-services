@@ -1623,7 +1623,7 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the backupdr server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The resource name.
+         * @param name Output only. Identifier. The resource name.
          * @param content the {@link com.google.api.services.backupdr.v1.model.BackupVault}
          * @return the request
          */
@@ -1651,7 +1651,7 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The resource name.
+           * @param name Output only. Identifier. The resource name.
            * @param content the {@link com.google.api.services.backupdr.v1.model.BackupVault}
            * @since 1.13
            */
@@ -1720,17 +1720,17 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Output only. The resource name. */
+          /** Output only. Identifier. The resource name. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The resource name.
+          /** Output only. Identifier. The resource name.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Output only. The resource name. */
+          /** Output only. Identifier. The resource name. */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1743,13 +1743,12 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. If set to true, will not check plan duration against backup vault enforcement
-           * duration. Non-standard field.
+           * duration.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean force;
 
           /** Optional. If set to true, will not check plan duration against backup vault enforcement duration.
-         Non-standard field.
            */
           public java.lang.Boolean getForce() {
             return force;
@@ -1757,7 +1756,7 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. If set to true, will not check plan duration against backup vault enforcement
-           * duration. Non-standard field.
+           * duration.
            */
           public Patch setForce(java.lang.Boolean force) {
             this.force = force;
@@ -2976,7 +2975,7 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the backupdr server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. The resource name.
+           * @param name Output only. Identifier. The resource name.
            * @param content the {@link com.google.api.services.backupdr.v1.model.DataSource}
            * @return the request
            */
@@ -3004,7 +3003,7 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. The resource name.
+             * @param name Output only. Identifier. The resource name.
              * @param content the {@link com.google.api.services.backupdr.v1.model.DataSource}
              * @since 1.13
              */
@@ -3073,17 +3072,17 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
               return (Patch) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Output only. The resource name. */
+            /** Output only. Identifier. The resource name. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. The resource name.
+            /** Output only. Identifier. The resource name.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Output only. The resource name. */
+            /** Output only. Identifier. The resource name. */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4040,7 +4039,7 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
              * This request holds the parameters needed by the backupdr server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name Output only. Name of the resource.
+             * @param name Output only. Identifier. Name of the resource.
              * @param content the {@link com.google.api.services.backupdr.v1.model.Backup}
              * @return the request
              */
@@ -4068,7 +4067,7 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Output only. Name of the resource.
+               * @param name Output only. Identifier. Name of the resource.
                * @param content the {@link com.google.api.services.backupdr.v1.model.Backup}
                * @since 1.13
                */
@@ -4137,17 +4136,17 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
                 return (Patch) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Output only. Name of the resource. */
+              /** Output only. Identifier. Name of the resource. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Output only. Name of the resource.
+              /** Output only. Identifier. Name of the resource.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** Output only. Name of the resource. */
+              /** Output only. Identifier. Name of the resource. */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

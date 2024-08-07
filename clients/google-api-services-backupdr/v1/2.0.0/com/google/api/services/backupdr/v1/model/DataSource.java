@@ -46,7 +46,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   private java.lang.Long backupCount;
 
   /**
-   * The backup configuration state.
+   * Output only. The backup configuration state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. The resource name.
+   * Output only. Identifier. The resource name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,7 +153,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The backup configuration state.
+   * Output only. The backup configuration state.
    * @return value or {@code null} for none
    */
   public java.lang.String getConfigState() {
@@ -161,7 +161,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The backup configuration state.
+   * Output only. The backup configuration state.
    * @param configState configState or {@code null} for none
    */
   public DataSource setConfigState(java.lang.String configState) {
@@ -261,7 +261,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource name.
+   * Output only. Identifier. The resource name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -269,7 +269,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource name.
+   * Output only. Identifier. The resource name.
    * @param name name or {@code null} for none
    */
   public DataSource setName(java.lang.String name) {

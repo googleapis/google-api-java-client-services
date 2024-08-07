@@ -31,6 +31,7 @@ package com.google.api.services.backupdr.v1.model;
 public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Backup Appliance specific backup properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,12 +45,14 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.util.List<BackupLock> backupApplianceLocks;
 
   /**
+   * Output only. Type of the backup, unspecified, scheduled or ondemand.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String backupType;
 
   /**
+   * Output only. Compute Engine specific backup properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +115,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. Name of the resource.
+   * Output only. Identifier. Name of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,6 +151,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
+   * Output only. Backup Appliance specific backup properties.
    * @return value or {@code null} for none
    */
   public BackupApplianceBackupProperties getBackupApplianceBackupProperties() {
@@ -155,6 +159,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Backup Appliance specific backup properties.
    * @param backupApplianceBackupProperties backupApplianceBackupProperties or {@code null} for none
    */
   public Backup setBackupApplianceBackupProperties(BackupApplianceBackupProperties backupApplianceBackupProperties) {
@@ -180,6 +185,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Type of the backup, unspecified, scheduled or ondemand.
    * @return value or {@code null} for none
    */
   public java.lang.String getBackupType() {
@@ -187,6 +193,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Type of the backup, unspecified, scheduled or ondemand.
    * @param backupType backupType or {@code null} for none
    */
   public Backup setBackupType(java.lang.String backupType) {
@@ -195,6 +202,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Compute Engine specific backup properties.
    * @return value or {@code null} for none
    */
   public ComputeInstanceBackupProperties getComputeInstanceBackupProperties() {
@@ -202,6 +210,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Compute Engine specific backup properties.
    * @param computeInstanceBackupProperties computeInstanceBackupProperties or {@code null} for none
    */
   public Backup setComputeInstanceBackupProperties(ComputeInstanceBackupProperties computeInstanceBackupProperties) {
@@ -346,7 +355,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Name of the resource.
+   * Output only. Identifier. Name of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -354,7 +363,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Name of the resource.
+   * Output only. Identifier. Name of the resource.
    * @param name name or {@code null} for none
    */
   public Backup setName(java.lang.String name) {

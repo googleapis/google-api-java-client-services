@@ -31,7 +31,7 @@ package com.google.api.services.backupdr.v1.model;
 public final class SetInternalStatusRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The new BackupConfigState to set for the DataSource.
+   * Required. Output only. The new BackupConfigState to set for the DataSource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class SetInternalStatusRequest extends com.google.api.client.json.G
   private java.lang.String value;
 
   /**
-   * Required. The new BackupConfigState to set for the DataSource.
+   * Required. Output only. The new BackupConfigState to set for the DataSource.
    * @return value or {@code null} for none
    */
   public java.lang.String getBackupConfigState() {
@@ -68,7 +68,7 @@ public final class SetInternalStatusRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Required. The new BackupConfigState to set for the DataSource.
+   * Required. Output only. The new BackupConfigState to set for the DataSource.
    * @param backupConfigState backupConfigState or {@code null} for none
    */
   public SetInternalStatusRequest setBackupConfigState(java.lang.String backupConfigState) {

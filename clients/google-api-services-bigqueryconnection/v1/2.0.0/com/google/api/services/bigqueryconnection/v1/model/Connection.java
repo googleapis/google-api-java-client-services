@@ -102,7 +102,8 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean hasCredential;
 
   /**
-   * Optional. The Cloud KMS key that is used for encryption. Example:
+   * Optional. The Cloud KMS key that is used for credentials encryption. If omitted, internal
+   * Google owned encryption keys are used. Example:
    * `projects/[kms_project_id]/locations/[region]/keyRings/[key_region]/cryptoKeys/[key]`
    * The value may be {@code null}.
    */
@@ -310,7 +311,8 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The Cloud KMS key that is used for encryption. Example:
+   * Optional. The Cloud KMS key that is used for credentials encryption. If omitted, internal
+   * Google owned encryption keys are used. Example:
    * `projects/[kms_project_id]/locations/[region]/keyRings/[key_region]/cryptoKeys/[key]`
    * @return value or {@code null} for none
    */
@@ -319,7 +321,8 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The Cloud KMS key that is used for encryption. Example:
+   * Optional. The Cloud KMS key that is used for credentials encryption. If omitted, internal
+   * Google owned encryption keys are used. Example:
    * `projects/[kms_project_id]/locations/[region]/keyRings/[key_region]/cryptoKeys/[key]`
    * @param kmsKeyName kmsKeyName or {@code null} for none
    */

@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.retail.v2alpha.model;
+package com.google.api.services.retail.v2beta.model;
 
 /**
- * Resource that represents attribute results.
+ * Recipient contact information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI Search for Retail API. For a detailed
@@ -28,37 +28,40 @@ package com.google.api.services.retail.v2alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudRetailV2alphaCompleteQueryResponseAttributeResult extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudRetailV2betaAlertConfigAlertPolicyRecipient extends com.google.api.client.json.GenericJson {
 
   /**
+   * Email address of the recipient.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> suggestions;
+  private java.lang.String emailAddress;
 
   /**
+   * Email address of the recipient.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getSuggestions() {
-    return suggestions;
+  public java.lang.String getEmailAddress() {
+    return emailAddress;
   }
 
   /**
-   * @param suggestions suggestions or {@code null} for none
+   * Email address of the recipient.
+   * @param emailAddress emailAddress or {@code null} for none
    */
-  public GoogleCloudRetailV2alphaCompleteQueryResponseAttributeResult setSuggestions(java.util.List<java.lang.String> suggestions) {
-    this.suggestions = suggestions;
+  public GoogleCloudRetailV2betaAlertConfigAlertPolicyRecipient setEmailAddress(java.lang.String emailAddress) {
+    this.emailAddress = emailAddress;
     return this;
   }
 
   @Override
-  public GoogleCloudRetailV2alphaCompleteQueryResponseAttributeResult set(String fieldName, Object value) {
-    return (GoogleCloudRetailV2alphaCompleteQueryResponseAttributeResult) super.set(fieldName, value);
+  public GoogleCloudRetailV2betaAlertConfigAlertPolicyRecipient set(String fieldName, Object value) {
+    return (GoogleCloudRetailV2betaAlertConfigAlertPolicyRecipient) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudRetailV2alphaCompleteQueryResponseAttributeResult clone() {
-    return (GoogleCloudRetailV2alphaCompleteQueryResponseAttributeResult) super.clone();
+  public GoogleCloudRetailV2betaAlertConfigAlertPolicyRecipient clone() {
+    return (GoogleCloudRetailV2betaAlertConfigAlertPolicyRecipient) super.clone();
   }
 
 }

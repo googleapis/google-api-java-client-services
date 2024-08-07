@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.retail.v2alpha.model;
+package com.google.api.services.retail.v2.model;
 
 /**
  * Resource that represents attribute results.
@@ -28,7 +28,7 @@ package com.google.api.services.retail.v2alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudRetailV2alphaCompleteQueryResponseAttributeResult extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudRetailV2CompleteQueryResponseAttributeResult extends com.google.api.client.json.GenericJson {
 
   /**
    * The value may be {@code null}.
@@ -46,19 +46,19 @@ public final class GoogleCloudRetailV2alphaCompleteQueryResponseAttributeResult 
   /**
    * @param suggestions suggestions or {@code null} for none
    */
-  public GoogleCloudRetailV2alphaCompleteQueryResponseAttributeResult setSuggestions(java.util.List<java.lang.String> suggestions) {
+  public GoogleCloudRetailV2CompleteQueryResponseAttributeResult setSuggestions(java.util.List<java.lang.String> suggestions) {
     this.suggestions = suggestions;
     return this;
   }
 
   @Override
-  public GoogleCloudRetailV2alphaCompleteQueryResponseAttributeResult set(String fieldName, Object value) {
-    return (GoogleCloudRetailV2alphaCompleteQueryResponseAttributeResult) super.set(fieldName, value);
+  public GoogleCloudRetailV2CompleteQueryResponseAttributeResult set(String fieldName, Object value) {
+    return (GoogleCloudRetailV2CompleteQueryResponseAttributeResult) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudRetailV2alphaCompleteQueryResponseAttributeResult clone() {
-    return (GoogleCloudRetailV2alphaCompleteQueryResponseAttributeResult) super.clone();
+  public GoogleCloudRetailV2CompleteQueryResponseAttributeResult clone() {
+    return (GoogleCloudRetailV2CompleteQueryResponseAttributeResult) super.clone();
   }
 
 }

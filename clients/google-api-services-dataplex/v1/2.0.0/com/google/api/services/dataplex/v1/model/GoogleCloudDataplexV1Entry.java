@@ -71,8 +71,9 @@ public final class GoogleCloudDataplexV1Entry extends com.google.api.client.json
   private java.lang.String entryType;
 
   /**
-   * Optional. A name for the entry that can be referenced by an external system. The maximum size
-   * of the field is 4000 characters.
+   * Optional. A name for the entry that can be referenced by an external system. For more
+   * information, see Fully qualified names (https://cloud.google.com/data-catalog/docs/fully-
+   * qualified-names). The maximum size of the field is 4000 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,8 +184,9 @@ public final class GoogleCloudDataplexV1Entry extends com.google.api.client.json
   }
 
   /**
-   * Optional. A name for the entry that can be referenced by an external system. The maximum size
-   * of the field is 4000 characters.
+   * Optional. A name for the entry that can be referenced by an external system. For more
+   * information, see Fully qualified names (https://cloud.google.com/data-catalog/docs/fully-
+   * qualified-names). The maximum size of the field is 4000 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getFullyQualifiedName() {
@@ -192,8 +194,9 @@ public final class GoogleCloudDataplexV1Entry extends com.google.api.client.json
   }
 
   /**
-   * Optional. A name for the entry that can be referenced by an external system. The maximum size
-   * of the field is 4000 characters.
+   * Optional. A name for the entry that can be referenced by an external system. For more
+   * information, see Fully qualified names (https://cloud.google.com/data-catalog/docs/fully-
+   * qualified-names). The maximum size of the field is 4000 characters.
    * @param fullyQualifiedName fullyQualifiedName or {@code null} for none
    */
   public GoogleCloudDataplexV1Entry setFullyQualifiedName(java.lang.String fullyQualifiedName) {

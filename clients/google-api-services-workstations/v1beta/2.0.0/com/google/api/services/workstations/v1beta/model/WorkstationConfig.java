@@ -36,8 +36,9 @@ package com.google.api.services.workstations.v1beta.model;
 public final class WorkstationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A Single or Range of ports externally accessible in the workstation. If not specified
-   * defaults to ports 22, 80 and ports 1024-65535.
+   * Optional. A list of PortRanges specifying single ports or ranges of ports that are externally
+   * accessible in the workstation. Allowed ports must be one of 22, 80, or within range 1024-65535.
+   * If not specified defaults to ports 22, 80, and ports 1024-65535.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,7 +175,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private Host host;
 
   /**
-   * Optional. Http options that customize the behavior of the workstation service's http proxy.
+   * Optional. HTTP options that customize the behavior of the workstation service's HTTP proxy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -300,8 +301,9 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private String updateTime;
 
   /**
-   * Optional. A Single or Range of ports externally accessible in the workstation. If not specified
-   * defaults to ports 22, 80 and ports 1024-65535.
+   * Optional. A list of PortRanges specifying single ports or ranges of ports that are externally
+   * accessible in the workstation. Allowed ports must be one of 22, 80, or within range 1024-65535.
+   * If not specified defaults to ports 22, 80, and ports 1024-65535.
    * @return value or {@code null} for none
    */
   public java.util.List<PortRange> getAllowedPorts() {
@@ -309,8 +311,9 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. A Single or Range of ports externally accessible in the workstation. If not specified
-   * defaults to ports 22, 80 and ports 1024-65535.
+   * Optional. A list of PortRanges specifying single ports or ranges of ports that are externally
+   * accessible in the workstation. Allowed ports must be one of 22, 80, or within range 1024-65535.
+   * If not specified defaults to ports 22, 80, and ports 1024-65535.
    * @param allowedPorts allowedPorts or {@code null} for none
    */
   public WorkstationConfig setAllowedPorts(java.util.List<PortRange> allowedPorts) {
@@ -582,7 +585,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Http options that customize the behavior of the workstation service's http proxy.
+   * Optional. HTTP options that customize the behavior of the workstation service's HTTP proxy.
    * @return value or {@code null} for none
    */
   public HttpOptions getHttpOptions() {
@@ -590,7 +593,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Http options that customize the behavior of the workstation service's http proxy.
+   * Optional. HTTP options that customize the behavior of the workstation service's HTTP proxy.
    * @param httpOptions httpOptions or {@code null} for none
    */
   public WorkstationConfig setHttpOptions(HttpOptions httpOptions) {

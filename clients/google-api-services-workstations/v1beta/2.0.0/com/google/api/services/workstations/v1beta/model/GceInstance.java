@@ -181,8 +181,9 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Resource manager tags to be bound to this instance. Tag keys and values have the same
-   * definition as https://cloud.google.com/resource-manager/docs/tags/tags-overview Keys must be in
-   * the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`.
+   * definition as [resource manager tags](https://cloud.google.com/resource-manager/docs/tags/tags-
+   * overview). Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format
+   * `tagValues/456`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -506,8 +507,9 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Resource manager tags to be bound to this instance. Tag keys and values have the same
-   * definition as https://cloud.google.com/resource-manager/docs/tags/tags-overview Keys must be in
-   * the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`.
+   * definition as [resource manager tags](https://cloud.google.com/resource-manager/docs/tags/tags-
+   * overview). Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format
+   * `tagValues/456`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getVmTags() {
@@ -516,8 +518,9 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Resource manager tags to be bound to this instance. Tag keys and values have the same
-   * definition as https://cloud.google.com/resource-manager/docs/tags/tags-overview Keys must be in
-   * the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`.
+   * definition as [resource manager tags](https://cloud.google.com/resource-manager/docs/tags/tags-
+   * overview). Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format
+   * `tagValues/456`.
    * @param vmTags vmTags or {@code null} for none
    */
   public GceInstance setVmTags(java.util.Map<String, java.lang.String> vmTags) {

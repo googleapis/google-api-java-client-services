@@ -31,8 +31,9 @@ public final class QueryAssetsResponse extends com.google.api.client.json.Generi
 
   /**
    * The query response, which can be either an `error` or a valid `response`. If `done` == `false`
-   * and the query result is being saved in a output, the output_config field will be set. If `done`
-   * == `true`, exactly one of `error`, `query_result` or `output_config` will be set.
+   * and the query result is being saved in an output, the output_config field will be set. If
+   * `done` == `true`, exactly one of `error`, `query_result` or `output_config` will be set. [done]
+   * is unset unless the [QueryAssetsResponse] contains a [QueryAssetsResponse.job_reference].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +54,8 @@ public final class QueryAssetsResponse extends com.google.api.client.json.Generi
   private java.lang.String jobReference;
 
   /**
-   * Output configuration which indicates instead of being returned in API response on the fly, the
-   * query result will be saved in a specific output.
+   * Output configuration, which indicates that instead of being returned in an API response on the
+   * fly, the query result will be saved in a specific output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +70,9 @@ public final class QueryAssetsResponse extends com.google.api.client.json.Generi
 
   /**
    * The query response, which can be either an `error` or a valid `response`. If `done` == `false`
-   * and the query result is being saved in a output, the output_config field will be set. If `done`
-   * == `true`, exactly one of `error`, `query_result` or `output_config` will be set.
+   * and the query result is being saved in an output, the output_config field will be set. If
+   * `done` == `true`, exactly one of `error`, `query_result` or `output_config` will be set. [done]
+   * is unset unless the [QueryAssetsResponse] contains a [QueryAssetsResponse.job_reference].
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDone() {
@@ -79,8 +81,9 @@ public final class QueryAssetsResponse extends com.google.api.client.json.Generi
 
   /**
    * The query response, which can be either an `error` or a valid `response`. If `done` == `false`
-   * and the query result is being saved in a output, the output_config field will be set. If `done`
-   * == `true`, exactly one of `error`, `query_result` or `output_config` will be set.
+   * and the query result is being saved in an output, the output_config field will be set. If
+   * `done` == `true`, exactly one of `error`, `query_result` or `output_config` will be set. [done]
+   * is unset unless the [QueryAssetsResponse] contains a [QueryAssetsResponse.job_reference].
    * @param done done or {@code null} for none
    */
   public QueryAssetsResponse setDone(java.lang.Boolean done) {
@@ -123,8 +126,8 @@ public final class QueryAssetsResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output configuration which indicates instead of being returned in API response on the fly, the
-   * query result will be saved in a specific output.
+   * Output configuration, which indicates that instead of being returned in an API response on the
+   * fly, the query result will be saved in a specific output.
    * @return value or {@code null} for none
    */
   public QueryAssetsOutputConfig getOutputConfig() {
@@ -132,8 +135,8 @@ public final class QueryAssetsResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output configuration which indicates instead of being returned in API response on the fly, the
-   * query result will be saved in a specific output.
+   * Output configuration, which indicates that instead of being returned in an API response on the
+   * fly, the query result will be saved in a specific output.
    * @param outputConfig outputConfig or {@code null} for none
    */
   public QueryAssetsResponse setOutputConfig(QueryAssetsOutputConfig outputConfig) {

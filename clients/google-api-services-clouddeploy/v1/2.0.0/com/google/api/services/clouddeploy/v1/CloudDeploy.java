@@ -681,7 +681,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the clouddeploy server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent collection in which the `CustomTargetType` should be created. Format should be
+         * @param parent Required. The parent collection in which the `CustomTargetType` must be created. The format is
          *        `projects/{project_id}/locations/{location_name}`.
          * @param content the {@link com.google.api.services.clouddeploy.v1.model.CustomTargetType}
          * @return the request
@@ -710,7 +710,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent collection in which the `CustomTargetType` should be created. Format should be
+           * @param parent Required. The parent collection in which the `CustomTargetType` must be created. The format is
          *        `projects/{project_id}/locations/{location_name}`.
            * @param content the {@link com.google.api.services.clouddeploy.v1.model.CustomTargetType}
            * @since 1.13
@@ -781,13 +781,13 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Required. The parent collection in which the `CustomTargetType` should be created.
-           * Format should be `projects/{project_id}/locations/{location_name}`.
+           * Required. The parent collection in which the `CustomTargetType` must be created. The
+           * format is `projects/{project_id}/locations/{location_name}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent collection in which the `CustomTargetType` should be created. Format should be
+          /** Required. The parent collection in which the `CustomTargetType` must be created. The format is
          `projects/{project_id}/locations/{location_name}`.
            */
           public java.lang.String getParent() {
@@ -795,8 +795,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Required. The parent collection in which the `CustomTargetType` should be created.
-           * Format should be `projects/{project_id}/locations/{location_name}`.
+           * Required. The parent collection in which the `CustomTargetType` must be created. The
+           * format is `projects/{project_id}/locations/{location_name}`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1934,28 +1934,28 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Required. Field mask is used to specify the fields to be overwritten in the
-           * `CustomTargetType` resource by the update. The fields specified in the update_mask are
-           * relative to the resource, not the full request. A field will be overwritten if it's in
-           * the mask. If the user doesn't provide a mask then all fields are overwritten.
+           * Required. Field mask is used to specify the fields to be overwritten by the update in
+           * the `CustomTargetType` resource. The fields specified in the update_mask are relative
+           * to the resource, not the full request. A field will be overwritten if it's in the mask.
+           * If the user doesn't provide a mask then all fields are overwritten.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Field mask is used to specify the fields to be overwritten in the `CustomTargetType`
-         resource by the update. The fields specified in the update_mask are relative to the resource, not
-         the full request. A field will be overwritten if it's in the mask. If the user doesn't provide a
-         mask then all fields are overwritten.
+          /** Required. Field mask is used to specify the fields to be overwritten by the update in the
+         `CustomTargetType` resource. The fields specified in the update_mask are relative to the resource,
+         not the full request. A field will be overwritten if it's in the mask. If the user doesn't provide
+         a mask then all fields are overwritten.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Required. Field mask is used to specify the fields to be overwritten in the
-           * `CustomTargetType` resource by the update. The fields specified in the update_mask are
-           * relative to the resource, not the full request. A field will be overwritten if it's in
-           * the mask. If the user doesn't provide a mask then all fields are overwritten.
+           * Required. Field mask is used to specify the fields to be overwritten by the update in
+           * the `CustomTargetType` resource. The fields specified in the update_mask are relative
+           * to the resource, not the full request. A field will be overwritten if it's in the mask.
+           * If the user doesn't provide a mask then all fields are overwritten.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -2167,7 +2167,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the clouddeploy server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent collection in which the `DeliveryPipeline` should be created. Format should be
+         * @param parent Required. The parent collection in which the `DeliveryPipeline` must be created. The format is
          *        `projects/{project_id}/locations/{location_name}`.
          * @param content the {@link com.google.api.services.clouddeploy.v1.model.DeliveryPipeline}
          * @return the request
@@ -2196,7 +2196,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent collection in which the `DeliveryPipeline` should be created. Format should be
+           * @param parent Required. The parent collection in which the `DeliveryPipeline` must be created. The format is
          *        `projects/{project_id}/locations/{location_name}`.
            * @param content the {@link com.google.api.services.clouddeploy.v1.model.DeliveryPipeline}
            * @since 1.13
@@ -2267,13 +2267,13 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Required. The parent collection in which the `DeliveryPipeline` should be created.
-           * Format should be `projects/{project_id}/locations/{location_name}`.
+           * Required. The parent collection in which the `DeliveryPipeline` must be created. The
+           * format is `projects/{project_id}/locations/{location_name}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent collection in which the `DeliveryPipeline` should be created. Format should be
+          /** Required. The parent collection in which the `DeliveryPipeline` must be created. The format is
          `projects/{project_id}/locations/{location_name}`.
            */
           public java.lang.String getParent() {
@@ -2281,8 +2281,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Required. The parent collection in which the `DeliveryPipeline` should be created.
-           * Format should be `projects/{project_id}/locations/{location_name}`.
+           * Required. The parent collection in which the `DeliveryPipeline` must be created. The
+           * format is `projects/{project_id}/locations/{location_name}`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -2389,7 +2389,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the clouddeploy server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the `DeliveryPipeline` to delete. Format should be
+         * @param name Required. The name of the `DeliveryPipeline` to delete. The format is
          *        `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
          * @return the request
          */
@@ -2417,7 +2417,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the `DeliveryPipeline` to delete. Format should be
+           * @param name Required. The name of the `DeliveryPipeline` to delete. The format is
          *        `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            * @since 1.13
            */
@@ -2487,13 +2487,13 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Required. The name of the `DeliveryPipeline` to delete. Format should be
+           * Required. The name of the `DeliveryPipeline` to delete. The format is
            * `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the `DeliveryPipeline` to delete. Format should be
+          /** Required. The name of the `DeliveryPipeline` to delete. The format is
          `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            */
           public java.lang.String getName() {
@@ -2501,7 +2501,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Required. The name of the `DeliveryPipeline` to delete. Format should be
+           * Required. The name of the `DeliveryPipeline` to delete. The format is
            * `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            */
           public Delete setName(java.lang.String name) {
@@ -3438,28 +3438,28 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Required. Field mask is used to specify the fields to be overwritten in the
-           * `DeliveryPipeline` resource by the update. The fields specified in the update_mask are
-           * relative to the resource, not the full request. A field will be overwritten if it's in
-           * the mask. If the user doesn't provide a mask then all fields are overwritten.
+           * Required. Field mask is used to specify the fields to be overwritten by the update in
+           * the `DeliveryPipeline` resource. The fields specified in the update_mask are relative
+           * to the resource, not the full request. A field will be overwritten if it's in the mask.
+           * If the user doesn't provide a mask then all fields are overwritten.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Field mask is used to specify the fields to be overwritten in the `DeliveryPipeline`
-         resource by the update. The fields specified in the update_mask are relative to the resource, not
-         the full request. A field will be overwritten if it's in the mask. If the user doesn't provide a
-         mask then all fields are overwritten.
+          /** Required. Field mask is used to specify the fields to be overwritten by the update in the
+         `DeliveryPipeline` resource. The fields specified in the update_mask are relative to the resource,
+         not the full request. A field will be overwritten if it's in the mask. If the user doesn't provide
+         a mask then all fields are overwritten.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Required. Field mask is used to specify the fields to be overwritten in the
-           * `DeliveryPipeline` resource by the update. The fields specified in the update_mask are
-           * relative to the resource, not the full request. A field will be overwritten if it's in
-           * the mask. If the user doesn't provide a mask then all fields are overwritten.
+           * Required. Field mask is used to specify the fields to be overwritten by the update in
+           * the `DeliveryPipeline` resource. The fields specified in the update_mask are relative
+           * to the resource, not the full request. A field will be overwritten if it's in the mask.
+           * If the user doesn't provide a mask then all fields are overwritten.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -3502,8 +3502,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the clouddeploy server.  After setting any optional
          * parameters, call the {@link RollbackTarget#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The `DeliveryPipeline` for which the rollback `Rollout` should be created. Format should
-         *        be `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
+         * @param name Required. The `DeliveryPipeline` for which the rollback `Rollout` must be created. The format is
+         *        `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
          * @param content the {@link com.google.api.services.clouddeploy.v1.model.RollbackTargetRequest}
          * @return the request
          */
@@ -3531,8 +3531,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param name Required. The `DeliveryPipeline` for which the rollback `Rollout` should be created. Format should
-         *        be `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
+           * @param name Required. The `DeliveryPipeline` for which the rollback `Rollout` must be created. The format is
+         *        `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            * @param content the {@link com.google.api.services.clouddeploy.v1.model.RollbackTargetRequest}
            * @since 1.13
            */
@@ -3602,23 +3602,23 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Required. The `DeliveryPipeline` for which the rollback `Rollout` should be created.
-           * Format should be
+           * Required. The `DeliveryPipeline` for which the rollback `Rollout` must be created. The
+           * format is
            * `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The `DeliveryPipeline` for which the rollback `Rollout` should be created. Format should
-         be `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
+          /** Required. The `DeliveryPipeline` for which the rollback `Rollout` must be created. The format is
+         `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The `DeliveryPipeline` for which the rollback `Rollout` should be created.
-           * Format should be
+           * Required. The `DeliveryPipeline` for which the rollback `Rollout` must be created. The
+           * format is
            * `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            */
           public RollbackTarget setName(java.lang.String name) {
@@ -4509,7 +4509,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the clouddeploy server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent collection in which the `Automation` should be created. Format should be
+           * @param parent Required. The parent collection in which the `Automation` must be created. The format is
            *        `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            * @param content the {@link com.google.api.services.clouddeploy.v1.model.Automation}
            * @return the request
@@ -4538,7 +4538,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent collection in which the `Automation` should be created. Format should be
+             * @param parent Required. The parent collection in which the `Automation` must be created. The format is
            *        `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
              * @param content the {@link com.google.api.services.clouddeploy.v1.model.Automation}
              * @since 1.13
@@ -4609,14 +4609,14 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The parent collection in which the `Automation` should be created. Format
-             * should be
+             * Required. The parent collection in which the `Automation` must be created. The format
+             * is
              * `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent collection in which the `Automation` should be created. Format should be
+            /** Required. The parent collection in which the `Automation` must be created. The format is
            `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
              */
             public java.lang.String getParent() {
@@ -4624,8 +4624,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The parent collection in which the `Automation` should be created. Format
-             * should be
+             * Required. The parent collection in which the `Automation` must be created. The format
+             * is
              * `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
              */
             public Create setParent(java.lang.String parent) {
@@ -4733,8 +4733,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the clouddeploy server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the `Automation` to delete. Format should be `projects/{project_id}/locations/
-           *        {location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
+           * @param name Required. The name of the `Automation` to delete. The format is `projects/{project_id}/locations/{lo
+           *        cation_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -4761,8 +4761,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the `Automation` to delete. Format should be `projects/{project_id}/locations/
-           *        {location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
+             * @param name Required. The name of the `Automation` to delete. The format is `projects/{project_id}/locations/{lo
+           *        cation_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -4831,24 +4831,24 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The name of the `Automation` to delete. Format should be `projects/{project
-             * _id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automat
-             * ion_name}`.
+             * Required. The name of the `Automation` to delete. The format is `projects/{project_id
+             * }/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automation
+             * _name}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the `Automation` to delete. Format should be `projects/{project_id}/locations
-           /{location_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
+            /** Required. The name of the `Automation` to delete. The format is `projects/{project_id}/locations/{l
+           ocation_name}/deliveryPipelines/{pipeline_name}/automations/{automation_name}`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The name of the `Automation` to delete. Format should be `projects/{project
-             * _id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automat
-             * ion_name}`.
+             * Required. The name of the `Automation` to delete. The format is `projects/{project_id
+             * }/locations/{location_name}/deliveryPipelines/{pipeline_name}/automations/{automation
+             * _name}`.
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -5562,28 +5562,28 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. Field mask is used to specify the fields to be overwritten in the
-             * `Automation` resource by the update. The fields specified in the update_mask are
-             * relative to the resource, not the full request. A field will be overwritten if it's
-             * in the mask. If the user doesn't provide a mask then all fields are overwritten.
+             * Required. Field mask is used to specify the fields to be overwritten by the update in
+             * the `Automation` resource. The fields specified in the update_mask are relative to
+             * the resource, not the full request. A field will be overwritten if it's in the mask.
+             * If the user doesn't provide a mask then all fields are overwritten.
              */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** Required. Field mask is used to specify the fields to be overwritten in the `Automation` resource
-           by the update. The fields specified in the update_mask are relative to the resource, not the full
-           request. A field will be overwritten if it's in the mask. If the user doesn't provide a mask then
-           all fields are overwritten.
+            /** Required. Field mask is used to specify the fields to be overwritten by the update in the
+           `Automation` resource. The fields specified in the update_mask are relative to the resource, not
+           the full request. A field will be overwritten if it's in the mask. If the user doesn't provide a
+           mask then all fields are overwritten.
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
             /**
-             * Required. Field mask is used to specify the fields to be overwritten in the
-             * `Automation` resource by the update. The fields specified in the update_mask are
-             * relative to the resource, not the full request. A field will be overwritten if it's
-             * in the mask. If the user doesn't provide a mask then all fields are overwritten.
+             * Required. Field mask is used to specify the fields to be overwritten by the update in
+             * the `Automation` resource. The fields specified in the update_mask are relative to
+             * the resource, not the full request. A field will be overwritten if it's in the mask.
+             * If the user doesn't provide a mask then all fields are overwritten.
              */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
@@ -5790,7 +5790,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the clouddeploy server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent collection in which the `Release` should be created. Format should be
+           * @param parent Required. The parent collection in which the `Release` is created. The format is
            *        `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
            * @param content the {@link com.google.api.services.clouddeploy.v1.model.Release}
            * @return the request
@@ -5819,7 +5819,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent collection in which the `Release` should be created. Format should be
+             * @param parent Required. The parent collection in which the `Release` is created. The format is
            *        `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
              * @param content the {@link com.google.api.services.clouddeploy.v1.model.Release}
              * @since 1.13
@@ -5890,14 +5890,13 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The parent collection in which the `Release` should be created. Format
-             * should be
+             * Required. The parent collection in which the `Release` is created. The format is
              * `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent collection in which the `Release` should be created. Format should be
+            /** Required. The parent collection in which the `Release` is created. The format is
            `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
              */
             public java.lang.String getParent() {
@@ -5905,8 +5904,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The parent collection in which the `Release` should be created. Format
-             * should be
+             * Required. The parent collection in which the `Release` is created. The format is
              * `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}`.
              */
             public Create setParent(java.lang.String parent) {
@@ -6838,9 +6836,9 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
              * This request holds the parameters needed by the clouddeploy server.  After setting any optional
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The parent collection in which the `Rollout` should be created. Format should be `projects
-             *        /{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{releas
-             *        e_name}`.
+             * @param parent Required. The parent collection in which the `Rollout` must be created. The format is `projects/{pro
+             *        ject_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_nam
+             *        e}`.
              * @param content the {@link com.google.api.services.clouddeploy.v1.model.Rollout}
              * @return the request
              */
@@ -6868,9 +6866,9 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The parent collection in which the `Rollout` should be created. Format should be `projects
-             *        /{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{releas
-             *        e_name}`.
+               * @param parent Required. The parent collection in which the `Rollout` must be created. The format is `projects/{pro
+             *        ject_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_nam
+             *        e}`.
                * @param content the {@link com.google.api.services.clouddeploy.v1.model.Rollout}
                * @since 1.13
                */
@@ -6940,25 +6938,24 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
               }
 
               /**
-               * Required. The parent collection in which the `Rollout` should be created. Format
-               * should be `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipel
-               * ine_name}/releases/{release_name}`.
+               * Required. The parent collection in which the `Rollout` must be created. The format
+               * is `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_nam
+               * e}/releases/{release_name}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The parent collection in which the `Rollout` should be created. Format should be `project
-             s/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}`
-             .
+              /** Required. The parent collection in which the `Rollout` must be created. The format is `projects/{pr
+             oject_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}`.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The parent collection in which the `Rollout` should be created. Format
-               * should be `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipel
-               * ine_name}/releases/{release_name}`.
+               * Required. The parent collection in which the `Rollout` must be created. The format
+               * is `projects/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_nam
+               * e}/releases/{release_name}`.
                */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -8953,7 +8950,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the clouddeploy server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent collection in which the `Target` should be created. Format should be
+         * @param parent Required. The parent collection in which the `Target` must be created. The format is
          *        `projects/{project_id}/locations/{location_name}`.
          * @param content the {@link com.google.api.services.clouddeploy.v1.model.Target}
          * @return the request
@@ -8982,7 +8979,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent collection in which the `Target` should be created. Format should be
+           * @param parent Required. The parent collection in which the `Target` must be created. The format is
          *        `projects/{project_id}/locations/{location_name}`.
            * @param content the {@link com.google.api.services.clouddeploy.v1.model.Target}
            * @since 1.13
@@ -9053,13 +9050,13 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Required. The parent collection in which the `Target` should be created. Format should
-           * be `projects/{project_id}/locations/{location_name}`.
+           * Required. The parent collection in which the `Target` must be created. The format is
+           * `projects/{project_id}/locations/{location_name}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent collection in which the `Target` should be created. Format should be
+          /** Required. The parent collection in which the `Target` must be created. The format is
          `projects/{project_id}/locations/{location_name}`.
            */
           public java.lang.String getParent() {
@@ -9067,8 +9064,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Required. The parent collection in which the `Target` should be created. Format should
-           * be `projects/{project_id}/locations/{location_name}`.
+           * Required. The parent collection in which the `Target` must be created. The format is
+           * `projects/{project_id}/locations/{location_name}`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -9175,7 +9172,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the clouddeploy server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the `Target` to delete. Format should be
+         * @param name Required. The name of the `Target` to delete. The format is
          *        `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
          * @return the request
          */
@@ -9203,7 +9200,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the `Target` to delete. Format should be
+           * @param name Required. The name of the `Target` to delete. The format is
          *        `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
            * @since 1.13
            */
@@ -9273,13 +9270,13 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Required. The name of the `Target` to delete. Format should be
+           * Required. The name of the `Target` to delete. The format is
            * `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the `Target` to delete. Format should be
+          /** Required. The name of the `Target` to delete. The format is
          `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
            */
           public java.lang.String getName() {
@@ -9287,7 +9284,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Required. The name of the `Target` to delete. Format should be
+           * Required. The name of the `Target` to delete. The format is
            * `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
            */
           public Delete setName(java.lang.String name) {
@@ -10210,26 +10207,26 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Required. Field mask is used to specify the fields to be overwritten in the Target
-           * resource by the update. The fields specified in the update_mask are relative to the
+           * Required. Field mask is used to specify the fields to be overwritten by the update in
+           * the `Target` resource. The fields specified in the update_mask are relative to the
            * resource, not the full request. A field will be overwritten if it's in the mask. If the
            * user doesn't provide a mask then all fields are overwritten.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Field mask is used to specify the fields to be overwritten in the Target resource by the
-         update. The fields specified in the update_mask are relative to the resource, not the full request.
-         A field will be overwritten if it's in the mask. If the user doesn't provide a mask then all fields
-         are overwritten.
+          /** Required. Field mask is used to specify the fields to be overwritten by the update in the `Target`
+         resource. The fields specified in the update_mask are relative to the resource, not the full
+         request. A field will be overwritten if it's in the mask. If the user doesn't provide a mask then
+         all fields are overwritten.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Required. Field mask is used to specify the fields to be overwritten in the Target
-           * resource by the update. The fields specified in the update_mask are relative to the
+           * Required. Field mask is used to specify the fields to be overwritten by the update in
+           * the `Target` resource. The fields specified in the update_mask are relative to the
            * resource, not the full request. A field will be overwritten if it's in the mask. If the
            * user doesn't provide a mask then all fields are overwritten.
            */

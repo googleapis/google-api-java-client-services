@@ -46,6 +46,14 @@ public final class ServiceNetworking extends com.google.api.client.json.GenericJ
   private java.lang.Boolean disablePodOverprovisioning;
 
   /**
+   * Optional. The label to use when selecting Pods for the Deployment resource. This label must
+   * already be present in the Deployment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String podSelectorLabel;
+
+  /**
    * Required. Name of the Kubernetes Service.
    * The value may be {@code null}.
    */
@@ -87,6 +95,25 @@ public final class ServiceNetworking extends com.google.api.client.json.GenericJ
    */
   public ServiceNetworking setDisablePodOverprovisioning(java.lang.Boolean disablePodOverprovisioning) {
     this.disablePodOverprovisioning = disablePodOverprovisioning;
+    return this;
+  }
+
+  /**
+   * Optional. The label to use when selecting Pods for the Deployment resource. This label must
+   * already be present in the Deployment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPodSelectorLabel() {
+    return podSelectorLabel;
+  }
+
+  /**
+   * Optional. The label to use when selecting Pods for the Deployment resource. This label must
+   * already be present in the Deployment.
+   * @param podSelectorLabel podSelectorLabel or {@code null} for none
+   */
+  public ServiceNetworking setPodSelectorLabel(java.lang.String podSelectorLabel) {
+    this.podSelectorLabel = podSelectorLabel;
     return this;
   }
 

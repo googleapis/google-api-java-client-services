@@ -105,6 +105,20 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
   private EventingConfigTemplate eventingConfigTemplate;
 
   /**
+   * Output only. Is custom actions supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isCustomActionsSupported;
+
+  /**
+   * Output only. Is custom entities supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isCustomEntitiesSupported;
+
+  /**
    * Output only. Resource labels to represent user-provided metadata. Refer to cloud documentation
    * on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
    * The value may be {@code null}.
@@ -169,6 +183,20 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private SupportedRuntimeFeatures supportedRuntimeFeatures;
+
+  /**
+   * Output only. Supported standard actions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<StandardAction> supportedStandardActions;
+
+  /**
+   * Output only. Supported standard entities.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<StandardEntity> supportedStandardEntities;
 
   /**
    * Output only. Unsupported connection types.
@@ -338,6 +366,40 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Output only. Is custom actions supported.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsCustomActionsSupported() {
+    return isCustomActionsSupported;
+  }
+
+  /**
+   * Output only. Is custom actions supported.
+   * @param isCustomActionsSupported isCustomActionsSupported or {@code null} for none
+   */
+  public ConnectorVersion setIsCustomActionsSupported(java.lang.Boolean isCustomActionsSupported) {
+    this.isCustomActionsSupported = isCustomActionsSupported;
+    return this;
+  }
+
+  /**
+   * Output only. Is custom entities supported.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsCustomEntitiesSupported() {
+    return isCustomEntitiesSupported;
+  }
+
+  /**
+   * Output only. Is custom entities supported.
+   * @param isCustomEntitiesSupported isCustomEntitiesSupported or {@code null} for none
+   */
+  public ConnectorVersion setIsCustomEntitiesSupported(java.lang.Boolean isCustomEntitiesSupported) {
+    this.isCustomEntitiesSupported = isCustomEntitiesSupported;
+    return this;
+  }
+
+  /**
    * Output only. Resource labels to represent user-provided metadata. Refer to cloud documentation
    * on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
    * @return value or {@code null} for none
@@ -493,6 +555,40 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
    */
   public ConnectorVersion setSupportedRuntimeFeatures(SupportedRuntimeFeatures supportedRuntimeFeatures) {
     this.supportedRuntimeFeatures = supportedRuntimeFeatures;
+    return this;
+  }
+
+  /**
+   * Output only. Supported standard actions.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<StandardAction> getSupportedStandardActions() {
+    return supportedStandardActions;
+  }
+
+  /**
+   * Output only. Supported standard actions.
+   * @param supportedStandardActions supportedStandardActions or {@code null} for none
+   */
+  public ConnectorVersion setSupportedStandardActions(java.util.List<StandardAction> supportedStandardActions) {
+    this.supportedStandardActions = supportedStandardActions;
+    return this;
+  }
+
+  /**
+   * Output only. Supported standard entities.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<StandardEntity> getSupportedStandardEntities() {
+    return supportedStandardEntities;
+  }
+
+  /**
+   * Output only. Supported standard entities.
+   * @param supportedStandardEntities supportedStandardEntities or {@code null} for none
+   */
+  public ConnectorVersion setSupportedStandardEntities(java.util.List<StandardEntity> supportedStandardEntities) {
+    this.supportedStandardEntities = supportedStandardEntities;
     return this;
   }
 

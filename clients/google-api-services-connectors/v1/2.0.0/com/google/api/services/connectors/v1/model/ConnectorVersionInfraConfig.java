@@ -66,6 +66,13 @@ public final class ConnectorVersionInfraConfig extends com.google.api.client.jso
   private java.lang.Long internalclientRatelimitThreshold;
 
   /**
+   * Output only. Max instance request concurrency.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxInstanceRequestConcurrency;
+
+  /**
    * Output only. Max QPS supported by the connector version before throttling of requests.
    * The value may be {@code null}.
    */
@@ -175,6 +182,23 @@ public final class ConnectorVersionInfraConfig extends com.google.api.client.jso
    */
   public ConnectorVersionInfraConfig setInternalclientRatelimitThreshold(java.lang.Long internalclientRatelimitThreshold) {
     this.internalclientRatelimitThreshold = internalclientRatelimitThreshold;
+    return this;
+  }
+
+  /**
+   * Output only. Max instance request concurrency.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxInstanceRequestConcurrency() {
+    return maxInstanceRequestConcurrency;
+  }
+
+  /**
+   * Output only. Max instance request concurrency.
+   * @param maxInstanceRequestConcurrency maxInstanceRequestConcurrency or {@code null} for none
+   */
+  public ConnectorVersionInfraConfig setMaxInstanceRequestConcurrency(java.lang.Integer maxInstanceRequestConcurrency) {
+    this.maxInstanceRequestConcurrency = maxInstanceRequestConcurrency;
     return this;
   }
 

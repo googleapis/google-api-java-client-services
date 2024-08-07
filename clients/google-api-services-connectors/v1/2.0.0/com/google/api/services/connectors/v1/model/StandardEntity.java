@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.connectors.v2.model;
+package com.google.api.services.connectors.v1.model;
 
 /**
- * RefreshAccessTokenRequest includes the refresh token.
+ * Standard entity
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -27,43 +27,40 @@ package com.google.api.services.connectors.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RefreshAccessTokenRequest extends com.google.api.client.json.GenericJson {
+public final class StandardEntity extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Refresh Token String. If the Refresh Token is not provided, the runtime will read the
-   * data from the secret manager.
+   * Name of the standard entity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String refreshToken;
+  private java.lang.String name;
 
   /**
-   * Optional. Refresh Token String. If the Refresh Token is not provided, the runtime will read the
-   * data from the secret manager.
+   * Name of the standard entity.
    * @return value or {@code null} for none
    */
-  public java.lang.String getRefreshToken() {
-    return refreshToken;
+  public java.lang.String getName() {
+    return name;
   }
 
   /**
-   * Optional. Refresh Token String. If the Refresh Token is not provided, the runtime will read the
-   * data from the secret manager.
-   * @param refreshToken refreshToken or {@code null} for none
+   * Name of the standard entity.
+   * @param name name or {@code null} for none
    */
-  public RefreshAccessTokenRequest setRefreshToken(java.lang.String refreshToken) {
-    this.refreshToken = refreshToken;
+  public StandardEntity setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 
   @Override
-  public RefreshAccessTokenRequest set(String fieldName, Object value) {
-    return (RefreshAccessTokenRequest) super.set(fieldName, value);
+  public StandardEntity set(String fieldName, Object value) {
+    return (StandardEntity) super.set(fieldName, value);
   }
 
   @Override
-  public RefreshAccessTokenRequest clone() {
-    return (RefreshAccessTokenRequest) super.clone();
+  public StandardEntity clone() {
+    return (StandardEntity) super.clone();
   }
 
 }

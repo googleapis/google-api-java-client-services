@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v2.model;
 
 /**
- * ExchangeAuthCodeRequest currently includes no fields.
+ * ExchangeAuthCodeRequest currently includes the auth code data.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -28,6 +28,36 @@ package com.google.api.services.connectors.v2.model;
  */
 @SuppressWarnings("javadoc")
 public final class ExchangeAuthCodeRequest extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Optional. AuthCodeData contains the data the runtime requires to exchange for access and
+   * refresh tokens. If the data is not provided, the runtime will read the data from the secret
+   * manager.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AuthCodeData authCodeData;
+
+  /**
+   * Optional. AuthCodeData contains the data the runtime requires to exchange for access and
+   * refresh tokens. If the data is not provided, the runtime will read the data from the secret
+   * manager.
+   * @return value or {@code null} for none
+   */
+  public AuthCodeData getAuthCodeData() {
+    return authCodeData;
+  }
+
+  /**
+   * Optional. AuthCodeData contains the data the runtime requires to exchange for access and
+   * refresh tokens. If the data is not provided, the runtime will read the data from the secret
+   * manager.
+   * @param authCodeData authCodeData or {@code null} for none
+   */
+  public ExchangeAuthCodeRequest setAuthCodeData(AuthCodeData authCodeData) {
+    this.authCodeData = authCodeData;
+    return this;
+  }
 
   @Override
   public ExchangeAuthCodeRequest set(String fieldName, Object value) {

@@ -3420,7 +3420,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Resource name of the organization or project, for example
+         * @param parent Required. Resource name of the organization or project, for example,
          *        `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
          * @return the request
          */
@@ -3448,7 +3448,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Resource name of the organization or project, for example
+           * @param parent Required. Resource name of the organization or project, for example,
          *        `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
            * @since 1.13
            */
@@ -3528,13 +3528,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. Resource name of the organization or project, for example
+           * Required. Resource name of the organization or project, for example,
            * `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Resource name of the organization or project, for example
+          /** Required. Resource name of the organization or project, for example,
          `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
            */
           public java.lang.String getParent() {
@@ -3542,7 +3542,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. Resource name of the organization or project, for example
+           * Required. Resource name of the organization or project, for example,
            * `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
            */
           public List setParent(java.lang.String parent) {
@@ -3762,7 +3762,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Search#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Resource name of the organization or project with a wildcard location, for example
+         * @param parent Required. Resource name of the organization or project with a wildcard location, for example,
          *        `organizations/433245324/locations/-` or `projects/project-id/locations/-`.
          * @return the request
          */
@@ -3789,7 +3789,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Resource name of the organization or project with a wildcard location, for example
+           * @param parent Required. Resource name of the organization or project with a wildcard location, for example,
          *        `organizations/433245324/locations/-` or `projects/project-id/locations/-`.
            * @since 1.13
            */
@@ -3870,12 +3870,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Resource name of the organization or project with a wildcard location, for
-           * example `organizations/433245324/locations/-` or `projects/project-id/locations/-`.
+           * example, `organizations/433245324/locations/-` or `projects/project-id/locations/-`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Resource name of the organization or project with a wildcard location, for example
+          /** Required. Resource name of the organization or project with a wildcard location, for example,
          `organizations/433245324/locations/-` or `projects/project-id/locations/-`.
            */
           public java.lang.String getParent() {
@@ -3884,7 +3884,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Resource name of the organization or project with a wildcard location, for
-           * example `organizations/433245324/locations/-` or `projects/project-id/locations/-`.
+           * example, `organizations/433245324/locations/-` or `projects/project-id/locations/-`.
            */
           public Search setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -17056,7 +17056,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Resource name of the organization or project, for example
+         * @param parent Required. Resource name of the organization or project, for example,
          *        `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
          * @return the request
          */
@@ -17084,7 +17084,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Resource name of the organization or project, for example
+           * @param parent Required. Resource name of the organization or project, for example,
          *        `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
            * @since 1.13
            */
@@ -17164,13 +17164,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. Resource name of the organization or project, for example
+           * Required. Resource name of the organization or project, for example,
            * `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Resource name of the organization or project, for example
+          /** Required. Resource name of the organization or project, for example,
          `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
            */
           public java.lang.String getParent() {
@@ -17178,7 +17178,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. Resource name of the organization or project, for example
+           * Required. Resource name of the organization or project, for example,
            * `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
            */
           public List setParent(java.lang.String parent) {
@@ -17398,7 +17398,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Search#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Resource name of the organization or project with a wildcard location, for example
+         * @param parent Required. Resource name of the organization or project with a wildcard location, for example,
          *        `organizations/433245324/locations/-` or `projects/project-id/locations/-`.
          * @return the request
          */
@@ -17425,7 +17425,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Resource name of the organization or project with a wildcard location, for example
+           * @param parent Required. Resource name of the organization or project with a wildcard location, for example,
          *        `organizations/433245324/locations/-` or `projects/project-id/locations/-`.
            * @since 1.13
            */
@@ -17506,12 +17506,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Resource name of the organization or project with a wildcard location, for
-           * example `organizations/433245324/locations/-` or `projects/project-id/locations/-`.
+           * example, `organizations/433245324/locations/-` or `projects/project-id/locations/-`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Resource name of the organization or project with a wildcard location, for example
+          /** Required. Resource name of the organization or project with a wildcard location, for example,
          `organizations/433245324/locations/-` or `projects/project-id/locations/-`.
            */
           public java.lang.String getParent() {
@@ -17520,7 +17520,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Resource name of the organization or project with a wildcard location, for
-           * example `organizations/433245324/locations/-` or `projects/project-id/locations/-`.
+           * example, `organizations/433245324/locations/-` or `projects/project-id/locations/-`.
            */
           public Search setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

@@ -40,8 +40,8 @@ public final class GooglePrivacyDlpV2DiscoveryGenerationCadence extends com.goog
   private GooglePrivacyDlpV2DiscoveryInspectTemplateModifiedCadence inspectTemplateModifiedCadence;
 
   /**
-   * Frequency to update profiles regardless of whether the underlying resource has changed.
-   * Defaults to never.
+   * Frequency at which profiles should be updated, regardless of whether the underlying resource
+   * has changed. Defaults to never.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,8 +81,8 @@ public final class GooglePrivacyDlpV2DiscoveryGenerationCadence extends com.goog
   }
 
   /**
-   * Frequency to update profiles regardless of whether the underlying resource has changed.
-   * Defaults to never.
+   * Frequency at which profiles should be updated, regardless of whether the underlying resource
+   * has changed. Defaults to never.
    * @return value or {@code null} for none
    */
   public java.lang.String getRefreshFrequency() {
@@ -90,8 +90,8 @@ public final class GooglePrivacyDlpV2DiscoveryGenerationCadence extends com.goog
   }
 
   /**
-   * Frequency to update profiles regardless of whether the underlying resource has changed.
-   * Defaults to never.
+   * Frequency at which profiles should be updated, regardless of whether the underlying resource
+   * has changed. Defaults to never.
    * @param refreshFrequency refreshFrequency or {@code null} for none
    */
   public GooglePrivacyDlpV2DiscoveryGenerationCadence setRefreshFrequency(java.lang.String refreshFrequency) {

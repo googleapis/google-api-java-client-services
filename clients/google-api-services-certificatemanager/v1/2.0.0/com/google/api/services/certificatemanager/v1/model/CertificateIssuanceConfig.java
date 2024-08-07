@@ -46,7 +46,7 @@ public final class CertificateIssuanceConfig extends com.google.api.client.json.
   private String createTime;
 
   /**
-   * One or more paragraphs of text description of a CertificateIssuanceConfig.
+   * Optional. One or more paragraphs of text description of a CertificateIssuanceConfig.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class CertificateIssuanceConfig extends com.google.api.client.json.
   private java.lang.String keyAlgorithm;
 
   /**
-   * Set of labels associated with a CertificateIssuanceConfig.
+   * Optional. Set of labels associated with a CertificateIssuanceConfig.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,8 +74,9 @@ public final class CertificateIssuanceConfig extends com.google.api.client.json.
   private String lifetime;
 
   /**
-   * A user-defined name of the certificate issuance config. CertificateIssuanceConfig names must be
-   * unique globally and match pattern `projects/locations/certificateIssuanceConfigs`.
+   * Identifier. A user-defined name of the certificate issuance config. CertificateIssuanceConfig
+   * names must be unique globally and match pattern
+   * `projects/locations/certificateIssuanceConfigs`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,7 +134,7 @@ public final class CertificateIssuanceConfig extends com.google.api.client.json.
   }
 
   /**
-   * One or more paragraphs of text description of a CertificateIssuanceConfig.
+   * Optional. One or more paragraphs of text description of a CertificateIssuanceConfig.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -141,7 +142,7 @@ public final class CertificateIssuanceConfig extends com.google.api.client.json.
   }
 
   /**
-   * One or more paragraphs of text description of a CertificateIssuanceConfig.
+   * Optional. One or more paragraphs of text description of a CertificateIssuanceConfig.
    * @param description description or {@code null} for none
    */
   public CertificateIssuanceConfig setDescription(java.lang.String description) {
@@ -167,7 +168,7 @@ public final class CertificateIssuanceConfig extends com.google.api.client.json.
   }
 
   /**
-   * Set of labels associated with a CertificateIssuanceConfig.
+   * Optional. Set of labels associated with a CertificateIssuanceConfig.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -175,7 +176,7 @@ public final class CertificateIssuanceConfig extends com.google.api.client.json.
   }
 
   /**
-   * Set of labels associated with a CertificateIssuanceConfig.
+   * Optional. Set of labels associated with a CertificateIssuanceConfig.
    * @param labels labels or {@code null} for none
    */
   public CertificateIssuanceConfig setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -201,8 +202,9 @@ public final class CertificateIssuanceConfig extends com.google.api.client.json.
   }
 
   /**
-   * A user-defined name of the certificate issuance config. CertificateIssuanceConfig names must be
-   * unique globally and match pattern `projects/locations/certificateIssuanceConfigs`.
+   * Identifier. A user-defined name of the certificate issuance config. CertificateIssuanceConfig
+   * names must be unique globally and match pattern
+   * `projects/locations/certificateIssuanceConfigs`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -210,8 +212,9 @@ public final class CertificateIssuanceConfig extends com.google.api.client.json.
   }
 
   /**
-   * A user-defined name of the certificate issuance config. CertificateIssuanceConfig names must be
-   * unique globally and match pattern `projects/locations/certificateIssuanceConfigs`.
+   * Identifier. A user-defined name of the certificate issuance config. CertificateIssuanceConfig
+   * names must be unique globally and match pattern
+   * `projects/locations/certificateIssuanceConfigs`.
    * @param name name or {@code null} for none
    */
   public CertificateIssuanceConfig setName(java.lang.String name) {

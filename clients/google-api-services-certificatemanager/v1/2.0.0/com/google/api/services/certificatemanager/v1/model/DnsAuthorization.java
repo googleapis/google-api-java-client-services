@@ -39,7 +39,7 @@ public final class DnsAuthorization extends com.google.api.client.json.GenericJs
   private String createTime;
 
   /**
-   * One or more paragraphs of text description of a DnsAuthorization.
+   * Optional. One or more paragraphs of text description of a DnsAuthorization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,23 +62,24 @@ public final class DnsAuthorization extends com.google.api.client.json.GenericJs
   private java.lang.String domain;
 
   /**
-   * Set of labels associated with a DnsAuthorization.
+   * Optional. Set of labels associated with a DnsAuthorization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * A user-defined name of the dns authorization. DnsAuthorization names must be unique globally
-   * and match pattern `projects/locations/dnsAuthorizations`.
+   * Identifier. A user-defined name of the dns authorization. DnsAuthorization names must be unique
+   * globally and match pattern `projects/locations/dnsAuthorizations`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Immutable. Type of DnsAuthorization. If unset during resource creation the following default
-   * will be used: - in location `global`: FIXED_RECORD, - in other locations: PER_PROJECT_RECORD.
+   * Optional. Immutable. Type of DnsAuthorization. If unset during resource creation the following
+   * default will be used: - in location `global`: FIXED_RECORD, - in other locations:
+   * PER_PROJECT_RECORD.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +110,7 @@ public final class DnsAuthorization extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * One or more paragraphs of text description of a DnsAuthorization.
+   * Optional. One or more paragraphs of text description of a DnsAuthorization.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -117,7 +118,7 @@ public final class DnsAuthorization extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * One or more paragraphs of text description of a DnsAuthorization.
+   * Optional. One or more paragraphs of text description of a DnsAuthorization.
    * @param description description or {@code null} for none
    */
   public DnsAuthorization setDescription(java.lang.String description) {
@@ -164,7 +165,7 @@ public final class DnsAuthorization extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Set of labels associated with a DnsAuthorization.
+   * Optional. Set of labels associated with a DnsAuthorization.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -172,7 +173,7 @@ public final class DnsAuthorization extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Set of labels associated with a DnsAuthorization.
+   * Optional. Set of labels associated with a DnsAuthorization.
    * @param labels labels or {@code null} for none
    */
   public DnsAuthorization setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -181,8 +182,8 @@ public final class DnsAuthorization extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A user-defined name of the dns authorization. DnsAuthorization names must be unique globally
-   * and match pattern `projects/locations/dnsAuthorizations`.
+   * Identifier. A user-defined name of the dns authorization. DnsAuthorization names must be unique
+   * globally and match pattern `projects/locations/dnsAuthorizations`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -190,8 +191,8 @@ public final class DnsAuthorization extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A user-defined name of the dns authorization. DnsAuthorization names must be unique globally
-   * and match pattern `projects/locations/dnsAuthorizations`.
+   * Identifier. A user-defined name of the dns authorization. DnsAuthorization names must be unique
+   * globally and match pattern `projects/locations/dnsAuthorizations`.
    * @param name name or {@code null} for none
    */
   public DnsAuthorization setName(java.lang.String name) {
@@ -200,8 +201,9 @@ public final class DnsAuthorization extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Immutable. Type of DnsAuthorization. If unset during resource creation the following default
-   * will be used: - in location `global`: FIXED_RECORD, - in other locations: PER_PROJECT_RECORD.
+   * Optional. Immutable. Type of DnsAuthorization. If unset during resource creation the following
+   * default will be used: - in location `global`: FIXED_RECORD, - in other locations:
+   * PER_PROJECT_RECORD.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -209,8 +211,9 @@ public final class DnsAuthorization extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Immutable. Type of DnsAuthorization. If unset during resource creation the following default
-   * will be used: - in location `global`: FIXED_RECORD, - in other locations: PER_PROJECT_RECORD.
+   * Optional. Immutable. Type of DnsAuthorization. If unset during resource creation the following
+   * default will be used: - in location `global`: FIXED_RECORD, - in other locations:
+   * PER_PROJECT_RECORD.
    * @param type type or {@code null} for none
    */
   public DnsAuthorization setType(java.lang.String type) {

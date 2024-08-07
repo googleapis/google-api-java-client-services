@@ -38,7 +38,7 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * One or more paragraphs of text description of a certificate.
+   * Optional. One or more paragraphs of text description of a certificate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
   private String expireTime;
 
   /**
-   * Set of labels associated with a Certificate.
+   * Optional. Set of labels associated with a Certificate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +66,8 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
   private ManagedCertificate managed;
 
   /**
-   * A user-defined name of the certificate. Certificate names must be unique globally and match
-   * pattern `projects/locations/certificates`.
+   * Identifier. A user-defined name of the certificate. Certificate names must be unique globally
+   * and match pattern `projects/locations/certificates`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> sanDnsnames;
 
   /**
-   * Immutable. The scope of the certificate.
+   * Optional. Immutable. The scope of the certificate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,7 +128,7 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * One or more paragraphs of text description of a certificate.
+   * Optional. One or more paragraphs of text description of a certificate.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -136,7 +136,7 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * One or more paragraphs of text description of a certificate.
+   * Optional. One or more paragraphs of text description of a certificate.
    * @param description description or {@code null} for none
    */
   public Certificate setDescription(java.lang.String description) {
@@ -162,7 +162,7 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Set of labels associated with a Certificate.
+   * Optional. Set of labels associated with a Certificate.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -170,7 +170,7 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Set of labels associated with a Certificate.
+   * Optional. Set of labels associated with a Certificate.
    * @param labels labels or {@code null} for none
    */
   public Certificate setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -196,8 +196,8 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A user-defined name of the certificate. Certificate names must be unique globally and match
-   * pattern `projects/locations/certificates`.
+   * Identifier. A user-defined name of the certificate. Certificate names must be unique globally
+   * and match pattern `projects/locations/certificates`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -205,8 +205,8 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A user-defined name of the certificate. Certificate names must be unique globally and match
-   * pattern `projects/locations/certificates`.
+   * Identifier. A user-defined name of the certificate. Certificate names must be unique globally
+   * and match pattern `projects/locations/certificates`.
    * @param name name or {@code null} for none
    */
   public Certificate setName(java.lang.String name) {
@@ -253,7 +253,7 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The scope of the certificate.
+   * Optional. Immutable. The scope of the certificate.
    * @return value or {@code null} for none
    */
   public java.lang.String getScope() {
@@ -261,7 +261,7 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The scope of the certificate.
+   * Optional. Immutable. The scope of the certificate.
    * @param scope scope or {@code null} for none
    */
   public Certificate setScope(java.lang.String scope) {

@@ -46,24 +46,24 @@ public final class ManagedCertificate extends com.google.api.client.json.Generic
   }
 
   /**
-   * Immutable. Authorizations that will be used for performing domain authorization.
+   * Optional. Immutable. Authorizations that will be used for performing domain authorization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> dnsAuthorizations;
 
   /**
-   * Immutable. The domains for which a managed SSL certificate will be generated. Wildcard domains
-   * are only supported with DNS challenge resolution.
+   * Optional. Immutable. The domains for which a managed SSL certificate will be generated.
+   * Wildcard domains are only supported with DNS challenge resolution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> domains;
 
   /**
-   * Immutable. The resource name for a CertificateIssuanceConfig used to configure private PKI
-   * certificates in the format `projects/locations/certificateIssuanceConfigs`. If this field is
-   * not set, the certificates will instead be publicly signed as documented at
+   * Optional. Immutable. The resource name for a CertificateIssuanceConfig used to configure
+   * private PKI certificates in the format `projects/locations/certificateIssuanceConfigs`. If this
+   * field is not set, the certificates will instead be publicly signed as documented at
    * https://cloud.google.com/load-balancing/docs/ssl-certificates/google-managed-certs#caa.
    * The value may be {@code null}.
    */
@@ -104,7 +104,7 @@ public final class ManagedCertificate extends com.google.api.client.json.Generic
   }
 
   /**
-   * Immutable. Authorizations that will be used for performing domain authorization.
+   * Optional. Immutable. Authorizations that will be used for performing domain authorization.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDnsAuthorizations() {
@@ -112,7 +112,7 @@ public final class ManagedCertificate extends com.google.api.client.json.Generic
   }
 
   /**
-   * Immutable. Authorizations that will be used for performing domain authorization.
+   * Optional. Immutable. Authorizations that will be used for performing domain authorization.
    * @param dnsAuthorizations dnsAuthorizations or {@code null} for none
    */
   public ManagedCertificate setDnsAuthorizations(java.util.List<java.lang.String> dnsAuthorizations) {
@@ -121,8 +121,8 @@ public final class ManagedCertificate extends com.google.api.client.json.Generic
   }
 
   /**
-   * Immutable. The domains for which a managed SSL certificate will be generated. Wildcard domains
-   * are only supported with DNS challenge resolution.
+   * Optional. Immutable. The domains for which a managed SSL certificate will be generated.
+   * Wildcard domains are only supported with DNS challenge resolution.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDomains() {
@@ -130,8 +130,8 @@ public final class ManagedCertificate extends com.google.api.client.json.Generic
   }
 
   /**
-   * Immutable. The domains for which a managed SSL certificate will be generated. Wildcard domains
-   * are only supported with DNS challenge resolution.
+   * Optional. Immutable. The domains for which a managed SSL certificate will be generated.
+   * Wildcard domains are only supported with DNS challenge resolution.
    * @param domains domains or {@code null} for none
    */
   public ManagedCertificate setDomains(java.util.List<java.lang.String> domains) {
@@ -140,9 +140,9 @@ public final class ManagedCertificate extends com.google.api.client.json.Generic
   }
 
   /**
-   * Immutable. The resource name for a CertificateIssuanceConfig used to configure private PKI
-   * certificates in the format `projects/locations/certificateIssuanceConfigs`. If this field is
-   * not set, the certificates will instead be publicly signed as documented at
+   * Optional. Immutable. The resource name for a CertificateIssuanceConfig used to configure
+   * private PKI certificates in the format `projects/locations/certificateIssuanceConfigs`. If this
+   * field is not set, the certificates will instead be publicly signed as documented at
    * https://cloud.google.com/load-balancing/docs/ssl-certificates/google-managed-certs#caa.
    * @return value or {@code null} for none
    */
@@ -151,9 +151,9 @@ public final class ManagedCertificate extends com.google.api.client.json.Generic
   }
 
   /**
-   * Immutable. The resource name for a CertificateIssuanceConfig used to configure private PKI
-   * certificates in the format `projects/locations/certificateIssuanceConfigs`. If this field is
-   * not set, the certificates will instead be publicly signed as documented at
+   * Optional. Immutable. The resource name for a CertificateIssuanceConfig used to configure
+   * private PKI certificates in the format `projects/locations/certificateIssuanceConfigs`. If this
+   * field is not set, the certificates will instead be publicly signed as documented at
    * https://cloud.google.com/load-balancing/docs/ssl-certificates/google-managed-certs#caa.
    * @param issuanceConfig issuanceConfig or {@code null} for none
    */

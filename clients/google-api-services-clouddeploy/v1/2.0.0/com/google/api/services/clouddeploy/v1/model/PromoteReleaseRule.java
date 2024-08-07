@@ -17,8 +17,8 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * `PromoteRelease` rule will automatically promote a release from the current target to a specified
- * target.
+ * The `PromoteRelease` rule will automatically promote a release from the current target to a
+ * specified target.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:

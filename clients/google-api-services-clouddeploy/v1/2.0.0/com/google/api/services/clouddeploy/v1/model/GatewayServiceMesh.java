@@ -45,6 +45,14 @@ public final class GatewayServiceMesh extends com.google.api.client.json.Generic
   private java.lang.String httpRoute;
 
   /**
+   * Optional. The label to use when selecting Pods for the Deployment and Service resources. This
+   * label must already be present in both resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String podSelectorLabel;
+
+  /**
    * Optional. The time to wait for route updates to propagate. The maximum configurable time is 3
    * hours, in seconds format. If unspecified, there is no wait time.
    * The value may be {@code null}.
@@ -101,6 +109,25 @@ public final class GatewayServiceMesh extends com.google.api.client.json.Generic
    */
   public GatewayServiceMesh setHttpRoute(java.lang.String httpRoute) {
     this.httpRoute = httpRoute;
+    return this;
+  }
+
+  /**
+   * Optional. The label to use when selecting Pods for the Deployment and Service resources. This
+   * label must already be present in both resources.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPodSelectorLabel() {
+    return podSelectorLabel;
+  }
+
+  /**
+   * Optional. The label to use when selecting Pods for the Deployment and Service resources. This
+   * label must already be present in both resources.
+   * @param podSelectorLabel podSelectorLabel or {@code null} for none
+   */
+  public GatewayServiceMesh setPodSelectorLabel(java.lang.String podSelectorLabel) {
+    this.podSelectorLabel = podSelectorLabel;
     return this;
   }
 

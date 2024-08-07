@@ -71,7 +71,9 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   private java.lang.String management;
 
   /**
-   * Policy Controller configuration for the cluster.
+   * Policy Controller configuration for the cluster. Deprecated: Configuring Policy Controller
+   * through the configmanagement feature is no longer recommended. Use the policycontroller feature
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,7 +182,9 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * Policy Controller configuration for the cluster.
+   * Policy Controller configuration for the cluster. Deprecated: Configuring Policy Controller
+   * through the configmanagement feature is no longer recommended. Use the policycontroller feature
+   * instead.
    * @return value or {@code null} for none
    */
   public ConfigManagementPolicyController getPolicyController() {
@@ -188,7 +192,9 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * Policy Controller configuration for the cluster.
+   * Policy Controller configuration for the cluster. Deprecated: Configuring Policy Controller
+   * through the configmanagement feature is no longer recommended. Use the policycontroller feature
+   * instead.
    * @param policyController policyController or {@code null} for none
    */
   public ConfigManagementMembershipSpec setPolicyController(ConfigManagementPolicyController policyController) {

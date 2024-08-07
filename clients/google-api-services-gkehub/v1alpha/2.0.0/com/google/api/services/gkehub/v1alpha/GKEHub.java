@@ -1326,6 +1326,32 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
             return this;
           }
 
+          /**
+           * Optional. If set to true, the response will return partial results when some regions
+           * are unreachable and the unreachable field in Feature proto will be populated. If set to
+           * false, the request will fail when some regions are unreachable.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnPartialSuccess;
+
+          /** Optional. If set to true, the response will return partial results when some regions are
+         unreachable and the unreachable field in Feature proto will be populated. If set to false, the
+         request will fail when some regions are unreachable.
+           */
+          public java.lang.Boolean getReturnPartialSuccess() {
+            return returnPartialSuccess;
+          }
+
+          /**
+           * Optional. If set to true, the response will return partial results when some regions
+           * are unreachable and the unreachable field in Feature proto will be populated. If set to
+           * false, the request will fail when some regions are unreachable.
+           */
+          public Get setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+            this.returnPartialSuccess = returnPartialSuccess;
+            return this;
+          }
+
           @Override
           public Get set(String parameterName, Object value) {
             return (Get) super.set(parameterName, value);
@@ -1768,6 +1794,32 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, the response will return partial results when some regions
+           * are unreachable and the unreachable field in Feature proto will be populated. If set to
+           * false, the request will fail when some regions are unreachable.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnPartialSuccess;
+
+          /** Optional. If set to true, the response will return partial results when some regions are
+         unreachable and the unreachable field in Feature proto will be populated. If set to false, the
+         request will fail when some regions are unreachable.
+           */
+          public java.lang.Boolean getReturnPartialSuccess() {
+            return returnPartialSuccess;
+          }
+
+          /**
+           * Optional. If set to true, the response will return partial results when some regions
+           * are unreachable and the unreachable field in Feature proto will be populated. If set to
+           * false, the request will fail when some regions are unreachable.
+           */
+          public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+            this.returnPartialSuccess = returnPartialSuccess;
             return this;
           }
 

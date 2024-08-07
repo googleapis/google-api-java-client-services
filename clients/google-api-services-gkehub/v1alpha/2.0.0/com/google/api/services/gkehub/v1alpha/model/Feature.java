@@ -138,6 +138,13 @@ public final class Feature extends com.google.api.client.json.GenericJson {
   private CommonFeatureState state;
 
   /**
+   * Output only. List of locations that could not be reached while fetching this feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * Output only. When the Feature resource was last updated.
    * The value may be {@code null}.
    */
@@ -393,6 +400,23 @@ public final class Feature extends com.google.api.client.json.GenericJson {
    */
   public Feature setState(CommonFeatureState state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. List of locations that could not be reached while fetching this feature.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * Output only. List of locations that could not be reached while fetching this feature.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public Feature setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

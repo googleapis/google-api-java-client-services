@@ -38,7 +38,7 @@ public final class CertificateMap extends com.google.api.client.json.GenericJson
   private String createTime;
 
   /**
-   * One or more paragraphs of text description of a certificate map.
+   * Optional. One or more paragraphs of text description of a certificate map.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,15 +53,15 @@ public final class CertificateMap extends com.google.api.client.json.GenericJson
   private java.util.List<GclbTarget> gclbTargets;
 
   /**
-   * Set of labels associated with a Certificate Map.
+   * Optional. Set of labels associated with a Certificate Map.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * A user-defined name of the Certificate Map. Certificate Map names must be unique globally and
-   * match pattern `projects/locations/certificateMaps`.
+   * Identifier. A user-defined name of the Certificate Map. Certificate Map names must be unique
+   * globally and match pattern `projects/locations/certificateMaps`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +92,7 @@ public final class CertificateMap extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * One or more paragraphs of text description of a certificate map.
+   * Optional. One or more paragraphs of text description of a certificate map.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -100,7 +100,7 @@ public final class CertificateMap extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * One or more paragraphs of text description of a certificate map.
+   * Optional. One or more paragraphs of text description of a certificate map.
    * @param description description or {@code null} for none
    */
   public CertificateMap setDescription(java.lang.String description) {
@@ -128,7 +128,7 @@ public final class CertificateMap extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Set of labels associated with a Certificate Map.
+   * Optional. Set of labels associated with a Certificate Map.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -136,7 +136,7 @@ public final class CertificateMap extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Set of labels associated with a Certificate Map.
+   * Optional. Set of labels associated with a Certificate Map.
    * @param labels labels or {@code null} for none
    */
   public CertificateMap setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -145,8 +145,8 @@ public final class CertificateMap extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A user-defined name of the Certificate Map. Certificate Map names must be unique globally and
-   * match pattern `projects/locations/certificateMaps`.
+   * Identifier. A user-defined name of the Certificate Map. Certificate Map names must be unique
+   * globally and match pattern `projects/locations/certificateMaps`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -154,8 +154,8 @@ public final class CertificateMap extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A user-defined name of the Certificate Map. Certificate Map names must be unique globally and
-   * match pattern `projects/locations/certificateMaps`.
+   * Identifier. A user-defined name of the Certificate Map. Certificate Map names must be unique
+   * globally and match pattern `projects/locations/certificateMaps`.
    * @param name name or {@code null} for none
    */
   public CertificateMap setName(java.lang.String name) {

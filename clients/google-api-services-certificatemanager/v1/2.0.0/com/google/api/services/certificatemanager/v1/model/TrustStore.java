@@ -31,8 +31,9 @@ package com.google.api.services.certificatemanager.v1.model;
 public final class TrustStore extends com.google.api.client.json.GenericJson {
 
   /**
-   * Set of intermediate CA certificates used for the path building phase of chain validation. The
-   * field is currently not supported if TrustConfig is used for the workload certificate feature.
+   * Optional. Set of intermediate CA certificates used for the path building phase of chain
+   * validation. The field is currently not supported if TrustConfig is used for the workload
+   * certificate feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +46,8 @@ public final class TrustStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of Trust Anchors to be used while performing validation against a given TrustStore.
+   * Optional. List of Trust Anchors to be used while performing validation against a given
+   * TrustStore.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,8 +60,9 @@ public final class TrustStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Set of intermediate CA certificates used for the path building phase of chain validation. The
-   * field is currently not supported if TrustConfig is used for the workload certificate feature.
+   * Optional. Set of intermediate CA certificates used for the path building phase of chain
+   * validation. The field is currently not supported if TrustConfig is used for the workload
+   * certificate feature.
    * @return value or {@code null} for none
    */
   public java.util.List<IntermediateCA> getIntermediateCas() {
@@ -67,8 +70,9 @@ public final class TrustStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Set of intermediate CA certificates used for the path building phase of chain validation. The
-   * field is currently not supported if TrustConfig is used for the workload certificate feature.
+   * Optional. Set of intermediate CA certificates used for the path building phase of chain
+   * validation. The field is currently not supported if TrustConfig is used for the workload
+   * certificate feature.
    * @param intermediateCas intermediateCas or {@code null} for none
    */
   public TrustStore setIntermediateCas(java.util.List<IntermediateCA> intermediateCas) {
@@ -77,7 +81,8 @@ public final class TrustStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of Trust Anchors to be used while performing validation against a given TrustStore.
+   * Optional. List of Trust Anchors to be used while performing validation against a given
+   * TrustStore.
    * @return value or {@code null} for none
    */
   public java.util.List<TrustAnchor> getTrustAnchors() {
@@ -85,7 +90,8 @@ public final class TrustStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of Trust Anchors to be used while performing validation against a given TrustStore.
+   * Optional. List of Trust Anchors to be used while performing validation against a given
+   * TrustStore.
    * @param trustAnchors trustAnchors or {@code null} for none
    */
   public TrustStore setTrustAnchors(java.util.List<TrustAnchor> trustAnchors) {

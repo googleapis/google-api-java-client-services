@@ -31,8 +31,8 @@ package com.google.api.services.certificatemanager.v1.model;
 public final class CertificateMapEntry extends com.google.api.client.json.GenericJson {
 
   /**
-   * A set of Certificates defines for the given `hostname`. There can be defined up to four
-   * certificates in each Certificate Map Entry. Each certificate must match pattern
+   * Optional. A set of Certificates defines for the given `hostname`. There can be defined up to
+   * four certificates in each Certificate Map Entry. Each certificate must match pattern
    * `projects/locations/certificates`.
    * The value may be {@code null}.
    */
@@ -47,7 +47,7 @@ public final class CertificateMapEntry extends com.google.api.client.json.Generi
   private String createTime;
 
   /**
-   * One or more paragraphs of text description of a certificate map entry.
+   * Optional. One or more paragraphs of text description of a certificate map entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class CertificateMapEntry extends com.google.api.client.json.Generi
   private java.lang.String hostname;
 
   /**
-   * Set of labels associated with a Certificate Map Entry.
+   * Optional. Set of labels associated with a Certificate Map Entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,8 +77,9 @@ public final class CertificateMapEntry extends com.google.api.client.json.Generi
   private java.lang.String matcher;
 
   /**
-   * A user-defined name of the Certificate Map Entry. Certificate Map Entry names must be unique
-   * globally and match pattern `projects/locations/certificateMaps/certificateMapEntries`.
+   * Identifier. A user-defined name of the Certificate Map Entry. Certificate Map Entry names must
+   * be unique globally and match pattern
+   * `projects/locations/certificateMaps/certificateMapEntries`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,8 +100,8 @@ public final class CertificateMapEntry extends com.google.api.client.json.Generi
   private String updateTime;
 
   /**
-   * A set of Certificates defines for the given `hostname`. There can be defined up to four
-   * certificates in each Certificate Map Entry. Each certificate must match pattern
+   * Optional. A set of Certificates defines for the given `hostname`. There can be defined up to
+   * four certificates in each Certificate Map Entry. Each certificate must match pattern
    * `projects/locations/certificates`.
    * @return value or {@code null} for none
    */
@@ -109,8 +110,8 @@ public final class CertificateMapEntry extends com.google.api.client.json.Generi
   }
 
   /**
-   * A set of Certificates defines for the given `hostname`. There can be defined up to four
-   * certificates in each Certificate Map Entry. Each certificate must match pattern
+   * Optional. A set of Certificates defines for the given `hostname`. There can be defined up to
+   * four certificates in each Certificate Map Entry. Each certificate must match pattern
    * `projects/locations/certificates`.
    * @param certificates certificates or {@code null} for none
    */
@@ -137,7 +138,7 @@ public final class CertificateMapEntry extends com.google.api.client.json.Generi
   }
 
   /**
-   * One or more paragraphs of text description of a certificate map entry.
+   * Optional. One or more paragraphs of text description of a certificate map entry.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -145,7 +146,7 @@ public final class CertificateMapEntry extends com.google.api.client.json.Generi
   }
 
   /**
-   * One or more paragraphs of text description of a certificate map entry.
+   * Optional. One or more paragraphs of text description of a certificate map entry.
    * @param description description or {@code null} for none
    */
   public CertificateMapEntry setDescription(java.lang.String description) {
@@ -175,7 +176,7 @@ public final class CertificateMapEntry extends com.google.api.client.json.Generi
   }
 
   /**
-   * Set of labels associated with a Certificate Map Entry.
+   * Optional. Set of labels associated with a Certificate Map Entry.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -183,7 +184,7 @@ public final class CertificateMapEntry extends com.google.api.client.json.Generi
   }
 
   /**
-   * Set of labels associated with a Certificate Map Entry.
+   * Optional. Set of labels associated with a Certificate Map Entry.
    * @param labels labels or {@code null} for none
    */
   public CertificateMapEntry setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -209,8 +210,9 @@ public final class CertificateMapEntry extends com.google.api.client.json.Generi
   }
 
   /**
-   * A user-defined name of the Certificate Map Entry. Certificate Map Entry names must be unique
-   * globally and match pattern `projects/locations/certificateMaps/certificateMapEntries`.
+   * Identifier. A user-defined name of the Certificate Map Entry. Certificate Map Entry names must
+   * be unique globally and match pattern
+   * `projects/locations/certificateMaps/certificateMapEntries`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -218,8 +220,9 @@ public final class CertificateMapEntry extends com.google.api.client.json.Generi
   }
 
   /**
-   * A user-defined name of the Certificate Map Entry. Certificate Map Entry names must be unique
-   * globally and match pattern `projects/locations/certificateMaps/certificateMapEntries`.
+   * Identifier. A user-defined name of the Certificate Map Entry. Certificate Map Entry names must
+   * be unique globally and match pattern
+   * `projects/locations/certificateMaps/certificateMapEntries`.
    * @param name name or {@code null} for none
    */
   public CertificateMapEntry setName(java.lang.String name) {

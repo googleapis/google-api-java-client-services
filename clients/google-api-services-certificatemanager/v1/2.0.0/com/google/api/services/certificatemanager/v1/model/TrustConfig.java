@@ -53,7 +53,7 @@ public final class TrustConfig extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * One or more paragraphs of text description of a TrustConfig.
+   * Optional. One or more paragraphs of text description of a TrustConfig.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,24 +68,24 @@ public final class TrustConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Set of labels associated with a TrustConfig.
+   * Optional. Set of labels associated with a TrustConfig.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * A user-defined name of the trust config. TrustConfig names must be unique globally and match
-   * pattern `projects/locations/trustConfigs`.
+   * Identifier. A user-defined name of the trust config. TrustConfig names must be unique globally
+   * and match pattern `projects/locations/trustConfigs`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Set of trust stores to perform validation against. This field is supported when TrustConfig is
-   * configured with Load Balancers, currently not supported for SPIFFE certificate validation. Only
-   * one TrustStore specified is currently allowed.
+   * Optional. Set of trust stores to perform validation against. This field is supported when
+   * TrustConfig is configured with Load Balancers, currently not supported for SPIFFE certificate
+   * validation. Only one TrustStore specified is currently allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +137,7 @@ public final class TrustConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * One or more paragraphs of text description of a TrustConfig.
+   * Optional. One or more paragraphs of text description of a TrustConfig.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -145,7 +145,7 @@ public final class TrustConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * One or more paragraphs of text description of a TrustConfig.
+   * Optional. One or more paragraphs of text description of a TrustConfig.
    * @param description description or {@code null} for none
    */
   public TrustConfig setDescription(java.lang.String description) {
@@ -173,7 +173,7 @@ public final class TrustConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Set of labels associated with a TrustConfig.
+   * Optional. Set of labels associated with a TrustConfig.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -181,7 +181,7 @@ public final class TrustConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Set of labels associated with a TrustConfig.
+   * Optional. Set of labels associated with a TrustConfig.
    * @param labels labels or {@code null} for none
    */
   public TrustConfig setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -190,8 +190,8 @@ public final class TrustConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A user-defined name of the trust config. TrustConfig names must be unique globally and match
-   * pattern `projects/locations/trustConfigs`.
+   * Identifier. A user-defined name of the trust config. TrustConfig names must be unique globally
+   * and match pattern `projects/locations/trustConfigs`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -199,8 +199,8 @@ public final class TrustConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A user-defined name of the trust config. TrustConfig names must be unique globally and match
-   * pattern `projects/locations/trustConfigs`.
+   * Identifier. A user-defined name of the trust config. TrustConfig names must be unique globally
+   * and match pattern `projects/locations/trustConfigs`.
    * @param name name or {@code null} for none
    */
   public TrustConfig setName(java.lang.String name) {
@@ -209,9 +209,9 @@ public final class TrustConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Set of trust stores to perform validation against. This field is supported when TrustConfig is
-   * configured with Load Balancers, currently not supported for SPIFFE certificate validation. Only
-   * one TrustStore specified is currently allowed.
+   * Optional. Set of trust stores to perform validation against. This field is supported when
+   * TrustConfig is configured with Load Balancers, currently not supported for SPIFFE certificate
+   * validation. Only one TrustStore specified is currently allowed.
    * @return value or {@code null} for none
    */
   public java.util.List<TrustStore> getTrustStores() {
@@ -219,9 +219,9 @@ public final class TrustConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Set of trust stores to perform validation against. This field is supported when TrustConfig is
-   * configured with Load Balancers, currently not supported for SPIFFE certificate validation. Only
-   * one TrustStore specified is currently allowed.
+   * Optional. Set of trust stores to perform validation against. This field is supported when
+   * TrustConfig is configured with Load Balancers, currently not supported for SPIFFE certificate
+   * validation. Only one TrustStore specified is currently allowed.
    * @param trustStores trustStores or {@code null} for none
    */
   public TrustConfig setTrustStores(java.util.List<TrustStore> trustStores) {

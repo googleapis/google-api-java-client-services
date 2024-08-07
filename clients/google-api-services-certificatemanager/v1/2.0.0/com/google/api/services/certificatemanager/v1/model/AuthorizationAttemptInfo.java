@@ -40,7 +40,7 @@ public final class AuthorizationAttemptInfo extends com.google.api.client.json.G
   private java.lang.String details;
 
   /**
-   * Domain name of the authorization attempt.
+   * Output only. Domain name of the authorization attempt.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class AuthorizationAttemptInfo extends com.google.api.client.json.G
   }
 
   /**
-   * Domain name of the authorization attempt.
+   * Output only. Domain name of the authorization attempt.
    * @return value or {@code null} for none
    */
   public java.lang.String getDomain() {
@@ -90,7 +90,7 @@ public final class AuthorizationAttemptInfo extends com.google.api.client.json.G
   }
 
   /**
-   * Domain name of the authorization attempt.
+   * Output only. Domain name of the authorization attempt.
    * @param domain domain or {@code null} for none
    */
   public AuthorizationAttemptInfo setDomain(java.lang.String domain) {

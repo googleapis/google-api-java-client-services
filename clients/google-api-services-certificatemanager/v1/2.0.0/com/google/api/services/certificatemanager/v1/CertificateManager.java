@@ -1121,84 +1121,84 @@ public class CertificateManager extends com.google.api.client.googleapis.service
             return this;
           }
 
-          /** Filter expression to restrict the Certificates Configs returned. */
+          /** Optional. Filter expression to restrict the Certificates Configs returned. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filter expression to restrict the Certificates Configs returned.
+          /** Optional. Filter expression to restrict the Certificates Configs returned.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Filter expression to restrict the Certificates Configs returned. */
+          /** Optional. Filter expression to restrict the Certificates Configs returned. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
           /**
-           * A list of Certificate Config field names used to specify the order of the returned
-           * results. The default sorting order is ascending. To specify descending order for a
-           * field, add a suffix `" desc"`.
+           * Optional. A list of Certificate Config field names used to specify the order of the
+           * returned results. The default sorting order is ascending. To specify descending order
+           * for a field, add a suffix `" desc"`.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** A list of Certificate Config field names used to specify the order of the returned results. The
-         default sorting order is ascending. To specify descending order for a field, add a suffix `"
-         desc"`.
+          /** Optional. A list of Certificate Config field names used to specify the order of the returned
+         results. The default sorting order is ascending. To specify descending order for a field, add a
+         suffix `" desc"`.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
           /**
-           * A list of Certificate Config field names used to specify the order of the returned
-           * results. The default sorting order is ascending. To specify descending order for a
-           * field, add a suffix `" desc"`.
+           * Optional. A list of Certificate Config field names used to specify the order of the
+           * returned results. The default sorting order is ascending. To specify descending order
+           * for a field, add a suffix `" desc"`.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
           }
 
-          /** Maximum number of certificate configs to return per call. */
+          /** Optional. Maximum number of certificate configs to return per call. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Maximum number of certificate configs to return per call.
+          /** Optional. Maximum number of certificate configs to return per call.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Maximum number of certificate configs to return per call. */
+          /** Optional. Maximum number of certificate configs to return per call. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
           /**
-           * The value returned by the last `ListCertificateIssuanceConfigsResponse`. Indicates that
-           * this is a continuation of a prior `ListCertificateIssuanceConfigs` call, and that the
-           * system should return the next page of data.
+           * Optional. The value returned by the last `ListCertificateIssuanceConfigsResponse`.
+           * Indicates that this is a continuation of a prior `ListCertificateIssuanceConfigs` call,
+           * and that the system should return the next page of data.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last `ListCertificateIssuanceConfigsResponse`. Indicates that this is a
-         continuation of a prior `ListCertificateIssuanceConfigs` call, and that the system should return
-         the next page of data.
+          /** Optional. The value returned by the last `ListCertificateIssuanceConfigsResponse`. Indicates that
+         this is a continuation of a prior `ListCertificateIssuanceConfigs` call, and that the system should
+         return the next page of data.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * The value returned by the last `ListCertificateIssuanceConfigsResponse`. Indicates that
-           * this is a continuation of a prior `ListCertificateIssuanceConfigs` call, and that the
-           * system should return the next page of data.
+           * Optional. The value returned by the last `ListCertificateIssuanceConfigsResponse`.
+           * Indicates that this is a continuation of a prior `ListCertificateIssuanceConfigs` call,
+           * and that the system should return the next page of data.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -1208,6 +1208,173 @@ public class CertificateManager extends com.google.api.client.googleapis.service
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a CertificateIssuanceConfig.
+         *
+         * Create a request for the method "certificateIssuanceConfigs.patch".
+         *
+         * This request holds the parameters needed by the certificatemanager server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. A user-defined name of the certificate issuance config. CertificateIssuanceConfig names
+         *        must be unique globally and match pattern `projects/locations/certificateIssuanceConfigs`.
+         * @param content the {@link com.google.api.services.certificatemanager.v1.model.CertificateIssuanceConfig}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.certificatemanager.v1.model.CertificateIssuanceConfig content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends CertificateManagerRequest<com.google.api.services.certificatemanager.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/certificateIssuanceConfigs/[^/]+$");
+
+          /**
+           * Updates a CertificateIssuanceConfig.
+           *
+           * Create a request for the method "certificateIssuanceConfigs.patch".
+           *
+           * This request holds the parameters needed by the the certificatemanager server.  After setting
+           * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. A user-defined name of the certificate issuance config. CertificateIssuanceConfig names
+         *        must be unique globally and match pattern `projects/locations/certificateIssuanceConfigs`.
+           * @param content the {@link com.google.api.services.certificatemanager.v1.model.CertificateIssuanceConfig}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.certificatemanager.v1.model.CertificateIssuanceConfig content) {
+            super(CertificateManager.this, "PATCH", REST_PATH, content, com.google.api.services.certificatemanager.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/certificateIssuanceConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. A user-defined name of the certificate issuance config.
+           * CertificateIssuanceConfig names must be unique globally and match pattern
+           * `projects/locations/certificateIssuanceConfigs`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. A user-defined name of the certificate issuance config. CertificateIssuanceConfig names
+         must be unique globally and match pattern `projects/locations/certificateIssuanceConfigs`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. A user-defined name of the certificate issuance config.
+           * CertificateIssuanceConfig names must be unique globally and match pattern
+           * `projects/locations/certificateIssuanceConfigs`.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/certificateIssuanceConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. The update mask applies to the resource. For the `FieldMask` definition, see
+           * https://developers.google.com/protocol-
+           * buffers/docs/reference/google.protobuf#fieldmask.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. The update mask applies to the resource. For the `FieldMask` definition, see
+         https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. The update mask applies to the resource. For the `FieldMask` definition, see
+           * https://developers.google.com/protocol-
+           * buffers/docs/reference/google.protobuf#fieldmask.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
 
@@ -1816,32 +1983,32 @@ public class CertificateManager extends com.google.api.client.googleapis.service
             return this;
           }
 
-          /** Filter expression to restrict the Certificates Maps returned. */
+          /** Optional. Filter expression to restrict the Certificates Maps returned. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filter expression to restrict the Certificates Maps returned.
+          /** Optional. Filter expression to restrict the Certificates Maps returned.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Filter expression to restrict the Certificates Maps returned. */
+          /** Optional. Filter expression to restrict the Certificates Maps returned. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
           /**
-           * A list of Certificate Map field names used to specify the order of the returned
-           * results. The default sorting order is ascending. To specify descending order for a
-           * field, add a suffix `" desc"`.
+           * Optional. A list of Certificate Map field names used to specify the order of the
+           * returned results. The default sorting order is ascending. To specify descending order
+           * for a field, add a suffix `" desc"`.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** A list of Certificate Map field names used to specify the order of the returned results. The
-         default sorting order is ascending. To specify descending order for a field, add a suffix `"
+          /** Optional. A list of Certificate Map field names used to specify the order of the returned results.
+         The default sorting order is ascending. To specify descending order for a field, add a suffix `"
          desc"`.
            */
           public java.lang.String getOrderBy() {
@@ -1849,50 +2016,51 @@ public class CertificateManager extends com.google.api.client.googleapis.service
           }
 
           /**
-           * A list of Certificate Map field names used to specify the order of the returned
-           * results. The default sorting order is ascending. To specify descending order for a
-           * field, add a suffix `" desc"`.
+           * Optional. A list of Certificate Map field names used to specify the order of the
+           * returned results. The default sorting order is ascending. To specify descending order
+           * for a field, add a suffix `" desc"`.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
           }
 
-          /** Maximum number of certificate maps to return per call. */
+          /** Optional. Maximum number of certificate maps to return per call. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Maximum number of certificate maps to return per call.
+          /** Optional. Maximum number of certificate maps to return per call.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Maximum number of certificate maps to return per call. */
+          /** Optional. Maximum number of certificate maps to return per call. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
           /**
-           * The value returned by the last `ListCertificateMapsResponse`. Indicates that this is a
-           * continuation of a prior `ListCertificateMaps` call, and that the system should return
-           * the next page of data.
+           * Optional. The value returned by the last `ListCertificateMapsResponse`. Indicates that
+           * this is a continuation of a prior `ListCertificateMaps` call, and that the system
+           * should return the next page of data.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last `ListCertificateMapsResponse`. Indicates that this is a continuation
-         of a prior `ListCertificateMaps` call, and that the system should return the next page of data.
+          /** Optional. The value returned by the last `ListCertificateMapsResponse`. Indicates that this is a
+         continuation of a prior `ListCertificateMaps` call, and that the system should return the next page
+         of data.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * The value returned by the last `ListCertificateMapsResponse`. Indicates that this is a
-           * continuation of a prior `ListCertificateMaps` call, and that the system should return
-           * the next page of data.
+           * Optional. The value returned by the last `ListCertificateMapsResponse`. Indicates that
+           * this is a continuation of a prior `ListCertificateMaps` call, and that the system
+           * should return the next page of data.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -1912,8 +2080,8 @@ public class CertificateManager extends com.google.api.client.googleapis.service
          * This request holds the parameters needed by the certificatemanager server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name A user-defined name of the Certificate Map. Certificate Map names must be unique globally and match
-         *        pattern `projects/locations/certificateMaps`.
+         * @param name Identifier. A user-defined name of the Certificate Map. Certificate Map names must be unique
+         *        globally and match pattern `projects/locations/certificateMaps`.
          * @param content the {@link com.google.api.services.certificatemanager.v1.model.CertificateMap}
          * @return the request
          */
@@ -1941,8 +2109,8 @@ public class CertificateManager extends com.google.api.client.googleapis.service
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name A user-defined name of the Certificate Map. Certificate Map names must be unique globally and match
-         *        pattern `projects/locations/certificateMaps`.
+           * @param name Identifier. A user-defined name of the Certificate Map. Certificate Map names must be unique
+         *        globally and match pattern `projects/locations/certificateMaps`.
            * @param content the {@link com.google.api.services.certificatemanager.v1.model.CertificateMap}
            * @since 1.13
            */
@@ -2012,22 +2180,22 @@ public class CertificateManager extends com.google.api.client.googleapis.service
           }
 
           /**
-           * A user-defined name of the Certificate Map. Certificate Map names must be unique
-           * globally and match pattern `projects/locations/certificateMaps`.
+           * Identifier. A user-defined name of the Certificate Map. Certificate Map names must be
+           * unique globally and match pattern `projects/locations/certificateMaps`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** A user-defined name of the Certificate Map. Certificate Map names must be unique globally and match
-         pattern `projects/locations/certificateMaps`.
+          /** Identifier. A user-defined name of the Certificate Map. Certificate Map names must be unique
+         globally and match pattern `projects/locations/certificateMaps`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * A user-defined name of the Certificate Map. Certificate Map names must be unique
-           * globally and match pattern `projects/locations/certificateMaps`.
+           * Identifier. A user-defined name of the Certificate Map. Certificate Map names must be
+           * unique globally and match pattern `projects/locations/certificateMaps`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2677,42 +2845,42 @@ public class CertificateManager extends com.google.api.client.googleapis.service
               return this;
             }
 
-            /** Filter expression to restrict the returned Certificate Map Entries. */
+            /** Optional. Filter expression to restrict the returned Certificate Map Entries. */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Filter expression to restrict the returned Certificate Map Entries.
+            /** Optional. Filter expression to restrict the returned Certificate Map Entries.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
-            /** Filter expression to restrict the returned Certificate Map Entries. */
+            /** Optional. Filter expression to restrict the returned Certificate Map Entries. */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
             }
 
             /**
-             * A list of Certificate Map Entry field names used to specify the order of the returned
-             * results. The default sorting order is ascending. To specify descending order for a
-             * field, add a suffix `" desc"`.
+             * Optional. A list of Certificate Map Entry field names used to specify the order of
+             * the returned results. The default sorting order is ascending. To specify descending
+             * order for a field, add a suffix `" desc"`.
              */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
-            /** A list of Certificate Map Entry field names used to specify the order of the returned results. The
-           default sorting order is ascending. To specify descending order for a field, add a suffix `"
-           desc"`.
+            /** Optional. A list of Certificate Map Entry field names used to specify the order of the returned
+           results. The default sorting order is ascending. To specify descending order for a field, add a
+           suffix `" desc"`.
              */
             public java.lang.String getOrderBy() {
               return orderBy;
             }
 
             /**
-             * A list of Certificate Map Entry field names used to specify the order of the returned
-             * results. The default sorting order is ascending. To specify descending order for a
-             * field, add a suffix `" desc"`.
+             * Optional. A list of Certificate Map Entry field names used to specify the order of
+             * the returned results. The default sorting order is ascending. To specify descending
+             * order for a field, add a suffix `" desc"`.
              */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;
@@ -2720,25 +2888,25 @@ public class CertificateManager extends com.google.api.client.googleapis.service
             }
 
             /**
-             * Maximum number of certificate map entries to return. The service may return fewer
-             * than this value. If unspecified, at most 50 certificate map entries will be returned.
-             * The maximum value is 1000; values above 1000 will be coerced to 1000.
+             * Optional. Maximum number of certificate map entries to return. The service may return
+             * fewer than this value. If unspecified, at most 50 certificate map entries will be
+             * returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Maximum number of certificate map entries to return. The service may return fewer than this value.
-           If unspecified, at most 50 certificate map entries will be returned. The maximum value is 1000;
-           values above 1000 will be coerced to 1000.
+            /** Optional. Maximum number of certificate map entries to return. The service may return fewer than
+           this value. If unspecified, at most 50 certificate map entries will be returned. The maximum value
+           is 1000; values above 1000 will be coerced to 1000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * Maximum number of certificate map entries to return. The service may return fewer
-             * than this value. If unspecified, at most 50 certificate map entries will be returned.
-             * The maximum value is 1000; values above 1000 will be coerced to 1000.
+             * Optional. Maximum number of certificate map entries to return. The service may return
+             * fewer than this value. If unspecified, at most 50 certificate map entries will be
+             * returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -2746,25 +2914,25 @@ public class CertificateManager extends com.google.api.client.googleapis.service
             }
 
             /**
-             * The value returned by the last `ListCertificateMapEntriesResponse`. Indicates that
-             * this is a continuation of a prior `ListCertificateMapEntries` call, and that the
-             * system should return the next page of data.
+             * Optional. The value returned by the last `ListCertificateMapEntriesResponse`.
+             * Indicates that this is a continuation of a prior `ListCertificateMapEntries` call,
+             * and that the system should return the next page of data.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The value returned by the last `ListCertificateMapEntriesResponse`. Indicates that this is a
-           continuation of a prior `ListCertificateMapEntries` call, and that the system should return the
-           next page of data.
+            /** Optional. The value returned by the last `ListCertificateMapEntriesResponse`. Indicates that this
+           is a continuation of a prior `ListCertificateMapEntries` call, and that the system should return
+           the next page of data.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * The value returned by the last `ListCertificateMapEntriesResponse`. Indicates that
-             * this is a continuation of a prior `ListCertificateMapEntries` call, and that the
-             * system should return the next page of data.
+             * Optional. The value returned by the last `ListCertificateMapEntriesResponse`.
+             * Indicates that this is a continuation of a prior `ListCertificateMapEntries` call,
+             * and that the system should return the next page of data.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -2784,8 +2952,9 @@ public class CertificateManager extends com.google.api.client.googleapis.service
            * This request holds the parameters needed by the certificatemanager server.  After setting any
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name A user-defined name of the Certificate Map Entry. Certificate Map Entry names must be unique
-           *        globally and match pattern `projects/locations/certificateMaps/certificateMapEntries`.
+           * @param name Identifier. A user-defined name of the Certificate Map Entry. Certificate Map Entry names must be
+           *        unique globally and match pattern
+           *        `projects/locations/certificateMaps/certificateMapEntries`.
            * @param content the {@link com.google.api.services.certificatemanager.v1.model.CertificateMapEntry}
            * @return the request
            */
@@ -2813,8 +2982,9 @@ public class CertificateManager extends com.google.api.client.googleapis.service
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name A user-defined name of the Certificate Map Entry. Certificate Map Entry names must be unique
-           *        globally and match pattern `projects/locations/certificateMaps/certificateMapEntries`.
+             * @param name Identifier. A user-defined name of the Certificate Map Entry. Certificate Map Entry names must be
+           *        unique globally and match pattern
+           *        `projects/locations/certificateMaps/certificateMapEntries`.
              * @param content the {@link com.google.api.services.certificatemanager.v1.model.CertificateMapEntry}
              * @since 1.13
              */
@@ -2884,23 +3054,23 @@ public class CertificateManager extends com.google.api.client.googleapis.service
             }
 
             /**
-             * A user-defined name of the Certificate Map Entry. Certificate Map Entry names must be
-             * unique globally and match pattern
+             * Identifier. A user-defined name of the Certificate Map Entry. Certificate Map Entry
+             * names must be unique globally and match pattern
              * `projects/locations/certificateMaps/certificateMapEntries`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** A user-defined name of the Certificate Map Entry. Certificate Map Entry names must be unique
-           globally and match pattern `projects/locations/certificateMaps/certificateMapEntries`.
+            /** Identifier. A user-defined name of the Certificate Map Entry. Certificate Map Entry names must be
+           unique globally and match pattern `projects/locations/certificateMaps/certificateMapEntries`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * A user-defined name of the Certificate Map Entry. Certificate Map Entry names must be
-             * unique globally and match pattern
+             * Identifier. A user-defined name of the Certificate Map Entry. Certificate Map Entry
+             * names must be unique globally and match pattern
              * `projects/locations/certificateMaps/certificateMapEntries`.
              */
             public Patch setName(java.lang.String name) {
@@ -3548,82 +3718,84 @@ public class CertificateManager extends com.google.api.client.googleapis.service
             return this;
           }
 
-          /** Filter expression to restrict the Certificates returned. */
+          /** Optional. Filter expression to restrict the Certificates returned. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filter expression to restrict the Certificates returned.
+          /** Optional. Filter expression to restrict the Certificates returned.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Filter expression to restrict the Certificates returned. */
+          /** Optional. Filter expression to restrict the Certificates returned. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
           /**
-           * A list of Certificate field names used to specify the order of the returned results.
-           * The default sorting order is ascending. To specify descending order for a field, add a
-           * suffix `" desc"`.
+           * Optional. A list of Certificate field names used to specify the order of the returned
+           * results. The default sorting order is ascending. To specify descending order for a
+           * field, add a suffix `" desc"`.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** A list of Certificate field names used to specify the order of the returned results. The default
-         sorting order is ascending. To specify descending order for a field, add a suffix `" desc"`.
+          /** Optional. A list of Certificate field names used to specify the order of the returned results. The
+         default sorting order is ascending. To specify descending order for a field, add a suffix `"
+         desc"`.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
           /**
-           * A list of Certificate field names used to specify the order of the returned results.
-           * The default sorting order is ascending. To specify descending order for a field, add a
-           * suffix `" desc"`.
+           * Optional. A list of Certificate field names used to specify the order of the returned
+           * results. The default sorting order is ascending. To specify descending order for a
+           * field, add a suffix `" desc"`.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
           }
 
-          /** Maximum number of certificates to return per call. */
+          /** Optional. Maximum number of certificates to return per call. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Maximum number of certificates to return per call.
+          /** Optional. Maximum number of certificates to return per call.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Maximum number of certificates to return per call. */
+          /** Optional. Maximum number of certificates to return per call. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
           /**
-           * The value returned by the last `ListCertificatesResponse`. Indicates that this is a
-           * continuation of a prior `ListCertificates` call, and that the system should return the
-           * next page of data.
+           * Optional. The value returned by the last `ListCertificatesResponse`. Indicates that
+           * this is a continuation of a prior `ListCertificates` call, and that the system should
+           * return the next page of data.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last `ListCertificatesResponse`. Indicates that this is a continuation of
-         a prior `ListCertificates` call, and that the system should return the next page of data.
+          /** Optional. The value returned by the last `ListCertificatesResponse`. Indicates that this is a
+         continuation of a prior `ListCertificates` call, and that the system should return the next page of
+         data.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * The value returned by the last `ListCertificatesResponse`. Indicates that this is a
-           * continuation of a prior `ListCertificates` call, and that the system should return the
-           * next page of data.
+           * Optional. The value returned by the last `ListCertificatesResponse`. Indicates that
+           * this is a continuation of a prior `ListCertificates` call, and that the system should
+           * return the next page of data.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -3643,8 +3815,8 @@ public class CertificateManager extends com.google.api.client.googleapis.service
          * This request holds the parameters needed by the certificatemanager server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name A user-defined name of the certificate. Certificate names must be unique globally and match pattern
-         *        `projects/locations/certificates`.
+         * @param name Identifier. A user-defined name of the certificate. Certificate names must be unique globally and
+         *        match pattern `projects/locations/certificates`.
          * @param content the {@link com.google.api.services.certificatemanager.v1.model.Certificate}
          * @return the request
          */
@@ -3672,8 +3844,8 @@ public class CertificateManager extends com.google.api.client.googleapis.service
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name A user-defined name of the certificate. Certificate names must be unique globally and match pattern
-         *        `projects/locations/certificates`.
+           * @param name Identifier. A user-defined name of the certificate. Certificate names must be unique globally and
+         *        match pattern `projects/locations/certificates`.
            * @param content the {@link com.google.api.services.certificatemanager.v1.model.Certificate}
            * @since 1.13
            */
@@ -3743,22 +3915,22 @@ public class CertificateManager extends com.google.api.client.googleapis.service
           }
 
           /**
-           * A user-defined name of the certificate. Certificate names must be unique globally and
-           * match pattern `projects/locations/certificates`.
+           * Identifier. A user-defined name of the certificate. Certificate names must be unique
+           * globally and match pattern `projects/locations/certificates`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** A user-defined name of the certificate. Certificate names must be unique globally and match pattern
-         `projects/locations/certificates`.
+          /** Identifier. A user-defined name of the certificate. Certificate names must be unique globally and
+         match pattern `projects/locations/certificates`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * A user-defined name of the certificate. Certificate names must be unique globally and
-           * match pattern `projects/locations/certificates`.
+           * Identifier. A user-defined name of the certificate. Certificate names must be unique
+           * globally and match pattern `projects/locations/certificates`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4404,73 +4576,73 @@ public class CertificateManager extends com.google.api.client.googleapis.service
             return this;
           }
 
-          /** Filter expression to restrict the Dns Authorizations returned. */
+          /** Optional. Filter expression to restrict the Dns Authorizations returned. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filter expression to restrict the Dns Authorizations returned.
+          /** Optional. Filter expression to restrict the Dns Authorizations returned.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Filter expression to restrict the Dns Authorizations returned. */
+          /** Optional. Filter expression to restrict the Dns Authorizations returned. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
           /**
-           * A list of Dns Authorization field names used to specify the order of the returned
-           * results. The default sorting order is ascending. To specify descending order for a
-           * field, add a suffix `" desc"`.
+           * Optional. A list of Dns Authorization field names used to specify the order of the
+           * returned results. The default sorting order is ascending. To specify descending order
+           * for a field, add a suffix `" desc"`.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** A list of Dns Authorization field names used to specify the order of the returned results. The
-         default sorting order is ascending. To specify descending order for a field, add a suffix `"
-         desc"`.
+          /** Optional. A list of Dns Authorization field names used to specify the order of the returned
+         results. The default sorting order is ascending. To specify descending order for a field, add a
+         suffix `" desc"`.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
           /**
-           * A list of Dns Authorization field names used to specify the order of the returned
-           * results. The default sorting order is ascending. To specify descending order for a
-           * field, add a suffix `" desc"`.
+           * Optional. A list of Dns Authorization field names used to specify the order of the
+           * returned results. The default sorting order is ascending. To specify descending order
+           * for a field, add a suffix `" desc"`.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
           }
 
-          /** Maximum number of dns authorizations to return per call. */
+          /** Optional. Maximum number of dns authorizations to return per call. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Maximum number of dns authorizations to return per call.
+          /** Optional. Maximum number of dns authorizations to return per call.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Maximum number of dns authorizations to return per call. */
+          /** Optional. Maximum number of dns authorizations to return per call. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
           /**
-           * The value returned by the last `ListDnsAuthorizationsResponse`. Indicates that this is
-           * a continuation of a prior `ListDnsAuthorizations` call, and that the system should
-           * return the next page of data.
+           * Optional. The value returned by the last `ListDnsAuthorizationsResponse`. Indicates
+           * that this is a continuation of a prior `ListDnsAuthorizations` call, and that the
+           * system should return the next page of data.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last `ListDnsAuthorizationsResponse`. Indicates that this is a
+          /** Optional. The value returned by the last `ListDnsAuthorizationsResponse`. Indicates that this is a
          continuation of a prior `ListDnsAuthorizations` call, and that the system should return the next
          page of data.
            */
@@ -4479,9 +4651,9 @@ public class CertificateManager extends com.google.api.client.googleapis.service
           }
 
           /**
-           * The value returned by the last `ListDnsAuthorizationsResponse`. Indicates that this is
-           * a continuation of a prior `ListDnsAuthorizations` call, and that the system should
-           * return the next page of data.
+           * Optional. The value returned by the last `ListDnsAuthorizationsResponse`. Indicates
+           * that this is a continuation of a prior `ListDnsAuthorizations` call, and that the
+           * system should return the next page of data.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -4501,8 +4673,8 @@ public class CertificateManager extends com.google.api.client.googleapis.service
          * This request holds the parameters needed by the certificatemanager server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name A user-defined name of the dns authorization. DnsAuthorization names must be unique globally and
-         *        match pattern `projects/locations/dnsAuthorizations`.
+         * @param name Identifier. A user-defined name of the dns authorization. DnsAuthorization names must be unique
+         *        globally and match pattern `projects/locations/dnsAuthorizations`.
          * @param content the {@link com.google.api.services.certificatemanager.v1.model.DnsAuthorization}
          * @return the request
          */
@@ -4530,8 +4702,8 @@ public class CertificateManager extends com.google.api.client.googleapis.service
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name A user-defined name of the dns authorization. DnsAuthorization names must be unique globally and
-         *        match pattern `projects/locations/dnsAuthorizations`.
+           * @param name Identifier. A user-defined name of the dns authorization. DnsAuthorization names must be unique
+         *        globally and match pattern `projects/locations/dnsAuthorizations`.
            * @param content the {@link com.google.api.services.certificatemanager.v1.model.DnsAuthorization}
            * @since 1.13
            */
@@ -4601,22 +4773,22 @@ public class CertificateManager extends com.google.api.client.googleapis.service
           }
 
           /**
-           * A user-defined name of the dns authorization. DnsAuthorization names must be unique
-           * globally and match pattern `projects/locations/dnsAuthorizations`.
+           * Identifier. A user-defined name of the dns authorization. DnsAuthorization names must
+           * be unique globally and match pattern `projects/locations/dnsAuthorizations`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** A user-defined name of the dns authorization. DnsAuthorization names must be unique globally and
-         match pattern `projects/locations/dnsAuthorizations`.
+          /** Identifier. A user-defined name of the dns authorization. DnsAuthorization names must be unique
+         globally and match pattern `projects/locations/dnsAuthorizations`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * A user-defined name of the dns authorization. DnsAuthorization names must be unique
-           * globally and match pattern `projects/locations/dnsAuthorizations`.
+           * Identifier. A user-defined name of the dns authorization. DnsAuthorization names must
+           * be unique globally and match pattern `projects/locations/dnsAuthorizations`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -5601,24 +5773,24 @@ public class CertificateManager extends com.google.api.client.googleapis.service
           }
 
           /**
-           * The current etag of the TrustConfig. If an etag is provided and does not match the
-           * current etag of the resource, deletion will be blocked and an ABORTED error will be
-           * returned.
+           * Optional. The current etag of the TrustConfig. If an etag is provided and does not
+           * match the current etag of the resource, deletion will be blocked and an ABORTED error
+           * will be returned.
            */
           @com.google.api.client.util.Key
           private java.lang.String etag;
 
-          /** The current etag of the TrustConfig. If an etag is provided and does not match the current etag of
-         the resource, deletion will be blocked and an ABORTED error will be returned.
+          /** Optional. The current etag of the TrustConfig. If an etag is provided and does not match the
+         current etag of the resource, deletion will be blocked and an ABORTED error will be returned.
            */
           public java.lang.String getEtag() {
             return etag;
           }
 
           /**
-           * The current etag of the TrustConfig. If an etag is provided and does not match the
-           * current etag of the resource, deletion will be blocked and an ABORTED error will be
-           * returned.
+           * Optional. The current etag of the TrustConfig. If an etag is provided and does not
+           * match the current etag of the resource, deletion will be blocked and an ABORTED error
+           * will be returned.
            */
           public Delete setEtag(java.lang.String etag) {
             this.etag = etag;
@@ -5921,82 +6093,84 @@ public class CertificateManager extends com.google.api.client.googleapis.service
             return this;
           }
 
-          /** Filter expression to restrict the TrustConfigs returned. */
+          /** Optional. Filter expression to restrict the TrustConfigs returned. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filter expression to restrict the TrustConfigs returned.
+          /** Optional. Filter expression to restrict the TrustConfigs returned.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Filter expression to restrict the TrustConfigs returned. */
+          /** Optional. Filter expression to restrict the TrustConfigs returned. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
           /**
-           * A list of TrustConfig field names used to specify the order of the returned results.
-           * The default sorting order is ascending. To specify descending order for a field, add a
-           * suffix `" desc"`.
+           * Optional. A list of TrustConfig field names used to specify the order of the returned
+           * results. The default sorting order is ascending. To specify descending order for a
+           * field, add a suffix `" desc"`.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** A list of TrustConfig field names used to specify the order of the returned results. The default
-         sorting order is ascending. To specify descending order for a field, add a suffix `" desc"`.
+          /** Optional. A list of TrustConfig field names used to specify the order of the returned results. The
+         default sorting order is ascending. To specify descending order for a field, add a suffix `"
+         desc"`.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
           /**
-           * A list of TrustConfig field names used to specify the order of the returned results.
-           * The default sorting order is ascending. To specify descending order for a field, add a
-           * suffix `" desc"`.
+           * Optional. A list of TrustConfig field names used to specify the order of the returned
+           * results. The default sorting order is ascending. To specify descending order for a
+           * field, add a suffix `" desc"`.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
           }
 
-          /** Maximum number of TrustConfigs to return per call. */
+          /** Optional. Maximum number of TrustConfigs to return per call. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Maximum number of TrustConfigs to return per call.
+          /** Optional. Maximum number of TrustConfigs to return per call.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Maximum number of TrustConfigs to return per call. */
+          /** Optional. Maximum number of TrustConfigs to return per call. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
           /**
-           * The value returned by the last `ListTrustConfigsResponse`. Indicates that this is a
-           * continuation of a prior `ListTrustConfigs` call, and that the system should return the
-           * next page of data.
+           * Optional. The value returned by the last `ListTrustConfigsResponse`. Indicates that
+           * this is a continuation of a prior `ListTrustConfigs` call, and that the system should
+           * return the next page of data.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last `ListTrustConfigsResponse`. Indicates that this is a continuation of
-         a prior `ListTrustConfigs` call, and that the system should return the next page of data.
+          /** Optional. The value returned by the last `ListTrustConfigsResponse`. Indicates that this is a
+         continuation of a prior `ListTrustConfigs` call, and that the system should return the next page of
+         data.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * The value returned by the last `ListTrustConfigsResponse`. Indicates that this is a
-           * continuation of a prior `ListTrustConfigs` call, and that the system should return the
-           * next page of data.
+           * Optional. The value returned by the last `ListTrustConfigsResponse`. Indicates that
+           * this is a continuation of a prior `ListTrustConfigs` call, and that the system should
+           * return the next page of data.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -6016,8 +6190,8 @@ public class CertificateManager extends com.google.api.client.googleapis.service
          * This request holds the parameters needed by the certificatemanager server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name A user-defined name of the trust config. TrustConfig names must be unique globally and match pattern
-         *        `projects/locations/trustConfigs`.
+         * @param name Identifier. A user-defined name of the trust config. TrustConfig names must be unique globally and
+         *        match pattern `projects/locations/trustConfigs`.
          * @param content the {@link com.google.api.services.certificatemanager.v1.model.TrustConfig}
          * @return the request
          */
@@ -6045,8 +6219,8 @@ public class CertificateManager extends com.google.api.client.googleapis.service
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name A user-defined name of the trust config. TrustConfig names must be unique globally and match pattern
-         *        `projects/locations/trustConfigs`.
+           * @param name Identifier. A user-defined name of the trust config. TrustConfig names must be unique globally and
+         *        match pattern `projects/locations/trustConfigs`.
            * @param content the {@link com.google.api.services.certificatemanager.v1.model.TrustConfig}
            * @since 1.13
            */
@@ -6116,22 +6290,22 @@ public class CertificateManager extends com.google.api.client.googleapis.service
           }
 
           /**
-           * A user-defined name of the trust config. TrustConfig names must be unique globally and
-           * match pattern `projects/locations/trustConfigs`.
+           * Identifier. A user-defined name of the trust config. TrustConfig names must be unique
+           * globally and match pattern `projects/locations/trustConfigs`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** A user-defined name of the trust config. TrustConfig names must be unique globally and match
-         pattern `projects/locations/trustConfigs`.
+          /** Identifier. A user-defined name of the trust config. TrustConfig names must be unique globally and
+         match pattern `projects/locations/trustConfigs`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * A user-defined name of the trust config. TrustConfig names must be unique globally and
-           * match pattern `projects/locations/trustConfigs`.
+           * Identifier. A user-defined name of the trust config. TrustConfig names must be unique
+           * globally and match pattern `projects/locations/trustConfigs`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

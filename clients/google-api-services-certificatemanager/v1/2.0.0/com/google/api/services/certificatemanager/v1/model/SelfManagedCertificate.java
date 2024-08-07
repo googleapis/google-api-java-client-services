@@ -32,23 +32,23 @@ package com.google.api.services.certificatemanager.v1.model;
 public final class SelfManagedCertificate extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input only. The PEM-encoded certificate chain. Leaf certificate comes first, followed by
-   * intermediate ones if any.
+   * Optional. Input only. The PEM-encoded certificate chain. Leaf certificate comes first, followed
+   * by intermediate ones if any.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pemCertificate;
 
   /**
-   * Input only. The PEM-encoded private key of the leaf certificate.
+   * Optional. Input only. The PEM-encoded private key of the leaf certificate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pemPrivateKey;
 
   /**
-   * Input only. The PEM-encoded certificate chain. Leaf certificate comes first, followed by
-   * intermediate ones if any.
+   * Optional. Input only. The PEM-encoded certificate chain. Leaf certificate comes first, followed
+   * by intermediate ones if any.
    * @return value or {@code null} for none
    */
   public java.lang.String getPemCertificate() {
@@ -56,8 +56,8 @@ public final class SelfManagedCertificate extends com.google.api.client.json.Gen
   }
 
   /**
-   * Input only. The PEM-encoded certificate chain. Leaf certificate comes first, followed by
-   * intermediate ones if any.
+   * Optional. Input only. The PEM-encoded certificate chain. Leaf certificate comes first, followed
+   * by intermediate ones if any.
    * @param pemCertificate pemCertificate or {@code null} for none
    */
   public SelfManagedCertificate setPemCertificate(java.lang.String pemCertificate) {
@@ -66,7 +66,7 @@ public final class SelfManagedCertificate extends com.google.api.client.json.Gen
   }
 
   /**
-   * Input only. The PEM-encoded private key of the leaf certificate.
+   * Optional. Input only. The PEM-encoded private key of the leaf certificate.
    * @return value or {@code null} for none
    */
   public java.lang.String getPemPrivateKey() {
@@ -74,7 +74,7 @@ public final class SelfManagedCertificate extends com.google.api.client.json.Gen
   }
 
   /**
-   * Input only. The PEM-encoded private key of the leaf certificate.
+   * Optional. Input only. The PEM-encoded private key of the leaf certificate.
    * @param pemPrivateKey pemPrivateKey or {@code null} for none
    */
   public SelfManagedCertificate setPemPrivateKey(java.lang.String pemPrivateKey) {

@@ -31,7 +31,7 @@ package com.google.api.services.cloudbuild.v2.model;
 public final class TaskRef extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the task.
+   * Optional. Name of the task.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class TaskRef extends com.google.api.client.json.GenericJson {
   private java.lang.String resolver;
 
   /**
-   * Name of the task.
+   * Optional. Name of the task.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -68,7 +68,7 @@ public final class TaskRef extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the task.
+   * Optional. Name of the task.
    * @param name name or {@code null} for none
    */
   public TaskRef setName(java.lang.String name) {

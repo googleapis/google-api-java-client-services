@@ -30,7 +30,7 @@ package com.google.api.services.docs.v1.model;
 public final class TabProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * The index of the tab within the parent.
+   * The zero-based index of the tab within the parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class TabProperties extends com.google.api.client.json.GenericJson 
   private java.lang.String title;
 
   /**
-   * The index of the tab within the parent.
+   * The zero-based index of the tab within the parent.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIndex() {
@@ -74,7 +74,7 @@ public final class TabProperties extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The index of the tab within the parent.
+   * The zero-based index of the tab within the parent.
    * @param index index or {@code null} for none
    */
   public TabProperties setIndex(java.lang.Integer index) {

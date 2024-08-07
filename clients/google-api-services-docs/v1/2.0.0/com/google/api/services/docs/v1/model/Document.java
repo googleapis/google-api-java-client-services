@@ -30,7 +30,10 @@ package com.google.api.services.docs.v1.model;
 public final class Document extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The main body of the document.
+   * Output only. The main body of the document. Legacy field: Instead, use
+   * Document.tabs.documentTab.body, which exposes the actual document content from all tabs when
+   * the includeTabsContent parameter is set to `true`. If `false` or unset, this field contains
+   * information about the first tab in the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,63 +47,90 @@ public final class Document extends com.google.api.client.json.GenericJson {
   private java.lang.String documentId;
 
   /**
-   * Output only. The style of the document.
+   * Output only. The style of the document. Legacy field: Instead, use
+   * Document.tabs.documentTab.documentStyle, which exposes the actual document content from all
+   * tabs when the includeTabsContent parameter is set to `true`. If `false` or unset, this field
+   * contains information about the first tab in the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DocumentStyle documentStyle;
 
   /**
-   * Output only. The footers in the document, keyed by footer ID.
+   * Output only. The footers in the document, keyed by footer ID. Legacy field: Instead, use
+   * Document.tabs.documentTab.footers, which exposes the actual document content from all tabs when
+   * the includeTabsContent parameter is set to `true`. If `false` or unset, this field contains
+   * information about the first tab in the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, Footer> footers;
 
   /**
-   * Output only. The footnotes in the document, keyed by footnote ID.
+   * Output only. The footnotes in the document, keyed by footnote ID. Legacy field: Instead, use
+   * Document.tabs.documentTab.footnotes, which exposes the actual document content from all tabs
+   * when the includeTabsContent parameter is set to `true`. If `false` or unset, this field
+   * contains information about the first tab in the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, Footnote> footnotes;
 
   /**
-   * Output only. The headers in the document, keyed by header ID.
+   * Output only. The headers in the document, keyed by header ID. Legacy field: Instead, use
+   * Document.tabs.documentTab.headers, which exposes the actual document content from all tabs when
+   * the includeTabsContent parameter is set to `true`. If `false` or unset, this field contains
+   * information about the first tab in the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, Header> headers;
 
   /**
-   * Output only. The inline objects in the document, keyed by object ID.
+   * Output only. The inline objects in the document, keyed by object ID. Legacy field: Instead, use
+   * Document.tabs.documentTab.inlineObjects, which exposes the actual document content from all
+   * tabs when the includeTabsContent parameter is set to `true`. If `false` or unset, this field
+   * contains information about the first tab in the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, InlineObject> inlineObjects;
 
   /**
-   * Output only. The lists in the document, keyed by list ID.
+   * Output only. The lists in the document, keyed by list ID. Legacy field: Instead, use
+   * Document.tabs.documentTab.lists, which exposes the actual document content from all tabs when
+   * the includeTabsContent parameter is set to `true`. If `false` or unset, this field contains
+   * information about the first tab in the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, List> lists;
 
   /**
-   * Output only. The named ranges in the document, keyed by name.
+   * Output only. The named ranges in the document, keyed by name. Legacy field: Instead, use
+   * Document.tabs.documentTab.namedRanges, which exposes the actual document content from all tabs
+   * when the includeTabsContent parameter is set to `true`. If `false` or unset, this field
+   * contains information about the first tab in the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, NamedRanges> namedRanges;
 
   /**
-   * Output only. The named styles of the document.
+   * Output only. The named styles of the document. Legacy field: Instead, use
+   * Document.tabs.documentTab.namedStyles, which exposes the actual document content from all tabs
+   * when the includeTabsContent parameter is set to `true`. If `false` or unset, this field
+   * contains information about the first tab in the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private NamedStyles namedStyles;
 
   /**
-   * Output only. The positioned objects in the document, keyed by object ID.
+   * Output only. The positioned objects in the document, keyed by object ID. Legacy field: Instead,
+   * use Document.tabs.documentTab.positionedObjects, which exposes the actual document content from
+   * all tabs when the includeTabsContent parameter is set to `true`. If `false` or unset, this
+   * field contains information about the first tab in the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,7 +152,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   private java.lang.String revisionId;
 
   /**
-   * Output only. The suggested changes to the style of the document, keyed by suggestion ID.
+   * Output only. The suggested changes to the style of the document, keyed by suggestion ID. Legacy
+   * field: Instead, use Document.tabs.documentTab.suggestedDocumentStyleChanges, which exposes the
+   * actual document content from all tabs when the includeTabsContent parameter is set to `true`.
+   * If `false` or unset, this field contains information about the first tab in the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,6 +163,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The suggested changes to the named styles of the document, keyed by suggestion ID.
+   * Legacy field: Instead, use Document.tabs.documentTab.suggestedNamedStylesChanges, which exposes
+   * the actual document content from all tabs when the includeTabsContent parameter is set to
+   * `true`. If `false` or unset, this field contains information about the first tab in the
+   * document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,7 +182,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
 
   /**
    * Tabs that are part of a document. Tabs can contain child tabs, a tab nested within another tab.
-   * Child tabs are represented by the Tab.child_tabs field.
+   * Child tabs are represented by the Tab.childTabs field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,7 +196,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   private java.lang.String title;
 
   /**
-   * Output only. The main body of the document.
+   * Output only. The main body of the document. Legacy field: Instead, use
+   * Document.tabs.documentTab.body, which exposes the actual document content from all tabs when
+   * the includeTabsContent parameter is set to `true`. If `false` or unset, this field contains
+   * information about the first tab in the document.
    * @return value or {@code null} for none
    */
   public Body getBody() {
@@ -167,7 +207,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The main body of the document.
+   * Output only. The main body of the document. Legacy field: Instead, use
+   * Document.tabs.documentTab.body, which exposes the actual document content from all tabs when
+   * the includeTabsContent parameter is set to `true`. If `false` or unset, this field contains
+   * information about the first tab in the document.
    * @param body body or {@code null} for none
    */
   public Document setBody(Body body) {
@@ -193,7 +236,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The style of the document.
+   * Output only. The style of the document. Legacy field: Instead, use
+   * Document.tabs.documentTab.documentStyle, which exposes the actual document content from all
+   * tabs when the includeTabsContent parameter is set to `true`. If `false` or unset, this field
+   * contains information about the first tab in the document.
    * @return value or {@code null} for none
    */
   public DocumentStyle getDocumentStyle() {
@@ -201,7 +247,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The style of the document.
+   * Output only. The style of the document. Legacy field: Instead, use
+   * Document.tabs.documentTab.documentStyle, which exposes the actual document content from all
+   * tabs when the includeTabsContent parameter is set to `true`. If `false` or unset, this field
+   * contains information about the first tab in the document.
    * @param documentStyle documentStyle or {@code null} for none
    */
   public Document setDocumentStyle(DocumentStyle documentStyle) {
@@ -210,7 +259,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The footers in the document, keyed by footer ID.
+   * Output only. The footers in the document, keyed by footer ID. Legacy field: Instead, use
+   * Document.tabs.documentTab.footers, which exposes the actual document content from all tabs when
+   * the includeTabsContent parameter is set to `true`. If `false` or unset, this field contains
+   * information about the first tab in the document.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Footer> getFooters() {
@@ -218,7 +270,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The footers in the document, keyed by footer ID.
+   * Output only. The footers in the document, keyed by footer ID. Legacy field: Instead, use
+   * Document.tabs.documentTab.footers, which exposes the actual document content from all tabs when
+   * the includeTabsContent parameter is set to `true`. If `false` or unset, this field contains
+   * information about the first tab in the document.
    * @param footers footers or {@code null} for none
    */
   public Document setFooters(java.util.Map<String, Footer> footers) {
@@ -227,7 +282,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The footnotes in the document, keyed by footnote ID.
+   * Output only. The footnotes in the document, keyed by footnote ID. Legacy field: Instead, use
+   * Document.tabs.documentTab.footnotes, which exposes the actual document content from all tabs
+   * when the includeTabsContent parameter is set to `true`. If `false` or unset, this field
+   * contains information about the first tab in the document.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Footnote> getFootnotes() {
@@ -235,7 +293,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The footnotes in the document, keyed by footnote ID.
+   * Output only. The footnotes in the document, keyed by footnote ID. Legacy field: Instead, use
+   * Document.tabs.documentTab.footnotes, which exposes the actual document content from all tabs
+   * when the includeTabsContent parameter is set to `true`. If `false` or unset, this field
+   * contains information about the first tab in the document.
    * @param footnotes footnotes or {@code null} for none
    */
   public Document setFootnotes(java.util.Map<String, Footnote> footnotes) {
@@ -244,7 +305,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The headers in the document, keyed by header ID.
+   * Output only. The headers in the document, keyed by header ID. Legacy field: Instead, use
+   * Document.tabs.documentTab.headers, which exposes the actual document content from all tabs when
+   * the includeTabsContent parameter is set to `true`. If `false` or unset, this field contains
+   * information about the first tab in the document.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Header> getHeaders() {
@@ -252,7 +316,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The headers in the document, keyed by header ID.
+   * Output only. The headers in the document, keyed by header ID. Legacy field: Instead, use
+   * Document.tabs.documentTab.headers, which exposes the actual document content from all tabs when
+   * the includeTabsContent parameter is set to `true`. If `false` or unset, this field contains
+   * information about the first tab in the document.
    * @param headers headers or {@code null} for none
    */
   public Document setHeaders(java.util.Map<String, Header> headers) {
@@ -261,7 +328,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The inline objects in the document, keyed by object ID.
+   * Output only. The inline objects in the document, keyed by object ID. Legacy field: Instead, use
+   * Document.tabs.documentTab.inlineObjects, which exposes the actual document content from all
+   * tabs when the includeTabsContent parameter is set to `true`. If `false` or unset, this field
+   * contains information about the first tab in the document.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, InlineObject> getInlineObjects() {
@@ -269,7 +339,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The inline objects in the document, keyed by object ID.
+   * Output only. The inline objects in the document, keyed by object ID. Legacy field: Instead, use
+   * Document.tabs.documentTab.inlineObjects, which exposes the actual document content from all
+   * tabs when the includeTabsContent parameter is set to `true`. If `false` or unset, this field
+   * contains information about the first tab in the document.
    * @param inlineObjects inlineObjects or {@code null} for none
    */
   public Document setInlineObjects(java.util.Map<String, InlineObject> inlineObjects) {
@@ -278,7 +351,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The lists in the document, keyed by list ID.
+   * Output only. The lists in the document, keyed by list ID. Legacy field: Instead, use
+   * Document.tabs.documentTab.lists, which exposes the actual document content from all tabs when
+   * the includeTabsContent parameter is set to `true`. If `false` or unset, this field contains
+   * information about the first tab in the document.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, List> getLists() {
@@ -286,7 +362,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The lists in the document, keyed by list ID.
+   * Output only. The lists in the document, keyed by list ID. Legacy field: Instead, use
+   * Document.tabs.documentTab.lists, which exposes the actual document content from all tabs when
+   * the includeTabsContent parameter is set to `true`. If `false` or unset, this field contains
+   * information about the first tab in the document.
    * @param lists lists or {@code null} for none
    */
   public Document setLists(java.util.Map<String, List> lists) {
@@ -295,7 +374,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The named ranges in the document, keyed by name.
+   * Output only. The named ranges in the document, keyed by name. Legacy field: Instead, use
+   * Document.tabs.documentTab.namedRanges, which exposes the actual document content from all tabs
+   * when the includeTabsContent parameter is set to `true`. If `false` or unset, this field
+   * contains information about the first tab in the document.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, NamedRanges> getNamedRanges() {
@@ -303,7 +385,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The named ranges in the document, keyed by name.
+   * Output only. The named ranges in the document, keyed by name. Legacy field: Instead, use
+   * Document.tabs.documentTab.namedRanges, which exposes the actual document content from all tabs
+   * when the includeTabsContent parameter is set to `true`. If `false` or unset, this field
+   * contains information about the first tab in the document.
    * @param namedRanges namedRanges or {@code null} for none
    */
   public Document setNamedRanges(java.util.Map<String, NamedRanges> namedRanges) {
@@ -312,7 +397,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The named styles of the document.
+   * Output only. The named styles of the document. Legacy field: Instead, use
+   * Document.tabs.documentTab.namedStyles, which exposes the actual document content from all tabs
+   * when the includeTabsContent parameter is set to `true`. If `false` or unset, this field
+   * contains information about the first tab in the document.
    * @return value or {@code null} for none
    */
   public NamedStyles getNamedStyles() {
@@ -320,7 +408,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The named styles of the document.
+   * Output only. The named styles of the document. Legacy field: Instead, use
+   * Document.tabs.documentTab.namedStyles, which exposes the actual document content from all tabs
+   * when the includeTabsContent parameter is set to `true`. If `false` or unset, this field
+   * contains information about the first tab in the document.
    * @param namedStyles namedStyles or {@code null} for none
    */
   public Document setNamedStyles(NamedStyles namedStyles) {
@@ -329,7 +420,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The positioned objects in the document, keyed by object ID.
+   * Output only. The positioned objects in the document, keyed by object ID. Legacy field: Instead,
+   * use Document.tabs.documentTab.positionedObjects, which exposes the actual document content from
+   * all tabs when the includeTabsContent parameter is set to `true`. If `false` or unset, this
+   * field contains information about the first tab in the document.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, PositionedObject> getPositionedObjects() {
@@ -337,7 +431,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The positioned objects in the document, keyed by object ID.
+   * Output only. The positioned objects in the document, keyed by object ID. Legacy field: Instead,
+   * use Document.tabs.documentTab.positionedObjects, which exposes the actual document content from
+   * all tabs when the includeTabsContent parameter is set to `true`. If `false` or unset, this
+   * field contains information about the first tab in the document.
    * @param positionedObjects positionedObjects or {@code null} for none
    */
   public Document setPositionedObjects(java.util.Map<String, PositionedObject> positionedObjects) {
@@ -379,7 +476,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The suggested changes to the style of the document, keyed by suggestion ID.
+   * Output only. The suggested changes to the style of the document, keyed by suggestion ID. Legacy
+   * field: Instead, use Document.tabs.documentTab.suggestedDocumentStyleChanges, which exposes the
+   * actual document content from all tabs when the includeTabsContent parameter is set to `true`.
+   * If `false` or unset, this field contains information about the first tab in the document.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, SuggestedDocumentStyle> getSuggestedDocumentStyleChanges() {
@@ -387,7 +487,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The suggested changes to the style of the document, keyed by suggestion ID.
+   * Output only. The suggested changes to the style of the document, keyed by suggestion ID. Legacy
+   * field: Instead, use Document.tabs.documentTab.suggestedDocumentStyleChanges, which exposes the
+   * actual document content from all tabs when the includeTabsContent parameter is set to `true`.
+   * If `false` or unset, this field contains information about the first tab in the document.
    * @param suggestedDocumentStyleChanges suggestedDocumentStyleChanges or {@code null} for none
    */
   public Document setSuggestedDocumentStyleChanges(java.util.Map<String, SuggestedDocumentStyle> suggestedDocumentStyleChanges) {
@@ -397,6 +500,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The suggested changes to the named styles of the document, keyed by suggestion ID.
+   * Legacy field: Instead, use Document.tabs.documentTab.suggestedNamedStylesChanges, which exposes
+   * the actual document content from all tabs when the includeTabsContent parameter is set to
+   * `true`. If `false` or unset, this field contains information about the first tab in the
+   * document.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, SuggestedNamedStyles> getSuggestedNamedStylesChanges() {
@@ -405,6 +512,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The suggested changes to the named styles of the document, keyed by suggestion ID.
+   * Legacy field: Instead, use Document.tabs.documentTab.suggestedNamedStylesChanges, which exposes
+   * the actual document content from all tabs when the includeTabsContent parameter is set to
+   * `true`. If `false` or unset, this field contains information about the first tab in the
+   * document.
    * @param suggestedNamedStylesChanges suggestedNamedStylesChanges or {@code null} for none
    */
   public Document setSuggestedNamedStylesChanges(java.util.Map<String, SuggestedNamedStyles> suggestedNamedStylesChanges) {
@@ -433,7 +544,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
 
   /**
    * Tabs that are part of a document. Tabs can contain child tabs, a tab nested within another tab.
-   * Child tabs are represented by the Tab.child_tabs field.
+   * Child tabs are represented by the Tab.childTabs field.
    * @return value or {@code null} for none
    */
   public java.util.List<Tab> getTabs() {
@@ -442,7 +553,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
 
   /**
    * Tabs that are part of a document. Tabs can contain child tabs, a tab nested within another tab.
-   * Child tabs are represented by the Tab.child_tabs field.
+   * Child tabs are represented by the Tab.childTabs field.
    * @param tabs tabs or {@code null} for none
    */
   public Document setTabs(java.util.List<Tab> tabs) {

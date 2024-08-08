@@ -515,6 +515,1729 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
+       * An accessor for creating requests from the BackupPlanAssociations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Backupdr backupdr = new Backupdr(...);}
+       *   {@code Backupdr.BackupPlanAssociations.List request = backupdr.backupPlanAssociations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public BackupPlanAssociations backupPlanAssociations() {
+        return new BackupPlanAssociations();
+      }
+
+      /**
+       * The "backupPlanAssociations" collection of methods.
+       */
+      public class BackupPlanAssociations {
+
+        /**
+         * Create a BackupPlanAssociation
+         *
+         * Create a request for the method "backupPlanAssociations.create".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The backup plan association project and location in the format
+         *        `projects/{project_id}/locations/{location}`. In Cloud BackupDR locations map to GCP
+         *        regions, for example **us-central1**.
+         * @param content the {@link com.google.api.services.backupdr.v1.model.BackupPlanAssociation}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.backupdr.v1.model.BackupPlanAssociation content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends BackupdrRequest<com.google.api.services.backupdr.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/backupPlanAssociations";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Create a BackupPlanAssociation
+           *
+           * Create a request for the method "backupPlanAssociations.create".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The backup plan association project and location in the format
+         *        `projects/{project_id}/locations/{location}`. In Cloud BackupDR locations map to GCP
+         *        regions, for example **us-central1**.
+           * @param content the {@link com.google.api.services.backupdr.v1.model.BackupPlanAssociation}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.backupdr.v1.model.BackupPlanAssociation content) {
+            super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The backup plan association project and location in the format
+           * `projects/{project_id}/locations/{location}`. In Cloud BackupDR locations map to GCP
+           * regions, for example **us-central1**.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The backup plan association project and location in the format
+         `projects/{project_id}/locations/{location}`. In Cloud BackupDR locations map to GCP regions, for
+         example **us-central1**.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The backup plan association project and location in the format
+           * `projects/{project_id}/locations/{location}`. In Cloud BackupDR locations map to GCP
+           * regions, for example **us-central1**.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The name of the backup plan association to create. The name must be unique
+           * for the specified project and location.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String backupPlanAssociationId;
+
+          /** Required. The name of the backup plan association to create. The name must be unique for the
+         specified project and location.
+           */
+          public java.lang.String getBackupPlanAssociationId() {
+            return backupPlanAssociationId;
+          }
+
+          /**
+           * Required. The name of the backup plan association to create. The name must be unique
+           * for the specified project and location.
+           */
+          public Create setBackupPlanAssociationId(java.lang.String backupPlanAssociationId) {
+            this.backupPlanAssociationId = backupPlanAssociationId;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and t he request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes since the first request. For
+         example, consider a situation where you make an initial request and t he request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and t he request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a single BackupPlanAssociation.
+         *
+         * Create a request for the method "backupPlanAssociations.delete".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the backup plan association resource, in the format
+         *        `projects/{project}/locations/{location}/backupPlanAssociations/{backupPlanAssociationId}`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends BackupdrRequest<com.google.api.services.backupdr.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupPlanAssociations/[^/]+$");
+
+          /**
+           * Deletes a single BackupPlanAssociation.
+           *
+           * Create a request for the method "backupPlanAssociations.delete".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the backup plan association resource, in the format
+         *        `projects/{project}/locations/{location}/backupPlanAssociations/{backupPlanAssociationId}`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Backupdr.this, "DELETE", REST_PATH, null, com.google.api.services.backupdr.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backupPlanAssociations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the backup plan association resource, in the format `projects/{projec
+           * t}/locations/{location}/backupPlanAssociations/{backupPlanAssociationId}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the backup plan association resource, in the format
+         `projects/{project}/locations/{location}/backupPlanAssociations/{backupPlanAssociationId}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the backup plan association resource, in the format `projects/{projec
+           * t}/locations/{location}/backupPlanAssociations/{backupPlanAssociationId}`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backupPlanAssociations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * after the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes after the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * after the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single BackupPlanAssociation.
+         *
+         * Create a request for the method "backupPlanAssociations.get".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the backup plan association resource, in the format
+         *        `projects/{project}/locations/{location}/backupPlanAssociations/{backupPlanAssociationId}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends BackupdrRequest<com.google.api.services.backupdr.v1.model.BackupPlanAssociation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupPlanAssociations/[^/]+$");
+
+          /**
+           * Gets details of a single BackupPlanAssociation.
+           *
+           * Create a request for the method "backupPlanAssociations.get".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the backup plan association resource, in the format
+         *        `projects/{project}/locations/{location}/backupPlanAssociations/{backupPlanAssociationId}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1.model.BackupPlanAssociation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backupPlanAssociations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the backup plan association resource, in the format `projects/{projec
+           * t}/locations/{location}/backupPlanAssociations/{backupPlanAssociationId}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the backup plan association resource, in the format
+         `projects/{project}/locations/{location}/backupPlanAssociations/{backupPlanAssociationId}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the backup plan association resource, in the format `projects/{projec
+           * t}/locations/{location}/backupPlanAssociations/{backupPlanAssociationId}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backupPlanAssociations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists BackupPlanAssociations in a given project and location.
+         *
+         * Create a request for the method "backupPlanAssociations.list".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location for which to retrieve backup Plan Associations information, in
+         *        the format `projects/{project_id}/locations/{location}`. In Cloud BackupDR, locations map
+         *        to GCP regions, for example **us-central1**. To retrieve backup plan associations for all
+         *        locations, use "-" for the `{location}` value.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends BackupdrRequest<com.google.api.services.backupdr.v1.model.ListBackupPlanAssociationsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/backupPlanAssociations";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists BackupPlanAssociations in a given project and location.
+           *
+           * Create a request for the method "backupPlanAssociations.list".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location for which to retrieve backup Plan Associations information, in
+         *        the format `projects/{project_id}/locations/{location}`. In Cloud BackupDR, locations map
+         *        to GCP regions, for example **us-central1**. To retrieve backup plan associations for all
+         *        locations, use "-" for the `{location}` value.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1.model.ListBackupPlanAssociationsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location for which to retrieve backup Plan Associations
+           * information, in the format `projects/{project_id}/locations/{location}`. In Cloud
+           * BackupDR, locations map to GCP regions, for example **us-central1**. To retrieve backup
+           * plan associations for all locations, use "-" for the `{location}` value.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location for which to retrieve backup Plan Associations information, in
+         the format `projects/{project_id}/locations/{location}`. In Cloud BackupDR, locations map to GCP
+         regions, for example **us-central1**. To retrieve backup plan associations for all locations, use
+         "-" for the `{location}` value.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location for which to retrieve backup Plan Associations
+           * information, in the format `projects/{project_id}/locations/{location}`. In Cloud
+           * BackupDR, locations map to GCP regions, for example **us-central1**. To retrieve backup
+           * plan associations for all locations, use "-" for the `{location}` value.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Filtering results */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filtering results
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Filtering results */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token identifying a page of results the server should return.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Triggers a new Backup.
+         *
+         * Create a request for the method "backupPlanAssociations.triggerBackup".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link TriggerBackup#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the backup plan association resource, in the format
+         *        `projects/{project}/locations/{location}/backupPlanAssociations/{backupPlanAssociationId}`
+         * @param content the {@link com.google.api.services.backupdr.v1.model.TriggerBackupRequest}
+         * @return the request
+         */
+        public TriggerBackup triggerBackup(java.lang.String name, com.google.api.services.backupdr.v1.model.TriggerBackupRequest content) throws java.io.IOException {
+          TriggerBackup result = new TriggerBackup(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class TriggerBackup extends BackupdrRequest<com.google.api.services.backupdr.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:triggerBackup";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupPlanAssociations/[^/]+$");
+
+          /**
+           * Triggers a new Backup.
+           *
+           * Create a request for the method "backupPlanAssociations.triggerBackup".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link TriggerBackup#execute()} method to invoke the remote
+           * operation. <p> {@link TriggerBackup#initialize(com.google.api.client.googleapis.services.Abstra
+           * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param name Required. Name of the backup plan association resource, in the format
+         *        `projects/{project}/locations/{location}/backupPlanAssociations/{backupPlanAssociationId}`
+           * @param content the {@link com.google.api.services.backupdr.v1.model.TriggerBackupRequest}
+           * @since 1.13
+           */
+          protected TriggerBackup(java.lang.String name, com.google.api.services.backupdr.v1.model.TriggerBackupRequest content) {
+            super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backupPlanAssociations/[^/]+$");
+            }
+          }
+
+          @Override
+          public TriggerBackup set$Xgafv(java.lang.String $Xgafv) {
+            return (TriggerBackup) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public TriggerBackup setAccessToken(java.lang.String accessToken) {
+            return (TriggerBackup) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public TriggerBackup setAlt(java.lang.String alt) {
+            return (TriggerBackup) super.setAlt(alt);
+          }
+
+          @Override
+          public TriggerBackup setCallback(java.lang.String callback) {
+            return (TriggerBackup) super.setCallback(callback);
+          }
+
+          @Override
+          public TriggerBackup setFields(java.lang.String fields) {
+            return (TriggerBackup) super.setFields(fields);
+          }
+
+          @Override
+          public TriggerBackup setKey(java.lang.String key) {
+            return (TriggerBackup) super.setKey(key);
+          }
+
+          @Override
+          public TriggerBackup setOauthToken(java.lang.String oauthToken) {
+            return (TriggerBackup) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public TriggerBackup setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (TriggerBackup) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public TriggerBackup setQuotaUser(java.lang.String quotaUser) {
+            return (TriggerBackup) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public TriggerBackup setUploadType(java.lang.String uploadType) {
+            return (TriggerBackup) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public TriggerBackup setUploadProtocol(java.lang.String uploadProtocol) {
+            return (TriggerBackup) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the backup plan association resource, in the format `projects/{projec
+           * t}/locations/{location}/backupPlanAssociations/{backupPlanAssociationId}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the backup plan association resource, in the format
+         `projects/{project}/locations/{location}/backupPlanAssociations/{backupPlanAssociationId}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the backup plan association resource, in the format `projects/{projec
+           * t}/locations/{location}/backupPlanAssociations/{backupPlanAssociationId}`
+           */
+          public TriggerBackup setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backupPlanAssociations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public TriggerBackup set(String parameterName, Object value) {
+            return (TriggerBackup) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the BackupPlans collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Backupdr backupdr = new Backupdr(...);}
+       *   {@code Backupdr.BackupPlans.List request = backupdr.backupPlans().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public BackupPlans backupPlans() {
+        return new BackupPlans();
+      }
+
+      /**
+       * The "backupPlans" collection of methods.
+       */
+      public class BackupPlans {
+
+        /**
+         * Create a BackupPlan
+         *
+         * Create a request for the method "backupPlans.create".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The `BackupPlan` project and location in the format
+         *        `projects/{project}/locations/{location}`. In Cloud BackupDR locations map to GCP regions,
+         *        for example **us-central1**.
+         * @param content the {@link com.google.api.services.backupdr.v1.model.BackupPlan}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.backupdr.v1.model.BackupPlan content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends BackupdrRequest<com.google.api.services.backupdr.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/backupPlans";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Create a BackupPlan
+           *
+           * Create a request for the method "backupPlans.create".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The `BackupPlan` project and location in the format
+         *        `projects/{project}/locations/{location}`. In Cloud BackupDR locations map to GCP regions,
+         *        for example **us-central1**.
+           * @param content the {@link com.google.api.services.backupdr.v1.model.BackupPlan}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.backupdr.v1.model.BackupPlan content) {
+            super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The `BackupPlan` project and location in the format
+           * `projects/{project}/locations/{location}`. In Cloud BackupDR locations map to GCP
+           * regions, for example **us-central1**.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The `BackupPlan` project and location in the format
+         `projects/{project}/locations/{location}`. In Cloud BackupDR locations map to GCP regions, for
+         example **us-central1**.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The `BackupPlan` project and location in the format
+           * `projects/{project}/locations/{location}`. In Cloud BackupDR locations map to GCP
+           * regions, for example **us-central1**.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The name of the `BackupPlan` to create. The name must be unique for the
+           * specified project and location.The name must start with a lowercase letter followed by
+           * up to 62 lowercase letters, numbers, or hyphens. Pattern, /a-z{,62}/.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String backupPlanId;
+
+          /** Required. The name of the `BackupPlan` to create. The name must be unique for the specified project
+         and location.The name must start with a lowercase letter followed by up to 62 lowercase letters,
+         numbers, or hyphens. Pattern, /a-z{,62}/.
+           */
+          public java.lang.String getBackupPlanId() {
+            return backupPlanId;
+          }
+
+          /**
+           * Required. The name of the `BackupPlan` to create. The name must be unique for the
+           * specified project and location.The name must start with a lowercase letter followed by
+           * up to 62 lowercase letters, numbers, or hyphens. Pattern, /a-z{,62}/.
+           */
+          public Create setBackupPlanId(java.lang.String backupPlanId) {
+            this.backupPlanId = backupPlanId;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and t he request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes since the first request. For
+         example, consider a situation where you make an initial request and t he request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and t he request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a single BackupPlan.
+         *
+         * Create a request for the method "backupPlans.delete".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the `BackupPlan` to delete. Format:
+         *        `projects/{project}/locations/{location}/backupPlans/{backup_plan}`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends BackupdrRequest<com.google.api.services.backupdr.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupPlans/[^/]+$");
+
+          /**
+           * Deletes a single BackupPlan.
+           *
+           * Create a request for the method "backupPlans.delete".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the `BackupPlan` to delete. Format:
+         *        `projects/{project}/locations/{location}/backupPlans/{backup_plan}`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Backupdr.this, "DELETE", REST_PATH, null, com.google.api.services.backupdr.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backupPlans/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the `BackupPlan` to delete. Format:
+           * `projects/{project}/locations/{location}/backupPlans/{backup_plan}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the `BackupPlan` to delete. Format:
+         `projects/{project}/locations/{location}/backupPlans/{backup_plan}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the `BackupPlan` to delete. Format:
+           * `projects/{project}/locations/{location}/backupPlans/{backup_plan}`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backupPlans/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * after the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes after the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * after the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single BackupPlan.
+         *
+         * Create a request for the method "backupPlans.get".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the `BackupPlan` to retrieve. Format:
+         *        `projects/{project}/locations/{location}/backupPlans/{backup_plan}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends BackupdrRequest<com.google.api.services.backupdr.v1.model.BackupPlan> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupPlans/[^/]+$");
+
+          /**
+           * Gets details of a single BackupPlan.
+           *
+           * Create a request for the method "backupPlans.get".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the `BackupPlan` to retrieve. Format:
+         *        `projects/{project}/locations/{location}/backupPlans/{backup_plan}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1.model.BackupPlan.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backupPlans/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the `BackupPlan` to retrieve. Format:
+           * `projects/{project}/locations/{location}/backupPlans/{backup_plan}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the `BackupPlan` to retrieve. Format:
+         `projects/{project}/locations/{location}/backupPlans/{backup_plan}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the `BackupPlan` to retrieve. Format:
+           * `projects/{project}/locations/{location}/backupPlans/{backup_plan}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backupPlans/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists BackupPlans in a given project and location.
+         *
+         * Create a request for the method "backupPlans.list".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location for which to retrieve `BackupPlans` information. Format:
+         *        `projects/{project}/locations/{location}`. In Cloud BackupDR, locations map to GCP
+         *        regions, for e.g. **us-central1**. To retrieve backup plans for all locations, use "-" for
+         *        the `{location}` value.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends BackupdrRequest<com.google.api.services.backupdr.v1.model.ListBackupPlansResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/backupPlans";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists BackupPlans in a given project and location.
+           *
+           * Create a request for the method "backupPlans.list".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location for which to retrieve `BackupPlans` information. Format:
+         *        `projects/{project}/locations/{location}`. In Cloud BackupDR, locations map to GCP
+         *        regions, for e.g. **us-central1**. To retrieve backup plans for all locations, use "-" for
+         *        the `{location}` value.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1.model.ListBackupPlansResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location for which to retrieve `BackupPlans` information.
+           * Format: `projects/{project}/locations/{location}`. In Cloud BackupDR, locations map to
+           * GCP regions, for e.g. **us-central1**. To retrieve backup plans for all locations, use
+           * "-" for the `{location}` value.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location for which to retrieve `BackupPlans` information. Format:
+         `projects/{project}/locations/{location}`. In Cloud BackupDR, locations map to GCP regions, for
+         e.g. **us-central1**. To retrieve backup plans for all locations, use "-" for the `{location}`
+         value.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location for which to retrieve `BackupPlans` information.
+           * Format: `projects/{project}/locations/{location}`. In Cloud BackupDR, locations map to
+           * GCP regions, for e.g. **us-central1**. To retrieve backup plans for all locations, use
+           * "-" for the `{location}` value.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Field match expression used to filter the results. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Field match expression used to filter the results.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Field match expression used to filter the results. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Field by which to sort the results. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Field by which to sort the results.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Field by which to sort the results. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of `BackupPlans` to return in a single response. If not
+           * specified, a default value will be chosen by the service. Note that the response may
+           * include a partial list and a caller should only rely on the response's next_page_token
+           * to determine if there are more instances left to be queried.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of `BackupPlans` to return in a single response. If not specified, a
+         default value will be chosen by the service. Note that the response may include a partial list and
+         a caller should only rely on the response's next_page_token to determine if there are more
+         instances left to be queried.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of `BackupPlans` to return in a single response. If not
+           * specified, a default value will be chosen by the service. Note that the response may
+           * include a partial list and a caller should only rely on the response's next_page_token
+           * to determine if there are more instances left to be queried.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. The value of next_page_token received from a previous `ListBackupPlans` call.
+           * Provide this to retrieve the subsequent page in a multi-page list of results. When
+           * paginating, all other parameters provided to `ListBackupPlans` must match the call that
+           * provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The value of next_page_token received from a previous `ListBackupPlans` call. Provide
+         this to retrieve the subsequent page in a multi-page list of results. When paginating, all other
+         parameters provided to `ListBackupPlans` must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. The value of next_page_token received from a previous `ListBackupPlans` call.
+           * Provide this to retrieve the subsequent page in a multi-page list of results. When
+           * paginating, all other parameters provided to `ListBackupPlans` must match the call that
+           * provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the BackupVaults collection.
        *
        * <p>The typical use is:</p>
@@ -4234,6 +5957,146 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
               @Override
               public Patch set(String parameterName, Object value) {
                 return (Patch) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Restore from a Backup
+             *
+             * Create a request for the method "backups.restore".
+             *
+             * This request holds the parameters needed by the backupdr server.  After setting any optional
+             * parameters, call the {@link Restore#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the Backup instance, in the format
+             *        'projects/locations/backupVaults/dataSources/backups/'.
+             * @param content the {@link com.google.api.services.backupdr.v1.model.RestoreBackupRequest}
+             * @return the request
+             */
+            public Restore restore(java.lang.String name, com.google.api.services.backupdr.v1.model.RestoreBackupRequest content) throws java.io.IOException {
+              Restore result = new Restore(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Restore extends BackupdrRequest<com.google.api.services.backupdr.v1.model.Operation> {
+
+              private static final String REST_PATH = "v1/{+name}:restore";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+/dataSources/[^/]+/backups/[^/]+$");
+
+              /**
+               * Restore from a Backup
+               *
+               * Create a request for the method "backups.restore".
+               *
+               * This request holds the parameters needed by the the backupdr server.  After setting any
+               * optional parameters, call the {@link Restore#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Restore#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the Backup instance, in the format
+             *        'projects/locations/backupVaults/dataSources/backups/'.
+               * @param content the {@link com.google.api.services.backupdr.v1.model.RestoreBackupRequest}
+               * @since 1.13
+               */
+              protected Restore(java.lang.String name, com.google.api.services.backupdr.v1.model.RestoreBackupRequest content) {
+                super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1.model.Operation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+/dataSources/[^/]+/backups/[^/]+$");
+                }
+              }
+
+              @Override
+              public Restore set$Xgafv(java.lang.String $Xgafv) {
+                return (Restore) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Restore setAccessToken(java.lang.String accessToken) {
+                return (Restore) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Restore setAlt(java.lang.String alt) {
+                return (Restore) super.setAlt(alt);
+              }
+
+              @Override
+              public Restore setCallback(java.lang.String callback) {
+                return (Restore) super.setCallback(callback);
+              }
+
+              @Override
+              public Restore setFields(java.lang.String fields) {
+                return (Restore) super.setFields(fields);
+              }
+
+              @Override
+              public Restore setKey(java.lang.String key) {
+                return (Restore) super.setKey(key);
+              }
+
+              @Override
+              public Restore setOauthToken(java.lang.String oauthToken) {
+                return (Restore) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Restore setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Restore) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Restore setQuotaUser(java.lang.String quotaUser) {
+                return (Restore) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Restore setUploadType(java.lang.String uploadType) {
+                return (Restore) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Restore setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Restore) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the Backup instance, in the format
+               * 'projects/locations/backupVaults/dataSources/backups/'.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the Backup instance, in the format
+             'projects/locations/backupVaults/dataSources/backups/'.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name of the Backup instance, in the format
+               * 'projects/locations/backupVaults/dataSources/backups/'.
+               */
+              public Restore setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/backupVaults/[^/]+/dataSources/[^/]+/backups/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Restore set(String parameterName, Object value) {
+                return (Restore) super.set(parameterName, value);
               }
             }
 

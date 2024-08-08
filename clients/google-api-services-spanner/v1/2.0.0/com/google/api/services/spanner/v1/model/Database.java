@@ -102,7 +102,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. Applicable only for databases that use dual region instance configurations.
+   * Output only. Applicable only for databases that use dual-region instance configurations.
    * Contains information about the quorum.
    * The value may be {@code null}.
    */
@@ -310,7 +310,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Applicable only for databases that use dual region instance configurations.
+   * Output only. Applicable only for databases that use dual-region instance configurations.
    * Contains information about the quorum.
    * @return value or {@code null} for none
    */
@@ -319,7 +319,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Applicable only for databases that use dual region instance configurations.
+   * Output only. Applicable only for databases that use dual-region instance configurations.
    * Contains information about the quorum.
    * @param quorumInfo quorumInfo or {@code null} for none
    */

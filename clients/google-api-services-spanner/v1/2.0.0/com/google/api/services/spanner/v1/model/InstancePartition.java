@@ -96,9 +96,9 @@ public final class InstancePartition extends com.google.api.client.json.GenericJ
   private java.lang.Integer processingUnits;
 
   /**
-   * Output only. The names of the backups that reference this instance partition. Referencing
-   * backups should share the parent instance. The existence of any referencing backup prevents the
-   * instance partition from being deleted.
+   * Output only. Deprecated: This field is not populated. Output only. The names of the backups
+   * that reference this instance partition. Referencing backups should share the parent instance.
+   * The existence of any referencing backup prevents the instance partition from being deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -281,9 +281,9 @@ public final class InstancePartition extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The names of the backups that reference this instance partition. Referencing
-   * backups should share the parent instance. The existence of any referencing backup prevents the
-   * instance partition from being deleted.
+   * Output only. Deprecated: This field is not populated. Output only. The names of the backups
+   * that reference this instance partition. Referencing backups should share the parent instance.
+   * The existence of any referencing backup prevents the instance partition from being deleted.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getReferencingBackups() {
@@ -291,9 +291,9 @@ public final class InstancePartition extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The names of the backups that reference this instance partition. Referencing
-   * backups should share the parent instance. The existence of any referencing backup prevents the
-   * instance partition from being deleted.
+   * Output only. Deprecated: This field is not populated. Output only. The names of the backups
+   * that reference this instance partition. Referencing backups should share the parent instance.
+   * The existence of any referencing backup prevents the instance partition from being deleted.
    * @param referencingBackups referencingBackups or {@code null} for none
    */
   public InstancePartition setReferencingBackups(java.util.List<java.lang.String> referencingBackups) {

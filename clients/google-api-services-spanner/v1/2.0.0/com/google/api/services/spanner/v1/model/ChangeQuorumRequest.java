@@ -30,9 +30,9 @@ package com.google.api.services.spanner.v1.model;
 public final class ChangeQuorumRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The etag is the hash of the QuorumInfo. The ChangeQuorum operation will only be
-   * performed if the etag matches that of the QuorumInfo in the current database resource.
-   * Otherwise the API will return an `ABORTED` error. The etag is used for optimistic concurrency
+   * Optional. The etag is the hash of the `QuorumInfo`. The `ChangeQuorum` operation is only
+   * performed if the etag matches that of the `QuorumInfo` in the current database resource.
+   * Otherwise the API returns an `ABORTED` error. The etag is used for optimistic concurrency
    * control as a way to help prevent simultaneous change quorum requests that could create a race
    * condition.
    * The value may be {@code null}.
@@ -41,7 +41,7 @@ public final class ChangeQuorumRequest extends com.google.api.client.json.Generi
   private java.lang.String etag;
 
   /**
-   * Required. Name of the database in which to apply the ChangeQuorum. Values are of the form
+   * Required. Name of the database in which to apply `ChangeQuorum`. Values are of the form
    * `projects//instances//databases/`.
    * The value may be {@code null}.
    */
@@ -49,16 +49,16 @@ public final class ChangeQuorumRequest extends com.google.api.client.json.Generi
   private java.lang.String name;
 
   /**
-   * Required. The type of this Quorum.
+   * Required. The type of this quorum.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private QuorumType quorumType;
 
   /**
-   * Optional. The etag is the hash of the QuorumInfo. The ChangeQuorum operation will only be
-   * performed if the etag matches that of the QuorumInfo in the current database resource.
-   * Otherwise the API will return an `ABORTED` error. The etag is used for optimistic concurrency
+   * Optional. The etag is the hash of the `QuorumInfo`. The `ChangeQuorum` operation is only
+   * performed if the etag matches that of the `QuorumInfo` in the current database resource.
+   * Otherwise the API returns an `ABORTED` error. The etag is used for optimistic concurrency
    * control as a way to help prevent simultaneous change quorum requests that could create a race
    * condition.
    * @return value or {@code null} for none
@@ -68,9 +68,9 @@ public final class ChangeQuorumRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. The etag is the hash of the QuorumInfo. The ChangeQuorum operation will only be
-   * performed if the etag matches that of the QuorumInfo in the current database resource.
-   * Otherwise the API will return an `ABORTED` error. The etag is used for optimistic concurrency
+   * Optional. The etag is the hash of the `QuorumInfo`. The `ChangeQuorum` operation is only
+   * performed if the etag matches that of the `QuorumInfo` in the current database resource.
+   * Otherwise the API returns an `ABORTED` error. The etag is used for optimistic concurrency
    * control as a way to help prevent simultaneous change quorum requests that could create a race
    * condition.
    * @param etag etag or {@code null} for none
@@ -81,7 +81,7 @@ public final class ChangeQuorumRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Name of the database in which to apply the ChangeQuorum. Values are of the form
+   * Required. Name of the database in which to apply `ChangeQuorum`. Values are of the form
    * `projects//instances//databases/`.
    * @return value or {@code null} for none
    */
@@ -90,7 +90,7 @@ public final class ChangeQuorumRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Name of the database in which to apply the ChangeQuorum. Values are of the form
+   * Required. Name of the database in which to apply `ChangeQuorum`. Values are of the form
    * `projects//instances//databases/`.
    * @param name name or {@code null} for none
    */
@@ -100,7 +100,7 @@ public final class ChangeQuorumRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The type of this Quorum.
+   * Required. The type of this quorum.
    * @return value or {@code null} for none
    */
   public QuorumType getQuorumType() {
@@ -108,7 +108,7 @@ public final class ChangeQuorumRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The type of this Quorum.
+   * Required. The type of this quorum.
    * @param quorumType quorumType or {@code null} for none
    */
   public ChangeQuorumRequest setQuorumType(QuorumType quorumType) {

@@ -79,6 +79,22 @@ public final class CreativeServingDecision extends com.google.api.client.json.Ge
   private java.util.List<java.lang.String> detectedAttributes;
 
   /**
+   * Output only. IDs of the detected categories, if any. The taxonomy in which the categories are
+   * expressed is specified by the detected_categories_taxonomy field. Can be used to filter the
+   * response of the creatives.list method.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> detectedCategories;
+
+  /**
+   * Output only. The taxonomy in which the detected_categories field is expressed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String detectedCategoriesTaxonomy;
+
+  /**
    * The set of detected destination URLs for the creative. Can be used to filter the response of
    * the creatives.list method.
    * The value may be {@code null}.
@@ -265,6 +281,44 @@ public final class CreativeServingDecision extends com.google.api.client.json.Ge
    */
   public CreativeServingDecision setDetectedAttributes(java.util.List<java.lang.String> detectedAttributes) {
     this.detectedAttributes = detectedAttributes;
+    return this;
+  }
+
+  /**
+   * Output only. IDs of the detected categories, if any. The taxonomy in which the categories are
+   * expressed is specified by the detected_categories_taxonomy field. Can be used to filter the
+   * response of the creatives.list method.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDetectedCategories() {
+    return detectedCategories;
+  }
+
+  /**
+   * Output only. IDs of the detected categories, if any. The taxonomy in which the categories are
+   * expressed is specified by the detected_categories_taxonomy field. Can be used to filter the
+   * response of the creatives.list method.
+   * @param detectedCategories detectedCategories or {@code null} for none
+   */
+  public CreativeServingDecision setDetectedCategories(java.util.List<java.lang.String> detectedCategories) {
+    this.detectedCategories = detectedCategories;
+    return this;
+  }
+
+  /**
+   * Output only. The taxonomy in which the detected_categories field is expressed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDetectedCategoriesTaxonomy() {
+    return detectedCategoriesTaxonomy;
+  }
+
+  /**
+   * Output only. The taxonomy in which the detected_categories field is expressed.
+   * @param detectedCategoriesTaxonomy detectedCategoriesTaxonomy or {@code null} for none
+   */
+  public CreativeServingDecision setDetectedCategoriesTaxonomy(java.lang.String detectedCategoriesTaxonomy) {
+    this.detectedCategoriesTaxonomy = detectedCategoriesTaxonomy;
     return this;
   }
 

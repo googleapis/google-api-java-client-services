@@ -47,6 +47,15 @@ public final class GoogleCloudDiscoveryengineV1alphaFhirStoreSource extends com.
   private java.lang.String gcsStagingDir;
 
   /**
+   * The FHIR resource types to import. The resource types should be a subset of all [supported FHIR
+   * resource types](https://cloud.google.com/generative-ai-app-builder/docs/fhir-schema-
+   * reference#resource-level-specification). Default to all supported FHIR resource types if empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> resourceTypes;
+
+  /**
    * Required. The full resource name of the FHIR store to import data from, in the format of
    * `projects/{project}/locations/{location}/datasets/{dataset}/fhirStores/{fhir_store}`.
    * @return value or {@code null} for none
@@ -83,6 +92,27 @@ public final class GoogleCloudDiscoveryengineV1alphaFhirStoreSource extends com.
    */
   public GoogleCloudDiscoveryengineV1alphaFhirStoreSource setGcsStagingDir(java.lang.String gcsStagingDir) {
     this.gcsStagingDir = gcsStagingDir;
+    return this;
+  }
+
+  /**
+   * The FHIR resource types to import. The resource types should be a subset of all [supported FHIR
+   * resource types](https://cloud.google.com/generative-ai-app-builder/docs/fhir-schema-
+   * reference#resource-level-specification). Default to all supported FHIR resource types if empty.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getResourceTypes() {
+    return resourceTypes;
+  }
+
+  /**
+   * The FHIR resource types to import. The resource types should be a subset of all [supported FHIR
+   * resource types](https://cloud.google.com/generative-ai-app-builder/docs/fhir-schema-
+   * reference#resource-level-specification). Default to all supported FHIR resource types if empty.
+   * @param resourceTypes resourceTypes or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaFhirStoreSource setResourceTypes(java.util.List<java.lang.String> resourceTypes) {
+    this.resourceTypes = resourceTypes;
     return this;
   }
 

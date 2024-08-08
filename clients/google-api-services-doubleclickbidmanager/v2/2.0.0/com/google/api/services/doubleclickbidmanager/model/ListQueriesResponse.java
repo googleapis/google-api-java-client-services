@@ -31,23 +31,23 @@ package com.google.api.services.doubleclickbidmanager.model;
 public final class ListQueriesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A token, which can be sent as page_token to retrieve the next page of queries. If this field is
-   * omitted, there are no subsequent pages.
+   * A token to retrieve the next page of results. Pass this value in the page_token field in the
+   * subsequent call to `queries.list` method to retrieve the next page of results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The list of queries.
+   * The list of queries. This field will be absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Query> queries;
 
   /**
-   * A token, which can be sent as page_token to retrieve the next page of queries. If this field is
-   * omitted, there are no subsequent pages.
+   * A token to retrieve the next page of results. Pass this value in the page_token field in the
+   * subsequent call to `queries.list` method to retrieve the next page of results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -55,8 +55,8 @@ public final class ListQueriesResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * A token, which can be sent as page_token to retrieve the next page of queries. If this field is
-   * omitted, there are no subsequent pages.
+   * A token to retrieve the next page of results. Pass this value in the page_token field in the
+   * subsequent call to `queries.list` method to retrieve the next page of results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListQueriesResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -65,7 +65,7 @@ public final class ListQueriesResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The list of queries.
+   * The list of queries. This field will be absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<Query> getQueries() {
@@ -73,7 +73,7 @@ public final class ListQueriesResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The list of queries.
+   * The list of queries. This field will be absent if empty.
    * @param queries queries or {@code null} for none
    */
   public ListQueriesResponse setQueries(java.util.List<Query> queries) {

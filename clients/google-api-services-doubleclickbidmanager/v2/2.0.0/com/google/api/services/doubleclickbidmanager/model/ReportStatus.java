@@ -17,7 +17,7 @@
 package com.google.api.services.doubleclickbidmanager.model;
 
 /**
- * Report status.
+ * The status of a report.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the DoubleClick Bid Manager API. For a detailed
@@ -31,28 +31,30 @@ package com.google.api.services.doubleclickbidmanager.model;
 public final class ReportStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The time when this report either completed successfully or failed.
+   * Output only. The timestamp of when report generation finished successfully or in failure. This
+   * field will not be set unless state is `DONE` or `FAILED`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String finishTime;
 
   /**
-   * The file type of the report.
+   * The format of the generated report file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String format;
 
   /**
-   * Output only. The state of the report.
+   * Output only. The state of the report generation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Output only. The time when this report either completed successfully or failed.
+   * Output only. The timestamp of when report generation finished successfully or in failure. This
+   * field will not be set unless state is `DONE` or `FAILED`.
    * @return value or {@code null} for none
    */
   public String getFinishTime() {
@@ -60,7 +62,8 @@ public final class ReportStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time when this report either completed successfully or failed.
+   * Output only. The timestamp of when report generation finished successfully or in failure. This
+   * field will not be set unless state is `DONE` or `FAILED`.
    * @param finishTime finishTime or {@code null} for none
    */
   public ReportStatus setFinishTime(String finishTime) {
@@ -69,7 +72,7 @@ public final class ReportStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The file type of the report.
+   * The format of the generated report file.
    * @return value or {@code null} for none
    */
   public java.lang.String getFormat() {
@@ -77,7 +80,7 @@ public final class ReportStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The file type of the report.
+   * The format of the generated report file.
    * @param format format or {@code null} for none
    */
   public ReportStatus setFormat(java.lang.String format) {
@@ -86,7 +89,7 @@ public final class ReportStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The state of the report.
+   * Output only. The state of the report generation.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -94,7 +97,7 @@ public final class ReportStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The state of the report.
+   * Output only. The state of the report generation.
    * @param state state or {@code null} for none
    */
   public ReportStatus setState(java.lang.String state) {

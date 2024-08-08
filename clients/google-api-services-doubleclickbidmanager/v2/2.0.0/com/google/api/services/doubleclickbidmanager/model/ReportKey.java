@@ -17,7 +17,7 @@
 package com.google.api.services.doubleclickbidmanager.model;
 
 /**
- * Key used to identify a report.
+ * Identifying information of a report.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the DoubleClick Bid Manager API. For a detailed
@@ -31,21 +31,21 @@ package com.google.api.services.doubleclickbidmanager.model;
 public final class ReportKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Query ID.
+   * Output only. The unique ID of the query that generated the report.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long queryId;
 
   /**
-   * Output only. Report ID.
+   * Output only. The unique ID of the report.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long reportId;
 
   /**
-   * Output only. Query ID.
+   * Output only. The unique ID of the query that generated the report.
    * @return value or {@code null} for none
    */
   public java.lang.Long getQueryId() {
@@ -53,7 +53,7 @@ public final class ReportKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Query ID.
+   * Output only. The unique ID of the query that generated the report.
    * @param queryId queryId or {@code null} for none
    */
   public ReportKey setQueryId(java.lang.Long queryId) {
@@ -62,7 +62,7 @@ public final class ReportKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Report ID.
+   * Output only. The unique ID of the report.
    * @return value or {@code null} for none
    */
   public java.lang.Long getReportId() {
@@ -70,7 +70,7 @@ public final class ReportKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Report ID.
+   * Output only. The unique ID of the report.
    * @param reportId reportId or {@code null} for none
    */
   public ReportKey setReportId(java.lang.Long reportId) {

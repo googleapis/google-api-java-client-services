@@ -17,7 +17,7 @@
 package com.google.api.services.doubleclickbidmanager.model;
 
 /**
- * Parameters of a query or report.
+ * Parameters of a generated report.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the DoubleClick Bid Manager API. For a detailed
@@ -31,7 +31,7 @@ package com.google.api.services.doubleclickbidmanager.model;
 public final class Parameters extends com.google.api.client.json.GenericJson {
 
   /**
-   * Filters used to match traffic data in your report.
+   * Filters to limit the scope of reported data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,36 +44,38 @@ public final class Parameters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Data is grouped by the filters listed in this field.
+   * Dimensions by which to segment and group the data. Defined by [Filter](/bid-
+   * manager/reference/rest/v2/filters-metrics#filters) values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> groupBys;
 
   /**
-   * Metrics to include as columns in your report.
+   * Metrics to define the data populating the report. Defined by [Metric](/bid-
+   * manager/reference/rest/v2/filters-metrics#metrics) values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> metrics;
 
   /**
-   * Additional query options.
+   * Additional report parameter options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Options options;
 
   /**
-   * The type of the report. The type of the report will dictate what dimesions, filters, and
-   * metrics can be used.
+   * The type of the report. The type of the report determines the dimesions, filters, and metrics
+   * that can be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Filters used to match traffic data in your report.
+   * Filters to limit the scope of reported data.
    * @return value or {@code null} for none
    */
   public java.util.List<FilterPair> getFilters() {
@@ -81,7 +83,7 @@ public final class Parameters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Filters used to match traffic data in your report.
+   * Filters to limit the scope of reported data.
    * @param filters filters or {@code null} for none
    */
   public Parameters setFilters(java.util.List<FilterPair> filters) {
@@ -90,7 +92,8 @@ public final class Parameters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Data is grouped by the filters listed in this field.
+   * Dimensions by which to segment and group the data. Defined by [Filter](/bid-
+   * manager/reference/rest/v2/filters-metrics#filters) values.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getGroupBys() {
@@ -98,7 +101,8 @@ public final class Parameters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Data is grouped by the filters listed in this field.
+   * Dimensions by which to segment and group the data. Defined by [Filter](/bid-
+   * manager/reference/rest/v2/filters-metrics#filters) values.
    * @param groupBys groupBys or {@code null} for none
    */
   public Parameters setGroupBys(java.util.List<java.lang.String> groupBys) {
@@ -107,7 +111,8 @@ public final class Parameters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Metrics to include as columns in your report.
+   * Metrics to define the data populating the report. Defined by [Metric](/bid-
+   * manager/reference/rest/v2/filters-metrics#metrics) values.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMetrics() {
@@ -115,7 +120,8 @@ public final class Parameters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Metrics to include as columns in your report.
+   * Metrics to define the data populating the report. Defined by [Metric](/bid-
+   * manager/reference/rest/v2/filters-metrics#metrics) values.
    * @param metrics metrics or {@code null} for none
    */
   public Parameters setMetrics(java.util.List<java.lang.String> metrics) {
@@ -124,7 +130,7 @@ public final class Parameters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional query options.
+   * Additional report parameter options.
    * @return value or {@code null} for none
    */
   public Options getOptions() {
@@ -132,7 +138,7 @@ public final class Parameters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional query options.
+   * Additional report parameter options.
    * @param options options or {@code null} for none
    */
   public Parameters setOptions(Options options) {
@@ -141,8 +147,8 @@ public final class Parameters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the report. The type of the report will dictate what dimesions, filters, and
-   * metrics can be used.
+   * The type of the report. The type of the report determines the dimesions, filters, and metrics
+   * that can be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -150,8 +156,8 @@ public final class Parameters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the report. The type of the report will dictate what dimesions, filters, and
-   * metrics can be used.
+   * The type of the report. The type of the report determines the dimesions, filters, and metrics
+   * that can be used.
    * @param type type or {@code null} for none
    */
   public Parameters setType(java.lang.String type) {

@@ -17,7 +17,7 @@
 package com.google.api.services.doubleclickbidmanager.model;
 
 /**
- * Additional query options.
+ * Report parameter options.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the DoubleClick Bid Manager API. For a detailed
@@ -31,16 +31,16 @@ package com.google.api.services.doubleclickbidmanager.model;
 public final class Options extends com.google.api.client.json.GenericJson {
 
   /**
-   * Set to true and filter your report by `FILTER_INSERTION_ORDER` or `FILTER_LINE_ITEM` to include
-   * data for audience lists specifically targeted by those items.
+   * Whether to include data for audience lists specifically targeted by filtered line items or
+   * insertion orders. Requires the use of `FILTER_INSERTION_ORDER` or `FILTER_LINE_ITEM` filters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean includeOnlyTargetedUserLists;
 
   /**
-   * Set to true and filter your report by `FILTER_INSERTION_ORDER` or `FILTER_LINE_ITEM` to include
-   * data for audience lists specifically targeted by those items.
+   * Whether to include data for audience lists specifically targeted by filtered line items or
+   * insertion orders. Requires the use of `FILTER_INSERTION_ORDER` or `FILTER_LINE_ITEM` filters.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeOnlyTargetedUserLists() {
@@ -48,8 +48,8 @@ public final class Options extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Set to true and filter your report by `FILTER_INSERTION_ORDER` or `FILTER_LINE_ITEM` to include
-   * data for audience lists specifically targeted by those items.
+   * Whether to include data for audience lists specifically targeted by filtered line items or
+   * insertion orders. Requires the use of `FILTER_INSERTION_ORDER` or `FILTER_LINE_ITEM` filters.
    * @param includeOnlyTargetedUserLists includeOnlyTargetedUserLists or {@code null} for none
    */
   public Options setIncludeOnlyTargetedUserLists(java.lang.Boolean includeOnlyTargetedUserLists) {

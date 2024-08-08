@@ -17,7 +17,7 @@
 package com.google.api.services.doubleclickbidmanager.model;
 
 /**
- * Filter used to match traffic data in your report.
+ * Represents a single filter rule.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the DoubleClick Bid Manager API. For a detailed
@@ -31,21 +31,23 @@ package com.google.api.services.doubleclickbidmanager.model;
 public final class FilterPair extends com.google.api.client.json.GenericJson {
 
   /**
-   * Filter type.
+   * The type of value to filter by. Defined by a [Filter](/bid-manager/reference/rest/v2/filters-
+   * metrics#filters) value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Filter value.
+   * The identifying value to filter by, such as a relevant resource ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * Filter type.
+   * The type of value to filter by. Defined by a [Filter](/bid-manager/reference/rest/v2/filters-
+   * metrics#filters) value.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -53,7 +55,8 @@ public final class FilterPair extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Filter type.
+   * The type of value to filter by. Defined by a [Filter](/bid-manager/reference/rest/v2/filters-
+   * metrics#filters) value.
    * @param type type or {@code null} for none
    */
   public FilterPair setType(java.lang.String type) {
@@ -62,7 +65,7 @@ public final class FilterPair extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Filter value.
+   * The identifying value to filter by, such as a relevant resource ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -70,7 +73,7 @@ public final class FilterPair extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Filter value.
+   * The identifying value to filter by, such as a relevant resource ID.
    * @param value value or {@code null} for none
    */
   public FilterPair setValue(java.lang.String value) {

@@ -17,7 +17,7 @@
 package com.google.api.services.doubleclickbidmanager.model;
 
 /**
- * Report data range.
+ * The date range to be reported on.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the DoubleClick Bid Manager API. For a detailed
@@ -31,31 +31,35 @@ package com.google.api.services.doubleclickbidmanager.model;
 public final class DataRange extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ending date for the data that is shown in the report. Note, `customEndDate` is required if
-   * `range` is `CUSTOM_DATES` and ignored otherwise.
+   * If `CUSTOM_DATES` is assigned to range, this field specifies the end date for the date range
+   * that is reported on. This field is required if using `CUSTOM_DATES` range and will be ignored
+   * otherwise.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Date customEndDate;
 
   /**
-   * The starting data for the data that is shown in the report. Note, `customStartDate` is required
-   * if `range` is `CUSTOM_DATES` and ignored otherwise.
+   * If `CUSTOM_DATES` is assigned to range, this field specifies the starting date for the date
+   * range that is reported on. This field is required if using `CUSTOM_DATES` range and will be
+   * ignored otherwise.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Date customStartDate;
 
   /**
-   * Report data range used to generate the report.
+   * The preset date range to be reported on. If `CUSTOM_DATES` is assigned to this field, fields
+   * custom_start_date and custom_end_date must be set to specify the custom date range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String range;
 
   /**
-   * The ending date for the data that is shown in the report. Note, `customEndDate` is required if
-   * `range` is `CUSTOM_DATES` and ignored otherwise.
+   * If `CUSTOM_DATES` is assigned to range, this field specifies the end date for the date range
+   * that is reported on. This field is required if using `CUSTOM_DATES` range and will be ignored
+   * otherwise.
    * @return value or {@code null} for none
    */
   public Date getCustomEndDate() {
@@ -63,8 +67,9 @@ public final class DataRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ending date for the data that is shown in the report. Note, `customEndDate` is required if
-   * `range` is `CUSTOM_DATES` and ignored otherwise.
+   * If `CUSTOM_DATES` is assigned to range, this field specifies the end date for the date range
+   * that is reported on. This field is required if using `CUSTOM_DATES` range and will be ignored
+   * otherwise.
    * @param customEndDate customEndDate or {@code null} for none
    */
   public DataRange setCustomEndDate(Date customEndDate) {
@@ -73,8 +78,9 @@ public final class DataRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The starting data for the data that is shown in the report. Note, `customStartDate` is required
-   * if `range` is `CUSTOM_DATES` and ignored otherwise.
+   * If `CUSTOM_DATES` is assigned to range, this field specifies the starting date for the date
+   * range that is reported on. This field is required if using `CUSTOM_DATES` range and will be
+   * ignored otherwise.
    * @return value or {@code null} for none
    */
   public Date getCustomStartDate() {
@@ -82,8 +88,9 @@ public final class DataRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The starting data for the data that is shown in the report. Note, `customStartDate` is required
-   * if `range` is `CUSTOM_DATES` and ignored otherwise.
+   * If `CUSTOM_DATES` is assigned to range, this field specifies the starting date for the date
+   * range that is reported on. This field is required if using `CUSTOM_DATES` range and will be
+   * ignored otherwise.
    * @param customStartDate customStartDate or {@code null} for none
    */
   public DataRange setCustomStartDate(Date customStartDate) {
@@ -92,7 +99,8 @@ public final class DataRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Report data range used to generate the report.
+   * The preset date range to be reported on. If `CUSTOM_DATES` is assigned to this field, fields
+   * custom_start_date and custom_end_date must be set to specify the custom date range.
    * @return value or {@code null} for none
    */
   public java.lang.String getRange() {
@@ -100,7 +108,8 @@ public final class DataRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Report data range used to generate the report.
+   * The preset date range to be reported on. If `CUSTOM_DATES` is assigned to this field, fields
+   * custom_start_date and custom_end_date must be set to specify the custom date range.
    * @param range range or {@code null} for none
    */
   public DataRange setRange(java.lang.String range) {

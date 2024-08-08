@@ -31,23 +31,23 @@ package com.google.api.services.doubleclickbidmanager.model;
 public final class ListReportsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A token, which can be sent as page_token to retrieve the next page of reports. If this field is
-   * omitted, there are no subsequent pages.
+   * A token to retrieve the next page of results. Pass this value in the page_token field in the
+   * subsequent call to `queries.reports.list` method to retrieve the next page of results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * Retrieved reports.
+   * The list of reports. This field will be absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Report> reports;
 
   /**
-   * A token, which can be sent as page_token to retrieve the next page of reports. If this field is
-   * omitted, there are no subsequent pages.
+   * A token to retrieve the next page of results. Pass this value in the page_token field in the
+   * subsequent call to `queries.reports.list` method to retrieve the next page of results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -55,8 +55,8 @@ public final class ListReportsResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * A token, which can be sent as page_token to retrieve the next page of reports. If this field is
-   * omitted, there are no subsequent pages.
+   * A token to retrieve the next page of results. Pass this value in the page_token field in the
+   * subsequent call to `queries.reports.list` method to retrieve the next page of results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListReportsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -65,7 +65,7 @@ public final class ListReportsResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Retrieved reports.
+   * The list of reports. This field will be absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<Report> getReports() {
@@ -73,7 +73,7 @@ public final class ListReportsResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Retrieved reports.
+   * The list of reports. This field will be absent if empty.
    * @param reports reports or {@code null} for none
    */
   public ListReportsResponse setReports(java.util.List<Report> reports) {

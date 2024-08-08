@@ -17,7 +17,7 @@
 package com.google.api.services.doubleclickbidmanager.model;
 
 /**
- * Information on when and how frequently to run a query.
+ * Settings on when and how frequently to run a query.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the DoubleClick Bid Manager API. For a detailed
@@ -31,35 +31,40 @@ package com.google.api.services.doubleclickbidmanager.model;
 public final class QuerySchedule extends com.google.api.client.json.GenericJson {
 
   /**
-   * Date to periodically run the query until. Not applicable to `ONE_TIME` frequency.
+   * The date on which to end the scheduled runs. This field is required if frequency is not set to
+   * `ONE_TIME`. Otherwise, it will be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Date endDate;
 
   /**
-   * How often the query is run.
+   * How frequently to run the query. If set to `ONE_TIME`, the query will only be run when
+   * queries.run is called.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String frequency;
 
   /**
-   * Canonical timezone code for report generation time. Defaults to `America/New_York`.
+   * The canonical code for the timezone the query schedule is based on. Scheduled runs are usually
+   * conducted in the morning of a given day. Defaults to `America/New_York`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextRunTimezoneCode;
 
   /**
-   * When to start running the query. Not applicable to `ONE_TIME` frequency.
+   * The date on which to begin the scheduled runs. This field is required if frequency is not set
+   * to `ONE_TIME`. Otherwise, it will be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Date startDate;
 
   /**
-   * Date to periodically run the query until. Not applicable to `ONE_TIME` frequency.
+   * The date on which to end the scheduled runs. This field is required if frequency is not set to
+   * `ONE_TIME`. Otherwise, it will be ignored.
    * @return value or {@code null} for none
    */
   public Date getEndDate() {
@@ -67,7 +72,8 @@ public final class QuerySchedule extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Date to periodically run the query until. Not applicable to `ONE_TIME` frequency.
+   * The date on which to end the scheduled runs. This field is required if frequency is not set to
+   * `ONE_TIME`. Otherwise, it will be ignored.
    * @param endDate endDate or {@code null} for none
    */
   public QuerySchedule setEndDate(Date endDate) {
@@ -76,7 +82,8 @@ public final class QuerySchedule extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * How often the query is run.
+   * How frequently to run the query. If set to `ONE_TIME`, the query will only be run when
+   * queries.run is called.
    * @return value or {@code null} for none
    */
   public java.lang.String getFrequency() {
@@ -84,7 +91,8 @@ public final class QuerySchedule extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * How often the query is run.
+   * How frequently to run the query. If set to `ONE_TIME`, the query will only be run when
+   * queries.run is called.
    * @param frequency frequency or {@code null} for none
    */
   public QuerySchedule setFrequency(java.lang.String frequency) {
@@ -93,7 +101,8 @@ public final class QuerySchedule extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Canonical timezone code for report generation time. Defaults to `America/New_York`.
+   * The canonical code for the timezone the query schedule is based on. Scheduled runs are usually
+   * conducted in the morning of a given day. Defaults to `America/New_York`.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextRunTimezoneCode() {
@@ -101,7 +110,8 @@ public final class QuerySchedule extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Canonical timezone code for report generation time. Defaults to `America/New_York`.
+   * The canonical code for the timezone the query schedule is based on. Scheduled runs are usually
+   * conducted in the morning of a given day. Defaults to `America/New_York`.
    * @param nextRunTimezoneCode nextRunTimezoneCode or {@code null} for none
    */
   public QuerySchedule setNextRunTimezoneCode(java.lang.String nextRunTimezoneCode) {
@@ -110,7 +120,8 @@ public final class QuerySchedule extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * When to start running the query. Not applicable to `ONE_TIME` frequency.
+   * The date on which to begin the scheduled runs. This field is required if frequency is not set
+   * to `ONE_TIME`. Otherwise, it will be ignored.
    * @return value or {@code null} for none
    */
   public Date getStartDate() {
@@ -118,7 +129,8 @@ public final class QuerySchedule extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * When to start running the query. Not applicable to `ONE_TIME` frequency.
+   * The date on which to begin the scheduled runs. This field is required if frequency is not set
+   * to `ONE_TIME`. Otherwise, it will be ignored.
    * @param startDate startDate or {@code null} for none
    */
   public QuerySchedule setStartDate(Date startDate) {

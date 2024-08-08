@@ -17,7 +17,7 @@
 package com.google.api.services.doubleclickbidmanager.model;
 
 /**
- * Request to run a stored query to generate a report.
+ * Details specifying how to run a query.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the DoubleClick Bid Manager API. For a detailed
@@ -31,16 +31,16 @@ package com.google.api.services.doubleclickbidmanager.model;
 public final class RunQueryRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Report data range used to generate the report. If unspecified, the original parent query's data
-   * range is used.
+   * The date range used by the query to generate the report. If unspecified, the query's original
+   * data_range is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DataRange dataRange;
 
   /**
-   * Report data range used to generate the report. If unspecified, the original parent query's data
-   * range is used.
+   * The date range used by the query to generate the report. If unspecified, the query's original
+   * data_range is used.
    * @return value or {@code null} for none
    */
   public DataRange getDataRange() {
@@ -48,8 +48,8 @@ public final class RunQueryRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Report data range used to generate the report. If unspecified, the original parent query's data
-   * range is used.
+   * The date range used by the query to generate the report. If unspecified, the query's original
+   * data_range is used.
    * @param dataRange dataRange or {@code null} for none
    */
   public RunQueryRequest setDataRange(DataRange dataRange) {

@@ -17,7 +17,7 @@
 package com.google.api.services.doubleclickbidmanager.model;
 
 /**
- * Report metadata.
+ * The metadata of a report.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the DoubleClick Bid Manager API. For a detailed
@@ -31,35 +31,37 @@ package com.google.api.services.doubleclickbidmanager.model;
 public final class ReportMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The path to the location in Google Cloud Storage where the report is stored.
+   * Output only. The location of the generated report file in Google Cloud Storage. This field will
+   * be absent if status.state is not `DONE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String googleCloudStoragePath;
 
   /**
-   * The ending time for the data that is shown in the report.
+   * The end date of the report data date range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Date reportDataEndDate;
 
   /**
-   * The starting time for the data that is shown in the report.
+   * The start date of the report data date range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Date reportDataStartDate;
 
   /**
-   * Report status.
+   * The status of the report.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ReportStatus status;
 
   /**
-   * Output only. The path to the location in Google Cloud Storage where the report is stored.
+   * Output only. The location of the generated report file in Google Cloud Storage. This field will
+   * be absent if status.state is not `DONE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getGoogleCloudStoragePath() {
@@ -67,7 +69,8 @@ public final class ReportMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The path to the location in Google Cloud Storage where the report is stored.
+   * Output only. The location of the generated report file in Google Cloud Storage. This field will
+   * be absent if status.state is not `DONE`.
    * @param googleCloudStoragePath googleCloudStoragePath or {@code null} for none
    */
   public ReportMetadata setGoogleCloudStoragePath(java.lang.String googleCloudStoragePath) {
@@ -76,7 +79,7 @@ public final class ReportMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The ending time for the data that is shown in the report.
+   * The end date of the report data date range.
    * @return value or {@code null} for none
    */
   public Date getReportDataEndDate() {
@@ -84,7 +87,7 @@ public final class ReportMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The ending time for the data that is shown in the report.
+   * The end date of the report data date range.
    * @param reportDataEndDate reportDataEndDate or {@code null} for none
    */
   public ReportMetadata setReportDataEndDate(Date reportDataEndDate) {
@@ -93,7 +96,7 @@ public final class ReportMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The starting time for the data that is shown in the report.
+   * The start date of the report data date range.
    * @return value or {@code null} for none
    */
   public Date getReportDataStartDate() {
@@ -101,7 +104,7 @@ public final class ReportMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The starting time for the data that is shown in the report.
+   * The start date of the report data date range.
    * @param reportDataStartDate reportDataStartDate or {@code null} for none
    */
   public ReportMetadata setReportDataStartDate(Date reportDataStartDate) {
@@ -110,7 +113,7 @@ public final class ReportMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Report status.
+   * The status of the report.
    * @return value or {@code null} for none
    */
   public ReportStatus getStatus() {
@@ -118,7 +121,7 @@ public final class ReportMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Report status.
+   * The status of the report.
    * @param status status or {@code null} for none
    */
   public ReportMetadata setStatus(ReportStatus status) {

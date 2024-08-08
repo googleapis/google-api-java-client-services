@@ -37,6 +37,13 @@ public final class GoogleCloudDiscoveryengineV1alphaDocumentInfo extends com.goo
   private java.lang.String id;
 
   /**
+   * Output only. Whether the referenced Document can be found in the data store.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean joined;
+
+  /**
    * The Document resource full name, of the form: `projects/{project_id}/locations/{location}/colle
    * ctions/{collection_id}/dataStores/{data_store_id}/branches/{branch_id}/documents/{document_id}`
    * The value may be {@code null}.
@@ -82,6 +89,23 @@ public final class GoogleCloudDiscoveryengineV1alphaDocumentInfo extends com.goo
    */
   public GoogleCloudDiscoveryengineV1alphaDocumentInfo setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Output only. Whether the referenced Document can be found in the data store.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getJoined() {
+    return joined;
+  }
+
+  /**
+   * Output only. Whether the referenced Document can be found in the data store.
+   * @param joined joined or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDocumentInfo setJoined(java.lang.Boolean joined) {
+    this.joined = joined;
     return this;
   }
 

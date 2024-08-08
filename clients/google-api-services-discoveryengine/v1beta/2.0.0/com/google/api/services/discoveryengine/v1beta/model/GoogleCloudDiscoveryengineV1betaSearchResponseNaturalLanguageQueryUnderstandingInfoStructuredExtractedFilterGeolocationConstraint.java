@@ -45,6 +45,20 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponseNaturalLanguage
   private java.lang.String fieldName;
 
   /**
+   * The latitude of the geolocation inferred from the input query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double latitude;
+
+  /**
+   * The longitude of the geolocation inferred from the input query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double longitude;
+
+  /**
    * The radius in meters around the address. The record is returned if the location of the
    * geolocation field is within the radius.
    * The value may be {@code null}.
@@ -85,6 +99,40 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponseNaturalLanguage
    */
   public GoogleCloudDiscoveryengineV1betaSearchResponseNaturalLanguageQueryUnderstandingInfoStructuredExtractedFilterGeolocationConstraint setFieldName(java.lang.String fieldName) {
     this.fieldName = fieldName;
+    return this;
+  }
+
+  /**
+   * The latitude of the geolocation inferred from the input query.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getLatitude() {
+    return latitude;
+  }
+
+  /**
+   * The latitude of the geolocation inferred from the input query.
+   * @param latitude latitude or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchResponseNaturalLanguageQueryUnderstandingInfoStructuredExtractedFilterGeolocationConstraint setLatitude(java.lang.Double latitude) {
+    this.latitude = latitude;
+    return this;
+  }
+
+  /**
+   * The longitude of the geolocation inferred from the input query.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getLongitude() {
+    return longitude;
+  }
+
+  /**
+   * The longitude of the geolocation inferred from the input query.
+   * @param longitude longitude or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchResponseNaturalLanguageQueryUnderstandingInfoStructuredExtractedFilterGeolocationConstraint setLongitude(java.lang.Double longitude) {
+    this.longitude = longitude;
     return this;
   }
 

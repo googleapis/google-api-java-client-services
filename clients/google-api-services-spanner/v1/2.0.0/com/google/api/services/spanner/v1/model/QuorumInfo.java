@@ -17,7 +17,7 @@
 package com.google.api.services.spanner.v1.model;
 
 /**
- * Information about the dual region quorum.
+ * Information about the dual-region quorum.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Spanner API. For a detailed explanation see:
@@ -31,14 +31,14 @@ public final class QuorumInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The etag is used for optimistic concurrency control as a way to help prevent
-   * simultaneous ChangeQuorum requests that could create a race condition.
+   * simultaneous `ChangeQuorum` requests that might create a race condition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
 
   /**
-   * Output only. Whether this ChangeQuorum is a Google or User initiated.
+   * Output only. Whether this `ChangeQuorum` is Google or User initiated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class QuorumInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The etag is used for optimistic concurrency control as a way to help prevent
-   * simultaneous ChangeQuorum requests that could create a race condition.
+   * simultaneous `ChangeQuorum` requests that might create a race condition.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -70,7 +70,7 @@ public final class QuorumInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The etag is used for optimistic concurrency control as a way to help prevent
-   * simultaneous ChangeQuorum requests that could create a race condition.
+   * simultaneous `ChangeQuorum` requests that might create a race condition.
    * @param etag etag or {@code null} for none
    */
   public QuorumInfo setEtag(java.lang.String etag) {
@@ -79,7 +79,7 @@ public final class QuorumInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether this ChangeQuorum is a Google or User initiated.
+   * Output only. Whether this `ChangeQuorum` is Google or User initiated.
    * @return value or {@code null} for none
    */
   public java.lang.String getInitiator() {
@@ -87,7 +87,7 @@ public final class QuorumInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether this ChangeQuorum is a Google or User initiated.
+   * Output only. Whether this `ChangeQuorum` is Google or User initiated.
    * @param initiator initiator or {@code null} for none
    */
   public QuorumInfo setInitiator(java.lang.String initiator) {

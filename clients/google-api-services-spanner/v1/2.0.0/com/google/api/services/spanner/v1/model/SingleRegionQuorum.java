@@ -31,9 +31,9 @@ public final class SingleRegionQuorum extends com.google.api.client.json.Generic
 
   /**
    * Required. The location of the serving region, e.g. "us-central1". The location must be one of
-   * the regions within the dual region instance configuration of your database. The list of valid
-   * locations is available via [GetInstanceConfig[InstanceAdmin.GetInstanceConfig] API. This should
-   * only be used if you plan to change quorum in single-region quorum type.
+   * the regions within the dual-region instance configuration of your database. The list of valid
+   * locations is available using the GetInstanceConfig API. This should only be used if you plan to
+   * change quorum to the single-region quorum type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,9 +41,9 @@ public final class SingleRegionQuorum extends com.google.api.client.json.Generic
 
   /**
    * Required. The location of the serving region, e.g. "us-central1". The location must be one of
-   * the regions within the dual region instance configuration of your database. The list of valid
-   * locations is available via [GetInstanceConfig[InstanceAdmin.GetInstanceConfig] API. This should
-   * only be used if you plan to change quorum in single-region quorum type.
+   * the regions within the dual-region instance configuration of your database. The list of valid
+   * locations is available using the GetInstanceConfig API. This should only be used if you plan to
+   * change quorum to the single-region quorum type.
    * @return value or {@code null} for none
    */
   public java.lang.String getServingLocation() {
@@ -52,9 +52,9 @@ public final class SingleRegionQuorum extends com.google.api.client.json.Generic
 
   /**
    * Required. The location of the serving region, e.g. "us-central1". The location must be one of
-   * the regions within the dual region instance configuration of your database. The list of valid
-   * locations is available via [GetInstanceConfig[InstanceAdmin.GetInstanceConfig] API. This should
-   * only be used if you plan to change quorum in single-region quorum type.
+   * the regions within the dual-region instance configuration of your database. The list of valid
+   * locations is available using the GetInstanceConfig API. This should only be used if you plan to
+   * change quorum to the single-region quorum type.
    * @param servingLocation servingLocation or {@code null} for none
    */
   public SingleRegionQuorum setServingLocation(java.lang.String servingLocation) {

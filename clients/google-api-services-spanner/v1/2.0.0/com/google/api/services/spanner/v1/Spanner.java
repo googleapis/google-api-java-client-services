@@ -7074,11 +7074,11 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
       public class Databases {
 
         /**
-         * ChangeQuorum is strictly restricted to databases that use dual region instance configurations.
-         * Initiates a background operation to change quorum a database from dual-region mode to single-
-         * region mode and vice versa. The returned long-running operation will have a name of the format
+         * `ChangeQuorum` is strictly restricted to databases that use dual-region instance configurations.
+         * Initiates a background operation to change the quorum of a database from dual-region mode to
+         * single-region mode or vice versa. The returned long-running operation has a name of the format
          * `projects//instances//databases//operations/` and can be used to track execution of the
-         * ChangeQuorum. The metadata field type is ChangeQuorumMetadata. Authorization requires
+         * `ChangeQuorum`. The metadata field type is ChangeQuorumMetadata. Authorization requires
          * `spanner.databases.changequorum` permission on the resource database.
          *
          * Create a request for the method "databases.changequorum".
@@ -7086,7 +7086,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the spanner server.  After setting any optional
          * parameters, call the {@link Changequorum#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the database in which to apply the ChangeQuorum. Values are of the form
+         * @param name Required. Name of the database in which to apply `ChangeQuorum`. Values are of the form
          *        `projects//instances//databases/`.
          * @param content the {@link com.google.api.services.spanner.v1.model.ChangeQuorumRequest}
          * @return the request
@@ -7105,11 +7105,11 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
 
           /**
-           * ChangeQuorum is strictly restricted to databases that use dual region instance configurations.
-           * Initiates a background operation to change quorum a database from dual-region mode to single-
-           * region mode and vice versa. The returned long-running operation will have a name of the format
-           * `projects//instances//databases//operations/` and can be used to track execution of the
-           * ChangeQuorum. The metadata field type is ChangeQuorumMetadata. Authorization requires
+           * `ChangeQuorum` is strictly restricted to databases that use dual-region instance
+           * configurations. Initiates a background operation to change the quorum of a database from dual-
+           * region mode to single-region mode or vice versa. The returned long-running operation has a name
+           * of the format `projects//instances//databases//operations/` and can be used to track execution
+           * of the `ChangeQuorum`. The metadata field type is ChangeQuorumMetadata. Authorization requires
            * `spanner.databases.changequorum` permission on the resource database.
            *
            * Create a request for the method "databases.changequorum".
@@ -7120,7 +7120,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * Changequorum#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the database in which to apply the ChangeQuorum. Values are of the form
+           * @param name Required. Name of the database in which to apply `ChangeQuorum`. Values are of the form
          *        `projects//instances//databases/`.
            * @param content the {@link com.google.api.services.spanner.v1.model.ChangeQuorumRequest}
            * @since 1.13
@@ -7191,13 +7191,13 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
-           * Required. Name of the database in which to apply the ChangeQuorum. Values are of the
-           * form `projects//instances//databases/`.
+           * Required. Name of the database in which to apply `ChangeQuorum`. Values are of the form
+           * `projects//instances//databases/`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the database in which to apply the ChangeQuorum. Values are of the form
+          /** Required. Name of the database in which to apply `ChangeQuorum`. Values are of the form
          `projects//instances//databases/`.
            */
           public java.lang.String getName() {
@@ -7205,8 +7205,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
-           * Required. Name of the database in which to apply the ChangeQuorum. Values are of the
-           * form `projects//instances//databases/`.
+           * Required. Name of the database in which to apply `ChangeQuorum`. Values are of the form
+           * `projects//instances//databases/`.
            */
           public Changequorum setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

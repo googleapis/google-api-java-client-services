@@ -17,7 +17,7 @@
 package com.google.api.services.spanner.v1.model;
 
 /**
- * Information about the database quorum type. this applies only for dual region instance configs.
+ * Information about the database quorum type. This only applies to dual-region instance configs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Spanner API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.spanner.v1.model;
 public final class QuorumType extends com.google.api.client.json.GenericJson {
 
   /**
-   * Dual region quorum type.
+   * Dual-region quorum type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DualRegionQuorum dualRegion;
 
   /**
-   * Single region quorum type.
+   * Single-region quorum type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SingleRegionQuorum singleRegion;
 
   /**
-   * Dual region quorum type.
+   * Dual-region quorum type.
    * @return value or {@code null} for none
    */
   public DualRegionQuorum getDualRegion() {
@@ -52,7 +52,7 @@ public final class QuorumType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Dual region quorum type.
+   * Dual-region quorum type.
    * @param dualRegion dualRegion or {@code null} for none
    */
   public QuorumType setDualRegion(DualRegionQuorum dualRegion) {
@@ -61,7 +61,7 @@ public final class QuorumType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Single region quorum type.
+   * Single-region quorum type.
    * @return value or {@code null} for none
    */
   public SingleRegionQuorum getSingleRegion() {
@@ -69,7 +69,7 @@ public final class QuorumType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Single region quorum type.
+   * Single-region quorum type.
    * @param singleRegion singleRegion or {@code null} for none
    */
   public QuorumType setSingleRegion(SingleRegionQuorum singleRegion) {

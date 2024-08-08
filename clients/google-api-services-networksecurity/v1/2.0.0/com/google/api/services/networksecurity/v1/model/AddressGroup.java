@@ -73,6 +73,13 @@ public final class AddressGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. List of supported purposes of the Address Group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> purpose;
+
+  /**
    * Output only. Server-defined fully-qualified URL for this resource.
    * The value may be {@code null}.
    */
@@ -194,6 +201,23 @@ public final class AddressGroup extends com.google.api.client.json.GenericJson {
    */
   public AddressGroup setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. List of supported purposes of the Address Group.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPurpose() {
+    return purpose;
+  }
+
+  /**
+   * Optional. List of supported purposes of the Address Group.
+   * @param purpose purpose or {@code null} for none
+   */
+  public AddressGroup setPurpose(java.util.List<java.lang.String> purpose) {
+    this.purpose = purpose;
     return this;
   }
 

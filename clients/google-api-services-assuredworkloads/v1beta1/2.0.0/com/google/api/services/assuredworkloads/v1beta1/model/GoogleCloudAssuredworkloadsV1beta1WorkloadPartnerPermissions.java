@@ -31,6 +31,13 @@ package com.google.api.services.assuredworkloads.v1beta1.model;
 public final class GoogleCloudAssuredworkloadsV1beta1WorkloadPartnerPermissions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Allow partner to view support case details for an AXT log
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean accessTransparencyLogsSupportCaseViewer;
+
+  /**
    * Optional. Allow partner to view violation alerts.
    * The value may be {@code null}.
    */
@@ -50,6 +57,23 @@ public final class GoogleCloudAssuredworkloadsV1beta1WorkloadPartnerPermissions 
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean serviceAccessApprover;
+
+  /**
+   * Optional. Allow partner to view support case details for an AXT log
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAccessTransparencyLogsSupportCaseViewer() {
+    return accessTransparencyLogsSupportCaseViewer;
+  }
+
+  /**
+   * Optional. Allow partner to view support case details for an AXT log
+   * @param accessTransparencyLogsSupportCaseViewer accessTransparencyLogsSupportCaseViewer or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1WorkloadPartnerPermissions setAccessTransparencyLogsSupportCaseViewer(java.lang.Boolean accessTransparencyLogsSupportCaseViewer) {
+    this.accessTransparencyLogsSupportCaseViewer = accessTransparencyLogsSupportCaseViewer;
+    return this;
+  }
 
   /**
    * Optional. Allow partner to view violation alerts.

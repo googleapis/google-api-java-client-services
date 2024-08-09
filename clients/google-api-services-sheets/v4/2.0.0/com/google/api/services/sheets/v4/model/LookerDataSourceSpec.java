@@ -30,7 +30,7 @@ package com.google.api.services.sheets.v4.model;
 public final class LookerDataSourceSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of a LookerML model explore.
+   * Name of a Looker model explore.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,14 +44,14 @@ public final class LookerDataSourceSpec extends com.google.api.client.json.Gener
   private java.lang.String instanceUri;
 
   /**
-   * Name of a LookerML model.
+   * Name of a Looker model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String model;
 
   /**
-   * Name of a LookerML model explore.
+   * Name of a Looker model explore.
    * @return value or {@code null} for none
    */
   public java.lang.String getExplore() {
@@ -59,7 +59,7 @@ public final class LookerDataSourceSpec extends com.google.api.client.json.Gener
   }
 
   /**
-   * Name of a LookerML model explore.
+   * Name of a Looker model explore.
    * @param explore explore or {@code null} for none
    */
   public LookerDataSourceSpec setExplore(java.lang.String explore) {
@@ -85,7 +85,7 @@ public final class LookerDataSourceSpec extends com.google.api.client.json.Gener
   }
 
   /**
-   * Name of a LookerML model.
+   * Name of a Looker model.
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -93,7 +93,7 @@ public final class LookerDataSourceSpec extends com.google.api.client.json.Gener
   }
 
   /**
-   * Name of a LookerML model.
+   * Name of a Looker model.
    * @param model model or {@code null} for none
    */
   public LookerDataSourceSpec setModel(java.lang.String model) {

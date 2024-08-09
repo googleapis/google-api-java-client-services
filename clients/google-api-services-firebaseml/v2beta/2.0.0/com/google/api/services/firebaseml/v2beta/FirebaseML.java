@@ -361,8 +361,9 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the firebaseml server.  After setting any optional
            * parameters, call the {@link GenerateContent#execute()} method to invoke the remote operation.
            *
-           * @param model Required. The name of the publisher model requested to serve the prediction. Format:
-           *        `projects/{project}/locations/{location}/publishers/models`
+           * @param model Required. The fully qualified name of the publisher model or tuned model endpoint to use. Publisher
+           *        model format: `projects/{project}/locations/{location}/publishers/models` Tuned model
+           *        endpoint format: `projects/{project}/locations/{location}/endpoints/{endpoint}`
            * @param content the {@link com.google.api.services.firebaseml.v2beta.model.GoogleCloudAiplatformV1beta1GenerateContentRequest}
            * @return the request
            */
@@ -390,8 +391,9 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
              * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
              * the constructor. </p>
              *
-             * @param model Required. The name of the publisher model requested to serve the prediction. Format:
-           *        `projects/{project}/locations/{location}/publishers/models`
+             * @param model Required. The fully qualified name of the publisher model or tuned model endpoint to use. Publisher
+           *        model format: `projects/{project}/locations/{location}/publishers/models` Tuned model
+           *        endpoint format: `projects/{project}/locations/{location}/endpoints/{endpoint}`
              * @param content the {@link com.google.api.services.firebaseml.v2beta.model.GoogleCloudAiplatformV1beta1GenerateContentRequest}
              * @since 1.13
              */
@@ -461,22 +463,27 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required. The name of the publisher model requested to serve the prediction. Format:
-             * `projects/{project}/locations/{location}/publishers/models`
+             * Required. The fully qualified name of the publisher model or tuned model endpoint to
+             * use. Publisher model format:
+             * `projects/{project}/locations/{location}/publishers/models` Tuned model endpoint
+             * format: `projects/{project}/locations/{location}/endpoints/{endpoint}`
              */
             @com.google.api.client.util.Key
             private java.lang.String model;
 
-            /** Required. The name of the publisher model requested to serve the prediction. Format:
-           `projects/{project}/locations/{location}/publishers/models`
+            /** Required. The fully qualified name of the publisher model or tuned model endpoint to use. Publisher
+           model format: `projects/{project}/locations/{location}/publishers/models` Tuned model endpoint
+           format: `projects/{project}/locations/{location}/endpoints/{endpoint}`
              */
             public java.lang.String getModel() {
               return model;
             }
 
             /**
-             * Required. The name of the publisher model requested to serve the prediction. Format:
-             * `projects/{project}/locations/{location}/publishers/models`
+             * Required. The fully qualified name of the publisher model or tuned model endpoint to
+             * use. Publisher model format:
+             * `projects/{project}/locations/{location}/publishers/models` Tuned model endpoint
+             * format: `projects/{project}/locations/{location}/endpoints/{endpoint}`
              */
             public GenerateContent setModel(java.lang.String model) {
               if (!getSuppressPatternChecks()) {
@@ -502,8 +509,9 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
            * parameters, call the {@link StreamGenerateContent#execute()} method to invoke the remote
            * operation.
            *
-           * @param model Required. The name of the publisher model requested to serve the prediction. Format:
-           *        `projects/{project}/locations/{location}/publishers/models`
+           * @param model Required. The fully qualified name of the publisher model or tuned model endpoint to use. Publisher
+           *        model format: `projects/{project}/locations/{location}/publishers/models` Tuned model
+           *        endpoint format: `projects/{project}/locations/{location}/endpoints/{endpoint}`
            * @param content the {@link com.google.api.services.firebaseml.v2beta.model.GoogleCloudAiplatformV1beta1GenerateContentRequest}
            * @return the request
            */
@@ -531,8 +539,9 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
              * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
              * after invoking the constructor. </p>
              *
-             * @param model Required. The name of the publisher model requested to serve the prediction. Format:
-           *        `projects/{project}/locations/{location}/publishers/models`
+             * @param model Required. The fully qualified name of the publisher model or tuned model endpoint to use. Publisher
+           *        model format: `projects/{project}/locations/{location}/publishers/models` Tuned model
+           *        endpoint format: `projects/{project}/locations/{location}/endpoints/{endpoint}`
              * @param content the {@link com.google.api.services.firebaseml.v2beta.model.GoogleCloudAiplatformV1beta1GenerateContentRequest}
              * @since 1.13
              */
@@ -602,22 +611,27 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required. The name of the publisher model requested to serve the prediction. Format:
-             * `projects/{project}/locations/{location}/publishers/models`
+             * Required. The fully qualified name of the publisher model or tuned model endpoint to
+             * use. Publisher model format:
+             * `projects/{project}/locations/{location}/publishers/models` Tuned model endpoint
+             * format: `projects/{project}/locations/{location}/endpoints/{endpoint}`
              */
             @com.google.api.client.util.Key
             private java.lang.String model;
 
-            /** Required. The name of the publisher model requested to serve the prediction. Format:
-           `projects/{project}/locations/{location}/publishers/models`
+            /** Required. The fully qualified name of the publisher model or tuned model endpoint to use. Publisher
+           model format: `projects/{project}/locations/{location}/publishers/models` Tuned model endpoint
+           format: `projects/{project}/locations/{location}/endpoints/{endpoint}`
              */
             public java.lang.String getModel() {
               return model;
             }
 
             /**
-             * Required. The name of the publisher model requested to serve the prediction. Format:
-             * `projects/{project}/locations/{location}/publishers/models`
+             * Required. The fully qualified name of the publisher model or tuned model endpoint to
+             * use. Publisher model format:
+             * `projects/{project}/locations/{location}/publishers/models` Tuned model endpoint
+             * format: `projects/{project}/locations/{location}/endpoints/{endpoint}`
              */
             public StreamGenerateContent setModel(java.lang.String model) {
               if (!getSuppressPatternChecks()) {

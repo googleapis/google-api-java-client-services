@@ -46,6 +46,14 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   private GoogleCloudRecaptchaenterpriseV1AccountVerificationInfo accountVerification;
 
   /**
+   * Optional. The environment creating the assessment. This describes your environment (the system
+   * invoking CreateAssessment), NOT the environment of your user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRecaptchaenterpriseV1AssessmentEnvironment assessmentEnvironment;
+
+  /**
    * Optional. The event being assessed.
    * The value may be {@code null}.
    */
@@ -81,6 +89,14 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. Assessment returned when a site key, a token, and a phone number as `user_id` are
+   * provided. Account defender and SMS toll fraud protection need to be enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRecaptchaenterpriseV1PhoneFraudAssessment phoneFraudAssessment;
 
   /**
    * Optional. The private password leak verification field contains the parameters that are used to
@@ -137,6 +153,25 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
    */
   public GoogleCloudRecaptchaenterpriseV1Assessment setAccountVerification(GoogleCloudRecaptchaenterpriseV1AccountVerificationInfo accountVerification) {
     this.accountVerification = accountVerification;
+    return this;
+  }
+
+  /**
+   * Optional. The environment creating the assessment. This describes your environment (the system
+   * invoking CreateAssessment), NOT the environment of your user.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1AssessmentEnvironment getAssessmentEnvironment() {
+    return assessmentEnvironment;
+  }
+
+  /**
+   * Optional. The environment creating the assessment. This describes your environment (the system
+   * invoking CreateAssessment), NOT the environment of your user.
+   * @param assessmentEnvironment assessmentEnvironment or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1Assessment setAssessmentEnvironment(GoogleCloudRecaptchaenterpriseV1AssessmentEnvironment assessmentEnvironment) {
+    this.assessmentEnvironment = assessmentEnvironment;
     return this;
   }
 
@@ -226,6 +261,25 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
    */
   public GoogleCloudRecaptchaenterpriseV1Assessment setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Assessment returned when a site key, a token, and a phone number as `user_id` are
+   * provided. Account defender and SMS toll fraud protection need to be enabled.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1PhoneFraudAssessment getPhoneFraudAssessment() {
+    return phoneFraudAssessment;
+  }
+
+  /**
+   * Output only. Assessment returned when a site key, a token, and a phone number as `user_id` are
+   * provided. Account defender and SMS toll fraud protection need to be enabled.
+   * @param phoneFraudAssessment phoneFraudAssessment or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1Assessment setPhoneFraudAssessment(GoogleCloudRecaptchaenterpriseV1PhoneFraudAssessment phoneFraudAssessment) {
+    this.phoneFraudAssessment = phoneFraudAssessment;
     return this;
   }
 

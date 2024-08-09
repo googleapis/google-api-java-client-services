@@ -17,7 +17,7 @@
 package com.google.api.services.recaptchaenterprise.v1.model;
 
 /**
- * Response to request to list firewall policies belonging to a key.
+ * Response to request to list firewall policies belonging to a project.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the reCAPTCHA Enterprise API. For a detailed explanation

@@ -1252,6 +1252,143 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
           return (Patch) super.set(parameterName, value);
         }
       }
+      /**
+       * Reorders all firewall policies.
+       *
+       * Create a request for the method "firewallpolicies.reorder".
+       *
+       * This request holds the parameters needed by the recaptchaenterprise server.  After setting any
+       * optional parameters, call the {@link Reorder#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The name of the project to list the policies for, in the format `projects/{project}`.
+       * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1ReorderFirewallPoliciesRequest}
+       * @return the request
+       */
+      public Reorder reorder(java.lang.String parent, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1ReorderFirewallPoliciesRequest content) throws java.io.IOException {
+        Reorder result = new Reorder(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Reorder extends RecaptchaEnterpriseRequest<com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1ReorderFirewallPoliciesResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/firewallpolicies:reorder";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Reorders all firewall policies.
+         *
+         * Create a request for the method "firewallpolicies.reorder".
+         *
+         * This request holds the parameters needed by the the recaptchaenterprise server.  After setting
+         * any optional parameters, call the {@link Reorder#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Reorder#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The name of the project to list the policies for, in the format `projects/{project}`.
+         * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1ReorderFirewallPoliciesRequest}
+         * @since 1.13
+         */
+        protected Reorder(java.lang.String parent, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1ReorderFirewallPoliciesRequest content) {
+          super(RecaptchaEnterprise.this, "POST", REST_PATH, content, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1ReorderFirewallPoliciesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Reorder set$Xgafv(java.lang.String $Xgafv) {
+          return (Reorder) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Reorder setAccessToken(java.lang.String accessToken) {
+          return (Reorder) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Reorder setAlt(java.lang.String alt) {
+          return (Reorder) super.setAlt(alt);
+        }
+
+        @Override
+        public Reorder setCallback(java.lang.String callback) {
+          return (Reorder) super.setCallback(callback);
+        }
+
+        @Override
+        public Reorder setFields(java.lang.String fields) {
+          return (Reorder) super.setFields(fields);
+        }
+
+        @Override
+        public Reorder setKey(java.lang.String key) {
+          return (Reorder) super.setKey(key);
+        }
+
+        @Override
+        public Reorder setOauthToken(java.lang.String oauthToken) {
+          return (Reorder) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Reorder setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Reorder) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Reorder setQuotaUser(java.lang.String quotaUser) {
+          return (Reorder) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Reorder setUploadType(java.lang.String uploadType) {
+          return (Reorder) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Reorder setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Reorder) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the project to list the policies for, in the format
+         * `projects/{project}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The name of the project to list the policies for, in the format `projects/{project}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The name of the project to list the policies for, in the format
+         * `projects/{project}`.
+         */
+        public Reorder setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Reorder set(String parameterName, Object value) {
+          return (Reorder) super.set(parameterName, value);
+        }
+      }
 
     }
     /**
@@ -1274,6 +1411,151 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
      */
     public class Keys {
 
+      /**
+       * Adds an IP override to a key. The following restrictions hold: * The maximum number of IP
+       * overrides per key is 100. * For any conflict (such as IP already exists or IP part of an existing
+       * IP range), an error will be returned.
+       *
+       * Create a request for the method "keys.addIpOverride".
+       *
+       * This request holds the parameters needed by the recaptchaenterprise server.  After setting any
+       * optional parameters, call the {@link AddIpOverride#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The name of the key to which the IP override is added, in the format
+       *        `projects/{project}/keys/{key}`.
+       * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1AddIpOverrideRequest}
+       * @return the request
+       */
+      public AddIpOverride addIpOverride(java.lang.String name, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1AddIpOverrideRequest content) throws java.io.IOException {
+        AddIpOverride result = new AddIpOverride(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class AddIpOverride extends RecaptchaEnterpriseRequest<com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1AddIpOverrideResponse> {
+
+        private static final String REST_PATH = "v1/{+name}:addIpOverride";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/keys/[^/]+$");
+
+        /**
+         * Adds an IP override to a key. The following restrictions hold: * The maximum number of IP
+         * overrides per key is 100. * For any conflict (such as IP already exists or IP part of an
+         * existing IP range), an error will be returned.
+         *
+         * Create a request for the method "keys.addIpOverride".
+         *
+         * This request holds the parameters needed by the the recaptchaenterprise server.  After setting
+         * any optional parameters, call the {@link AddIpOverride#execute()} method to invoke the remote
+         * operation. <p> {@link AddIpOverride#initialize(com.google.api.client.googleapis.services.Abstra
+         * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param name Required. The name of the key to which the IP override is added, in the format
+       *        `projects/{project}/keys/{key}`.
+         * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1AddIpOverrideRequest}
+         * @since 1.13
+         */
+        protected AddIpOverride(java.lang.String name, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1AddIpOverrideRequest content) {
+          super(RecaptchaEnterprise.this, "POST", REST_PATH, content, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1AddIpOverrideResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/keys/[^/]+$");
+          }
+        }
+
+        @Override
+        public AddIpOverride set$Xgafv(java.lang.String $Xgafv) {
+          return (AddIpOverride) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public AddIpOverride setAccessToken(java.lang.String accessToken) {
+          return (AddIpOverride) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public AddIpOverride setAlt(java.lang.String alt) {
+          return (AddIpOverride) super.setAlt(alt);
+        }
+
+        @Override
+        public AddIpOverride setCallback(java.lang.String callback) {
+          return (AddIpOverride) super.setCallback(callback);
+        }
+
+        @Override
+        public AddIpOverride setFields(java.lang.String fields) {
+          return (AddIpOverride) super.setFields(fields);
+        }
+
+        @Override
+        public AddIpOverride setKey(java.lang.String key) {
+          return (AddIpOverride) super.setKey(key);
+        }
+
+        @Override
+        public AddIpOverride setOauthToken(java.lang.String oauthToken) {
+          return (AddIpOverride) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public AddIpOverride setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (AddIpOverride) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public AddIpOverride setQuotaUser(java.lang.String quotaUser) {
+          return (AddIpOverride) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public AddIpOverride setUploadType(java.lang.String uploadType) {
+          return (AddIpOverride) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public AddIpOverride setUploadProtocol(java.lang.String uploadProtocol) {
+          return (AddIpOverride) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the key to which the IP override is added, in the format
+         * `projects/{project}/keys/{key}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the key to which the IP override is added, in the format
+       `projects/{project}/keys/{key}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the key to which the IP override is added, in the format
+         * `projects/{project}/keys/{key}`.
+         */
+        public AddIpOverride setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/keys/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public AddIpOverride set(String parameterName, Object value) {
+          return (AddIpOverride) super.set(parameterName, value);
+        }
+      }
       /**
        * Creates a new reCAPTCHA Enterprise key.
        *
@@ -3200,6 +3482,11 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
     public Builder setGoogleClientRequestInitializer(
         com.google.api.client.googleapis.services.GoogleClientRequestInitializer googleClientRequestInitializer) {
       return (Builder) super.setGoogleClientRequestInitializer(googleClientRequestInitializer);
+    }
+
+    @Override
+    public Builder setUniverseDomain(String universeDomain) {
+      return (Builder) super.setUniverseDomain(universeDomain);
     }
   }
 }

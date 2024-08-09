@@ -37,12 +37,6 @@ public final class InterconnectApplicationAwareInterconnect extends com.google.a
   private InterconnectApplicationAwareInterconnectBandwidthPercentagePolicy bandwidthPercentagePolicy;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private InterconnectApplicationAwareInterconnectBandwidthPercentagePolicy egressMinBandwidthPercentagePolicy;
-
-  /**
    * A description for the AAI profile on this interconnect.
    * The value may be {@code null}.
    */
@@ -67,21 +61,6 @@ public final class InterconnectApplicationAwareInterconnect extends com.google.a
    */
   public InterconnectApplicationAwareInterconnect setBandwidthPercentagePolicy(InterconnectApplicationAwareInterconnectBandwidthPercentagePolicy bandwidthPercentagePolicy) {
     this.bandwidthPercentagePolicy = bandwidthPercentagePolicy;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public InterconnectApplicationAwareInterconnectBandwidthPercentagePolicy getEgressMinBandwidthPercentagePolicy() {
-    return egressMinBandwidthPercentagePolicy;
-  }
-
-  /**
-   * @param egressMinBandwidthPercentagePolicy egressMinBandwidthPercentagePolicy or {@code null} for none
-   */
-  public InterconnectApplicationAwareInterconnect setEgressMinBandwidthPercentagePolicy(InterconnectApplicationAwareInterconnectBandwidthPercentagePolicy egressMinBandwidthPercentagePolicy) {
-    this.egressMinBandwidthPercentagePolicy = egressMinBandwidthPercentagePolicy;
     return this;
   }
 

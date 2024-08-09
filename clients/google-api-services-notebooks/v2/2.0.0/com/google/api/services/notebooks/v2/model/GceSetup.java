@@ -110,6 +110,15 @@ public final class GceSetup extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> metadata;
 
   /**
+   * Optional. The minimum CPU platform to use for this instance. The list of valid values can be
+   * found in https://cloud.google.com/compute/docs/instances/specify-min-cpu-
+   * platform#availablezones
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String minCpuPlatform;
+
+  /**
    * Optional. The network interfaces for the VM. Supports only one interface.
    * The value may be {@code null}.
    */
@@ -307,6 +316,27 @@ public final class GceSetup extends com.google.api.client.json.GenericJson {
    */
   public GceSetup setMetadata(java.util.Map<String, java.lang.String> metadata) {
     this.metadata = metadata;
+    return this;
+  }
+
+  /**
+   * Optional. The minimum CPU platform to use for this instance. The list of valid values can be
+   * found in https://cloud.google.com/compute/docs/instances/specify-min-cpu-
+   * platform#availablezones
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMinCpuPlatform() {
+    return minCpuPlatform;
+  }
+
+  /**
+   * Optional. The minimum CPU platform to use for this instance. The list of valid values can be
+   * found in https://cloud.google.com/compute/docs/instances/specify-min-cpu-
+   * platform#availablezones
+   * @param minCpuPlatform minCpuPlatform or {@code null} for none
+   */
+  public GceSetup setMinCpuPlatform(java.lang.String minCpuPlatform) {
+    this.minCpuPlatform = minCpuPlatform;
     return this;
   }
 

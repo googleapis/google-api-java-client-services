@@ -44,8 +44,10 @@ public final class CreateAndConfigureAccountRequest extends com.google.api.clien
   private Account account;
 
   /**
-   * Optional. If specified, an account service between the account to be created and the provider
-   * account is initialized as part of the creation.
+   * Required. An account service between the account to be created and the provider account is
+   * initialized as part of the creation. At least one such service needs to be provided. Currently
+   * only `account_aggregation` is supported which means the newly created account will be a
+   * subaccount of the provider defined in the `account_aggregation` service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,8 +101,10 @@ public final class CreateAndConfigureAccountRequest extends com.google.api.clien
   }
 
   /**
-   * Optional. If specified, an account service between the account to be created and the provider
-   * account is initialized as part of the creation.
+   * Required. An account service between the account to be created and the provider account is
+   * initialized as part of the creation. At least one such service needs to be provided. Currently
+   * only `account_aggregation` is supported which means the newly created account will be a
+   * subaccount of the provider defined in the `account_aggregation` service.
    * @return value or {@code null} for none
    */
   public java.util.List<AddAccountService> getService() {
@@ -108,8 +112,10 @@ public final class CreateAndConfigureAccountRequest extends com.google.api.clien
   }
 
   /**
-   * Optional. If specified, an account service between the account to be created and the provider
-   * account is initialized as part of the creation.
+   * Required. An account service between the account to be created and the provider account is
+   * initialized as part of the creation. At least one such service needs to be provided. Currently
+   * only `account_aggregation` is supported which means the newly created account will be a
+   * subaccount of the provider defined in the `account_aggregation` service.
    * @param service service or {@code null} for none
    */
   public CreateAndConfigureAccountRequest setService(java.util.List<AddAccountService> service) {

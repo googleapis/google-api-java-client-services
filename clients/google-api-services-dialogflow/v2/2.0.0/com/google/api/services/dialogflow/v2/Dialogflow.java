@@ -21798,6 +21798,145 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
+       * Gets location-level encryption key specification.
+       *
+       * Create a request for the method "locations.getEncryptionSpec".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link GetEncryptionSpec#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the encryption spec resource to get.
+       * @return the request
+       */
+      public GetEncryptionSpec getEncryptionSpec(java.lang.String name) throws java.io.IOException {
+        GetEncryptionSpec result = new GetEncryptionSpec(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetEncryptionSpec extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2EncryptionSpec> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/encryptionSpec$");
+
+        /**
+         * Gets location-level encryption key specification.
+         *
+         * Create a request for the method "locations.getEncryptionSpec".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link GetEncryptionSpec#execute()} method to invoke the remote
+         * operation. <p> {@link GetEncryptionSpec#initialize(com.google.api.client.googleapis.services.Ab
+         * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. The name of the encryption spec resource to get.
+         * @since 1.13
+         */
+        protected GetEncryptionSpec(java.lang.String name) {
+          super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2EncryptionSpec.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/encryptionSpec$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetEncryptionSpec set$Xgafv(java.lang.String $Xgafv) {
+          return (GetEncryptionSpec) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetEncryptionSpec setAccessToken(java.lang.String accessToken) {
+          return (GetEncryptionSpec) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetEncryptionSpec setAlt(java.lang.String alt) {
+          return (GetEncryptionSpec) super.setAlt(alt);
+        }
+
+        @Override
+        public GetEncryptionSpec setCallback(java.lang.String callback) {
+          return (GetEncryptionSpec) super.setCallback(callback);
+        }
+
+        @Override
+        public GetEncryptionSpec setFields(java.lang.String fields) {
+          return (GetEncryptionSpec) super.setFields(fields);
+        }
+
+        @Override
+        public GetEncryptionSpec setKey(java.lang.String key) {
+          return (GetEncryptionSpec) super.setKey(key);
+        }
+
+        @Override
+        public GetEncryptionSpec setOauthToken(java.lang.String oauthToken) {
+          return (GetEncryptionSpec) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetEncryptionSpec setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetEncryptionSpec) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetEncryptionSpec setQuotaUser(java.lang.String quotaUser) {
+          return (GetEncryptionSpec) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetEncryptionSpec setUploadType(java.lang.String uploadType) {
+          return (GetEncryptionSpec) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetEncryptionSpec setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetEncryptionSpec) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The name of the encryption spec resource to get. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the encryption spec resource to get.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The name of the encryption spec resource to get. */
+        public GetEncryptionSpec setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/encryptionSpec$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetEncryptionSpec set(String parameterName, Object value) {
+          return (GetEncryptionSpec) super.set(parameterName, value);
+        }
+      }
+      /**
        * Lists information about the supported locations for this service.
        *
        * Create a request for the method "locations.list".
@@ -39003,6 +39142,174 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
 
         }
+      }
+      /**
+       * An accessor for creating requests from the EncryptionSpec collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+       *   {@code Dialogflow.EncryptionSpec.List request = dialogflow.encryptionSpec().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public EncryptionSpec encryptionSpec() {
+        return new EncryptionSpec();
+      }
+
+      /**
+       * The "encryptionSpec" collection of methods.
+       */
+      public class EncryptionSpec {
+
+        /**
+         * Initializes a location-level encryption key specification. An error will be thrown if the
+         * location has resources already created before the initialization. Once the encryption
+         * specification is initialized at a location, it is immutable and all newly created resources under
+         * the location will be encrypted with the existing specification.
+         *
+         * Create a request for the method "encryptionSpec.initialize".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link Initialize#execute()} method to invoke the remote operation.
+         *
+         * @param name Immutable. The resource name of the encryption key specification resource. Format:
+         *        projects/{project}/locations/{location}/encryptionSpec
+         * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2InitializeEncryptionSpecRequest}
+         * @return the request
+         */
+        public Initialize initialize(java.lang.String name, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2InitializeEncryptionSpecRequest content) throws java.io.IOException {
+          Initialize result = new Initialize(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Initialize extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2/{+name}:initialize";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/encryptionSpec$");
+
+          /**
+           * Initializes a location-level encryption key specification. An error will be thrown if the
+           * location has resources already created before the initialization. Once the encryption
+           * specification is initialized at a location, it is immutable and all newly created resources
+           * under the location will be encrypted with the existing specification.
+           *
+           * Create a request for the method "encryptionSpec.initialize".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link Initialize#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Initialize#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Immutable. The resource name of the encryption key specification resource. Format:
+         *        projects/{project}/locations/{location}/encryptionSpec
+           * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2InitializeEncryptionSpecRequest}
+           * @since 1.13
+           */
+          protected Initialize(java.lang.String name, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2InitializeEncryptionSpecRequest content) {
+            super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/encryptionSpec$");
+            }
+          }
+
+          @Override
+          public Initialize set$Xgafv(java.lang.String $Xgafv) {
+            return (Initialize) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Initialize setAccessToken(java.lang.String accessToken) {
+            return (Initialize) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Initialize setAlt(java.lang.String alt) {
+            return (Initialize) super.setAlt(alt);
+          }
+
+          @Override
+          public Initialize setCallback(java.lang.String callback) {
+            return (Initialize) super.setCallback(callback);
+          }
+
+          @Override
+          public Initialize setFields(java.lang.String fields) {
+            return (Initialize) super.setFields(fields);
+          }
+
+          @Override
+          public Initialize setKey(java.lang.String key) {
+            return (Initialize) super.setKey(key);
+          }
+
+          @Override
+          public Initialize setOauthToken(java.lang.String oauthToken) {
+            return (Initialize) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Initialize setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Initialize) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Initialize setQuotaUser(java.lang.String quotaUser) {
+            return (Initialize) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Initialize setUploadType(java.lang.String uploadType) {
+            return (Initialize) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Initialize setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Initialize) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Immutable. The resource name of the encryption key specification resource. Format:
+           * projects/{project}/locations/{location}/encryptionSpec
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Immutable. The resource name of the encryption key specification resource. Format:
+         projects/{project}/locations/{location}/encryptionSpec
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Immutable. The resource name of the encryption key specification resource. Format:
+           * projects/{project}/locations/{location}/encryptionSpec
+           */
+          public Initialize setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/encryptionSpec$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Initialize set(String parameterName, Object value) {
+            return (Initialize) super.set(parameterName, value);
+          }
+        }
+
       }
       /**
        * An accessor for creating requests from the Generators collection.

@@ -120,7 +120,7 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<RouterNatSubnetworkToNat64> nat64subnetworks;
+  private java.util.List<RouterNatSubnetworkToNat64> nat64Subnetworks;
 
   /**
    * Specify the NatIpAllocateOption, which can take one of the following values: - MANUAL_ONLY:
@@ -417,17 +417,17 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
    * only when LIST_OF_IPV6_SUBNETWORKS is selected for the SubnetworkIpRangeToNat64Option above.
    * @return value or {@code null} for none
    */
-  public java.util.List<RouterNatSubnetworkToNat64> getNat64subnetworks() {
-    return nat64subnetworks;
+  public java.util.List<RouterNatSubnetworkToNat64> getNat64Subnetworks() {
+    return nat64Subnetworks;
   }
 
   /**
    * List of Subnetwork resources whose traffic should be translated by NAT64 Gateway. It is used
    * only when LIST_OF_IPV6_SUBNETWORKS is selected for the SubnetworkIpRangeToNat64Option above.
-   * @param nat64subnetworks nat64subnetworks or {@code null} for none
+   * @param nat64Subnetworks nat64Subnetworks or {@code null} for none
    */
-  public RouterNat setNat64subnetworks(java.util.List<RouterNatSubnetworkToNat64> nat64subnetworks) {
-    this.nat64subnetworks = nat64subnetworks;
+  public RouterNat setNat64Subnetworks(java.util.List<RouterNatSubnetworkToNat64> nat64Subnetworks) {
+    this.nat64Subnetworks = nat64Subnetworks;
     return this;
   }
 

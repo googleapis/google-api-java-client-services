@@ -37,6 +37,14 @@ public final class FutureReservationStatusLastKnownGoodState extends com.google.
   private java.lang.String description;
 
   /**
+   * [Output Only] Represents the matching usage for the future reservation before an amendment was
+   * requested.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FutureReservationStatusExistingMatchingUsageInfo existingMatchingUsageInfo;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,6 +85,25 @@ public final class FutureReservationStatusLastKnownGoodState extends com.google.
    */
   public FutureReservationStatusLastKnownGoodState setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * [Output Only] Represents the matching usage for the future reservation before an amendment was
+   * requested.
+   * @return value or {@code null} for none
+   */
+  public FutureReservationStatusExistingMatchingUsageInfo getExistingMatchingUsageInfo() {
+    return existingMatchingUsageInfo;
+  }
+
+  /**
+   * [Output Only] Represents the matching usage for the future reservation before an amendment was
+   * requested.
+   * @param existingMatchingUsageInfo existingMatchingUsageInfo or {@code null} for none
+   */
+  public FutureReservationStatusLastKnownGoodState setExistingMatchingUsageInfo(FutureReservationStatusExistingMatchingUsageInfo existingMatchingUsageInfo) {
+    this.existingMatchingUsageInfo = existingMatchingUsageInfo;
     return this;
   }
 

@@ -44,6 +44,13 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
   private java.util.List<java.lang.String> autoCreatedReservations;
 
   /**
+   * [Output Only] Represents the existing matching usage for the future reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FutureReservationStatusExistingMatchingUsageInfo existingMatchingUsageInfo;
+
+  /**
    * This count indicates the fulfilled capacity so far. This is set during "PROVISIONING" state.
    * This count also includes capacity delivered as part of existing matching reservations.
    * The value may be {@code null}.
@@ -115,6 +122,23 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
    */
   public FutureReservationStatus setAutoCreatedReservations(java.util.List<java.lang.String> autoCreatedReservations) {
     this.autoCreatedReservations = autoCreatedReservations;
+    return this;
+  }
+
+  /**
+   * [Output Only] Represents the existing matching usage for the future reservation.
+   * @return value or {@code null} for none
+   */
+  public FutureReservationStatusExistingMatchingUsageInfo getExistingMatchingUsageInfo() {
+    return existingMatchingUsageInfo;
+  }
+
+  /**
+   * [Output Only] Represents the existing matching usage for the future reservation.
+   * @param existingMatchingUsageInfo existingMatchingUsageInfo or {@code null} for none
+   */
+  public FutureReservationStatus setExistingMatchingUsageInfo(FutureReservationStatusExistingMatchingUsageInfo existingMatchingUsageInfo) {
+    this.existingMatchingUsageInfo = existingMatchingUsageInfo;
     return this;
   }
 

@@ -105,7 +105,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
 
   /**
    * The number of instances to be created by this resize request. The group's target size will be
-   * increased by this number.
+   * increased by this number. This field cannot be used together with 'instances'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -318,7 +318,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
 
   /**
    * The number of instances to be created by this resize request. The group's target size will be
-   * increased by this number.
+   * increased by this number. This field cannot be used together with 'instances'.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getResizeBy() {
@@ -327,7 +327,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
 
   /**
    * The number of instances to be created by this resize request. The group's target size will be
-   * increased by this number.
+   * increased by this number. This field cannot be used together with 'instances'.
    * @param resizeBy resizeBy or {@code null} for none
    */
   public InstanceGroupManagerResizeRequest setResizeBy(java.lang.Integer resizeBy) {

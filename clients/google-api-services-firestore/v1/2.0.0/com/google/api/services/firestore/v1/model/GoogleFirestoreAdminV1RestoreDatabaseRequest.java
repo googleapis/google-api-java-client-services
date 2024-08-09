@@ -50,31 +50,13 @@ public final class GoogleFirestoreAdminV1RestoreDatabaseRequest extends com.goog
   private java.lang.String databaseId;
 
   /**
-   * Use Customer Managed Encryption Keys (CMEK) for encryption. Only keys in the same location as
-   * the restored database are allowed to be used for encryption. For Firestore's nam5 multi-region,
-   * this corresponds to Cloud KMS multi-region us. For Firestore's eur3 multi-region, this
-   * corresponds to Cloud KMS multi-region europe. See https://cloud.google.com/kms/docs/locations.
-   * The expected format is
-   * `projects/{project_id}/locations/{kms_location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+   * Optional. Encryption configuration for the restored database. If this field is not specified,
+   * the restored database will use the same encryption configuration as the backup, namely
+   * use_source_encryption.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String kmsKeyName;
-
-  /**
-   * The restored database will use the same encryption configuration as the backup. This is the
-   * default option when no `encryption_config` is specified.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Empty useBackupEncryption;
-
-  /**
-   * Use Google default encryption.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Empty useGoogleDefaultEncryption;
+  private GoogleFirestoreAdminV1EncryptionConfig encryptionConfig;
 
   /**
    * Backup to restore from. Must be from the same project as the parent. The restored database will
@@ -123,65 +105,23 @@ public final class GoogleFirestoreAdminV1RestoreDatabaseRequest extends com.goog
   }
 
   /**
-   * Use Customer Managed Encryption Keys (CMEK) for encryption. Only keys in the same location as
-   * the restored database are allowed to be used for encryption. For Firestore's nam5 multi-region,
-   * this corresponds to Cloud KMS multi-region us. For Firestore's eur3 multi-region, this
-   * corresponds to Cloud KMS multi-region europe. See https://cloud.google.com/kms/docs/locations.
-   * The expected format is
-   * `projects/{project_id}/locations/{kms_location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+   * Optional. Encryption configuration for the restored database. If this field is not specified,
+   * the restored database will use the same encryption configuration as the backup, namely
+   * use_source_encryption.
    * @return value or {@code null} for none
    */
-  public java.lang.String getKmsKeyName() {
-    return kmsKeyName;
+  public GoogleFirestoreAdminV1EncryptionConfig getEncryptionConfig() {
+    return encryptionConfig;
   }
 
   /**
-   * Use Customer Managed Encryption Keys (CMEK) for encryption. Only keys in the same location as
-   * the restored database are allowed to be used for encryption. For Firestore's nam5 multi-region,
-   * this corresponds to Cloud KMS multi-region us. For Firestore's eur3 multi-region, this
-   * corresponds to Cloud KMS multi-region europe. See https://cloud.google.com/kms/docs/locations.
-   * The expected format is
-   * `projects/{project_id}/locations/{kms_location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
-   * @param kmsKeyName kmsKeyName or {@code null} for none
+   * Optional. Encryption configuration for the restored database. If this field is not specified,
+   * the restored database will use the same encryption configuration as the backup, namely
+   * use_source_encryption.
+   * @param encryptionConfig encryptionConfig or {@code null} for none
    */
-  public GoogleFirestoreAdminV1RestoreDatabaseRequest setKmsKeyName(java.lang.String kmsKeyName) {
-    this.kmsKeyName = kmsKeyName;
-    return this;
-  }
-
-  /**
-   * The restored database will use the same encryption configuration as the backup. This is the
-   * default option when no `encryption_config` is specified.
-   * @return value or {@code null} for none
-   */
-  public Empty getUseBackupEncryption() {
-    return useBackupEncryption;
-  }
-
-  /**
-   * The restored database will use the same encryption configuration as the backup. This is the
-   * default option when no `encryption_config` is specified.
-   * @param useBackupEncryption useBackupEncryption or {@code null} for none
-   */
-  public GoogleFirestoreAdminV1RestoreDatabaseRequest setUseBackupEncryption(Empty useBackupEncryption) {
-    this.useBackupEncryption = useBackupEncryption;
-    return this;
-  }
-
-  /**
-   * Use Google default encryption.
-   * @return value or {@code null} for none
-   */
-  public Empty getUseGoogleDefaultEncryption() {
-    return useGoogleDefaultEncryption;
-  }
-
-  /**
-   * Use Google default encryption.
-   * @param useGoogleDefaultEncryption useGoogleDefaultEncryption or {@code null} for none
-   */
-  public GoogleFirestoreAdminV1RestoreDatabaseRequest setUseGoogleDefaultEncryption(Empty useGoogleDefaultEncryption) {
-    this.useGoogleDefaultEncryption = useGoogleDefaultEncryption;
+  public GoogleFirestoreAdminV1RestoreDatabaseRequest setEncryptionConfig(GoogleFirestoreAdminV1EncryptionConfig encryptionConfig) {
+    this.encryptionConfig = encryptionConfig;
     return this;
   }
 

@@ -55,6 +55,13 @@ public final class Matter extends com.google.api.client.json.GenericJson {
   private java.util.List<MatterPermission> matterPermissions;
 
   /**
+   * Optional. The requested data region for the matter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String matterRegion;
+
+  /**
    * The name of the matter.
    * The value may be {@code null}.
    */
@@ -118,6 +125,23 @@ public final class Matter extends com.google.api.client.json.GenericJson {
    */
   public Matter setMatterPermissions(java.util.List<MatterPermission> matterPermissions) {
     this.matterPermissions = matterPermissions;
+    return this;
+  }
+
+  /**
+   * Optional. The requested data region for the matter.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMatterRegion() {
+    return matterRegion;
+  }
+
+  /**
+   * Optional. The requested data region for the matter.
+   * @param matterRegion matterRegion or {@code null} for none
+   */
+  public Matter setMatterRegion(java.lang.String matterRegion) {
+    this.matterRegion = matterRegion;
     return this;
   }
 

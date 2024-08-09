@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Log configuration for the connection.
+ * Define the template of IntegrationVersion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -28,64 +28,64 @@ package com.google.api.services.integrations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudConnectorsV1LogConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudIntegrationsV1alphaIntegrationVersionTemplate extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enabled represents whether logging is enabled or not for a connection.
+   * Required. Templatized version of integration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean enabled;
+  private GoogleCloudIntegrationsV1alphaIntegrationVersion integrationVersion;
 
   /**
-   * Optional. Log configuration level.
+   * Required. Unique Key of the IntegrationVersion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String level;
+  private java.lang.String key;
 
   /**
-   * Enabled represents whether logging is enabled or not for a connection.
+   * Required. Templatized version of integration.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getEnabled() {
-    return enabled;
+  public GoogleCloudIntegrationsV1alphaIntegrationVersion getIntegrationVersion() {
+    return integrationVersion;
   }
 
   /**
-   * Enabled represents whether logging is enabled or not for a connection.
-   * @param enabled enabled or {@code null} for none
+   * Required. Templatized version of integration.
+   * @param integrationVersion integrationVersion or {@code null} for none
    */
-  public GoogleCloudConnectorsV1LogConfig setEnabled(java.lang.Boolean enabled) {
-    this.enabled = enabled;
+  public GoogleCloudIntegrationsV1alphaIntegrationVersionTemplate setIntegrationVersion(GoogleCloudIntegrationsV1alphaIntegrationVersion integrationVersion) {
+    this.integrationVersion = integrationVersion;
     return this;
   }
 
   /**
-   * Optional. Log configuration level.
+   * Required. Unique Key of the IntegrationVersion.
    * @return value or {@code null} for none
    */
-  public java.lang.String getLevel() {
-    return level;
+  public java.lang.String getKey() {
+    return key;
   }
 
   /**
-   * Optional. Log configuration level.
-   * @param level level or {@code null} for none
+   * Required. Unique Key of the IntegrationVersion.
+   * @param key key or {@code null} for none
    */
-  public GoogleCloudConnectorsV1LogConfig setLevel(java.lang.String level) {
-    this.level = level;
+  public GoogleCloudIntegrationsV1alphaIntegrationVersionTemplate setKey(java.lang.String key) {
+    this.key = key;
     return this;
   }
 
   @Override
-  public GoogleCloudConnectorsV1LogConfig set(String fieldName, Object value) {
-    return (GoogleCloudConnectorsV1LogConfig) super.set(fieldName, value);
+  public GoogleCloudIntegrationsV1alphaIntegrationVersionTemplate set(String fieldName, Object value) {
+    return (GoogleCloudIntegrationsV1alphaIntegrationVersionTemplate) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudConnectorsV1LogConfig clone() {
-    return (GoogleCloudConnectorsV1LogConfig) super.clone();
+  public GoogleCloudIntegrationsV1alphaIntegrationVersionTemplate clone() {
+    return (GoogleCloudIntegrationsV1alphaIntegrationVersionTemplate) super.clone();
   }
 
 }

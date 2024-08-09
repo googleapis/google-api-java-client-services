@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Model definition for GoogleProtobufStruct.
+ * Response for UploadTemplate.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -28,16 +28,40 @@ package com.google.api.services.integrations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleProtobufStruct extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudIntegrationsV1alphaUploadTemplateResponse extends com.google.api.client.json.GenericJson {
 
-  @Override
-  public GoogleProtobufStruct set(String fieldName, Object value) {
-    return (GoogleProtobufStruct) super.set(fieldName, value);
+  /**
+   * The uploaded Template
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIntegrationsV1alphaTemplate template;
+
+  /**
+   * The uploaded Template
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaTemplate getTemplate() {
+    return template;
+  }
+
+  /**
+   * The uploaded Template
+   * @param template template or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaUploadTemplateResponse setTemplate(GoogleCloudIntegrationsV1alphaTemplate template) {
+    this.template = template;
+    return this;
   }
 
   @Override
-  public GoogleProtobufStruct clone() {
-    return (GoogleProtobufStruct) super.clone();
+  public GoogleCloudIntegrationsV1alphaUploadTemplateResponse set(String fieldName, Object value) {
+    return (GoogleCloudIntegrationsV1alphaUploadTemplateResponse) super.set(fieldName, value);
+  }
+
+  @Override
+  public GoogleCloudIntegrationsV1alphaUploadTemplateResponse clone() {
+    return (GoogleCloudIntegrationsV1alphaUploadTemplateResponse) super.clone();
   }
 
 }

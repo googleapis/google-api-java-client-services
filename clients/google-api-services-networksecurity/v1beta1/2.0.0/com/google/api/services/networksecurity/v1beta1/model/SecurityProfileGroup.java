@@ -18,7 +18,7 @@ package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
  * SecurityProfileGroup is a resource that defines the behavior for various ProfileTypes. Next ID:
- * 10
+ * 11
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -69,8 +69,7 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   private java.lang.String name;
 
   /**
-   * Optional. Reference to a SecurityProfile with the threat prevention configuration for the
-   * SecurityProfileGroup.
+   * Optional. Reference to a SecurityProfile with the ThreatPrevention configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -175,8 +174,7 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Reference to a SecurityProfile with the threat prevention configuration for the
-   * SecurityProfileGroup.
+   * Optional. Reference to a SecurityProfile with the ThreatPrevention configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getThreatPreventionProfile() {
@@ -184,8 +182,7 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Reference to a SecurityProfile with the threat prevention configuration for the
-   * SecurityProfileGroup.
+   * Optional. Reference to a SecurityProfile with the ThreatPrevention configuration.
    * @param threatPreventionProfile threatPreventionProfile or {@code null} for none
    */
   public SecurityProfileGroup setThreatPreventionProfile(java.lang.String threatPreventionProfile) {

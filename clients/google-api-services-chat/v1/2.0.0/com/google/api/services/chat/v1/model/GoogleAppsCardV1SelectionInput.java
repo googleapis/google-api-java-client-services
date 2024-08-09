@@ -79,9 +79,9 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   private java.lang.Integer multiSelectMinQueryLength;
 
   /**
-   * The name that identifies the selection input in a form input event. For details about working
-   * with form inputs, see [Receive form data](https://developers.google.com/workspace/chat/read-
-   * form-data).
+   * Required. The name that identifies the selection input in a form input event. For details about
+   * working with form inputs, see [Receive form
+   * data](https://developers.google.com/workspace/chat/read-form-data).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -212,9 +212,9 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   }
 
   /**
-   * The name that identifies the selection input in a form input event. For details about working
-   * with form inputs, see [Receive form data](https://developers.google.com/workspace/chat/read-
-   * form-data).
+   * Required. The name that identifies the selection input in a form input event. For details about
+   * working with form inputs, see [Receive form
+   * data](https://developers.google.com/workspace/chat/read-form-data).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -222,9 +222,9 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   }
 
   /**
-   * The name that identifies the selection input in a form input event. For details about working
-   * with form inputs, see [Receive form data](https://developers.google.com/workspace/chat/read-
-   * form-data).
+   * Required. The name that identifies the selection input in a form input event. For details about
+   * working with form inputs, see [Receive form
+   * data](https://developers.google.com/workspace/chat/read-form-data).
    * @param name name or {@code null} for none
    */
   public GoogleAppsCardV1SelectionInput setName(java.lang.String name) {

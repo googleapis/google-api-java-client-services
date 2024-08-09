@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Log configuration for the connection.
+ * Request for UploadTemplate.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -28,64 +28,64 @@ package com.google.api.services.integrations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudConnectorsV1LogConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudIntegrationsV1alphaUploadTemplateRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enabled represents whether logging is enabled or not for a connection.
+   * Required. The textproto of the template.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean enabled;
+  private java.lang.String content;
 
   /**
-   * Optional. Log configuration level.
+   * Required. File format for upload request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String level;
+  private java.lang.String fileFormat;
 
   /**
-   * Enabled represents whether logging is enabled or not for a connection.
+   * Required. The textproto of the template.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getEnabled() {
-    return enabled;
+  public java.lang.String getContent() {
+    return content;
   }
 
   /**
-   * Enabled represents whether logging is enabled or not for a connection.
-   * @param enabled enabled or {@code null} for none
+   * Required. The textproto of the template.
+   * @param content content or {@code null} for none
    */
-  public GoogleCloudConnectorsV1LogConfig setEnabled(java.lang.Boolean enabled) {
-    this.enabled = enabled;
+  public GoogleCloudIntegrationsV1alphaUploadTemplateRequest setContent(java.lang.String content) {
+    this.content = content;
     return this;
   }
 
   /**
-   * Optional. Log configuration level.
+   * Required. File format for upload request.
    * @return value or {@code null} for none
    */
-  public java.lang.String getLevel() {
-    return level;
+  public java.lang.String getFileFormat() {
+    return fileFormat;
   }
 
   /**
-   * Optional. Log configuration level.
-   * @param level level or {@code null} for none
+   * Required. File format for upload request.
+   * @param fileFormat fileFormat or {@code null} for none
    */
-  public GoogleCloudConnectorsV1LogConfig setLevel(java.lang.String level) {
-    this.level = level;
+  public GoogleCloudIntegrationsV1alphaUploadTemplateRequest setFileFormat(java.lang.String fileFormat) {
+    this.fileFormat = fileFormat;
     return this;
   }
 
   @Override
-  public GoogleCloudConnectorsV1LogConfig set(String fieldName, Object value) {
-    return (GoogleCloudConnectorsV1LogConfig) super.set(fieldName, value);
+  public GoogleCloudIntegrationsV1alphaUploadTemplateRequest set(String fieldName, Object value) {
+    return (GoogleCloudIntegrationsV1alphaUploadTemplateRequest) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudConnectorsV1LogConfig clone() {
-    return (GoogleCloudConnectorsV1LogConfig) super.clone();
+  public GoogleCloudIntegrationsV1alphaUploadTemplateRequest clone() {
+    return (GoogleCloudIntegrationsV1alphaUploadTemplateRequest) super.clone();
   }
 
 }

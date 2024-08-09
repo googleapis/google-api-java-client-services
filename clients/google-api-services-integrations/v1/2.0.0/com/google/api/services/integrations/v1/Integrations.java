@@ -1791,8 +1791,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-           * /list-filters.
+           * Filtering as supported in https://developers.google.com/authorized-
+           * buyers/apis/guides/list-filters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -1804,8 +1804,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-           * /list-filters.
+           * Filtering as supported in https://developers.google.com/authorized-
+           * buyers/apis/guides/list-filters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -2755,8 +2755,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-           * /list-filters.
+           * Filtering as supported in https://developers.google.com/authorized-
+           * buyers/apis/guides/list-filters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -2768,8 +2768,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-           * /list-filters.
+           * Filtering as supported in https://developers.google.com/authorized-
+           * buyers/apis/guides/list-filters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -4934,10 +4934,10 @@ public class Integrations extends com.google.api.client.googleapis.services.json
          *
          * @param name Required. The integration resource name. Format:
          *        projects/{gcp_project_id}/locations/{location}/integrations/{integration_id}
-         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleProtobufStruct}
+         * @param content the {@link com.google.api.services.integrations.v1.model.Integrations.Projects.Locations.IntegrationsOperations.ExecuteEvent.ExecuteEventRequestContent}
          * @return the request
          */
-        public ExecuteEvent executeEvent(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleProtobufStruct content) throws java.io.IOException {
+        public ExecuteEvent executeEvent(java.lang.String name, com.google.api.services.integrations.v1.model.Integrations.Projects.Locations.IntegrationsOperations.ExecuteEvent.ExecuteEventRequestContent content) throws java.io.IOException {
           ExecuteEvent result = new ExecuteEvent(name, content);
           initialize(result);
           return result;
@@ -4964,10 +4964,10 @@ public class Integrations extends com.google.api.client.googleapis.services.json
            *
            * @param name Required. The integration resource name. Format:
          *        projects/{gcp_project_id}/locations/{location}/integrations/{integration_id}
-           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleProtobufStruct}
+           * @param content the {@link com.google.api.services.integrations.v1.model.Integrations.Projects.Locations.IntegrationsOperations.ExecuteEvent.ExecuteEventRequestContent}
            * @since 1.13
            */
-          protected ExecuteEvent(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleProtobufStruct content) {
+          protected ExecuteEvent(java.lang.String name, com.google.api.services.integrations.v1.model.Integrations.Projects.Locations.IntegrationsOperations.ExecuteEvent.ExecuteEventRequestContent content) {
             super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaExecuteEventResponse.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
@@ -6280,13 +6280,13 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * Optional. The results would be returned in order you specified here. Currently
-             * supporting "last_modified_time" and "create_time".
+             * supporting "create_time".
              */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
             /** Optional. The results would be returned in order you specified here. Currently supporting
-           "last_modified_time" and "create_time".
+           "create_time".
              */
             public java.lang.String getOrderBy() {
               return orderBy;
@@ -6294,7 +6294,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * Optional. The results would be returned in order you specified here. Currently
-             * supporting "last_modified_time" and "create_time".
+             * supporting "create_time".
              */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;
@@ -6436,6 +6436,148 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Re-execute an existing execution, with same request parameters and execution strategy
+           *
+           * Create a request for the method "executions.replay".
+           *
+           * This request holds the parameters needed by the integrations server.  After setting any optional
+           * parameters, call the {@link Replay#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The execution resource name. Format:
+           *        projects/{gcp_project_id}/locations/{location}/integrations/{integration}/executions/{exec
+           *        ution_id}
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaReplayExecutionRequest}
+           * @return the request
+           */
+          public Replay replay(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaReplayExecutionRequest content) throws java.io.IOException {
+            Replay result = new Replay(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Replay extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaReplayExecutionResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:replay";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/executions/[^/]+$");
+
+            /**
+             * Re-execute an existing execution, with same request parameters and execution strategy
+             *
+             * Create a request for the method "executions.replay".
+             *
+             * This request holds the parameters needed by the the integrations server.  After setting any
+             * optional parameters, call the {@link Replay#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Replay#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The execution resource name. Format:
+           *        projects/{gcp_project_id}/locations/{location}/integrations/{integration}/executions/{exec
+           *        ution_id}
+             * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaReplayExecutionRequest}
+             * @since 1.13
+             */
+            protected Replay(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaReplayExecutionRequest content) {
+              super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaReplayExecutionResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/executions/[^/]+$");
+              }
+            }
+
+            @Override
+            public Replay set$Xgafv(java.lang.String $Xgafv) {
+              return (Replay) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Replay setAccessToken(java.lang.String accessToken) {
+              return (Replay) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Replay setAlt(java.lang.String alt) {
+              return (Replay) super.setAlt(alt);
+            }
+
+            @Override
+            public Replay setCallback(java.lang.String callback) {
+              return (Replay) super.setCallback(callback);
+            }
+
+            @Override
+            public Replay setFields(java.lang.String fields) {
+              return (Replay) super.setFields(fields);
+            }
+
+            @Override
+            public Replay setKey(java.lang.String key) {
+              return (Replay) super.setKey(key);
+            }
+
+            @Override
+            public Replay setOauthToken(java.lang.String oauthToken) {
+              return (Replay) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Replay setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Replay) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Replay setQuotaUser(java.lang.String quotaUser) {
+              return (Replay) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Replay setUploadType(java.lang.String uploadType) {
+              return (Replay) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Replay setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Replay) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The execution resource name. Format: projects/{gcp_project_id}/locations/{l
+             * ocation}/integrations/{integration}/executions/{execution_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The execution resource name. Format:
+           projects/{gcp_project_id}/locations/{location}/integrations/{integration}/executions/{execution_id}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The execution resource name. Format: projects/{gcp_project_id}/locations/{l
+             * ocation}/integrations/{integration}/executions/{execution_id}
+             */
+            public Replay setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/executions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Replay set(String parameterName, Object value) {
+              return (Replay) super.set(parameterName, value);
             }
           }
 
@@ -9452,8 +9594,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-             * /list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-
+             * buyers/apis/guides/list-filters.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
@@ -9465,8 +9607,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-             * /list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-
+             * buyers/apis/guides/list-filters.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -10418,8 +10560,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-             * /list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-
+             * buyers/apis/guides/list-filters.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
@@ -10431,8 +10573,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-             * /list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-
+             * buyers/apis/guides/list-filters.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -12305,13 +12447,13 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
               /**
                * Optional. The results would be returned in order you specified here. Currently
-               * supporting "last_modified_time" and "create_time".
+               * supporting "create_time".
                */
               @com.google.api.client.util.Key
               private java.lang.String orderBy;
 
               /** Optional. The results would be returned in order you specified here. Currently supporting
-             "last_modified_time" and "create_time".
+             "create_time".
                */
               public java.lang.String getOrderBy() {
                 return orderBy;
@@ -12319,7 +12461,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
               /**
                * Optional. The results would be returned in order you specified here. Currently
-               * supporting "last_modified_time" and "create_time".
+               * supporting "create_time".
                */
               public List setOrderBy(java.lang.String orderBy) {
                 this.orderBy = orderBy;
@@ -15285,8 +15427,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-             * /list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-
+             * buyers/apis/guides/list-filters.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
@@ -15298,8 +15440,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-             * /list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-
+             * buyers/apis/guides/list-filters.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -16886,8 +17028,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-           * /list-filters.
+           * Filtering as supported in https://developers.google.com/authorized-
+           * buyers/apis/guides/list-filters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -16899,8 +17041,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-           * /list-filters.
+           * Filtering as supported in https://developers.google.com/authorized-
+           * buyers/apis/guides/list-filters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -17684,8 +17826,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-             * /list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-
+             * buyers/apis/guides/list-filters.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
@@ -17697,8 +17839,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-             * /list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-
+             * buyers/apis/guides/list-filters.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -17931,6 +18073,1912 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
         }
+      }
+      /**
+       * An accessor for creating requests from the Templates collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Integrations integrations = new Integrations(...);}
+       *   {@code Integrations.Templates.List request = integrations.templates().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Templates templates() {
+        return new Templates();
+      }
+
+      /**
+       * The "templates" collection of methods.
+       */
+      public class Templates {
+
+        /**
+         * Creates a new template
+         *
+         * Create a request for the method "templates.create".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. "projects/{project}/locations/{location}" format.
+         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate> {
+
+          private static final String REST_PATH = "v1/{+parent}/templates";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new template
+           *
+           * Create a request for the method "templates.create".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. "projects/{project}/locations/{location}" format.
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate content) {
+            super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. "projects/{project}/locations/{location}" format. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. "projects/{project}/locations/{location}" format.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. "projects/{project}/locations/{location}" format. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a template
+         *
+         * Create a request for the method "templates.delete".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name that is associated with the Template.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+
+          /**
+           * Deletes a template
+           *
+           * Create a request for the method "templates.delete".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name that is associated with the Template.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Integrations.this, "DELETE", REST_PATH, null, com.google.api.services.integrations.v1.model.GoogleProtobufEmpty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name that is associated with the Template. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name that is associated with the Template.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name that is associated with the Template. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Downloads a template. Retrieves the `Template` and returns the response as a string.
+         *
+         * Create a request for the method "templates.download".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link Download#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The template to download. Format:
+         *        projects/{project}/locations/{location}/template/{template_id}
+         * @return the request
+         */
+        public Download download(java.lang.String name) throws java.io.IOException {
+          Download result = new Download(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Download extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaDownloadTemplateResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:download";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+
+          /**
+           * Downloads a template. Retrieves the `Template` and returns the response as a string.
+           *
+           * Create a request for the method "templates.download".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Download#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The template to download. Format:
+         *        projects/{project}/locations/{location}/template/{template_id}
+           * @since 1.13
+           */
+          protected Download(java.lang.String name) {
+            super(Integrations.this, "GET", REST_PATH, null, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaDownloadTemplateResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Download set$Xgafv(java.lang.String $Xgafv) {
+            return (Download) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Download setAccessToken(java.lang.String accessToken) {
+            return (Download) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Download setAlt(java.lang.String alt) {
+            return (Download) super.setAlt(alt);
+          }
+
+          @Override
+          public Download setCallback(java.lang.String callback) {
+            return (Download) super.setCallback(callback);
+          }
+
+          @Override
+          public Download setFields(java.lang.String fields) {
+            return (Download) super.setFields(fields);
+          }
+
+          @Override
+          public Download setKey(java.lang.String key) {
+            return (Download) super.setKey(key);
+          }
+
+          @Override
+          public Download setOauthToken(java.lang.String oauthToken) {
+            return (Download) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Download setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Download) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Download setQuotaUser(java.lang.String quotaUser) {
+            return (Download) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Download setUploadType(java.lang.String uploadType) {
+            return (Download) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Download setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Download) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The template to download. Format:
+           * projects/{project}/locations/{location}/template/{template_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The template to download. Format:
+         projects/{project}/locations/{location}/template/{template_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The template to download. Format:
+           * projects/{project}/locations/{location}/template/{template_id}
+           */
+          public Download setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Required. File format for download request. */
+          @com.google.api.client.util.Key
+          private java.lang.String fileFormat;
+
+          /** Required. File format for download request.
+           */
+          public java.lang.String getFileFormat() {
+            return fileFormat;
+          }
+
+          /** Required. File format for download request. */
+          public Download setFileFormat(java.lang.String fileFormat) {
+            this.fileFormat = fileFormat;
+            return this;
+          }
+
+          @Override
+          public Download set(String parameterName, Object value) {
+            return (Download) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Get a template in the specified project.
+         *
+         * Create a request for the method "templates.get".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The template to retrieve. Format:
+         *        projects/{project}/locations/{location}/templates/{template}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+
+          /**
+           * Get a template in the specified project.
+           *
+           * Create a request for the method "templates.get".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The template to retrieve. Format:
+         *        projects/{project}/locations/{location}/templates/{template}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Integrations.this, "GET", REST_PATH, null, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The template to retrieve. Format:
+           * projects/{project}/locations/{location}/templates/{template}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The template to retrieve. Format:
+         projects/{project}/locations/{location}/templates/{template}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The template to retrieve. Format:
+           * projects/{project}/locations/{location}/templates/{template}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Import the template to an existing integration. This api would keep track of usage_count and
+         * last_used_time. PERMISSION_DENIED would be thrown if template is not accessible by client.
+         *
+         * Create a request for the method "templates.import".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link IntegrationsImport#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name that is associated with the Template.
+         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaImportTemplateRequest}
+         * @return the request
+         */
+        public IntegrationsImport integrationsImport(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaImportTemplateRequest content) throws java.io.IOException {
+          IntegrationsImport result = new IntegrationsImport(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class IntegrationsImport extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaImportTemplateResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:import";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+
+          /**
+           * Import the template to an existing integration. This api would keep track of usage_count and
+           * last_used_time. PERMISSION_DENIED would be thrown if template is not accessible by client.
+           *
+           * Create a request for the method "templates.import".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link IntegrationsImport#execute()} method to invoke the remote
+           * operation. <p> {@link IntegrationsImport#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. The name that is associated with the Template.
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaImportTemplateRequest}
+           * @since 1.13
+           */
+          protected IntegrationsImport(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaImportTemplateRequest content) {
+            super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaImportTemplateResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+          }
+
+          @Override
+          public IntegrationsImport set$Xgafv(java.lang.String $Xgafv) {
+            return (IntegrationsImport) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public IntegrationsImport setAccessToken(java.lang.String accessToken) {
+            return (IntegrationsImport) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public IntegrationsImport setAlt(java.lang.String alt) {
+            return (IntegrationsImport) super.setAlt(alt);
+          }
+
+          @Override
+          public IntegrationsImport setCallback(java.lang.String callback) {
+            return (IntegrationsImport) super.setCallback(callback);
+          }
+
+          @Override
+          public IntegrationsImport setFields(java.lang.String fields) {
+            return (IntegrationsImport) super.setFields(fields);
+          }
+
+          @Override
+          public IntegrationsImport setKey(java.lang.String key) {
+            return (IntegrationsImport) super.setKey(key);
+          }
+
+          @Override
+          public IntegrationsImport setOauthToken(java.lang.String oauthToken) {
+            return (IntegrationsImport) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public IntegrationsImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (IntegrationsImport) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public IntegrationsImport setQuotaUser(java.lang.String quotaUser) {
+            return (IntegrationsImport) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public IntegrationsImport setUploadType(java.lang.String uploadType) {
+            return (IntegrationsImport) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public IntegrationsImport setUploadProtocol(java.lang.String uploadProtocol) {
+            return (IntegrationsImport) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name that is associated with the Template. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name that is associated with the Template.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name that is associated with the Template. */
+          public IntegrationsImport setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public IntegrationsImport set(String parameterName, Object value) {
+            return (IntegrationsImport) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all templates matching the filter.
+         *
+         * Create a request for the method "templates.list".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The client, which owns this collection of Templates.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaListTemplatesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/templates";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists all templates matching the filter.
+           *
+           * Create a request for the method "templates.list".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The client, which owns this collection of Templates.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Integrations.this, "GET", REST_PATH, null, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaListTemplatesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The client, which owns this collection of Templates. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The client, which owns this collection of Templates.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The client, which owns this collection of Templates. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Standard filter field to filter templates. client_id filter won't be
+           * supported and will restrict to templates belonging to the current client only. Return
+           * all templates of the current client if the filter is empty. Also supports operators
+           * like AND, OR, NOT For example, "status=\"ACTIVE\"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Standard filter field to filter templates. client_id filter won't be supported and will
+         restrict to templates belonging to the current client only. Return all templates of the current
+         client if the filter is empty. Also supports operators like AND, OR, NOT For example,
+         "status=\"ACTIVE\"
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Standard filter field to filter templates. client_id filter won't be
+           * supported and will restrict to templates belonging to the current client only. Return
+           * all templates of the current client if the filter is empty. Also supports operators
+           * like AND, OR, NOT For example, "status=\"ACTIVE\"
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. The results would be returned in the order you specified here. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. The results would be returned in the order you specified here.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. The results would be returned in the order you specified here. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The size of the response entries. If unspecified, defaults to 100. The
+           * maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The size of the response entries. If unspecified, defaults to 100. The maximum value is
+         1000; values above 1000 will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The size of the response entries. If unspecified, defaults to 100. The
+           * maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. The token returned in the previous response. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The token returned in the previous response.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. The token returned in the previous response. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. The mask which specifies fields that need to be returned in the template's
+           * response.
+           */
+          @com.google.api.client.util.Key
+          private String readMask;
+
+          /** Optional. The mask which specifies fields that need to be returned in the template's response.
+           */
+          public String getReadMask() {
+            return readMask;
+          }
+
+          /**
+           * Optional. The mask which specifies fields that need to be returned in the template's
+           * response.
+           */
+          public List setReadMask(String readMask) {
+            this.readMask = readMask;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the template by given id.
+         *
+         * Create a request for the method "templates.patch".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. Resource name of the template.
+         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+
+          /**
+           * Updates the template by given id.
+           *
+           * Create a request for the method "templates.patch".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. Resource name of the template.
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate content) {
+            super(Integrations.this, "PATCH", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Identifier. Resource name of the template. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. Resource name of the template.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Identifier. Resource name of the template. */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. Field mask specifying the fields in the above template that have been
+           * modified and must be updated.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Field mask specifying the fields in the above template that have been modified and must
+         be updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. Field mask specifying the fields in the above template that have been
+           * modified and must be updated.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Search templates based on user query and filters. This api would query the templates and return a
+         * list of templates based on the user filter.
+         *
+         * Create a request for the method "templates.search".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link Search#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The client, which owns this collection of Templates.
+         * @return the request
+         */
+        public Search search(java.lang.String parent) throws java.io.IOException {
+          Search result = new Search(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class Search extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaSearchTemplatesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/templates:search";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Search templates based on user query and filters. This api would query the templates and return
+           * a list of templates based on the user filter.
+           *
+           * Create a request for the method "templates.search".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The client, which owns this collection of Templates.
+           * @since 1.13
+           */
+          protected Search(java.lang.String parent) {
+            super(Integrations.this, "GET", REST_PATH, null, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaSearchTemplatesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Search set$Xgafv(java.lang.String $Xgafv) {
+            return (Search) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Search setAccessToken(java.lang.String accessToken) {
+            return (Search) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Search setAlt(java.lang.String alt) {
+            return (Search) super.setAlt(alt);
+          }
+
+          @Override
+          public Search setCallback(java.lang.String callback) {
+            return (Search) super.setCallback(callback);
+          }
+
+          @Override
+          public Search setFields(java.lang.String fields) {
+            return (Search) super.setFields(fields);
+          }
+
+          @Override
+          public Search setKey(java.lang.String key) {
+            return (Search) super.setKey(key);
+          }
+
+          @Override
+          public Search setOauthToken(java.lang.String oauthToken) {
+            return (Search) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Search) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Search setQuotaUser(java.lang.String quotaUser) {
+            return (Search) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Search setUploadType(java.lang.String uploadType) {
+            return (Search) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Search setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Search) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The client, which owns this collection of Templates. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The client, which owns this collection of Templates.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The client, which owns this collection of Templates. */
+          public Search setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Standard filter field to filter templates. client_id filter won't be
+           * supported and will restrict to templates belonging to the current client only. Return
+           * all templates of the current client if the filter is empty. Also supports operators
+           * like AND, OR, NOT For example, "status=\"ACTIVE\"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Standard filter field to filter templates. client_id filter won't be supported and will
+         restrict to templates belonging to the current client only. Return all templates of the current
+         client if the filter is empty. Also supports operators like AND, OR, NOT For example,
+         "status=\"ACTIVE\"
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Standard filter field to filter templates. client_id filter won't be
+           * supported and will restrict to templates belonging to the current client only. Return
+           * all templates of the current client if the filter is empty. Also supports operators
+           * like AND, OR, NOT For example, "status=\"ACTIVE\"
+           */
+          public Search setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. The results would be returned in the order you specified here. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. The results would be returned in the order you specified here.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. The results would be returned in the order you specified here. */
+          public Search setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The size of the response entries. If unspecified, defaults to 100. The
+           * maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The size of the response entries. If unspecified, defaults to 100. The maximum value is
+         1000; values above 1000 will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The size of the response entries. If unspecified, defaults to 100. The
+           * maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          public Search setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. The token returned in the previous response. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The token returned in the previous response.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. The token returned in the previous response. */
+          public Search setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. The mask which specifies fields that need to be returned in the template's
+           * response.
+           */
+          @com.google.api.client.util.Key
+          private String readMask;
+
+          /** Optional. The mask which specifies fields that need to be returned in the template's response.
+           */
+          public String getReadMask() {
+            return readMask;
+          }
+
+          /**
+           * Optional. The mask which specifies fields that need to be returned in the template's
+           * response.
+           */
+          public Search setReadMask(String readMask) {
+            this.readMask = readMask;
+            return this;
+          }
+
+          @Override
+          public Search set(String parameterName, Object value) {
+            return (Search) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Share a template with other clients. Only the template owner can share the templates with other
+         * projects. PERMISSION_DENIED would be thrown if the request is not from the owner.
+         *
+         * Create a request for the method "templates.share".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link Share#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name that is associated with the Template.
+         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaShareTemplateRequest}
+         * @return the request
+         */
+        public Share share(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaShareTemplateRequest content) throws java.io.IOException {
+          Share result = new Share(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Share extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1/{+name}:share";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+
+          /**
+           * Share a template with other clients. Only the template owner can share the templates with other
+           * projects. PERMISSION_DENIED would be thrown if the request is not from the owner.
+           *
+           * Create a request for the method "templates.share".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link Share#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Share#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name that is associated with the Template.
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaShareTemplateRequest}
+           * @since 1.13
+           */
+          protected Share(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaShareTemplateRequest content) {
+            super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleProtobufEmpty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Share set$Xgafv(java.lang.String $Xgafv) {
+            return (Share) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Share setAccessToken(java.lang.String accessToken) {
+            return (Share) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Share setAlt(java.lang.String alt) {
+            return (Share) super.setAlt(alt);
+          }
+
+          @Override
+          public Share setCallback(java.lang.String callback) {
+            return (Share) super.setCallback(callback);
+          }
+
+          @Override
+          public Share setFields(java.lang.String fields) {
+            return (Share) super.setFields(fields);
+          }
+
+          @Override
+          public Share setKey(java.lang.String key) {
+            return (Share) super.setKey(key);
+          }
+
+          @Override
+          public Share setOauthToken(java.lang.String oauthToken) {
+            return (Share) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Share setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Share) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Share setQuotaUser(java.lang.String quotaUser) {
+            return (Share) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Share setUploadType(java.lang.String uploadType) {
+            return (Share) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Share setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Share) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name that is associated with the Template. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name that is associated with the Template.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name that is associated with the Template. */
+          public Share setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Share set(String parameterName, Object value) {
+            return (Share) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Unshare a template from given clients. Owner of the template can unshare template with clients.
+         * Shared client can only unshare the template from itself. PERMISSION_DENIED would be thrown if
+         * request is not from owner or for unsharing itself.
+         *
+         * Create a request for the method "templates.unshare".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link Unshare#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name that is associated with the Template.
+         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUnshareTemplateRequest}
+         * @return the request
+         */
+        public Unshare unshare(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUnshareTemplateRequest content) throws java.io.IOException {
+          Unshare result = new Unshare(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Unshare extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1/{+name}:unshare";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+
+          /**
+           * Unshare a template from given clients. Owner of the template can unshare template with clients.
+           * Shared client can only unshare the template from itself. PERMISSION_DENIED would be thrown if
+           * request is not from owner or for unsharing itself.
+           *
+           * Create a request for the method "templates.unshare".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link Unshare#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Unshare#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name that is associated with the Template.
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUnshareTemplateRequest}
+           * @since 1.13
+           */
+          protected Unshare(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUnshareTemplateRequest content) {
+            super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleProtobufEmpty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Unshare set$Xgafv(java.lang.String $Xgafv) {
+            return (Unshare) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Unshare setAccessToken(java.lang.String accessToken) {
+            return (Unshare) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Unshare setAlt(java.lang.String alt) {
+            return (Unshare) super.setAlt(alt);
+          }
+
+          @Override
+          public Unshare setCallback(java.lang.String callback) {
+            return (Unshare) super.setCallback(callback);
+          }
+
+          @Override
+          public Unshare setFields(java.lang.String fields) {
+            return (Unshare) super.setFields(fields);
+          }
+
+          @Override
+          public Unshare setKey(java.lang.String key) {
+            return (Unshare) super.setKey(key);
+          }
+
+          @Override
+          public Unshare setOauthToken(java.lang.String oauthToken) {
+            return (Unshare) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Unshare setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Unshare) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Unshare setQuotaUser(java.lang.String quotaUser) {
+            return (Unshare) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Unshare setUploadType(java.lang.String uploadType) {
+            return (Unshare) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Unshare setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Unshare) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name that is associated with the Template. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name that is associated with the Template.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name that is associated with the Template. */
+          public Unshare setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Unshare set(String parameterName, Object value) {
+            return (Unshare) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Uploads a template. The content can be a previously downloaded template. Performs the same
+         * function as CreateTemplate, but accepts input in a string format, which holds the complete
+         * representation of the Template content.
+         *
+         * Create a request for the method "templates.upload".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The template to upload. Format: projects/{project}/locations/{location}
+         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUploadTemplateRequest}
+         * @return the request
+         */
+        public Upload upload(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUploadTemplateRequest content) throws java.io.IOException {
+          Upload result = new Upload(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Upload extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUploadTemplateResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/templates:upload";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Uploads a template. The content can be a previously downloaded template. Performs the same
+           * function as CreateTemplate, but accepts input in a string format, which holds the complete
+           * representation of the Template content.
+           *
+           * Create a request for the method "templates.upload".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The template to upload. Format: projects/{project}/locations/{location}
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUploadTemplateRequest}
+           * @since 1.13
+           */
+          protected Upload(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUploadTemplateRequest content) {
+            super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUploadTemplateResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Upload set$Xgafv(java.lang.String $Xgafv) {
+            return (Upload) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Upload setAccessToken(java.lang.String accessToken) {
+            return (Upload) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Upload setAlt(java.lang.String alt) {
+            return (Upload) super.setAlt(alt);
+          }
+
+          @Override
+          public Upload setCallback(java.lang.String callback) {
+            return (Upload) super.setCallback(callback);
+          }
+
+          @Override
+          public Upload setFields(java.lang.String fields) {
+            return (Upload) super.setFields(fields);
+          }
+
+          @Override
+          public Upload setKey(java.lang.String key) {
+            return (Upload) super.setKey(key);
+          }
+
+          @Override
+          public Upload setOauthToken(java.lang.String oauthToken) {
+            return (Upload) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Upload setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Upload) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Upload setQuotaUser(java.lang.String quotaUser) {
+            return (Upload) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Upload setUploadType(java.lang.String uploadType) {
+            return (Upload) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Upload) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The template to upload. Format: projects/{project}/locations/{location} */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The template to upload. Format: projects/{project}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The template to upload. Format: projects/{project}/locations/{location} */
+          public Upload setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Upload set(String parameterName, Object value) {
+            return (Upload) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Use the template to create integration. This api would keep track of usage_count and
+         * last_used_time. PERMISSION_DENIED would be thrown if template is not accessible by client.
+         *
+         * Create a request for the method "templates.use".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link Use#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name that is associated with the Template.
+         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUseTemplateRequest}
+         * @return the request
+         */
+        public Use use(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUseTemplateRequest content) throws java.io.IOException {
+          Use result = new Use(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Use extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUseTemplateResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:use";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+
+          /**
+           * Use the template to create integration. This api would keep track of usage_count and
+           * last_used_time. PERMISSION_DENIED would be thrown if template is not accessible by client.
+           *
+           * Create a request for the method "templates.use".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link Use#execute()} method to invoke the remote operation. <p>
+           * {@link Use#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name that is associated with the Template.
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUseTemplateRequest}
+           * @since 1.13
+           */
+          protected Use(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUseTemplateRequest content) {
+            super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUseTemplateResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Use set$Xgafv(java.lang.String $Xgafv) {
+            return (Use) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Use setAccessToken(java.lang.String accessToken) {
+            return (Use) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Use setAlt(java.lang.String alt) {
+            return (Use) super.setAlt(alt);
+          }
+
+          @Override
+          public Use setCallback(java.lang.String callback) {
+            return (Use) super.setCallback(callback);
+          }
+
+          @Override
+          public Use setFields(java.lang.String fields) {
+            return (Use) super.setFields(fields);
+          }
+
+          @Override
+          public Use setKey(java.lang.String key) {
+            return (Use) super.setKey(key);
+          }
+
+          @Override
+          public Use setOauthToken(java.lang.String oauthToken) {
+            return (Use) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Use setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Use) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Use setQuotaUser(java.lang.String quotaUser) {
+            return (Use) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Use setUploadType(java.lang.String uploadType) {
+            return (Use) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Use setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Use) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name that is associated with the Template. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name that is associated with the Template.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name that is associated with the Template. */
+          public Use setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Use set(String parameterName, Object value) {
+            return (Use) super.set(parameterName, value);
+          }
+        }
+
       }
     }
   }

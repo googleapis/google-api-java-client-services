@@ -91,12 +91,10 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
   /**
    * Required. The sequence of one or more runnables (executable scripts, executable containers,
    * and/or barriers) for each task in this task group to run. Each task runs this list of runnables
-   * in order. For a task to succeed, all of its script and container runnables each must either
-   * exit with a zero status or enable the `ignore_exit_status` subfield and exit with any status.
-   * Background runnables are killed automatically (if they have not already exited) a short time
-   * after all foreground runnables have completed. Even though this is likely to result in a non-
-   * zero exit status for the background runnable, these automatic kills are not treated as Task
-   * failures.
+   * in order. For a task to succeed, all of its script and container runnables each must meet at
+   * least one of the following conditions: + The runnable exited with a zero status. + The runnable
+   * didn't finish, but you enabled its `background` subfield. + The runnable exited with a non-zero
+   * status, but you enabled its `ignore_exit_status` subfield.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -242,12 +240,10 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
   /**
    * Required. The sequence of one or more runnables (executable scripts, executable containers,
    * and/or barriers) for each task in this task group to run. Each task runs this list of runnables
-   * in order. For a task to succeed, all of its script and container runnables each must either
-   * exit with a zero status or enable the `ignore_exit_status` subfield and exit with any status.
-   * Background runnables are killed automatically (if they have not already exited) a short time
-   * after all foreground runnables have completed. Even though this is likely to result in a non-
-   * zero exit status for the background runnable, these automatic kills are not treated as Task
-   * failures.
+   * in order. For a task to succeed, all of its script and container runnables each must meet at
+   * least one of the following conditions: + The runnable exited with a zero status. + The runnable
+   * didn't finish, but you enabled its `background` subfield. + The runnable exited with a non-zero
+   * status, but you enabled its `ignore_exit_status` subfield.
    * @return value or {@code null} for none
    */
   public java.util.List<Runnable> getRunnables() {
@@ -257,12 +253,10 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
   /**
    * Required. The sequence of one or more runnables (executable scripts, executable containers,
    * and/or barriers) for each task in this task group to run. Each task runs this list of runnables
-   * in order. For a task to succeed, all of its script and container runnables each must either
-   * exit with a zero status or enable the `ignore_exit_status` subfield and exit with any status.
-   * Background runnables are killed automatically (if they have not already exited) a short time
-   * after all foreground runnables have completed. Even though this is likely to result in a non-
-   * zero exit status for the background runnable, these automatic kills are not treated as Task
-   * failures.
+   * in order. For a task to succeed, all of its script and container runnables each must meet at
+   * least one of the following conditions: + The runnable exited with a zero status. + The runnable
+   * didn't finish, but you enabled its `background` subfield. + The runnable exited with a non-zero
+   * status, but you enabled its `ignore_exit_status` subfield.
    * @param runnables runnables or {@code null} for none
    */
   public TaskSpec setRunnables(java.util.List<Runnable> runnables) {

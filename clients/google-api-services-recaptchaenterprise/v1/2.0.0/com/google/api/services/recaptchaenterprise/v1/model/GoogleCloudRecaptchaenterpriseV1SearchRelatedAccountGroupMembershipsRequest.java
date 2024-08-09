@@ -31,9 +31,19 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The unique stable hashed user identifier used to search connections. The identifier
-   * should correspond to a `hashed_account_id` provided in a previous `CreateAssessment` or
-   * `AnnotateAssessment` call.
+   * Optional. The unique stable account identifier used to search connections. The identifier
+   * should correspond to an `account_id` provided in a previous `CreateAssessment` or
+   * `AnnotateAssessment` call. Either hashed_account_id or account_id must be set, but not both.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String accountId;
+
+  /**
+   * Optional. Deprecated: use `account_id` instead. The unique stable hashed account identifier
+   * used to search connections. The identifier should correspond to a `hashed_account_id` provided
+   * in a previous `CreateAssessment` or `AnnotateAssessment` call. Either hashed_account_id or
+   * account_id must be set, but not both.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,9 +68,31 @@ public final class GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMemb
   private java.lang.String pageToken;
 
   /**
-   * Optional. The unique stable hashed user identifier used to search connections. The identifier
-   * should correspond to a `hashed_account_id` provided in a previous `CreateAssessment` or
-   * `AnnotateAssessment` call.
+   * Optional. The unique stable account identifier used to search connections. The identifier
+   * should correspond to an `account_id` provided in a previous `CreateAssessment` or
+   * `AnnotateAssessment` call. Either hashed_account_id or account_id must be set, but not both.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAccountId() {
+    return accountId;
+  }
+
+  /**
+   * Optional. The unique stable account identifier used to search connections. The identifier
+   * should correspond to an `account_id` provided in a previous `CreateAssessment` or
+   * `AnnotateAssessment` call. Either hashed_account_id or account_id must be set, but not both.
+   * @param accountId accountId or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsRequest setAccountId(java.lang.String accountId) {
+    this.accountId = accountId;
+    return this;
+  }
+
+  /**
+   * Optional. Deprecated: use `account_id` instead. The unique stable hashed account identifier
+   * used to search connections. The identifier should correspond to a `hashed_account_id` provided
+   * in a previous `CreateAssessment` or `AnnotateAssessment` call. Either hashed_account_id or
+   * account_id must be set, but not both.
    * @see #decodeHashedAccountId()
    * @return value or {@code null} for none
    */
@@ -69,9 +101,10 @@ public final class GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMemb
   }
 
   /**
-   * Optional. The unique stable hashed user identifier used to search connections. The identifier
-   * should correspond to a `hashed_account_id` provided in a previous `CreateAssessment` or
-   * `AnnotateAssessment` call.
+   * Optional. Deprecated: use `account_id` instead. The unique stable hashed account identifier
+   * used to search connections. The identifier should correspond to a `hashed_account_id` provided
+   * in a previous `CreateAssessment` or `AnnotateAssessment` call. Either hashed_account_id or
+   * account_id must be set, but not both.
    * @see #getHashedAccountId()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -82,9 +115,10 @@ public final class GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMemb
   }
 
   /**
-   * Optional. The unique stable hashed user identifier used to search connections. The identifier
-   * should correspond to a `hashed_account_id` provided in a previous `CreateAssessment` or
-   * `AnnotateAssessment` call.
+   * Optional. Deprecated: use `account_id` instead. The unique stable hashed account identifier
+   * used to search connections. The identifier should correspond to a `hashed_account_id` provided
+   * in a previous `CreateAssessment` or `AnnotateAssessment` call. Either hashed_account_id or
+   * account_id must be set, but not both.
    * @see #encodeHashedAccountId()
    * @param hashedAccountId hashedAccountId or {@code null} for none
    */
@@ -94,9 +128,10 @@ public final class GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMemb
   }
 
   /**
-   * Optional. The unique stable hashed user identifier used to search connections. The identifier
-   * should correspond to a `hashed_account_id` provided in a previous `CreateAssessment` or
-   * `AnnotateAssessment` call.
+   * Optional. Deprecated: use `account_id` instead. The unique stable hashed account identifier
+   * used to search connections. The identifier should correspond to a `hashed_account_id` provided
+   * in a previous `CreateAssessment` or `AnnotateAssessment` call. Either hashed_account_id or
+   * account_id must be set, but not both.
    * @see #setHashedAccountId()
    *
    * <p>

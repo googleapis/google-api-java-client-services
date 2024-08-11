@@ -40,6 +40,13 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   private Cvssv3 cvssv3;
 
   /**
+   * Date the first publicly available exploit or PoC was released.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String exploitReleaseDate;
+
+  /**
    * The exploitation activity of the vulnerability in the wild.
    * The value may be {@code null}.
    */
@@ -105,6 +112,23 @@ public final class Cve extends com.google.api.client.json.GenericJson {
    */
   public Cve setCvssv3(Cvssv3 cvssv3) {
     this.cvssv3 = cvssv3;
+    return this;
+  }
+
+  /**
+   * Date the first publicly available exploit or PoC was released.
+   * @return value or {@code null} for none
+   */
+  public String getExploitReleaseDate() {
+    return exploitReleaseDate;
+  }
+
+  /**
+   * Date the first publicly available exploit or PoC was released.
+   * @param exploitReleaseDate exploitReleaseDate or {@code null} for none
+   */
+  public Cve setExploitReleaseDate(String exploitReleaseDate) {
+    this.exploitReleaseDate = exploitReleaseDate;
     return this;
   }
 

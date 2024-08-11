@@ -55,6 +55,15 @@ public final class BulkMuteFindingsRequest extends com.google.api.client.json.Ge
   private java.lang.String muteAnnotation;
 
   /**
+   * Optional. All findings matching the given filter will have their mute state set to this value.
+   * The default value is `MUTED`. Setting this to `UNDEFINED` will clear the mute state on all
+   * matching findings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String muteState;
+
+  /**
    * Expression that identifies findings that should be updated. The expression is a list of zero or
    * more restrictions combined via logical operators `AND` and `OR`. Parentheses are supported, and
    * `OR` has higher precedence than `AND`. Restrictions have the form ` ` and may have a `-`
@@ -101,6 +110,27 @@ public final class BulkMuteFindingsRequest extends com.google.api.client.json.Ge
    */
   public BulkMuteFindingsRequest setMuteAnnotation(java.lang.String muteAnnotation) {
     this.muteAnnotation = muteAnnotation;
+    return this;
+  }
+
+  /**
+   * Optional. All findings matching the given filter will have their mute state set to this value.
+   * The default value is `MUTED`. Setting this to `UNDEFINED` will clear the mute state on all
+   * matching findings.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMuteState() {
+    return muteState;
+  }
+
+  /**
+   * Optional. All findings matching the given filter will have their mute state set to this value.
+   * The default value is `MUTED`. Setting this to `UNDEFINED` will clear the mute state on all
+   * matching findings.
+   * @param muteState muteState or {@code null} for none
+   */
+  public BulkMuteFindingsRequest setMuteState(java.lang.String muteState) {
+    this.muteState = muteState;
     return this;
   }
 

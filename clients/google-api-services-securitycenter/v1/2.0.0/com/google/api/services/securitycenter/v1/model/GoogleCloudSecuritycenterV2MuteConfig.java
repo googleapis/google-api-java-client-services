@@ -47,6 +47,14 @@ public final class GoogleCloudSecuritycenterV2MuteConfig extends com.google.api.
   private java.lang.String description;
 
   /**
+   * Optional. The expiry of the mute config. Only applicable for dynamic configs. If the expiry is
+   * set, when the config expires, it is removed from all findings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String expiryTime;
+
+  /**
    * Required. An expression that defines the filter to apply across create/update events of
    * findings. While creating a filter string, be mindful of the scope in which the mute
    * configuration is being created. E.g., If a filter contains project = X but is created under the
@@ -131,6 +139,25 @@ public final class GoogleCloudSecuritycenterV2MuteConfig extends com.google.api.
    */
   public GoogleCloudSecuritycenterV2MuteConfig setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. The expiry of the mute config. Only applicable for dynamic configs. If the expiry is
+   * set, when the config expires, it is removed from all findings.
+   * @return value or {@code null} for none
+   */
+  public String getExpiryTime() {
+    return expiryTime;
+  }
+
+  /**
+   * Optional. The expiry of the mute config. Only applicable for dynamic configs. If the expiry is
+   * set, when the config expires, it is removed from all findings.
+   * @param expiryTime expiryTime or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2MuteConfig setExpiryTime(String expiryTime) {
+    this.expiryTime = expiryTime;
     return this;
   }
 

@@ -322,6 +322,13 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   private java.lang.String mute;
 
   /**
+   * Output only. The mute information regarding this finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2MuteInfo muteInfo;
+
+  /**
    * Records additional information about the mute operation, for example, the [mute
    * configuration](https://cloud.google.com/security-command-center/docs/how-to-mute-findings) that
    * muted the finding and the user who muted the finding.
@@ -1065,6 +1072,23 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Finding setMute(java.lang.String mute) {
     this.mute = mute;
+    return this;
+  }
+
+  /**
+   * Output only. The mute information regarding this finding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2MuteInfo getMuteInfo() {
+    return muteInfo;
+  }
+
+  /**
+   * Output only. The mute information regarding this finding.
+   * @param muteInfo muteInfo or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setMuteInfo(GoogleCloudSecuritycenterV2MuteInfo muteInfo) {
+    this.muteInfo = muteInfo;
     return this;
   }
 

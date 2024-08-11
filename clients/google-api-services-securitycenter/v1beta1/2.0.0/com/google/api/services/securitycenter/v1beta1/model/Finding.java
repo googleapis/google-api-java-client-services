@@ -313,6 +313,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String mute;
 
   /**
+   * Output only. The mute information regarding this finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MuteInfo muteInfo;
+
+  /**
    * Records additional information about the mute operation, for example, the [mute
    * configuration](/security-command-center/docs/how-to-mute-findings) that muted the finding and
    * the user who muted the finding.
@@ -1043,6 +1050,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setMute(java.lang.String mute) {
     this.mute = mute;
+    return this;
+  }
+
+  /**
+   * Output only. The mute information regarding this finding.
+   * @return value or {@code null} for none
+   */
+  public MuteInfo getMuteInfo() {
+    return muteInfo;
+  }
+
+  /**
+   * Output only. The mute information regarding this finding.
+   * @param muteInfo muteInfo or {@code null} for none
+   */
+  public Finding setMuteInfo(MuteInfo muteInfo) {
+    this.muteInfo = muteInfo;
     return this;
   }
 

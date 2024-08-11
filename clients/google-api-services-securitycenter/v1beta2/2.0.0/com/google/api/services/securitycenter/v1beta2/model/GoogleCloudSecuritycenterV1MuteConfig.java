@@ -54,6 +54,14 @@ public final class GoogleCloudSecuritycenterV1MuteConfig extends com.google.api.
   private java.lang.String displayName;
 
   /**
+   * Optional. The expiry of the mute config. Only applicable for dynamic configs. If the expiry is
+   * set, when the config expires, it is removed from all findings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String expiryTime;
+
+  /**
    * Required. An expression that defines the filter to apply across create/update events of
    * findings. While creating a filter string, be mindful of the scope in which the mute
    * configuration is being created. E.g., If a filter contains project = X but is created under the
@@ -87,6 +95,15 @@ public final class GoogleCloudSecuritycenterV1MuteConfig extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. The type of the mute config, which determines what type of mute state the config
+   * affects. The static mute state takes precedence over the dynamic mute state. Immutable after
+   * creation. STATIC by default if not set during creation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
 
   /**
    * Output only. The most recent time at which the mute config was updated. This field is set by
@@ -146,6 +163,25 @@ public final class GoogleCloudSecuritycenterV1MuteConfig extends com.google.api.
    */
   public GoogleCloudSecuritycenterV1MuteConfig setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. The expiry of the mute config. Only applicable for dynamic configs. If the expiry is
+   * set, when the config expires, it is removed from all findings.
+   * @return value or {@code null} for none
+   */
+  public String getExpiryTime() {
+    return expiryTime;
+  }
+
+  /**
+   * Optional. The expiry of the mute config. Only applicable for dynamic configs. If the expiry is
+   * set, when the config expires, it is removed from all findings.
+   * @param expiryTime expiryTime or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1MuteConfig setExpiryTime(String expiryTime) {
+    this.expiryTime = expiryTime;
     return this;
   }
 
@@ -225,6 +261,27 @@ public final class GoogleCloudSecuritycenterV1MuteConfig extends com.google.api.
    */
   public GoogleCloudSecuritycenterV1MuteConfig setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The type of the mute config, which determines what type of mute state the config
+   * affects. The static mute state takes precedence over the dynamic mute state. Immutable after
+   * creation. STATIC by default if not set during creation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Optional. The type of the mute config, which determines what type of mute state the config
+   * affects. The static mute state takes precedence over the dynamic mute state. Immutable after
+   * creation. STATIC by default if not set during creation.
+   * @param type type or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1MuteConfig setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

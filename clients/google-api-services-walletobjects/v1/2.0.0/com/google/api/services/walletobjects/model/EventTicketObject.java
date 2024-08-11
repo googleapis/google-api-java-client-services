@@ -153,6 +153,22 @@ public final class EventTicketObject extends com.google.api.client.json.GenericJ
   private java.lang.String kind;
 
   /**
+   * linked_object_ids are a list of other objects such as event ticket, loyalty, offer, generic,
+   * giftcard, transit and boarding pass that should be automatically attached to this event ticket
+   * object. If a user had saved this event ticket, then these linked_object_ids would be
+   * automatically pushed to the user's wallet (unless they turned off the setting to receive such
+   * linked passes). Make sure that objects present in linked_object_ids are already inserted - if
+   * not, calls would fail. Once linked, the linked objects cannot be unlinked. You cannot link
+   * objects belonging to another issuer. There is a limit to the number of objects that can be
+   * linked to a single object. After the limit is reached, new linked objects in the call will be
+   * ignored silently. Object IDs should follow the format issuer ID. identifier where the former is
+   * issued by Google and the latter is chosen by you.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> linkedObjectIds;
+
+  /**
    * A list of offer objects linked to this event ticket. The offer objects must already exist.
    * Offer object IDs should follow the format issuer ID. identifier where the former is issued by
    * Google and latter is chosen by you.
@@ -573,6 +589,41 @@ public final class EventTicketObject extends com.google.api.client.json.GenericJ
    */
   public EventTicketObject setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * linked_object_ids are a list of other objects such as event ticket, loyalty, offer, generic,
+   * giftcard, transit and boarding pass that should be automatically attached to this event ticket
+   * object. If a user had saved this event ticket, then these linked_object_ids would be
+   * automatically pushed to the user's wallet (unless they turned off the setting to receive such
+   * linked passes). Make sure that objects present in linked_object_ids are already inserted - if
+   * not, calls would fail. Once linked, the linked objects cannot be unlinked. You cannot link
+   * objects belonging to another issuer. There is a limit to the number of objects that can be
+   * linked to a single object. After the limit is reached, new linked objects in the call will be
+   * ignored silently. Object IDs should follow the format issuer ID. identifier where the former is
+   * issued by Google and the latter is chosen by you.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLinkedObjectIds() {
+    return linkedObjectIds;
+  }
+
+  /**
+   * linked_object_ids are a list of other objects such as event ticket, loyalty, offer, generic,
+   * giftcard, transit and boarding pass that should be automatically attached to this event ticket
+   * object. If a user had saved this event ticket, then these linked_object_ids would be
+   * automatically pushed to the user's wallet (unless they turned off the setting to receive such
+   * linked passes). Make sure that objects present in linked_object_ids are already inserted - if
+   * not, calls would fail. Once linked, the linked objects cannot be unlinked. You cannot link
+   * objects belonging to another issuer. There is a limit to the number of objects that can be
+   * linked to a single object. After the limit is reached, new linked objects in the call will be
+   * ignored silently. Object IDs should follow the format issuer ID. identifier where the former is
+   * issued by Google and the latter is chosen by you.
+   * @param linkedObjectIds linkedObjectIds or {@code null} for none
+   */
+  public EventTicketObject setLinkedObjectIds(java.util.List<java.lang.String> linkedObjectIds) {
+    this.linkedObjectIds = linkedObjectIds;
     return this;
   }
 

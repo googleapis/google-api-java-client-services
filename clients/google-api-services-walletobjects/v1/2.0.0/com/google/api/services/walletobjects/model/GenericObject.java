@@ -127,6 +127,22 @@ public final class GenericObject extends com.google.api.client.json.GenericJson 
   private java.util.List<ImageModuleData> imageModulesData;
 
   /**
+   * linked_object_ids are a list of other objects such as event ticket, loyalty, offer, generic,
+   * giftcard, transit and boarding pass that should be automatically attached to this generic
+   * object. If a user had saved this generic card, then these linked_object_ids would be
+   * automatically pushed to the user's wallet (unless they turned off the setting to receive such
+   * linked passes). Make sure that objects present in linked_object_ids are already inserted - if
+   * not, calls would fail. Once linked, the linked objects cannot be unlinked. You cannot link
+   * objects belonging to another issuer. There is a limit to the number of objects that can be
+   * linked to a single object. After the limit is reached, new linked objects in the call will be
+   * ignored silently. Object IDs should follow the format issuer ID. identifier where the former is
+   * issued by Google and the latter is chosen by you.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> linkedObjectIds;
+
+  /**
    * Links module data. If `linksModuleData` is also defined on the class, both will be displayed.
    * The maximum number of these fields displayed is 10 from class and 10 from object.
    * The value may be {@code null}.
@@ -458,6 +474,41 @@ public final class GenericObject extends com.google.api.client.json.GenericJson 
    */
   public GenericObject setImageModulesData(java.util.List<ImageModuleData> imageModulesData) {
     this.imageModulesData = imageModulesData;
+    return this;
+  }
+
+  /**
+   * linked_object_ids are a list of other objects such as event ticket, loyalty, offer, generic,
+   * giftcard, transit and boarding pass that should be automatically attached to this generic
+   * object. If a user had saved this generic card, then these linked_object_ids would be
+   * automatically pushed to the user's wallet (unless they turned off the setting to receive such
+   * linked passes). Make sure that objects present in linked_object_ids are already inserted - if
+   * not, calls would fail. Once linked, the linked objects cannot be unlinked. You cannot link
+   * objects belonging to another issuer. There is a limit to the number of objects that can be
+   * linked to a single object. After the limit is reached, new linked objects in the call will be
+   * ignored silently. Object IDs should follow the format issuer ID. identifier where the former is
+   * issued by Google and the latter is chosen by you.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLinkedObjectIds() {
+    return linkedObjectIds;
+  }
+
+  /**
+   * linked_object_ids are a list of other objects such as event ticket, loyalty, offer, generic,
+   * giftcard, transit and boarding pass that should be automatically attached to this generic
+   * object. If a user had saved this generic card, then these linked_object_ids would be
+   * automatically pushed to the user's wallet (unless they turned off the setting to receive such
+   * linked passes). Make sure that objects present in linked_object_ids are already inserted - if
+   * not, calls would fail. Once linked, the linked objects cannot be unlinked. You cannot link
+   * objects belonging to another issuer. There is a limit to the number of objects that can be
+   * linked to a single object. After the limit is reached, new linked objects in the call will be
+   * ignored silently. Object IDs should follow the format issuer ID. identifier where the former is
+   * issued by Google and the latter is chosen by you.
+   * @param linkedObjectIds linkedObjectIds or {@code null} for none
+   */
+  public GenericObject setLinkedObjectIds(java.util.List<java.lang.String> linkedObjectIds) {
+    this.linkedObjectIds = linkedObjectIds;
     return this;
   }
 

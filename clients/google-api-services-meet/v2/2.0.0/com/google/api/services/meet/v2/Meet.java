@@ -2886,15 +2886,17 @@ public class Meet extends com.google.api.client.googleapis.services.json.Abstrac
 
       /**
        * Optional. Field mask used to specify the fields to be updated in the space. If update_mask
-       * isn't provided, it defaults to '*' and updates all fields provided in the request,
-       * including deleting fields not set in the request.
+       * isn't provided(not set, set with empty paths, or only has "" as paths), it defaults to
+       * update all fields provided with values in the request. Using "*" as update_mask will update
+       * all fields, including deleting fields not set in the request.
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
       /** Optional. Field mask used to specify the fields to be updated in the space. If update_mask isn't
-     provided, it defaults to '*' and updates all fields provided in the request, including deleting
-     fields not set in the request.
+     provided(not set, set with empty paths, or only has "" as paths), it defaults to update all fields
+     provided with values in the request. Using "*" as update_mask will update all fields, including
+     deleting fields not set in the request.
        */
       public String getUpdateMask() {
         return updateMask;
@@ -2902,8 +2904,9 @@ public class Meet extends com.google.api.client.googleapis.services.json.Abstrac
 
       /**
        * Optional. Field mask used to specify the fields to be updated in the space. If update_mask
-       * isn't provided, it defaults to '*' and updates all fields provided in the request,
-       * including deleting fields not set in the request.
+       * isn't provided(not set, set with empty paths, or only has "" as paths), it defaults to
+       * update all fields provided with values in the request. Using "*" as update_mask will update
+       * all fields, including deleting fields not set in the request.
        */
       public Patch setUpdateMask(String updateMask) {
         this.updateMask = updateMask;

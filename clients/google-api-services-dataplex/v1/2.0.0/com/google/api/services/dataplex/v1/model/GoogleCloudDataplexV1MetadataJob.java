@@ -58,20 +58,22 @@ public final class GoogleCloudDataplexV1MetadataJob extends com.google.api.clien
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. The name of the resource that the configuration is applied to, in the format
-   * projects/{project_number}/locations/{location_id}/metadataJobs/{metadata_job_id}.
+   * Output only. Identifier. The name of the resource that the configuration is applied to, in the
+   * format projects/{project_number}/locations/{location_id}/metadataJobs/{metadata_job_id}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
+   * Output only. Metadata job status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1MetadataJobStatus status;
 
   /**
+   * Required. Metadata job type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,8 +163,8 @@ public final class GoogleCloudDataplexV1MetadataJob extends com.google.api.clien
   }
 
   /**
-   * Output only. The name of the resource that the configuration is applied to, in the format
-   * projects/{project_number}/locations/{location_id}/metadataJobs/{metadata_job_id}.
+   * Output only. Identifier. The name of the resource that the configuration is applied to, in the
+   * format projects/{project_number}/locations/{location_id}/metadataJobs/{metadata_job_id}.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -170,8 +172,8 @@ public final class GoogleCloudDataplexV1MetadataJob extends com.google.api.clien
   }
 
   /**
-   * Output only. The name of the resource that the configuration is applied to, in the format
-   * projects/{project_number}/locations/{location_id}/metadataJobs/{metadata_job_id}.
+   * Output only. Identifier. The name of the resource that the configuration is applied to, in the
+   * format projects/{project_number}/locations/{location_id}/metadataJobs/{metadata_job_id}.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDataplexV1MetadataJob setName(java.lang.String name) {
@@ -180,6 +182,7 @@ public final class GoogleCloudDataplexV1MetadataJob extends com.google.api.clien
   }
 
   /**
+   * Output only. Metadata job status.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1MetadataJobStatus getStatus() {
@@ -187,6 +190,7 @@ public final class GoogleCloudDataplexV1MetadataJob extends com.google.api.clien
   }
 
   /**
+   * Output only. Metadata job status.
    * @param status status or {@code null} for none
    */
   public GoogleCloudDataplexV1MetadataJob setStatus(GoogleCloudDataplexV1MetadataJobStatus status) {
@@ -195,6 +199,7 @@ public final class GoogleCloudDataplexV1MetadataJob extends com.google.api.clien
   }
 
   /**
+   * Required. Metadata job type.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -202,6 +207,7 @@ public final class GoogleCloudDataplexV1MetadataJob extends com.google.api.clien
   }
 
   /**
+   * Required. Metadata job type.
    * @param type type or {@code null} for none
    */
   public GoogleCloudDataplexV1MetadataJob setType(java.lang.String type) {

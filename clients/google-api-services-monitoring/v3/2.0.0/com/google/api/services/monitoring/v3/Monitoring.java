@@ -6200,15 +6200,15 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * If provided, this field specifies the criteria that must be met by notification channels
-         * to be included in the response.For more details, see sorting and filtering
+         * Optional. If provided, this field specifies the criteria that must be met by notification
+         * channels to be included in the response.For more details, see sorting and filtering
          * (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** If provided, this field specifies the criteria that must be met by notification channels to be
-       included in the response.For more details, see sorting and filtering
+        /** Optional. If provided, this field specifies the criteria that must be met by notification channels
+       to be included in the response.For more details, see sorting and filtering
        (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
          */
         public java.lang.String getFilter() {
@@ -6216,8 +6216,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * If provided, this field specifies the criteria that must be met by notification channels
-         * to be included in the response.For more details, see sorting and filtering
+         * Optional. If provided, this field specifies the criteria that must be met by notification
+         * channels to be included in the response.For more details, see sorting and filtering
          * (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
          */
         public List setFilter(java.lang.String filter) {
@@ -6226,17 +6226,17 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * A comma-separated list of fields by which to sort the result. Supports the same set of
-         * fields as in filter. Entries can be prefixed with a minus sign to sort in descending
-         * rather than ascending order.For more details, see sorting and filtering
+         * Optional. A comma-separated list of fields by which to sort the result. Supports the same
+         * set of fields as in filter. Entries can be prefixed with a minus sign to sort in
+         * descending rather than ascending order.For more details, see sorting and filtering
          * (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** A comma-separated list of fields by which to sort the result. Supports the same set of fields as in
-       filter. Entries can be prefixed with a minus sign to sort in descending rather than ascending
-       order.For more details, see sorting and filtering
+        /** Optional. A comma-separated list of fields by which to sort the result. Supports the same set of
+       fields as in filter. Entries can be prefixed with a minus sign to sort in descending rather than
+       ascending order.For more details, see sorting and filtering
        (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
          */
         public java.lang.String getOrderBy() {
@@ -6244,9 +6244,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * A comma-separated list of fields by which to sort the result. Supports the same set of
-         * fields as in filter. Entries can be prefixed with a minus sign to sort in descending
-         * rather than ascending order.For more details, see sorting and filtering
+         * Optional. A comma-separated list of fields by which to sort the result. Supports the same
+         * set of fields as in filter. Entries can be prefixed with a minus sign to sort in
+         * descending rather than ascending order.For more details, see sorting and filtering
          * (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
          */
         public List setOrderBy(java.lang.String orderBy) {
@@ -6255,22 +6255,22 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The maximum number of results to return in a single response. If not set to a positive
-         * number, a reasonable value will be chosen by the service.
+         * Optional. The maximum number of results to return in a single response. If not set to a
+         * positive number, a reasonable value will be chosen by the service.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return in a single response. If not set to a positive number, a
-       reasonable value will be chosen by the service.
+        /** Optional. The maximum number of results to return in a single response. If not set to a positive
+       number, a reasonable value will be chosen by the service.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * The maximum number of results to return in a single response. If not set to a positive
-         * number, a reasonable value will be chosen by the service.
+         * Optional. The maximum number of results to return in a single response. If not set to a
+         * positive number, a reasonable value will be chosen by the service.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -6278,22 +6278,22 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * If non-empty, page_token must contain a value returned as the next_page_token in a
-         * previous response to request the next set of results.
+         * Optional. If non-empty, page_token must contain a value returned as the next_page_token
+         * in a previous response to request the next set of results.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** If non-empty, page_token must contain a value returned as the next_page_token in a previous
-       response to request the next set of results.
+        /** Optional. If non-empty, page_token must contain a value returned as the next_page_token in a
+       previous response to request the next set of results.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * If non-empty, page_token must contain a value returned as the next_page_token in a
-         * previous response to request the next set of results.
+         * Optional. If non-empty, page_token must contain a value returned as the next_page_token
+         * in a previous response to request the next set of results.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -6451,17 +6451,17 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
-        /** The fields to update. */
+        /** Optional. The fields to update. */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The fields to update.
+        /** Optional. The fields to update.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** The fields to update. */
+        /** Optional. The fields to update. */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;

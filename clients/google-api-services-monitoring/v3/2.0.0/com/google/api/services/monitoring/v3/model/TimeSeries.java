@@ -97,7 +97,7 @@ public final class TimeSeries extends com.google.api.client.json.GenericJson {
   /**
    * The units in which the metric value is reported. It is only applicable if the value_type is
    * INT64, DOUBLE, or DISTRIBUTION. The unit defines the representation of the stored metric
-   * values. This field can only be changed through CreateTimeSeries when it is empty or "1".
+   * values. This field can only be changed through CreateTimeSeries when it is empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -248,7 +248,7 @@ public final class TimeSeries extends com.google.api.client.json.GenericJson {
   /**
    * The units in which the metric value is reported. It is only applicable if the value_type is
    * INT64, DOUBLE, or DISTRIBUTION. The unit defines the representation of the stored metric
-   * values. This field can only be changed through CreateTimeSeries when it is empty or "1".
+   * values. This field can only be changed through CreateTimeSeries when it is empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getUnit() {
@@ -258,7 +258,7 @@ public final class TimeSeries extends com.google.api.client.json.GenericJson {
   /**
    * The units in which the metric value is reported. It is only applicable if the value_type is
    * INT64, DOUBLE, or DISTRIBUTION. The unit defines the representation of the stored metric
-   * values. This field can only be changed through CreateTimeSeries when it is empty or "1".
+   * values. This field can only be changed through CreateTimeSeries when it is empty.
    * @param unit unit or {@code null} for none
    */
   public TimeSeries setUnit(java.lang.String unit) {

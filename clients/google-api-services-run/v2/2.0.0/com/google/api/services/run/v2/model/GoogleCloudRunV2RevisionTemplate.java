@@ -132,6 +132,13 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   private java.lang.String serviceAccount;
 
   /**
+   * Optional. Enables service mesh connectivity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2ServiceMesh serviceMesh;
+
+  /**
    * Optional. Enable session affinity.
    * The value may be {@code null}.
    */
@@ -382,6 +389,23 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
    */
   public GoogleCloudRunV2RevisionTemplate setServiceAccount(java.lang.String serviceAccount) {
     this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * Optional. Enables service mesh connectivity.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2ServiceMesh getServiceMesh() {
+    return serviceMesh;
+  }
+
+  /**
+   * Optional. Enables service mesh connectivity.
+   * @param serviceMesh serviceMesh or {@code null} for none
+   */
+  public GoogleCloudRunV2RevisionTemplate setServiceMesh(GoogleCloudRunV2ServiceMesh serviceMesh) {
+    this.serviceMesh = serviceMesh;
     return this;
   }
 

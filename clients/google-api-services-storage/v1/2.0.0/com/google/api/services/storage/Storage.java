@@ -1896,7 +1896,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
   public class Buckets {
 
     /**
-     * Permanently deletes an empty bucket.
+     * Deletes an empty bucket. Deletions are permanent unless soft delete is enabled on the bucket.
      *
      * Create a request for the method "buckets.delete".
      *
@@ -1917,7 +1917,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       private static final String REST_PATH = "b/{bucket}";
 
       /**
-       * Permanently deletes an empty bucket.
+       * Deletes an empty bucket. Deletions are permanent unless soft delete is enabled on the bucket.
        *
        * Create a request for the method "buckets.delete".
        *
@@ -2149,6 +2149,28 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
+       * If present, specifies the generation of the bucket. This is required if softDeleted is
+       * true.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long generation;
+
+      /** If present, specifies the generation of the bucket. This is required if softDeleted is true.
+       */
+      public java.lang.Long getGeneration() {
+        return generation;
+      }
+
+      /**
+       * If present, specifies the generation of the bucket. This is required if softDeleted is
+       * true.
+       */
+      public Get setGeneration(java.lang.Long generation) {
+        this.generation = generation;
+        return this;
+      }
+
+      /**
        * Makes the return of the bucket metadata conditional on whether the bucket's current
        * metageneration matches the given value.
        */
@@ -2207,6 +2229,29 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /** Set of properties to return. Defaults to noAcl. */
       public Get setProjection(java.lang.String projection) {
         this.projection = projection;
+        return this;
+      }
+
+      /**
+       * If true, return the soft-deleted version of this bucket. The default is false. For more
+       * information, see [Soft Delete](https://cloud.google.com/storage/docs/soft-delete).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean softDeleted;
+
+      /** If true, return the soft-deleted version of this bucket. The default is false. For more
+     information, see [Soft Delete](https://cloud.google.com/storage/docs/soft-delete).
+       */
+      public java.lang.Boolean getSoftDeleted() {
+        return softDeleted;
+      }
+
+      /**
+       * If true, return the soft-deleted version of this bucket. The default is false. For more
+       * information, see [Soft Delete](https://cloud.google.com/storage/docs/soft-delete).
+       */
+      public Get setSoftDeleted(java.lang.Boolean softDeleted) {
+        this.softDeleted = softDeleted;
         return this;
       }
 
@@ -2917,6 +2962,29 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /**
+       * If true, only soft-deleted bucket versions will be returned. The default is false. For more
+       * information, see [Soft Delete](https://cloud.google.com/storage/docs/soft-delete).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean softDeleted;
+
+      /** If true, only soft-deleted bucket versions will be returned. The default is false. For more
+     information, see [Soft Delete](https://cloud.google.com/storage/docs/soft-delete).
+       */
+      public java.lang.Boolean getSoftDeleted() {
+        return softDeleted;
+      }
+
+      /**
+       * If true, only soft-deleted bucket versions will be returned. The default is false. For more
+       * information, see [Soft Delete](https://cloud.google.com/storage/docs/soft-delete).
+       */
+      public List setSoftDeleted(java.lang.Boolean softDeleted) {
+        this.softDeleted = softDeleted;
+        return this;
+      }
+
       /** The project to be billed for this request. */
       @com.google.api.client.util.Key
       private java.lang.String userProject;
@@ -3292,6 +3360,142 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public Patch set(String parameterName, Object value) {
         return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Restores a soft-deleted bucket.
+     *
+     * Create a request for the method "buckets.restore".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link Restore#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of a bucket.
+     * @param generation Generation of a bucket.
+     * @return the request
+     */
+    public Restore restore(java.lang.String bucket, java.lang.Long generation) throws java.io.IOException {
+      Restore result = new Restore(bucket, generation);
+      initialize(result);
+      return result;
+    }
+
+    public class Restore extends StorageRequest<Void> {
+
+      private static final String REST_PATH = "b/{bucket}/restore";
+
+      /**
+       * Restores a soft-deleted bucket.
+       *
+       * Create a request for the method "buckets.restore".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link Restore#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Restore#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of a bucket.
+       * @param generation Generation of a bucket.
+       * @since 1.13
+       */
+      protected Restore(java.lang.String bucket, java.lang.Long generation) {
+        super(Storage.this, "POST", REST_PATH, null, Void.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.generation = com.google.api.client.util.Preconditions.checkNotNull(generation, "Required parameter generation must be specified.");
+      }
+
+      @Override
+      public Restore setAlt(java.lang.String alt) {
+        return (Restore) super.setAlt(alt);
+      }
+
+      @Override
+      public Restore setFields(java.lang.String fields) {
+        return (Restore) super.setFields(fields);
+      }
+
+      @Override
+      public Restore setKey(java.lang.String key) {
+        return (Restore) super.setKey(key);
+      }
+
+      @Override
+      public Restore setOauthToken(java.lang.String oauthToken) {
+        return (Restore) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Restore setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Restore) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Restore setQuotaUser(java.lang.String quotaUser) {
+        return (Restore) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Restore setUploadType(java.lang.String uploadType) {
+        return (Restore) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Restore setUserIp(java.lang.String userIp) {
+        return (Restore) super.setUserIp(userIp);
+      }
+
+      /** Name of a bucket. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of a bucket.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of a bucket. */
+      public Restore setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** Generation of a bucket. */
+      @com.google.api.client.util.Key
+      private java.lang.Long generation;
+
+      /** Generation of a bucket.
+       */
+      public java.lang.Long getGeneration() {
+        return generation;
+      }
+
+      /** Generation of a bucket. */
+      public Restore setGeneration(java.lang.Long generation) {
+        this.generation = generation;
+        return this;
+      }
+
+      /** The project to be billed for this request. Required for Requester Pays buckets. */
+      @com.google.api.client.util.Key
+      private java.lang.String userProject;
+
+      /** The project to be billed for this request. Required for Requester Pays buckets.
+       */
+      public java.lang.String getUserProject() {
+        return userProject;
+      }
+
+      /** The project to be billed for this request. Required for Requester Pays buckets. */
+      public Restore setUserProject(java.lang.String userProject) {
+        this.userProject = userProject;
+        return this;
+      }
+
+      @Override
+      public Restore set(String parameterName, Object value) {
+        return (Restore) super.set(parameterName, value);
       }
     }
     /**
@@ -9991,13 +10195,13 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * If true, only soft-deleted object versions will be listed. The default is false. For more
-       * information, see Soft Delete.
+       * information, see [Soft Delete](https://cloud.google.com/storage/docs/soft-delete).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean softDeleted;
 
       /** If true, only soft-deleted object versions will be listed. The default is false. For more
-     information, see Soft Delete.
+     information, see [Soft Delete](https://cloud.google.com/storage/docs/soft-delete).
        */
       public java.lang.Boolean getSoftDeleted() {
         return softDeleted;
@@ -10005,7 +10209,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * If true, only soft-deleted object versions will be listed. The default is false. For more
-       * information, see Soft Delete.
+       * information, see [Soft Delete](https://cloud.google.com/storage/docs/soft-delete).
        */
       public Get setSoftDeleted(java.lang.Boolean softDeleted) {
         this.softDeleted = softDeleted;
@@ -10915,13 +11119,13 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * If true, only soft-deleted object versions will be listed. The default is false. For more
-       * information, see Soft Delete.
+       * information, see [Soft Delete](https://cloud.google.com/storage/docs/soft-delete).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean softDeleted;
 
       /** If true, only soft-deleted object versions will be listed. The default is false. For more
-     information, see Soft Delete.
+     information, see [Soft Delete](https://cloud.google.com/storage/docs/soft-delete).
        */
       public java.lang.Boolean getSoftDeleted() {
         return softDeleted;
@@ -10929,7 +11133,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * If true, only soft-deleted object versions will be listed. The default is false. For more
-       * information, see Soft Delete.
+       * information, see [Soft Delete](https://cloud.google.com/storage/docs/soft-delete).
        */
       public List setSoftDeleted(java.lang.Boolean softDeleted) {
         this.softDeleted = softDeleted;

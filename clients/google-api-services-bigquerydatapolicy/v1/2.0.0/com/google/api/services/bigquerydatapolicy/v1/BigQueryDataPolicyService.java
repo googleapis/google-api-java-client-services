@@ -468,6 +468,29 @@ public class BigQueryDataPolicyService extends com.google.api.client.googleapis.
             return this;
           }
 
+          /**
+           * Optional. If true, the data policy will be deleted even when it is referenced by one or
+           * more table columns.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** Optional. If true, the data policy will be deleted even when it is referenced by one or more table
+         columns.
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /**
+           * Optional. If true, the data policy will be deleted even when it is referenced by one or
+           * more table columns.
+           */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);
@@ -1127,6 +1150,29 @@ public class BigQueryDataPolicyService extends com.google.api.client.googleapis.
                   "^projects/[^/]+/locations/[^/]+/dataPolicies/[^/]+$");
             }
             this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, and the data policy is not found, a new data policy will be
+           * created. In this situation, update_mask is ignored.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If set to true, and the data policy is not found, a new data policy will be created. In
+         this situation, update_mask is ignored.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If set to true, and the data policy is not found, a new data policy will be
+           * created. In this situation, update_mask is ignored.
+           */
+          public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
             return this;
           }
 

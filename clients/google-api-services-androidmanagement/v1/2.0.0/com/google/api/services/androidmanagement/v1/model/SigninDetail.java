@@ -55,6 +55,19 @@ public final class SigninDetail extends com.google.api.client.json.GenericJson {
   private java.lang.String allowPersonalUsage;
 
   /**
+   * Optional. Whether the sign-in URL should be used by default for the enterprise. The
+   * SigninDetail with defaultStatus set to SIGNIN_DETAIL_IS_DEFAULT is used for Google account
+   * enrollment method. Only one of an enterprise's signinDetails can have defaultStatus set to
+   * SIGNIN_DETAIL_IS_DEFAULT. If an Enterprise has at least one signinDetails and none of them have
+   * defaultStatus set to SIGNIN_DETAIL_IS_DEFAULT then the first one from the list is selected and
+   * has set defaultStatus to SIGNIN_DETAIL_IS_DEFAULT. If no signinDetails specified for the
+   * Enterprise then the Google Account device enrollment will fail.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultStatus;
+
+  /**
    * A JSON string whose UTF-8 representation can be used to generate a QR code to enroll a device
    * with this enrollment token. To enroll a device using NFC, the NFC record must contain a
    * serialized java.util.Properties representation of the properties in the JSON. This is a read-
@@ -113,6 +126,35 @@ public final class SigninDetail extends com.google.api.client.json.GenericJson {
    */
   public SigninDetail setAllowPersonalUsage(java.lang.String allowPersonalUsage) {
     this.allowPersonalUsage = allowPersonalUsage;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the sign-in URL should be used by default for the enterprise. The
+   * SigninDetail with defaultStatus set to SIGNIN_DETAIL_IS_DEFAULT is used for Google account
+   * enrollment method. Only one of an enterprise's signinDetails can have defaultStatus set to
+   * SIGNIN_DETAIL_IS_DEFAULT. If an Enterprise has at least one signinDetails and none of them have
+   * defaultStatus set to SIGNIN_DETAIL_IS_DEFAULT then the first one from the list is selected and
+   * has set defaultStatus to SIGNIN_DETAIL_IS_DEFAULT. If no signinDetails specified for the
+   * Enterprise then the Google Account device enrollment will fail.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultStatus() {
+    return defaultStatus;
+  }
+
+  /**
+   * Optional. Whether the sign-in URL should be used by default for the enterprise. The
+   * SigninDetail with defaultStatus set to SIGNIN_DETAIL_IS_DEFAULT is used for Google account
+   * enrollment method. Only one of an enterprise's signinDetails can have defaultStatus set to
+   * SIGNIN_DETAIL_IS_DEFAULT. If an Enterprise has at least one signinDetails and none of them have
+   * defaultStatus set to SIGNIN_DETAIL_IS_DEFAULT then the first one from the list is selected and
+   * has set defaultStatus to SIGNIN_DETAIL_IS_DEFAULT. If no signinDetails specified for the
+   * Enterprise then the Google Account device enrollment will fail.
+   * @param defaultStatus defaultStatus or {@code null} for none
+   */
+  public SigninDetail setDefaultStatus(java.lang.String defaultStatus) {
+    this.defaultStatus = defaultStatus;
     return this;
   }
 

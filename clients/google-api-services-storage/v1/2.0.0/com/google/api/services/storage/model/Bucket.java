@@ -109,6 +109,13 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * The generation of this bucket.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long generation;
+
+  /**
    * The bucket's hierarchical namespace configuration.
    * The value may be {@code null}.
    */
@@ -237,6 +244,13 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String rpo;
+
+  /**
+   * Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPZI;
 
   /**
    * Reserved for future use.
@@ -468,6 +482,23 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
    */
   public Bucket setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * The generation of this bucket.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getGeneration() {
+    return generation;
+  }
+
+  /**
+   * The generation of this bucket.
+   * @param generation generation or {@code null} for none
+   */
+  public Bucket setGeneration(java.lang.Long generation) {
+    this.generation = generation;
     return this;
   }
 
@@ -779,6 +810,23 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
    */
   public Bucket setRpo(java.lang.String rpo) {
     this.rpo = rpo;
+    return this;
+  }
+
+  /**
+   * Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPZI() {
+    return satisfiesPZI;
+  }
+
+  /**
+   * Reserved for future use.
+   * @param satisfiesPZI satisfiesPZI or {@code null} for none
+   */
+  public Bucket setSatisfiesPZI(java.lang.Boolean satisfiesPZI) {
+    this.satisfiesPZI = satisfiesPZI;
     return this;
   }
 

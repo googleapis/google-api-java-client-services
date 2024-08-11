@@ -203,6 +203,19 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Optional. Maximum number of workstations under this config a user can have
+   * `workstations.workstation.use` permission on. Only enforced on CreateWorkstation API calls on
+   * the user issuing the API request. Can be overridden by: - granting a user
+   * workstations.workstationConfigs.exemptMaxUsableWorkstationLimit permission, or - having a user
+   * with that permission create a workstation and granting another user
+   * `workstations.workstation.use` permission on that workstation. If not specified defaults to 0
+   * which indicates unlimited.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxUsableWorkstations;
+
+  /**
    * Identifier. Full name of this workstation configuration.
    * The value may be {@code null}.
    */
@@ -646,6 +659,35 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    */
   public WorkstationConfig setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Optional. Maximum number of workstations under this config a user can have
+   * `workstations.workstation.use` permission on. Only enforced on CreateWorkstation API calls on
+   * the user issuing the API request. Can be overridden by: - granting a user
+   * workstations.workstationConfigs.exemptMaxUsableWorkstationLimit permission, or - having a user
+   * with that permission create a workstation and granting another user
+   * `workstations.workstation.use` permission on that workstation. If not specified defaults to 0
+   * which indicates unlimited.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxUsableWorkstations() {
+    return maxUsableWorkstations;
+  }
+
+  /**
+   * Optional. Maximum number of workstations under this config a user can have
+   * `workstations.workstation.use` permission on. Only enforced on CreateWorkstation API calls on
+   * the user issuing the API request. Can be overridden by: - granting a user
+   * workstations.workstationConfigs.exemptMaxUsableWorkstationLimit permission, or - having a user
+   * with that permission create a workstation and granting another user
+   * `workstations.workstation.use` permission on that workstation. If not specified defaults to 0
+   * which indicates unlimited.
+   * @param maxUsableWorkstations maxUsableWorkstations or {@code null} for none
+   */
+  public WorkstationConfig setMaxUsableWorkstations(java.lang.Integer maxUsableWorkstations) {
+    this.maxUsableWorkstations = maxUsableWorkstations;
     return this;
   }
 

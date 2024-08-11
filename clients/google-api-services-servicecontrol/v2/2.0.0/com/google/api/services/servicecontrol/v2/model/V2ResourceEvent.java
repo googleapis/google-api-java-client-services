@@ -32,6 +32,15 @@ package com.google.api.services.servicecontrol.v2.model;
 public final class V2ResourceEvent extends com.google.api.client.json.GenericJson {
 
   /**
+   * The ESF unique context id of the api request, from which this resource event originated. This
+   * field is only needed for CAIS integration via api annotation. See go/cais-lro-delete for more
+   * details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long contextId;
+
+  /**
    * The destinations field determines which backend services should handle the event. This should
    * be specified as a comma-delimited string.
    * The value may be {@code null}.
@@ -77,6 +86,27 @@ public final class V2ResourceEvent extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * The ESF unique context id of the api request, from which this resource event originated. This
+   * field is only needed for CAIS integration via api annotation. See go/cais-lro-delete for more
+   * details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getContextId() {
+    return contextId;
+  }
+
+  /**
+   * The ESF unique context id of the api request, from which this resource event originated. This
+   * field is only needed for CAIS integration via api annotation. See go/cais-lro-delete for more
+   * details.
+   * @param contextId contextId or {@code null} for none
+   */
+  public V2ResourceEvent setContextId(java.lang.Long contextId) {
+    this.contextId = contextId;
+    return this;
+  }
 
   /**
    * The destinations field determines which backend services should handle the event. This should

@@ -160,7 +160,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The bucket's lifecycle configuration. See lifecycle management for more information.
+   * The bucket's lifecycle configuration. See [Lifecycle
+   * Management](https://cloud.google.com/storage/docs/lifecycle) for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,7 +169,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
 
   /**
    * The location of the bucket. Object data for objects in the bucket resides in physical storage
-   * within this region. Defaults to US. See the developer's guide for the authoritative list.
+   * within this region. Defaults to US. See the [Developer's
+   * Guide](https://cloud.google.com/storage/docs/locations) for the authoritative list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -279,7 +281,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
    * created object. This defines how objects in the bucket are stored and determines the SLA and
    * the cost of storage. Values include MULTI_REGIONAL, REGIONAL, STANDARD, NEARLINE, COLDLINE,
    * ARCHIVE, and DURABLE_REDUCED_AVAILABILITY. If this value is not specified when the bucket is
-   * created, it will default to STANDARD. For more information, see storage classes.
+   * created, it will default to STANDARD. For more information, see [Storage
+   * Classes](https://cloud.google.com/storage/docs/storage-classes).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -308,7 +311,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
 
   /**
    * The bucket's website configuration, controlling how the service behaves when accessing bucket
-   * contents as a web site. See the Static Website Examples for more information.
+   * contents as a web site. See the [Static Website
+   * Examples](https://cloud.google.com/storage/docs/static-website) for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -609,7 +613,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The bucket's lifecycle configuration. See lifecycle management for more information.
+   * The bucket's lifecycle configuration. See [Lifecycle
+   * Management](https://cloud.google.com/storage/docs/lifecycle) for more information.
    * @return value or {@code null} for none
    */
   public Lifecycle getLifecycle() {
@@ -617,7 +622,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The bucket's lifecycle configuration. See lifecycle management for more information.
+   * The bucket's lifecycle configuration. See [Lifecycle
+   * Management](https://cloud.google.com/storage/docs/lifecycle) for more information.
    * @param lifecycle lifecycle or {@code null} for none
    */
   public Bucket setLifecycle(Lifecycle lifecycle) {
@@ -627,7 +633,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
 
   /**
    * The location of the bucket. Object data for objects in the bucket resides in physical storage
-   * within this region. Defaults to US. See the developer's guide for the authoritative list.
+   * within this region. Defaults to US. See the [Developer's
+   * Guide](https://cloud.google.com/storage/docs/locations) for the authoritative list.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -636,7 +643,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
 
   /**
    * The location of the bucket. Object data for objects in the bucket resides in physical storage
-   * within this region. Defaults to US. See the developer's guide for the authoritative list.
+   * within this region. Defaults to US. See the [Developer's
+   * Guide](https://cloud.google.com/storage/docs/locations) for the authoritative list.
    * @param location location or {@code null} for none
    */
   public Bucket setLocation(java.lang.String location) {
@@ -888,7 +896,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
    * created object. This defines how objects in the bucket are stored and determines the SLA and
    * the cost of storage. Values include MULTI_REGIONAL, REGIONAL, STANDARD, NEARLINE, COLDLINE,
    * ARCHIVE, and DURABLE_REDUCED_AVAILABILITY. If this value is not specified when the bucket is
-   * created, it will default to STANDARD. For more information, see storage classes.
+   * created, it will default to STANDARD. For more information, see [Storage
+   * Classes](https://cloud.google.com/storage/docs/storage-classes).
    * @return value or {@code null} for none
    */
   public java.lang.String getStorageClass() {
@@ -900,7 +909,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
    * created object. This defines how objects in the bucket are stored and determines the SLA and
    * the cost of storage. Values include MULTI_REGIONAL, REGIONAL, STANDARD, NEARLINE, COLDLINE,
    * ARCHIVE, and DURABLE_REDUCED_AVAILABILITY. If this value is not specified when the bucket is
-   * created, it will default to STANDARD. For more information, see storage classes.
+   * created, it will default to STANDARD. For more information, see [Storage
+   * Classes](https://cloud.google.com/storage/docs/storage-classes).
    * @param storageClass storageClass or {@code null} for none
    */
   public Bucket setStorageClass(java.lang.String storageClass) {
@@ -961,7 +971,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
 
   /**
    * The bucket's website configuration, controlling how the service behaves when accessing bucket
-   * contents as a web site. See the Static Website Examples for more information.
+   * contents as a web site. See the [Static Website
+   * Examples](https://cloud.google.com/storage/docs/static-website) for more information.
    * @return value or {@code null} for none
    */
   public Website getWebsite() {
@@ -970,7 +981,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
 
   /**
    * The bucket's website configuration, controlling how the service behaves when accessing bucket
-   * contents as a web site. See the Static Website Examples for more information.
+   * contents as a web site. See the [Static Website
+   * Examples](https://cloud.google.com/storage/docs/static-website) for more information.
    * @param website website or {@code null} for none
    */
   public Bucket setWebsite(Website website) {
@@ -1851,7 +1863,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The bucket's lifecycle configuration. See lifecycle management for more information.
+   * The bucket's lifecycle configuration. See [Lifecycle
+   * Management](https://cloud.google.com/storage/docs/lifecycle) for more information.
    */
   public static final class Lifecycle extends com.google.api.client.json.GenericJson {
 
@@ -2783,7 +2796,8 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
 
   /**
    * The bucket's website configuration, controlling how the service behaves when accessing bucket
-   * contents as a web site. See the Static Website Examples for more information.
+   * contents as a web site. See the [Static Website
+   * Examples](https://cloud.google.com/storage/docs/static-website) for more information.
    */
   public static final class Website extends com.google.api.client.json.GenericJson {
 

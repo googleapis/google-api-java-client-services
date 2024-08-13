@@ -11184,13 +11184,14 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * If true, lists all versions of an object as distinct results. The default is false. For
-       * more information, see Object Versioning.
+       * more information, see [Object Versioning](https://cloud.google.com/storage/docs/object-
+       * versioning).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean versions;
 
       /** If true, lists all versions of an object as distinct results. The default is false. For more
-     information, see Object Versioning.
+     information, see [Object Versioning](https://cloud.google.com/storage/docs/object-versioning).
        */
       public java.lang.Boolean getVersions() {
         return versions;
@@ -11198,7 +11199,8 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * If true, lists all versions of an object as distinct results. The default is false. For
-       * more information, see Object Versioning.
+       * more information, see [Object Versioning](https://cloud.google.com/storage/docs/object-
+       * versioning).
        */
       public List setVersions(java.lang.Boolean versions) {
         this.versions = versions;
@@ -11545,7 +11547,8 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param bucket Name of the bucket in which the object resides.
      * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](https://cloud.google.com/storage/docs/request-
+     *        endpoints#encoding).
      * @param generation Selects a specific revision of this object.
      * @return the request
      */
@@ -11572,7 +11575,8 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param bucket Name of the bucket in which the object resides.
        * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](https://cloud.google.com/storage/docs/request-
+     *        endpoints#encoding).
        * @param generation Selects a specific revision of this object.
        * @since 1.13
        */
@@ -11641,13 +11645,14 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](https://cloud.google.com/storage/docs/request-
+       * endpoints#encoding).
        */
       @com.google.api.client.util.Key("object")
       private java.lang.String object__;
 
       /** Name of the object. For information about how to URL encode object names to be path safe, see
-     Encoding URI Path Parts.
+     [Encoding URI Path Parts](https://cloud.google.com/storage/docs/request-endpoints#encoding).
        */
       public java.lang.String getObject() {
         return object__;
@@ -11655,7 +11660,8 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](https://cloud.google.com/storage/docs/request-
+       * endpoints#encoding).
        */
       public Restore setObject(java.lang.String object__) {
         this.object__ = object__;
@@ -13390,13 +13396,14 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * If true, lists all versions of an object as distinct results. The default is false. For
-       * more information, see Object Versioning.
+       * more information, see [Object Versioning](https://cloud.google.com/storage/docs/object-
+       * versioning).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean versions;
 
       /** If true, lists all versions of an object as distinct results. The default is false. For more
-     information, see Object Versioning.
+     information, see [Object Versioning](https://cloud.google.com/storage/docs/object-versioning).
        */
       public java.lang.Boolean getVersions() {
         return versions;
@@ -13404,7 +13411,8 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * If true, lists all versions of an object as distinct results. The default is false. For
-       * more information, see Object Versioning.
+       * more information, see [Object Versioning](https://cloud.google.com/storage/docs/object-
+       * versioning).
        */
       public WatchAll setVersions(java.lang.Boolean versions) {
         this.versions = versions;
@@ -14538,7 +14546,9 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Updates the state of an HMAC key. See the HMAC Key resource descriptor for valid states.
+       * Updates the state of an HMAC key. See the [HMAC Key resource
+       * descriptor](https://cloud.google.com/storage/docs/json_api/v1/projects/hmacKeys/update#request-
+       * body) for valid states.
        *
        * Create a request for the method "hmacKeys.update".
        *
@@ -14561,7 +14571,9 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         private static final String REST_PATH = "projects/{projectId}/hmacKeys/{accessId}";
 
         /**
-         * Updates the state of an HMAC key. See the HMAC Key resource descriptor for valid states.
+         * Updates the state of an HMAC key. See the [HMAC Key resource
+         * descriptor](https://cloud.google.com/storage/docs/json_api/v1/projects/hmacKeys/update#request-
+         * body) for valid states.
          *
          * Create a request for the method "hmacKeys.update".
          *

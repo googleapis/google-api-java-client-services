@@ -91,8 +91,8 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
 
   /**
    * CRC32c checksum, as described in RFC 4960, Appendix B; encoded using base64 in big-endian byte
-   * order. For more information about using the CRC32c checksum, see Hashes and ETags: Best
-   * Practices.
+   * order. For more information about using the CRC32c checksum, see [Data Validation and Change
+   * Detection](https://cloud.google.com/storage/docs/data-validation).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,7 +173,7 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
 
   /**
    * MD5 hash of the data; encoded using base64. For more information about using the MD5 hash, see
-   * Hashes and ETags: Best Practices.
+   * [Data Validation and Change Detection](https://cloud.google.com/storage/docs/data-validation).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -450,8 +450,8 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
 
   /**
    * CRC32c checksum, as described in RFC 4960, Appendix B; encoded using base64 in big-endian byte
-   * order. For more information about using the CRC32c checksum, see Hashes and ETags: Best
-   * Practices.
+   * order. For more information about using the CRC32c checksum, see [Data Validation and Change
+   * Detection](https://cloud.google.com/storage/docs/data-validation).
    * @return value or {@code null} for none
    */
   public java.lang.String getCrc32c() {
@@ -460,8 +460,8 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
 
   /**
    * CRC32c checksum, as described in RFC 4960, Appendix B; encoded using base64 in big-endian byte
-   * order. For more information about using the CRC32c checksum, see Hashes and ETags: Best
-   * Practices.
+   * order. For more information about using the CRC32c checksum, see [Data Validation and Change
+   * Detection](https://cloud.google.com/storage/docs/data-validation).
    * @param crc32c crc32c or {@code null} for none
    */
   public StorageObject setCrc32c(java.lang.String crc32c) {
@@ -644,7 +644,7 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
 
   /**
    * MD5 hash of the data; encoded using base64. For more information about using the MD5 hash, see
-   * Hashes and ETags: Best Practices.
+   * [Data Validation and Change Detection](https://cloud.google.com/storage/docs/data-validation).
    * @return value or {@code null} for none
    */
   public java.lang.String getMd5Hash() {
@@ -653,7 +653,7 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
 
   /**
    * MD5 hash of the data; encoded using base64. For more information about using the MD5 hash, see
-   * Hashes and ETags: Best Practices.
+   * [Data Validation and Change Detection](https://cloud.google.com/storage/docs/data-validation).
    * @param md5Hash md5Hash or {@code null} for none
    */
   public StorageObject setMd5Hash(java.lang.String md5Hash) {

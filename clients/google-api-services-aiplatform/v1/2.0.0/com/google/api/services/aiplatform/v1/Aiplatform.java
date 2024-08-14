@@ -87314,6 +87314,22 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
+        /** Optional. Token used to access Hugging Face gated models. */
+        @com.google.api.client.util.Key
+        private java.lang.String huggingFaceToken;
+
+        /** Optional. Token used to access Hugging Face gated models.
+         */
+        public java.lang.String getHuggingFaceToken() {
+          return huggingFaceToken;
+        }
+
+        /** Optional. Token used to access Hugging Face gated models. */
+        public Get setHuggingFaceToken(java.lang.String huggingFaceToken) {
+          this.huggingFaceToken = huggingFaceToken;
+          return this;
+        }
+
         /** Optional. Boolean indicates whether the requested model is a Hugging Face model. */
         @com.google.api.client.util.Key
         private java.lang.Boolean isHuggingFaceModel;

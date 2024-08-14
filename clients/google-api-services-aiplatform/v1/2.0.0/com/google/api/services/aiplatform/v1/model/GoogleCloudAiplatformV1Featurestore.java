@@ -94,6 +94,20 @@ public final class GoogleCloudAiplatformV1Featurestore extends com.google.api.cl
   private java.lang.Integer onlineStorageTtlDays;
 
   /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Output only. State of the featurestore.
    * The value may be {@code null}.
    */
@@ -251,6 +265,40 @@ public final class GoogleCloudAiplatformV1Featurestore extends com.google.api.cl
    */
   public GoogleCloudAiplatformV1Featurestore setOnlineStorageTtlDays(java.lang.Integer onlineStorageTtlDays) {
     this.onlineStorageTtlDays = onlineStorageTtlDays;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Featurestore setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Featurestore setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

@@ -177,6 +177,16 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> includedDestination;
 
   /**
+   * Optional. List of countries to show this product in. Countries provided in this attribute will
+   * override any of the countries configured at feed level. The values should be: the [CLDR
+   * territory code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) of the
+   * countries in which this item will be shown.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> intendedCountry;
+
+  /**
    * The item group id of the product. For more information, see
    * https://support.google.com/manufacturers/answer/6124116#itemgroupid.
    * The value may be {@code null}.
@@ -700,6 +710,29 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   public Attributes setIncludedDestination(java.util.List<java.lang.String> includedDestination) {
     this.includedDestination = includedDestination;
+    return this;
+  }
+
+  /**
+   * Optional. List of countries to show this product in. Countries provided in this attribute will
+   * override any of the countries configured at feed level. The values should be: the [CLDR
+   * territory code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) of the
+   * countries in which this item will be shown.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getIntendedCountry() {
+    return intendedCountry;
+  }
+
+  /**
+   * Optional. List of countries to show this product in. Countries provided in this attribute will
+   * override any of the countries configured at feed level. The values should be: the [CLDR
+   * territory code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) of the
+   * countries in which this item will be shown.
+   * @param intendedCountry intendedCountry or {@code null} for none
+   */
+  public Attributes setIntendedCountry(java.util.List<java.lang.String> intendedCountry) {
+    this.intendedCountry = intendedCountry;
     return this;
   }
 

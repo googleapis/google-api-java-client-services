@@ -73,6 +73,13 @@ public final class GoogleCloudAiplatformV1beta1EvaluateInstancesRequest extends 
   private GoogleCloudAiplatformV1beta1GroundednessInput groundednessInput;
 
   /**
+   * Input for pairwise metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1PairwiseMetricInput pairwiseMetricInput;
+
+  /**
    * Input for pairwise question answering quality metric.
    * The value may be {@code null}.
    */
@@ -85,6 +92,13 @@ public final class GoogleCloudAiplatformV1beta1EvaluateInstancesRequest extends 
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1PairwiseSummarizationQualityInput pairwiseSummarizationQualityInput;
+
+  /**
+   * Input for pointwise metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1PointwiseMetricInput pointwiseMetricInput;
 
   /**
    * Input for question answering correctness metric.
@@ -282,6 +296,23 @@ public final class GoogleCloudAiplatformV1beta1EvaluateInstancesRequest extends 
   }
 
   /**
+   * Input for pairwise metric.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PairwiseMetricInput getPairwiseMetricInput() {
+    return pairwiseMetricInput;
+  }
+
+  /**
+   * Input for pairwise metric.
+   * @param pairwiseMetricInput pairwiseMetricInput or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluateInstancesRequest setPairwiseMetricInput(GoogleCloudAiplatformV1beta1PairwiseMetricInput pairwiseMetricInput) {
+    this.pairwiseMetricInput = pairwiseMetricInput;
+    return this;
+  }
+
+  /**
    * Input for pairwise question answering quality metric.
    * @return value or {@code null} for none
    */
@@ -312,6 +343,23 @@ public final class GoogleCloudAiplatformV1beta1EvaluateInstancesRequest extends 
    */
   public GoogleCloudAiplatformV1beta1EvaluateInstancesRequest setPairwiseSummarizationQualityInput(GoogleCloudAiplatformV1beta1PairwiseSummarizationQualityInput pairwiseSummarizationQualityInput) {
     this.pairwiseSummarizationQualityInput = pairwiseSummarizationQualityInput;
+    return this;
+  }
+
+  /**
+   * Input for pointwise metric.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PointwiseMetricInput getPointwiseMetricInput() {
+    return pointwiseMetricInput;
+  }
+
+  /**
+   * Input for pointwise metric.
+   * @param pointwiseMetricInput pointwiseMetricInput or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluateInstancesRequest setPointwiseMetricInput(GoogleCloudAiplatformV1beta1PointwiseMetricInput pointwiseMetricInput) {
+    this.pointwiseMetricInput = pointwiseMetricInput;
     return this;
   }
 

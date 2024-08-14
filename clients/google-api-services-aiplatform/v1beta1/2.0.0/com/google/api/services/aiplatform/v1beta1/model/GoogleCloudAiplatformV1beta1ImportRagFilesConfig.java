@@ -70,6 +70,13 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
   private GoogleCloudAiplatformV1beta1RagFileChunkingConfig ragFileChunkingConfig;
 
   /**
+   * Specifies the parsing config for RagFiles.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RagFileParsingConfig ragFileParsingConfig;
+
+  /**
    * Slack channels with their corresponding access tokens.
    * The value may be {@code null}.
    */
@@ -168,6 +175,23 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
    */
   public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setRagFileChunkingConfig(GoogleCloudAiplatformV1beta1RagFileChunkingConfig ragFileChunkingConfig) {
     this.ragFileChunkingConfig = ragFileChunkingConfig;
+    return this;
+  }
+
+  /**
+   * Specifies the parsing config for RagFiles.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagFileParsingConfig getRagFileParsingConfig() {
+    return ragFileParsingConfig;
+  }
+
+  /**
+   * Specifies the parsing config for RagFiles.
+   * @param ragFileParsingConfig ragFileParsingConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setRagFileParsingConfig(GoogleCloudAiplatformV1beta1RagFileParsingConfig ragFileParsingConfig) {
+    this.ragFileParsingConfig = ragFileParsingConfig;
     return this;
   }
 

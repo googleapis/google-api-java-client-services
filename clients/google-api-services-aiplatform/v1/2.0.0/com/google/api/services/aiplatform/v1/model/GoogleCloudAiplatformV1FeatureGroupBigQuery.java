@@ -44,6 +44,16 @@ public final class GoogleCloudAiplatformV1FeatureGroupBigQuery extends com.googl
   private java.util.List<java.lang.String> entityIdColumns;
 
   /**
+   * Optional. If the source is a time-series source, this can be set to control how downstream
+   * sources (ex: FeatureOnlineStore.FeatureView) will treat time series sources. If not set, will
+   * treat the source as a time-series source with feature_timestamp as timestamp column and no scan
+   * boundary.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1FeatureGroupBigQueryTimeSeries timeSeries;
+
+  /**
    * Required. Immutable. The BigQuery source URI that points to either a BigQuery Table or View.
    * @return value or {@code null} for none
    */
@@ -74,6 +84,29 @@ public final class GoogleCloudAiplatformV1FeatureGroupBigQuery extends com.googl
    */
   public GoogleCloudAiplatformV1FeatureGroupBigQuery setEntityIdColumns(java.util.List<java.lang.String> entityIdColumns) {
     this.entityIdColumns = entityIdColumns;
+    return this;
+  }
+
+  /**
+   * Optional. If the source is a time-series source, this can be set to control how downstream
+   * sources (ex: FeatureOnlineStore.FeatureView) will treat time series sources. If not set, will
+   * treat the source as a time-series source with feature_timestamp as timestamp column and no scan
+   * boundary.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FeatureGroupBigQueryTimeSeries getTimeSeries() {
+    return timeSeries;
+  }
+
+  /**
+   * Optional. If the source is a time-series source, this can be set to control how downstream
+   * sources (ex: FeatureOnlineStore.FeatureView) will treat time series sources. If not set, will
+   * treat the source as a time-series source with feature_timestamp as timestamp column and no scan
+   * boundary.
+   * @param timeSeries timeSeries or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FeatureGroupBigQuery setTimeSeries(GoogleCloudAiplatformV1FeatureGroupBigQueryTimeSeries timeSeries) {
+    this.timeSeries = timeSeries;
     return this;
   }
 

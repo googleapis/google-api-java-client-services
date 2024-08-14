@@ -73,6 +73,13 @@ public final class GoogleCloudAiplatformV1beta1EvaluateInstancesResponse extends
   private GoogleCloudAiplatformV1beta1GroundednessResult groundednessResult;
 
   /**
+   * Result for pairwise metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1PairwiseMetricResult pairwiseMetricResult;
+
+  /**
    * Result for pairwise question answering quality metric.
    * The value may be {@code null}.
    */
@@ -85,6 +92,13 @@ public final class GoogleCloudAiplatformV1beta1EvaluateInstancesResponse extends
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1PairwiseSummarizationQualityResult pairwiseSummarizationQualityResult;
+
+  /**
+   * Generic metrics. Result for pointwise metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1PointwiseMetricResult pointwiseMetricResult;
 
   /**
    * Result for question answering correctness metric.
@@ -282,6 +296,23 @@ public final class GoogleCloudAiplatformV1beta1EvaluateInstancesResponse extends
   }
 
   /**
+   * Result for pairwise metric.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PairwiseMetricResult getPairwiseMetricResult() {
+    return pairwiseMetricResult;
+  }
+
+  /**
+   * Result for pairwise metric.
+   * @param pairwiseMetricResult pairwiseMetricResult or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluateInstancesResponse setPairwiseMetricResult(GoogleCloudAiplatformV1beta1PairwiseMetricResult pairwiseMetricResult) {
+    this.pairwiseMetricResult = pairwiseMetricResult;
+    return this;
+  }
+
+  /**
    * Result for pairwise question answering quality metric.
    * @return value or {@code null} for none
    */
@@ -312,6 +343,23 @@ public final class GoogleCloudAiplatformV1beta1EvaluateInstancesResponse extends
    */
   public GoogleCloudAiplatformV1beta1EvaluateInstancesResponse setPairwiseSummarizationQualityResult(GoogleCloudAiplatformV1beta1PairwiseSummarizationQualityResult pairwiseSummarizationQualityResult) {
     this.pairwiseSummarizationQualityResult = pairwiseSummarizationQualityResult;
+    return this;
+  }
+
+  /**
+   * Generic metrics. Result for pointwise metric.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PointwiseMetricResult getPointwiseMetricResult() {
+    return pointwiseMetricResult;
+  }
+
+  /**
+   * Generic metrics. Result for pointwise metric.
+   * @param pointwiseMetricResult pointwiseMetricResult or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluateInstancesResponse setPointwiseMetricResult(GoogleCloudAiplatformV1beta1PointwiseMetricResult pointwiseMetricResult) {
+    this.pointwiseMetricResult = pointwiseMetricResult;
     return this;
   }
 

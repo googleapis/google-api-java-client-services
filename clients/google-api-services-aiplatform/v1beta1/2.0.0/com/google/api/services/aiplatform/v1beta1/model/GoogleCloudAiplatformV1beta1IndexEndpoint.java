@@ -143,6 +143,20 @@ public final class GoogleCloudAiplatformV1beta1IndexEndpoint extends com.google.
   private java.lang.Boolean publicEndpointEnabled;
 
   /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Output only. Timestamp when this IndexEndpoint was last updated. This timestamp is not updated
    * when the endpoint's DeployedIndexes are updated, e.g. due to updates of the original Indexes
    * they are the deployments of.
@@ -401,6 +415,40 @@ public final class GoogleCloudAiplatformV1beta1IndexEndpoint extends com.google.
    */
   public GoogleCloudAiplatformV1beta1IndexEndpoint setPublicEndpointEnabled(java.lang.Boolean publicEndpointEnabled) {
     this.publicEndpointEnabled = publicEndpointEnabled;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1IndexEndpoint setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1IndexEndpoint setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

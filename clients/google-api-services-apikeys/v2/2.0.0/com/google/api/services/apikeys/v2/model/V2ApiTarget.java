@@ -43,8 +43,8 @@ public final class V2ApiTarget extends com.google.api.client.json.GenericJson {
   /**
    * The service for this restriction. It should be the canonical service name, for example:
    * `translate.googleapis.com`. You can use [`gcloud services
-   * list`](/sdk/gcloud/reference/services/list) to get a list of services that are enabled in the
-   * project.
+   * list`](https://cloud.google.com/sdk/gcloud/reference/services/list) to get a list of services
+   * that are enabled in the project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,8 +76,8 @@ public final class V2ApiTarget extends com.google.api.client.json.GenericJson {
   /**
    * The service for this restriction. It should be the canonical service name, for example:
    * `translate.googleapis.com`. You can use [`gcloud services
-   * list`](/sdk/gcloud/reference/services/list) to get a list of services that are enabled in the
-   * project.
+   * list`](https://cloud.google.com/sdk/gcloud/reference/services/list) to get a list of services
+   * that are enabled in the project.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -87,8 +87,8 @@ public final class V2ApiTarget extends com.google.api.client.json.GenericJson {
   /**
    * The service for this restriction. It should be the canonical service name, for example:
    * `translate.googleapis.com`. You can use [`gcloud services
-   * list`](/sdk/gcloud/reference/services/list) to get a list of services that are enabled in the
-   * project.
+   * list`](https://cloud.google.com/sdk/gcloud/reference/services/list) to get a list of services
+   * that are enabled in the project.
    * @param service service or {@code null} for none
    */
   public V2ApiTarget setService(java.lang.String service) {

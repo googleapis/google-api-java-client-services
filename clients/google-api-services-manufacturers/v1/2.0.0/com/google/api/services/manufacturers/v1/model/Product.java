@@ -59,6 +59,13 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The feed label for the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String feedLabel;
+
+  /**
    * A server-generated list of issues associated with the product.
    * The value may be {@code null}.
    */
@@ -155,6 +162,23 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setDestinationStatuses(java.util.List<DestinationStatus> destinationStatuses) {
     this.destinationStatuses = destinationStatuses;
+    return this;
+  }
+
+  /**
+   * Optional. The feed label for the product.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFeedLabel() {
+    return feedLabel;
+  }
+
+  /**
+   * Optional. The feed label for the product.
+   * @param feedLabel feedLabel or {@code null} for none
+   */
+  public Product setFeedLabel(java.lang.String feedLabel) {
+    this.feedLabel = feedLabel;
     return this;
   }
 

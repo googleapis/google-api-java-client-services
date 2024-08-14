@@ -47,13 +47,14 @@ public final class BackendCustomMetric extends com.google.api.client.json.Generi
   private java.lang.Float maxUtilization;
 
   /**
-   * Name of a custom utilization signal. The name must be 1-24 characters long, and comply with
-   * RFC1035. Specifically, the name must be 1-24 characters long and match the regular expression
-   * [a-z]([-a-z0-9]*[a-z0-9])? which means the first character must be a lowercase letter, and all
-   * following characters must be a dash, lowercase letter, or digit, except the last character,
-   * which cannot be a dash. For usage guidelines, see Custom Metrics balancing mode. This field can
-   * only be used for a global or regional backend service with the loadBalancingScheme set to
-   * EXTERNAL_MANAGED, INTERNAL_MANAGED INTERNAL_SELF_MANAGED.
+   * Name of a custom utilization signal. The name must be 1-64 characters long, and comply with
+   * relaxed RFC1035. Specifically, the name must be 1-64 characters long and match the regular
+   * expression [a-z]([-_.a-z0-9]*[a-z0-9])? which means the first character must be a lowercase
+   * letter, and all following characters must be a dash, period, underscore, lowercase letter, or
+   * digit, except the last character, which cannot be a dash, period, or underscore. For usage
+   * guidelines, see Custom Metrics balancing mode. This field can only be used for a global or
+   * regional backend service with the loadBalancingScheme set to EXTERNAL_MANAGED, INTERNAL_MANAGED
+   * INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,13 +99,14 @@ public final class BackendCustomMetric extends com.google.api.client.json.Generi
   }
 
   /**
-   * Name of a custom utilization signal. The name must be 1-24 characters long, and comply with
-   * RFC1035. Specifically, the name must be 1-24 characters long and match the regular expression
-   * [a-z]([-a-z0-9]*[a-z0-9])? which means the first character must be a lowercase letter, and all
-   * following characters must be a dash, lowercase letter, or digit, except the last character,
-   * which cannot be a dash. For usage guidelines, see Custom Metrics balancing mode. This field can
-   * only be used for a global or regional backend service with the loadBalancingScheme set to
-   * EXTERNAL_MANAGED, INTERNAL_MANAGED INTERNAL_SELF_MANAGED.
+   * Name of a custom utilization signal. The name must be 1-64 characters long, and comply with
+   * relaxed RFC1035. Specifically, the name must be 1-64 characters long and match the regular
+   * expression [a-z]([-_.a-z0-9]*[a-z0-9])? which means the first character must be a lowercase
+   * letter, and all following characters must be a dash, period, underscore, lowercase letter, or
+   * digit, except the last character, which cannot be a dash, period, or underscore. For usage
+   * guidelines, see Custom Metrics balancing mode. This field can only be used for a global or
+   * regional backend service with the loadBalancingScheme set to EXTERNAL_MANAGED, INTERNAL_MANAGED
+   * INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -112,13 +114,14 @@ public final class BackendCustomMetric extends com.google.api.client.json.Generi
   }
 
   /**
-   * Name of a custom utilization signal. The name must be 1-24 characters long, and comply with
-   * RFC1035. Specifically, the name must be 1-24 characters long and match the regular expression
-   * [a-z]([-a-z0-9]*[a-z0-9])? which means the first character must be a lowercase letter, and all
-   * following characters must be a dash, lowercase letter, or digit, except the last character,
-   * which cannot be a dash. For usage guidelines, see Custom Metrics balancing mode. This field can
-   * only be used for a global or regional backend service with the loadBalancingScheme set to
-   * EXTERNAL_MANAGED, INTERNAL_MANAGED INTERNAL_SELF_MANAGED.
+   * Name of a custom utilization signal. The name must be 1-64 characters long, and comply with
+   * relaxed RFC1035. Specifically, the name must be 1-64 characters long and match the regular
+   * expression [a-z]([-_.a-z0-9]*[a-z0-9])? which means the first character must be a lowercase
+   * letter, and all following characters must be a dash, period, underscore, lowercase letter, or
+   * digit, except the last character, which cannot be a dash, period, or underscore. For usage
+   * guidelines, see Custom Metrics balancing mode. This field can only be used for a global or
+   * regional backend service with the loadBalancingScheme set to EXTERNAL_MANAGED, INTERNAL_MANAGED
+   * INTERNAL_SELF_MANAGED.
    * @param name name or {@code null} for none
    */
   public BackendCustomMetric setName(java.lang.String name) {

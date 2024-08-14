@@ -96,7 +96,8 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   /**
    * Local traffic selector to use when establishing the VPN tunnel with the peer VPN gateway. The
    * value should be a CIDR formatted string, for example: 192.168.0.0/16. The ranges must be
-   * disjoint. Only IPv4 is supported.
+   * disjoint. Only IPv4 is supported for Classic VPN tunnels. This field is output only for HA VPN
+   * tunnels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +144,8 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   private java.lang.String peerGcpGateway;
 
   /**
-   * IP address of the peer VPN gateway. Only IPv4 is supported.
+   * IP address of the peer VPN gateway. Only IPv4 is supported. This field can be set only for
+   * Classic VPN tunnels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,7 +162,8 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   /**
    * Remote traffic selectors to use when establishing the VPN tunnel with the peer VPN gateway. The
    * value should be a CIDR formatted string, for example: 192.168.0.0/16. The ranges should be
-   * disjoint. Only IPv4 is supported.
+   * disjoint. Only IPv4 is supported for Classic VPN tunnels. This field is output only for HA VPN
+   * tunnels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -218,7 +221,7 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
 
   /**
    * URL of the Target VPN gateway with which this VPN tunnel is associated. Provided by the client
-   * when the VPN tunnel is created.
+   * when the VPN tunnel is created. This field can be set only for Classic VPN tunnels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -432,7 +435,8 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   /**
    * Local traffic selector to use when establishing the VPN tunnel with the peer VPN gateway. The
    * value should be a CIDR formatted string, for example: 192.168.0.0/16. The ranges must be
-   * disjoint. Only IPv4 is supported.
+   * disjoint. Only IPv4 is supported for Classic VPN tunnels. This field is output only for HA VPN
+   * tunnels.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLocalTrafficSelector() {
@@ -442,7 +446,8 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   /**
    * Local traffic selector to use when establishing the VPN tunnel with the peer VPN gateway. The
    * value should be a CIDR formatted string, for example: 192.168.0.0/16. The ranges must be
-   * disjoint. Only IPv4 is supported.
+   * disjoint. Only IPv4 is supported for Classic VPN tunnels. This field is output only for HA VPN
+   * tunnels.
    * @param localTrafficSelector localTrafficSelector or {@code null} for none
    */
   public VpnTunnel setLocalTrafficSelector(java.util.List<java.lang.String> localTrafficSelector) {
@@ -543,7 +548,8 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * IP address of the peer VPN gateway. Only IPv4 is supported.
+   * IP address of the peer VPN gateway. Only IPv4 is supported. This field can be set only for
+   * Classic VPN tunnels.
    * @return value or {@code null} for none
    */
   public java.lang.String getPeerIp() {
@@ -551,7 +557,8 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * IP address of the peer VPN gateway. Only IPv4 is supported.
+   * IP address of the peer VPN gateway. Only IPv4 is supported. This field can be set only for
+   * Classic VPN tunnels.
    * @param peerIp peerIp or {@code null} for none
    */
   public VpnTunnel setPeerIp(java.lang.String peerIp) {
@@ -581,7 +588,8 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   /**
    * Remote traffic selectors to use when establishing the VPN tunnel with the peer VPN gateway. The
    * value should be a CIDR formatted string, for example: 192.168.0.0/16. The ranges should be
-   * disjoint. Only IPv4 is supported.
+   * disjoint. Only IPv4 is supported for Classic VPN tunnels. This field is output only for HA VPN
+   * tunnels.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRemoteTrafficSelector() {
@@ -591,7 +599,8 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   /**
    * Remote traffic selectors to use when establishing the VPN tunnel with the peer VPN gateway. The
    * value should be a CIDR formatted string, for example: 192.168.0.0/16. The ranges should be
-   * disjoint. Only IPv4 is supported.
+   * disjoint. Only IPv4 is supported for Classic VPN tunnels. This field is output only for HA VPN
+   * tunnels.
    * @param remoteTrafficSelector remoteTrafficSelector or {@code null} for none
    */
   public VpnTunnel setRemoteTrafficSelector(java.util.List<java.lang.String> remoteTrafficSelector) {
@@ -716,7 +725,7 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
 
   /**
    * URL of the Target VPN gateway with which this VPN tunnel is associated. Provided by the client
-   * when the VPN tunnel is created.
+   * when the VPN tunnel is created. This field can be set only for Classic VPN tunnels.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetVpnGateway() {
@@ -725,7 +734,7 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
 
   /**
    * URL of the Target VPN gateway with which this VPN tunnel is associated. Provided by the client
-   * when the VPN tunnel is created.
+   * when the VPN tunnel is created. This field can be set only for Classic VPN tunnels.
    * @param targetVpnGateway targetVpnGateway or {@code null} for none
    */
   public VpnTunnel setTargetVpnGateway(java.lang.String targetVpnGateway) {

@@ -31,9 +31,7 @@ package com.google.api.services.playintegrity.v1.model;
 public final class WriteDeviceRecallRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Integrity token obtained from calling Play Integrity API. Note that the integrity
-   * token contains the existing device recall bits. The write will only succeed if those bits in
-   * the integrity token are up to date.
+   * Required. Integrity token obtained from calling Play Integrity API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,9 +45,7 @@ public final class WriteDeviceRecallRequest extends com.google.api.client.json.G
   private Values newValues;
 
   /**
-   * Required. Integrity token obtained from calling Play Integrity API. Note that the integrity
-   * token contains the existing device recall bits. The write will only succeed if those bits in
-   * the integrity token are up to date.
+   * Required. Integrity token obtained from calling Play Integrity API.
    * @return value or {@code null} for none
    */
   public java.lang.String getIntegrityToken() {
@@ -57,9 +53,7 @@ public final class WriteDeviceRecallRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Required. Integrity token obtained from calling Play Integrity API. Note that the integrity
-   * token contains the existing device recall bits. The write will only succeed if those bits in
-   * the integrity token are up to date.
+   * Required. Integrity token obtained from calling Play Integrity API.
    * @param integrityToken integrityToken or {@code null} for none
    */
   public WriteDeviceRecallRequest setIntegrityToken(java.lang.String integrityToken) {

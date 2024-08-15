@@ -38,6 +38,15 @@ public final class DefaultClusterConfig extends com.google.api.client.json.Gener
   private BinaryAuthorizationConfig binaryAuthorizationConfig;
 
   /**
+   * Optional. Enable/Disable Compliance Posture features for the cluster. Note that on UpdateFleet,
+   * only full replacement of this field is allowed. Users are not allowed for partial updates
+   * through field mask.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CompliancePostureConfig compliancePostureConfig;
+
+  /**
    * Enable/Disable Security Posture features for the cluster.
    * The value may be {@code null}.
    */
@@ -58,6 +67,27 @@ public final class DefaultClusterConfig extends com.google.api.client.json.Gener
    */
   public DefaultClusterConfig setBinaryAuthorizationConfig(BinaryAuthorizationConfig binaryAuthorizationConfig) {
     this.binaryAuthorizationConfig = binaryAuthorizationConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Enable/Disable Compliance Posture features for the cluster. Note that on UpdateFleet,
+   * only full replacement of this field is allowed. Users are not allowed for partial updates
+   * through field mask.
+   * @return value or {@code null} for none
+   */
+  public CompliancePostureConfig getCompliancePostureConfig() {
+    return compliancePostureConfig;
+  }
+
+  /**
+   * Optional. Enable/Disable Compliance Posture features for the cluster. Note that on UpdateFleet,
+   * only full replacement of this field is allowed. Users are not allowed for partial updates
+   * through field mask.
+   * @param compliancePostureConfig compliancePostureConfig or {@code null} for none
+   */
+  public DefaultClusterConfig setCompliancePostureConfig(CompliancePostureConfig compliancePostureConfig) {
+    this.compliancePostureConfig = compliancePostureConfig;
     return this;
   }
 

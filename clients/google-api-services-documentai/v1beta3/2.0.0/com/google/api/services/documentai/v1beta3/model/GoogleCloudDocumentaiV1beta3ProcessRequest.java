@@ -54,6 +54,13 @@ public final class GoogleCloudDocumentaiV1beta3ProcessRequest extends com.google
   private GoogleCloudDocumentaiV1beta3GcsDocument gcsDocument;
 
   /**
+   * Optional. Option to remove images from the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean imagelessMode;
+
+  /**
    * An inline document proto.
    * The value may be {@code null}.
    */
@@ -143,6 +150,23 @@ public final class GoogleCloudDocumentaiV1beta3ProcessRequest extends com.google
    */
   public GoogleCloudDocumentaiV1beta3ProcessRequest setGcsDocument(GoogleCloudDocumentaiV1beta3GcsDocument gcsDocument) {
     this.gcsDocument = gcsDocument;
+    return this;
+  }
+
+  /**
+   * Optional. Option to remove images from the document.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getImagelessMode() {
+    return imagelessMode;
+  }
+
+  /**
+   * Optional. Option to remove images from the document.
+   * @param imagelessMode imagelessMode or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ProcessRequest setImagelessMode(java.lang.Boolean imagelessMode) {
+    this.imagelessMode = imagelessMode;
     return this;
   }
 

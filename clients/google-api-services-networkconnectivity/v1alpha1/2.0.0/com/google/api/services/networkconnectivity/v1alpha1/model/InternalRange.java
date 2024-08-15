@@ -61,6 +61,13 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Optional. Should be present if usage is set to FOR_MIGRATION.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Migration migration;
+
+  /**
    * Immutable. The name of an internal range. Format:
    * projects/{project}/locations/{location}/internalRanges/{internal_range} See:
    * https://google.aip.dev/122#fields-representing-resource-names
@@ -204,6 +211,23 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
    */
   public InternalRange setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Optional. Should be present if usage is set to FOR_MIGRATION.
+   * @return value or {@code null} for none
+   */
+  public Migration getMigration() {
+    return migration;
+  }
+
+  /**
+   * Optional. Should be present if usage is set to FOR_MIGRATION.
+   * @param migration migration or {@code null} for none
+   */
+  public InternalRange setMigration(Migration migration) {
+    this.migration = migration;
     return this;
   }
 

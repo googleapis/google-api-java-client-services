@@ -65,7 +65,7 @@ public final class GoogleCloudDiscoveryengineV1BigQuerySource extends com.google
   private GoogleTypeDate partitionDate;
 
   /**
-   * The project ID (can be project # or ID) that the BigQuery source is in with a length limit of
+   * The project ID or the project number that contains the BigQuery source. Has a length limit of
    * 128 characters. If not specified, inherits the project ID from the parent request.
    * The value may be {@code null}.
    */
@@ -162,7 +162,7 @@ public final class GoogleCloudDiscoveryengineV1BigQuerySource extends com.google
   }
 
   /**
-   * The project ID (can be project # or ID) that the BigQuery source is in with a length limit of
+   * The project ID or the project number that contains the BigQuery source. Has a length limit of
    * 128 characters. If not specified, inherits the project ID from the parent request.
    * @return value or {@code null} for none
    */
@@ -171,7 +171,7 @@ public final class GoogleCloudDiscoveryengineV1BigQuerySource extends com.google
   }
 
   /**
-   * The project ID (can be project # or ID) that the BigQuery source is in with a length limit of
+   * The project ID or the project number that contains the BigQuery source. Has a length limit of
    * 128 characters. If not specified, inherits the project ID from the parent request.
    * @param projectId projectId or {@code null} for none
    */

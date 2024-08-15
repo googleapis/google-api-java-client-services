@@ -104,6 +104,14 @@ public final class GoogleCloudDiscoveryengineV1DataStore extends com.google.api.
   private GoogleCloudDiscoveryengineV1Schema startingSchema;
 
   /**
+   * Config to store data store type configuration for workspace data. This must be set when
+   * DataStore.content_config is set as DataStore.ContentConfig.GOOGLE_WORKSPACE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1WorkspaceConfig workspaceConfig;
+
+  /**
    * Immutable. The content config of the data store. If this field is unset, the server behavior
    * defaults to ContentConfig.NO_CONTENT.
    * @return value or {@code null} for none
@@ -275,6 +283,25 @@ public final class GoogleCloudDiscoveryengineV1DataStore extends com.google.api.
    */
   public GoogleCloudDiscoveryengineV1DataStore setStartingSchema(GoogleCloudDiscoveryengineV1Schema startingSchema) {
     this.startingSchema = startingSchema;
+    return this;
+  }
+
+  /**
+   * Config to store data store type configuration for workspace data. This must be set when
+   * DataStore.content_config is set as DataStore.ContentConfig.GOOGLE_WORKSPACE.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1WorkspaceConfig getWorkspaceConfig() {
+    return workspaceConfig;
+  }
+
+  /**
+   * Config to store data store type configuration for workspace data. This must be set when
+   * DataStore.content_config is set as DataStore.ContentConfig.GOOGLE_WORKSPACE.
+   * @param workspaceConfig workspaceConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DataStore setWorkspaceConfig(GoogleCloudDiscoveryengineV1WorkspaceConfig workspaceConfig) {
+    this.workspaceConfig = workspaceConfig;
     return this;
   }
 

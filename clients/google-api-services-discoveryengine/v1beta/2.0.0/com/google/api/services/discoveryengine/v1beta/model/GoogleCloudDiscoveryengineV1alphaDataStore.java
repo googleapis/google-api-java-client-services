@@ -129,6 +129,14 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
   private GoogleCloudDiscoveryengineV1alphaSchema startingSchema;
 
   /**
+   * Config to store data store type configuration for workspace data. This must be set when
+   * DataStore.content_config is set as DataStore.ContentConfig.GOOGLE_WORKSPACE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaWorkspaceConfig workspaceConfig;
+
+  /**
    * Immutable. Whether data in the DataStore has ACL information. If set to `true`, the source data
    * must have ACL. ACL will be ingested when data is ingested by DocumentService.ImportDocuments
    * methods. When ACL is enabled for the DataStore, Document can't be accessed by calling
@@ -359,6 +367,25 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
    */
   public GoogleCloudDiscoveryengineV1alphaDataStore setStartingSchema(GoogleCloudDiscoveryengineV1alphaSchema startingSchema) {
     this.startingSchema = startingSchema;
+    return this;
+  }
+
+  /**
+   * Config to store data store type configuration for workspace data. This must be set when
+   * DataStore.content_config is set as DataStore.ContentConfig.GOOGLE_WORKSPACE.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWorkspaceConfig getWorkspaceConfig() {
+    return workspaceConfig;
+  }
+
+  /**
+   * Config to store data store type configuration for workspace data. This must be set when
+   * DataStore.content_config is set as DataStore.ContentConfig.GOOGLE_WORKSPACE.
+   * @param workspaceConfig workspaceConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataStore setWorkspaceConfig(GoogleCloudDiscoveryengineV1alphaWorkspaceConfig workspaceConfig) {
+    this.workspaceConfig = workspaceConfig;
     return this;
   }
 

@@ -232,6 +232,15 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   private java.lang.String regionCode;
 
   /**
+   * The relevance threshold of the search results. Default to Google defined threshold, leveraging
+   * a balance of precision and recall to deliver both highly accurate results and comprehensive
+   * coverage of relevant information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String relevanceThreshold;
+
+  /**
    * Whether to turn on safe search. This is only supported for website search.
    * The value may be {@code null}.
    */
@@ -789,6 +798,27 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequest setRegionCode(java.lang.String regionCode) {
     this.regionCode = regionCode;
+    return this;
+  }
+
+  /**
+   * The relevance threshold of the search results. Default to Google defined threshold, leveraging
+   * a balance of precision and recall to deliver both highly accurate results and comprehensive
+   * coverage of relevant information.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRelevanceThreshold() {
+    return relevanceThreshold;
+  }
+
+  /**
+   * The relevance threshold of the search results. Default to Google defined threshold, leveraging
+   * a balance of precision and recall to deliver both highly accurate results and comprehensive
+   * coverage of relevant information.
+   * @param relevanceThreshold relevanceThreshold or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchRequest setRelevanceThreshold(java.lang.String relevanceThreshold) {
+    this.relevanceThreshold = relevanceThreshold;
     return this;
   }
 

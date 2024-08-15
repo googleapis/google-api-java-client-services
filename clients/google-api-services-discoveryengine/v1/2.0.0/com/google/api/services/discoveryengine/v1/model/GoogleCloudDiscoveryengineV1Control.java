@@ -31,7 +31,7 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1Control extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. List of all ServingConfig ids this control is attached to. May take up to 10
+   * Output only. List of all ServingConfig IDs this control is attached to. May take up to 10
    * minutes to update after changes.
    * The value may be {@code null}.
    */
@@ -113,7 +113,7 @@ public final class GoogleCloudDiscoveryengineV1Control extends com.google.api.cl
   private java.util.List<java.lang.String> useCases;
 
   /**
-   * Output only. List of all ServingConfig ids this control is attached to. May take up to 10
+   * Output only. List of all ServingConfig IDs this control is attached to. May take up to 10
    * minutes to update after changes.
    * @return value or {@code null} for none
    */
@@ -122,7 +122,7 @@ public final class GoogleCloudDiscoveryengineV1Control extends com.google.api.cl
   }
 
   /**
-   * Output only. List of all ServingConfig ids this control is attached to. May take up to 10
+   * Output only. List of all ServingConfig IDs this control is attached to. May take up to 10
    * minutes to update after changes.
    * @param associatedServingConfigIds associatedServingConfigIds or {@code null} for none
    */

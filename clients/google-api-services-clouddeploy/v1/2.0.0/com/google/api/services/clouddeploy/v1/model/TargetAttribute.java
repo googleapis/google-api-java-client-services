@@ -31,8 +31,7 @@ public final class TargetAttribute extends com.google.api.client.json.GenericJso
 
   /**
    * ID of the `Target`. The value of this field could be one of the following: * The last segment
-   * of a target name. It only needs the ID to determine which target is being referred to * "*",
-   * all targets in a location.
+   * of a target name * "*", all targets in a location
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +46,7 @@ public final class TargetAttribute extends com.google.api.client.json.GenericJso
 
   /**
    * ID of the `Target`. The value of this field could be one of the following: * The last segment
-   * of a target name. It only needs the ID to determine which target is being referred to * "*",
-   * all targets in a location.
+   * of a target name * "*", all targets in a location
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -57,8 +55,7 @@ public final class TargetAttribute extends com.google.api.client.json.GenericJso
 
   /**
    * ID of the `Target`. The value of this field could be one of the following: * The last segment
-   * of a target name. It only needs the ID to determine which target is being referred to * "*",
-   * all targets in a location.
+   * of a target name * "*", all targets in a location
    * @param id id or {@code null} for none
    */
   public TargetAttribute setId(java.lang.String id) {

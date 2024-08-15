@@ -45,6 +45,15 @@ public final class LinkedVpcNetwork extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> includeExportRanges;
 
   /**
+   * Output only. The list of Producer VPC spokes that this VPC spoke is a service consumer VPC
+   * spoke for. These producer VPCs are connected through VPC peering to this spoke's backing VPC
+   * network.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> producerVpcSpokes;
+
+  /**
    * Required. The URI of the VPC network resource.
    * The value may be {@code null}.
    */
@@ -82,6 +91,27 @@ public final class LinkedVpcNetwork extends com.google.api.client.json.GenericJs
    */
   public LinkedVpcNetwork setIncludeExportRanges(java.util.List<java.lang.String> includeExportRanges) {
     this.includeExportRanges = includeExportRanges;
+    return this;
+  }
+
+  /**
+   * Output only. The list of Producer VPC spokes that this VPC spoke is a service consumer VPC
+   * spoke for. These producer VPCs are connected through VPC peering to this spoke's backing VPC
+   * network.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getProducerVpcSpokes() {
+    return producerVpcSpokes;
+  }
+
+  /**
+   * Output only. The list of Producer VPC spokes that this VPC spoke is a service consumer VPC
+   * spoke for. These producer VPCs are connected through VPC peering to this spoke's backing VPC
+   * network.
+   * @param producerVpcSpokes producerVpcSpokes or {@code null} for none
+   */
+  public LinkedVpcNetwork setProducerVpcSpokes(java.util.List<java.lang.String> producerVpcSpokes) {
+    this.producerVpcSpokes = producerVpcSpokes;
     return this;
   }
 

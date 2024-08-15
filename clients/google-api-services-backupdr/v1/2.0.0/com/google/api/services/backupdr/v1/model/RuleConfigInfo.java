@@ -31,16 +31,6 @@ package com.google.api.services.backupdr.v1.model;
 public final class RuleConfigInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. TODO b/341576760: Remove deprecated BV and Datasource field form BP and BPA once
-   * UI removed all dependencies on them Output Only. Resource name of data source which will be
-   * used as storage location for backups taken by specified rule. Format :
-   * projects/{project}/locations/{location}/backupVaults/{backupvault}/dataSources/{datasource}
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String dataSource;
-
-  /**
    * Output only. Output Only. google.rpc.Status object to store the last backup error.
    * The value may be {@code null}.
    */
@@ -67,29 +57,6 @@ public final class RuleConfigInfo extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String ruleId;
-
-  /**
-   * Output only. TODO b/341576760: Remove deprecated BV and Datasource field form BP and BPA once
-   * UI removed all dependencies on them Output Only. Resource name of data source which will be
-   * used as storage location for backups taken by specified rule. Format :
-   * projects/{project}/locations/{location}/backupVaults/{backupvault}/dataSources/{datasource}
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDataSource() {
-    return dataSource;
-  }
-
-  /**
-   * Output only. TODO b/341576760: Remove deprecated BV and Datasource field form BP and BPA once
-   * UI removed all dependencies on them Output Only. Resource name of data source which will be
-   * used as storage location for backups taken by specified rule. Format :
-   * projects/{project}/locations/{location}/backupVaults/{backupvault}/dataSources/{datasource}
-   * @param dataSource dataSource or {@code null} for none
-   */
-  public RuleConfigInfo setDataSource(java.lang.String dataSource) {
-    this.dataSource = dataSource;
-    return this;
-  }
 
   /**
    * Output only. Output Only. google.rpc.Status object to store the last backup error.

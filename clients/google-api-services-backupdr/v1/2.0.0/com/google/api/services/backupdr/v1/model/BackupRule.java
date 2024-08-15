@@ -39,26 +39,6 @@ public final class BackupRule extends com.google.api.client.json.GenericJson {
   private java.lang.Integer backupRetentionDays;
 
   /**
-   * Optional. TODO b/341576760: Remove deprecated BV and Datasource field form BP and BPA once UI
-   * removed all dependencies on them Required. Resource name of backup vault which will be used as
-   * storage location for backups. Format:
-   * projects/{project}/locations/{location}/backupVaults/{backupvault}
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String backupVault;
-
-  /**
-   * Output only. TODO b/341576760: Remove deprecated BV and Datasource field form BP and BPA once
-   * UI removed all dependencies on them Output only. The Google Cloud Platform Service Account to
-   * be used by the BackupVault for taking backups. Specify the email address of the Backup Vault
-   * Service Account.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String backupVaultServiceAccount;
-
-  /**
    * Required. Immutable. The unique id of this `BackupRule`. The `rule_id` is unique per
    * `BackupPlan`.The `rule_id` must start with a lowercase letter followed by up to 62 lowercase
    * letters, numbers, or hyphens. Pattern, /a-z{,62}/.
@@ -90,52 +70,6 @@ public final class BackupRule extends com.google.api.client.json.GenericJson {
    */
   public BackupRule setBackupRetentionDays(java.lang.Integer backupRetentionDays) {
     this.backupRetentionDays = backupRetentionDays;
-    return this;
-  }
-
-  /**
-   * Optional. TODO b/341576760: Remove deprecated BV and Datasource field form BP and BPA once UI
-   * removed all dependencies on them Required. Resource name of backup vault which will be used as
-   * storage location for backups. Format:
-   * projects/{project}/locations/{location}/backupVaults/{backupvault}
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getBackupVault() {
-    return backupVault;
-  }
-
-  /**
-   * Optional. TODO b/341576760: Remove deprecated BV and Datasource field form BP and BPA once UI
-   * removed all dependencies on them Required. Resource name of backup vault which will be used as
-   * storage location for backups. Format:
-   * projects/{project}/locations/{location}/backupVaults/{backupvault}
-   * @param backupVault backupVault or {@code null} for none
-   */
-  public BackupRule setBackupVault(java.lang.String backupVault) {
-    this.backupVault = backupVault;
-    return this;
-  }
-
-  /**
-   * Output only. TODO b/341576760: Remove deprecated BV and Datasource field form BP and BPA once
-   * UI removed all dependencies on them Output only. The Google Cloud Platform Service Account to
-   * be used by the BackupVault for taking backups. Specify the email address of the Backup Vault
-   * Service Account.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getBackupVaultServiceAccount() {
-    return backupVaultServiceAccount;
-  }
-
-  /**
-   * Output only. TODO b/341576760: Remove deprecated BV and Datasource field form BP and BPA once
-   * UI removed all dependencies on them Output only. The Google Cloud Platform Service Account to
-   * be used by the BackupVault for taking backups. Specify the email address of the Backup Vault
-   * Service Account.
-   * @param backupVaultServiceAccount backupVaultServiceAccount or {@code null} for none
-   */
-  public BackupRule setBackupVaultServiceAccount(java.lang.String backupVaultServiceAccount) {
-    this.backupVaultServiceAccount = backupVaultServiceAccount;
     return this;
   }
 

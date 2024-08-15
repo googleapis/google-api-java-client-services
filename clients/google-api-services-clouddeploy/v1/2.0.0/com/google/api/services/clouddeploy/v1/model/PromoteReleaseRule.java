@@ -48,9 +48,8 @@ public final class PromoteReleaseRule extends com.google.api.client.json.Generic
   /**
    * Optional. The ID of the stage in the pipeline to which this `Release` is deploying. If
    * unspecified, default it to the next stage in the promotion flow. The value of this field could
-   * be one of the following: * The last segment of a target name. It only needs the ID to determine
-   * if the target is one of the stages in the promotion sequence defined in the pipeline. *
-   * "@next", the next target in the promotion sequence.
+   * be one of the following: * The last segment of a target name * "@next", the next target in the
+   * promotion sequence
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,9 +109,8 @@ public final class PromoteReleaseRule extends com.google.api.client.json.Generic
   /**
    * Optional. The ID of the stage in the pipeline to which this `Release` is deploying. If
    * unspecified, default it to the next stage in the promotion flow. The value of this field could
-   * be one of the following: * The last segment of a target name. It only needs the ID to determine
-   * if the target is one of the stages in the promotion sequence defined in the pipeline. *
-   * "@next", the next target in the promotion sequence.
+   * be one of the following: * The last segment of a target name * "@next", the next target in the
+   * promotion sequence
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationTargetId() {
@@ -122,9 +120,8 @@ public final class PromoteReleaseRule extends com.google.api.client.json.Generic
   /**
    * Optional. The ID of the stage in the pipeline to which this `Release` is deploying. If
    * unspecified, default it to the next stage in the promotion flow. The value of this field could
-   * be one of the following: * The last segment of a target name. It only needs the ID to determine
-   * if the target is one of the stages in the promotion sequence defined in the pipeline. *
-   * "@next", the next target in the promotion sequence.
+   * be one of the following: * The last segment of a target name * "@next", the next target in the
+   * promotion sequence
    * @param destinationTargetId destinationTargetId or {@code null} for none
    */
   public PromoteReleaseRule setDestinationTargetId(java.lang.String destinationTargetId) {

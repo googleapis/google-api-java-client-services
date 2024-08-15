@@ -46,6 +46,19 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   private java.lang.String collation;
 
   /**
+   * Optional. Data policy options, will replace the data_policies.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DataPolicyOption> dataPolicies;
+
+  static {
+    // hack to force ProGuard to consider DataPolicyOption used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DataPolicyOption.class);
+  }
+
+  /**
    * Optional. A SQL expression to specify the [default value]
    * (https://cloud.google.com/bigquery/docs/default-values) for this field.
    * The value may be {@code null}.
@@ -74,15 +87,6 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String foreignTypeDefinition;
-
-  /**
-   * Optional. Definition of how values are generated for the field. Setting this option means that
-   * the field is an identity column. Only valid for top-level schema INTEGER fields (not nested
-   * fields).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private IdentityColumnInfo identityColumnInfo;
 
   /**
    * Optional. Maximum length of values of this field for STRINGS or BYTES. If max_length is not
@@ -210,6 +214,23 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Optional. Data policy options, will replace the data_policies.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DataPolicyOption> getDataPolicies() {
+    return dataPolicies;
+  }
+
+  /**
+   * Optional. Data policy options, will replace the data_policies.
+   * @param dataPolicies dataPolicies or {@code null} for none
+   */
+  public TableFieldSchema setDataPolicies(java.util.List<DataPolicyOption> dataPolicies) {
+    this.dataPolicies = dataPolicies;
+    return this;
+  }
+
+  /**
    * Optional. A SQL expression to specify the [default value]
    * (https://cloud.google.com/bigquery/docs/default-values) for this field.
    * @return value or {@code null} for none
@@ -278,27 +299,6 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
    */
   public TableFieldSchema setForeignTypeDefinition(java.lang.String foreignTypeDefinition) {
     this.foreignTypeDefinition = foreignTypeDefinition;
-    return this;
-  }
-
-  /**
-   * Optional. Definition of how values are generated for the field. Setting this option means that
-   * the field is an identity column. Only valid for top-level schema INTEGER fields (not nested
-   * fields).
-   * @return value or {@code null} for none
-   */
-  public IdentityColumnInfo getIdentityColumnInfo() {
-    return identityColumnInfo;
-  }
-
-  /**
-   * Optional. Definition of how values are generated for the field. Setting this option means that
-   * the field is an identity column. Only valid for top-level schema INTEGER fields (not nested
-   * fields).
-   * @param identityColumnInfo identityColumnInfo or {@code null} for none
-   */
-  public TableFieldSchema setIdentityColumnInfo(IdentityColumnInfo identityColumnInfo) {
-    this.identityColumnInfo = identityColumnInfo;
     return this;
   }
 

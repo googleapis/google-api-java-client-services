@@ -61,7 +61,7 @@ public final class GoogleCloudDiscoveryengineV1alphaAlloyDbSource extends com.go
   private java.lang.String locationId;
 
   /**
-   * The project ID that the AlloyDB source is in with a length limit of 128 characters. If not
+   * The project ID that contains the AlloyDB source. Has a length limit of 128 characters. If not
    * specified, inherits the project ID from the parent request.
    * The value may be {@code null}.
    */
@@ -150,7 +150,7 @@ public final class GoogleCloudDiscoveryengineV1alphaAlloyDbSource extends com.go
   }
 
   /**
-   * The project ID that the AlloyDB source is in with a length limit of 128 characters. If not
+   * The project ID that contains the AlloyDB source. Has a length limit of 128 characters. If not
    * specified, inherits the project ID from the parent request.
    * @return value or {@code null} for none
    */
@@ -159,7 +159,7 @@ public final class GoogleCloudDiscoveryengineV1alphaAlloyDbSource extends com.go
   }
 
   /**
-   * The project ID that the AlloyDB source is in with a length limit of 128 characters. If not
+   * The project ID that contains the AlloyDB source. Has a length limit of 128 characters. If not
    * specified, inherits the project ID from the parent request.
    * @param projectId projectId or {@code null} for none
    */

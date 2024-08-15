@@ -37,6 +37,13 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponseNaturalLanguage
   private java.lang.String fieldName;
 
   /**
+   * Identifies the keywords within the search query that match a filter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String querySegment;
+
+  /**
    * Values of the string field. The record will only be returned if the field value matches one of
    * the values specified here.
    * The value may be {@code null}.
@@ -58,6 +65,23 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponseNaturalLanguage
    */
   public GoogleCloudDiscoveryengineV1betaSearchResponseNaturalLanguageQueryUnderstandingInfoStructuredExtractedFilterStringConstraint setFieldName(java.lang.String fieldName) {
     this.fieldName = fieldName;
+    return this;
+  }
+
+  /**
+   * Identifies the keywords within the search query that match a filter.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getQuerySegment() {
+    return querySegment;
+  }
+
+  /**
+   * Identifies the keywords within the search query that match a filter.
+   * @param querySegment querySegment or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchResponseNaturalLanguageQueryUnderstandingInfoStructuredExtractedFilterStringConstraint setQuerySegment(java.lang.String querySegment) {
+    this.querySegment = querySegment;
     return this;
   }
 

@@ -65,6 +65,13 @@ public final class GoogleCloudDiscoveryengineV1CheckGroundingResponseClaim exten
   private java.lang.Boolean groundingCheckRequired;
 
   /**
+   * Confidence score for the claim in the answer candidate, in the range of [0, 1].
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double score;
+
+  /**
    * Position indicating the start of the claim in the answer candidate, measured in bytes.
    * The value may be {@code null}.
    */
@@ -150,6 +157,23 @@ public final class GoogleCloudDiscoveryengineV1CheckGroundingResponseClaim exten
    */
   public GoogleCloudDiscoveryengineV1CheckGroundingResponseClaim setGroundingCheckRequired(java.lang.Boolean groundingCheckRequired) {
     this.groundingCheckRequired = groundingCheckRequired;
+    return this;
+  }
+
+  /**
+   * Confidence score for the claim in the answer candidate, in the range of [0, 1].
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getScore() {
+    return score;
+  }
+
+  /**
+   * Confidence score for the claim in the answer candidate, in the range of [0, 1].
+   * @param score score or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1CheckGroundingResponseClaim setScore(java.lang.Double score) {
+    this.score = score;
     return this;
   }
 

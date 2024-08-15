@@ -17,7 +17,7 @@
 package com.google.api.services.redis.v1beta1.model;
 
 /**
- * Any custom metadata associated with the resource. i.e. A spanner instance can have multiple
+ * Any custom metadata associated with the resource. e.g. A spanner instance can have multiple
  * databases with its own unique metadata. Information for these individual databases can be
  * captured in custom metadata data
  *
@@ -33,23 +33,29 @@ package com.google.api.services.redis.v1beta1.model;
 public final class CustomMetadataData extends com.google.api.client.json.GenericJson {
 
   /**
+   * Metadata for individual internal resources in an instance. e.g. spanner instance can have
+   * multiple databases with unique configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<DatabaseMetadata> databaseMetadata;
+  private java.util.List<InternalResourceMetadata> internalResourceMetadata;
 
   /**
+   * Metadata for individual internal resources in an instance. e.g. spanner instance can have
+   * multiple databases with unique configuration.
    * @return value or {@code null} for none
    */
-  public java.util.List<DatabaseMetadata> getDatabaseMetadata() {
-    return databaseMetadata;
+  public java.util.List<InternalResourceMetadata> getInternalResourceMetadata() {
+    return internalResourceMetadata;
   }
 
   /**
-   * @param databaseMetadata databaseMetadata or {@code null} for none
+   * Metadata for individual internal resources in an instance. e.g. spanner instance can have
+   * multiple databases with unique configuration.
+   * @param internalResourceMetadata internalResourceMetadata or {@code null} for none
    */
-  public CustomMetadataData setDatabaseMetadata(java.util.List<DatabaseMetadata> databaseMetadata) {
-    this.databaseMetadata = databaseMetadata;
+  public CustomMetadataData setInternalResourceMetadata(java.util.List<InternalResourceMetadata> internalResourceMetadata) {
+    this.internalResourceMetadata = internalResourceMetadata;
     return this;
   }
 

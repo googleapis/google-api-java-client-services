@@ -17,8 +17,9 @@
 package com.google.api.services.redis.v1beta1.model;
 
 /**
- * Metadata for individual databases created in an instance. i.e. spanner instance can have multiple
- * databases with unique configuration settings.
+ * Metadata for individual internal resources in an instance. e.g. spanner instance can have
+ * multiple databases with unique configuration settings. Similarly bigtable can have multiple
+ * clusters within same bigtable instance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Memorystore for Redis API. For a
@@ -29,7 +30,7 @@ package com.google.api.services.redis.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DatabaseMetadata extends com.google.api.client.json.GenericJson {
+public final class InternalResourceMetadata extends com.google.api.client.json.GenericJson {
 
   /**
    * Backup configuration for this database
@@ -58,8 +59,8 @@ public final class DatabaseMetadata extends com.google.api.client.json.GenericJs
   private DatabaseResourceId resourceId;
 
   /**
-   * Required. Database name. Resource name to follow CAIS resource_name format as noted here
-   * go/condor-common-datamodel
+   * Required. internal resource name for spanner this will be database name
+   * e.g."spanner.googleapis.com/projects/123/abc/instances/inst1/databases/db1"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +78,7 @@ public final class DatabaseMetadata extends com.google.api.client.json.GenericJs
    * Backup configuration for this database
    * @param backupConfiguration backupConfiguration or {@code null} for none
    */
-  public DatabaseMetadata setBackupConfiguration(BackupConfiguration backupConfiguration) {
+  public InternalResourceMetadata setBackupConfiguration(BackupConfiguration backupConfiguration) {
     this.backupConfiguration = backupConfiguration;
     return this;
   }
@@ -94,7 +95,7 @@ public final class DatabaseMetadata extends com.google.api.client.json.GenericJs
    * Information about the last backup attempt for this database
    * @param backupRun backupRun or {@code null} for none
    */
-  public DatabaseMetadata setBackupRun(BackupRun backupRun) {
+  public InternalResourceMetadata setBackupRun(BackupRun backupRun) {
     this.backupRun = backupRun;
     return this;
   }
@@ -109,7 +110,7 @@ public final class DatabaseMetadata extends com.google.api.client.json.GenericJs
   /**
    * @param product product or {@code null} for none
    */
-  public DatabaseMetadata setProduct(Product product) {
+  public InternalResourceMetadata setProduct(Product product) {
     this.product = product;
     return this;
   }
@@ -124,14 +125,14 @@ public final class DatabaseMetadata extends com.google.api.client.json.GenericJs
   /**
    * @param resourceId resourceId or {@code null} for none
    */
-  public DatabaseMetadata setResourceId(DatabaseResourceId resourceId) {
+  public InternalResourceMetadata setResourceId(DatabaseResourceId resourceId) {
     this.resourceId = resourceId;
     return this;
   }
 
   /**
-   * Required. Database name. Resource name to follow CAIS resource_name format as noted here
-   * go/condor-common-datamodel
+   * Required. internal resource name for spanner this will be database name
+   * e.g."spanner.googleapis.com/projects/123/abc/instances/inst1/databases/db1"
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -139,23 +140,23 @@ public final class DatabaseMetadata extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Database name. Resource name to follow CAIS resource_name format as noted here
-   * go/condor-common-datamodel
+   * Required. internal resource name for spanner this will be database name
+   * e.g."spanner.googleapis.com/projects/123/abc/instances/inst1/databases/db1"
    * @param resourceName resourceName or {@code null} for none
    */
-  public DatabaseMetadata setResourceName(java.lang.String resourceName) {
+  public InternalResourceMetadata setResourceName(java.lang.String resourceName) {
     this.resourceName = resourceName;
     return this;
   }
 
   @Override
-  public DatabaseMetadata set(String fieldName, Object value) {
-    return (DatabaseMetadata) super.set(fieldName, value);
+  public InternalResourceMetadata set(String fieldName, Object value) {
+    return (InternalResourceMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public DatabaseMetadata clone() {
-    return (DatabaseMetadata) super.clone();
+  public InternalResourceMetadata clone() {
+    return (InternalResourceMetadata) super.clone();
   }
 
 }

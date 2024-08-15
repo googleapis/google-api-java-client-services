@@ -46,6 +46,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Optional. Cross cluster replication config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CrossClusterReplicationConfig crossClusterReplicationConfig;
+
+  /**
    * Optional. The delete operation will fail when the value is set to true.
    * The value may be {@code null}.
    */
@@ -121,7 +128,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.Integer replicaCount;
 
   /**
-   * Required. Number of shards for the Redis cluster.
+   * Optional. Number of shards for the Redis cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,6 +212,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Cross cluster replication config.
+   * @return value or {@code null} for none
+   */
+  public CrossClusterReplicationConfig getCrossClusterReplicationConfig() {
+    return crossClusterReplicationConfig;
+  }
+
+  /**
+   * Optional. Cross cluster replication config.
+   * @param crossClusterReplicationConfig crossClusterReplicationConfig or {@code null} for none
+   */
+  public Cluster setCrossClusterReplicationConfig(CrossClusterReplicationConfig crossClusterReplicationConfig) {
+    this.crossClusterReplicationConfig = crossClusterReplicationConfig;
     return this;
   }
 
@@ -389,7 +413,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Number of shards for the Redis cluster.
+   * Optional. Number of shards for the Redis cluster.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getShardCount() {
@@ -397,7 +421,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Number of shards for the Redis cluster.
+   * Optional. Number of shards for the Redis cluster.
    * @param shardCount shardCount or {@code null} for none
    */
   public Cluster setShardCount(java.lang.Integer shardCount) {

@@ -30,9 +30,9 @@ package com.google.api.services.spanner.v1.model;
 public final class CreateInstanceConfigRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The InstanceConfig proto of the configuration to create. instance_config.name must be
-   * `/instanceConfigs/`. instance_config.base_config must be a Google-managed configuration name,
-   * e.g. /instanceConfigs/us-east1, /instanceConfigs/nam3.
+   * Required. The `InstanceConfig` proto of the configuration to create. `instance_config.name`
+   * must be `/instanceConfigs/`. `instance_config.base_config` must be a Google-managed
+   * configuration name, e.g. /instanceConfigs/us-east1, /instanceConfigs/nam3.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,9 +55,9 @@ public final class CreateInstanceConfigRequest extends com.google.api.client.jso
   private java.lang.Boolean validateOnly;
 
   /**
-   * Required. The InstanceConfig proto of the configuration to create. instance_config.name must be
-   * `/instanceConfigs/`. instance_config.base_config must be a Google-managed configuration name,
-   * e.g. /instanceConfigs/us-east1, /instanceConfigs/nam3.
+   * Required. The `InstanceConfig` proto of the configuration to create. `instance_config.name`
+   * must be `/instanceConfigs/`. `instance_config.base_config` must be a Google-managed
+   * configuration name, e.g. /instanceConfigs/us-east1, /instanceConfigs/nam3.
    * @return value or {@code null} for none
    */
   public InstanceConfig getInstanceConfig() {
@@ -65,9 +65,9 @@ public final class CreateInstanceConfigRequest extends com.google.api.client.jso
   }
 
   /**
-   * Required. The InstanceConfig proto of the configuration to create. instance_config.name must be
-   * `/instanceConfigs/`. instance_config.base_config must be a Google-managed configuration name,
-   * e.g. /instanceConfigs/us-east1, /instanceConfigs/nam3.
+   * Required. The `InstanceConfig` proto of the configuration to create. `instance_config.name`
+   * must be `/instanceConfigs/`. `instance_config.base_config` must be a Google-managed
+   * configuration name, e.g. /instanceConfigs/us-east1, /instanceConfigs/nam3.
    * @param instanceConfig instanceConfig or {@code null} for none
    */
   public CreateInstanceConfigRequest setInstanceConfig(InstanceConfig instanceConfig) {

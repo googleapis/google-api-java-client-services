@@ -479,27 +479,28 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Creates an instance configuration and begins preparing it to be used. The returned long-running
-       * operation can be used to track the progress of preparing the new instance config. The instance
-       * configuration name is assigned by the caller. If the named instance configuration already exists,
-       * `CreateInstanceConfig` returns `ALREADY_EXISTS`. Immediately after the request returns: * The
-       * instance configuration is readable via the API, with all requested attributes. The instance
-       * config's reconciling field is set to true. Its state is `CREATING`. While the operation is
-       * pending: * Cancelling the operation renders the instance configuration immediately unreadable via
-       * the API. * Except for deleting the creating resource, all other attempts to modify the instance
-       * configuration are rejected. Upon completion of the returned operation: * Instances can be created
-       * using the instance configuration. * The instance config's reconciling field becomes false. Its
-       * state becomes `READY`. The returned long-running operation will have a name of the format
-       * `/operations/` and can be used to track creation of the instance config. The metadata field type
-       * is CreateInstanceConfigMetadata. The response field type is InstanceConfig, if successful.
-       * Authorization requires `spanner.instanceConfigs.create` permission on the resource parent.
+       * operation can be used to track the progress of preparing the new instance configuration. The
+       * instance configuration name is assigned by the caller. If the named instance configuration
+       * already exists, `CreateInstanceConfig` returns `ALREADY_EXISTS`. Immediately after the request
+       * returns: * The instance configuration is readable via the API, with all requested attributes. The
+       * instance configuration's reconciling field is set to true. Its state is `CREATING`. While the
+       * operation is pending: * Cancelling the operation renders the instance configuration immediately
+       * unreadable via the API. * Except for deleting the creating resource, all other attempts to modify
+       * the instance configuration are rejected. Upon completion of the returned operation: * Instances
+       * can be created using the instance configuration. * The instance configuration's reconciling field
+       * becomes false. Its state becomes `READY`. The returned long-running operation will have a name of
+       * the format `/operations/` and can be used to track creation of the instance configuration. The
+       * metadata field type is CreateInstanceConfigMetadata. The response field type is InstanceConfig,
+       * if successful. Authorization requires `spanner.instanceConfigs.create` permission on the resource
+       * parent.
        *
        * Create a request for the method "instanceConfigs.create".
        *
        * This request holds the parameters needed by the spanner server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the project in which to create the instance config. Values are of the form
-       *        `projects/`.
+       * @param parent Required. The name of the project in which to create the instance configuration. Values are of the
+       *        form `projects/`.
        * @param content the {@link com.google.api.services.spanner.v1.model.CreateInstanceConfigRequest}
        * @return the request
        */
@@ -518,20 +519,20 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Creates an instance configuration and begins preparing it to be used. The returned long-running
-         * operation can be used to track the progress of preparing the new instance config. The instance
-         * configuration name is assigned by the caller. If the named instance configuration already
-         * exists, `CreateInstanceConfig` returns `ALREADY_EXISTS`. Immediately after the request returns:
-         * * The instance configuration is readable via the API, with all requested attributes. The
-         * instance config's reconciling field is set to true. Its state is `CREATING`. While the
-         * operation is pending: * Cancelling the operation renders the instance configuration immediately
-         * unreadable via the API. * Except for deleting the creating resource, all other attempts to
-         * modify the instance configuration are rejected. Upon completion of the returned operation: *
-         * Instances can be created using the instance configuration. * The instance config's reconciling
-         * field becomes false. Its state becomes `READY`. The returned long-running operation will have a
-         * name of the format `/operations/` and can be used to track creation of the instance config. The
-         * metadata field type is CreateInstanceConfigMetadata. The response field type is InstanceConfig,
-         * if successful. Authorization requires `spanner.instanceConfigs.create` permission on the
-         * resource parent.
+         * operation can be used to track the progress of preparing the new instance configuration. The
+         * instance configuration name is assigned by the caller. If the named instance configuration
+         * already exists, `CreateInstanceConfig` returns `ALREADY_EXISTS`. Immediately after the request
+         * returns: * The instance configuration is readable via the API, with all requested attributes.
+         * The instance configuration's reconciling field is set to true. Its state is `CREATING`. While
+         * the operation is pending: * Cancelling the operation renders the instance configuration
+         * immediately unreadable via the API. * Except for deleting the creating resource, all other
+         * attempts to modify the instance configuration are rejected. Upon completion of the returned
+         * operation: * Instances can be created using the instance configuration. * The instance
+         * configuration's reconciling field becomes false. Its state becomes `READY`. The returned long-
+         * running operation will have a name of the format `/operations/` and can be used to track
+         * creation of the instance configuration. The metadata field type is
+         * CreateInstanceConfigMetadata. The response field type is InstanceConfig, if successful.
+         * Authorization requires `spanner.instanceConfigs.create` permission on the resource parent.
          *
          * Create a request for the method "instanceConfigs.create".
          *
@@ -540,8 +541,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the project in which to create the instance config. Values are of the form
-       *        `projects/`.
+         * @param parent Required. The name of the project in which to create the instance configuration. Values are of the
+       *        form `projects/`.
          * @param content the {@link com.google.api.services.spanner.v1.model.CreateInstanceConfigRequest}
          * @since 1.13
          */
@@ -611,22 +612,22 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Required. The name of the project in which to create the instance config. Values are of
-         * the form `projects/`.
+         * Required. The name of the project in which to create the instance configuration. Values
+         * are of the form `projects/`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the project in which to create the instance config. Values are of the form
-       `projects/`.
+        /** Required. The name of the project in which to create the instance configuration. Values are of the
+       form `projects/`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The name of the project in which to create the instance config. Values are of
-         * the form `projects/`.
+         * Required. The name of the project in which to create the instance configuration. Values
+         * are of the form `projects/`.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -644,10 +645,10 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Deletes the instance config. Deletion is only allowed when no instances are using the
-       * configuration. If any instances are using the config, returns `FAILED_PRECONDITION`. Only user-
-       * managed configurations can be deleted. Authorization requires `spanner.instanceConfigs.delete`
-       * permission on the resource name.
+       * Deletes the instance configuration. Deletion is only allowed when no instances are using the
+       * configuration. If any instances are using the configuration, returns `FAILED_PRECONDITION`. Only
+       * user-managed configurations can be deleted. Authorization requires
+       * `spanner.instanceConfigs.delete` permission on the resource name.
        *
        * Create a request for the method "instanceConfigs.delete".
        *
@@ -672,10 +673,10 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^projects/[^/]+/instanceConfigs/[^/]+$");
 
         /**
-         * Deletes the instance config. Deletion is only allowed when no instances are using the
-         * configuration. If any instances are using the config, returns `FAILED_PRECONDITION`. Only user-
-         * managed configurations can be deleted. Authorization requires `spanner.instanceConfigs.delete`
-         * permission on the resource name.
+         * Deletes the instance configuration. Deletion is only allowed when no instances are using the
+         * configuration. If any instances are using the configuration, returns `FAILED_PRECONDITION`.
+         * Only user-managed configurations can be deleted. Authorization requires
+         * `spanner.instanceConfigs.delete` permission on the resource name.
          *
          * Create a request for the method "instanceConfigs.delete".
          *
@@ -785,17 +786,17 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * Used for optimistic concurrency control as a way to help prevent simultaneous deletes of
          * an instance configuration from overwriting each other. If not empty, the API only deletes
          * the instance configuration when the etag provided matches the current status of the
-         * requested instance config. Otherwise, deletes the instance configuration without checking
-         * the current status of the requested instance config.
+         * requested instance configuration. Otherwise, deletes the instance configuration without
+         * checking the current status of the requested instance configuration.
          */
         @com.google.api.client.util.Key
         private java.lang.String etag;
 
         /** Used for optimistic concurrency control as a way to help prevent simultaneous deletes of an
        instance configuration from overwriting each other. If not empty, the API only deletes the instance
-       configuration when the etag provided matches the current status of the requested instance config.
-       Otherwise, deletes the instance configuration without checking the current status of the requested
-       instance config.
+       configuration when the etag provided matches the current status of the requested instance
+       configuration. Otherwise, deletes the instance configuration without checking the current status of
+       the requested instance configuration.
          */
         public java.lang.String getEtag() {
           return etag;
@@ -805,8 +806,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * Used for optimistic concurrency control as a way to help prevent simultaneous deletes of
          * an instance configuration from overwriting each other. If not empty, the API only deletes
          * the instance configuration when the etag provided matches the current status of the
-         * requested instance config. Otherwise, deletes the instance configuration without checking
-         * the current status of the requested instance config.
+         * requested instance configuration. Otherwise, deletes the instance configuration without
+         * checking the current status of the requested instance configuration.
          */
         public Delete setEtag(java.lang.String etag) {
           this.etag = etag;
@@ -1183,21 +1184,21 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Updates an instance config. The returned long-running operation can be used to track the progress
-       * of updating the instance. If the named instance configuration does not exist, returns
+       * Updates an instance configuration. The returned long-running operation can be used to track the
+       * progress of updating the instance. If the named instance configuration does not exist, returns
        * `NOT_FOUND`. Only user-managed configurations can be updated. Immediately after the request
-       * returns: * The instance config's reconciling field is set to true. While the operation is
+       * returns: * The instance configuration's reconciling field is set to true. While the operation is
        * pending: * Cancelling the operation sets its metadata's cancel_time. The operation is guaranteed
        * to succeed at undoing all changes, after which point it terminates with a `CANCELLED` status. *
        * All other attempts to modify the instance configuration are rejected. * Reading the instance
        * configuration via the API continues to give the pre-request values. Upon completion of the
        * returned operation: * Creating instances using the instance configuration uses the new values. *
-       * The instance config's new values are readable via the API. * The instance config's reconciling
-       * field becomes false. The returned long-running operation will have a name of the format
-       * `/operations/` and can be used to track the instance configuration modification. The metadata
-       * field type is UpdateInstanceConfigMetadata. The response field type is InstanceConfig, if
-       * successful. Authorization requires `spanner.instanceConfigs.update` permission on the resource
-       * name.
+       * The new values of the instance configuration are readable via the API. * The instance
+       * configuration's reconciling field becomes false. The returned long-running operation will have a
+       * name of the format `/operations/` and can be used to track the instance configuration
+       * modification. The metadata field type is UpdateInstanceConfigMetadata. The response field type is
+       * InstanceConfig, if successful. Authorization requires `spanner.instanceConfigs.update` permission
+       * on the resource name.
        *
        * Create a request for the method "instanceConfigs.patch".
        *
@@ -1223,21 +1224,21 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^projects/[^/]+/instanceConfigs/[^/]+$");
 
         /**
-         * Updates an instance config. The returned long-running operation can be used to track the
+         * Updates an instance configuration. The returned long-running operation can be used to track the
          * progress of updating the instance. If the named instance configuration does not exist, returns
          * `NOT_FOUND`. Only user-managed configurations can be updated. Immediately after the request
-         * returns: * The instance config's reconciling field is set to true. While the operation is
-         * pending: * Cancelling the operation sets its metadata's cancel_time. The operation is
+         * returns: * The instance configuration's reconciling field is set to true. While the operation
+         * is pending: * Cancelling the operation sets its metadata's cancel_time. The operation is
          * guaranteed to succeed at undoing all changes, after which point it terminates with a
          * `CANCELLED` status. * All other attempts to modify the instance configuration are rejected. *
          * Reading the instance configuration via the API continues to give the pre-request values. Upon
          * completion of the returned operation: * Creating instances using the instance configuration
-         * uses the new values. * The instance config's new values are readable via the API. * The
-         * instance config's reconciling field becomes false. The returned long-running operation will
-         * have a name of the format `/operations/` and can be used to track the instance configuration
-         * modification. The metadata field type is UpdateInstanceConfigMetadata. The response field type
-         * is InstanceConfig, if successful. Authorization requires `spanner.instanceConfigs.update`
-         * permission on the resource name.
+         * uses the new values. * The new values of the instance configuration are readable via the API. *
+         * The instance configuration's reconciling field becomes false. The returned long-running
+         * operation will have a name of the format `/operations/` and can be used to track the instance
+         * configuration modification. The metadata field type is UpdateInstanceConfigMetadata. The
+         * response field type is InstanceConfig, if successful. Authorization requires
+         * `spanner.instanceConfigs.update` permission on the resource name.
          *
          * Create a request for the method "instanceConfigs.patch".
          *
@@ -3515,28 +3516,29 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Moves the instance to the target instance config. The returned long-running operation can be used
-       * to track the progress of moving the instance. `MoveInstance` returns `FAILED_PRECONDITION` if the
-       * instance meets any of the following criteria: * Has an ongoing move to a different instance
-       * config * Has backups * Has an ongoing update * Is under free trial * Contains any CMEK-enabled
-       * databases While the operation is pending: * All other attempts to modify the instance, including
-       * changes to its compute capacity, are rejected. * The following database and backup admin
-       * operations are rejected: * DatabaseAdmin.CreateDatabase, * DatabaseAdmin.UpdateDatabaseDdl
-       * (Disabled if default_leader is specified in the request.) * DatabaseAdmin.RestoreDatabase *
-       * DatabaseAdmin.CreateBackup * DatabaseAdmin.CopyBackup * Both the source and target instance
-       * configurations are subject to hourly compute and storage charges. * The instance may experience
-       * higher read-write latencies and a higher transaction abort rate. However, moving an instance does
-       * not cause any downtime. The returned long-running operation will have a name of the format
-       * `/operations/` and can be used to track the move instance operation. The metadata field type is
-       * MoveInstanceMetadata. The response field type is Instance, if successful. Cancelling the
-       * operation sets its metadata's cancel_time. Cancellation is not immediate since it involves moving
-       * any data previously moved to target instance configuration back to the original instance config.
-       * The same operation can be used to track the progress of the cancellation. Upon successful
-       * completion of the cancellation, the operation terminates with `CANCELLED` status. Upon
-       * completion(if not cancelled) of the returned operation: * Instance would be successfully moved to
-       * the target instance config. * You are billed for compute and storage in target instance config.
-       * Authorization requires `spanner.instances.update` permission on the resource instance. For more
-       * details, please see [documentation](https://cloud.google.com/spanner/docs/move-instance).
+       * Moves an instance to the target instance configuration. You can use the returned long-running
+       * operation to track the progress of moving the instance. `MoveInstance` returns
+       * `FAILED_PRECONDITION` if the instance meets any of the following criteria: * Is undergoing a move
+       * to a different instance configuration * Has backups * Has an ongoing update * Contains any CMEK-
+       * enabled databases * Is a free trial instance While the operation is pending: * All other attempts
+       * to modify the instance, including changes to its compute capacity, are rejected. * The following
+       * database and backup admin operations are rejected: * `DatabaseAdmin.CreateDatabase` *
+       * `DatabaseAdmin.UpdateDatabaseDdl` (disabled if default_leader is specified in the request.) *
+       * `DatabaseAdmin.RestoreDatabase` * `DatabaseAdmin.CreateBackup` * `DatabaseAdmin.CopyBackup` *
+       * Both the source and target instance configurations are subject to hourly compute and storage
+       * charges. * The instance might experience higher read-write latencies and a higher transaction
+       * abort rate. However, moving an instance doesn't cause any downtime. The returned long-running
+       * operation has a name of the format `/operations/` and can be used to track the move instance
+       * operation. The metadata field type is MoveInstanceMetadata. The response field type is Instance,
+       * if successful. Cancelling the operation sets its metadata's cancel_time. Cancellation is not
+       * immediate because it involves moving any data previously moved to the target instance
+       * configuration back to the original instance configuration. You can use this operation to track
+       * the progress of the cancellation. Upon successful completion of the cancellation, the operation
+       * terminates with `CANCELLED` status. If not cancelled, upon completion of the returned operation:
+       * * The instance successfully moves to the target instance configuration. * You are billed for
+       * compute and storage in target instance configuration. Authorization requires the
+       * `spanner.instances.update` permission on the resource instance. For more details, see [Move an
+       * instance](https://cloud.google.com/spanner/docs/move-instance).
        *
        * Create a request for the method "instances.move".
        *
@@ -3561,29 +3563,29 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+$");
 
         /**
-         * Moves the instance to the target instance config. The returned long-running operation can be
-         * used to track the progress of moving the instance. `MoveInstance` returns `FAILED_PRECONDITION`
-         * if the instance meets any of the following criteria: * Has an ongoing move to a different
-         * instance config * Has backups * Has an ongoing update * Is under free trial * Contains any
-         * CMEK-enabled databases While the operation is pending: * All other attempts to modify the
-         * instance, including changes to its compute capacity, are rejected. * The following database and
-         * backup admin operations are rejected: * DatabaseAdmin.CreateDatabase, *
-         * DatabaseAdmin.UpdateDatabaseDdl (Disabled if default_leader is specified in the request.) *
-         * DatabaseAdmin.RestoreDatabase * DatabaseAdmin.CreateBackup * DatabaseAdmin.CopyBackup * Both
-         * the source and target instance configurations are subject to hourly compute and storage
-         * charges. * The instance may experience higher read-write latencies and a higher transaction
-         * abort rate. However, moving an instance does not cause any downtime. The returned long-running
-         * operation will have a name of the format `/operations/` and can be used to track the move
-         * instance operation. The metadata field type is MoveInstanceMetadata. The response field type is
+         * Moves an instance to the target instance configuration. You can use the returned long-running
+         * operation to track the progress of moving the instance. `MoveInstance` returns
+         * `FAILED_PRECONDITION` if the instance meets any of the following criteria: * Is undergoing a
+         * move to a different instance configuration * Has backups * Has an ongoing update * Contains any
+         * CMEK-enabled databases * Is a free trial instance While the operation is pending: * All other
+         * attempts to modify the instance, including changes to its compute capacity, are rejected. * The
+         * following database and backup admin operations are rejected: * `DatabaseAdmin.CreateDatabase` *
+         * `DatabaseAdmin.UpdateDatabaseDdl` (disabled if default_leader is specified in the request.) *
+         * `DatabaseAdmin.RestoreDatabase` * `DatabaseAdmin.CreateBackup` * `DatabaseAdmin.CopyBackup` *
+         * Both the source and target instance configurations are subject to hourly compute and storage
+         * charges. * The instance might experience higher read-write latencies and a higher transaction
+         * abort rate. However, moving an instance doesn't cause any downtime. The returned long-running
+         * operation has a name of the format `/operations/` and can be used to track the move instance
+         * operation. The metadata field type is MoveInstanceMetadata. The response field type is
          * Instance, if successful. Cancelling the operation sets its metadata's cancel_time. Cancellation
-         * is not immediate since it involves moving any data previously moved to target instance
-         * configuration back to the original instance config. The same operation can be used to track the
-         * progress of the cancellation. Upon successful completion of the cancellation, the operation
-         * terminates with `CANCELLED` status. Upon completion(if not cancelled) of the returned
-         * operation: * Instance would be successfully moved to the target instance config. * You are
-         * billed for compute and storage in target instance config. Authorization requires
-         * `spanner.instances.update` permission on the resource instance. For more details, please see
-         * [documentation](https://cloud.google.com/spanner/docs/move-instance).
+         * is not immediate because it involves moving any data previously moved to the target instance
+         * configuration back to the original instance configuration. You can use this operation to track
+         * the progress of the cancellation. Upon successful completion of the cancellation, the operation
+         * terminates with `CANCELLED` status. If not cancelled, upon completion of the returned
+         * operation: * The instance successfully moves to the target instance configuration. * You are
+         * billed for compute and storage in target instance configuration. Authorization requires the
+         * `spanner.instances.update` permission on the resource instance. For more details, see [Move an
+         * instance](https://cloud.google.com/spanner/docs/move-instance).
          *
          * Create a request for the method "instances.move".
          *

@@ -39,7 +39,7 @@ public final class ListInstanceConfigOperationsResponse extends com.google.api.c
 
   /**
    * The list of matching instance configuration long-running operations. Each operation's name will
-   * be prefixed by the instance config's name. The operation's metadata field type
+   * be prefixed by the name of the instance configuration. The operation's metadata field type
    * `metadata.type_url` describes the type of the metadata.
    * The value may be {@code null}.
    */
@@ -67,7 +67,7 @@ public final class ListInstanceConfigOperationsResponse extends com.google.api.c
 
   /**
    * The list of matching instance configuration long-running operations. Each operation's name will
-   * be prefixed by the instance config's name. The operation's metadata field type
+   * be prefixed by the name of the instance configuration. The operation's metadata field type
    * `metadata.type_url` describes the type of the metadata.
    * @return value or {@code null} for none
    */
@@ -77,7 +77,7 @@ public final class ListInstanceConfigOperationsResponse extends com.google.api.c
 
   /**
    * The list of matching instance configuration long-running operations. Each operation's name will
-   * be prefixed by the instance config's name. The operation's metadata field type
+   * be prefixed by the name of the instance configuration. The operation's metadata field type
    * `metadata.type_url` describes the type of the metadata.
    * @param operations operations or {@code null} for none
    */

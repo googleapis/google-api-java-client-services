@@ -17,7 +17,10 @@
 package com.google.api.services.spanner.v1.model;
 
 /**
- * The request for MoveInstance.
+ * The specification for incremental backup chains. An incremental backup stores the delta of
+ * changes between a previous backup and the database contents at a given version time. An
+ * incremental backup chain consists of a full backup and zero or more successive incremental
+ * backups. The first backup created for an incremental backup chain is always a full backup.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Spanner API. For a detailed explanation see:
@@ -27,43 +30,16 @@ package com.google.api.services.spanner.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class MoveInstanceRequest extends com.google.api.client.json.GenericJson {
+public final class IncrementalBackupSpec extends com.google.api.client.json.GenericJson {
 
-  /**
-   * Required. The target instance configuration where to move the instance. Values are of the form
-   * `projects//instanceConfigs/`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String targetConfig;
-
-  /**
-   * Required. The target instance configuration where to move the instance. Values are of the form
-   * `projects//instanceConfigs/`.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getTargetConfig() {
-    return targetConfig;
-  }
-
-  /**
-   * Required. The target instance configuration where to move the instance. Values are of the form
-   * `projects//instanceConfigs/`.
-   * @param targetConfig targetConfig or {@code null} for none
-   */
-  public MoveInstanceRequest setTargetConfig(java.lang.String targetConfig) {
-    this.targetConfig = targetConfig;
-    return this;
+  @Override
+  public IncrementalBackupSpec set(String fieldName, Object value) {
+    return (IncrementalBackupSpec) super.set(fieldName, value);
   }
 
   @Override
-  public MoveInstanceRequest set(String fieldName, Object value) {
-    return (MoveInstanceRequest) super.set(fieldName, value);
-  }
-
-  @Override
-  public MoveInstanceRequest clone() {
-    return (MoveInstanceRequest) super.clone();
+  public IncrementalBackupSpec clone() {
+    return (IncrementalBackupSpec) super.clone();
   }
 
 }

@@ -31,14 +31,14 @@ package com.google.api.services.container.v1beta1.model;
 public final class SecretManagerConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the cluster is configured to use secret manager CSI component.
+   * Enable/Disable Secret Manager Config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
 
   /**
-   * Whether the cluster is configured to use secret manager CSI component.
+   * Enable/Disable Secret Manager Config.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -46,7 +46,7 @@ public final class SecretManagerConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Whether the cluster is configured to use secret manager CSI component.
+   * Enable/Disable Secret Manager Config.
    * @param enabled enabled or {@code null} for none
    */
   public SecretManagerConfig setEnabled(java.lang.Boolean enabled) {

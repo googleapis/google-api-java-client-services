@@ -349,6 +349,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean spot;
 
   /**
+   * List of Storage Pools where boot disks are provisioned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> storagePools;
+
+  /**
    * The list of instance tags applied to all nodes. Tags are used to identify valid sources or
    * targets for network firewalls and are specified by the client during cluster or node pool
    * creation. Each tag within the list must comply with RFC1035.
@@ -1109,6 +1116,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setSpot(java.lang.Boolean spot) {
     this.spot = spot;
+    return this;
+  }
+
+  /**
+   * List of Storage Pools where boot disks are provisioned.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getStoragePools() {
+    return storagePools;
+  }
+
+  /**
+   * List of Storage Pools where boot disks are provisioned.
+   * @param storagePools storagePools or {@code null} for none
+   */
+  public NodeConfig setStoragePools(java.util.List<java.lang.String> storagePools) {
+    this.storagePools = storagePools;
     return this;
   }
 

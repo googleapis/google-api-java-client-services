@@ -52,6 +52,13 @@ public final class OracleConnectionProfile extends com.google.api.client.json.Ge
   private java.lang.String host;
 
   /**
+   * Optional. Configuration for Oracle ASM connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OracleAsmConfig oracleAsmConfig;
+
+  /**
    * Required. Input only. The password for the user that Database Migration Service will be using
    * to connect to the database. This field is not returned on request, and the value is encrypted
    * when stored in Database Migration Service.
@@ -152,6 +159,23 @@ public final class OracleConnectionProfile extends com.google.api.client.json.Ge
    */
   public OracleConnectionProfile setHost(java.lang.String host) {
     this.host = host;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for Oracle ASM connection.
+   * @return value or {@code null} for none
+   */
+  public OracleAsmConfig getOracleAsmConfig() {
+    return oracleAsmConfig;
+  }
+
+  /**
+   * Optional. Configuration for Oracle ASM connection.
+   * @param oracleAsmConfig oracleAsmConfig or {@code null} for none
+   */
+  public OracleConnectionProfile setOracleAsmConfig(OracleAsmConfig oracleAsmConfig) {
+    this.oracleAsmConfig = oracleAsmConfig;
     return this;
   }
 

@@ -45,7 +45,6 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   private java.lang.String feedType;
 
   /**
-   * More feed data would be added in subsequent CLs
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +111,6 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * More feed data would be added in subsequent CLs
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainObservabilityMetricData getObservabilityMetricData() {
@@ -120,7 +118,6 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * More feed data would be added in subsequent CLs
    * @param observabilityMetricData observabilityMetricData or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setObservabilityMetricData(StorageDatabasecenterPartnerapiV1mainObservabilityMetricData observabilityMetricData) {

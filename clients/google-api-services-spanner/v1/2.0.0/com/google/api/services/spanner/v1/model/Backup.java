@@ -84,6 +84,18 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.util.List<EncryptionInfo> encryptionInformation;
 
   /**
+   * Output only. For a backup in an incremental backup chain, this is the storage space needed to
+   * keep the data that has changed since the previous backup. For all other backups, this is always
+   * the size of the backup. This value may change if backups on the same chain get deleted or
+   * expired. This field can be used to calculate the total storage space used by a set of backups.
+   * For example, the total space used by all backups of a database can be computed by summing up
+   * this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long exclusiveSizeBytes;
+
+  /**
    * Required for the CreateBackup operation. The expiration time of the backup, with microseconds
    * granularity that must be at least 6 hours and at most 366 days from the time the CreateBackup
    * request is processed. Once the `expire_time` has passed, the backup is eligible to be
@@ -92,6 +104,27 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String expireTime;
+
+  /**
+   * Output only. The number of bytes that will be freed by deleting this backup. This value will be
+   * zero if, for example, this backup is part of an incremental backup chain and younger backups in
+   * the chain require that we keep its data. For backups not in an incremental backup chain, this
+   * is always the size of the backup. This value may change if backups on the same chain get
+   * created, deleted or expired.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long freeableSizeBytes;
+
+  /**
+   * Output only. Populated only for backups in an incremental backup chain. Backups share the same
+   * chain id if and only if they belong to the same incremental backup chain. Use this field to
+   * determine which backups are part of the same incremental backup chain. The ordering of backups
+   * in the chain can be determined by ordering the backup `version_time`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String incrementalBackupChainId;
 
   /**
    * Output only. The max allowed expiration time of the backup, with microseconds granularity. A
@@ -116,6 +149,17 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. Data deleted at a time older than this is guaranteed not to be retained in order
+   * to support this backup. For a backup in an incremental backup chain, this is the version time
+   * of the oldest backup that exists or ever existed in the chain. For all other backups, this is
+   * the version time of the backup. This field can be used to understand what data is being
+   * retained by the backup system.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String oldestVersionTime;
+
+  /**
    * Output only. The names of the destination backups being created by copying this source backup.
    * The backup names are of the form `projects//instances//backups/`. Referencing backups may exist
    * in different instances. The existence of any referencing backup prevents the backup from being
@@ -138,7 +182,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> referencingDatabases;
 
   /**
-   * Output only. Size of the backup in bytes.
+   * Output only. Size of the backup in bytes. For a backup in an incremental backup chain, this is
+   * the sum of the `exclusive_size_bytes` of itself and all older backups in the chain.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -287,6 +332,33 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. For a backup in an incremental backup chain, this is the storage space needed to
+   * keep the data that has changed since the previous backup. For all other backups, this is always
+   * the size of the backup. This value may change if backups on the same chain get deleted or
+   * expired. This field can be used to calculate the total storage space used by a set of backups.
+   * For example, the total space used by all backups of a database can be computed by summing up
+   * this field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getExclusiveSizeBytes() {
+    return exclusiveSizeBytes;
+  }
+
+  /**
+   * Output only. For a backup in an incremental backup chain, this is the storage space needed to
+   * keep the data that has changed since the previous backup. For all other backups, this is always
+   * the size of the backup. This value may change if backups on the same chain get deleted or
+   * expired. This field can be used to calculate the total storage space used by a set of backups.
+   * For example, the total space used by all backups of a database can be computed by summing up
+   * this field.
+   * @param exclusiveSizeBytes exclusiveSizeBytes or {@code null} for none
+   */
+  public Backup setExclusiveSizeBytes(java.lang.Long exclusiveSizeBytes) {
+    this.exclusiveSizeBytes = exclusiveSizeBytes;
+    return this;
+  }
+
+  /**
    * Required for the CreateBackup operation. The expiration time of the backup, with microseconds
    * granularity that must be at least 6 hours and at most 366 days from the time the CreateBackup
    * request is processed. Once the `expire_time` has passed, the backup is eligible to be
@@ -306,6 +378,54 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setExpireTime(String expireTime) {
     this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
+   * Output only. The number of bytes that will be freed by deleting this backup. This value will be
+   * zero if, for example, this backup is part of an incremental backup chain and younger backups in
+   * the chain require that we keep its data. For backups not in an incremental backup chain, this
+   * is always the size of the backup. This value may change if backups on the same chain get
+   * created, deleted or expired.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getFreeableSizeBytes() {
+    return freeableSizeBytes;
+  }
+
+  /**
+   * Output only. The number of bytes that will be freed by deleting this backup. This value will be
+   * zero if, for example, this backup is part of an incremental backup chain and younger backups in
+   * the chain require that we keep its data. For backups not in an incremental backup chain, this
+   * is always the size of the backup. This value may change if backups on the same chain get
+   * created, deleted or expired.
+   * @param freeableSizeBytes freeableSizeBytes or {@code null} for none
+   */
+  public Backup setFreeableSizeBytes(java.lang.Long freeableSizeBytes) {
+    this.freeableSizeBytes = freeableSizeBytes;
+    return this;
+  }
+
+  /**
+   * Output only. Populated only for backups in an incremental backup chain. Backups share the same
+   * chain id if and only if they belong to the same incremental backup chain. Use this field to
+   * determine which backups are part of the same incremental backup chain. The ordering of backups
+   * in the chain can be determined by ordering the backup `version_time`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIncrementalBackupChainId() {
+    return incrementalBackupChainId;
+  }
+
+  /**
+   * Output only. Populated only for backups in an incremental backup chain. Backups share the same
+   * chain id if and only if they belong to the same incremental backup chain. Use this field to
+   * determine which backups are part of the same incremental backup chain. The ordering of backups
+   * in the chain can be determined by ordering the backup `version_time`.
+   * @param incrementalBackupChainId incrementalBackupChainId or {@code null} for none
+   */
+  public Backup setIncrementalBackupChainId(java.lang.String incrementalBackupChainId) {
+    this.incrementalBackupChainId = incrementalBackupChainId;
     return this;
   }
 
@@ -360,6 +480,31 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Data deleted at a time older than this is guaranteed not to be retained in order
+   * to support this backup. For a backup in an incremental backup chain, this is the version time
+   * of the oldest backup that exists or ever existed in the chain. For all other backups, this is
+   * the version time of the backup. This field can be used to understand what data is being
+   * retained by the backup system.
+   * @return value or {@code null} for none
+   */
+  public String getOldestVersionTime() {
+    return oldestVersionTime;
+  }
+
+  /**
+   * Output only. Data deleted at a time older than this is guaranteed not to be retained in order
+   * to support this backup. For a backup in an incremental backup chain, this is the version time
+   * of the oldest backup that exists or ever existed in the chain. For all other backups, this is
+   * the version time of the backup. This field can be used to understand what data is being
+   * retained by the backup system.
+   * @param oldestVersionTime oldestVersionTime or {@code null} for none
+   */
+  public Backup setOldestVersionTime(String oldestVersionTime) {
+    this.oldestVersionTime = oldestVersionTime;
+    return this;
+  }
+
+  /**
    * Output only. The names of the destination backups being created by copying this source backup.
    * The backup names are of the form `projects//instances//backups/`. Referencing backups may exist
    * in different instances. The existence of any referencing backup prevents the backup from being
@@ -410,7 +555,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Size of the backup in bytes.
+   * Output only. Size of the backup in bytes. For a backup in an incremental backup chain, this is
+   * the sum of the `exclusive_size_bytes` of itself and all older backups in the chain.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSizeBytes() {
@@ -418,7 +564,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Size of the backup in bytes.
+   * Output only. Size of the backup in bytes. For a backup in an incremental backup chain, this is
+   * the sum of the `exclusive_size_bytes` of itself and all older backups in the chain.
    * @param sizeBytes sizeBytes or {@code null} for none
    */
   public Backup setSizeBytes(java.lang.Long sizeBytes) {

@@ -40,7 +40,8 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   private java.lang.String baseConfig;
 
   /**
-   * Output only. Whether this instance configuration is a Google- or user-managed configuration.
+   * Output only. Whether this instance configuration is a Google-managed or user-managed
+   * configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +70,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. Describes whether free instances are available to be created in this instance
-   * config.
+   * configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,7 +128,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. If true, the instance configuration is being created or updated. If false, there
-   * are no ongoing operations for the instance config.
+   * are no ongoing operations for the instance configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,7 +181,8 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Whether this instance configuration is a Google- or user-managed configuration.
+   * Output only. Whether this instance configuration is a Google-managed or user-managed
+   * configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getConfigType() {
@@ -188,7 +190,8 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Whether this instance configuration is a Google- or user-managed configuration.
+   * Output only. Whether this instance configuration is a Google-managed or user-managed
+   * configuration.
    * @param configType configType or {@code null} for none
    */
   public InstanceConfig setConfigType(java.lang.String configType) {
@@ -246,7 +249,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. Describes whether free instances are available to be created in this instance
-   * config.
+   * configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getFreeInstanceAvailability() {
@@ -255,7 +258,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. Describes whether free instances are available to be created in this instance
-   * config.
+   * configuration.
    * @param freeInstanceAvailability freeInstanceAvailability or {@code null} for none
    */
   public InstanceConfig setFreeInstanceAvailability(java.lang.String freeInstanceAvailability) {
@@ -380,7 +383,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. If true, the instance configuration is being created or updated. If false, there
-   * are no ongoing operations for the instance config.
+   * are no ongoing operations for the instance configuration.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReconciling() {
@@ -389,7 +392,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. If true, the instance configuration is being created or updated. If false, there
-   * are no ongoing operations for the instance config.
+   * are no ongoing operations for the instance configuration.
    * @param reconciling reconciling or {@code null} for none
    */
   public InstanceConfig setReconciling(java.lang.Boolean reconciling) {

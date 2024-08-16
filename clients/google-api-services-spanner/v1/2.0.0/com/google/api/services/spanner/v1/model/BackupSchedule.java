@@ -46,6 +46,13 @@ public final class BackupSchedule extends com.google.api.client.json.GenericJson
   private FullBackupSpec fullBackupSpec;
 
   /**
+   * The schedule creates incremental backup chains.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IncrementalBackupSpec incrementalBackupSpec;
+
+  /**
    * Identifier. Output only for the CreateBackupSchedule operation. Required for the
    * UpdateBackupSchedule operation. A globally unique identifier for the backup schedule which
    * cannot be changed. Values are of the form
@@ -112,6 +119,23 @@ public final class BackupSchedule extends com.google.api.client.json.GenericJson
    */
   public BackupSchedule setFullBackupSpec(FullBackupSpec fullBackupSpec) {
     this.fullBackupSpec = fullBackupSpec;
+    return this;
+  }
+
+  /**
+   * The schedule creates incremental backup chains.
+   * @return value or {@code null} for none
+   */
+  public IncrementalBackupSpec getIncrementalBackupSpec() {
+    return incrementalBackupSpec;
+  }
+
+  /**
+   * The schedule creates incremental backup chains.
+   * @param incrementalBackupSpec incrementalBackupSpec or {@code null} for none
+   */
+  public BackupSchedule setIncrementalBackupSpec(IncrementalBackupSpec incrementalBackupSpec) {
+    this.incrementalBackupSpec = incrementalBackupSpec;
     return this;
   }
 

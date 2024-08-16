@@ -57,6 +57,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private BackupSource backupSource;
 
   /**
+   * Output only. Cluster created from CloudSQL snapshot.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudSQLBackupRunSource cloudsqlBackupRunSource;
+
+  /**
    * Output only. The type of the cluster. This is an output-only field and it's populated at the
    * Cluster creation time or the Cluster promotion time. The cluster type is determined by which
    * RPC was used to create the cluster (i.e. `CreateCluster` vs. `CreateSecondaryCluster`
@@ -347,6 +354,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setBackupSource(BackupSource backupSource) {
     this.backupSource = backupSource;
+    return this;
+  }
+
+  /**
+   * Output only. Cluster created from CloudSQL snapshot.
+   * @return value or {@code null} for none
+   */
+  public CloudSQLBackupRunSource getCloudsqlBackupRunSource() {
+    return cloudsqlBackupRunSource;
+  }
+
+  /**
+   * Output only. Cluster created from CloudSQL snapshot.
+   * @param cloudsqlBackupRunSource cloudsqlBackupRunSource or {@code null} for none
+   */
+  public Cluster setCloudsqlBackupRunSource(CloudSQLBackupRunSource cloudsqlBackupRunSource) {
+    this.cloudsqlBackupRunSource = cloudsqlBackupRunSource;
     return this;
   }
 

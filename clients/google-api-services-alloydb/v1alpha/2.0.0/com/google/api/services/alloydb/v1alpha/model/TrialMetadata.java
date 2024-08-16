@@ -37,6 +37,13 @@ public final class TrialMetadata extends com.google.api.client.json.GenericJson 
   private String endTime;
 
   /**
+   * grace end time of the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String graceEndTime;
+
+  /**
    * start time of the trial cluster.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class TrialMetadata extends com.google.api.client.json.GenericJson 
    */
   public TrialMetadata setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * grace end time of the cluster.
+   * @return value or {@code null} for none
+   */
+  public String getGraceEndTime() {
+    return graceEndTime;
+  }
+
+  /**
+   * grace end time of the cluster.
+   * @param graceEndTime graceEndTime or {@code null} for none
+   */
+  public TrialMetadata setGraceEndTime(String graceEndTime) {
+    this.graceEndTime = graceEndTime;
     return this;
   }
 

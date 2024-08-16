@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1alpha.model;
 
 /**
- * Model definition for RestartInstanceRequest.
+ * Upgrades a cluster.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -27,15 +27,15 @@ package com.google.api.services.alloydb.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RestartInstanceRequest extends com.google.api.client.json.GenericJson {
+public final class UpgradeClusterRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Full name of the nodes as obtained from INSTANCE_VIEW_FULL to restart upon. Only
-   * applicable for read instances.
+   * Optional. The current etag of the Cluster. If an etag is provided and does not match the
+   * current etag of the Cluster, upgrade will be blocked and an ABORTED error will be returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> nodeIds;
+  private java.lang.String etag;
 
   /**
    * Optional. An optional request ID to identify requests. Specify a unique request ID so that if
@@ -53,28 +53,35 @@ public final class RestartInstanceRequest extends com.google.api.client.json.Gen
 
   /**
    * Optional. If set, performs request validation (e.g. permission checks and any other type of
-   * validation), but do not actually execute the restart.
+   * validation), but does not actually execute the upgrade.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean validateOnly;
 
   /**
-   * Optional. Full name of the nodes as obtained from INSTANCE_VIEW_FULL to restart upon. Only
-   * applicable for read instances.
+   * Required. The version the cluster is going to be upgraded to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String version;
+
+  /**
+   * Optional. The current etag of the Cluster. If an etag is provided and does not match the
+   * current etag of the Cluster, upgrade will be blocked and an ABORTED error will be returned.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getNodeIds() {
-    return nodeIds;
+  public java.lang.String getEtag() {
+    return etag;
   }
 
   /**
-   * Optional. Full name of the nodes as obtained from INSTANCE_VIEW_FULL to restart upon. Only
-   * applicable for read instances.
-   * @param nodeIds nodeIds or {@code null} for none
+   * Optional. The current etag of the Cluster. If an etag is provided and does not match the
+   * current etag of the Cluster, upgrade will be blocked and an ABORTED error will be returned.
+   * @param etag etag or {@code null} for none
    */
-  public RestartInstanceRequest setNodeIds(java.util.List<java.lang.String> nodeIds) {
-    this.nodeIds = nodeIds;
+  public UpgradeClusterRequest setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 
@@ -104,14 +111,14 @@ public final class RestartInstanceRequest extends com.google.api.client.json.Gen
    * with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
    * @param requestId requestId or {@code null} for none
    */
-  public RestartInstanceRequest setRequestId(java.lang.String requestId) {
+  public UpgradeClusterRequest setRequestId(java.lang.String requestId) {
     this.requestId = requestId;
     return this;
   }
 
   /**
    * Optional. If set, performs request validation (e.g. permission checks and any other type of
-   * validation), but do not actually execute the restart.
+   * validation), but does not actually execute the upgrade.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getValidateOnly() {
@@ -120,22 +127,39 @@ public final class RestartInstanceRequest extends com.google.api.client.json.Gen
 
   /**
    * Optional. If set, performs request validation (e.g. permission checks and any other type of
-   * validation), but do not actually execute the restart.
+   * validation), but does not actually execute the upgrade.
    * @param validateOnly validateOnly or {@code null} for none
    */
-  public RestartInstanceRequest setValidateOnly(java.lang.Boolean validateOnly) {
+  public UpgradeClusterRequest setValidateOnly(java.lang.Boolean validateOnly) {
     this.validateOnly = validateOnly;
     return this;
   }
 
-  @Override
-  public RestartInstanceRequest set(String fieldName, Object value) {
-    return (RestartInstanceRequest) super.set(fieldName, value);
+  /**
+   * Required. The version the cluster is going to be upgraded to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVersion() {
+    return version;
+  }
+
+  /**
+   * Required. The version the cluster is going to be upgraded to.
+   * @param version version or {@code null} for none
+   */
+  public UpgradeClusterRequest setVersion(java.lang.String version) {
+    this.version = version;
+    return this;
   }
 
   @Override
-  public RestartInstanceRequest clone() {
-    return (RestartInstanceRequest) super.clone();
+  public UpgradeClusterRequest set(String fieldName, Object value) {
+    return (UpgradeClusterRequest) super.set(fieldName, value);
+  }
+
+  @Override
+  public UpgradeClusterRequest clone() {
+    return (UpgradeClusterRequest) super.clone();
   }
 
 }

@@ -32,6 +32,14 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2DiscoveryCloudSqlGenerationCadence extends com.google.api.client.json.GenericJson {
 
   /**
+   * Governs when to update data profiles when the inspection rules defined by the `InspectTemplate`
+   * change. If not set, changing the template will not cause a data profile to update.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2DiscoveryInspectTemplateModifiedCadence inspectTemplateModifiedCadence;
+
+  /**
    * Data changes (non-schema changes) in Cloud SQL tables can't trigger reprofiling. If you set
    * this field, profiles are refreshed at this frequency regardless of whether the underlying
    * tables have changed. Defaults to never.
@@ -46,6 +54,25 @@ public final class GooglePrivacyDlpV2DiscoveryCloudSqlGenerationCadence extends 
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2SchemaModifiedCadence schemaModifiedCadence;
+
+  /**
+   * Governs when to update data profiles when the inspection rules defined by the `InspectTemplate`
+   * change. If not set, changing the template will not cause a data profile to update.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DiscoveryInspectTemplateModifiedCadence getInspectTemplateModifiedCadence() {
+    return inspectTemplateModifiedCadence;
+  }
+
+  /**
+   * Governs when to update data profiles when the inspection rules defined by the `InspectTemplate`
+   * change. If not set, changing the template will not cause a data profile to update.
+   * @param inspectTemplateModifiedCadence inspectTemplateModifiedCadence or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DiscoveryCloudSqlGenerationCadence setInspectTemplateModifiedCadence(GooglePrivacyDlpV2DiscoveryInspectTemplateModifiedCadence inspectTemplateModifiedCadence) {
+    this.inspectTemplateModifiedCadence = inspectTemplateModifiedCadence;
+    return this;
+  }
 
   /**
    * Data changes (non-schema changes) in Cloud SQL tables can't trigger reprofiling. If you set

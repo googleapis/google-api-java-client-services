@@ -45,6 +45,13 @@ public final class GooglePrivacyDlpV2DataProfileAction extends com.google.api.cl
   private GooglePrivacyDlpV2PubSubNotification pubSubNotification;
 
   /**
+   * Tags the profiled resources with the specified tag values.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2TagResources tagResources;
+
+  /**
    * Export data profiles into a provided location.
    * @return value or {@code null} for none
    */
@@ -75,6 +82,23 @@ public final class GooglePrivacyDlpV2DataProfileAction extends com.google.api.cl
    */
   public GooglePrivacyDlpV2DataProfileAction setPubSubNotification(GooglePrivacyDlpV2PubSubNotification pubSubNotification) {
     this.pubSubNotification = pubSubNotification;
+    return this;
+  }
+
+  /**
+   * Tags the profiled resources with the specified tag values.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2TagResources getTagResources() {
+    return tagResources;
+  }
+
+  /**
+   * Tags the profiled resources with the specified tag values.
+   * @param tagResources tagResources or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DataProfileAction setTagResources(GooglePrivacyDlpV2TagResources tagResources) {
+    this.tagResources = tagResources;
     return this;
   }
 

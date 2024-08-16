@@ -58,14 +58,16 @@ public final class GooglePrivacyDlpV2FileClusterSummary extends com.google.api.c
   private GooglePrivacyDlpV2FileClusterType fileClusterType;
 
   /**
-   * A sample of file types scanned in this cluster. Empty if no files were scanned.
+   * A sample of file types scanned in this cluster. Empty if no files were scanned. File extensions
+   * can be derived from the file name or the file content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2FileExtensionInfo> fileExtensionsScanned;
 
   /**
-   * A sample of file types seen in this cluster. Empty if no files were seen.
+   * A sample of file types seen in this cluster. Empty if no files were seen. File extensions can
+   * be derived from the file name or the file content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,7 +148,8 @@ public final class GooglePrivacyDlpV2FileClusterSummary extends com.google.api.c
   }
 
   /**
-   * A sample of file types scanned in this cluster. Empty if no files were scanned.
+   * A sample of file types scanned in this cluster. Empty if no files were scanned. File extensions
+   * can be derived from the file name or the file content.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2FileExtensionInfo> getFileExtensionsScanned() {
@@ -154,7 +157,8 @@ public final class GooglePrivacyDlpV2FileClusterSummary extends com.google.api.c
   }
 
   /**
-   * A sample of file types scanned in this cluster. Empty if no files were scanned.
+   * A sample of file types scanned in this cluster. Empty if no files were scanned. File extensions
+   * can be derived from the file name or the file content.
    * @param fileExtensionsScanned fileExtensionsScanned or {@code null} for none
    */
   public GooglePrivacyDlpV2FileClusterSummary setFileExtensionsScanned(java.util.List<GooglePrivacyDlpV2FileExtensionInfo> fileExtensionsScanned) {
@@ -163,7 +167,8 @@ public final class GooglePrivacyDlpV2FileClusterSummary extends com.google.api.c
   }
 
   /**
-   * A sample of file types seen in this cluster. Empty if no files were seen.
+   * A sample of file types seen in this cluster. Empty if no files were seen. File extensions can
+   * be derived from the file name or the file content.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2FileExtensionInfo> getFileExtensionsSeen() {
@@ -171,7 +176,8 @@ public final class GooglePrivacyDlpV2FileClusterSummary extends com.google.api.c
   }
 
   /**
-   * A sample of file types seen in this cluster. Empty if no files were seen.
+   * A sample of file types seen in this cluster. Empty if no files were seen. File extensions can
+   * be derived from the file name or the file content.
    * @param fileExtensionsSeen fileExtensionsSeen or {@code null} for none
    */
   public GooglePrivacyDlpV2FileClusterSummary setFileExtensionsSeen(java.util.List<GooglePrivacyDlpV2FileExtensionInfo> fileExtensionsSeen) {

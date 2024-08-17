@@ -210,7 +210,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   private LabelInfo labelInfo;
 
   /**
-   * Output only. The last user to modify the file.
+   * Output only. The last user to modify the file. This field is only populated when the last
+   * modification was performed by a signed-in user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -296,10 +297,11 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.util.List<User> owners;
 
   /**
-   * The IDs of the parent folders which contain the file. If not specified as part of a create
-   * request, the file is placed directly in the user's My Drive folder. If not specified as part of
-   * a copy request, the file inherits any discoverable parents of the source file. Update requests
-   * must use the `addParents` and `removeParents` parameters to modify the parents list.
+   * The ID of the parent folder containing the file. A file can only have one parent folder;
+   * specifying multiple parents isn't supported. If not specified as part of a create request, the
+   * file is placed directly in the user's My Drive folder. If not specified as part of a copy
+   * request, the file inherits any discoverable parent of the source file. Update requests must use
+   * the `addParents` and `removeParents` parameters to modify the parents list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -936,7 +938,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The last user to modify the file.
+   * Output only. The last user to modify the file. This field is only populated when the last
+   * modification was performed by a signed-in user.
    * @return value or {@code null} for none
    */
   public User getLastModifyingUser() {
@@ -944,7 +947,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The last user to modify the file.
+   * Output only. The last user to modify the file. This field is only populated when the last
+   * modification was performed by a signed-in user.
    * @param lastModifyingUser lastModifyingUser or {@code null} for none
    */
   public File setLastModifyingUser(User lastModifyingUser) {
@@ -1141,10 +1145,11 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The IDs of the parent folders which contain the file. If not specified as part of a create
-   * request, the file is placed directly in the user's My Drive folder. If not specified as part of
-   * a copy request, the file inherits any discoverable parents of the source file. Update requests
-   * must use the `addParents` and `removeParents` parameters to modify the parents list.
+   * The ID of the parent folder containing the file. A file can only have one parent folder;
+   * specifying multiple parents isn't supported. If not specified as part of a create request, the
+   * file is placed directly in the user's My Drive folder. If not specified as part of a copy
+   * request, the file inherits any discoverable parent of the source file. Update requests must use
+   * the `addParents` and `removeParents` parameters to modify the parents list.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getParents() {
@@ -1152,10 +1157,11 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The IDs of the parent folders which contain the file. If not specified as part of a create
-   * request, the file is placed directly in the user's My Drive folder. If not specified as part of
-   * a copy request, the file inherits any discoverable parents of the source file. Update requests
-   * must use the `addParents` and `removeParents` parameters to modify the parents list.
+   * The ID of the parent folder containing the file. A file can only have one parent folder;
+   * specifying multiple parents isn't supported. If not specified as part of a create request, the
+   * file is placed directly in the user's My Drive folder. If not specified as part of a copy
+   * request, the file inherits any discoverable parent of the source file. Update requests must use
+   * the `addParents` and `removeParents` parameters to modify the parents list.
    * @param parents parents or {@code null} for none
    */
   public File setParents(java.util.List<java.lang.String> parents) {

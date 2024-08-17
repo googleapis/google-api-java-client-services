@@ -42,7 +42,7 @@ public final class FutureReservationStatusExistingMatchingUsageInfo extends com.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String timestamp;
+  private java.lang.String timestamp;
 
   /**
    * Count to represent min(FR total_count,
@@ -67,7 +67,7 @@ public final class FutureReservationStatusExistingMatchingUsageInfo extends com.
    * Timestamp when the matching usage was calculated
    * @return value or {@code null} for none
    */
-  public String getTimestamp() {
+  public java.lang.String getTimestamp() {
     return timestamp;
   }
 
@@ -75,7 +75,7 @@ public final class FutureReservationStatusExistingMatchingUsageInfo extends com.
    * Timestamp when the matching usage was calculated
    * @param timestamp timestamp or {@code null} for none
    */
-  public FutureReservationStatusExistingMatchingUsageInfo setTimestamp(String timestamp) {
+  public FutureReservationStatusExistingMatchingUsageInfo setTimestamp(java.lang.String timestamp) {
     this.timestamp = timestamp;
     return this;
   }

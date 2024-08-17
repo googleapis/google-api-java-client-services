@@ -63,7 +63,8 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * Output only. The last user to modify this revision.
+   * Output only. The last user to modify this revision. This field is only populated when the last
+   * modification was performed by a signed-in user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -214,7 +215,8 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The last user to modify this revision.
+   * Output only. The last user to modify this revision. This field is only populated when the last
+   * modification was performed by a signed-in user.
    * @return value or {@code null} for none
    */
   public User getLastModifyingUser() {
@@ -222,7 +224,8 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The last user to modify this revision.
+   * Output only. The last user to modify this revision. This field is only populated when the last
+   * modification was performed by a signed-in user.
    * @param lastModifyingUser lastModifyingUser or {@code null} for none
    */
   public Revision setLastModifyingUser(User lastModifyingUser) {

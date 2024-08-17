@@ -17,8 +17,9 @@
 package com.google.api.services.drive.model;
 
 /**
- * A reference to a file's parent. Some resource methods (such as `parents.get`) require a
- * `parentId`. Use the `parents.list` method to retrieve the ID for a parent.
+ * A reference to a file's parent. A file can only have one parent folder; specifying multiple
+ * parents isn't supported. Some resource methods (such as `parents.get`) require a `parentId`. Use
+ * the `parents.list` method to retrieve the ID for a parent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:

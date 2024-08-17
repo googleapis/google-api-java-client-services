@@ -807,6 +807,171 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
+       * An accessor for creating requests from the Builds collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudRun run = new CloudRun(...);}
+       *   {@code CloudRun.Builds.List request = run.builds().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Builds builds() {
+        return new Builds();
+      }
+
+      /**
+       * The "builds" collection of methods.
+       */
+      public class Builds {
+
+        /**
+         * Submits a build in a given project.
+         *
+         * Create a request for the method "builds.submit".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Submit#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location to build in. Location must be a region, e.g., 'us-central1' or
+         *        'global' if the global builder is to be used. Format:
+         *        projects/{project}/locations/{location}
+         * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2SubmitBuildRequest}
+         * @return the request
+         */
+        public Submit submit(java.lang.String parent, com.google.api.services.run.v2.model.GoogleCloudRunV2SubmitBuildRequest content) throws java.io.IOException {
+          Submit result = new Submit(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Submit extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleCloudRunV2SubmitBuildResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/builds:submit";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Submits a build in a given project.
+           *
+           * Create a request for the method "builds.submit".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Submit#execute()} method to invoke the remote operation. <p> {@link
+           * Submit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location to build in. Location must be a region, e.g., 'us-central1' or
+         *        'global' if the global builder is to be used. Format:
+         *        projects/{project}/locations/{location}
+           * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2SubmitBuildRequest}
+           * @since 1.13
+           */
+          protected Submit(java.lang.String parent, com.google.api.services.run.v2.model.GoogleCloudRunV2SubmitBuildRequest content) {
+            super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v2.model.GoogleCloudRunV2SubmitBuildResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Submit set$Xgafv(java.lang.String $Xgafv) {
+            return (Submit) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Submit setAccessToken(java.lang.String accessToken) {
+            return (Submit) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Submit setAlt(java.lang.String alt) {
+            return (Submit) super.setAlt(alt);
+          }
+
+          @Override
+          public Submit setCallback(java.lang.String callback) {
+            return (Submit) super.setCallback(callback);
+          }
+
+          @Override
+          public Submit setFields(java.lang.String fields) {
+            return (Submit) super.setFields(fields);
+          }
+
+          @Override
+          public Submit setKey(java.lang.String key) {
+            return (Submit) super.setKey(key);
+          }
+
+          @Override
+          public Submit setOauthToken(java.lang.String oauthToken) {
+            return (Submit) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Submit setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Submit) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Submit setQuotaUser(java.lang.String quotaUser) {
+            return (Submit) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Submit setUploadType(java.lang.String uploadType) {
+            return (Submit) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Submit setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Submit) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location to build in. Location must be a region, e.g., 'us-
+           * central1' or 'global' if the global builder is to be used. Format:
+           * projects/{project}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location to build in. Location must be a region, e.g., 'us-central1' or
+         'global' if the global builder is to be used. Format: projects/{project}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location to build in. Location must be a region, e.g., 'us-
+           * central1' or 'global' if the global builder is to be used. Format:
+           * projects/{project}/locations/{location}
+           */
+          public Submit setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Submit set(String parameterName, Object value) {
+            return (Submit) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Jobs collection.
        *
        * <p>The typical use is:</p>

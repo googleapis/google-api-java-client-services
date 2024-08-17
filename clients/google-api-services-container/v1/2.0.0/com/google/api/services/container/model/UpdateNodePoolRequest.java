@@ -242,6 +242,14 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private ResourceManagerTags resourceManagerTags;
 
   /**
+   * List of Storage Pools where boot disks are provisioned. Existing Storage Pools will be replaced
+   * with storage-pools.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> storagePools;
+
+  /**
    * The desired network tags to be applied to all nodes in the node pool. If this field is not
    * present, the tags will not be changed. Otherwise, the existing network tags will be *replaced*
    * with the provided tags.
@@ -771,6 +779,25 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setResourceManagerTags(ResourceManagerTags resourceManagerTags) {
     this.resourceManagerTags = resourceManagerTags;
+    return this;
+  }
+
+  /**
+   * List of Storage Pools where boot disks are provisioned. Existing Storage Pools will be replaced
+   * with storage-pools.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getStoragePools() {
+    return storagePools;
+  }
+
+  /**
+   * List of Storage Pools where boot disks are provisioned. Existing Storage Pools will be replaced
+   * with storage-pools.
+   * @param storagePools storagePools or {@code null} for none
+   */
+  public UpdateNodePoolRequest setStoragePools(java.util.List<java.lang.String> storagePools) {
+    this.storagePools = storagePools;
     return this;
   }
 

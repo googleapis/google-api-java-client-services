@@ -520,6 +520,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean satisfiesPzs;
 
   /**
+   * Secret CSI driver configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecretManagerConfig secretManagerConfig;
+
+  /**
    * Enable/Disable Security Posture API features for the cluster.
    * The value may be {@code null}.
    */
@@ -1757,6 +1764,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
     this.satisfiesPzs = satisfiesPzs;
+    return this;
+  }
+
+  /**
+   * Secret CSI driver configuration.
+   * @return value or {@code null} for none
+   */
+  public SecretManagerConfig getSecretManagerConfig() {
+    return secretManagerConfig;
+  }
+
+  /**
+   * Secret CSI driver configuration.
+   * @param secretManagerConfig secretManagerConfig or {@code null} for none
+   */
+  public Cluster setSecretManagerConfig(SecretManagerConfig secretManagerConfig) {
+    this.secretManagerConfig = secretManagerConfig;
     return this;
   }
 

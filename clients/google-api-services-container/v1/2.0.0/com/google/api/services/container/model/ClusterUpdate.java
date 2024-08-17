@@ -401,6 +401,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private ResourceUsageExportConfig desiredResourceUsageExportConfig;
 
   /**
+   * Enable/Disable Secret Manager Config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecretManagerConfig desiredSecretManagerConfig;
+
+  /**
    * Enable/Disable Security Posture API features for the cluster.
    * The value may be {@code null}.
    */
@@ -1346,6 +1353,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredResourceUsageExportConfig(ResourceUsageExportConfig desiredResourceUsageExportConfig) {
     this.desiredResourceUsageExportConfig = desiredResourceUsageExportConfig;
+    return this;
+  }
+
+  /**
+   * Enable/Disable Secret Manager Config.
+   * @return value or {@code null} for none
+   */
+  public SecretManagerConfig getDesiredSecretManagerConfig() {
+    return desiredSecretManagerConfig;
+  }
+
+  /**
+   * Enable/Disable Secret Manager Config.
+   * @param desiredSecretManagerConfig desiredSecretManagerConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredSecretManagerConfig(SecretManagerConfig desiredSecretManagerConfig) {
+    this.desiredSecretManagerConfig = desiredSecretManagerConfig;
     return this;
   }
 

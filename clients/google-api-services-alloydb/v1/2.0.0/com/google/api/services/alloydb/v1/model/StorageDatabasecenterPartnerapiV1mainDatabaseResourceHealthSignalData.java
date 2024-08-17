@@ -123,6 +123,13 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   private java.lang.String signalId;
 
   /**
+   * The severity of the signal, such as if it's a HIGH or LOW severity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String signalSeverity;
+
+  /**
    * Required. Type of signal, for example, `AVAILABLE_IN_MULTIPLE_ZONES`, `LOGGING_MOST_ERRORS`,
    * etc.
    * The value may be {@code null}.
@@ -340,6 +347,23 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setSignalId(java.lang.String signalId) {
     this.signalId = signalId;
+    return this;
+  }
+
+  /**
+   * The severity of the signal, such as if it's a HIGH or LOW severity.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSignalSeverity() {
+    return signalSeverity;
+  }
+
+  /**
+   * The severity of the signal, such as if it's a HIGH or LOW severity.
+   * @param signalSeverity signalSeverity or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setSignalSeverity(java.lang.String signalSeverity) {
+    this.signalSeverity = signalSeverity;
     return this;
   }
 

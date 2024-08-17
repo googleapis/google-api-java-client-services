@@ -17,8 +17,9 @@
 package com.google.api.services.alloydb.v1.model;
 
 /**
- * Metadata for individual databases created in an instance. i.e. spanner instance can have multiple
- * databases with unique configuration settings.
+ * Metadata for individual internal resources in an instance. e.g. spanner instance can have
+ * multiple databases with unique configuration settings. Similarly bigtable can have multiple
+ * clusters within same bigtable instance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -28,7 +29,7 @@ package com.google.api.services.alloydb.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class StorageDatabasecenterPartnerapiV1mainDatabaseMetadata extends com.google.api.client.json.GenericJson {
+public final class StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata extends com.google.api.client.json.GenericJson {
 
   /**
    * Backup configuration for this database
@@ -57,8 +58,8 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseMetadata extends
   private StorageDatabasecenterPartnerapiV1mainDatabaseResourceId resourceId;
 
   /**
-   * Required. Database name. Resource name to follow CAIS resource_name format as noted here
-   * go/condor-common-datamodel
+   * Required. internal resource name for spanner this will be database name
+   * e.g."spanner.googleapis.com/projects/123/abc/instances/inst1/databases/db1"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +77,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseMetadata extends
    * Backup configuration for this database
    * @param backupConfiguration backupConfiguration or {@code null} for none
    */
-  public StorageDatabasecenterPartnerapiV1mainDatabaseMetadata setBackupConfiguration(StorageDatabasecenterPartnerapiV1mainBackupConfiguration backupConfiguration) {
+  public StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata setBackupConfiguration(StorageDatabasecenterPartnerapiV1mainBackupConfiguration backupConfiguration) {
     this.backupConfiguration = backupConfiguration;
     return this;
   }
@@ -93,7 +94,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseMetadata extends
    * Information about the last backup attempt for this database
    * @param backupRun backupRun or {@code null} for none
    */
-  public StorageDatabasecenterPartnerapiV1mainDatabaseMetadata setBackupRun(StorageDatabasecenterPartnerapiV1mainBackupRun backupRun) {
+  public StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata setBackupRun(StorageDatabasecenterPartnerapiV1mainBackupRun backupRun) {
     this.backupRun = backupRun;
     return this;
   }
@@ -108,7 +109,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseMetadata extends
   /**
    * @param product product or {@code null} for none
    */
-  public StorageDatabasecenterPartnerapiV1mainDatabaseMetadata setProduct(StorageDatabasecenterProtoCommonProduct product) {
+  public StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata setProduct(StorageDatabasecenterProtoCommonProduct product) {
     this.product = product;
     return this;
   }
@@ -123,14 +124,14 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseMetadata extends
   /**
    * @param resourceId resourceId or {@code null} for none
    */
-  public StorageDatabasecenterPartnerapiV1mainDatabaseMetadata setResourceId(StorageDatabasecenterPartnerapiV1mainDatabaseResourceId resourceId) {
+  public StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata setResourceId(StorageDatabasecenterPartnerapiV1mainDatabaseResourceId resourceId) {
     this.resourceId = resourceId;
     return this;
   }
 
   /**
-   * Required. Database name. Resource name to follow CAIS resource_name format as noted here
-   * go/condor-common-datamodel
+   * Required. internal resource name for spanner this will be database name
+   * e.g."spanner.googleapis.com/projects/123/abc/instances/inst1/databases/db1"
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -138,23 +139,23 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseMetadata extends
   }
 
   /**
-   * Required. Database name. Resource name to follow CAIS resource_name format as noted here
-   * go/condor-common-datamodel
+   * Required. internal resource name for spanner this will be database name
+   * e.g."spanner.googleapis.com/projects/123/abc/instances/inst1/databases/db1"
    * @param resourceName resourceName or {@code null} for none
    */
-  public StorageDatabasecenterPartnerapiV1mainDatabaseMetadata setResourceName(java.lang.String resourceName) {
+  public StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata setResourceName(java.lang.String resourceName) {
     this.resourceName = resourceName;
     return this;
   }
 
   @Override
-  public StorageDatabasecenterPartnerapiV1mainDatabaseMetadata set(String fieldName, Object value) {
-    return (StorageDatabasecenterPartnerapiV1mainDatabaseMetadata) super.set(fieldName, value);
+  public StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata set(String fieldName, Object value) {
+    return (StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public StorageDatabasecenterPartnerapiV1mainDatabaseMetadata clone() {
-    return (StorageDatabasecenterPartnerapiV1mainDatabaseMetadata) super.clone();
+  public StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata clone() {
+    return (StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata) super.clone();
   }
 
 }

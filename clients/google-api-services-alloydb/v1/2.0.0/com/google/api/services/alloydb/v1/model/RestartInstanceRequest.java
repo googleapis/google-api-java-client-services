@@ -30,6 +30,14 @@ package com.google.api.services.alloydb.v1.model;
 public final class RestartInstanceRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Full name of the nodes as obtained from INSTANCE_VIEW_FULL to restart upon. Only
+   * applicable for read instances.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> nodeIds;
+
+  /**
    * Optional. An optional request ID to identify requests. Specify a unique request ID so that if
    * you must retry your request, the server will know to ignore the request if it has already been
    * completed. The server will guarantee that for at least 60 minutes after the first request. For
@@ -50,6 +58,25 @@ public final class RestartInstanceRequest extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean validateOnly;
+
+  /**
+   * Optional. Full name of the nodes as obtained from INSTANCE_VIEW_FULL to restart upon. Only
+   * applicable for read instances.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getNodeIds() {
+    return nodeIds;
+  }
+
+  /**
+   * Optional. Full name of the nodes as obtained from INSTANCE_VIEW_FULL to restart upon. Only
+   * applicable for read instances.
+   * @param nodeIds nodeIds or {@code null} for none
+   */
+  public RestartInstanceRequest setNodeIds(java.util.List<java.lang.String> nodeIds) {
+    this.nodeIds = nodeIds;
+    return this;
+  }
 
   /**
    * Optional. An optional request ID to identify requests. Specify a unique request ID so that if

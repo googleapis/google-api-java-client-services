@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1.model;
 
 /**
- * Any custom metadata associated with the resource. i.e. A spanner instance can have multiple
+ * Any custom metadata associated with the resource. e.g. A spanner instance can have multiple
  * databases with its own unique metadata. Information for these individual databases can be
  * captured in custom metadata data
  *
@@ -32,23 +32,29 @@ package com.google.api.services.alloydb.v1.model;
 public final class StorageDatabasecenterPartnerapiV1mainCustomMetadataData extends com.google.api.client.json.GenericJson {
 
   /**
+   * Metadata for individual internal resources in an instance. e.g. spanner instance can have
+   * multiple databases with unique configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<StorageDatabasecenterPartnerapiV1mainDatabaseMetadata> databaseMetadata;
+  private java.util.List<StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata> internalResourceMetadata;
 
   /**
+   * Metadata for individual internal resources in an instance. e.g. spanner instance can have
+   * multiple databases with unique configuration.
    * @return value or {@code null} for none
    */
-  public java.util.List<StorageDatabasecenterPartnerapiV1mainDatabaseMetadata> getDatabaseMetadata() {
-    return databaseMetadata;
+  public java.util.List<StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata> getInternalResourceMetadata() {
+    return internalResourceMetadata;
   }
 
   /**
-   * @param databaseMetadata databaseMetadata or {@code null} for none
+   * Metadata for individual internal resources in an instance. e.g. spanner instance can have
+   * multiple databases with unique configuration.
+   * @param internalResourceMetadata internalResourceMetadata or {@code null} for none
    */
-  public StorageDatabasecenterPartnerapiV1mainCustomMetadataData setDatabaseMetadata(java.util.List<StorageDatabasecenterPartnerapiV1mainDatabaseMetadata> databaseMetadata) {
-    this.databaseMetadata = databaseMetadata;
+  public StorageDatabasecenterPartnerapiV1mainCustomMetadataData setInternalResourceMetadata(java.util.List<StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata> internalResourceMetadata) {
+    this.internalResourceMetadata = internalResourceMetadata;
     return this;
   }
 

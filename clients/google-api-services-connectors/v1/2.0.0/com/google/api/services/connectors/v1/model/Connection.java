@@ -149,6 +149,13 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private EventingRuntimeData eventingRuntimeData;
 
   /**
+   * Output only. The name of the Hostname of the Service Directory service with TLS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String host;
+
+  /**
    * Output only. GCR location where the runtime image is stored. formatted like:
    * gcr.io/{bucketName}/{imageName}
    * The value may be {@code null}.
@@ -243,6 +250,13 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean suspended;
+
+  /**
+   * Output only. The name of the Service Directory service with TLS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tlsServiceDirectory;
 
   /**
    * Output only. Updated time.
@@ -523,6 +537,23 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. The name of the Hostname of the Service Directory service with TLS.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHost() {
+    return host;
+  }
+
+  /**
+   * Output only. The name of the Hostname of the Service Directory service with TLS.
+   * @param host host or {@code null} for none
+   */
+  public Connection setHost(java.lang.String host) {
+    this.host = host;
+    return this;
+  }
+
+  /**
    * Output only. GCR location where the runtime image is stored. formatted like:
    * gcr.io/{bucketName}/{imageName}
    * @return value or {@code null} for none
@@ -750,6 +781,23 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   public Connection setSuspended(java.lang.Boolean suspended) {
     this.suspended = suspended;
+    return this;
+  }
+
+  /**
+   * Output only. The name of the Service Directory service with TLS.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTlsServiceDirectory() {
+    return tlsServiceDirectory;
+  }
+
+  /**
+   * Output only. The name of the Service Directory service with TLS.
+   * @param tlsServiceDirectory tlsServiceDirectory or {@code null} for none
+   */
+  public Connection setTlsServiceDirectory(java.lang.String tlsServiceDirectory) {
+    this.tlsServiceDirectory = tlsServiceDirectory;
     return this;
   }
 

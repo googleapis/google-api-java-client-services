@@ -65,6 +65,13 @@ public final class AuthConfigTemplate extends com.google.api.client.json.Generic
   private java.lang.String displayName;
 
   /**
+   * Whether the auth config is the default one.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isDefault;
+
+  /**
    * Identifier key for auth config
    * @return value or {@code null} for none
    */
@@ -146,6 +153,23 @@ public final class AuthConfigTemplate extends com.google.api.client.json.Generic
    */
   public AuthConfigTemplate setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Whether the auth config is the default one.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsDefault() {
+    return isDefault;
+  }
+
+  /**
+   * Whether the auth config is the default one.
+   * @param isDefault isDefault or {@code null} for none
+   */
+  public AuthConfigTemplate setIsDefault(java.lang.Boolean isDefault) {
+    this.isDefault = isDefault;
     return this;
   }
 

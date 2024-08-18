@@ -41,7 +41,7 @@ public final class GoogleCloudRetailV2RuleForceReturnFacetAction extends com.goo
 
   /**
    * Each instance corresponds to a force return attribute for the given condition. There can't be
-   * more 3 instances here.
+   * more 15 instances here.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +49,7 @@ public final class GoogleCloudRetailV2RuleForceReturnFacetAction extends com.goo
 
   /**
    * Each instance corresponds to a force return attribute for the given condition. There can't be
-   * more 3 instances here.
+   * more 15 instances here.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRetailV2RuleForceReturnFacetActionFacetPositionAdjustment> getFacetPositionAdjustments() {
@@ -58,7 +58,7 @@ public final class GoogleCloudRetailV2RuleForceReturnFacetAction extends com.goo
 
   /**
    * Each instance corresponds to a force return attribute for the given condition. There can't be
-   * more 3 instances here.
+   * more 15 instances here.
    * @param facetPositionAdjustments facetPositionAdjustments or {@code null} for none
    */
   public GoogleCloudRetailV2RuleForceReturnFacetAction setFacetPositionAdjustments(java.util.List<GoogleCloudRetailV2RuleForceReturnFacetActionFacetPositionAdjustment> facetPositionAdjustments) {

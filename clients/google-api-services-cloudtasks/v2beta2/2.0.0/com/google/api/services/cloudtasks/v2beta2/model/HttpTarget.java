@@ -68,10 +68,11 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
   private java.lang.String httpMethod;
 
   /**
-   * If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) will be
+   * If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) is
    * generated and attached as an `Authorization` header in the HTTP request. This type of
-   * authorization should generally only be used when calling Google APIs hosted on
-   * *.googleapis.com.
+   * authorization should generally be used only when calling Google APIs hosted on
+   * *.googleapis.com. Note that both the service account email and the scope MUST be specified when
+   * using the queue-level authorization override.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,9 +80,10 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
 
   /**
    * If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token
-   * will be generated and attached as an `Authorization` header in the HTTP request. This type of
+   * is generated and attached as an `Authorization` header in the HTTP request. This type of
    * authorization can be used for many scenarios, including calling Cloud Run, or endpoints where
-   * you intend to validate the token yourself.
+   * you intend to validate the token yourself. Note that both the service account email and the
+   * audience MUST be specified when using the queue-level authorization override.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,10 +165,11 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) will be
+   * If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) is
    * generated and attached as an `Authorization` header in the HTTP request. This type of
-   * authorization should generally only be used when calling Google APIs hosted on
-   * *.googleapis.com.
+   * authorization should generally be used only when calling Google APIs hosted on
+   * *.googleapis.com. Note that both the service account email and the scope MUST be specified when
+   * using the queue-level authorization override.
    * @return value or {@code null} for none
    */
   public OAuthToken getOauthToken() {
@@ -174,10 +177,11 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) will be
+   * If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) is
    * generated and attached as an `Authorization` header in the HTTP request. This type of
-   * authorization should generally only be used when calling Google APIs hosted on
-   * *.googleapis.com.
+   * authorization should generally be used only when calling Google APIs hosted on
+   * *.googleapis.com. Note that both the service account email and the scope MUST be specified when
+   * using the queue-level authorization override.
    * @param oauthToken oauthToken or {@code null} for none
    */
   public HttpTarget setOauthToken(OAuthToken oauthToken) {
@@ -187,9 +191,10 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
 
   /**
    * If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token
-   * will be generated and attached as an `Authorization` header in the HTTP request. This type of
+   * is generated and attached as an `Authorization` header in the HTTP request. This type of
    * authorization can be used for many scenarios, including calling Cloud Run, or endpoints where
-   * you intend to validate the token yourself.
+   * you intend to validate the token yourself. Note that both the service account email and the
+   * audience MUST be specified when using the queue-level authorization override.
    * @return value or {@code null} for none
    */
   public OidcToken getOidcToken() {
@@ -198,9 +203,10 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
 
   /**
    * If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token
-   * will be generated and attached as an `Authorization` header in the HTTP request. This type of
+   * is generated and attached as an `Authorization` header in the HTTP request. This type of
    * authorization can be used for many scenarios, including calling Cloud Run, or endpoints where
-   * you intend to validate the token yourself.
+   * you intend to validate the token yourself. Note that both the service account email and the
+   * audience MUST be specified when using the queue-level authorization override.
    * @param oidcToken oidcToken or {@code null} for none
    */
   public HttpTarget setOidcToken(OidcToken oidcToken) {

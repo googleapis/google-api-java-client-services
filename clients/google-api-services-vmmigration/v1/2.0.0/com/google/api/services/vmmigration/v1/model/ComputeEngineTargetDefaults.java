@@ -45,6 +45,15 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
   private AppliedLicense appliedLicense;
 
   /**
+   * Optional. By default the virtual machine will keep its existing boot option. Setting this
+   * property will trigger an internal process which will convert the virtual machine from using the
+   * existing boot option to another.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bootConversion;
+
+  /**
    * Output only. The VM Boot Option, as set in the source VM.
    * The value may be {@code null}.
    */
@@ -64,6 +73,22 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.String diskType;
+
+  /**
+   * Optional. Defines whether the instance has integrity monitoring enabled. This can be set to
+   * true only if the VM boot option is EFI, and vTPM is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableIntegrityMonitoring;
+
+  /**
+   * Optional. Defines whether the instance has vTPM enabled. This can be set to true only if the VM
+   * boot option is EFI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableVtpm;
 
   /**
    * Optional. Immutable. The encryption to apply to the VM disks.
@@ -200,6 +225,27 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
   }
 
   /**
+   * Optional. By default the virtual machine will keep its existing boot option. Setting this
+   * property will trigger an internal process which will convert the virtual machine from using the
+   * existing boot option to another.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBootConversion() {
+    return bootConversion;
+  }
+
+  /**
+   * Optional. By default the virtual machine will keep its existing boot option. Setting this
+   * property will trigger an internal process which will convert the virtual machine from using the
+   * existing boot option to another.
+   * @param bootConversion bootConversion or {@code null} for none
+   */
+  public ComputeEngineTargetDefaults setBootConversion(java.lang.String bootConversion) {
+    this.bootConversion = bootConversion;
+    return this;
+  }
+
+  /**
    * Output only. The VM Boot Option, as set in the source VM.
    * @return value or {@code null} for none
    */
@@ -247,6 +293,44 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
    */
   public ComputeEngineTargetDefaults setDiskType(java.lang.String diskType) {
     this.diskType = diskType;
+    return this;
+  }
+
+  /**
+   * Optional. Defines whether the instance has integrity monitoring enabled. This can be set to
+   * true only if the VM boot option is EFI, and vTPM is enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableIntegrityMonitoring() {
+    return enableIntegrityMonitoring;
+  }
+
+  /**
+   * Optional. Defines whether the instance has integrity monitoring enabled. This can be set to
+   * true only if the VM boot option is EFI, and vTPM is enabled.
+   * @param enableIntegrityMonitoring enableIntegrityMonitoring or {@code null} for none
+   */
+  public ComputeEngineTargetDefaults setEnableIntegrityMonitoring(java.lang.Boolean enableIntegrityMonitoring) {
+    this.enableIntegrityMonitoring = enableIntegrityMonitoring;
+    return this;
+  }
+
+  /**
+   * Optional. Defines whether the instance has vTPM enabled. This can be set to true only if the VM
+   * boot option is EFI.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableVtpm() {
+    return enableVtpm;
+  }
+
+  /**
+   * Optional. Defines whether the instance has vTPM enabled. This can be set to true only if the VM
+   * boot option is EFI.
+   * @param enableVtpm enableVtpm or {@code null} for none
+   */
+  public ComputeEngineTargetDefaults setEnableVtpm(java.lang.Boolean enableVtpm) {
+    this.enableVtpm = enableVtpm;
     return this;
   }
 

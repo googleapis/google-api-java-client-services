@@ -52,8 +52,9 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   private java.lang.String network;
 
   /**
-   * Optional. The networking tier used for configuring network access configuration. If left empty,
-   * will default to PREMIUM.
+   * Optional. The networking tier used for optimizing connectivity between instances and systems on
+   * the internet. Applies only for external ephemeral IP addresses. If left empty, will default to
+   * PREMIUM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,8 +121,9 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The networking tier used for configuring network access configuration. If left empty,
-   * will default to PREMIUM.
+   * Optional. The networking tier used for optimizing connectivity between instances and systems on
+   * the internet. Applies only for external ephemeral IP addresses. If left empty, will default to
+   * PREMIUM.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkTier() {
@@ -129,8 +131,9 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The networking tier used for configuring network access configuration. If left empty,
-   * will default to PREMIUM.
+   * Optional. The networking tier used for optimizing connectivity between instances and systems on
+   * the internet. Applies only for external ephemeral IP addresses. If left empty, will default to
+   * PREMIUM.
    * @param networkTier networkTier or {@code null} for none
    */
   public NetworkInterface setNetworkTier(java.lang.String networkTier) {

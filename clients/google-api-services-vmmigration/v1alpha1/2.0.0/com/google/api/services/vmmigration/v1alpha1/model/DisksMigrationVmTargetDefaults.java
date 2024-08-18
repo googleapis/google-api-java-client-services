@@ -51,6 +51,20 @@ public final class DisksMigrationVmTargetDefaults extends com.google.api.client.
   private ComputeScheduling computeScheduling;
 
   /**
+   * Optional. Defines whether the instance has integrity monitoring enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableIntegrityMonitoring;
+
+  /**
+   * Optional. Defines whether the instance has vTPM enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableVtpm;
+
+  /**
    * Optional. The encryption to apply to the VM.
    * The value may be {@code null}.
    */
@@ -176,6 +190,40 @@ public final class DisksMigrationVmTargetDefaults extends com.google.api.client.
    */
   public DisksMigrationVmTargetDefaults setComputeScheduling(ComputeScheduling computeScheduling) {
     this.computeScheduling = computeScheduling;
+    return this;
+  }
+
+  /**
+   * Optional. Defines whether the instance has integrity monitoring enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableIntegrityMonitoring() {
+    return enableIntegrityMonitoring;
+  }
+
+  /**
+   * Optional. Defines whether the instance has integrity monitoring enabled.
+   * @param enableIntegrityMonitoring enableIntegrityMonitoring or {@code null} for none
+   */
+  public DisksMigrationVmTargetDefaults setEnableIntegrityMonitoring(java.lang.Boolean enableIntegrityMonitoring) {
+    this.enableIntegrityMonitoring = enableIntegrityMonitoring;
+    return this;
+  }
+
+  /**
+   * Optional. Defines whether the instance has vTPM enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableVtpm() {
+    return enableVtpm;
+  }
+
+  /**
+   * Optional. Defines whether the instance has vTPM enabled.
+   * @param enableVtpm enableVtpm or {@code null} for none
+   */
+  public DisksMigrationVmTargetDefaults setEnableVtpm(java.lang.Boolean enableVtpm) {
+    this.enableVtpm = enableVtpm;
     return this;
   }
 

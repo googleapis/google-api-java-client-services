@@ -79,6 +79,20 @@ public final class DatabaseDeploymentTopology extends com.google.api.client.json
   private java.lang.Long memoryLimitBytes;
 
   /**
+   * Optional. Number of total physical cores.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer physicalCoreCount;
+
+  /**
+   * Optional. Number of total physical cores limited by db deployment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer physicalCoreLimit;
+
+  /**
    * Optional. Number of total logical cores.
    * @return value or {@code null} for none
    */
@@ -194,6 +208,40 @@ public final class DatabaseDeploymentTopology extends com.google.api.client.json
    */
   public DatabaseDeploymentTopology setMemoryLimitBytes(java.lang.Long memoryLimitBytes) {
     this.memoryLimitBytes = memoryLimitBytes;
+    return this;
+  }
+
+  /**
+   * Optional. Number of total physical cores.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPhysicalCoreCount() {
+    return physicalCoreCount;
+  }
+
+  /**
+   * Optional. Number of total physical cores.
+   * @param physicalCoreCount physicalCoreCount or {@code null} for none
+   */
+  public DatabaseDeploymentTopology setPhysicalCoreCount(java.lang.Integer physicalCoreCount) {
+    this.physicalCoreCount = physicalCoreCount;
+    return this;
+  }
+
+  /**
+   * Optional. Number of total physical cores limited by db deployment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPhysicalCoreLimit() {
+    return physicalCoreLimit;
+  }
+
+  /**
+   * Optional. Number of total physical cores limited by db deployment.
+   * @param physicalCoreLimit physicalCoreLimit or {@code null} for none
+   */
+  public DatabaseDeploymentTopology setPhysicalCoreLimit(java.lang.Integer physicalCoreLimit) {
+    this.physicalCoreLimit = physicalCoreLimit;
     return this;
   }
 

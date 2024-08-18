@@ -46,11 +46,33 @@ public final class VmwareEnginePreferences extends com.google.api.client.json.Ge
   private java.lang.Double cpuOvercommitRatio;
 
   /**
+   * Optional. Discount percentage for the license type offered to you by Broadcom. Must be between
+   * 0 and 100. Only valid when service_type is set to SERVICE_TYPE_PORTABLE_LICENSE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float licenseDiscountPercentage;
+
+  /**
+   * Optional. Preferences concerning the machine types to consider on Google Cloud VMware Engine.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VMwareEngineMachinePreferences machinePreferences;
+
+  /**
    * Memory overcommit ratio. Acceptable values are 1.0, 1.25, 1.5, 1.75 and 2.0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double memoryOvercommitRatio;
+
+  /**
+   * Optional. VMWare Service Type (Fully Licensed or Portable License).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceType;
 
   /**
    * The Deduplication and Compression ratio is based on the logical (Used Before) space required to
@@ -103,6 +125,42 @@ public final class VmwareEnginePreferences extends com.google.api.client.json.Ge
   }
 
   /**
+   * Optional. Discount percentage for the license type offered to you by Broadcom. Must be between
+   * 0 and 100. Only valid when service_type is set to SERVICE_TYPE_PORTABLE_LICENSE.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getLicenseDiscountPercentage() {
+    return licenseDiscountPercentage;
+  }
+
+  /**
+   * Optional. Discount percentage for the license type offered to you by Broadcom. Must be between
+   * 0 and 100. Only valid when service_type is set to SERVICE_TYPE_PORTABLE_LICENSE.
+   * @param licenseDiscountPercentage licenseDiscountPercentage or {@code null} for none
+   */
+  public VmwareEnginePreferences setLicenseDiscountPercentage(java.lang.Float licenseDiscountPercentage) {
+    this.licenseDiscountPercentage = licenseDiscountPercentage;
+    return this;
+  }
+
+  /**
+   * Optional. Preferences concerning the machine types to consider on Google Cloud VMware Engine.
+   * @return value or {@code null} for none
+   */
+  public VMwareEngineMachinePreferences getMachinePreferences() {
+    return machinePreferences;
+  }
+
+  /**
+   * Optional. Preferences concerning the machine types to consider on Google Cloud VMware Engine.
+   * @param machinePreferences machinePreferences or {@code null} for none
+   */
+  public VmwareEnginePreferences setMachinePreferences(VMwareEngineMachinePreferences machinePreferences) {
+    this.machinePreferences = machinePreferences;
+    return this;
+  }
+
+  /**
    * Memory overcommit ratio. Acceptable values are 1.0, 1.25, 1.5, 1.75 and 2.0.
    * @return value or {@code null} for none
    */
@@ -116,6 +174,23 @@ public final class VmwareEnginePreferences extends com.google.api.client.json.Ge
    */
   public VmwareEnginePreferences setMemoryOvercommitRatio(java.lang.Double memoryOvercommitRatio) {
     this.memoryOvercommitRatio = memoryOvercommitRatio;
+    return this;
+  }
+
+  /**
+   * Optional. VMWare Service Type (Fully Licensed or Portable License).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceType() {
+    return serviceType;
+  }
+
+  /**
+   * Optional. VMWare Service Type (Fully Licensed or Portable License).
+   * @param serviceType serviceType or {@code null} for none
+   */
+  public VmwareEnginePreferences setServiceType(java.lang.String serviceType) {
+    this.serviceType = serviceType;
     return this;
   }
 

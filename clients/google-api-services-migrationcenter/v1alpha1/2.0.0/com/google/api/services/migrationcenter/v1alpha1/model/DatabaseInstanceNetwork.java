@@ -17,7 +17,7 @@
 package com.google.api.services.migrationcenter.v1alpha1.model;
 
 /**
- * Details of a database instance.
+ * Network details of a database instance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:
@@ -27,88 +27,88 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DatabaseInstance extends com.google.api.client.json.GenericJson {
+public final class DatabaseInstanceNetwork extends com.google.api.client.json.GenericJson {
 
   /**
-   * The instance's name.
+   * Optional. The instance's host names.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String instanceName;
+  private java.util.List<java.lang.String> hostNames;
 
   /**
-   * Optional. Networking details.
+   * Optional. The instance's IP addresses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DatabaseInstanceNetwork network;
+  private java.util.List<java.lang.String> ipAddresses;
 
   /**
-   * The instance role in the database engine.
+   * Optional. The instance's primary MAC address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String role;
+  private java.lang.String primaryMacAddress;
 
   /**
-   * The instance's name.
+   * Optional. The instance's host names.
    * @return value or {@code null} for none
    */
-  public java.lang.String getInstanceName() {
-    return instanceName;
+  public java.util.List<java.lang.String> getHostNames() {
+    return hostNames;
   }
 
   /**
-   * The instance's name.
-   * @param instanceName instanceName or {@code null} for none
+   * Optional. The instance's host names.
+   * @param hostNames hostNames or {@code null} for none
    */
-  public DatabaseInstance setInstanceName(java.lang.String instanceName) {
-    this.instanceName = instanceName;
+  public DatabaseInstanceNetwork setHostNames(java.util.List<java.lang.String> hostNames) {
+    this.hostNames = hostNames;
     return this;
   }
 
   /**
-   * Optional. Networking details.
+   * Optional. The instance's IP addresses.
    * @return value or {@code null} for none
    */
-  public DatabaseInstanceNetwork getNetwork() {
-    return network;
+  public java.util.List<java.lang.String> getIpAddresses() {
+    return ipAddresses;
   }
 
   /**
-   * Optional. Networking details.
-   * @param network network or {@code null} for none
+   * Optional. The instance's IP addresses.
+   * @param ipAddresses ipAddresses or {@code null} for none
    */
-  public DatabaseInstance setNetwork(DatabaseInstanceNetwork network) {
-    this.network = network;
+  public DatabaseInstanceNetwork setIpAddresses(java.util.List<java.lang.String> ipAddresses) {
+    this.ipAddresses = ipAddresses;
     return this;
   }
 
   /**
-   * The instance role in the database engine.
+   * Optional. The instance's primary MAC address.
    * @return value or {@code null} for none
    */
-  public java.lang.String getRole() {
-    return role;
+  public java.lang.String getPrimaryMacAddress() {
+    return primaryMacAddress;
   }
 
   /**
-   * The instance role in the database engine.
-   * @param role role or {@code null} for none
+   * Optional. The instance's primary MAC address.
+   * @param primaryMacAddress primaryMacAddress or {@code null} for none
    */
-  public DatabaseInstance setRole(java.lang.String role) {
-    this.role = role;
+  public DatabaseInstanceNetwork setPrimaryMacAddress(java.lang.String primaryMacAddress) {
+    this.primaryMacAddress = primaryMacAddress;
     return this;
   }
 
   @Override
-  public DatabaseInstance set(String fieldName, Object value) {
-    return (DatabaseInstance) super.set(fieldName, value);
+  public DatabaseInstanceNetwork set(String fieldName, Object value) {
+    return (DatabaseInstanceNetwork) super.set(fieldName, value);
   }
 
   @Override
-  public DatabaseInstance clone() {
-    return (DatabaseInstance) super.clone();
+  public DatabaseInstanceNetwork clone() {
+    return (DatabaseInstanceNetwork) super.clone();
   }
 
 }

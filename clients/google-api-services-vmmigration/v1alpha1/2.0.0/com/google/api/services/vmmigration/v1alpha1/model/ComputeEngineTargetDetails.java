@@ -45,6 +45,15 @@ public final class ComputeEngineTargetDetails extends com.google.api.client.json
   private AppliedLicense appliedLicense;
 
   /**
+   * Optional. By default the virtual machine will keep its existing boot option. Setting this
+   * property will trigger an internal process which will convert the virtual machine from using the
+   * existing boot option to another.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bootConversion;
+
+  /**
    * The VM Boot Option, as set in the source VM.
    * The value may be {@code null}.
    */
@@ -64,6 +73,20 @@ public final class ComputeEngineTargetDetails extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private java.lang.String diskType;
+
+  /**
+   * Optional. Defines whether the instance has integrity monitoring enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableIntegrityMonitoring;
+
+  /**
+   * Optional. Defines whether the instance has vTPM enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableVtpm;
 
   /**
    * Optional. The encryption to apply to the VM disks.
@@ -199,6 +222,27 @@ public final class ComputeEngineTargetDetails extends com.google.api.client.json
   }
 
   /**
+   * Optional. By default the virtual machine will keep its existing boot option. Setting this
+   * property will trigger an internal process which will convert the virtual machine from using the
+   * existing boot option to another.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBootConversion() {
+    return bootConversion;
+  }
+
+  /**
+   * Optional. By default the virtual machine will keep its existing boot option. Setting this
+   * property will trigger an internal process which will convert the virtual machine from using the
+   * existing boot option to another.
+   * @param bootConversion bootConversion or {@code null} for none
+   */
+  public ComputeEngineTargetDetails setBootConversion(java.lang.String bootConversion) {
+    this.bootConversion = bootConversion;
+    return this;
+  }
+
+  /**
    * The VM Boot Option, as set in the source VM.
    * @return value or {@code null} for none
    */
@@ -246,6 +290,40 @@ public final class ComputeEngineTargetDetails extends com.google.api.client.json
    */
   public ComputeEngineTargetDetails setDiskType(java.lang.String diskType) {
     this.diskType = diskType;
+    return this;
+  }
+
+  /**
+   * Optional. Defines whether the instance has integrity monitoring enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableIntegrityMonitoring() {
+    return enableIntegrityMonitoring;
+  }
+
+  /**
+   * Optional. Defines whether the instance has integrity monitoring enabled.
+   * @param enableIntegrityMonitoring enableIntegrityMonitoring or {@code null} for none
+   */
+  public ComputeEngineTargetDetails setEnableIntegrityMonitoring(java.lang.Boolean enableIntegrityMonitoring) {
+    this.enableIntegrityMonitoring = enableIntegrityMonitoring;
+    return this;
+  }
+
+  /**
+   * Optional. Defines whether the instance has vTPM enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableVtpm() {
+    return enableVtpm;
+  }
+
+  /**
+   * Optional. Defines whether the instance has vTPM enabled.
+   * @param enableVtpm enableVtpm or {@code null} for none
+   */
+  public ComputeEngineTargetDetails setEnableVtpm(java.lang.Boolean enableVtpm) {
+    this.enableVtpm = enableVtpm;
     return this;
   }
 

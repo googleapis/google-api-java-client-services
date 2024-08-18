@@ -145,8 +145,8 @@ public final class GoogleAdsSearchads360V0ResourcesConversion extends com.google
   private java.lang.Long id;
 
   /**
-   * Output only. The SearchAds360 inventory account ID containing the product that was clicked on.
-   * SearchAds360 generates this ID when you link an inventory account in SearchAds360.
+   * Output only. The Search Ads 360 inventory account ID containing the product that was clicked
+   * on. Search Ads 360 generates this ID when you link an inventory account in Search Ads 360.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -206,7 +206,7 @@ public final class GoogleAdsSearchads360V0ResourcesConversion extends com.google
   private java.lang.String status;
 
   /**
-   * Output only. The SearchAds360 visit ID that the conversion is attributed to.
+   * Output only. The Search Ads 360 visit ID that the conversion is attributed to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -486,8 +486,8 @@ public final class GoogleAdsSearchads360V0ResourcesConversion extends com.google
   }
 
   /**
-   * Output only. The SearchAds360 inventory account ID containing the product that was clicked on.
-   * SearchAds360 generates this ID when you link an inventory account in SearchAds360.
+   * Output only. The Search Ads 360 inventory account ID containing the product that was clicked
+   * on. Search Ads 360 generates this ID when you link an inventory account in Search Ads 360.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMerchantId() {
@@ -495,8 +495,8 @@ public final class GoogleAdsSearchads360V0ResourcesConversion extends com.google
   }
 
   /**
-   * Output only. The SearchAds360 inventory account ID containing the product that was clicked on.
-   * SearchAds360 generates this ID when you link an inventory account in SearchAds360.
+   * Output only. The Search Ads 360 inventory account ID containing the product that was clicked
+   * on. Search Ads 360 generates this ID when you link an inventory account in Search Ads 360.
    * @param merchantId merchantId or {@code null} for none
    */
   public GoogleAdsSearchads360V0ResourcesConversion setMerchantId(java.lang.Long merchantId) {
@@ -632,7 +632,7 @@ public final class GoogleAdsSearchads360V0ResourcesConversion extends com.google
   }
 
   /**
-   * Output only. The SearchAds360 visit ID that the conversion is attributed to.
+   * Output only. The Search Ads 360 visit ID that the conversion is attributed to.
    * @return value or {@code null} for none
    */
   public java.lang.Long getVisitId() {
@@ -640,7 +640,7 @@ public final class GoogleAdsSearchads360V0ResourcesConversion extends com.google
   }
 
   /**
-   * Output only. The SearchAds360 visit ID that the conversion is attributed to.
+   * Output only. The Search Ads 360 visit ID that the conversion is attributed to.
    * @param visitId visitId or {@code null} for none
    */
   public GoogleAdsSearchads360V0ResourcesConversion setVisitId(java.lang.Long visitId) {

@@ -31,7 +31,7 @@ package com.google.api.services.searchads360.v0.model;
 public final class GoogleAdsSearchads360V0CommonTextLabel extends com.google.api.client.json.GenericJson {
 
   /**
-   * Background color of the label in RGB format. This string must match the regular expression
+   * Background color of the label in HEX format. This string must match the regular expression
    * '^\#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$'. Note: The background color may not be visible for
    * manager accounts.
    * The value may be {@code null}.
@@ -47,7 +47,7 @@ public final class GoogleAdsSearchads360V0CommonTextLabel extends com.google.api
   private java.lang.String description;
 
   /**
-   * Background color of the label in RGB format. This string must match the regular expression
+   * Background color of the label in HEX format. This string must match the regular expression
    * '^\#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$'. Note: The background color may not be visible for
    * manager accounts.
    * @return value or {@code null} for none
@@ -57,7 +57,7 @@ public final class GoogleAdsSearchads360V0CommonTextLabel extends com.google.api
   }
 
   /**
-   * Background color of the label in RGB format. This string must match the regular expression
+   * Background color of the label in HEX format. This string must match the regular expression
    * '^\#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$'. Note: The background color may not be visible for
    * manager accounts.
    * @param backgroundColor backgroundColor or {@code null} for none

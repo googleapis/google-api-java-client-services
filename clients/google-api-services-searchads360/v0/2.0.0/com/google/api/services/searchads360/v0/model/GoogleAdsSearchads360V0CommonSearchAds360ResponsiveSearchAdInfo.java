@@ -38,6 +38,34 @@ public final class GoogleAdsSearchads360V0CommonSearchAds360ResponsiveSearchAdIn
   private java.lang.Long adTrackingId;
 
   /**
+   * List of text assets for descriptions. When the ad serves the descriptions will be selected from
+   * this list.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleAdsSearchads360V0CommonAdTextAsset> descriptions;
+
+  static {
+    // hack to force ProGuard to consider GoogleAdsSearchads360V0CommonAdTextAsset used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleAdsSearchads360V0CommonAdTextAsset.class);
+  }
+
+  /**
+   * List of text assets for headlines. When the ad serves the headlines will be selected from this
+   * list.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleAdsSearchads360V0CommonAdTextAsset> headlines;
+
+  static {
+    // hack to force ProGuard to consider GoogleAdsSearchads360V0CommonAdTextAsset used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleAdsSearchads360V0CommonAdTextAsset.class);
+  }
+
+  /**
    * Text appended to the auto-generated visible URL with a delimiter.
    * The value may be {@code null}.
    */
@@ -65,6 +93,44 @@ public final class GoogleAdsSearchads360V0CommonSearchAds360ResponsiveSearchAdIn
    */
   public GoogleAdsSearchads360V0CommonSearchAds360ResponsiveSearchAdInfo setAdTrackingId(java.lang.Long adTrackingId) {
     this.adTrackingId = adTrackingId;
+    return this;
+  }
+
+  /**
+   * List of text assets for descriptions. When the ad serves the descriptions will be selected from
+   * this list.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleAdsSearchads360V0CommonAdTextAsset> getDescriptions() {
+    return descriptions;
+  }
+
+  /**
+   * List of text assets for descriptions. When the ad serves the descriptions will be selected from
+   * this list.
+   * @param descriptions descriptions or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSearchAds360ResponsiveSearchAdInfo setDescriptions(java.util.List<GoogleAdsSearchads360V0CommonAdTextAsset> descriptions) {
+    this.descriptions = descriptions;
+    return this;
+  }
+
+  /**
+   * List of text assets for headlines. When the ad serves the headlines will be selected from this
+   * list.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleAdsSearchads360V0CommonAdTextAsset> getHeadlines() {
+    return headlines;
+  }
+
+  /**
+   * List of text assets for headlines. When the ad serves the headlines will be selected from this
+   * list.
+   * @param headlines headlines or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSearchAds360ResponsiveSearchAdInfo setHeadlines(java.util.List<GoogleAdsSearchads360V0CommonAdTextAsset> headlines) {
+    this.headlines = headlines;
     return this;
   }
 

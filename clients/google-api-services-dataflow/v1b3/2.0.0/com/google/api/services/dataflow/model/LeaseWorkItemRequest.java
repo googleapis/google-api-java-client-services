@@ -45,6 +45,13 @@ public final class LeaseWorkItemRequest extends com.google.api.client.json.Gener
   private java.lang.String location;
 
   /**
+   * Optional. The project number of the project this worker belongs to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long projectNumber;
+
+  /**
    * The initial lease period.
    * The value may be {@code null}.
    */
@@ -113,6 +120,23 @@ public final class LeaseWorkItemRequest extends com.google.api.client.json.Gener
    */
   public LeaseWorkItemRequest setLocation(java.lang.String location) {
     this.location = location;
+    return this;
+  }
+
+  /**
+   * Optional. The project number of the project this worker belongs to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getProjectNumber() {
+    return projectNumber;
+  }
+
+  /**
+   * Optional. The project number of the project this worker belongs to.
+   * @param projectNumber projectNumber or {@code null} for none
+   */
+  public LeaseWorkItemRequest setProjectNumber(java.lang.Long projectNumber) {
+    this.projectNumber = projectNumber;
     return this;
   }
 

@@ -45,6 +45,13 @@ public final class ReportWorkItemStatusRequest extends com.google.api.client.jso
   private java.lang.String location;
 
   /**
+   * Optional. The project number of the project which owns the WorkItem's job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long projectNumber;
+
+  /**
    * Untranslated bag-of-bytes WorkProgressUpdateRequest from UnifiedWorker.
    * The value may be {@code null}.
    */
@@ -101,6 +108,23 @@ public final class ReportWorkItemStatusRequest extends com.google.api.client.jso
    */
   public ReportWorkItemStatusRequest setLocation(java.lang.String location) {
     this.location = location;
+    return this;
+  }
+
+  /**
+   * Optional. The project number of the project which owns the WorkItem's job.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getProjectNumber() {
+    return projectNumber;
+  }
+
+  /**
+   * Optional. The project number of the project which owns the WorkItem's job.
+   * @param projectNumber projectNumber or {@code null} for none
+   */
+  public ReportWorkItemStatusRequest setProjectNumber(java.lang.Long projectNumber) {
+    this.projectNumber = projectNumber;
     return this;
   }
 

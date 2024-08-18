@@ -30,11 +30,35 @@ package com.google.api.services.youtube.model;
 public final class PlaylistStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * The playlist's podcast status.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String podcastStatus;
+
+  /**
    * The playlist's privacy status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String privacyStatus;
+
+  /**
+   * The playlist's podcast status.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPodcastStatus() {
+    return podcastStatus;
+  }
+
+  /**
+   * The playlist's podcast status.
+   * @param podcastStatus podcastStatus or {@code null} for none
+   */
+  public PlaylistStatus setPodcastStatus(java.lang.String podcastStatus) {
+    this.podcastStatus = podcastStatus;
+    return this;
+  }
 
   /**
    * The playlist's privacy status.

@@ -53,6 +53,14 @@ public final class GoogleAdsSearchads360V0ResourcesCustomerManagerLink extends c
   private java.lang.String resourceName;
 
   /**
+   * Output only. The timestamp when the CustomerManagerLink was created. The timestamp is in the
+   * customer's time zone and in "yyyy-MM-dd HH:mm:ss" format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String startTime;
+
+  /**
    * Status of the link between the customer and the manager.
    * The value may be {@code null}.
    */
@@ -109,6 +117,25 @@ public final class GoogleAdsSearchads360V0ResourcesCustomerManagerLink extends c
    */
   public GoogleAdsSearchads360V0ResourcesCustomerManagerLink setResourceName(java.lang.String resourceName) {
     this.resourceName = resourceName;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp when the CustomerManagerLink was created. The timestamp is in the
+   * customer's time zone and in "yyyy-MM-dd HH:mm:ss" format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStartTime() {
+    return startTime;
+  }
+
+  /**
+   * Output only. The timestamp when the CustomerManagerLink was created. The timestamp is in the
+   * customer's time zone and in "yyyy-MM-dd HH:mm:ss" format.
+   * @param startTime startTime or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCustomerManagerLink setStartTime(java.lang.String startTime) {
+    this.startTime = startTime;
     return this;
   }
 

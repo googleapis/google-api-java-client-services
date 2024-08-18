@@ -180,6 +180,13 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   private java.lang.Double averageCpm;
 
   /**
+   * The average quality score.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double averageQualityScore;
+
+  /**
    * The number of clicks.
    * The value may be {@code null}.
    */
@@ -1231,6 +1238,23 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
    */
   public GoogleAdsSearchads360V0CommonMetrics setAverageCpm(java.lang.Double averageCpm) {
     this.averageCpm = averageCpm;
+    return this;
+  }
+
+  /**
+   * The average quality score.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getAverageQualityScore() {
+    return averageQualityScore;
+  }
+
+  /**
+   * The average quality score.
+   * @param averageQualityScore averageQualityScore or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setAverageQualityScore(java.lang.Double averageQualityScore) {
+    this.averageQualityScore = averageQualityScore;
     return this;
   }
 

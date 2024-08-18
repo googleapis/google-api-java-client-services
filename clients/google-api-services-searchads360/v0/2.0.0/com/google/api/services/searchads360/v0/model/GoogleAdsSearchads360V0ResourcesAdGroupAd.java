@@ -46,9 +46,9 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupAd extends com.google.
   private java.lang.String creationTime;
 
   /**
-   * Output only. ID of the ad in the external engine account. This field is for SearchAds 360
-   * account only, for example, Yahoo Japan, Microsoft, Baidu etc. For non-SearchAds 360 entity, use
-   * "ad_group_ad.ad.id" instead.
+   * Output only. ID of the ad in the external engine account. This field is for Search Ads 360
+   * account only, for example, Yahoo Japan, Microsoft, Baidu etc. For non-Search Ads 360 entity,
+   * use "ad_group_ad.ad.id" instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,9 +129,9 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupAd extends com.google.
   }
 
   /**
-   * Output only. ID of the ad in the external engine account. This field is for SearchAds 360
-   * account only, for example, Yahoo Japan, Microsoft, Baidu etc. For non-SearchAds 360 entity, use
-   * "ad_group_ad.ad.id" instead.
+   * Output only. ID of the ad in the external engine account. This field is for Search Ads 360
+   * account only, for example, Yahoo Japan, Microsoft, Baidu etc. For non-Search Ads 360 entity,
+   * use "ad_group_ad.ad.id" instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getEngineId() {
@@ -139,9 +139,9 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupAd extends com.google.
   }
 
   /**
-   * Output only. ID of the ad in the external engine account. This field is for SearchAds 360
-   * account only, for example, Yahoo Japan, Microsoft, Baidu etc. For non-SearchAds 360 entity, use
-   * "ad_group_ad.ad.id" instead.
+   * Output only. ID of the ad in the external engine account. This field is for Search Ads 360
+   * account only, for example, Yahoo Japan, Microsoft, Baidu etc. For non-Search Ads 360 entity,
+   * use "ad_group_ad.ad.id" instead.
    * @param engineId engineId or {@code null} for none
    */
   public GoogleAdsSearchads360V0ResourcesAdGroupAd setEngineId(java.lang.String engineId) {

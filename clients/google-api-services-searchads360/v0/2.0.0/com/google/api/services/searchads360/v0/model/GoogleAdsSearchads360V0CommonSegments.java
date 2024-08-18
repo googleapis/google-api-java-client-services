@@ -100,6 +100,41 @@ public final class GoogleAdsSearchads360V0CommonSegments extends com.google.api.
   private java.lang.String device;
 
   /**
+   * Resource name of the geo target constant that represents a city.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String geoTargetCity;
+
+  /**
+   * Resource name of the geo target constant that represents a country.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String geoTargetCountry;
+
+  /**
+   * Resource name of the geo target constant that represents a metro.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String geoTargetMetro;
+
+  /**
+   * Resource name of the geo target constant that represents a region.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String geoTargetRegion;
+
+  /**
+   * Hour of day as a number between 0 and 23, inclusive.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer hour;
+
+  /**
    * Keyword criterion.
    * The value may be {@code null}.
    */
@@ -607,6 +642,91 @@ public final class GoogleAdsSearchads360V0CommonSegments extends com.google.api.
    */
   public GoogleAdsSearchads360V0CommonSegments setDevice(java.lang.String device) {
     this.device = device;
+    return this;
+  }
+
+  /**
+   * Resource name of the geo target constant that represents a city.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGeoTargetCity() {
+    return geoTargetCity;
+  }
+
+  /**
+   * Resource name of the geo target constant that represents a city.
+   * @param geoTargetCity geoTargetCity or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setGeoTargetCity(java.lang.String geoTargetCity) {
+    this.geoTargetCity = geoTargetCity;
+    return this;
+  }
+
+  /**
+   * Resource name of the geo target constant that represents a country.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGeoTargetCountry() {
+    return geoTargetCountry;
+  }
+
+  /**
+   * Resource name of the geo target constant that represents a country.
+   * @param geoTargetCountry geoTargetCountry or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setGeoTargetCountry(java.lang.String geoTargetCountry) {
+    this.geoTargetCountry = geoTargetCountry;
+    return this;
+  }
+
+  /**
+   * Resource name of the geo target constant that represents a metro.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGeoTargetMetro() {
+    return geoTargetMetro;
+  }
+
+  /**
+   * Resource name of the geo target constant that represents a metro.
+   * @param geoTargetMetro geoTargetMetro or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setGeoTargetMetro(java.lang.String geoTargetMetro) {
+    this.geoTargetMetro = geoTargetMetro;
+    return this;
+  }
+
+  /**
+   * Resource name of the geo target constant that represents a region.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGeoTargetRegion() {
+    return geoTargetRegion;
+  }
+
+  /**
+   * Resource name of the geo target constant that represents a region.
+   * @param geoTargetRegion geoTargetRegion or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setGeoTargetRegion(java.lang.String geoTargetRegion) {
+    this.geoTargetRegion = geoTargetRegion;
+    return this;
+  }
+
+  /**
+   * Hour of day as a number between 0 and 23, inclusive.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getHour() {
+    return hour;
+  }
+
+  /**
+   * Hour of day as a number between 0 and 23, inclusive.
+   * @param hour hour or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setHour(java.lang.Integer hour) {
+    this.hour = hour;
     return this;
   }
 

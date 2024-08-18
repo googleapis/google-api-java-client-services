@@ -7713,7 +7713,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param liveChatId The id of the live chat for which comments should be returned.
      * @param part The *part* parameter specifies the liveChatComment resource parts that the API response will
-     *        include. Supported values are id and snippet.
+     *        include. Supported values are id, snippet, and authorDetails.
      * @return the request
      */
     public List list(java.lang.String liveChatId, java.util.List<java.lang.String> part) throws java.io.IOException {
@@ -7738,7 +7738,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param liveChatId The id of the live chat for which comments should be returned.
        * @param part The *part* parameter specifies the liveChatComment resource parts that the API response will
-     *        include. Supported values are id and snippet.
+     *        include. Supported values are id, snippet, and authorDetails.
        * @since 1.13
        */
       protected List(java.lang.String liveChatId, java.util.List<java.lang.String> part) {
@@ -7830,13 +7830,13 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * The *part* parameter specifies the liveChatComment resource parts that the API response
-       * will include. Supported values are id and snippet.
+       * will include. Supported values are id, snippet, and authorDetails.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> part;
 
       /** The *part* parameter specifies the liveChatComment resource parts that the API response will
-     include. Supported values are id and snippet.
+     include. Supported values are id, snippet, and authorDetails.
        */
       public java.util.List<java.lang.String> getPart() {
         return part;
@@ -7844,7 +7844,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * The *part* parameter specifies the liveChatComment resource parts that the API response
-       * will include. Supported values are id and snippet.
+       * will include. Supported values are id, snippet, and authorDetails.
        */
       public List setPart(java.util.List<java.lang.String> part) {
         this.part = part;

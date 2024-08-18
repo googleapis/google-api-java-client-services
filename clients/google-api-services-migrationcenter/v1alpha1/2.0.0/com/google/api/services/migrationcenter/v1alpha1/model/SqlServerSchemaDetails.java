@@ -29,6 +29,30 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 @SuppressWarnings("javadoc")
 public final class SqlServerSchemaDetails extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. SqlServer number of CLR objects.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer clrObjectCount;
+
+  /**
+   * Optional. SqlServer number of CLR objects.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getClrObjectCount() {
+    return clrObjectCount;
+  }
+
+  /**
+   * Optional. SqlServer number of CLR objects.
+   * @param clrObjectCount clrObjectCount or {@code null} for none
+   */
+  public SqlServerSchemaDetails setClrObjectCount(java.lang.Integer clrObjectCount) {
+    this.clrObjectCount = clrObjectCount;
+    return this;
+  }
+
   @Override
   public SqlServerSchemaDetails set(String fieldName, Object value) {
     return (SqlServerSchemaDetails) super.set(fieldName, value);

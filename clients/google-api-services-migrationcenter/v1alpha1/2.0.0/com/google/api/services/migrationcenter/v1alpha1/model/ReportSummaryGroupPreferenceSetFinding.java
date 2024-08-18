@@ -88,6 +88,13 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   private Money monthlyCostDatabaseLicensing;
 
   /**
+   * Output only. GCVE Protected nodes cost for this preference set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Money monthlyCostGcveProtected;
+
+  /**
    * Output only. Network Egress monthly cost for this preference set. Only present for virtual
    * machines.
    * The value may be {@code null}.
@@ -109,6 +116,15 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
    */
   @com.google.api.client.util.Key
   private Money monthlyCostOther;
+
+  /**
+   * Output only. VMware portable license monthly cost for this preference set. Only present for
+   * VMware target with portable license service type. This cost is not paid to google, but is an
+   * estimate of license costs paid to VMware.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Money monthlyCostPortableVmwareLicense;
 
   /**
    * Output only. Storage monthly cost for this preference set.
@@ -309,6 +325,23 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
+   * Output only. GCVE Protected nodes cost for this preference set.
+   * @return value or {@code null} for none
+   */
+  public Money getMonthlyCostGcveProtected() {
+    return monthlyCostGcveProtected;
+  }
+
+  /**
+   * Output only. GCVE Protected nodes cost for this preference set.
+   * @param monthlyCostGcveProtected monthlyCostGcveProtected or {@code null} for none
+   */
+  public ReportSummaryGroupPreferenceSetFinding setMonthlyCostGcveProtected(Money monthlyCostGcveProtected) {
+    this.monthlyCostGcveProtected = monthlyCostGcveProtected;
+    return this;
+  }
+
+  /**
    * Output only. Network Egress monthly cost for this preference set. Only present for virtual
    * machines.
    * @return value or {@code null} for none
@@ -360,6 +393,27 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
    */
   public ReportSummaryGroupPreferenceSetFinding setMonthlyCostOther(Money monthlyCostOther) {
     this.monthlyCostOther = monthlyCostOther;
+    return this;
+  }
+
+  /**
+   * Output only. VMware portable license monthly cost for this preference set. Only present for
+   * VMware target with portable license service type. This cost is not paid to google, but is an
+   * estimate of license costs paid to VMware.
+   * @return value or {@code null} for none
+   */
+  public Money getMonthlyCostPortableVmwareLicense() {
+    return monthlyCostPortableVmwareLicense;
+  }
+
+  /**
+   * Output only. VMware portable license monthly cost for this preference set. Only present for
+   * VMware target with portable license service type. This cost is not paid to google, but is an
+   * estimate of license costs paid to VMware.
+   * @param monthlyCostPortableVmwareLicense monthlyCostPortableVmwareLicense or {@code null} for none
+   */
+  public ReportSummaryGroupPreferenceSetFinding setMonthlyCostPortableVmwareLicense(Money monthlyCostPortableVmwareLicense) {
+    this.monthlyCostPortableVmwareLicense = monthlyCostPortableVmwareLicense;
     return this;
   }
 

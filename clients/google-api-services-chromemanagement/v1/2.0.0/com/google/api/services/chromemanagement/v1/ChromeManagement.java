@@ -5308,7 +5308,8 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
            * Read mask to specify which fields to return. Supported read_mask paths are: - name -
            * org_unit_id - user_id - user_email - user_device.device_id -
            * user_device.audio_status_report - user_device.device_activity_report -
-           * user_device.network_bandwidth_report - user_device.peripherals_report
+           * user_device.network_bandwidth_report - user_device.peripherals_report -
+           * user_device.app_report
            */
           @com.google.api.client.util.Key
           private String readMask;
@@ -5316,7 +5317,7 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
           /** Read mask to specify which fields to return. Supported read_mask paths are: - name - org_unit_id -
          user_id - user_email - user_device.device_id - user_device.audio_status_report -
          user_device.device_activity_report - user_device.network_bandwidth_report -
-         user_device.peripherals_report
+         user_device.peripherals_report - user_device.app_report
            */
           public String getReadMask() {
             return readMask;
@@ -5326,7 +5327,8 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
            * Read mask to specify which fields to return. Supported read_mask paths are: - name -
            * org_unit_id - user_id - user_email - user_device.device_id -
            * user_device.audio_status_report - user_device.device_activity_report -
-           * user_device.network_bandwidth_report - user_device.peripherals_report
+           * user_device.network_bandwidth_report - user_device.peripherals_report -
+           * user_device.app_report
            */
           public Get setReadMask(String readMask) {
             this.readMask = readMask;
@@ -5538,7 +5540,8 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
            * Read mask to specify which fields to return. Supported read_mask paths are: - name -
            * org_unit_id - user_id - user_email - user_device.device_id -
            * user_device.audio_status_report - user_device.device_activity_report -
-           * user_device.network_bandwidth_report - user_device.peripherals_report
+           * user_device.network_bandwidth_report - user_device.peripherals_report -
+           * user_device.app_report
            */
           @com.google.api.client.util.Key
           private String readMask;
@@ -5546,7 +5549,7 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
           /** Read mask to specify which fields to return. Supported read_mask paths are: - name - org_unit_id -
          user_id - user_email - user_device.device_id - user_device.audio_status_report -
          user_device.device_activity_report - user_device.network_bandwidth_report -
-         user_device.peripherals_report
+         user_device.peripherals_report - user_device.app_report
            */
           public String getReadMask() {
             return readMask;
@@ -5556,7 +5559,8 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
            * Read mask to specify which fields to return. Supported read_mask paths are: - name -
            * org_unit_id - user_id - user_email - user_device.device_id -
            * user_device.audio_status_report - user_device.device_activity_report -
-           * user_device.network_bandwidth_report - user_device.peripherals_report
+           * user_device.network_bandwidth_report - user_device.peripherals_report -
+           * user_device.app_report
            */
           public List setReadMask(String readMask) {
             this.readMask = readMask;

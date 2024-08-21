@@ -122,6 +122,19 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
+   * Enrichments of the asset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AssetEnrichment> enrichments;
+
+  static {
+    // hack to force ProGuard to consider AssetEnrichment used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AssetEnrichment.class);
+  }
+
+  /**
    * The folder(s) that this resource belongs to, in the form of folders/{FOLDER_NUMBER}. This field
    * is available when the resource belongs to one or more folders. To search against `folders`: *
    * Use a field query. Example: `folders:(123 OR 456)` * Use a free text query. Example: `123` *
@@ -529,6 +542,23 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    */
   public ResourceSearchResult setEffectiveTags(java.util.List<EffectiveTagDetails> effectiveTags) {
     this.effectiveTags = effectiveTags;
+    return this;
+  }
+
+  /**
+   * Enrichments of the asset.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AssetEnrichment> getEnrichments() {
+    return enrichments;
+  }
+
+  /**
+   * Enrichments of the asset.
+   * @param enrichments enrichments or {@code null} for none
+   */
+  public ResourceSearchResult setEnrichments(java.util.List<AssetEnrichment> enrichments) {
+    this.enrichments = enrichments;
     return this;
   }
 

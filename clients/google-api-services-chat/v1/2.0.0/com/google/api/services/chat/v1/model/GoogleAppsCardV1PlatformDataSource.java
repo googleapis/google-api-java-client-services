@@ -41,6 +41,9 @@ public final class GoogleAppsCardV1PlatformDataSource extends com.google.api.cli
 
   /**
    * A data source that's unique to a Google Workspace host application, such spaces in Google Chat.
+   * This field supports the Google API Client Libraries but isn't available in the Cloud Client
+   * Libraries. To learn more, see [Install the client
+   * libraries](https://developers.google.com/workspace/chat/libraries).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,6 +70,9 @@ public final class GoogleAppsCardV1PlatformDataSource extends com.google.api.cli
 
   /**
    * A data source that's unique to a Google Workspace host application, such spaces in Google Chat.
+   * This field supports the Google API Client Libraries but isn't available in the Cloud Client
+   * Libraries. To learn more, see [Install the client
+   * libraries](https://developers.google.com/workspace/chat/libraries).
    * @return value or {@code null} for none
    */
   public HostAppDataSourceMarkup getHostAppDataSource() {
@@ -75,6 +81,9 @@ public final class GoogleAppsCardV1PlatformDataSource extends com.google.api.cli
 
   /**
    * A data source that's unique to a Google Workspace host application, such spaces in Google Chat.
+   * This field supports the Google API Client Libraries but isn't available in the Cloud Client
+   * Libraries. To learn more, see [Install the client
+   * libraries](https://developers.google.com/workspace/chat/libraries).
    * @param hostAppDataSource hostAppDataSource or {@code null} for none
    */
   public GoogleAppsCardV1PlatformDataSource setHostAppDataSource(HostAppDataSourceMarkup hostAppDataSource) {

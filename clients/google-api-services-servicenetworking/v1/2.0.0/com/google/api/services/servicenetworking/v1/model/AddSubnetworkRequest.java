@@ -183,6 +183,18 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   private java.util.List<SecondaryIpRangeSpec> secondaryIpRangeSpecs;
 
   /**
+   * Optional. Skips validating if the requested_address is in use by SN VPC’s peering group.
+   * Compute Engine will still perform this check and fail the request if the requested_address is
+   * in use. Note that Compute Engine does not check for the existence of dynamic routes when
+   * performing this check. Caller of this API should make sure that there are no dynamic routes
+   * overlapping with the requested_address/prefix_length IP address range otherwise the created
+   * subnet could cause misrouting.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipRequestedAddressValidation;
+
+  /**
    * Required. A name for the new subnet. For information about the naming requirements, see
    * [subnetwork](/compute/docs/reference/rest/v1/subnetworks) in the Compute API documentation.
    * The value may be {@code null}.
@@ -558,6 +570,33 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
    */
   public AddSubnetworkRequest setSecondaryIpRangeSpecs(java.util.List<SecondaryIpRangeSpec> secondaryIpRangeSpecs) {
     this.secondaryIpRangeSpecs = secondaryIpRangeSpecs;
+    return this;
+  }
+
+  /**
+   * Optional. Skips validating if the requested_address is in use by SN VPC’s peering group.
+   * Compute Engine will still perform this check and fail the request if the requested_address is
+   * in use. Note that Compute Engine does not check for the existence of dynamic routes when
+   * performing this check. Caller of this API should make sure that there are no dynamic routes
+   * overlapping with the requested_address/prefix_length IP address range otherwise the created
+   * subnet could cause misrouting.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipRequestedAddressValidation() {
+    return skipRequestedAddressValidation;
+  }
+
+  /**
+   * Optional. Skips validating if the requested_address is in use by SN VPC’s peering group.
+   * Compute Engine will still perform this check and fail the request if the requested_address is
+   * in use. Note that Compute Engine does not check for the existence of dynamic routes when
+   * performing this check. Caller of this API should make sure that there are no dynamic routes
+   * overlapping with the requested_address/prefix_length IP address range otherwise the created
+   * subnet could cause misrouting.
+   * @param skipRequestedAddressValidation skipRequestedAddressValidation or {@code null} for none
+   */
+  public AddSubnetworkRequest setSkipRequestedAddressValidation(java.lang.Boolean skipRequestedAddressValidation) {
+    this.skipRequestedAddressValidation = skipRequestedAddressValidation;
     return this;
   }
 

@@ -50,15 +50,9 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
 
   /**
    * Collection of labels associated with the span. Label keys must be less than 128 bytes. Label
-   * values must be less than 16 kilobytes (10MB for `/stacktrace` values). Some predefined label
-   * keys exist, or you may create your own. When creating your own, we recommend the following
-   * formats: * `/category/product/key` for agents of well-known products (e.g.
-   * `/db/mongodb/read_size`). * `short_host/path/key` for domain-specific keys (e.g.
-   * `foo.com/myproduct/bar`) Predefined labels include: * `/agent` * `/component` *
-   * `/error/message` * `/error/name` * `/http/client_city` * `/http/client_country` *
-   * `/http/client_protocol` * `/http/client_region` * `/http/host` * `/http/method` * `/http/path`
-   * * `/http/redirected_url` * `/http/request/size` * `/http/response/size` * `/http/route` *
-   * `/http/status_code` * `/http/url` * `/http/user_agent` * `/pid` * `/stacktrace` * `/tid`
+   * values must be less than 16 KiB. Some keys might have predefined meaning, and you can also
+   * create your own. For more information, see [Cloud Trace
+   * labels](https://cloud.google.com/trace/docs/trace-labels).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,15 +130,9 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
 
   /**
    * Collection of labels associated with the span. Label keys must be less than 128 bytes. Label
-   * values must be less than 16 kilobytes (10MB for `/stacktrace` values). Some predefined label
-   * keys exist, or you may create your own. When creating your own, we recommend the following
-   * formats: * `/category/product/key` for agents of well-known products (e.g.
-   * `/db/mongodb/read_size`). * `short_host/path/key` for domain-specific keys (e.g.
-   * `foo.com/myproduct/bar`) Predefined labels include: * `/agent` * `/component` *
-   * `/error/message` * `/error/name` * `/http/client_city` * `/http/client_country` *
-   * `/http/client_protocol` * `/http/client_region` * `/http/host` * `/http/method` * `/http/path`
-   * * `/http/redirected_url` * `/http/request/size` * `/http/response/size` * `/http/route` *
-   * `/http/status_code` * `/http/url` * `/http/user_agent` * `/pid` * `/stacktrace` * `/tid`
+   * values must be less than 16 KiB. Some keys might have predefined meaning, and you can also
+   * create your own. For more information, see [Cloud Trace
+   * labels](https://cloud.google.com/trace/docs/trace-labels).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -153,15 +141,9 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
 
   /**
    * Collection of labels associated with the span. Label keys must be less than 128 bytes. Label
-   * values must be less than 16 kilobytes (10MB for `/stacktrace` values). Some predefined label
-   * keys exist, or you may create your own. When creating your own, we recommend the following
-   * formats: * `/category/product/key` for agents of well-known products (e.g.
-   * `/db/mongodb/read_size`). * `short_host/path/key` for domain-specific keys (e.g.
-   * `foo.com/myproduct/bar`) Predefined labels include: * `/agent` * `/component` *
-   * `/error/message` * `/error/name` * `/http/client_city` * `/http/client_country` *
-   * `/http/client_protocol` * `/http/client_region` * `/http/host` * `/http/method` * `/http/path`
-   * * `/http/redirected_url` * `/http/request/size` * `/http/response/size` * `/http/route` *
-   * `/http/status_code` * `/http/url` * `/http/user_agent` * `/pid` * `/stacktrace` * `/tid`
+   * values must be less than 16 KiB. Some keys might have predefined meaning, and you can also
+   * create your own. For more information, see [Cloud Trace
+   * labels](https://cloud.google.com/trace/docs/trace-labels).
    * @param labels labels or {@code null} for none
    */
   public TraceSpan setLabels(java.util.Map<String, java.lang.String> labels) {

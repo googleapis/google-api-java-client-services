@@ -38,8 +38,7 @@ public final class SynthesizeLongAudioRequest extends com.google.api.client.json
   private AudioConfig audioConfig;
 
   /**
-   * Required. The Synthesizer requires either plain text or SSML as input. While Long Audio is in
-   * preview, SSML is temporarily unsupported.
+   * Required. The Synthesizer requires either plain text or SSML as input.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,8 +77,7 @@ public final class SynthesizeLongAudioRequest extends com.google.api.client.json
   }
 
   /**
-   * Required. The Synthesizer requires either plain text or SSML as input. While Long Audio is in
-   * preview, SSML is temporarily unsupported.
+   * Required. The Synthesizer requires either plain text or SSML as input.
    * @return value or {@code null} for none
    */
   public SynthesisInput getInput() {
@@ -87,8 +85,7 @@ public final class SynthesizeLongAudioRequest extends com.google.api.client.json
   }
 
   /**
-   * Required. The Synthesizer requires either plain text or SSML as input. While Long Audio is in
-   * preview, SSML is temporarily unsupported.
+   * Required. The Synthesizer requires either plain text or SSML as input.
    * @param input input or {@code null} for none
    */
   public SynthesizeLongAudioRequest setInput(SynthesisInput input) {

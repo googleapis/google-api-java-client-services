@@ -17,10 +17,7 @@
 package com.google.api.services.androidenterprise.model;
 
 /**
- * *Deprecated:* New integrations cannot use this method and can refer to our new recommendations. A
- * managed configuration resource contains the set of managed properties defined by the app
- * developer in the app's managed configurations schema, as well as any configuration variables
- * defined for the user.
+ * *Deprecated:* New integrations cannot use this method and can refer to our new recommendations
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play EMM API. For a detailed explanation see:

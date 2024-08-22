@@ -38,7 +38,8 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchResponse extends com.g
 
   /**
    * A unique search token. This should be included in the UserEvent logs resulting from this
-   * search, which enables accurate attribution of search model performance.
+   * search, which enables accurate attribution of search model performance. This also helps to
+   * identify a request during the customer support scenarios.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,7 +161,8 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchResponse extends com.g
 
   /**
    * A unique search token. This should be included in the UserEvent logs resulting from this
-   * search, which enables accurate attribution of search model performance.
+   * search, which enables accurate attribution of search model performance. This also helps to
+   * identify a request during the customer support scenarios.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttributionToken() {
@@ -169,7 +171,8 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchResponse extends com.g
 
   /**
    * A unique search token. This should be included in the UserEvent logs resulting from this
-   * search, which enables accurate attribution of search model performance.
+   * search, which enables accurate attribution of search model performance. This also helps to
+   * identify a request during the customer support scenarios.
    * @param attributionToken attributionToken or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchResponse setAttributionToken(java.lang.String attributionToken) {

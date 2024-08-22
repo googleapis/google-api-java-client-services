@@ -91,6 +91,13 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Optional. Describes the level of the execution history feature to apply to this workflow.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String executionHistoryLevel;
+
+  /**
    * Labels associated with this workflow. Labels can contain at most 64 entries. Keys and values
    * can be no longer than 63 characters and can only contain lowercase letters, numeric characters,
    * underscores, and dashes. Label keys must start with a letter. International characters are
@@ -318,6 +325,23 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
    */
   public Workflow setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Describes the level of the execution history feature to apply to this workflow.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExecutionHistoryLevel() {
+    return executionHistoryLevel;
+  }
+
+  /**
+   * Optional. Describes the level of the execution history feature to apply to this workflow.
+   * @param executionHistoryLevel executionHistoryLevel or {@code null} for none
+   */
+  public Workflow setExecutionHistoryLevel(java.lang.String executionHistoryLevel) {
+    this.executionHistoryLevel = executionHistoryLevel;
     return this;
   }
 

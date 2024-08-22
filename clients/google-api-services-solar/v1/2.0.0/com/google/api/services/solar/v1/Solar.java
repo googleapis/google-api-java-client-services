@@ -257,6 +257,22 @@ public class Solar extends com.google.api.client.googleapis.services.json.Abstra
         return (FindClosest) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** Optional. Specifies the pre-GA features to enable. */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> experiments;
+
+      /** Optional. Specifies the pre-GA features to enable.
+       */
+      public java.util.List<java.lang.String> getExperiments() {
+        return experiments;
+      }
+
+      /** Optional. Specifies the pre-GA features to enable. */
+      public FindClosest setExperiments(java.util.List<java.lang.String> experiments) {
+        this.experiments = experiments;
+        return this;
+      }
+
       /** The latitude in degrees. It must be in the range [-90.0, +90.0]. */
       @com.google.api.client.util.Key("location.latitude")
       private java.lang.Double locationLatitude;
@@ -474,6 +490,22 @@ public class Solar extends com.google.api.client.googleapis.services.json.Abstra
        */
       public Get setExactQualityRequired(java.lang.Boolean exactQualityRequired) {
         this.exactQualityRequired = exactQualityRequired;
+        return this;
+      }
+
+      /** Optional. Specifies the pre-GA experiments to enable. */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> experiments;
+
+      /** Optional. Specifies the pre-GA experiments to enable.
+       */
+      public java.util.List<java.lang.String> getExperiments() {
+        return experiments;
+      }
+
+      /** Optional. Specifies the pre-GA experiments to enable. */
+      public Get setExperiments(java.util.List<java.lang.String> experiments) {
+        this.experiments = experiments;
         return this;
       }
 

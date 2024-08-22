@@ -8829,6 +8829,375 @@ public class MigrationCenterAPI extends com.google.api.client.googleapis.service
 
       }
       /**
+       * An accessor for creating requests from the Relations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code MigrationCenterAPI migrationcenter = new MigrationCenterAPI(...);}
+       *   {@code MigrationCenterAPI.Relations.List request = migrationcenter.relations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Relations relations() {
+        return new Relations();
+      }
+
+      /**
+       * The "relations" collection of methods.
+       */
+      public class Relations {
+
+        /**
+         * Gets the details of an relation.
+         *
+         * Create a request for the method "relations.get".
+         *
+         * This request holds the parameters needed by the migrationcenter server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the resource.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends MigrationCenterAPIRequest<com.google.api.services.migrationcenter.v1alpha1.model.Relation> {
+
+          private static final String REST_PATH = "v1alpha1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/relations/[^/]+$");
+
+          /**
+           * Gets the details of an relation.
+           *
+           * Create a request for the method "relations.get".
+           *
+           * This request holds the parameters needed by the the migrationcenter server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the resource.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(MigrationCenterAPI.this, "GET", REST_PATH, null, com.google.api.services.migrationcenter.v1alpha1.model.Relation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/relations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Name of the resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Name of the resource. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/relations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all the relations in a given project and location.
+         *
+         * Create a request for the method "relations.list".
+         *
+         * This request holds the parameters needed by the migrationcenter server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Parent value for `ListRelationsRequest`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends MigrationCenterAPIRequest<com.google.api.services.migrationcenter.v1alpha1.model.ListRelationsResponse> {
+
+          private static final String REST_PATH = "v1alpha1/{+parent}/relations";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists all the relations in a given project and location.
+           *
+           * Create a request for the method "relations.list".
+           *
+           * This request holds the parameters needed by the the migrationcenter server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Parent value for `ListRelationsRequest`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(MigrationCenterAPI.this, "GET", REST_PATH, null, com.google.api.services.migrationcenter.v1alpha1.model.ListRelationsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Parent value for `ListRelationsRequest`. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Parent value for `ListRelationsRequest`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Parent value for `ListRelationsRequest`. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Filtering results. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Filtering results.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Filtering results. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Field to sort by. See https://google.aip.dev/132#ordering for more details. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Field to sort by. See https://google.aip.dev/132#ordering for more details.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Field to sort by. See https://google.aip.dev/132#ordering for more details. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Requested page size. Server may return fewer items than requested. If unspecified,
+           * server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. Server may return fewer items than requested. If unspecified, server will pick
+         an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. Server may return fewer items than requested. If unspecified,
+           * server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** A token identifying a page of results the server should return. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A token identifying a page of results the server should return.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** A token identifying a page of results the server should return. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the ReportConfigs collection.
        *
        * <p>The typical use is:</p>

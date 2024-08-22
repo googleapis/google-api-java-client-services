@@ -17,8 +17,7 @@
 package com.google.api.services.androidenterprise.model;
 
 /**
- * *Deprecated:* New integrations cannot use this method and can refer to our new recommendations.
- * Credentials that can be used to authenticate as a service account.
+ * *Deprecated:* New integrations cannot use this method and can refer to our new recommendations
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play EMM API. For a detailed explanation see:

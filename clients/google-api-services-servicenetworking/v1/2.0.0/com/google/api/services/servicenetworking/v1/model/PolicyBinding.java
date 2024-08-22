@@ -43,9 +43,10 @@ public final class PolicyBinding extends com.google.api.client.json.GenericJson 
    * Required. Role to apply. Only allowlisted roles can be used at the specified granularity. The
    * role must be one of the following: - 'roles/container.hostServiceAgentUser' applied on the
    * shared VPC host project - 'roles/compute.securityAdmin' applied on the shared VPC host project
-   * - 'roles/compute.networkAdmin' applied on the shared VPC host project -
-   * 'roles/compute.xpnAdmin' applied on the shared VPC host project - 'roles/dns.admin' applied on
-   * the shared VPC host project - 'roles/logging.admin' applied on the shared VPC host project
+   * - 'roles/compute.networkAdmin' applied on the shared VPC host project - 'roles/tpu.xpnAgent'
+   * applied on the shared VPC host project - 'roles/dns.admin' applied on the shared VPC host
+   * project - 'roles/logging.admin' applied on the shared VPC host project -
+   * 'roles/monitoring.viewer' applied on the shared VPC host project
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,9 +77,10 @@ public final class PolicyBinding extends com.google.api.client.json.GenericJson 
    * Required. Role to apply. Only allowlisted roles can be used at the specified granularity. The
    * role must be one of the following: - 'roles/container.hostServiceAgentUser' applied on the
    * shared VPC host project - 'roles/compute.securityAdmin' applied on the shared VPC host project
-   * - 'roles/compute.networkAdmin' applied on the shared VPC host project -
-   * 'roles/compute.xpnAdmin' applied on the shared VPC host project - 'roles/dns.admin' applied on
-   * the shared VPC host project - 'roles/logging.admin' applied on the shared VPC host project
+   * - 'roles/compute.networkAdmin' applied on the shared VPC host project - 'roles/tpu.xpnAgent'
+   * applied on the shared VPC host project - 'roles/dns.admin' applied on the shared VPC host
+   * project - 'roles/logging.admin' applied on the shared VPC host project -
+   * 'roles/monitoring.viewer' applied on the shared VPC host project
    * @return value or {@code null} for none
    */
   public java.lang.String getRole() {
@@ -89,9 +91,10 @@ public final class PolicyBinding extends com.google.api.client.json.GenericJson 
    * Required. Role to apply. Only allowlisted roles can be used at the specified granularity. The
    * role must be one of the following: - 'roles/container.hostServiceAgentUser' applied on the
    * shared VPC host project - 'roles/compute.securityAdmin' applied on the shared VPC host project
-   * - 'roles/compute.networkAdmin' applied on the shared VPC host project -
-   * 'roles/compute.xpnAdmin' applied on the shared VPC host project - 'roles/dns.admin' applied on
-   * the shared VPC host project - 'roles/logging.admin' applied on the shared VPC host project
+   * - 'roles/compute.networkAdmin' applied on the shared VPC host project - 'roles/tpu.xpnAgent'
+   * applied on the shared VPC host project - 'roles/dns.admin' applied on the shared VPC host
+   * project - 'roles/logging.admin' applied on the shared VPC host project -
+   * 'roles/monitoring.viewer' applied on the shared VPC host project
    * @param role role or {@code null} for none
    */
   public PolicyBinding setRole(java.lang.String role) {

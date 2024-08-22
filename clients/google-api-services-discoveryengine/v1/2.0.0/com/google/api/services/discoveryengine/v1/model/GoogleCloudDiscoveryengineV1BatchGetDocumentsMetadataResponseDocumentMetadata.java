@@ -30,6 +30,15 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponseDocumentMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * The data ingestion source of the Document. Allowed values are: * `batch`: Data ingested via
+   * Batch API, e.g., ImportDocuments. * `streaming` Data ingested via Streaming API, e.g., FHIR
+   * streaming.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataIngestionSource;
+
+  /**
    * The timestamp of the last time the Document was last indexed.
    * The value may be {@code null}.
    */
@@ -49,6 +58,27 @@ public final class GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponse
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
+
+  /**
+   * The data ingestion source of the Document. Allowed values are: * `batch`: Data ingested via
+   * Batch API, e.g., ImportDocuments. * `streaming` Data ingested via Streaming API, e.g., FHIR
+   * streaming.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataIngestionSource() {
+    return dataIngestionSource;
+  }
+
+  /**
+   * The data ingestion source of the Document. Allowed values are: * `batch`: Data ingested via
+   * Batch API, e.g., ImportDocuments. * `streaming` Data ingested via Streaming API, e.g., FHIR
+   * streaming.
+   * @param dataIngestionSource dataIngestionSource or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponseDocumentMetadata setDataIngestionSource(java.lang.String dataIngestionSource) {
+    this.dataIngestionSource = dataIngestionSource;
+    return this;
+  }
 
   /**
    * The timestamp of the last time the Document was last indexed.

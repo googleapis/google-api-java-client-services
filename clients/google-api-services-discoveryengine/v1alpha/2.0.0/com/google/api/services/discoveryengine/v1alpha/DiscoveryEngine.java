@@ -3456,6 +3456,31 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
+              /**
+               * Required. The FHIR resources to match by. Format: projects/{project}/locations/{loc
+               * ation}/datasets/{dataset}/fhirStores/{fhir_store}/fhir/{resource_type}/{fhir_resour
+               * ce_id}
+               */
+              @com.google.api.client.util.Key("matcher.fhirMatcher.fhirResources")
+              private java.util.List<java.lang.String> matcherFhirMatcherFhirResources;
+
+              /** Required. The FHIR resources to match by. Format: projects/{project}/locations/{location}/datasets/
+             {dataset}/fhirStores/{fhir_store}/fhir/{resource_type}/{fhir_resource_id}
+               */
+              public java.util.List<java.lang.String> getMatcherFhirMatcherFhirResources() {
+                return matcherFhirMatcherFhirResources;
+              }
+
+              /**
+               * Required. The FHIR resources to match by. Format: projects/{project}/locations/{loc
+               * ation}/datasets/{dataset}/fhirStores/{fhir_store}/fhir/{resource_type}/{fhir_resour
+               * ce_id}
+               */
+              public BatchGetDocumentsMetadata setMatcherFhirMatcherFhirResources(java.util.List<java.lang.String> matcherFhirMatcherFhirResources) {
+                this.matcherFhirMatcherFhirResources = matcherFhirMatcherFhirResources;
+                return this;
+              }
+
               /** The exact URIs to match by. */
               @com.google.api.client.util.Key("matcher.urisMatcher.uris")
               private java.util.List<java.lang.String> matcherUrisMatcherUris;
@@ -23754,6 +23779,31 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                     "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+$");
               }
               this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The FHIR resources to match by. Format: projects/{project}/locations/{locat
+             * ion}/datasets/{dataset}/fhirStores/{fhir_store}/fhir/{resource_type}/{fhir_resource_i
+             * d}
+             */
+            @com.google.api.client.util.Key("matcher.fhirMatcher.fhirResources")
+            private java.util.List<java.lang.String> matcherFhirMatcherFhirResources;
+
+            /** Required. The FHIR resources to match by. Format: projects/{project}/locations/{location}/datasets/
+           {dataset}/fhirStores/{fhir_store}/fhir/{resource_type}/{fhir_resource_id}
+             */
+            public java.util.List<java.lang.String> getMatcherFhirMatcherFhirResources() {
+              return matcherFhirMatcherFhirResources;
+            }
+
+            /**
+             * Required. The FHIR resources to match by. Format: projects/{project}/locations/{locat
+             * ion}/datasets/{dataset}/fhirStores/{fhir_store}/fhir/{resource_type}/{fhir_resource_i
+             * d}
+             */
+            public BatchGetDocumentsMetadata setMatcherFhirMatcherFhirResources(java.util.List<java.lang.String> matcherFhirMatcherFhirResources) {
+              this.matcherFhirMatcherFhirResources = matcherFhirMatcherFhirResources;
               return this;
             }
 

@@ -5049,8 +5049,7 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Use this method to start, resume or recover a stream with a non default CDC strategy. NOTE: This
-         * feature is currently experimental.
+         * Use this method to start, resume or recover a stream with a non default CDC strategy.
          *
          * Create a request for the method "streams.run".
          *
@@ -5076,8 +5075,7 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/streams/[^/]+$");
 
           /**
-           * Use this method to start, resume or recover a stream with a non default CDC strategy. NOTE:
-           * This feature is currently experimental.
+           * Use this method to start, resume or recover a stream with a non default CDC strategy.
            *
            * Create a request for the method "streams.run".
            *

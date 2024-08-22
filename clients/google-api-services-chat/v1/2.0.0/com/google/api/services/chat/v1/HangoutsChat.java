@@ -946,6 +946,42 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
+       * method runs using the user's Google Workspace administrator privileges. The calling user
+       * must be a Google Workspace administrator with the [manage chat and spaces conversations
+       * privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.delete`
+       * [OAuth 2.0 scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-
+       * api-scopes).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean useAdminAccess;
+
+      /**[ Developer Preview](https://developers.google.com/workspace/preview). When `true`, the method runs
+    [ using the user's Google Workspace administrator privileges. The calling user must be a Google
+    [ Workspace administrator with the [manage chat and spaces conversations
+    [ privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.delete` [OAuth
+    [ 2.0 scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes).
+    [
+
+       */
+      public java.lang.Boolean getUseAdminAccess() {
+        return useAdminAccess;
+      }
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
+       * method runs using the user's Google Workspace administrator privileges. The calling user
+       * must be a Google Workspace administrator with the [manage chat and spaces conversations
+       * privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.delete`
+       * [OAuth 2.0 scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-
+       * api-scopes).
+       */
+      public Delete setUseAdminAccess(java.lang.Boolean useAdminAccess) {
+        this.useAdminAccess = useAdminAccess;
+        return this;
+      }
+
       @Override
       public Delete set(String parameterName, Object value) {
         return (Delete) super.set(parameterName, value);
@@ -1268,6 +1304,45 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
               "^spaces/[^/]+$");
         }
         this.name = name;
+        return this;
+      }
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
+       * method runs using the user's Google Workspace administrator privileges. The calling user
+       * must be a Google Workspace administrator with the [manage chat and spaces conversations
+       * privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.spaces`
+       * or `chat.admin.spaces.readonly` [OAuth 2.0
+       * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
+       * scopes).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean useAdminAccess;
+
+      /**[ Developer Preview](https://developers.google.com/workspace/preview). When `true`, the method runs
+    [ using the user's Google Workspace administrator privileges. The calling user must be a Google
+    [ Workspace administrator with the [manage chat and spaces conversations
+    [ privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.spaces` or
+    [ `chat.admin.spaces.readonly` [OAuth 2.0
+    [ scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes).
+    [
+
+       */
+      public java.lang.Boolean getUseAdminAccess() {
+        return useAdminAccess;
+      }
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
+       * method runs using the user's Google Workspace administrator privileges. The calling user
+       * must be a Google Workspace administrator with the [manage chat and spaces conversations
+       * privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.spaces`
+       * or `chat.admin.spaces.readonly` [OAuth 2.0
+       * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
+       * scopes).
+       */
+      public Get setUseAdminAccess(java.lang.Boolean useAdminAccess) {
+        this.useAdminAccess = useAdminAccess;
         return this;
       }
 
@@ -1744,9 +1819,405 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
+       * method runs using the user's Google Workspace administrator privileges. The calling user
+       * must be a Google Workspace administrator with the [manage chat and spaces conversations
+       * privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.spaces`
+       * [OAuth 2.0 scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-
+       * api-scopes). Some `FieldMask` values are not supported using admin access. For details, see
+       * the description of `update_mask`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean useAdminAccess;
+
+      /**[ Developer Preview](https://developers.google.com/workspace/preview). When `true`, the method runs
+    [ using the user's Google Workspace administrator privileges. The calling user must be a Google
+    [ Workspace administrator with the [manage chat and spaces conversations
+    [ privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.spaces` [OAuth
+    [ 2.0 scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes).
+    [ Some `FieldMask` values are not supported using admin access. For details, see the description of
+    [ `update_mask`.
+    [
+
+       */
+      public java.lang.Boolean getUseAdminAccess() {
+        return useAdminAccess;
+      }
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
+       * method runs using the user's Google Workspace administrator privileges. The calling user
+       * must be a Google Workspace administrator with the [manage chat and spaces conversations
+       * privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.spaces`
+       * [OAuth 2.0 scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-
+       * api-scopes). Some `FieldMask` values are not supported using admin access. For details, see
+       * the description of `update_mask`.
+       */
+      public Patch setUseAdminAccess(java.lang.Boolean useAdminAccess) {
+        this.useAdminAccess = useAdminAccess;
+        return this;
+      }
+
       @Override
       public Patch set(String parameterName, Object value) {
         return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * [Developer Preview](https://developers.google.com/workspace/preview). Returns a list of spaces
+     * based on a user's search. Requires [user
+     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+     * The user must be an administrator for the Google Workspace organization. In the request, set
+     * `use_admin_access` to `true`.
+     *
+     * Create a request for the method "spaces.search".
+     *
+     * This request holds the parameters needed by the chat server.  After setting any optional
+     * parameters, call the {@link Search#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public Search search() throws java.io.IOException {
+      Search result = new Search();
+      initialize(result);
+      return result;
+    }
+
+    public class Search extends HangoutsChatRequest<com.google.api.services.chat.v1.model.SearchSpacesResponse> {
+
+      private static final String REST_PATH = "v1/spaces:search";
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview). Returns a list of spaces
+       * based on a user's search. Requires [user
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+       * The user must be an administrator for the Google Workspace organization. In the request, set
+       * `use_admin_access` to `true`.
+       *
+       * Create a request for the method "spaces.search".
+       *
+       * This request holds the parameters needed by the the chat server.  After setting any optional
+       * parameters, call the {@link Search#execute()} method to invoke the remote operation. <p> {@link
+       * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected Search() {
+        super(HangoutsChat.this, "GET", REST_PATH, null, com.google.api.services.chat.v1.model.SearchSpacesResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Search set$Xgafv(java.lang.String $Xgafv) {
+        return (Search) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Search setAccessToken(java.lang.String accessToken) {
+        return (Search) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Search setAlt(java.lang.String alt) {
+        return (Search) super.setAlt(alt);
+      }
+
+      @Override
+      public Search setCallback(java.lang.String callback) {
+        return (Search) super.setCallback(callback);
+      }
+
+      @Override
+      public Search setFields(java.lang.String fields) {
+        return (Search) super.setFields(fields);
+      }
+
+      @Override
+      public Search setKey(java.lang.String key) {
+        return (Search) super.setKey(key);
+      }
+
+      @Override
+      public Search setOauthToken(java.lang.String oauthToken) {
+        return (Search) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Search) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Search setQuotaUser(java.lang.String quotaUser) {
+        return (Search) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Search setUploadType(java.lang.String uploadType) {
+        return (Search) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Search setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Search) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. How the list of spaces is ordered. Supported attributes to order by are: -
+       * `membership_count.joined_direct_human_user_count` — Denotes the count of human users that
+       * have directly joined a space. - `last_active_time` — Denotes the time when last eligible
+       * item is added to any topic of this space. - `create_time` — Denotes the time of the space
+       * creation. Valid ordering operation values are: - `ASC` for ascending. Default value. -
+       * `DESC` for descending. The supported syntax are: -
+       * `membership_count.joined_direct_human_user_count DESC` -
+       * `membership_count.joined_direct_human_user_count ASC` - `last_active_time DESC` -
+       * `last_active_time ASC` - `create_time DESC` - `create_time ASC`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** Optional. How the list of spaces is ordered. Supported attributes to order by are: -
+     `membership_count.joined_direct_human_user_count` — Denotes the count of human users that have
+     directly joined a space. - `last_active_time` — Denotes the time when last eligible item is added
+     to any topic of this space. - `create_time` — Denotes the time of the space creation. Valid
+     ordering operation values are: - `ASC` for ascending. Default value. - `DESC` for descending. The
+     supported syntax are: - `membership_count.joined_direct_human_user_count DESC` -
+     `membership_count.joined_direct_human_user_count ASC` - `last_active_time DESC` - `last_active_time
+     ASC` - `create_time DESC` - `create_time ASC`
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * Optional. How the list of spaces is ordered. Supported attributes to order by are: -
+       * `membership_count.joined_direct_human_user_count` — Denotes the count of human users that
+       * have directly joined a space. - `last_active_time` — Denotes the time when last eligible
+       * item is added to any topic of this space. - `create_time` — Denotes the time of the space
+       * creation. Valid ordering operation values are: - `ASC` for ascending. Default value. -
+       * `DESC` for descending. The supported syntax are: -
+       * `membership_count.joined_direct_human_user_count DESC` -
+       * `membership_count.joined_direct_human_user_count ASC` - `last_active_time DESC` -
+       * `last_active_time ASC` - `create_time DESC` - `create_time ASC`
+       */
+      public Search setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
+      /**
+       * The maximum number of spaces to return. The service may return fewer than this value. If
+       * unspecified, at most 100 spaces are returned. The maximum value is 1000. If you use a value
+       * more than 1000, it's automatically changed to 1000.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of spaces to return. The service may return fewer than this value. If
+     unspecified, at most 100 spaces are returned. The maximum value is 1000. If you use a value more
+     than 1000, it's automatically changed to 1000.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of spaces to return. The service may return fewer than this value. If
+       * unspecified, at most 100 spaces are returned. The maximum value is 1000. If you use a value
+       * more than 1000, it's automatically changed to 1000.
+       */
+      public Search setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A token, received from the previous search spaces call. Provide this parameter to retrieve
+       * the subsequent page. When paginating, all other parameters provided should match the call
+       * that provided the page token. Passing different values to the other parameters might lead
+       * to unexpected results.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A token, received from the previous search spaces call. Provide this parameter to retrieve the
+     subsequent page. When paginating, all other parameters provided should match the call that provided
+     the page token. Passing different values to the other parameters might lead to unexpected results.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A token, received from the previous search spaces call. Provide this parameter to retrieve
+       * the subsequent page. When paginating, all other parameters provided should match the call
+       * that provided the page token. Passing different values to the other parameters might lead
+       * to unexpected results.
+       */
+      public Search setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Required. A search query. You can search by using the following parameters: - `create_time`
+       * - `customer` - `display_name` - `external_user_allowed` - `last_active_time` -
+       * `space_history_state` - `space_type` `create_time` and `last_active_time` accept a
+       * timestamp in [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339) format and the supported
+       * comparison operators are: `=`, `<`, `>`, `<=`, `>=`. `customer` is required and is used to
+       * indicate which customer to fetch spaces from. `customers/my_customer` is the only supported
+       * value. `display_name` only accepts the `HAS` (`:`) operator. The text to match is first
+       * tokenized into tokens and each token is prefix-matched case-insensitively and independently
+       * as a substring anywhere in the space's `display_name`. For example, `Fun Eve` matches `Fun
+       * event` or `The evening was fun`, but not `notFun event` or `even`. `external_user_allowed`
+       * accepts either `true` or `false`. `space_history_state` only accepts values from the
+       * [`historyState`] (https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces
+       * #Space.HistoryState) field of a `space` resource. `space_type` is required and the only
+       * valid value is `SPACE`. Across different fields, only `AND` operators are supported. A
+       * valid example is `space_type = "SPACE" AND display_name:"Hello"` and an invalid example is
+       * `space_type = "SPACE" OR display_name:"Hello"`. Among the same field, `space_type` doesn't
+       * support `AND` or `OR` operators. `display_name`, 'space_history_state', and
+       * 'external_user_allowed' only support `OR` operators. `last_active_time` and `create_time`
+       * support both `AND` and `OR` operators. `AND` can only be used to represent an interval,
+       * such as `last_active_time < "2022-01-01T00:00:00+00:00" AND last_active_time >
+       * "2023-01-01T00:00:00+00:00"`. The following example queries are valid: ``` customer =
+       * "customers/my_customer" AND space_type = "SPACE" customer = "customers/my_customer" AND
+       * space_type = "SPACE" AND display_name:"Hello World" customer = "customers/my_customer" AND
+       * space_type = "SPACE" AND (last_active_time < "2020-01-01T00:00:00+00:00" OR
+       * last_active_time > "2022-01-01T00:00:00+00:00") customer = "customers/my_customer" AND
+       * space_type = "SPACE" AND (display_name:"Hello World" OR display_name:"Fun event") AND
+       * (last_active_time > "2020-01-01T00:00:00+00:00" AND last_active_time <
+       * "2022-01-01T00:00:00+00:00") customer = "customers/my_customer" AND space_type = "SPACE"
+       * AND (create_time > "2019-01-01T00:00:00+00:00" AND create_time <
+       * "2020-01-01T00:00:00+00:00") AND (external_user_allowed = "true") AND (space_history_state
+       * = "HISTORY_ON" OR space_history_state = "HISTORY_OFF") ```
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String query;
+
+      /** Required. A search query. You can search by using the following parameters: - `create_time` -
+     `customer` - `display_name` - `external_user_allowed` - `last_active_time` - `space_history_state`
+     - `space_type` `create_time` and `last_active_time` accept a timestamp in
+     [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339) format and the supported comparison operators
+     are: `=`, `<`, `>`, `<=`, `>=`. `customer` is required and is used to indicate which customer to
+     fetch spaces from. `customers/my_customer` is the only supported value. `display_name` only accepts
+     the `HAS` (`:`) operator. The text to match is first tokenized into tokens and each token is
+     prefix-matched case-insensitively and independently as a substring anywhere in the space's
+     `display_name`. For example, `Fun Eve` matches `Fun event` or `The evening was fun`, but not
+     `notFun event` or `even`. `external_user_allowed` accepts either `true` or `false`.
+     `space_history_state` only accepts values from the [`historyState`]
+     (https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces#Space.HistoryState)
+     field of a `space` resource. `space_type` is required and the only valid value is `SPACE`. Across
+     different fields, only `AND` operators are supported. A valid example is `space_type = "SPACE" AND
+     display_name:"Hello"` and an invalid example is `space_type = "SPACE" OR display_name:"Hello"`.
+     Among the same field, `space_type` doesn't support `AND` or `OR` operators. `display_name`,
+     'space_history_state', and 'external_user_allowed' only support `OR` operators. `last_active_time`
+     and `create_time` support both `AND` and `OR` operators. `AND` can only be used to represent an
+     interval, such as `last_active_time < "2022-01-01T00:00:00+00:00" AND last_active_time >
+     "2023-01-01T00:00:00+00:00"`. The following example queries are valid: ``` customer =
+     "customers/my_customer" AND space_type = "SPACE" customer = "customers/my_customer" AND space_type
+     = "SPACE" AND display_name:"Hello World" customer = "customers/my_customer" AND space_type =
+     "SPACE" AND (last_active_time < "2020-01-01T00:00:00+00:00" OR last_active_time >
+     "2022-01-01T00:00:00+00:00") customer = "customers/my_customer" AND space_type = "SPACE" AND
+     (display_name:"Hello World" OR display_name:"Fun event") AND (last_active_time >
+     "2020-01-01T00:00:00+00:00" AND last_active_time < "2022-01-01T00:00:00+00:00") customer =
+     "customers/my_customer" AND space_type = "SPACE" AND (create_time > "2019-01-01T00:00:00+00:00" AND
+     create_time < "2020-01-01T00:00:00+00:00") AND (external_user_allowed = "true") AND
+     (space_history_state = "HISTORY_ON" OR space_history_state = "HISTORY_OFF") ```
+       */
+      public java.lang.String getQuery() {
+        return query;
+      }
+
+      /**
+       * Required. A search query. You can search by using the following parameters: - `create_time`
+       * - `customer` - `display_name` - `external_user_allowed` - `last_active_time` -
+       * `space_history_state` - `space_type` `create_time` and `last_active_time` accept a
+       * timestamp in [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339) format and the supported
+       * comparison operators are: `=`, `<`, `>`, `<=`, `>=`. `customer` is required and is used to
+       * indicate which customer to fetch spaces from. `customers/my_customer` is the only supported
+       * value. `display_name` only accepts the `HAS` (`:`) operator. The text to match is first
+       * tokenized into tokens and each token is prefix-matched case-insensitively and independently
+       * as a substring anywhere in the space's `display_name`. For example, `Fun Eve` matches `Fun
+       * event` or `The evening was fun`, but not `notFun event` or `even`. `external_user_allowed`
+       * accepts either `true` or `false`. `space_history_state` only accepts values from the
+       * [`historyState`] (https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces
+       * #Space.HistoryState) field of a `space` resource. `space_type` is required and the only
+       * valid value is `SPACE`. Across different fields, only `AND` operators are supported. A
+       * valid example is `space_type = "SPACE" AND display_name:"Hello"` and an invalid example is
+       * `space_type = "SPACE" OR display_name:"Hello"`. Among the same field, `space_type` doesn't
+       * support `AND` or `OR` operators. `display_name`, 'space_history_state', and
+       * 'external_user_allowed' only support `OR` operators. `last_active_time` and `create_time`
+       * support both `AND` and `OR` operators. `AND` can only be used to represent an interval,
+       * such as `last_active_time < "2022-01-01T00:00:00+00:00" AND last_active_time >
+       * "2023-01-01T00:00:00+00:00"`. The following example queries are valid: ``` customer =
+       * "customers/my_customer" AND space_type = "SPACE" customer = "customers/my_customer" AND
+       * space_type = "SPACE" AND display_name:"Hello World" customer = "customers/my_customer" AND
+       * space_type = "SPACE" AND (last_active_time < "2020-01-01T00:00:00+00:00" OR
+       * last_active_time > "2022-01-01T00:00:00+00:00") customer = "customers/my_customer" AND
+       * space_type = "SPACE" AND (display_name:"Hello World" OR display_name:"Fun event") AND
+       * (last_active_time > "2020-01-01T00:00:00+00:00" AND last_active_time <
+       * "2022-01-01T00:00:00+00:00") customer = "customers/my_customer" AND space_type = "SPACE"
+       * AND (create_time > "2019-01-01T00:00:00+00:00" AND create_time <
+       * "2020-01-01T00:00:00+00:00") AND (external_user_allowed = "true") AND (space_history_state
+       * = "HISTORY_ON" OR space_history_state = "HISTORY_OFF") ```
+       */
+      public Search setQuery(java.lang.String query) {
+        this.query = query;
+        return this;
+      }
+
+      /**
+       * When `true`, the method runs using the user's Google Workspace administrator privileges.
+       * The calling user must be a Google Workspace administrator with the [manage chat and spaces
+       * conversations privilege](https://support.google.com/a/answer/13369245). Requires either the
+       * `chat.admin.spaces.readonly` or `chat.admin.spaces` [OAuth 2.0
+       * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
+       * scopes). This method currently only supports admin access, thus only `true` is accepted for
+       * this field.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean useAdminAccess;
+
+      /** When `true`, the method runs using the user's Google Workspace administrator privileges. The
+     calling user must be a Google Workspace administrator with the [manage chat and spaces
+     conversations privilege](https://support.google.com/a/answer/13369245). Requires either the
+     `chat.admin.spaces.readonly` or `chat.admin.spaces` [OAuth 2.0
+     scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes). This
+     method currently only supports admin access, thus only `true` is accepted for this field.
+       */
+      public java.lang.Boolean getUseAdminAccess() {
+        return useAdminAccess;
+      }
+
+      /**
+       * When `true`, the method runs using the user's Google Workspace administrator privileges.
+       * The calling user must be a Google Workspace administrator with the [manage chat and spaces
+       * conversations privilege](https://support.google.com/a/answer/13369245). Requires either the
+       * `chat.admin.spaces.readonly` or `chat.admin.spaces` [OAuth 2.0
+       * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
+       * scopes). This method currently only supports admin access, thus only `true` is accepted for
+       * this field.
+       */
+      public Search setUseAdminAccess(java.lang.Boolean useAdminAccess) {
+        this.useAdminAccess = useAdminAccess;
+        return this;
+      }
+
+      @Override
+      public Search set(String parameterName, Object value) {
+        return (Search) super.set(parameterName, value);
       }
     }
     /**
@@ -2080,6 +2551,48 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           return this;
         }
 
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
+         * method runs using the user's Google Workspace administrator privileges. The calling user
+         * must be a Google Workspace administrator with the [manage chat and spaces conversations
+         * privilege](https://support.google.com/a/answer/13369245). Requires the
+         * `chat.admin.memberships` [OAuth 2.0
+         * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
+         * scopes). Creating app memberships or creating memberships for users outside the
+         * administrator's Google Workspace organization isn't supported using admin access.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean useAdminAccess;
+
+        /**[ Developer Preview](https://developers.google.com/workspace/preview). When `true`, the method runs
+      [ using the user's Google Workspace administrator privileges. The calling user must be a Google
+      [ Workspace administrator with the [manage chat and spaces conversations
+      [ privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.memberships`
+      [ [OAuth 2.0 scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
+      [ scopes). Creating app memberships or creating memberships for users outside the administrator's
+      [ Google Workspace organization isn't supported using admin access.
+      [
+
+         */
+        public java.lang.Boolean getUseAdminAccess() {
+          return useAdminAccess;
+        }
+
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
+         * method runs using the user's Google Workspace administrator privileges. The calling user
+         * must be a Google Workspace administrator with the [manage chat and spaces conversations
+         * privilege](https://support.google.com/a/answer/13369245). Requires the
+         * `chat.admin.memberships` [OAuth 2.0
+         * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
+         * scopes). Creating app memberships or creating memberships for users outside the
+         * administrator's Google Workspace organization isn't supported using admin access.
+         */
+        public Create setUseAdminAccess(java.lang.Boolean useAdminAccess) {
+          this.useAdminAccess = useAdminAccess;
+          return this;
+        }
+
         @Override
         public Create set(String parameterName, Object value) {
           return (Create) super.set(parameterName, value);
@@ -2247,6 +2760,45 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
                 "^spaces/[^/]+/members/[^/]+$");
           }
           this.name = name;
+          return this;
+        }
+
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
+         * method runs using the user's Google Workspace administrator privileges. The calling user
+         * must be a Google Workspace administrator with the [manage chat and spaces conversations
+         * privilege](https://support.google.com/a/answer/13369245). Requires the
+         * `chat.admin.memberships` [OAuth 2.0
+         * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
+         * scopes). Deleting app memberships in a space isn't supported using admin access.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean useAdminAccess;
+
+        /**[ Developer Preview](https://developers.google.com/workspace/preview). When `true`, the method runs
+      [ using the user's Google Workspace administrator privileges. The calling user must be a Google
+      [ Workspace administrator with the [manage chat and spaces conversations
+      [ privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.memberships`
+      [ [OAuth 2.0 scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
+      [ scopes). Deleting app memberships in a space isn't supported using admin access.
+      [
+
+         */
+        public java.lang.Boolean getUseAdminAccess() {
+          return useAdminAccess;
+        }
+
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
+         * method runs using the user's Google Workspace administrator privileges. The calling user
+         * must be a Google Workspace administrator with the [manage chat and spaces conversations
+         * privilege](https://support.google.com/a/answer/13369245). Requires the
+         * `chat.admin.memberships` [OAuth 2.0
+         * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
+         * scopes). Deleting app memberships in a space isn't supported using admin access.
+         */
+        public Delete setUseAdminAccess(java.lang.Boolean useAdminAccess) {
+          this.useAdminAccess = useAdminAccess;
           return this;
         }
 
@@ -2434,6 +2986,46 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
                 "^spaces/[^/]+/members/[^/]+$");
           }
           this.name = name;
+          return this;
+        }
+
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
+         * method runs using the user's Google Workspace administrator privileges. The calling user
+         * must be a Google Workspace administrator with the [manage chat and spaces conversations
+         * privilege](https://support.google.com/a/answer/13369245). Requires the
+         * `chat.admin.memberships` or `chat.admin.memberships.readonly` [OAuth 2.0
+         * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
+         * scopes). Getting app memberships in a space isn't supported when using admin access.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean useAdminAccess;
+
+        /**[ Developer Preview](https://developers.google.com/workspace/preview). When `true`, the method runs
+      [ using the user's Google Workspace administrator privileges. The calling user must be a Google
+      [ Workspace administrator with the [manage chat and spaces conversations
+      [ privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.memberships` or
+      [ `chat.admin.memberships.readonly` [OAuth 2.0
+      [ scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes).
+      [ Getting app memberships in a space isn't supported when using admin access.
+      [
+
+         */
+        public java.lang.Boolean getUseAdminAccess() {
+          return useAdminAccess;
+        }
+
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
+         * method runs using the user's Google Workspace administrator privileges. The calling user
+         * must be a Google Workspace administrator with the [manage chat and spaces conversations
+         * privilege](https://support.google.com/a/answer/13369245). Requires the
+         * `chat.admin.memberships` or `chat.admin.memberships.readonly` [OAuth 2.0
+         * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
+         * scopes). Getting app memberships in a space isn't supported when using admin access.
+         */
+        public Get setUseAdminAccess(java.lang.Boolean useAdminAccess) {
+          this.useAdminAccess = useAdminAccess;
           return this;
         }
 
@@ -2776,6 +3368,46 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           return this;
         }
 
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
+         * method runs using the user's Google Workspace administrator privileges. The calling user
+         * must be a Google Workspace administrator with the [manage chat and spaces conversations
+         * privilege](https://support.google.com/a/answer/13369245). Requires either the
+         * `chat.admin.memberships.readonly` or `chat.admin.memberships` [OAuth 2.0
+         * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
+         * scopes). Listing app memberships in a space isn't supported when using admin access.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean useAdminAccess;
+
+        /**[ Developer Preview](https://developers.google.com/workspace/preview). When `true`, the method runs
+      [ using the user's Google Workspace administrator privileges. The calling user must be a Google
+      [ Workspace administrator with the [manage chat and spaces conversations
+      [ privilege](https://support.google.com/a/answer/13369245). Requires either the
+      [ `chat.admin.memberships.readonly` or `chat.admin.memberships` [OAuth 2.0
+      [ scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes).
+      [ Listing app memberships in a space isn't supported when using admin access.
+      [
+
+         */
+        public java.lang.Boolean getUseAdminAccess() {
+          return useAdminAccess;
+        }
+
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
+         * method runs using the user's Google Workspace administrator privileges. The calling user
+         * must be a Google Workspace administrator with the [manage chat and spaces conversations
+         * privilege](https://support.google.com/a/answer/13369245). Requires either the
+         * `chat.admin.memberships.readonly` or `chat.admin.memberships` [OAuth 2.0
+         * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
+         * scopes). Listing app memberships in a space isn't supported when using admin access.
+         */
+        public List setUseAdminAccess(java.lang.Boolean useAdminAccess) {
+          this.useAdminAccess = useAdminAccess;
+          return this;
+        }
+
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
@@ -2936,6 +3568,45 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
+          return this;
+        }
+
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
+         * method runs using the user's Google Workspace administrator privileges. The calling user
+         * must be a Google Workspace administrator with the [manage chat and spaces conversations
+         * privilege](https://support.google.com/a/answer/13369245). Requires the
+         * `chat.admin.memberships` [OAuth 2.0
+         * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
+         * scopes).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean useAdminAccess;
+
+        /**[ Developer Preview](https://developers.google.com/workspace/preview). When `true`, the method runs
+      [ using the user's Google Workspace administrator privileges. The calling user must be a Google
+      [ Workspace administrator with the [manage chat and spaces conversations
+      [ privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.memberships`
+      [ [OAuth 2.0 scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
+      [ scopes).
+      [
+
+         */
+        public java.lang.Boolean getUseAdminAccess() {
+          return useAdminAccess;
+        }
+
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
+         * method runs using the user's Google Workspace administrator privileges. The calling user
+         * must be a Google Workspace administrator with the [manage chat and spaces conversations
+         * privilege](https://support.google.com/a/answer/13369245). Requires the
+         * `chat.admin.memberships` [OAuth 2.0
+         * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
+         * scopes).
+         */
+        public Patch setUseAdminAccess(java.lang.Boolean useAdminAccess) {
+          this.useAdminAccess = useAdminAccess;
           return this;
         }
 

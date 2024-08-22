@@ -92,6 +92,23 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean importMode;
 
   /**
+   * Output only. Timestamp of the last message in the space. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String lastActiveTime;
+
+  /**
+   * Output only. The count of joined memberships grouped by member type. Populated when the
+   * `space_type` is `SPACE`, `DIRECT_MESSAGE` or `GROUP_CHAT`. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MembershipCount membershipCount;
+
+  /**
    * Resource name of the space. Format: `spaces/{space}`
    * The value may be {@code null}.
    */
@@ -293,6 +310,46 @@ public final class Space extends com.google.api.client.json.GenericJson {
    */
   public Space setImportMode(java.lang.Boolean importMode) {
     this.importMode = importMode;
+    return this;
+  }
+
+  /**
+   * Output only. Timestamp of the last message in the space. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public String getLastActiveTime() {
+    return lastActiveTime;
+  }
+
+  /**
+   * Output only. Timestamp of the last message in the space. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param lastActiveTime lastActiveTime or {@code null} for none
+   */
+  public Space setLastActiveTime(String lastActiveTime) {
+    this.lastActiveTime = lastActiveTime;
+    return this;
+  }
+
+  /**
+   * Output only. The count of joined memberships grouped by member type. Populated when the
+   * `space_type` is `SPACE`, `DIRECT_MESSAGE` or `GROUP_CHAT`. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public MembershipCount getMembershipCount() {
+    return membershipCount;
+  }
+
+  /**
+   * Output only. The count of joined memberships grouped by member type. Populated when the
+   * `space_type` is `SPACE`, `DIRECT_MESSAGE` or `GROUP_CHAT`. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param membershipCount membershipCount or {@code null} for none
+   */
+  public Space setMembershipCount(MembershipCount membershipCount) {
+    this.membershipCount = membershipCount;
     return this;
   }
 

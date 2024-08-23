@@ -187,6 +187,16 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   private GoogleCloudAssuredworkloadsV1beta1WorkloadPartnerPermissions partnerPermissions;
 
   /**
+   * Optional. Billing account necessary for purchasing services from Sovereign Partners. This field
+   * is required for creating SIA/PSN partner workloads. The caller should have
+   * 'billing.resourceAssociations.create' IAM permission on this billing-account. The format of
+   * this string is billingAccounts/AAAAAA-BBBBBB-CCCCCC
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String partnerServicesBillingAccount;
+
+  /**
    * Input only. The parent resource for the resources managed by this Assured Workload. May be
    * either empty or a folder resource which is a child of the Workload parent. If not specified all
    * resources are created under the parent organization. Format: folders/{folder_id}
@@ -610,6 +620,29 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
    */
   public GoogleCloudAssuredworkloadsV1beta1Workload setPartnerPermissions(GoogleCloudAssuredworkloadsV1beta1WorkloadPartnerPermissions partnerPermissions) {
     this.partnerPermissions = partnerPermissions;
+    return this;
+  }
+
+  /**
+   * Optional. Billing account necessary for purchasing services from Sovereign Partners. This field
+   * is required for creating SIA/PSN partner workloads. The caller should have
+   * 'billing.resourceAssociations.create' IAM permission on this billing-account. The format of
+   * this string is billingAccounts/AAAAAA-BBBBBB-CCCCCC
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPartnerServicesBillingAccount() {
+    return partnerServicesBillingAccount;
+  }
+
+  /**
+   * Optional. Billing account necessary for purchasing services from Sovereign Partners. This field
+   * is required for creating SIA/PSN partner workloads. The caller should have
+   * 'billing.resourceAssociations.create' IAM permission on this billing-account. The format of
+   * this string is billingAccounts/AAAAAA-BBBBBB-CCCCCC
+   * @param partnerServicesBillingAccount partnerServicesBillingAccount or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1Workload setPartnerServicesBillingAccount(java.lang.String partnerServicesBillingAccount) {
+    this.partnerServicesBillingAccount = partnerServicesBillingAccount;
     return this;
   }
 

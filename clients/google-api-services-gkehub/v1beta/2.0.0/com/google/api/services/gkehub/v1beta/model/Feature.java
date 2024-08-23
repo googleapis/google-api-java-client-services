@@ -17,7 +17,7 @@
 package com.google.api.services.gkehub.v1beta.model;
 
 /**
- * Feature represents the settings and status of any Hub Feature.
+ * Feature represents the settings and status of any Fleet Feature.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -123,7 +123,7 @@ public final class Feature extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, ScopeFeatureState> scopeStates;
 
   /**
-   * Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide
+   * Optional. Fleet-wide Feature configuration. If this Feature does not support any Fleet-wide
    * configuration, this field may be unused.
    * The value may be {@code null}.
    */
@@ -131,7 +131,7 @@ public final class Feature extends com.google.api.client.json.GenericJson {
   private CommonFeatureSpec spec;
 
   /**
-   * Output only. The Hub-wide Feature state.
+   * Output only. The Fleet-wide Feature state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -368,7 +368,7 @@ public final class Feature extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide
+   * Optional. Fleet-wide Feature configuration. If this Feature does not support any Fleet-wide
    * configuration, this field may be unused.
    * @return value or {@code null} for none
    */
@@ -377,7 +377,7 @@ public final class Feature extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide
+   * Optional. Fleet-wide Feature configuration. If this Feature does not support any Fleet-wide
    * configuration, this field may be unused.
    * @param spec spec or {@code null} for none
    */
@@ -387,7 +387,7 @@ public final class Feature extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The Hub-wide Feature state.
+   * Output only. The Fleet-wide Feature state.
    * @return value or {@code null} for none
    */
   public CommonFeatureState getState() {
@@ -395,7 +395,7 @@ public final class Feature extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The Hub-wide Feature state.
+   * Output only. The Fleet-wide Feature state.
    * @param state state or {@code null} for none
    */
   public Feature setState(CommonFeatureState state) {

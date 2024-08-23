@@ -17,8 +17,7 @@
 package com.google.api.services.gkehub.v1beta.model;
 
 /**
- * MembershipFeatureSpec contains configuration information for a single Membership. NOTE: Please
- * use snake case in your feature name.
+ * MembershipFeatureSpec contains configuration information for a single Membership.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:

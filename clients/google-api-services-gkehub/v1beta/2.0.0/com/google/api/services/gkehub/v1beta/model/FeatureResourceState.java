@@ -18,7 +18,7 @@ package com.google.api.services.gkehub.v1beta.model;
 
 /**
  * FeatureResourceState describes the state of a Feature *resource* in the GkeHub API. See
- * `FeatureState` for the "running state" of the Feature in the Hub and across Memberships.
+ * `FeatureState` for the "running state" of the Feature in the Fleet and across Memberships.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:

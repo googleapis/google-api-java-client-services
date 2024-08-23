@@ -17,7 +17,7 @@
 package com.google.api.services.gkehub.v1beta.model;
 
 /**
- * CommonFeatureState contains Hub-wide Feature status information.
+ * CommonFeatureState contains Fleet-wide Feature status information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -51,7 +51,7 @@ public final class CommonFeatureState extends com.google.api.client.json.Generic
   private FleetObservabilityFeatureState fleetobservability;
 
   /**
-   * Output only. The "running state" of the Feature in this Hub.
+   * Output only. The "running state" of the Feature in this Fleet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +109,7 @@ public final class CommonFeatureState extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The "running state" of the Feature in this Hub.
+   * Output only. The "running state" of the Feature in this Fleet.
    * @return value or {@code null} for none
    */
   public FeatureState getState() {
@@ -117,7 +117,7 @@ public final class CommonFeatureState extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The "running state" of the Feature in this Hub.
+   * Output only. The "running state" of the Feature in this Fleet.
    * @param state state or {@code null} for none
    */
   public CommonFeatureState setState(FeatureState state) {

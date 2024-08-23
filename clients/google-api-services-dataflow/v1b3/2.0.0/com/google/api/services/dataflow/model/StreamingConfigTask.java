@@ -79,6 +79,20 @@ public final class StreamingConfigTask extends com.google.api.client.json.Generi
   private java.util.Map<String, java.lang.String> userStepToStateFamilyNameMap;
 
   /**
+   * Binary encoded proto to control runtime behavior of the java runner v1 user worker.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String userWorkerRunnerV1Settings;
+
+  /**
+   * Binary encoded proto to control runtime behavior of the runner v2 user worker.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String userWorkerRunnerV2Settings;
+
+  /**
    * If present, the worker must use this endpoint to communicate with Windmill Service dispatchers,
    * otherwise the worker must continue to use whatever endpoint it had been using.
    * The value may be {@code null}.
@@ -195,6 +209,96 @@ public final class StreamingConfigTask extends com.google.api.client.json.Generi
    */
   public StreamingConfigTask setUserStepToStateFamilyNameMap(java.util.Map<String, java.lang.String> userStepToStateFamilyNameMap) {
     this.userStepToStateFamilyNameMap = userStepToStateFamilyNameMap;
+    return this;
+  }
+
+  /**
+   * Binary encoded proto to control runtime behavior of the java runner v1 user worker.
+   * @see #decodeUserWorkerRunnerV1Settings()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUserWorkerRunnerV1Settings() {
+    return userWorkerRunnerV1Settings;
+  }
+
+  /**
+   * Binary encoded proto to control runtime behavior of the java runner v1 user worker.
+   * @see #getUserWorkerRunnerV1Settings()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeUserWorkerRunnerV1Settings() {
+    return com.google.api.client.util.Base64.decodeBase64(userWorkerRunnerV1Settings);
+  }
+
+  /**
+   * Binary encoded proto to control runtime behavior of the java runner v1 user worker.
+   * @see #encodeUserWorkerRunnerV1Settings()
+   * @param userWorkerRunnerV1Settings userWorkerRunnerV1Settings or {@code null} for none
+   */
+  public StreamingConfigTask setUserWorkerRunnerV1Settings(java.lang.String userWorkerRunnerV1Settings) {
+    this.userWorkerRunnerV1Settings = userWorkerRunnerV1Settings;
+    return this;
+  }
+
+  /**
+   * Binary encoded proto to control runtime behavior of the java runner v1 user worker.
+   * @see #setUserWorkerRunnerV1Settings()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public StreamingConfigTask encodeUserWorkerRunnerV1Settings(byte[] userWorkerRunnerV1Settings) {
+    this.userWorkerRunnerV1Settings = com.google.api.client.util.Base64.encodeBase64URLSafeString(userWorkerRunnerV1Settings);
+    return this;
+  }
+
+  /**
+   * Binary encoded proto to control runtime behavior of the runner v2 user worker.
+   * @see #decodeUserWorkerRunnerV2Settings()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUserWorkerRunnerV2Settings() {
+    return userWorkerRunnerV2Settings;
+  }
+
+  /**
+   * Binary encoded proto to control runtime behavior of the runner v2 user worker.
+   * @see #getUserWorkerRunnerV2Settings()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeUserWorkerRunnerV2Settings() {
+    return com.google.api.client.util.Base64.decodeBase64(userWorkerRunnerV2Settings);
+  }
+
+  /**
+   * Binary encoded proto to control runtime behavior of the runner v2 user worker.
+   * @see #encodeUserWorkerRunnerV2Settings()
+   * @param userWorkerRunnerV2Settings userWorkerRunnerV2Settings or {@code null} for none
+   */
+  public StreamingConfigTask setUserWorkerRunnerV2Settings(java.lang.String userWorkerRunnerV2Settings) {
+    this.userWorkerRunnerV2Settings = userWorkerRunnerV2Settings;
+    return this;
+  }
+
+  /**
+   * Binary encoded proto to control runtime behavior of the runner v2 user worker.
+   * @see #setUserWorkerRunnerV2Settings()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public StreamingConfigTask encodeUserWorkerRunnerV2Settings(byte[] userWorkerRunnerV2Settings) {
+    this.userWorkerRunnerV2Settings = com.google.api.client.util.Base64.encodeBase64URLSafeString(userWorkerRunnerV2Settings);
     return this;
   }
 

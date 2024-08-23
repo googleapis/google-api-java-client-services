@@ -6825,7 +6825,7 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the translate server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Identifier. The resource name of the entry. Format: "projects/locations/glossaries/glossaryEntries"
+           * @param name Identifier. The resource name of the entry. Format: `projects/locations/glossaries/glossaryEntries`
            * @param content the {@link com.google.api.services.translate.v3.model.GlossaryEntry}
            * @return the request
            */
@@ -6853,7 +6853,7 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Identifier. The resource name of the entry. Format: "projects/locations/glossaries/glossaryEntries"
+             * @param name Identifier. The resource name of the entry. Format: `projects/locations/glossaries/glossaryEntries`
              * @param content the {@link com.google.api.services.translate.v3.model.GlossaryEntry}
              * @since 1.13
              */
@@ -6924,12 +6924,12 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Identifier. The resource name of the entry. Format:
-             * "projects/locations/glossaries/glossaryEntries"
+             * `projects/locations/glossaries/glossaryEntries`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Identifier. The resource name of the entry. Format: "projects/locations/glossaries/glossaryEntries"
+            /** Identifier. The resource name of the entry. Format: `projects/locations/glossaries/glossaryEntries`
              */
             public java.lang.String getName() {
               return name;
@@ -6937,7 +6937,7 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Identifier. The resource name of the entry. Format:
-             * "projects/locations/glossaries/glossaryEntries"
+             * `projects/locations/glossaries/glossaryEntries`
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

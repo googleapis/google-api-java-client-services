@@ -32,7 +32,7 @@ public final class Example extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource name of the example, in form of `projects/{project-number-or-
-   * id}/locations/{location_id}/datasets/{dataset_id}/examples/{example_id}'
+   * id}/locations/{location_id}/datasets/{dataset_id}/examples/{example_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class Example extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource name of the example, in form of `projects/{project-number-or-
-   * id}/locations/{location_id}/datasets/{dataset_id}/examples/{example_id}'
+   * id}/locations/{location_id}/datasets/{dataset_id}/examples/{example_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -70,7 +70,7 @@ public final class Example extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource name of the example, in form of `projects/{project-number-or-
-   * id}/locations/{location_id}/datasets/{dataset_id}/examples/{example_id}'
+   * id}/locations/{location_id}/datasets/{dataset_id}/examples/{example_id}`
    * @param name name or {@code null} for none
    */
   public Example setName(java.lang.String name) {

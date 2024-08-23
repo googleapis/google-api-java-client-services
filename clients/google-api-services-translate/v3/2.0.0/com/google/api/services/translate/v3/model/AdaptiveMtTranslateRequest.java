@@ -51,7 +51,7 @@ public final class AdaptiveMtTranslateRequest extends com.google.api.client.json
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private TranslateTextGlossaryConfig glossaryConfig;
+  private GlossaryConfig glossaryConfig;
 
   /**
    * Configuration for caller provided reference sentences.
@@ -101,7 +101,7 @@ public final class AdaptiveMtTranslateRequest extends com.google.api.client.json
    * location-id) as the model, otherwise an INVALID_ARGUMENT (400) error is returned.
    * @return value or {@code null} for none
    */
-  public TranslateTextGlossaryConfig getGlossaryConfig() {
+  public GlossaryConfig getGlossaryConfig() {
     return glossaryConfig;
   }
 
@@ -110,7 +110,7 @@ public final class AdaptiveMtTranslateRequest extends com.google.api.client.json
    * location-id) as the model, otherwise an INVALID_ARGUMENT (400) error is returned.
    * @param glossaryConfig glossaryConfig or {@code null} for none
    */
-  public AdaptiveMtTranslateRequest setGlossaryConfig(TranslateTextGlossaryConfig glossaryConfig) {
+  public AdaptiveMtTranslateRequest setGlossaryConfig(GlossaryConfig glossaryConfig) {
     this.glossaryConfig = glossaryConfig;
     return this;
   }

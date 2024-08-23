@@ -3024,22 +3024,22 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         /**
-         * Must be set to true if the app bundle installation may trigger a warning on user devices
-         * (for example, if installation size may be over a threshold, typically 100 MB).
+         * Deprecated. The installation warning has been removed, it's not necessary to set this
+         * field anymore.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean ackBundleInstallationWarning;
 
-        /** Must be set to true if the app bundle installation may trigger a warning on user devices (for
-       example, if installation size may be over a threshold, typically 100 MB).
+        /** Deprecated. The installation warning has been removed, it's not necessary to set this field
+       anymore.
          */
         public java.lang.Boolean getAckBundleInstallationWarning() {
           return ackBundleInstallationWarning;
         }
 
         /**
-         * Must be set to true if the app bundle installation may trigger a warning on user devices
-         * (for example, if installation size may be over a threshold, typically 100 MB).
+         * Deprecated. The installation warning has been removed, it's not necessary to set this
+         * field anymore.
          */
         public Upload setAckBundleInstallationWarning(java.lang.Boolean ackBundleInstallationWarning) {
           this.ackBundleInstallationWarning = ackBundleInstallationWarning;

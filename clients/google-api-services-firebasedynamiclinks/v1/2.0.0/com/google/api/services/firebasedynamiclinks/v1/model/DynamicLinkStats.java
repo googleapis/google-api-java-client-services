@@ -44,6 +44,13 @@ public final class DynamicLinkStats extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Optional warnings associated this API request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DynamicLinkWarning> warnings;
+
+  /**
    * Dynamic Link event stats.
    * @return value or {@code null} for none
    */
@@ -57,6 +64,23 @@ public final class DynamicLinkStats extends com.google.api.client.json.GenericJs
    */
   public DynamicLinkStats setLinkEventStats(java.util.List<DynamicLinkEventStat> linkEventStats) {
     this.linkEventStats = linkEventStats;
+    return this;
+  }
+
+  /**
+   * Optional warnings associated this API request.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DynamicLinkWarning> getWarnings() {
+    return warnings;
+  }
+
+  /**
+   * Optional warnings associated this API request.
+   * @param warnings warnings or {@code null} for none
+   */
+  public DynamicLinkStats setWarnings(java.util.List<DynamicLinkWarning> warnings) {
+    this.warnings = warnings;
     return this;
   }
 

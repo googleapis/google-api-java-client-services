@@ -315,6 +315,13 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   private java.lang.String uri;
 
   /**
+   * Output only. All URLs serving traffic for this Service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> urls;
+
+  /**
    * Optional. Unstructured key value map that may be set by external tools to store and arbitrary
    * metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API
    * v2 does not support annotations with `run.googleapis.com`, `cloud.googleapis.com`,
@@ -959,6 +966,23 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
    */
   public GoogleCloudRunV2Service setUri(java.lang.String uri) {
     this.uri = uri;
+    return this;
+  }
+
+  /**
+   * Output only. All URLs serving traffic for this Service.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUrls() {
+    return urls;
+  }
+
+  /**
+   * Output only. All URLs serving traffic for this Service.
+   * @param urls urls or {@code null} for none
+   */
+  public GoogleCloudRunV2Service setUrls(java.util.List<java.lang.String> urls) {
+    this.urls = urls;
     return this;
   }
 

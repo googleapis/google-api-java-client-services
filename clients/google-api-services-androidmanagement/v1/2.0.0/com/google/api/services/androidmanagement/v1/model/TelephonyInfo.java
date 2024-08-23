@@ -39,6 +39,13 @@ public final class TelephonyInfo extends com.google.api.client.json.GenericJson 
   private java.lang.String carrierName;
 
   /**
+   * Output only. The ICCID associated with this SIM card.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String iccId;
+
+  /**
    * The phone number associated with this SIM card.
    * The value may be {@code null}.
    */
@@ -59,6 +66,23 @@ public final class TelephonyInfo extends com.google.api.client.json.GenericJson 
    */
   public TelephonyInfo setCarrierName(java.lang.String carrierName) {
     this.carrierName = carrierName;
+    return this;
+  }
+
+  /**
+   * Output only. The ICCID associated with this SIM card.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIccId() {
+    return iccId;
+  }
+
+  /**
+   * Output only. The ICCID associated with this SIM card.
+   * @param iccId iccId or {@code null} for none
+   */
+  public TelephonyInfo setIccId(java.lang.String iccId) {
+    this.iccId = iccId;
     return this;
   }
 

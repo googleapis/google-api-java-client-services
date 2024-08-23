@@ -59,6 +59,13 @@ public final class ApprovalRequest extends com.google.api.client.json.GenericJso
   private String requestTime;
 
   /**
+   * This field contains the augmented information of the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AugmentedInfo requestedAugmentedInfo;
+
+  /**
    * The requested access duration.
    * The value may be {@code null}.
    */
@@ -172,6 +179,23 @@ public final class ApprovalRequest extends com.google.api.client.json.GenericJso
    */
   public ApprovalRequest setRequestTime(String requestTime) {
     this.requestTime = requestTime;
+    return this;
+  }
+
+  /**
+   * This field contains the augmented information of the request.
+   * @return value or {@code null} for none
+   */
+  public AugmentedInfo getRequestedAugmentedInfo() {
+    return requestedAugmentedInfo;
+  }
+
+  /**
+   * This field contains the augmented information of the request.
+   * @param requestedAugmentedInfo requestedAugmentedInfo or {@code null} for none
+   */
+  public ApprovalRequest setRequestedAugmentedInfo(AugmentedInfo requestedAugmentedInfo) {
+    this.requestedAugmentedInfo = requestedAugmentedInfo;
     return this;
   }
 

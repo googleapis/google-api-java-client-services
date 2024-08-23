@@ -98,6 +98,19 @@ public final class GetIosReopenAttributionResponse extends com.google.api.client
   private java.lang.String utmTerm;
 
   /**
+   * Optional warnings associated this API request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DynamicLinkWarning> warning;
+
+  static {
+    // hack to force ProGuard to consider DynamicLinkWarning used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DynamicLinkWarning.class);
+  }
+
+  /**
    * The deep-link attributed the app universal link open. For both regular FDL links and invite FDL
    * links.
    * @return value or {@code null} for none
@@ -253,6 +266,23 @@ public final class GetIosReopenAttributionResponse extends com.google.api.client
    */
   public GetIosReopenAttributionResponse setUtmTerm(java.lang.String utmTerm) {
     this.utmTerm = utmTerm;
+    return this;
+  }
+
+  /**
+   * Optional warnings associated this API request.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DynamicLinkWarning> getWarning() {
+    return warning;
+  }
+
+  /**
+   * Optional warnings associated this API request.
+   * @param warning warning or {@code null} for none
+   */
+  public GetIosReopenAttributionResponse setWarning(java.util.List<DynamicLinkWarning> warning) {
+    this.warning = warning;
     return this;
   }
 

@@ -2740,7 +2740,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
         /**
          * Creates a new `VpcFlowLogsConfig`. If a configuration with the exact same settings already exists
          * (even if the ID is different), the creation fails. Notes: 1. Creating a configuration with
-         * state=DISABLED will fail. 2. The following fields are not considrered as `settings` for the
+         * state=DISABLED will fail. 2. The following fields are not considered as `settings` for the
          * purpose of the check mentioned above, therefore - creating another configuration with the same
          * fields but different values for the following fields will fail as well: - name - create_time -
          * update_time - labels - description
@@ -2771,10 +2771,10 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
           /**
            * Creates a new `VpcFlowLogsConfig`. If a configuration with the exact same settings already
            * exists (even if the ID is different), the creation fails. Notes: 1. Creating a configuration
-           * with state=DISABLED will fail. 2. The following fields are not considrered as `settings` for
-           * the purpose of the check mentioned above, therefore - creating another configuration with the
-           * same fields but different values for the following fields will fail as well: - name -
-           * create_time - update_time - labels - description
+           * with state=DISABLED will fail. 2. The following fields are not considered as `settings` for the
+           * purpose of the check mentioned above, therefore - creating another configuration with the same
+           * fields but different values for the following fields will fail as well: - name - create_time -
+           * update_time - labels - description
            *
            * Create a request for the method "vpcFlowLogsConfigs.create".
            *
@@ -3412,10 +3412,11 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
         }
         /**
          * Updates an existing `VpcFlowLogsConfig`. If a configuration with the exact same settings already
-         * exists (even if the ID is different), the creation fails. Notes: 1. The following fields are not
-         * considrered as `settings` for the purpose of the check mentioned above, therefore - updating
-         * another configuration with the same fields but different values for the following fields will
-         * fail as well: - name - create_time - update_time - labels - description
+         * exists (even if the ID is different), the creation fails. Notes: 1. Updating a configuration with
+         * state=DISABLED will fail. 2. The following fields are not considered as `settings` for the
+         * purpose of the check mentioned above, therefore - updating another configuration with the same
+         * fields but different values for the following fields will fail as well: - name - create_time -
+         * update_time - labels - description
          *
          * Create a request for the method "vpcFlowLogsConfigs.patch".
          *
@@ -3442,10 +3443,11 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
 
           /**
            * Updates an existing `VpcFlowLogsConfig`. If a configuration with the exact same settings
-           * already exists (even if the ID is different), the creation fails. Notes: 1. The following
-           * fields are not considrered as `settings` for the purpose of the check mentioned above,
-           * therefore - updating another configuration with the same fields but different values for the
-           * following fields will fail as well: - name - create_time - update_time - labels - description
+           * already exists (even if the ID is different), the creation fails. Notes: 1. Updating a
+           * configuration with state=DISABLED will fail. 2. The following fields are not considered as
+           * `settings` for the purpose of the check mentioned above, therefore - updating another
+           * configuration with the same fields but different values for the following fields will fail as
+           * well: - name - create_time - update_time - labels - description
            *
            * Create a request for the method "vpcFlowLogsConfigs.patch".
            *

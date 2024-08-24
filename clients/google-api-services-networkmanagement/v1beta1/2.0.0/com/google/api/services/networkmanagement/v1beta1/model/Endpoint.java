@@ -151,6 +151,20 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   private java.lang.String projectId;
 
   /**
+   * A [Redis Cluster](https://cloud.google.com/memorystore/docs/cluster) URI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String redisCluster;
+
+  /**
+   * A [Redis Instance](https://cloud.google.com/memorystore/docs/redis) URI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String redisInstance;
+
+  /**
    * An [App Engine](https://cloud.google.com/appengine) [service
    * version](https://cloud.google.com/appengine/docs/admin-
    * api/reference/rest/v1/apps.services.versions).
@@ -432,6 +446,40 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
    */
   public Endpoint setProjectId(java.lang.String projectId) {
     this.projectId = projectId;
+    return this;
+  }
+
+  /**
+   * A [Redis Cluster](https://cloud.google.com/memorystore/docs/cluster) URI.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRedisCluster() {
+    return redisCluster;
+  }
+
+  /**
+   * A [Redis Cluster](https://cloud.google.com/memorystore/docs/cluster) URI.
+   * @param redisCluster redisCluster or {@code null} for none
+   */
+  public Endpoint setRedisCluster(java.lang.String redisCluster) {
+    this.redisCluster = redisCluster;
+    return this;
+  }
+
+  /**
+   * A [Redis Instance](https://cloud.google.com/memorystore/docs/redis) URI.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRedisInstance() {
+    return redisInstance;
+  }
+
+  /**
+   * A [Redis Instance](https://cloud.google.com/memorystore/docs/redis) URI.
+   * @param redisInstance redisInstance or {@code null} for none
+   */
+  public Endpoint setRedisInstance(java.lang.String redisInstance) {
+    this.redisInstance = redisInstance;
     return this;
   }
 

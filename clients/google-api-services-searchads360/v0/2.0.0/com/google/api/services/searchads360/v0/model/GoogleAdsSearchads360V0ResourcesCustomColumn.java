@@ -84,6 +84,13 @@ public final class GoogleAdsSearchads360V0ResourcesCustomColumn extends com.goog
   private java.lang.Boolean referencesMetrics;
 
   /**
+   * Output only. How the result value of the custom column should be interpreted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String renderType;
+
+  /**
    * Immutable. The resource name of the custom column. Custom column resource names have the form:
    * `customers/{customer_id}/customColumns/{custom_column_id}`
    * The value may be {@code null}.
@@ -220,6 +227,23 @@ public final class GoogleAdsSearchads360V0ResourcesCustomColumn extends com.goog
    */
   public GoogleAdsSearchads360V0ResourcesCustomColumn setReferencesMetrics(java.lang.Boolean referencesMetrics) {
     this.referencesMetrics = referencesMetrics;
+    return this;
+  }
+
+  /**
+   * Output only. How the result value of the custom column should be interpreted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRenderType() {
+    return renderType;
+  }
+
+  /**
+   * Output only. How the result value of the custom column should be interpreted.
+   * @param renderType renderType or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCustomColumn setRenderType(java.lang.String renderType) {
+    this.renderType = renderType;
     return this;
   }
 

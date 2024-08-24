@@ -49,7 +49,9 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   private ConfigManagementConfigSync configSync;
 
   /**
-   * Hierarchy Controller configuration for the cluster.
+   * Hierarchy Controller configuration for the cluster. Deprecated: Configuring Hierarchy
+   * Controller through the configmanagement feature is no longer recommended. Use
+   * https://github.com/kubernetes-sigs/hierarchical-namespaces instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,7 +123,9 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * Hierarchy Controller configuration for the cluster.
+   * Hierarchy Controller configuration for the cluster. Deprecated: Configuring Hierarchy
+   * Controller through the configmanagement feature is no longer recommended. Use
+   * https://github.com/kubernetes-sigs/hierarchical-namespaces instead.
    * @return value or {@code null} for none
    */
   public ConfigManagementHierarchyControllerConfig getHierarchyController() {
@@ -129,7 +133,9 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * Hierarchy Controller configuration for the cluster.
+   * Hierarchy Controller configuration for the cluster. Deprecated: Configuring Hierarchy
+   * Controller through the configmanagement feature is no longer recommended. Use
+   * https://github.com/kubernetes-sigs/hierarchical-namespaces instead.
    * @param hierarchyController hierarchyController or {@code null} for none
    */
   public ConfigManagementMembershipSpec setHierarchyController(ConfigManagementHierarchyControllerConfig hierarchyController) {

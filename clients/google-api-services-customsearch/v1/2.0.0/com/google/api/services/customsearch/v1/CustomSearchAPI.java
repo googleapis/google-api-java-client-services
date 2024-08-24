@@ -370,6 +370,28 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
         return this;
       }
 
+      /**
+       * Optional. Enables routing of Programmable Search Engine requests to an alternate search
+       * handler.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean enableAlternateSearchHandler;
+
+      /** Optional. Enables routing of Programmable Search Engine requests to an alternate search handler.
+       */
+      public java.lang.Boolean getEnableAlternateSearchHandler() {
+        return enableAlternateSearchHandler;
+      }
+
+      /**
+       * Optional. Enables routing of Programmable Search Engine requests to an alternate search
+       * handler.
+       */
+      public List setEnableAlternateSearchHandler(java.lang.Boolean enableAlternateSearchHandler) {
+        this.enableAlternateSearchHandler = enableAlternateSearchHandler;
+        return this;
+      }
+
       /** Identifies a phrase that all documents in the search results must contain. */
       @com.google.api.client.util.Key
       private java.lang.String exactTerms;
@@ -1327,6 +1349,28 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
          */
         public List setDateRestrict(java.lang.String dateRestrict) {
           this.dateRestrict = dateRestrict;
+          return this;
+        }
+
+        /**
+         * Optional. Enables routing of Programmable Search Engine requests to an alternate search
+         * handler.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean enableAlternateSearchHandler;
+
+        /** Optional. Enables routing of Programmable Search Engine requests to an alternate search handler.
+         */
+        public java.lang.Boolean getEnableAlternateSearchHandler() {
+          return enableAlternateSearchHandler;
+        }
+
+        /**
+         * Optional. Enables routing of Programmable Search Engine requests to an alternate search
+         * handler.
+         */
+        public List setEnableAlternateSearchHandler(java.lang.Boolean enableAlternateSearchHandler) {
+          this.enableAlternateSearchHandler = enableAlternateSearchHandler;
           return this;
         }
 

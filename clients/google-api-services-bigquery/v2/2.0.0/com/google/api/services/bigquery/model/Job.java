@@ -51,9 +51,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * Output only. If set, it provides the reason why a Job was created. If not set, it should be
-   * treated as the default: REQUESTED. This feature is not yet available. Jobs will always be
-   * created.
+   * Output only. The reason why a Job was created. [Preview](/products/#product-launch-stages)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,9 +161,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. If set, it provides the reason why a Job was created. If not set, it should be
-   * treated as the default: REQUESTED. This feature is not yet available. Jobs will always be
-   * created.
+   * Output only. The reason why a Job was created. [Preview](/products/#product-launch-stages)
    * @return value or {@code null} for none
    */
   public JobCreationReason getJobCreationReason() {
@@ -173,9 +169,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. If set, it provides the reason why a Job was created. If not set, it should be
-   * treated as the default: REQUESTED. This feature is not yet available. Jobs will always be
-   * created.
+   * Output only. The reason why a Job was created. [Preview](/products/#product-launch-stages)
    * @param jobCreationReason jobCreationReason or {@code null} for none
    */
   public Job setJobCreationReason(JobCreationReason jobCreationReason) {

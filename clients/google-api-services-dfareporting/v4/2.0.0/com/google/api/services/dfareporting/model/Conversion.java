@@ -38,6 +38,13 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   private java.lang.String adUserDataConsent;
 
   /**
+   * The cart data associated with this conversion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CartData cartData;
+
+  /**
    * Whether this particular request may come from a user under the age of 13, under COPPA
    * compliance.
    * The value may be {@code null}.
@@ -221,6 +228,23 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
    */
   public Conversion setAdUserDataConsent(java.lang.String adUserDataConsent) {
     this.adUserDataConsent = adUserDataConsent;
+    return this;
+  }
+
+  /**
+   * The cart data associated with this conversion.
+   * @return value or {@code null} for none
+   */
+  public CartData getCartData() {
+    return cartData;
+  }
+
+  /**
+   * The cart data associated with this conversion.
+   * @param cartData cartData or {@code null} for none
+   */
+  public Conversion setCartData(CartData cartData) {
+    this.cartData = cartData;
     return this;
   }
 

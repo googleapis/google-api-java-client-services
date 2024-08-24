@@ -45,6 +45,13 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterionLabel extends
   private java.lang.String label;
 
   /**
+   * Output only. The ID of the Customer which owns the label.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long ownerCustomerId;
+
+  /**
    * Immutable. The resource name of the ad group criterion label. Ad group criterion label resource
    * names have the form:
    * `customers/{customer_id}/adGroupCriterionLabels/{ad_group_id}~{criterion_id}~{label_id}`
@@ -84,6 +91,23 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterionLabel extends
    */
   public GoogleAdsSearchads360V0ResourcesAdGroupCriterionLabel setLabel(java.lang.String label) {
     this.label = label;
+    return this;
+  }
+
+  /**
+   * Output only. The ID of the Customer which owns the label.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getOwnerCustomerId() {
+    return ownerCustomerId;
+  }
+
+  /**
+   * Output only. The ID of the Customer which owns the label.
+   * @param ownerCustomerId ownerCustomerId or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroupCriterionLabel setOwnerCustomerId(java.lang.Long ownerCustomerId) {
+    this.ownerCustomerId = ownerCustomerId;
     return this;
   }
 

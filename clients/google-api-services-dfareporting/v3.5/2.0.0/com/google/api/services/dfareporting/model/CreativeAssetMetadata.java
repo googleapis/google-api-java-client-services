@@ -100,18 +100,6 @@ public final class CreativeAssetMetadata extends com.google.api.client.json.Gene
   private java.lang.String kind;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private MediaRequestInfo mediaRequestInfo;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private MediaResponseInfo mediaResponseInfo;
-
-  /**
    * True if the uploaded asset is a rich media asset. This is a read-only, auto-generated field.
    * The value may be {@code null}.
    */
@@ -286,36 +274,6 @@ public final class CreativeAssetMetadata extends com.google.api.client.json.Gene
    */
   public CreativeAssetMetadata setKind(java.lang.String kind) {
     this.kind = kind;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public MediaRequestInfo getMediaRequestInfo() {
-    return mediaRequestInfo;
-  }
-
-  /**
-   * @param mediaRequestInfo mediaRequestInfo or {@code null} for none
-   */
-  public CreativeAssetMetadata setMediaRequestInfo(MediaRequestInfo mediaRequestInfo) {
-    this.mediaRequestInfo = mediaRequestInfo;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public MediaResponseInfo getMediaResponseInfo() {
-    return mediaResponseInfo;
-  }
-
-  /**
-   * @param mediaResponseInfo mediaResponseInfo or {@code null} for none
-   */
-  public CreativeAssetMetadata setMediaResponseInfo(MediaResponseInfo mediaResponseInfo) {
-    this.mediaResponseInfo = mediaResponseInfo;
     return this;
   }
 

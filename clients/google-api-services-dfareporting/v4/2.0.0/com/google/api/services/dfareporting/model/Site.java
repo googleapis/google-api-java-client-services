@@ -38,6 +38,19 @@ public final class Site extends com.google.api.client.json.GenericJson {
   private java.lang.Long accountId;
 
   /**
+   * Optional. Ad serving platform ID to identify the ad serving platform used by the site.
+   * Measurement partners can use this field to add ad-server specific macros. If set, this value
+   * acts as the default during placement creation. Possible values are: * `1`, Adelphic * `2`,
+   * Adform * `3`, Adobe * `4`, Amobee * `5`, Basis (Centro) * `6`, Beeswax * `7`, Amazon * `8`,
+   * DV360 (DBM) * `9`, Innovid * `10`, MediaMath * `11`, Roku OneView DSP * `12`, TabMo Hawk *
+   * `13`, The Trade Desk * `14`, Xandr Invest DSP * `15`, Yahoo DSP * `16`, Zeta Global * `17`,
+   * Scaleout * `18`, Bidtellect * `19`, Unicorn * `20`, Teads * `21`, Quantcast * `22`, Cognitiv
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long adServingPlatformId;
+
+  /**
    * Whether this site is approved.
    * The value may be {@code null}.
    */
@@ -140,6 +153,35 @@ public final class Site extends com.google.api.client.json.GenericJson {
    */
   public Site setAccountId(java.lang.Long accountId) {
     this.accountId = accountId;
+    return this;
+  }
+
+  /**
+   * Optional. Ad serving platform ID to identify the ad serving platform used by the site.
+   * Measurement partners can use this field to add ad-server specific macros. If set, this value
+   * acts as the default during placement creation. Possible values are: * `1`, Adelphic * `2`,
+   * Adform * `3`, Adobe * `4`, Amobee * `5`, Basis (Centro) * `6`, Beeswax * `7`, Amazon * `8`,
+   * DV360 (DBM) * `9`, Innovid * `10`, MediaMath * `11`, Roku OneView DSP * `12`, TabMo Hawk *
+   * `13`, The Trade Desk * `14`, Xandr Invest DSP * `15`, Yahoo DSP * `16`, Zeta Global * `17`,
+   * Scaleout * `18`, Bidtellect * `19`, Unicorn * `20`, Teads * `21`, Quantcast * `22`, Cognitiv
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getAdServingPlatformId() {
+    return adServingPlatformId;
+  }
+
+  /**
+   * Optional. Ad serving platform ID to identify the ad serving platform used by the site.
+   * Measurement partners can use this field to add ad-server specific macros. If set, this value
+   * acts as the default during placement creation. Possible values are: * `1`, Adelphic * `2`,
+   * Adform * `3`, Adobe * `4`, Amobee * `5`, Basis (Centro) * `6`, Beeswax * `7`, Amazon * `8`,
+   * DV360 (DBM) * `9`, Innovid * `10`, MediaMath * `11`, Roku OneView DSP * `12`, TabMo Hawk *
+   * `13`, The Trade Desk * `14`, Xandr Invest DSP * `15`, Yahoo DSP * `16`, Zeta Global * `17`,
+   * Scaleout * `18`, Bidtellect * `19`, Unicorn * `20`, Teads * `21`, Quantcast * `22`, Cognitiv
+   * @param adServingPlatformId adServingPlatformId or {@code null} for none
+   */
+  public Site setAdServingPlatformId(java.lang.Long adServingPlatformId) {
+    this.adServingPlatformId = adServingPlatformId;
     return this;
   }
 

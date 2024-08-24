@@ -75,7 +75,13 @@ public final class VideoSettings extends com.google.api.client.json.GenericJson 
   private java.lang.String orientation;
 
   /**
-   * Publisher specification ID of a video placement.
+   * Publisher specification ID of a video placement. Possible values are: * `1`, Hulu * `2`, NBC *
+   * `3`, CBS * `4`, CBS Desktop * `5`, Discovery * `6`, VEVO HD * `7`, VEVO Vertical * `8`, Fox *
+   * `9`, CW Network * `10`, Disney * `11`, IGN * `12`, NFL.com * `13`, Turner Broadcasting * `14`,
+   * Tubi on Fox * `15`, Hearst Corporation * `16`, Twitch Desktop * `17`, ABC * `18`, Univision *
+   * `19`, MLB.com * `20`, MLB.com Mobile * `21`, MLB.com OTT * `22`, Polsat * `23`, TVN * `24`,
+   * Mediaset * `25`, Antena 3 * `26`, Mediamond * `27`, Sky Italia * `28`, Tubi on CBS * `29`,
+   * Spotify * `30`, Paramount * `31`, Max
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -204,7 +210,13 @@ public final class VideoSettings extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Publisher specification ID of a video placement.
+   * Publisher specification ID of a video placement. Possible values are: * `1`, Hulu * `2`, NBC *
+   * `3`, CBS * `4`, CBS Desktop * `5`, Discovery * `6`, VEVO HD * `7`, VEVO Vertical * `8`, Fox *
+   * `9`, CW Network * `10`, Disney * `11`, IGN * `12`, NFL.com * `13`, Turner Broadcasting * `14`,
+   * Tubi on Fox * `15`, Hearst Corporation * `16`, Twitch Desktop * `17`, ABC * `18`, Univision *
+   * `19`, MLB.com * `20`, MLB.com Mobile * `21`, MLB.com OTT * `22`, Polsat * `23`, TVN * `24`,
+   * Mediaset * `25`, Antena 3 * `26`, Mediamond * `27`, Sky Italia * `28`, Tubi on CBS * `29`,
+   * Spotify * `30`, Paramount * `31`, Max
    * @return value or {@code null} for none
    */
   public java.lang.Long getPublisherSpecificationId() {
@@ -212,7 +224,13 @@ public final class VideoSettings extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Publisher specification ID of a video placement.
+   * Publisher specification ID of a video placement. Possible values are: * `1`, Hulu * `2`, NBC *
+   * `3`, CBS * `4`, CBS Desktop * `5`, Discovery * `6`, VEVO HD * `7`, VEVO Vertical * `8`, Fox *
+   * `9`, CW Network * `10`, Disney * `11`, IGN * `12`, NFL.com * `13`, Turner Broadcasting * `14`,
+   * Tubi on Fox * `15`, Hearst Corporation * `16`, Twitch Desktop * `17`, ABC * `18`, Univision *
+   * `19`, MLB.com * `20`, MLB.com Mobile * `21`, MLB.com OTT * `22`, Polsat * `23`, TVN * `24`,
+   * Mediaset * `25`, Antena 3 * `26`, Mediamond * `27`, Sky Italia * `28`, Tubi on CBS * `29`,
+   * Spotify * `30`, Paramount * `31`, Max
    * @param publisherSpecificationId publisherSpecificationId or {@code null} for none
    */
   public VideoSettings setPublisherSpecificationId(java.lang.Long publisherSpecificationId) {

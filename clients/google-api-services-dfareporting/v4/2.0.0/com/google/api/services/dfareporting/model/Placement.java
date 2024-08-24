@@ -53,6 +53,19 @@ public final class Placement extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean adBlockingOptOut;
 
   /**
+   * Optional. Ad serving platform ID to identify the ad serving platform used by the placement.
+   * Measurement partners can use this field to add ad-server specific macros. Possible values are:
+   * * `1`, Adelphic * `2`, Adform * `3`, Adobe * `4`, Amobee * `5`, Basis (Centro) * `6`, Beeswax *
+   * `7`, Amazon * `8`, DV360 (DBM) * `9`, Innovid * `10`, MediaMath * `11`, Roku OneView DSP *
+   * `12`, TabMo Hawk * `13`, The Trade Desk * `14`, Xandr Invest DSP * `15`, Yahoo DSP * `16`, Zeta
+   * Global * `17`, Scaleout * `18`, Bidtellect * `19`, Unicorn * `20`, Teads * `21`, Quantcast *
+   * `22`, Cognitiv
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long adServingPlatformId;
+
+  /**
    * Additional sizes associated with this placement. When inserting or updating a placement, only
    * the size ID field is used.
    * The value may be {@code null}.
@@ -285,6 +298,14 @@ public final class Placement extends com.google.api.client.json.GenericJson {
   private DimensionValue siteIdDimensionValue;
 
   /**
+   * Optional. Whether the ads in the placement are served by another platform and CM is only used
+   * for tracking or they are served by CM. A false value indicates the ad is served by CM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean siteServed;
+
+  /**
    * Size associated with this placement. When inserting or updating a placement, only the size ID
    * field is used. This field is required on insertion.
    * The value may be {@code null}.
@@ -422,6 +443,35 @@ public final class Placement extends com.google.api.client.json.GenericJson {
    */
   public Placement setAdBlockingOptOut(java.lang.Boolean adBlockingOptOut) {
     this.adBlockingOptOut = adBlockingOptOut;
+    return this;
+  }
+
+  /**
+   * Optional. Ad serving platform ID to identify the ad serving platform used by the placement.
+   * Measurement partners can use this field to add ad-server specific macros. Possible values are:
+   * * `1`, Adelphic * `2`, Adform * `3`, Adobe * `4`, Amobee * `5`, Basis (Centro) * `6`, Beeswax *
+   * `7`, Amazon * `8`, DV360 (DBM) * `9`, Innovid * `10`, MediaMath * `11`, Roku OneView DSP *
+   * `12`, TabMo Hawk * `13`, The Trade Desk * `14`, Xandr Invest DSP * `15`, Yahoo DSP * `16`, Zeta
+   * Global * `17`, Scaleout * `18`, Bidtellect * `19`, Unicorn * `20`, Teads * `21`, Quantcast *
+   * `22`, Cognitiv
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getAdServingPlatformId() {
+    return adServingPlatformId;
+  }
+
+  /**
+   * Optional. Ad serving platform ID to identify the ad serving platform used by the placement.
+   * Measurement partners can use this field to add ad-server specific macros. Possible values are:
+   * * `1`, Adelphic * `2`, Adform * `3`, Adobe * `4`, Amobee * `5`, Basis (Centro) * `6`, Beeswax *
+   * `7`, Amazon * `8`, DV360 (DBM) * `9`, Innovid * `10`, MediaMath * `11`, Roku OneView DSP *
+   * `12`, TabMo Hawk * `13`, The Trade Desk * `14`, Xandr Invest DSP * `15`, Yahoo DSP * `16`, Zeta
+   * Global * `17`, Scaleout * `18`, Bidtellect * `19`, Unicorn * `20`, Teads * `21`, Quantcast *
+   * `22`, Cognitiv
+   * @param adServingPlatformId adServingPlatformId or {@code null} for none
+   */
+  public Placement setAdServingPlatformId(java.lang.Long adServingPlatformId) {
+    this.adServingPlatformId = adServingPlatformId;
     return this;
   }
 
@@ -979,6 +1029,25 @@ public final class Placement extends com.google.api.client.json.GenericJson {
    */
   public Placement setSiteIdDimensionValue(DimensionValue siteIdDimensionValue) {
     this.siteIdDimensionValue = siteIdDimensionValue;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the ads in the placement are served by another platform and CM is only used
+   * for tracking or they are served by CM. A false value indicates the ad is served by CM.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSiteServed() {
+    return siteServed;
+  }
+
+  /**
+   * Optional. Whether the ads in the placement are served by another platform and CM is only used
+   * for tracking or they are served by CM. A false value indicates the ad is served by CM.
+   * @param siteServed siteServed or {@code null} for none
+   */
+  public Placement setSiteServed(java.lang.Boolean siteServed) {
+    this.siteServed = siteServed;
     return this;
   }
 

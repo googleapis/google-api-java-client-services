@@ -21,7 +21,7 @@ package com.google.api.services.gkeonprem.v1.model;
  * DEGRADED).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Anthos On-Prem API. For a detailed explanation see:
+ * transmitted over HTTP when working with the GDC Virtual API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -53,6 +53,20 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String errorMessage;
+
+  /**
+   * Reflect current version of the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String version;
+
+  /**
+   * Shows the mapping of a given version to the number of machines under this version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Versions versions;
 
   /**
    * ResourceCondition provide a standard mechanism for higher-level status reporting from
@@ -93,6 +107,40 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
    */
   public ResourceStatus setErrorMessage(java.lang.String errorMessage) {
     this.errorMessage = errorMessage;
+    return this;
+  }
+
+  /**
+   * Reflect current version of the resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVersion() {
+    return version;
+  }
+
+  /**
+   * Reflect current version of the resource.
+   * @param version version or {@code null} for none
+   */
+  public ResourceStatus setVersion(java.lang.String version) {
+    this.version = version;
+    return this;
+  }
+
+  /**
+   * Shows the mapping of a given version to the number of machines under this version.
+   * @return value or {@code null} for none
+   */
+  public Versions getVersions() {
+    return versions;
+  }
+
+  /**
+   * Shows the mapping of a given version to the number of machines under this version.
+   * @param versions versions or {@code null} for none
+   */
+  public ResourceStatus setVersions(Versions versions) {
+    this.versions = versions;
     return this;
   }
 

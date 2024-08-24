@@ -17,7 +17,7 @@
 package com.google.api.services.gkeonprem.v1;
 
 /**
- * Available OAuth 2.0 scopes for use with the Anthos On-Prem API.
+ * Available OAuth 2.0 scopes for use with the GDC Virtual API.
  *
  * @since 1.4
  */

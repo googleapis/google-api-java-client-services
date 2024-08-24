@@ -479,6 +479,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private PrivateClusterConfig privateClusterConfig;
 
   /**
+   * RBACBindingConfig allows user to restrict ClusterRoleBindings an RoleBindings that can be
+   * created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RBACBindingConfig rbacBindingConfig;
+
+  /**
    * Release channel configuration. If left unspecified on cluster creation and a version is
    * specified, the cluster is enrolled in the most mature release channel where the version is
    * available (first checking STABLE, then REGULAR, and finally RAPID). Otherwise, if no release
@@ -1667,6 +1675,25 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setPrivateClusterConfig(PrivateClusterConfig privateClusterConfig) {
     this.privateClusterConfig = privateClusterConfig;
+    return this;
+  }
+
+  /**
+   * RBACBindingConfig allows user to restrict ClusterRoleBindings an RoleBindings that can be
+   * created.
+   * @return value or {@code null} for none
+   */
+  public RBACBindingConfig getRbacBindingConfig() {
+    return rbacBindingConfig;
+  }
+
+  /**
+   * RBACBindingConfig allows user to restrict ClusterRoleBindings an RoleBindings that can be
+   * created.
+   * @param rbacBindingConfig rbacBindingConfig or {@code null} for none
+   */
+  public Cluster setRbacBindingConfig(RBACBindingConfig rbacBindingConfig) {
+    this.rbacBindingConfig = rbacBindingConfig;
     return this;
   }
 

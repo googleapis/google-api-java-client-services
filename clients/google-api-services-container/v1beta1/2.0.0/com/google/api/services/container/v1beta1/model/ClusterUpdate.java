@@ -425,6 +425,14 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private ProtectConfig desiredProtectConfig;
 
   /**
+   * RBACBindingConfig allows user to restrict ClusterRoleBindings an RoleBindings that can be
+   * created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RBACBindingConfig desiredRbacBindingConfig;
+
+  /**
    * The desired release channel configuration.
    * The value may be {@code null}.
    */
@@ -1477,6 +1485,25 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredProtectConfig(ProtectConfig desiredProtectConfig) {
     this.desiredProtectConfig = desiredProtectConfig;
+    return this;
+  }
+
+  /**
+   * RBACBindingConfig allows user to restrict ClusterRoleBindings an RoleBindings that can be
+   * created.
+   * @return value or {@code null} for none
+   */
+  public RBACBindingConfig getDesiredRbacBindingConfig() {
+    return desiredRbacBindingConfig;
+  }
+
+  /**
+   * RBACBindingConfig allows user to restrict ClusterRoleBindings an RoleBindings that can be
+   * created.
+   * @param desiredRbacBindingConfig desiredRbacBindingConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredRbacBindingConfig(RBACBindingConfig desiredRbacBindingConfig) {
+    this.desiredRbacBindingConfig = desiredRbacBindingConfig;
     return this;
   }
 

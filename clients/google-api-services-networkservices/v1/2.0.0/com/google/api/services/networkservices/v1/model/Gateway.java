@@ -125,6 +125,14 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Integer> ports;
 
   /**
+   * Optional. The routing mode of the Gateway. This field is configurable only for gateways of type
+   * SECURE_WEB_GATEWAY. This field is required for gateways of type SECURE_WEB_GATEWAY.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String routingMode;
+
+  /**
    * Optional. Scope determines how configuration across multiple Gateway instances are merged. The
    * configuration for multiple Gateway instances with the same scope will be merged as presented as
    * a single coniguration to the proxy/load balancer. Max length 64 characters. Scope should start
@@ -387,6 +395,25 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
    */
   public Gateway setPorts(java.util.List<java.lang.Integer> ports) {
     this.ports = ports;
+    return this;
+  }
+
+  /**
+   * Optional. The routing mode of the Gateway. This field is configurable only for gateways of type
+   * SECURE_WEB_GATEWAY. This field is required for gateways of type SECURE_WEB_GATEWAY.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRoutingMode() {
+    return routingMode;
+  }
+
+  /**
+   * Optional. The routing mode of the Gateway. This field is configurable only for gateways of type
+   * SECURE_WEB_GATEWAY. This field is required for gateways of type SECURE_WEB_GATEWAY.
+   * @param routingMode routingMode or {@code null} for none
+   */
+  public Gateway setRoutingMode(java.lang.String routingMode) {
+    this.routingMode = routingMode;
     return this;
   }
 

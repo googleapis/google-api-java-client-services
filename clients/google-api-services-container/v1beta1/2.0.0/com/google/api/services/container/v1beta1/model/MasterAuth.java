@@ -33,7 +33,7 @@ public final class MasterAuth extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Base64-encoded public certificate used by clients to authenticate to the cluster
-   * endpoint.
+   * endpoint. Issued only if client_certificate_config is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +87,7 @@ public final class MasterAuth extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Base64-encoded public certificate used by clients to authenticate to the cluster
-   * endpoint.
+   * endpoint. Issued only if client_certificate_config is set.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientCertificate() {
@@ -96,7 +96,7 @@ public final class MasterAuth extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Base64-encoded public certificate used by clients to authenticate to the cluster
-   * endpoint.
+   * endpoint. Issued only if client_certificate_config is set.
    * @param clientCertificate clientCertificate or {@code null} for none
    */
   public MasterAuth setClientCertificate(java.lang.String clientCertificate) {

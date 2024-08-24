@@ -17,7 +17,7 @@
 package com.google.api.services.gkeonprem.v1.model;
 
 /**
- * VmwareAdminPreparedSecretsConfig represents configuration for admin cluster prepared secrets.
+ * Version describes the number of nodes at a given version under a resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GDC Virtual API. For a detailed explanation see:
@@ -27,40 +27,64 @@ package com.google.api.services.gkeonprem.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class VmwareAdminPreparedSecretsConfig extends com.google.api.client.json.GenericJson {
+public final class Version extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether prepared secrets is enabled.
+   * Number of machines under the above version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long count;
+
+  /**
+   * Resource version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean enabled;
+  private java.lang.String version;
 
   /**
-   * Whether prepared secrets is enabled.
+   * Number of machines under the above version.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getEnabled() {
-    return enabled;
+  public java.lang.Long getCount() {
+    return count;
   }
 
   /**
-   * Whether prepared secrets is enabled.
-   * @param enabled enabled or {@code null} for none
+   * Number of machines under the above version.
+   * @param count count or {@code null} for none
    */
-  public VmwareAdminPreparedSecretsConfig setEnabled(java.lang.Boolean enabled) {
-    this.enabled = enabled;
+  public Version setCount(java.lang.Long count) {
+    this.count = count;
+    return this;
+  }
+
+  /**
+   * Resource version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVersion() {
+    return version;
+  }
+
+  /**
+   * Resource version.
+   * @param version version or {@code null} for none
+   */
+  public Version setVersion(java.lang.String version) {
+    this.version = version;
     return this;
   }
 
   @Override
-  public VmwareAdminPreparedSecretsConfig set(String fieldName, Object value) {
-    return (VmwareAdminPreparedSecretsConfig) super.set(fieldName, value);
+  public Version set(String fieldName, Object value) {
+    return (Version) super.set(fieldName, value);
   }
 
   @Override
-  public VmwareAdminPreparedSecretsConfig clone() {
-    return (VmwareAdminPreparedSecretsConfig) super.clone();
+  public Version clone() {
+    return (Version) super.clone();
   }
 
 }

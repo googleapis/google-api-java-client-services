@@ -49,7 +49,7 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
         com.google.api.client.googleapis.GoogleUtils.MAJOR_VERSION >= 2,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "2.0.0 of the Anthos On-Prem API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "2.0.0 of the GDC Virtual API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -676,6 +676,34 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
+           * Optional. If set to true, CLM will force CCFE to persist the cluster resource in RMS
+           * when the creation fails during standalone preflight checks. In that case the subsequent
+           * create call will fail with "cluster already exists" error and hence a update cluster is
+           * required to fix the cluster.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowPreflightFailure;
+
+          /** Optional. If set to true, CLM will force CCFE to persist the cluster resource in RMS when the
+         creation fails during standalone preflight checks. In that case the subsequent create call will
+         fail with "cluster already exists" error and hence a update cluster is required to fix the cluster.
+           */
+          public java.lang.Boolean getAllowPreflightFailure() {
+            return allowPreflightFailure;
+          }
+
+          /**
+           * Optional. If set to true, CLM will force CCFE to persist the cluster resource in RMS
+           * when the creation fails during standalone preflight checks. In that case the subsequent
+           * create call will fail with "cluster already exists" error and hence a update cluster is
+           * required to fix the cluster.
+           */
+          public Create setAllowPreflightFailure(java.lang.Boolean allowPreflightFailure) {
+            this.allowPreflightFailure = allowPreflightFailure;
+            return this;
+          }
+
+          /**
            * Required. User provided identifier that is used as part of the resource name; must
            * conform to RFC-1034 and additionally restrict to lower-cased letters. This comes out
            * roughly to: /^a-z+[a-z0-9]$/
@@ -1009,6 +1037,28 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
                   "^projects/[^/]+/locations/[^/]+/bareMetalAdminClusters/[^/]+$");
             }
             this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If true, return BareMetal Admin Cluster including the one that only exists in
+           * RMS.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If true, return BareMetal Admin Cluster including the one that only exists in RMS.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If true, return BareMetal Admin Cluster including the one that only exists in
+           * RMS.
+           */
+          public Get setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
             return this;
           }
 
@@ -1380,6 +1430,29 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
                   "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. If true, return list of BareMetal Admin Clusters including the ones that only
+           * exists in RMS.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If true, return list of BareMetal Admin Clusters including the ones that only exists in
+         RMS.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If true, return list of BareMetal Admin Clusters including the ones that only
+           * exists in RMS.
+           */
+          public List setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
             return this;
           }
 
@@ -2849,6 +2922,34 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
+           * Optional. If set to true, CLM will force CCFE to persist the cluster resource in RMS
+           * when the creation fails during standalone preflight checks. In that case the subsequent
+           * create call will fail with "cluster already exists" error and hence a update cluster is
+           * required to fix the cluster.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowPreflightFailure;
+
+          /** Optional. If set to true, CLM will force CCFE to persist the cluster resource in RMS when the
+         creation fails during standalone preflight checks. In that case the subsequent create call will
+         fail with "cluster already exists" error and hence a update cluster is required to fix the cluster.
+           */
+          public java.lang.Boolean getAllowPreflightFailure() {
+            return allowPreflightFailure;
+          }
+
+          /**
+           * Optional. If set to true, CLM will force CCFE to persist the cluster resource in RMS
+           * when the creation fails during standalone preflight checks. In that case the subsequent
+           * create call will fail with "cluster already exists" error and hence a update cluster is
+           * required to fix the cluster.
+           */
+          public Create setAllowPreflightFailure(java.lang.Boolean allowPreflightFailure) {
+            this.allowPreflightFailure = allowPreflightFailure;
+            return this;
+          }
+
+          /**
            * Required. User provided identifier that is used as part of the resource name; must
            * conform to RFC-1034 and additionally restrict to lower-cased letters. This comes out
            * roughly to: /^a-z+[a-z0-9]$/
@@ -3436,6 +3537,26 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
+           * Optional. If true, return BareMetal Cluster including the one that only exists in RMS.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If true, return BareMetal Cluster including the one that only exists in RMS.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If true, return BareMetal Cluster including the one that only exists in RMS.
+           */
+          public Get setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
+          /**
            * View for bare metal user cluster. When `BASIC` is specified, only the cluster resource
            * name and admin cluster membership are returned. The default/unset value
            * `CLUSTER_VIEW_UNSPECIFIED` is the same as `FULL', which returns the complete cluster
@@ -3805,6 +3926,28 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
                   "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. If true, return list of BareMetal Clusters including the ones that only
+           * exists in RMS.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If true, return list of BareMetal Clusters including the ones that only exists in RMS.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If true, return list of BareMetal Clusters including the ones that only
+           * exists in RMS.
+           */
+          public List setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
             return this;
           }
 
@@ -8385,6 +8528,28 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
+           * Optional. If true, return Vmware Admin Cluster including the one that only exists in
+           * RMS.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If true, return Vmware Admin Cluster including the one that only exists in RMS.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If true, return Vmware Admin Cluster including the one that only exists in
+           * RMS.
+           */
+          public Get setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
+          /**
            * View for VMware admin cluster. When `BASIC` is specified, only the cluster resource
            * name and membership are returned. The default/unset value `CLUSTER_VIEW_UNSPECIFIED` is
            * the same as `FULL', which returns the complete cluster configuration details.
@@ -8752,6 +8917,28 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
                   "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. If true, return list of Vmware Admin Clusters including the ones that only
+           * exists in RMS.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If true, return list of Vmware Admin Clusters including the ones that only exists in RMS.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If true, return list of Vmware Admin Clusters including the ones that only
+           * exists in RMS.
+           */
+          public List setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
             return this;
           }
 
@@ -10023,6 +10210,34 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
+          /**
+           * Optional. If set to true, CLM will force CCFE to persist the cluster resource in RMS
+           * when the creation fails during standalone preflight checks. In that case the subsequent
+           * create call will fail with "cluster already exists" error and hence a update cluster is
+           * required to fix the cluster.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowPreflightFailure;
+
+          /** Optional. If set to true, CLM will force CCFE to persist the cluster resource in RMS when the
+         creation fails during standalone preflight checks. In that case the subsequent create call will
+         fail with "cluster already exists" error and hence a update cluster is required to fix the cluster.
+           */
+          public java.lang.Boolean getAllowPreflightFailure() {
+            return allowPreflightFailure;
+          }
+
+          /**
+           * Optional. If set to true, CLM will force CCFE to persist the cluster resource in RMS
+           * when the creation fails during standalone preflight checks. In that case the subsequent
+           * create call will fail with "cluster already exists" error and hence a update cluster is
+           * required to fix the cluster.
+           */
+          public Create setAllowPreflightFailure(java.lang.Boolean allowPreflightFailure) {
+            this.allowPreflightFailure = allowPreflightFailure;
+            return this;
+          }
+
           /** Validate the request without actually doing any updates. */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
@@ -10608,6 +10823,26 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
+           * Optional. If true, return Vmware Cluster including the one that only exists in RMS.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If true, return Vmware Cluster including the one that only exists in RMS.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If true, return Vmware Cluster including the one that only exists in RMS.
+           */
+          public Get setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
+          /**
            * View for VMware user cluster. When `BASIC` is specified, only the cluster resource name
            * and admin cluster membership are returned. The default/unset value
            * `CLUSTER_VIEW_UNSPECIFIED` is the same as `FULL', which returns the complete cluster
@@ -10977,6 +11212,28 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
                   "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. If true, return list of Vmware Clusters including the ones that only exists
+           * in RMS.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If true, return list of Vmware Clusters including the ones that only exists in RMS.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If true, return list of Vmware Clusters including the ones that only exists
+           * in RMS.
+           */
+          public List setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
             return this;
           }
 

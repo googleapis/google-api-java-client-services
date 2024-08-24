@@ -17,7 +17,7 @@
 package com.google.api.services.gkeonprem.v1.model;
 
 /**
- * VmwareAdminPreparedSecretsConfig represents configuration for admin cluster prepared secrets.
+ * Versions describes the mapping of a given version to the number of machines under this version.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GDC Virtual API. For a detailed explanation see:
@@ -27,40 +27,46 @@ package com.google.api.services.gkeonprem.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class VmwareAdminPreparedSecretsConfig extends com.google.api.client.json.GenericJson {
+public final class Versions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether prepared secrets is enabled.
+   * Shows the mapping of a given version to the number of machines under this version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean enabled;
+  private java.util.List<Version> versions;
 
-  /**
-   * Whether prepared secrets is enabled.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getEnabled() {
-    return enabled;
+  static {
+    // hack to force ProGuard to consider Version used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Version.class);
   }
 
   /**
-   * Whether prepared secrets is enabled.
-   * @param enabled enabled or {@code null} for none
+   * Shows the mapping of a given version to the number of machines under this version.
+   * @return value or {@code null} for none
    */
-  public VmwareAdminPreparedSecretsConfig setEnabled(java.lang.Boolean enabled) {
-    this.enabled = enabled;
+  public java.util.List<Version> getVersions() {
+    return versions;
+  }
+
+  /**
+   * Shows the mapping of a given version to the number of machines under this version.
+   * @param versions versions or {@code null} for none
+   */
+  public Versions setVersions(java.util.List<Version> versions) {
+    this.versions = versions;
     return this;
   }
 
   @Override
-  public VmwareAdminPreparedSecretsConfig set(String fieldName, Object value) {
-    return (VmwareAdminPreparedSecretsConfig) super.set(fieldName, value);
+  public Versions set(String fieldName, Object value) {
+    return (Versions) super.set(fieldName, value);
   }
 
   @Override
-  public VmwareAdminPreparedSecretsConfig clone() {
-    return (VmwareAdminPreparedSecretsConfig) super.clone();
+  public Versions clone() {
+    return (Versions) super.clone();
   }
 
 }

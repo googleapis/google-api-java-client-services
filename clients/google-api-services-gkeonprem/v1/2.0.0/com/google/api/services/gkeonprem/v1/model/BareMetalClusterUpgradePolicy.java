@@ -20,7 +20,7 @@ package com.google.api.services.gkeonprem.v1.model;
  * BareMetalClusterUpgradePolicy defines the cluster upgrade policy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Anthos On-Prem API. For a detailed explanation see:
+ * transmitted over HTTP when working with the GDC Virtual API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,11 +30,35 @@ package com.google.api.services.gkeonprem.v1.model;
 public final class BareMetalClusterUpgradePolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Pause is used to show the upgrade pause status. It's view only for now.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean pause;
+
+  /**
    * Specifies which upgrade policy to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String policy;
+
+  /**
+   * Output only. Pause is used to show the upgrade pause status. It's view only for now.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPause() {
+    return pause;
+  }
+
+  /**
+   * Output only. Pause is used to show the upgrade pause status. It's view only for now.
+   * @param pause pause or {@code null} for none
+   */
+  public BareMetalClusterUpgradePolicy setPause(java.lang.Boolean pause) {
+    this.pause = pause;
+    return this;
+  }
 
   /**
    * Specifies which upgrade policy to use.

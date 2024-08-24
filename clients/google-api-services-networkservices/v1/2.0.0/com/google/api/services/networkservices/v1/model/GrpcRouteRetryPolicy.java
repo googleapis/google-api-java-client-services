@@ -17,7 +17,8 @@
 package com.google.api.services.networkservices.v1.model;
 
 /**
- * The specifications for retries.
+ * The specifications for retries. Specifies one or more conditions for which this retry rule
+ * applies. Valid values are:
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Services API. For a detailed explanation see:

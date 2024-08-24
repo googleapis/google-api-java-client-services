@@ -68,11 +68,9 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean jobComplete;
 
   /**
-   * Optional. Only relevant when a job_reference is present in the response. If job_reference is
-   * not present it will always be unset. When job_reference is present, this field should be
-   * interpreted as follows: If set, it will provide the reason of why a Job was created. If not
-   * set, it should be treated as the default: REQUESTED. This feature is not yet available. Jobs
-   * will always be created.
+   * Optional. The reason why a Job was created. Only relevant when a job_reference is present in
+   * the response. If job_reference is not present it will always be unset.
+   * [Preview](/products/#product-launch-stages)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +80,9 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * Reference to the Job that was created to run the query. This field will be present even if the
    * original request timed out, in which case GetQueryResults can be used to read the results once
    * the query has completed. Since this API only returns the first page of results, subsequent
-   * pages can be fetched via the same mechanism (GetQueryResults).
+   * pages can be fetched via the same mechanism (GetQueryResults). If job_creation_mode was set to
+   * `JOB_CREATION_OPTIONAL` and the query completes without creating a job, this field will be
+   * empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,8 +114,7 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   private java.lang.String pageToken;
 
   /**
-   * Query ID for the completed query. This ID will be auto-generated. This field is not yet
-   * available and it is currently not guaranteed to be populated.
+   * Auto-generated ID for the query. [Preview](/products/#product-launch-stages)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -237,11 +236,9 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Only relevant when a job_reference is present in the response. If job_reference is
-   * not present it will always be unset. When job_reference is present, this field should be
-   * interpreted as follows: If set, it will provide the reason of why a Job was created. If not
-   * set, it should be treated as the default: REQUESTED. This feature is not yet available. Jobs
-   * will always be created.
+   * Optional. The reason why a Job was created. Only relevant when a job_reference is present in
+   * the response. If job_reference is not present it will always be unset.
+   * [Preview](/products/#product-launch-stages)
    * @return value or {@code null} for none
    */
   public JobCreationReason getJobCreationReason() {
@@ -249,11 +246,9 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Only relevant when a job_reference is present in the response. If job_reference is
-   * not present it will always be unset. When job_reference is present, this field should be
-   * interpreted as follows: If set, it will provide the reason of why a Job was created. If not
-   * set, it should be treated as the default: REQUESTED. This feature is not yet available. Jobs
-   * will always be created.
+   * Optional. The reason why a Job was created. Only relevant when a job_reference is present in
+   * the response. If job_reference is not present it will always be unset.
+   * [Preview](/products/#product-launch-stages)
    * @param jobCreationReason jobCreationReason or {@code null} for none
    */
   public QueryResponse setJobCreationReason(JobCreationReason jobCreationReason) {
@@ -265,7 +260,9 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * Reference to the Job that was created to run the query. This field will be present even if the
    * original request timed out, in which case GetQueryResults can be used to read the results once
    * the query has completed. Since this API only returns the first page of results, subsequent
-   * pages can be fetched via the same mechanism (GetQueryResults).
+   * pages can be fetched via the same mechanism (GetQueryResults). If job_creation_mode was set to
+   * `JOB_CREATION_OPTIONAL` and the query completes without creating a job, this field will be
+   * empty.
    * @return value or {@code null} for none
    */
   public JobReference getJobReference() {
@@ -276,7 +273,9 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * Reference to the Job that was created to run the query. This field will be present even if the
    * original request timed out, in which case GetQueryResults can be used to read the results once
    * the query has completed. Since this API only returns the first page of results, subsequent
-   * pages can be fetched via the same mechanism (GetQueryResults).
+   * pages can be fetched via the same mechanism (GetQueryResults). If job_creation_mode was set to
+   * `JOB_CREATION_OPTIONAL` and the query completes without creating a job, this field will be
+   * empty.
    * @param jobReference jobReference or {@code null} for none
    */
   public QueryResponse setJobReference(JobReference jobReference) {
@@ -344,8 +343,7 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Query ID for the completed query. This ID will be auto-generated. This field is not yet
-   * available and it is currently not guaranteed to be populated.
+   * Auto-generated ID for the query. [Preview](/products/#product-launch-stages)
    * @return value or {@code null} for none
    */
   public java.lang.String getQueryId() {
@@ -353,8 +351,7 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Query ID for the completed query. This ID will be auto-generated. This field is not yet
-   * available and it is currently not guaranteed to be populated.
+   * Auto-generated ID for the query. [Preview](/products/#product-launch-stages)
    * @param queryId queryId or {@code null} for none
    */
   public QueryResponse setQueryId(java.lang.String queryId) {

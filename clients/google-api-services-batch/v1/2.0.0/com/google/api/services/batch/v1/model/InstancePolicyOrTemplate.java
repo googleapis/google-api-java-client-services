@@ -32,6 +32,21 @@ package com.google.api.services.batch.v1.model;
 public final class InstancePolicyOrTemplate extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Set this field to `true` if you want Batch to block project-level SSH keys from
+   * accessing this job's VMs. Alternatively, you can configure the job to specify a VM instance
+   * template that blocks project-level SSH keys. In either case, Batch blocks project-level SSH
+   * keys while creating the VMs for this job. Batch allows project-level SSH keys for a job's VMs
+   * only if all the following are true: + This field is undefined or set to `false`. + The job's VM
+   * instance template (if any) doesn't block project-level SSH keys. Notably, you can override this
+   * behavior by manually updating a VM to block or allow project-level SSH keys. For more
+   * information about blocking project-level SSH keys, see the Compute Engine documentation:
+   * https://cloud.google.com/compute/docs/connect/restrict-ssh-keys#block-keys
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean blockProjectSshKeys;
+
+  /**
    * Set this field true if you want Batch to help fetch drivers from a third party location and
    * install them for GPUs specified in `policy.accelerators` or `instance_template` on your behalf.
    * Default is false. For Container-Optimized Image cases, Batch will install the accelerator
@@ -66,6 +81,39 @@ public final class InstancePolicyOrTemplate extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private InstancePolicy policy;
+
+  /**
+   * Optional. Set this field to `true` if you want Batch to block project-level SSH keys from
+   * accessing this job's VMs. Alternatively, you can configure the job to specify a VM instance
+   * template that blocks project-level SSH keys. In either case, Batch blocks project-level SSH
+   * keys while creating the VMs for this job. Batch allows project-level SSH keys for a job's VMs
+   * only if all the following are true: + This field is undefined or set to `false`. + The job's VM
+   * instance template (if any) doesn't block project-level SSH keys. Notably, you can override this
+   * behavior by manually updating a VM to block or allow project-level SSH keys. For more
+   * information about blocking project-level SSH keys, see the Compute Engine documentation:
+   * https://cloud.google.com/compute/docs/connect/restrict-ssh-keys#block-keys
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getBlockProjectSshKeys() {
+    return blockProjectSshKeys;
+  }
+
+  /**
+   * Optional. Set this field to `true` if you want Batch to block project-level SSH keys from
+   * accessing this job's VMs. Alternatively, you can configure the job to specify a VM instance
+   * template that blocks project-level SSH keys. In either case, Batch blocks project-level SSH
+   * keys while creating the VMs for this job. Batch allows project-level SSH keys for a job's VMs
+   * only if all the following are true: + This field is undefined or set to `false`. + The job's VM
+   * instance template (if any) doesn't block project-level SSH keys. Notably, you can override this
+   * behavior by manually updating a VM to block or allow project-level SSH keys. For more
+   * information about blocking project-level SSH keys, see the Compute Engine documentation:
+   * https://cloud.google.com/compute/docs/connect/restrict-ssh-keys#block-keys
+   * @param blockProjectSshKeys blockProjectSshKeys or {@code null} for none
+   */
+  public InstancePolicyOrTemplate setBlockProjectSshKeys(java.lang.Boolean blockProjectSshKeys) {
+    this.blockProjectSshKeys = blockProjectSshKeys;
+    return this;
+  }
 
   /**
    * Set this field true if you want Batch to help fetch drivers from a third party location and

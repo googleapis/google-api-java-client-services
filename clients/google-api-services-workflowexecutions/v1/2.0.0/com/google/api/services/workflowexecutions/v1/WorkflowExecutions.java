@@ -645,6 +645,147 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
             }
           }
           /**
+           * Deletes all step entries for an execution.
+           *
+           * Create a request for the method "executions.deleteExecutionHistory".
+           *
+           * This request holds the parameters needed by the workflowexecutions server.  After setting any
+           * optional parameters, call the {@link DeleteExecutionHistory#execute()} method to invoke the
+           * remote operation.
+           *
+           * @param name Required. Name of the execution for which step entries should be deleted. Format:
+           *        projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
+           * @param content the {@link com.google.api.services.workflowexecutions.v1.model.DeleteExecutionHistoryRequest}
+           * @return the request
+           */
+          public DeleteExecutionHistory deleteExecutionHistory(java.lang.String name, com.google.api.services.workflowexecutions.v1.model.DeleteExecutionHistoryRequest content) throws java.io.IOException {
+            DeleteExecutionHistory result = new DeleteExecutionHistory(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class DeleteExecutionHistory extends WorkflowExecutionsRequest<com.google.api.services.workflowexecutions.v1.model.Empty> {
+
+            private static final String REST_PATH = "v1/{+name}:deleteExecutionHistory";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workflows/[^/]+/executions/[^/]+$");
+
+            /**
+             * Deletes all step entries for an execution.
+             *
+             * Create a request for the method "executions.deleteExecutionHistory".
+             *
+             * This request holds the parameters needed by the the workflowexecutions server.  After setting
+             * any optional parameters, call the {@link DeleteExecutionHistory#execute()} method to invoke the
+             * remote operation. <p> {@link DeleteExecutionHistory#initialize(com.google.api.client.googleapis
+             * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the execution for which step entries should be deleted. Format:
+           *        projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
+             * @param content the {@link com.google.api.services.workflowexecutions.v1.model.DeleteExecutionHistoryRequest}
+             * @since 1.13
+             */
+            protected DeleteExecutionHistory(java.lang.String name, com.google.api.services.workflowexecutions.v1.model.DeleteExecutionHistoryRequest content) {
+              super(WorkflowExecutions.this, "POST", REST_PATH, content, com.google.api.services.workflowexecutions.v1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workflows/[^/]+/executions/[^/]+$");
+              }
+            }
+
+            @Override
+            public DeleteExecutionHistory set$Xgafv(java.lang.String $Xgafv) {
+              return (DeleteExecutionHistory) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public DeleteExecutionHistory setAccessToken(java.lang.String accessToken) {
+              return (DeleteExecutionHistory) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public DeleteExecutionHistory setAlt(java.lang.String alt) {
+              return (DeleteExecutionHistory) super.setAlt(alt);
+            }
+
+            @Override
+            public DeleteExecutionHistory setCallback(java.lang.String callback) {
+              return (DeleteExecutionHistory) super.setCallback(callback);
+            }
+
+            @Override
+            public DeleteExecutionHistory setFields(java.lang.String fields) {
+              return (DeleteExecutionHistory) super.setFields(fields);
+            }
+
+            @Override
+            public DeleteExecutionHistory setKey(java.lang.String key) {
+              return (DeleteExecutionHistory) super.setKey(key);
+            }
+
+            @Override
+            public DeleteExecutionHistory setOauthToken(java.lang.String oauthToken) {
+              return (DeleteExecutionHistory) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public DeleteExecutionHistory setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (DeleteExecutionHistory) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public DeleteExecutionHistory setQuotaUser(java.lang.String quotaUser) {
+              return (DeleteExecutionHistory) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public DeleteExecutionHistory setUploadType(java.lang.String uploadType) {
+              return (DeleteExecutionHistory) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public DeleteExecutionHistory setUploadProtocol(java.lang.String uploadProtocol) {
+              return (DeleteExecutionHistory) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the execution for which step entries should be deleted. Format:
+             * projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the execution for which step entries should be deleted. Format:
+           projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Name of the execution for which step entries should be deleted. Format:
+             * projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
+             */
+            public DeleteExecutionHistory setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workflows/[^/]+/executions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public DeleteExecutionHistory set(String parameterName, Object value) {
+              return (DeleteExecutionHistory) super.set(parameterName, value);
+            }
+          }
+          /**
            * Returns all metadata stored about an execution, excluding most data that is already accessible
            * using other API methods.
            *
@@ -1652,6 +1793,22 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
                 return this;
               }
 
+              /** Deprecated field. */
+              @com.google.api.client.util.Key
+              private java.lang.String view;
+
+              /** Deprecated field.
+               */
+              public java.lang.String getView() {
+                return view;
+              }
+
+              /** Deprecated field. */
+              public Get setView(java.lang.String view) {
+                this.view = view;
+                return this;
+              }
+
               @Override
               public Get set(String parameterName, Object value) {
                 return (Get) super.set(parameterName, value);
@@ -1667,8 +1824,7 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
              * @param parent Required. Name of the workflow execution to list entries for. Format:
-             *        projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}/stepEn
-             *        tries/
+             *        projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -1697,8 +1853,7 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
                * called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent Required. Name of the workflow execution to list entries for. Format:
-             *        projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}/stepEn
-             *        tries/
+             *        projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -1777,22 +1932,22 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
               }
 
               /**
-               * Required. Name of the workflow execution to list entries for. Format: projects/{pro
-               * ject}/locations/{location}/workflows/{workflow}/executions/{execution}/stepEntries/
+               * Required. Name of the workflow execution to list entries for. Format:
+               * projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
               /** Required. Name of the workflow execution to list entries for. Format:
-             projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}/stepEntries/
+             projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. Name of the workflow execution to list entries for. Format: projects/{pro
-               * ject}/locations/{location}/workflows/{workflow}/executions/{execution}/stepEntries/
+               * Required. Name of the workflow execution to list entries for. Format:
+               * projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -1807,17 +1962,17 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
               /**
                * Optional. Filters applied to the `[StepEntries.ListStepEntries]` results. The
                * following fields are supported for filtering: `entryId`, `createTime`,
-               * `updateTime`, `routine`, `step`, `stepType`, `state`. For details, see AIP-160. For
-               * example, if you are using the Google APIs Explorer: `state="SUCCEEDED"` or
-               * `createTime>"2023-08-01" AND state="FAILED"`
+               * `updateTime`, `routine`, `step`, `stepType`, `parent`, `state`. For details, see
+               * AIP-160. For example, if you are using the Google APIs Explorer:
+               * `state="SUCCEEDED"` or `createTime>"2023-08-01" AND state="FAILED"`
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
               /** Optional. Filters applied to the `[StepEntries.ListStepEntries]` results. The following fields are
              supported for filtering: `entryId`, `createTime`, `updateTime`, `routine`, `step`, `stepType`,
-             `state`. For details, see AIP-160. For example, if you are using the Google APIs Explorer:
-             `state="SUCCEEDED"` or `createTime>"2023-08-01" AND state="FAILED"`
+             `parent`, `state`. For details, see AIP-160. For example, if you are using the Google APIs
+             Explorer: `state="SUCCEEDED"` or `createTime>"2023-08-01" AND state="FAILED"`
                */
               public java.lang.String getFilter() {
                 return filter;
@@ -1826,9 +1981,9 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
               /**
                * Optional. Filters applied to the `[StepEntries.ListStepEntries]` results. The
                * following fields are supported for filtering: `entryId`, `createTime`,
-               * `updateTime`, `routine`, `step`, `stepType`, `state`. For details, see AIP-160. For
-               * example, if you are using the Google APIs Explorer: `state="SUCCEEDED"` or
-               * `createTime>"2023-08-01" AND state="FAILED"`
+               * `updateTime`, `routine`, `step`, `stepType`, `parent`, `state`. For details, see
+               * AIP-160. For example, if you are using the Google APIs Explorer:
+               * `state="SUCCEEDED"` or `createTime>"2023-08-01" AND state="FAILED"`
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -1931,6 +2086,22 @@ public class WorkflowExecutions extends com.google.api.client.googleapis.service
                */
               public List setSkip(java.lang.Integer skip) {
                 this.skip = skip;
+                return this;
+              }
+
+              /** Deprecated field. */
+              @com.google.api.client.util.Key
+              private java.lang.String view;
+
+              /** Deprecated field.
+               */
+              public java.lang.String getView() {
+                return view;
+              }
+
+              /** Deprecated field. */
+              public List setView(java.lang.String view) {
+                this.view = view;
                 return this;
               }
 

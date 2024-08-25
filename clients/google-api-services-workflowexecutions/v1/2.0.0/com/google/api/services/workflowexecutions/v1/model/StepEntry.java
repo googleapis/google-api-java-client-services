@@ -111,6 +111,13 @@ public final class StepEntry extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
+   * Output only. The VariableData associated to this step.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VariableData variableData;
+
+  /**
    * Output only. The creation time of the step entry.
    * @return value or {@code null} for none
    */
@@ -300,6 +307,23 @@ public final class StepEntry extends com.google.api.client.json.GenericJson {
    */
   public StepEntry setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Output only. The VariableData associated to this step.
+   * @return value or {@code null} for none
+   */
+  public VariableData getVariableData() {
+    return variableData;
+  }
+
+  /**
+   * Output only. The VariableData associated to this step.
+   * @param variableData variableData or {@code null} for none
+   */
+  public StepEntry setVariableData(VariableData variableData) {
+    this.variableData = variableData;
     return this;
   }
 

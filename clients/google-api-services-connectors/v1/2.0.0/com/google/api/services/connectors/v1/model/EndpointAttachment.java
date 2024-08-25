@@ -82,6 +82,14 @@ public final class EndpointAttachment extends com.google.api.client.json.Generic
   private java.lang.String serviceAttachment;
 
   /**
+   * Output only. The Private Service Connect Connection Endpoint State. This value is only
+   * available in the Full view.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * Output only. Updated time.
    * The value may be {@code null}.
    */
@@ -210,6 +218,25 @@ public final class EndpointAttachment extends com.google.api.client.json.Generic
    */
   public EndpointAttachment setServiceAttachment(java.lang.String serviceAttachment) {
     this.serviceAttachment = serviceAttachment;
+    return this;
+  }
+
+  /**
+   * Output only. The Private Service Connect Connection Endpoint State. This value is only
+   * available in the Full view.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. The Private Service Connect Connection Endpoint State. This value is only
+   * available in the Full view.
+   * @param state state or {@code null} for none
+   */
+  public EndpointAttachment setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

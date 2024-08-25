@@ -6145,6 +6145,29 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
+          /**
+           * Optional. Specifies which fields of the EndpointAttachment are returned in the
+           * response. Defaults to `ENDPOINT_ATTACHMENT_VIEW_BASIC` view.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String view;
+
+          /** Optional. Specifies which fields of the EndpointAttachment are returned in the response. Defaults
+         to `ENDPOINT_ATTACHMENT_VIEW_BASIC` view.
+           */
+          public java.lang.String getView() {
+            return view;
+          }
+
+          /**
+           * Optional. Specifies which fields of the EndpointAttachment are returned in the
+           * response. Defaults to `ENDPOINT_ATTACHMENT_VIEW_BASIC` view.
+           */
+          public Get setView(java.lang.String view) {
+            this.view = view;
+            return this;
+          }
+
           @Override
           public Get set(String parameterName, Object value) {
             return (Get) super.set(parameterName, value);
@@ -6348,6 +6371,29 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
           /** Page token. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. Specifies which fields of the EndpointAttachment are returned in the
+           * response. Defaults to `ENDPOINT_ATTACHMENT_VIEW_BASIC` view.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String view;
+
+          /** Optional. Specifies which fields of the EndpointAttachment are returned in the response. Defaults
+         to `ENDPOINT_ATTACHMENT_VIEW_BASIC` view.
+           */
+          public java.lang.String getView() {
+            return view;
+          }
+
+          /**
+           * Optional. Specifies which fields of the EndpointAttachment are returned in the
+           * response. Defaults to `ENDPOINT_ATTACHMENT_VIEW_BASIC` view.
+           */
+          public List setView(java.lang.String view) {
+            this.view = view;
             return this;
           }
 

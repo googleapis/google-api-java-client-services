@@ -82,13 +82,6 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   private String effectiveTime;
 
   /**
-   * Required. The default retention period for each backup in the backup vault (Deprecated).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String enforcedRetentionDuration;
-
-  /**
    * Optional. Server specified ETag for the backup vault resource to prevent simultaneous updates
    * from overwiting each other.
    * The value may be {@code null}.
@@ -267,23 +260,6 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
    */
   public BackupVault setEffectiveTime(String effectiveTime) {
     this.effectiveTime = effectiveTime;
-    return this;
-  }
-
-  /**
-   * Required. The default retention period for each backup in the backup vault (Deprecated).
-   * @return value or {@code null} for none
-   */
-  public String getEnforcedRetentionDuration() {
-    return enforcedRetentionDuration;
-  }
-
-  /**
-   * Required. The default retention period for each backup in the backup vault (Deprecated).
-   * @param enforcedRetentionDuration enforcedRetentionDuration or {@code null} for none
-   */
-  public BackupVault setEnforcedRetentionDuration(String enforcedRetentionDuration) {
-    this.enforcedRetentionDuration = enforcedRetentionDuration;
     return this;
   }
 

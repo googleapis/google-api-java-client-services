@@ -116,6 +116,13 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   private java.lang.Long generation;
 
   /**
+   * The hard delete time of the bucket in RFC 3339 format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private com.google.api.client.util.DateTime hardDeleteTime;
+
+  /**
    * The bucket's hierarchical namespace configuration.
    * The value may be {@code null}.
    */
@@ -275,6 +282,13 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private SoftDeletePolicy softDeletePolicy;
+
+  /**
+   * The soft delete time of the bucket in RFC 3339 format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private com.google.api.client.util.DateTime softDeleteTime;
 
   /**
    * The bucket's default storage class, used whenever no storageClass is specified for a newly-
@@ -503,6 +517,23 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
    */
   public Bucket setGeneration(java.lang.Long generation) {
     this.generation = generation;
+    return this;
+  }
+
+  /**
+   * The hard delete time of the bucket in RFC 3339 format.
+   * @return value or {@code null} for none
+   */
+  public com.google.api.client.util.DateTime getHardDeleteTime() {
+    return hardDeleteTime;
+  }
+
+  /**
+   * The hard delete time of the bucket in RFC 3339 format.
+   * @param hardDeleteTime hardDeleteTime or {@code null} for none
+   */
+  public Bucket setHardDeleteTime(com.google.api.client.util.DateTime hardDeleteTime) {
+    this.hardDeleteTime = hardDeleteTime;
     return this;
   }
 
@@ -888,6 +919,23 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
    */
   public Bucket setSoftDeletePolicy(SoftDeletePolicy softDeletePolicy) {
     this.softDeletePolicy = softDeletePolicy;
+    return this;
+  }
+
+  /**
+   * The soft delete time of the bucket in RFC 3339 format.
+   * @return value or {@code null} for none
+   */
+  public com.google.api.client.util.DateTime getSoftDeleteTime() {
+    return softDeleteTime;
+  }
+
+  /**
+   * The soft delete time of the bucket in RFC 3339 format.
+   * @param softDeleteTime softDeleteTime or {@code null} for none
+   */
+  public Bucket setSoftDeleteTime(com.google.api.client.util.DateTime softDeleteTime) {
+    this.softDeleteTime = softDeleteTime;
     return this;
   }
 

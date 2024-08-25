@@ -5525,17 +5525,19 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * sensitive. The following fields in the Backup are eligible for filtering: * `name` *
            * `database` * `state` * `create_time` (and values are of the format YYYY-MM-
            * DDTHH:MM:SSZ) * `expire_time` (and values are of the format YYYY-MM-DDTHH:MM:SSZ) *
-           * `version_time` (and values are of the format YYYY-MM-DDTHH:MM:SSZ) * `size_bytes` You
-           * can combine multiple expressions by enclosing each expression in parentheses. By
-           * default, expressions are combined with AND logic, but you can specify AND, OR, and NOT
-           * logic explicitly. Here are a few examples: * `name:Howl` - The backup's name contains
-           * the string "howl". * `database:prod` - The database's name contains the string "prod".
-           * * `state:CREATING` - The backup is pending creation. * `state:READY` - The backup is
-           * fully created and ready for use. * `(name:howl) AND (create_time <
-           * \"2018-03-28T14:50:00Z\")` - The backup name contains the string "howl" and
-           * `create_time` of the backup is before 2018-03-28T14:50:00Z. * `expire_time <
+           * `version_time` (and values are of the format YYYY-MM-DDTHH:MM:SSZ) * `size_bytes` *
+           * `backup_schedules` You can combine multiple expressions by enclosing each expression in
+           * parentheses. By default, expressions are combined with AND logic, but you can specify
+           * AND, OR, and NOT logic explicitly. Here are a few examples: * `name:Howl` - The
+           * backup's name contains the string "howl". * `database:prod` - The database's name
+           * contains the string "prod". * `state:CREATING` - The backup is pending creation. *
+           * `state:READY` - The backup is fully created and ready for use. * `(name:howl) AND
+           * (create_time < \"2018-03-28T14:50:00Z\")` - The backup name contains the string "howl"
+           * and `create_time` of the backup is before 2018-03-28T14:50:00Z. * `expire_time <
            * \"2018-03-28T14:50:00Z\"` - The backup `expire_time` is before 2018-03-28T14:50:00Z. *
-           * `size_bytes > 10000000000` - The backup's size is greater than 10GB
+           * `size_bytes > 10000000000` - The backup's size is greater than 10GB *
+           * `backup_schedules:daily` - The backup is created from a schedule with "daily" in its
+           * name.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -5546,16 +5548,17 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          is the contains operator. Filter rules are not case sensitive. The following fields in the Backup
          are eligible for filtering: * `name` * `database` * `state` * `create_time` (and values are of the
          format YYYY-MM-DDTHH:MM:SSZ) * `expire_time` (and values are of the format YYYY-MM-DDTHH:MM:SSZ) *
-         `version_time` (and values are of the format YYYY-MM-DDTHH:MM:SSZ) * `size_bytes` You can combine
-         multiple expressions by enclosing each expression in parentheses. By default, expressions are
-         combined with AND logic, but you can specify AND, OR, and NOT logic explicitly. Here are a few
-         examples: * `name:Howl` - The backup's name contains the string "howl". * `database:prod` - The
-         database's name contains the string "prod". * `state:CREATING` - The backup is pending creation. *
-         `state:READY` - The backup is fully created and ready for use. * `(name:howl) AND (create_time <
-         \"2018-03-28T14:50:00Z\")` - The backup name contains the string "howl" and `create_time` of the
-         backup is before 2018-03-28T14:50:00Z. * `expire_time < \"2018-03-28T14:50:00Z\"` - The backup
-         `expire_time` is before 2018-03-28T14:50:00Z. * `size_bytes > 10000000000` - The backup's size is
-         greater than 10GB
+         `version_time` (and values are of the format YYYY-MM-DDTHH:MM:SSZ) * `size_bytes` *
+         `backup_schedules` You can combine multiple expressions by enclosing each expression in
+         parentheses. By default, expressions are combined with AND logic, but you can specify AND, OR, and
+         NOT logic explicitly. Here are a few examples: * `name:Howl` - The backup's name contains the
+         string "howl". * `database:prod` - The database's name contains the string "prod". *
+         `state:CREATING` - The backup is pending creation. * `state:READY` - The backup is fully created
+         and ready for use. * `(name:howl) AND (create_time < \"2018-03-28T14:50:00Z\")` - The backup name
+         contains the string "howl" and `create_time` of the backup is before 2018-03-28T14:50:00Z. *
+         `expire_time < \"2018-03-28T14:50:00Z\"` - The backup `expire_time` is before 2018-03-28T14:50:00Z.
+         * `size_bytes > 10000000000` - The backup's size is greater than 10GB * `backup_schedules:daily` -
+         The backup is created from a schedule with "daily" in its name.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -5569,17 +5572,19 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * sensitive. The following fields in the Backup are eligible for filtering: * `name` *
            * `database` * `state` * `create_time` (and values are of the format YYYY-MM-
            * DDTHH:MM:SSZ) * `expire_time` (and values are of the format YYYY-MM-DDTHH:MM:SSZ) *
-           * `version_time` (and values are of the format YYYY-MM-DDTHH:MM:SSZ) * `size_bytes` You
-           * can combine multiple expressions by enclosing each expression in parentheses. By
-           * default, expressions are combined with AND logic, but you can specify AND, OR, and NOT
-           * logic explicitly. Here are a few examples: * `name:Howl` - The backup's name contains
-           * the string "howl". * `database:prod` - The database's name contains the string "prod".
-           * * `state:CREATING` - The backup is pending creation. * `state:READY` - The backup is
-           * fully created and ready for use. * `(name:howl) AND (create_time <
-           * \"2018-03-28T14:50:00Z\")` - The backup name contains the string "howl" and
-           * `create_time` of the backup is before 2018-03-28T14:50:00Z. * `expire_time <
+           * `version_time` (and values are of the format YYYY-MM-DDTHH:MM:SSZ) * `size_bytes` *
+           * `backup_schedules` You can combine multiple expressions by enclosing each expression in
+           * parentheses. By default, expressions are combined with AND logic, but you can specify
+           * AND, OR, and NOT logic explicitly. Here are a few examples: * `name:Howl` - The
+           * backup's name contains the string "howl". * `database:prod` - The database's name
+           * contains the string "prod". * `state:CREATING` - The backup is pending creation. *
+           * `state:READY` - The backup is fully created and ready for use. * `(name:howl) AND
+           * (create_time < \"2018-03-28T14:50:00Z\")` - The backup name contains the string "howl"
+           * and `create_time` of the backup is before 2018-03-28T14:50:00Z. * `expire_time <
            * \"2018-03-28T14:50:00Z\"` - The backup `expire_time` is before 2018-03-28T14:50:00Z. *
-           * `size_bytes > 10000000000` - The backup's size is greater than 10GB
+           * `size_bytes > 10000000000` - The backup's size is greater than 10GB *
+           * `backup_schedules:daily` - The backup is created from a schedule with "daily" in its
+           * name.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;

@@ -168,6 +168,16 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private java.lang.String etag;
 
   /**
+   * Optional. Grant creator of a workstation `roles/workstations.policyAdmin` role along with
+   * `roles/workstations.user` role on the workstation created by them. This allows workstation
+   * users to share access to either their entire workstation, or individual ports. Defaults to
+   * false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean grantWorkstationAdminRoleOnCreate;
+
+  /**
    * Optional. Runtime host for the workstation.
    * The value may be {@code null}.
    */
@@ -577,6 +587,29 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    */
   public WorkstationConfig setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Optional. Grant creator of a workstation `roles/workstations.policyAdmin` role along with
+   * `roles/workstations.user` role on the workstation created by them. This allows workstation
+   * users to share access to either their entire workstation, or individual ports. Defaults to
+   * false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGrantWorkstationAdminRoleOnCreate() {
+    return grantWorkstationAdminRoleOnCreate;
+  }
+
+  /**
+   * Optional. Grant creator of a workstation `roles/workstations.policyAdmin` role along with
+   * `roles/workstations.user` role on the workstation created by them. This allows workstation
+   * users to share access to either their entire workstation, or individual ports. Defaults to
+   * false.
+   * @param grantWorkstationAdminRoleOnCreate grantWorkstationAdminRoleOnCreate or {@code null} for none
+   */
+  public WorkstationConfig setGrantWorkstationAdminRoleOnCreate(java.lang.Boolean grantWorkstationAdminRoleOnCreate) {
+    this.grantWorkstationAdminRoleOnCreate = grantWorkstationAdminRoleOnCreate;
     return this;
   }
 

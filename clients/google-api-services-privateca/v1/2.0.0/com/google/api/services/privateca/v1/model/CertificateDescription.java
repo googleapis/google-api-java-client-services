@@ -85,6 +85,15 @@ public final class CertificateDescription extends com.google.api.client.json.Gen
   private KeyId subjectKeyId;
 
   /**
+   * The hash of the pre-signed certificate, which will be signed by the CA. Corresponds to the TBS
+   * Certificate in https://tools.ietf.org/html/rfc5280#section-4.1.2. The field will always be
+   * populated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tbsCertificateDigest;
+
+  /**
    * Describes some of the technical X.509 fields in a certificate.
    * The value may be {@code null}.
    */
@@ -215,6 +224,27 @@ public final class CertificateDescription extends com.google.api.client.json.Gen
    */
   public CertificateDescription setSubjectKeyId(KeyId subjectKeyId) {
     this.subjectKeyId = subjectKeyId;
+    return this;
+  }
+
+  /**
+   * The hash of the pre-signed certificate, which will be signed by the CA. Corresponds to the TBS
+   * Certificate in https://tools.ietf.org/html/rfc5280#section-4.1.2. The field will always be
+   * populated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTbsCertificateDigest() {
+    return tbsCertificateDigest;
+  }
+
+  /**
+   * The hash of the pre-signed certificate, which will be signed by the CA. Corresponds to the TBS
+   * Certificate in https://tools.ietf.org/html/rfc5280#section-4.1.2. The field will always be
+   * populated.
+   * @param tbsCertificateDigest tbsCertificateDigest or {@code null} for none
+   */
+  public CertificateDescription setTbsCertificateDigest(java.lang.String tbsCertificateDigest) {
+    this.tbsCertificateDigest = tbsCertificateDigest;
     return this;
   }
 

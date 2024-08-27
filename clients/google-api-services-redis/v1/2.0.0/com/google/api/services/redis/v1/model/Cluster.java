@@ -68,6 +68,20 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.util.List<DiscoveryEndpoint> discoveryEndpoints;
 
   /**
+   * Optional. ClusterMaintenancePolicy determines when to allow or deny updates.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ClusterMaintenancePolicy maintenancePolicy;
+
+  /**
+   * Output only. ClusterMaintenanceSchedule Output only Published maintenance schedule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ClusterMaintenanceSchedule maintenanceSchedule;
+
+  /**
    * Required. Identifier. Unique name of the resource in this scope including project and location
    * using the form: `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
    * The value may be {@code null}.
@@ -265,6 +279,40 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setDiscoveryEndpoints(java.util.List<DiscoveryEndpoint> discoveryEndpoints) {
     this.discoveryEndpoints = discoveryEndpoints;
+    return this;
+  }
+
+  /**
+   * Optional. ClusterMaintenancePolicy determines when to allow or deny updates.
+   * @return value or {@code null} for none
+   */
+  public ClusterMaintenancePolicy getMaintenancePolicy() {
+    return maintenancePolicy;
+  }
+
+  /**
+   * Optional. ClusterMaintenancePolicy determines when to allow or deny updates.
+   * @param maintenancePolicy maintenancePolicy or {@code null} for none
+   */
+  public Cluster setMaintenancePolicy(ClusterMaintenancePolicy maintenancePolicy) {
+    this.maintenancePolicy = maintenancePolicy;
+    return this;
+  }
+
+  /**
+   * Output only. ClusterMaintenanceSchedule Output only Published maintenance schedule.
+   * @return value or {@code null} for none
+   */
+  public ClusterMaintenanceSchedule getMaintenanceSchedule() {
+    return maintenanceSchedule;
+  }
+
+  /**
+   * Output only. ClusterMaintenanceSchedule Output only Published maintenance schedule.
+   * @param maintenanceSchedule maintenanceSchedule or {@code null} for none
+   */
+  public Cluster setMaintenanceSchedule(ClusterMaintenanceSchedule maintenanceSchedule) {
+    this.maintenanceSchedule = maintenanceSchedule;
     return this;
   }
 

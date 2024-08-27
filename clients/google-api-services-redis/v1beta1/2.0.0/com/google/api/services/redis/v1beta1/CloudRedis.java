@@ -1588,6 +1588,152 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
             return (Patch) super.set(parameterName, value);
           }
         }
+        /**
+         * Reschedules upcoming maintenance event.
+         *
+         * Create a request for the method "clusters.rescheduleClusterMaintenance".
+         *
+         * This request holds the parameters needed by the redis server.  After setting any optional
+         * parameters, call the {@link RescheduleClusterMaintenance#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. Redis Cluster instance resource name using the form:
+         *        `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where `location_id`
+         *        refers to a GCP region.
+         * @param content the {@link com.google.api.services.redis.v1beta1.model.RescheduleClusterMaintenanceRequest}
+         * @return the request
+         */
+        public RescheduleClusterMaintenance rescheduleClusterMaintenance(java.lang.String name, com.google.api.services.redis.v1beta1.model.RescheduleClusterMaintenanceRequest content) throws java.io.IOException {
+          RescheduleClusterMaintenance result = new RescheduleClusterMaintenance(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RescheduleClusterMaintenance extends CloudRedisRequest<com.google.api.services.redis.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:rescheduleClusterMaintenance";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+
+          /**
+           * Reschedules upcoming maintenance event.
+           *
+           * Create a request for the method "clusters.rescheduleClusterMaintenance".
+           *
+           * This request holds the parameters needed by the the redis server.  After setting any optional
+           * parameters, call the {@link RescheduleClusterMaintenance#execute()} method to invoke the remote
+           * operation. <p> {@link RescheduleClusterMaintenance#initialize(com.google.api.client.googleapis.
+           * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Required. Redis Cluster instance resource name using the form:
+         *        `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where `location_id`
+         *        refers to a GCP region.
+           * @param content the {@link com.google.api.services.redis.v1beta1.model.RescheduleClusterMaintenanceRequest}
+           * @since 1.13
+           */
+          protected RescheduleClusterMaintenance(java.lang.String name, com.google.api.services.redis.v1beta1.model.RescheduleClusterMaintenanceRequest content) {
+            super(CloudRedis.this, "POST", REST_PATH, content, com.google.api.services.redis.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+            }
+          }
+
+          @Override
+          public RescheduleClusterMaintenance set$Xgafv(java.lang.String $Xgafv) {
+            return (RescheduleClusterMaintenance) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RescheduleClusterMaintenance setAccessToken(java.lang.String accessToken) {
+            return (RescheduleClusterMaintenance) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RescheduleClusterMaintenance setAlt(java.lang.String alt) {
+            return (RescheduleClusterMaintenance) super.setAlt(alt);
+          }
+
+          @Override
+          public RescheduleClusterMaintenance setCallback(java.lang.String callback) {
+            return (RescheduleClusterMaintenance) super.setCallback(callback);
+          }
+
+          @Override
+          public RescheduleClusterMaintenance setFields(java.lang.String fields) {
+            return (RescheduleClusterMaintenance) super.setFields(fields);
+          }
+
+          @Override
+          public RescheduleClusterMaintenance setKey(java.lang.String key) {
+            return (RescheduleClusterMaintenance) super.setKey(key);
+          }
+
+          @Override
+          public RescheduleClusterMaintenance setOauthToken(java.lang.String oauthToken) {
+            return (RescheduleClusterMaintenance) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RescheduleClusterMaintenance setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RescheduleClusterMaintenance) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RescheduleClusterMaintenance setQuotaUser(java.lang.String quotaUser) {
+            return (RescheduleClusterMaintenance) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RescheduleClusterMaintenance setUploadType(java.lang.String uploadType) {
+            return (RescheduleClusterMaintenance) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RescheduleClusterMaintenance setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RescheduleClusterMaintenance) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Redis Cluster instance resource name using the form:
+           * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where
+           * `location_id` refers to a GCP region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Redis Cluster instance resource name using the form:
+         `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where `location_id` refers to
+         a GCP region.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Redis Cluster instance resource name using the form:
+           * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where
+           * `location_id` refers to a GCP region.
+           */
+          public RescheduleClusterMaintenance setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public RescheduleClusterMaintenance set(String parameterName, Object value) {
+            return (RescheduleClusterMaintenance) super.set(parameterName, value);
+          }
+        }
 
       }
       /**

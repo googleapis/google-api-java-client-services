@@ -44,6 +44,14 @@ public final class ListKeyHandlesResponse extends com.google.api.client.json.Gen
   }
 
   /**
+   * A token to retrieve next page of results. Pass this value in ListKeyHandlesRequest.page_token
+   * to retrieve the next page of results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nextPageToken;
+
+  /**
    * Resulting KeyHandles.
    * @return value or {@code null} for none
    */
@@ -57,6 +65,25 @@ public final class ListKeyHandlesResponse extends com.google.api.client.json.Gen
    */
   public ListKeyHandlesResponse setKeyHandles(java.util.List<KeyHandle> keyHandles) {
     this.keyHandles = keyHandles;
+    return this;
+  }
+
+  /**
+   * A token to retrieve next page of results. Pass this value in ListKeyHandlesRequest.page_token
+   * to retrieve the next page of results.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNextPageToken() {
+    return nextPageToken;
+  }
+
+  /**
+   * A token to retrieve next page of results. Pass this value in ListKeyHandlesRequest.page_token
+   * to retrieve the next page of results.
+   * @param nextPageToken nextPageToken or {@code null} for none
+   */
+  public ListKeyHandlesResponse setNextPageToken(java.lang.String nextPageToken) {
+    this.nextPageToken = nextPageToken;
     return this;
   }
 

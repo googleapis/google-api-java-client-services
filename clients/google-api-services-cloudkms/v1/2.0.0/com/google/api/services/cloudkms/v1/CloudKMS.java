@@ -3817,6 +3817,57 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
+          /**
+           * Optional. Optional limit on the number of KeyHandles to include in the response. The
+           * service may return fewer than this value. Further KeyHandles can subsequently be
+           * obtained by including the ListKeyHandlesResponse.next_page_token in a subsequent
+           * request. If unspecified, at most KeyHandles 100 will be returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Optional limit on the number of KeyHandles to include in the response. The service may
+         return fewer than this value. Further KeyHandles can subsequently be obtained by including the
+         ListKeyHandlesResponse.next_page_token in a subsequent request. If unspecified, at most KeyHandles
+         100 will be returned.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Optional limit on the number of KeyHandles to include in the response. The
+           * service may return fewer than this value. Further KeyHandles can subsequently be
+           * obtained by including the ListKeyHandlesResponse.next_page_token in a subsequent
+           * request. If unspecified, at most KeyHandles 100 will be returned.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Optional pagination token, returned earlier via
+           * ListKeyHandlesResponse.next_page_token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Optional pagination token, returned earlier via ListKeyHandlesResponse.next_page_token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Optional pagination token, returned earlier via
+           * ListKeyHandlesResponse.next_page_token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);

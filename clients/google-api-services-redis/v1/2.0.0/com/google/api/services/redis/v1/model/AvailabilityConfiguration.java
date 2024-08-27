@@ -31,6 +31,14 @@ package com.google.api.services.redis.v1.model;
 public final class AvailabilityConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
+   * Checks for existence of (multi-cluster) routing configuration that allows automatic failover to
+   * a different zone/region in case of an outage. Applicable to Bigtable resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean automaticFailoverRoutingConfigured;
+
+  /**
    * Availability type. Potential values: * `ZONAL`: The instance serves data from only one zone.
    * Outages in that zone affect data accessibility. * `REGIONAL`: The instance can serve data from
    * more than one zone in a region (it is highly available).
@@ -58,6 +66,25 @@ public final class AvailabilityConfiguration extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean promotableReplicaConfigured;
+
+  /**
+   * Checks for existence of (multi-cluster) routing configuration that allows automatic failover to
+   * a different zone/region in case of an outage. Applicable to Bigtable resources.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAutomaticFailoverRoutingConfigured() {
+    return automaticFailoverRoutingConfigured;
+  }
+
+  /**
+   * Checks for existence of (multi-cluster) routing configuration that allows automatic failover to
+   * a different zone/region in case of an outage. Applicable to Bigtable resources.
+   * @param automaticFailoverRoutingConfigured automaticFailoverRoutingConfigured or {@code null} for none
+   */
+  public AvailabilityConfiguration setAutomaticFailoverRoutingConfigured(java.lang.Boolean automaticFailoverRoutingConfigured) {
+    this.automaticFailoverRoutingConfigured = automaticFailoverRoutingConfigured;
+    return this;
+  }
 
   /**
    * Availability type. Potential values: * `ZONAL`: The instance serves data from only one zone.

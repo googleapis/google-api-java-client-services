@@ -51,6 +51,13 @@ public final class AutokeyConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
+   * Output only. The state for the AutokeyConfig.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * Optional. Name of the key project, e.g. `projects/{PROJECT_ID}` or `projects/{PROJECT_NUMBER}`,
    * where Cloud KMS Autokey will provision a new CryptoKey when a KeyHandle is created. On
    * UpdateAutokeyConfig, the caller will require `cloudkms.cryptoKeys.setIamPolicy` permission on
@@ -93,6 +100,23 @@ public final class AutokeyConfig extends com.google.api.client.json.GenericJson 
    */
   public AutokeyConfig setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The state for the AutokeyConfig.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. The state for the AutokeyConfig.
+   * @param state state or {@code null} for none
+   */
+  public AutokeyConfig setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

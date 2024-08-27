@@ -71,8 +71,8 @@ public final class EkmConnection extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
-   * A list of ServiceResolvers where the EKM can be reached. There should be one ServiceResolver
-   * per EKM replica. Currently, only a single ServiceResolver is supported.
+   * Optional. A list of ServiceResolvers where the EKM can be reached. There should be one
+   * ServiceResolver per EKM replica. Currently, only a single ServiceResolver is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -170,8 +170,8 @@ public final class EkmConnection extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A list of ServiceResolvers where the EKM can be reached. There should be one ServiceResolver
-   * per EKM replica. Currently, only a single ServiceResolver is supported.
+   * Optional. A list of ServiceResolvers where the EKM can be reached. There should be one
+   * ServiceResolver per EKM replica. Currently, only a single ServiceResolver is supported.
    * @return value or {@code null} for none
    */
   public java.util.List<ServiceResolver> getServiceResolvers() {
@@ -179,8 +179,8 @@ public final class EkmConnection extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A list of ServiceResolvers where the EKM can be reached. There should be one ServiceResolver
-   * per EKM replica. Currently, only a single ServiceResolver is supported.
+   * Optional. A list of ServiceResolvers where the EKM can be reached. There should be one
+   * ServiceResolver per EKM replica. Currently, only a single ServiceResolver is supported.
    * @param serviceResolvers serviceResolvers or {@code null} for none
    */
   public EkmConnection setServiceResolvers(java.util.List<ServiceResolver> serviceResolvers) {

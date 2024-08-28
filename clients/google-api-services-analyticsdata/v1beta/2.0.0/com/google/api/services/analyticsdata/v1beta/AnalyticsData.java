@@ -154,7 +154,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
   public class Properties {
 
     /**
-     * Returns multiple pivot reports in a batch. All reports must be for the same GA4 Property.
+     * Returns multiple pivot reports in a batch. All reports must be for the same Google Analytics
+     * property.
      *
      * Create a request for the method "properties.batchRunPivotReports".
      *
@@ -162,8 +163,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
      * parameters, call the {@link BatchRunPivotReports#execute()} method to invoke the remote
      * operation.
      *
-     * @param property A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and
-     *        not the body. To learn more, see [where to find your Property
+     * @param property A Google Analytics property identifier whose events are tracked. Specified in the URL path and not
+     *        the body. To learn more, see [where to find your Property
      *        ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). This
      *        property must be specified for the batch. The property within RunPivotReportRequest may
      *        either be unspecified or consistent with this property. Example: properties/1234
@@ -184,7 +185,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
           java.util.regex.Pattern.compile("^properties/[^/]+$");
 
       /**
-       * Returns multiple pivot reports in a batch. All reports must be for the same GA4 Property.
+       * Returns multiple pivot reports in a batch. All reports must be for the same Google Analytics
+       * property.
        *
        * Create a request for the method "properties.batchRunPivotReports".
        *
@@ -194,8 +196,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
        * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
        * after invoking the constructor. </p>
        *
-       * @param property A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and
-     *        not the body. To learn more, see [where to find your Property
+       * @param property A Google Analytics property identifier whose events are tracked. Specified in the URL path and not
+     *        the body. To learn more, see [where to find your Property
      *        ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). This
      *        property must be specified for the batch. The property within RunPivotReportRequest may
      *        either be unspecified or consistent with this property. Example: properties/1234
@@ -268,8 +270,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL
-       * path and not the body. To learn more, see [where to find your Property
+       * A Google Analytics property identifier whose events are tracked. Specified in the URL path
+       * and not the body. To learn more, see [where to find your Property
        * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). This
        * property must be specified for the batch. The property within RunPivotReportRequest may
        * either be unspecified or consistent with this property. Example: properties/1234
@@ -277,8 +279,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       @com.google.api.client.util.Key
       private java.lang.String property;
 
-      /** A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and
-     not the body. To learn more, see [where to find your Property
+      /** A Google Analytics property identifier whose events are tracked. Specified in the URL path and not
+     the body. To learn more, see [where to find your Property
      ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). This property
      must be specified for the batch. The property within RunPivotReportRequest may either be
      unspecified or consistent with this property. Example: properties/1234
@@ -288,8 +290,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL
-       * path and not the body. To learn more, see [where to find your Property
+       * A Google Analytics property identifier whose events are tracked. Specified in the URL path
+       * and not the body. To learn more, see [where to find your Property
        * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). This
        * property must be specified for the batch. The property within RunPivotReportRequest may
        * either be unspecified or consistent with this property. Example: properties/1234
@@ -310,15 +312,15 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Returns multiple reports in a batch. All reports must be for the same GA4 Property.
+     * Returns multiple reports in a batch. All reports must be for the same Google Analytics property.
      *
      * Create a request for the method "properties.batchRunReports".
      *
      * This request holds the parameters needed by the analyticsdata server.  After setting any optional
      * parameters, call the {@link BatchRunReports#execute()} method to invoke the remote operation.
      *
-     * @param property A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and
-     *        not the body. To learn more, see [where to find your Property
+     * @param property A Google Analytics property identifier whose events are tracked. Specified in the URL path and not
+     *        the body. To learn more, see [where to find your Property
      *        ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). This
      *        property must be specified for the batch. The property within RunReportRequest may either
      *        be unspecified or consistent with this property. Example: properties/1234
@@ -339,7 +341,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
           java.util.regex.Pattern.compile("^properties/[^/]+$");
 
       /**
-       * Returns multiple reports in a batch. All reports must be for the same GA4 Property.
+       * Returns multiple reports in a batch. All reports must be for the same Google Analytics
+       * property.
        *
        * Create a request for the method "properties.batchRunReports".
        *
@@ -349,8 +352,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
        * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
        * the constructor. </p>
        *
-       * @param property A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and
-     *        not the body. To learn more, see [where to find your Property
+       * @param property A Google Analytics property identifier whose events are tracked. Specified in the URL path and not
+     *        the body. To learn more, see [where to find your Property
      *        ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). This
      *        property must be specified for the batch. The property within RunReportRequest may either
      *        be unspecified or consistent with this property. Example: properties/1234
@@ -423,8 +426,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL
-       * path and not the body. To learn more, see [where to find your Property
+       * A Google Analytics property identifier whose events are tracked. Specified in the URL path
+       * and not the body. To learn more, see [where to find your Property
        * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). This
        * property must be specified for the batch. The property within RunReportRequest may either
        * be unspecified or consistent with this property. Example: properties/1234
@@ -432,8 +435,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       @com.google.api.client.util.Key
       private java.lang.String property;
 
-      /** A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and
-     not the body. To learn more, see [where to find your Property
+      /** A Google Analytics property identifier whose events are tracked. Specified in the URL path and not
+     the body. To learn more, see [where to find your Property
      ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). This property
      must be specified for the batch. The property within RunReportRequest may either be unspecified or
      consistent with this property. Example: properties/1234
@@ -443,8 +446,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL
-       * path and not the body. To learn more, see [where to find your Property
+       * A Google Analytics property identifier whose events are tracked. Specified in the URL path
+       * and not the body. To learn more, see [where to find your Property
        * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). This
        * property must be specified for the batch. The property within RunReportRequest may either
        * be unspecified or consistent with this property. Example: properties/1234
@@ -477,8 +480,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
      * This request holds the parameters needed by the analyticsdata server.  After setting any optional
      * parameters, call the {@link CheckCompatibility#execute()} method to invoke the remote operation.
      *
-     * @param property A Google Analytics GA4 property identifier whose events are tracked. To learn more, see [where to
-     *        find your Property
+     * @param property A Google Analytics property identifier whose events are tracked. To learn more, see [where to find
+     *        your Property
      *        ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
      *        `property` should be the same value as in your `runReport` request. Example:
      *        properties/1234
@@ -514,8 +517,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
        * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param property A Google Analytics GA4 property identifier whose events are tracked. To learn more, see [where to
-     *        find your Property
+       * @param property A Google Analytics property identifier whose events are tracked. To learn more, see [where to find
+     *        your Property
      *        ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
      *        `property` should be the same value as in your `runReport` request. Example:
      *        properties/1234
@@ -588,8 +591,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * A Google Analytics GA4 property identifier whose events are tracked. To learn more, see
-       * [where to find your Property
+       * A Google Analytics property identifier whose events are tracked. To learn more, see [where
+       * to find your Property
        * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
        * `property` should be the same value as in your `runReport` request. Example:
        * properties/1234
@@ -597,18 +600,17 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       @com.google.api.client.util.Key
       private java.lang.String property;
 
-      /** A Google Analytics GA4 property identifier whose events are tracked. To learn more, see [where to
-     find your Property
-     ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). `property`
-     should be the same value as in your `runReport` request. Example: properties/1234
+      /** A Google Analytics property identifier whose events are tracked. To learn more, see [where to find
+     your Property ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
+     `property` should be the same value as in your `runReport` request. Example: properties/1234
        */
       public java.lang.String getProperty() {
         return property;
       }
 
       /**
-       * A Google Analytics GA4 property identifier whose events are tracked. To learn more, see
-       * [where to find your Property
+       * A Google Analytics property identifier whose events are tracked. To learn more, see [where
+       * to find your Property
        * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
        * `property` should be the same value as in your `runReport` request. Example:
        * properties/1234
@@ -630,8 +632,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
     }
     /**
      * Returns metadata for dimensions and metrics available in reporting methods. Used to explore the
-     * dimensions and metrics. In this method, a Google Analytics GA4 Property Identifier is specified
-     * in the request, and the metadata response includes Custom dimensions and metrics as well as
+     * dimensions and metrics. In this method, a Google Analytics property identifier is specified in
+     * the request, and the metadata response includes Custom dimensions and metrics as well as
      * Universal metadata. For example if a custom metric with parameter name `levels_unlocked` is
      * registered to a property, the Metadata response will contain `customEvent:levels_unlocked`.
      * Universal metadata are dimensions and metrics applicable to any property such as `country` and
@@ -643,8 +645,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
      * parameters, call the {@link GetMetadata#execute()} method to invoke the remote operation.
      *
      * @param name Required. The resource name of the metadata to retrieve. This name field is specified in the URL
-     *        path and not URL parameters. Property is a numeric Google Analytics GA4 Property
-     *        identifier. To learn more, see [where to find your Property
+     *        path and not URL parameters. Property is a numeric Google Analytics property identifier.
+     *        To learn more, see [where to find your Property
      *        ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
      *        Example: properties/1234/metadata Set the Property ID to 0 for dimensions and metrics
      *        common to all properties. In this special mode, this method will not return custom
@@ -666,8 +668,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
 
       /**
        * Returns metadata for dimensions and metrics available in reporting methods. Used to explore the
-       * dimensions and metrics. In this method, a Google Analytics GA4 Property Identifier is specified
-       * in the request, and the metadata response includes Custom dimensions and metrics as well as
+       * dimensions and metrics. In this method, a Google Analytics property identifier is specified in
+       * the request, and the metadata response includes Custom dimensions and metrics as well as
        * Universal metadata. For example if a custom metric with parameter name `levels_unlocked` is
        * registered to a property, the Metadata response will contain `customEvent:levels_unlocked`.
        * Universal metadata are dimensions and metrics applicable to any property such as `country` and
@@ -682,8 +684,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param name Required. The resource name of the metadata to retrieve. This name field is specified in the URL
-     *        path and not URL parameters. Property is a numeric Google Analytics GA4 Property
-     *        identifier. To learn more, see [where to find your Property
+     *        path and not URL parameters. Property is a numeric Google Analytics property identifier.
+     *        To learn more, see [where to find your Property
      *        ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
      *        Example: properties/1234/metadata Set the Property ID to 0 for dimensions and metrics
      *        common to all properties. In this special mode, this method will not return custom
@@ -767,7 +769,7 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. The resource name of the metadata to retrieve. This name field is specified in
-       * the URL path and not URL parameters. Property is a numeric Google Analytics GA4 Property
+       * the URL path and not URL parameters. Property is a numeric Google Analytics property
        * identifier. To learn more, see [where to find your Property
        * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
        * Example: properties/1234/metadata Set the Property ID to 0 for dimensions and metrics
@@ -778,8 +780,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       private java.lang.String name;
 
       /** Required. The resource name of the metadata to retrieve. This name field is specified in the URL
-     path and not URL parameters. Property is a numeric Google Analytics GA4 Property identifier. To
-     learn more, see [where to find your Property
+     path and not URL parameters. Property is a numeric Google Analytics property identifier. To learn
+     more, see [where to find your Property
      ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). Example:
      properties/1234/metadata Set the Property ID to 0 for dimensions and metrics common to all
      properties. In this special mode, this method will not return custom dimensions and metrics.
@@ -790,7 +792,7 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. The resource name of the metadata to retrieve. This name field is specified in
-       * the URL path and not URL parameters. Property is a numeric Google Analytics GA4 Property
+       * the URL path and not URL parameters. Property is a numeric Google Analytics property
        * identifier. To learn more, see [where to find your Property
        * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
        * Example: properties/1234/metadata Set the Property ID to 0 for dimensions and metrics
@@ -823,8 +825,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
      * This request holds the parameters needed by the analyticsdata server.  After setting any optional
      * parameters, call the {@link RunPivotReport#execute()} method to invoke the remote operation.
      *
-     * @param property A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and
-     *        not the body. To learn more, see [where to find your Property
+     * @param property A Google Analytics property identifier whose events are tracked. Specified in the URL path and not
+     *        the body. To learn more, see [where to find your Property
      *        ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
      *        Within a batch request, this property should either be unspecified or consistent with the
      *        batch-level property. Example: properties/1234
@@ -858,8 +860,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
        * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
        * the constructor. </p>
        *
-       * @param property A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and
-     *        not the body. To learn more, see [where to find your Property
+       * @param property A Google Analytics property identifier whose events are tracked. Specified in the URL path and not
+     *        the body. To learn more, see [where to find your Property
      *        ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
      *        Within a batch request, this property should either be unspecified or consistent with the
      *        batch-level property. Example: properties/1234
@@ -932,8 +934,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL
-       * path and not the body. To learn more, see [where to find your Property
+       * A Google Analytics property identifier whose events are tracked. Specified in the URL path
+       * and not the body. To learn more, see [where to find your Property
        * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
        * Within a batch request, this property should either be unspecified or consistent with the
        * batch-level property. Example: properties/1234
@@ -941,8 +943,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       @com.google.api.client.util.Key
       private java.lang.String property;
 
-      /** A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and
-     not the body. To learn more, see [where to find your Property
+      /** A Google Analytics property identifier whose events are tracked. Specified in the URL path and not
+     the body. To learn more, see [where to find your Property
      ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). Within a
      batch request, this property should either be unspecified or consistent with the batch-level
      property. Example: properties/1234
@@ -952,8 +954,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL
-       * path and not the body. To learn more, see [where to find your Property
+       * A Google Analytics property identifier whose events are tracked. Specified in the URL path
+       * and not the body. To learn more, see [where to find your Property
        * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
        * Within a batch request, this property should either be unspecified or consistent with the
        * batch-level property. Example: properties/1234
@@ -986,8 +988,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
      * This request holds the parameters needed by the analyticsdata server.  After setting any optional
      * parameters, call the {@link RunRealtimeReport#execute()} method to invoke the remote operation.
      *
-     * @param property A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and
-     *        not the body. To learn more, see [where to find your Property
+     * @param property A Google Analytics property identifier whose events are tracked. Specified in the URL path and not
+     *        the body. To learn more, see [where to find your Property
      *        ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
      *        Example: properties/1234
      * @param content the {@link com.google.api.services.analyticsdata.v1beta.model.RunRealtimeReportRequest}
@@ -1022,8 +1024,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
        * stractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param property A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and
-     *        not the body. To learn more, see [where to find your Property
+       * @param property A Google Analytics property identifier whose events are tracked. Specified in the URL path and not
+     *        the body. To learn more, see [where to find your Property
      *        ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
      *        Example: properties/1234
        * @param content the {@link com.google.api.services.analyticsdata.v1beta.model.RunRealtimeReportRequest}
@@ -1095,16 +1097,16 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL
-       * path and not the body. To learn more, see [where to find your Property
+       * A Google Analytics property identifier whose events are tracked. Specified in the URL path
+       * and not the body. To learn more, see [where to find your Property
        * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
        * Example: properties/1234
        */
       @com.google.api.client.util.Key
       private java.lang.String property;
 
-      /** A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and
-     not the body. To learn more, see [where to find your Property
+      /** A Google Analytics property identifier whose events are tracked. Specified in the URL path and not
+     the body. To learn more, see [where to find your Property
      ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). Example:
      properties/1234
        */
@@ -1113,8 +1115,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL
-       * path and not the body. To learn more, see [where to find your Property
+       * A Google Analytics property identifier whose events are tracked. Specified in the URL path
+       * and not the body. To learn more, see [where to find your Property
        * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
        * Example: properties/1234
        */
@@ -1147,8 +1149,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
      * This request holds the parameters needed by the analyticsdata server.  After setting any optional
      * parameters, call the {@link RunReport#execute()} method to invoke the remote operation.
      *
-     * @param property A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and
-     *        not the body. To learn more, see [where to find your Property
+     * @param property A Google Analytics property identifier whose events are tracked. Specified in the URL path and not
+     *        the body. To learn more, see [where to find your Property
      *        ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
      *        Within a batch request, this property should either be unspecified or consistent with the
      *        batch-level property. Example: properties/1234
@@ -1185,8 +1187,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
        * RunReport#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param property A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and
-     *        not the body. To learn more, see [where to find your Property
+       * @param property A Google Analytics property identifier whose events are tracked. Specified in the URL path and not
+     *        the body. To learn more, see [where to find your Property
      *        ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
      *        Within a batch request, this property should either be unspecified or consistent with the
      *        batch-level property. Example: properties/1234
@@ -1259,8 +1261,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL
-       * path and not the body. To learn more, see [where to find your Property
+       * A Google Analytics property identifier whose events are tracked. Specified in the URL path
+       * and not the body. To learn more, see [where to find your Property
        * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
        * Within a batch request, this property should either be unspecified or consistent with the
        * batch-level property. Example: properties/1234
@@ -1268,8 +1270,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       @com.google.api.client.util.Key
       private java.lang.String property;
 
-      /** A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and
-     not the body. To learn more, see [where to find your Property
+      /** A Google Analytics property identifier whose events are tracked. Specified in the URL path and not
+     the body. To learn more, see [where to find your Property
      ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). Within a
      batch request, this property should either be unspecified or consistent with the batch-level
      property. Example: properties/1234
@@ -1279,8 +1281,8 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL
-       * path and not the body. To learn more, see [where to find your Property
+       * A Google Analytics property identifier whose events are tracked. Specified in the URL path
+       * and not the body. To learn more, see [where to find your Property
        * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
        * Within a batch request, this property should either be unspecified or consistent with the
        * batch-level property. Example: properties/1234

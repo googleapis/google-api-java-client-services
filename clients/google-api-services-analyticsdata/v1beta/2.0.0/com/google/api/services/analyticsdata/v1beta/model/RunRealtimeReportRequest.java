@@ -121,8 +121,8 @@ public final class RunRealtimeReportRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Toggles whether to return the current state of this Analytics Property's Realtime quota. Quota
-   * is returned in [PropertyQuota](#PropertyQuota).
+   * Toggles whether to return the current state of this Google Analytics property's Realtime quota.
+   * Quota is returned in [PropertyQuota](#PropertyQuota).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -285,8 +285,8 @@ public final class RunRealtimeReportRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Toggles whether to return the current state of this Analytics Property's Realtime quota. Quota
-   * is returned in [PropertyQuota](#PropertyQuota).
+   * Toggles whether to return the current state of this Google Analytics property's Realtime quota.
+   * Quota is returned in [PropertyQuota](#PropertyQuota).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReturnPropertyQuota() {
@@ -294,8 +294,8 @@ public final class RunRealtimeReportRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Toggles whether to return the current state of this Analytics Property's Realtime quota. Quota
-   * is returned in [PropertyQuota](#PropertyQuota).
+   * Toggles whether to return the current state of this Google Analytics property's Realtime quota.
+   * Quota is returned in [PropertyQuota](#PropertyQuota).
    * @param returnPropertyQuota returnPropertyQuota or {@code null} for none
    */
   public RunRealtimeReportRequest setReturnPropertyQuota(java.lang.Boolean returnPropertyQuota) {

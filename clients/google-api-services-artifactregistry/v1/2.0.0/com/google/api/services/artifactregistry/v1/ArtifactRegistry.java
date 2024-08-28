@@ -2046,6 +2046,65 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
             return this;
           }
 
+          /**
+           * Optional. An expression for filtering the results of the request. Filter rules are case
+           * insensitive. The fields eligible for filtering are: * `name` Examples of using a
+           * filter: To filter the results of your request to repositories with the name "my-repo"
+           * in project my-project in the us-central region, append the following filter expression
+           * to your request: * `name="projects/my-project/locations/us-central1/repositories/my-
+           * repo` You can also use wildcards to match any number of characters before or after the
+           * value: * `name="projects/my-project/locations/us-central1/repositories/my-*"` *
+           * `name="projects/my-project/locations/us-central1/repositoriesrepo"` *
+           * `name="projects/my-project/locations/us-central1/repositoriesrepo*"`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. An expression for filtering the results of the request. Filter rules are case
+         insensitive. The fields eligible for filtering are: * `name` Examples of using a filter: To filter
+         the results of your request to repositories with the name "my-repo" in project my-project in the
+         us-central region, append the following filter expression to your request: * `name="projects/my-
+         project/locations/us-central1/repositories/my-repo` You can also use wildcards to match any number
+         of characters before or after the value: * `name="projects/my-project/locations/us-
+         central1/repositories/my-*"` * `name="projects/my-project/locations/us-central1/repositoriesrepo"`
+         * `name="projects/my-project/locations/us-central1/repositoriesrepo*"`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. An expression for filtering the results of the request. Filter rules are case
+           * insensitive. The fields eligible for filtering are: * `name` Examples of using a
+           * filter: To filter the results of your request to repositories with the name "my-repo"
+           * in project my-project in the us-central region, append the following filter expression
+           * to your request: * `name="projects/my-project/locations/us-central1/repositories/my-
+           * repo` You can also use wildcards to match any number of characters before or after the
+           * value: * `name="projects/my-project/locations/us-central1/repositories/my-*"` *
+           * `name="projects/my-project/locations/us-central1/repositoriesrepo"` *
+           * `name="projects/my-project/locations/us-central1/repositoriesrepo*"`
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. The field to order the results by. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. The field to order the results by.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. The field to order the results by. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
           /** The maximum number of repositories to return. Maximum page size is 1,000. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
@@ -6035,6 +6094,105 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
               return this;
             }
 
+            /**
+             * Optional. An expression for filtering the results of the request. Filter rules are
+             * case insensitive. The fields eligible for filtering are: * `name` * `annotations`
+             * Examples of using a filter: To filter the results of your request to packages with
+             * the name "my-package" in project my-project in the us-central region, in repository
+             * my-repo, append the following filter expression to your request: *
+             * `name="projects/my-project/locations/us-central1/repositories/my-repo/packages/my-
+             * package"` You can also use wildcards to match any number of characters before or
+             * after the value: * `name="projects/my-project/locations/us-central1/repositories/my-
+             * repo/packages/my-*"` * `name="projects/my-project/locations/us-
+             * central1/repositories/my-repo/packagespackage"` * `name="projects/my-
+             * project/locations/us-central1/repositories/my-repo/packagespack*"` To filter the
+             * results of your request to packages with the annotation key-value pair
+             * [`external_link`:`external_link_value`], append the following filter expression to
+             * your request": * "annotations.external_link:external_link_value" To filter the
+             * results just for a specific annotation key `external_link`, append the following
+             * filter expression to your request: * "annotations.external_link" If the annotation
+             * key or value contains special characters, you can escape them by surrounding the
+             * value with backticks. For example, to filter the results of your request to packages
+             * with the annotation key-value pair [`external.link`:`https://example.com/my-
+             * package`], append the following filter expression to your request: *
+             * "annotations.`external.link`:`https://example.com/my-package`" You can also filter
+             * with annotations with a wildcard to match any number of characters before or after
+             * the value: * "annotations.*_link:`*example.com*`"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. An expression for filtering the results of the request. Filter rules are case
+           insensitive. The fields eligible for filtering are: * `name` * `annotations` Examples of using a
+           filter: To filter the results of your request to packages with the name "my-package" in project my-
+           project in the us-central region, in repository my-repo, append the following filter expression to
+           your request: * `name="projects/my-project/locations/us-central1/repositories/my-repo/packages/my-
+           package"` You can also use wildcards to match any number of characters before or after the value: *
+           `name="projects/my-project/locations/us-central1/repositories/my-repo/packages/my-*"` *
+           `name="projects/my-project/locations/us-central1/repositories/my-repo/packagespackage"` *
+           `name="projects/my-project/locations/us-central1/repositories/my-repo/packagespack*"` To filter the
+           results of your request to packages with the annotation key-value pair
+           [`external_link`:`external_link_value`], append the following filter expression to your request": *
+           "annotations.external_link:external_link_value" To filter the results just for a specific
+           annotation key `external_link`, append the following filter expression to your request: *
+           "annotations.external_link" If the annotation key or value contains special characters, you can
+           escape them by surrounding the value with backticks. For example, to filter the results of your
+           request to packages with the annotation key-value pair [`external.link`:`https://example.com/my-
+           package`], append the following filter expression to your request: *
+           "annotations.`external.link`:`https://example.com/my-package`" You can also filter with annotations
+           with a wildcard to match any number of characters before or after the value: *
+           "annotations.*_link:`*example.com*`"
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. An expression for filtering the results of the request. Filter rules are
+             * case insensitive. The fields eligible for filtering are: * `name` * `annotations`
+             * Examples of using a filter: To filter the results of your request to packages with
+             * the name "my-package" in project my-project in the us-central region, in repository
+             * my-repo, append the following filter expression to your request: *
+             * `name="projects/my-project/locations/us-central1/repositories/my-repo/packages/my-
+             * package"` You can also use wildcards to match any number of characters before or
+             * after the value: * `name="projects/my-project/locations/us-central1/repositories/my-
+             * repo/packages/my-*"` * `name="projects/my-project/locations/us-
+             * central1/repositories/my-repo/packagespackage"` * `name="projects/my-
+             * project/locations/us-central1/repositories/my-repo/packagespack*"` To filter the
+             * results of your request to packages with the annotation key-value pair
+             * [`external_link`:`external_link_value`], append the following filter expression to
+             * your request": * "annotations.external_link:external_link_value" To filter the
+             * results just for a specific annotation key `external_link`, append the following
+             * filter expression to your request: * "annotations.external_link" If the annotation
+             * key or value contains special characters, you can escape them by surrounding the
+             * value with backticks. For example, to filter the results of your request to packages
+             * with the annotation key-value pair [`external.link`:`https://example.com/my-
+             * package`], append the following filter expression to your request: *
+             * "annotations.`external.link`:`https://example.com/my-package`" You can also filter
+             * with annotations with a wildcard to match any number of characters before or after
+             * the value: * "annotations.*_link:`*example.com*`"
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** Optional. The field to order the results by. */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. The field to order the results by.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** Optional. The field to order the results by. */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
             /** The maximum number of packages to return. Maximum page size is 1,000. */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
@@ -7685,6 +7843,92 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
                       "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/packages/[^/]+$");
                 }
                 this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. An expression for filtering the results of the request. Filter rules are
+               * case insensitive. The fields eligible for filtering are: * `name` * `annotations`
+               * Examples of using a filter: To filter the results of your request to versions with
+               * the name "my-version" in project my-project in the us-central region, in repository
+               * my-repo, append the following filter expression to your request: *
+               * `name="projects/my-project/locations/us-central1/repositories/my-repo/packages/my-
+               * package/versions/my-version"` You can also use wildcards to match any number of
+               * characters before or after the value: * `name="projects/my-project/locations/us-
+               * central1/repositories/my-repo/packages/my-package/versionsversion"` *
+               * `name="projects/my-project/locations/us-central1/repositories/my-repo/packages/my-
+               * package/versions/my*"` * `name="projects/my-project/locations/us-
+               * central1/repositories/my-repo/packages/my-package/versionsversion*"` To filter the
+               * results of your request to versions with the annotation key-value pair
+               * [`external_link`:`external_link_value`], append the following filter expression to
+               * your request: * "annotations.external_link:external_link_value" To filter just for
+               * a specific annotation key `external_link`, append the following filter expression
+               * to your request: * "annotations.external_link" If the annotation key or value
+               * contains special characters, you can escape them by surrounding the value with
+               * backticks. For example, to filter the results of your request to versions with the
+               * annotation key-value pair [`external.link`:`https://example.com/my-version`],
+               * append the following filter expression to your request: *
+               * "annotations.`external.link`:`https://example.com/my-version`" You can also filter
+               * with annotations with a wildcard to match any number of characters before or after
+               * the value: * "annotations.*_link:`*example.com*`"
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Optional. An expression for filtering the results of the request. Filter rules are case
+             insensitive. The fields eligible for filtering are: * `name` * `annotations` Examples of using a
+             filter: To filter the results of your request to versions with the name "my-version" in project my-
+             project in the us-central region, in repository my-repo, append the following filter expression to
+             your request: * `name="projects/my-project/locations/us-central1/repositories/my-repo/packages/my-
+             package/versions/my-version"` You can also use wildcards to match any number of characters before
+             or after the value: * `name="projects/my-project/locations/us-central1/repositories/my-
+             repo/packages/my-package/versionsversion"` * `name="projects/my-project/locations/us-
+             central1/repositories/my-repo/packages/my-package/versions/my*"` * `name="projects/my-
+             project/locations/us-central1/repositories/my-repo/packages/my-package/versionsversion*"` To filter
+             the results of your request to versions with the annotation key-value pair
+             [`external_link`:`external_link_value`], append the following filter expression to your request: *
+             "annotations.external_link:external_link_value" To filter just for a specific annotation key
+             `external_link`, append the following filter expression to your request: *
+             "annotations.external_link" If the annotation key or value contains special characters, you can
+             escape them by surrounding the value with backticks. For example, to filter the results of your
+             request to versions with the annotation key-value pair [`external.link`:`https://example.com/my-
+             version`], append the following filter expression to your request: *
+             "annotations.`external.link`:`https://example.com/my-version`" You can also filter with annotations
+             with a wildcard to match any number of characters before or after the value: *
+             "annotations.*_link:`*example.com*`"
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * Optional. An expression for filtering the results of the request. Filter rules are
+               * case insensitive. The fields eligible for filtering are: * `name` * `annotations`
+               * Examples of using a filter: To filter the results of your request to versions with
+               * the name "my-version" in project my-project in the us-central region, in repository
+               * my-repo, append the following filter expression to your request: *
+               * `name="projects/my-project/locations/us-central1/repositories/my-repo/packages/my-
+               * package/versions/my-version"` You can also use wildcards to match any number of
+               * characters before or after the value: * `name="projects/my-project/locations/us-
+               * central1/repositories/my-repo/packages/my-package/versionsversion"` *
+               * `name="projects/my-project/locations/us-central1/repositories/my-repo/packages/my-
+               * package/versions/my*"` * `name="projects/my-project/locations/us-
+               * central1/repositories/my-repo/packages/my-package/versionsversion*"` To filter the
+               * results of your request to versions with the annotation key-value pair
+               * [`external_link`:`external_link_value`], append the following filter expression to
+               * your request: * "annotations.external_link:external_link_value" To filter just for
+               * a specific annotation key `external_link`, append the following filter expression
+               * to your request: * "annotations.external_link" If the annotation key or value
+               * contains special characters, you can escape them by surrounding the value with
+               * backticks. For example, to filter the results of your request to versions with the
+               * annotation key-value pair [`external.link`:`https://example.com/my-version`],
+               * append the following filter expression to your request: *
+               * "annotations.`external.link`:`https://example.com/my-version`" You can also filter
+               * with annotations with a wildcard to match any number of characters before or after
+               * the value: * "annotations.*_link:`*example.com*`"
+               */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
                 return this;
               }
 

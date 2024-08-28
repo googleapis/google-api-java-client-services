@@ -1744,6 +1744,22 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
             return this;
           }
 
+          /** Optional. The field to order the results by. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. The field to order the results by.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. The field to order the results by. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
           /** The maximum number of repositories to return. Maximum page size is 1,000. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
@@ -3597,6 +3613,22 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
                     "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
               }
               this.parent = parent;
+              return this;
+            }
+
+            /** Optional. The field to order the results by. */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. The field to order the results by.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** Optional. The field to order the results by. */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
               return this;
             }
 

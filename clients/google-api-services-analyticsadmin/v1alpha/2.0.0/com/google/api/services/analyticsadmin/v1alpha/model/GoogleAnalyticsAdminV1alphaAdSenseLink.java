@@ -17,7 +17,7 @@
 package com.google.api.services.analyticsadmin.v1alpha.model;
 
 /**
- * A link between a GA4 Property and an AdSense for Content ad client.
+ * A link between a Google Analytics property and an AdSense for Content ad client.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Analytics Admin API. For a detailed
@@ -31,8 +31,8 @@ package com.google.api.services.analyticsadmin.v1alpha.model;
 public final class GoogleAnalyticsAdminV1alphaAdSenseLink extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. The AdSense ad client code that the GA4 property is linked to. Example format: "ca-
-   * pub-1234567890"
+   * Immutable. The AdSense ad client code that the Google Analytics property is linked to. Example
+   * format: "ca-pub-1234567890"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +47,8 @@ public final class GoogleAnalyticsAdminV1alphaAdSenseLink extends com.google.api
   private java.lang.String name;
 
   /**
-   * Immutable. The AdSense ad client code that the GA4 property is linked to. Example format: "ca-
-   * pub-1234567890"
+   * Immutable. The AdSense ad client code that the Google Analytics property is linked to. Example
+   * format: "ca-pub-1234567890"
    * @return value or {@code null} for none
    */
   public java.lang.String getAdClientCode() {
@@ -56,8 +56,8 @@ public final class GoogleAnalyticsAdminV1alphaAdSenseLink extends com.google.api
   }
 
   /**
-   * Immutable. The AdSense ad client code that the GA4 property is linked to. Example format: "ca-
-   * pub-1234567890"
+   * Immutable. The AdSense ad client code that the Google Analytics property is linked to. Example
+   * format: "ca-pub-1234567890"
    * @param adClientCode adClientCode or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaAdSenseLink setAdClientCode(java.lang.String adClientCode) {

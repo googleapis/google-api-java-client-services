@@ -31,8 +31,8 @@ package com.google.api.services.analyticsadmin.v1alpha.model;
 public final class GoogleAnalyticsAdminV1alphaEventMapping extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Name of the GA4 event. It must always be set. The max allowed display name length is
-   * 40 UTF-16 code units.
+   * Required. Name of the Google Analytics event. It must always be set. The max allowed display
+   * name length is 40 UTF-16 code units.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,8 +72,8 @@ public final class GoogleAnalyticsAdminV1alphaEventMapping extends com.google.ap
   private java.lang.Double minEventValue;
 
   /**
-   * Required. Name of the GA4 event. It must always be set. The max allowed display name length is
-   * 40 UTF-16 code units.
+   * Required. Name of the Google Analytics event. It must always be set. The max allowed display
+   * name length is 40 UTF-16 code units.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventName() {
@@ -81,8 +81,8 @@ public final class GoogleAnalyticsAdminV1alphaEventMapping extends com.google.ap
   }
 
   /**
-   * Required. Name of the GA4 event. It must always be set. The max allowed display name length is
-   * 40 UTF-16 code units.
+   * Required. Name of the Google Analytics event. It must always be set. The max allowed display
+   * name length is 40 UTF-16 code units.
    * @param eventName eventName or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaEventMapping setEventName(java.lang.String eventName) {

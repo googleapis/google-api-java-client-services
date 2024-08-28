@@ -17,9 +17,9 @@
 package com.google.api.services.analyticsadmin.v1alpha.model;
 
 /**
- * A proposal for a link between a GA4 property and a Display & Video 360 advertiser. A proposal is
- * converted to a DisplayVideo360AdvertiserLink once approved. Google Analytics admins approve
- * inbound proposals while Display & Video 360 admins approve outbound proposals.
+ * A proposal for a link between a Google Analytics property and a Display & Video 360 advertiser. A
+ * proposal is converted to a DisplayVideo360AdvertiserLink once approved. Google Analytics admins
+ * approve inbound proposals while Display & Video 360 admins approve outbound proposals.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Analytics Admin API. For a detailed

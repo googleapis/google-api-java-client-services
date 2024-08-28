@@ -17,7 +17,7 @@
 package com.google.api.services.analyticsadmin.v1alpha.model;
 
 /**
- * A link between a GA4 property and a Display & Video 360 advertiser.
+ * A link between a Google Analytics property and a Display & Video 360 advertiser.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Analytics Admin API. For a detailed
@@ -53,19 +53,19 @@ public final class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink exte
   private java.lang.String advertiserId;
 
   /**
-   * Immutable. Enables the import of campaign data from Display & Video 360 into the GA4 property.
-   * After link creation, this can only be updated from the Display & Video 360 product. If this
-   * field is not set on create, it will be defaulted to true.
+   * Immutable. Enables the import of campaign data from Display & Video 360 into the Google
+   * Analytics property. After link creation, this can only be updated from the Display & Video 360
+   * product. If this field is not set on create, it will be defaulted to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean campaignDataSharingEnabled;
 
   /**
-   * Immutable. Enables the import of cost data from Display & Video 360 into the GA4 property. This
-   * can only be enabled if campaign_data_sharing_enabled is enabled. After link creation, this can
-   * only be updated from the Display & Video 360 product. If this field is not set on create, it
-   * will be defaulted to true.
+   * Immutable. Enables the import of cost data from Display & Video 360 into the Google Analytics
+   * property. This can only be enabled if `campaign_data_sharing_enabled` is true. After link
+   * creation, this can only be updated from the Display & Video 360 product. If this field is not
+   * set on create, it will be defaulted to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,9 +134,9 @@ public final class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink exte
   }
 
   /**
-   * Immutable. Enables the import of campaign data from Display & Video 360 into the GA4 property.
-   * After link creation, this can only be updated from the Display & Video 360 product. If this
-   * field is not set on create, it will be defaulted to true.
+   * Immutable. Enables the import of campaign data from Display & Video 360 into the Google
+   * Analytics property. After link creation, this can only be updated from the Display & Video 360
+   * product. If this field is not set on create, it will be defaulted to true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCampaignDataSharingEnabled() {
@@ -144,9 +144,9 @@ public final class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink exte
   }
 
   /**
-   * Immutable. Enables the import of campaign data from Display & Video 360 into the GA4 property.
-   * After link creation, this can only be updated from the Display & Video 360 product. If this
-   * field is not set on create, it will be defaulted to true.
+   * Immutable. Enables the import of campaign data from Display & Video 360 into the Google
+   * Analytics property. After link creation, this can only be updated from the Display & Video 360
+   * product. If this field is not set on create, it will be defaulted to true.
    * @param campaignDataSharingEnabled campaignDataSharingEnabled or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink setCampaignDataSharingEnabled(java.lang.Boolean campaignDataSharingEnabled) {
@@ -155,10 +155,10 @@ public final class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink exte
   }
 
   /**
-   * Immutable. Enables the import of cost data from Display & Video 360 into the GA4 property. This
-   * can only be enabled if campaign_data_sharing_enabled is enabled. After link creation, this can
-   * only be updated from the Display & Video 360 product. If this field is not set on create, it
-   * will be defaulted to true.
+   * Immutable. Enables the import of cost data from Display & Video 360 into the Google Analytics
+   * property. This can only be enabled if `campaign_data_sharing_enabled` is true. After link
+   * creation, this can only be updated from the Display & Video 360 product. If this field is not
+   * set on create, it will be defaulted to true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCostDataSharingEnabled() {
@@ -166,10 +166,10 @@ public final class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink exte
   }
 
   /**
-   * Immutable. Enables the import of cost data from Display & Video 360 into the GA4 property. This
-   * can only be enabled if campaign_data_sharing_enabled is enabled. After link creation, this can
-   * only be updated from the Display & Video 360 product. If this field is not set on create, it
-   * will be defaulted to true.
+   * Immutable. Enables the import of cost data from Display & Video 360 into the Google Analytics
+   * property. This can only be enabled if `campaign_data_sharing_enabled` is true. After link
+   * creation, this can only be updated from the Display & Video 360 product. If this field is not
+   * set on create, it will be defaulted to true.
    * @param costDataSharingEnabled costDataSharingEnabled or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink setCostDataSharingEnabled(java.lang.Boolean costDataSharingEnabled) {

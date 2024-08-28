@@ -31,8 +31,8 @@ public final class GoogleCloudAiplatformV1FeatureGroupBigQueryTimeSeries extends
 
   /**
    * Optional. Column hosting timestamp values for a time-series source. Will be used to determine
-   * the latest featureValues for each entity. Optional. If not provided, a feature_timestamp column
-   * of type TIMESTAMP will be used.
+   * the latest `feature_values` for each entity. Optional. If not provided, column named
+   * `feature_timestamp` of type `TIMESTAMP` will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,8 +40,8 @@ public final class GoogleCloudAiplatformV1FeatureGroupBigQueryTimeSeries extends
 
   /**
    * Optional. Column hosting timestamp values for a time-series source. Will be used to determine
-   * the latest featureValues for each entity. Optional. If not provided, a feature_timestamp column
-   * of type TIMESTAMP will be used.
+   * the latest `feature_values` for each entity. Optional. If not provided, column named
+   * `feature_timestamp` of type `TIMESTAMP` will be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimestampColumn() {
@@ -50,8 +50,8 @@ public final class GoogleCloudAiplatformV1FeatureGroupBigQueryTimeSeries extends
 
   /**
    * Optional. Column hosting timestamp values for a time-series source. Will be used to determine
-   * the latest featureValues for each entity. Optional. If not provided, a feature_timestamp column
-   * of type TIMESTAMP will be used.
+   * the latest `feature_values` for each entity. Optional. If not provided, column named
+   * `feature_timestamp` of type `TIMESTAMP` will be used.
    * @param timestampColumn timestampColumn or {@code null} for none
    */
   public GoogleCloudAiplatformV1FeatureGroupBigQueryTimeSeries setTimestampColumn(java.lang.String timestampColumn) {

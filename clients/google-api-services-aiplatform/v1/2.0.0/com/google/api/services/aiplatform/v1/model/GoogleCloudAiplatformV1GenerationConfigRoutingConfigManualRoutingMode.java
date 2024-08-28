@@ -30,14 +30,14 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1GenerationConfigRoutingConfigManualRoutingMode extends com.google.api.client.json.GenericJson {
 
   /**
-   * The model name to use. Only the public LLM models are accepted. e.g. gemini-1.5-pro-001.
+   * The model name to use. Only the public LLM models are accepted. e.g. 'gemini-1.5-pro-001'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String modelName;
 
   /**
-   * The model name to use. Only the public LLM models are accepted. e.g. gemini-1.5-pro-001.
+   * The model name to use. Only the public LLM models are accepted. e.g. 'gemini-1.5-pro-001'.
    * @return value or {@code null} for none
    */
   public java.lang.String getModelName() {
@@ -45,7 +45,7 @@ public final class GoogleCloudAiplatformV1GenerationConfigRoutingConfigManualRou
   }
 
   /**
-   * The model name to use. Only the public LLM models are accepted. e.g. gemini-1.5-pro-001.
+   * The model name to use. Only the public LLM models are accepted. e.g. 'gemini-1.5-pro-001'.
    * @param modelName modelName or {@code null} for none
    */
   public GoogleCloudAiplatformV1GenerationConfigRoutingConfigManualRoutingMode setModelName(java.lang.String modelName) {

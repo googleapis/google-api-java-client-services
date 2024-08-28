@@ -38,6 +38,14 @@ public final class GoogleCloudAiplatformV1beta1FeatureViewSyncSyncSummary extend
   private java.lang.Long rowSynced;
 
   /**
+   * Lower bound of the system time watermark for the sync job. This is only set for continuously
+   * syncing feature views.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String systemWatermarkTime;
+
+  /**
    * Output only. BigQuery slot milliseconds consumed for the sync job.
    * The value may be {@code null}.
    */
@@ -58,6 +66,25 @@ public final class GoogleCloudAiplatformV1beta1FeatureViewSyncSyncSummary extend
    */
   public GoogleCloudAiplatformV1beta1FeatureViewSyncSyncSummary setRowSynced(java.lang.Long rowSynced) {
     this.rowSynced = rowSynced;
+    return this;
+  }
+
+  /**
+   * Lower bound of the system time watermark for the sync job. This is only set for continuously
+   * syncing feature views.
+   * @return value or {@code null} for none
+   */
+  public String getSystemWatermarkTime() {
+    return systemWatermarkTime;
+  }
+
+  /**
+   * Lower bound of the system time watermark for the sync job. This is only set for continuously
+   * syncing feature views.
+   * @param systemWatermarkTime systemWatermarkTime or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FeatureViewSyncSyncSummary setSystemWatermarkTime(String systemWatermarkTime) {
+    this.systemWatermarkTime = systemWatermarkTime;
     return this;
   }
 

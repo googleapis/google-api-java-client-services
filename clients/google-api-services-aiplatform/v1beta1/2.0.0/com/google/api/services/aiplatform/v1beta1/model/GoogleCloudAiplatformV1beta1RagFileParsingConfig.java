@@ -30,35 +30,11 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1RagFileParsingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether to use OCR for PDFs.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean parsePdfsUsingOcr;
-
-  /**
    * Whether to use advanced PDF parsing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useAdvancedPdfParsing;
-
-  /**
-   * Whether to use OCR for PDFs.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getParsePdfsUsingOcr() {
-    return parsePdfsUsingOcr;
-  }
-
-  /**
-   * Whether to use OCR for PDFs.
-   * @param parsePdfsUsingOcr parsePdfsUsingOcr or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1RagFileParsingConfig setParsePdfsUsingOcr(java.lang.Boolean parsePdfsUsingOcr) {
-    this.parsePdfsUsingOcr = parsePdfsUsingOcr;
-    return this;
-  }
 
   /**
    * Whether to use advanced PDF parsing.

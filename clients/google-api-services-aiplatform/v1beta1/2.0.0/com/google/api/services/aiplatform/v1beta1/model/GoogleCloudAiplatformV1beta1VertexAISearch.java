@@ -17,8 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Retrieve from Vertex AI Search datastore for grounding. See https://cloud.google.com/vertex-ai-
- * search-and-conversation
+ * Retrieve from Vertex AI Search datastore for grounding. See
+ * https://cloud.google.com/products/agent-builder
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -31,7 +31,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1VertexAISearch extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Fully-qualified Vertex AI Search's datastore resource ID. Format:
+   * Required. Fully-qualified Vertex AI Search data store resource ID. Format:
    * `projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore}`
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class GoogleCloudAiplatformV1beta1VertexAISearch extends com.google
   private java.lang.String datastore;
 
   /**
-   * Required. Fully-qualified Vertex AI Search's datastore resource ID. Format:
+   * Required. Fully-qualified Vertex AI Search data store resource ID. Format:
    * `projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore}`
    * @return value or {@code null} for none
    */
@@ -48,7 +48,7 @@ public final class GoogleCloudAiplatformV1beta1VertexAISearch extends com.google
   }
 
   /**
-   * Required. Fully-qualified Vertex AI Search's datastore resource ID. Format:
+   * Required. Fully-qualified Vertex AI Search data store resource ID. Format:
    * `projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore}`
    * @param datastore datastore or {@code null} for none
    */

@@ -45,9 +45,8 @@ public final class GoogleCloudAiplatformV1FeatureGroupBigQuery extends com.googl
 
   /**
    * Optional. If the source is a time-series source, this can be set to control how downstream
-   * sources (ex: FeatureOnlineStore.FeatureView) will treat time series sources. If not set, will
-   * treat the source as a time-series source with feature_timestamp as timestamp column and no scan
-   * boundary.
+   * sources (ex: FeatureView ) will treat time-series sources. If not set, will treat the source as
+   * a time-series source with `feature_timestamp` as timestamp column and no scan boundary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,9 +88,8 @@ public final class GoogleCloudAiplatformV1FeatureGroupBigQuery extends com.googl
 
   /**
    * Optional. If the source is a time-series source, this can be set to control how downstream
-   * sources (ex: FeatureOnlineStore.FeatureView) will treat time series sources. If not set, will
-   * treat the source as a time-series source with feature_timestamp as timestamp column and no scan
-   * boundary.
+   * sources (ex: FeatureView ) will treat time-series sources. If not set, will treat the source as
+   * a time-series source with `feature_timestamp` as timestamp column and no scan boundary.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1FeatureGroupBigQueryTimeSeries getTimeSeries() {
@@ -100,9 +98,8 @@ public final class GoogleCloudAiplatformV1FeatureGroupBigQuery extends com.googl
 
   /**
    * Optional. If the source is a time-series source, this can be set to control how downstream
-   * sources (ex: FeatureOnlineStore.FeatureView) will treat time series sources. If not set, will
-   * treat the source as a time-series source with feature_timestamp as timestamp column and no scan
-   * boundary.
+   * sources (ex: FeatureView ) will treat time-series sources. If not set, will treat the source as
+   * a time-series source with `feature_timestamp` as timestamp column and no scan boundary.
    * @param timeSeries timeSeries or {@code null} for none
    */
   public GoogleCloudAiplatformV1FeatureGroupBigQuery setTimeSeries(GoogleCloudAiplatformV1FeatureGroupBigQueryTimeSeries timeSeries) {

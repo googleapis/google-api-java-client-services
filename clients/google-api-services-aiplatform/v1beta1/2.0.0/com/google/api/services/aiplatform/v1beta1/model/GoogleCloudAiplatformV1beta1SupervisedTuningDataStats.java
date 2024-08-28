@@ -44,11 +44,25 @@ public final class GoogleCloudAiplatformV1beta1SupervisedTuningDataStats extends
   private java.lang.Long totalBillableTokenCount;
 
   /**
+   * The number of examples in the dataset that have been truncated by any amount.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long totalTruncatedExampleCount;
+
+  /**
    * Output only. Number of tuning characters in the tuning dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long totalTuningCharacterCount;
+
+  /**
+   * A partial sample of the indices (starting from 1) of the truncated examples.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.List<java.lang.Long> truncatedExampleIndices;
 
   /**
    * Output only. Number of examples in the tuning dataset.
@@ -133,6 +147,23 @@ public final class GoogleCloudAiplatformV1beta1SupervisedTuningDataStats extends
   }
 
   /**
+   * The number of examples in the dataset that have been truncated by any amount.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTotalTruncatedExampleCount() {
+    return totalTruncatedExampleCount;
+  }
+
+  /**
+   * The number of examples in the dataset that have been truncated by any amount.
+   * @param totalTruncatedExampleCount totalTruncatedExampleCount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SupervisedTuningDataStats setTotalTruncatedExampleCount(java.lang.Long totalTruncatedExampleCount) {
+    this.totalTruncatedExampleCount = totalTruncatedExampleCount;
+    return this;
+  }
+
+  /**
    * Output only. Number of tuning characters in the tuning dataset.
    * @return value or {@code null} for none
    */
@@ -146,6 +177,23 @@ public final class GoogleCloudAiplatformV1beta1SupervisedTuningDataStats extends
    */
   public GoogleCloudAiplatformV1beta1SupervisedTuningDataStats setTotalTuningCharacterCount(java.lang.Long totalTuningCharacterCount) {
     this.totalTuningCharacterCount = totalTuningCharacterCount;
+    return this;
+  }
+
+  /**
+   * A partial sample of the indices (starting from 1) of the truncated examples.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Long> getTruncatedExampleIndices() {
+    return truncatedExampleIndices;
+  }
+
+  /**
+   * A partial sample of the indices (starting from 1) of the truncated examples.
+   * @param truncatedExampleIndices truncatedExampleIndices or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SupervisedTuningDataStats setTruncatedExampleIndices(java.util.List<java.lang.Long> truncatedExampleIndices) {
+    this.truncatedExampleIndices = truncatedExampleIndices;
     return this;
   }
 

@@ -122,7 +122,13 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Enrichments of the asset.
+   * Enrichments of the asset. Currently supported enrichment types with SearchAllResources API: *
+   * RESOURCE_OWNERS The corresponding read masks in order to get the enrichment: *
+   * enrichments.resource_owners The corresponding required permissions: *
+   * cloudasset.assets.searchEnrichmentResourceOwners Example query to get resource owner
+   * enrichment: scope: "projects/my-project" query: "name: my-project" assetTypes:
+   * "cloudresourcemanager.googleapis.com/Project" readMask: { paths: "asset_type" paths: "name"
+   * paths: "enrichments.resource_owners" }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -546,7 +552,13 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Enrichments of the asset.
+   * Enrichments of the asset. Currently supported enrichment types with SearchAllResources API: *
+   * RESOURCE_OWNERS The corresponding read masks in order to get the enrichment: *
+   * enrichments.resource_owners The corresponding required permissions: *
+   * cloudasset.assets.searchEnrichmentResourceOwners Example query to get resource owner
+   * enrichment: scope: "projects/my-project" query: "name: my-project" assetTypes:
+   * "cloudresourcemanager.googleapis.com/Project" readMask: { paths: "asset_type" paths: "name"
+   * paths: "enrichments.resource_owners" }
    * @return value or {@code null} for none
    */
   public java.util.List<AssetEnrichment> getEnrichments() {
@@ -554,7 +566,13 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Enrichments of the asset.
+   * Enrichments of the asset. Currently supported enrichment types with SearchAllResources API: *
+   * RESOURCE_OWNERS The corresponding read masks in order to get the enrichment: *
+   * enrichments.resource_owners The corresponding required permissions: *
+   * cloudasset.assets.searchEnrichmentResourceOwners Example query to get resource owner
+   * enrichment: scope: "projects/my-project" query: "name: my-project" assetTypes:
+   * "cloudresourcemanager.googleapis.com/Project" readMask: { paths: "asset_type" paths: "name"
+   * paths: "enrichments.resource_owners" }
    * @param enrichments enrichments or {@code null} for none
    */
   public ResourceSearchResult setEnrichments(java.util.List<AssetEnrichment> enrichments) {

@@ -17,7 +17,7 @@
 package com.google.api.services.retail.v2alpha.model;
 
 /**
- * Resource that represents attribute results.
+ * Resource that represents attribute results. The list of suggestions for the attribute.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI Search for Retail API. For a detailed

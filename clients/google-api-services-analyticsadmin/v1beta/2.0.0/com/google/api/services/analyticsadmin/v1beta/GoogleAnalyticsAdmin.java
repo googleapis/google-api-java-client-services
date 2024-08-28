@@ -774,7 +774,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
     }
     /**
      * Returns all accounts accessible by the caller. Note that these accounts might not currently have
-     * GA4 properties. Soft-deleted (ie: "trashed") accounts are excluded by default. Returns an empty
+     * GA properties. Soft-deleted (ie: "trashed") accounts are excluded by default. Returns an empty
      * list if no relevant accounts are found.
      *
      * Create a request for the method "accounts.list".
@@ -796,7 +796,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
 
       /**
        * Returns all accounts accessible by the caller. Note that these accounts might not currently
-       * have GA4 properties. Soft-deleted (ie: "trashed") accounts are excluded by default. Returns an
+       * have GA properties. Soft-deleted (ie: "trashed") accounts are excluded by default. Returns an
        * empty list if no relevant accounts are found.
        *
        * Create a request for the method "accounts.list".
@@ -1225,8 +1225,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
      * user reads Google Analytics reporting data. Access records are retained for up to 2 years. Data
      * Access Reports can be requested for a property. Reports may be requested for any property, but
      * dimensions that aren't related to quota can only be requested on Google Analytics 360 properties.
-     * This method is only available to Administrators. These data access records include GA4 UI
-     * Reporting, GA4 UI Explorations, GA4 Data API, and other products like Firebase & Admob that can
+     * This method is only available to Administrators. These data access records include GA UI
+     * Reporting, GA UI Explorations, GA Data API, and other products like Firebase & Admob that can
      * retrieve data from Google Analytics through a linkage. These records don't include property
      * configuration changes like adding a stream or changing a property's time zone. For configuration
      * change history, see [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides
@@ -1241,8 +1241,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
      * @param entity The Data Access Report supports requesting at the property level or account level. If requested at
      *        the account level, Data Access Reports include all access for all properties under that
      *        account. To request at the property level, entity should be for example 'properties/123'
-     *        if "123" is your GA4 property ID. To request at the account level, entity should be for
-     *        example 'accounts/1234' if "1234" is your GA4 Account ID.
+     *        if "123" is your Google Analytics property ID. To request at the account level, entity
+     *        should be for example 'accounts/1234' if "1234" is your Google Analytics Account ID.
      * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaRunAccessReportRequest}
      * @return the request
      */
@@ -1265,9 +1265,9 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * Access Reports can be requested for a property. Reports may be requested for any property, but
        * dimensions that aren't related to quota can only be requested on Google Analytics 360
        * properties. This method is only available to Administrators. These data access records include
-       * GA4 UI Reporting, GA4 UI Explorations, GA4 Data API, and other products like Firebase & Admob
-       * that can retrieve data from Google Analytics through a linkage. These records don't include
-       * property configuration changes like adding a stream or changing a property's time zone. For
+       * GA UI Reporting, GA UI Explorations, GA Data API, and other products like Firebase & Admob that
+       * can retrieve data from Google Analytics through a linkage. These records don't include property
+       * configuration changes like adding a stream or changing a property's time zone. For
        * configuration change history, see [searchChangeHistoryEvents](https://developers.google.com/ana
        * lytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
        *
@@ -1282,8 +1282,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * @param entity The Data Access Report supports requesting at the property level or account level. If requested at
      *        the account level, Data Access Reports include all access for all properties under that
      *        account. To request at the property level, entity should be for example 'properties/123'
-     *        if "123" is your GA4 property ID. To request at the account level, entity should be for
-     *        example 'accounts/1234' if "1234" is your GA4 Account ID.
+     *        if "123" is your Google Analytics property ID. To request at the account level, entity
+     *        should be for example 'accounts/1234' if "1234" is your Google Analytics Account ID.
        * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaRunAccessReportRequest}
        * @since 1.13
        */
@@ -1356,17 +1356,18 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * The Data Access Report supports requesting at the property level or account level. If
        * requested at the account level, Data Access Reports include all access for all properties
        * under that account. To request at the property level, entity should be for example
-       * 'properties/123' if "123" is your GA4 property ID. To request at the account level, entity
-       * should be for example 'accounts/1234' if "1234" is your GA4 Account ID.
+       * 'properties/123' if "123" is your Google Analytics property ID. To request at the account
+       * level, entity should be for example 'accounts/1234' if "1234" is your Google Analytics
+       * Account ID.
        */
       @com.google.api.client.util.Key
       private java.lang.String entity;
 
       /** The Data Access Report supports requesting at the property level or account level. If requested at
      the account level, Data Access Reports include all access for all properties under that account. To
-     request at the property level, entity should be for example 'properties/123' if "123" is your GA4
-     property ID. To request at the account level, entity should be for example 'accounts/1234' if
-     "1234" is your GA4 Account ID.
+     request at the property level, entity should be for example 'properties/123' if "123" is your
+     Google Analytics property ID. To request at the account level, entity should be for example
+     'accounts/1234' if "1234" is your Google Analytics Account ID.
        */
       public java.lang.String getEntity() {
         return entity;
@@ -1376,8 +1377,9 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * The Data Access Report supports requesting at the property level or account level. If
        * requested at the account level, Data Access Reports include all access for all properties
        * under that account. To request at the property level, entity should be for example
-       * 'properties/123' if "123" is your GA4 property ID. To request at the account level, entity
-       * should be for example 'accounts/1234' if "1234" is your GA4 Account ID.
+       * 'properties/123' if "123" is your Google Analytics property ID. To request at the account
+       * level, entity should be for example 'accounts/1234' if "1234" is your Google Analytics
+       * Account ID.
        */
       public RunAccessReport setEntity(java.lang.String entity) {
         if (!getSuppressPatternChecks()) {
@@ -1695,7 +1697,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * Creates an "GA4" property with the specified location and attributes.
+     * Creates a Google Analytics property with the specified location and attributes.
      *
      * Create a request for the method "properties.create".
      *
@@ -1716,7 +1718,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v1beta/properties";
 
       /**
-       * Creates an "GA4" property with the specified location and attributes.
+       * Creates a Google Analytics property with the specified location and attributes.
        *
        * Create a request for the method "properties.create".
        *
@@ -1798,8 +1800,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
      * method to restore soft-deleted properties. However, they can be restored using the Trash Can UI.
      * If the properties are not restored before the expiration time, the Property and all child
      * resources (eg: GoogleAdsLinks, Streams, AccessBindings) will be permanently purged.
-     * https://support.google.com/analytics/answer/6154772 Returns an error if the target is not found,
-     * or is not a GA4 Property.
+     * https://support.google.com/analytics/answer/6154772 Returns an error if the target is not found.
      *
      * Create a request for the method "properties.delete".
      *
@@ -1829,7 +1830,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * UI. If the properties are not restored before the expiration time, the Property and all child
        * resources (eg: GoogleAdsLinks, Streams, AccessBindings) will be permanently purged.
        * https://support.google.com/analytics/answer/6154772 Returns an error if the target is not
-       * found, or is not a GA4 Property.
+       * found.
        *
        * Create a request for the method "properties.delete".
        *
@@ -1942,7 +1943,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * Lookup for a single "GA4" Property.
+     * Lookup for a single GA Property.
      *
      * Create a request for the method "properties.get".
      *
@@ -1967,7 +1968,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
           java.util.regex.Pattern.compile("^properties/[^/]+$");
 
       /**
-       * Lookup for a single "GA4" Property.
+       * Lookup for a single GA Property.
        *
        * Create a request for the method "properties.get".
        *
@@ -2240,10 +2241,9 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * Returns child Properties under the specified parent Account. Only "GA4" properties will be
-     * returned. Properties will be excluded if the caller does not have access. Soft-deleted (ie:
-     * "trashed") properties are excluded by default. Returns an empty list if no relevant properties
-     * are found.
+     * Returns child Properties under the specified parent Account. Properties will be excluded if the
+     * caller does not have access. Soft-deleted (ie: "trashed") properties are excluded by default.
+     * Returns an empty list if no relevant properties are found.
      *
      * Create a request for the method "properties.list".
      *
@@ -2263,10 +2263,9 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v1beta/properties";
 
       /**
-       * Returns child Properties under the specified parent Account. Only "GA4" properties will be
-       * returned. Properties will be excluded if the caller does not have access. Soft-deleted (ie:
-       * "trashed") properties are excluded by default. Returns an empty list if no relevant properties
-       * are found.
+       * Returns child Properties under the specified parent Account. Properties will be excluded if the
+       * caller does not have access. Soft-deleted (ie: "trashed") properties are excluded by default.
+       * Returns an empty list if no relevant properties are found.
        *
        * Create a request for the method "properties.list".
        *
@@ -2641,8 +2640,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
      * user reads Google Analytics reporting data. Access records are retained for up to 2 years. Data
      * Access Reports can be requested for a property. Reports may be requested for any property, but
      * dimensions that aren't related to quota can only be requested on Google Analytics 360 properties.
-     * This method is only available to Administrators. These data access records include GA4 UI
-     * Reporting, GA4 UI Explorations, GA4 Data API, and other products like Firebase & Admob that can
+     * This method is only available to Administrators. These data access records include GA UI
+     * Reporting, GA UI Explorations, GA Data API, and other products like Firebase & Admob that can
      * retrieve data from Google Analytics through a linkage. These records don't include property
      * configuration changes like adding a stream or changing a property's time zone. For configuration
      * change history, see [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides
@@ -2657,8 +2656,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
      * @param entity The Data Access Report supports requesting at the property level or account level. If requested at
      *        the account level, Data Access Reports include all access for all properties under that
      *        account. To request at the property level, entity should be for example 'properties/123'
-     *        if "123" is your GA4 property ID. To request at the account level, entity should be for
-     *        example 'accounts/1234' if "1234" is your GA4 Account ID.
+     *        if "123" is your Google Analytics property ID. To request at the account level, entity
+     *        should be for example 'accounts/1234' if "1234" is your Google Analytics Account ID.
      * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaRunAccessReportRequest}
      * @return the request
      */
@@ -2681,9 +2680,9 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * Access Reports can be requested for a property. Reports may be requested for any property, but
        * dimensions that aren't related to quota can only be requested on Google Analytics 360
        * properties. This method is only available to Administrators. These data access records include
-       * GA4 UI Reporting, GA4 UI Explorations, GA4 Data API, and other products like Firebase & Admob
-       * that can retrieve data from Google Analytics through a linkage. These records don't include
-       * property configuration changes like adding a stream or changing a property's time zone. For
+       * GA UI Reporting, GA UI Explorations, GA Data API, and other products like Firebase & Admob that
+       * can retrieve data from Google Analytics through a linkage. These records don't include property
+       * configuration changes like adding a stream or changing a property's time zone. For
        * configuration change history, see [searchChangeHistoryEvents](https://developers.google.com/ana
        * lytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
        *
@@ -2698,8 +2697,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * @param entity The Data Access Report supports requesting at the property level or account level. If requested at
      *        the account level, Data Access Reports include all access for all properties under that
      *        account. To request at the property level, entity should be for example 'properties/123'
-     *        if "123" is your GA4 property ID. To request at the account level, entity should be for
-     *        example 'accounts/1234' if "1234" is your GA4 Account ID.
+     *        if "123" is your Google Analytics property ID. To request at the account level, entity
+     *        should be for example 'accounts/1234' if "1234" is your Google Analytics Account ID.
        * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaRunAccessReportRequest}
        * @since 1.13
        */
@@ -2772,17 +2771,18 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * The Data Access Report supports requesting at the property level or account level. If
        * requested at the account level, Data Access Reports include all access for all properties
        * under that account. To request at the property level, entity should be for example
-       * 'properties/123' if "123" is your GA4 property ID. To request at the account level, entity
-       * should be for example 'accounts/1234' if "1234" is your GA4 Account ID.
+       * 'properties/123' if "123" is your Google Analytics property ID. To request at the account
+       * level, entity should be for example 'accounts/1234' if "1234" is your Google Analytics
+       * Account ID.
        */
       @com.google.api.client.util.Key
       private java.lang.String entity;
 
       /** The Data Access Report supports requesting at the property level or account level. If requested at
      the account level, Data Access Reports include all access for all properties under that account. To
-     request at the property level, entity should be for example 'properties/123' if "123" is your GA4
-     property ID. To request at the account level, entity should be for example 'accounts/1234' if
-     "1234" is your GA4 Account ID.
+     request at the property level, entity should be for example 'properties/123' if "123" is your
+     Google Analytics property ID. To request at the account level, entity should be for example
+     'accounts/1234' if "1234" is your Google Analytics Account ID.
        */
       public java.lang.String getEntity() {
         return entity;
@@ -2792,8 +2792,9 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * The Data Access Report supports requesting at the property level or account level. If
        * requested at the account level, Data Access Reports include all access for all properties
        * under that account. To request at the property level, entity should be for example
-       * 'properties/123' if "123" is your GA4 property ID. To request at the account level, entity
-       * should be for example 'accounts/1234' if "1234" is your GA4 Account ID.
+       * 'properties/123' if "123" is your Google Analytics property ID. To request at the account
+       * level, entity should be for example 'accounts/1234' if "1234" is your Google Analytics
+       * Account ID.
        */
       public RunAccessReport setEntity(java.lang.String entity) {
         if (!getSuppressPatternChecks()) {
@@ -6455,7 +6456,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
           }
         }
         /**
-         * Lookup for a single "GA4" MeasurementProtocolSecret.
+         * Lookup for a single MeasurementProtocolSecret.
          *
          * Create a request for the method "measurementProtocolSecrets.get".
          *
@@ -6480,7 +6481,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
               java.util.regex.Pattern.compile("^properties/[^/]+/dataStreams/[^/]+/measurementProtocolSecrets/[^/]+$");
 
           /**
-           * Lookup for a single "GA4" MeasurementProtocolSecret.
+           * Lookup for a single MeasurementProtocolSecret.
            *
            * Create a request for the method "measurementProtocolSecrets.get".
            *

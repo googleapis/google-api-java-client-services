@@ -17,7 +17,7 @@
 package com.google.api.services.analyticsadmin.v1beta.model;
 
 /**
- * A resource message representing a Google Analytics GA4 property.
+ * A resource message representing a Google Analytics property.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Analytics Admin API. For a detailed

@@ -101,10 +101,10 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   /**
    * If false or unspecified, each row with all metrics equal to 0 will not be returned. If true,
    * these rows will be returned if they are not separately removed by a filter. Regardless of this
-   * `keep_empty_rows` setting, only data recorded by the Google Analytics (GA4) property can be
-   * displayed in a report. For example if a property never logs a `purchase` event, then a query
-   * for the `eventName` dimension and `eventCount` metric will not have a row eventName: "purchase"
-   * and eventCount: 0.
+   * `keep_empty_rows` setting, only data recorded by the Google Analytics property can be displayed
+   * in a report. For example if a property never logs a `purchase` event, then a query for the
+   * `eventName` dimension and `eventCount` metric will not have a row eventName: "purchase" and
+   * eventCount: 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -181,8 +181,8 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path
-   * and not the body. To learn more, see [where to find your Property
+   * A Google Analytics property identifier whose events are tracked. Specified in the URL path and
+   * not the body. To learn more, see [where to find your Property
    * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). Within a
    * batch request, this property should either be unspecified or consistent with the batch-level
    * property. Example: properties/1234
@@ -192,7 +192,7 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   private java.lang.String property;
 
   /**
-   * Toggles whether to return the current state of this Analytics Property's quota. Quota is
+   * Toggles whether to return the current state of this Google Analytics property's quota. Quota is
    * returned in [PropertyQuota](#PropertyQuota).
    * The value may be {@code null}.
    */
@@ -320,10 +320,10 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   /**
    * If false or unspecified, each row with all metrics equal to 0 will not be returned. If true,
    * these rows will be returned if they are not separately removed by a filter. Regardless of this
-   * `keep_empty_rows` setting, only data recorded by the Google Analytics (GA4) property can be
-   * displayed in a report. For example if a property never logs a `purchase` event, then a query
-   * for the `eventName` dimension and `eventCount` metric will not have a row eventName: "purchase"
-   * and eventCount: 0.
+   * `keep_empty_rows` setting, only data recorded by the Google Analytics property can be displayed
+   * in a report. For example if a property never logs a `purchase` event, then a query for the
+   * `eventName` dimension and `eventCount` metric will not have a row eventName: "purchase" and
+   * eventCount: 0.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getKeepEmptyRows() {
@@ -333,10 +333,10 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   /**
    * If false or unspecified, each row with all metrics equal to 0 will not be returned. If true,
    * these rows will be returned if they are not separately removed by a filter. Regardless of this
-   * `keep_empty_rows` setting, only data recorded by the Google Analytics (GA4) property can be
-   * displayed in a report. For example if a property never logs a `purchase` event, then a query
-   * for the `eventName` dimension and `eventCount` metric will not have a row eventName: "purchase"
-   * and eventCount: 0.
+   * `keep_empty_rows` setting, only data recorded by the Google Analytics property can be displayed
+   * in a report. For example if a property never logs a `purchase` event, then a query for the
+   * `eventName` dimension and `eventCount` metric will not have a row eventName: "purchase" and
+   * eventCount: 0.
    * @param keepEmptyRows keepEmptyRows or {@code null} for none
    */
   public RunReportRequest setKeepEmptyRows(java.lang.Boolean keepEmptyRows) {
@@ -479,8 +479,8 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path
-   * and not the body. To learn more, see [where to find your Property
+   * A Google Analytics property identifier whose events are tracked. Specified in the URL path and
+   * not the body. To learn more, see [where to find your Property
    * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). Within a
    * batch request, this property should either be unspecified or consistent with the batch-level
    * property. Example: properties/1234
@@ -491,8 +491,8 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path
-   * and not the body. To learn more, see [where to find your Property
+   * A Google Analytics property identifier whose events are tracked. Specified in the URL path and
+   * not the body. To learn more, see [where to find your Property
    * ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). Within a
    * batch request, this property should either be unspecified or consistent with the batch-level
    * property. Example: properties/1234
@@ -504,7 +504,7 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Toggles whether to return the current state of this Analytics Property's quota. Quota is
+   * Toggles whether to return the current state of this Google Analytics property's quota. Quota is
    * returned in [PropertyQuota](#PropertyQuota).
    * @return value or {@code null} for none
    */
@@ -513,7 +513,7 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Toggles whether to return the current state of this Analytics Property's quota. Quota is
+   * Toggles whether to return the current state of this Google Analytics property's quota. Quota is
    * returned in [PropertyQuota](#PropertyQuota).
    * @param returnPropertyQuota returnPropertyQuota or {@code null} for none
    */

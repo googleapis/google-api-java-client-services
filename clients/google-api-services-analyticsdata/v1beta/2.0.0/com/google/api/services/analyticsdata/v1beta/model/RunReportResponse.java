@@ -100,7 +100,7 @@ public final class RunReportResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * This Analytics Property's quota state including this request.
+   * This Google Analytics property's quota state including this request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -253,7 +253,7 @@ public final class RunReportResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * This Analytics Property's quota state including this request.
+   * This Google Analytics property's quota state including this request.
    * @return value or {@code null} for none
    */
   public PropertyQuota getPropertyQuota() {
@@ -261,7 +261,7 @@ public final class RunReportResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * This Analytics Property's quota state including this request.
+   * This Google Analytics property's quota state including this request.
    * @param propertyQuota propertyQuota or {@code null} for none
    */
   public RunReportResponse setPropertyQuota(PropertyQuota propertyQuota) {

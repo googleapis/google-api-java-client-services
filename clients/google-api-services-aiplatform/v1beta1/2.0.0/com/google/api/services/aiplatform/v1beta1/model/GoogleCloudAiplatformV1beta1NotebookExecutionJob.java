@@ -60,7 +60,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookExecutionJob extends com.
 
   /**
    * Customer-managed encryption key spec for the notebook execution job. This field is auto-
-   * populated if the NotebookRuntimeTemplate has an encryption spec.
+   * populated if the NotebookService.NotebookRuntimeTemplate has an encryption spec.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -229,7 +229,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookExecutionJob extends com.
 
   /**
    * Customer-managed encryption key spec for the notebook execution job. This field is auto-
-   * populated if the NotebookRuntimeTemplate has an encryption spec.
+   * populated if the NotebookService.NotebookRuntimeTemplate has an encryption spec.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1EncryptionSpec getEncryptionSpec() {
@@ -238,7 +238,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookExecutionJob extends com.
 
   /**
    * Customer-managed encryption key spec for the notebook execution job. This field is auto-
-   * populated if the NotebookRuntimeTemplate has an encryption spec.
+   * populated if the NotebookService.NotebookRuntimeTemplate has an encryption spec.
    * @param encryptionSpec encryptionSpec or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1NotebookExecutionJob setEncryptionSpec(GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec) {

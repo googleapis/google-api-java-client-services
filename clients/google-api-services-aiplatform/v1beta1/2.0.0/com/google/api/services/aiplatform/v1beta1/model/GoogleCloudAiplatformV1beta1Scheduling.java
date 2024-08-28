@@ -38,6 +38,15 @@ public final class GoogleCloudAiplatformV1beta1Scheduling extends com.google.api
   private java.lang.Boolean disableRetries;
 
   /**
+   * Optional. This is the maximum duration that a job will wait for the requested resources to be
+   * provisioned if the scheduling strategy is set to [Strategy.DWS_FLEX_START]. If set to 0, the
+   * job will wait indefinitely. The default is 24 hours.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String maxWaitDuration;
+
+  /**
    * Restarts the entire CustomJob if a worker gets restarted. This feature can be used by
    * distributed training jobs that are not resilient to workers leaving and joining a job.
    * The value may be {@code null}.
@@ -75,6 +84,27 @@ public final class GoogleCloudAiplatformV1beta1Scheduling extends com.google.api
    */
   public GoogleCloudAiplatformV1beta1Scheduling setDisableRetries(java.lang.Boolean disableRetries) {
     this.disableRetries = disableRetries;
+    return this;
+  }
+
+  /**
+   * Optional. This is the maximum duration that a job will wait for the requested resources to be
+   * provisioned if the scheduling strategy is set to [Strategy.DWS_FLEX_START]. If set to 0, the
+   * job will wait indefinitely. The default is 24 hours.
+   * @return value or {@code null} for none
+   */
+  public String getMaxWaitDuration() {
+    return maxWaitDuration;
+  }
+
+  /**
+   * Optional. This is the maximum duration that a job will wait for the requested resources to be
+   * provisioned if the scheduling strategy is set to [Strategy.DWS_FLEX_START]. If set to 0, the
+   * job will wait indefinitely. The default is 24 hours.
+   * @param maxWaitDuration maxWaitDuration or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Scheduling setMaxWaitDuration(String maxWaitDuration) {
+    this.maxWaitDuration = maxWaitDuration;
     return this;
   }
 

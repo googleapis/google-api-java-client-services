@@ -51,6 +51,13 @@ public final class GoogleCloudAiplatformV1PublisherModelCallToAction extends com
   private GoogleCloudAiplatformV1PublisherModelCallToActionDeployGke deployGke;
 
   /**
+   * Optional. Multiple setups to deploy the PublisherModel to Vertex Endpoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1PublisherModelCallToActionDeployVertex multiDeployVertex;
+
+  /**
    * Optional. Open evaluation pipeline of the PublisherModel.
    * The value may be {@code null}.
    */
@@ -168,6 +175,23 @@ public final class GoogleCloudAiplatformV1PublisherModelCallToAction extends com
    */
   public GoogleCloudAiplatformV1PublisherModelCallToAction setDeployGke(GoogleCloudAiplatformV1PublisherModelCallToActionDeployGke deployGke) {
     this.deployGke = deployGke;
+    return this;
+  }
+
+  /**
+   * Optional. Multiple setups to deploy the PublisherModel to Vertex Endpoint.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1PublisherModelCallToActionDeployVertex getMultiDeployVertex() {
+    return multiDeployVertex;
+  }
+
+  /**
+   * Optional. Multiple setups to deploy the PublisherModel to Vertex Endpoint.
+   * @param multiDeployVertex multiDeployVertex or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1PublisherModelCallToAction setMultiDeployVertex(GoogleCloudAiplatformV1PublisherModelCallToActionDeployVertex multiDeployVertex) {
+    this.multiDeployVertex = multiDeployVertex;
     return this;
   }
 

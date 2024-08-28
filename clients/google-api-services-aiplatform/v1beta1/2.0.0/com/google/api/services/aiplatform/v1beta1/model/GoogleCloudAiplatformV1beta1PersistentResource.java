@@ -132,6 +132,20 @@ public final class GoogleCloudAiplatformV1beta1PersistentResource extends com.go
   private GoogleCloudAiplatformV1beta1ResourceRuntimeSpec resourceRuntimeSpec;
 
   /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Output only. Time when the PersistentResource for the first time entered the `RUNNING` state.
    * The value may be {@code null}.
    */
@@ -387,6 +401,40 @@ public final class GoogleCloudAiplatformV1beta1PersistentResource extends com.go
    */
   public GoogleCloudAiplatformV1beta1PersistentResource setResourceRuntimeSpec(GoogleCloudAiplatformV1beta1ResourceRuntimeSpec resourceRuntimeSpec) {
     this.resourceRuntimeSpec = resourceRuntimeSpec;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PersistentResource setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PersistentResource setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

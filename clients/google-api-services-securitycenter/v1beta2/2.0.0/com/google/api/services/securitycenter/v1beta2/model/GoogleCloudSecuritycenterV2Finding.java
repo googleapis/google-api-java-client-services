@@ -170,6 +170,32 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   private String createTime;
 
   /**
+   * Data access events associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudSecuritycenterV2DataAccessEvent> dataAccessEvents;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudSecuritycenterV2DataAccessEvent used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudSecuritycenterV2DataAccessEvent.class);
+  }
+
+  /**
+   * Data flow events associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudSecuritycenterV2DataFlowEvent> dataFlowEvents;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudSecuritycenterV2DataFlowEvent used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudSecuritycenterV2DataFlowEvent.class);
+  }
+
+  /**
    * Database associated with the finding.
    * The value may be {@code null}.
    */
@@ -738,6 +764,40 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Finding setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Data access events associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudSecuritycenterV2DataAccessEvent> getDataAccessEvents() {
+    return dataAccessEvents;
+  }
+
+  /**
+   * Data access events associated with the finding.
+   * @param dataAccessEvents dataAccessEvents or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setDataAccessEvents(java.util.List<GoogleCloudSecuritycenterV2DataAccessEvent> dataAccessEvents) {
+    this.dataAccessEvents = dataAccessEvents;
+    return this;
+  }
+
+  /**
+   * Data flow events associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudSecuritycenterV2DataFlowEvent> getDataFlowEvents() {
+    return dataFlowEvents;
+  }
+
+  /**
+   * Data flow events associated with the finding.
+   * @param dataFlowEvents dataFlowEvents or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setDataFlowEvents(java.util.List<GoogleCloudSecuritycenterV2DataFlowEvent> dataFlowEvents) {
+    this.dataFlowEvents = dataFlowEvents;
     return this;
   }
 

@@ -60,6 +60,13 @@ public final class GoogleCloudSecuritycenterV2AzureMetadata extends com.google.a
   private GoogleCloudSecuritycenterV2AzureSubscription subscription;
 
   /**
+   * The Azure Entra tenant associated with the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2AzureTenant tenant;
+
+  /**
    * A list of Azure management groups associated with the resource, ordered from lowest level
    * (closest to the subscription) to highest level.
    * @return value or {@code null} for none
@@ -109,6 +116,23 @@ public final class GoogleCloudSecuritycenterV2AzureMetadata extends com.google.a
    */
   public GoogleCloudSecuritycenterV2AzureMetadata setSubscription(GoogleCloudSecuritycenterV2AzureSubscription subscription) {
     this.subscription = subscription;
+    return this;
+  }
+
+  /**
+   * The Azure Entra tenant associated with the resource.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2AzureTenant getTenant() {
+    return tenant;
+  }
+
+  /**
+   * The Azure Entra tenant associated with the resource.
+   * @param tenant tenant or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2AzureMetadata setTenant(GoogleCloudSecuritycenterV2AzureTenant tenant) {
+    this.tenant = tenant;
     return this;
   }
 

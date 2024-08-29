@@ -64,13 +64,6 @@ public final class ImportRowError extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Error details for a JSON file.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ImportRowErrorJsonErrorDetails jsonError;
-
-  /**
    * The row number where the error was detected.
    * The value may be {@code null}.
    */
@@ -163,23 +156,6 @@ public final class ImportRowError extends com.google.api.client.json.GenericJson
    */
   public ImportRowError setErrors(java.util.List<ImportError> errors) {
     this.errors = errors;
-    return this;
-  }
-
-  /**
-   * Error details for a JSON file.
-   * @return value or {@code null} for none
-   */
-  public ImportRowErrorJsonErrorDetails getJsonError() {
-    return jsonError;
-  }
-
-  /**
-   * Error details for a JSON file.
-   * @param jsonError jsonError or {@code null} for none
-   */
-  public ImportRowError setJsonError(ImportRowErrorJsonErrorDetails jsonError) {
-    this.jsonError = jsonError;
     return this;
   }
 

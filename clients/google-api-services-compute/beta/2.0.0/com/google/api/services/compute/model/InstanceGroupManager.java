@@ -195,6 +195,13 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.lang.String region;
 
   /**
+   * Resource policies for this managed instance group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceGroupManagerResourcePolicies resourcePolicies;
+
+  /**
    * [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
@@ -725,6 +732,23 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    */
   public InstanceGroupManager setRegion(java.lang.String region) {
     this.region = region;
+    return this;
+  }
+
+  /**
+   * Resource policies for this managed instance group.
+   * @return value or {@code null} for none
+   */
+  public InstanceGroupManagerResourcePolicies getResourcePolicies() {
+    return resourcePolicies;
+  }
+
+  /**
+   * Resource policies for this managed instance group.
+   * @param resourcePolicies resourcePolicies or {@code null} for none
+   */
+  public InstanceGroupManager setResourcePolicies(InstanceGroupManagerResourcePolicies resourcePolicies) {
+    this.resourcePolicies = resourcePolicies;
     return this;
   }
 

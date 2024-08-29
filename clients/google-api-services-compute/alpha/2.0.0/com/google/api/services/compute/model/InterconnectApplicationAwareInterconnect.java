@@ -44,6 +44,14 @@ public final class InterconnectApplicationAwareInterconnect extends com.google.a
   private java.lang.String profileDescription;
 
   /**
+   * Optional field to specify a list of shape average percentages to be applied in conjunction with
+   * StrictPriorityPolicy or BandwidthPercentagePolicy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<InterconnectApplicationAwareInterconnectBandwidthPercentage> shapeAveragePercentages;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,6 +86,25 @@ public final class InterconnectApplicationAwareInterconnect extends com.google.a
    */
   public InterconnectApplicationAwareInterconnect setProfileDescription(java.lang.String profileDescription) {
     this.profileDescription = profileDescription;
+    return this;
+  }
+
+  /**
+   * Optional field to specify a list of shape average percentages to be applied in conjunction with
+   * StrictPriorityPolicy or BandwidthPercentagePolicy.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<InterconnectApplicationAwareInterconnectBandwidthPercentage> getShapeAveragePercentages() {
+    return shapeAveragePercentages;
+  }
+
+  /**
+   * Optional field to specify a list of shape average percentages to be applied in conjunction with
+   * StrictPriorityPolicy or BandwidthPercentagePolicy.
+   * @param shapeAveragePercentages shapeAveragePercentages or {@code null} for none
+   */
+  public InterconnectApplicationAwareInterconnect setShapeAveragePercentages(java.util.List<InterconnectApplicationAwareInterconnectBandwidthPercentage> shapeAveragePercentages) {
+    this.shapeAveragePercentages = shapeAveragePercentages;
     return this;
   }
 

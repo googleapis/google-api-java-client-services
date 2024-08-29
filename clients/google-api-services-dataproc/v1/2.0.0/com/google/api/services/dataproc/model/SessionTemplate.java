@@ -90,6 +90,13 @@ public final class SessionTemplate extends com.google.api.client.json.GenericJso
   private RuntimeConfig runtimeConfig;
 
   /**
+   * Optional. Spark connect session config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SparkConnectConfig sparkConnectSession;
+
+  /**
    * Output only. The time the template was last updated.
    * The value may be {@code null}.
    */
@@ -245,6 +252,23 @@ public final class SessionTemplate extends com.google.api.client.json.GenericJso
    */
   public SessionTemplate setRuntimeConfig(RuntimeConfig runtimeConfig) {
     this.runtimeConfig = runtimeConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Spark connect session config.
+   * @return value or {@code null} for none
+   */
+  public SparkConnectConfig getSparkConnectSession() {
+    return sparkConnectSession;
+  }
+
+  /**
+   * Optional. Spark connect session config.
+   * @param sparkConnectSession sparkConnectSession or {@code null} for none
+   */
+  public SessionTemplate setSparkConnectSession(SparkConnectConfig sparkConnectSession) {
+    this.sparkConnectSession = sparkConnectSession;
     return this;
   }
 

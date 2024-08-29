@@ -38,6 +38,13 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> databaseRoles;
 
   /**
+   * Input only. If the user already exists and it has additional roles, keep them granted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean keepExtraRoles;
+
+  /**
    * Output only. Name of the resource in the form of
    * projects/{project}/locations/{location}/cluster/{cluster}/users/{user}.
    * The value may be {@code null}.
@@ -75,6 +82,23 @@ public final class User extends com.google.api.client.json.GenericJson {
    */
   public User setDatabaseRoles(java.util.List<java.lang.String> databaseRoles) {
     this.databaseRoles = databaseRoles;
+    return this;
+  }
+
+  /**
+   * Input only. If the user already exists and it has additional roles, keep them granted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getKeepExtraRoles() {
+    return keepExtraRoles;
+  }
+
+  /**
+   * Input only. If the user already exists and it has additional roles, keep them granted.
+   * @param keepExtraRoles keepExtraRoles or {@code null} for none
+   */
+  public User setKeepExtraRoles(java.lang.Boolean keepExtraRoles) {
+    this.keepExtraRoles = keepExtraRoles;
     return this;
   }
 

@@ -57,8 +57,7 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   private java.lang.Float capacityScaler;
 
   /**
-   * List of custom metrics that are used for CUSTOM_METRICS BalancingMode and WEIGHTED_ROUND_ROBIN
-   * BackendService locality_lb_policy.
+   * List of custom metrics that are used for CUSTOM_METRICS BalancingMode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -224,8 +223,7 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of custom metrics that are used for CUSTOM_METRICS BalancingMode and WEIGHTED_ROUND_ROBIN
-   * BackendService locality_lb_policy.
+   * List of custom metrics that are used for CUSTOM_METRICS BalancingMode.
    * @return value or {@code null} for none
    */
   public java.util.List<BackendCustomMetric> getCustomMetrics() {
@@ -233,8 +231,7 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of custom metrics that are used for CUSTOM_METRICS BalancingMode and WEIGHTED_ROUND_ROBIN
-   * BackendService locality_lb_policy.
+   * List of custom metrics that are used for CUSTOM_METRICS BalancingMode.
    * @param customMetrics customMetrics or {@code null} for none
    */
   public Backend setCustomMetrics(java.util.List<BackendCustomMetric> customMetrics) {

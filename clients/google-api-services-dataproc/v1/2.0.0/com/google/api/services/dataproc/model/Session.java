@@ -101,6 +101,13 @@ public final class Session extends com.google.api.client.json.GenericJson {
   private java.lang.String sessionTemplate;
 
   /**
+   * Optional. Spark connect session config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SparkConnectConfig sparkConnectSession;
+
+  /**
    * Output only. A state of the session.
    * The value may be {@code null}.
    */
@@ -309,6 +316,23 @@ public final class Session extends com.google.api.client.json.GenericJson {
    */
   public Session setSessionTemplate(java.lang.String sessionTemplate) {
     this.sessionTemplate = sessionTemplate;
+    return this;
+  }
+
+  /**
+   * Optional. Spark connect session config.
+   * @return value or {@code null} for none
+   */
+  public SparkConnectConfig getSparkConnectSession() {
+    return sparkConnectSession;
+  }
+
+  /**
+   * Optional. Spark connect session config.
+   * @param sparkConnectSession sparkConnectSession or {@code null} for none
+   */
+  public Session setSparkConnectSession(SparkConnectConfig sparkConnectSession) {
+    this.sparkConnectSession = sparkConnectSession;
     return this;
   }
 

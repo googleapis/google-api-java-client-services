@@ -57,19 +57,12 @@ public final class GoogleCloudDiscoveryengineV1alphaCheckGroundingResponseClaim 
   /**
    * Indicates that this claim required grounding check. When the system decided this claim doesn't
    * require attribution/grounding check, this field will be set to false. In that case, no
-   * grounding check was done for the claim and therefore citation_indices, and
-   * anti_citation_indices should not be returned.
+   * grounding check was done for the claim and therefore citation_indices, anti_citation_indices,
+   * and score should not be returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean groundingCheckRequired;
-
-  /**
-   * Confidence score for the claim in the answer candidate, in the range of [0, 1].
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Double score;
 
   /**
    * Position indicating the start of the claim in the answer candidate, measured in bytes.
@@ -140,8 +133,8 @@ public final class GoogleCloudDiscoveryengineV1alphaCheckGroundingResponseClaim 
   /**
    * Indicates that this claim required grounding check. When the system decided this claim doesn't
    * require attribution/grounding check, this field will be set to false. In that case, no
-   * grounding check was done for the claim and therefore citation_indices, and
-   * anti_citation_indices should not be returned.
+   * grounding check was done for the claim and therefore citation_indices, anti_citation_indices,
+   * and score should not be returned.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getGroundingCheckRequired() {
@@ -151,29 +144,12 @@ public final class GoogleCloudDiscoveryengineV1alphaCheckGroundingResponseClaim 
   /**
    * Indicates that this claim required grounding check. When the system decided this claim doesn't
    * require attribution/grounding check, this field will be set to false. In that case, no
-   * grounding check was done for the claim and therefore citation_indices, and
-   * anti_citation_indices should not be returned.
+   * grounding check was done for the claim and therefore citation_indices, anti_citation_indices,
+   * and score should not be returned.
    * @param groundingCheckRequired groundingCheckRequired or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaCheckGroundingResponseClaim setGroundingCheckRequired(java.lang.Boolean groundingCheckRequired) {
     this.groundingCheckRequired = groundingCheckRequired;
-    return this;
-  }
-
-  /**
-   * Confidence score for the claim in the answer candidate, in the range of [0, 1].
-   * @return value or {@code null} for none
-   */
-  public java.lang.Double getScore() {
-    return score;
-  }
-
-  /**
-   * Confidence score for the claim in the answer candidate, in the range of [0, 1].
-   * @param score score or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1alphaCheckGroundingResponseClaim setScore(java.lang.Double score) {
-    this.score = score;
     return this;
   }
 

@@ -23977,6 +23977,287 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
     }
+    /**
+     * An accessor for creating requests from the ValuedResources collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+     *   {@code SecurityCommandCenter.ValuedResources.List request = securitycenter.valuedResources().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public ValuedResources valuedResources() {
+      return new ValuedResources();
+    }
+
+    /**
+     * The "valuedResources" collection of methods.
+     */
+    public class ValuedResources {
+
+      /**
+       * Lists the valued resources for a set of simulation results and filter.
+       *
+       * Create a request for the method "valuedResources.list".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Name of parent to list valued resources. Valid formats: `organizations/{organization}`,
+       *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
+       *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.ListValuedResourcesResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/valuedResources";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Lists the valued resources for a set of simulation results and filter.
+         *
+         * Create a request for the method "valuedResources.list".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Name of parent to list valued resources. Valid formats: `organizations/{organization}`,
+       *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
+       *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.ListValuedResourcesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of parent to list valued resources. Valid formats:
+         * `organizations/{organization}`, `organizations/{organization}/simulations/{simulation}` `
+         * organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_expos
+         * ure_result_v2}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Name of parent to list valued resources. Valid formats: `organizations/{organization}`,
+       `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simulations/{
+       simulation}/attackExposureResults/{attack_exposure_result_v2}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Name of parent to list valued resources. Valid formats:
+         * `organizations/{organization}`, `organizations/{organization}/simulations/{simulation}` `
+         * organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_expos
+         * ure_result_v2}`
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The filter expression that filters the valued resources in the response. Supported
+         * fields: * `resource_value` supports = * `resource_type` supports =
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** The filter expression that filters the valued resources in the response. Supported fields: *
+       `resource_value` supports = * `resource_type` supports =
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * The filter expression that filters the valued resources in the response. Supported
+         * fields: * `resource_value` supports = * `resource_type` supports =
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. The fields by which to order the valued resources response. Supported fields: *
+         * `exposed_score` * `resource_value` * `resource_type` * `resource` * `display_name` Values
+         * should be a comma separated list of fields. For example: `exposed_score,resource_value`.
+         * The default sorting order is descending. To specify ascending or descending order for a
+         * field, append a ` ASC` or a ` DESC` suffix, respectively; for example: `exposed_score
+         * DESC`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional. The fields by which to order the valued resources response. Supported fields: *
+       `exposed_score` * `resource_value` * `resource_type` * `resource` * `display_name` Values should be
+       a comma separated list of fields. For example: `exposed_score,resource_value`. The default sorting
+       order is descending. To specify ascending or descending order for a field, append a ` ASC` or a `
+       DESC` suffix, respectively; for example: `exposed_score DESC`.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Optional. The fields by which to order the valued resources response. Supported fields: *
+         * `exposed_score` * `resource_value` * `resource_type` * `resource` * `display_name` Values
+         * should be a comma separated list of fields. For example: `exposed_score,resource_value`.
+         * The default sorting order is descending. To specify ascending or descending order for a
+         * field, append a ` ASC` or a ` DESC` suffix, respectively; for example: `exposed_score
+         * DESC`.
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * The maximum number of results to return in a single response. Default is 10, minimum is
+         * 1, maximum is 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
+       is 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of results to return in a single response. Default is 10, minimum is
+         * 1, maximum is 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * The value returned by the last `ListValuedResourcesResponse`; indicates that this is a
+         * continuation of a prior `ListValuedResources` call, and that the system should return the
+         * next page of data.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The value returned by the last `ListValuedResourcesResponse`; indicates that this is a continuation
+       of a prior `ListValuedResources` call, and that the system should return the next page of data.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * The value returned by the last `ListValuedResourcesResponse`; indicates that this is a
+         * continuation of a prior `ListValuedResources` call, and that the system should return the
+         * next page of data.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

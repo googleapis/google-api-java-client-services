@@ -167,6 +167,32 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Data access events associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DataAccessEvent> dataAccessEvents;
+
+  static {
+    // hack to force ProGuard to consider DataAccessEvent used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DataAccessEvent.class);
+  }
+
+  /**
+   * Data flow events associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DataFlowEvent> dataFlowEvents;
+
+  static {
+    // hack to force ProGuard to consider DataFlowEvent used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DataFlowEvent.class);
+  }
+
+  /**
    * Database associated with the finding.
    * The value may be {@code null}.
    */
@@ -716,6 +742,40 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Data access events associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DataAccessEvent> getDataAccessEvents() {
+    return dataAccessEvents;
+  }
+
+  /**
+   * Data access events associated with the finding.
+   * @param dataAccessEvents dataAccessEvents or {@code null} for none
+   */
+  public Finding setDataAccessEvents(java.util.List<DataAccessEvent> dataAccessEvents) {
+    this.dataAccessEvents = dataAccessEvents;
+    return this;
+  }
+
+  /**
+   * Data flow events associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DataFlowEvent> getDataFlowEvents() {
+    return dataFlowEvents;
+  }
+
+  /**
+   * Data flow events associated with the finding.
+   * @param dataFlowEvents dataFlowEvents or {@code null} for none
+   */
+  public Finding setDataFlowEvents(java.util.List<DataFlowEvent> dataFlowEvents) {
+    this.dataFlowEvents = dataFlowEvents;
     return this;
   }
 

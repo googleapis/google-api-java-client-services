@@ -60,6 +60,13 @@ public final class AzureMetadata extends com.google.api.client.json.GenericJson 
   private AzureSubscription subscription;
 
   /**
+   * The Azure Entra tenant associated with the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AzureTenant tenant;
+
+  /**
    * A list of Azure management groups associated with the resource, ordered from lowest level
    * (closest to the subscription) to highest level.
    * @return value or {@code null} for none
@@ -109,6 +116,23 @@ public final class AzureMetadata extends com.google.api.client.json.GenericJson 
    */
   public AzureMetadata setSubscription(AzureSubscription subscription) {
     this.subscription = subscription;
+    return this;
+  }
+
+  /**
+   * The Azure Entra tenant associated with the resource.
+   * @return value or {@code null} for none
+   */
+  public AzureTenant getTenant() {
+    return tenant;
+  }
+
+  /**
+   * The Azure Entra tenant associated with the resource.
+   * @param tenant tenant or {@code null} for none
+   */
+  public AzureMetadata setTenant(AzureTenant tenant) {
+    this.tenant = tenant;
     return this;
   }
 

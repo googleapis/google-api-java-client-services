@@ -54,6 +54,13 @@ public final class GoogleCloudSecuritycenterV2Cve extends com.google.api.client.
   private java.lang.String exploitationActivity;
 
   /**
+   * Date of the earliest known exploitation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String firstExploitationDate;
+
+  /**
    * The unique identifier for the vulnerability. e.g. CVE-2021-34527
    * The value may be {@code null}.
    */
@@ -146,6 +153,23 @@ public final class GoogleCloudSecuritycenterV2Cve extends com.google.api.client.
    */
   public GoogleCloudSecuritycenterV2Cve setExploitationActivity(java.lang.String exploitationActivity) {
     this.exploitationActivity = exploitationActivity;
+    return this;
+  }
+
+  /**
+   * Date of the earliest known exploitation.
+   * @return value or {@code null} for none
+   */
+  public String getFirstExploitationDate() {
+    return firstExploitationDate;
+  }
+
+  /**
+   * Date of the earliest known exploitation.
+   * @param firstExploitationDate firstExploitationDate or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Cve setFirstExploitationDate(String firstExploitationDate) {
+    this.firstExploitationDate = firstExploitationDate;
     return this;
   }
 

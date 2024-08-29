@@ -1159,17 +1159,18 @@ public class WorkspaceEvents extends com.google.api.client.googleapis.services.j
        * Optional. The field to update. If omitted, updates any fields included in the request. You
        * can update one of the following fields in a subscription: * `expire_time`: The timestamp
        * when the subscription expires. * `ttl`: The time-to-live (TTL) or duration of the
-       * subscription. To fully replace the subscription (the equivalent of `PUT`), use `*`. Any
-       * omitted fields are updated with empty values.
+       * subscription. * `event_types`: The list of event types to receive about the target
+       * resource. To fully replace the subscription (the equivalent of `PUT`), use `*`. Any omitted
+       * fields are updated with empty values.
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
       /** Optional. The field to update. If omitted, updates any fields included in the request. You can
      update one of the following fields in a subscription: * `expire_time`: The timestamp when the
-     subscription expires. * `ttl`: The time-to-live (TTL) or duration of the subscription. To fully
-     replace the subscription (the equivalent of `PUT`), use `*`. Any omitted fields are updated with
-     empty values.
+     subscription expires. * `ttl`: The time-to-live (TTL) or duration of the subscription. *
+     `event_types`: The list of event types to receive about the target resource. To fully replace the
+     subscription (the equivalent of `PUT`), use `*`. Any omitted fields are updated with empty values.
        */
       public String getUpdateMask() {
         return updateMask;
@@ -1179,8 +1180,9 @@ public class WorkspaceEvents extends com.google.api.client.googleapis.services.j
        * Optional. The field to update. If omitted, updates any fields included in the request. You
        * can update one of the following fields in a subscription: * `expire_time`: The timestamp
        * when the subscription expires. * `ttl`: The time-to-live (TTL) or duration of the
-       * subscription. To fully replace the subscription (the equivalent of `PUT`), use `*`. Any
-       * omitted fields are updated with empty values.
+       * subscription. * `event_types`: The list of event types to receive about the target
+       * resource. To fully replace the subscription (the equivalent of `PUT`), use `*`. Any omitted
+       * fields are updated with empty values.
        */
       public Patch setUpdateMask(String updateMask) {
         this.updateMask = updateMask;

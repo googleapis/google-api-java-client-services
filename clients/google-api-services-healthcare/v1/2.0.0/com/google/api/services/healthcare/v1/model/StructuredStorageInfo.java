@@ -17,7 +17,8 @@
 package com.google.api.services.healthcare.v1.model;
 
 /**
- * Final response of rollback HL7v2 messages request.
+ * StructuredStorageInfo contains details about the data stored in Structured Storage for the
+ * referenced resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -27,46 +28,40 @@ package com.google.api.services.healthcare.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RollbackHl7V2MessagesResponse extends com.google.api.client.json.GenericJson {
+public final class StructuredStorageInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the HL7v2 store to rollback, in the format of
-   * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
-   * /hl7v2Stores/{hl7v2_store_id}".
+   * Size in bytes of data stored in structured storage.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key
-  private java.lang.String hl7v2Store;
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long sizeBytes;
 
   /**
-   * The name of the HL7v2 store to rollback, in the format of
-   * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
-   * /hl7v2Stores/{hl7v2_store_id}".
+   * Size in bytes of data stored in structured storage.
    * @return value or {@code null} for none
    */
-  public java.lang.String getHl7v2Store() {
-    return hl7v2Store;
+  public java.lang.Long getSizeBytes() {
+    return sizeBytes;
   }
 
   /**
-   * The name of the HL7v2 store to rollback, in the format of
-   * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
-   * /hl7v2Stores/{hl7v2_store_id}".
-   * @param hl7v2Store hl7v2Store or {@code null} for none
+   * Size in bytes of data stored in structured storage.
+   * @param sizeBytes sizeBytes or {@code null} for none
    */
-  public RollbackHl7V2MessagesResponse setHl7v2Store(java.lang.String hl7v2Store) {
-    this.hl7v2Store = hl7v2Store;
+  public StructuredStorageInfo setSizeBytes(java.lang.Long sizeBytes) {
+    this.sizeBytes = sizeBytes;
     return this;
   }
 
   @Override
-  public RollbackHl7V2MessagesResponse set(String fieldName, Object value) {
-    return (RollbackHl7V2MessagesResponse) super.set(fieldName, value);
+  public StructuredStorageInfo set(String fieldName, Object value) {
+    return (StructuredStorageInfo) super.set(fieldName, value);
   }
 
   @Override
-  public RollbackHl7V2MessagesResponse clone() {
-    return (RollbackHl7V2MessagesResponse) super.clone();
+  public StructuredStorageInfo clone() {
+    return (StructuredStorageInfo) super.clone();
   }
 
 }

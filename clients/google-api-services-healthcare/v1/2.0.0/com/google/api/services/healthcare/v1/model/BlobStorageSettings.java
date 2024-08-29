@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1.model;
 
 /**
- * Final response of rollback HL7v2 messages request.
+ * Settings for data stored in Blob storage.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -27,46 +27,40 @@ package com.google.api.services.healthcare.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RollbackHl7V2MessagesResponse extends com.google.api.client.json.GenericJson {
+public final class BlobStorageSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the HL7v2 store to rollback, in the format of
-   * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
-   * /hl7v2Stores/{hl7v2_store_id}".
+   * The Storage class in which the Blob data is stored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String hl7v2Store;
+  private java.lang.String blobStorageClass;
 
   /**
-   * The name of the HL7v2 store to rollback, in the format of
-   * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
-   * /hl7v2Stores/{hl7v2_store_id}".
+   * The Storage class in which the Blob data is stored.
    * @return value or {@code null} for none
    */
-  public java.lang.String getHl7v2Store() {
-    return hl7v2Store;
+  public java.lang.String getBlobStorageClass() {
+    return blobStorageClass;
   }
 
   /**
-   * The name of the HL7v2 store to rollback, in the format of
-   * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
-   * /hl7v2Stores/{hl7v2_store_id}".
-   * @param hl7v2Store hl7v2Store or {@code null} for none
+   * The Storage class in which the Blob data is stored.
+   * @param blobStorageClass blobStorageClass or {@code null} for none
    */
-  public RollbackHl7V2MessagesResponse setHl7v2Store(java.lang.String hl7v2Store) {
-    this.hl7v2Store = hl7v2Store;
+  public BlobStorageSettings setBlobStorageClass(java.lang.String blobStorageClass) {
+    this.blobStorageClass = blobStorageClass;
     return this;
   }
 
   @Override
-  public RollbackHl7V2MessagesResponse set(String fieldName, Object value) {
-    return (RollbackHl7V2MessagesResponse) super.set(fieldName, value);
+  public BlobStorageSettings set(String fieldName, Object value) {
+    return (BlobStorageSettings) super.set(fieldName, value);
   }
 
   @Override
-  public RollbackHl7V2MessagesResponse clone() {
-    return (RollbackHl7V2MessagesResponse) super.clone();
+  public BlobStorageSettings clone() {
+    return (BlobStorageSettings) super.clone();
   }
 
 }

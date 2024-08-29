@@ -17,8 +17,7 @@
 package com.google.api.services.healthcare.v1.model;
 
 /**
- * Filtering fields for an HL7v2 rollback. Currently only supports a list of operation ids to roll
- * back.
+ * Returns additional info in regards to a completed set blob storage settings API.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -28,40 +27,16 @@ package com.google.api.services.healthcare.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RollbackHL7MessagesFilteringFields extends com.google.api.client.json.GenericJson {
+public final class SetBlobStorageSettingsResponse extends com.google.api.client.json.GenericJson {
 
-  /**
-   * Optional. A list of operation IDs to roll back.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.util.List<java.math.BigInteger> operationIds;
-
-  /**
-   * Optional. A list of operation IDs to roll back.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.math.BigInteger> getOperationIds() {
-    return operationIds;
-  }
-
-  /**
-   * Optional. A list of operation IDs to roll back.
-   * @param operationIds operationIds or {@code null} for none
-   */
-  public RollbackHL7MessagesFilteringFields setOperationIds(java.util.List<java.math.BigInteger> operationIds) {
-    this.operationIds = operationIds;
-    return this;
+  @Override
+  public SetBlobStorageSettingsResponse set(String fieldName, Object value) {
+    return (SetBlobStorageSettingsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public RollbackHL7MessagesFilteringFields set(String fieldName, Object value) {
-    return (RollbackHL7MessagesFilteringFields) super.set(fieldName, value);
-  }
-
-  @Override
-  public RollbackHL7MessagesFilteringFields clone() {
-    return (RollbackHL7MessagesFilteringFields) super.clone();
+  public SetBlobStorageSettingsResponse clone() {
+    return (SetBlobStorageSettingsResponse) super.clone();
   }
 
 }

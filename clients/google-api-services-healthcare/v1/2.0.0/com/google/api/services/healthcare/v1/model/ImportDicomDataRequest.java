@@ -32,12 +32,36 @@ package com.google.api.services.healthcare.v1.model;
 public final class ImportDicomDataRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The blob storage settings for the data imported by this operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BlobStorageSettings blobStorageSettings;
+
+  /**
    * Cloud Storage source data location and import configuration. The Cloud Healthcare Service Agent
    * requires the `roles/storage.objectViewer` Cloud IAM roles on the Cloud Storage location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudHealthcareV1DicomGcsSource gcsSource;
+
+  /**
+   * Optional. The blob storage settings for the data imported by this operation.
+   * @return value or {@code null} for none
+   */
+  public BlobStorageSettings getBlobStorageSettings() {
+    return blobStorageSettings;
+  }
+
+  /**
+   * Optional. The blob storage settings for the data imported by this operation.
+   * @param blobStorageSettings blobStorageSettings or {@code null} for none
+   */
+  public ImportDicomDataRequest setBlobStorageSettings(BlobStorageSettings blobStorageSettings) {
+    this.blobStorageSettings = blobStorageSettings;
+    return this;
+  }
 
   /**
    * Cloud Storage source data location and import configuration. The Cloud Healthcare Service Agent

@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * Filtering fields for an HL7 rollback. Currently only supports a list of operation ids to roll
+ * Filtering fields for an HL7v2 rollback. Currently only supports a list of operation ids to roll
  * back.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

@@ -10856,6 +10856,181 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
+           * SetBlobStorageSettings sets the blob storage settings of the specified resources.
+           *
+           * Create a request for the method "dicomStores.setBlobStorageSettings".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link SetBlobStorageSettings#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param resource Required. The path of the resource to update the blob storage settings in the format of `projects/{p
+           *        rojectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/
+           *        studies/{studyUID}`, `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dic
+           *        omStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/`, or `projects/{pr
+           *        ojectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/s
+           *        tudies/{studyUID}/series/{seriesUID}/instances/{instanceUID}`. If `filter_config` is
+           *        specified, set the value of `resource` to the resource name of a DICOM store in the format
+           *        `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreI
+           *        D}`.
+           * @param content the {@link com.google.api.services.healthcare.v1.model.SetBlobStorageSettingsRequest}
+           * @return the request
+           */
+          public SetBlobStorageSettings setBlobStorageSettings(java.lang.String resource, com.google.api.services.healthcare.v1.model.SetBlobStorageSettingsRequest content) throws java.io.IOException {
+            SetBlobStorageSettings result = new SetBlobStorageSettings(resource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class SetBlobStorageSettings extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+resource}:setBlobStorageSettings";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+
+            /**
+             * SetBlobStorageSettings sets the blob storage settings of the specified resources.
+             *
+             * Create a request for the method "dicomStores.setBlobStorageSettings".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link SetBlobStorageSettings#execute()} method to invoke the
+             * remote operation. <p> {@link SetBlobStorageSettings#initialize(com.google.api.client.googleapis
+             * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param resource Required. The path of the resource to update the blob storage settings in the format of `projects/{p
+           *        rojectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/
+           *        studies/{studyUID}`, `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dic
+           *        omStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/`, or `projects/{pr
+           *        ojectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/s
+           *        tudies/{studyUID}/series/{seriesUID}/instances/{instanceUID}`. If `filter_config` is
+           *        specified, set the value of `resource` to the resource name of a DICOM store in the format
+           *        `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreI
+           *        D}`.
+             * @param content the {@link com.google.api.services.healthcare.v1.model.SetBlobStorageSettingsRequest}
+             * @since 1.13
+             */
+            protected SetBlobStorageSettings(java.lang.String resource, com.google.api.services.healthcare.v1.model.SetBlobStorageSettingsRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1.model.Operation.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public SetBlobStorageSettings set$Xgafv(java.lang.String $Xgafv) {
+              return (SetBlobStorageSettings) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SetBlobStorageSettings setAccessToken(java.lang.String accessToken) {
+              return (SetBlobStorageSettings) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SetBlobStorageSettings setAlt(java.lang.String alt) {
+              return (SetBlobStorageSettings) super.setAlt(alt);
+            }
+
+            @Override
+            public SetBlobStorageSettings setCallback(java.lang.String callback) {
+              return (SetBlobStorageSettings) super.setCallback(callback);
+            }
+
+            @Override
+            public SetBlobStorageSettings setFields(java.lang.String fields) {
+              return (SetBlobStorageSettings) super.setFields(fields);
+            }
+
+            @Override
+            public SetBlobStorageSettings setKey(java.lang.String key) {
+              return (SetBlobStorageSettings) super.setKey(key);
+            }
+
+            @Override
+            public SetBlobStorageSettings setOauthToken(java.lang.String oauthToken) {
+              return (SetBlobStorageSettings) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SetBlobStorageSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SetBlobStorageSettings) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SetBlobStorageSettings setQuotaUser(java.lang.String quotaUser) {
+              return (SetBlobStorageSettings) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SetBlobStorageSettings setUploadType(java.lang.String uploadType) {
+              return (SetBlobStorageSettings) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SetBlobStorageSettings setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SetBlobStorageSettings) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The path of the resource to update the blob storage settings in the format
+             * of `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dic
+             * omStoreID}/dicomWeb/studies/{studyUID}`, `projects/{projectID}/locations/{locationID}
+             * /datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{
+             * seriesUID}/`, or `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/di
+             * comStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/instances/{in
+             * stanceUID}`. If `filter_config` is specified, set the value of `resource` to the
+             * resource name of a DICOM store in the format `projects/{projectID}/locations/{locatio
+             * nID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** Required. The path of the resource to update the blob storage settings in the format of `projects/{
+           projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/
+           {studyUID}`, `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomSt
+           oreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/`, or `projects/{projectID}/locations/{locati
+           onID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID
+           }/instances/{instanceUID}`. If `filter_config` is specified, set the value of `resource` to the
+           resource name of a DICOM store in the format
+           `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * Required. The path of the resource to update the blob storage settings in the format
+             * of `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dic
+             * omStoreID}/dicomWeb/studies/{studyUID}`, `projects/{projectID}/locations/{locationID}
+             * /datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{
+             * seriesUID}/`, or `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/di
+             * comStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/instances/{in
+             * stanceUID}`. If `filter_config` is specified, set the value of `resource` to the
+             * resource name of a DICOM store in the format `projects/{projectID}/locations/{locatio
+             * nID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+             */
+            public SetBlobStorageSettings setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            @Override
+            public SetBlobStorageSettings set(String parameterName, Object value) {
+              return (SetBlobStorageSettings) super.set(parameterName, value);
+            }
+          }
+          /**
            * Sets the access control policy on the specified resource. Replaces any existing policy. Can
            * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *
@@ -11541,6 +11716,183 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   return (GetStudyMetrics) super.set(parameterName, value);
                 }
               }
+              /**
+               * SetBlobStorageSettings sets the blob storage settings of the specified resources.
+               *
+               * Create a request for the method "studies.setBlobStorageSettings".
+               *
+               * This request holds the parameters needed by the healthcare server.  After setting any optional
+               * parameters, call the {@link SetBlobStorageSettings#execute()} method to invoke the remote
+               * operation.
+               *
+               * @param resource Required. The path of the resource to update the blob storage settings in the format of `projects/{p
+               *        rojectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/
+               *        studies/{studyUID}`, `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dic
+               *        omStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/`, or `projects/{pr
+               *        ojectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/s
+               *        tudies/{studyUID}/series/{seriesUID}/instances/{instanceUID}`. If `filter_config` is
+               *        specified, set the value of `resource` to the resource name of a DICOM store in the format
+               *        `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreI
+               *        D}`.
+               * @param content the {@link com.google.api.services.healthcare.v1.model.SetBlobStorageSettingsRequest}
+               * @return the request
+               */
+              public SetBlobStorageSettings setBlobStorageSettings(java.lang.String resource, com.google.api.services.healthcare.v1.model.SetBlobStorageSettingsRequest content) throws java.io.IOException {
+                SetBlobStorageSettings result = new SetBlobStorageSettings(resource, content);
+                initialize(result);
+                return result;
+              }
+
+              public class SetBlobStorageSettings extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.Operation> {
+
+                private static final String REST_PATH = "v1/{+resource}:setBlobStorageSettings";
+
+                private final java.util.regex.Pattern RESOURCE_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+/dicomWeb/studies/.*$");
+
+                /**
+                 * SetBlobStorageSettings sets the blob storage settings of the specified resources.
+                 *
+                 * Create a request for the method "studies.setBlobStorageSettings".
+                 *
+                 * This request holds the parameters needed by the the healthcare server.  After setting any
+                 * optional parameters, call the {@link SetBlobStorageSettings#execute()} method to invoke the
+                 * remote operation. <p> {@link SetBlobStorageSettings#initialize(com.google.api.client.googleapis
+                 * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+                 * after invoking the constructor. </p>
+                 *
+                 * @param resource Required. The path of the resource to update the blob storage settings in the format of `projects/{p
+               *        rojectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/
+               *        studies/{studyUID}`, `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dic
+               *        omStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/`, or `projects/{pr
+               *        ojectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/s
+               *        tudies/{studyUID}/series/{seriesUID}/instances/{instanceUID}`. If `filter_config` is
+               *        specified, set the value of `resource` to the resource name of a DICOM store in the format
+               *        `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreI
+               *        D}`.
+                 * @param content the {@link com.google.api.services.healthcare.v1.model.SetBlobStorageSettingsRequest}
+                 * @since 1.13
+                 */
+                protected SetBlobStorageSettings(java.lang.String resource, com.google.api.services.healthcare.v1.model.SetBlobStorageSettingsRequest content) {
+                  super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1.model.Operation.class);
+                  this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                        "Parameter resource must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+/dicomWeb/studies/.*$");
+                  }
+                }
+
+                @Override
+                public SetBlobStorageSettings set$Xgafv(java.lang.String $Xgafv) {
+                  return (SetBlobStorageSettings) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public SetBlobStorageSettings setAccessToken(java.lang.String accessToken) {
+                  return (SetBlobStorageSettings) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public SetBlobStorageSettings setAlt(java.lang.String alt) {
+                  return (SetBlobStorageSettings) super.setAlt(alt);
+                }
+
+                @Override
+                public SetBlobStorageSettings setCallback(java.lang.String callback) {
+                  return (SetBlobStorageSettings) super.setCallback(callback);
+                }
+
+                @Override
+                public SetBlobStorageSettings setFields(java.lang.String fields) {
+                  return (SetBlobStorageSettings) super.setFields(fields);
+                }
+
+                @Override
+                public SetBlobStorageSettings setKey(java.lang.String key) {
+                  return (SetBlobStorageSettings) super.setKey(key);
+                }
+
+                @Override
+                public SetBlobStorageSettings setOauthToken(java.lang.String oauthToken) {
+                  return (SetBlobStorageSettings) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public SetBlobStorageSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (SetBlobStorageSettings) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public SetBlobStorageSettings setQuotaUser(java.lang.String quotaUser) {
+                  return (SetBlobStorageSettings) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public SetBlobStorageSettings setUploadType(java.lang.String uploadType) {
+                  return (SetBlobStorageSettings) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public SetBlobStorageSettings setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (SetBlobStorageSettings) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The path of the resource to update the blob storage settings in the
+                 * format of `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicom
+                 * Stores/{dicomStoreID}/dicomWeb/studies/{studyUID}`, `projects/{projectID}/locatio
+                 * ns/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/
+                 * {studyUID}/series/{seriesUID}/`, or `projects/{projectID}/locations/{locationID}/
+                 * datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/serie
+                 * s/{seriesUID}/instances/{instanceUID}`. If `filter_config` is specified, set the
+                 * value of `resource` to the resource name of a DICOM store in the format `projects
+                 * /{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreI
+                 * D}`.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String resource;
+
+                /** Required. The path of the resource to update the blob storage settings in the format of `projects/{
+               projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/
+               {studyUID}`, `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomSt
+               oreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/`, or `projects/{projectID}/locations/{locati
+               onID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID
+               }/instances/{instanceUID}`. If `filter_config` is specified, set the value of `resource` to the
+               resource name of a DICOM store in the format
+               `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+                 */
+                public java.lang.String getResource() {
+                  return resource;
+                }
+
+                /**
+                 * Required. The path of the resource to update the blob storage settings in the
+                 * format of `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicom
+                 * Stores/{dicomStoreID}/dicomWeb/studies/{studyUID}`, `projects/{projectID}/locatio
+                 * ns/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/
+                 * {studyUID}/series/{seriesUID}/`, or `projects/{projectID}/locations/{locationID}/
+                 * datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/serie
+                 * s/{seriesUID}/instances/{instanceUID}`. If `filter_config` is specified, set the
+                 * value of `resource` to the resource name of a DICOM store in the format `projects
+                 * /{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreI
+                 * D}`.
+                 */
+                public SetBlobStorageSettings setResource(java.lang.String resource) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                        "Parameter resource must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+/dicomWeb/studies/.*$");
+                  }
+                  this.resource = resource;
+                  return this;
+                }
+
+                @Override
+                public SetBlobStorageSettings set(String parameterName, Object value) {
+                  return (SetBlobStorageSettings) super.set(parameterName, value);
+                }
+              }
 
               /**
                * An accessor for creating requests from the Series collection.
@@ -11715,6 +12067,183 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
                 }
 
+                /**
+                 * An accessor for creating requests from the Instances collection.
+                 *
+                 * <p>The typical use is:</p>
+                 * <pre>
+                 *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
+                 *   {@code CloudHealthcare.Instances.List request = healthcare.instances().list(parameters ...)}
+                 * </pre>
+                 *
+                 * @return the resource collection
+                 */
+                public Instances instances() {
+                  return new Instances();
+                }
+
+                /**
+                 * The "instances" collection of methods.
+                 */
+                public class Instances {
+
+                  /**
+                   * GetStorageInfo returns the storage info of the specified resource.
+                   *
+                   * Create a request for the method "instances.getStorageInfo".
+                   *
+                   * This request holds the parameters needed by the healthcare server.  After setting any optional
+                   * parameters, call the {@link GetStorageInfo#execute()} method to invoke the remote operation.
+                   *
+                   * @param resource Required. The path of the instance to return storage info for, in the form: `projects/{projectID}/lo
+                   *        cations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{stu
+                   *        dyUID}/series/{seriesUID}/instances/{instanceUID}`
+                   * @return the request
+                   */
+                  public GetStorageInfo getStorageInfo(java.lang.String resource) throws java.io.IOException {
+                    GetStorageInfo result = new GetStorageInfo(resource);
+                    initialize(result);
+                    return result;
+                  }
+
+                  public class GetStorageInfo extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.StorageInfo> {
+
+                    private static final String REST_PATH = "v1/{+resource}:getStorageInfo";
+
+                    private final java.util.regex.Pattern RESOURCE_PATTERN =
+                        java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+/dicomWeb/studies/[^/]+/series/[^/]+/instances/[^/]+$");
+
+                    /**
+                     * GetStorageInfo returns the storage info of the specified resource.
+                     *
+                     * Create a request for the method "instances.getStorageInfo".
+                     *
+                     * This request holds the parameters needed by the the healthcare server.  After setting any
+                     * optional parameters, call the {@link GetStorageInfo#execute()} method to invoke the remote
+                     * operation. <p> {@link GetStorageInfo#initialize(com.google.api.client.googleapis.services.Abstr
+                     * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+                     * the constructor. </p>
+                     *
+                     * @param resource Required. The path of the instance to return storage info for, in the form: `projects/{projectID}/lo
+                   *        cations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{stu
+                   *        dyUID}/series/{seriesUID}/instances/{instanceUID}`
+                     * @since 1.13
+                     */
+                    protected GetStorageInfo(java.lang.String resource) {
+                      super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1.model.StorageInfo.class);
+                      this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+                      if (!getSuppressPatternChecks()) {
+                        com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                            "Parameter resource must conform to the pattern " +
+                            "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+/dicomWeb/studies/[^/]+/series/[^/]+/instances/[^/]+$");
+                      }
+                    }
+
+                    @Override
+                    public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                      return super.executeUsingHead();
+                    }
+
+                    @Override
+                    public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                      return super.buildHttpRequestUsingHead();
+                    }
+
+                    @Override
+                    public GetStorageInfo set$Xgafv(java.lang.String $Xgafv) {
+                      return (GetStorageInfo) super.set$Xgafv($Xgafv);
+                    }
+
+                    @Override
+                    public GetStorageInfo setAccessToken(java.lang.String accessToken) {
+                      return (GetStorageInfo) super.setAccessToken(accessToken);
+                    }
+
+                    @Override
+                    public GetStorageInfo setAlt(java.lang.String alt) {
+                      return (GetStorageInfo) super.setAlt(alt);
+                    }
+
+                    @Override
+                    public GetStorageInfo setCallback(java.lang.String callback) {
+                      return (GetStorageInfo) super.setCallback(callback);
+                    }
+
+                    @Override
+                    public GetStorageInfo setFields(java.lang.String fields) {
+                      return (GetStorageInfo) super.setFields(fields);
+                    }
+
+                    @Override
+                    public GetStorageInfo setKey(java.lang.String key) {
+                      return (GetStorageInfo) super.setKey(key);
+                    }
+
+                    @Override
+                    public GetStorageInfo setOauthToken(java.lang.String oauthToken) {
+                      return (GetStorageInfo) super.setOauthToken(oauthToken);
+                    }
+
+                    @Override
+                    public GetStorageInfo setPrettyPrint(java.lang.Boolean prettyPrint) {
+                      return (GetStorageInfo) super.setPrettyPrint(prettyPrint);
+                    }
+
+                    @Override
+                    public GetStorageInfo setQuotaUser(java.lang.String quotaUser) {
+                      return (GetStorageInfo) super.setQuotaUser(quotaUser);
+                    }
+
+                    @Override
+                    public GetStorageInfo setUploadType(java.lang.String uploadType) {
+                      return (GetStorageInfo) super.setUploadType(uploadType);
+                    }
+
+                    @Override
+                    public GetStorageInfo setUploadProtocol(java.lang.String uploadProtocol) {
+                      return (GetStorageInfo) super.setUploadProtocol(uploadProtocol);
+                    }
+
+                    /**
+                     * Required. The path of the instance to return storage info for, in the form: `
+                     * projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/
+                     * {dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/instances/{inst
+                     * anceUID}`
+                     */
+                    @com.google.api.client.util.Key
+                    private java.lang.String resource;
+
+                    /** Required. The path of the instance to return storage info for, in the form: `projects/{projectID}/l
+                   ocations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/s
+                   eries/{seriesUID}/instances/{instanceUID}`
+                     */
+                    public java.lang.String getResource() {
+                      return resource;
+                    }
+
+                    /**
+                     * Required. The path of the instance to return storage info for, in the form: `
+                     * projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/
+                     * {dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/instances/{inst
+                     * anceUID}`
+                     */
+                    public GetStorageInfo setResource(java.lang.String resource) {
+                      if (!getSuppressPatternChecks()) {
+                        com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                            "Parameter resource must conform to the pattern " +
+                            "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+/dicomWeb/studies/[^/]+/series/[^/]+/instances/[^/]+$");
+                      }
+                      this.resource = resource;
+                      return this;
+                    }
+
+                    @Override
+                    public GetStorageInfo set(String parameterName, Object value) {
+                      return (GetStorageInfo) super.set(parameterName, value);
+                    }
+                  }
+
+                }
               }
             }
           }
@@ -22328,7 +22857,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Rolls back messages from the HL7 store to the specified time. This method returns an Operation
+           * Rolls back messages from the HL7v2 store to the specified time. This method returns an Operation
            * that can be used to track the status of the rollback by calling GetOperation. Immediate fatal
            * errors appear in the error field, errors are also logged to Cloud Logging (see [Viewing error
            * logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). Otherwise,
@@ -22360,13 +22889,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
 
             /**
-             * Rolls back messages from the HL7 store to the specified time. This method returns an Operation
-             * that can be used to track the status of the rollback by calling GetOperation. Immediate fatal
-             * errors appear in the error field, errors are also logged to Cloud Logging (see [Viewing error
-             * logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). Otherwise,
-             * when the operation finishes, a detailed response of type RollbackHl7V2MessagesResponse is
-             * returned in the response field. The metadata field type for this operation is
-             * OperationMetadata.
+             * Rolls back messages from the HL7v2 store to the specified time. This method returns an
+             * Operation that can be used to track the status of the rollback by calling GetOperation.
+             * Immediate fatal errors appear in the error field, errors are also logged to Cloud Logging (see
+             * [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-
+             * tos/logging)). Otherwise, when the operation finishes, a detailed response of type
+             * RollbackHl7V2MessagesResponse is returned in the response field. The metadata field type for
+             * this operation is OperationMetadata.
              *
              * Create a request for the method "hl7V2Stores.rollback".
              *

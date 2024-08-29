@@ -30,7 +30,7 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class RollbackHl7V2MessagesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the HL7 store to rollback, in the format of
+   * The name of the HL7v2 store to rollback, in the format of
    * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
    * /hl7v2Stores/{fhir_store_id}".
    * The value may be {@code null}.
@@ -39,7 +39,7 @@ public final class RollbackHl7V2MessagesResponse extends com.google.api.client.j
   private java.lang.String hl7v2Store;
 
   /**
-   * The name of the HL7 store to rollback, in the format of
+   * The name of the HL7v2 store to rollback, in the format of
    * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
    * /hl7v2Stores/{fhir_store_id}".
    * @return value or {@code null} for none
@@ -49,7 +49,7 @@ public final class RollbackHl7V2MessagesResponse extends com.google.api.client.j
   }
 
   /**
-   * The name of the HL7 store to rollback, in the format of
+   * The name of the HL7v2 store to rollback, in the format of
    * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
    * /hl7v2Stores/{fhir_store_id}".
    * @param hl7v2Store hl7v2Store or {@code null} for none

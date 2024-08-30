@@ -33,8 +33,8 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   /**
    * A list of buttons. For example, the following JSON creates two buttons. The first is a blue
    * text button and the second is an image button that opens a link: ``` "buttonList": { "buttons":
-   * [ { "text": "Edit", "color": { "red": 0, "green": 0, "blue": 1, "alpha": 1 }, "disabled": true,
-   * }, { "icon": { "knownIcon": "INVITE", "altText": "check calendar" }, "onClick": { "openLink": {
+   * [ { "text": "Edit", "color": { "red": 0, "green": 0, "blue": 1, }, "disabled": true, }, {
+   * "icon": { "knownIcon": "INVITE", "altText": "check calendar" }, "onClick": { "openLink": {
    * "url": "https://example.com/calendar" } } } ] } ```
    * The value may be {@code null}.
    */
@@ -154,8 +154,8 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   /**
    * A list of buttons. For example, the following JSON creates two buttons. The first is a blue
    * text button and the second is an image button that opens a link: ``` "buttonList": { "buttons":
-   * [ { "text": "Edit", "color": { "red": 0, "green": 0, "blue": 1, "alpha": 1 }, "disabled": true,
-   * }, { "icon": { "knownIcon": "INVITE", "altText": "check calendar" }, "onClick": { "openLink": {
+   * [ { "text": "Edit", "color": { "red": 0, "green": 0, "blue": 1, }, "disabled": true, }, {
+   * "icon": { "knownIcon": "INVITE", "altText": "check calendar" }, "onClick": { "openLink": {
    * "url": "https://example.com/calendar" } } } ] } ```
    * @return value or {@code null} for none
    */
@@ -166,8 +166,8 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   /**
    * A list of buttons. For example, the following JSON creates two buttons. The first is a blue
    * text button and the second is an image button that opens a link: ``` "buttonList": { "buttons":
-   * [ { "text": "Edit", "color": { "red": 0, "green": 0, "blue": 1, "alpha": 1 }, "disabled": true,
-   * }, { "icon": { "knownIcon": "INVITE", "altText": "check calendar" }, "onClick": { "openLink": {
+   * [ { "text": "Edit", "color": { "red": 0, "green": 0, "blue": 1, }, "disabled": true, }, {
+   * "icon": { "knownIcon": "INVITE", "altText": "check calendar" }, "onClick": { "openLink": {
    * "url": "https://example.com/calendar" } } } ] } ```
    * @param buttonList buttonList or {@code null} for none
    */

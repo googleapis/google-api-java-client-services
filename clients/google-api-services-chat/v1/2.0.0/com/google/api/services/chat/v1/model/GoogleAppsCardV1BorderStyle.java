@@ -38,7 +38,12 @@ public final class GoogleAppsCardV1BorderStyle extends com.google.api.client.jso
   private java.lang.Integer cornerRadius;
 
   /**
-   * The colors to use when the type is `BORDER_TYPE_STROKE`.
+   * The colors to use when the type is `BORDER_TYPE_STROKE`. To set the stroke color, specify a
+   * value for the `red`, `green`, and `blue` fields. The value must be a float number between 0 and
+   * 1 based on the RGB color value, where `0` (0/255) represents the absence of color and `1`
+   * (255/255) represents the maximum intensity of the color. For example, the following sets the
+   * color to red at its maximum intensity: ``` "color": { "red": 1, "green": 0, "blue": 0, } ```
+   * The `alpha` field is unavailable for stroke color. If specified, this field is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +74,12 @@ public final class GoogleAppsCardV1BorderStyle extends com.google.api.client.jso
   }
 
   /**
-   * The colors to use when the type is `BORDER_TYPE_STROKE`.
+   * The colors to use when the type is `BORDER_TYPE_STROKE`. To set the stroke color, specify a
+   * value for the `red`, `green`, and `blue` fields. The value must be a float number between 0 and
+   * 1 based on the RGB color value, where `0` (0/255) represents the absence of color and `1`
+   * (255/255) represents the maximum intensity of the color. For example, the following sets the
+   * color to red at its maximum intensity: ``` "color": { "red": 1, "green": 0, "blue": 0, } ```
+   * The `alpha` field is unavailable for stroke color. If specified, this field is ignored.
    * @return value or {@code null} for none
    */
   public Color getStrokeColor() {
@@ -77,7 +87,12 @@ public final class GoogleAppsCardV1BorderStyle extends com.google.api.client.jso
   }
 
   /**
-   * The colors to use when the type is `BORDER_TYPE_STROKE`.
+   * The colors to use when the type is `BORDER_TYPE_STROKE`. To set the stroke color, specify a
+   * value for the `red`, `green`, and `blue` fields. The value must be a float number between 0 and
+   * 1 based on the RGB color value, where `0` (0/255) represents the absence of color and `1`
+   * (255/255) represents the maximum intensity of the color. For example, the following sets the
+   * color to red at its maximum intensity: ``` "color": { "red": 1, "green": 0, "blue": 0, } ```
+   * The `alpha` field is unavailable for stroke color. If specified, this field is ignored.
    * @param strokeColor strokeColor or {@code null} for none
    */
   public GoogleAppsCardV1BorderStyle setStrokeColor(Color strokeColor) {

@@ -1579,7 +1579,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the chat server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param name Resource name of the space. Format: `spaces/{space}`
+     * @param name Resource name of the space. Format: `spaces/{space}` Where `{space}` represents the system-assigned
+     *        ID for the space. You can obtain the space ID by calling the [`spaces.list()`](https://dev
+     *        elopers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) method or from the
+     *        space URL. For example, if the space URL is
+     *        `https://mail.google.com/mail/u/0/#chat/space/AAAAAAAAA`, the space ID is `AAAAAAAAA`.
      * @param content the {@link com.google.api.services.chat.v1.model.Space}
      * @return the request
      */
@@ -1611,7 +1615,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Resource name of the space. Format: `spaces/{space}`
+       * @param name Resource name of the space. Format: `spaces/{space}` Where `{space}` represents the system-assigned
+     *        ID for the space. You can obtain the space ID by calling the [`spaces.list()`](https://dev
+     *        elopers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) method or from the
+     *        space URL. For example, if the space URL is
+     *        `https://mail.google.com/mail/u/0/#chat/space/AAAAAAAAA`, the space ID is `AAAAAAAAA`.
        * @param content the {@link com.google.api.services.chat.v1.model.Space}
        * @since 1.13
        */
@@ -1680,17 +1688,33 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Resource name of the space. Format: `spaces/{space}` */
+      /**
+       * Resource name of the space. Format: `spaces/{space}` Where `{space}` represents the system-
+       * assigned ID for the space. You can obtain the space ID by calling the [`spaces.list()`](htt
+       * ps://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) method or from
+       * the space URL. For example, if the space URL is
+       * `https://mail.google.com/mail/u/0/#chat/space/AAAAAAAAA`, the space ID is `AAAAAAAAA`.
+       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Resource name of the space. Format: `spaces/{space}`
+      /** Resource name of the space. Format: `spaces/{space}` Where `{space}` represents the system-assigned
+     ID for the space. You can obtain the space ID by calling the
+     [`spaces.list()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list)
+     method or from the space URL. For example, if the space URL is
+     `https://mail.google.com/mail/u/0/#chat/space/AAAAAAAAA`, the space ID is `AAAAAAAAA`.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Resource name of the space. Format: `spaces/{space}` */
+      /**
+       * Resource name of the space. Format: `spaces/{space}` Where `{space}` represents the system-
+       * assigned ID for the space. You can obtain the space ID by calling the [`spaces.list()`](htt
+       * ps://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) method or from
+       * the space URL. For example, if the space URL is
+       * `https://mail.google.com/mail/u/0/#chat/space/AAAAAAAAA`, the space ID is `AAAAAAAAA`.
+       */
       public Patch setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3638,13 +3662,19 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
     public class Messages {
 
       /**
-       * Creates a message in a Google Chat space. The maximum message size, including text and cards, is
-       * 32,000 bytes. For an example, see [Send a
-       * message](https://developers.google.com/workspace/chat/create-messages). Calling this method
-       * requires [authentication](https://developers.google.com/workspace/chat/authenticate-authorize)
-       * and supports the following authentication types: - For text messages, user authentication or app
-       * authentication are supported. - For card messages, only app authentication is supported. (Only
-       * Chat apps can create card messages.)
+       * Creates a message in a Google Chat space. For an example, see [Send a
+       * message](https://developers.google.com/workspace/chat/create-messages). The `create()` method
+       * requires either user or app authentication. Chat attributes the message sender differently
+       * depending on the type of authentication that you use in your request. The following image shows
+       * how Chat attributes a message when you use app authentication. Chat displays the Chat app as the
+       * message sender. The content of the message can contain text (`text`), cards (`cardsV2`), and
+       * accessory widgets (`accessoryWidgets`). ![Message sent with app
+       * authentication](https://developers.google.com/workspace/chat/images/message-app-auth.svg) The
+       * following image shows how Chat attributes a message when you use user authentication. Chat
+       * displays the user as the message sender and attributes the Chat app to the message by displaying
+       * its name. The content of message can only contain text (`text`). ![Message sent with user
+       * authentication](https://developers.google.com/workspace/chat/images/message-user-auth.svg) The
+       * maximum message size, including the message contents, is 32,000 bytes.
        *
        * Create a request for the method "messages.create".
        *
@@ -3669,13 +3699,19 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^spaces/[^/]+$");
 
         /**
-         * Creates a message in a Google Chat space. The maximum message size, including text and cards,
-         * is 32,000 bytes. For an example, see [Send a
-         * message](https://developers.google.com/workspace/chat/create-messages). Calling this method
-         * requires [authentication](https://developers.google.com/workspace/chat/authenticate-authorize)
-         * and supports the following authentication types: - For text messages, user authentication or
-         * app authentication are supported. - For card messages, only app authentication is supported.
-         * (Only Chat apps can create card messages.)
+         * Creates a message in a Google Chat space. For an example, see [Send a
+         * message](https://developers.google.com/workspace/chat/create-messages). The `create()` method
+         * requires either user or app authentication. Chat attributes the message sender differently
+         * depending on the type of authentication that you use in your request. The following image shows
+         * how Chat attributes a message when you use app authentication. Chat displays the Chat app as
+         * the message sender. The content of the message can contain text (`text`), cards (`cardsV2`),
+         * and accessory widgets (`accessoryWidgets`). ![Message sent with app
+         * authentication](https://developers.google.com/workspace/chat/images/message-app-auth.svg) The
+         * following image shows how Chat attributes a message when you use user authentication. Chat
+         * displays the user as the message sender and attributes the Chat app to the message by
+         * displaying its name. The content of message can only contain text (`text`). ![Message sent with
+         * user authentication](https://developers.google.com/workspace/chat/images/message-user-auth.svg)
+         * The maximum message size, including the message contents, is 32,000 bytes.
          *
          * Create a request for the method "messages.create".
          *

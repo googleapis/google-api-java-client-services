@@ -312,6 +312,145 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
+       * Get default config for a given project and location.
+       *
+       * Create a request for the method "locations.getConfig".
+       *
+       * This request holds the parameters needed by the dataform server.  After setting any optional
+       * parameters, call the {@link GetConfig#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The config name.
+       * @return the request
+       */
+      public GetConfig getConfig(java.lang.String name) throws java.io.IOException {
+        GetConfig result = new GetConfig(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetConfig extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Config> {
+
+        private static final String REST_PATH = "v1beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/config$");
+
+        /**
+         * Get default config for a given project and location.
+         *
+         * Create a request for the method "locations.getConfig".
+         *
+         * This request holds the parameters needed by the the dataform server.  After setting any
+         * optional parameters, call the {@link GetConfig#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * GetConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The config name.
+         * @since 1.13
+         */
+        protected GetConfig(java.lang.String name) {
+          super(Dataform.this, "GET", REST_PATH, null, com.google.api.services.dataform.v1beta1.model.Config.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/config$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (GetConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetConfig setAccessToken(java.lang.String accessToken) {
+          return (GetConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetConfig setAlt(java.lang.String alt) {
+          return (GetConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public GetConfig setCallback(java.lang.String callback) {
+          return (GetConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public GetConfig setFields(java.lang.String fields) {
+          return (GetConfig) super.setFields(fields);
+        }
+
+        @Override
+        public GetConfig setKey(java.lang.String key) {
+          return (GetConfig) super.setKey(key);
+        }
+
+        @Override
+        public GetConfig setOauthToken(java.lang.String oauthToken) {
+          return (GetConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetConfig setQuotaUser(java.lang.String quotaUser) {
+          return (GetConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetConfig setUploadType(java.lang.String uploadType) {
+          return (GetConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The config name. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The config name.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The config name. */
+        public GetConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/config$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetConfig set(String parameterName, Object value) {
+          return (GetConfig) super.set(parameterName, value);
+        }
+      }
+      /**
        * Lists information about the supported locations for this service.
        *
        * Create a request for the method "locations.list".
@@ -511,6 +650,153 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Update default config for a given project and location.
+       *
+       * Create a request for the method "locations.updateConfig".
+       *
+       * This request holds the parameters needed by the dataform server.  After setting any optional
+       * parameters, call the {@link UpdateConfig#execute()} method to invoke the remote operation.
+       *
+       * @param name Identifier. The config name.
+       * @param content the {@link com.google.api.services.dataform.v1beta1.model.Config}
+       * @return the request
+       */
+      public UpdateConfig updateConfig(java.lang.String name, com.google.api.services.dataform.v1beta1.model.Config content) throws java.io.IOException {
+        UpdateConfig result = new UpdateConfig(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateConfig extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Config> {
+
+        private static final String REST_PATH = "v1beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/config$");
+
+        /**
+         * Update default config for a given project and location.
+         *
+         * Create a request for the method "locations.updateConfig".
+         *
+         * This request holds the parameters needed by the the dataform server.  After setting any
+         * optional parameters, call the {@link UpdateConfig#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * UpdateConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Identifier. The config name.
+         * @param content the {@link com.google.api.services.dataform.v1beta1.model.Config}
+         * @since 1.13
+         */
+        protected UpdateConfig(java.lang.String name, com.google.api.services.dataform.v1beta1.model.Config content) {
+          super(Dataform.this, "PATCH", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.Config.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/config$");
+          }
+        }
+
+        @Override
+        public UpdateConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateConfig setAccessToken(java.lang.String accessToken) {
+          return (UpdateConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateConfig setAlt(java.lang.String alt) {
+          return (UpdateConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateConfig setCallback(java.lang.String callback) {
+          return (UpdateConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateConfig setFields(java.lang.String fields) {
+          return (UpdateConfig) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateConfig setKey(java.lang.String key) {
+          return (UpdateConfig) super.setKey(key);
+        }
+
+        @Override
+        public UpdateConfig setOauthToken(java.lang.String oauthToken) {
+          return (UpdateConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateConfig setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateConfig setUploadType(java.lang.String uploadType) {
+          return (UpdateConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Identifier. The config name. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. The config name.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Identifier. The config name. */
+        public UpdateConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/config$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Optional. Specifies the fields to be updated in the config. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. Specifies the fields to be updated in the config.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Optional. Specifies the fields to be updated in the config. */
+        public UpdateConfig setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateConfig set(String parameterName, Object value) {
+          return (UpdateConfig) super.set(parameterName, value);
         }
       }
 

@@ -109,7 +109,11 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private MembershipCount membershipCount;
 
   /**
-   * Resource name of the space. Format: `spaces/{space}`
+   * Resource name of the space. Format: `spaces/{space}` Where `{space}` represents the system-
+   * assigned ID for the space. You can obtain the space ID by calling the [`spaces.list()`](https:/
+   * /developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) method or from the
+   * space URL. For example, if the space URL is
+   * `https://mail.google.com/mail/u/0/#chat/space/AAAAAAAAA`, the space ID is `AAAAAAAAA`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -354,7 +358,11 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the space. Format: `spaces/{space}`
+   * Resource name of the space. Format: `spaces/{space}` Where `{space}` represents the system-
+   * assigned ID for the space. You can obtain the space ID by calling the [`spaces.list()`](https:/
+   * /developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) method or from the
+   * space URL. For example, if the space URL is
+   * `https://mail.google.com/mail/u/0/#chat/space/AAAAAAAAA`, the space ID is `AAAAAAAAA`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -362,7 +370,11 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the space. Format: `spaces/{space}`
+   * Resource name of the space. Format: `spaces/{space}` Where `{space}` represents the system-
+   * assigned ID for the space. You can obtain the space ID by calling the [`spaces.list()`](https:/
+   * /developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) method or from the
+   * space URL. For example, if the space URL is
+   * `https://mail.google.com/mail/u/0/#chat/space/AAAAAAAAA`, the space ID is `AAAAAAAAA`.
    * @param name name or {@code null} for none
    */
   public Space setName(java.lang.String name) {

@@ -120,8 +120,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * An array of [cards](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards).
    * Only Chat apps can create cards. If your Chat app [authenticates as a
    * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), the
-   * messages can't contain cards. To learn about cards and how to create them, see [Send card
-   * messages](https://developers.google.com/workspace/chat/create-messages#create). [Card
+   * messages can't contain cards. To learn how to create a message that contains cards, see [Send a
+   * message](https://developers.google.com/workspace/chat/create-messages). [Card
    * builder](https://addons.gsuite.google.com/uikit/builder)
    * The value may be {@code null}.
    */
@@ -244,8 +244,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * app. Link previews and attachments aren't supported for private messages. Only Chat apps can
    * send private messages. If your Chat app [authenticates as a
    * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) to send a
-   * message, the message can't be private and must omit this field. For details, see [Send private
-   * messages to Google Chat users](https://developers.google.com/workspace/chat/private-messages).
+   * message, the message can't be private and must omit this field. For details, see [Send a
+   * message privately](https://developers.google.com/workspace/chat/create-messages#private).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -292,8 +292,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * [preview chip](https://developers.google.com/workspace/chat/preview-links). You can also
    * [@mention a Google Chat user](https://developers.google.com/workspace/chat/format-
    * messages#messages-@mention), or everyone in the space. To learn about creating text messages,
-   * see [Send a text message](https://developers.google.com/workspace/chat/create-messages#create-
-   * text-messages).
+   * see [Send a message](https://developers.google.com/workspace/chat/create-messages).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -456,8 +455,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * An array of [cards](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards).
    * Only Chat apps can create cards. If your Chat app [authenticates as a
    * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), the
-   * messages can't contain cards. To learn about cards and how to create them, see [Send card
-   * messages](https://developers.google.com/workspace/chat/create-messages#create). [Card
+   * messages can't contain cards. To learn how to create a message that contains cards, see [Send a
+   * message](https://developers.google.com/workspace/chat/create-messages). [Card
    * builder](https://addons.gsuite.google.com/uikit/builder)
    * @return value or {@code null} for none
    */
@@ -469,8 +468,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * An array of [cards](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards).
    * Only Chat apps can create cards. If your Chat app [authenticates as a
    * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), the
-   * messages can't contain cards. To learn about cards and how to create them, see [Send card
-   * messages](https://developers.google.com/workspace/chat/create-messages#create). [Card
+   * messages can't contain cards. To learn how to create a message that contains cards, see [Send a
+   * message](https://developers.google.com/workspace/chat/create-messages). [Card
    * builder](https://addons.gsuite.google.com/uikit/builder)
    * @param cardsV2 cardsV2 or {@code null} for none
    */
@@ -711,8 +710,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * app. Link previews and attachments aren't supported for private messages. Only Chat apps can
    * send private messages. If your Chat app [authenticates as a
    * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) to send a
-   * message, the message can't be private and must omit this field. For details, see [Send private
-   * messages to Google Chat users](https://developers.google.com/workspace/chat/private-messages).
+   * message, the message can't be private and must omit this field. For details, see [Send a
+   * message privately](https://developers.google.com/workspace/chat/create-messages#private).
    * @return value or {@code null} for none
    */
   public User getPrivateMessageViewer() {
@@ -725,8 +724,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * app. Link previews and attachments aren't supported for private messages. Only Chat apps can
    * send private messages. If your Chat app [authenticates as a
    * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) to send a
-   * message, the message can't be private and must omit this field. For details, see [Send private
-   * messages to Google Chat users](https://developers.google.com/workspace/chat/private-messages).
+   * message, the message can't be private and must omit this field. For details, see [Send a
+   * message privately](https://developers.google.com/workspace/chat/create-messages#private).
    * @param privateMessageViewer privateMessageViewer or {@code null} for none
    */
   public Message setPrivateMessageViewer(User privateMessageViewer) {
@@ -823,8 +822,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * [preview chip](https://developers.google.com/workspace/chat/preview-links). You can also
    * [@mention a Google Chat user](https://developers.google.com/workspace/chat/format-
    * messages#messages-@mention), or everyone in the space. To learn about creating text messages,
-   * see [Send a text message](https://developers.google.com/workspace/chat/create-messages#create-
-   * text-messages).
+   * see [Send a message](https://developers.google.com/workspace/chat/create-messages).
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -836,8 +834,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * [preview chip](https://developers.google.com/workspace/chat/preview-links). You can also
    * [@mention a Google Chat user](https://developers.google.com/workspace/chat/format-
    * messages#messages-@mention), or everyone in the space. To learn about creating text messages,
-   * see [Send a text message](https://developers.google.com/workspace/chat/create-messages#create-
-   * text-messages).
+   * see [Send a message](https://developers.google.com/workspace/chat/create-messages).
    * @param text text or {@code null} for none
    */
   public Message setText(java.lang.String text) {

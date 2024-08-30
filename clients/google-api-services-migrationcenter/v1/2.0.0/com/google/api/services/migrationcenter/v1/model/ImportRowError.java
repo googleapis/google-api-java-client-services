@@ -30,6 +30,13 @@ package com.google.api.services.migrationcenter.v1.model;
 public final class ImportRowError extends com.google.api.client.json.GenericJson {
 
   /**
+   * Error details for a CSV file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ImportRowErrorCsvErrorDetails csvError;
+
+  /**
    * The list of errors detected in the row.
    * The value may be {@code null}.
    */
@@ -62,6 +69,30 @@ public final class ImportRowError extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String vmUuid;
+
+  /**
+   * Error details for an XLSX file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ImportRowErrorXlsxErrorDetails xlsxError;
+
+  /**
+   * Error details for a CSV file.
+   * @return value or {@code null} for none
+   */
+  public ImportRowErrorCsvErrorDetails getCsvError() {
+    return csvError;
+  }
+
+  /**
+   * Error details for a CSV file.
+   * @param csvError csvError or {@code null} for none
+   */
+  public ImportRowError setCsvError(ImportRowErrorCsvErrorDetails csvError) {
+    this.csvError = csvError;
+    return this;
+  }
 
   /**
    * The list of errors detected in the row.
@@ -128,6 +159,23 @@ public final class ImportRowError extends com.google.api.client.json.GenericJson
    */
   public ImportRowError setVmUuid(java.lang.String vmUuid) {
     this.vmUuid = vmUuid;
+    return this;
+  }
+
+  /**
+   * Error details for an XLSX file.
+   * @return value or {@code null} for none
+   */
+  public ImportRowErrorXlsxErrorDetails getXlsxError() {
+    return xlsxError;
+  }
+
+  /**
+   * Error details for an XLSX file.
+   * @param xlsxError xlsxError or {@code null} for none
+   */
+  public ImportRowError setXlsxError(ImportRowErrorXlsxErrorDetails xlsxError) {
+    this.xlsxError = xlsxError;
     return this;
   }
 

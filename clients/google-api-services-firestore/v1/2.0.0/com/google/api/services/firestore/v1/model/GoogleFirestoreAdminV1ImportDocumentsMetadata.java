@@ -30,7 +30,7 @@ package com.google.api.services.firestore.v1.model;
 public final class GoogleFirestoreAdminV1ImportDocumentsMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Which collection ids are being imported.
+   * Which collection IDs are being imported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class GoogleFirestoreAdminV1ImportDocumentsMetadata extends com.goo
   private java.lang.String inputUriPrefix;
 
   /**
-   * Which namespace ids are being imported.
+   * Which namespace IDs are being imported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +86,7 @@ public final class GoogleFirestoreAdminV1ImportDocumentsMetadata extends com.goo
   private String startTime;
 
   /**
-   * Which collection ids are being imported.
+   * Which collection IDs are being imported.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCollectionIds() {
@@ -94,7 +94,7 @@ public final class GoogleFirestoreAdminV1ImportDocumentsMetadata extends com.goo
   }
 
   /**
-   * Which collection ids are being imported.
+   * Which collection IDs are being imported.
    * @param collectionIds collectionIds or {@code null} for none
    */
   public GoogleFirestoreAdminV1ImportDocumentsMetadata setCollectionIds(java.util.List<java.lang.String> collectionIds) {
@@ -137,7 +137,7 @@ public final class GoogleFirestoreAdminV1ImportDocumentsMetadata extends com.goo
   }
 
   /**
-   * Which namespace ids are being imported.
+   * Which namespace IDs are being imported.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNamespaceIds() {
@@ -145,7 +145,7 @@ public final class GoogleFirestoreAdminV1ImportDocumentsMetadata extends com.goo
   }
 
   /**
-   * Which namespace ids are being imported.
+   * Which namespace IDs are being imported.
    * @param namespaceIds namespaceIds or {@code null} for none
    */
   public GoogleFirestoreAdminV1ImportDocumentsMetadata setNamespaceIds(java.util.List<java.lang.String> namespaceIds) {

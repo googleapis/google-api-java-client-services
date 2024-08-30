@@ -39,6 +39,25 @@ public final class FindNearest extends com.google.api.client.json.GenericJson {
   private java.lang.String distanceMeasure;
 
   /**
+   * Optional. Optional name of the field to output the result of the vector distance calculation.
+   * Must conform to document field name limitations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String distanceResultField;
+
+  /**
+   * Optional. Option to specify a threshold for which no less similar documents will be returned.
+   * The behavior of the specified `distance_measure` will affect the meaning of the distance
+   * threshold. Since DOT_PRODUCT distances increase when the vectors are more similar, the
+   * comparison is inverted. For EUCLIDEAN, COSINE: WHERE distance <= distance_threshold For
+   * DOT_PRODUCT: WHERE distance >= distance_threshold
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double distanceThreshold;
+
+  /**
    * Required. The number of nearest neighbors to return. Must be a positive integer of no more than
    * 1000.
    * The value may be {@code null}.
@@ -76,6 +95,50 @@ public final class FindNearest extends com.google.api.client.json.GenericJson {
    */
   public FindNearest setDistanceMeasure(java.lang.String distanceMeasure) {
     this.distanceMeasure = distanceMeasure;
+    return this;
+  }
+
+  /**
+   * Optional. Optional name of the field to output the result of the vector distance calculation.
+   * Must conform to document field name limitations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDistanceResultField() {
+    return distanceResultField;
+  }
+
+  /**
+   * Optional. Optional name of the field to output the result of the vector distance calculation.
+   * Must conform to document field name limitations.
+   * @param distanceResultField distanceResultField or {@code null} for none
+   */
+  public FindNearest setDistanceResultField(java.lang.String distanceResultField) {
+    this.distanceResultField = distanceResultField;
+    return this;
+  }
+
+  /**
+   * Optional. Option to specify a threshold for which no less similar documents will be returned.
+   * The behavior of the specified `distance_measure` will affect the meaning of the distance
+   * threshold. Since DOT_PRODUCT distances increase when the vectors are more similar, the
+   * comparison is inverted. For EUCLIDEAN, COSINE: WHERE distance <= distance_threshold For
+   * DOT_PRODUCT: WHERE distance >= distance_threshold
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getDistanceThreshold() {
+    return distanceThreshold;
+  }
+
+  /**
+   * Optional. Option to specify a threshold for which no less similar documents will be returned.
+   * The behavior of the specified `distance_measure` will affect the meaning of the distance
+   * threshold. Since DOT_PRODUCT distances increase when the vectors are more similar, the
+   * comparison is inverted. For EUCLIDEAN, COSINE: WHERE distance <= distance_threshold For
+   * DOT_PRODUCT: WHERE distance >= distance_threshold
+   * @param distanceThreshold distanceThreshold or {@code null} for none
+   */
+  public FindNearest setDistanceThreshold(java.lang.Double distanceThreshold) {
+    this.distanceThreshold = distanceThreshold;
     return this;
   }
 

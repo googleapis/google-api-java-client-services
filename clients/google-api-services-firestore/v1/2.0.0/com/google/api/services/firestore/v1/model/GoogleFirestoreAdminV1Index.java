@@ -60,10 +60,10 @@ public final class GoogleFirestoreAdminV1Index extends com.google.api.client.jso
 
   /**
    * Indexes with a collection query scope specified allow queries against a collection that is the
-   * child of a specific document, specified at query time, and that has the same collection id.
+   * child of a specific document, specified at query time, and that has the same collection ID.
    * Indexes with a collection group query scope specified allow queries against all collections
    * descended from a specific document, specified at query time, and that have the same collection
-   * id as this index.
+   * ID as this index.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,10 +145,10 @@ public final class GoogleFirestoreAdminV1Index extends com.google.api.client.jso
 
   /**
    * Indexes with a collection query scope specified allow queries against a collection that is the
-   * child of a specific document, specified at query time, and that has the same collection id.
+   * child of a specific document, specified at query time, and that has the same collection ID.
    * Indexes with a collection group query scope specified allow queries against all collections
    * descended from a specific document, specified at query time, and that have the same collection
-   * id as this index.
+   * ID as this index.
    * @return value or {@code null} for none
    */
   public java.lang.String getQueryScope() {
@@ -157,10 +157,10 @@ public final class GoogleFirestoreAdminV1Index extends com.google.api.client.jso
 
   /**
    * Indexes with a collection query scope specified allow queries against a collection that is the
-   * child of a specific document, specified at query time, and that has the same collection id.
+   * child of a specific document, specified at query time, and that has the same collection ID.
    * Indexes with a collection group query scope specified allow queries against all collections
    * descended from a specific document, specified at query time, and that have the same collection
-   * id as this index.
+   * ID as this index.
    * @param queryScope queryScope or {@code null} for none
    */
   public GoogleFirestoreAdminV1Index setQueryScope(java.lang.String queryScope) {

@@ -18,7 +18,7 @@ package com.google.api.services.firestore.v1.model;
 
 /**
  * Represents a single field in the database. Fields are grouped by their "Collection Group", which
- * represent all collections in the database with the same id.
+ * represent all collections in the database with the same ID.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:

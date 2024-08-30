@@ -30,7 +30,7 @@ package com.google.api.services.firestore.v1.model;
 public final class GoogleFirestoreAdminV1ExportDocumentsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Which collection ids to export. Unspecified means all collections. Each collection id in this
+   * Which collection IDs to export. Unspecified means all collections. Each collection ID in this
    * list must be unique.
    * The value may be {@code null}.
    */
@@ -71,7 +71,7 @@ public final class GoogleFirestoreAdminV1ExportDocumentsRequest extends com.goog
   private String snapshotTime;
 
   /**
-   * Which collection ids to export. Unspecified means all collections. Each collection id in this
+   * Which collection IDs to export. Unspecified means all collections. Each collection ID in this
    * list must be unique.
    * @return value or {@code null} for none
    */
@@ -80,7 +80,7 @@ public final class GoogleFirestoreAdminV1ExportDocumentsRequest extends com.goog
   }
 
   /**
-   * Which collection ids to export. Unspecified means all collections. Each collection id in this
+   * Which collection IDs to export. Unspecified means all collections. Each collection ID in this
    * list must be unique.
    * @param collectionIds collectionIds or {@code null} for none
    */

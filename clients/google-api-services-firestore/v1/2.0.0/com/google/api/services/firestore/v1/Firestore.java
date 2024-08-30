@@ -451,7 +451,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * Required. The ID to use for the database, which will become the final component of the
          * database's resource name. This value should be 4-63 characters. Valid characters are
          * /a-z-/ with first character a letter and the last a letter or a number. Must not be UUID-
-         * like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database id is also valid.
+         * like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database ID is also valid.
          */
         @com.google.api.client.util.Key
         private java.lang.String databaseId;
@@ -459,7 +459,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
         /** Required. The ID to use for the database, which will become the final component of the database's
        resource name. This value should be 4-63 characters. Valid characters are /a-z-/ with first
        character a letter and the last a letter or a number. Must not be UUID-like
-       /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database id is also valid.
+       /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database ID is also valid.
          */
         public java.lang.String getDatabaseId() {
           return databaseId;
@@ -469,7 +469,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * Required. The ID to use for the database, which will become the final component of the
          * database's resource name. This value should be 4-63 characters. Valid characters are
          * /a-z-/ with first character a letter and the last a letter or a number. Must not be UUID-
-         * like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database id is also valid.
+         * like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database ID is also valid.
          */
         public Create setDatabaseId(java.lang.String databaseId) {
           this.databaseId = databaseId;

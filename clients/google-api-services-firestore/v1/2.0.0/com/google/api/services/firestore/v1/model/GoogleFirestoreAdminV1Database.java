@@ -94,7 +94,7 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
 
   /**
    * Output only. The key_prefix for this database. This key_prefix is used, in combination with the
-   * project id ("~") to construct the application id that is returned from the Cloud Datastore APIs
+   * project ID ("~") to construct the application ID that is returned from the Cloud Datastore APIs
    * in Google App Engine first generation runtimes. This value may be empty in which case the appid
    * to use for URL-encoded keys is the project_id (eg: foo instead of v~foo).
    * The value may be {@code null}.
@@ -317,7 +317,7 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
 
   /**
    * Output only. The key_prefix for this database. This key_prefix is used, in combination with the
-   * project id ("~") to construct the application id that is returned from the Cloud Datastore APIs
+   * project ID ("~") to construct the application ID that is returned from the Cloud Datastore APIs
    * in Google App Engine first generation runtimes. This value may be empty in which case the appid
    * to use for URL-encoded keys is the project_id (eg: foo instead of v~foo).
    * @return value or {@code null} for none
@@ -328,7 +328,7 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
 
   /**
    * Output only. The key_prefix for this database. This key_prefix is used, in combination with the
-   * project id ("~") to construct the application id that is returned from the Cloud Datastore APIs
+   * project ID ("~") to construct the application ID that is returned from the Cloud Datastore APIs
    * in Google App Engine first generation runtimes. This value may be empty in which case the appid
    * to use for URL-encoded keys is the project_id (eg: foo instead of v~foo).
    * @param keyPrefix keyPrefix or {@code null} for none

@@ -30,8 +30,8 @@ package com.google.api.services.firestore.v1.model;
 public final class GoogleFirestoreAdminV1RestoreDatabaseRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Backup to restore from. Must be from the same project as the parent. The restored database will
-   * be created in the same location as the source backup. Format is:
+   * Required. Backup to restore from. Must be from the same project as the parent. The restored
+   * database will be created in the same location as the source backup. Format is:
    * `projects/{project_id}/locations/{location}/backups/{backup}`
    * The value may be {@code null}.
    */
@@ -40,10 +40,10 @@ public final class GoogleFirestoreAdminV1RestoreDatabaseRequest extends com.goog
 
   /**
    * Required. The ID to use for the database, which will become the final component of the
-   * database's resource name. This database id must not be associated with an existing database.
+   * database's resource name. This database ID must not be associated with an existing database.
    * This value should be 4-63 characters. Valid characters are /a-z-/ with first character a letter
    * and the last a letter or a number. Must not be UUID-like
-   * /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database id is also valid.
+   * /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database ID is also valid.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,8 +59,8 @@ public final class GoogleFirestoreAdminV1RestoreDatabaseRequest extends com.goog
   private GoogleFirestoreAdminV1EncryptionConfig encryptionConfig;
 
   /**
-   * Backup to restore from. Must be from the same project as the parent. The restored database will
-   * be created in the same location as the source backup. Format is:
+   * Required. Backup to restore from. Must be from the same project as the parent. The restored
+   * database will be created in the same location as the source backup. Format is:
    * `projects/{project_id}/locations/{location}/backups/{backup}`
    * @return value or {@code null} for none
    */
@@ -69,8 +69,8 @@ public final class GoogleFirestoreAdminV1RestoreDatabaseRequest extends com.goog
   }
 
   /**
-   * Backup to restore from. Must be from the same project as the parent. The restored database will
-   * be created in the same location as the source backup. Format is:
+   * Required. Backup to restore from. Must be from the same project as the parent. The restored
+   * database will be created in the same location as the source backup. Format is:
    * `projects/{project_id}/locations/{location}/backups/{backup}`
    * @param backup backup or {@code null} for none
    */
@@ -81,10 +81,10 @@ public final class GoogleFirestoreAdminV1RestoreDatabaseRequest extends com.goog
 
   /**
    * Required. The ID to use for the database, which will become the final component of the
-   * database's resource name. This database id must not be associated with an existing database.
+   * database's resource name. This database ID must not be associated with an existing database.
    * This value should be 4-63 characters. Valid characters are /a-z-/ with first character a letter
    * and the last a letter or a number. Must not be UUID-like
-   * /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database id is also valid.
+   * /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database ID is also valid.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabaseId() {
@@ -93,10 +93,10 @@ public final class GoogleFirestoreAdminV1RestoreDatabaseRequest extends com.goog
 
   /**
    * Required. The ID to use for the database, which will become the final component of the
-   * database's resource name. This database id must not be associated with an existing database.
+   * database's resource name. This database ID must not be associated with an existing database.
    * This value should be 4-63 characters. Valid characters are /a-z-/ with first character a letter
    * and the last a letter or a number. Must not be UUID-like
-   * /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database id is also valid.
+   * /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database ID is also valid.
    * @param databaseId databaseId or {@code null} for none
    */
   public GoogleFirestoreAdminV1RestoreDatabaseRequest setDatabaseId(java.lang.String databaseId) {

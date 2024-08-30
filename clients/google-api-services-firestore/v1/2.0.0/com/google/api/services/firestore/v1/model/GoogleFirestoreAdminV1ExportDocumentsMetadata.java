@@ -30,7 +30,7 @@ package com.google.api.services.firestore.v1.model;
 public final class GoogleFirestoreAdminV1ExportDocumentsMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Which collection ids are being exported.
+   * Which collection IDs are being exported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class GoogleFirestoreAdminV1ExportDocumentsMetadata extends com.goo
   private String endTime;
 
   /**
-   * Which namespace ids are being exported.
+   * Which namespace IDs are being exported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +94,7 @@ public final class GoogleFirestoreAdminV1ExportDocumentsMetadata extends com.goo
   private String startTime;
 
   /**
-   * Which collection ids are being exported.
+   * Which collection IDs are being exported.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCollectionIds() {
@@ -102,7 +102,7 @@ public final class GoogleFirestoreAdminV1ExportDocumentsMetadata extends com.goo
   }
 
   /**
-   * Which collection ids are being exported.
+   * Which collection IDs are being exported.
    * @param collectionIds collectionIds or {@code null} for none
    */
   public GoogleFirestoreAdminV1ExportDocumentsMetadata setCollectionIds(java.util.List<java.lang.String> collectionIds) {
@@ -128,7 +128,7 @@ public final class GoogleFirestoreAdminV1ExportDocumentsMetadata extends com.goo
   }
 
   /**
-   * Which namespace ids are being exported.
+   * Which namespace IDs are being exported.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNamespaceIds() {
@@ -136,7 +136,7 @@ public final class GoogleFirestoreAdminV1ExportDocumentsMetadata extends com.goo
   }
 
   /**
-   * Which namespace ids are being exported.
+   * Which namespace IDs are being exported.
    * @param namespaceIds namespaceIds or {@code null} for none
    */
   public GoogleFirestoreAdminV1ExportDocumentsMetadata setNamespaceIds(java.util.List<java.lang.String> namespaceIds) {

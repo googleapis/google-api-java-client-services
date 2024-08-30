@@ -30,7 +30,7 @@ package com.google.api.services.firestore.v1.model;
 public final class GoogleFirestoreAdminV1BulkDeleteDocumentsMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ids of the collection groups that are being deleted.
+   * The IDs of the collection groups that are being deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class GoogleFirestoreAdminV1BulkDeleteDocumentsMetadata extends com
   private String endTime;
 
   /**
-   * Which namespace ids are being deleted.
+   * Which namespace IDs are being deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +88,7 @@ public final class GoogleFirestoreAdminV1BulkDeleteDocumentsMetadata extends com
   private String startTime;
 
   /**
-   * The ids of the collection groups that are being deleted.
+   * The IDs of the collection groups that are being deleted.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCollectionIds() {
@@ -96,7 +96,7 @@ public final class GoogleFirestoreAdminV1BulkDeleteDocumentsMetadata extends com
   }
 
   /**
-   * The ids of the collection groups that are being deleted.
+   * The IDs of the collection groups that are being deleted.
    * @param collectionIds collectionIds or {@code null} for none
    */
   public GoogleFirestoreAdminV1BulkDeleteDocumentsMetadata setCollectionIds(java.util.List<java.lang.String> collectionIds) {
@@ -122,7 +122,7 @@ public final class GoogleFirestoreAdminV1BulkDeleteDocumentsMetadata extends com
   }
 
   /**
-   * Which namespace ids are being deleted.
+   * Which namespace IDs are being deleted.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNamespaceIds() {
@@ -130,7 +130,7 @@ public final class GoogleFirestoreAdminV1BulkDeleteDocumentsMetadata extends com
   }
 
   /**
-   * Which namespace ids are being deleted.
+   * Which namespace IDs are being deleted.
    * @param namespaceIds namespaceIds or {@code null} for none
    */
   public GoogleFirestoreAdminV1BulkDeleteDocumentsMetadata setNamespaceIds(java.util.List<java.lang.String> namespaceIds) {

@@ -17,7 +17,7 @@
 package com.google.api.services.analyticshub.v1.model;
 
 /**
- * Message for response when you revoke a subscription.
+ * Message for response when you revoke a subscription. Empty for now.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Analytics Hub API. For a detailed explanation see:

@@ -176,6 +176,9 @@ public class DataPortabilityScopes {
   /** Move a copy of information about your YouTube channel.. */
   public static final String DATAPORTABILITY_YOUTUBE_CHANNEL = "https://www.googleapis.com/auth/dataportability.youtube.channel";
 
+  /** Move a copy of your YouTube clips metadata.. */
+  public static final String DATAPORTABILITY_YOUTUBE_CLIPS = "https://www.googleapis.com/auth/dataportability.youtube.clips";
+
   /** Move a copy of your YouTube comments.. */
   public static final String DATAPORTABILITY_YOUTUBE_COMMENTS = "https://www.googleapis.com/auth/dataportability.youtube.comments";
 
@@ -273,6 +276,7 @@ public class DataPortabilityScopes {
     set.add(DATAPORTABILITY_SHOPPING_REVIEWS);
     set.add(DATAPORTABILITY_STREETVIEW_IMAGERY);
     set.add(DATAPORTABILITY_YOUTUBE_CHANNEL);
+    set.add(DATAPORTABILITY_YOUTUBE_CLIPS);
     set.add(DATAPORTABILITY_YOUTUBE_COMMENTS);
     set.add(DATAPORTABILITY_YOUTUBE_LIVE_CHAT);
     set.add(DATAPORTABILITY_YOUTUBE_MUSIC);

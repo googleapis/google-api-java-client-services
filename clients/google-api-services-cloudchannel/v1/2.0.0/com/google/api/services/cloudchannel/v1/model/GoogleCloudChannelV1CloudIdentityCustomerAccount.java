@@ -31,6 +31,13 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1CloudIdentityCustomerAccount extends com.google.api.client.json.GenericJson {
 
   /**
+   * If existing = true, and is 2-tier customer, the channel partner of the customer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String channelPartnerCloudIdentityId;
+
+  /**
    * If existing = true, the Cloud Identity ID of the customer.
    * The value may be {@code null}.
    */
@@ -46,6 +53,13 @@ public final class GoogleCloudChannelV1CloudIdentityCustomerAccount extends com.
   private java.lang.String customerName;
 
   /**
+   * If existing = true, the type of the customer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customerType;
+
+  /**
    * Returns true if a Cloud Identity account exists for a specific domain.
    * The value may be {@code null}.
    */
@@ -59,6 +73,23 @@ public final class GoogleCloudChannelV1CloudIdentityCustomerAccount extends com.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean owned;
+
+  /**
+   * If existing = true, and is 2-tier customer, the channel partner of the customer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getChannelPartnerCloudIdentityId() {
+    return channelPartnerCloudIdentityId;
+  }
+
+  /**
+   * If existing = true, and is 2-tier customer, the channel partner of the customer.
+   * @param channelPartnerCloudIdentityId channelPartnerCloudIdentityId or {@code null} for none
+   */
+  public GoogleCloudChannelV1CloudIdentityCustomerAccount setChannelPartnerCloudIdentityId(java.lang.String channelPartnerCloudIdentityId) {
+    this.channelPartnerCloudIdentityId = channelPartnerCloudIdentityId;
+    return this;
+  }
 
   /**
    * If existing = true, the Cloud Identity ID of the customer.
@@ -93,6 +124,23 @@ public final class GoogleCloudChannelV1CloudIdentityCustomerAccount extends com.
    */
   public GoogleCloudChannelV1CloudIdentityCustomerAccount setCustomerName(java.lang.String customerName) {
     this.customerName = customerName;
+    return this;
+  }
+
+  /**
+   * If existing = true, the type of the customer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomerType() {
+    return customerType;
+  }
+
+  /**
+   * If existing = true, the type of the customer.
+   * @param customerType customerType or {@code null} for none
+   */
+  public GoogleCloudChannelV1CloudIdentityCustomerAccount setCustomerType(java.lang.String customerType) {
+    this.customerType = customerType;
     return this;
   }
 

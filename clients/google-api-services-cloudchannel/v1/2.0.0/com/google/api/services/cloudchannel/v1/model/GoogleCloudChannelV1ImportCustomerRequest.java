@@ -78,6 +78,13 @@ public final class GoogleCloudChannelV1ImportCustomerRequest extends com.google.
   private java.lang.Boolean overwriteIfExists;
 
   /**
+   * Optional. Customer's primary admin email.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String primaryAdminEmail;
+
+  /**
    * Optional. The super admin of the resold customer generates this token to authorize a reseller
    * to access their Cloud Identity and purchase entitlements on their behalf. You can omit this
    * token after authorization. See https://support.google.com/a/answer/7643790 for more details.
@@ -188,6 +195,23 @@ public final class GoogleCloudChannelV1ImportCustomerRequest extends com.google.
    */
   public GoogleCloudChannelV1ImportCustomerRequest setOverwriteIfExists(java.lang.Boolean overwriteIfExists) {
     this.overwriteIfExists = overwriteIfExists;
+    return this;
+  }
+
+  /**
+   * Optional. Customer's primary admin email.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrimaryAdminEmail() {
+    return primaryAdminEmail;
+  }
+
+  /**
+   * Optional. Customer's primary admin email.
+   * @param primaryAdminEmail primaryAdminEmail or {@code null} for none
+   */
+  public GoogleCloudChannelV1ImportCustomerRequest setPrimaryAdminEmail(java.lang.String primaryAdminEmail) {
+    this.primaryAdminEmail = primaryAdminEmail;
     return this;
   }
 

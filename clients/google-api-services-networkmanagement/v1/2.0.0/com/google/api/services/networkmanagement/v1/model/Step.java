@@ -189,6 +189,13 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private ProxyConnectionInfo proxyConnection;
 
   /**
+   * Display information of a Redis Instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RedisInstanceInfo redisInstance;
+
+  /**
    * Display information of a Compute Engine route.
    * The value may be {@code null}.
    */
@@ -615,6 +622,23 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setProxyConnection(ProxyConnectionInfo proxyConnection) {
     this.proxyConnection = proxyConnection;
+    return this;
+  }
+
+  /**
+   * Display information of a Redis Instance.
+   * @return value or {@code null} for none
+   */
+  public RedisInstanceInfo getRedisInstance() {
+    return redisInstance;
+  }
+
+  /**
+   * Display information of a Redis Instance.
+   * @param redisInstance redisInstance or {@code null} for none
+   */
+  public Step setRedisInstance(RedisInstanceInfo redisInstance) {
+    this.redisInstance = redisInstance;
     return this;
   }
 

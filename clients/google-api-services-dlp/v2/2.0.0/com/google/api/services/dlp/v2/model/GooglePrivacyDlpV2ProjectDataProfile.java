@@ -66,7 +66,7 @@ public final class GooglePrivacyDlpV2ProjectDataProfile extends com.google.api.c
   private GooglePrivacyDlpV2ProfileStatus profileStatus;
 
   /**
-   * Project ID that was profiled.
+   * Project ID or account that was profiled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,7 +172,7 @@ public final class GooglePrivacyDlpV2ProjectDataProfile extends com.google.api.c
   }
 
   /**
-   * Project ID that was profiled.
+   * Project ID or account that was profiled.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -180,7 +180,7 @@ public final class GooglePrivacyDlpV2ProjectDataProfile extends com.google.api.c
   }
 
   /**
-   * Project ID that was profiled.
+   * Project ID or account that was profiled.
    * @param projectId projectId or {@code null} for none
    */
   public GooglePrivacyDlpV2ProjectDataProfile setProjectId(java.lang.String projectId) {

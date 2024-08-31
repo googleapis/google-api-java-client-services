@@ -38,6 +38,13 @@ public final class GoogleCloudChannelV1CheckCloudIdentityAccountsExistRequest ex
   private java.lang.String domain;
 
   /**
+   * Optional. Primary admin email to fetch for Cloud Identity account domainless customer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String primaryAdminEmail;
+
+  /**
    * Required. Domain to fetch for Cloud Identity account customers, including domained and
    * domainless.
    * @return value or {@code null} for none
@@ -53,6 +60,23 @@ public final class GoogleCloudChannelV1CheckCloudIdentityAccountsExistRequest ex
    */
   public GoogleCloudChannelV1CheckCloudIdentityAccountsExistRequest setDomain(java.lang.String domain) {
     this.domain = domain;
+    return this;
+  }
+
+  /**
+   * Optional. Primary admin email to fetch for Cloud Identity account domainless customer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrimaryAdminEmail() {
+    return primaryAdminEmail;
+  }
+
+  /**
+   * Optional. Primary admin email to fetch for Cloud Identity account domainless customer.
+   * @param primaryAdminEmail primaryAdminEmail or {@code null} for none
+   */
+  public GoogleCloudChannelV1CheckCloudIdentityAccountsExistRequest setPrimaryAdminEmail(java.lang.String primaryAdminEmail) {
+    this.primaryAdminEmail = primaryAdminEmail;
     return this;
   }
 

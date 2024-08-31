@@ -58,8 +58,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Required. Immutable. Unordered list. Input for creating a subscription. Otherwise, output only.
-   * One or more types of events to receive about the target resource. Formatted according to the
+   * Required. Unordered list. Input for creating a subscription. Otherwise, output only. One or
+   * more types of events to receive about the target resource. Formatted according to the
    * CloudEvents specification. The supported event types depend on the target resource of your
    * subscription. For details, see [Supported Google Workspace
    * events](https://developers.google.com/workspace/events/guides#supported-events). By default,
@@ -223,8 +223,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. Unordered list. Input for creating a subscription. Otherwise, output only.
-   * One or more types of events to receive about the target resource. Formatted according to the
+   * Required. Unordered list. Input for creating a subscription. Otherwise, output only. One or
+   * more types of events to receive about the target resource. Formatted according to the
    * CloudEvents specification. The supported event types depend on the target resource of your
    * subscription. For details, see [Supported Google Workspace
    * events](https://developers.google.com/workspace/events/guides#supported-events). By default,
@@ -240,8 +240,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. Unordered list. Input for creating a subscription. Otherwise, output only.
-   * One or more types of events to receive about the target resource. Formatted according to the
+   * Required. Unordered list. Input for creating a subscription. Otherwise, output only. One or
+   * more types of events to receive about the target resource. Formatted according to the
    * CloudEvents specification. The supported event types depend on the target resource of your
    * subscription. For details, see [Supported Google Workspace
    * events](https://developers.google.com/workspace/events/guides#supported-events). By default,

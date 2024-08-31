@@ -37,6 +37,13 @@ public final class AgentTaskSpec extends com.google.api.client.json.GenericJson 
   private AgentEnvironment environment;
 
   /**
+   * Logging option for the task.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AgentTaskLoggingOption loggingOption;
+
+  /**
    * Maximum duration the task should run before being automatically retried (if enabled) or
    * automatically failed. Format the value of this field as a time limit in seconds followed by
    * `s`—for example, `3600s` for 1 hour. The field accepts any value between 0 and the maximum
@@ -84,6 +91,23 @@ public final class AgentTaskSpec extends com.google.api.client.json.GenericJson 
    */
   public AgentTaskSpec setEnvironment(AgentEnvironment environment) {
     this.environment = environment;
+    return this;
+  }
+
+  /**
+   * Logging option for the task.
+   * @return value or {@code null} for none
+   */
+  public AgentTaskLoggingOption getLoggingOption() {
+    return loggingOption;
+  }
+
+  /**
+   * Logging option for the task.
+   * @param loggingOption loggingOption or {@code null} for none
+   */
+  public AgentTaskSpec setLoggingOption(AgentTaskLoggingOption loggingOption) {
+    this.loggingOption = loggingOption;
     return this;
   }
 

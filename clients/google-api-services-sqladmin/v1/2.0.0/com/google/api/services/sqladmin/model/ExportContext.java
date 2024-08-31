@@ -286,6 +286,26 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
     private java.lang.Boolean differentialBase;
 
     /**
+     * Optional. The end timestamp when transaction log will be included in the export operation. [RFC
+     * 3339](https://tools.ietf.org/html/rfc3339) format (for example, `2023-10-01T16:19:00.094`) in
+     * UTC. When omitted, all available logs until current time will be included. Only applied to
+     * Cloud SQL for SQL Server.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private String exportLogEndTime;
+
+    /**
+     * Optional. The begin timestamp when transaction log will be included in the export operation.
+     * [RFC 3339](https://tools.ietf.org/html/rfc3339) format (for example, `2023-10-01T16:19:00.094`)
+     * in UTC. When omitted, all available logs from the beginning of retention period will be
+     * included. Only applied to Cloud SQL for SQL Server.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private String exportLogStartTime;
+
+    /**
      * Option for specifying how many stripes to use for the export. If blank, and the value of the
      * striped field is true, the number of stripes is automatically chosen.
      * The value may be {@code null}.
@@ -350,6 +370,52 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
      */
     public BakExportOptions setDifferentialBase(java.lang.Boolean differentialBase) {
       this.differentialBase = differentialBase;
+      return this;
+    }
+
+    /**
+     * Optional. The end timestamp when transaction log will be included in the export operation. [RFC
+     * 3339](https://tools.ietf.org/html/rfc3339) format (for example, `2023-10-01T16:19:00.094`) in
+     * UTC. When omitted, all available logs until current time will be included. Only applied to
+     * Cloud SQL for SQL Server.
+     * @return value or {@code null} for none
+     */
+    public String getExportLogEndTime() {
+      return exportLogEndTime;
+    }
+
+    /**
+     * Optional. The end timestamp when transaction log will be included in the export operation. [RFC
+     * 3339](https://tools.ietf.org/html/rfc3339) format (for example, `2023-10-01T16:19:00.094`) in
+     * UTC. When omitted, all available logs until current time will be included. Only applied to
+     * Cloud SQL for SQL Server.
+     * @param exportLogEndTime exportLogEndTime or {@code null} for none
+     */
+    public BakExportOptions setExportLogEndTime(String exportLogEndTime) {
+      this.exportLogEndTime = exportLogEndTime;
+      return this;
+    }
+
+    /**
+     * Optional. The begin timestamp when transaction log will be included in the export operation.
+     * [RFC 3339](https://tools.ietf.org/html/rfc3339) format (for example, `2023-10-01T16:19:00.094`)
+     * in UTC. When omitted, all available logs from the beginning of retention period will be
+     * included. Only applied to Cloud SQL for SQL Server.
+     * @return value or {@code null} for none
+     */
+    public String getExportLogStartTime() {
+      return exportLogStartTime;
+    }
+
+    /**
+     * Optional. The begin timestamp when transaction log will be included in the export operation.
+     * [RFC 3339](https://tools.ietf.org/html/rfc3339) format (for example, `2023-10-01T16:19:00.094`)
+     * in UTC. When omitted, all available logs from the beginning of retention period will be
+     * included. Only applied to Cloud SQL for SQL Server.
+     * @param exportLogStartTime exportLogStartTime or {@code null} for none
+     */
+    public BakExportOptions setExportLogStartTime(String exportLogStartTime) {
+      this.exportLogStartTime = exportLogStartTime;
       return this;
     }
 

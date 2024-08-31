@@ -30,25 +30,25 @@ package com.google.api.services.gkehub.v1beta.model;
 public final class ResourceManifest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the resource provided in the manifest is `cluster_scoped`. If unset, the manifest is
-   * assumed to be namespace scoped. This field is used for REST mapping when applying the resource
-   * in a cluster.
+   * Output only. Whether the resource provided in the manifest is `cluster_scoped`. If unset, the
+   * manifest is assumed to be namespace scoped. This field is used for REST mapping when applying
+   * the resource in a cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean clusterScoped;
 
   /**
-   * YAML manifest of the resource.
+   * Output only. YAML manifest of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String manifest;
 
   /**
-   * Whether the resource provided in the manifest is `cluster_scoped`. If unset, the manifest is
-   * assumed to be namespace scoped. This field is used for REST mapping when applying the resource
-   * in a cluster.
+   * Output only. Whether the resource provided in the manifest is `cluster_scoped`. If unset, the
+   * manifest is assumed to be namespace scoped. This field is used for REST mapping when applying
+   * the resource in a cluster.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getClusterScoped() {
@@ -56,9 +56,9 @@ public final class ResourceManifest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Whether the resource provided in the manifest is `cluster_scoped`. If unset, the manifest is
-   * assumed to be namespace scoped. This field is used for REST mapping when applying the resource
-   * in a cluster.
+   * Output only. Whether the resource provided in the manifest is `cluster_scoped`. If unset, the
+   * manifest is assumed to be namespace scoped. This field is used for REST mapping when applying
+   * the resource in a cluster.
    * @param clusterScoped clusterScoped or {@code null} for none
    */
   public ResourceManifest setClusterScoped(java.lang.Boolean clusterScoped) {
@@ -67,7 +67,7 @@ public final class ResourceManifest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * YAML manifest of the resource.
+   * Output only. YAML manifest of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getManifest() {
@@ -75,7 +75,7 @@ public final class ResourceManifest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * YAML manifest of the resource.
+   * Output only. YAML manifest of the resource.
    * @param manifest manifest or {@code null} for none
    */
   public ResourceManifest setManifest(java.lang.String manifest) {

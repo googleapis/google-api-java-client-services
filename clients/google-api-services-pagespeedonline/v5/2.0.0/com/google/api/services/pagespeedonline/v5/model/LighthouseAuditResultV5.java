@@ -73,6 +73,13 @@ public final class LighthouseAuditResultV5 extends com.google.api.client.json.Ge
   private java.lang.String id;
 
   /**
+   * The metric savings of the audit.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MetricSavings metricSavings;
+
+  /**
    * The unit of the numeric_value field. Used to format the numeric value for display.
    * The value may be {@code null}.
    */
@@ -215,6 +222,23 @@ public final class LighthouseAuditResultV5 extends com.google.api.client.json.Ge
    */
   public LighthouseAuditResultV5 setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * The metric savings of the audit.
+   * @return value or {@code null} for none
+   */
+  public MetricSavings getMetricSavings() {
+    return metricSavings;
+  }
+
+  /**
+   * The metric savings of the audit.
+   * @param metricSavings metricSavings or {@code null} for none
+   */
+  public LighthouseAuditResultV5 setMetricSavings(MetricSavings metricSavings) {
+    this.metricSavings = metricSavings;
     return this;
   }
 

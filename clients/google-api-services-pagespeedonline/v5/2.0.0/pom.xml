@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-pagespeedonline</artifactId>
-  <version>v5-rev20240509-2.0.0</version>
-  <name>PageSpeed Insights API v5-rev20240509-2.0.0</name>
+  <version>v5-rev20240829-2.0.0</version>
+  <name>PageSpeed Insights API v5-rev20240829-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

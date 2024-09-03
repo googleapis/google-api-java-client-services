@@ -37,7 +37,7 @@ public final class Concentration extends com.google.api.client.json.GenericJson 
   private java.lang.String units;
 
   /**
-   * Value of pollutant concentration.
+   * Value of the pollutant concentration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class Concentration extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Value of pollutant concentration.
+   * Value of the pollutant concentration.
    * @return value or {@code null} for none
    */
   public java.lang.Float getValue() {
@@ -69,7 +69,7 @@ public final class Concentration extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Value of pollutant concentration.
+   * Value of the pollutant concentration.
    * @param value value or {@code null} for none
    */
   public Concentration setValue(java.lang.Float value) {

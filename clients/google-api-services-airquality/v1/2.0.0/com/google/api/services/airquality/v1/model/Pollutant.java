@@ -37,8 +37,8 @@ public final class Pollutant extends com.google.api.client.json.GenericJson {
   private AdditionalInfo additionalInfo;
 
   /**
-   * The pollutant's code name. For example: "so2". A list of all available codes could be found
-   * [here](/maps/documentation/air-quality/pollutants#reported_pollutants).
+   * The pollutant's code name (for example, "so2"). For a list of supported pollutant codes, see
+   * [Reported pollutants](/maps/documentation/air-quality/pollutants#reported_pollutants).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class Pollutant extends com.google.api.client.json.GenericJson {
   /**
    * The pollutant's full name. For chemical compounds, this is the IUPAC name. Example: "Sulfur
    * Dioxide". For more information about the IUPAC names table, see https://iupac.org/what-we-
-   * do/periodic-table-of-elements/
+   * do/periodic-table-of-elements/.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,8 +86,8 @@ public final class Pollutant extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The pollutant's code name. For example: "so2". A list of all available codes could be found
-   * [here](/maps/documentation/air-quality/pollutants#reported_pollutants).
+   * The pollutant's code name (for example, "so2"). For a list of supported pollutant codes, see
+   * [Reported pollutants](/maps/documentation/air-quality/pollutants#reported_pollutants).
    * @return value or {@code null} for none
    */
   public java.lang.String getCode() {
@@ -95,8 +95,8 @@ public final class Pollutant extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The pollutant's code name. For example: "so2". A list of all available codes could be found
-   * [here](/maps/documentation/air-quality/pollutants#reported_pollutants).
+   * The pollutant's code name (for example, "so2"). For a list of supported pollutant codes, see
+   * [Reported pollutants](/maps/documentation/air-quality/pollutants#reported_pollutants).
    * @param code code or {@code null} for none
    */
   public Pollutant setCode(java.lang.String code) {
@@ -143,7 +143,7 @@ public final class Pollutant extends com.google.api.client.json.GenericJson {
   /**
    * The pollutant's full name. For chemical compounds, this is the IUPAC name. Example: "Sulfur
    * Dioxide". For more information about the IUPAC names table, see https://iupac.org/what-we-
-   * do/periodic-table-of-elements/
+   * do/periodic-table-of-elements/.
    * @return value or {@code null} for none
    */
   public java.lang.String getFullName() {
@@ -153,7 +153,7 @@ public final class Pollutant extends com.google.api.client.json.GenericJson {
   /**
    * The pollutant's full name. For chemical compounds, this is the IUPAC name. Example: "Sulfur
    * Dioxide". For more information about the IUPAC names table, see https://iupac.org/what-we-
-   * do/periodic-table-of-elements/
+   * do/periodic-table-of-elements/.
    * @param fullName fullName or {@code null} for none
    */
   public Pollutant setFullName(java.lang.String fullName) {

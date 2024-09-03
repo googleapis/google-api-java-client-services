@@ -2257,13 +2257,15 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           /**
            * Mask of fields to update. At least one path must be supplied in this field. The
            * elements of the repeated paths field may only include these fields: * "description" *
-           * "file_shares" * "labels"
+           * "file_shares" * "labels" * "performance_config" * "deletion_protection_enabled" *
+           * "deletion_protection_reason"
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** Mask of fields to update. At least one path must be supplied in this field. The elements of the
-         repeated paths field may only include these fields: * "description" * "file_shares" * "labels"
+         repeated paths field may only include these fields: * "description" * "file_shares" * "labels" *
+         "performance_config" * "deletion_protection_enabled" * "deletion_protection_reason"
            */
           public String getUpdateMask() {
             return updateMask;
@@ -2272,7 +2274,8 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           /**
            * Mask of fields to update. At least one path must be supplied in this field. The
            * elements of the repeated paths field may only include these fields: * "description" *
-           * "file_shares" * "labels"
+           * "file_shares" * "labels" * "performance_config" * "deletion_protection_enabled" *
+           * "deletion_protection_reason"
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -2285,7 +2288,7 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
         }
         /**
-         * Promote an standby instance (replica).
+         * Promote the standby instance (replica).
          *
          * Create a request for the method "instances.promoteReplica".
          *
@@ -2311,7 +2314,7 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
 
           /**
-           * Promote an standby instance (replica).
+           * Promote the standby instance (replica).
            *
            * Create a request for the method "instances.promoteReplica".
            *

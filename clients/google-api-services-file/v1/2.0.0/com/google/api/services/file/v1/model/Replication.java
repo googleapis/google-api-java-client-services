@@ -30,8 +30,8 @@ package com.google.api.services.file.v1.model;
 public final class Replication extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Replicas configuration on the instance. For now, only a single replica config is
-   * supported.
+   * Optional. Replication configuration for the replica instance associated with this instance.
+   * Only a single replica is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,8 +51,8 @@ public final class Replication extends com.google.api.client.json.GenericJson {
   private java.lang.String role;
 
   /**
-   * Optional. Replicas configuration on the instance. For now, only a single replica config is
-   * supported.
+   * Optional. Replication configuration for the replica instance associated with this instance.
+   * Only a single replica is supported.
    * @return value or {@code null} for none
    */
   public java.util.List<ReplicaConfig> getReplicas() {
@@ -60,8 +60,8 @@ public final class Replication extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Replicas configuration on the instance. For now, only a single replica config is
-   * supported.
+   * Optional. Replication configuration for the replica instance associated with this instance.
+   * Only a single replica is supported.
    * @param replicas replicas or {@code null} for none
    */
   public Replication setReplicas(java.util.List<ReplicaConfig> replicas) {

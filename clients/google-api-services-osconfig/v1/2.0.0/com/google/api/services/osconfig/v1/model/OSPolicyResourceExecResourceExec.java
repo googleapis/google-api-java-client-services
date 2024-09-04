@@ -54,7 +54,7 @@ public final class OSPolicyResourceExecResourceExec extends com.google.api.clien
    * Only recorded for enforce Exec. Path to an output file (that is created by this Exec) whose
    * content will be recorded in OSPolicyResourceCompliance after a successful run. Absence or
    * failure to read this file will result in this ExecResource being non-compliant. Output file
-   * size is limited to 100K bytes.
+   * size is limited to 500K bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,7 +122,7 @@ public final class OSPolicyResourceExecResourceExec extends com.google.api.clien
    * Only recorded for enforce Exec. Path to an output file (that is created by this Exec) whose
    * content will be recorded in OSPolicyResourceCompliance after a successful run. Absence or
    * failure to read this file will result in this ExecResource being non-compliant. Output file
-   * size is limited to 100K bytes.
+   * size is limited to 500K bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getOutputFilePath() {
@@ -133,7 +133,7 @@ public final class OSPolicyResourceExecResourceExec extends com.google.api.clien
    * Only recorded for enforce Exec. Path to an output file (that is created by this Exec) whose
    * content will be recorded in OSPolicyResourceCompliance after a successful run. Absence or
    * failure to read this file will result in this ExecResource being non-compliant. Output file
-   * size is limited to 100K bytes.
+   * size is limited to 500K bytes.
    * @param outputFilePath outputFilePath or {@code null} for none
    */
   public OSPolicyResourceExecResourceExec setOutputFilePath(java.lang.String outputFilePath) {

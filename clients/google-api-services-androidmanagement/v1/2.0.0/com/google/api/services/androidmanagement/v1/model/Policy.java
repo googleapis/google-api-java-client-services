@@ -98,6 +98,16 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Controls whether AssistContent
+   * (https://developer.android.com/reference/android/app/assist/AssistContent) is allowed to be
+   * sent to a privileged app such as an assistant app. AssistContent includes screenshots and
+   * information about an app, such as package name. This is supported on Android 15 and above.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String assistContentPolicy;
+
+  /**
    * Whether auto date, time, and time zone are enabled on a company-owned device. If this is set,
    * then autoTimeRequired is ignored.
    * The value may be {@code null}.
@@ -808,7 +818,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean wifiConfigDisabled;
 
   /**
-   * DEPRECATED - Use wifi_config_disabled.
+   * This is deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -955,6 +965,29 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setApplications(java.util.List<ApplicationPolicy> applications) {
     this.applications = applications;
+    return this;
+  }
+
+  /**
+   * Optional. Controls whether AssistContent
+   * (https://developer.android.com/reference/android/app/assist/AssistContent) is allowed to be
+   * sent to a privileged app such as an assistant app. AssistContent includes screenshots and
+   * information about an app, such as package name. This is supported on Android 15 and above.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAssistContentPolicy() {
+    return assistContentPolicy;
+  }
+
+  /**
+   * Optional. Controls whether AssistContent
+   * (https://developer.android.com/reference/android/app/assist/AssistContent) is allowed to be
+   * sent to a privileged app such as an assistant app. AssistContent includes screenshots and
+   * information about an app, such as package name. This is supported on Android 15 and above.
+   * @param assistContentPolicy assistContentPolicy or {@code null} for none
+   */
+  public Policy setAssistContentPolicy(java.lang.String assistContentPolicy) {
+    this.assistContentPolicy = assistContentPolicy;
     return this;
   }
 
@@ -2559,7 +2592,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * DEPRECATED - Use wifi_config_disabled.
+   * This is deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getWifiConfigsLockdownEnabled() {
@@ -2567,7 +2600,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * DEPRECATED - Use wifi_config_disabled.
+   * This is deprecated.
    * @param wifiConfigsLockdownEnabled wifiConfigsLockdownEnabled or {@code null} for none
    */
   public Policy setWifiConfigsLockdownEnabled(java.lang.Boolean wifiConfigsLockdownEnabled) {

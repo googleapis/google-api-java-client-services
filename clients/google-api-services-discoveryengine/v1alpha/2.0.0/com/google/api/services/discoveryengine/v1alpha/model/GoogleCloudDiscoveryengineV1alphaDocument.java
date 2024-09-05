@@ -61,6 +61,15 @@ public final class GoogleCloudDiscoveryengineV1alphaDocument extends com.google.
   private java.lang.String id;
 
   /**
+   * Output only. The index status of the document. * If document is indexed successfully, the
+   * index_time field is populated. * Otherwise, if document is not indexed due to errors, the
+   * error_samples field is populated. * Otherwise, index_status is unset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaDocumentIndexStatus indexStatus;
+
+  /**
    * Output only. The last time the document was indexed. If this field is set, the document could
    * be returned in search results. This field is OUTPUT_ONLY. If this field is not populated, it
    * means the document has never been indexed.
@@ -181,6 +190,27 @@ public final class GoogleCloudDiscoveryengineV1alphaDocument extends com.google.
    */
   public GoogleCloudDiscoveryengineV1alphaDocument setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Output only. The index status of the document. * If document is indexed successfully, the
+   * index_time field is populated. * Otherwise, if document is not indexed due to errors, the
+   * error_samples field is populated. * Otherwise, index_status is unset.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDocumentIndexStatus getIndexStatus() {
+    return indexStatus;
+  }
+
+  /**
+   * Output only. The index status of the document. * If document is indexed successfully, the
+   * index_time field is populated. * Otherwise, if document is not indexed due to errors, the
+   * error_samples field is populated. * Otherwise, index_status is unset.
+   * @param indexStatus indexStatus or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDocument setIndexStatus(GoogleCloudDiscoveryengineV1alphaDocumentIndexStatus indexStatus) {
+    this.indexStatus = indexStatus;
     return this;
   }
 

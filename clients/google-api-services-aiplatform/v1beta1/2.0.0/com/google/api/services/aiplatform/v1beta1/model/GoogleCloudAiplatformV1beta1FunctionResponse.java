@@ -41,7 +41,9 @@ public final class GoogleCloudAiplatformV1beta1FunctionResponse extends com.goog
   private java.lang.String name;
 
   /**
-   * Required. The function response in JSON object format.
+   * Required. The function response in JSON object format. Use "output" key to specify function
+   * output and "error" key to specify error details (if any). If "output" and "error" keys are not
+   * specified, then whole "response" is treated as function output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +69,9 @@ public final class GoogleCloudAiplatformV1beta1FunctionResponse extends com.goog
   }
 
   /**
-   * Required. The function response in JSON object format.
+   * Required. The function response in JSON object format. Use "output" key to specify function
+   * output and "error" key to specify error details (if any). If "output" and "error" keys are not
+   * specified, then whole "response" is treated as function output.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getResponse() {
@@ -75,7 +79,9 @@ public final class GoogleCloudAiplatformV1beta1FunctionResponse extends com.goog
   }
 
   /**
-   * Required. The function response in JSON object format.
+   * Required. The function response in JSON object format. Use "output" key to specify function
+   * output and "error" key to specify error details (if any). If "output" and "error" keys are not
+   * specified, then whole "response" is treated as function output.
    * @param response response or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FunctionResponse setResponse(java.util.Map<String, java.lang.Object> response) {

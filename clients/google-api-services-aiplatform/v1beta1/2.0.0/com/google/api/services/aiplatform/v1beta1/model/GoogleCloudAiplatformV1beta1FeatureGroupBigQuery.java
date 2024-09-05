@@ -37,11 +37,31 @@ public final class GoogleCloudAiplatformV1beta1FeatureGroupBigQuery extends com.
   private GoogleCloudAiplatformV1beta1BigQuerySource bigQuerySource;
 
   /**
+   * Optional. If set, all feature values will be fetched from a single row per unique entityId
+   * including nulls. If not set, will collapse all rows for each unique entityId into a singe row
+   * with any non-null values if present, if no non-null values are present will sync null. ex: If
+   * source has schema (entity_id, feature_timestamp, f0, f1) and values (e1,
+   * 2020-01-01T10:00:00.123Z, 10, 15) (e1, 2020-02-01T10:00:00.123Z, 20, null) If dense is set,
+   * (e1, 20, null) is synced to online stores. If dense is not set, (e1, 20, 15) is synced to
+   * online stores.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean dense;
+
+  /**
    * Optional. Columns to construct entity_id / row keys. If not provided defaults to `entity_id`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> entityIdColumns;
+
+  /**
+   * Optional. Set if the data source is not a time-series.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean staticDataSource;
 
   /**
    * Optional. If the source is a time-series source, this can be set to control how downstream
@@ -70,6 +90,35 @@ public final class GoogleCloudAiplatformV1beta1FeatureGroupBigQuery extends com.
   }
 
   /**
+   * Optional. If set, all feature values will be fetched from a single row per unique entityId
+   * including nulls. If not set, will collapse all rows for each unique entityId into a singe row
+   * with any non-null values if present, if no non-null values are present will sync null. ex: If
+   * source has schema (entity_id, feature_timestamp, f0, f1) and values (e1,
+   * 2020-01-01T10:00:00.123Z, 10, 15) (e1, 2020-02-01T10:00:00.123Z, 20, null) If dense is set,
+   * (e1, 20, null) is synced to online stores. If dense is not set, (e1, 20, 15) is synced to
+   * online stores.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDense() {
+    return dense;
+  }
+
+  /**
+   * Optional. If set, all feature values will be fetched from a single row per unique entityId
+   * including nulls. If not set, will collapse all rows for each unique entityId into a singe row
+   * with any non-null values if present, if no non-null values are present will sync null. ex: If
+   * source has schema (entity_id, feature_timestamp, f0, f1) and values (e1,
+   * 2020-01-01T10:00:00.123Z, 10, 15) (e1, 2020-02-01T10:00:00.123Z, 20, null) If dense is set,
+   * (e1, 20, null) is synced to online stores. If dense is not set, (e1, 20, 15) is synced to
+   * online stores.
+   * @param dense dense or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FeatureGroupBigQuery setDense(java.lang.Boolean dense) {
+    this.dense = dense;
+    return this;
+  }
+
+  /**
    * Optional. Columns to construct entity_id / row keys. If not provided defaults to `entity_id`.
    * @return value or {@code null} for none
    */
@@ -83,6 +132,23 @@ public final class GoogleCloudAiplatformV1beta1FeatureGroupBigQuery extends com.
    */
   public GoogleCloudAiplatformV1beta1FeatureGroupBigQuery setEntityIdColumns(java.util.List<java.lang.String> entityIdColumns) {
     this.entityIdColumns = entityIdColumns;
+    return this;
+  }
+
+  /**
+   * Optional. Set if the data source is not a time-series.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getStaticDataSource() {
+    return staticDataSource;
+  }
+
+  /**
+   * Optional. Set if the data source is not a time-series.
+   * @param staticDataSource staticDataSource or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FeatureGroupBigQuery setStaticDataSource(java.lang.Boolean staticDataSource) {
+    this.staticDataSource = staticDataSource;
     return this;
   }
 

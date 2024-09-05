@@ -18,8 +18,8 @@ package com.google.api.services.aiplatform.v1.model;
 
 /**
  * Schema is used to define the format of input/output data. Represents a select subset of an
- * [OpenAPI 3.0 schema object](https://spec.openapis.org/oas/v3.0.3#schema). More fields may be
- * added in the future as needed.
+ * [OpenAPI 3.0 schema object](https://spec.openapis.org/oas/v3.0.3#schema-object). More fields may
+ * be added in the future as needed.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:

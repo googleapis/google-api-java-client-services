@@ -146,6 +146,13 @@ public final class GoogleCloudAiplatformV1beta1FeatureView extends com.google.ap
   private GoogleCloudAiplatformV1beta1FeatureViewVectorSearchConfig vectorSearchConfig;
 
   /**
+   * Optional. The Vertex RAG Source that the FeatureView is linked to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1FeatureViewVertexRagSource vertexRagSource;
+
+  /**
    * Optional. Configures how data is supposed to be extracted from a BigQuery source to be loaded
    * onto the FeatureOnlineStore.
    * @return value or {@code null} for none
@@ -414,6 +421,23 @@ public final class GoogleCloudAiplatformV1beta1FeatureView extends com.google.ap
    */
   public GoogleCloudAiplatformV1beta1FeatureView setVectorSearchConfig(GoogleCloudAiplatformV1beta1FeatureViewVectorSearchConfig vectorSearchConfig) {
     this.vectorSearchConfig = vectorSearchConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The Vertex RAG Source that the FeatureView is linked to.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FeatureViewVertexRagSource getVertexRagSource() {
+    return vertexRagSource;
+  }
+
+  /**
+   * Optional. The Vertex RAG Source that the FeatureView is linked to.
+   * @param vertexRagSource vertexRagSource or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FeatureView setVertexRagSource(GoogleCloudAiplatformV1beta1FeatureViewVertexRagSource vertexRagSource) {
+    this.vertexRagSource = vertexRagSource;
     return this;
   }
 

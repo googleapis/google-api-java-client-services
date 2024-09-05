@@ -120,6 +120,13 @@ public final class GoogleCloudAiplatformV1FeatureView extends com.google.api.cli
   private String updateTime;
 
   /**
+   * Optional. The Vertex RAG Source that the FeatureView is linked to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1FeatureViewVertexRagSource vertexRagSource;
+
+  /**
    * Optional. Configures how data is supposed to be extracted from a BigQuery source to be loaded
    * onto the FeatureOnlineStore.
    * @return value or {@code null} for none
@@ -327,6 +334,23 @@ public final class GoogleCloudAiplatformV1FeatureView extends com.google.api.cli
    */
   public GoogleCloudAiplatformV1FeatureView setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Optional. The Vertex RAG Source that the FeatureView is linked to.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FeatureViewVertexRagSource getVertexRagSource() {
+    return vertexRagSource;
+  }
+
+  /**
+   * Optional. The Vertex RAG Source that the FeatureView is linked to.
+   * @param vertexRagSource vertexRagSource or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FeatureView setVertexRagSource(GoogleCloudAiplatformV1FeatureViewVertexRagSource vertexRagSource) {
+    this.vertexRagSource = vertexRagSource;
     return this;
   }
 

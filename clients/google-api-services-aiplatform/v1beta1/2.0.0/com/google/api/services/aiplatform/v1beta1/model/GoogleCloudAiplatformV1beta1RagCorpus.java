@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1RagCorpus extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. RagCorpus state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1CorpusStatus corpusStatus;
+
+  /**
    * Output only. Timestamp when this RagCorpus was created.
    * The value may be {@code null}.
    */
@@ -66,11 +73,35 @@ public final class GoogleCloudAiplatformV1beta1RagCorpus extends com.google.api.
   private GoogleCloudAiplatformV1beta1RagEmbeddingModelConfig ragEmbeddingModelConfig;
 
   /**
+   * Optional. Immutable. The Vector DB config of the RagCorpus.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RagVectorDbConfig ragVectorDbConfig;
+
+  /**
    * Output only. Timestamp when this RagCorpus was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. RagCorpus state.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1CorpusStatus getCorpusStatus() {
+    return corpusStatus;
+  }
+
+  /**
+   * Output only. RagCorpus state.
+   * @param corpusStatus corpusStatus or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagCorpus setCorpusStatus(GoogleCloudAiplatformV1beta1CorpusStatus corpusStatus) {
+    this.corpusStatus = corpusStatus;
+    return this;
+  }
 
   /**
    * Output only. Timestamp when this RagCorpus was created.
@@ -156,6 +187,23 @@ public final class GoogleCloudAiplatformV1beta1RagCorpus extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1RagCorpus setRagEmbeddingModelConfig(GoogleCloudAiplatformV1beta1RagEmbeddingModelConfig ragEmbeddingModelConfig) {
     this.ragEmbeddingModelConfig = ragEmbeddingModelConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. The Vector DB config of the RagCorpus.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagVectorDbConfig getRagVectorDbConfig() {
+    return ragVectorDbConfig;
+  }
+
+  /**
+   * Optional. Immutable. The Vector DB config of the RagCorpus.
+   * @param ragVectorDbConfig ragVectorDbConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagCorpus setRagVectorDbConfig(GoogleCloudAiplatformV1beta1RagVectorDbConfig ragVectorDbConfig) {
+    this.ragVectorDbConfig = ragVectorDbConfig;
     return this;
   }
 

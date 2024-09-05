@@ -59,6 +59,13 @@ public final class GoogleCloudAiplatformV1beta1RagFile extends com.google.api.cl
   private java.lang.String displayName;
 
   /**
+   * Output only. State of the RagFile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1FileStatus fileStatus;
+
+  /**
    * Output only. Google Cloud Storage location of the RagFile. It does not support wildcards in the
    * Cloud Storage uri for now.
    * The value may be {@code null}.
@@ -183,6 +190,23 @@ public final class GoogleCloudAiplatformV1beta1RagFile extends com.google.api.cl
    */
   public GoogleCloudAiplatformV1beta1RagFile setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Output only. State of the RagFile.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FileStatus getFileStatus() {
+    return fileStatus;
+  }
+
+  /**
+   * Output only. State of the RagFile.
+   * @param fileStatus fileStatus or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagFile setFileStatus(GoogleCloudAiplatformV1beta1FileStatus fileStatus) {
+    this.fileStatus = fileStatus;
     return this;
   }
 

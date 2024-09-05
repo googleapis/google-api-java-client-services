@@ -45,6 +45,7 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   private java.lang.Integer promptTokenCount;
 
   /**
+   * Total token count for prompt and response candidates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,6 +88,7 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
+   * Total token count for prompt and response candidates.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalTokenCount() {
@@ -94,6 +96,7 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
+   * Total token count for prompt and response candidates.
    * @param totalTokenCount totalTokenCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata setTotalTokenCount(java.lang.Integer totalTokenCount) {

@@ -111,6 +111,13 @@ public final class GoogleCloudAiplatformV1beta1CachedContent extends com.google.
   private String updateTime;
 
   /**
+   * Output only. Metadata on the usage of the cached content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1CachedContentUsageMetadata usageMetadata;
+
+  /**
    * Optional. Input only. Immutable. The content to cache
    * @return value or {@code null} for none
    */
@@ -302,6 +309,23 @@ public final class GoogleCloudAiplatformV1beta1CachedContent extends com.google.
    */
   public GoogleCloudAiplatformV1beta1CachedContent setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata on the usage of the cached content.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1CachedContentUsageMetadata getUsageMetadata() {
+    return usageMetadata;
+  }
+
+  /**
+   * Output only. Metadata on the usage of the cached content.
+   * @param usageMetadata usageMetadata or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1CachedContent setUsageMetadata(GoogleCloudAiplatformV1beta1CachedContentUsageMetadata usageMetadata) {
+    this.usageMetadata = usageMetadata;
     return this;
   }
 

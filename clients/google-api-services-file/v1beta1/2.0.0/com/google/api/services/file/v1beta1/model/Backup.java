@@ -142,7 +142,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.Long storageBytes;
 
   /**
-   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * Optional. Input only. Immutable. Tag key-value pairs are bound to this resource. For example:
    * "123/environment": "production", "123/costCenter": "marketing"
    * The value may be {@code null}.
    */
@@ -419,7 +419,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * Optional. Input only. Immutable. Tag key-value pairs are bound to this resource. For example:
    * "123/environment": "production", "123/costCenter": "marketing"
    * @return value or {@code null} for none
    */
@@ -428,7 +428,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * Optional. Input only. Immutable. Tag key-value pairs are bound to this resource. For example:
    * "123/environment": "production", "123/costCenter": "marketing"
    * @param tags tags or {@code null} for none
    */

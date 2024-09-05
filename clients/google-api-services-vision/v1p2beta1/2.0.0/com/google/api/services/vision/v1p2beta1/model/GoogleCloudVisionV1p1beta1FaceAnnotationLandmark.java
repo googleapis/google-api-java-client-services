@@ -17,7 +17,9 @@
 package com.google.api.services.vision.v1p2beta1.model;
 
 /**
- * A face-specific landmark (for example, a face feature).
+ * A face-specific landmark (for example, a face feature). Landmark positions may fall outside the
+ * bounds of the image if the face is near one or more edges of the image. Therefore it is NOT
+ * guaranteed that `0 <= x < width` or `0 <= y < height`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Vision API. For a detailed explanation see:

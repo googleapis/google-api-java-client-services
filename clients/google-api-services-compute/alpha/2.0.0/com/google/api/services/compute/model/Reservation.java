@@ -69,6 +69,13 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String deleteAtTime;
 
   /**
+   * Specifies the deployment strategy for this reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deploymentType;
+
+  /**
    * An optional description of this resource. Provide this property when you create the resource.
    * The value may be {@code null}.
    */
@@ -81,6 +88,13 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
+
+  /**
+   * Instance termination action that will be invoked when the reservation is deleted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String instanceTerminationAction;
 
   /**
    * [Output Only] Type of the resource. Always compute#reservations for reservations.
@@ -276,6 +290,23 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Specifies the deployment strategy for this reservation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeploymentType() {
+    return deploymentType;
+  }
+
+  /**
+   * Specifies the deployment strategy for this reservation.
+   * @param deploymentType deploymentType or {@code null} for none
+   */
+  public Reservation setDeploymentType(java.lang.String deploymentType) {
+    this.deploymentType = deploymentType;
+    return this;
+  }
+
+  /**
    * An optional description of this resource. Provide this property when you create the resource.
    * @return value or {@code null} for none
    */
@@ -306,6 +337,23 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setId(java.math.BigInteger id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Instance termination action that will be invoked when the reservation is deleted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInstanceTerminationAction() {
+    return instanceTerminationAction;
+  }
+
+  /**
+   * Instance termination action that will be invoked when the reservation is deleted.
+   * @param instanceTerminationAction instanceTerminationAction or {@code null} for none
+   */
+  public Reservation setInstanceTerminationAction(java.lang.String instanceTerminationAction) {
+    this.instanceTerminationAction = instanceTerminationAction;
     return this;
   }
 

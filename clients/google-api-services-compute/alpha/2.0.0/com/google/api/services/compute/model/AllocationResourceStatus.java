@@ -30,11 +30,35 @@ package com.google.api.services.compute.model;
 public final class AllocationResourceStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * Indicates number of blocks for accelerator optimized family (applicable beyond A3 only).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer reservationBlockCount;
+
+  /**
    * Allocation Properties of this reservation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AllocationResourceStatusSpecificSKUAllocation specificSkuAllocation;
+
+  /**
+   * Indicates number of blocks for accelerator optimized family (applicable beyond A3 only).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getReservationBlockCount() {
+    return reservationBlockCount;
+  }
+
+  /**
+   * Indicates number of blocks for accelerator optimized family (applicable beyond A3 only).
+   * @param reservationBlockCount reservationBlockCount or {@code null} for none
+   */
+  public AllocationResourceStatus setReservationBlockCount(java.lang.Integer reservationBlockCount) {
+    this.reservationBlockCount = reservationBlockCount;
+    return this;
+  }
 
   /**
    * Allocation Properties of this reservation.

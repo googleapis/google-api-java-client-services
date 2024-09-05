@@ -52,6 +52,20 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Optional. Indicates whether the instance is protected against deletion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean deletionProtectionEnabled;
+
+  /**
+   * Optional. The reason for enabling deletion protection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deletionProtectionReason;
+
+  /**
    * The description of the instance (2048 characters or less).
    * The value may be {@code null}.
    */
@@ -150,7 +164,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String protocol;
 
   /**
-   * Optional. Replicaition configuration.
+   * Optional. Replication configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -192,7 +206,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> suspensionReasons;
 
   /**
-   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * Optional. Input only. Immutable. Tag key-value pairs are bound to this resource. For example:
    * "123/environment": "production", "123/costCenter": "marketing"
    * The value may be {@code null}.
    */
@@ -256,6 +270,40 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates whether the instance is protected against deletion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDeletionProtectionEnabled() {
+    return deletionProtectionEnabled;
+  }
+
+  /**
+   * Optional. Indicates whether the instance is protected against deletion.
+   * @param deletionProtectionEnabled deletionProtectionEnabled or {@code null} for none
+   */
+  public Instance setDeletionProtectionEnabled(java.lang.Boolean deletionProtectionEnabled) {
+    this.deletionProtectionEnabled = deletionProtectionEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. The reason for enabling deletion protection.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeletionProtectionReason() {
+    return deletionProtectionReason;
+  }
+
+  /**
+   * Optional. The reason for enabling deletion protection.
+   * @param deletionProtectionReason deletionProtectionReason or {@code null} for none
+   */
+  public Instance setDeletionProtectionReason(java.lang.String deletionProtectionReason) {
+    this.deletionProtectionReason = deletionProtectionReason;
     return this;
   }
 
@@ -480,7 +528,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Replicaition configuration.
+   * Optional. Replication configuration.
    * @return value or {@code null} for none
    */
   public Replication getReplication() {
@@ -488,7 +536,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Replicaition configuration.
+   * Optional. Replication configuration.
    * @param replication replication or {@code null} for none
    */
   public Instance setReplication(Replication replication) {
@@ -582,7 +630,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * Optional. Input only. Immutable. Tag key-value pairs are bound to this resource. For example:
    * "123/environment": "production", "123/costCenter": "marketing"
    * @return value or {@code null} for none
    */
@@ -591,7 +639,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * Optional. Input only. Immutable. Tag key-value pairs are bound to this resource. For example:
    * "123/environment": "production", "123/costCenter": "marketing"
    * @param tags tags or {@code null} for none
    */

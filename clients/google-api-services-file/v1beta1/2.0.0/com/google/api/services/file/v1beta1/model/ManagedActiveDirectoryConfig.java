@@ -17,8 +17,8 @@
 package com.google.api.services.file.v1beta1.model;
 
 /**
- * ManagedActiveDirectoryConfig contains all the parameters for connecting to Managed Active
- * Directory.
+ * ManagedActiveDirectoryConfig contains all the parameters for connecting to Managed Service for
+ * Microsoft Active Directory (Managed Microsoft AD).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Filestore API. For a detailed explanation see:
@@ -31,9 +31,9 @@ package com.google.api.services.file.v1beta1.model;
 public final class ManagedActiveDirectoryConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The computer name is used as a prefix to the mount remote target. Example: if the
-   * computer is `my-computer`, the mount command will look like: `$mount -o vers=4.1,sec=krb5 my-
-   * computer.filestore.: `.
+   * Required. The computer name is used as a prefix in the command to mount the remote target. For
+   * example: if the computer is `my-computer`, the mount command will look like: `$mount -o
+   * vers=4.1,sec=krb5 my-computer.filestore.: `.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,9 +48,9 @@ public final class ManagedActiveDirectoryConfig extends com.google.api.client.js
   private java.lang.String domain;
 
   /**
-   * Required. The computer name is used as a prefix to the mount remote target. Example: if the
-   * computer is `my-computer`, the mount command will look like: `$mount -o vers=4.1,sec=krb5 my-
-   * computer.filestore.: `.
+   * Required. The computer name is used as a prefix in the command to mount the remote target. For
+   * example: if the computer is `my-computer`, the mount command will look like: `$mount -o
+   * vers=4.1,sec=krb5 my-computer.filestore.: `.
    * @return value or {@code null} for none
    */
   public java.lang.String getComputer() {
@@ -58,9 +58,9 @@ public final class ManagedActiveDirectoryConfig extends com.google.api.client.js
   }
 
   /**
-   * Required. The computer name is used as a prefix to the mount remote target. Example: if the
-   * computer is `my-computer`, the mount command will look like: `$mount -o vers=4.1,sec=krb5 my-
-   * computer.filestore.: `.
+   * Required. The computer name is used as a prefix in the command to mount the remote target. For
+   * example: if the computer is `my-computer`, the mount command will look like: `$mount -o
+   * vers=4.1,sec=krb5 my-computer.filestore.: `.
    * @param computer computer or {@code null} for none
    */
   public ManagedActiveDirectoryConfig setComputer(java.lang.String computer) {

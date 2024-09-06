@@ -21709,6 +21709,673 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           public class Fhir {
 
             /**
+             * Creates a FHIR Binary resource. This method can be used to create a Binary resource either by
+             * using one of the accepted FHIR JSON content types, or as a raw data stream. If a resource is
+             * created with this method using the FHIR content type this method's behavior is the same as
+             * [`fhir.create`](https://cloud.google.com/healthcare-
+             * api/docs/reference/rest/v1/projects.locations.datasets.fhirStores.fhir/create). If a resource
+             * type other than Binary is used in the request it's treated in the same way as non-FHIR data
+             * (e.g., images, zip archives, pdf files, documents). When a non-FHIR content type is used in the
+             * request, a Binary resource will be generated, and the uploaded data will be stored in the
+             * `content` field (`DSTU2` and `STU3`), or the `data` field (`R4`). The Binary resource's
+             * `contentType` will be filled in using the value of the `Content-Type` header, and the
+             * `securityContext` field (not present in `DSTU2`) will be populated from the `X-Security-Context`
+             * header if it exists. At this time `securityContext` has no special behavior in the Cloud
+             * Healthcare API. Note: the limit on data ingested through this method is 2 GB. For best
+             * performance, use a non-FHIR data type instead of wrapping the data in a Binary resource. Some of
+             * the Healthcare API features, such as [exporting to BigQuery](https://cloud.google.com/healthcare-
+             * api/docs/how-tos/fhir-export-bigquery) or [Pub/Sub
+             * notifications](https://cloud.google.com/healthcare-api/docs/fhir-
+             * pubsub#behavior_when_a_fhir_resource_is_too_large_or_traffic_is_high) with full resource content,
+             * do not support Binary resources that are larger than 10 MB. In these cases the resource's `data`
+             * field will be omitted. Instead, the "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+             * extension will be present to indicate that including the data is `unsupported`. On success, an
+             * empty `201 Created` response is returned. The newly created resource's ID and version are
+             * returned in the Location header. Using `Prefer: representation=resource` is not allowed for this
+             * method. The definition of the Binary REST API can be found at
+             * https://hl7.org/fhir/binary.html#rest.
+             *
+             * Create a request for the method "fhir.Binary-create".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link BinaryCreate#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The name of the FHIR store this resource belongs to.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
+             * @return the request
+             */
+            public BinaryCreate binaryCreate(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.HttpBody content) throws java.io.IOException {
+              BinaryCreate result = new BinaryCreate(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class BinaryCreate extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1beta1/{+parent}/fhir/Binary";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+
+              /**
+               * Creates a FHIR Binary resource. This method can be used to create a Binary resource either by
+               * using one of the accepted FHIR JSON content types, or as a raw data stream. If a resource is
+               * created with this method using the FHIR content type this method's behavior is the same as
+               * [`fhir.create`](https://cloud.google.com/healthcare-
+               * api/docs/reference/rest/v1/projects.locations.datasets.fhirStores.fhir/create). If a resource
+               * type other than Binary is used in the request it's treated in the same way as non-FHIR data
+               * (e.g., images, zip archives, pdf files, documents). When a non-FHIR content type is used in the
+               * request, a Binary resource will be generated, and the uploaded data will be stored in the
+               * `content` field (`DSTU2` and `STU3`), or the `data` field (`R4`). The Binary resource's
+               * `contentType` will be filled in using the value of the `Content-Type` header, and the
+               * `securityContext` field (not present in `DSTU2`) will be populated from the `X-Security-
+               * Context` header if it exists. At this time `securityContext` has no special behavior in the
+               * Cloud Healthcare API. Note: the limit on data ingested through this method is 2 GB. For best
+               * performance, use a non-FHIR data type instead of wrapping the data in a Binary resource. Some
+               * of the Healthcare API features, such as [exporting to
+               * BigQuery](https://cloud.google.com/healthcare-api/docs/how-tos/fhir-export-bigquery) or
+               * [Pub/Sub notifications](https://cloud.google.com/healthcare-api/docs/fhir-
+               * pubsub#behavior_when_a_fhir_resource_is_too_large_or_traffic_is_high) with full resource
+               * content, do not support Binary resources that are larger than 10 MB. In these cases the
+               * resource's `data` field will be omitted. Instead, the
+               * "http://hl7.org/fhir/StructureDefinition/data-absent-reason" extension will be present to
+               * indicate that including the data is `unsupported`. On success, an empty `201 Created` response
+               * is returned. The newly created resource's ID and version are returned in the Location header.
+               * Using `Prefer: representation=resource` is not allowed for this method. The definition of the
+               * Binary REST API can be found at https://hl7.org/fhir/binary.html#rest.
+               *
+               * Create a request for the method "fhir.Binary-create".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link BinaryCreate#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * BinaryCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The name of the FHIR store this resource belongs to.
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
+               * @since 1.13
+               */
+              protected BinaryCreate(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.HttpBody content) {
+                super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public BinaryCreate set$Xgafv(java.lang.String $Xgafv) {
+                return (BinaryCreate) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public BinaryCreate setAccessToken(java.lang.String accessToken) {
+                return (BinaryCreate) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public BinaryCreate setAlt(java.lang.String alt) {
+                return (BinaryCreate) super.setAlt(alt);
+              }
+
+              @Override
+              public BinaryCreate setCallback(java.lang.String callback) {
+                return (BinaryCreate) super.setCallback(callback);
+              }
+
+              @Override
+              public BinaryCreate setFields(java.lang.String fields) {
+                return (BinaryCreate) super.setFields(fields);
+              }
+
+              @Override
+              public BinaryCreate setKey(java.lang.String key) {
+                return (BinaryCreate) super.setKey(key);
+              }
+
+              @Override
+              public BinaryCreate setOauthToken(java.lang.String oauthToken) {
+                return (BinaryCreate) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public BinaryCreate setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (BinaryCreate) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public BinaryCreate setQuotaUser(java.lang.String quotaUser) {
+                return (BinaryCreate) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public BinaryCreate setUploadType(java.lang.String uploadType) {
+                return (BinaryCreate) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public BinaryCreate setUploadProtocol(java.lang.String uploadProtocol) {
+                return (BinaryCreate) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The name of the FHIR store this resource belongs to. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The name of the FHIR store this resource belongs to.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. The name of the FHIR store this resource belongs to. */
+              public BinaryCreate setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public BinaryCreate set(String parameterName, Object value) {
+                return (BinaryCreate) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Gets the contents of a FHIR Binary resource. This method can be used to retrieve a Binary
+             * resource either by using the FHIR JSON mimetype as the value for the Accept header, or as a raw
+             * data stream. If the FHIR Accept type is used this method will return a Binary resource with the
+             * data base64-encoded, regardless of how the resource was created. The resource data can be
+             * retrieved in base64-decoded form if the Accept type of the request matches the value of the
+             * resource's `contentType` field. The definition of the Binary REST API can be found at
+             * https://hl7.org/fhir/binary.html#rest.
+             *
+             * Create a request for the method "fhir.Binary-read".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link BinaryRead#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the Binary resource to retrieve.
+             * @return the request
+             */
+            public BinaryRead binaryRead(java.lang.String name) throws java.io.IOException {
+              BinaryRead result = new BinaryRead(name);
+              initialize(result);
+              return result;
+            }
+
+            public class BinaryRead extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Binary/[^/]+$");
+
+              /**
+               * Gets the contents of a FHIR Binary resource. This method can be used to retrieve a Binary
+               * resource either by using the FHIR JSON mimetype as the value for the Accept header, or as a raw
+               * data stream. If the FHIR Accept type is used this method will return a Binary resource with the
+               * data base64-encoded, regardless of how the resource was created. The resource data can be
+               * retrieved in base64-decoded form if the Accept type of the request matches the value of the
+               * resource's `contentType` field. The definition of the Binary REST API can be found at
+               * https://hl7.org/fhir/binary.html#rest.
+               *
+               * Create a request for the method "fhir.Binary-read".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link BinaryRead#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * BinaryRead#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the Binary resource to retrieve.
+               * @since 1.13
+               */
+              protected BinaryRead(java.lang.String name) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Binary/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public BinaryRead set$Xgafv(java.lang.String $Xgafv) {
+                return (BinaryRead) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public BinaryRead setAccessToken(java.lang.String accessToken) {
+                return (BinaryRead) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public BinaryRead setAlt(java.lang.String alt) {
+                return (BinaryRead) super.setAlt(alt);
+              }
+
+              @Override
+              public BinaryRead setCallback(java.lang.String callback) {
+                return (BinaryRead) super.setCallback(callback);
+              }
+
+              @Override
+              public BinaryRead setFields(java.lang.String fields) {
+                return (BinaryRead) super.setFields(fields);
+              }
+
+              @Override
+              public BinaryRead setKey(java.lang.String key) {
+                return (BinaryRead) super.setKey(key);
+              }
+
+              @Override
+              public BinaryRead setOauthToken(java.lang.String oauthToken) {
+                return (BinaryRead) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public BinaryRead setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (BinaryRead) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public BinaryRead setQuotaUser(java.lang.String quotaUser) {
+                return (BinaryRead) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public BinaryRead setUploadType(java.lang.String uploadType) {
+                return (BinaryRead) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public BinaryRead setUploadProtocol(java.lang.String uploadProtocol) {
+                return (BinaryRead) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The name of the Binary resource to retrieve. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the Binary resource to retrieve.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The name of the Binary resource to retrieve. */
+              public BinaryRead setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Binary/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public BinaryRead set(String parameterName, Object value) {
+                return (BinaryRead) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Updates the entire contents of a Binary resource. If the specified resource does not exist and
+             * the FHIR store has enable_update_create set, creates the resource with the client-specified ID.
+             * It is strongly advised not to include or encode any sensitive data such as patient identifiers in
+             * client-specified resource IDs. Those IDs are part of the FHIR resource path recorded in Cloud
+             * Audit Logs and Pub/Sub notifications. Those IDs can also be contained in reference fields within
+             * other resources. This method can be used to update a Binary resource either by using one of the
+             * accepted FHIR JSON content types, or as a raw data stream. If a resource is updated with this
+             * method using the FHIR content type this method's behavior is the same as `update`. If a resource
+             * type other than Binary is used in the request it will be treated in the same way as non-FHIR
+             * data. When a non-FHIR content type is used in the request, a Binary resource will be generated
+             * using the ID from the resource path, and the uploaded data will be stored in the `content` field
+             * (`DSTU2` and `STU3`), or the `data` field (`R4`). The Binary resource's `contentType` will be
+             * filled in using the value of the `Content-Type` header, and the `securityContext` field (not
+             * present in `DSTU2`) will be populated from the `X-Security-Context` header if it exists. At this
+             * time `securityContext` has no special behavior in the Cloud Healthcare API. Note: the limit on
+             * data ingested through this method is 2 GB. For best performance, use a non-FHIR data type instead
+             * of wrapping the data in a Binary resource. Some of the Healthcare API features, such as
+             * [exporting to BigQuery](https://cloud.google.com/healthcare-api/docs/how-tos/fhir-export-
+             * bigquery) or [Pub/Sub notifications](https://cloud.google.com/healthcare-api/docs/fhir-
+             * pubsub#behavior_when_a_fhir_resource_is_too_large_or_traffic_is_high) with full resource content,
+             * do not support Binary resources that are larger than 10 MB. In these cases the resource's `data`
+             * field will be omitted. Instead, the "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+             * extension will be present to indicate that including the data is `unsupported`. On success, an
+             * empty 200 OK response will be returned, or a 201 Created if the resource did not exit. The
+             * resource's ID and version are returned in the Location header. Using `Prefer:
+             * representation=resource` is not allowed for this method. The definition of the Binary REST API
+             * can be found at https://hl7.org/fhir/binary.html#rest.
+             *
+             * Create a request for the method "fhir.Binary-update".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link BinaryUpdate#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the resource to update.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
+             * @return the request
+             */
+            public BinaryUpdate binaryUpdate(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.HttpBody content) throws java.io.IOException {
+              BinaryUpdate result = new BinaryUpdate(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class BinaryUpdate extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Binary/[^/]+$");
+
+              /**
+               * Updates the entire contents of a Binary resource. If the specified resource does not exist and
+               * the FHIR store has enable_update_create set, creates the resource with the client-specified ID.
+               * It is strongly advised not to include or encode any sensitive data such as patient identifiers
+               * in client-specified resource IDs. Those IDs are part of the FHIR resource path recorded in
+               * Cloud Audit Logs and Pub/Sub notifications. Those IDs can also be contained in reference fields
+               * within other resources. This method can be used to update a Binary resource either by using one
+               * of the accepted FHIR JSON content types, or as a raw data stream. If a resource is updated with
+               * this method using the FHIR content type this method's behavior is the same as `update`. If a
+               * resource type other than Binary is used in the request it will be treated in the same way as
+               * non-FHIR data. When a non-FHIR content type is used in the request, a Binary resource will be
+               * generated using the ID from the resource path, and the uploaded data will be stored in the
+               * `content` field (`DSTU2` and `STU3`), or the `data` field (`R4`). The Binary resource's
+               * `contentType` will be filled in using the value of the `Content-Type` header, and the
+               * `securityContext` field (not present in `DSTU2`) will be populated from the `X-Security-
+               * Context` header if it exists. At this time `securityContext` has no special behavior in the
+               * Cloud Healthcare API. Note: the limit on data ingested through this method is 2 GB. For best
+               * performance, use a non-FHIR data type instead of wrapping the data in a Binary resource. Some
+               * of the Healthcare API features, such as [exporting to
+               * BigQuery](https://cloud.google.com/healthcare-api/docs/how-tos/fhir-export-bigquery) or
+               * [Pub/Sub notifications](https://cloud.google.com/healthcare-api/docs/fhir-
+               * pubsub#behavior_when_a_fhir_resource_is_too_large_or_traffic_is_high) with full resource
+               * content, do not support Binary resources that are larger than 10 MB. In these cases the
+               * resource's `data` field will be omitted. Instead, the
+               * "http://hl7.org/fhir/StructureDefinition/data-absent-reason" extension will be present to
+               * indicate that including the data is `unsupported`. On success, an empty 200 OK response will be
+               * returned, or a 201 Created if the resource did not exit. The resource's ID and version are
+               * returned in the Location header. Using `Prefer: representation=resource` is not allowed for
+               * this method. The definition of the Binary REST API can be found at
+               * https://hl7.org/fhir/binary.html#rest.
+               *
+               * Create a request for the method "fhir.Binary-update".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link BinaryUpdate#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * BinaryUpdate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the resource to update.
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
+               * @since 1.13
+               */
+              protected BinaryUpdate(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.HttpBody content) {
+                super(CloudHealthcare.this, "PUT", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Binary/[^/]+$");
+                }
+              }
+
+              @Override
+              public BinaryUpdate set$Xgafv(java.lang.String $Xgafv) {
+                return (BinaryUpdate) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public BinaryUpdate setAccessToken(java.lang.String accessToken) {
+                return (BinaryUpdate) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public BinaryUpdate setAlt(java.lang.String alt) {
+                return (BinaryUpdate) super.setAlt(alt);
+              }
+
+              @Override
+              public BinaryUpdate setCallback(java.lang.String callback) {
+                return (BinaryUpdate) super.setCallback(callback);
+              }
+
+              @Override
+              public BinaryUpdate setFields(java.lang.String fields) {
+                return (BinaryUpdate) super.setFields(fields);
+              }
+
+              @Override
+              public BinaryUpdate setKey(java.lang.String key) {
+                return (BinaryUpdate) super.setKey(key);
+              }
+
+              @Override
+              public BinaryUpdate setOauthToken(java.lang.String oauthToken) {
+                return (BinaryUpdate) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public BinaryUpdate setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (BinaryUpdate) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public BinaryUpdate setQuotaUser(java.lang.String quotaUser) {
+                return (BinaryUpdate) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public BinaryUpdate setUploadType(java.lang.String uploadType) {
+                return (BinaryUpdate) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public BinaryUpdate setUploadProtocol(java.lang.String uploadProtocol) {
+                return (BinaryUpdate) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The name of the resource to update. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the resource to update.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The name of the resource to update. */
+              public BinaryUpdate setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Binary/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public BinaryUpdate set(String parameterName, Object value) {
+                return (BinaryUpdate) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Gets the contents of a version (current or historical) of a FHIR Binary resource by version ID.
+             * This method can be used to retrieve a Binary resource version either by using the FHIR JSON
+             * mimetype as the value for the Accept header, or as a raw data stream. If the FHIR Accept type is
+             * used this method will return a Binary resource with the data base64-encoded, regardless of how
+             * the resource version was created. The resource data can be retrieved in base64-decoded form if
+             * the Accept type of the request matches the value of the resource version's `contentType` field.
+             * The definition of the Binary REST API can be found at https://hl7.org/fhir/binary.html#rest.
+             *
+             * Create a request for the method "fhir.Binary-vread".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link BinaryVread#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the Binary resource version to retrieve.
+             * @return the request
+             */
+            public BinaryVread binaryVread(java.lang.String name) throws java.io.IOException {
+              BinaryVread result = new BinaryVread(name);
+              initialize(result);
+              return result;
+            }
+
+            public class BinaryVread extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Binary/[^/]+/_history/[^/]+$");
+
+              /**
+               * Gets the contents of a version (current or historical) of a FHIR Binary resource by version ID.
+               * This method can be used to retrieve a Binary resource version either by using the FHIR JSON
+               * mimetype as the value for the Accept header, or as a raw data stream. If the FHIR Accept type
+               * is used this method will return a Binary resource with the data base64-encoded, regardless of
+               * how the resource version was created. The resource data can be retrieved in base64-decoded form
+               * if the Accept type of the request matches the value of the resource version's `contentType`
+               * field. The definition of the Binary REST API can be found at
+               * https://hl7.org/fhir/binary.html#rest.
+               *
+               * Create a request for the method "fhir.Binary-vread".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link BinaryVread#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * BinaryVread#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the Binary resource version to retrieve.
+               * @since 1.13
+               */
+              protected BinaryVread(java.lang.String name) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Binary/[^/]+/_history/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public BinaryVread set$Xgafv(java.lang.String $Xgafv) {
+                return (BinaryVread) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public BinaryVread setAccessToken(java.lang.String accessToken) {
+                return (BinaryVread) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public BinaryVread setAlt(java.lang.String alt) {
+                return (BinaryVread) super.setAlt(alt);
+              }
+
+              @Override
+              public BinaryVread setCallback(java.lang.String callback) {
+                return (BinaryVread) super.setCallback(callback);
+              }
+
+              @Override
+              public BinaryVread setFields(java.lang.String fields) {
+                return (BinaryVread) super.setFields(fields);
+              }
+
+              @Override
+              public BinaryVread setKey(java.lang.String key) {
+                return (BinaryVread) super.setKey(key);
+              }
+
+              @Override
+              public BinaryVread setOauthToken(java.lang.String oauthToken) {
+                return (BinaryVread) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public BinaryVread setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (BinaryVread) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public BinaryVread setQuotaUser(java.lang.String quotaUser) {
+                return (BinaryVread) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public BinaryVread setUploadType(java.lang.String uploadType) {
+                return (BinaryVread) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public BinaryVread setUploadProtocol(java.lang.String uploadProtocol) {
+                return (BinaryVread) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The name of the Binary resource version to retrieve. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the Binary resource version to retrieve.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The name of the Binary resource version to retrieve. */
+              public BinaryVread setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Binary/[^/]+/_history/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public BinaryVread set(String parameterName, Object value) {
+                return (BinaryVread) super.set(parameterName, value);
+              }
+            }
+            /**
              * Translates a code from one value set to another by searching for appropriate concept maps.
              * Implements the FHIR standard $translate operation
              * ([DSTU2](https://www.hl7.org/fhir/DSTU2/operation-conceptmap-translate.html),

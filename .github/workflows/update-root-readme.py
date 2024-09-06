@@ -21,7 +21,6 @@ import re
 import sys
 from typing import List
 from absl import app
-from collections.abc import Sequence
 import json
 from git import Repo
 import shutil
@@ -136,7 +135,7 @@ def all_services():
     return services
 
 
-def main(argv: Sequence[str]) -> None:
+def main(argv: List[str]) -> None:
     if len(argv) > 1:
         print('update-root-readme.py takes no arguments')
         exit(1)

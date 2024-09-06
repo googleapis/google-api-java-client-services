@@ -39,6 +39,17 @@ public final class GoogleCloudApigeeV1SecurityAction extends com.google.api.clie
   private GoogleCloudApigeeV1SecurityActionAllow allow;
 
   /**
+   * Optional. If unset, this would apply to all proxies in the environment. If set, this action is
+   * enforced only if at least one proxy in the repeated list is deployed at the time of
+   * enforcement. If set, several restrictions are enforced on SecurityActions. There can be at most
+   * 100 enabled actions with proxies set in an env. Several other restrictions apply on conditions
+   * and are detailed later.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> apiProxies;
+
+  /**
    * Required. A valid SecurityAction must contain at least one condition.
    * The value may be {@code null}.
    */
@@ -127,6 +138,31 @@ public final class GoogleCloudApigeeV1SecurityAction extends com.google.api.clie
    */
   public GoogleCloudApigeeV1SecurityAction setAllow(GoogleCloudApigeeV1SecurityActionAllow allow) {
     this.allow = allow;
+    return this;
+  }
+
+  /**
+   * Optional. If unset, this would apply to all proxies in the environment. If set, this action is
+   * enforced only if at least one proxy in the repeated list is deployed at the time of
+   * enforcement. If set, several restrictions are enforced on SecurityActions. There can be at most
+   * 100 enabled actions with proxies set in an env. Several other restrictions apply on conditions
+   * and are detailed later.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getApiProxies() {
+    return apiProxies;
+  }
+
+  /**
+   * Optional. If unset, this would apply to all proxies in the environment. If set, this action is
+   * enforced only if at least one proxy in the repeated list is deployed at the time of
+   * enforcement. If set, several restrictions are enforced on SecurityActions. There can be at most
+   * 100 enabled actions with proxies set in an env. Several other restrictions apply on conditions
+   * and are detailed later.
+   * @param apiProxies apiProxies or {@code null} for none
+   */
+  public GoogleCloudApigeeV1SecurityAction setApiProxies(java.util.List<java.lang.String> apiProxies) {
+    this.apiProxies = apiProxies;
     return this;
   }
 

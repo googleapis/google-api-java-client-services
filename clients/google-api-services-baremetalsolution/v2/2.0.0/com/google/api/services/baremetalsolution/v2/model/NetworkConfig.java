@@ -97,7 +97,7 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * List of VLAN attachments. As of now there are always 2 attachments, but it is going to change
-   * in the future (multi vlan).
+   * in the future (multi vlan). Use only one of vlan_attachments or vrf
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,6 +115,14 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean vlanSameProject;
+
+  /**
+   * Optional. The name of a pre-existing Vrf that the network should be attached to. Format is
+   * `vrfs/{vrf}`. If vrf is specified, vlan_attachments must be empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vrf;
 
   /**
    * Interconnect bandwidth. Set only when type is CLIENT.
@@ -275,7 +283,7 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * List of VLAN attachments. As of now there are always 2 attachments, but it is going to change
-   * in the future (multi vlan).
+   * in the future (multi vlan). Use only one of vlan_attachments or vrf
    * @return value or {@code null} for none
    */
   public java.util.List<IntakeVlanAttachment> getVlanAttachments() {
@@ -284,7 +292,7 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * List of VLAN attachments. As of now there are always 2 attachments, but it is going to change
-   * in the future (multi vlan).
+   * in the future (multi vlan). Use only one of vlan_attachments or vrf
    * @param vlanAttachments vlanAttachments or {@code null} for none
    */
   public NetworkConfig setVlanAttachments(java.util.List<IntakeVlanAttachment> vlanAttachments) {
@@ -306,6 +314,25 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   public NetworkConfig setVlanSameProject(java.lang.Boolean vlanSameProject) {
     this.vlanSameProject = vlanSameProject;
+    return this;
+  }
+
+  /**
+   * Optional. The name of a pre-existing Vrf that the network should be attached to. Format is
+   * `vrfs/{vrf}`. If vrf is specified, vlan_attachments must be empty.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVrf() {
+    return vrf;
+  }
+
+  /**
+   * Optional. The name of a pre-existing Vrf that the network should be attached to. Format is
+   * `vrfs/{vrf}`. If vrf is specified, vlan_attachments must be empty.
+   * @param vrf vrf or {@code null} for none
+   */
+  public NetworkConfig setVrf(java.lang.String vrf) {
+    this.vrf = vrf;
     return this;
   }
 

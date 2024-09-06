@@ -41,10 +41,17 @@ public final class DirectoryChromeosdevicesIssueCommandRequest extends com.googl
    * support adding payload: * `SET_VOLUME`: Payload is a stringified JSON object in the form: {
    * "volume": 50 }. The volume has to be an integer in the range [0,100]. *
    * `DEVICE_START_CRD_SESSION`: Payload is optionally a stringified JSON object in the form: {
-   * "ackedUserPresence": true }. `ackedUserPresence` is a boolean. By default, `ackedUserPresence`
-   * is set to `false`. To start a Chrome Remote Desktop session for an active device, set
-   * `ackedUserPresence` to `true`. * `REBOOT`: Payload is a stringified JSON object in the form: {
-   * "user_session_delay_seconds": 300 }. The delay has to be in the range [0, 300]. *
+   * "ackedUserPresence": true, "crdSessionType": string }. `ackedUserPresence` is a boolean. By
+   * default, `ackedUserPresence` is set to `false`. To start a Chrome Remote Desktop session for an
+   * active device, set `ackedUserPresence` to `true`. `crdSessionType` can only select from values
+   * `private` (which grants the remote admin exclusive control of the ChromeOS device) or `shared`
+   * (which allows the admin and the local user to share control of the ChromeOS device). If not
+   * set, `crdSessionType` defaults to `shared`. * `REBOOT`: Payload is a stringified JSON object in
+   * the form: { "user_session_delay_seconds": 300 }. The `user_session_delay_seconds` is the amount
+   * of seconds to wait before rebooting the device if a user is logged in. It has to be an integer
+   * in the range [0,300]. When payload is not present for reboot, 0 delay is the default. Note:
+   * This only applies if an actual user is logged in, including a Guest. If the device is in the
+   * login screen or in Kiosk mode the value is not respected and the device immediately reboots. *
    * `FETCH_SUPPORT_PACKET`: Payload is optionally a stringified JSON object in the form:
    * {"supportPacketDetails":{ "issueCaseId": optional_support_case_id_string, "issueDescription":
    * optional_issue_description_string, "requestedDataCollectors": []}} The list of available
@@ -84,10 +91,17 @@ public final class DirectoryChromeosdevicesIssueCommandRequest extends com.googl
    * support adding payload: * `SET_VOLUME`: Payload is a stringified JSON object in the form: {
    * "volume": 50 }. The volume has to be an integer in the range [0,100]. *
    * `DEVICE_START_CRD_SESSION`: Payload is optionally a stringified JSON object in the form: {
-   * "ackedUserPresence": true }. `ackedUserPresence` is a boolean. By default, `ackedUserPresence`
-   * is set to `false`. To start a Chrome Remote Desktop session for an active device, set
-   * `ackedUserPresence` to `true`. * `REBOOT`: Payload is a stringified JSON object in the form: {
-   * "user_session_delay_seconds": 300 }. The delay has to be in the range [0, 300]. *
+   * "ackedUserPresence": true, "crdSessionType": string }. `ackedUserPresence` is a boolean. By
+   * default, `ackedUserPresence` is set to `false`. To start a Chrome Remote Desktop session for an
+   * active device, set `ackedUserPresence` to `true`. `crdSessionType` can only select from values
+   * `private` (which grants the remote admin exclusive control of the ChromeOS device) or `shared`
+   * (which allows the admin and the local user to share control of the ChromeOS device). If not
+   * set, `crdSessionType` defaults to `shared`. * `REBOOT`: Payload is a stringified JSON object in
+   * the form: { "user_session_delay_seconds": 300 }. The `user_session_delay_seconds` is the amount
+   * of seconds to wait before rebooting the device if a user is logged in. It has to be an integer
+   * in the range [0,300]. When payload is not present for reboot, 0 delay is the default. Note:
+   * This only applies if an actual user is logged in, including a Guest. If the device is in the
+   * login screen or in Kiosk mode the value is not respected and the device immediately reboots. *
    * `FETCH_SUPPORT_PACKET`: Payload is optionally a stringified JSON object in the form:
    * {"supportPacketDetails":{ "issueCaseId": optional_support_case_id_string, "issueDescription":
    * optional_issue_description_string, "requestedDataCollectors": []}} The list of available
@@ -111,10 +125,17 @@ public final class DirectoryChromeosdevicesIssueCommandRequest extends com.googl
    * support adding payload: * `SET_VOLUME`: Payload is a stringified JSON object in the form: {
    * "volume": 50 }. The volume has to be an integer in the range [0,100]. *
    * `DEVICE_START_CRD_SESSION`: Payload is optionally a stringified JSON object in the form: {
-   * "ackedUserPresence": true }. `ackedUserPresence` is a boolean. By default, `ackedUserPresence`
-   * is set to `false`. To start a Chrome Remote Desktop session for an active device, set
-   * `ackedUserPresence` to `true`. * `REBOOT`: Payload is a stringified JSON object in the form: {
-   * "user_session_delay_seconds": 300 }. The delay has to be in the range [0, 300]. *
+   * "ackedUserPresence": true, "crdSessionType": string }. `ackedUserPresence` is a boolean. By
+   * default, `ackedUserPresence` is set to `false`. To start a Chrome Remote Desktop session for an
+   * active device, set `ackedUserPresence` to `true`. `crdSessionType` can only select from values
+   * `private` (which grants the remote admin exclusive control of the ChromeOS device) or `shared`
+   * (which allows the admin and the local user to share control of the ChromeOS device). If not
+   * set, `crdSessionType` defaults to `shared`. * `REBOOT`: Payload is a stringified JSON object in
+   * the form: { "user_session_delay_seconds": 300 }. The `user_session_delay_seconds` is the amount
+   * of seconds to wait before rebooting the device if a user is logged in. It has to be an integer
+   * in the range [0,300]. When payload is not present for reboot, 0 delay is the default. Note:
+   * This only applies if an actual user is logged in, including a Guest. If the device is in the
+   * login screen or in Kiosk mode the value is not respected and the device immediately reboots. *
    * `FETCH_SUPPORT_PACKET`: Payload is optionally a stringified JSON object in the form:
    * {"supportPacketDetails":{ "issueCaseId": optional_support_case_id_string, "issueDescription":
    * optional_issue_description_string, "requestedDataCollectors": []}} The list of available

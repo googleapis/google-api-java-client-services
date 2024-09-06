@@ -3391,6 +3391,137 @@ public class CloudAlloyDBAdmin extends com.google.api.client.googleapis.services
             return (Switchover) super.set(parameterName, value);
           }
         }
+        /**
+         * Upgrades a single Cluster. Imperative only.
+         *
+         * Create a request for the method "clusters.upgrade".
+         *
+         * This request holds the parameters needed by the alloydb server.  After setting any optional
+         * parameters, call the {@link Upgrade#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the cluster.
+         * @param content the {@link com.google.api.services.alloydb.v1beta.model.UpgradeClusterRequest}
+         * @return the request
+         */
+        public Upgrade upgrade(java.lang.String name, com.google.api.services.alloydb.v1beta.model.UpgradeClusterRequest content) throws java.io.IOException {
+          Upgrade result = new Upgrade(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Upgrade extends CloudAlloyDBAdminRequest<com.google.api.services.alloydb.v1beta.model.Operation> {
+
+          private static final String REST_PATH = "v1beta/{+name}:upgrade";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+
+          /**
+           * Upgrades a single Cluster. Imperative only.
+           *
+           * Create a request for the method "clusters.upgrade".
+           *
+           * This request holds the parameters needed by the the alloydb server.  After setting any optional
+           * parameters, call the {@link Upgrade#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * Upgrade#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the cluster.
+           * @param content the {@link com.google.api.services.alloydb.v1beta.model.UpgradeClusterRequest}
+           * @since 1.13
+           */
+          protected Upgrade(java.lang.String name, com.google.api.services.alloydb.v1beta.model.UpgradeClusterRequest content) {
+            super(CloudAlloyDBAdmin.this, "PATCH", REST_PATH, content, com.google.api.services.alloydb.v1beta.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+            }
+          }
+
+          @Override
+          public Upgrade set$Xgafv(java.lang.String $Xgafv) {
+            return (Upgrade) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Upgrade setAccessToken(java.lang.String accessToken) {
+            return (Upgrade) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Upgrade setAlt(java.lang.String alt) {
+            return (Upgrade) super.setAlt(alt);
+          }
+
+          @Override
+          public Upgrade setCallback(java.lang.String callback) {
+            return (Upgrade) super.setCallback(callback);
+          }
+
+          @Override
+          public Upgrade setFields(java.lang.String fields) {
+            return (Upgrade) super.setFields(fields);
+          }
+
+          @Override
+          public Upgrade setKey(java.lang.String key) {
+            return (Upgrade) super.setKey(key);
+          }
+
+          @Override
+          public Upgrade setOauthToken(java.lang.String oauthToken) {
+            return (Upgrade) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Upgrade setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Upgrade) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Upgrade setQuotaUser(java.lang.String quotaUser) {
+            return (Upgrade) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Upgrade setUploadType(java.lang.String uploadType) {
+            return (Upgrade) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Upgrade setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Upgrade) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The resource name of the cluster. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the cluster.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The resource name of the cluster. */
+          public Upgrade setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Upgrade set(String parameterName, Object value) {
+            return (Upgrade) super.set(parameterName, value);
+          }
+        }
 
         /**
          * An accessor for creating requests from the Instances collection.

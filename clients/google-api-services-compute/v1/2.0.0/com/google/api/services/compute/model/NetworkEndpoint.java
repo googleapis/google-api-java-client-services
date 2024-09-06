@@ -37,6 +37,14 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
+   * Represents the port number to which PSC consumer sends packets. Only valid for network endpoint
+   * groups created with GCE_VM_IP_PORTMAP endpoint type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer clientDestinationPort;
+
+  /**
    * Optional fully qualified domain name of network endpoint. This can only be specified when
    * NetworkEndpointGroup.network_endpoint_type is NON_GCP_FQDN_PORT.
    * The value may be {@code null}.
@@ -91,6 +99,25 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
    */
   public NetworkEndpoint setAnnotations(java.util.Map<String, java.lang.String> annotations) {
     this.annotations = annotations;
+    return this;
+  }
+
+  /**
+   * Represents the port number to which PSC consumer sends packets. Only valid for network endpoint
+   * groups created with GCE_VM_IP_PORTMAP endpoint type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getClientDestinationPort() {
+    return clientDestinationPort;
+  }
+
+  /**
+   * Represents the port number to which PSC consumer sends packets. Only valid for network endpoint
+   * groups created with GCE_VM_IP_PORTMAP endpoint type.
+   * @param clientDestinationPort clientDestinationPort or {@code null} for none
+   */
+  public NetworkEndpoint setClientDestinationPort(java.lang.Integer clientDestinationPort) {
+    this.clientDestinationPort = clientDestinationPort;
     return this;
   }
 

@@ -45,6 +45,23 @@ public final class GooglePrivacyDlpV2DataProfileAction extends com.google.api.cl
   private GooglePrivacyDlpV2PubSubNotification pubSubNotification;
 
   /**
+   * Publishes generated data profiles to Google Security Operations. For more information, see [Use
+   * Sensitive Data Protection data in context-aware
+   * analytics](https://cloud.google.com/chronicle/docs/detection/usecase-dlp-high-risk-user-
+   * download).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2PublishToChronicle publishToChronicle;
+
+  /**
+   * Publishes findings to SCC for each data profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2PublishToSecurityCommandCenter publishToScc;
+
+  /**
    * Tags the profiled resources with the specified tag values.
    * The value may be {@code null}.
    */
@@ -82,6 +99,46 @@ public final class GooglePrivacyDlpV2DataProfileAction extends com.google.api.cl
    */
   public GooglePrivacyDlpV2DataProfileAction setPubSubNotification(GooglePrivacyDlpV2PubSubNotification pubSubNotification) {
     this.pubSubNotification = pubSubNotification;
+    return this;
+  }
+
+  /**
+   * Publishes generated data profiles to Google Security Operations. For more information, see [Use
+   * Sensitive Data Protection data in context-aware
+   * analytics](https://cloud.google.com/chronicle/docs/detection/usecase-dlp-high-risk-user-
+   * download).
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2PublishToChronicle getPublishToChronicle() {
+    return publishToChronicle;
+  }
+
+  /**
+   * Publishes generated data profiles to Google Security Operations. For more information, see [Use
+   * Sensitive Data Protection data in context-aware
+   * analytics](https://cloud.google.com/chronicle/docs/detection/usecase-dlp-high-risk-user-
+   * download).
+   * @param publishToChronicle publishToChronicle or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DataProfileAction setPublishToChronicle(GooglePrivacyDlpV2PublishToChronicle publishToChronicle) {
+    this.publishToChronicle = publishToChronicle;
+    return this;
+  }
+
+  /**
+   * Publishes findings to SCC for each data profile.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2PublishToSecurityCommandCenter getPublishToScc() {
+    return publishToScc;
+  }
+
+  /**
+   * Publishes findings to SCC for each data profile.
+   * @param publishToScc publishToScc or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DataProfileAction setPublishToScc(GooglePrivacyDlpV2PublishToSecurityCommandCenter publishToScc) {
+    this.publishToScc = publishToScc;
     return this;
   }
 

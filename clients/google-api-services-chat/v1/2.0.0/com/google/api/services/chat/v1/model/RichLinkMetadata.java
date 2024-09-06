@@ -30,6 +30,14 @@ package com.google.api.services.chat.v1.model;
 public final class RichLinkMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Data for a chat space link. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ChatSpaceLinkData chatSpaceLinkData;
+
+  /**
    * Data for a drive link.
    * The value may be {@code null}.
    */
@@ -49,6 +57,25 @@ public final class RichLinkMetadata extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * Data for a chat space link. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public ChatSpaceLinkData getChatSpaceLinkData() {
+    return chatSpaceLinkData;
+  }
+
+  /**
+   * Data for a chat space link. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param chatSpaceLinkData chatSpaceLinkData or {@code null} for none
+   */
+  public RichLinkMetadata setChatSpaceLinkData(ChatSpaceLinkData chatSpaceLinkData) {
+    this.chatSpaceLinkData = chatSpaceLinkData;
+    return this;
+  }
 
   /**
    * Data for a drive link.

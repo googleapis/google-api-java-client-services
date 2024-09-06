@@ -8,7 +8,7 @@ on:
 
 name: update root README.md
 jobs:
-  generate_one:
+  update:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2

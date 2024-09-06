@@ -45,6 +45,14 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
   private java.lang.String commonCriteriaMode;
 
   /**
+   * Optional. Controls whether content protection, which scans for deceptive apps, is enabled. This
+   * is supported on Android 15 and above.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String contentProtectionPolicy;
+
+  /**
    * Controls access to developer settings: developer options and safe boot. Replaces
    * safeBootDisabled (deprecated) and debuggingFeaturesAllowed (deprecated).
    * The value may be {@code null}.
@@ -115,6 +123,25 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
    */
   public AdvancedSecurityOverrides setCommonCriteriaMode(java.lang.String commonCriteriaMode) {
     this.commonCriteriaMode = commonCriteriaMode;
+    return this;
+  }
+
+  /**
+   * Optional. Controls whether content protection, which scans for deceptive apps, is enabled. This
+   * is supported on Android 15 and above.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContentProtectionPolicy() {
+    return contentProtectionPolicy;
+  }
+
+  /**
+   * Optional. Controls whether content protection, which scans for deceptive apps, is enabled. This
+   * is supported on Android 15 and above.
+   * @param contentProtectionPolicy contentProtectionPolicy or {@code null} for none
+   */
+  public AdvancedSecurityOverrides setContentProtectionPolicy(java.lang.String contentProtectionPolicy) {
+    this.contentProtectionPolicy = contentProtectionPolicy;
     return this;
   }
 

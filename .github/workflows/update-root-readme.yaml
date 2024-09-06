@@ -3,6 +3,8 @@ on:
   # Runs at 03:00 am.
   - cron: '0 3 * * *'
   workflow_dispatch:
+  # PR trigger is temporary while we validate this PR
+  pull_request:
 
 name: update root README.md
 jobs:

@@ -200,9 +200,10 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
 
   /**
    * The service account used for all user-controlled operations including UpdateBuildTrigger,
-   * RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is set, then the standard
-   * Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com) will be used instead.
-   * Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
+   * RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is set and the legacy
+   * Cloud Build service account ([PROJECT_NUM]@cloudbuild.gserviceaccount.com) is the default for
+   * the project then it will be used instead. Format:
+   * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -653,9 +654,10 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
 
   /**
    * The service account used for all user-controlled operations including UpdateBuildTrigger,
-   * RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is set, then the standard
-   * Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com) will be used instead.
-   * Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
+   * RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is set and the legacy
+   * Cloud Build service account ([PROJECT_NUM]@cloudbuild.gserviceaccount.com) is the default for
+   * the project then it will be used instead. Format:
+   * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -664,9 +666,10 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
 
   /**
    * The service account used for all user-controlled operations including UpdateBuildTrigger,
-   * RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is set, then the standard
-   * Cloud Build service account ([PROJECT_NUM]@system.gserviceaccount.com) will be used instead.
-   * Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
+   * RunBuildTrigger, CreateBuild, and CancelBuild. If no service account is set and the legacy
+   * Cloud Build service account ([PROJECT_NUM]@cloudbuild.gserviceaccount.com) is the default for
+   * the project then it will be used instead. Format:
+   * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public BuildTrigger setServiceAccount(java.lang.String serviceAccount) {

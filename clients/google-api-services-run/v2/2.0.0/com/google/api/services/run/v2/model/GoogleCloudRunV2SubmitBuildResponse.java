@@ -38,6 +38,13 @@ public final class GoogleCloudRunV2SubmitBuildResponse extends com.google.api.cl
   private java.lang.String baseImageUri;
 
   /**
+   * Warning message for the base image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String baseImageWarning;
+
+  /**
    * Cloud Build operation to be polled via CloudBuild API.
    * The value may be {@code null}.
    */
@@ -60,6 +67,23 @@ public final class GoogleCloudRunV2SubmitBuildResponse extends com.google.api.cl
    */
   public GoogleCloudRunV2SubmitBuildResponse setBaseImageUri(java.lang.String baseImageUri) {
     this.baseImageUri = baseImageUri;
+    return this;
+  }
+
+  /**
+   * Warning message for the base image.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBaseImageWarning() {
+    return baseImageWarning;
+  }
+
+  /**
+   * Warning message for the base image.
+   * @param baseImageWarning baseImageWarning or {@code null} for none
+   */
+  public GoogleCloudRunV2SubmitBuildResponse setBaseImageWarning(java.lang.String baseImageWarning) {
+    this.baseImageWarning = baseImageWarning;
     return this;
   }
 

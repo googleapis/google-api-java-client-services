@@ -47,6 +47,14 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private AuthConfig authConfig;
 
   /**
+   * Optional. Auth override enabled for the connection. If Auth Override is enabled, Connection
+   * allows the backend service auth to be overridden in the entities/actions API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean authOverrideEnabled;
+
+  /**
    * Output only. Billing config for the connection.
    * The value may be {@code null}.
    */
@@ -302,6 +310,25 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   public Connection setAuthConfig(AuthConfig authConfig) {
     this.authConfig = authConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Auth override enabled for the connection. If Auth Override is enabled, Connection
+   * allows the backend service auth to be overridden in the entities/actions API.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAuthOverrideEnabled() {
+    return authOverrideEnabled;
+  }
+
+  /**
+   * Optional. Auth override enabled for the connection. If Auth Override is enabled, Connection
+   * allows the backend service auth to be overridden in the entities/actions API.
+   * @param authOverrideEnabled authOverrideEnabled or {@code null} for none
+   */
+  public Connection setAuthOverrideEnabled(java.lang.Boolean authOverrideEnabled) {
+    this.authOverrideEnabled = authOverrideEnabled;
     return this;
   }
 

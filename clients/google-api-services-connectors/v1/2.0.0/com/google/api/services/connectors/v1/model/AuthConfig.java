@@ -58,6 +58,13 @@ public final class AuthConfig extends com.google.api.client.json.GenericJson {
   private Oauth2AuthCodeFlow oauth2AuthCodeFlow;
 
   /**
+   * Oauth2AuthCodeFlowGoogleManaged.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Oauth2AuthCodeFlowGoogleManaged oauth2AuthCodeFlowGoogleManaged;
+
+  /**
    * Oauth2ClientCredentials.
    * The value may be {@code null}.
    */
@@ -150,6 +157,23 @@ public final class AuthConfig extends com.google.api.client.json.GenericJson {
    */
   public AuthConfig setOauth2AuthCodeFlow(Oauth2AuthCodeFlow oauth2AuthCodeFlow) {
     this.oauth2AuthCodeFlow = oauth2AuthCodeFlow;
+    return this;
+  }
+
+  /**
+   * Oauth2AuthCodeFlowGoogleManaged.
+   * @return value or {@code null} for none
+   */
+  public Oauth2AuthCodeFlowGoogleManaged getOauth2AuthCodeFlowGoogleManaged() {
+    return oauth2AuthCodeFlowGoogleManaged;
+  }
+
+  /**
+   * Oauth2AuthCodeFlowGoogleManaged.
+   * @param oauth2AuthCodeFlowGoogleManaged oauth2AuthCodeFlowGoogleManaged or {@code null} for none
+   */
+  public AuthConfig setOauth2AuthCodeFlowGoogleManaged(Oauth2AuthCodeFlowGoogleManaged oauth2AuthCodeFlowGoogleManaged) {
+    this.oauth2AuthCodeFlowGoogleManaged = oauth2AuthCodeFlowGoogleManaged;
     return this;
   }
 

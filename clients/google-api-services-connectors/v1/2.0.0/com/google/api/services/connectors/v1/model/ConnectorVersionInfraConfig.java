@@ -101,6 +101,13 @@ public final class ConnectorVersionInfraConfig extends com.google.api.client.jso
   private java.lang.String sharedDeployment;
 
   /**
+   * Output only. Status of the TLS migration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tlsMigrationState;
+
+  /**
    * Output only. The window used for ratelimiting runtime requests to connections.
    * @return value or {@code null} for none
    */
@@ -267,6 +274,23 @@ public final class ConnectorVersionInfraConfig extends com.google.api.client.jso
    */
   public ConnectorVersionInfraConfig setSharedDeployment(java.lang.String sharedDeployment) {
     this.sharedDeployment = sharedDeployment;
+    return this;
+  }
+
+  /**
+   * Output only. Status of the TLS migration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTlsMigrationState() {
+    return tlsMigrationState;
+  }
+
+  /**
+   * Output only. Status of the TLS migration.
+   * @param tlsMigrationState tlsMigrationState or {@code null} for none
+   */
+  public ConnectorVersionInfraConfig setTlsMigrationState(java.lang.String tlsMigrationState) {
+    this.tlsMigrationState = tlsMigrationState;
     return this;
   }
 

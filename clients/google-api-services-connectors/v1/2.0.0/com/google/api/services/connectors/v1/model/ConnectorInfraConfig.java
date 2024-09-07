@@ -73,6 +73,13 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
   private java.lang.Boolean migrateDeploymentModel;
 
   /**
+   * Indicate whether connector is being migrated to TLS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean migrateTls;
+
+  /**
    * Max QPS supported by the connector version before throttling of requests.
    * The value may be {@code null}.
    */
@@ -199,6 +206,23 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
    */
   public ConnectorInfraConfig setMigrateDeploymentModel(java.lang.Boolean migrateDeploymentModel) {
     this.migrateDeploymentModel = migrateDeploymentModel;
+    return this;
+  }
+
+  /**
+   * Indicate whether connector is being migrated to TLS.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMigrateTls() {
+    return migrateTls;
+  }
+
+  /**
+   * Indicate whether connector is being migrated to TLS.
+   * @param migrateTls migrateTls or {@code null} for none
+   */
+  public ConnectorInfraConfig setMigrateTls(java.lang.Boolean migrateTls) {
+    this.migrateTls = migrateTls;
     return this;
   }
 

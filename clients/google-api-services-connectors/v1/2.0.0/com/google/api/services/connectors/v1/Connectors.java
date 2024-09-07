@@ -10922,6 +10922,172 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
           public class Versions {
 
             /**
+             * fetch and return the list of auth config variables required to override the connection backend
+             * auth.
+             *
+             * Create a request for the method "versions.fetchAuthSchema".
+             *
+             * This request holds the parameters needed by the connectors server.  After setting any optional
+             * parameters, call the {@link FetchAuthSchema#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. Parent resource of the Connector Version, of the form:
+             *        `projects/locations/providers/connectors/versions`
+             * @return the request
+             */
+            public FetchAuthSchema fetchAuthSchema(java.lang.String name) throws java.io.IOException {
+              FetchAuthSchema result = new FetchAuthSchema(name);
+              initialize(result);
+              return result;
+            }
+
+            public class FetchAuthSchema extends ConnectorsRequest<com.google.api.services.connectors.v1.model.FetchAuthSchemaResponse> {
+
+              private static final String REST_PATH = "v1/{+name}:fetchAuthSchema";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/providers/[^/]+/connectors/[^/]+/versions/[^/]+$");
+
+              /**
+               * fetch and return the list of auth config variables required to override the connection backend
+               * auth.
+               *
+               * Create a request for the method "versions.fetchAuthSchema".
+               *
+               * This request holds the parameters needed by the the connectors server.  After setting any
+               * optional parameters, call the {@link FetchAuthSchema#execute()} method to invoke the remote
+               * operation. <p> {@link FetchAuthSchema#initialize(com.google.api.client.googleapis.services.Abst
+               * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+               * the constructor. </p>
+               *
+               * @param name Required. Parent resource of the Connector Version, of the form:
+             *        `projects/locations/providers/connectors/versions`
+               * @since 1.13
+               */
+              protected FetchAuthSchema(java.lang.String name) {
+                super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v1.model.FetchAuthSchemaResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/providers/[^/]+/connectors/[^/]+/versions/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public FetchAuthSchema set$Xgafv(java.lang.String $Xgafv) {
+                return (FetchAuthSchema) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public FetchAuthSchema setAccessToken(java.lang.String accessToken) {
+                return (FetchAuthSchema) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public FetchAuthSchema setAlt(java.lang.String alt) {
+                return (FetchAuthSchema) super.setAlt(alt);
+              }
+
+              @Override
+              public FetchAuthSchema setCallback(java.lang.String callback) {
+                return (FetchAuthSchema) super.setCallback(callback);
+              }
+
+              @Override
+              public FetchAuthSchema setFields(java.lang.String fields) {
+                return (FetchAuthSchema) super.setFields(fields);
+              }
+
+              @Override
+              public FetchAuthSchema setKey(java.lang.String key) {
+                return (FetchAuthSchema) super.setKey(key);
+              }
+
+              @Override
+              public FetchAuthSchema setOauthToken(java.lang.String oauthToken) {
+                return (FetchAuthSchema) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public FetchAuthSchema setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (FetchAuthSchema) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public FetchAuthSchema setQuotaUser(java.lang.String quotaUser) {
+                return (FetchAuthSchema) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public FetchAuthSchema setUploadType(java.lang.String uploadType) {
+                return (FetchAuthSchema) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public FetchAuthSchema setUploadProtocol(java.lang.String uploadProtocol) {
+                return (FetchAuthSchema) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Parent resource of the Connector Version, of the form:
+               * `projects/locations/providers/connectors/versions`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. Parent resource of the Connector Version, of the form:
+             `projects/locations/providers/connectors/versions`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. Parent resource of the Connector Version, of the form:
+               * `projects/locations/providers/connectors/versions`
+               */
+              public FetchAuthSchema setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/providers/[^/]+/connectors/[^/]+/versions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /** Optional. View of the AuthSchema. The default value is BASIC. */
+              @com.google.api.client.util.Key
+              private java.lang.String view;
+
+              /** Optional. View of the AuthSchema. The default value is BASIC.
+               */
+              public java.lang.String getView() {
+                return view;
+              }
+
+              /** Optional. View of the AuthSchema. The default value is BASIC. */
+              public FetchAuthSchema setView(java.lang.String view) {
+                this.view = view;
+                return this;
+              }
+
+              @Override
+              public FetchAuthSchema set(String parameterName, Object value) {
+                return (FetchAuthSchema) super.set(parameterName, value);
+              }
+            }
+            /**
              * Gets details of a single connector version.
              *
              * Create a request for the method "versions.get".

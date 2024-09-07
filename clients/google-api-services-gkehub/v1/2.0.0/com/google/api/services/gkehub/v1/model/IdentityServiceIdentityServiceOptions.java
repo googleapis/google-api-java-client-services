@@ -30,14 +30,38 @@ package com.google.api.services.gkehub.v1.model;
 public final class IdentityServiceIdentityServiceOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Determines the lifespan of STS tokens issued by Anthos Identity Service.
+   * Configuration options for the AIS diagnostic interface.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IdentityServiceDiagnosticInterface diagnosticInterface;
+
+  /**
+   * Determines the lifespan of STS tokens issued by Anthos Identity Service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String sessionDuration;
 
   /**
-   * Optional. Determines the lifespan of STS tokens issued by Anthos Identity Service.
+   * Configuration options for the AIS diagnostic interface.
+   * @return value or {@code null} for none
+   */
+  public IdentityServiceDiagnosticInterface getDiagnosticInterface() {
+    return diagnosticInterface;
+  }
+
+  /**
+   * Configuration options for the AIS diagnostic interface.
+   * @param diagnosticInterface diagnosticInterface or {@code null} for none
+   */
+  public IdentityServiceIdentityServiceOptions setDiagnosticInterface(IdentityServiceDiagnosticInterface diagnosticInterface) {
+    this.diagnosticInterface = diagnosticInterface;
+    return this;
+  }
+
+  /**
+   * Determines the lifespan of STS tokens issued by Anthos Identity Service.
    * @return value or {@code null} for none
    */
   public String getSessionDuration() {
@@ -45,7 +69,7 @@ public final class IdentityServiceIdentityServiceOptions extends com.google.api.
   }
 
   /**
-   * Optional. Determines the lifespan of STS tokens issued by Anthos Identity Service.
+   * Determines the lifespan of STS tokens issued by Anthos Identity Service.
    * @param sessionDuration sessionDuration or {@code null} for none
    */
   public IdentityServiceIdentityServiceOptions setSessionDuration(String sessionDuration) {

@@ -85,6 +85,13 @@ public final class ComputeInstanceBackupProperties extends com.google.api.client
   private java.lang.String keyRevocationActionType;
 
   /**
+   * Labels to apply to instances that are created from these properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * The machine type to use for instances that are created from these properties.
    * The value may be {@code null}.
    */
@@ -249,6 +256,23 @@ public final class ComputeInstanceBackupProperties extends com.google.api.client
    */
   public ComputeInstanceBackupProperties setKeyRevocationActionType(java.lang.String keyRevocationActionType) {
     this.keyRevocationActionType = keyRevocationActionType;
+    return this;
+  }
+
+  /**
+   * Labels to apply to instances that are created from these properties.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Labels to apply to instances that are created from these properties.
+   * @param labels labels or {@code null} for none
+   */
+  public ComputeInstanceBackupProperties setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

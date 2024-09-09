@@ -8454,7 +8454,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Queries time series using Monitoring Query Language.
+       * Queries time series by using Monitoring Query Language (MQL). We recommend using PromQL instead
+       * of MQL. For more information about the status of MQL, see the MQL deprecation notice
+       * (https://cloud.google.com/stackdriver/docs/deprecations/mql).
        *
        * Create a request for the method "timeSeries.query".
        *
@@ -8480,7 +8482,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Queries time series using Monitoring Query Language.
+         * Queries time series by using Monitoring Query Language (MQL). We recommend using PromQL instead
+         * of MQL. For more information about the status of MQL, see the MQL deprecation notice
+         * (https://cloud.google.com/stackdriver/docs/deprecations/mql).
          *
          * Create a request for the method "timeSeries.query".
          *

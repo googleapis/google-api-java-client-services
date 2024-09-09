@@ -17,7 +17,8 @@
 package com.google.api.services.monitoring.v3.model;
 
 /**
- * The QueryTimeSeries request.
+ * The QueryTimeSeries request. For information about the status of Monitoring Query Language (MQL),
+ * see the MQL deprecation notice (https://cloud.google.com/stackdriver/docs/deprecations/mql).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:

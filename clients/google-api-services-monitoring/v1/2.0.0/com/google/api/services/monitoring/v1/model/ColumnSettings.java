@@ -30,6 +30,13 @@ package com.google.api.services.monitoring.v1.model;
 public final class ColumnSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Whether the column should be left / middle / right aligned
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String alignment;
+
+  /**
    * Required. The id of the column.
    * The value may be {@code null}.
    */
@@ -37,11 +44,43 @@ public final class ColumnSettings extends com.google.api.client.json.GenericJson
   private java.lang.String column;
 
   /**
+   * Optional. Display name of the column
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
+   * Optional. The thresholds used to determine how the table cell should be rendered given the time
+   * series' current value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Threshold> thresholds;
+
+  /**
    * Required. Whether the column should be visible on page load.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean visible;
+
+  /**
+   * Optional. Whether the column should be left / middle / right aligned
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAlignment() {
+    return alignment;
+  }
+
+  /**
+   * Optional. Whether the column should be left / middle / right aligned
+   * @param alignment alignment or {@code null} for none
+   */
+  public ColumnSettings setAlignment(java.lang.String alignment) {
+    this.alignment = alignment;
+    return this;
+  }
 
   /**
    * Required. The id of the column.
@@ -57,6 +96,42 @@ public final class ColumnSettings extends com.google.api.client.json.GenericJson
    */
   public ColumnSettings setColumn(java.lang.String column) {
     this.column = column;
+    return this;
+  }
+
+  /**
+   * Optional. Display name of the column
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Optional. Display name of the column
+   * @param displayName displayName or {@code null} for none
+   */
+  public ColumnSettings setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. The thresholds used to determine how the table cell should be rendered given the time
+   * series' current value.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Threshold> getThresholds() {
+    return thresholds;
+  }
+
+  /**
+   * Optional. The thresholds used to determine how the table cell should be rendered given the time
+   * series' current value.
+   * @param thresholds thresholds or {@code null} for none
+   */
+  public ColumnSettings setThresholds(java.util.List<Threshold> thresholds) {
+    this.thresholds = thresholds;
     return this;
   }
 

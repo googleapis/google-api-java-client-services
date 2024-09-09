@@ -1,0 +1,38 @@
+on:
+  schedule:
+  # Runs at 03:00 am.
+  - cron: '0 3 * * *'
+  workflow_dispatch:
+
+name: update root README.md
+jobs:
+  update:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+          path: google-api-java-client-services
+      - run: |
+          sudo apt update
+          sudo apt install python3
+          echo "using $(python3 --version)"
+          curl https://bootstrap.pypa.io/pip/3.6/get-pip.py -o get-pip.py
+          python3 get-pip.py
+          python3 -m pip install --require-hashes -r ./google-api-java-client-services/.github/workflows/requirements.txt
+      - run: python3 ./google-api-java-client-services/.github/workflows/update-root-readme.py
+      - uses: googleapis/code-suggester@v2 # takes the changes from git directory
+        env:
+          ACCESS_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
+        with:
+          command: pr
+          upstream_owner: ${{ github.repository_owner }}
+          upstream_repo: google-api-java-client-services
+          description: 'Generated in GitHub action: https://github.com/${{ github.repository_owner }}/${{ github.repository }}/actions/workflows/update-root-readme.yaml'
+          title: 'chore: regenerate README.md'
+          message: 'chore: regenerate README.md'
+          branch: regenerate-README
+          git_dir: 'google-api-java-client-services'
+          primary: main
+          force: true
+          fork: true

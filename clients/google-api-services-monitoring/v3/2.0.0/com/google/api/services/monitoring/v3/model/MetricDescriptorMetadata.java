@@ -54,6 +54,13 @@ public final class MetricDescriptorMetadata extends com.google.api.client.json.G
   private String samplePeriod;
 
   /**
+   * The scope of the timeseries data of the metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> timeSeriesResourceHierarchyLevel;
+
+  /**
    * The delay of data points caused by ingestion. Data points older than this age are guaranteed to
    * be ingested and available to be read, excluding data loss due to errors.
    * @return value or {@code null} for none
@@ -107,6 +114,23 @@ public final class MetricDescriptorMetadata extends com.google.api.client.json.G
    */
   public MetricDescriptorMetadata setSamplePeriod(String samplePeriod) {
     this.samplePeriod = samplePeriod;
+    return this;
+  }
+
+  /**
+   * The scope of the timeseries data of the metric.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTimeSeriesResourceHierarchyLevel() {
+    return timeSeriesResourceHierarchyLevel;
+  }
+
+  /**
+   * The scope of the timeseries data of the metric.
+   * @param timeSeriesResourceHierarchyLevel timeSeriesResourceHierarchyLevel or {@code null} for none
+   */
+  public MetricDescriptorMetadata setTimeSeriesResourceHierarchyLevel(java.util.List<java.lang.String> timeSeriesResourceHierarchyLevel) {
+    this.timeSeriesResourceHierarchyLevel = timeSeriesResourceHierarchyLevel;
     return this;
   }
 

@@ -2236,6 +2236,300 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
   public class Instances {
 
     /**
+     * Lists all versions of server certificates and certificate authorities (CAs) for the specified
+     * instance. There can be up to three sets of certs listed: the certificate that is currently in
+     * use, a future that has been added but not yet used to sign a certificate, and a certificate that
+     * has been rotated out.
+     *
+     * Create a request for the method "instances.ListServerCertificates".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link ListServerCertificates#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param project Required. Project ID of the project that contains the instance.
+     * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
+     * @return the request
+     */
+    public ListServerCertificates listServerCertificates(java.lang.String project, java.lang.String instance) throws java.io.IOException {
+      ListServerCertificates result = new ListServerCertificates(project, instance);
+      initialize(result);
+      return result;
+    }
+
+    public class ListServerCertificates extends SQLAdminRequest<com.google.api.services.sqladmin.model.InstancesListServerCertificatesResponse> {
+
+      private static final String REST_PATH = "v1/projects/{project}/instances/{instance}/listServerCertificates";
+
+      /**
+       * Lists all versions of server certificates and certificate authorities (CAs) for the specified
+       * instance. There can be up to three sets of certs listed: the certificate that is currently in
+       * use, a future that has been added but not yet used to sign a certificate, and a certificate
+       * that has been rotated out.
+       *
+       * Create a request for the method "instances.ListServerCertificates".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link ListServerCertificates#execute()} method to invoke the
+       * remote operation. <p> {@link ListServerCertificates#initialize(com.google.api.client.googleapis
+       * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param project Required. Project ID of the project that contains the instance.
+       * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
+       * @since 1.13
+       */
+      protected ListServerCertificates(java.lang.String project, java.lang.String instance) {
+        super(SQLAdmin.this, "GET", REST_PATH, null, com.google.api.services.sqladmin.model.InstancesListServerCertificatesResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public ListServerCertificates set$Xgafv(java.lang.String $Xgafv) {
+        return (ListServerCertificates) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ListServerCertificates setAccessToken(java.lang.String accessToken) {
+        return (ListServerCertificates) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ListServerCertificates setAlt(java.lang.String alt) {
+        return (ListServerCertificates) super.setAlt(alt);
+      }
+
+      @Override
+      public ListServerCertificates setCallback(java.lang.String callback) {
+        return (ListServerCertificates) super.setCallback(callback);
+      }
+
+      @Override
+      public ListServerCertificates setFields(java.lang.String fields) {
+        return (ListServerCertificates) super.setFields(fields);
+      }
+
+      @Override
+      public ListServerCertificates setKey(java.lang.String key) {
+        return (ListServerCertificates) super.setKey(key);
+      }
+
+      @Override
+      public ListServerCertificates setOauthToken(java.lang.String oauthToken) {
+        return (ListServerCertificates) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ListServerCertificates setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ListServerCertificates) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ListServerCertificates setQuotaUser(java.lang.String quotaUser) {
+        return (ListServerCertificates) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ListServerCertificates setUploadType(java.lang.String uploadType) {
+        return (ListServerCertificates) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ListServerCertificates setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ListServerCertificates) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the project that contains the instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Required. Project ID of the project that contains the instance.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Required. Project ID of the project that contains the instance. */
+      public ListServerCertificates setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID. */
+      @com.google.api.client.util.Key
+      private java.lang.String instance;
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID.
+       */
+      public java.lang.String getInstance() {
+        return instance;
+      }
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID. */
+      public ListServerCertificates setInstance(java.lang.String instance) {
+        this.instance = instance;
+        return this;
+      }
+
+      @Override
+      public ListServerCertificates set(String parameterName, Object value) {
+        return (ListServerCertificates) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Rotates the server certificate version to one previously added with the addServerCertificate
+     * method. For instances not using Certificate Authority Service (CAS) server CA, please use
+     * RotateServerCa instead.
+     *
+     * Create a request for the method "instances.RotateServerCertificate".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link RotateServerCertificate#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param project Required. Project ID of the project that contains the instance.
+     * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
+     * @param content the {@link com.google.api.services.sqladmin.model.InstancesRotateServerCertificateRequest}
+     * @return the request
+     */
+    public RotateServerCertificate rotateServerCertificate(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.InstancesRotateServerCertificateRequest content) throws java.io.IOException {
+      RotateServerCertificate result = new RotateServerCertificate(project, instance, content);
+      initialize(result);
+      return result;
+    }
+
+    public class RotateServerCertificate extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
+
+      private static final String REST_PATH = "v1/projects/{project}/instances/{instance}/rotateServerCertificate";
+
+      /**
+       * Rotates the server certificate version to one previously added with the addServerCertificate
+       * method. For instances not using Certificate Authority Service (CAS) server CA, please use
+       * RotateServerCa instead.
+       *
+       * Create a request for the method "instances.RotateServerCertificate".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link RotateServerCertificate#execute()} method to invoke the
+       * remote operation. <p> {@link RotateServerCertificate#initialize(com.google.api.client.googleapi
+       * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param project Required. Project ID of the project that contains the instance.
+       * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
+       * @param content the {@link com.google.api.services.sqladmin.model.InstancesRotateServerCertificateRequest}
+       * @since 1.13
+       */
+      protected RotateServerCertificate(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.InstancesRotateServerCertificateRequest content) {
+        super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+      }
+
+      @Override
+      public RotateServerCertificate set$Xgafv(java.lang.String $Xgafv) {
+        return (RotateServerCertificate) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public RotateServerCertificate setAccessToken(java.lang.String accessToken) {
+        return (RotateServerCertificate) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public RotateServerCertificate setAlt(java.lang.String alt) {
+        return (RotateServerCertificate) super.setAlt(alt);
+      }
+
+      @Override
+      public RotateServerCertificate setCallback(java.lang.String callback) {
+        return (RotateServerCertificate) super.setCallback(callback);
+      }
+
+      @Override
+      public RotateServerCertificate setFields(java.lang.String fields) {
+        return (RotateServerCertificate) super.setFields(fields);
+      }
+
+      @Override
+      public RotateServerCertificate setKey(java.lang.String key) {
+        return (RotateServerCertificate) super.setKey(key);
+      }
+
+      @Override
+      public RotateServerCertificate setOauthToken(java.lang.String oauthToken) {
+        return (RotateServerCertificate) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public RotateServerCertificate setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (RotateServerCertificate) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public RotateServerCertificate setQuotaUser(java.lang.String quotaUser) {
+        return (RotateServerCertificate) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public RotateServerCertificate setUploadType(java.lang.String uploadType) {
+        return (RotateServerCertificate) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public RotateServerCertificate setUploadProtocol(java.lang.String uploadProtocol) {
+        return (RotateServerCertificate) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the project that contains the instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Required. Project ID of the project that contains the instance.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Required. Project ID of the project that contains the instance. */
+      public RotateServerCertificate setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID. */
+      @com.google.api.client.util.Key
+      private java.lang.String instance;
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID.
+       */
+      public java.lang.String getInstance() {
+        return instance;
+      }
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID. */
+      public RotateServerCertificate setInstance(java.lang.String instance) {
+        this.instance = instance;
+        return this;
+      }
+
+      @Override
+      public RotateServerCertificate set(String parameterName, Object value) {
+        return (RotateServerCertificate) super.set(parameterName, value);
+      }
+    }
+    /**
      * Acquire a lease for the setup of SQL Server Reporting Services (SSRS).
      *
      * Create a request for the method "instances.acquireSsrsLease".
@@ -2527,6 +2821,150 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       @Override
       public AddServerCa set(String parameterName, Object value) {
         return (AddServerCa) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Add a new trusted server certificate version for the specified instance using Certificate
+     * Authority Service (CAS) server CA. Required to prepare for a certificate rotation. If a server
+     * certificate version was previously added but never used in a certificate rotation, this operation
+     * replaces that version. There cannot be more than one certificate version waiting to be rotated
+     * in. For instances not using CAS server CA, please use AddServerCa instead.
+     *
+     * Create a request for the method "instances.addServerCertificate".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link AddServerCertificate#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param project Project ID of the project that contains the instance.
+     * @param instance Cloud SQL instance ID. This does not include the project ID.
+     * @return the request
+     */
+    public AddServerCertificate addServerCertificate(java.lang.String project, java.lang.String instance) throws java.io.IOException {
+      AddServerCertificate result = new AddServerCertificate(project, instance);
+      initialize(result);
+      return result;
+    }
+
+    public class AddServerCertificate extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
+
+      private static final String REST_PATH = "v1/projects/{project}/instances/{instance}/addServerCertificate";
+
+      /**
+       * Add a new trusted server certificate version for the specified instance using Certificate
+       * Authority Service (CAS) server CA. Required to prepare for a certificate rotation. If a server
+       * certificate version was previously added but never used in a certificate rotation, this
+       * operation replaces that version. There cannot be more than one certificate version waiting to
+       * be rotated in. For instances not using CAS server CA, please use AddServerCa instead.
+       *
+       * Create a request for the method "instances.addServerCertificate".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link AddServerCertificate#execute()} method to invoke the
+       * remote operation. <p> {@link AddServerCertificate#initialize(com.google.api.client.googleapis.s
+       * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param project Project ID of the project that contains the instance.
+       * @param instance Cloud SQL instance ID. This does not include the project ID.
+       * @since 1.13
+       */
+      protected AddServerCertificate(java.lang.String project, java.lang.String instance) {
+        super(SQLAdmin.this, "POST", REST_PATH, null, com.google.api.services.sqladmin.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+      }
+
+      @Override
+      public AddServerCertificate set$Xgafv(java.lang.String $Xgafv) {
+        return (AddServerCertificate) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public AddServerCertificate setAccessToken(java.lang.String accessToken) {
+        return (AddServerCertificate) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public AddServerCertificate setAlt(java.lang.String alt) {
+        return (AddServerCertificate) super.setAlt(alt);
+      }
+
+      @Override
+      public AddServerCertificate setCallback(java.lang.String callback) {
+        return (AddServerCertificate) super.setCallback(callback);
+      }
+
+      @Override
+      public AddServerCertificate setFields(java.lang.String fields) {
+        return (AddServerCertificate) super.setFields(fields);
+      }
+
+      @Override
+      public AddServerCertificate setKey(java.lang.String key) {
+        return (AddServerCertificate) super.setKey(key);
+      }
+
+      @Override
+      public AddServerCertificate setOauthToken(java.lang.String oauthToken) {
+        return (AddServerCertificate) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public AddServerCertificate setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (AddServerCertificate) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public AddServerCertificate setQuotaUser(java.lang.String quotaUser) {
+        return (AddServerCertificate) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public AddServerCertificate setUploadType(java.lang.String uploadType) {
+        return (AddServerCertificate) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public AddServerCertificate setUploadProtocol(java.lang.String uploadProtocol) {
+        return (AddServerCertificate) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Project ID of the project that contains the instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID of the project that contains the instance.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID of the project that contains the instance. */
+      public AddServerCertificate setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** Cloud SQL instance ID. This does not include the project ID. */
+      @com.google.api.client.util.Key
+      private java.lang.String instance;
+
+      /** Cloud SQL instance ID. This does not include the project ID.
+       */
+      public java.lang.String getInstance() {
+        return instance;
+      }
+
+      /** Cloud SQL instance ID. This does not include the project ID. */
+      public AddServerCertificate setInstance(java.lang.String instance) {
+        this.instance = instance;
+        return this;
+      }
+
+      @Override
+      public AddServerCertificate set(String parameterName, Object value) {
+        return (AddServerCertificate) super.set(parameterName, value);
       }
     }
     /**

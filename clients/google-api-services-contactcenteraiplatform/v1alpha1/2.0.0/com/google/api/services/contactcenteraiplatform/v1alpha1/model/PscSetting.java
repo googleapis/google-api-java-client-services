@@ -39,6 +39,13 @@ public final class PscSetting extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> allowedConsumerProjectIds;
 
   /**
+   * Output only. The CCAIP tenant project ids.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> producerProjectIds;
+
+  /**
    * The list of project ids that are allowed to send traffic to the service attachment. This field
    * should be filled only for the ingress components.
    * @return value or {@code null} for none
@@ -54,6 +61,23 @@ public final class PscSetting extends com.google.api.client.json.GenericJson {
    */
   public PscSetting setAllowedConsumerProjectIds(java.util.List<java.lang.String> allowedConsumerProjectIds) {
     this.allowedConsumerProjectIds = allowedConsumerProjectIds;
+    return this;
+  }
+
+  /**
+   * Output only. The CCAIP tenant project ids.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getProducerProjectIds() {
+    return producerProjectIds;
+  }
+
+  /**
+   * Output only. The CCAIP tenant project ids.
+   * @param producerProjectIds producerProjectIds or {@code null} for none
+   */
+  public PscSetting setProducerProjectIds(java.util.List<java.lang.String> producerProjectIds) {
+    this.producerProjectIds = producerProjectIds;
     return this;
   }
 

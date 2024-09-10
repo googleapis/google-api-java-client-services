@@ -17,8 +17,8 @@
 package com.google.api.services.contactcenteraiplatform.v1alpha1.model;
 
 /**
- * Instances in this Channel will receive updates after all instances in `Critical` were updated + 2
- * days. They also will only be updated outside of their peak hours.
+ * Instances in this Channel will receive updates after all instances in `Normal` were updated. They
+ * also will only be updated outside of their peak hours.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Contact Center AI Platform API. For a detailed

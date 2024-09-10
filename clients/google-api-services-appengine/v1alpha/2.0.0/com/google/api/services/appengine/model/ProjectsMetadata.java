@@ -54,6 +54,20 @@ public final class ProjectsMetadata extends com.google.api.client.json.GenericJs
   private java.lang.String consumerProjectState;
 
   /**
+   * The GCE tags associated with the consumer project and those inherited due to their ancestry, if
+   * any. Not supported by CCFE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GceTag> gceTag;
+
+  static {
+    // hack to force ProGuard to consider GceTag used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GceTag.class);
+  }
+
+  /**
    * The service account authorized to operate on the consumer project. Note: CCFE only propagates
    * P4SA with default tag to CLH.
    * The value may be {@code null}.
@@ -141,6 +155,25 @@ public final class ProjectsMetadata extends com.google.api.client.json.GenericJs
    */
   public ProjectsMetadata setConsumerProjectState(java.lang.String consumerProjectState) {
     this.consumerProjectState = consumerProjectState;
+    return this;
+  }
+
+  /**
+   * The GCE tags associated with the consumer project and those inherited due to their ancestry, if
+   * any. Not supported by CCFE.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GceTag> getGceTag() {
+    return gceTag;
+  }
+
+  /**
+   * The GCE tags associated with the consumer project and those inherited due to their ancestry, if
+   * any. Not supported by CCFE.
+   * @param gceTag gceTag or {@code null} for none
+   */
+  public ProjectsMetadata setGceTag(java.util.List<GceTag> gceTag) {
+    this.gceTag = gceTag;
     return this;
   }
 

@@ -45,6 +45,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Long capacityStepSizeGb;
 
   /**
+   * Output only. Indicates whether this instance's performance is configurable. If enabled, adjust
+   * it using the 'performance_config' field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean configurablePerformanceEnabled;
+
+  /**
    * Output only. The time when the instance was created.
    * The value may be {@code null}.
    */
@@ -155,6 +163,20 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<NetworkConfig> networks;
 
   /**
+   * Optional. Used to configure performance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PerformanceConfig performanceConfig;
+
+  /**
+   * Output only. Used for getting performance limits.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PerformanceLimits performanceLimits;
+
+  /**
    * Immutable. The protocol indicates the access protocol for all shares in the instance. This
    * field is immutable and it cannot be changed after the instance has been created. Default value:
    * `NFS_V3`.
@@ -253,6 +275,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setCapacityStepSizeGb(java.lang.Long capacityStepSizeGb) {
     this.capacityStepSizeGb = capacityStepSizeGb;
+    return this;
+  }
+
+  /**
+   * Output only. Indicates whether this instance's performance is configurable. If enabled, adjust
+   * it using the 'performance_config' field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getConfigurablePerformanceEnabled() {
+    return configurablePerformanceEnabled;
+  }
+
+  /**
+   * Output only. Indicates whether this instance's performance is configurable. If enabled, adjust
+   * it using the 'performance_config' field.
+   * @param configurablePerformanceEnabled configurablePerformanceEnabled or {@code null} for none
+   */
+  public Instance setConfigurablePerformanceEnabled(java.lang.Boolean configurablePerformanceEnabled) {
+    this.configurablePerformanceEnabled = configurablePerformanceEnabled;
     return this;
   }
 
@@ -503,6 +544,40 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setNetworks(java.util.List<NetworkConfig> networks) {
     this.networks = networks;
+    return this;
+  }
+
+  /**
+   * Optional. Used to configure performance.
+   * @return value or {@code null} for none
+   */
+  public PerformanceConfig getPerformanceConfig() {
+    return performanceConfig;
+  }
+
+  /**
+   * Optional. Used to configure performance.
+   * @param performanceConfig performanceConfig or {@code null} for none
+   */
+  public Instance setPerformanceConfig(PerformanceConfig performanceConfig) {
+    this.performanceConfig = performanceConfig;
+    return this;
+  }
+
+  /**
+   * Output only. Used for getting performance limits.
+   * @return value or {@code null} for none
+   */
+  public PerformanceLimits getPerformanceLimits() {
+    return performanceLimits;
+  }
+
+  /**
+   * Output only. Used for getting performance limits.
+   * @param performanceLimits performanceLimits or {@code null} for none
+   */
+  public Instance setPerformanceLimits(PerformanceLimits performanceLimits) {
+    this.performanceLimits = performanceLimits;
     return this;
   }
 

@@ -132,7 +132,10 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   private java.lang.String optimizationObjective;
 
   /**
-   * Required. The budget spending speed setting of the insertion order.
+   * Required. The budget spending speed setting of the insertion order. *Warning*: Starting on
+   * **November 5, 2024**, pacing_type `PACING_TYPE_ASAP` will no longer be compatible with
+   * pacing_period `PACING_PERIOD_FLIGHT`. [Read more about this announced change](/display-
+   * video/api/deprecations#features.io_asap).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -403,7 +406,10 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The budget spending speed setting of the insertion order.
+   * Required. The budget spending speed setting of the insertion order. *Warning*: Starting on
+   * **November 5, 2024**, pacing_type `PACING_TYPE_ASAP` will no longer be compatible with
+   * pacing_period `PACING_PERIOD_FLIGHT`. [Read more about this announced change](/display-
+   * video/api/deprecations#features.io_asap).
    * @return value or {@code null} for none
    */
   public Pacing getPacing() {
@@ -411,7 +417,10 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The budget spending speed setting of the insertion order.
+   * Required. The budget spending speed setting of the insertion order. *Warning*: Starting on
+   * **November 5, 2024**, pacing_type `PACING_TYPE_ASAP` will no longer be compatible with
+   * pacing_period `PACING_PERIOD_FLIGHT`. [Read more about this announced change](/display-
+   * video/api/deprecations#features.io_asap).
    * @param pacing pacing or {@code null} for none
    */
   public InsertionOrder setPacing(Pacing pacing) {

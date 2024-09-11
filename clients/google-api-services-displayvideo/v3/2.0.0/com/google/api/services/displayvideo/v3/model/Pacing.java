@@ -63,7 +63,9 @@ public final class Pacing extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The type of pacing that defines how the budget amount will be spent across the
-   * pacing_period.
+   * pacing_period. *Warning*: Starting on **November 5, 2024**, `PACING_TYPE_ASAP` will no longer
+   * be compatible with pacing_period `PACING_PERIOD_FLIGHT` for insertion orders. [Read more about
+   * this announced change](/display-video/api/deprecations#features.io_asap).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,7 +144,9 @@ public final class Pacing extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The type of pacing that defines how the budget amount will be spent across the
-   * pacing_period.
+   * pacing_period. *Warning*: Starting on **November 5, 2024**, `PACING_TYPE_ASAP` will no longer
+   * be compatible with pacing_period `PACING_PERIOD_FLIGHT` for insertion orders. [Read more about
+   * this announced change](/display-video/api/deprecations#features.io_asap).
    * @return value or {@code null} for none
    */
   public java.lang.String getPacingType() {
@@ -151,7 +155,9 @@ public final class Pacing extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The type of pacing that defines how the budget amount will be spent across the
-   * pacing_period.
+   * pacing_period. *Warning*: Starting on **November 5, 2024**, `PACING_TYPE_ASAP` will no longer
+   * be compatible with pacing_period `PACING_PERIOD_FLIGHT` for insertion orders. [Read more about
+   * this announced change](/display-video/api/deprecations#features.io_asap).
    * @param pacingType pacingType or {@code null} for none
    */
   public Pacing setPacingType(java.lang.String pacingType) {

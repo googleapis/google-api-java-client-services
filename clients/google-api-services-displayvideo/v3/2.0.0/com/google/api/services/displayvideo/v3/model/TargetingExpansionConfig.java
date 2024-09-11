@@ -48,7 +48,10 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
   private java.lang.Boolean audienceExpansionSeedListExcluded;
 
   /**
-   * Required. Whether to enable Optimized Targeting for the line item.
+   * Required. Whether to enable Optimized Targeting for the line item. *Warning*: Starting on
+   * **September 30, 2024**, optimized targeting will no longer be compatible with a subset of bid
+   * strategies. [Read more about this announced change](/display-
+   * video/api/deprecations#features.ot_bid_strategies).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +96,10 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Required. Whether to enable Optimized Targeting for the line item.
+   * Required. Whether to enable Optimized Targeting for the line item. *Warning*: Starting on
+   * **September 30, 2024**, optimized targeting will no longer be compatible with a subset of bid
+   * strategies. [Read more about this announced change](/display-
+   * video/api/deprecations#features.ot_bid_strategies).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableOptimizedTargeting() {
@@ -101,7 +107,10 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Required. Whether to enable Optimized Targeting for the line item.
+   * Required. Whether to enable Optimized Targeting for the line item. *Warning*: Starting on
+   * **September 30, 2024**, optimized targeting will no longer be compatible with a subset of bid
+   * strategies. [Read more about this announced change](/display-
+   * video/api/deprecations#features.ot_bid_strategies).
    * @param enableOptimizedTargeting enableOptimizedTargeting or {@code null} for none
    */
   public TargetingExpansionConfig setEnableOptimizedTargeting(java.lang.Boolean enableOptimizedTargeting) {

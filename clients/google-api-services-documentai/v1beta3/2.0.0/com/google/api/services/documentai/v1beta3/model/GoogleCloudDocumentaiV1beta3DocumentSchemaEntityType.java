@@ -40,6 +40,14 @@ public final class GoogleCloudDocumentaiV1beta3DocumentSchemaEntityType extends 
   private java.util.List<java.lang.String> baseTypes;
 
   /**
+   * The description of the entity type. Could be used to provide more information about the entity
+   * type for model calls.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
    * User defined name for the type.
    * The value may be {@code null}.
    */
@@ -97,6 +105,25 @@ public final class GoogleCloudDocumentaiV1beta3DocumentSchemaEntityType extends 
    */
   public GoogleCloudDocumentaiV1beta3DocumentSchemaEntityType setBaseTypes(java.util.List<java.lang.String> baseTypes) {
     this.baseTypes = baseTypes;
+    return this;
+  }
+
+  /**
+   * The description of the entity type. Could be used to provide more information about the entity
+   * type for model calls.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * The description of the entity type. Could be used to provide more information about the entity
+   * type for model calls.
+   * @param description description or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3DocumentSchemaEntityType setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 

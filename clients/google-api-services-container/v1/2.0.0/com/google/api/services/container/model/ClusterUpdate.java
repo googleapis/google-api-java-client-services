@@ -75,6 +75,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private ClusterAutoscaling desiredClusterAutoscaling;
 
   /**
+   * Enable/Disable Compliance Posture features for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CompliancePostureConfig desiredCompliancePostureConfig;
+
+  /**
    * The desired containerd config for the cluster.
    * The value may be {@code null}.
    */
@@ -583,6 +590,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredClusterAutoscaling(ClusterAutoscaling desiredClusterAutoscaling) {
     this.desiredClusterAutoscaling = desiredClusterAutoscaling;
+    return this;
+  }
+
+  /**
+   * Enable/Disable Compliance Posture features for the cluster.
+   * @return value or {@code null} for none
+   */
+  public CompliancePostureConfig getDesiredCompliancePostureConfig() {
+    return desiredCompliancePostureConfig;
+  }
+
+  /**
+   * Enable/Disable Compliance Posture features for the cluster.
+   * @param desiredCompliancePostureConfig desiredCompliancePostureConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredCompliancePostureConfig(CompliancePostureConfig desiredCompliancePostureConfig) {
+    this.desiredCompliancePostureConfig = desiredCompliancePostureConfig;
     return this;
   }
 

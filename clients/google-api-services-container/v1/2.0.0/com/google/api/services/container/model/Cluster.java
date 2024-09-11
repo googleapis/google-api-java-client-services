@@ -76,6 +76,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String clusterIpv4Cidr;
 
   /**
+   * Enable/Disable Compliance Posture features for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CompliancePostureConfig compliancePostureConfig;
+
+  /**
    * Which conditions caused the current cluster state.
    * The value may be {@code null}.
    */
@@ -725,6 +732,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setClusterIpv4Cidr(java.lang.String clusterIpv4Cidr) {
     this.clusterIpv4Cidr = clusterIpv4Cidr;
+    return this;
+  }
+
+  /**
+   * Enable/Disable Compliance Posture features for the cluster.
+   * @return value or {@code null} for none
+   */
+  public CompliancePostureConfig getCompliancePostureConfig() {
+    return compliancePostureConfig;
+  }
+
+  /**
+   * Enable/Disable Compliance Posture features for the cluster.
+   * @param compliancePostureConfig compliancePostureConfig or {@code null} for none
+   */
+  public Cluster setCompliancePostureConfig(CompliancePostureConfig compliancePostureConfig) {
+    this.compliancePostureConfig = compliancePostureConfig;
     return this;
   }
 

@@ -30,14 +30,14 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class FitDescriptor extends com.google.api.client.json.GenericJson {
 
   /**
-   * Fit level.
+   * Output only. Fit level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fitLevel;
 
   /**
-   * Fit level.
+   * Output only. Fit level.
    * @return value or {@code null} for none
    */
   public java.lang.String getFitLevel() {
@@ -45,7 +45,7 @@ public final class FitDescriptor extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Fit level.
+   * Output only. Fit level.
    * @param fitLevel fitLevel or {@code null} for none
    */
   public FitDescriptor setFitLevel(java.lang.String fitLevel) {

@@ -44,6 +44,13 @@ public final class AssetsExportJob extends com.google.api.client.json.GenericJso
   private String createTime;
 
   /**
+   * Export asset inventory details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssetsExportJobInventory inventory;
+
+  /**
    * Optional. Labels as key value pairs. Labels must meet the following constraints: * Keys and
    * values can contain only lowercase letters, numeric characters, underscores, and dashes. * All
    * characters must use UTF-8 encoding, and international characters are allowed. * Keys must start
@@ -69,11 +76,26 @@ public final class AssetsExportJob extends com.google.api.client.json.GenericJso
   private AssetsExportJobNetworkDependencies networkDependencies;
 
   /**
+   * Export asset with performance data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssetsExportJobPerformanceData performanceData;
+
+  /**
    * Output only. Recent non expired executions of the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<AssetsExportJobExecution> recentExecutions;
+
+  /**
+   * Optional. When this value is set to 'true' the response will include all assets, including
+   * those that are hidden.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean showHidden;
 
   /**
    * Export to Cloud Storage files downloadable using signed URIs.
@@ -120,6 +142,23 @@ public final class AssetsExportJob extends com.google.api.client.json.GenericJso
    */
   public AssetsExportJob setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Export asset inventory details.
+   * @return value or {@code null} for none
+   */
+  public AssetsExportJobInventory getInventory() {
+    return inventory;
+  }
+
+  /**
+   * Export asset inventory details.
+   * @param inventory inventory or {@code null} for none
+   */
+  public AssetsExportJob setInventory(AssetsExportJobInventory inventory) {
+    this.inventory = inventory;
     return this;
   }
 
@@ -183,6 +222,23 @@ public final class AssetsExportJob extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Export asset with performance data.
+   * @return value or {@code null} for none
+   */
+  public AssetsExportJobPerformanceData getPerformanceData() {
+    return performanceData;
+  }
+
+  /**
+   * Export asset with performance data.
+   * @param performanceData performanceData or {@code null} for none
+   */
+  public AssetsExportJob setPerformanceData(AssetsExportJobPerformanceData performanceData) {
+    this.performanceData = performanceData;
+    return this;
+  }
+
+  /**
    * Output only. Recent non expired executions of the job.
    * @return value or {@code null} for none
    */
@@ -196,6 +252,25 @@ public final class AssetsExportJob extends com.google.api.client.json.GenericJso
    */
   public AssetsExportJob setRecentExecutions(java.util.List<AssetsExportJobExecution> recentExecutions) {
     this.recentExecutions = recentExecutions;
+    return this;
+  }
+
+  /**
+   * Optional. When this value is set to 'true' the response will include all assets, including
+   * those that are hidden.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getShowHidden() {
+    return showHidden;
+  }
+
+  /**
+   * Optional. When this value is set to 'true' the response will include all assets, including
+   * those that are hidden.
+   * @param showHidden showHidden or {@code null} for none
+   */
+  public AssetsExportJob setShowHidden(java.lang.Boolean showHidden) {
+    this.showHidden = showHidden;
     return this;
   }
 

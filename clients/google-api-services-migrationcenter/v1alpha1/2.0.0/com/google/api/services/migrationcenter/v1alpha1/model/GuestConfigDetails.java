@@ -37,7 +37,7 @@ public final class GuestConfigDetails extends com.google.api.client.json.Generic
   private FstabEntryList fstab;
 
   /**
-   * Hosts file (/etc/hosts).
+   * Output only. Hosts file (/etc/hosts).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class GuestConfigDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Hosts file (/etc/hosts).
+   * Output only. Hosts file (/etc/hosts).
    * @return value or {@code null} for none
    */
   public HostsEntryList getHosts() {
@@ -90,7 +90,7 @@ public final class GuestConfigDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Hosts file (/etc/hosts).
+   * Output only. Hosts file (/etc/hosts).
    * @param hosts hosts or {@code null} for none
    */
   public GuestConfigDetails setHosts(HostsEntryList hosts) {

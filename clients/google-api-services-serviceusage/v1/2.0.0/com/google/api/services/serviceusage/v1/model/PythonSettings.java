@@ -37,6 +37,13 @@ public final class PythonSettings extends com.google.api.client.json.GenericJson
   private CommonLanguageSettings common;
 
   /**
+   * Experimental features to be included during client library generation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExperimentalFeatures experimentalFeatures;
+
+  /**
    * Some settings.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class PythonSettings extends com.google.api.client.json.GenericJson
    */
   public PythonSettings setCommon(CommonLanguageSettings common) {
     this.common = common;
+    return this;
+  }
+
+  /**
+   * Experimental features to be included during client library generation.
+   * @return value or {@code null} for none
+   */
+  public ExperimentalFeatures getExperimentalFeatures() {
+    return experimentalFeatures;
+  }
+
+  /**
+   * Experimental features to be included during client library generation.
+   * @param experimentalFeatures experimentalFeatures or {@code null} for none
+   */
+  public PythonSettings setExperimentalFeatures(ExperimentalFeatures experimentalFeatures) {
+    this.experimentalFeatures = experimentalFeatures;
     return this;
   }
 

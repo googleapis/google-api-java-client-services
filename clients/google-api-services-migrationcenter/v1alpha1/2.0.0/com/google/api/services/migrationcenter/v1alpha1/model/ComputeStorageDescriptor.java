@@ -37,7 +37,7 @@ public final class ComputeStorageDescriptor extends com.google.api.client.json.G
   private java.lang.Integer sizeGb;
 
   /**
-   * Disk type backing the storage.
+   * Output only. Disk type backing the storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class ComputeStorageDescriptor extends com.google.api.client.json.G
   }
 
   /**
-   * Disk type backing the storage.
+   * Output only. Disk type backing the storage.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -69,7 +69,7 @@ public final class ComputeStorageDescriptor extends com.google.api.client.json.G
   }
 
   /**
-   * Disk type backing the storage.
+   * Output only. Disk type backing the storage.
    * @param type type or {@code null} for none
    */
   public ComputeStorageDescriptor setType(java.lang.String type) {

@@ -108,7 +108,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. Performance data for the asset.
+   * Performance data for the asset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -330,7 +330,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Performance data for the asset.
+   * Performance data for the asset.
    * @return value or {@code null} for none
    */
   public AssetPerformanceData getPerformanceData() {
@@ -338,7 +338,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Performance data for the asset.
+   * Performance data for the asset.
    * @param performanceData performanceData or {@code null} for none
    */
   public Asset setPerformanceData(AssetPerformanceData performanceData) {

@@ -17,7 +17,7 @@
 package com.google.api.services.migrationcenter.v1alpha1.model;
 
 /**
- * Contains the result of the assets export.
+ * Contains a single output file of type CSV.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:
@@ -27,88 +27,88 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AssetsExportJobExecutionResult extends com.google.api.client.json.GenericJson {
+public final class CsvOutputFile extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Error encountered during export.
+   * Output only. Number of columns in the file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Status error;
+  private java.lang.Integer columnsCount;
 
   /**
-   * Output only. List of output files.
+   * Output only. Number of rows in the file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private OutputFileList outputFiles;
+  private java.lang.Integer rowCount;
 
   /**
-   * Output only. Signed URLs for downloading export artifacts.
+   * Output only. Signed URI destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private SignedUris signedUris;
+  private SignedUri signedUri;
 
   /**
-   * Output only. Error encountered during export.
+   * Output only. Number of columns in the file.
    * @return value or {@code null} for none
    */
-  public Status getError() {
-    return error;
+  public java.lang.Integer getColumnsCount() {
+    return columnsCount;
   }
 
   /**
-   * Output only. Error encountered during export.
-   * @param error error or {@code null} for none
+   * Output only. Number of columns in the file.
+   * @param columnsCount columnsCount or {@code null} for none
    */
-  public AssetsExportJobExecutionResult setError(Status error) {
-    this.error = error;
+  public CsvOutputFile setColumnsCount(java.lang.Integer columnsCount) {
+    this.columnsCount = columnsCount;
     return this;
   }
 
   /**
-   * Output only. List of output files.
+   * Output only. Number of rows in the file.
    * @return value or {@code null} for none
    */
-  public OutputFileList getOutputFiles() {
-    return outputFiles;
+  public java.lang.Integer getRowCount() {
+    return rowCount;
   }
 
   /**
-   * Output only. List of output files.
-   * @param outputFiles outputFiles or {@code null} for none
+   * Output only. Number of rows in the file.
+   * @param rowCount rowCount or {@code null} for none
    */
-  public AssetsExportJobExecutionResult setOutputFiles(OutputFileList outputFiles) {
-    this.outputFiles = outputFiles;
+  public CsvOutputFile setRowCount(java.lang.Integer rowCount) {
+    this.rowCount = rowCount;
     return this;
   }
 
   /**
-   * Output only. Signed URLs for downloading export artifacts.
+   * Output only. Signed URI destination.
    * @return value or {@code null} for none
    */
-  public SignedUris getSignedUris() {
-    return signedUris;
+  public SignedUri getSignedUri() {
+    return signedUri;
   }
 
   /**
-   * Output only. Signed URLs for downloading export artifacts.
-   * @param signedUris signedUris or {@code null} for none
+   * Output only. Signed URI destination.
+   * @param signedUri signedUri or {@code null} for none
    */
-  public AssetsExportJobExecutionResult setSignedUris(SignedUris signedUris) {
-    this.signedUris = signedUris;
+  public CsvOutputFile setSignedUri(SignedUri signedUri) {
+    this.signedUri = signedUri;
     return this;
   }
 
   @Override
-  public AssetsExportJobExecutionResult set(String fieldName, Object value) {
-    return (AssetsExportJobExecutionResult) super.set(fieldName, value);
+  public CsvOutputFile set(String fieldName, Object value) {
+    return (CsvOutputFile) super.set(fieldName, value);
   }
 
   @Override
-  public AssetsExportJobExecutionResult clone() {
-    return (AssetsExportJobExecutionResult) super.clone();
+  public CsvOutputFile clone() {
+    return (CsvOutputFile) super.clone();
   }
 
 }

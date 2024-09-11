@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.migrationcenter.v1.model;
+package com.google.api.services.migrationcenter.v1alpha1.model;
 
 /**
- * Describes the fit level of an asset for migration to a specific target.
+ * Configuration for asset inventory details exports.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:
@@ -27,40 +27,16 @@ package com.google.api.services.migrationcenter.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class FitDescriptor extends com.google.api.client.json.GenericJson {
+public final class AssetsExportJobInventory extends com.google.api.client.json.GenericJson {
 
-  /**
-   * Output only. Fit level.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String fitLevel;
-
-  /**
-   * Output only. Fit level.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getFitLevel() {
-    return fitLevel;
-  }
-
-  /**
-   * Output only. Fit level.
-   * @param fitLevel fitLevel or {@code null} for none
-   */
-  public FitDescriptor setFitLevel(java.lang.String fitLevel) {
-    this.fitLevel = fitLevel;
-    return this;
+  @Override
+  public AssetsExportJobInventory set(String fieldName, Object value) {
+    return (AssetsExportJobInventory) super.set(fieldName, value);
   }
 
   @Override
-  public FitDescriptor set(String fieldName, Object value) {
-    return (FitDescriptor) super.set(fieldName, value);
-  }
-
-  @Override
-  public FitDescriptor clone() {
-    return (FitDescriptor) super.clone();
+  public AssetsExportJobInventory clone() {
+    return (AssetsExportJobInventory) super.clone();
   }
 
 }

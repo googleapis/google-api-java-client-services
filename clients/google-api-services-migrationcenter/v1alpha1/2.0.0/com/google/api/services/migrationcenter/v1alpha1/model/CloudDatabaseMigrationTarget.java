@@ -37,7 +37,7 @@ public final class CloudDatabaseMigrationTarget extends com.google.api.client.js
   private CloudSqlForMySqlShape cloudSqlForMysqlShape;
 
   /**
-   * Cloud SQL for Postgres database shape.
+   * Cloud SQL for PostgreSQL database shape.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class CloudDatabaseMigrationTarget extends com.google.api.client.js
   }
 
   /**
-   * Cloud SQL for Postgres database shape.
+   * Cloud SQL for PostgreSQL database shape.
    * @return value or {@code null} for none
    */
   public CloudSqlForPostgreSqlShape getCloudSqlForPostgresqlShape() {
@@ -76,7 +76,7 @@ public final class CloudDatabaseMigrationTarget extends com.google.api.client.js
   }
 
   /**
-   * Cloud SQL for Postgres database shape.
+   * Cloud SQL for PostgreSQL database shape.
    * @param cloudSqlForPostgresqlShape cloudSqlForPostgresqlShape or {@code null} for none
    */
   public CloudDatabaseMigrationTarget setCloudSqlForPostgresqlShape(CloudSqlForPostgreSqlShape cloudSqlForPostgresqlShape) {

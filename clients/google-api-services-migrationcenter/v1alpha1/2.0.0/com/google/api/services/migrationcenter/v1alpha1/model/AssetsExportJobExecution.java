@@ -51,6 +51,13 @@ public final class AssetsExportJobExecution extends com.google.api.client.json.G
   private String expireTime;
 
   /**
+   * Output only. Number of assets requested for export after resolving the requested filters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer requestedAssetCount;
+
+  /**
    * Output only. Result of the export execution.
    * The value may be {@code null}.
    */
@@ -112,6 +119,23 @@ public final class AssetsExportJobExecution extends com.google.api.client.json.G
    */
   public AssetsExportJobExecution setExpireTime(String expireTime) {
     this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
+   * Output only. Number of assets requested for export after resolving the requested filters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getRequestedAssetCount() {
+    return requestedAssetCount;
+  }
+
+  /**
+   * Output only. Number of assets requested for export after resolving the requested filters.
+   * @param requestedAssetCount requestedAssetCount or {@code null} for none
+   */
+  public AssetsExportJobExecution setRequestedAssetCount(java.lang.Integer requestedAssetCount) {
+    this.requestedAssetCount = requestedAssetCount;
     return this;
   }
 

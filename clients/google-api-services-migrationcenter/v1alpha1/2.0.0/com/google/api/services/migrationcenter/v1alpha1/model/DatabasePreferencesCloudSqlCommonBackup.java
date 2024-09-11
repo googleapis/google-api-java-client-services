@@ -30,14 +30,14 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class DatabasePreferencesCloudSqlCommonBackup extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Mode of automated backups.
+   * Optional. Automated backup mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String backupMode;
 
   /**
-   * Optional. Mode of automated backups.
+   * Optional. Automated backup mode.
    * @return value or {@code null} for none
    */
   public java.lang.String getBackupMode() {
@@ -45,7 +45,7 @@ public final class DatabasePreferencesCloudSqlCommonBackup extends com.google.ap
   }
 
   /**
-   * Optional. Mode of automated backups.
+   * Optional. Automated backup mode.
    * @param backupMode backupMode or {@code null} for none
    */
   public DatabasePreferencesCloudSqlCommonBackup setBackupMode(java.lang.String backupMode) {

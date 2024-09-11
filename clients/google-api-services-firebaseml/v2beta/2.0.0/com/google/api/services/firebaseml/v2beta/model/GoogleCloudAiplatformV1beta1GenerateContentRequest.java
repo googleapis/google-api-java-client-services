@@ -62,6 +62,17 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentRequest extends co
   private GoogleCloudAiplatformV1beta1GenerationConfig generationConfig;
 
   /**
+   * Optional. The labels with user-defined metadata for the request. It is used for billing and
+   * reporting only. Label keys and values can be no longer than 63 characters (Unicode codepoints)
+   * and can only contain lowercase letters, numeric characters, underscores, and dashes.
+   * International characters are allowed. Label values are optional. Label keys must start with a
+   * letter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Optional. Per request settings for blocking unsafe content. Enforced on
    * GenerateContentResponse.candidates.
    * The value may be {@code null}.
@@ -151,6 +162,31 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentRequest extends co
    */
   public GoogleCloudAiplatformV1beta1GenerateContentRequest setGenerationConfig(GoogleCloudAiplatformV1beta1GenerationConfig generationConfig) {
     this.generationConfig = generationConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The labels with user-defined metadata for the request. It is used for billing and
+   * reporting only. Label keys and values can be no longer than 63 characters (Unicode codepoints)
+   * and can only contain lowercase letters, numeric characters, underscores, and dashes.
+   * International characters are allowed. Label values are optional. Label keys must start with a
+   * letter.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. The labels with user-defined metadata for the request. It is used for billing and
+   * reporting only. Label keys and values can be no longer than 63 characters (Unicode codepoints)
+   * and can only contain lowercase letters, numeric characters, underscores, and dashes.
+   * International characters are allowed. Label values are optional. Label keys must start with a
+   * letter.
+   * @param labels labels or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerateContentRequest setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

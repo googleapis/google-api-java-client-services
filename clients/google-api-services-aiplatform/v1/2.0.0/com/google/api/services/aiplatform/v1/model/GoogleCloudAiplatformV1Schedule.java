@@ -48,6 +48,13 @@ public final class GoogleCloudAiplatformV1Schedule extends com.google.api.client
   private java.lang.Boolean catchUp;
 
   /**
+   * Request for NotebookService.CreateNotebookExecutionJob.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1CreateNotebookExecutionJobRequest createNotebookExecutionJobRequest;
+
+  /**
    * Request for PipelineService.CreatePipelineJob. CreatePipelineJobRequest.parent field is
    * required (format: projects/{project}/locations/{location}).
    * The value may be {@code null}.
@@ -214,6 +221,23 @@ public final class GoogleCloudAiplatformV1Schedule extends com.google.api.client
    */
   public GoogleCloudAiplatformV1Schedule setCatchUp(java.lang.Boolean catchUp) {
     this.catchUp = catchUp;
+    return this;
+  }
+
+  /**
+   * Request for NotebookService.CreateNotebookExecutionJob.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1CreateNotebookExecutionJobRequest getCreateNotebookExecutionJobRequest() {
+    return createNotebookExecutionJobRequest;
+  }
+
+  /**
+   * Request for NotebookService.CreateNotebookExecutionJob.
+   * @param createNotebookExecutionJobRequest createNotebookExecutionJobRequest or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Schedule setCreateNotebookExecutionJobRequest(GoogleCloudAiplatformV1CreateNotebookExecutionJobRequest createNotebookExecutionJobRequest) {
+    this.createNotebookExecutionJobRequest = createNotebookExecutionJobRequest;
     return this;
   }
 

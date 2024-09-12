@@ -42,6 +42,14 @@ public final class MultiClusterRoutingUseAny extends com.google.api.client.json.
   private java.util.List<java.lang.String> clusterIds;
 
   /**
+   * Row affinity sticky routing based on the row key of the request. Requests that span multiple
+   * rows are routed non-deterministically.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RowAffinity rowAffinity;
+
+  /**
    * The set of clusters to route to. The order is ignored; clusters will be tried in order of
    * distance. If left empty, all clusters are eligible.
    * @return value or {@code null} for none
@@ -57,6 +65,25 @@ public final class MultiClusterRoutingUseAny extends com.google.api.client.json.
    */
   public MultiClusterRoutingUseAny setClusterIds(java.util.List<java.lang.String> clusterIds) {
     this.clusterIds = clusterIds;
+    return this;
+  }
+
+  /**
+   * Row affinity sticky routing based on the row key of the request. Requests that span multiple
+   * rows are routed non-deterministically.
+   * @return value or {@code null} for none
+   */
+  public RowAffinity getRowAffinity() {
+    return rowAffinity;
+  }
+
+  /**
+   * Row affinity sticky routing based on the row key of the request. Requests that span multiple
+   * rows are routed non-deterministically.
+   * @param rowAffinity rowAffinity or {@code null} for none
+   */
+  public MultiClusterRoutingUseAny setRowAffinity(RowAffinity rowAffinity) {
+    this.rowAffinity = rowAffinity;
     return this;
   }
 

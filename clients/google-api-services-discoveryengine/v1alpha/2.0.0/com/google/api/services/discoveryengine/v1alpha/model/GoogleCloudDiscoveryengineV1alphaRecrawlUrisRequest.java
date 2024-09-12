@@ -30,12 +30,42 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaRecrawlUrisRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Full resource name of the SiteCredential, such as
+   * `projects/locations/collections/dataStores/siteSearchEngine/siteCredentials`. Only set to crawl
+   * private URIs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String siteCredential;
+
+  /**
    * Required. List of URIs to crawl. At most 10K URIs are supported, otherwise an INVALID_ARGUMENT
    * error is thrown. Each URI should match at least one TargetSite in `site_search_engine`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> uris;
+
+  /**
+   * Optional. Full resource name of the SiteCredential, such as
+   * `projects/locations/collections/dataStores/siteSearchEngine/siteCredentials`. Only set to crawl
+   * private URIs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSiteCredential() {
+    return siteCredential;
+  }
+
+  /**
+   * Optional. Full resource name of the SiteCredential, such as
+   * `projects/locations/collections/dataStores/siteSearchEngine/siteCredentials`. Only set to crawl
+   * private URIs.
+   * @param siteCredential siteCredential or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaRecrawlUrisRequest setSiteCredential(java.lang.String siteCredential) {
+    this.siteCredential = siteCredential;
+    return this;
+  }
 
   /**
    * Required. List of URIs to crawl. At most 10K URIs are supported, otherwise an INVALID_ARGUMENT

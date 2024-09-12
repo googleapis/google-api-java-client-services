@@ -30,16 +30,16 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1betaTuneEngineMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The resource name of the engine that this tune applies to. Format: `projects/{project
-   * _number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+   * Required. The resource name of the engine that this tune applies to. Format:
+   * `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String engine;
 
   /**
-   * Required. The resource name of the engine that this tune applies to. Format: `projects/{project
-   * _number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+   * Required. The resource name of the engine that this tune applies to. Format:
+   * `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getEngine() {
@@ -47,8 +47,8 @@ public final class GoogleCloudDiscoveryengineV1betaTuneEngineMetadata extends co
   }
 
   /**
-   * Required. The resource name of the engine that this tune applies to. Format: `projects/{project
-   * _number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+   * Required. The resource name of the engine that this tune applies to. Format:
+   * `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
    * @param engine engine or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaTuneEngineMetadata setEngine(java.lang.String engine) {

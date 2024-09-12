@@ -25,7 +25,7 @@ package com.google.api.services.discoveryengine.v1alpha;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://cloud.google.com/discovery-engine/docs" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/generative-ai-app-builder/docs/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -2267,9 +2267,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link GetDocumentProcessingConfig#execute()} method to invoke the
            * remote operation.
            *
-           * @param name Required. Full DocumentProcessingConfig resource name. Format: `projects/{project_number}/locations/
-           *        {location_id}/collections/{collection_id}/dataStores/{data_store_id}/documentProcessingCon
-           *        fig`
+           * @param name Required. Full DocumentProcessingConfig resource name. Format: `projects/{project}/locations/{locati
+           *        on}/collections/{collection_id}/dataStores/{data_store_id}/documentProcessingConfig`
            * @return the request
            */
           public GetDocumentProcessingConfig getDocumentProcessingConfig(java.lang.String name) throws java.io.IOException {
@@ -2296,9 +2295,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
              * immediately after invoking the constructor. </p>
              *
-             * @param name Required. Full DocumentProcessingConfig resource name. Format: `projects/{project_number}/locations/
-           *        {location_id}/collections/{collection_id}/dataStores/{data_store_id}/documentProcessingCon
-           *        fig`
+             * @param name Required. Full DocumentProcessingConfig resource name. Format: `projects/{project}/locations/{locati
+           *        on}/collections/{collection_id}/dataStores/{data_store_id}/documentProcessingConfig`
              * @since 1.13
              */
             protected GetDocumentProcessingConfig(java.lang.String name) {
@@ -2377,24 +2375,24 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. Full DocumentProcessingConfig resource name. Format: `projects/{project_num
-             * ber}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/d
-             * ocumentProcessingConfig`
+             * Required. Full DocumentProcessingConfig resource name. Format: `projects/{project}/lo
+             * cations/{location}/collections/{collection_id}/dataStores/{data_store_id}/documentPro
+             * cessingConfig`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Full DocumentProcessingConfig resource name. Format: `projects/{project_number}/locations
-           /{location_id}/collections/{collection_id}/dataStores/{data_store_id}/documentProcessingConfig`
+            /** Required. Full DocumentProcessingConfig resource name. Format: `projects/{project}/locations/{locat
+           ion}/collections/{collection_id}/dataStores/{data_store_id}/documentProcessingConfig`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. Full DocumentProcessingConfig resource name. Format: `projects/{project_num
-             * ber}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/d
-             * ocumentProcessingConfig`
+             * Required. Full DocumentProcessingConfig resource name. Format: `projects/{project}/lo
+             * cations/{location}/collections/{collection_id}/dataStores/{data_store_id}/documentPro
+             * cessingConfig`
              */
             public GetDocumentProcessingConfig setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -6150,9 +6148,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{loc
-             *        ation_id}/collections/{collection_id}/dataStores/{data_store_id}` or `projects/{project_nu
-             *        mber}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+             * @param parent Required. Full resource name of parent data store. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+             *        e_id}` or
+             *        `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaControl}
              * @return the request
              */
@@ -6182,9 +6181,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{loc
-             *        ation_id}/collections/{collection_id}/dataStores/{data_store_id}` or `projects/{project_nu
-             *        mber}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+               * @param parent Required. Full resource name of parent data store. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+             *        e_id}` or
+             *        `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaControl}
                * @since 1.13
                */
@@ -6254,27 +6254,25 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. Full resource name of parent data store. Format: `projects/{project_numbe
-               * r}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
-               * or `projects/{project_number}/locations/{location_id}/collections/{collection_id}/e
-               * ngines/{engine_id}`.
+               * Required. Full resource name of parent data store. Format: `projects/{project}/loca
+               * tions/{location}/collections/{collection_id}/dataStores/{data_store_id}` or `projec
+               * ts/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{lo
-             cation_id}/collections/{collection_id}/dataStores/{data_store_id}` or `projects/{project_number}/lo
-             cations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+              /** Required. Full resource name of parent data store. Format:
+             `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}` or
+             `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. Full resource name of parent data store. Format: `projects/{project_numbe
-               * r}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
-               * or `projects/{project_number}/locations/{location_id}/collections/{collection_id}/e
-               * ngines/{engine_id}`.
+               * Required. Full resource name of parent data store. Format: `projects/{project}/loca
+               * tions/{location}/collections/{collection_id}/dataStores/{data_store_id}` or `projec
+               * ts/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
                */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -6324,8 +6322,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the Control to delete. Format: `projects/{project_number}/locations/{
-             *        location_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+             * @param name Required. The resource name of the Control to delete. Format: `projects/{project}/locations/{locatio
+             *        n}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -6352,8 +6350,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the Control to delete. Format: `projects/{project_number}/locations/{
-             *        location_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+               * @param name Required. The resource name of the Control to delete. Format: `projects/{project}/locations/{locatio
+             *        n}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -6422,24 +6420,24 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the Control to delete. Format: `projects/{project_nu
-               * mber}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id
-               * }/controls/{control_id}`
+               * Required. The resource name of the Control to delete. Format: `projects/{project}/l
+               * ocations/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls
+               * /{control_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the Control to delete. Format: `projects/{project_number}/locations/
-             {location_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+              /** Required. The resource name of the Control to delete. Format: `projects/{project}/locations/{locati
+             on}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The resource name of the Control to delete. Format: `projects/{project_nu
-               * mber}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id
-               * }/controls/{control_id}`
+               * Required. The resource name of the Control to delete. Format: `projects/{project}/l
+               * ocations/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls
+               * /{control_id}`
                */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -6464,8 +6462,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the Control to get. Format: `projects/{project_number}/locations/{loc
-             *        ation_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+             * @param name Required. The resource name of the Control to get. Format: `projects/{project}/locations/{location}/
+             *        collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -6491,8 +6489,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the Control to get. Format: `projects/{project_number}/locations/{loc
-             *        ation_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+               * @param name Required. The resource name of the Control to get. Format: `projects/{project}/locations/{location}/
+             *        collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -6571,24 +6569,24 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the Control to get. Format: `projects/{project_numbe
-               * r}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/c
-               * ontrols/{control_id}`
+               * Required. The resource name of the Control to get. Format: `projects/{project}/loca
+               * tions/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls/{c
+               * ontrol_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the Control to get. Format: `projects/{project_number}/locations/{lo
-             cation_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+              /** Required. The resource name of the Control to get. Format: `projects/{project}/locations/{location}
+             /collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The resource name of the Control to get. Format: `projects/{project_numbe
-               * r}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/c
-               * ontrols/{control_id}`
+               * Required. The resource name of the Control to get. Format: `projects/{project}/loca
+               * tions/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls/{c
+               * ontrol_id}`
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -6613,9 +6611,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/c
-             *        ollections/{collection_id}/dataStores/{data_store_id}` or `projects/{project_number}/locat
-             *        ions/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+             * @param parent Required. The data store resource name. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+             *        e_id}` or
+             *        `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -6641,9 +6640,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/c
-             *        ollections/{collection_id}/dataStores/{data_store_id}` or `projects/{project_number}/locat
-             *        ions/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+               * @param parent Required. The data store resource name. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+             *        e_id}` or
+             *        `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -6722,27 +6722,25 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The data store resource name. Format: `projects/{project_number}/location
-               * s/{location_id}/collections/{collection_id}/dataStores/{data_store_id}` or `project
-               * s/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{eng
-               * ine_id}`.
+               * Required. The data store resource name. Format: `projects/{project}/locations/{loca
+               * tion}/collections/{collection_id}/dataStores/{data_store_id}` or `projects/{project
+               * }/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/
-             collections/{collection_id}/dataStores/{data_store_id}` or `projects/{project_number}/locations/{lo
-             cation_id}/collections/{collection_id}/engines/{engine_id}`.
+              /** Required. The data store resource name. Format:
+             `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}` or
+             `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The data store resource name. Format: `projects/{project_number}/location
-               * s/{location_id}/collections/{collection_id}/dataStores/{data_store_id}` or `project
-               * s/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{eng
-               * ine_id}`.
+               * Required. The data store resource name. Format: `projects/{project}/locations/{loca
+               * tion}/collections/{collection_id}/dataStores/{data_store_id}` or `projects/{project
+               * }/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -7019,11 +7017,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Converse#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the Conversation to get. Format: `projects/{project_number}/locations
-             *        /{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversa
-             *        tion_id}`. Use `projects/{project_number}/locations/{location_id}/collections/{collection}
-             *        /dataStores/{data_store_id}/conversations/-` to activate auto session mode, which
-             *        automatically creates a new conversation inside a ConverseConversation session.
+             * @param name Required. The resource name of the Conversation to get. Format: `projects/{project}/locations/{locat
+             *        ion}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`.
+             *        Use `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_sto
+             *        re_id}/conversations/-` to activate auto session mode, which automatically creates a new
+             *        conversation inside a ConverseConversation session.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaConverseConversationRequest}
              * @return the request
              */
@@ -7051,11 +7049,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Converse#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the Conversation to get. Format: `projects/{project_number}/locations
-             *        /{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversa
-             *        tion_id}`. Use `projects/{project_number}/locations/{location_id}/collections/{collection}
-             *        /dataStores/{data_store_id}/conversations/-` to activate auto session mode, which
-             *        automatically creates a new conversation inside a ConverseConversation session.
+               * @param name Required. The resource name of the Conversation to get. Format: `projects/{project}/locations/{locat
+             *        ion}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`.
+             *        Use `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_sto
+             *        re_id}/conversations/-` to activate auto session mode, which automatically creates a new
+             *        conversation inside a ConverseConversation session.
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaConverseConversationRequest}
                * @since 1.13
                */
@@ -7125,33 +7123,33 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the Conversation to get. Format: `projects/{project_
-               * number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}
-               * /conversations/{conversation_id}`. Use `projects/{project_number}/locations/{locati
-               * on_id}/collections/{collection}/dataStores/{data_store_id}/conversations/-` to
-               * activate auto session mode, which automatically creates a new conversation inside a
-               * ConverseConversation session.
+               * Required. The resource name of the Conversation to get. Format: `projects/{project}
+               * /locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversat
+               * ions/{conversation_id}`. Use `projects/{project}/locations/{location}/collections/{
+               * collection}/dataStores/{data_store_id}/conversations/-` to activate auto session
+               * mode, which automatically creates a new conversation inside a ConverseConversation
+               * session.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the Conversation to get. Format: `projects/{project_number}/location
-             s/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}
-             `. Use `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data
-             _store_id}/conversations/-` to activate auto session mode, which automatically creates a new
-             conversation inside a ConverseConversation session.
+              /** Required. The resource name of the Conversation to get. Format: `projects/{project}/locations/{loca
+             tion}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`. Use `pr
+             ojects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversat
+             ions/-` to activate auto session mode, which automatically creates a new conversation inside a
+             ConverseConversation session.
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The resource name of the Conversation to get. Format: `projects/{project_
-               * number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}
-               * /conversations/{conversation_id}`. Use `projects/{project_number}/locations/{locati
-               * on_id}/collections/{collection}/dataStores/{data_store_id}/conversations/-` to
-               * activate auto session mode, which automatically creates a new conversation inside a
-               * ConverseConversation session.
+               * Required. The resource name of the Conversation to get. Format: `projects/{project}
+               * /locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversat
+               * ions/{conversation_id}`. Use `projects/{project}/locations/{location}/collections/{
+               * collection}/dataStores/{data_store_id}/conversations/-` to activate auto session
+               * mode, which automatically creates a new conversation inside a ConverseConversation
+               * session.
                */
               public Converse setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -7177,8 +7175,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{loc
-             *        ation_id}/collections/{collection}/dataStores/{data_store_id}`
+             * @param parent Required. Full resource name of parent data store. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_i
+             *        d}`
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaConversation}
              * @return the request
              */
@@ -7207,8 +7206,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{loc
-             *        ation_id}/collections/{collection}/dataStores/{data_store_id}`
+               * @param parent Required. Full resource name of parent data store. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_i
+             *        d}`
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaConversation}
                * @since 1.13
                */
@@ -7278,22 +7278,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. Full resource name of parent data store. Format: `projects/{project_numbe
-               * r}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+               * Required. Full resource name of parent data store. Format: `projects/{project}/loca
+               * tions/{location}/collections/{collection}/dataStores/{data_store_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{lo
-             cation_id}/collections/{collection}/dataStores/{data_store_id}`
+              /** Required. Full resource name of parent data store. Format:
+             `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. Full resource name of parent data store. Format: `projects/{project_numbe
-               * r}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+               * Required. Full resource name of parent data store. Format: `projects/{project}/loca
+               * tions/{location}/collections/{collection}/dataStores/{data_store_id}`
                */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -7319,9 +7319,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the Conversation to delete. Format: `projects/{project_number}/locati
-             *        ons/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conve
-             *        rsation_id}`
+             * @param name Required. The resource name of the Conversation to delete. Format: `projects/{project}/locations/{lo
+             *        cation}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id
+             *        }`
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -7349,9 +7349,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the Conversation to delete. Format: `projects/{project_number}/locati
-             *        ons/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conve
-             *        rsation_id}`
+               * @param name Required. The resource name of the Conversation to delete. Format: `projects/{project}/locations/{lo
+             *        cation}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id
+             *        }`
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -7421,15 +7421,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The resource name of the Conversation to delete. Format: `projects/{proje
-               * ct_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_
-               * id}/conversations/{conversation_id}`
+               * ct}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conver
+               * sations/{conversation_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the Conversation to delete. Format: `projects/{project_number}/locat
-             ions/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_
-             id}`
+              /** Required. The resource name of the Conversation to delete. Format: `projects/{project}/locations/{l
+             ocation}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
                */
               public java.lang.String getName() {
                 return name;
@@ -7437,8 +7436,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The resource name of the Conversation to delete. Format: `projects/{proje
-               * ct_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_
-               * id}/conversations/{conversation_id}`
+               * ct}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conver
+               * sations/{conversation_id}`
                */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -7463,9 +7462,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the Conversation to get. Format: `projects/{project_number}/locations
-             *        /{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversa
-             *        tion_id}`
+             * @param name Required. The resource name of the Conversation to get. Format: `projects/{project}/locations/{locat
+             *        ion}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -7491,9 +7489,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the Conversation to get. Format: `projects/{project_number}/locations
-             *        /{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversa
-             *        tion_id}`
+               * @param name Required. The resource name of the Conversation to get. Format: `projects/{project}/locations/{locat
+             *        ion}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -7572,25 +7569,24 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the Conversation to get. Format: `projects/{project_
-               * number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}
-               * /conversations/{conversation_id}`
+               * Required. The resource name of the Conversation to get. Format: `projects/{project}
+               * /locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversat
+               * ions/{conversation_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the Conversation to get. Format: `projects/{project_number}/location
-             s/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}
-             `
+              /** Required. The resource name of the Conversation to get. Format: `projects/{project}/locations/{loca
+             tion}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The resource name of the Conversation to get. Format: `projects/{project_
-               * number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}
-               * /conversations/{conversation_id}`
+               * Required. The resource name of the Conversation to get. Format: `projects/{project}
+               * /locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversat
+               * ions/{conversation_id}`
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -7615,8 +7611,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/c
-             *        ollections/{collection}/dataStores/{data_store_id}`
+             * @param parent Required. The data store resource name. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_i
+             *        d}`
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -7642,8 +7639,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/c
-             *        ollections/{collection}/dataStores/{data_store_id}`
+               * @param parent Required. The data store resource name. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_i
+             *        d}`
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -7722,22 +7720,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The data store resource name. Format: `projects/{project_number}/location
-               * s/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+               * Required. The data store resource name. Format: `projects/{project}/locations/{loca
+               * tion}/collections/{collection}/dataStores/{data_store_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/
-             collections/{collection}/dataStores/{data_store_id}`
+              /** Required. The data store resource name. Format:
+             `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The data store resource name. Format: `projects/{project_number}/location
-               * s/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+               * Required. The data store resource name. Format: `projects/{project}/locations/{loca
+               * tion}/collections/{collection}/dataStores/{data_store_id}`
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -10301,8 +10299,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/location
-             *        s/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
+             * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project}/locations/{loca
+             *        tion}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -10328,8 +10326,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/location
-             *        s/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
+               * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project}/locations/{loca
+             *        tion}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -10409,14 +10407,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The resource name of the ServingConfig to get. Format: `projects/{project
-               * _number}/locations/{location}/collections/{collection}/engines/{engine}/servingConf
-               * igs/{serving_config_id}`
+               * }/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{se
+               * rving_config_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/locatio
-             ns/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
+              /** Required. The resource name of the ServingConfig to get. Format: `projects/{project}/locations/{loc
+             ation}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
                */
               public java.lang.String getName() {
                 return name;
@@ -10424,8 +10422,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The resource name of the ServingConfig to get. Format: `projects/{project
-               * _number}/locations/{location}/collections/{collection}/engines/{engine}/servingConf
-               * igs/{serving_config_id}`
+               * }/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{se
+               * rving_config_id}`
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -10451,7 +10449,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
              * @param parent Required. Full resource name of the parent resource. Format:
-             *        `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
+             *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -10478,7 +10476,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent Required. Full resource name of the parent resource. Format:
-             *        `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
+             *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -10557,22 +10555,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. Full resource name of the parent resource. Format: `projects/{project_num
-               * ber}/locations/{location}/collections/{collection}/engines/{engine}`
+               * Required. Full resource name of the parent resource. Format:
+               * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
               /** Required. Full resource name of the parent resource. Format:
-             `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
+             `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. Full resource name of the parent resource. Format: `projects/{project_num
-               * ber}/locations/{location}/collections/{collection}/engines/{engine}`
+               * Required. Full resource name of the parent resource. Format:
+               * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -11152,8 +11150,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{loc
-             *        ation_id}/collections/{collection}/dataStores/{data_store_id}`
+             * @param parent Required. Full resource name of parent data store. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_i
+             *        d}`
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaSession}
              * @return the request
              */
@@ -11182,8 +11181,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{loc
-             *        ation_id}/collections/{collection}/dataStores/{data_store_id}`
+               * @param parent Required. Full resource name of parent data store. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_i
+             *        d}`
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaSession}
                * @since 1.13
                */
@@ -11253,22 +11253,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. Full resource name of parent data store. Format: `projects/{project_numbe
-               * r}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+               * Required. Full resource name of parent data store. Format: `projects/{project}/loca
+               * tions/{location}/collections/{collection}/dataStores/{data_store_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{lo
-             cation_id}/collections/{collection}/dataStores/{data_store_id}`
+              /** Required. Full resource name of parent data store. Format:
+             `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. Full resource name of parent data store. Format: `projects/{project_numbe
-               * r}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+               * Required. Full resource name of parent data store. Format: `projects/{project}/loca
+               * tions/{location}/collections/{collection}/dataStores/{data_store_id}`
                */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -11293,8 +11293,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the Session to delete. Format: `projects/{project_number}/locations/{
-             *        location_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+             * @param name Required. The resource name of the Session to delete. Format: `projects/{project}/locations/{locatio
+             *        n}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -11321,8 +11321,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the Session to delete. Format: `projects/{project_number}/locations/{
-             *        location_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+               * @param name Required. The resource name of the Session to delete. Format: `projects/{project}/locations/{locatio
+             *        n}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -11391,24 +11391,24 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the Session to delete. Format: `projects/{project_nu
-               * mber}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/s
-               * essions/{session_id}`
+               * Required. The resource name of the Session to delete. Format: `projects/{project}/l
+               * ocations/{location}/collections/{collection}/dataStores/{data_store_id}/sessions/{s
+               * ession_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the Session to delete. Format: `projects/{project_number}/locations/
-             {location_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+              /** Required. The resource name of the Session to delete. Format: `projects/{project}/locations/{locati
+             on}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The resource name of the Session to delete. Format: `projects/{project_nu
-               * mber}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/s
-               * essions/{session_id}`
+               * Required. The resource name of the Session to delete. Format: `projects/{project}/l
+               * ocations/{location}/collections/{collection}/dataStores/{data_store_id}/sessions/{s
+               * ession_id}`
                */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -11433,8 +11433,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the Session to get. Format: `projects/{project_number}/locations/{loc
-             *        ation_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+             * @param name Required. The resource name of the Session to get. Format: `projects/{project}/locations/{location}/
+             *        collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -11460,8 +11460,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the Session to get. Format: `projects/{project_number}/locations/{loc
-             *        ation_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+               * @param name Required. The resource name of the Session to get. Format: `projects/{project}/locations/{location}/
+             *        collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -11540,24 +11540,24 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the Session to get. Format: `projects/{project_numbe
-               * r}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/sess
-               * ions/{session_id}`
+               * Required. The resource name of the Session to get. Format: `projects/{project}/loca
+               * tions/{location}/collections/{collection}/dataStores/{data_store_id}/sessions/{sess
+               * ion_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the Session to get. Format: `projects/{project_number}/locations/{lo
-             cation_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+              /** Required. The resource name of the Session to get. Format: `projects/{project}/locations/{location}
+             /collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The resource name of the Session to get. Format: `projects/{project_numbe
-               * r}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/sess
-               * ions/{session_id}`
+               * Required. The resource name of the Session to get. Format: `projects/{project}/loca
+               * tions/{location}/collections/{collection}/dataStores/{data_store_id}/sessions/{sess
+               * ion_id}`
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -11582,8 +11582,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/c
-             *        ollections/{collection}/dataStores/{data_store_id}`
+             * @param parent Required. The data store resource name. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_i
+             *        d}`
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -11609,8 +11610,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/c
-             *        ollections/{collection}/dataStores/{data_store_id}`
+               * @param parent Required. The data store resource name. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_i
+             *        d}`
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -11689,22 +11691,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The data store resource name. Format: `projects/{project_number}/location
-               * s/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+               * Required. The data store resource name. Format: `projects/{project}/locations/{loca
+               * tion}/collections/{collection}/dataStores/{data_store_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/
-             collections/{collection}/dataStores/{data_store_id}`
+              /** Required. The data store resource name. Format:
+             `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The data store resource name. Format: `projects/{project_number}/location
-               * s/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+               * Required. The data store resource name. Format: `projects/{project}/locations/{loca
+               * tion}/collections/{collection}/dataStores/{data_store_id}`
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -12009,9 +12011,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * This request holds the parameters needed by the discoveryengine server.  After setting any
                * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
                *
-               * @param name Required. The resource name of the Answer to get. Format: `projects/{project_number}/locations/{loca
-               *        tion_id}/collections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answe
-               *        r_id}`
+               * @param name Required. The resource name of the Answer to get. Format: `projects/{project}/locations/{location}/c
+               *        ollections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answer_id}`
                * @return the request
                */
               public Get get(java.lang.String name) throws java.io.IOException {
@@ -12037,9 +12038,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                  * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                  * must be called to initialize this instance immediately after invoking the constructor. </p>
                  *
-                 * @param name Required. The resource name of the Answer to get. Format: `projects/{project_number}/locations/{loca
-               *        tion_id}/collections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answe
-               *        r_id}`
+                 * @param name Required. The resource name of the Answer to get. Format: `projects/{project}/locations/{location}/c
+               *        ollections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answer_id}`
                  * @since 1.13
                  */
                 protected Get(java.lang.String name) {
@@ -12118,24 +12118,24 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * Required. The resource name of the Answer to get. Format: `projects/{project_numb
-                 * er}/locations/{location_id}/collections/{collection}/engines/{engine_id}/sessions
-                 * /{session_id}/answers/{answer_id}`
+                 * Required. The resource name of the Answer to get. Format: `projects/{project}/loc
+                 * ations/{location}/collections/{collection}/engines/{engine_id}/sessions/{session_
+                 * id}/answers/{answer_id}`
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String name;
 
-                /** Required. The resource name of the Answer to get. Format: `projects/{project_number}/locations/{loc
-               ation_id}/collections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answer_id}`
+                /** Required. The resource name of the Answer to get. Format: `projects/{project}/locations/{location}/
+               collections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answer_id}`
                  */
                 public java.lang.String getName() {
                   return name;
                 }
 
                 /**
-                 * Required. The resource name of the Answer to get. Format: `projects/{project_numb
-                 * er}/locations/{location_id}/collections/{collection}/engines/{engine_id}/sessions
-                 * /{session_id}/answers/{answer_id}`
+                 * Required. The resource name of the Answer to get. Format: `projects/{project}/loc
+                 * ations/{location}/collections/{collection}/engines/{engine_id}/sessions/{session_
+                 * id}/answers/{answer_id}`
                  */
                 public Get setName(java.lang.String name) {
                   if (!getSuppressPatternChecks()) {
@@ -15638,8 +15638,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * optional parameters, call the {@link Purge#execute()} method to invoke the remote operation.
              *
              * @param parent Required. The resource name of the catalog under which the events are created. The format is
-             *        `projects/${projectId}/locations/global/collections/{$collectionId}/dataStores/${dataStore
-             *        Id}`
+             *        `projects/{project}/locations/global/collections/{collection}/dataStores/{dataStore}`.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaPurgeUserEventsRequest}
              * @return the request
              */
@@ -15670,8 +15669,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent Required. The resource name of the catalog under which the events are created. The format is
-             *        `projects/${projectId}/locations/global/collections/{$collectionId}/dataStores/${dataStore
-             *        Id}`
+             *        `projects/{project}/locations/global/collections/{collection}/dataStores/{dataStore}`.
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaPurgeUserEventsRequest}
                * @since 1.13
                */
@@ -15742,14 +15740,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The resource name of the catalog under which the events are created. The
-               * format is `projects/${projectId}/locations/global/collections/{$collectionId}/dataS
-               * tores/${dataStoreId}`
+               * format is `projects/{project}/locations/global/collections/{collection}/dataStores/
+               * {dataStore}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
               /** Required. The resource name of the catalog under which the events are created. The format is
-             `projects/${projectId}/locations/global/collections/{$collectionId}/dataStores/${dataStoreId}`
+             `projects/{project}/locations/global/collections/{collection}/dataStores/{dataStore}`.
                */
               public java.lang.String getParent() {
                 return parent;
@@ -15757,8 +15755,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The resource name of the catalog under which the events are created. The
-               * format is `projects/${projectId}/locations/global/collections/{$collectionId}/dataS
-               * tores/${dataStoreId}`
+               * format is `projects/{project}/locations/global/collections/{collection}/dataStores/
+               * {dataStore}`.
                */
               public Purge setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -16653,8 +16651,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            *
            * @param name Immutable. The fully qualified resource name of the engine. This field must be a UTF-8 encoded
            *        string with a length limit of 1024 characters. Format:
-           *        `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
-           *        engine should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an
+           *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}` engine
+           *        should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an
            *        INVALID_ARGUMENT error is returned.
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaEngine}
            * @return the request
@@ -16685,8 +16683,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              *
              * @param name Immutable. The fully qualified resource name of the engine. This field must be a UTF-8 encoded
            *        string with a length limit of 1024 characters. Format:
-           *        `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
-           *        engine should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an
+           *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}` engine
+           *        should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an
            *        INVALID_ARGUMENT error is returned.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaEngine}
              * @since 1.13
@@ -16758,9 +16756,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Immutable. The fully qualified resource name of the engine. This field must be a
-             * UTF-8 encoded string with a length limit of 1024 characters. Format: `projects/{proje
-             * ct_number}/locations/{location}/collections/{collection}/engines/{engine}` engine
-             * should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an
+             * UTF-8 encoded string with a length limit of 1024 characters. Format:
+             * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+             * engine should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an
              * INVALID_ARGUMENT error is returned.
              */
             @com.google.api.client.util.Key
@@ -16768,9 +16766,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /** Immutable. The fully qualified resource name of the engine. This field must be a UTF-8 encoded
            string with a length limit of 1024 characters. Format:
-           `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}` engine
-           should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an INVALID_ARGUMENT error
-           is returned.
+           `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}` engine should
+           be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an INVALID_ARGUMENT error is
+           returned.
              */
             public java.lang.String getName() {
               return name;
@@ -16778,9 +16776,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Immutable. The fully qualified resource name of the engine. This field must be a
-             * UTF-8 encoded string with a length limit of 1024 characters. Format: `projects/{proje
-             * ct_number}/locations/{location}/collections/{collection}/engines/{engine}` engine
-             * should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an
+             * UTF-8 encoded string with a length limit of 1024 characters. Format:
+             * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+             * engine should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an
              * INVALID_ARGUMENT error is returned.
              */
             public Patch setName(java.lang.String name) {
@@ -16831,8 +16829,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link Pause#execute()} method to invoke the remote operation.
            *
            * @param name Required. The name of the engine to pause. Format:
-           *        `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{en
-           *        gine_id}`
+           *        `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaPauseEngineRequest}
            * @return the request
            */
@@ -16862,8 +16859,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The name of the engine to pause. Format:
-           *        `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{en
-           *        gine_id}`
+           *        `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaPauseEngineRequest}
              * @since 1.13
              */
@@ -16933,22 +16929,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. The name of the engine to pause. Format: `projects/{project_number}/locatio
-             * ns/{location_id}/collections/{collection_id}/engines/{engine_id}`
+             * Required. The name of the engine to pause. Format: `projects/{project}/locations/{loc
+             * ation}/collections/{collection_id}/engines/{engine_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The name of the engine to pause. Format:
-           `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+           `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The name of the engine to pause. Format: `projects/{project_number}/locatio
-             * ns/{location_id}/collections/{collection_id}/engines/{engine_id}`
+             * Required. The name of the engine to pause. Format: `projects/{project}/locations/{loc
+             * ation}/collections/{collection_id}/engines/{engine_id}`
              */
             public Pause setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -16975,8 +16971,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link Resume#execute()} method to invoke the remote operation.
            *
            * @param name Required. The name of the engine to resume. Format:
-           *        `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{en
-           *        gine_id}`
+           *        `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaResumeEngineRequest}
            * @return the request
            */
@@ -17006,8 +17001,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The name of the engine to resume. Format:
-           *        `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{en
-           *        gine_id}`
+           *        `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaResumeEngineRequest}
              * @since 1.13
              */
@@ -17077,22 +17071,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. The name of the engine to resume. Format: `projects/{project_number}/locati
-             * ons/{location_id}/collections/{collection_id}/engines/{engine_id}`
+             * Required. The name of the engine to resume. Format: `projects/{project}/locations/{lo
+             * cation}/collections/{collection_id}/engines/{engine_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The name of the engine to resume. Format:
-           `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+           `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The name of the engine to resume. Format: `projects/{project_number}/locati
-             * ons/{location_id}/collections/{collection_id}/engines/{engine_id}`
+             * Required. The name of the engine to resume. Format: `projects/{project}/locations/{lo
+             * cation}/collections/{collection_id}/engines/{engine_id}`
              */
             public Resume setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -17118,8 +17112,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link Tune#execute()} method to invoke the remote operation.
            *
            * @param name Required. The resource name of the engine to tune. Format:
-           *        `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{en
-           *        gine_id}`
+           *        `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaTuneEngineRequest}
            * @return the request
            */
@@ -17147,8 +17140,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The resource name of the engine to tune. Format:
-           *        `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{en
-           *        gine_id}`
+           *        `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaTuneEngineRequest}
              * @since 1.13
              */
@@ -17218,22 +17210,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. The resource name of the engine to tune. Format: `projects/{project_number}
-             * /locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+             * Required. The resource name of the engine to tune. Format: `projects/{project}/locati
+             * ons/{location}/collections/{collection_id}/engines/{engine_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The resource name of the engine to tune. Format:
-           `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+           `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The resource name of the engine to tune. Format: `projects/{project_number}
-             * /locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+             * Required. The resource name of the engine to tune. Format: `projects/{project}/locati
+             * ons/{location}/collections/{collection_id}/engines/{engine_id}`
              */
             public Tune setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -17281,9 +17273,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{loc
-             *        ation_id}/collections/{collection_id}/dataStores/{data_store_id}` or `projects/{project_nu
-             *        mber}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+             * @param parent Required. Full resource name of parent data store. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+             *        e_id}` or
+             *        `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaControl}
              * @return the request
              */
@@ -17313,9 +17306,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{loc
-             *        ation_id}/collections/{collection_id}/dataStores/{data_store_id}` or `projects/{project_nu
-             *        mber}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+               * @param parent Required. Full resource name of parent data store. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+             *        e_id}` or
+             *        `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaControl}
                * @since 1.13
                */
@@ -17385,27 +17379,25 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. Full resource name of parent data store. Format: `projects/{project_numbe
-               * r}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
-               * or `projects/{project_number}/locations/{location_id}/collections/{collection_id}/e
-               * ngines/{engine_id}`.
+               * Required. Full resource name of parent data store. Format: `projects/{project}/loca
+               * tions/{location}/collections/{collection_id}/dataStores/{data_store_id}` or `projec
+               * ts/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{lo
-             cation_id}/collections/{collection_id}/dataStores/{data_store_id}` or `projects/{project_number}/lo
-             cations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+              /** Required. Full resource name of parent data store. Format:
+             `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}` or
+             `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. Full resource name of parent data store. Format: `projects/{project_numbe
-               * r}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}`
-               * or `projects/{project_number}/locations/{location_id}/collections/{collection_id}/e
-               * ngines/{engine_id}`.
+               * Required. Full resource name of parent data store. Format: `projects/{project}/loca
+               * tions/{location}/collections/{collection_id}/dataStores/{data_store_id}` or `projec
+               * ts/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
                */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -17455,8 +17447,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the Control to delete. Format: `projects/{project_number}/locations/{
-             *        location_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+             * @param name Required. The resource name of the Control to delete. Format: `projects/{project}/locations/{locatio
+             *        n}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -17483,8 +17475,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the Control to delete. Format: `projects/{project_number}/locations/{
-             *        location_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+               * @param name Required. The resource name of the Control to delete. Format: `projects/{project}/locations/{locatio
+             *        n}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -17553,24 +17545,24 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the Control to delete. Format: `projects/{project_nu
-               * mber}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id
-               * }/controls/{control_id}`
+               * Required. The resource name of the Control to delete. Format: `projects/{project}/l
+               * ocations/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls
+               * /{control_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the Control to delete. Format: `projects/{project_number}/locations/
-             {location_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+              /** Required. The resource name of the Control to delete. Format: `projects/{project}/locations/{locati
+             on}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The resource name of the Control to delete. Format: `projects/{project_nu
-               * mber}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id
-               * }/controls/{control_id}`
+               * Required. The resource name of the Control to delete. Format: `projects/{project}/l
+               * ocations/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls
+               * /{control_id}`
                */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -17595,8 +17587,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the Control to get. Format: `projects/{project_number}/locations/{loc
-             *        ation_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+             * @param name Required. The resource name of the Control to get. Format: `projects/{project}/locations/{location}/
+             *        collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -17622,8 +17614,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the Control to get. Format: `projects/{project_number}/locations/{loc
-             *        ation_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+               * @param name Required. The resource name of the Control to get. Format: `projects/{project}/locations/{location}/
+             *        collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -17702,24 +17694,24 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the Control to get. Format: `projects/{project_numbe
-               * r}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/c
-               * ontrols/{control_id}`
+               * Required. The resource name of the Control to get. Format: `projects/{project}/loca
+               * tions/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls/{c
+               * ontrol_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the Control to get. Format: `projects/{project_number}/locations/{lo
-             cation_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+              /** Required. The resource name of the Control to get. Format: `projects/{project}/locations/{location}
+             /collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The resource name of the Control to get. Format: `projects/{project_numbe
-               * r}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/c
-               * ontrols/{control_id}`
+               * Required. The resource name of the Control to get. Format: `projects/{project}/loca
+               * tions/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls/{c
+               * ontrol_id}`
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -17744,9 +17736,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/c
-             *        ollections/{collection_id}/dataStores/{data_store_id}` or `projects/{project_number}/locat
-             *        ions/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+             * @param parent Required. The data store resource name. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+             *        e_id}` or
+             *        `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -17772,9 +17765,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/c
-             *        ollections/{collection_id}/dataStores/{data_store_id}` or `projects/{project_number}/locat
-             *        ions/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+               * @param parent Required. The data store resource name. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+             *        e_id}` or
+             *        `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -17853,27 +17847,25 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The data store resource name. Format: `projects/{project_number}/location
-               * s/{location_id}/collections/{collection_id}/dataStores/{data_store_id}` or `project
-               * s/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{eng
-               * ine_id}`.
+               * Required. The data store resource name. Format: `projects/{project}/locations/{loca
+               * tion}/collections/{collection_id}/dataStores/{data_store_id}` or `projects/{project
+               * }/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/
-             collections/{collection_id}/dataStores/{data_store_id}` or `projects/{project_number}/locations/{lo
-             cation_id}/collections/{collection_id}/engines/{engine_id}`.
+              /** Required. The data store resource name. Format:
+             `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}` or
+             `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The data store resource name. Format: `projects/{project_number}/location
-               * s/{location_id}/collections/{collection_id}/dataStores/{data_store_id}` or `project
-               * s/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{eng
-               * ine_id}`.
+               * Required. The data store resource name. Format: `projects/{project}/locations/{loca
+               * tion}/collections/{collection_id}/dataStores/{data_store_id}` or `projects/{project
+               * }/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -18150,11 +18142,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Converse#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the Conversation to get. Format: `projects/{project_number}/locations
-             *        /{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversa
-             *        tion_id}`. Use `projects/{project_number}/locations/{location_id}/collections/{collection}
-             *        /dataStores/{data_store_id}/conversations/-` to activate auto session mode, which
-             *        automatically creates a new conversation inside a ConverseConversation session.
+             * @param name Required. The resource name of the Conversation to get. Format: `projects/{project}/locations/{locat
+             *        ion}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`.
+             *        Use `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_sto
+             *        re_id}/conversations/-` to activate auto session mode, which automatically creates a new
+             *        conversation inside a ConverseConversation session.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaConverseConversationRequest}
              * @return the request
              */
@@ -18182,11 +18174,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Converse#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the Conversation to get. Format: `projects/{project_number}/locations
-             *        /{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversa
-             *        tion_id}`. Use `projects/{project_number}/locations/{location_id}/collections/{collection}
-             *        /dataStores/{data_store_id}/conversations/-` to activate auto session mode, which
-             *        automatically creates a new conversation inside a ConverseConversation session.
+               * @param name Required. The resource name of the Conversation to get. Format: `projects/{project}/locations/{locat
+             *        ion}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`.
+             *        Use `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_sto
+             *        re_id}/conversations/-` to activate auto session mode, which automatically creates a new
+             *        conversation inside a ConverseConversation session.
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaConverseConversationRequest}
                * @since 1.13
                */
@@ -18256,33 +18248,33 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the Conversation to get. Format: `projects/{project_
-               * number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}
-               * /conversations/{conversation_id}`. Use `projects/{project_number}/locations/{locati
-               * on_id}/collections/{collection}/dataStores/{data_store_id}/conversations/-` to
-               * activate auto session mode, which automatically creates a new conversation inside a
-               * ConverseConversation session.
+               * Required. The resource name of the Conversation to get. Format: `projects/{project}
+               * /locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversat
+               * ions/{conversation_id}`. Use `projects/{project}/locations/{location}/collections/{
+               * collection}/dataStores/{data_store_id}/conversations/-` to activate auto session
+               * mode, which automatically creates a new conversation inside a ConverseConversation
+               * session.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the Conversation to get. Format: `projects/{project_number}/location
-             s/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}
-             `. Use `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data
-             _store_id}/conversations/-` to activate auto session mode, which automatically creates a new
-             conversation inside a ConverseConversation session.
+              /** Required. The resource name of the Conversation to get. Format: `projects/{project}/locations/{loca
+             tion}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`. Use `pr
+             ojects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversat
+             ions/-` to activate auto session mode, which automatically creates a new conversation inside a
+             ConverseConversation session.
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The resource name of the Conversation to get. Format: `projects/{project_
-               * number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}
-               * /conversations/{conversation_id}`. Use `projects/{project_number}/locations/{locati
-               * on_id}/collections/{collection}/dataStores/{data_store_id}/conversations/-` to
-               * activate auto session mode, which automatically creates a new conversation inside a
-               * ConverseConversation session.
+               * Required. The resource name of the Conversation to get. Format: `projects/{project}
+               * /locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversat
+               * ions/{conversation_id}`. Use `projects/{project}/locations/{location}/collections/{
+               * collection}/dataStores/{data_store_id}/conversations/-` to activate auto session
+               * mode, which automatically creates a new conversation inside a ConverseConversation
+               * session.
                */
               public Converse setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -18308,8 +18300,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{loc
-             *        ation_id}/collections/{collection}/dataStores/{data_store_id}`
+             * @param parent Required. Full resource name of parent data store. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_i
+             *        d}`
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaConversation}
              * @return the request
              */
@@ -18338,8 +18331,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{loc
-             *        ation_id}/collections/{collection}/dataStores/{data_store_id}`
+               * @param parent Required. Full resource name of parent data store. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_i
+             *        d}`
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaConversation}
                * @since 1.13
                */
@@ -18409,22 +18403,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. Full resource name of parent data store. Format: `projects/{project_numbe
-               * r}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+               * Required. Full resource name of parent data store. Format: `projects/{project}/loca
+               * tions/{location}/collections/{collection}/dataStores/{data_store_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{lo
-             cation_id}/collections/{collection}/dataStores/{data_store_id}`
+              /** Required. Full resource name of parent data store. Format:
+             `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. Full resource name of parent data store. Format: `projects/{project_numbe
-               * r}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+               * Required. Full resource name of parent data store. Format: `projects/{project}/loca
+               * tions/{location}/collections/{collection}/dataStores/{data_store_id}`
                */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -18450,9 +18444,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the Conversation to delete. Format: `projects/{project_number}/locati
-             *        ons/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conve
-             *        rsation_id}`
+             * @param name Required. The resource name of the Conversation to delete. Format: `projects/{project}/locations/{lo
+             *        cation}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id
+             *        }`
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -18480,9 +18474,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the Conversation to delete. Format: `projects/{project_number}/locati
-             *        ons/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conve
-             *        rsation_id}`
+               * @param name Required. The resource name of the Conversation to delete. Format: `projects/{project}/locations/{lo
+             *        cation}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id
+             *        }`
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -18552,15 +18546,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The resource name of the Conversation to delete. Format: `projects/{proje
-               * ct_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_
-               * id}/conversations/{conversation_id}`
+               * ct}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conver
+               * sations/{conversation_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the Conversation to delete. Format: `projects/{project_number}/locat
-             ions/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_
-             id}`
+              /** Required. The resource name of the Conversation to delete. Format: `projects/{project}/locations/{l
+             ocation}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
                */
               public java.lang.String getName() {
                 return name;
@@ -18568,8 +18561,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The resource name of the Conversation to delete. Format: `projects/{proje
-               * ct_number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_
-               * id}/conversations/{conversation_id}`
+               * ct}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conver
+               * sations/{conversation_id}`
                */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -18594,9 +18587,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the Conversation to get. Format: `projects/{project_number}/locations
-             *        /{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversa
-             *        tion_id}`
+             * @param name Required. The resource name of the Conversation to get. Format: `projects/{project}/locations/{locat
+             *        ion}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -18622,9 +18614,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the Conversation to get. Format: `projects/{project_number}/locations
-             *        /{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversa
-             *        tion_id}`
+               * @param name Required. The resource name of the Conversation to get. Format: `projects/{project}/locations/{locat
+             *        ion}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -18703,25 +18694,24 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the Conversation to get. Format: `projects/{project_
-               * number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}
-               * /conversations/{conversation_id}`
+               * Required. The resource name of the Conversation to get. Format: `projects/{project}
+               * /locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversat
+               * ions/{conversation_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the Conversation to get. Format: `projects/{project_number}/location
-             s/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}
-             `
+              /** Required. The resource name of the Conversation to get. Format: `projects/{project}/locations/{loca
+             tion}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The resource name of the Conversation to get. Format: `projects/{project_
-               * number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}
-               * /conversations/{conversation_id}`
+               * Required. The resource name of the Conversation to get. Format: `projects/{project}
+               * /locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversat
+               * ions/{conversation_id}`
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -18746,8 +18736,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/c
-             *        ollections/{collection}/dataStores/{data_store_id}`
+             * @param parent Required. The data store resource name. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_i
+             *        d}`
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -18773,8 +18764,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/c
-             *        ollections/{collection}/dataStores/{data_store_id}`
+               * @param parent Required. The data store resource name. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_i
+             *        d}`
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -18853,22 +18845,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The data store resource name. Format: `projects/{project_number}/location
-               * s/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+               * Required. The data store resource name. Format: `projects/{project}/locations/{loca
+               * tion}/collections/{collection}/dataStores/{data_store_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/
-             collections/{collection}/dataStores/{data_store_id}`
+              /** Required. The data store resource name. Format:
+             `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The data store resource name. Format: `projects/{project_number}/location
-               * s/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+               * Required. The data store resource name. Format: `projects/{project}/locations/{loca
+               * tion}/collections/{collection}/dataStores/{data_store_id}`
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -19685,8 +19677,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/location
-             *        s/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
+             * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project}/locations/{loca
+             *        tion}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -19712,8 +19704,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/location
-             *        s/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
+               * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project}/locations/{loca
+             *        tion}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -19793,14 +19785,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The resource name of the ServingConfig to get. Format: `projects/{project
-               * _number}/locations/{location}/collections/{collection}/engines/{engine}/servingConf
-               * igs/{serving_config_id}`
+               * }/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{se
+               * rving_config_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/locatio
-             ns/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
+              /** Required. The resource name of the ServingConfig to get. Format: `projects/{project}/locations/{loc
+             ation}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
                */
               public java.lang.String getName() {
                 return name;
@@ -19808,8 +19800,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The resource name of the ServingConfig to get. Format: `projects/{project
-               * _number}/locations/{location}/collections/{collection}/engines/{engine}/servingConf
-               * igs/{serving_config_id}`
+               * }/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{se
+               * rving_config_id}`
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -19835,7 +19827,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
              * @param parent Required. Full resource name of the parent resource. Format:
-             *        `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
+             *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -19862,7 +19854,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent Required. Full resource name of the parent resource. Format:
-             *        `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
+             *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -19941,22 +19933,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. Full resource name of the parent resource. Format: `projects/{project_num
-               * ber}/locations/{location}/collections/{collection}/engines/{engine}`
+               * Required. Full resource name of the parent resource. Format:
+               * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
               /** Required. Full resource name of the parent resource. Format:
-             `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
+             `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. Full resource name of the parent resource. Format: `projects/{project_num
-               * ber}/locations/{location}/collections/{collection}/engines/{engine}`
+               * Required. Full resource name of the parent resource. Format:
+               * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -20536,8 +20528,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{loc
-             *        ation_id}/collections/{collection}/dataStores/{data_store_id}`
+             * @param parent Required. Full resource name of parent data store. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_i
+             *        d}`
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaSession}
              * @return the request
              */
@@ -20566,8 +20559,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{loc
-             *        ation_id}/collections/{collection}/dataStores/{data_store_id}`
+               * @param parent Required. Full resource name of parent data store. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_i
+             *        d}`
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaSession}
                * @since 1.13
                */
@@ -20637,22 +20631,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. Full resource name of parent data store. Format: `projects/{project_numbe
-               * r}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+               * Required. Full resource name of parent data store. Format: `projects/{project}/loca
+               * tions/{location}/collections/{collection}/dataStores/{data_store_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{lo
-             cation_id}/collections/{collection}/dataStores/{data_store_id}`
+              /** Required. Full resource name of parent data store. Format:
+             `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. Full resource name of parent data store. Format: `projects/{project_numbe
-               * r}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+               * Required. Full resource name of parent data store. Format: `projects/{project}/loca
+               * tions/{location}/collections/{collection}/dataStores/{data_store_id}`
                */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -20677,8 +20671,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the Session to delete. Format: `projects/{project_number}/locations/{
-             *        location_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+             * @param name Required. The resource name of the Session to delete. Format: `projects/{project}/locations/{locatio
+             *        n}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -20705,8 +20699,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the Session to delete. Format: `projects/{project_number}/locations/{
-             *        location_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+               * @param name Required. The resource name of the Session to delete. Format: `projects/{project}/locations/{locatio
+             *        n}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -20775,24 +20769,24 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the Session to delete. Format: `projects/{project_nu
-               * mber}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/s
-               * essions/{session_id}`
+               * Required. The resource name of the Session to delete. Format: `projects/{project}/l
+               * ocations/{location}/collections/{collection}/dataStores/{data_store_id}/sessions/{s
+               * ession_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the Session to delete. Format: `projects/{project_number}/locations/
-             {location_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+              /** Required. The resource name of the Session to delete. Format: `projects/{project}/locations/{locati
+             on}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The resource name of the Session to delete. Format: `projects/{project_nu
-               * mber}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/s
-               * essions/{session_id}`
+               * Required. The resource name of the Session to delete. Format: `projects/{project}/l
+               * ocations/{location}/collections/{collection}/dataStores/{data_store_id}/sessions/{s
+               * ession_id}`
                */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -20817,8 +20811,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the Session to get. Format: `projects/{project_number}/locations/{loc
-             *        ation_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+             * @param name Required. The resource name of the Session to get. Format: `projects/{project}/locations/{location}/
+             *        collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -20844,8 +20838,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the Session to get. Format: `projects/{project_number}/locations/{loc
-             *        ation_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+               * @param name Required. The resource name of the Session to get. Format: `projects/{project}/locations/{location}/
+             *        collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -20924,24 +20918,24 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the Session to get. Format: `projects/{project_numbe
-               * r}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/sess
-               * ions/{session_id}`
+               * Required. The resource name of the Session to get. Format: `projects/{project}/loca
+               * tions/{location}/collections/{collection}/dataStores/{data_store_id}/sessions/{sess
+               * ion_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the Session to get. Format: `projects/{project_number}/locations/{lo
-             cation_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+              /** Required. The resource name of the Session to get. Format: `projects/{project}/locations/{location}
+             /collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The resource name of the Session to get. Format: `projects/{project_numbe
-               * r}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/sess
-               * ions/{session_id}`
+               * Required. The resource name of the Session to get. Format: `projects/{project}/loca
+               * tions/{location}/collections/{collection}/dataStores/{data_store_id}/sessions/{sess
+               * ion_id}`
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -20966,8 +20960,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/c
-             *        ollections/{collection}/dataStores/{data_store_id}`
+             * @param parent Required. The data store resource name. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_i
+             *        d}`
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -20993,8 +20988,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/c
-             *        ollections/{collection}/dataStores/{data_store_id}`
+               * @param parent Required. The data store resource name. Format:
+             *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_i
+             *        d}`
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -21073,22 +21069,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The data store resource name. Format: `projects/{project_number}/location
-               * s/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+               * Required. The data store resource name. Format: `projects/{project}/locations/{loca
+               * tion}/collections/{collection}/dataStores/{data_store_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/
-             collections/{collection}/dataStores/{data_store_id}`
+              /** Required. The data store resource name. Format:
+             `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The data store resource name. Format: `projects/{project_number}/location
-               * s/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+               * Required. The data store resource name. Format: `projects/{project}/locations/{loca
+               * tion}/collections/{collection}/dataStores/{data_store_id}`
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -21393,9 +21389,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * This request holds the parameters needed by the discoveryengine server.  After setting any
                * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
                *
-               * @param name Required. The resource name of the Answer to get. Format: `projects/{project_number}/locations/{loca
-               *        tion_id}/collections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answe
-               *        r_id}`
+               * @param name Required. The resource name of the Answer to get. Format: `projects/{project}/locations/{location}/c
+               *        ollections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answer_id}`
                * @return the request
                */
               public Get get(java.lang.String name) throws java.io.IOException {
@@ -21421,9 +21416,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                  * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                  * must be called to initialize this instance immediately after invoking the constructor. </p>
                  *
-                 * @param name Required. The resource name of the Answer to get. Format: `projects/{project_number}/locations/{loca
-               *        tion_id}/collections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answe
-               *        r_id}`
+                 * @param name Required. The resource name of the Answer to get. Format: `projects/{project}/locations/{location}/c
+               *        ollections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answer_id}`
                  * @since 1.13
                  */
                 protected Get(java.lang.String name) {
@@ -21502,24 +21496,24 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * Required. The resource name of the Answer to get. Format: `projects/{project_numb
-                 * er}/locations/{location_id}/collections/{collection}/engines/{engine_id}/sessions
-                 * /{session_id}/answers/{answer_id}`
+                 * Required. The resource name of the Answer to get. Format: `projects/{project}/loc
+                 * ations/{location}/collections/{collection}/engines/{engine_id}/sessions/{session_
+                 * id}/answers/{answer_id}`
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String name;
 
-                /** Required. The resource name of the Answer to get. Format: `projects/{project_number}/locations/{loc
-               ation_id}/collections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answer_id}`
+                /** Required. The resource name of the Answer to get. Format: `projects/{project}/locations/{location}/
+               collections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answer_id}`
                  */
                 public java.lang.String getName() {
                   return name;
                 }
 
                 /**
-                 * Required. The resource name of the Answer to get. Format: `projects/{project_numb
-                 * er}/locations/{location_id}/collections/{collection}/engines/{engine_id}/sessions
-                 * /{session_id}/answers/{answer_id}`
+                 * Required. The resource name of the Answer to get. Format: `projects/{project}/loc
+                 * ations/{location}/collections/{collection}/engines/{engine_id}/sessions/{session_
+                 * id}/answers/{answer_id}`
                  */
                 public Get setName(java.lang.String name) {
                   if (!getSuppressPatternChecks()) {
@@ -22741,9 +22735,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link GetDocumentProcessingConfig#execute()} method to invoke the
          * remote operation.
          *
-         * @param name Required. Full DocumentProcessingConfig resource name. Format: `projects/{project_number}/locations/
-         *        {location_id}/collections/{collection_id}/dataStores/{data_store_id}/documentProcessingCon
-         *        fig`
+         * @param name Required. Full DocumentProcessingConfig resource name. Format: `projects/{project}/locations/{locati
+         *        on}/collections/{collection_id}/dataStores/{data_store_id}/documentProcessingConfig`
          * @return the request
          */
         public GetDocumentProcessingConfig getDocumentProcessingConfig(java.lang.String name) throws java.io.IOException {
@@ -22770,9 +22763,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
            * immediately after invoking the constructor. </p>
            *
-           * @param name Required. Full DocumentProcessingConfig resource name. Format: `projects/{project_number}/locations/
-         *        {location_id}/collections/{collection_id}/dataStores/{data_store_id}/documentProcessingCon
-         *        fig`
+           * @param name Required. Full DocumentProcessingConfig resource name. Format: `projects/{project}/locations/{locati
+         *        on}/collections/{collection_id}/dataStores/{data_store_id}/documentProcessingConfig`
            * @since 1.13
            */
           protected GetDocumentProcessingConfig(java.lang.String name) {
@@ -22851,24 +22843,24 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Full DocumentProcessingConfig resource name. Format: `projects/{project_numbe
-           * r}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/docum
-           * entProcessingConfig`
+           * Required. Full DocumentProcessingConfig resource name. Format: `projects/{project}/loca
+           * tions/{location}/collections/{collection_id}/dataStores/{data_store_id}/documentProcess
+           * ingConfig`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Full DocumentProcessingConfig resource name. Format: `projects/{project_number}/locations
-         /{location_id}/collections/{collection_id}/dataStores/{data_store_id}/documentProcessingConfig`
+          /** Required. Full DocumentProcessingConfig resource name. Format: `projects/{project}/locations/{locat
+         ion}/collections/{collection_id}/dataStores/{data_store_id}/documentProcessingConfig`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Full DocumentProcessingConfig resource name. Format: `projects/{project_numbe
-           * r}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/docum
-           * entProcessingConfig`
+           * Required. Full DocumentProcessingConfig resource name. Format: `projects/{project}/loca
+           * tions/{location}/collections/{collection_id}/dataStores/{data_store_id}/documentProcess
+           * ingConfig`
            */
           public GetDocumentProcessingConfig setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -26466,9 +26458,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the discoveryengine server.  After setting any
            * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{loc
-           *        ation_id}/collections/{collection_id}/dataStores/{data_store_id}` or `projects/{project_nu
-           *        mber}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+           * @param parent Required. Full resource name of parent data store. Format:
+           *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+           *        e_id}` or
+           *        `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaControl}
            * @return the request
            */
@@ -26498,9 +26491,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{loc
-           *        ation_id}/collections/{collection_id}/dataStores/{data_store_id}` or `projects/{project_nu
-           *        mber}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+             * @param parent Required. Full resource name of parent data store. Format:
+           *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+           *        e_id}` or
+           *        `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaControl}
              * @since 1.13
              */
@@ -26570,27 +26564,25 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. Full resource name of parent data store. Format: `projects/{project_number}
-             * /locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}` or `
-             * projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines
-             * /{engine_id}`.
+             * Required. Full resource name of parent data store. Format: `projects/{project}/locati
+             * ons/{location}/collections/{collection_id}/dataStores/{data_store_id}` or `projects/{
+             * project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{lo
-           cation_id}/collections/{collection_id}/dataStores/{data_store_id}` or `projects/{project_number}/lo
-           cations/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+            /** Required. Full resource name of parent data store. Format:
+           `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}` or
+           `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. Full resource name of parent data store. Format: `projects/{project_number}
-             * /locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}` or `
-             * projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines
-             * /{engine_id}`.
+             * Required. Full resource name of parent data store. Format: `projects/{project}/locati
+             * ons/{location}/collections/{collection_id}/dataStores/{data_store_id}` or `projects/{
+             * project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -26640,8 +26632,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the discoveryengine server.  After setting any
            * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the Control to delete. Format: `projects/{project_number}/locations/{
-           *        location_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+           * @param name Required. The resource name of the Control to delete. Format: `projects/{project}/locations/{locatio
+           *        n}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -26668,8 +26660,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the Control to delete. Format: `projects/{project_number}/locations/{
-           *        location_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+             * @param name Required. The resource name of the Control to delete. Format: `projects/{project}/locations/{locatio
+           *        n}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -26738,24 +26730,24 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. The resource name of the Control to delete. Format: `projects/{project_numb
-             * er}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/co
-             * ntrols/{control_id}`
+             * Required. The resource name of the Control to delete. Format: `projects/{project}/loc
+             * ations/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls/{co
+             * ntrol_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the Control to delete. Format: `projects/{project_number}/locations/
-           {location_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+            /** Required. The resource name of the Control to delete. Format: `projects/{project}/locations/{locati
+           on}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The resource name of the Control to delete. Format: `projects/{project_numb
-             * er}/locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/co
-             * ntrols/{control_id}`
+             * Required. The resource name of the Control to delete. Format: `projects/{project}/loc
+             * ations/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls/{co
+             * ntrol_id}`
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -26780,8 +26772,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the discoveryengine server.  After setting any
            * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the Control to get. Format: `projects/{project_number}/locations/{loc
-           *        ation_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+           * @param name Required. The resource name of the Control to get. Format: `projects/{project}/locations/{location}/
+           *        collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -26807,8 +26799,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the Control to get. Format: `projects/{project_number}/locations/{loc
-           *        ation_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+             * @param name Required. The resource name of the Control to get. Format: `projects/{project}/locations/{location}/
+           *        collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -26887,24 +26879,24 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. The resource name of the Control to get. Format: `projects/{project_number}
-             * /locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/contr
-             * ols/{control_id}`
+             * Required. The resource name of the Control to get. Format: `projects/{project}/locati
+             * ons/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls/{contr
+             * ol_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the Control to get. Format: `projects/{project_number}/locations/{lo
-           cation_id}/collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
+            /** Required. The resource name of the Control to get. Format: `projects/{project}/locations/{location}
+           /collections/{collection_id}/dataStores/{data_store_id}/controls/{control_id}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The resource name of the Control to get. Format: `projects/{project_number}
-             * /locations/{location_id}/collections/{collection_id}/dataStores/{data_store_id}/contr
-             * ols/{control_id}`
+             * Required. The resource name of the Control to get. Format: `projects/{project}/locati
+             * ons/{location}/collections/{collection_id}/dataStores/{data_store_id}/controls/{contr
+             * ol_id}`
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -26929,9 +26921,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the discoveryengine server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/c
-           *        ollections/{collection_id}/dataStores/{data_store_id}` or `projects/{project_number}/locat
-           *        ions/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+           * @param parent Required. The data store resource name. Format:
+           *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+           *        e_id}` or
+           *        `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -26957,9 +26950,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/c
-           *        ollections/{collection_id}/dataStores/{data_store_id}` or `projects/{project_number}/locat
-           *        ions/{location_id}/collections/{collection_id}/engines/{engine_id}`.
+             * @param parent Required. The data store resource name. Format:
+           *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+           *        e_id}` or
+           *        `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -27038,27 +27032,25 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. The data store resource name. Format: `projects/{project_number}/locations/
-             * {location_id}/collections/{collection_id}/dataStores/{data_store_id}` or `projects/{p
-             * roject_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id
-             * }`.
+             * Required. The data store resource name. Format: `projects/{project}/locations/{locati
+             * on}/collections/{collection_id}/dataStores/{data_store_id}` or `projects/{project}/lo
+             * cations/{location}/collections/{collection_id}/engines/{engine_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/
-           collections/{collection_id}/dataStores/{data_store_id}` or `projects/{project_number}/locations/{lo
-           cation_id}/collections/{collection_id}/engines/{engine_id}`.
+            /** Required. The data store resource name. Format:
+           `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}` or
+           `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The data store resource name. Format: `projects/{project_number}/locations/
-             * {location_id}/collections/{collection_id}/dataStores/{data_store_id}` or `projects/{p
-             * roject_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id
-             * }`.
+             * Required. The data store resource name. Format: `projects/{project}/locations/{locati
+             * on}/collections/{collection_id}/dataStores/{data_store_id}` or `projects/{project}/lo
+             * cations/{location}/collections/{collection_id}/engines/{engine_id}`.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -27335,11 +27327,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the discoveryengine server.  After setting any
            * optional parameters, call the {@link Converse#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the Conversation to get. Format: `projects/{project_number}/locations
-           *        /{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversa
-           *        tion_id}`. Use `projects/{project_number}/locations/{location_id}/collections/{collection}
-           *        /dataStores/{data_store_id}/conversations/-` to activate auto session mode, which
-           *        automatically creates a new conversation inside a ConverseConversation session.
+           * @param name Required. The resource name of the Conversation to get. Format: `projects/{project}/locations/{locat
+           *        ion}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`.
+           *        Use `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_sto
+           *        re_id}/conversations/-` to activate auto session mode, which automatically creates a new
+           *        conversation inside a ConverseConversation session.
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaConverseConversationRequest}
            * @return the request
            */
@@ -27367,11 +27359,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Converse#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the Conversation to get. Format: `projects/{project_number}/locations
-           *        /{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversa
-           *        tion_id}`. Use `projects/{project_number}/locations/{location_id}/collections/{collection}
-           *        /dataStores/{data_store_id}/conversations/-` to activate auto session mode, which
-           *        automatically creates a new conversation inside a ConverseConversation session.
+             * @param name Required. The resource name of the Conversation to get. Format: `projects/{project}/locations/{locat
+           *        ion}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`.
+           *        Use `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_sto
+           *        re_id}/conversations/-` to activate auto session mode, which automatically creates a new
+           *        conversation inside a ConverseConversation session.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaConverseConversationRequest}
              * @since 1.13
              */
@@ -27441,33 +27433,31 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. The resource name of the Conversation to get. Format: `projects/{project_nu
-             * mber}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/con
-             * versations/{conversation_id}`. Use `projects/{project_number}/locations/{location_id}
-             * /collections/{collection}/dataStores/{data_store_id}/conversations/-` to activate
-             * auto session mode, which automatically creates a new conversation inside a
-             * ConverseConversation session.
+             * Required. The resource name of the Conversation to get. Format: `projects/{project}/l
+             * ocations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations
+             * /{conversation_id}`. Use `projects/{project}/locations/{location}/collections/{collec
+             * tion}/dataStores/{data_store_id}/conversations/-` to activate auto session mode,
+             * which automatically creates a new conversation inside a ConverseConversation session.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the Conversation to get. Format: `projects/{project_number}/location
-           s/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}
-           `. Use `projects/{project_number}/locations/{location_id}/collections/{collection}/dataStores/{data
-           _store_id}/conversations/-` to activate auto session mode, which automatically creates a new
-           conversation inside a ConverseConversation session.
+            /** Required. The resource name of the Conversation to get. Format: `projects/{project}/locations/{loca
+           tion}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`. Use `pr
+           ojects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversat
+           ions/-` to activate auto session mode, which automatically creates a new conversation inside a
+           ConverseConversation session.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The resource name of the Conversation to get. Format: `projects/{project_nu
-             * mber}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/con
-             * versations/{conversation_id}`. Use `projects/{project_number}/locations/{location_id}
-             * /collections/{collection}/dataStores/{data_store_id}/conversations/-` to activate
-             * auto session mode, which automatically creates a new conversation inside a
-             * ConverseConversation session.
+             * Required. The resource name of the Conversation to get. Format: `projects/{project}/l
+             * ocations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations
+             * /{conversation_id}`. Use `projects/{project}/locations/{location}/collections/{collec
+             * tion}/dataStores/{data_store_id}/conversations/-` to activate auto session mode,
+             * which automatically creates a new conversation inside a ConverseConversation session.
              */
             public Converse setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -27493,8 +27483,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the discoveryengine server.  After setting any
            * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{loc
-           *        ation_id}/collections/{collection}/dataStores/{data_store_id}`
+           * @param parent Required. Full resource name of parent data store. Format:
+           *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_i
+           *        d}`
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaConversation}
            * @return the request
            */
@@ -27523,8 +27514,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{loc
-           *        ation_id}/collections/{collection}/dataStores/{data_store_id}`
+             * @param parent Required. Full resource name of parent data store. Format:
+           *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_i
+           *        d}`
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaConversation}
              * @since 1.13
              */
@@ -27594,22 +27586,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. Full resource name of parent data store. Format: `projects/{project_number}
-             * /locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+             * Required. Full resource name of parent data store. Format: `projects/{project}/locati
+             * ons/{location}/collections/{collection}/dataStores/{data_store_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{lo
-           cation_id}/collections/{collection}/dataStores/{data_store_id}`
+            /** Required. Full resource name of parent data store. Format:
+           `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. Full resource name of parent data store. Format: `projects/{project_number}
-             * /locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+             * Required. Full resource name of parent data store. Format: `projects/{project}/locati
+             * ons/{location}/collections/{collection}/dataStores/{data_store_id}`
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -27635,9 +27627,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the discoveryengine server.  After setting any
            * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the Conversation to delete. Format: `projects/{project_number}/locati
-           *        ons/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conve
-           *        rsation_id}`
+           * @param name Required. The resource name of the Conversation to delete. Format: `projects/{project}/locations/{lo
+           *        cation}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id
+           *        }`
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -27665,9 +27657,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the Conversation to delete. Format: `projects/{project_number}/locati
-           *        ons/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conve
-           *        rsation_id}`
+             * @param name Required. The resource name of the Conversation to delete. Format: `projects/{project}/locations/{lo
+           *        cation}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id
+           *        }`
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -27737,15 +27729,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. The resource name of the Conversation to delete. Format: `projects/{project
-             * _number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/
-             * conversations/{conversation_id}`
+             * }/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversati
+             * ons/{conversation_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the Conversation to delete. Format: `projects/{project_number}/locat
-           ions/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_
-           id}`
+            /** Required. The resource name of the Conversation to delete. Format: `projects/{project}/locations/{l
+           ocation}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
              */
             public java.lang.String getName() {
               return name;
@@ -27753,8 +27744,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. The resource name of the Conversation to delete. Format: `projects/{project
-             * _number}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/
-             * conversations/{conversation_id}`
+             * }/locations/{location}/collections/{collection}/dataStores/{data_store_id}/conversati
+             * ons/{conversation_id}`
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -27779,9 +27770,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the discoveryengine server.  After setting any
            * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the Conversation to get. Format: `projects/{project_number}/locations
-           *        /{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversa
-           *        tion_id}`
+           * @param name Required. The resource name of the Conversation to get. Format: `projects/{project}/locations/{locat
+           *        ion}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -27807,9 +27797,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the Conversation to get. Format: `projects/{project_number}/locations
-           *        /{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversa
-           *        tion_id}`
+             * @param name Required. The resource name of the Conversation to get. Format: `projects/{project}/locations/{locat
+           *        ion}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -27888,25 +27877,24 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. The resource name of the Conversation to get. Format: `projects/{project_nu
-             * mber}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/con
-             * versations/{conversation_id}`
+             * Required. The resource name of the Conversation to get. Format: `projects/{project}/l
+             * ocations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations
+             * /{conversation_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the Conversation to get. Format: `projects/{project_number}/location
-           s/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}
-           `
+            /** Required. The resource name of the Conversation to get. Format: `projects/{project}/locations/{loca
+           tion}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversation_id}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The resource name of the Conversation to get. Format: `projects/{project_nu
-             * mber}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/con
-             * versations/{conversation_id}`
+             * Required. The resource name of the Conversation to get. Format: `projects/{project}/l
+             * ocations/{location}/collections/{collection}/dataStores/{data_store_id}/conversations
+             * /{conversation_id}`
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -27931,8 +27919,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the discoveryengine server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/c
-           *        ollections/{collection}/dataStores/{data_store_id}`
+           * @param parent Required. The data store resource name. Format:
+           *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_i
+           *        d}`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -27958,8 +27947,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/c
-           *        ollections/{collection}/dataStores/{data_store_id}`
+             * @param parent Required. The data store resource name. Format:
+           *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_i
+           *        d}`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -28038,22 +28028,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. The data store resource name. Format: `projects/{project_number}/locations/
-             * {location_id}/collections/{collection}/dataStores/{data_store_id}`
+             * Required. The data store resource name. Format: `projects/{project}/locations/{locati
+             * on}/collections/{collection}/dataStores/{data_store_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/
-           collections/{collection}/dataStores/{data_store_id}`
+            /** Required. The data store resource name. Format:
+           `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The data store resource name. Format: `projects/{project_number}/locations/
-             * {location_id}/collections/{collection}/dataStores/{data_store_id}`
+             * Required. The data store resource name. Format: `projects/{project}/locations/{locati
+             * on}/collections/{collection}/dataStores/{data_store_id}`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -30091,8 +30081,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the discoveryengine server.  After setting any
            * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/location
-           *        s/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
+           * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project}/locations/{loca
+           *        tion}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -30118,8 +30108,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/location
-           *        s/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
+             * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project}/locations/{loca
+           *        tion}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -30198,24 +30188,24 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. The resource name of the ServingConfig to get. Format: `projects/{project_n
-             * umber}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/
-             * {serving_config_id}`
+             * Required. The resource name of the ServingConfig to get. Format: `projects/{project}/
+             * locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{servin
+             * g_config_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/locatio
-           ns/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
+            /** Required. The resource name of the ServingConfig to get. Format: `projects/{project}/locations/{loc
+           ation}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The resource name of the ServingConfig to get. Format: `projects/{project_n
-             * umber}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/
-             * {serving_config_id}`
+             * Required. The resource name of the ServingConfig to get. Format: `projects/{project}/
+             * locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{servin
+             * g_config_id}`
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -30241,7 +30231,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param parent Required. Full resource name of the parent resource. Format:
-           *        `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
+           *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -30268,7 +30258,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. Full resource name of the parent resource. Format:
-           *        `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
+           *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -30347,22 +30337,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. Full resource name of the parent resource. Format: `projects/{project_numbe
-             * r}/locations/{location}/collections/{collection}/engines/{engine}`
+             * Required. Full resource name of the parent resource. Format:
+             * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. Full resource name of the parent resource. Format:
-           `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
+           `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. Full resource name of the parent resource. Format: `projects/{project_numbe
-             * r}/locations/{location}/collections/{collection}/engines/{engine}`
+             * Required. Full resource name of the parent resource. Format:
+             * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -30942,8 +30932,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the discoveryengine server.  After setting any
            * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{loc
-           *        ation_id}/collections/{collection}/dataStores/{data_store_id}`
+           * @param parent Required. Full resource name of parent data store. Format:
+           *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_i
+           *        d}`
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaSession}
            * @return the request
            */
@@ -30972,8 +30963,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{loc
-           *        ation_id}/collections/{collection}/dataStores/{data_store_id}`
+             * @param parent Required. Full resource name of parent data store. Format:
+           *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_i
+           *        d}`
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaSession}
              * @since 1.13
              */
@@ -31043,22 +31035,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. Full resource name of parent data store. Format: `projects/{project_number}
-             * /locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+             * Required. Full resource name of parent data store. Format: `projects/{project}/locati
+             * ons/{location}/collections/{collection}/dataStores/{data_store_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Full resource name of parent data store. Format: `projects/{project_number}/locations/{lo
-           cation_id}/collections/{collection}/dataStores/{data_store_id}`
+            /** Required. Full resource name of parent data store. Format:
+           `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. Full resource name of parent data store. Format: `projects/{project_number}
-             * /locations/{location_id}/collections/{collection}/dataStores/{data_store_id}`
+             * Required. Full resource name of parent data store. Format: `projects/{project}/locati
+             * ons/{location}/collections/{collection}/dataStores/{data_store_id}`
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -31083,8 +31075,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the discoveryengine server.  After setting any
            * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the Session to delete. Format: `projects/{project_number}/locations/{
-           *        location_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+           * @param name Required. The resource name of the Session to delete. Format: `projects/{project}/locations/{locatio
+           *        n}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -31111,8 +31103,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the Session to delete. Format: `projects/{project_number}/locations/{
-           *        location_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+             * @param name Required. The resource name of the Session to delete. Format: `projects/{project}/locations/{locatio
+           *        n}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -31181,24 +31173,24 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. The resource name of the Session to delete. Format: `projects/{project_numb
-             * er}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/sessi
-             * ons/{session_id}`
+             * Required. The resource name of the Session to delete. Format: `projects/{project}/loc
+             * ations/{location}/collections/{collection}/dataStores/{data_store_id}/sessions/{sessi
+             * on_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the Session to delete. Format: `projects/{project_number}/locations/
-           {location_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+            /** Required. The resource name of the Session to delete. Format: `projects/{project}/locations/{locati
+           on}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The resource name of the Session to delete. Format: `projects/{project_numb
-             * er}/locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/sessi
-             * ons/{session_id}`
+             * Required. The resource name of the Session to delete. Format: `projects/{project}/loc
+             * ations/{location}/collections/{collection}/dataStores/{data_store_id}/sessions/{sessi
+             * on_id}`
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -31223,8 +31215,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the discoveryengine server.  After setting any
            * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the Session to get. Format: `projects/{project_number}/locations/{loc
-           *        ation_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+           * @param name Required. The resource name of the Session to get. Format: `projects/{project}/locations/{location}/
+           *        collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -31250,8 +31242,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the Session to get. Format: `projects/{project_number}/locations/{loc
-           *        ation_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+             * @param name Required. The resource name of the Session to get. Format: `projects/{project}/locations/{location}/
+           *        collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -31330,24 +31322,24 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. The resource name of the Session to get. Format: `projects/{project_number}
-             * /locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/sessions
-             * /{session_id}`
+             * Required. The resource name of the Session to get. Format: `projects/{project}/locati
+             * ons/{location}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_
+             * id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the Session to get. Format: `projects/{project_number}/locations/{lo
-           cation_id}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
+            /** Required. The resource name of the Session to get. Format: `projects/{project}/locations/{location}
+           /collections/{collection}/dataStores/{data_store_id}/sessions/{session_id}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The resource name of the Session to get. Format: `projects/{project_number}
-             * /locations/{location_id}/collections/{collection}/dataStores/{data_store_id}/sessions
-             * /{session_id}`
+             * Required. The resource name of the Session to get. Format: `projects/{project}/locati
+             * ons/{location}/collections/{collection}/dataStores/{data_store_id}/sessions/{session_
+             * id}`
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -31372,8 +31364,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the discoveryengine server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/c
-           *        ollections/{collection}/dataStores/{data_store_id}`
+           * @param parent Required. The data store resource name. Format:
+           *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_i
+           *        d}`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -31399,8 +31392,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/c
-           *        ollections/{collection}/dataStores/{data_store_id}`
+             * @param parent Required. The data store resource name. Format:
+           *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_i
+           *        d}`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -31479,22 +31473,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. The data store resource name. Format: `projects/{project_number}/locations/
-             * {location_id}/collections/{collection}/dataStores/{data_store_id}`
+             * Required. The data store resource name. Format: `projects/{project}/locations/{locati
+             * on}/collections/{collection}/dataStores/{data_store_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The data store resource name. Format: `projects/{project_number}/locations/{location_id}/
-           collections/{collection}/dataStores/{data_store_id}`
+            /** Required. The data store resource name. Format:
+           `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store_id}`
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The data store resource name. Format: `projects/{project_number}/locations/
-             * {location_id}/collections/{collection}/dataStores/{data_store_id}`
+             * Required. The data store resource name. Format: `projects/{project}/locations/{locati
+             * on}/collections/{collection}/dataStores/{data_store_id}`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -31799,9 +31793,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the Answer to get. Format: `projects/{project_number}/locations/{loca
-             *        tion_id}/collections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answe
-             *        r_id}`
+             * @param name Required. The resource name of the Answer to get. Format: `projects/{project}/locations/{location}/c
+             *        ollections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answer_id}`
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -31827,9 +31820,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the Answer to get. Format: `projects/{project_number}/locations/{loca
-             *        tion_id}/collections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answe
-             *        r_id}`
+               * @param name Required. The resource name of the Answer to get. Format: `projects/{project}/locations/{location}/c
+             *        ollections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answer_id}`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -31908,24 +31900,24 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The resource name of the Answer to get. Format: `projects/{project_number
-               * }/locations/{location_id}/collections/{collection}/engines/{engine_id}/sessions/{se
-               * ssion_id}/answers/{answer_id}`
+               * Required. The resource name of the Answer to get. Format: `projects/{project}/locat
+               * ions/{location}/collections/{collection}/engines/{engine_id}/sessions/{session_id}/
+               * answers/{answer_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The resource name of the Answer to get. Format: `projects/{project_number}/locations/{loc
-             ation_id}/collections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answer_id}`
+              /** Required. The resource name of the Answer to get. Format: `projects/{project}/locations/{location}/
+             collections/{collection}/engines/{engine_id}/sessions/{session_id}/answers/{answer_id}`
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Required. The resource name of the Answer to get. Format: `projects/{project_number
-               * }/locations/{location_id}/collections/{collection}/engines/{engine_id}/sessions/{se
-               * ssion_id}/answers/{answer_id}`
+               * Required. The resource name of the Answer to get. Format: `projects/{project}/locat
+               * ions/{location}/collections/{collection}/engines/{engine_id}/sessions/{session_id}/
+               * answers/{answer_id}`
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -34081,8 +34073,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link Purge#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The resource name of the catalog under which the events are created. The format is
-           *        `projects/${projectId}/locations/global/collections/{$collectionId}/dataStores/${dataStore
-           *        Id}`
+           *        `projects/{project}/locations/global/collections/{collection}/dataStores/{dataStore}`.
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaPurgeUserEventsRequest}
            * @return the request
            */
@@ -34113,8 +34104,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The resource name of the catalog under which the events are created. The format is
-           *        `projects/${projectId}/locations/global/collections/{$collectionId}/dataStores/${dataStore
-           *        Id}`
+           *        `projects/{project}/locations/global/collections/{collection}/dataStores/{dataStore}`.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaPurgeUserEventsRequest}
              * @since 1.13
              */
@@ -34185,14 +34175,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. The resource name of the catalog under which the events are created. The
-             * format is `projects/${projectId}/locations/global/collections/{$collectionId}/dataSto
-             * res/${dataStoreId}`
+             * format is `projects/{project}/locations/global/collections/{collection}/dataStores/{d
+             * ataStore}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The resource name of the catalog under which the events are created. The format is
-           `projects/${projectId}/locations/global/collections/{$collectionId}/dataStores/${dataStoreId}`
+           `projects/{project}/locations/global/collections/{collection}/dataStores/{dataStore}`.
              */
             public java.lang.String getParent() {
               return parent;
@@ -34200,8 +34190,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. The resource name of the catalog under which the events are created. The
-             * format is `projects/${projectId}/locations/global/collections/{$collectionId}/dataSto
-             * res/${dataStoreId}`
+             * format is `projects/{project}/locations/global/collections/{collection}/dataStores/{d
+             * ataStore}`.
              */
             public Purge setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -36220,7 +36210,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link Rank#execute()} method to invoke the remote operation.
          *
          * @param rankingConfig Required. The resource name of the rank service config, such as
-         *        `projects/{project_num}/locations/{location_id}/rankingConfigs/default_ranking_config`.
+         *        `projects/{project_num}/locations/{location}/rankingConfigs/default_ranking_config`.
          * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRankRequest}
          * @return the request
          */
@@ -36248,7 +36238,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param rankingConfig Required. The resource name of the rank service config, such as
-         *        `projects/{project_num}/locations/{location_id}/rankingConfigs/default_ranking_config`.
+         *        `projects/{project_num}/locations/{location}/rankingConfigs/default_ranking_config`.
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRankRequest}
            * @since 1.13
            */
@@ -36319,13 +36309,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The resource name of the rank service config, such as
-           * `projects/{project_num}/locations/{location_id}/rankingConfigs/default_ranking_config`.
+           * `projects/{project_num}/locations/{location}/rankingConfigs/default_ranking_config`.
            */
           @com.google.api.client.util.Key
           private java.lang.String rankingConfig;
 
           /** Required. The resource name of the rank service config, such as
-         `projects/{project_num}/locations/{location_id}/rankingConfigs/default_ranking_config`.
+         `projects/{project_num}/locations/{location}/rankingConfigs/default_ranking_config`.
            */
           public java.lang.String getRankingConfig() {
             return rankingConfig;
@@ -36333,7 +36323,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The resource name of the rank service config, such as
-           * `projects/{project_num}/locations/{location_id}/rankingConfigs/default_ranking_config`.
+           * `projects/{project_num}/locations/{location}/rankingConfigs/default_ranking_config`.
            */
           public Rank setRankingConfig(java.lang.String rankingConfig) {
             if (!getSuppressPatternChecks()) {

@@ -45,7 +45,8 @@ public final class Connector extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
+   * Optional. The range of internal addresses that follows RFC 4632 notation. Example:
+   * `10.132.0.0/28`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +110,7 @@ public final class Connector extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Name of a VPC network.
+   * Optional. Name of a VPC network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +124,7 @@ public final class Connector extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * The subnet in which to house the VPC Access Connector.
+   * Optional. The subnet in which to house the VPC Access Connector.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,7 +165,8 @@ public final class Connector extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
+   * Optional. The range of internal addresses that follows RFC 4632 notation. Example:
+   * `10.132.0.0/28`.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpCidrRange() {
@@ -172,7 +174,8 @@ public final class Connector extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
+   * Optional. The range of internal addresses that follows RFC 4632 notation. Example:
+   * `10.132.0.0/28`.
    * @param ipCidrRange ipCidrRange or {@code null} for none
    */
   public Connector setIpCidrRange(java.lang.String ipCidrRange) {
@@ -316,7 +319,7 @@ public final class Connector extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of a VPC network.
+   * Optional. Name of a VPC network.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -324,7 +327,7 @@ public final class Connector extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of a VPC network.
+   * Optional. Name of a VPC network.
    * @param network network or {@code null} for none
    */
   public Connector setNetwork(java.lang.String network) {
@@ -350,7 +353,7 @@ public final class Connector extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The subnet in which to house the VPC Access Connector.
+   * Optional. The subnet in which to house the VPC Access Connector.
    * @return value or {@code null} for none
    */
   public Subnet getSubnet() {
@@ -358,7 +361,7 @@ public final class Connector extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The subnet in which to house the VPC Access Connector.
+   * Optional. The subnet in which to house the VPC Access Connector.
    * @param subnet subnet or {@code null} for none
    */
   public Connector setSubnet(Subnet subnet) {

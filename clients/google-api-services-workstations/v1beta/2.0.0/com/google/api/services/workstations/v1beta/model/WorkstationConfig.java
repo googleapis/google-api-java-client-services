@@ -122,9 +122,10 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    * service_account must also be specified that has `roles/logging.logWriter` and
    * `roles/monitoring.metricWriter` on the project. Operating system audit logging is distinct from
    * [Cloud Audit Logs](https://cloud.google.com/workstations/docs/audit-logging) and [Container
-   * output logging](http://cloud/workstations/docs/container-output-logging#overview). Operating
-   * system audit logs are available in the [Cloud Logging](https://cloud.google.com/logging/docs)
-   * console by querying: resource.type="gce_instance" log_name:"/logs/linux-auditd"
+   * output logging](https://cloud.google.com/workstations/docs/container-output-logging#overview).
+   * Operating system audit logs are available in the [Cloud
+   * Logging](https://cloud.google.com/logging/docs) console by querying:
+   * resource.type="gce_instance" log_name:"/logs/linux-auditd"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,13 +214,13 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Optional. Maximum number of workstations under this config a user can have
+   * Optional. Maximum number of workstations under this configuration a user can have
    * `workstations.workstation.use` permission on. Only enforced on CreateWorkstation API calls on
    * the user issuing the API request. Can be overridden by: - granting a user
    * workstations.workstationConfigs.exemptMaxUsableWorkstationLimit permission, or - having a user
    * with that permission create a workstation and granting another user
-   * `workstations.workstation.use` permission on that workstation. If not specified defaults to 0
-   * which indicates unlimited.
+   * `workstations.workstation.use` permission on that workstation. If not specified, defaults to
+   * `0`, which indicates unlimited.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -495,9 +496,10 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    * service_account must also be specified that has `roles/logging.logWriter` and
    * `roles/monitoring.metricWriter` on the project. Operating system audit logging is distinct from
    * [Cloud Audit Logs](https://cloud.google.com/workstations/docs/audit-logging) and [Container
-   * output logging](http://cloud/workstations/docs/container-output-logging#overview). Operating
-   * system audit logs are available in the [Cloud Logging](https://cloud.google.com/logging/docs)
-   * console by querying: resource.type="gce_instance" log_name:"/logs/linux-auditd"
+   * output logging](https://cloud.google.com/workstations/docs/container-output-logging#overview).
+   * Operating system audit logs are available in the [Cloud
+   * Logging](https://cloud.google.com/logging/docs) console by querying:
+   * resource.type="gce_instance" log_name:"/logs/linux-auditd"
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableAuditAgent() {
@@ -509,9 +511,10 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    * service_account must also be specified that has `roles/logging.logWriter` and
    * `roles/monitoring.metricWriter` on the project. Operating system audit logging is distinct from
    * [Cloud Audit Logs](https://cloud.google.com/workstations/docs/audit-logging) and [Container
-   * output logging](http://cloud/workstations/docs/container-output-logging#overview). Operating
-   * system audit logs are available in the [Cloud Logging](https://cloud.google.com/logging/docs)
-   * console by querying: resource.type="gce_instance" log_name:"/logs/linux-auditd"
+   * output logging](https://cloud.google.com/workstations/docs/container-output-logging#overview).
+   * Operating system audit logs are available in the [Cloud
+   * Logging](https://cloud.google.com/logging/docs) console by querying:
+   * resource.type="gce_instance" log_name:"/logs/linux-auditd"
    * @param enableAuditAgent enableAuditAgent or {@code null} for none
    */
   public WorkstationConfig setEnableAuditAgent(java.lang.Boolean enableAuditAgent) {
@@ -696,13 +699,13 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Maximum number of workstations under this config a user can have
+   * Optional. Maximum number of workstations under this configuration a user can have
    * `workstations.workstation.use` permission on. Only enforced on CreateWorkstation API calls on
    * the user issuing the API request. Can be overridden by: - granting a user
    * workstations.workstationConfigs.exemptMaxUsableWorkstationLimit permission, or - having a user
    * with that permission create a workstation and granting another user
-   * `workstations.workstation.use` permission on that workstation. If not specified defaults to 0
-   * which indicates unlimited.
+   * `workstations.workstation.use` permission on that workstation. If not specified, defaults to
+   * `0`, which indicates unlimited.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxUsableWorkstations() {
@@ -710,13 +713,13 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Maximum number of workstations under this config a user can have
+   * Optional. Maximum number of workstations under this configuration a user can have
    * `workstations.workstation.use` permission on. Only enforced on CreateWorkstation API calls on
    * the user issuing the API request. Can be overridden by: - granting a user
    * workstations.workstationConfigs.exemptMaxUsableWorkstationLimit permission, or - having a user
    * with that permission create a workstation and granting another user
-   * `workstations.workstation.use` permission on that workstation. If not specified defaults to 0
-   * which indicates unlimited.
+   * `workstations.workstation.use` permission on that workstation. If not specified, defaults to
+   * `0`, which indicates unlimited.
    * @param maxUsableWorkstations maxUsableWorkstations or {@code null} for none
    */
   public WorkstationConfig setMaxUsableWorkstations(java.lang.Integer maxUsableWorkstations) {

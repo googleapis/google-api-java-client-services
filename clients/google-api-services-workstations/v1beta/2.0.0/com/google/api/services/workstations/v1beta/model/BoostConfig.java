@@ -75,7 +75,7 @@ public final class BoostConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enableNestedVirtualization;
 
   /**
-   * Optional. Required. The id to be used for the boost config.
+   * Optional. Required. The id to be used for the boost configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -185,7 +185,7 @@ public final class BoostConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Required. The id to be used for the boost config.
+   * Optional. Required. The id to be used for the boost configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -193,7 +193,7 @@ public final class BoostConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Required. The id to be used for the boost config.
+   * Optional. Required. The id to be used for the boost configuration.
    * @param id id or {@code null} for none
    */
   public BoostConfig setId(java.lang.String id) {

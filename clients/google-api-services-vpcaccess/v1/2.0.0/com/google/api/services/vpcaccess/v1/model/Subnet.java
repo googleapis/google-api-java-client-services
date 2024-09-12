@@ -31,26 +31,26 @@ package com.google.api.services.vpcaccess.v1.model;
 public final class Subnet extends com.google.api.client.json.GenericJson {
 
   /**
-   * Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is https://comput
-   * e.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the
-   * correct input for this field would be {subnetName}
+   * Optional. Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is http
+   * s://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetNa
+   * me} the correct input for this field would be {subnetName}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Project in which the subnet exists. If not set, this project is assumed to be the project for
-   * which the connector create request was issued.
+   * Optional. Project in which the subnet exists. If not set, this project is assumed to be the
+   * project for which the connector create request was issued.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is https://comput
-   * e.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the
-   * correct input for this field would be {subnetName}
+   * Optional. Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is http
+   * s://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetNa
+   * me} the correct input for this field would be {subnetName}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -58,9 +58,9 @@ public final class Subnet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is https://comput
-   * e.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the
-   * correct input for this field would be {subnetName}
+   * Optional. Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is http
+   * s://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetNa
+   * me} the correct input for this field would be {subnetName}
    * @param name name or {@code null} for none
    */
   public Subnet setName(java.lang.String name) {
@@ -69,8 +69,8 @@ public final class Subnet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Project in which the subnet exists. If not set, this project is assumed to be the project for
-   * which the connector create request was issued.
+   * Optional. Project in which the subnet exists. If not set, this project is assumed to be the
+   * project for which the connector create request was issued.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -78,8 +78,8 @@ public final class Subnet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Project in which the subnet exists. If not set, this project is assumed to be the project for
-   * which the connector create request was issued.
+   * Optional. Project in which the subnet exists. If not set, this project is assumed to be the
+   * project for which the connector create request was issued.
    * @param projectId projectId or {@code null} for none
    */
   public Subnet setProjectId(java.lang.String projectId) {

@@ -50,6 +50,19 @@ public final class GoogleCloudDiscoveryengineV1AnswerQueryRequestAnswerGeneratio
   private java.lang.Boolean ignoreAdversarialQuery;
 
   /**
+   * Optional. Specifies whether to filter out jail-breaking queries. The default value is `false`.
+   * Google employs search-query classification to detect jail-breaking queries. No summary is
+   * returned if the search query is classified as a jail-breaking query. A user might add
+   * instructions to the query to change the tone, style, language, content of the answer, or ask
+   * the model to act as a different entity, e.g. "Reply in the tone of a competing company's CEO".
+   * If this field is set to `true`, we skip generating summaries for jail-breaking queries and
+   * return fallback messages instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean ignoreJailBreakingQuery;
+
+  /**
    * Specifies whether to filter out queries that have low relevance. If this field is set to
    * `false`, all search results are used regardless of relevance to generate answers. If set to
    * `true` or unset, the behavior will be determined automatically by the service.
@@ -133,6 +146,35 @@ public final class GoogleCloudDiscoveryengineV1AnswerQueryRequestAnswerGeneratio
    */
   public GoogleCloudDiscoveryengineV1AnswerQueryRequestAnswerGenerationSpec setIgnoreAdversarialQuery(java.lang.Boolean ignoreAdversarialQuery) {
     this.ignoreAdversarialQuery = ignoreAdversarialQuery;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies whether to filter out jail-breaking queries. The default value is `false`.
+   * Google employs search-query classification to detect jail-breaking queries. No summary is
+   * returned if the search query is classified as a jail-breaking query. A user might add
+   * instructions to the query to change the tone, style, language, content of the answer, or ask
+   * the model to act as a different entity, e.g. "Reply in the tone of a competing company's CEO".
+   * If this field is set to `true`, we skip generating summaries for jail-breaking queries and
+   * return fallback messages instead.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIgnoreJailBreakingQuery() {
+    return ignoreJailBreakingQuery;
+  }
+
+  /**
+   * Optional. Specifies whether to filter out jail-breaking queries. The default value is `false`.
+   * Google employs search-query classification to detect jail-breaking queries. No summary is
+   * returned if the search query is classified as a jail-breaking query. A user might add
+   * instructions to the query to change the tone, style, language, content of the answer, or ask
+   * the model to act as a different entity, e.g. "Reply in the tone of a competing company's CEO".
+   * If this field is set to `true`, we skip generating summaries for jail-breaking queries and
+   * return fallback messages instead.
+   * @param ignoreJailBreakingQuery ignoreJailBreakingQuery or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1AnswerQueryRequestAnswerGenerationSpec setIgnoreJailBreakingQuery(java.lang.Boolean ignoreJailBreakingQuery) {
+    this.ignoreJailBreakingQuery = ignoreJailBreakingQuery;
     return this;
   }
 

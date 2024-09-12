@@ -83,6 +83,13 @@ public final class GoogleCloudDiscoveryengineV1DataStore extends com.google.api.
   private java.lang.String name;
 
   /**
+   * Optional. Stores serving config at DataStore level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1ServingConfigDataStore servingConfigDataStore;
+
+  /**
    * The solutions that the data store enrolls. Available solutions for each industry_vertical: *
    * `MEDIA`: `SOLUTION_TYPE_RECOMMENDATION` and `SOLUTION_TYPE_SEARCH`. * `SITE_SEARCH`:
    * `SOLUTION_TYPE_SEARCH` is automatically enrolled. Other solutions cannot be enrolled.
@@ -235,6 +242,23 @@ public final class GoogleCloudDiscoveryengineV1DataStore extends com.google.api.
    */
   public GoogleCloudDiscoveryengineV1DataStore setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Stores serving config at DataStore level.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1ServingConfigDataStore getServingConfigDataStore() {
+    return servingConfigDataStore;
+  }
+
+  /**
+   * Optional. Stores serving config at DataStore level.
+   * @param servingConfigDataStore servingConfigDataStore or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DataStore setServingConfigDataStore(GoogleCloudDiscoveryengineV1ServingConfigDataStore servingConfigDataStore) {
+    this.servingConfigDataStore = servingConfigDataStore;
     return this;
   }
 

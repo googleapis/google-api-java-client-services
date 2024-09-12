@@ -90,6 +90,20 @@ public final class GoogleCloudDiscoveryengineV1betaDataStore extends com.google.
   private java.lang.String name;
 
   /**
+   * Optional. Configuration for Natural Language Query Understanding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaNaturalLanguageQueryUnderstandingConfig naturalLanguageQueryUnderstandingConfig;
+
+  /**
+   * Optional. Stores serving config at DataStore level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaServingConfigDataStore servingConfigDataStore;
+
+  /**
    * The solutions that the data store enrolls. Available solutions for each industry_vertical: *
    * `MEDIA`: `SOLUTION_TYPE_RECOMMENDATION` and `SOLUTION_TYPE_SEARCH`. * `SITE_SEARCH`:
    * `SOLUTION_TYPE_SEARCH` is automatically enrolled. Other solutions cannot be enrolled.
@@ -259,6 +273,40 @@ public final class GoogleCloudDiscoveryengineV1betaDataStore extends com.google.
    */
   public GoogleCloudDiscoveryengineV1betaDataStore setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for Natural Language Query Understanding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaNaturalLanguageQueryUnderstandingConfig getNaturalLanguageQueryUnderstandingConfig() {
+    return naturalLanguageQueryUnderstandingConfig;
+  }
+
+  /**
+   * Optional. Configuration for Natural Language Query Understanding.
+   * @param naturalLanguageQueryUnderstandingConfig naturalLanguageQueryUnderstandingConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaDataStore setNaturalLanguageQueryUnderstandingConfig(GoogleCloudDiscoveryengineV1betaNaturalLanguageQueryUnderstandingConfig naturalLanguageQueryUnderstandingConfig) {
+    this.naturalLanguageQueryUnderstandingConfig = naturalLanguageQueryUnderstandingConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Stores serving config at DataStore level.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaServingConfigDataStore getServingConfigDataStore() {
+    return servingConfigDataStore;
+  }
+
+  /**
+   * Optional. Stores serving config at DataStore level.
+   * @param servingConfigDataStore servingConfigDataStore or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaDataStore setServingConfigDataStore(GoogleCloudDiscoveryengineV1betaServingConfigDataStore servingConfigDataStore) {
+    this.servingConfigDataStore = servingConfigDataStore;
     return this;
   }
 

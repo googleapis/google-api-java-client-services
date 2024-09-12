@@ -37,9 +37,9 @@ public final class GoogleCloudDiscoveryengineV1Project extends com.google.api.cl
   private String createTime;
 
   /**
-   * Output only. Full resource name of the project, for example `projects/{project_number}`. Note
-   * that when making requests, project number and project id are both acceptable, but the server
-   * will always respond in project number.
+   * Output only. Full resource name of the project, for example `projects/{project}`. Note that
+   * when making requests, project number and project id are both acceptable, but the server will
+   * always respond in project number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,9 +78,9 @@ public final class GoogleCloudDiscoveryengineV1Project extends com.google.api.cl
   }
 
   /**
-   * Output only. Full resource name of the project, for example `projects/{project_number}`. Note
-   * that when making requests, project number and project id are both acceptable, but the server
-   * will always respond in project number.
+   * Output only. Full resource name of the project, for example `projects/{project}`. Note that
+   * when making requests, project number and project id are both acceptable, but the server will
+   * always respond in project number.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -88,9 +88,9 @@ public final class GoogleCloudDiscoveryengineV1Project extends com.google.api.cl
   }
 
   /**
-   * Output only. Full resource name of the project, for example `projects/{project_number}`. Note
-   * that when making requests, project number and project id are both acceptable, but the server
-   * will always respond in project number.
+   * Output only. Full resource name of the project, for example `projects/{project}`. Note that
+   * when making requests, project number and project id are both acceptable, but the server will
+   * always respond in project number.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1Project setName(java.lang.String name) {

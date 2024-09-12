@@ -53,11 +53,11 @@ public final class GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponse
   private GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponseDocumentMetadataMatcherValue matcherValue;
 
   /**
-   * The status of the document.
+   * The state of the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String status;
+  private java.lang.String state;
 
   /**
    * The data ingestion source of the Document. Allowed values are: * `batch`: Data ingested via
@@ -115,19 +115,19 @@ public final class GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponse
   }
 
   /**
-   * The status of the document.
+   * The state of the document.
    * @return value or {@code null} for none
    */
-  public java.lang.String getStatus() {
-    return status;
+  public java.lang.String getState() {
+    return state;
   }
 
   /**
-   * The status of the document.
-   * @param status status or {@code null} for none
+   * The state of the document.
+   * @param state state or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponseDocumentMetadata setStatus(java.lang.String status) {
-    this.status = status;
+  public GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponseDocumentMetadata setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

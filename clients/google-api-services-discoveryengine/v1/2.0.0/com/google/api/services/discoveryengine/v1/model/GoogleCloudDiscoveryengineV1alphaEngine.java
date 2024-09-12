@@ -97,9 +97,9 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
   /**
    * Immutable. The fully qualified resource name of the engine. This field must be a UTF-8 encoded
    * string with a length limit of 1024 characters. Format:
-   * `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
-   * engine should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an
-   * INVALID_ARGUMENT error is returned.
+   * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}` engine
+   * should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an INVALID_ARGUMENT
+   * error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -298,9 +298,9 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
   /**
    * Immutable. The fully qualified resource name of the engine. This field must be a UTF-8 encoded
    * string with a length limit of 1024 characters. Format:
-   * `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
-   * engine should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an
-   * INVALID_ARGUMENT error is returned.
+   * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}` engine
+   * should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an INVALID_ARGUMENT
+   * error is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -310,9 +310,9 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
   /**
    * Immutable. The fully qualified resource name of the engine. This field must be a UTF-8 encoded
    * string with a length limit of 1024 characters. Format:
-   * `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
-   * engine should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an
-   * INVALID_ARGUMENT error is returned.
+   * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}` engine
+   * should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an INVALID_ARGUMENT
+   * error is returned.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaEngine setName(java.lang.String name) {

@@ -44,8 +44,8 @@ public final class GoogleCloudDiscoveryengineV1DocumentInfo extends com.google.a
   private java.lang.Boolean joined;
 
   /**
-   * The Document resource full name, of the form: `projects/{project_id}/locations/{location}/colle
-   * ctions/{collection_id}/dataStores/{data_store_id}/branches/{branch_id}/documents/{document_id}`
+   * The Document resource full name, of the form: `projects/{project}/locations/{location}/collecti
+   * ons/{collection_id}/dataStores/{data_store_id}/branches/{branch_id}/documents/{document_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,8 +110,8 @@ public final class GoogleCloudDiscoveryengineV1DocumentInfo extends com.google.a
   }
 
   /**
-   * The Document resource full name, of the form: `projects/{project_id}/locations/{location}/colle
-   * ctions/{collection_id}/dataStores/{data_store_id}/branches/{branch_id}/documents/{document_id}`
+   * The Document resource full name, of the form: `projects/{project}/locations/{location}/collecti
+   * ons/{collection_id}/dataStores/{data_store_id}/branches/{branch_id}/documents/{document_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -119,8 +119,8 @@ public final class GoogleCloudDiscoveryengineV1DocumentInfo extends com.google.a
   }
 
   /**
-   * The Document resource full name, of the form: `projects/{project_id}/locations/{location}/colle
-   * ctions/{collection_id}/dataStores/{data_store_id}/branches/{branch_id}/documents/{document_id}`
+   * The Document resource full name, of the form: `projects/{project}/locations/{location}/collecti
+   * ons/{collection_id}/dataStores/{data_store_id}/branches/{branch_id}/documents/{document_id}`
    * @param name name or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1DocumentInfo setName(java.lang.String name) {

@@ -77,9 +77,9 @@ public final class GoogleCloudDiscoveryengineV1betaConverseConversationRequest e
   private java.lang.Boolean safeSearch;
 
   /**
-   * The resource name of the Serving Config to use. Format: `projects/{project_number}/locations/{l
-   * ocation_id}/collections/{collection}/dataStores/{data_store_id}/servingConfigs/{serving_config_
-   * id}` If this is not set, the default serving config will be used.
+   * The resource name of the Serving Config to use. Format: `projects/{project}/locations/{location
+   * }/collections/{collection}/dataStores/{data_store_id}/servingConfigs/{serving_config_id}` If
+   * this is not set, the default serving config will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -218,9 +218,9 @@ public final class GoogleCloudDiscoveryengineV1betaConverseConversationRequest e
   }
 
   /**
-   * The resource name of the Serving Config to use. Format: `projects/{project_number}/locations/{l
-   * ocation_id}/collections/{collection}/dataStores/{data_store_id}/servingConfigs/{serving_config_
-   * id}` If this is not set, the default serving config will be used.
+   * The resource name of the Serving Config to use. Format: `projects/{project}/locations/{location
+   * }/collections/{collection}/dataStores/{data_store_id}/servingConfigs/{serving_config_id}` If
+   * this is not set, the default serving config will be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getServingConfig() {
@@ -228,9 +228,9 @@ public final class GoogleCloudDiscoveryengineV1betaConverseConversationRequest e
   }
 
   /**
-   * The resource name of the Serving Config to use. Format: `projects/{project_number}/locations/{l
-   * ocation_id}/collections/{collection}/dataStores/{data_store_id}/servingConfigs/{serving_config_
-   * id}` If this is not set, the default serving config will be used.
+   * The resource name of the Serving Config to use. Format: `projects/{project}/locations/{location
+   * }/collections/{collection}/dataStores/{data_store_id}/servingConfigs/{serving_config_id}` If
+   * this is not set, the default serving config will be used.
    * @param servingConfig servingConfig or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaConverseConversationRequest setServingConfig(java.lang.String servingConfig) {

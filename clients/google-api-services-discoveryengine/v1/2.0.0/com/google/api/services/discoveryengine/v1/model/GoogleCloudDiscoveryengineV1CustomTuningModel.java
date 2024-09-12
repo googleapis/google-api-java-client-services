@@ -65,9 +65,9 @@ public final class GoogleCloudDiscoveryengineV1CustomTuningModel extends com.goo
   private java.lang.Long modelVersion;
 
   /**
-   * Required. The fully qualified resource name of the model. Format: `projects/{project_number}/lo
-   * cations/{location}/collections/{collection}/dataStores/{data_store}/customTuningModels/{custom_
-   * tuning_model}` model must be an alpha-numerical string with limit of 40 characters.
+   * Required. The fully qualified resource name of the model. Format: `projects/{project}/locations
+   * /{location}/collections/{collection}/dataStores/{data_store}/customTuningModels/{custom_tuning_
+   * model}`. Model must be an alpha-numerical string with limit of 40 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -166,9 +166,9 @@ public final class GoogleCloudDiscoveryengineV1CustomTuningModel extends com.goo
   }
 
   /**
-   * Required. The fully qualified resource name of the model. Format: `projects/{project_number}/lo
-   * cations/{location}/collections/{collection}/dataStores/{data_store}/customTuningModels/{custom_
-   * tuning_model}` model must be an alpha-numerical string with limit of 40 characters.
+   * Required. The fully qualified resource name of the model. Format: `projects/{project}/locations
+   * /{location}/collections/{collection}/dataStores/{data_store}/customTuningModels/{custom_tuning_
+   * model}`. Model must be an alpha-numerical string with limit of 40 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -176,9 +176,9 @@ public final class GoogleCloudDiscoveryengineV1CustomTuningModel extends com.goo
   }
 
   /**
-   * Required. The fully qualified resource name of the model. Format: `projects/{project_number}/lo
-   * cations/{location}/collections/{collection}/dataStores/{data_store}/customTuningModels/{custom_
-   * tuning_model}` model must be an alpha-numerical string with limit of 40 characters.
+   * Required. The fully qualified resource name of the model. Format: `projects/{project}/locations
+   * /{location}/collections/{collection}/dataStores/{data_store}/customTuningModels/{custom_tuning_
+   * model}`. Model must be an alpha-numerical string with limit of 40 characters.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1CustomTuningModel setName(java.lang.String name) {

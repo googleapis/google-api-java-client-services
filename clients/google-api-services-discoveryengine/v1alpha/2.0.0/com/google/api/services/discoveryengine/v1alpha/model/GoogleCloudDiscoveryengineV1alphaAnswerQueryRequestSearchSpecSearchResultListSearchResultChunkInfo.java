@@ -44,6 +44,13 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpec
   private java.lang.String content;
 
   /**
+   * Metadata of the document from the current chunk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpecSearchResultListSearchResultChunkInfoDocumentMetadata documentMetadata;
+
+  /**
    * Chunk resource name.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpec
    */
   public GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpecSearchResultListSearchResultChunkInfo setContent(java.lang.String content) {
     this.content = content;
+    return this;
+  }
+
+  /**
+   * Metadata of the document from the current chunk.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpecSearchResultListSearchResultChunkInfoDocumentMetadata getDocumentMetadata() {
+    return documentMetadata;
+  }
+
+  /**
+   * Metadata of the document from the current chunk.
+   * @param documentMetadata documentMetadata or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpecSearchResultListSearchResultChunkInfo setDocumentMetadata(GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpecSearchResultListSearchResultChunkInfoDocumentMetadata documentMetadata) {
+    this.documentMetadata = documentMetadata;
     return this;
   }
 

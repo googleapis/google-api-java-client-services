@@ -37,10 +37,11 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequest extends c
   private GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestAnswerGenerationSpec answerGenerationSpec;
 
   /**
-   * Asynchronous mode control. If enabled, the response will be returned with answer/session
-   * resource name without final answer. The API users need to do the polling to get the latest
-   * status of answer/session by calling ConversationalSearchService.GetAnswer or
-   * ConversationalSearchService.GetSession method.
+   * Deprecated: This field is deprecated. Streaming Answer API will be supported. Asynchronous mode
+   * control. If enabled, the response will be returned with answer/session resource name without
+   * final answer. The API users need to do the polling to get the latest status of answer/session
+   * by calling ConversationalSearchService.GetAnswer or ConversationalSearchService.GetSession
+   * method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,10 +136,11 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequest extends c
   }
 
   /**
-   * Asynchronous mode control. If enabled, the response will be returned with answer/session
-   * resource name without final answer. The API users need to do the polling to get the latest
-   * status of answer/session by calling ConversationalSearchService.GetAnswer or
-   * ConversationalSearchService.GetSession method.
+   * Deprecated: This field is deprecated. Streaming Answer API will be supported. Asynchronous mode
+   * control. If enabled, the response will be returned with answer/session resource name without
+   * final answer. The API users need to do the polling to get the latest status of answer/session
+   * by calling ConversationalSearchService.GetAnswer or ConversationalSearchService.GetSession
+   * method.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAsynchronousMode() {
@@ -146,10 +148,11 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequest extends c
   }
 
   /**
-   * Asynchronous mode control. If enabled, the response will be returned with answer/session
-   * resource name without final answer. The API users need to do the polling to get the latest
-   * status of answer/session by calling ConversationalSearchService.GetAnswer or
-   * ConversationalSearchService.GetSession method.
+   * Deprecated: This field is deprecated. Streaming Answer API will be supported. Asynchronous mode
+   * control. If enabled, the response will be returned with answer/session resource name without
+   * final answer. The API users need to do the polling to get the latest status of answer/session
+   * by calling ConversationalSearchService.GetAnswer or ConversationalSearchService.GetSession
+   * method.
    * @param asynchronousMode asynchronousMode or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaAnswerQueryRequest setAsynchronousMode(java.lang.Boolean asynchronousMode) {

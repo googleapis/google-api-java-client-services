@@ -31,6 +31,13 @@ package com.google.api.services.bigtableadmin.v2.model;
 public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
+   * Indicates the backup type of the backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backupType;
+
+  /**
    * Output only. The encryption information for the backup.
    * The value may be {@code null}.
    */
@@ -53,6 +60,17 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String expireTime;
+
+  /**
+   * The time at which the hot backup will be converted to a standard backup. Once the
+   * `hot_to_standard_time` has passed, Cloud Bigtable will convert the hot backup to a standard
+   * backup. This value must be greater than the backup creation time by: - At least 24 hours This
+   * field only applies for hot backups. When creating or updating a standard backup, attempting to
+   * set this field will fail the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String hotToStandardTime;
 
   /**
    * A globally unique identifier for the backup which cannot be changed. Values are of the form
@@ -105,6 +123,23 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Indicates the backup type of the backup.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackupType() {
+    return backupType;
+  }
+
+  /**
+   * Indicates the backup type of the backup.
+   * @param backupType backupType or {@code null} for none
+   */
+  public Backup setBackupType(java.lang.String backupType) {
+    this.backupType = backupType;
+    return this;
+  }
 
   /**
    * Output only. The encryption information for the backup.
@@ -160,6 +195,31 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setExpireTime(String expireTime) {
     this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
+   * The time at which the hot backup will be converted to a standard backup. Once the
+   * `hot_to_standard_time` has passed, Cloud Bigtable will convert the hot backup to a standard
+   * backup. This value must be greater than the backup creation time by: - At least 24 hours This
+   * field only applies for hot backups. When creating or updating a standard backup, attempting to
+   * set this field will fail the request.
+   * @return value or {@code null} for none
+   */
+  public String getHotToStandardTime() {
+    return hotToStandardTime;
+  }
+
+  /**
+   * The time at which the hot backup will be converted to a standard backup. Once the
+   * `hot_to_standard_time` has passed, Cloud Bigtable will convert the hot backup to a standard
+   * backup. This value must be greater than the backup creation time by: - At least 24 hours This
+   * field only applies for hot backups. When creating or updating a standard backup, attempting to
+   * set this field will fail the request.
+   * @param hotToStandardTime hotToStandardTime or {@code null} for none
+   */
+  public Backup setHotToStandardTime(String hotToStandardTime) {
+    this.hotToStandardTime = hotToStandardTime;
     return this;
   }
 

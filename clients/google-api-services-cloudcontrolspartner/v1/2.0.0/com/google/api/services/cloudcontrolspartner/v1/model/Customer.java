@@ -38,7 +38,7 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   private CustomerOnboardingState customerOnboardingState;
 
   /**
-   * The customer organization's display name. E.g. "Google".
+   * Required. Display name for the customer
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The customer organization's display name. E.g. "Google".
+   * Required. Display name for the customer
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -84,7 +84,7 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The customer organization's display name. E.g. "Google".
+   * Required. Display name for the customer
    * @param displayName displayName or {@code null} for none
    */
   public Customer setDisplayName(java.lang.String displayName) {

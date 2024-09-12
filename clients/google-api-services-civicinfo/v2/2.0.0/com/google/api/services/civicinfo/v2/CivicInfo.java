@@ -154,6 +154,129 @@ public class CivicInfo extends com.google.api.client.googleapis.services.json.Ab
   public class Divisions {
 
     /**
+     * Lookup OCDIDs and names for divisions related to an address.
+     *
+     * Create a request for the method "divisions.queryDivisionByAddress".
+     *
+     * This request holds the parameters needed by the civicinfo server.  After setting any optional
+     * parameters, call the {@link QueryDivisionByAddress#execute()} method to invoke the remote
+     * operation.
+     *
+     * @return the request
+     */
+    public QueryDivisionByAddress queryDivisionByAddress() throws java.io.IOException {
+      QueryDivisionByAddress result = new QueryDivisionByAddress();
+      initialize(result);
+      return result;
+    }
+
+    public class QueryDivisionByAddress extends CivicInfoRequest<com.google.api.services.civicinfo.v2.model.DivisionByAddressResponse> {
+
+      private static final String REST_PATH = "civicinfo/v2/divisionsByAddress";
+
+      /**
+       * Lookup OCDIDs and names for divisions related to an address.
+       *
+       * Create a request for the method "divisions.queryDivisionByAddress".
+       *
+       * This request holds the parameters needed by the the civicinfo server.  After setting any
+       * optional parameters, call the {@link QueryDivisionByAddress#execute()} method to invoke the
+       * remote operation. <p> {@link QueryDivisionByAddress#initialize(com.google.api.client.googleapis
+       * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected QueryDivisionByAddress() {
+        super(CivicInfo.this, "GET", REST_PATH, null, com.google.api.services.civicinfo.v2.model.DivisionByAddressResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public QueryDivisionByAddress set$Xgafv(java.lang.String $Xgafv) {
+        return (QueryDivisionByAddress) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public QueryDivisionByAddress setAccessToken(java.lang.String accessToken) {
+        return (QueryDivisionByAddress) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public QueryDivisionByAddress setAlt(java.lang.String alt) {
+        return (QueryDivisionByAddress) super.setAlt(alt);
+      }
+
+      @Override
+      public QueryDivisionByAddress setCallback(java.lang.String callback) {
+        return (QueryDivisionByAddress) super.setCallback(callback);
+      }
+
+      @Override
+      public QueryDivisionByAddress setFields(java.lang.String fields) {
+        return (QueryDivisionByAddress) super.setFields(fields);
+      }
+
+      @Override
+      public QueryDivisionByAddress setKey(java.lang.String key) {
+        return (QueryDivisionByAddress) super.setKey(key);
+      }
+
+      @Override
+      public QueryDivisionByAddress setOauthToken(java.lang.String oauthToken) {
+        return (QueryDivisionByAddress) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public QueryDivisionByAddress setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (QueryDivisionByAddress) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public QueryDivisionByAddress setQuotaUser(java.lang.String quotaUser) {
+        return (QueryDivisionByAddress) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public QueryDivisionByAddress setUploadType(java.lang.String uploadType) {
+        return (QueryDivisionByAddress) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public QueryDivisionByAddress setUploadProtocol(java.lang.String uploadProtocol) {
+        return (QueryDivisionByAddress) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @com.google.api.client.util.Key
+      private java.lang.String address;
+
+      /**
+
+       */
+      public java.lang.String getAddress() {
+        return address;
+      }
+
+      public QueryDivisionByAddress setAddress(java.lang.String address) {
+        this.address = address;
+        return this;
+      }
+
+      @Override
+      public QueryDivisionByAddress set(String parameterName, Object value) {
+        return (QueryDivisionByAddress) super.set(parameterName, value);
+      }
+    }
+    /**
      * Searches for political divisions by their natural name or OCD ID.
      *
      * Create a request for the method "divisions.search".

@@ -17,7 +17,8 @@
 package com.google.api.services.workstations.v1beta.model;
 
 /**
- * Boost config for this workstation. This object is populated from the parent workstation config.
+ * Boost configuration for this workstation. This object is populated from the parent workstation
+ * configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Workstations API. For a detailed explanation
@@ -31,14 +32,14 @@ package com.google.api.services.workstations.v1beta.model;
 public final class WorkstationBoostConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Boost config id.
+   * Output only. Boost configuration ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Output only. Boost config id.
+   * Output only. Boost configuration ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -46,7 +47,7 @@ public final class WorkstationBoostConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. Boost config id.
+   * Output only. Boost configuration ID.
    * @param id id or {@code null} for none
    */
   public WorkstationBoostConfig setId(java.lang.String id) {

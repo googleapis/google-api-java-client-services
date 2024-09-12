@@ -78,7 +78,7 @@ public final class GoogleCloudChannelV1ImportCustomerRequest extends com.google.
   private java.lang.Boolean overwriteIfExists;
 
   /**
-   * Optional. Customer's primary admin email.
+   * Required. Customer's primary admin email.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -199,7 +199,7 @@ public final class GoogleCloudChannelV1ImportCustomerRequest extends com.google.
   }
 
   /**
-   * Optional. Customer's primary admin email.
+   * Required. Customer's primary admin email.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryAdminEmail() {
@@ -207,7 +207,7 @@ public final class GoogleCloudChannelV1ImportCustomerRequest extends com.google.
   }
 
   /**
-   * Optional. Customer's primary admin email.
+   * Required. Customer's primary admin email.
    * @param primaryAdminEmail primaryAdminEmail or {@code null} for none
    */
   public GoogleCloudChannelV1ImportCustomerRequest setPrimaryAdminEmail(java.lang.String primaryAdminEmail) {

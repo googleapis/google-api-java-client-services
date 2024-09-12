@@ -38,7 +38,7 @@ public final class ReauthSettings extends com.google.api.client.json.GenericJson
   private String maxAge;
 
   /**
-   * Reauth method requested.
+   * Optional. Reauth method requested.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class ReauthSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Reauth method requested.
+   * Optional. Reauth method requested.
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -78,7 +78,7 @@ public final class ReauthSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Reauth method requested.
+   * Optional. Reauth method requested.
    * @param method method or {@code null} for none
    */
   public ReauthSettings setMethod(java.lang.String method) {

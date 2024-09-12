@@ -188,6 +188,13 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.String headlineOfferCondition;
 
   /**
+   * Number and amount of installments to pay for an item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HeadlineOfferInstallment headlineOfferInstallment;
+
+  /**
    * Link to the headline offer.
    * The value may be {@code null}.
    */
@@ -214,6 +221,14 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Price headlineOfferShippingPrice;
+
+  /**
+   * Number of periods (months or years) and amount of payment per period for an item with an
+   * associated subscription contract.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HeadlineOfferSubscriptionCost headlineOfferSubscriptionCost;
 
   /**
    * High Price of the aggregate offer.
@@ -769,6 +784,23 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Number and amount of installments to pay for an item.
+   * @return value or {@code null} for none
+   */
+  public HeadlineOfferInstallment getHeadlineOfferInstallment() {
+    return headlineOfferInstallment;
+  }
+
+  /**
+   * Number and amount of installments to pay for an item.
+   * @param headlineOfferInstallment headlineOfferInstallment or {@code null} for none
+   */
+  public Attributes setHeadlineOfferInstallment(HeadlineOfferInstallment headlineOfferInstallment) {
+    this.headlineOfferInstallment = headlineOfferInstallment;
+    return this;
+  }
+
+  /**
    * Link to the headline offer.
    * @return value or {@code null} for none
    */
@@ -833,6 +865,25 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   public Attributes setHeadlineOfferShippingPrice(Price headlineOfferShippingPrice) {
     this.headlineOfferShippingPrice = headlineOfferShippingPrice;
+    return this;
+  }
+
+  /**
+   * Number of periods (months or years) and amount of payment per period for an item with an
+   * associated subscription contract.
+   * @return value or {@code null} for none
+   */
+  public HeadlineOfferSubscriptionCost getHeadlineOfferSubscriptionCost() {
+    return headlineOfferSubscriptionCost;
+  }
+
+  /**
+   * Number of periods (months or years) and amount of payment per period for an item with an
+   * associated subscription contract.
+   * @param headlineOfferSubscriptionCost headlineOfferSubscriptionCost or {@code null} for none
+   */
+  public Attributes setHeadlineOfferSubscriptionCost(HeadlineOfferSubscriptionCost headlineOfferSubscriptionCost) {
+    this.headlineOfferSubscriptionCost = headlineOfferSubscriptionCost;
     return this;
   }
 

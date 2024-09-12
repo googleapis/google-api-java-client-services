@@ -1063,6 +1063,330 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
     }
 
     /**
+     * An accessor for creating requests from the AutofeedSettings collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Merchant merchantapi = new Merchant(...);}
+     *   {@code Merchant.AutofeedSettings.List request = merchantapi.autofeedSettings().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public AutofeedSettings autofeedSettings() {
+      return new AutofeedSettings();
+    }
+
+    /**
+     * The "autofeedSettings" collection of methods.
+     */
+    public class AutofeedSettings {
+
+      /**
+       * Retrieves the autofeed settings of an account.
+       *
+       * Create a request for the method "autofeedSettings.getAutofeedSettings".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link GetAutofeedSettings#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the autofeed settings. Format: `accounts/{account}/autofeedSettings`
+       * @return the request
+       */
+      public GetAutofeedSettings getAutofeedSettings(java.lang.String name) throws java.io.IOException {
+        GetAutofeedSettings result = new GetAutofeedSettings(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetAutofeedSettings extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.AutofeedSettings> {
+
+        private static final String REST_PATH = "accounts/v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/autofeedSettings$");
+
+        /**
+         * Retrieves the autofeed settings of an account.
+         *
+         * Create a request for the method "autofeedSettings.getAutofeedSettings".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link GetAutofeedSettings#execute()} method to invoke the remote
+         * operation. <p> {@link GetAutofeedSettings#initialize(com.google.api.client.googleapis.services.
+         * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the autofeed settings. Format: `accounts/{account}/autofeedSettings`
+         * @since 1.13
+         */
+        protected GetAutofeedSettings(java.lang.String name) {
+          super(Merchant.this, "GET", REST_PATH, null, com.google.api.services.merchantapi.accounts_v1beta.model.AutofeedSettings.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/autofeedSettings$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetAutofeedSettings set$Xgafv(java.lang.String $Xgafv) {
+          return (GetAutofeedSettings) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetAutofeedSettings setAccessToken(java.lang.String accessToken) {
+          return (GetAutofeedSettings) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetAutofeedSettings setAlt(java.lang.String alt) {
+          return (GetAutofeedSettings) super.setAlt(alt);
+        }
+
+        @Override
+        public GetAutofeedSettings setCallback(java.lang.String callback) {
+          return (GetAutofeedSettings) super.setCallback(callback);
+        }
+
+        @Override
+        public GetAutofeedSettings setFields(java.lang.String fields) {
+          return (GetAutofeedSettings) super.setFields(fields);
+        }
+
+        @Override
+        public GetAutofeedSettings setKey(java.lang.String key) {
+          return (GetAutofeedSettings) super.setKey(key);
+        }
+
+        @Override
+        public GetAutofeedSettings setOauthToken(java.lang.String oauthToken) {
+          return (GetAutofeedSettings) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetAutofeedSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetAutofeedSettings) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetAutofeedSettings setQuotaUser(java.lang.String quotaUser) {
+          return (GetAutofeedSettings) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetAutofeedSettings setUploadType(java.lang.String uploadType) {
+          return (GetAutofeedSettings) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetAutofeedSettings setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetAutofeedSettings) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the autofeed settings. Format:
+         * `accounts/{account}/autofeedSettings`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the autofeed settings. Format: `accounts/{account}/autofeedSettings`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the autofeed settings. Format:
+         * `accounts/{account}/autofeedSettings`
+         */
+        public GetAutofeedSettings setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/autofeedSettings$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetAutofeedSettings set(String parameterName, Object value) {
+          return (GetAutofeedSettings) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the autofeed settings of an account.
+       *
+       * Create a request for the method "autofeedSettings.updateAutofeedSettings".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link UpdateAutofeedSettings#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Identifier. The resource name of the autofeed settings. Format:
+       *        `accounts/{account}/autofeedSettings`.
+       * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.AutofeedSettings}
+       * @return the request
+       */
+      public UpdateAutofeedSettings updateAutofeedSettings(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.AutofeedSettings content) throws java.io.IOException {
+        UpdateAutofeedSettings result = new UpdateAutofeedSettings(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateAutofeedSettings extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.AutofeedSettings> {
+
+        private static final String REST_PATH = "accounts/v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/autofeedSettings$");
+
+        /**
+         * Updates the autofeed settings of an account.
+         *
+         * Create a request for the method "autofeedSettings.updateAutofeedSettings".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link UpdateAutofeedSettings#execute()} method to invoke the
+         * remote operation. <p> {@link UpdateAutofeedSettings#initialize(com.google.api.client.googleapis
+         * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param name Identifier. The resource name of the autofeed settings. Format:
+       *        `accounts/{account}/autofeedSettings`.
+         * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.AutofeedSettings}
+         * @since 1.13
+         */
+        protected UpdateAutofeedSettings(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.AutofeedSettings content) {
+          super(Merchant.this, "PATCH", REST_PATH, content, com.google.api.services.merchantapi.accounts_v1beta.model.AutofeedSettings.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/autofeedSettings$");
+          }
+        }
+
+        @Override
+        public UpdateAutofeedSettings set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateAutofeedSettings) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateAutofeedSettings setAccessToken(java.lang.String accessToken) {
+          return (UpdateAutofeedSettings) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateAutofeedSettings setAlt(java.lang.String alt) {
+          return (UpdateAutofeedSettings) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateAutofeedSettings setCallback(java.lang.String callback) {
+          return (UpdateAutofeedSettings) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateAutofeedSettings setFields(java.lang.String fields) {
+          return (UpdateAutofeedSettings) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateAutofeedSettings setKey(java.lang.String key) {
+          return (UpdateAutofeedSettings) super.setKey(key);
+        }
+
+        @Override
+        public UpdateAutofeedSettings setOauthToken(java.lang.String oauthToken) {
+          return (UpdateAutofeedSettings) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateAutofeedSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateAutofeedSettings) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateAutofeedSettings setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateAutofeedSettings) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateAutofeedSettings setUploadType(java.lang.String uploadType) {
+          return (UpdateAutofeedSettings) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateAutofeedSettings setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateAutofeedSettings) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. The resource name of the autofeed settings. Format:
+         * `accounts/{account}/autofeedSettings`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. The resource name of the autofeed settings. Format:
+       `accounts/{account}/autofeedSettings`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. The resource name of the autofeed settings. Format:
+         * `accounts/{account}/autofeedSettings`.
+         */
+        public UpdateAutofeedSettings setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/autofeedSettings$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Required. List of fields being updated. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. List of fields being updated.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Required. List of fields being updated. */
+        public UpdateAutofeedSettings setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateAutofeedSettings set(String parameterName, Object value) {
+          return (UpdateAutofeedSettings) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the BusinessIdentity collection.
      *
      * <p>The typical use is:</p>
@@ -1707,30 +2031,30 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
     }
     /**
-     * An accessor for creating requests from the Emailpreferences collection.
+     * An accessor for creating requests from the EmailPreferences collection.
      *
      * <p>The typical use is:</p>
      * <pre>
      *   {@code Merchant merchantapi = new Merchant(...);}
-     *   {@code Merchant.Emailpreferences.List request = merchantapi.emailpreferences().list(parameters ...)}
+     *   {@code Merchant.EmailPreferences.List request = merchantapi.emailPreferences().list(parameters ...)}
      * </pre>
      *
      * @return the resource collection
      */
-    public Emailpreferences emailpreferences() {
-      return new Emailpreferences();
+    public EmailPreferences emailPreferences() {
+      return new EmailPreferences();
     }
 
     /**
-     * The "emailpreferences" collection of methods.
+     * The "emailPreferences" collection of methods.
      */
-    public class Emailpreferences {
+    public class EmailPreferences {
 
       /**
        * Returns the email preferences for a Merchant Center account user. Use the
        * name=accounts/users/me/emailPreferences alias to get preferences for the authenticated user.
        *
-       * Create a request for the method "emailpreferences.getEmailPreferences".
+       * Create a request for the method "emailPreferences.getEmailPreferences".
        *
        * This request holds the parameters needed by the merchantapi server.  After setting any optional
        * parameters, call the {@link GetEmailPreferences#execute()} method to invoke the remote operation.
@@ -1756,7 +2080,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * Returns the email preferences for a Merchant Center account user. Use the
          * name=accounts/users/me/emailPreferences alias to get preferences for the authenticated user.
          *
-         * Create a request for the method "emailpreferences.getEmailPreferences".
+         * Create a request for the method "emailPreferences.getEmailPreferences".
          *
          * This request holds the parameters needed by the the merchantapi server.  After setting any
          * optional parameters, call the {@link GetEmailPreferences#execute()} method to invoke the remote
@@ -1883,7 +2207,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * in status value. Use the name=accounts/users/me/emailPreferences alias to update preferences for
        * the authenticated user.
        *
-       * Create a request for the method "emailpreferences.updateEmailPreferences".
+       * Create a request for the method "emailPreferences.updateEmailPreferences".
        *
        * This request holds the parameters needed by the merchantapi server.  After setting any optional
        * parameters, call the {@link UpdateEmailPreferences#execute()} method to invoke the remote
@@ -1914,7 +2238,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * opt-in status value. Use the name=accounts/users/me/emailPreferences alias to update
          * preferences for the authenticated user.
          *
-         * Create a request for the method "emailpreferences.updateEmailPreferences".
+         * Create a request for the method "emailPreferences.updateEmailPreferences".
          *
          * This request holds the parameters needed by the the merchantapi server.  After setting any
          * optional parameters, call the {@link UpdateEmailPreferences#execute()} method to invoke the

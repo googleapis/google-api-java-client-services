@@ -56,6 +56,14 @@ public final class PrimaryProductDataSource extends com.google.api.client.json.G
   private java.util.List<java.lang.String> countries;
 
   /**
+   * Optional. Default rule management of the data source. If set, the linked data sources will be
+   * replaced.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DefaultRule defaultRule;
+
+  /**
    * Optional. Immutable. The feed label that is specified on the data source level. Must be less
    * than or equal to 20 uppercase letters (A-Z), numbers (0-9), and dashes (-). See also [migration
    * to feed labels](https://developers.google.com/shopping-content/guides/products/feed-labels).
@@ -126,6 +134,25 @@ public final class PrimaryProductDataSource extends com.google.api.client.json.G
    */
   public PrimaryProductDataSource setCountries(java.util.List<java.lang.String> countries) {
     this.countries = countries;
+    return this;
+  }
+
+  /**
+   * Optional. Default rule management of the data source. If set, the linked data sources will be
+   * replaced.
+   * @return value or {@code null} for none
+   */
+  public DefaultRule getDefaultRule() {
+    return defaultRule;
+  }
+
+  /**
+   * Optional. Default rule management of the data source. If set, the linked data sources will be
+   * replaced.
+   * @param defaultRule defaultRule or {@code null} for none
+   */
+  public PrimaryProductDataSource setDefaultRule(DefaultRule defaultRule) {
+    this.defaultRule = defaultRule;
     return this;
   }
 

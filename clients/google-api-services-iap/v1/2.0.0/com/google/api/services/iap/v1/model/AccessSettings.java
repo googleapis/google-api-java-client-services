@@ -67,8 +67,8 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   private OAuthSettings oauthSettings;
 
   /**
-   * Optional. Settings to configure Policy delegation for apps hosted in tenant projects.
-   * INTERNAL_ONLY.
+   * Optional. Settings to allow google-internal teams to use IAP for apps hosted in a tenant
+   * project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,8 +177,8 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Settings to configure Policy delegation for apps hosted in tenant projects.
-   * INTERNAL_ONLY.
+   * Optional. Settings to allow google-internal teams to use IAP for apps hosted in a tenant
+   * project.
    * @return value or {@code null} for none
    */
   public PolicyDelegationSettings getPolicyDelegationSettings() {
@@ -186,8 +186,8 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Settings to configure Policy delegation for apps hosted in tenant projects.
-   * INTERNAL_ONLY.
+   * Optional. Settings to allow google-internal teams to use IAP for apps hosted in a tenant
+   * project.
    * @param policyDelegationSettings policyDelegationSettings or {@code null} for none
    */
   public AccessSettings setPolicyDelegationSettings(PolicyDelegationSettings policyDelegationSettings) {

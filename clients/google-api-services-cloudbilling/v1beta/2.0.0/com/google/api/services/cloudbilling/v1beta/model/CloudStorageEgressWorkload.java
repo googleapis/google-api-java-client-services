@@ -20,7 +20,18 @@ package com.google.api.services.cloudbilling.v1beta.model;
  * Specification of a network type. Network data transfer within Google Cloud applies when you move
  * or copy data from one Cloud Storage bucket to another or when another Google Cloud service
  * accesses data in your Cloud Storage bucket.This includes the network data transfer within Google
- * Cloud and the general network usage.
+ * Cloud and the general network usage. * If transferring data between two regions, the source and
+ * destination fields are set to different values. For example: `source_continent` =
+ * "SOURCE_CONTINENT_ASIA_PACIFIC", `destination_continent` = "SOURCE_CONTINENT_SOUTH_AMERICA". * If
+ * transferring data within one region, the source and destination fields are set to the same value.
+ * For example: `source_continent` = "SOURCE_CONTINENT_ASIA_PACIFIC", `destination_continent` =
+ * "SOURCE_CONTINENT_ASIA_PACIFIC". Some examples for the Network data transfer traffic type on the
+ * pricing page. * Data moves between different locations on the same continent. `source_continent`
+ * = "SOURCE_CONTINENT_ASIA_PACIFIC", `destination_continent` = "SOURCE_CONTINENT_ASIA_PACIFIC". *
+ * Data moves between different continents and neither is Australia. `source_continent` =
+ * "SOURCE_CONTINENT_NORTH_AMERICA", `destination_continent` = "SOURCE_CONTINENT_ASIA_PACIFIC". *
+ * Data moves between different continents and one is Australia. `source_continent` =
+ * "SOURCE_CONTINENT_NORTH_AMERICA", `destination_continent` = "SOURCE_CONTINENT_AUSTRALIA".
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Billing API. For a detailed explanation see:

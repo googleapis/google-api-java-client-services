@@ -54,6 +54,21 @@ public final class SupplementalProductDataSource extends com.google.api.client.j
   private java.lang.String feedLabel;
 
   /**
+   * Output only. The (unordered and deduplicated) list of all primary data sources linked to this
+   * data source in either default or custom rules. Supplemental data source cannot be deleted
+   * before all links are removed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DataSourceReference> referencingPrimaryDataSources;
+
+  static {
+    // hack to force ProGuard to consider DataSourceReference used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DataSourceReference.class);
+  }
+
+  /**
    * Optional. Immutable. The two-letter ISO 639-1 language of the items in the data source.
    * `feedLabel` and `contentLanguage` must be either both set or unset. The fields can only be
    * unset for data sources without file input. If set, the data source will only accept products
@@ -104,6 +119,27 @@ public final class SupplementalProductDataSource extends com.google.api.client.j
    */
   public SupplementalProductDataSource setFeedLabel(java.lang.String feedLabel) {
     this.feedLabel = feedLabel;
+    return this;
+  }
+
+  /**
+   * Output only. The (unordered and deduplicated) list of all primary data sources linked to this
+   * data source in either default or custom rules. Supplemental data source cannot be deleted
+   * before all links are removed.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DataSourceReference> getReferencingPrimaryDataSources() {
+    return referencingPrimaryDataSources;
+  }
+
+  /**
+   * Output only. The (unordered and deduplicated) list of all primary data sources linked to this
+   * data source in either default or custom rules. Supplemental data source cannot be deleted
+   * before all links are removed.
+   * @param referencingPrimaryDataSources referencingPrimaryDataSources or {@code null} for none
+   */
+  public SupplementalProductDataSource setReferencingPrimaryDataSources(java.util.List<DataSourceReference> referencingPrimaryDataSources) {
+    this.referencingPrimaryDataSources = referencingPrimaryDataSources;
     return this;
   }
 

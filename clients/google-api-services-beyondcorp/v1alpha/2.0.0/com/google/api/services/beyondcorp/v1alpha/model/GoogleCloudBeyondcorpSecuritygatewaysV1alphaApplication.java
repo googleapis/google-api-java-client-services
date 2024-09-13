@@ -30,13 +30,6 @@ package com.google.api.services.beyondcorp.v1alpha.model;
 public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Application filter conditions associated with an application.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplicationMatchFilter applicationMatchFilter;
-
-  /**
    * Output only. Timestamp when the resource was created.
    * The value may be {@code null}.
    */
@@ -51,6 +44,18 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication exten
   private java.lang.String displayName;
 
   /**
+   * Required. Endpoint matchers associated with an application. A combination of hostname and ports
+   * as endpoint matcher is used to match the application. Match conditions for OR logic. An array
+   * of match conditions to allow for multiple matching criteria. The rule is considered a match if
+   * one the conditions are met. The conditions can be one of the following combination (Hostname),
+   * (Hostname & Ports) EXAMPLES: Hostname - ("*.abc.com"), ("xyz.abc.com") Hostname and Ports -
+   * ("abc.com" and "22"), ("abc.com" and "22,33") etc
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudBeyondcorpSecuritygatewaysV1alphaEndpointMatcher> endpointMatchers;
+
+  /**
    * Identifier. Name of the resource.
    * The value may be {@code null}.
    */
@@ -63,23 +68,6 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication exten
    */
   @com.google.api.client.util.Key
   private String updateTime;
-
-  /**
-   * Required. Application filter conditions associated with an application.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplicationMatchFilter getApplicationMatchFilter() {
-    return applicationMatchFilter;
-  }
-
-  /**
-   * Required. Application filter conditions associated with an application.
-   * @param applicationMatchFilter applicationMatchFilter or {@code null} for none
-   */
-  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication setApplicationMatchFilter(GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplicationMatchFilter applicationMatchFilter) {
-    this.applicationMatchFilter = applicationMatchFilter;
-    return this;
-  }
 
   /**
    * Output only. Timestamp when the resource was created.
@@ -112,6 +100,33 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication exten
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Required. Endpoint matchers associated with an application. A combination of hostname and ports
+   * as endpoint matcher is used to match the application. Match conditions for OR logic. An array
+   * of match conditions to allow for multiple matching criteria. The rule is considered a match if
+   * one the conditions are met. The conditions can be one of the following combination (Hostname),
+   * (Hostname & Ports) EXAMPLES: Hostname - ("*.abc.com"), ("xyz.abc.com") Hostname and Ports -
+   * ("abc.com" and "22"), ("abc.com" and "22,33") etc
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudBeyondcorpSecuritygatewaysV1alphaEndpointMatcher> getEndpointMatchers() {
+    return endpointMatchers;
+  }
+
+  /**
+   * Required. Endpoint matchers associated with an application. A combination of hostname and ports
+   * as endpoint matcher is used to match the application. Match conditions for OR logic. An array
+   * of match conditions to allow for multiple matching criteria. The rule is considered a match if
+   * one the conditions are met. The conditions can be one of the following combination (Hostname),
+   * (Hostname & Ports) EXAMPLES: Hostname - ("*.abc.com"), ("xyz.abc.com") Hostname and Ports -
+   * ("abc.com" and "22"), ("abc.com" and "22,33") etc
+   * @param endpointMatchers endpointMatchers or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication setEndpointMatchers(java.util.List<GoogleCloudBeyondcorpSecuritygatewaysV1alphaEndpointMatcher> endpointMatchers) {
+    this.endpointMatchers = endpointMatchers;
     return this;
   }
 

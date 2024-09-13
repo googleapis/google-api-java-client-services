@@ -17,7 +17,7 @@
 package com.google.api.services.beyondcorp.v1alpha.model;
 
 /**
- * A Beyondcorp Hub resource information.
+ * The Hub message contains information pertaining to the regional data path deployments.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BeyondCorp API. For a detailed explanation see:
@@ -30,152 +30,32 @@ package com.google.api.services.beyondcorp.v1alpha.model;
 public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaHub extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Timestamp when the resource was created.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String createTime;
-
-  /**
-   * Optional. An arbitrary user-provided name for the Hub. Cannot exceed 64 characters.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String displayName;
-
-  /**
-   * Identifier. Name of the resource.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String name;
-
-  /**
-   * Required. NAT gateway setup to ensure enough NAT IP addresses are available to handle the
+   * Optional. NAT gateway setup to ensure enough NAT IP addresses are available to handle the
    * traffic needed to access the applications. Allows to explicitly enable or disable the NAT in
    * the Hub along with the total IPs allocated to handle the capacity limits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudBeyondcorpSecuritygatewaysV1alphaHubNatGatewayConfig natGatewayConfig;
+  private GoogleCloudBeyondcorpSecuritygatewaysV1alphaNatGatewayConfig natGatewayConfig;
 
   /**
-   * Output only. The operational state of the Hub.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String state;
-
-  /**
-   * Output only. Timestamp when the resource was last modified.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String updateTime;
-
-  /**
-   * Output only. Timestamp when the resource was created.
-   * @return value or {@code null} for none
-   */
-  public String getCreateTime() {
-    return createTime;
-  }
-
-  /**
-   * Output only. Timestamp when the resource was created.
-   * @param createTime createTime or {@code null} for none
-   */
-  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaHub setCreateTime(String createTime) {
-    this.createTime = createTime;
-    return this;
-  }
-
-  /**
-   * Optional. An arbitrary user-provided name for the Hub. Cannot exceed 64 characters.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDisplayName() {
-    return displayName;
-  }
-
-  /**
-   * Optional. An arbitrary user-provided name for the Hub. Cannot exceed 64 characters.
-   * @param displayName displayName or {@code null} for none
-   */
-  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaHub setDisplayName(java.lang.String displayName) {
-    this.displayName = displayName;
-    return this;
-  }
-
-  /**
-   * Identifier. Name of the resource.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getName() {
-    return name;
-  }
-
-  /**
-   * Identifier. Name of the resource.
-   * @param name name or {@code null} for none
-   */
-  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaHub setName(java.lang.String name) {
-    this.name = name;
-    return this;
-  }
-
-  /**
-   * Required. NAT gateway setup to ensure enough NAT IP addresses are available to handle the
+   * Optional. NAT gateway setup to ensure enough NAT IP addresses are available to handle the
    * traffic needed to access the applications. Allows to explicitly enable or disable the NAT in
    * the Hub along with the total IPs allocated to handle the capacity limits.
    * @return value or {@code null} for none
    */
-  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaHubNatGatewayConfig getNatGatewayConfig() {
+  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaNatGatewayConfig getNatGatewayConfig() {
     return natGatewayConfig;
   }
 
   /**
-   * Required. NAT gateway setup to ensure enough NAT IP addresses are available to handle the
+   * Optional. NAT gateway setup to ensure enough NAT IP addresses are available to handle the
    * traffic needed to access the applications. Allows to explicitly enable or disable the NAT in
    * the Hub along with the total IPs allocated to handle the capacity limits.
    * @param natGatewayConfig natGatewayConfig or {@code null} for none
    */
-  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaHub setNatGatewayConfig(GoogleCloudBeyondcorpSecuritygatewaysV1alphaHubNatGatewayConfig natGatewayConfig) {
+  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaHub setNatGatewayConfig(GoogleCloudBeyondcorpSecuritygatewaysV1alphaNatGatewayConfig natGatewayConfig) {
     this.natGatewayConfig = natGatewayConfig;
-    return this;
-  }
-
-  /**
-   * Output only. The operational state of the Hub.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getState() {
-    return state;
-  }
-
-  /**
-   * Output only. The operational state of the Hub.
-   * @param state state or {@code null} for none
-   */
-  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaHub setState(java.lang.String state) {
-    this.state = state;
-    return this;
-  }
-
-  /**
-   * Output only. Timestamp when the resource was last modified.
-   * @return value or {@code null} for none
-   */
-  public String getUpdateTime() {
-    return updateTime;
-  }
-
-  /**
-   * Output only. Timestamp when the resource was last modified.
-   * @param updateTime updateTime or {@code null} for none
-   */
-  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaHub setUpdateTime(String updateTime) {
-    this.updateTime = updateTime;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.beyondcorp.v1alpha.model;
 
 /**
- * Match condition for idenfying the application.
+ * EndpointMatcher contains the information of the endpoint that will match the application.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BeyondCorp API. For a detailed explanation see:
@@ -27,21 +27,14 @@ package com.google.api.services.beyondcorp.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplicationMatchFilterMatchCondition extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaEndpointMatcher extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. FQDN of the application.
+   * Required. Hostname of the application.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String fqdn;
-
-  /**
-   * Optional. IP Address of the application.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String ipAddress;
+  private java.lang.String hostname;
 
   /**
    * Optional. Ports of the application.
@@ -51,36 +44,19 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplicationMatchF
   private java.util.List<java.lang.Integer> ports;
 
   /**
-   * Optional. FQDN of the application.
+   * Required. Hostname of the application.
    * @return value or {@code null} for none
    */
-  public java.lang.String getFqdn() {
-    return fqdn;
+  public java.lang.String getHostname() {
+    return hostname;
   }
 
   /**
-   * Optional. FQDN of the application.
-   * @param fqdn fqdn or {@code null} for none
+   * Required. Hostname of the application.
+   * @param hostname hostname or {@code null} for none
    */
-  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplicationMatchFilterMatchCondition setFqdn(java.lang.String fqdn) {
-    this.fqdn = fqdn;
-    return this;
-  }
-
-  /**
-   * Optional. IP Address of the application.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getIpAddress() {
-    return ipAddress;
-  }
-
-  /**
-   * Optional. IP Address of the application.
-   * @param ipAddress ipAddress or {@code null} for none
-   */
-  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplicationMatchFilterMatchCondition setIpAddress(java.lang.String ipAddress) {
-    this.ipAddress = ipAddress;
+  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaEndpointMatcher setHostname(java.lang.String hostname) {
+    this.hostname = hostname;
     return this;
   }
 
@@ -96,19 +72,19 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplicationMatchF
    * Optional. Ports of the application.
    * @param ports ports or {@code null} for none
    */
-  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplicationMatchFilterMatchCondition setPorts(java.util.List<java.lang.Integer> ports) {
+  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaEndpointMatcher setPorts(java.util.List<java.lang.Integer> ports) {
     this.ports = ports;
     return this;
   }
 
   @Override
-  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplicationMatchFilterMatchCondition set(String fieldName, Object value) {
-    return (GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplicationMatchFilterMatchCondition) super.set(fieldName, value);
+  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaEndpointMatcher set(String fieldName, Object value) {
+    return (GoogleCloudBeyondcorpSecuritygatewaysV1alphaEndpointMatcher) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplicationMatchFilterMatchCondition clone() {
-    return (GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplicationMatchFilterMatchCondition) super.clone();
+  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaEndpointMatcher clone() {
+    return (GoogleCloudBeyondcorpSecuritygatewaysV1alphaEndpointMatcher) super.clone();
   }
 
 }

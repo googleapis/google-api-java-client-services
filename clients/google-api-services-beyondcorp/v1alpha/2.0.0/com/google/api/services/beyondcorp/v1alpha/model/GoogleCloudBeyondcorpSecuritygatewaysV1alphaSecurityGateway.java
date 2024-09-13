@@ -51,6 +51,19 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaSecurityGateway e
   private java.util.List<java.lang.String> externalIps;
 
   /**
+   * Optional. Map of Hubs that represents regional data path deployment with GCP region as a key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudBeyondcorpSecuritygatewaysV1alphaHub> hubs;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudBeyondcorpSecuritygatewaysV1alphaHub used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudBeyondcorpSecuritygatewaysV1alphaHub.class);
+  }
+
+  /**
    * Identifier. Name of the resource.
    * The value may be {@code null}.
    */
@@ -119,6 +132,23 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaSecurityGateway e
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1alphaSecurityGateway setExternalIps(java.util.List<java.lang.String> externalIps) {
     this.externalIps = externalIps;
+    return this;
+  }
+
+  /**
+   * Optional. Map of Hubs that represents regional data path deployment with GCP region as a key.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudBeyondcorpSecuritygatewaysV1alphaHub> getHubs() {
+    return hubs;
+  }
+
+  /**
+   * Optional. Map of Hubs that represents regional data path deployment with GCP region as a key.
+   * @param hubs hubs or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaSecurityGateway setHubs(java.util.Map<String, GoogleCloudBeyondcorpSecuritygatewaysV1alphaHub> hubs) {
+    this.hubs = hubs;
     return this;
   }
 

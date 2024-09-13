@@ -27,16 +27,7 @@ package com.google.api.services.beyondcorp.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaHubNatGatewayConfig extends com.google.api.client.json.GenericJson {
-
-  /**
-   * Optional. Explicitly enable or disable the NAT Gateway. This is defaulted to false until NAT
-   * Gateway configuration is fully supported and any request with a disable option will be
-   * rejected.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean enableNatGateway;
+public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaNatGatewayConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. List of NAT IPs that will be used for establishing connection to the endpoints.
@@ -44,27 +35,6 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaHubNatGatewayConf
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> natIps;
-
-  /**
-   * Optional. Explicitly enable or disable the NAT Gateway. This is defaulted to false until NAT
-   * Gateway configuration is fully supported and any request with a disable option will be
-   * rejected.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getEnableNatGateway() {
-    return enableNatGateway;
-  }
-
-  /**
-   * Optional. Explicitly enable or disable the NAT Gateway. This is defaulted to false until NAT
-   * Gateway configuration is fully supported and any request with a disable option will be
-   * rejected.
-   * @param enableNatGateway enableNatGateway or {@code null} for none
-   */
-  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaHubNatGatewayConfig setEnableNatGateway(java.lang.Boolean enableNatGateway) {
-    this.enableNatGateway = enableNatGateway;
-    return this;
-  }
 
   /**
    * Output only. List of NAT IPs that will be used for establishing connection to the endpoints.
@@ -78,19 +48,19 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaHubNatGatewayConf
    * Output only. List of NAT IPs that will be used for establishing connection to the endpoints.
    * @param natIps natIps or {@code null} for none
    */
-  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaHubNatGatewayConfig setNatIps(java.util.List<java.lang.String> natIps) {
+  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaNatGatewayConfig setNatIps(java.util.List<java.lang.String> natIps) {
     this.natIps = natIps;
     return this;
   }
 
   @Override
-  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaHubNatGatewayConfig set(String fieldName, Object value) {
-    return (GoogleCloudBeyondcorpSecuritygatewaysV1alphaHubNatGatewayConfig) super.set(fieldName, value);
+  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaNatGatewayConfig set(String fieldName, Object value) {
+    return (GoogleCloudBeyondcorpSecuritygatewaysV1alphaNatGatewayConfig) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaHubNatGatewayConfig clone() {
-    return (GoogleCloudBeyondcorpSecuritygatewaysV1alphaHubNatGatewayConfig) super.clone();
+  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaNatGatewayConfig clone() {
+    return (GoogleCloudBeyondcorpSecuritygatewaysV1alphaNatGatewayConfig) super.clone();
   }
 
 }

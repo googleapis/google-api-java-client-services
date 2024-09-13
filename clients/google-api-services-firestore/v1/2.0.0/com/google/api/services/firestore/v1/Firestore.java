@@ -8188,6 +8188,40 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
+          /**
+           * An expression that filters the list of returned backups. A filter expression consists
+           * of a field name, a comparison operator, and a value for filtering. The value must be a
+           * string, a number, or a boolean. The comparison operator must be one of: `<`, `>`, `<=`,
+           * `>=`, `!=`, `=`, or `:`. Colon `:` is the contains operator. Filter rules are not case
+           * sensitive. The following fields in the Backup are eligible for filtering: *
+           * `database_uid` (supports `=` only)
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** An expression that filters the list of returned backups. A filter expression consists of a field
+         name, a comparison operator, and a value for filtering. The value must be a string, a number, or a
+         boolean. The comparison operator must be one of: `<`, `>`, `<=`, `>=`, `!=`, `=`, or `:`. Colon `:`
+         is the contains operator. Filter rules are not case sensitive. The following fields in the Backup
+         are eligible for filtering: * `database_uid` (supports `=` only)
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * An expression that filters the list of returned backups. A filter expression consists
+           * of a field name, a comparison operator, and a value for filtering. The value must be a
+           * string, a number, or a boolean. The comparison operator must be one of: `<`, `>`, `<=`,
+           * `>=`, `!=`, `=`, or `:`. Colon `:` is the contains operator. Filter rules are not case
+           * sensitive. The following fields in the Backup are eligible for filtering: *
+           * `database_uid` (supports `=` only)
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);

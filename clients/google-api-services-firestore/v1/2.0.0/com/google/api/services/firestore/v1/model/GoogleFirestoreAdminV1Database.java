@@ -133,6 +133,13 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   private java.lang.String previousId;
 
   /**
+   * Output only. Information about the provenance of this database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleFirestoreAdminV1SourceInfo sourceInfo;
+
+  /**
    * The type of the database. See https://cloud.google.com/datastore/docs/firestore-or-datastore
    * for information about how to choose.
    * The value may be {@code null}.
@@ -407,6 +414,23 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
    */
   public GoogleFirestoreAdminV1Database setPreviousId(java.lang.String previousId) {
     this.previousId = previousId;
+    return this;
+  }
+
+  /**
+   * Output only. Information about the provenance of this database.
+   * @return value or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1SourceInfo getSourceInfo() {
+    return sourceInfo;
+  }
+
+  /**
+   * Output only. Information about the provenance of this database.
+   * @param sourceInfo sourceInfo or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1Database setSourceInfo(GoogleFirestoreAdminV1SourceInfo sourceInfo) {
+    this.sourceInfo = sourceInfo;
     return this;
   }
 

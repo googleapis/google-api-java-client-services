@@ -72,6 +72,13 @@ public final class GcpUserAccessBinding extends com.google.api.client.json.Gener
   private java.lang.String name;
 
   /**
+   * Optional. GCSL policy for the group key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReauthSettings reauthSettings;
+
+  /**
    * Optional. A list of applications that are subject to this binding's restrictions. If the list
    * is empty, the binding restrictions will universally apply to all applications.
    * The value may be {@code null}.
@@ -84,6 +91,14 @@ public final class GcpUserAccessBinding extends com.google.api.client.json.Gener
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(Application.class);
   }
+
+  /**
+   * Optional. A list of scoped access settings that set this binding's restrictions on a subset of
+   * applications. This field cannot be set if restricted_client_applications is set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ScopedAccessSettings> scopedAccessSettings;
 
   /**
    * Optional. Access level that a user must have to be granted access. Only one access level is
@@ -178,6 +193,23 @@ public final class GcpUserAccessBinding extends com.google.api.client.json.Gener
   }
 
   /**
+   * Optional. GCSL policy for the group key.
+   * @return value or {@code null} for none
+   */
+  public ReauthSettings getReauthSettings() {
+    return reauthSettings;
+  }
+
+  /**
+   * Optional. GCSL policy for the group key.
+   * @param reauthSettings reauthSettings or {@code null} for none
+   */
+  public GcpUserAccessBinding setReauthSettings(ReauthSettings reauthSettings) {
+    this.reauthSettings = reauthSettings;
+    return this;
+  }
+
+  /**
    * Optional. A list of applications that are subject to this binding's restrictions. If the list
    * is empty, the binding restrictions will universally apply to all applications.
    * @return value or {@code null} for none
@@ -193,6 +225,25 @@ public final class GcpUserAccessBinding extends com.google.api.client.json.Gener
    */
   public GcpUserAccessBinding setRestrictedClientApplications(java.util.List<Application> restrictedClientApplications) {
     this.restrictedClientApplications = restrictedClientApplications;
+    return this;
+  }
+
+  /**
+   * Optional. A list of scoped access settings that set this binding's restrictions on a subset of
+   * applications. This field cannot be set if restricted_client_applications is set.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ScopedAccessSettings> getScopedAccessSettings() {
+    return scopedAccessSettings;
+  }
+
+  /**
+   * Optional. A list of scoped access settings that set this binding's restrictions on a subset of
+   * applications. This field cannot be set if restricted_client_applications is set.
+   * @param scopedAccessSettings scopedAccessSettings or {@code null} for none
+   */
+  public GcpUserAccessBinding setScopedAccessSettings(java.util.List<ScopedAccessSettings> scopedAccessSettings) {
+    this.scopedAccessSettings = scopedAccessSettings;
     return this;
   }
 

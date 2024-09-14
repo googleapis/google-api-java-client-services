@@ -37,15 +37,15 @@ public final class AddOnContext extends com.google.api.client.json.GenericJson {
   private java.lang.String courseId;
 
   /**
-   * Immutable. Identifier of the announcement, courseWork, or courseWorkMaterial under which the
-   * attachment is attached.
+   * Immutable. Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which
+   * the attachment is attached.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String itemId;
 
   /**
-   * Immutable. Deprecated, use item_id instead.
+   * Immutable. Deprecated, use `item_id` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,8 +92,8 @@ public final class AddOnContext extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. Identifier of the announcement, courseWork, or courseWorkMaterial under which the
-   * attachment is attached.
+   * Immutable. Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which
+   * the attachment is attached.
    * @return value or {@code null} for none
    */
   public java.lang.String getItemId() {
@@ -101,8 +101,8 @@ public final class AddOnContext extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. Identifier of the announcement, courseWork, or courseWorkMaterial under which the
-   * attachment is attached.
+   * Immutable. Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which
+   * the attachment is attached.
    * @param itemId itemId or {@code null} for none
    */
   public AddOnContext setItemId(java.lang.String itemId) {
@@ -111,7 +111,7 @@ public final class AddOnContext extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. Deprecated, use item_id instead.
+   * Immutable. Deprecated, use `item_id` instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getPostId() {
@@ -119,7 +119,7 @@ public final class AddOnContext extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. Deprecated, use item_id instead.
+   * Immutable. Deprecated, use `item_id` instead.
    * @param postId postId or {@code null} for none
    */
   public AddOnContext setPostId(java.lang.String postId) {

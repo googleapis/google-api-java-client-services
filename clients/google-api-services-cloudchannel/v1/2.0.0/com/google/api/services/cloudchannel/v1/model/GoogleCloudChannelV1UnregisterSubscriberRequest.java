@@ -30,35 +30,11 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1UnregisterSubscriberRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Resource name of the integrator.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String integrator;
-
-  /**
    * Required. Service account to unregister from subscriber access to the topic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAccount;
-
-  /**
-   * Optional. Resource name of the integrator.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getIntegrator() {
-    return integrator;
-  }
-
-  /**
-   * Optional. Resource name of the integrator.
-   * @param integrator integrator or {@code null} for none
-   */
-  public GoogleCloudChannelV1UnregisterSubscriberRequest setIntegrator(java.lang.String integrator) {
-    this.integrator = integrator;
-    return this;
-  }
 
   /**
    * Required. Service account to unregister from subscriber access to the topic.

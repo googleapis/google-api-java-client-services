@@ -37,6 +37,13 @@ public final class RunStreamRequest extends com.google.api.client.json.GenericJs
   private CdcStrategy cdcStrategy;
 
   /**
+   * Optional. Update the stream without validating it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean force;
+
+  /**
    * Optional. The CDC strategy of the stream. If not set, the system's default value will be used.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class RunStreamRequest extends com.google.api.client.json.GenericJs
    */
   public RunStreamRequest setCdcStrategy(CdcStrategy cdcStrategy) {
     this.cdcStrategy = cdcStrategy;
+    return this;
+  }
+
+  /**
+   * Optional. Update the stream without validating it.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getForce() {
+    return force;
+  }
+
+  /**
+   * Optional. Update the stream without validating it.
+   * @param force force or {@code null} for none
+   */
+  public RunStreamRequest setForce(java.lang.Boolean force) {
+    this.force = force;
     return this;
   }
 

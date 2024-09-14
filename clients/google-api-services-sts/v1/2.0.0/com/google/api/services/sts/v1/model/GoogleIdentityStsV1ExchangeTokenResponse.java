@@ -31,10 +31,10 @@ package com.google.api.services.sts.v1.model;
 public final class GoogleIdentityStsV1ExchangeTokenResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The access boundary session key. This key is used along with the access boundary intermediate
+   * The access boundary session key. This key is used along with the access boundary intermediary
    * token to generate Credential Access Boundary tokens at client side. This field is absent when
    * the `requested_token_type` from the request is not `urn:ietf:params:oauth:token-
-   * type:access_boundary_intermediate_token`.
+   * type:access_boundary_intermediary_token`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("access_boundary_session_key")
@@ -75,10 +75,10 @@ public final class GoogleIdentityStsV1ExchangeTokenResponse extends com.google.a
   private java.lang.String tokenType;
 
   /**
-   * The access boundary session key. This key is used along with the access boundary intermediate
+   * The access boundary session key. This key is used along with the access boundary intermediary
    * token to generate Credential Access Boundary tokens at client side. This field is absent when
    * the `requested_token_type` from the request is not `urn:ietf:params:oauth:token-
-   * type:access_boundary_intermediate_token`.
+   * type:access_boundary_intermediary_token`.
    * @see #decodeAccessBoundarySessionKey()
    * @return value or {@code null} for none
    */
@@ -87,10 +87,10 @@ public final class GoogleIdentityStsV1ExchangeTokenResponse extends com.google.a
   }
 
   /**
-   * The access boundary session key. This key is used along with the access boundary intermediate
+   * The access boundary session key. This key is used along with the access boundary intermediary
    * token to generate Credential Access Boundary tokens at client side. This field is absent when
    * the `requested_token_type` from the request is not `urn:ietf:params:oauth:token-
-   * type:access_boundary_intermediate_token`.
+   * type:access_boundary_intermediary_token`.
    * @see #getAccessBoundarySessionKey()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -101,10 +101,10 @@ public final class GoogleIdentityStsV1ExchangeTokenResponse extends com.google.a
   }
 
   /**
-   * The access boundary session key. This key is used along with the access boundary intermediate
+   * The access boundary session key. This key is used along with the access boundary intermediary
    * token to generate Credential Access Boundary tokens at client side. This field is absent when
    * the `requested_token_type` from the request is not `urn:ietf:params:oauth:token-
-   * type:access_boundary_intermediate_token`.
+   * type:access_boundary_intermediary_token`.
    * @see #encodeAccessBoundarySessionKey()
    * @param accessBoundarySessionKey accessBoundarySessionKey or {@code null} for none
    */
@@ -114,10 +114,10 @@ public final class GoogleIdentityStsV1ExchangeTokenResponse extends com.google.a
   }
 
   /**
-   * The access boundary session key. This key is used along with the access boundary intermediate
+   * The access boundary session key. This key is used along with the access boundary intermediary
    * token to generate Credential Access Boundary tokens at client side. This field is absent when
    * the `requested_token_type` from the request is not `urn:ietf:params:oauth:token-
-   * type:access_boundary_intermediate_token`.
+   * type:access_boundary_intermediary_token`.
    * @see #setAccessBoundarySessionKey()
    *
    * <p>

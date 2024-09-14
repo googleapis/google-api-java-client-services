@@ -43,6 +43,13 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentResponse extends c
   }
 
   /**
+   * Output only. The model version used to generate the response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String modelVersion;
+
+  /**
    * Output only. Content filter results for a prompt sent in the request. Note: Sent only in the
    * first stream chunk. Only happens when no candidates were generated due to content violations.
    * The value may be {@code null}.
@@ -71,6 +78,23 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentResponse extends c
    */
   public GoogleCloudAiplatformV1beta1GenerateContentResponse setCandidates(java.util.List<GoogleCloudAiplatformV1beta1Candidate> candidates) {
     this.candidates = candidates;
+    return this;
+  }
+
+  /**
+   * Output only. The model version used to generate the response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModelVersion() {
+    return modelVersion;
+  }
+
+  /**
+   * Output only. The model version used to generate the response.
+   * @param modelVersion modelVersion or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerateContentResponse setModelVersion(java.lang.String modelVersion) {
+    this.modelVersion = modelVersion;
     return this;
   }
 

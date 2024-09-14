@@ -44,6 +44,13 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
   private java.lang.Float frequencyPenalty;
 
   /**
+   * Optional. Logit probabilities.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer logprobs;
+
+  /**
    * Optional. The maximum number of output tokens to generate per message.
    * The value may be {@code null}.
    */
@@ -56,6 +63,13 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
    */
   @com.google.api.client.util.Key
   private java.lang.Float presencePenalty;
+
+  /**
+   * Optional. If true, export the logprobs results in response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean responseLogprobs;
 
   /**
    * Optional. Output response mimetype of the generated candidate text. Supported mimetype: -
@@ -155,6 +169,23 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
   }
 
   /**
+   * Optional. Logit probabilities.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getLogprobs() {
+    return logprobs;
+  }
+
+  /**
+   * Optional. Logit probabilities.
+   * @param logprobs logprobs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfig setLogprobs(java.lang.Integer logprobs) {
+    this.logprobs = logprobs;
+    return this;
+  }
+
+  /**
    * Optional. The maximum number of output tokens to generate per message.
    * @return value or {@code null} for none
    */
@@ -185,6 +216,23 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
    */
   public GoogleCloudAiplatformV1beta1GenerationConfig setPresencePenalty(java.lang.Float presencePenalty) {
     this.presencePenalty = presencePenalty;
+    return this;
+  }
+
+  /**
+   * Optional. If true, export the logprobs results in response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getResponseLogprobs() {
+    return responseLogprobs;
+  }
+
+  /**
+   * Optional. If true, export the logprobs results in response.
+   * @param responseLogprobs responseLogprobs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfig setResponseLogprobs(java.lang.Boolean responseLogprobs) {
+    this.responseLogprobs = responseLogprobs;
     return this;
   }
 

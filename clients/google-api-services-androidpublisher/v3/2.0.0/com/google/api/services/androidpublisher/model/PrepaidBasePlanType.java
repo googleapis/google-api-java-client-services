@@ -32,8 +32,9 @@ package com.google.api.services.androidpublisher.model;
 public final class PrepaidBasePlanType extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Subscription period, specified in ISO 8601 format. For a list of acceptable billing
-   * periods, refer to the help center.
+   * Required. Immutable. Subscription period, specified in ISO 8601 format. For a list of
+   * acceptable billing periods, refer to the help center. The duration is immutable after the base
+   * plan is created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,8 +49,9 @@ public final class PrepaidBasePlanType extends com.google.api.client.json.Generi
   private java.lang.String timeExtension;
 
   /**
-   * Required. Subscription period, specified in ISO 8601 format. For a list of acceptable billing
-   * periods, refer to the help center.
+   * Required. Immutable. Subscription period, specified in ISO 8601 format. For a list of
+   * acceptable billing periods, refer to the help center. The duration is immutable after the base
+   * plan is created.
    * @return value or {@code null} for none
    */
   public java.lang.String getBillingPeriodDuration() {
@@ -57,8 +59,9 @@ public final class PrepaidBasePlanType extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Subscription period, specified in ISO 8601 format. For a list of acceptable billing
-   * periods, refer to the help center.
+   * Required. Immutable. Subscription period, specified in ISO 8601 format. For a list of
+   * acceptable billing periods, refer to the help center. The duration is immutable after the base
+   * plan is created.
    * @param billingPeriodDuration billingPeriodDuration or {@code null} for none
    */
   public PrepaidBasePlanType setBillingPeriodDuration(java.lang.String billingPeriodDuration) {

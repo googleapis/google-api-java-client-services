@@ -164,6 +164,13 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.lang.String listManagedInstancesResults;
 
   /**
+   * URL to the multi-MIG that this Managed Instance Group belongs to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String multiMig;
+
+  /**
    * The name of the managed instance group. The name must be 1-63 characters long, and comply with
    * RFC1035.
    * The value may be {@code null}.
@@ -679,6 +686,23 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    */
   public InstanceGroupManager setListManagedInstancesResults(java.lang.String listManagedInstancesResults) {
     this.listManagedInstancesResults = listManagedInstancesResults;
+    return this;
+  }
+
+  /**
+   * URL to the multi-MIG that this Managed Instance Group belongs to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMultiMig() {
+    return multiMig;
+  }
+
+  /**
+   * URL to the multi-MIG that this Managed Instance Group belongs to.
+   * @param multiMig multiMig or {@code null} for none
+   */
+  public InstanceGroupManager setMultiMig(java.lang.String multiMig) {
+    this.multiMig = multiMig;
     return this;
   }
 

@@ -107,7 +107,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] The internal IPv6 address range that is assigned to this subnetwork.
+   * The internal IPv6 address range that is owned by this subnetwork.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -479,7 +479,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The internal IPv6 address range that is assigned to this subnetwork.
+   * The internal IPv6 address range that is owned by this subnetwork.
    * @return value or {@code null} for none
    */
   public java.lang.String getInternalIpv6Prefix() {
@@ -487,7 +487,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The internal IPv6 address range that is assigned to this subnetwork.
+   * The internal IPv6 address range that is owned by this subnetwork.
    * @param internalIpv6Prefix internalIpv6Prefix or {@code null} for none
    */
   public Subnetwork setInternalIpv6Prefix(java.lang.String internalIpv6Prefix) {

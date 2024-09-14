@@ -58,6 +58,12 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   private java.lang.String currentAction;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedInstanceCurrentActionDetails currentActionDetails;
+
+  /**
    * [Output only] The unique identifier for this resource. This field is empty when instance does
    * not exist.
    * The value may be {@code null}.
@@ -228,6 +234,21 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
    */
   public ManagedInstance setCurrentAction(java.lang.String currentAction) {
     this.currentAction = currentAction;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public ManagedInstanceCurrentActionDetails getCurrentActionDetails() {
+    return currentActionDetails;
+  }
+
+  /**
+   * @param currentActionDetails currentActionDetails or {@code null} for none
+   */
+  public ManagedInstance setCurrentActionDetails(ManagedInstanceCurrentActionDetails currentActionDetails) {
+    this.currentActionDetails = currentActionDetails;
     return this;
   }
 

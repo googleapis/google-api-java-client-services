@@ -31,9 +31,9 @@ public final class ModelExtractOptions extends com.google.api.client.json.Generi
 
   /**
    * The 1-based ID of the trial to be exported from a hyperparameter tuning model. If not
-   * specified, the trial with id =
-   * [Model](/bigquery/docs/reference/rest/v2/models#resource:-model).defaultTrialId is exported.
-   * This field is ignored for models not trained with hyperparameter tuning.
+   * specified, the trial with id = [Model](https://cloud.google.com/bigquery/docs/reference/rest/v2
+   * /models#resource:-model).defaultTrialId is exported. This field is ignored for models not
+   * trained with hyperparameter tuning.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -41,9 +41,9 @@ public final class ModelExtractOptions extends com.google.api.client.json.Generi
 
   /**
    * The 1-based ID of the trial to be exported from a hyperparameter tuning model. If not
-   * specified, the trial with id =
-   * [Model](/bigquery/docs/reference/rest/v2/models#resource:-model).defaultTrialId is exported.
-   * This field is ignored for models not trained with hyperparameter tuning.
+   * specified, the trial with id = [Model](https://cloud.google.com/bigquery/docs/reference/rest/v2
+   * /models#resource:-model).defaultTrialId is exported. This field is ignored for models not
+   * trained with hyperparameter tuning.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTrialId() {
@@ -52,9 +52,9 @@ public final class ModelExtractOptions extends com.google.api.client.json.Generi
 
   /**
    * The 1-based ID of the trial to be exported from a hyperparameter tuning model. If not
-   * specified, the trial with id =
-   * [Model](/bigquery/docs/reference/rest/v2/models#resource:-model).defaultTrialId is exported.
-   * This field is ignored for models not trained with hyperparameter tuning.
+   * specified, the trial with id = [Model](https://cloud.google.com/bigquery/docs/reference/rest/v2
+   * /models#resource:-model).defaultTrialId is exported. This field is ignored for models not
+   * trained with hyperparameter tuning.
    * @param trialId trialId or {@code null} for none
    */
   public ModelExtractOptions setTrialId(java.lang.Long trialId) {

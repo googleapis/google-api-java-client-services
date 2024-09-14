@@ -53,7 +53,8 @@ public final class TableMetadataCacheUsage extends com.google.api.client.json.Ge
   private TableReference tableReference;
 
   /**
-   * [Table type](/bigquery/docs/reference/rest/v2/tables#Table.FIELDS.type).
+   * [Table
+   * type](https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#Table.FIELDS.type).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,7 +121,8 @@ public final class TableMetadataCacheUsage extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Table type](/bigquery/docs/reference/rest/v2/tables#Table.FIELDS.type).
+   * [Table
+   * type](https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#Table.FIELDS.type).
    * @return value or {@code null} for none
    */
   public java.lang.String getTableType() {
@@ -128,7 +130,8 @@ public final class TableMetadataCacheUsage extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Table type](/bigquery/docs/reference/rest/v2/tables#Table.FIELDS.type).
+   * [Table
+   * type](https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#Table.FIELDS.type).
    * @param tableType tableType or {@code null} for none
    */
   public TableMetadataCacheUsage setTableType(java.lang.String tableType) {

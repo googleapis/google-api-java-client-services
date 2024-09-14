@@ -39,8 +39,8 @@ public final class StorageDescriptor extends com.google.api.client.json.GenericJ
   private java.lang.String inputFormat;
 
   /**
-   * Optional. The physical location of the table (e.g. 'gs://spark-dataproc-data/pangea-
-   * data/case_sensitive/' or 'gs://spark-dataproc-data/pangea-data'). The maximum length is 2056
+   * Optional. The physical location of the table (e.g. `gs://spark-dataproc-data/pangea-
+   * data/case_sensitive/` or `gs://spark-dataproc-data/pangea-data`). The maximum length is 2056
    * bytes.
    * The value may be {@code null}.
    */
@@ -82,8 +82,8 @@ public final class StorageDescriptor extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The physical location of the table (e.g. 'gs://spark-dataproc-data/pangea-
-   * data/case_sensitive/' or 'gs://spark-dataproc-data/pangea-data'). The maximum length is 2056
+   * Optional. The physical location of the table (e.g. `gs://spark-dataproc-data/pangea-
+   * data/case_sensitive/` or `gs://spark-dataproc-data/pangea-data`). The maximum length is 2056
    * bytes.
    * @return value or {@code null} for none
    */
@@ -92,8 +92,8 @@ public final class StorageDescriptor extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The physical location of the table (e.g. 'gs://spark-dataproc-data/pangea-
-   * data/case_sensitive/' or 'gs://spark-dataproc-data/pangea-data'). The maximum length is 2056
+   * Optional. The physical location of the table (e.g. `gs://spark-dataproc-data/pangea-
+   * data/case_sensitive/` or `gs://spark-dataproc-data/pangea-data`). The maximum length is 2056
    * bytes.
    * @param locationUri locationUri or {@code null} for none
    */

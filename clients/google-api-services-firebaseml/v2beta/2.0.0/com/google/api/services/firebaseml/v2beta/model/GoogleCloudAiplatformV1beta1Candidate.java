@@ -81,6 +81,13 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   private java.lang.Integer index;
 
   /**
+   * Output only. Log-likelihood scores for the response tokens and top tokens
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1LogprobsResult logprobsResult;
+
+  /**
    * Output only. List of ratings for the safety of a response candidate. There is at most one
    * rating per category.
    * The value may be {@code null}.
@@ -208,6 +215,23 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1Candidate setIndex(java.lang.Integer index) {
     this.index = index;
+    return this;
+  }
+
+  /**
+   * Output only. Log-likelihood scores for the response tokens and top tokens
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1LogprobsResult getLogprobsResult() {
+    return logprobsResult;
+  }
+
+  /**
+   * Output only. Log-likelihood scores for the response tokens and top tokens
+   * @param logprobsResult logprobsResult or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Candidate setLogprobsResult(GoogleCloudAiplatformV1beta1LogprobsResult logprobsResult) {
+    this.logprobsResult = logprobsResult;
     return this;
   }
 

@@ -2067,8 +2067,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * parameters, call the {@link GetAddOnContext#execute()} method to invoke the remote operation.
        *
        * @param courseId Required. Identifier of the course.
-       * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-       *        attached. This field is required, but is not marked as such while we are migrating from
+       * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+       *        is attached. This field is required, but is not marked as such while we are migrating from
        *        post_id.
        * @return the request
        */
@@ -2100,8 +2100,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * the constructor. </p>
          *
          * @param courseId Required. Identifier of the course.
-         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-       *        attached. This field is required, but is not marked as such while we are migrating from
+         * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+       *        is attached. This field is required, but is not marked as such while we are migrating from
        *        post_id.
          * @since 1.13
          */
@@ -2193,22 +2193,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+         * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the
          * attachment is attached. This field is required, but is not marked as such while we are
          * migrating from post_id.
          */
         @com.google.api.client.util.Key
         private java.lang.String itemId;
 
-        /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-       attached. This field is required, but is not marked as such while we are migrating from post_id.
+        /** Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+       is attached. This field is required, but is not marked as such while we are migrating from post_id.
          */
         public java.lang.String getItemId() {
           return itemId;
         }
 
         /**
-         * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+         * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the
          * attachment is attached. This field is required, but is not marked as such while we are
          * migrating from post_id.
          */
@@ -2276,17 +2276,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           return this;
         }
 
-        /** Optional. Deprecated, use item_id instead. */
+        /** Optional. Deprecated, use `item_id` instead. */
         @com.google.api.client.util.Key
         private java.lang.String postId;
 
-        /** Optional. Deprecated, use item_id instead.
+        /** Optional. Deprecated, use `item_id` instead.
          */
         public java.lang.String getPostId() {
           return postId;
         }
 
-        /** Optional. Deprecated, use item_id instead. */
+        /** Optional. Deprecated, use `item_id` instead. */
         public GetAddOnContext setPostId(java.lang.String postId) {
           this.postId = postId;
           return this;
@@ -2920,7 +2920,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param courseId Required. Identifier of the course.
-         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which to create the
+         * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which to create the
          *        attachment. This field is required, but is not marked as such while we are migrating from
          *        post_id.
          * @param content the {@link com.google.api.services.classroom.model.AddOnAttachment}
@@ -2951,7 +2951,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param courseId Required. Identifier of the course.
-           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which to create the
+           * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which to create the
          *        attachment. This field is required, but is not marked as such while we are migrating from
          *        post_id.
            * @param content the {@link com.google.api.services.classroom.model.AddOnAttachment}
@@ -3035,14 +3035,14 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial under which to create
-           * the attachment. This field is required, but is not marked as such while we are
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which to
+           * create the attachment. This field is required, but is not marked as such while we are
            * migrating from post_id.
            */
           @com.google.api.client.util.Key
           private java.lang.String itemId;
 
-          /** Identifier of the announcement, courseWork, or courseWorkMaterial under which to create the
+          /** Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which to create the
          attachment. This field is required, but is not marked as such while we are migrating from post_id.
            */
           public java.lang.String getItemId() {
@@ -3050,8 +3050,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial under which to create
-           * the attachment. This field is required, but is not marked as such while we are
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which to
+           * create the attachment. This field is required, but is not marked as such while we are
            * migrating from post_id.
            */
           public Create setItemId(java.lang.String itemId) {
@@ -3093,17 +3093,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Optional. Deprecated, use item_id instead. */
+          /** Optional. Deprecated, use `item_id` instead. */
           @com.google.api.client.util.Key
           private java.lang.String postId;
 
-          /** Optional. Deprecated, use item_id instead.
+          /** Optional. Deprecated, use `item_id` instead.
            */
           public java.lang.String getPostId() {
             return postId;
           }
 
-          /** Optional. Deprecated, use item_id instead. */
+          /** Optional. Deprecated, use `item_id` instead. */
           public Create setPostId(java.lang.String postId) {
             this.postId = postId;
             return this;
@@ -3126,8 +3126,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param courseId Required. Identifier of the course.
-         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-         *        attached. This field is required, but is not marked as such while we are migrating from
+         * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+         *        is attached. This field is required, but is not marked as such while we are migrating from
          *        post_id.
          * @param attachmentId Required. Identifier of the attachment.
          * @return the request
@@ -3157,8 +3157,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param courseId Required. Identifier of the course.
-           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-         *        attached. This field is required, but is not marked as such while we are migrating from
+           * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+         *        is attached. This field is required, but is not marked as such while we are migrating from
          *        post_id.
            * @param attachmentId Required. Identifier of the attachment.
            * @since 1.13
@@ -3242,22 +3242,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the
            * attachment is attached. This field is required, but is not marked as such while we are
            * migrating from post_id.
            */
           @com.google.api.client.util.Key
           private java.lang.String itemId;
 
-          /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-         attached. This field is required, but is not marked as such while we are migrating from post_id.
+          /** Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+         is attached. This field is required, but is not marked as such while we are migrating from post_id.
            */
           public java.lang.String getItemId() {
             return itemId;
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the
            * attachment is attached. This field is required, but is not marked as such while we are
            * migrating from post_id.
            */
@@ -3282,17 +3282,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Optional. Deprecated, use item_id instead. */
+          /** Optional. Deprecated, use `item_id` instead. */
           @com.google.api.client.util.Key
           private java.lang.String postId;
 
-          /** Optional. Deprecated, use item_id instead.
+          /** Optional. Deprecated, use `item_id` instead.
            */
           public java.lang.String getPostId() {
             return postId;
           }
 
-          /** Optional. Deprecated, use item_id instead. */
+          /** Optional. Deprecated, use `item_id` instead. */
           public Delete setPostId(java.lang.String postId) {
             this.postId = postId;
             return this;
@@ -3315,8 +3315,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param courseId Required. Identifier of the course.
-         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-         *        attached. This field is required, but is not marked as such while we are migrating from
+         * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+         *        is attached. This field is required, but is not marked as such while we are migrating from
          *        post_id.
          * @param attachmentId Required. Identifier of the attachment.
          * @return the request
@@ -3345,8 +3345,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param courseId Required. Identifier of the course.
-           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-         *        attached. This field is required, but is not marked as such while we are migrating from
+           * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+         *        is attached. This field is required, but is not marked as such while we are migrating from
          *        post_id.
            * @param attachmentId Required. Identifier of the attachment.
            * @since 1.13
@@ -3440,22 +3440,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the
            * attachment is attached. This field is required, but is not marked as such while we are
            * migrating from post_id.
            */
           @com.google.api.client.util.Key
           private java.lang.String itemId;
 
-          /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-         attached. This field is required, but is not marked as such while we are migrating from post_id.
+          /** Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+         is attached. This field is required, but is not marked as such while we are migrating from post_id.
            */
           public java.lang.String getItemId() {
             return itemId;
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the
            * attachment is attached. This field is required, but is not marked as such while we are
            * migrating from post_id.
            */
@@ -3480,17 +3480,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Optional. Deprecated, use item_id instead. */
+          /** Optional. Deprecated, use `item_id` instead. */
           @com.google.api.client.util.Key
           private java.lang.String postId;
 
-          /** Optional. Deprecated, use item_id instead.
+          /** Optional. Deprecated, use `item_id` instead.
            */
           public java.lang.String getPostId() {
             return postId;
           }
 
-          /** Optional. Deprecated, use item_id instead. */
+          /** Optional. Deprecated, use `item_id` instead. */
           public Get setPostId(java.lang.String postId) {
             this.postId = postId;
             return this;
@@ -3513,7 +3513,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param courseId Required. Identifier of the course.
-         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments should be
+         * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` whose attachments should be
          *        enumerated. This field is required, but is not marked as such while we are migrating from
          *        post_id.
          * @return the request
@@ -3543,7 +3543,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param courseId Required. Identifier of the course.
-           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments should be
+           * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` whose attachments should be
          *        enumerated. This field is required, but is not marked as such while we are migrating from
          *        post_id.
            * @since 1.13
@@ -3636,14 +3636,14 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments
-           * should be enumerated. This field is required, but is not marked as such while we are
-           * migrating from post_id.
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` whose
+           * attachments should be enumerated. This field is required, but is not marked as such
+           * while we are migrating from post_id.
            */
           @com.google.api.client.util.Key
           private java.lang.String itemId;
 
-          /** Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments should be
+          /** Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` whose attachments should be
          enumerated. This field is required, but is not marked as such while we are migrating from post_id.
            */
           public java.lang.String getItemId() {
@@ -3651,9 +3651,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments
-           * should be enumerated. This field is required, but is not marked as such while we are
-           * migrating from post_id.
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` whose
+           * attachments should be enumerated. This field is required, but is not marked as such
+           * while we are migrating from post_id.
            */
           public List setItemId(java.lang.String itemId) {
             this.itemId = itemId;
@@ -3714,13 +3714,13 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Optional. Identifier of the post under the course whose attachments to enumerate.
-           * Deprecated, use item_id instead.
+           * Deprecated, use `item_id` instead.
            */
           @com.google.api.client.util.Key
           private java.lang.String postId;
 
           /** Optional. Identifier of the post under the course whose attachments to enumerate. Deprecated, use
-         item_id instead.
+         `item_id` instead.
            */
           public java.lang.String getPostId() {
             return postId;
@@ -3728,7 +3728,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Optional. Identifier of the post under the course whose attachments to enumerate.
-           * Deprecated, use item_id instead.
+           * Deprecated, use `item_id` instead.
            */
           public List setPostId(java.lang.String postId) {
             this.postId = postId;
@@ -4458,8 +4458,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * parameters, call the {@link GetAddOnContext#execute()} method to invoke the remote operation.
        *
        * @param courseId Required. Identifier of the course.
-       * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-       *        attached. This field is required, but is not marked as such while we are migrating from
+       * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+       *        is attached. This field is required, but is not marked as such while we are migrating from
        *        post_id.
        * @return the request
        */
@@ -4491,8 +4491,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * the constructor. </p>
          *
          * @param courseId Required. Identifier of the course.
-         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-       *        attached. This field is required, but is not marked as such while we are migrating from
+         * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+       *        is attached. This field is required, but is not marked as such while we are migrating from
        *        post_id.
          * @since 1.13
          */
@@ -4584,22 +4584,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+         * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the
          * attachment is attached. This field is required, but is not marked as such while we are
          * migrating from post_id.
          */
         @com.google.api.client.util.Key
         private java.lang.String itemId;
 
-        /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-       attached. This field is required, but is not marked as such while we are migrating from post_id.
+        /** Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+       is attached. This field is required, but is not marked as such while we are migrating from post_id.
          */
         public java.lang.String getItemId() {
           return itemId;
         }
 
         /**
-         * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+         * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the
          * attachment is attached. This field is required, but is not marked as such while we are
          * migrating from post_id.
          */
@@ -4667,17 +4667,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           return this;
         }
 
-        /** Optional. Deprecated, use item_id instead. */
+        /** Optional. Deprecated, use `item_id` instead. */
         @com.google.api.client.util.Key
         private java.lang.String postId;
 
-        /** Optional. Deprecated, use item_id instead.
+        /** Optional. Deprecated, use `item_id` instead.
          */
         public java.lang.String getPostId() {
           return postId;
         }
 
-        /** Optional. Deprecated, use item_id instead. */
+        /** Optional. Deprecated, use `item_id` instead. */
         public GetAddOnContext setPostId(java.lang.String postId) {
           this.postId = postId;
           return this;
@@ -5325,7 +5325,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param courseId Required. Identifier of the course.
-         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which to create the
+         * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which to create the
          *        attachment. This field is required, but is not marked as such while we are migrating from
          *        post_id.
          * @param content the {@link com.google.api.services.classroom.model.AddOnAttachment}
@@ -5356,7 +5356,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param courseId Required. Identifier of the course.
-           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which to create the
+           * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which to create the
          *        attachment. This field is required, but is not marked as such while we are migrating from
          *        post_id.
            * @param content the {@link com.google.api.services.classroom.model.AddOnAttachment}
@@ -5440,14 +5440,14 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial under which to create
-           * the attachment. This field is required, but is not marked as such while we are
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which to
+           * create the attachment. This field is required, but is not marked as such while we are
            * migrating from post_id.
            */
           @com.google.api.client.util.Key
           private java.lang.String itemId;
 
-          /** Identifier of the announcement, courseWork, or courseWorkMaterial under which to create the
+          /** Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which to create the
          attachment. This field is required, but is not marked as such while we are migrating from post_id.
            */
           public java.lang.String getItemId() {
@@ -5455,8 +5455,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial under which to create
-           * the attachment. This field is required, but is not marked as such while we are
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which to
+           * create the attachment. This field is required, but is not marked as such while we are
            * migrating from post_id.
            */
           public Create setItemId(java.lang.String itemId) {
@@ -5498,17 +5498,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Optional. Deprecated, use item_id instead. */
+          /** Optional. Deprecated, use `item_id` instead. */
           @com.google.api.client.util.Key
           private java.lang.String postId;
 
-          /** Optional. Deprecated, use item_id instead.
+          /** Optional. Deprecated, use `item_id` instead.
            */
           public java.lang.String getPostId() {
             return postId;
           }
 
-          /** Optional. Deprecated, use item_id instead. */
+          /** Optional. Deprecated, use `item_id` instead. */
           public Create setPostId(java.lang.String postId) {
             this.postId = postId;
             return this;
@@ -5531,8 +5531,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param courseId Required. Identifier of the course.
-         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-         *        attached. This field is required, but is not marked as such while we are migrating from
+         * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+         *        is attached. This field is required, but is not marked as such while we are migrating from
          *        post_id.
          * @param attachmentId Required. Identifier of the attachment.
          * @return the request
@@ -5562,8 +5562,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param courseId Required. Identifier of the course.
-           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-         *        attached. This field is required, but is not marked as such while we are migrating from
+           * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+         *        is attached. This field is required, but is not marked as such while we are migrating from
          *        post_id.
            * @param attachmentId Required. Identifier of the attachment.
            * @since 1.13
@@ -5647,22 +5647,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the
            * attachment is attached. This field is required, but is not marked as such while we are
            * migrating from post_id.
            */
           @com.google.api.client.util.Key
           private java.lang.String itemId;
 
-          /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-         attached. This field is required, but is not marked as such while we are migrating from post_id.
+          /** Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+         is attached. This field is required, but is not marked as such while we are migrating from post_id.
            */
           public java.lang.String getItemId() {
             return itemId;
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the
            * attachment is attached. This field is required, but is not marked as such while we are
            * migrating from post_id.
            */
@@ -5687,17 +5687,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Optional. Deprecated, use item_id instead. */
+          /** Optional. Deprecated, use `item_id` instead. */
           @com.google.api.client.util.Key
           private java.lang.String postId;
 
-          /** Optional. Deprecated, use item_id instead.
+          /** Optional. Deprecated, use `item_id` instead.
            */
           public java.lang.String getPostId() {
             return postId;
           }
 
-          /** Optional. Deprecated, use item_id instead. */
+          /** Optional. Deprecated, use `item_id` instead. */
           public Delete setPostId(java.lang.String postId) {
             this.postId = postId;
             return this;
@@ -5720,8 +5720,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param courseId Required. Identifier of the course.
-         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-         *        attached. This field is required, but is not marked as such while we are migrating from
+         * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+         *        is attached. This field is required, but is not marked as such while we are migrating from
          *        post_id.
          * @param attachmentId Required. Identifier of the attachment.
          * @return the request
@@ -5750,8 +5750,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param courseId Required. Identifier of the course.
-           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-         *        attached. This field is required, but is not marked as such while we are migrating from
+           * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+         *        is attached. This field is required, but is not marked as such while we are migrating from
          *        post_id.
            * @param attachmentId Required. Identifier of the attachment.
            * @since 1.13
@@ -5845,22 +5845,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the
            * attachment is attached. This field is required, but is not marked as such while we are
            * migrating from post_id.
            */
           @com.google.api.client.util.Key
           private java.lang.String itemId;
 
-          /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-         attached. This field is required, but is not marked as such while we are migrating from post_id.
+          /** Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+         is attached. This field is required, but is not marked as such while we are migrating from post_id.
            */
           public java.lang.String getItemId() {
             return itemId;
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the
            * attachment is attached. This field is required, but is not marked as such while we are
            * migrating from post_id.
            */
@@ -5885,17 +5885,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Optional. Deprecated, use item_id instead. */
+          /** Optional. Deprecated, use `item_id` instead. */
           @com.google.api.client.util.Key
           private java.lang.String postId;
 
-          /** Optional. Deprecated, use item_id instead.
+          /** Optional. Deprecated, use `item_id` instead.
            */
           public java.lang.String getPostId() {
             return postId;
           }
 
-          /** Optional. Deprecated, use item_id instead. */
+          /** Optional. Deprecated, use `item_id` instead. */
           public Get setPostId(java.lang.String postId) {
             this.postId = postId;
             return this;
@@ -5918,7 +5918,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param courseId Required. Identifier of the course.
-         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments should be
+         * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` whose attachments should be
          *        enumerated. This field is required, but is not marked as such while we are migrating from
          *        post_id.
          * @return the request
@@ -5948,7 +5948,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param courseId Required. Identifier of the course.
-           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments should be
+           * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` whose attachments should be
          *        enumerated. This field is required, but is not marked as such while we are migrating from
          *        post_id.
            * @since 1.13
@@ -6041,14 +6041,14 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments
-           * should be enumerated. This field is required, but is not marked as such while we are
-           * migrating from post_id.
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` whose
+           * attachments should be enumerated. This field is required, but is not marked as such
+           * while we are migrating from post_id.
            */
           @com.google.api.client.util.Key
           private java.lang.String itemId;
 
-          /** Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments should be
+          /** Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` whose attachments should be
          enumerated. This field is required, but is not marked as such while we are migrating from post_id.
            */
           public java.lang.String getItemId() {
@@ -6056,9 +6056,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments
-           * should be enumerated. This field is required, but is not marked as such while we are
-           * migrating from post_id.
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` whose
+           * attachments should be enumerated. This field is required, but is not marked as such
+           * while we are migrating from post_id.
            */
           public List setItemId(java.lang.String itemId) {
             this.itemId = itemId;
@@ -6119,13 +6119,13 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Optional. Identifier of the post under the course whose attachments to enumerate.
-           * Deprecated, use item_id instead.
+           * Deprecated, use `item_id` instead.
            */
           @com.google.api.client.util.Key
           private java.lang.String postId;
 
           /** Optional. Identifier of the post under the course whose attachments to enumerate. Deprecated, use
-         item_id instead.
+         `item_id` instead.
            */
           public java.lang.String getPostId() {
             return postId;
@@ -6133,7 +6133,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Optional. Identifier of the post under the course whose attachments to enumerate.
-           * Deprecated, use item_id instead.
+           * Deprecated, use `item_id` instead.
            */
           public List setPostId(java.lang.String postId) {
             this.postId = postId;
@@ -6393,8 +6393,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
            * @param courseId Required. Identifier of the course.
-           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-           *        attached. This field is required, but is not marked as such while we are migrating from
+           * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+           *        is attached. This field is required, but is not marked as such while we are migrating from
            *        post_id.
            * @param attachmentId Required. Identifier of the attachment.
            * @param submissionId Required. Identifier of the student’s submission.
@@ -6423,8 +6423,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param courseId Required. Identifier of the course.
-             * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-           *        attached. This field is required, but is not marked as such while we are migrating from
+             * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+           *        is attached. This field is required, but is not marked as such while we are migrating from
            *        post_id.
              * @param attachmentId Required. Identifier of the attachment.
              * @param submissionId Required. Identifier of the student’s submission.
@@ -6520,24 +6520,24 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
-             * attachment is attached. This field is required, but is not marked as such while we
-             * are migrating from post_id.
+             * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which
+             * the attachment is attached. This field is required, but is not marked as such while
+             * we are migrating from post_id.
              */
             @com.google.api.client.util.Key
             private java.lang.String itemId;
 
-            /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-           attached. This field is required, but is not marked as such while we are migrating from post_id.
+            /** Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+           is attached. This field is required, but is not marked as such while we are migrating from post_id.
              */
             public java.lang.String getItemId() {
               return itemId;
             }
 
             /**
-             * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
-             * attachment is attached. This field is required, but is not marked as such while we
-             * are migrating from post_id.
+             * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which
+             * the attachment is attached. This field is required, but is not marked as such while
+             * we are migrating from post_id.
              */
             public Get setItemId(java.lang.String itemId) {
               this.itemId = itemId;
@@ -6576,17 +6576,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
               return this;
             }
 
-            /** Optional. Deprecated, use item_id instead. */
+            /** Optional. Deprecated, use `item_id` instead. */
             @com.google.api.client.util.Key
             private java.lang.String postId;
 
-            /** Optional. Deprecated, use item_id instead.
+            /** Optional. Deprecated, use `item_id` instead.
              */
             public java.lang.String getPostId() {
               return postId;
             }
 
-            /** Optional. Deprecated, use item_id instead. */
+            /** Optional. Deprecated, use `item_id` instead. */
             public Get setPostId(java.lang.String postId) {
               this.postId = postId;
               return this;
@@ -6610,8 +6610,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
            * @param courseId Required. Identifier of the course.
-           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-           *        attached. This field is required, but is not marked as such while we are migrating from
+           * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+           *        is attached. This field is required, but is not marked as such while we are migrating from
            *        post_id.
            * @param attachmentId Required. Identifier of the attachment.
            * @param submissionId Required. Identifier of the student's submission.
@@ -6644,8 +6644,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param courseId Required. Identifier of the course.
-             * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-           *        attached. This field is required, but is not marked as such while we are migrating from
+             * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+           *        is attached. This field is required, but is not marked as such while we are migrating from
            *        post_id.
              * @param attachmentId Required. Identifier of the attachment.
              * @param submissionId Required. Identifier of the student's submission.
@@ -6732,24 +6732,24 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
-             * attachment is attached. This field is required, but is not marked as such while we
-             * are migrating from post_id.
+             * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which
+             * the attachment is attached. This field is required, but is not marked as such while
+             * we are migrating from post_id.
              */
             @com.google.api.client.util.Key
             private java.lang.String itemId;
 
-            /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-           attached. This field is required, but is not marked as such while we are migrating from post_id.
+            /** Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+           is attached. This field is required, but is not marked as such while we are migrating from post_id.
              */
             public java.lang.String getItemId() {
               return itemId;
             }
 
             /**
-             * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
-             * attachment is attached. This field is required, but is not marked as such while we
-             * are migrating from post_id.
+             * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which
+             * the attachment is attached. This field is required, but is not marked as such while
+             * we are migrating from post_id.
              */
             public Patch setItemId(java.lang.String itemId) {
               this.itemId = itemId;
@@ -6788,17 +6788,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
               return this;
             }
 
-            /** Optional. Deprecated, use item_id instead. */
+            /** Optional. Deprecated, use `item_id` instead. */
             @com.google.api.client.util.Key
             private java.lang.String postId;
 
-            /** Optional. Deprecated, use item_id instead.
+            /** Optional. Deprecated, use `item_id` instead.
              */
             public java.lang.String getPostId() {
               return postId;
             }
 
-            /** Optional. Deprecated, use item_id instead. */
+            /** Optional. Deprecated, use `item_id` instead. */
             public Patch setPostId(java.lang.String postId) {
               this.postId = postId;
               return this;
@@ -8778,8 +8778,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * parameters, call the {@link GetAddOnContext#execute()} method to invoke the remote operation.
        *
        * @param courseId Required. Identifier of the course.
-       * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-       *        attached. This field is required, but is not marked as such while we are migrating from
+       * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+       *        is attached. This field is required, but is not marked as such while we are migrating from
        *        post_id.
        * @return the request
        */
@@ -8811,8 +8811,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * the constructor. </p>
          *
          * @param courseId Required. Identifier of the course.
-         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-       *        attached. This field is required, but is not marked as such while we are migrating from
+         * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+       *        is attached. This field is required, but is not marked as such while we are migrating from
        *        post_id.
          * @since 1.13
          */
@@ -8904,22 +8904,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+         * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the
          * attachment is attached. This field is required, but is not marked as such while we are
          * migrating from post_id.
          */
         @com.google.api.client.util.Key
         private java.lang.String itemId;
 
-        /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-       attached. This field is required, but is not marked as such while we are migrating from post_id.
+        /** Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+       is attached. This field is required, but is not marked as such while we are migrating from post_id.
          */
         public java.lang.String getItemId() {
           return itemId;
         }
 
         /**
-         * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+         * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the
          * attachment is attached. This field is required, but is not marked as such while we are
          * migrating from post_id.
          */
@@ -8987,17 +8987,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           return this;
         }
 
-        /** Optional. Deprecated, use item_id instead. */
+        /** Optional. Deprecated, use `item_id` instead. */
         @com.google.api.client.util.Key
         private java.lang.String postId;
 
-        /** Optional. Deprecated, use item_id instead.
+        /** Optional. Deprecated, use `item_id` instead.
          */
         public java.lang.String getPostId() {
           return postId;
         }
 
-        /** Optional. Deprecated, use item_id instead. */
+        /** Optional. Deprecated, use `item_id` instead. */
         public GetAddOnContext setPostId(java.lang.String postId) {
           this.postId = postId;
           return this;
@@ -9526,7 +9526,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param courseId Required. Identifier of the course.
-         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which to create the
+         * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which to create the
          *        attachment. This field is required, but is not marked as such while we are migrating from
          *        post_id.
          * @param content the {@link com.google.api.services.classroom.model.AddOnAttachment}
@@ -9557,7 +9557,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param courseId Required. Identifier of the course.
-           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which to create the
+           * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which to create the
          *        attachment. This field is required, but is not marked as such while we are migrating from
          *        post_id.
            * @param content the {@link com.google.api.services.classroom.model.AddOnAttachment}
@@ -9641,14 +9641,14 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial under which to create
-           * the attachment. This field is required, but is not marked as such while we are
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which to
+           * create the attachment. This field is required, but is not marked as such while we are
            * migrating from post_id.
            */
           @com.google.api.client.util.Key
           private java.lang.String itemId;
 
-          /** Identifier of the announcement, courseWork, or courseWorkMaterial under which to create the
+          /** Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which to create the
          attachment. This field is required, but is not marked as such while we are migrating from post_id.
            */
           public java.lang.String getItemId() {
@@ -9656,8 +9656,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial under which to create
-           * the attachment. This field is required, but is not marked as such while we are
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which to
+           * create the attachment. This field is required, but is not marked as such while we are
            * migrating from post_id.
            */
           public Create setItemId(java.lang.String itemId) {
@@ -9699,17 +9699,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Optional. Deprecated, use item_id instead. */
+          /** Optional. Deprecated, use `item_id` instead. */
           @com.google.api.client.util.Key
           private java.lang.String postId;
 
-          /** Optional. Deprecated, use item_id instead.
+          /** Optional. Deprecated, use `item_id` instead.
            */
           public java.lang.String getPostId() {
             return postId;
           }
 
-          /** Optional. Deprecated, use item_id instead. */
+          /** Optional. Deprecated, use `item_id` instead. */
           public Create setPostId(java.lang.String postId) {
             this.postId = postId;
             return this;
@@ -9732,8 +9732,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param courseId Required. Identifier of the course.
-         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-         *        attached. This field is required, but is not marked as such while we are migrating from
+         * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+         *        is attached. This field is required, but is not marked as such while we are migrating from
          *        post_id.
          * @param attachmentId Required. Identifier of the attachment.
          * @return the request
@@ -9763,8 +9763,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param courseId Required. Identifier of the course.
-           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-         *        attached. This field is required, but is not marked as such while we are migrating from
+           * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+         *        is attached. This field is required, but is not marked as such while we are migrating from
          *        post_id.
            * @param attachmentId Required. Identifier of the attachment.
            * @since 1.13
@@ -9848,22 +9848,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the
            * attachment is attached. This field is required, but is not marked as such while we are
            * migrating from post_id.
            */
           @com.google.api.client.util.Key
           private java.lang.String itemId;
 
-          /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-         attached. This field is required, but is not marked as such while we are migrating from post_id.
+          /** Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+         is attached. This field is required, but is not marked as such while we are migrating from post_id.
            */
           public java.lang.String getItemId() {
             return itemId;
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the
            * attachment is attached. This field is required, but is not marked as such while we are
            * migrating from post_id.
            */
@@ -9888,17 +9888,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Optional. Deprecated, use item_id instead. */
+          /** Optional. Deprecated, use `item_id` instead. */
           @com.google.api.client.util.Key
           private java.lang.String postId;
 
-          /** Optional. Deprecated, use item_id instead.
+          /** Optional. Deprecated, use `item_id` instead.
            */
           public java.lang.String getPostId() {
             return postId;
           }
 
-          /** Optional. Deprecated, use item_id instead. */
+          /** Optional. Deprecated, use `item_id` instead. */
           public Delete setPostId(java.lang.String postId) {
             this.postId = postId;
             return this;
@@ -9921,8 +9921,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param courseId Required. Identifier of the course.
-         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-         *        attached. This field is required, but is not marked as such while we are migrating from
+         * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+         *        is attached. This field is required, but is not marked as such while we are migrating from
          *        post_id.
          * @param attachmentId Required. Identifier of the attachment.
          * @return the request
@@ -9951,8 +9951,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param courseId Required. Identifier of the course.
-           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-         *        attached. This field is required, but is not marked as such while we are migrating from
+           * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+         *        is attached. This field is required, but is not marked as such while we are migrating from
          *        post_id.
            * @param attachmentId Required. Identifier of the attachment.
            * @since 1.13
@@ -10046,22 +10046,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the
            * attachment is attached. This field is required, but is not marked as such while we are
            * migrating from post_id.
            */
           @com.google.api.client.util.Key
           private java.lang.String itemId;
 
-          /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-         attached. This field is required, but is not marked as such while we are migrating from post_id.
+          /** Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+         is attached. This field is required, but is not marked as such while we are migrating from post_id.
            */
           public java.lang.String getItemId() {
             return itemId;
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the
            * attachment is attached. This field is required, but is not marked as such while we are
            * migrating from post_id.
            */
@@ -10086,17 +10086,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Optional. Deprecated, use item_id instead. */
+          /** Optional. Deprecated, use `item_id` instead. */
           @com.google.api.client.util.Key
           private java.lang.String postId;
 
-          /** Optional. Deprecated, use item_id instead.
+          /** Optional. Deprecated, use `item_id` instead.
            */
           public java.lang.String getPostId() {
             return postId;
           }
 
-          /** Optional. Deprecated, use item_id instead. */
+          /** Optional. Deprecated, use `item_id` instead. */
           public Get setPostId(java.lang.String postId) {
             this.postId = postId;
             return this;
@@ -10119,7 +10119,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param courseId Required. Identifier of the course.
-         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments should be
+         * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` whose attachments should be
          *        enumerated. This field is required, but is not marked as such while we are migrating from
          *        post_id.
          * @return the request
@@ -10149,7 +10149,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param courseId Required. Identifier of the course.
-           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments should be
+           * @param itemId Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` whose attachments should be
          *        enumerated. This field is required, but is not marked as such while we are migrating from
          *        post_id.
            * @since 1.13
@@ -10242,14 +10242,14 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments
-           * should be enumerated. This field is required, but is not marked as such while we are
-           * migrating from post_id.
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` whose
+           * attachments should be enumerated. This field is required, but is not marked as such
+           * while we are migrating from post_id.
            */
           @com.google.api.client.util.Key
           private java.lang.String itemId;
 
-          /** Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments should be
+          /** Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` whose attachments should be
          enumerated. This field is required, but is not marked as such while we are migrating from post_id.
            */
           public java.lang.String getItemId() {
@@ -10257,9 +10257,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments
-           * should be enumerated. This field is required, but is not marked as such while we are
-           * migrating from post_id.
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` whose
+           * attachments should be enumerated. This field is required, but is not marked as such
+           * while we are migrating from post_id.
            */
           public List setItemId(java.lang.String itemId) {
             this.itemId = itemId;
@@ -10320,13 +10320,13 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Optional. Identifier of the post under the course whose attachments to enumerate.
-           * Deprecated, use item_id instead.
+           * Deprecated, use `item_id` instead.
            */
           @com.google.api.client.util.Key
           private java.lang.String postId;
 
           /** Optional. Identifier of the post under the course whose attachments to enumerate. Deprecated, use
-         item_id instead.
+         `item_id` instead.
            */
           public java.lang.String getPostId() {
             return postId;
@@ -10334,7 +10334,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Optional. Identifier of the post under the course whose attachments to enumerate.
-           * Deprecated, use item_id instead.
+           * Deprecated, use `item_id` instead.
            */
           public List setPostId(java.lang.String postId) {
             this.postId = postId;
@@ -10600,7 +10600,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * parameters, call the {@link GetAddOnContext#execute()} method to invoke the remote operation.
        *
        * @param courseId Required. Identifier of the course.
-       * @param postId Optional. Deprecated, use item_id instead.
+       * @param postId Optional. Deprecated, use `item_id` instead.
        * @return the request
        */
       public GetAddOnContext getAddOnContext(java.lang.String courseId, java.lang.String postId) throws java.io.IOException {
@@ -10631,7 +10631,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * the constructor. </p>
          *
          * @param courseId Required. Identifier of the course.
-         * @param postId Optional. Deprecated, use item_id instead.
+         * @param postId Optional. Deprecated, use `item_id` instead.
          * @since 1.13
          */
         protected GetAddOnContext(java.lang.String courseId, java.lang.String postId) {
@@ -10721,17 +10721,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           return this;
         }
 
-        /** Optional. Deprecated, use item_id instead. */
+        /** Optional. Deprecated, use `item_id` instead. */
         @com.google.api.client.util.Key
         private java.lang.String postId;
 
-        /** Optional. Deprecated, use item_id instead.
+        /** Optional. Deprecated, use `item_id` instead.
          */
         public java.lang.String getPostId() {
           return postId;
         }
 
-        /** Optional. Deprecated, use item_id instead. */
+        /** Optional. Deprecated, use `item_id` instead. */
         public GetAddOnContext setPostId(java.lang.String postId) {
           this.postId = postId;
           return this;
@@ -10797,22 +10797,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+         * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the
          * attachment is attached. This field is required, but is not marked as such while we are
          * migrating from post_id.
          */
         @com.google.api.client.util.Key
         private java.lang.String itemId;
 
-        /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-       attached. This field is required, but is not marked as such while we are migrating from post_id.
+        /** Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+       is attached. This field is required, but is not marked as such while we are migrating from post_id.
          */
         public java.lang.String getItemId() {
           return itemId;
         }
 
         /**
-         * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+         * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the
          * attachment is attached. This field is required, but is not marked as such while we are
          * migrating from post_id.
          */
@@ -10859,7 +10859,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param courseId Required. Identifier of the course.
-         * @param postId Optional. Deprecated, use item_id instead.
+         * @param postId Optional. Deprecated, use `item_id` instead.
          * @param content the {@link com.google.api.services.classroom.model.AddOnAttachment}
          * @return the request
          */
@@ -10888,7 +10888,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param courseId Required. Identifier of the course.
-           * @param postId Optional. Deprecated, use item_id instead.
+           * @param postId Optional. Deprecated, use `item_id` instead.
            * @param content the {@link com.google.api.services.classroom.model.AddOnAttachment}
            * @since 1.13
            */
@@ -10969,17 +10969,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Optional. Deprecated, use item_id instead. */
+          /** Optional. Deprecated, use `item_id` instead. */
           @com.google.api.client.util.Key
           private java.lang.String postId;
 
-          /** Optional. Deprecated, use item_id instead.
+          /** Optional. Deprecated, use `item_id` instead.
            */
           public java.lang.String getPostId() {
             return postId;
           }
 
-          /** Optional. Deprecated, use item_id instead. */
+          /** Optional. Deprecated, use `item_id` instead. */
           public Create setPostId(java.lang.String postId) {
             this.postId = postId;
             return this;
@@ -11020,14 +11020,14 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial under which to create
-           * the attachment. This field is required, but is not marked as such while we are
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which to
+           * create the attachment. This field is required, but is not marked as such while we are
            * migrating from post_id.
            */
           @com.google.api.client.util.Key
           private java.lang.String itemId;
 
-          /** Identifier of the announcement, courseWork, or courseWorkMaterial under which to create the
+          /** Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which to create the
          attachment. This field is required, but is not marked as such while we are migrating from post_id.
            */
           public java.lang.String getItemId() {
@@ -11035,8 +11035,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial under which to create
-           * the attachment. This field is required, but is not marked as such while we are
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which to
+           * create the attachment. This field is required, but is not marked as such while we are
            * migrating from post_id.
            */
           public Create setItemId(java.lang.String itemId) {
@@ -11061,7 +11061,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param courseId Required. Identifier of the course.
-         * @param postId Optional. Deprecated, use item_id instead.
+         * @param postId Optional. Deprecated, use `item_id` instead.
          * @param attachmentId Required. Identifier of the attachment.
          * @return the request
          */
@@ -11090,7 +11090,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param courseId Required. Identifier of the course.
-           * @param postId Optional. Deprecated, use item_id instead.
+           * @param postId Optional. Deprecated, use `item_id` instead.
            * @param attachmentId Required. Identifier of the attachment.
            * @since 1.13
            */
@@ -11172,17 +11172,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Optional. Deprecated, use item_id instead. */
+          /** Optional. Deprecated, use `item_id` instead. */
           @com.google.api.client.util.Key
           private java.lang.String postId;
 
-          /** Optional. Deprecated, use item_id instead.
+          /** Optional. Deprecated, use `item_id` instead.
            */
           public java.lang.String getPostId() {
             return postId;
           }
 
-          /** Optional. Deprecated, use item_id instead. */
+          /** Optional. Deprecated, use `item_id` instead. */
           public Delete setPostId(java.lang.String postId) {
             this.postId = postId;
             return this;
@@ -11205,22 +11205,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the
            * attachment is attached. This field is required, but is not marked as such while we are
            * migrating from post_id.
            */
           @com.google.api.client.util.Key
           private java.lang.String itemId;
 
-          /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-         attached. This field is required, but is not marked as such while we are migrating from post_id.
+          /** Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+         is attached. This field is required, but is not marked as such while we are migrating from post_id.
            */
           public java.lang.String getItemId() {
             return itemId;
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the
            * attachment is attached. This field is required, but is not marked as such while we are
            * migrating from post_id.
            */
@@ -11246,7 +11246,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param courseId Required. Identifier of the course.
-         * @param postId Optional. Deprecated, use item_id instead.
+         * @param postId Optional. Deprecated, use `item_id` instead.
          * @param attachmentId Required. Identifier of the attachment.
          * @return the request
          */
@@ -11274,7 +11274,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param courseId Required. Identifier of the course.
-           * @param postId Optional. Deprecated, use item_id instead.
+           * @param postId Optional. Deprecated, use `item_id` instead.
            * @param attachmentId Required. Identifier of the attachment.
            * @since 1.13
            */
@@ -11366,17 +11366,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Optional. Deprecated, use item_id instead. */
+          /** Optional. Deprecated, use `item_id` instead. */
           @com.google.api.client.util.Key
           private java.lang.String postId;
 
-          /** Optional. Deprecated, use item_id instead.
+          /** Optional. Deprecated, use `item_id` instead.
            */
           public java.lang.String getPostId() {
             return postId;
           }
 
-          /** Optional. Deprecated, use item_id instead. */
+          /** Optional. Deprecated, use `item_id` instead. */
           public Get setPostId(java.lang.String postId) {
             this.postId = postId;
             return this;
@@ -11399,22 +11399,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the
            * attachment is attached. This field is required, but is not marked as such while we are
            * migrating from post_id.
            */
           @com.google.api.client.util.Key
           private java.lang.String itemId;
 
-          /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-         attached. This field is required, but is not marked as such while we are migrating from post_id.
+          /** Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+         is attached. This field is required, but is not marked as such while we are migrating from post_id.
            */
           public java.lang.String getItemId() {
             return itemId;
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the
            * attachment is attached. This field is required, but is not marked as such while we are
            * migrating from post_id.
            */
@@ -11441,7 +11441,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          *
          * @param courseId Required. Identifier of the course.
          * @param postId Optional. Identifier of the post under the course whose attachments to enumerate. Deprecated, use
-         *        item_id instead.
+         *        `item_id` instead.
          * @return the request
          */
         public List list(java.lang.String courseId, java.lang.String postId) throws java.io.IOException {
@@ -11470,7 +11470,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            *
            * @param courseId Required. Identifier of the course.
            * @param postId Optional. Identifier of the post under the course whose attachments to enumerate. Deprecated, use
-         *        item_id instead.
+         *        `item_id` instead.
            * @since 1.13
            */
           protected List(java.lang.String courseId, java.lang.String postId) {
@@ -11562,13 +11562,13 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Optional. Identifier of the post under the course whose attachments to enumerate.
-           * Deprecated, use item_id instead.
+           * Deprecated, use `item_id` instead.
            */
           @com.google.api.client.util.Key
           private java.lang.String postId;
 
           /** Optional. Identifier of the post under the course whose attachments to enumerate. Deprecated, use
-         item_id instead.
+         `item_id` instead.
            */
           public java.lang.String getPostId() {
             return postId;
@@ -11576,7 +11576,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Optional. Identifier of the post under the course whose attachments to enumerate.
-           * Deprecated, use item_id instead.
+           * Deprecated, use `item_id` instead.
            */
           public List setPostId(java.lang.String postId) {
             this.postId = postId;
@@ -11584,14 +11584,14 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments
-           * should be enumerated. This field is required, but is not marked as such while we are
-           * migrating from post_id.
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` whose
+           * attachments should be enumerated. This field is required, but is not marked as such
+           * while we are migrating from post_id.
            */
           @com.google.api.client.util.Key
           private java.lang.String itemId;
 
-          /** Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments should be
+          /** Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` whose attachments should be
          enumerated. This field is required, but is not marked as such while we are migrating from post_id.
            */
           public java.lang.String getItemId() {
@@ -11599,9 +11599,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments
-           * should be enumerated. This field is required, but is not marked as such while we are
-           * migrating from post_id.
+           * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` whose
+           * attachments should be enumerated. This field is required, but is not marked as such
+           * while we are migrating from post_id.
            */
           public List setItemId(java.lang.String itemId) {
             this.itemId = itemId;
@@ -11913,7 +11913,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
            * @param courseId Required. Identifier of the course.
-           * @param postId Optional. Deprecated, use item_id instead.
+           * @param postId Optional. Deprecated, use `item_id` instead.
            * @param attachmentId Required. Identifier of the attachment.
            * @param submissionId Required. Identifier of the student’s submission.
            * @return the request
@@ -11941,7 +11941,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param courseId Required. Identifier of the course.
-             * @param postId Optional. Deprecated, use item_id instead.
+             * @param postId Optional. Deprecated, use `item_id` instead.
              * @param attachmentId Required. Identifier of the attachment.
              * @param submissionId Required. Identifier of the student’s submission.
              * @since 1.13
@@ -12035,17 +12035,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
               return this;
             }
 
-            /** Optional. Deprecated, use item_id instead. */
+            /** Optional. Deprecated, use `item_id` instead. */
             @com.google.api.client.util.Key
             private java.lang.String postId;
 
-            /** Optional. Deprecated, use item_id instead.
+            /** Optional. Deprecated, use `item_id` instead.
              */
             public java.lang.String getPostId() {
               return postId;
             }
 
-            /** Optional. Deprecated, use item_id instead. */
+            /** Optional. Deprecated, use `item_id` instead. */
             public Get setPostId(java.lang.String postId) {
               this.postId = postId;
               return this;
@@ -12084,24 +12084,24 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
-             * attachment is attached. This field is required, but is not marked as such while we
-             * are migrating from post_id.
+             * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which
+             * the attachment is attached. This field is required, but is not marked as such while
+             * we are migrating from post_id.
              */
             @com.google.api.client.util.Key
             private java.lang.String itemId;
 
-            /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-           attached. This field is required, but is not marked as such while we are migrating from post_id.
+            /** Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+           is attached. This field is required, but is not marked as such while we are migrating from post_id.
              */
             public java.lang.String getItemId() {
               return itemId;
             }
 
             /**
-             * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
-             * attachment is attached. This field is required, but is not marked as such while we
-             * are migrating from post_id.
+             * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which
+             * the attachment is attached. This field is required, but is not marked as such while
+             * we are migrating from post_id.
              */
             public Get setItemId(java.lang.String itemId) {
               this.itemId = itemId;
@@ -12126,7 +12126,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
            * @param courseId Required. Identifier of the course.
-           * @param postId Optional. Deprecated, use item_id instead.
+           * @param postId Optional. Deprecated, use `item_id` instead.
            * @param attachmentId Required. Identifier of the attachment.
            * @param submissionId Required. Identifier of the student's submission.
            * @param content the {@link com.google.api.services.classroom.model.AddOnAttachmentStudentSubmission}
@@ -12158,7 +12158,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param courseId Required. Identifier of the course.
-             * @param postId Optional. Deprecated, use item_id instead.
+             * @param postId Optional. Deprecated, use `item_id` instead.
              * @param attachmentId Required. Identifier of the attachment.
              * @param submissionId Required. Identifier of the student's submission.
              * @param content the {@link com.google.api.services.classroom.model.AddOnAttachmentStudentSubmission}
@@ -12243,17 +12243,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
               return this;
             }
 
-            /** Optional. Deprecated, use item_id instead. */
+            /** Optional. Deprecated, use `item_id` instead. */
             @com.google.api.client.util.Key
             private java.lang.String postId;
 
-            /** Optional. Deprecated, use item_id instead.
+            /** Optional. Deprecated, use `item_id` instead.
              */
             public java.lang.String getPostId() {
               return postId;
             }
 
-            /** Optional. Deprecated, use item_id instead. */
+            /** Optional. Deprecated, use `item_id` instead. */
             public Patch setPostId(java.lang.String postId) {
               this.postId = postId;
               return this;
@@ -12292,24 +12292,24 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
-             * attachment is attached. This field is required, but is not marked as such while we
-             * are migrating from post_id.
+             * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which
+             * the attachment is attached. This field is required, but is not marked as such while
+             * we are migrating from post_id.
              */
             @com.google.api.client.util.Key
             private java.lang.String itemId;
 
-            /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
-           attached. This field is required, but is not marked as such while we are migrating from post_id.
+            /** Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which the attachment
+           is attached. This field is required, but is not marked as such while we are migrating from post_id.
              */
             public java.lang.String getItemId() {
               return itemId;
             }
 
             /**
-             * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
-             * attachment is attached. This field is required, but is not marked as such while we
-             * are migrating from post_id.
+             * Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which
+             * the attachment is attached. This field is required, but is not marked as such while
+             * we are migrating from post_id.
              */
             public Patch setItemId(java.lang.String itemId) {
               this.itemId = itemId;

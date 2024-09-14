@@ -70,8 +70,8 @@ public final class AddOnAttachment extends com.google.api.client.json.GenericJso
   private java.lang.String id;
 
   /**
-   * Immutable. Identifier of the announcement, courseWork, or courseWorkMaterial under which the
-   * attachment is attached. Unique per course.
+   * Immutable. Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which
+   * the attachment is attached. Unique per course.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +87,7 @@ public final class AddOnAttachment extends com.google.api.client.json.GenericJso
   private java.lang.Double maxPoints;
 
   /**
-   * Immutable. Deprecated, use item_id instead.
+   * Immutable. Deprecated, use `item_id` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +95,7 @@ public final class AddOnAttachment extends com.google.api.client.json.GenericJso
 
   /**
    * Required. URI to show the student view of the attachment. The URI will be opened in an iframe
-   * with the `courseId`, `postId`, and `attachmentId` query parameters set.
+   * with the `courseId`, `itemId`, `itemType`, and `attachmentId` query parameters set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,10 +103,11 @@ public final class AddOnAttachment extends com.google.api.client.json.GenericJso
 
   /**
    * URI for the teacher to see student work on the attachment, if applicable. The URI will be
-   * opened in an iframe with the `courseId`, `postId`, `attachmentId`, and `submissionId` query
-   * parameters set. This is the same `submissionId` returned by
-   * google.classroom.AddOns.GetAddOnContext when a student views the attachment. If the URI is
-   * omitted or removed, `max_points` will also be discarded.
+   * opened in an iframe with the `courseId`, `itemId`, `itemType`, `attachmentId`, and
+   * `submissionId` query parameters set. This is the same `submissionId` returned in the [`AddOnCon
+   * text.studentContext`](//devsite.google.com/classroom/reference/rest/v1/AddOnContext#StudentCont
+   * ext) field when a student views the attachment. If the URI is omitted or removed, `max_points`
+   * will also be discarded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +115,7 @@ public final class AddOnAttachment extends com.google.api.client.json.GenericJso
 
   /**
    * Required. URI to show the teacher view of the attachment. The URI will be opened in an iframe
-   * with the `courseId`, `postId`, and `attachmentId` query parameters set.
+   * with the `courseId`, `itemId`, `itemType`, and `attachmentId` query parameters set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -223,8 +224,8 @@ public final class AddOnAttachment extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Immutable. Identifier of the announcement, courseWork, or courseWorkMaterial under which the
-   * attachment is attached. Unique per course.
+   * Immutable. Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which
+   * the attachment is attached. Unique per course.
    * @return value or {@code null} for none
    */
   public java.lang.String getItemId() {
@@ -232,8 +233,8 @@ public final class AddOnAttachment extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Immutable. Identifier of the announcement, courseWork, or courseWorkMaterial under which the
-   * attachment is attached. Unique per course.
+   * Immutable. Identifier of the `Announcement`, `CourseWork`, or `CourseWorkMaterial` under which
+   * the attachment is attached. Unique per course.
    * @param itemId itemId or {@code null} for none
    */
   public AddOnAttachment setItemId(java.lang.String itemId) {
@@ -263,7 +264,7 @@ public final class AddOnAttachment extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Immutable. Deprecated, use item_id instead.
+   * Immutable. Deprecated, use `item_id` instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getPostId() {
@@ -271,7 +272,7 @@ public final class AddOnAttachment extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Immutable. Deprecated, use item_id instead.
+   * Immutable. Deprecated, use `item_id` instead.
    * @param postId postId or {@code null} for none
    */
   public AddOnAttachment setPostId(java.lang.String postId) {
@@ -281,7 +282,7 @@ public final class AddOnAttachment extends com.google.api.client.json.GenericJso
 
   /**
    * Required. URI to show the student view of the attachment. The URI will be opened in an iframe
-   * with the `courseId`, `postId`, and `attachmentId` query parameters set.
+   * with the `courseId`, `itemId`, `itemType`, and `attachmentId` query parameters set.
    * @return value or {@code null} for none
    */
   public EmbedUri getStudentViewUri() {
@@ -290,7 +291,7 @@ public final class AddOnAttachment extends com.google.api.client.json.GenericJso
 
   /**
    * Required. URI to show the student view of the attachment. The URI will be opened in an iframe
-   * with the `courseId`, `postId`, and `attachmentId` query parameters set.
+   * with the `courseId`, `itemId`, `itemType`, and `attachmentId` query parameters set.
    * @param studentViewUri studentViewUri or {@code null} for none
    */
   public AddOnAttachment setStudentViewUri(EmbedUri studentViewUri) {
@@ -300,10 +301,11 @@ public final class AddOnAttachment extends com.google.api.client.json.GenericJso
 
   /**
    * URI for the teacher to see student work on the attachment, if applicable. The URI will be
-   * opened in an iframe with the `courseId`, `postId`, `attachmentId`, and `submissionId` query
-   * parameters set. This is the same `submissionId` returned by
-   * google.classroom.AddOns.GetAddOnContext when a student views the attachment. If the URI is
-   * omitted or removed, `max_points` will also be discarded.
+   * opened in an iframe with the `courseId`, `itemId`, `itemType`, `attachmentId`, and
+   * `submissionId` query parameters set. This is the same `submissionId` returned in the [`AddOnCon
+   * text.studentContext`](//devsite.google.com/classroom/reference/rest/v1/AddOnContext#StudentCont
+   * ext) field when a student views the attachment. If the URI is omitted or removed, `max_points`
+   * will also be discarded.
    * @return value or {@code null} for none
    */
   public EmbedUri getStudentWorkReviewUri() {
@@ -312,10 +314,11 @@ public final class AddOnAttachment extends com.google.api.client.json.GenericJso
 
   /**
    * URI for the teacher to see student work on the attachment, if applicable. The URI will be
-   * opened in an iframe with the `courseId`, `postId`, `attachmentId`, and `submissionId` query
-   * parameters set. This is the same `submissionId` returned by
-   * google.classroom.AddOns.GetAddOnContext when a student views the attachment. If the URI is
-   * omitted or removed, `max_points` will also be discarded.
+   * opened in an iframe with the `courseId`, `itemId`, `itemType`, `attachmentId`, and
+   * `submissionId` query parameters set. This is the same `submissionId` returned in the [`AddOnCon
+   * text.studentContext`](//devsite.google.com/classroom/reference/rest/v1/AddOnContext#StudentCont
+   * ext) field when a student views the attachment. If the URI is omitted or removed, `max_points`
+   * will also be discarded.
    * @param studentWorkReviewUri studentWorkReviewUri or {@code null} for none
    */
   public AddOnAttachment setStudentWorkReviewUri(EmbedUri studentWorkReviewUri) {
@@ -325,7 +328,7 @@ public final class AddOnAttachment extends com.google.api.client.json.GenericJso
 
   /**
    * Required. URI to show the teacher view of the attachment. The URI will be opened in an iframe
-   * with the `courseId`, `postId`, and `attachmentId` query parameters set.
+   * with the `courseId`, `itemId`, `itemType`, and `attachmentId` query parameters set.
    * @return value or {@code null} for none
    */
   public EmbedUri getTeacherViewUri() {
@@ -334,7 +337,7 @@ public final class AddOnAttachment extends com.google.api.client.json.GenericJso
 
   /**
    * Required. URI to show the teacher view of the attachment. The URI will be opened in an iframe
-   * with the `courseId`, `postId`, and `attachmentId` query parameters set.
+   * with the `courseId`, `itemId`, `itemType`, and `attachmentId` query parameters set.
    * @param teacherViewUri teacherViewUri or {@code null} for none
    */
   public AddOnAttachment setTeacherViewUri(EmbedUri teacherViewUri) {

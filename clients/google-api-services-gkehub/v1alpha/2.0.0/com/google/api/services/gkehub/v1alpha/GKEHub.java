@@ -3827,6 +3827,208 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
+         * GenerateExclusivityManifest generates the manifests to update the exclusivity artifacts in the
+         * cluster if needed. Exclusivity artifacts include the Membership custom resource definition (CRD)
+         * and the singleton Membership custom resource (CR). Combined with ValidateExclusivity, exclusivity
+         * artifacts guarantee that a Kubernetes cluster is only registered to a single GKE Hub. The
+         * Membership CRD is versioned, and may require conversion when the GKE Hub API server begins
+         * serving a newer version of the CRD and corresponding CR. The response will be the converted CRD
+         * and CR if there are any differences between the versions.
+         *
+         * Create a request for the method "memberships.generateExclusivityManifest".
+         *
+         * This request holds the parameters needed by the gkehub server.  After setting any optional
+         * parameters, call the {@link GenerateExclusivityManifest#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The Membership resource name in the format `projects/locations/memberships`.
+         * @return the request
+         */
+        public GenerateExclusivityManifest generateExclusivityManifest(java.lang.String name) throws java.io.IOException {
+          GenerateExclusivityManifest result = new GenerateExclusivityManifest(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GenerateExclusivityManifest extends GKEHubRequest<com.google.api.services.gkehub.v1alpha.model.GenerateExclusivityManifestResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+name}:generateExclusivityManifest";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/memberships/[^/]+$");
+
+          /**
+           * GenerateExclusivityManifest generates the manifests to update the exclusivity artifacts in the
+           * cluster if needed. Exclusivity artifacts include the Membership custom resource definition
+           * (CRD) and the singleton Membership custom resource (CR). Combined with ValidateExclusivity,
+           * exclusivity artifacts guarantee that a Kubernetes cluster is only registered to a single GKE
+           * Hub. The Membership CRD is versioned, and may require conversion when the GKE Hub API server
+           * begins serving a newer version of the CRD and corresponding CR. The response will be the
+           * converted CRD and CR if there are any differences between the versions.
+           *
+           * Create a request for the method "memberships.generateExclusivityManifest".
+           *
+           * This request holds the parameters needed by the the gkehub server.  After setting any optional
+           * parameters, call the {@link GenerateExclusivityManifest#execute()} method to invoke the remote
+           * operation. <p> {@link GenerateExclusivityManifest#initialize(com.google.api.client.googleapis.s
+           * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Required. The Membership resource name in the format `projects/locations/memberships`.
+           * @since 1.13
+           */
+          protected GenerateExclusivityManifest(java.lang.String name) {
+            super(GKEHub.this, "GET", REST_PATH, null, com.google.api.services.gkehub.v1alpha.model.GenerateExclusivityManifestResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/memberships/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GenerateExclusivityManifest set$Xgafv(java.lang.String $Xgafv) {
+            return (GenerateExclusivityManifest) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GenerateExclusivityManifest setAccessToken(java.lang.String accessToken) {
+            return (GenerateExclusivityManifest) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GenerateExclusivityManifest setAlt(java.lang.String alt) {
+            return (GenerateExclusivityManifest) super.setAlt(alt);
+          }
+
+          @Override
+          public GenerateExclusivityManifest setCallback(java.lang.String callback) {
+            return (GenerateExclusivityManifest) super.setCallback(callback);
+          }
+
+          @Override
+          public GenerateExclusivityManifest setFields(java.lang.String fields) {
+            return (GenerateExclusivityManifest) super.setFields(fields);
+          }
+
+          @Override
+          public GenerateExclusivityManifest setKey(java.lang.String key) {
+            return (GenerateExclusivityManifest) super.setKey(key);
+          }
+
+          @Override
+          public GenerateExclusivityManifest setOauthToken(java.lang.String oauthToken) {
+            return (GenerateExclusivityManifest) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GenerateExclusivityManifest setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GenerateExclusivityManifest) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GenerateExclusivityManifest setQuotaUser(java.lang.String quotaUser) {
+            return (GenerateExclusivityManifest) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GenerateExclusivityManifest setUploadType(java.lang.String uploadType) {
+            return (GenerateExclusivityManifest) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GenerateExclusivityManifest setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GenerateExclusivityManifest) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The Membership resource name in the format `projects/locations/memberships`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The Membership resource name in the format `projects/locations/memberships`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The Membership resource name in the format `projects/locations/memberships`.
+           */
+          public GenerateExclusivityManifest setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/memberships/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. The YAML manifest of the membership CR retrieved by `kubectl get memberships
+           * membership`. Leave empty if the resource does not exist.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String crManifest;
+
+          /** Optional. The YAML manifest of the membership CR retrieved by `kubectl get memberships membership`.
+         Leave empty if the resource does not exist.
+           */
+          public java.lang.String getCrManifest() {
+            return crManifest;
+          }
+
+          /**
+           * Optional. The YAML manifest of the membership CR retrieved by `kubectl get memberships
+           * membership`. Leave empty if the resource does not exist.
+           */
+          public GenerateExclusivityManifest setCrManifest(java.lang.String crManifest) {
+            this.crManifest = crManifest;
+            return this;
+          }
+
+          /**
+           * Optional. The YAML manifest of the membership CRD retrieved by `kubectl get
+           * customresourcedefinitions membership`. Leave empty if the resource does not exist.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String crdManifest;
+
+          /** Optional. The YAML manifest of the membership CRD retrieved by `kubectl get
+         customresourcedefinitions membership`. Leave empty if the resource does not exist.
+           */
+          public java.lang.String getCrdManifest() {
+            return crdManifest;
+          }
+
+          /**
+           * Optional. The YAML manifest of the membership CRD retrieved by `kubectl get
+           * customresourcedefinitions membership`. Leave empty if the resource does not exist.
+           */
+          public GenerateExclusivityManifest setCrdManifest(java.lang.String crdManifest) {
+            this.crdManifest = crdManifest;
+            return this;
+          }
+
+          @Override
+          public GenerateExclusivityManifest set(String parameterName, Object value) {
+            return (GenerateExclusivityManifest) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the details of a Membership.
          *
          * Create a request for the method "memberships.get".
@@ -5286,6 +5488,201 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           @Override
           public ValidateCreate set(String parameterName, Object value) {
             return (ValidateCreate) super.set(parameterName, value);
+          }
+        }
+        /**
+         * ValidateExclusivity validates the state of exclusivity in the cluster. The validation does not
+         * depend on an existing Hub membership resource.
+         *
+         * Create a request for the method "memberships.validateExclusivity".
+         *
+         * This request holds the parameters needed by the gkehub server.  After setting any optional
+         * parameters, call the {@link ValidateExclusivity#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent (project and location) where the Memberships will be created. Specified in the
+         *        format `projects/locations`.
+         * @return the request
+         */
+        public ValidateExclusivity validateExclusivity(java.lang.String parent) throws java.io.IOException {
+          ValidateExclusivity result = new ValidateExclusivity(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class ValidateExclusivity extends GKEHubRequest<com.google.api.services.gkehub.v1alpha.model.ValidateExclusivityResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/memberships:validateExclusivity";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * ValidateExclusivity validates the state of exclusivity in the cluster. The validation does not
+           * depend on an existing Hub membership resource.
+           *
+           * Create a request for the method "memberships.validateExclusivity".
+           *
+           * This request holds the parameters needed by the the gkehub server.  After setting any optional
+           * parameters, call the {@link ValidateExclusivity#execute()} method to invoke the remote
+           * operation. <p> {@link ValidateExclusivity#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param parent Required. The parent (project and location) where the Memberships will be created. Specified in the
+         *        format `projects/locations`.
+           * @since 1.13
+           */
+          protected ValidateExclusivity(java.lang.String parent) {
+            super(GKEHub.this, "GET", REST_PATH, null, com.google.api.services.gkehub.v1alpha.model.ValidateExclusivityResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ValidateExclusivity set$Xgafv(java.lang.String $Xgafv) {
+            return (ValidateExclusivity) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ValidateExclusivity setAccessToken(java.lang.String accessToken) {
+            return (ValidateExclusivity) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ValidateExclusivity setAlt(java.lang.String alt) {
+            return (ValidateExclusivity) super.setAlt(alt);
+          }
+
+          @Override
+          public ValidateExclusivity setCallback(java.lang.String callback) {
+            return (ValidateExclusivity) super.setCallback(callback);
+          }
+
+          @Override
+          public ValidateExclusivity setFields(java.lang.String fields) {
+            return (ValidateExclusivity) super.setFields(fields);
+          }
+
+          @Override
+          public ValidateExclusivity setKey(java.lang.String key) {
+            return (ValidateExclusivity) super.setKey(key);
+          }
+
+          @Override
+          public ValidateExclusivity setOauthToken(java.lang.String oauthToken) {
+            return (ValidateExclusivity) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ValidateExclusivity setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ValidateExclusivity) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ValidateExclusivity setQuotaUser(java.lang.String quotaUser) {
+            return (ValidateExclusivity) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ValidateExclusivity setUploadType(java.lang.String uploadType) {
+            return (ValidateExclusivity) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ValidateExclusivity setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ValidateExclusivity) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent (project and location) where the Memberships will be created.
+           * Specified in the format `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent (project and location) where the Memberships will be created. Specified in the
+         format `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent (project and location) where the Memberships will be created.
+           * Specified in the format `projects/locations`.
+           */
+          public ValidateExclusivity setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The YAML of the membership CR in the cluster. Empty if the membership CR does
+           * not exist.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String crManifest;
+
+          /** Optional. The YAML of the membership CR in the cluster. Empty if the membership CR does not exist.
+           */
+          public java.lang.String getCrManifest() {
+            return crManifest;
+          }
+
+          /**
+           * Optional. The YAML of the membership CR in the cluster. Empty if the membership CR does
+           * not exist.
+           */
+          public ValidateExclusivity setCrManifest(java.lang.String crManifest) {
+            this.crManifest = crManifest;
+            return this;
+          }
+
+          /**
+           * Required. The intended membership name under the `parent`. This method only does
+           * validation in anticipation of a CreateMembership call with the same name.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String intendedMembership;
+
+          /** Required. The intended membership name under the `parent`. This method only does validation in
+         anticipation of a CreateMembership call with the same name.
+           */
+          public java.lang.String getIntendedMembership() {
+            return intendedMembership;
+          }
+
+          /**
+           * Required. The intended membership name under the `parent`. This method only does
+           * validation in anticipation of a CreateMembership call with the same name.
+           */
+          public ValidateExclusivity setIntendedMembership(java.lang.String intendedMembership) {
+            this.intendedMembership = intendedMembership;
+            return this;
+          }
+
+          @Override
+          public ValidateExclusivity set(String parameterName, Object value) {
+            return (ValidateExclusivity) super.set(parameterName, value);
           }
         }
 

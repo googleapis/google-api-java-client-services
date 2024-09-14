@@ -30,8 +30,8 @@ package com.google.api.services.bigquery.model;
 public final class MlStatistics extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Trials of a [hyperparameter tuning job](/bigquery-ml/docs/reference/standard-
-   * sql/bigqueryml-syntax-hp-tuning-overview) sorted by trial_id.
+   * Output only. Trials of a [hyperparameter tuning job](https://cloud.google.com/bigquery-
+   * ml/docs/reference/standard-sql/bigqueryml-syntax-hp-tuning-overview) sorted by trial_id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,8 +44,9 @@ public final class MlStatistics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Results for all completed iterations. Empty for [hyperparameter tuning jobs](/bigquery-
-   * ml/docs/reference/standard-sql/bigqueryml-syntax-hp-tuning-overview).
+   * Results for all completed iterations. Empty for [hyperparameter tuning
+   * jobs](https://cloud.google.com/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-hp-
+   * tuning-overview).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,8 +81,8 @@ public final class MlStatistics extends com.google.api.client.json.GenericJson {
   private java.lang.String trainingType;
 
   /**
-   * Output only. Trials of a [hyperparameter tuning job](/bigquery-ml/docs/reference/standard-
-   * sql/bigqueryml-syntax-hp-tuning-overview) sorted by trial_id.
+   * Output only. Trials of a [hyperparameter tuning job](https://cloud.google.com/bigquery-
+   * ml/docs/reference/standard-sql/bigqueryml-syntax-hp-tuning-overview) sorted by trial_id.
    * @return value or {@code null} for none
    */
   public java.util.List<HparamTuningTrial> getHparamTrials() {
@@ -89,8 +90,8 @@ public final class MlStatistics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Trials of a [hyperparameter tuning job](/bigquery-ml/docs/reference/standard-
-   * sql/bigqueryml-syntax-hp-tuning-overview) sorted by trial_id.
+   * Output only. Trials of a [hyperparameter tuning job](https://cloud.google.com/bigquery-
+   * ml/docs/reference/standard-sql/bigqueryml-syntax-hp-tuning-overview) sorted by trial_id.
    * @param hparamTrials hparamTrials or {@code null} for none
    */
   public MlStatistics setHparamTrials(java.util.List<HparamTuningTrial> hparamTrials) {
@@ -99,8 +100,9 @@ public final class MlStatistics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Results for all completed iterations. Empty for [hyperparameter tuning jobs](/bigquery-
-   * ml/docs/reference/standard-sql/bigqueryml-syntax-hp-tuning-overview).
+   * Results for all completed iterations. Empty for [hyperparameter tuning
+   * jobs](https://cloud.google.com/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-hp-
+   * tuning-overview).
    * @return value or {@code null} for none
    */
   public java.util.List<IterationResult> getIterationResults() {
@@ -108,8 +110,9 @@ public final class MlStatistics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Results for all completed iterations. Empty for [hyperparameter tuning jobs](/bigquery-
-   * ml/docs/reference/standard-sql/bigqueryml-syntax-hp-tuning-overview).
+   * Results for all completed iterations. Empty for [hyperparameter tuning
+   * jobs](https://cloud.google.com/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-hp-
+   * tuning-overview).
    * @param iterationResults iterationResults or {@code null} for none
    */
   public MlStatistics setIterationResults(java.util.List<IterationResult> iterationResults) {

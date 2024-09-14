@@ -238,12 +238,12 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private java.lang.Long maxTimeTravelHours;
 
   /**
-   * Optional. The [tags](/bigquery/docs/tags) attached to this dataset. Tag keys are globally
-   * unique. Tag key is expected to be in the namespaced format, for example
+   * Optional. The [tags](https://cloud.google.com/bigquery/docs/tags) attached to this dataset. Tag
+   * keys are globally unique. Tag key is expected to be in the namespaced format, for example
    * "123456789012/environment" where 123456789012 is the ID of the parent organization or project
    * resource for this tag key. Tag value is expected to be the short name, for example
-   * "Production". See [Tag definitions](/iam/docs/tags-access-control#definitions) for more
-   * details.
+   * "Production". See [Tag definitions](https://cloud.google.com/iam/docs/tags-access-
+   * control#definitions) for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -252,7 +252,8 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Output only. Restriction config for all tables and dataset. If set, restrict certain
    * accesses on the dataset and all its tables based on the config. See [Data
-   * egress](/bigquery/docs/analytics-hub-introduction#data_egress) for more details.
+   * egress](https://cloud.google.com/bigquery/docs/analytics-hub-introduction#data_egress) for more
+   * details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -780,12 +781,12 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The [tags](/bigquery/docs/tags) attached to this dataset. Tag keys are globally
-   * unique. Tag key is expected to be in the namespaced format, for example
+   * Optional. The [tags](https://cloud.google.com/bigquery/docs/tags) attached to this dataset. Tag
+   * keys are globally unique. Tag key is expected to be in the namespaced format, for example
    * "123456789012/environment" where 123456789012 is the ID of the parent organization or project
    * resource for this tag key. Tag value is expected to be the short name, for example
-   * "Production". See [Tag definitions](/iam/docs/tags-access-control#definitions) for more
-   * details.
+   * "Production". See [Tag definitions](https://cloud.google.com/iam/docs/tags-access-
+   * control#definitions) for more details.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getResourceTags() {
@@ -793,12 +794,12 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The [tags](/bigquery/docs/tags) attached to this dataset. Tag keys are globally
-   * unique. Tag key is expected to be in the namespaced format, for example
+   * Optional. The [tags](https://cloud.google.com/bigquery/docs/tags) attached to this dataset. Tag
+   * keys are globally unique. Tag key is expected to be in the namespaced format, for example
    * "123456789012/environment" where 123456789012 is the ID of the parent organization or project
    * resource for this tag key. Tag value is expected to be the short name, for example
-   * "Production". See [Tag definitions](/iam/docs/tags-access-control#definitions) for more
-   * details.
+   * "Production". See [Tag definitions](https://cloud.google.com/iam/docs/tags-access-
+   * control#definitions) for more details.
    * @param resourceTags resourceTags or {@code null} for none
    */
   public Dataset setResourceTags(java.util.Map<String, java.lang.String> resourceTags) {
@@ -809,7 +810,8 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Output only. Restriction config for all tables and dataset. If set, restrict certain
    * accesses on the dataset and all its tables based on the config. See [Data
-   * egress](/bigquery/docs/analytics-hub-introduction#data_egress) for more details.
+   * egress](https://cloud.google.com/bigquery/docs/analytics-hub-introduction#data_egress) for more
+   * details.
    * @return value or {@code null} for none
    */
   public RestrictionConfig getRestrictions() {
@@ -819,7 +821,8 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Output only. Restriction config for all tables and dataset. If set, restrict certain
    * accesses on the dataset and all its tables based on the config. See [Data
-   * egress](/bigquery/docs/analytics-hub-introduction#data_egress) for more details.
+   * egress](https://cloud.google.com/bigquery/docs/analytics-hub-introduction#data_egress) for more
+   * details.
    * @param restrictions restrictions or {@code null} for none
    */
   public Dataset setRestrictions(RestrictionConfig restrictions) {

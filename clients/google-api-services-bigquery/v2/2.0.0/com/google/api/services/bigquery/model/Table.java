@@ -349,8 +349,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Output only. Restriction config for table. If set, restrict certain accesses on the
-   * table based on the config. See [Data egress](/bigquery/docs/analytics-hub-
-   * introduction#data_egress) for more details.
+   * table based on the config. See [Data egress](https://cloud.google.com/bigquery/docs/analytics-
+   * hub-introduction#data_egress) for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -421,8 +421,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
    * references data stored in an external storage system, such as Google Cloud Storage. *
    * `MATERIALIZED_VIEW`: A precomputed view defined by a SQL query. * `SNAPSHOT`: An immutable
    * BigQuery table that preserves the contents of a base table at a particular time. See additional
-   * information on [table snapshots](/bigquery/docs/table-snapshots-intro). The default value is
-   * `TABLE`.
+   * information on [table snapshots](https://cloud.google.com/bigquery/docs/table-snapshots-intro).
+   * The default value is `TABLE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1221,8 +1221,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Output only. Restriction config for table. If set, restrict certain accesses on the
-   * table based on the config. See [Data egress](/bigquery/docs/analytics-hub-
-   * introduction#data_egress) for more details.
+   * table based on the config. See [Data egress](https://cloud.google.com/bigquery/docs/analytics-
+   * hub-introduction#data_egress) for more details.
    * @return value or {@code null} for none
    */
   public RestrictionConfig getRestrictions() {
@@ -1231,8 +1231,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Output only. Restriction config for table. If set, restrict certain accesses on the
-   * table based on the config. See [Data egress](/bigquery/docs/analytics-hub-
-   * introduction#data_egress) for more details.
+   * table based on the config. See [Data egress](https://cloud.google.com/bigquery/docs/analytics-
+   * hub-introduction#data_egress) for more details.
    * @param restrictions restrictions or {@code null} for none
    */
   public Table setRestrictions(RestrictionConfig restrictions) {
@@ -1388,8 +1388,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
    * references data stored in an external storage system, such as Google Cloud Storage. *
    * `MATERIALIZED_VIEW`: A precomputed view defined by a SQL query. * `SNAPSHOT`: An immutable
    * BigQuery table that preserves the contents of a base table at a particular time. See additional
-   * information on [table snapshots](/bigquery/docs/table-snapshots-intro). The default value is
-   * `TABLE`.
+   * information on [table snapshots](https://cloud.google.com/bigquery/docs/table-snapshots-intro).
+   * The default value is `TABLE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -1402,8 +1402,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
    * references data stored in an external storage system, such as Google Cloud Storage. *
    * `MATERIALIZED_VIEW`: A precomputed view defined by a SQL query. * `SNAPSHOT`: An immutable
    * BigQuery table that preserves the contents of a base table at a particular time. See additional
-   * information on [table snapshots](/bigquery/docs/table-snapshots-intro). The default value is
-   * `TABLE`.
+   * information on [table snapshots](https://cloud.google.com/bigquery/docs/table-snapshots-intro).
+   * The default value is `TABLE`.
    * @param type type or {@code null} for none
    */
   public Table setType(java.lang.String type) {

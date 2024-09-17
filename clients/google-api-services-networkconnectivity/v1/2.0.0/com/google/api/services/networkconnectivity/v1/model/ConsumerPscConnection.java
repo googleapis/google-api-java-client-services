@@ -84,11 +84,19 @@ public final class ConsumerPscConnection extends com.google.api.client.json.Gene
   private java.lang.String network;
 
   /**
-   * Immutable. An immutable identifier for the producer instance.
+   * Immutable. Deprecated. Use producer_instance_metadata instead. An immutable identifier for the
+   * producer instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String producerInstanceId;
+
+  /**
+   * Immutable. An immutable map for the producer instance metadata.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> producerInstanceMetadata;
 
   /**
    * The consumer project whose PSC forwarding rule is connected to the service attachments in this
@@ -256,7 +264,8 @@ public final class ConsumerPscConnection extends com.google.api.client.json.Gene
   }
 
   /**
-   * Immutable. An immutable identifier for the producer instance.
+   * Immutable. Deprecated. Use producer_instance_metadata instead. An immutable identifier for the
+   * producer instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getProducerInstanceId() {
@@ -264,11 +273,29 @@ public final class ConsumerPscConnection extends com.google.api.client.json.Gene
   }
 
   /**
-   * Immutable. An immutable identifier for the producer instance.
+   * Immutable. Deprecated. Use producer_instance_metadata instead. An immutable identifier for the
+   * producer instance.
    * @param producerInstanceId producerInstanceId or {@code null} for none
    */
   public ConsumerPscConnection setProducerInstanceId(java.lang.String producerInstanceId) {
     this.producerInstanceId = producerInstanceId;
+    return this;
+  }
+
+  /**
+   * Immutable. An immutable map for the producer instance metadata.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getProducerInstanceMetadata() {
+    return producerInstanceMetadata;
+  }
+
+  /**
+   * Immutable. An immutable map for the producer instance metadata.
+   * @param producerInstanceMetadata producerInstanceMetadata or {@code null} for none
+   */
+  public ConsumerPscConnection setProducerInstanceMetadata(java.util.Map<String, java.lang.String> producerInstanceMetadata) {
+    this.producerInstanceMetadata = producerInstanceMetadata;
     return this;
   }
 

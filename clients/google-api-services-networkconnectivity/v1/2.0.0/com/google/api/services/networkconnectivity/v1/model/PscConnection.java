@@ -52,7 +52,8 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   private java.lang.String consumerTargetProject;
 
   /**
-   * The most recent error during operating this connection.
+   * The most recent error during operating this connection. Deprecated, please use error_info
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,11 +82,19 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   private java.lang.String gceOperation;
 
   /**
-   * Immutable. An immutable identifier for the producer instance.
+   * Immutable. Deprecated. Use producer_instance_metadata instead. An immutable identifier for the
+   * producer instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String producerInstanceId;
+
+  /**
+   * Immutable. An immutable map for the producer instance metadata.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> producerInstanceMetadata;
 
   /**
    * The PSC connection id of the PSC forwarding rule.
@@ -100,6 +109,14 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String selectedSubnetwork;
+
+  /**
+   * Output only. [Output only] The service class associated with this PSC Connection. The value is
+   * derived from the SCPolicy and matches the service class name provided by the customer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceClass;
 
   /**
    * State of the PSC Connection
@@ -160,7 +177,8 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The most recent error during operating this connection.
+   * The most recent error during operating this connection. Deprecated, please use error_info
+   * instead.
    * @return value or {@code null} for none
    */
   public GoogleRpcStatus getError() {
@@ -168,7 +186,8 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The most recent error during operating this connection.
+   * The most recent error during operating this connection. Deprecated, please use error_info
+   * instead.
    * @param error error or {@code null} for none
    */
   public PscConnection setError(GoogleRpcStatus error) {
@@ -230,7 +249,8 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Immutable. An immutable identifier for the producer instance.
+   * Immutable. Deprecated. Use producer_instance_metadata instead. An immutable identifier for the
+   * producer instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getProducerInstanceId() {
@@ -238,11 +258,29 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Immutable. An immutable identifier for the producer instance.
+   * Immutable. Deprecated. Use producer_instance_metadata instead. An immutable identifier for the
+   * producer instance.
    * @param producerInstanceId producerInstanceId or {@code null} for none
    */
   public PscConnection setProducerInstanceId(java.lang.String producerInstanceId) {
     this.producerInstanceId = producerInstanceId;
+    return this;
+  }
+
+  /**
+   * Immutable. An immutable map for the producer instance metadata.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getProducerInstanceMetadata() {
+    return producerInstanceMetadata;
+  }
+
+  /**
+   * Immutable. An immutable map for the producer instance metadata.
+   * @param producerInstanceMetadata producerInstanceMetadata or {@code null} for none
+   */
+  public PscConnection setProducerInstanceMetadata(java.util.Map<String, java.lang.String> producerInstanceMetadata) {
+    this.producerInstanceMetadata = producerInstanceMetadata;
     return this;
   }
 
@@ -277,6 +315,25 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
    */
   public PscConnection setSelectedSubnetwork(java.lang.String selectedSubnetwork) {
     this.selectedSubnetwork = selectedSubnetwork;
+    return this;
+  }
+
+  /**
+   * Output only. [Output only] The service class associated with this PSC Connection. The value is
+   * derived from the SCPolicy and matches the service class name provided by the customer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceClass() {
+    return serviceClass;
+  }
+
+  /**
+   * Output only. [Output only] The service class associated with this PSC Connection. The value is
+   * derived from the SCPolicy and matches the service class name provided by the customer.
+   * @param serviceClass serviceClass or {@code null} for none
+   */
+  public PscConnection setServiceClass(java.lang.String serviceClass) {
+    this.serviceClass = serviceClass;
     return this;
   }
 

@@ -111,6 +111,26 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String projectId;
 
   /**
+   * Output only. Immutable. The globally unique, Google-assigned canonical identifier for the
+   * Project. Use this identifier when configuring integrations and/or making API calls to Google
+   * Cloud or third-party services.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String projectNumber;
+
+  /**
+   * Optional. Duplicate field for the URL of the default RTDB instances (if there is one) that uses
+   * the same field name as the unified V2 config file format. We wanted to make a single config
+   * file format for all the app platforms (Android, iOS and web) and we had to pick consistent
+   * names for all the fields since there was some varience between the platforms. If the request
+   * asks for the V2 format we will populate this field instead of realtime_database_instance_uri.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String realtimeDatabaseUrl;
+
+  /**
    * **DEPRECATED.** _Instead, find the default Cloud Storage for Firebase bucket using the [list en
    * dpoint](https://firebase.google.com/docs/reference/rest/storage/rest/v1beta/projects.buckets/li
    * st) within the Cloud Storage for Firebase REST API. Note that the default bucket for the
@@ -120,6 +140,13 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String storageBucket;
+
+  /**
+   * Version of the config specification.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String version;
 
   /**
    * The [`keyString`](https://cloud.google.com/api-
@@ -306,6 +333,52 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Immutable. The globally unique, Google-assigned canonical identifier for the
+   * Project. Use this identifier when configuring integrations and/or making API calls to Google
+   * Cloud or third-party services.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProjectNumber() {
+    return projectNumber;
+  }
+
+  /**
+   * Output only. Immutable. The globally unique, Google-assigned canonical identifier for the
+   * Project. Use this identifier when configuring integrations and/or making API calls to Google
+   * Cloud or third-party services.
+   * @param projectNumber projectNumber or {@code null} for none
+   */
+  public WebAppConfig setProjectNumber(java.lang.String projectNumber) {
+    this.projectNumber = projectNumber;
+    return this;
+  }
+
+  /**
+   * Optional. Duplicate field for the URL of the default RTDB instances (if there is one) that uses
+   * the same field name as the unified V2 config file format. We wanted to make a single config
+   * file format for all the app platforms (Android, iOS and web) and we had to pick consistent
+   * names for all the fields since there was some varience between the platforms. If the request
+   * asks for the V2 format we will populate this field instead of realtime_database_instance_uri.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRealtimeDatabaseUrl() {
+    return realtimeDatabaseUrl;
+  }
+
+  /**
+   * Optional. Duplicate field for the URL of the default RTDB instances (if there is one) that uses
+   * the same field name as the unified V2 config file format. We wanted to make a single config
+   * file format for all the app platforms (Android, iOS and web) and we had to pick consistent
+   * names for all the fields since there was some varience between the platforms. If the request
+   * asks for the V2 format we will populate this field instead of realtime_database_instance_uri.
+   * @param realtimeDatabaseUrl realtimeDatabaseUrl or {@code null} for none
+   */
+  public WebAppConfig setRealtimeDatabaseUrl(java.lang.String realtimeDatabaseUrl) {
+    this.realtimeDatabaseUrl = realtimeDatabaseUrl;
+    return this;
+  }
+
+  /**
    * **DEPRECATED.** _Instead, find the default Cloud Storage for Firebase bucket using the [list en
    * dpoint](https://firebase.google.com/docs/reference/rest/storage/rest/v1beta/projects.buckets/li
    * st) within the Cloud Storage for Firebase REST API. Note that the default bucket for the
@@ -327,6 +400,23 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
    */
   public WebAppConfig setStorageBucket(java.lang.String storageBucket) {
     this.storageBucket = storageBucket;
+    return this;
+  }
+
+  /**
+   * Version of the config specification.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVersion() {
+    return version;
+  }
+
+  /**
+   * Version of the config specification.
+   * @param version version or {@code null} for none
+   */
+  public WebAppConfig setVersion(java.lang.String version) {
+    this.version = version;
     return this;
   }
 

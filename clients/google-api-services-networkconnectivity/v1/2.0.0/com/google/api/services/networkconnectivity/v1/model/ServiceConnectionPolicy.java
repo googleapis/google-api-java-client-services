@@ -31,7 +31,7 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class ServiceConnectionPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Time when the ServiceConnectionMap was created.
+   * Output only. Time when the ServiceConnectionPolicy was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,14 +115,14 @@ public final class ServiceConnectionPolicy extends com.google.api.client.json.Ge
   private java.lang.String serviceClass;
 
   /**
-   * Output only. Time when the ServiceConnectionMap was updated.
+   * Output only. Time when the ServiceConnectionPolicy was updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. Time when the ServiceConnectionMap was created.
+   * Output only. Time when the ServiceConnectionPolicy was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -130,7 +130,7 @@ public final class ServiceConnectionPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Time when the ServiceConnectionMap was created.
+   * Output only. Time when the ServiceConnectionPolicy was created.
    * @param createTime createTime or {@code null} for none
    */
   public ServiceConnectionPolicy setCreateTime(String createTime) {
@@ -308,7 +308,7 @@ public final class ServiceConnectionPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Time when the ServiceConnectionMap was updated.
+   * Output only. Time when the ServiceConnectionPolicy was updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -316,7 +316,7 @@ public final class ServiceConnectionPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Time when the ServiceConnectionMap was updated.
+   * Output only. Time when the ServiceConnectionPolicy was updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public ServiceConnectionPolicy setUpdateTime(String updateTime) {

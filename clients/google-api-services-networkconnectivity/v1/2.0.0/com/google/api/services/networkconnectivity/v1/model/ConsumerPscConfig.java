@@ -58,11 +58,19 @@ public final class ConsumerPscConfig extends com.google.api.client.json.GenericJ
   private java.lang.String network;
 
   /**
-   * Immutable. An immutable identifier for the producer instance.
+   * Immutable. Deprecated. Use producer_instance_metadata instead. An immutable identifier for the
+   * producer instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String producerInstanceId;
+
+  /**
+   * Immutable. An immutable map for the producer instance metadata.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> producerInstanceMetadata;
 
   /**
    * The consumer project where PSC connections are allowed to be created in.
@@ -150,7 +158,8 @@ public final class ConsumerPscConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Immutable. An immutable identifier for the producer instance.
+   * Immutable. Deprecated. Use producer_instance_metadata instead. An immutable identifier for the
+   * producer instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getProducerInstanceId() {
@@ -158,11 +167,29 @@ public final class ConsumerPscConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Immutable. An immutable identifier for the producer instance.
+   * Immutable. Deprecated. Use producer_instance_metadata instead. An immutable identifier for the
+   * producer instance.
    * @param producerInstanceId producerInstanceId or {@code null} for none
    */
   public ConsumerPscConfig setProducerInstanceId(java.lang.String producerInstanceId) {
     this.producerInstanceId = producerInstanceId;
+    return this;
+  }
+
+  /**
+   * Immutable. An immutable map for the producer instance metadata.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getProducerInstanceMetadata() {
+    return producerInstanceMetadata;
+  }
+
+  /**
+   * Immutable. An immutable map for the producer instance metadata.
+   * @param producerInstanceMetadata producerInstanceMetadata or {@code null} for none
+   */
+  public ConsumerPscConfig setProducerInstanceMetadata(java.util.Map<String, java.lang.String> producerInstanceMetadata) {
+    this.producerInstanceMetadata = producerInstanceMetadata;
     return this;
   }
 

@@ -81,6 +81,20 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private EncryptionConfig encryptionConfig;
 
   /**
+   * Optional. Whether FIPS is enabled on the Looker instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean fipsEnabled;
+
+  /**
+   * Optional. Whether Gemini feature is enabled on the Looker instance or not.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean geminiEnabled;
+
+  /**
    * Output only. Private Ingress IP (IPv4).
    * The value may be {@code null}.
    */
@@ -333,6 +347,40 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setEncryptionConfig(EncryptionConfig encryptionConfig) {
     this.encryptionConfig = encryptionConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Whether FIPS is enabled on the Looker instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getFipsEnabled() {
+    return fipsEnabled;
+  }
+
+  /**
+   * Optional. Whether FIPS is enabled on the Looker instance.
+   * @param fipsEnabled fipsEnabled or {@code null} for none
+   */
+  public Instance setFipsEnabled(java.lang.Boolean fipsEnabled) {
+    this.fipsEnabled = fipsEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. Whether Gemini feature is enabled on the Looker instance or not.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGeminiEnabled() {
+    return geminiEnabled;
+  }
+
+  /**
+   * Optional. Whether Gemini feature is enabled on the Looker instance or not.
+   * @param geminiEnabled geminiEnabled or {@code null} for none
+   */
+  public Instance setGeminiEnabled(java.lang.Boolean geminiEnabled) {
+    this.geminiEnabled = geminiEnabled;
     return this;
   }
 

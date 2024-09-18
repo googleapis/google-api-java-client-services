@@ -55,6 +55,13 @@ public final class DeviceIdentifier extends com.google.api.client.json.GenericJs
   private java.lang.String imei;
 
   /**
+   * The device’s second IMEI number.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String imei2;
+
+  /**
    * The device manufacturer’s name. Matches the device's built-in value returned from
    * `android.os.Build.MANUFACTURER`. Allowed values are listed in [Android manufacturers](/zero-
    * touch/resources/manufacturer-names#manufacturers-names).
@@ -69,6 +76,13 @@ public final class DeviceIdentifier extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String meid;
+
+  /**
+   * The device’s second MEID number.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String meid2;
 
   /**
    * The device model's name. Allowed values are listed in [Android models](/zero-
@@ -141,6 +155,23 @@ public final class DeviceIdentifier extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * The device’s second IMEI number.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImei2() {
+    return imei2;
+  }
+
+  /**
+   * The device’s second IMEI number.
+   * @param imei2 imei2 or {@code null} for none
+   */
+  public DeviceIdentifier setImei2(java.lang.String imei2) {
+    this.imei2 = imei2;
+    return this;
+  }
+
+  /**
    * The device manufacturer’s name. Matches the device's built-in value returned from
    * `android.os.Build.MANUFACTURER`. Allowed values are listed in [Android manufacturers](/zero-
    * touch/resources/manufacturer-names#manufacturers-names).
@@ -175,6 +206,23 @@ public final class DeviceIdentifier extends com.google.api.client.json.GenericJs
    */
   public DeviceIdentifier setMeid(java.lang.String meid) {
     this.meid = meid;
+    return this;
+  }
+
+  /**
+   * The device’s second MEID number.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMeid2() {
+    return meid2;
+  }
+
+  /**
+   * The device’s second MEID number.
+   * @param meid2 meid2 or {@code null} for none
+   */
+  public DeviceIdentifier setMeid2(java.lang.String meid2) {
+    this.meid2 = meid2;
     return this;
   }
 

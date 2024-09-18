@@ -47,7 +47,9 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   private java.lang.String description;
 
   /**
-   * IP range that this internal range defines.
+   * IP range that this internal range defines. NOTE: IPv6 ranges are limited to
+   * usage=EXTERNAL_TO_VPC and peering=FOR_SELF. NOTE: For IPv6 Ranges this field is compulsory,
+   * i.e. the address range must be specified explicitly.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,10 +104,12 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   private java.lang.String peering;
 
   /**
-   * An alternative to ip_cidr_range. Can be set when trying to create a reservation that
+   * An alternative to ip_cidr_range. Can be set when trying to create an IPv4 reservation that
    * automatically finds a free range of the given size. If both ip_cidr_range and prefix_length are
    * set, there is an error if the range sizes do not match. Can also be used during updates to
-   * change the range size.
+   * change the range size. NOTE: For IPv6 this field only works if ip_cidr_range is set as well,
+   * and both fields must match. In other words, with IPv6 this field only works as a redundant
+   * parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -181,7 +185,9 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * IP range that this internal range defines.
+   * IP range that this internal range defines. NOTE: IPv6 ranges are limited to
+   * usage=EXTERNAL_TO_VPC and peering=FOR_SELF. NOTE: For IPv6 Ranges this field is compulsory,
+   * i.e. the address range must be specified explicitly.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpCidrRange() {
@@ -189,7 +195,9 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * IP range that this internal range defines.
+   * IP range that this internal range defines. NOTE: IPv6 ranges are limited to
+   * usage=EXTERNAL_TO_VPC and peering=FOR_SELF. NOTE: For IPv6 Ranges this field is compulsory,
+   * i.e. the address range must be specified explicitly.
    * @param ipCidrRange ipCidrRange or {@code null} for none
    */
   public InternalRange setIpCidrRange(java.lang.String ipCidrRange) {
@@ -312,10 +320,12 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * An alternative to ip_cidr_range. Can be set when trying to create a reservation that
+   * An alternative to ip_cidr_range. Can be set when trying to create an IPv4 reservation that
    * automatically finds a free range of the given size. If both ip_cidr_range and prefix_length are
    * set, there is an error if the range sizes do not match. Can also be used during updates to
-   * change the range size.
+   * change the range size. NOTE: For IPv6 this field only works if ip_cidr_range is set as well,
+   * and both fields must match. In other words, with IPv6 this field only works as a redundant
+   * parameter.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPrefixLength() {
@@ -323,10 +333,12 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * An alternative to ip_cidr_range. Can be set when trying to create a reservation that
+   * An alternative to ip_cidr_range. Can be set when trying to create an IPv4 reservation that
    * automatically finds a free range of the given size. If both ip_cidr_range and prefix_length are
    * set, there is an error if the range sizes do not match. Can also be used during updates to
-   * change the range size.
+   * change the range size. NOTE: For IPv6 this field only works if ip_cidr_range is set as well,
+   * and both fields must match. In other words, with IPv6 this field only works as a redundant
+   * parameter.
    * @param prefixLength prefixLength or {@code null} for none
    */
   public InternalRange setPrefixLength(java.lang.Integer prefixLength) {

@@ -48,6 +48,7 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
   /**
    * Maximum number of business days spent before an order is shipped. 0 means same day shipped, 1
    * means next day shipped. Must be greater than or equal to `min_handling_days`.
+   * 'min_handling_days' and 'max_handling_days' should be either set or not set at the same time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +64,8 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Minimum number of business days spent before an order is shipped. 0 means same day shipped, 1
-   * means next day shipped.
+   * means next day shipped. 'min_handling_days' and 'max_handling_days' should be either set or not
+   * set at the same time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,6 +147,7 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
   /**
    * Maximum number of business days spent before an order is shipped. 0 means same day shipped, 1
    * means next day shipped. Must be greater than or equal to `min_handling_days`.
+   * 'min_handling_days' and 'max_handling_days' should be either set or not set at the same time.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxHandlingDays() {
@@ -154,6 +157,7 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
   /**
    * Maximum number of business days spent before an order is shipped. 0 means same day shipped, 1
    * means next day shipped. Must be greater than or equal to `min_handling_days`.
+   * 'min_handling_days' and 'max_handling_days' should be either set or not set at the same time.
    * @param maxHandlingDays maxHandlingDays or {@code null} for none
    */
   public DeliveryTime setMaxHandlingDays(java.lang.Integer maxHandlingDays) {
@@ -182,7 +186,8 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Minimum number of business days spent before an order is shipped. 0 means same day shipped, 1
-   * means next day shipped.
+   * means next day shipped. 'min_handling_days' and 'max_handling_days' should be either set or not
+   * set at the same time.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinHandlingDays() {
@@ -191,7 +196,8 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Minimum number of business days spent before an order is shipped. 0 means same day shipped, 1
-   * means next day shipped.
+   * means next day shipped. 'min_handling_days' and 'max_handling_days' should be either set or not
+   * set at the same time.
    * @param minHandlingDays minHandlingDays or {@code null} for none
    */
   public DeliveryTime setMinHandlingDays(java.lang.Integer minHandlingDays) {

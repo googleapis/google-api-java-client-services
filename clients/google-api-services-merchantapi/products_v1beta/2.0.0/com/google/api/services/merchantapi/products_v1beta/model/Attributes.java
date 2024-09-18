@@ -293,12 +293,12 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.String googleProductCategory;
 
   /**
-   * Global Trade Item Number ([GTIN](https://support.google.com/merchants/answer/188494#gtin)) of
-   * the item.
+   * Global Trade Item Numbers ([GTIN](https://support.google.com/merchants/answer/188494#gtin)) of
+   * the item. You can provide up to 10 GTINs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String gtin;
+  private java.util.List<java.lang.String> gtin;
 
   /**
    * Set this value to false when the item does not have unique product identifiers appropriate to
@@ -1349,20 +1349,20 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Global Trade Item Number ([GTIN](https://support.google.com/merchants/answer/188494#gtin)) of
-   * the item.
+   * Global Trade Item Numbers ([GTIN](https://support.google.com/merchants/answer/188494#gtin)) of
+   * the item. You can provide up to 10 GTINs.
    * @return value or {@code null} for none
    */
-  public java.lang.String getGtin() {
+  public java.util.List<java.lang.String> getGtin() {
     return gtin;
   }
 
   /**
-   * Global Trade Item Number ([GTIN](https://support.google.com/merchants/answer/188494#gtin)) of
-   * the item.
+   * Global Trade Item Numbers ([GTIN](https://support.google.com/merchants/answer/188494#gtin)) of
+   * the item. You can provide up to 10 GTINs.
    * @param gtin gtin or {@code null} for none
    */
-  public Attributes setGtin(java.lang.String gtin) {
+  public Attributes setGtin(java.util.List<java.lang.String> gtin) {
     this.gtin = gtin;
     return this;
   }

@@ -40,9 +40,9 @@ public final class GoogleCloudAiplatformV1FeatureGroupBigQuery extends com.googl
    * Optional. If set, all feature values will be fetched from a single row per unique entityId
    * including nulls. If not set, will collapse all rows for each unique entityId into a singe row
    * with any non-null values if present, if no non-null values are present will sync null. ex: If
-   * source has schema (entity_id, feature_timestamp, f0, f1) and values (e1,
-   * 2020-01-01T10:00:00.123Z, 10, 15) (e1, 2020-02-01T10:00:00.123Z, 20, null) If dense is set,
-   * (e1, 20, null) is synced to online stores. If dense is not set, (e1, 20, 15) is synced to
+   * source has schema `(entity_id, feature_timestamp, f0, f1)` and the following rows: `(e1,
+   * 2020-01-01T10:00:00.123Z, 10, 15)` `(e1, 2020-02-01T10:00:00.123Z, 20, null)` If dense is set,
+   * `(e1, 20, null)` is synced to online stores. If dense is not set, `(e1, 20, 15)` is synced to
    * online stores.
    * The value may be {@code null}.
    */
@@ -93,9 +93,9 @@ public final class GoogleCloudAiplatformV1FeatureGroupBigQuery extends com.googl
    * Optional. If set, all feature values will be fetched from a single row per unique entityId
    * including nulls. If not set, will collapse all rows for each unique entityId into a singe row
    * with any non-null values if present, if no non-null values are present will sync null. ex: If
-   * source has schema (entity_id, feature_timestamp, f0, f1) and values (e1,
-   * 2020-01-01T10:00:00.123Z, 10, 15) (e1, 2020-02-01T10:00:00.123Z, 20, null) If dense is set,
-   * (e1, 20, null) is synced to online stores. If dense is not set, (e1, 20, 15) is synced to
+   * source has schema `(entity_id, feature_timestamp, f0, f1)` and the following rows: `(e1,
+   * 2020-01-01T10:00:00.123Z, 10, 15)` `(e1, 2020-02-01T10:00:00.123Z, 20, null)` If dense is set,
+   * `(e1, 20, null)` is synced to online stores. If dense is not set, `(e1, 20, 15)` is synced to
    * online stores.
    * @return value or {@code null} for none
    */
@@ -107,9 +107,9 @@ public final class GoogleCloudAiplatformV1FeatureGroupBigQuery extends com.googl
    * Optional. If set, all feature values will be fetched from a single row per unique entityId
    * including nulls. If not set, will collapse all rows for each unique entityId into a singe row
    * with any non-null values if present, if no non-null values are present will sync null. ex: If
-   * source has schema (entity_id, feature_timestamp, f0, f1) and values (e1,
-   * 2020-01-01T10:00:00.123Z, 10, 15) (e1, 2020-02-01T10:00:00.123Z, 20, null) If dense is set,
-   * (e1, 20, null) is synced to online stores. If dense is not set, (e1, 20, 15) is synced to
+   * source has schema `(entity_id, feature_timestamp, f0, f1)` and the following rows: `(e1,
+   * 2020-01-01T10:00:00.123Z, 10, 15)` `(e1, 2020-02-01T10:00:00.123Z, 20, null)` If dense is set,
+   * `(e1, 20, null)` is synced to online stores. If dense is not set, `(e1, 20, 15)` is synced to
    * online stores.
    * @param dense dense or {@code null} for none
    */

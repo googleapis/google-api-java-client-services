@@ -38,10 +38,11 @@ public final class GoogleCloudAiplatformV1beta1FeatureViewVertexRagSource extend
 
   /**
    * Required. The BigQuery view/table URI that will be materialized on each manual sync trigger.
-   * The table/view is expected to have the following columns at least: Field name Type Mode
-   * corpus_id STRING REQUIRED/NULLABLE file_id STRING REQUIRED/NULLABLE chunk_id STRING
-   * REQUIRED/NULLABLE chunk_data_type STRING REQUIRED/NULLABLE chunk_data STRING REQUIRED/NULLABLE
-   * embeddings FLOAT REPEATED file_original_uri STRING REQUIRED/NULLABLE
+   * The table/view is expected to have the following columns and types at least: - `corpus_id`
+   * (STRING, NULLABLE/REQUIRED) - `file_id` (STRING, NULLABLE/REQUIRED) - `chunk_id` (STRING,
+   * NULLABLE/REQUIRED) - `chunk_data_type` (STRING, NULLABLE/REQUIRED) - `chunk_data` (STRING,
+   * NULLABLE/REQUIRED) - `embeddings` (FLOAT, REPEATED) - `file_original_uri` (STRING,
+   * NULLABLE/REQUIRED)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,10 +67,11 @@ public final class GoogleCloudAiplatformV1beta1FeatureViewVertexRagSource extend
 
   /**
    * Required. The BigQuery view/table URI that will be materialized on each manual sync trigger.
-   * The table/view is expected to have the following columns at least: Field name Type Mode
-   * corpus_id STRING REQUIRED/NULLABLE file_id STRING REQUIRED/NULLABLE chunk_id STRING
-   * REQUIRED/NULLABLE chunk_data_type STRING REQUIRED/NULLABLE chunk_data STRING REQUIRED/NULLABLE
-   * embeddings FLOAT REPEATED file_original_uri STRING REQUIRED/NULLABLE
+   * The table/view is expected to have the following columns and types at least: - `corpus_id`
+   * (STRING, NULLABLE/REQUIRED) - `file_id` (STRING, NULLABLE/REQUIRED) - `chunk_id` (STRING,
+   * NULLABLE/REQUIRED) - `chunk_data_type` (STRING, NULLABLE/REQUIRED) - `chunk_data` (STRING,
+   * NULLABLE/REQUIRED) - `embeddings` (FLOAT, REPEATED) - `file_original_uri` (STRING,
+   * NULLABLE/REQUIRED)
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -78,10 +80,11 @@ public final class GoogleCloudAiplatformV1beta1FeatureViewVertexRagSource extend
 
   /**
    * Required. The BigQuery view/table URI that will be materialized on each manual sync trigger.
-   * The table/view is expected to have the following columns at least: Field name Type Mode
-   * corpus_id STRING REQUIRED/NULLABLE file_id STRING REQUIRED/NULLABLE chunk_id STRING
-   * REQUIRED/NULLABLE chunk_data_type STRING REQUIRED/NULLABLE chunk_data STRING REQUIRED/NULLABLE
-   * embeddings FLOAT REPEATED file_original_uri STRING REQUIRED/NULLABLE
+   * The table/view is expected to have the following columns and types at least: - `corpus_id`
+   * (STRING, NULLABLE/REQUIRED) - `file_id` (STRING, NULLABLE/REQUIRED) - `chunk_id` (STRING,
+   * NULLABLE/REQUIRED) - `chunk_data_type` (STRING, NULLABLE/REQUIRED) - `chunk_data` (STRING,
+   * NULLABLE/REQUIRED) - `embeddings` (FLOAT, REPEATED) - `file_original_uri` (STRING,
+   * NULLABLE/REQUIRED)
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FeatureViewVertexRagSource setUri(java.lang.String uri) {

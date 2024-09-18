@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1beta1RagVectorDbConfig extends com.goo
   private GoogleCloudAiplatformV1beta1ApiAuth apiAuth;
 
   /**
+   * The config for the Pinecone.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RagVectorDbConfigPinecone pinecone;
+
+  /**
    * The config for the RAG-managed Vector DB.
    * The value may be {@code null}.
    */
@@ -49,6 +56,13 @@ public final class GoogleCloudAiplatformV1beta1RagVectorDbConfig extends com.goo
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1RagVectorDbConfigVertexFeatureStore vertexFeatureStore;
+
+  /**
+   * The config for the Vertex Vector Search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RagVectorDbConfigVertexVectorSearch vertexVectorSearch;
 
   /**
    * The config for the Weaviate.
@@ -71,6 +85,23 @@ public final class GoogleCloudAiplatformV1beta1RagVectorDbConfig extends com.goo
    */
   public GoogleCloudAiplatformV1beta1RagVectorDbConfig setApiAuth(GoogleCloudAiplatformV1beta1ApiAuth apiAuth) {
     this.apiAuth = apiAuth;
+    return this;
+  }
+
+  /**
+   * The config for the Pinecone.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagVectorDbConfigPinecone getPinecone() {
+    return pinecone;
+  }
+
+  /**
+   * The config for the Pinecone.
+   * @param pinecone pinecone or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagVectorDbConfig setPinecone(GoogleCloudAiplatformV1beta1RagVectorDbConfigPinecone pinecone) {
+    this.pinecone = pinecone;
     return this;
   }
 
@@ -105,6 +136,23 @@ public final class GoogleCloudAiplatformV1beta1RagVectorDbConfig extends com.goo
    */
   public GoogleCloudAiplatformV1beta1RagVectorDbConfig setVertexFeatureStore(GoogleCloudAiplatformV1beta1RagVectorDbConfigVertexFeatureStore vertexFeatureStore) {
     this.vertexFeatureStore = vertexFeatureStore;
+    return this;
+  }
+
+  /**
+   * The config for the Vertex Vector Search.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagVectorDbConfigVertexVectorSearch getVertexVectorSearch() {
+    return vertexVectorSearch;
+  }
+
+  /**
+   * The config for the Vertex Vector Search.
+   * @param vertexVectorSearch vertexVectorSearch or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagVectorDbConfig setVertexVectorSearch(GoogleCloudAiplatformV1beta1RagVectorDbConfigVertexVectorSearch vertexVectorSearch) {
+    this.vertexVectorSearch = vertexVectorSearch;
     return this;
   }
 

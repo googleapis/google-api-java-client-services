@@ -64,6 +64,14 @@ public final class GoogleCloudRetailV2SearchRequest extends com.google.api.clien
   private java.lang.String canonicalFilter;
 
   /**
+   * Optional. This field specifies all conversational related parameters addition to traditional
+   * retail search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2SearchRequestConversationalSearchSpec conversationalSearchSpec;
+
+  /**
    * Deprecated. Refer to https://cloud.google.com/retail/docs/configs#dynamic to enable dynamic
    * facets. Do not set this field. The specification for dynamically generated facets. Notice that
    * only textual facets can be dynamically generated.
@@ -209,6 +217,13 @@ public final class GoogleCloudRetailV2SearchRequest extends com.google.api.clien
   private GoogleCloudRetailV2SearchRequestSpellCorrectionSpec spellCorrectionSpec;
 
   /**
+   * Optional. This field specifies tile navigation related parameters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2SearchRequestTileNavigationSpec tileNavigationSpec;
+
+  /**
    * User information.
    * The value may be {@code null}.
    */
@@ -327,6 +342,25 @@ public final class GoogleCloudRetailV2SearchRequest extends com.google.api.clien
    */
   public GoogleCloudRetailV2SearchRequest setCanonicalFilter(java.lang.String canonicalFilter) {
     this.canonicalFilter = canonicalFilter;
+    return this;
+  }
+
+  /**
+   * Optional. This field specifies all conversational related parameters addition to traditional
+   * retail search.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2SearchRequestConversationalSearchSpec getConversationalSearchSpec() {
+    return conversationalSearchSpec;
+  }
+
+  /**
+   * Optional. This field specifies all conversational related parameters addition to traditional
+   * retail search.
+   * @param conversationalSearchSpec conversationalSearchSpec or {@code null} for none
+   */
+  public GoogleCloudRetailV2SearchRequest setConversationalSearchSpec(GoogleCloudRetailV2SearchRequestConversationalSearchSpec conversationalSearchSpec) {
+    this.conversationalSearchSpec = conversationalSearchSpec;
     return this;
   }
 
@@ -662,6 +696,23 @@ public final class GoogleCloudRetailV2SearchRequest extends com.google.api.clien
    */
   public GoogleCloudRetailV2SearchRequest setSpellCorrectionSpec(GoogleCloudRetailV2SearchRequestSpellCorrectionSpec spellCorrectionSpec) {
     this.spellCorrectionSpec = spellCorrectionSpec;
+    return this;
+  }
+
+  /**
+   * Optional. This field specifies tile navigation related parameters.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2SearchRequestTileNavigationSpec getTileNavigationSpec() {
+    return tileNavigationSpec;
+  }
+
+  /**
+   * Optional. This field specifies tile navigation related parameters.
+   * @param tileNavigationSpec tileNavigationSpec or {@code null} for none
+   */
+  public GoogleCloudRetailV2SearchRequest setTileNavigationSpec(GoogleCloudRetailV2SearchRequestTileNavigationSpec tileNavigationSpec) {
+    this.tileNavigationSpec = tileNavigationSpec;
     return this;
   }
 

@@ -47,6 +47,14 @@ public final class GoogleCloudRetailV2alphaSearchResponse extends com.google.api
   private java.lang.String attributionToken;
 
   /**
+   * This field specifies all related information that is needed on client side for UI rendering of
+   * conversational retail search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2alphaSearchResponseConversationalSearchResult conversationalSearchResult;
+
+  /**
    * Contains the spell corrected query, if found. If the spell correction type is AUTOMATIC, then
    * the search results are based on corrected_query. Otherwise the original query is used for
    * search.
@@ -120,6 +128,14 @@ public final class GoogleCloudRetailV2alphaSearchResponse extends com.google.api
   private java.util.List<GoogleCloudRetailV2alphaSearchResponseSearchResult> results;
 
   /**
+   * This field specifies all related information for tile navigation that will be used in client
+   * side.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2alphaSearchResponseTileNavigationResult tileNavigationResult;
+
+  /**
    * The estimated total count of matched items irrespective of pagination. The count of results
    * returned by pagination may be less than the total_size that matches.
    * The value may be {@code null}.
@@ -162,6 +178,25 @@ public final class GoogleCloudRetailV2alphaSearchResponse extends com.google.api
    */
   public GoogleCloudRetailV2alphaSearchResponse setAttributionToken(java.lang.String attributionToken) {
     this.attributionToken = attributionToken;
+    return this;
+  }
+
+  /**
+   * This field specifies all related information that is needed on client side for UI rendering of
+   * conversational retail search.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaSearchResponseConversationalSearchResult getConversationalSearchResult() {
+    return conversationalSearchResult;
+  }
+
+  /**
+   * This field specifies all related information that is needed on client side for UI rendering of
+   * conversational retail search.
+   * @param conversationalSearchResult conversationalSearchResult or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaSearchResponse setConversationalSearchResult(GoogleCloudRetailV2alphaSearchResponseConversationalSearchResult conversationalSearchResult) {
+    this.conversationalSearchResult = conversationalSearchResult;
     return this;
   }
 
@@ -308,6 +343,25 @@ public final class GoogleCloudRetailV2alphaSearchResponse extends com.google.api
    */
   public GoogleCloudRetailV2alphaSearchResponse setResults(java.util.List<GoogleCloudRetailV2alphaSearchResponseSearchResult> results) {
     this.results = results;
+    return this;
+  }
+
+  /**
+   * This field specifies all related information for tile navigation that will be used in client
+   * side.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaSearchResponseTileNavigationResult getTileNavigationResult() {
+    return tileNavigationResult;
+  }
+
+  /**
+   * This field specifies all related information for tile navigation that will be used in client
+   * side.
+   * @param tileNavigationResult tileNavigationResult or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaSearchResponse setTileNavigationResult(GoogleCloudRetailV2alphaSearchResponseTileNavigationResult tileNavigationResult) {
+    this.tileNavigationResult = tileNavigationResult;
     return this;
   }
 

@@ -39,7 +39,7 @@ public final class Bin extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Double density;
+  private java.lang.Object density;
 
   /**
    * End is the end of the data bin. If end is not populated, then the bin has no end and is valid
@@ -60,7 +60,7 @@ public final class Bin extends com.google.api.client.json.GenericJson {
    * The proportion of users that experienced this bin's value for the given metric.
    * @return value or {@code null} for none
    */
-  public java.lang.Double getDensity() {
+  public java.lang.Object getDensity() {
     return density;
   }
 
@@ -68,7 +68,7 @@ public final class Bin extends com.google.api.client.json.GenericJson {
    * The proportion of users that experienced this bin's value for the given metric.
    * @param density density or {@code null} for none
    */
-  public Bin setDensity(java.lang.Double density) {
+  public Bin setDensity(java.lang.Object density) {
     this.density = density;
     return this;
   }

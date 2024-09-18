@@ -73,9 +73,8 @@ public final class SubscriptionOffer extends com.google.api.client.json.GenericJ
   private java.lang.String packageName;
 
   /**
-   * Required. The phases of this subscription offer. Must contain at least one entry, and may
-   * contain at most five. Users will always receive all these phases in the specified order. Phases
-   * may not be added, removed, or reordered after initial creation.
+   * Required. The phases of this subscription offer. Must contain at least one and at most two
+   * entries. Users will always receive all these phases in the specified order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -207,9 +206,8 @@ public final class SubscriptionOffer extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The phases of this subscription offer. Must contain at least one entry, and may
-   * contain at most five. Users will always receive all these phases in the specified order. Phases
-   * may not be added, removed, or reordered after initial creation.
+   * Required. The phases of this subscription offer. Must contain at least one and at most two
+   * entries. Users will always receive all these phases in the specified order.
    * @return value or {@code null} for none
    */
   public java.util.List<SubscriptionOfferPhase> getPhases() {
@@ -217,9 +215,8 @@ public final class SubscriptionOffer extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The phases of this subscription offer. Must contain at least one entry, and may
-   * contain at most five. Users will always receive all these phases in the specified order. Phases
-   * may not be added, removed, or reordered after initial creation.
+   * Required. The phases of this subscription offer. Must contain at least one and at most two
+   * entries. Users will always receive all these phases in the specified order.
    * @param phases phases or {@code null} for none
    */
   public SubscriptionOffer setPhases(java.util.List<SubscriptionOfferPhase> phases) {

@@ -30,7 +30,9 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
 public final class AcceptTermsOfService extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The resource name of the terms of service version.
+   * Required. The resource name of the terms of service version in the format
+   * `termsOfService/{version}`. To retrieve the latest version, use the [termsOfService.retrieveLat
+   * est](/merchant/api/reference/rest/accounts_v1beta/termsOfService/retrieveLatest) method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +47,9 @@ public final class AcceptTermsOfService extends com.google.api.client.json.Gener
   private java.lang.String regionCode;
 
   /**
-   * Required. The resource name of the terms of service version.
+   * Required. The resource name of the terms of service version in the format
+   * `termsOfService/{version}`. To retrieve the latest version, use the [termsOfService.retrieveLat
+   * est](/merchant/api/reference/rest/accounts_v1beta/termsOfService/retrieveLatest) method.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -53,7 +57,9 @@ public final class AcceptTermsOfService extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The resource name of the terms of service version.
+   * Required. The resource name of the terms of service version in the format
+   * `termsOfService/{version}`. To retrieve the latest version, use the [termsOfService.retrieveLat
+   * est](/merchant/api/reference/rest/accounts_v1beta/termsOfService/retrieveLatest) method.
    * @param name name or {@code null} for none
    */
   public AcceptTermsOfService setName(java.lang.String name) {

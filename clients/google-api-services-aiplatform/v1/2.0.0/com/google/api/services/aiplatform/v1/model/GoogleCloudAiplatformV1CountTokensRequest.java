@@ -43,6 +43,13 @@ public final class GoogleCloudAiplatformV1CountTokensRequest extends com.google.
   }
 
   /**
+   * Optional. Generation config that the model will use to generate the response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1GenerationConfig generationConfig;
+
+  /**
    * Optional. The instances that are the input to token counting call. Schema is identical to the
    * prediction schema of the underlying model.
    * The value may be {@code null}.
@@ -89,6 +96,23 @@ public final class GoogleCloudAiplatformV1CountTokensRequest extends com.google.
    */
   public GoogleCloudAiplatformV1CountTokensRequest setContents(java.util.List<GoogleCloudAiplatformV1Content> contents) {
     this.contents = contents;
+    return this;
+  }
+
+  /**
+   * Optional. Generation config that the model will use to generate the response.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerationConfig getGenerationConfig() {
+    return generationConfig;
+  }
+
+  /**
+   * Optional. Generation config that the model will use to generate the response.
+   * @param generationConfig generationConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1CountTokensRequest setGenerationConfig(GoogleCloudAiplatformV1GenerationConfig generationConfig) {
+    this.generationConfig = generationConfig;
     return this;
   }
 

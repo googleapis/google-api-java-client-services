@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Model definition for CloudAiLargeModelsVisionRaiInfo.
+ * Next ID: 6
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -28,6 +28,13 @@ package com.google.api.services.aiplatform.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class CloudAiLargeModelsVisionRaiInfo extends com.google.api.client.json.GenericJson {
+
+  /**
+   * List of blocked entities from the blocklist if it is detected.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> blockedEntities;
 
   /**
    * The list of detected labels for different rai categories.
@@ -58,6 +65,23 @@ public final class CloudAiLargeModelsVisionRaiInfo extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.Float> scores;
+
+  /**
+   * List of blocked entities from the blocklist if it is detected.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getBlockedEntities() {
+    return blockedEntities;
+  }
+
+  /**
+   * List of blocked entities from the blocklist if it is detected.
+   * @param blockedEntities blockedEntities or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionRaiInfo setBlockedEntities(java.util.List<java.lang.String> blockedEntities) {
+    this.blockedEntities = blockedEntities;
+    return this;
+  }
 
   /**
    * The list of detected labels for different rai categories.

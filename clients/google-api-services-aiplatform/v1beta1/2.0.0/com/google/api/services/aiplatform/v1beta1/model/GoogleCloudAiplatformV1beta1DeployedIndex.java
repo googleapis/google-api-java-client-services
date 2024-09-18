@@ -142,6 +142,15 @@ public final class GoogleCloudAiplatformV1beta1DeployedIndex extends com.google.
   private GoogleCloudAiplatformV1beta1IndexPrivateEndpoints privateEndpoints;
 
   /**
+   * Optional. If set for PSC deployed index, PSC connection will be automatically created after
+   * deployment is done and the endpoint information is populated in
+   * private_endpoints.psc_automated_endpoints.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1PSCAutomationConfig> pscAutomationConfigs;
+
+  /**
    * Optional. A list of reserved ip ranges under the VPC network that can be used for this
    * DeployedIndex. If set, we will deploy the index within the provided ip ranges. Otherwise, the
    * index might be deployed to any ip ranges under the provided VPC network. The value should be
@@ -407,6 +416,27 @@ public final class GoogleCloudAiplatformV1beta1DeployedIndex extends com.google.
    */
   public GoogleCloudAiplatformV1beta1DeployedIndex setPrivateEndpoints(GoogleCloudAiplatformV1beta1IndexPrivateEndpoints privateEndpoints) {
     this.privateEndpoints = privateEndpoints;
+    return this;
+  }
+
+  /**
+   * Optional. If set for PSC deployed index, PSC connection will be automatically created after
+   * deployment is done and the endpoint information is populated in
+   * private_endpoints.psc_automated_endpoints.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1PSCAutomationConfig> getPscAutomationConfigs() {
+    return pscAutomationConfigs;
+  }
+
+  /**
+   * Optional. If set for PSC deployed index, PSC connection will be automatically created after
+   * deployment is done and the endpoint information is populated in
+   * private_endpoints.psc_automated_endpoints.
+   * @param pscAutomationConfigs pscAutomationConfigs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DeployedIndex setPscAutomationConfigs(java.util.List<GoogleCloudAiplatformV1beta1PSCAutomationConfig> pscAutomationConfigs) {
+    this.pscAutomationConfigs = pscAutomationConfigs;
     return this;
   }
 

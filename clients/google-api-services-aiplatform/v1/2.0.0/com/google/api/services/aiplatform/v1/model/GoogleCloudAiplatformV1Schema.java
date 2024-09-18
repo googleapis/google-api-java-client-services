@@ -155,6 +155,14 @@ public final class GoogleCloudAiplatformV1Schema extends com.google.api.client.j
   private java.util.Map<String, GoogleCloudAiplatformV1Schema> properties;
 
   /**
+   * Optional. The order of the properties. Not a standard field in open api spec. Only used to
+   * support the order of the properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> propertyOrdering;
+
+  /**
    * Optional. Required properties of Type.OBJECT.
    * The value may be {@code null}.
    */
@@ -469,6 +477,25 @@ public final class GoogleCloudAiplatformV1Schema extends com.google.api.client.j
    */
   public GoogleCloudAiplatformV1Schema setProperties(java.util.Map<String, GoogleCloudAiplatformV1Schema> properties) {
     this.properties = properties;
+    return this;
+  }
+
+  /**
+   * Optional. The order of the properties. Not a standard field in open api spec. Only used to
+   * support the order of the properties.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPropertyOrdering() {
+    return propertyOrdering;
+  }
+
+  /**
+   * Optional. The order of the properties. Not a standard field in open api spec. Only used to
+   * support the order of the properties.
+   * @param propertyOrdering propertyOrdering or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Schema setPropertyOrdering(java.util.List<java.lang.String> propertyOrdering) {
+    this.propertyOrdering = propertyOrdering;
     return this;
   }
 

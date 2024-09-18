@@ -63,6 +63,23 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
   private java.lang.Integer maxEmbeddingRequestsPerMin;
 
   /**
+   * The BigQuery destination to write partial failures to. It should be a bigquery table resource
+   * name (e.g. "bq://projectId.bqDatasetId.bqTableId"). If the dataset id does not exist, it will
+   * be created. If the table does not exist, it will be created with the expected schema. If the
+   * table exists, the schema will be validated and data will be added to this existing table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1BigQueryDestination partialFailureBigquerySink;
+
+  /**
+   * The Cloud Storage path to write partial failures to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1GcsDestination partialFailureGcsSink;
+
+  /**
    * Specifies the size and overlap of chunks after importing RagFiles.
    * The value may be {@code null}.
    */
@@ -158,6 +175,46 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
    */
   public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setMaxEmbeddingRequestsPerMin(java.lang.Integer maxEmbeddingRequestsPerMin) {
     this.maxEmbeddingRequestsPerMin = maxEmbeddingRequestsPerMin;
+    return this;
+  }
+
+  /**
+   * The BigQuery destination to write partial failures to. It should be a bigquery table resource
+   * name (e.g. "bq://projectId.bqDatasetId.bqTableId"). If the dataset id does not exist, it will
+   * be created. If the table does not exist, it will be created with the expected schema. If the
+   * table exists, the schema will be validated and data will be added to this existing table.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1BigQueryDestination getPartialFailureBigquerySink() {
+    return partialFailureBigquerySink;
+  }
+
+  /**
+   * The BigQuery destination to write partial failures to. It should be a bigquery table resource
+   * name (e.g. "bq://projectId.bqDatasetId.bqTableId"). If the dataset id does not exist, it will
+   * be created. If the table does not exist, it will be created with the expected schema. If the
+   * table exists, the schema will be validated and data will be added to this existing table.
+   * @param partialFailureBigquerySink partialFailureBigquerySink or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setPartialFailureBigquerySink(GoogleCloudAiplatformV1beta1BigQueryDestination partialFailureBigquerySink) {
+    this.partialFailureBigquerySink = partialFailureBigquerySink;
+    return this;
+  }
+
+  /**
+   * The Cloud Storage path to write partial failures to.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GcsDestination getPartialFailureGcsSink() {
+    return partialFailureGcsSink;
+  }
+
+  /**
+   * The Cloud Storage path to write partial failures to.
+   * @param partialFailureGcsSink partialFailureGcsSink or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setPartialFailureGcsSink(GoogleCloudAiplatformV1beta1GcsDestination partialFailureGcsSink) {
+    this.partialFailureGcsSink = partialFailureGcsSink;
     return this;
   }
 

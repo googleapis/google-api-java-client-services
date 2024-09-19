@@ -3105,6 +3105,22 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
+          /** Optional. Reserved for future use to provide a BASIC & FULL view of Backup Vault */
+          @com.google.api.client.util.Key
+          private java.lang.String view;
+
+          /** Optional. Reserved for future use to provide a BASIC & FULL view of Backup Vault
+           */
+          public java.lang.String getView() {
+            return view;
+          }
+
+          /** Optional. Reserved for future use to provide a BASIC & FULL view of Backup Vault */
+          public Get setView(java.lang.String view) {
+            this.view = view;
+            return this;
+          }
+
           @Override
           public Get set(String parameterName, Object value) {
             return (Get) super.set(parameterName, value);
@@ -3330,6 +3346,22 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
           /** Optional. A token identifying a page of results the server should return. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /** Optional. Reserved for future use to provide a BASIC & FULL view of Backup Vault. */
+          @com.google.api.client.util.Key
+          private java.lang.String view;
+
+          /** Optional. Reserved for future use to provide a BASIC & FULL view of Backup Vault.
+           */
+          public java.lang.String getView() {
+            return view;
+          }
+
+          /** Optional. Reserved for future use to provide a BASIC & FULL view of Backup Vault. */
+          public List setView(java.lang.String view) {
+            this.view = view;
             return this;
           }
 
@@ -5521,6 +5553,28 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
                 return this;
               }
 
+              /**
+               * Optional. Reserved for future use to provide a BASIC & FULL view of Backup
+               * resource.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String view;
+
+              /** Optional. Reserved for future use to provide a BASIC & FULL view of Backup resource.
+               */
+              public java.lang.String getView() {
+                return view;
+              }
+
+              /**
+               * Optional. Reserved for future use to provide a BASIC & FULL view of Backup
+               * resource.
+               */
+              public Get setView(java.lang.String view) {
+                this.view = view;
+                return this;
+              }
+
               @Override
               public Get set(String parameterName, Object value) {
                 return (Get) super.set(parameterName, value);
@@ -5746,6 +5800,28 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
               /** Optional. A token identifying a page of results the server should return. */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
+                return this;
+              }
+
+              /**
+               * Optional. Reserved for future use to provide a BASIC & FULL view of Backup
+               * resource.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String view;
+
+              /** Optional. Reserved for future use to provide a BASIC & FULL view of Backup resource.
+               */
+              public java.lang.String getView() {
+                return view;
+              }
+
+              /**
+               * Optional. Reserved for future use to provide a BASIC & FULL view of Backup
+               * resource.
+               */
+              public List setView(java.lang.String view) {
+                this.view = view;
                 return this;
               }
 

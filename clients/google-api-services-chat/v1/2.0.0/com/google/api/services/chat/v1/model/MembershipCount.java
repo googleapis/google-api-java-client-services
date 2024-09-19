@@ -17,8 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * [Developer Preview](https://developers.google.com/workspace/preview). Represents the count of
- * memberships of a space, grouped into categories.
+ * Represents the count of memberships of a space, grouped into categories.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

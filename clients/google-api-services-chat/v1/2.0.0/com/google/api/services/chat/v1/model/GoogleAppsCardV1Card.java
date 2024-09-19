@@ -106,7 +106,7 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   private GoogleAppsCardV1CardHeader peekCardHeader;
 
   /**
-   * The divider style between sections.
+   * The divider style between the header, sections and footer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -255,7 +255,7 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * The divider style between sections.
+   * The divider style between the header, sections and footer.
    * @return value or {@code null} for none
    */
   public java.lang.String getSectionDividerStyle() {
@@ -263,7 +263,7 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
-   * The divider style between sections.
+   * The divider style between the header, sections and footer.
    * @param sectionDividerStyle sectionDividerStyle or {@code null} for none
    */
   public GoogleAppsCardV1Card setSectionDividerStyle(java.lang.String sectionDividerStyle) {

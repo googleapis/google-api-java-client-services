@@ -61,11 +61,11 @@ public final class Space extends com.google.api.client.json.GenericJson {
 
   /**
    * The space's display name. Required when [creating a
-   * space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/create). If
-   * you receive the error message `ALREADY_EXISTS` when creating a space or updating the
-   * `displayName`, try a different `displayName`. An existing space within the Google Workspace
-   * organization might already use this display name. For direct messages, this field might be
-   * empty. Supports up to 128 characters.
+   * space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/create) with a
+   * `spaceType` of `SPACE`. If you receive the error message `ALREADY_EXISTS` when creating a space
+   * or updating the `displayName`, try a different `displayName`. An existing space within the
+   * Google Workspace organization might already use this display name. For direct messages, this
+   * field might be empty. Supports up to 128 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,8 +92,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean importMode;
 
   /**
-   * Output only. Timestamp of the last message in the space. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Output only. Timestamp of the last message in the space.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,8 +100,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The count of joined memberships grouped by member type. Populated when the
-   * `space_type` is `SPACE`, `DIRECT_MESSAGE` or `GROUP_CHAT`. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * `space_type` is `SPACE`, `DIRECT_MESSAGE` or `GROUP_CHAT`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -246,11 +244,11 @@ public final class Space extends com.google.api.client.json.GenericJson {
 
   /**
    * The space's display name. Required when [creating a
-   * space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/create). If
-   * you receive the error message `ALREADY_EXISTS` when creating a space or updating the
-   * `displayName`, try a different `displayName`. An existing space within the Google Workspace
-   * organization might already use this display name. For direct messages, this field might be
-   * empty. Supports up to 128 characters.
+   * space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/create) with a
+   * `spaceType` of `SPACE`. If you receive the error message `ALREADY_EXISTS` when creating a space
+   * or updating the `displayName`, try a different `displayName`. An existing space within the
+   * Google Workspace organization might already use this display name. For direct messages, this
+   * field might be empty. Supports up to 128 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -259,11 +257,11 @@ public final class Space extends com.google.api.client.json.GenericJson {
 
   /**
    * The space's display name. Required when [creating a
-   * space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/create). If
-   * you receive the error message `ALREADY_EXISTS` when creating a space or updating the
-   * `displayName`, try a different `displayName`. An existing space within the Google Workspace
-   * organization might already use this display name. For direct messages, this field might be
-   * empty. Supports up to 128 characters.
+   * space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/create) with a
+   * `spaceType` of `SPACE`. If you receive the error message `ALREADY_EXISTS` when creating a space
+   * or updating the `displayName`, try a different `displayName`. An existing space within the
+   * Google Workspace organization might already use this display name. For direct messages, this
+   * field might be empty. Supports up to 128 characters.
    * @param displayName displayName or {@code null} for none
    */
   public Space setDisplayName(java.lang.String displayName) {
@@ -318,8 +316,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Timestamp of the last message in the space. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Output only. Timestamp of the last message in the space.
    * @return value or {@code null} for none
    */
   public String getLastActiveTime() {
@@ -327,8 +324,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Timestamp of the last message in the space. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Output only. Timestamp of the last message in the space.
    * @param lastActiveTime lastActiveTime or {@code null} for none
    */
   public Space setLastActiveTime(String lastActiveTime) {
@@ -338,8 +334,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The count of joined memberships grouped by member type. Populated when the
-   * `space_type` is `SPACE`, `DIRECT_MESSAGE` or `GROUP_CHAT`. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * `space_type` is `SPACE`, `DIRECT_MESSAGE` or `GROUP_CHAT`.
    * @return value or {@code null} for none
    */
   public MembershipCount getMembershipCount() {
@@ -348,8 +343,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The count of joined memberships grouped by member type. Populated when the
-   * `space_type` is `SPACE`, `DIRECT_MESSAGE` or `GROUP_CHAT`. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * `space_type` is `SPACE`, `DIRECT_MESSAGE` or `GROUP_CHAT`.
    * @param membershipCount membershipCount or {@code null} for none
    */
   public Space setMembershipCount(MembershipCount membershipCount) {

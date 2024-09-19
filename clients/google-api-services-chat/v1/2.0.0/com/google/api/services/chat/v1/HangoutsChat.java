@@ -680,10 +680,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Creates a named space. Spaces grouped by topics aren't supported. For an example, see [Create a
+     * Creates a space with no members. Can be used to create a named space. Spaces grouped by topics
+     * aren't supported. For an example, see [Create a
      * space](https://developers.google.com/workspace/chat/create-spaces). If you receive the error
      * message `ALREADY_EXISTS` when creating a space, try a different `displayName`. An existing space
-     * within the Google Workspace organization might already use this display name. Requires [user
+     * within the Google Workspace organization might already use this display name. If you're a member
+     * of the [Developer Preview program](https://developers.google.com/workspace/preview), you can
+     * create a group chat in import mode using `spaceType.GROUP_CHAT`. Requires [user
      * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
      *
      * Create a request for the method "spaces.create".
@@ -705,12 +708,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v1/spaces";
 
       /**
-       * Creates a named space. Spaces grouped by topics aren't supported. For an example, see [Create a
+       * Creates a space with no members. Can be used to create a named space. Spaces grouped by topics
+       * aren't supported. For an example, see [Create a
        * space](https://developers.google.com/workspace/chat/create-spaces). If you receive the error
        * message `ALREADY_EXISTS` when creating a space, try a different `displayName`. An existing
-       * space within the Google Workspace organization might already use this display name. Requires
-       * [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-       * user).
+       * space within the Google Workspace organization might already use this display name. If you're a
+       * member of the [Developer Preview program](https://developers.google.com/workspace/preview), you
+       * can create a group chat in import mode using `spaceType.GROUP_CHAT`. Requires [user
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
        *
        * Create a request for the method "spaces.create".
        *
@@ -947,35 +952,33 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
-       * method runs using the user's Google Workspace administrator privileges. The calling user
-       * must be a Google Workspace administrator with the [manage chat and spaces conversations
-       * privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.delete`
-       * [OAuth 2.0 scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-
-       * api-scopes).
+       * When `true`, the method runs using the user's Google Workspace administrator privileges.
+       * The calling user must be a Google Workspace administrator with the [manage chat and spaces
+       * conversations privilege](https://support.google.com/a/answer/13369245). Requires the
+       * `chat.admin.delete` [OAuth 2.0
+       * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
+       * scopes).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useAdminAccess;
 
-      /**[ Developer Preview](https://developers.google.com/workspace/preview). When `true`, the method runs
-    [ using the user's Google Workspace administrator privileges. The calling user must be a Google
-    [ Workspace administrator with the [manage chat and spaces conversations
-    [ privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.delete` [OAuth
-    [ 2.0 scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes).
-    [
-
+      /** When `true`, the method runs using the user's Google Workspace administrator privileges. The
+     calling user must be a Google Workspace administrator with the [manage chat and spaces
+     conversations privilege](https://support.google.com/a/answer/13369245). Requires the
+     `chat.admin.delete` [OAuth 2.0 scope](https://developers.google.com/workspace/chat/authenticate-
+     authorize#chat-api-scopes).
        */
       public java.lang.Boolean getUseAdminAccess() {
         return useAdminAccess;
       }
 
       /**
-       * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
-       * method runs using the user's Google Workspace administrator privileges. The calling user
-       * must be a Google Workspace administrator with the [manage chat and spaces conversations
-       * privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.delete`
-       * [OAuth 2.0 scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-
-       * api-scopes).
+       * When `true`, the method runs using the user's Google Workspace administrator privileges.
+       * The calling user must be a Google Workspace administrator with the [manage chat and spaces
+       * conversations privilege](https://support.google.com/a/answer/13369245). Requires the
+       * `chat.admin.delete` [OAuth 2.0
+       * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
+       * scopes).
        */
       public Delete setUseAdminAccess(java.lang.Boolean useAdminAccess) {
         this.useAdminAccess = useAdminAccess;
@@ -1308,36 +1311,31 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
-       * method runs using the user's Google Workspace administrator privileges. The calling user
-       * must be a Google Workspace administrator with the [manage chat and spaces conversations
-       * privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.spaces`
-       * or `chat.admin.spaces.readonly` [OAuth 2.0
+       * When `true`, the method runs using the user's Google Workspace administrator privileges.
+       * The calling user must be a Google Workspace administrator with the [manage chat and spaces
+       * conversations privilege](https://support.google.com/a/answer/13369245). Requires the
+       * `chat.admin.spaces` or `chat.admin.spaces.readonly` [OAuth 2.0
        * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
        * scopes).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useAdminAccess;
 
-      /**[ Developer Preview](https://developers.google.com/workspace/preview). When `true`, the method runs
-    [ using the user's Google Workspace administrator privileges. The calling user must be a Google
-    [ Workspace administrator with the [manage chat and spaces conversations
-    [ privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.spaces` or
-    [ `chat.admin.spaces.readonly` [OAuth 2.0
-    [ scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes).
-    [
-
+      /** When `true`, the method runs using the user's Google Workspace administrator privileges. The
+     calling user must be a Google Workspace administrator with the [manage chat and spaces
+     conversations privilege](https://support.google.com/a/answer/13369245). Requires the
+     `chat.admin.spaces` or `chat.admin.spaces.readonly` [OAuth 2.0
+     scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes).
        */
       public java.lang.Boolean getUseAdminAccess() {
         return useAdminAccess;
       }
 
       /**
-       * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
-       * method runs using the user's Google Workspace administrator privileges. The calling user
-       * must be a Google Workspace administrator with the [manage chat and spaces conversations
-       * privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.spaces`
-       * or `chat.admin.spaces.readonly` [OAuth 2.0
+       * When `true`, the method runs using the user's Google Workspace administrator privileges.
+       * The calling user must be a Google Workspace administrator with the [manage chat and spaces
+       * conversations privilege](https://support.google.com/a/answer/13369245). Requires the
+       * `chat.admin.spaces` or `chat.admin.spaces.readonly` [OAuth 2.0
        * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
        * scopes).
        */
@@ -1844,39 +1842,36 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
-       * method runs using the user's Google Workspace administrator privileges. The calling user
-       * must be a Google Workspace administrator with the [manage chat and spaces conversations
-       * privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.spaces`
-       * [OAuth 2.0 scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-
-       * api-scopes). Some `FieldMask` values are not supported using admin access. For details, see
-       * the description of `update_mask`.
+       * When `true`, the method runs using the user's Google Workspace administrator privileges.
+       * The calling user must be a Google Workspace administrator with the [manage chat and spaces
+       * conversations privilege](https://support.google.com/a/answer/13369245). Requires the
+       * `chat.admin.spaces` [OAuth 2.0
+       * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
+       * scopes). Some `FieldMask` values are not supported using admin access. For details, see the
+       * description of `update_mask`.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useAdminAccess;
 
-      /**[ Developer Preview](https://developers.google.com/workspace/preview). When `true`, the method runs
-    [ using the user's Google Workspace administrator privileges. The calling user must be a Google
-    [ Workspace administrator with the [manage chat and spaces conversations
-    [ privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.spaces` [OAuth
-    [ 2.0 scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes).
-    [ Some `FieldMask` values are not supported using admin access. For details, see the description of
-    [ `update_mask`.
-    [
-
+      /** When `true`, the method runs using the user's Google Workspace administrator privileges. The
+     calling user must be a Google Workspace administrator with the [manage chat and spaces
+     conversations privilege](https://support.google.com/a/answer/13369245). Requires the
+     `chat.admin.spaces` [OAuth 2.0 scope](https://developers.google.com/workspace/chat/authenticate-
+     authorize#chat-api-scopes). Some `FieldMask` values are not supported using admin access. For
+     details, see the description of `update_mask`.
        */
       public java.lang.Boolean getUseAdminAccess() {
         return useAdminAccess;
       }
 
       /**
-       * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
-       * method runs using the user's Google Workspace administrator privileges. The calling user
-       * must be a Google Workspace administrator with the [manage chat and spaces conversations
-       * privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.spaces`
-       * [OAuth 2.0 scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-
-       * api-scopes). Some `FieldMask` values are not supported using admin access. For details, see
-       * the description of `update_mask`.
+       * When `true`, the method runs using the user's Google Workspace administrator privileges.
+       * The calling user must be a Google Workspace administrator with the [manage chat and spaces
+       * conversations privilege](https://support.google.com/a/answer/13369245). Requires the
+       * `chat.admin.spaces` [OAuth 2.0
+       * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
+       * scopes). Some `FieldMask` values are not supported using admin access. For details, see the
+       * description of `update_mask`.
        */
       public Patch setUseAdminAccess(java.lang.Boolean useAdminAccess) {
         this.useAdminAccess = useAdminAccess;
@@ -1889,11 +1884,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * [Developer Preview](https://developers.google.com/workspace/preview). Returns a list of spaces
-     * based on a user's search. Requires [user
-     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
-     * The user must be an administrator for the Google Workspace organization. In the request, set
-     * `use_admin_access` to `true`.
+     * Returns a list of spaces in a Google Workspace organization based on an administrator's search.
+     * Requires [user authentication with administrator
+     * privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-
+     * privileges). In the request, set `use_admin_access` to `true`.
      *
      * Create a request for the method "spaces.search".
      *
@@ -1913,11 +1907,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v1/spaces:search";
 
       /**
-       * [Developer Preview](https://developers.google.com/workspace/preview). Returns a list of spaces
-       * based on a user's search. Requires [user
-       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
-       * The user must be an administrator for the Google Workspace organization. In the request, set
-       * `use_admin_access` to `true`.
+       * Returns a list of spaces in a Google Workspace organization based on an administrator's search.
+       * Requires [user authentication with administrator
+       * privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+       * user#admin-privileges). In the request, set `use_admin_access` to `true`.
        *
        * Create a request for the method "spaces.search".
        *
@@ -2576,11 +2569,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
-         * method runs using the user's Google Workspace administrator privileges. The calling user
-         * must be a Google Workspace administrator with the [manage chat and spaces conversations
-         * privilege](https://support.google.com/a/answer/13369245). Requires the
-         * `chat.admin.memberships` [OAuth 2.0
+         * When `true`, the method runs using the user's Google Workspace administrator privileges.
+         * The calling user must be a Google Workspace administrator with the [manage chat and
+         * spaces conversations privilege](https://support.google.com/a/answer/13369245). Requires
+         * the `chat.admin.memberships` [OAuth 2.0
          * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
          * scopes). Creating app memberships or creating memberships for users outside the
          * administrator's Google Workspace organization isn't supported using admin access.
@@ -2588,26 +2580,23 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         @com.google.api.client.util.Key
         private java.lang.Boolean useAdminAccess;
 
-        /**[ Developer Preview](https://developers.google.com/workspace/preview). When `true`, the method runs
-      [ using the user's Google Workspace administrator privileges. The calling user must be a Google
-      [ Workspace administrator with the [manage chat and spaces conversations
-      [ privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.memberships`
-      [ [OAuth 2.0 scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
-      [ scopes). Creating app memberships or creating memberships for users outside the administrator's
-      [ Google Workspace organization isn't supported using admin access.
-      [
-
+        /** When `true`, the method runs using the user's Google Workspace administrator privileges. The
+       calling user must be a Google Workspace administrator with the [manage chat and spaces
+       conversations privilege](https://support.google.com/a/answer/13369245). Requires the
+       `chat.admin.memberships` [OAuth 2.0
+       scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes).
+       Creating app memberships or creating memberships for users outside the administrator's Google
+       Workspace organization isn't supported using admin access.
          */
         public java.lang.Boolean getUseAdminAccess() {
           return useAdminAccess;
         }
 
         /**
-         * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
-         * method runs using the user's Google Workspace administrator privileges. The calling user
-         * must be a Google Workspace administrator with the [manage chat and spaces conversations
-         * privilege](https://support.google.com/a/answer/13369245). Requires the
-         * `chat.admin.memberships` [OAuth 2.0
+         * When `true`, the method runs using the user's Google Workspace administrator privileges.
+         * The calling user must be a Google Workspace administrator with the [manage chat and
+         * spaces conversations privilege](https://support.google.com/a/answer/13369245). Requires
+         * the `chat.admin.memberships` [OAuth 2.0
          * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
          * scopes). Creating app memberships or creating memberships for users outside the
          * administrator's Google Workspace organization isn't supported using admin access.
@@ -2788,36 +2777,32 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
-         * method runs using the user's Google Workspace administrator privileges. The calling user
-         * must be a Google Workspace administrator with the [manage chat and spaces conversations
-         * privilege](https://support.google.com/a/answer/13369245). Requires the
-         * `chat.admin.memberships` [OAuth 2.0
+         * When `true`, the method runs using the user's Google Workspace administrator privileges.
+         * The calling user must be a Google Workspace administrator with the [manage chat and
+         * spaces conversations privilege](https://support.google.com/a/answer/13369245). Requires
+         * the `chat.admin.memberships` [OAuth 2.0
          * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
          * scopes). Deleting app memberships in a space isn't supported using admin access.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean useAdminAccess;
 
-        /**[ Developer Preview](https://developers.google.com/workspace/preview). When `true`, the method runs
-      [ using the user's Google Workspace administrator privileges. The calling user must be a Google
-      [ Workspace administrator with the [manage chat and spaces conversations
-      [ privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.memberships`
-      [ [OAuth 2.0 scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
-      [ scopes). Deleting app memberships in a space isn't supported using admin access.
-      [
-
+        /** When `true`, the method runs using the user's Google Workspace administrator privileges. The
+       calling user must be a Google Workspace administrator with the [manage chat and spaces
+       conversations privilege](https://support.google.com/a/answer/13369245). Requires the
+       `chat.admin.memberships` [OAuth 2.0
+       scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes).
+       Deleting app memberships in a space isn't supported using admin access.
          */
         public java.lang.Boolean getUseAdminAccess() {
           return useAdminAccess;
         }
 
         /**
-         * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
-         * method runs using the user's Google Workspace administrator privileges. The calling user
-         * must be a Google Workspace administrator with the [manage chat and spaces conversations
-         * privilege](https://support.google.com/a/answer/13369245). Requires the
-         * `chat.admin.memberships` [OAuth 2.0
+         * When `true`, the method runs using the user's Google Workspace administrator privileges.
+         * The calling user must be a Google Workspace administrator with the [manage chat and
+         * spaces conversations privilege](https://support.google.com/a/answer/13369245). Requires
+         * the `chat.admin.memberships` [OAuth 2.0
          * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
          * scopes). Deleting app memberships in a space isn't supported using admin access.
          */
@@ -3014,37 +2999,32 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
-         * method runs using the user's Google Workspace administrator privileges. The calling user
-         * must be a Google Workspace administrator with the [manage chat and spaces conversations
-         * privilege](https://support.google.com/a/answer/13369245). Requires the
-         * `chat.admin.memberships` or `chat.admin.memberships.readonly` [OAuth 2.0
+         * When `true`, the method runs using the user's Google Workspace administrator privileges.
+         * The calling user must be a Google Workspace administrator with the [manage chat and
+         * spaces conversations privilege](https://support.google.com/a/answer/13369245). Requires
+         * the `chat.admin.memberships` or `chat.admin.memberships.readonly` [OAuth 2.0
          * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
          * scopes). Getting app memberships in a space isn't supported when using admin access.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean useAdminAccess;
 
-        /**[ Developer Preview](https://developers.google.com/workspace/preview). When `true`, the method runs
-      [ using the user's Google Workspace administrator privileges. The calling user must be a Google
-      [ Workspace administrator with the [manage chat and spaces conversations
-      [ privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.memberships` or
-      [ `chat.admin.memberships.readonly` [OAuth 2.0
-      [ scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes).
-      [ Getting app memberships in a space isn't supported when using admin access.
-      [
-
+        /** When `true`, the method runs using the user's Google Workspace administrator privileges. The
+       calling user must be a Google Workspace administrator with the [manage chat and spaces
+       conversations privilege](https://support.google.com/a/answer/13369245). Requires the
+       `chat.admin.memberships` or `chat.admin.memberships.readonly` [OAuth 2.0
+       scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes).
+       Getting app memberships in a space isn't supported when using admin access.
          */
         public java.lang.Boolean getUseAdminAccess() {
           return useAdminAccess;
         }
 
         /**
-         * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
-         * method runs using the user's Google Workspace administrator privileges. The calling user
-         * must be a Google Workspace administrator with the [manage chat and spaces conversations
-         * privilege](https://support.google.com/a/answer/13369245). Requires the
-         * `chat.admin.memberships` or `chat.admin.memberships.readonly` [OAuth 2.0
+         * When `true`, the method runs using the user's Google Workspace administrator privileges.
+         * The calling user must be a Google Workspace administrator with the [manage chat and
+         * spaces conversations privilege](https://support.google.com/a/answer/13369245). Requires
+         * the `chat.admin.memberships` or `chat.admin.memberships.readonly` [OAuth 2.0
          * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
          * scopes). Getting app memberships in a space isn't supported when using admin access.
          */
@@ -3225,15 +3205,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * /developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members#membershiprole
          * )) and type ([`member.type`](https://developers.google.com/workspace/chat/api/reference/r
          * est/v1/User#type)). To filter by role, set `role` to `ROLE_MEMBER` or `ROLE_MANAGER`. To
-         * filter by type, set `member.type` to `HUMAN` or `BOT`. Developer Preview: You can also
-         * filter for `member.type` using the `!=` operator. To filter by both role and type, use
-         * the `AND` operator. To filter by either role or type, use the `OR` operator. Either
-         * `member.type = "HUMAN"` or `member.type != "BOT"` is required when `use_admin_access` is
-         * set to true. Other member type filters will be rejected. For example, the following
-         * queries are valid: ``` role = "ROLE_MANAGER" OR role = "ROLE_MEMBER" member.type =
-         * "HUMAN" AND role = "ROLE_MANAGER" member.type != "BOT" ``` The following queries are
-         * invalid: ``` member.type = "HUMAN" AND member.type = "BOT" role = "ROLE_MANAGER" AND role
-         * = "ROLE_MEMBER" ``` Invalid queries are rejected by the server with an `INVALID_ARGUMENT`
+         * filter by type, set `member.type` to `HUMAN` or `BOT`. You can also filter for
+         * `member.type` using the `!=` operator. To filter by both role and type, use the `AND`
+         * operator. To filter by either role or type, use the `OR` operator. Either `member.type =
+         * "HUMAN"` or `member.type != "BOT"` is required when `use_admin_access` is set to true.
+         * Other member type filters will be rejected. For example, the following queries are valid:
+         * ``` role = "ROLE_MANAGER" OR role = "ROLE_MEMBER" member.type = "HUMAN" AND role =
+         * "ROLE_MANAGER" member.type != "BOT" ``` The following queries are invalid: ```
+         * member.type = "HUMAN" AND member.type = "BOT" role = "ROLE_MANAGER" AND role =
+         * "ROLE_MEMBER" ``` Invalid queries are rejected by the server with an `INVALID_ARGUMENT`
          * error.
          */
         @com.google.api.client.util.Key
@@ -3243,11 +3223,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        s.google.com/workspace/chat/api/reference/rest/v1/spaces.members#membershiprole)) and type
        ([`member.type`](https://developers.google.com/workspace/chat/api/reference/rest/v1/User#type)). To
        filter by role, set `role` to `ROLE_MEMBER` or `ROLE_MANAGER`. To filter by type, set `member.type`
-       to `HUMAN` or `BOT`. Developer Preview: You can also filter for `member.type` using the `!=`
-       operator. To filter by both role and type, use the `AND` operator. To filter by either role or
-       type, use the `OR` operator. Either `member.type = "HUMAN"` or `member.type != "BOT"` is required
-       when `use_admin_access` is set to true. Other member type filters will be rejected. For example,
-       the following queries are valid: ``` role = "ROLE_MANAGER" OR role = "ROLE_MEMBER" member.type =
+       to `HUMAN` or `BOT`. You can also filter for `member.type` using the `!=` operator. To filter by
+       both role and type, use the `AND` operator. To filter by either role or type, use the `OR`
+       operator. Either `member.type = "HUMAN"` or `member.type != "BOT"` is required when
+       `use_admin_access` is set to true. Other member type filters will be rejected. For example, the
+       following queries are valid: ``` role = "ROLE_MANAGER" OR role = "ROLE_MEMBER" member.type =
        "HUMAN" AND role = "ROLE_MANAGER" member.type != "BOT" ``` The following queries are invalid: ```
        member.type = "HUMAN" AND member.type = "BOT" role = "ROLE_MANAGER" AND role = "ROLE_MEMBER" ```
        Invalid queries are rejected by the server with an `INVALID_ARGUMENT` error.
@@ -3261,15 +3241,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * /developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members#membershiprole
          * )) and type ([`member.type`](https://developers.google.com/workspace/chat/api/reference/r
          * est/v1/User#type)). To filter by role, set `role` to `ROLE_MEMBER` or `ROLE_MANAGER`. To
-         * filter by type, set `member.type` to `HUMAN` or `BOT`. Developer Preview: You can also
-         * filter for `member.type` using the `!=` operator. To filter by both role and type, use
-         * the `AND` operator. To filter by either role or type, use the `OR` operator. Either
-         * `member.type = "HUMAN"` or `member.type != "BOT"` is required when `use_admin_access` is
-         * set to true. Other member type filters will be rejected. For example, the following
-         * queries are valid: ``` role = "ROLE_MANAGER" OR role = "ROLE_MEMBER" member.type =
-         * "HUMAN" AND role = "ROLE_MANAGER" member.type != "BOT" ``` The following queries are
-         * invalid: ``` member.type = "HUMAN" AND member.type = "BOT" role = "ROLE_MANAGER" AND role
-         * = "ROLE_MEMBER" ``` Invalid queries are rejected by the server with an `INVALID_ARGUMENT`
+         * filter by type, set `member.type` to `HUMAN` or `BOT`. You can also filter for
+         * `member.type` using the `!=` operator. To filter by both role and type, use the `AND`
+         * operator. To filter by either role or type, use the `OR` operator. Either `member.type =
+         * "HUMAN"` or `member.type != "BOT"` is required when `use_admin_access` is set to true.
+         * Other member type filters will be rejected. For example, the following queries are valid:
+         * ``` role = "ROLE_MANAGER" OR role = "ROLE_MEMBER" member.type = "HUMAN" AND role =
+         * "ROLE_MANAGER" member.type != "BOT" ``` The following queries are invalid: ```
+         * member.type = "HUMAN" AND member.type = "BOT" role = "ROLE_MANAGER" AND role =
+         * "ROLE_MEMBER" ``` Invalid queries are rejected by the server with an `INVALID_ARGUMENT`
          * error.
          */
         public List setFilter(java.lang.String filter) {
@@ -3393,37 +3373,32 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
-         * method runs using the user's Google Workspace administrator privileges. The calling user
-         * must be a Google Workspace administrator with the [manage chat and spaces conversations
-         * privilege](https://support.google.com/a/answer/13369245). Requires either the
-         * `chat.admin.memberships.readonly` or `chat.admin.memberships` [OAuth 2.0
+         * When `true`, the method runs using the user's Google Workspace administrator privileges.
+         * The calling user must be a Google Workspace administrator with the [manage chat and
+         * spaces conversations privilege](https://support.google.com/a/answer/13369245). Requires
+         * either the `chat.admin.memberships.readonly` or `chat.admin.memberships` [OAuth 2.0
          * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
          * scopes). Listing app memberships in a space isn't supported when using admin access.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean useAdminAccess;
 
-        /**[ Developer Preview](https://developers.google.com/workspace/preview). When `true`, the method runs
-      [ using the user's Google Workspace administrator privileges. The calling user must be a Google
-      [ Workspace administrator with the [manage chat and spaces conversations
-      [ privilege](https://support.google.com/a/answer/13369245). Requires either the
-      [ `chat.admin.memberships.readonly` or `chat.admin.memberships` [OAuth 2.0
-      [ scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes).
-      [ Listing app memberships in a space isn't supported when using admin access.
-      [
-
+        /** When `true`, the method runs using the user's Google Workspace administrator privileges. The
+       calling user must be a Google Workspace administrator with the [manage chat and spaces
+       conversations privilege](https://support.google.com/a/answer/13369245). Requires either the
+       `chat.admin.memberships.readonly` or `chat.admin.memberships` [OAuth 2.0
+       scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes).
+       Listing app memberships in a space isn't supported when using admin access.
          */
         public java.lang.Boolean getUseAdminAccess() {
           return useAdminAccess;
         }
 
         /**
-         * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
-         * method runs using the user's Google Workspace administrator privileges. The calling user
-         * must be a Google Workspace administrator with the [manage chat and spaces conversations
-         * privilege](https://support.google.com/a/answer/13369245). Requires either the
-         * `chat.admin.memberships.readonly` or `chat.admin.memberships` [OAuth 2.0
+         * When `true`, the method runs using the user's Google Workspace administrator privileges.
+         * The calling user must be a Google Workspace administrator with the [manage chat and
+         * spaces conversations privilege](https://support.google.com/a/answer/13369245). Requires
+         * either the `chat.admin.memberships.readonly` or `chat.admin.memberships` [OAuth 2.0
          * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
          * scopes). Listing app memberships in a space isn't supported when using admin access.
          */
@@ -3596,36 +3571,31 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
-         * method runs using the user's Google Workspace administrator privileges. The calling user
-         * must be a Google Workspace administrator with the [manage chat and spaces conversations
-         * privilege](https://support.google.com/a/answer/13369245). Requires the
-         * `chat.admin.memberships` [OAuth 2.0
+         * When `true`, the method runs using the user's Google Workspace administrator privileges.
+         * The calling user must be a Google Workspace administrator with the [manage chat and
+         * spaces conversations privilege](https://support.google.com/a/answer/13369245). Requires
+         * the `chat.admin.memberships` [OAuth 2.0
          * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
          * scopes).
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean useAdminAccess;
 
-        /**[ Developer Preview](https://developers.google.com/workspace/preview). When `true`, the method runs
-      [ using the user's Google Workspace administrator privileges. The calling user must be a Google
-      [ Workspace administrator with the [manage chat and spaces conversations
-      [ privilege](https://support.google.com/a/answer/13369245). Requires the `chat.admin.memberships`
-      [ [OAuth 2.0 scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
-      [ scopes).
-      [
-
+        /** When `true`, the method runs using the user's Google Workspace administrator privileges. The
+       calling user must be a Google Workspace administrator with the [manage chat and spaces
+       conversations privilege](https://support.google.com/a/answer/13369245). Requires the
+       `chat.admin.memberships` [OAuth 2.0
+       scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes).
          */
         public java.lang.Boolean getUseAdminAccess() {
           return useAdminAccess;
         }
 
         /**
-         * [Developer Preview](https://developers.google.com/workspace/preview). When `true`, the
-         * method runs using the user's Google Workspace administrator privileges. The calling user
-         * must be a Google Workspace administrator with the [manage chat and spaces conversations
-         * privilege](https://support.google.com/a/answer/13369245). Requires the
-         * `chat.admin.memberships` [OAuth 2.0
+         * When `true`, the method runs using the user's Google Workspace administrator privileges.
+         * The calling user must be a Google Workspace administrator with the [manage chat and
+         * spaces conversations privilege](https://support.google.com/a/answer/13369245). Requires
+         * the `chat.admin.memberships` [OAuth 2.0
          * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
          * scopes).
          */

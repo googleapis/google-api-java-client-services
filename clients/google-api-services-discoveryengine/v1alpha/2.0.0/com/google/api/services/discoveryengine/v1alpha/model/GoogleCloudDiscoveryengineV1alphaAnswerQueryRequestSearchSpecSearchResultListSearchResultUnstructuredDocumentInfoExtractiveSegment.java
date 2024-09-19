@@ -18,7 +18,8 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
  * Extractive segment. [Guide](https://cloud.google.com/generative-ai-app-
- * builder/docs/snippets#extractive-segments)
+ * builder/docs/snippets#extractive-segments) Answer generation will only use it if
+ * document_contexts is empty. This is supposed to be shorter snippets.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:

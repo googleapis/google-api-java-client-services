@@ -31,11 +31,35 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2AzureTenant extends com.google.api.client.json.GenericJson {
 
   /**
+   * The display name of the Azure tenant.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * The ID of the Microsoft Entra tenant, for example, "a11aaa11-aa11-1aa1-11aa-1aaa11a".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
+
+  /**
+   * The display name of the Azure tenant.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * The display name of the Azure tenant.
+   * @param displayName displayName or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2AzureTenant setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
 
   /**
    * The ID of the Microsoft Entra tenant, for example, "a11aaa11-aa11-1aa1-11aa-1aaa11a".

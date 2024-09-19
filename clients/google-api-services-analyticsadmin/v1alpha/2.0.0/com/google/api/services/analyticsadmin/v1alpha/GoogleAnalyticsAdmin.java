@@ -1230,7 +1230,9 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
      * retrieve data from Google Analytics through a linkage. These records don't include property
      * configuration changes like adding a stream or changing a property's time zone. For configuration
      * change history, see [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides
-     * /config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+     * /config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents). To give your feedback on this
+     * API, complete the [Google Analytics Access Reports feedback](https://docs.google.com/forms/d/e/1F
+     * AIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform) form.
      *
      * Create a request for the method "accounts.runAccessReport".
      *
@@ -1269,7 +1271,9 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * can retrieve data from Google Analytics through a linkage. These records don't include property
        * configuration changes like adding a stream or changing a property's time zone. For
        * configuration change history, see [searchChangeHistoryEvents](https://developers.google.com/ana
-       * lytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+       * lytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents). To give your
+       * feedback on this API, complete the [Google Analytics Access Reports feedback](https://docs.goog
+       * le.com/forms/d/e/1FAIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform) form.
        *
        * Create a request for the method "accounts.runAccessReport".
        *
@@ -5089,7 +5093,9 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
      * retrieve data from Google Analytics through a linkage. These records don't include property
      * configuration changes like adding a stream or changing a property's time zone. For configuration
      * change history, see [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides
-     * /config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+     * /config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents). To give your feedback on this
+     * API, complete the [Google Analytics Access Reports feedback](https://docs.google.com/forms/d/e/1F
+     * AIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform) form.
      *
      * Create a request for the method "properties.runAccessReport".
      *
@@ -5128,7 +5134,9 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * can retrieve data from Google Analytics through a linkage. These records don't include property
        * configuration changes like adding a stream or changing a property's time zone. For
        * configuration change history, see [searchChangeHistoryEvents](https://developers.google.com/ana
-       * lytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+       * lytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents). To give your
+       * feedback on this API, complete the [Google Analytics Access Reports feedback](https://docs.goog
+       * le.com/forms/d/e/1FAIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform) form.
        *
        * Create a request for the method "properties.runAccessReport".
        *

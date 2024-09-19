@@ -30,7 +30,7 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSearchResultUnstructuredDocumentInfoDocumentContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * Document content.
+   * Document content to be used for answer generation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearc
   private java.lang.String pageIdentifier;
 
   /**
-   * Document content.
+   * Document content to be used for answer generation.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -52,7 +52,7 @@ public final class GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearc
   }
 
   /**
-   * Document content.
+   * Document content to be used for answer generation.
    * @param content content or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSearchResultUnstructuredDocumentInfoDocumentContext setContent(java.lang.String content) {

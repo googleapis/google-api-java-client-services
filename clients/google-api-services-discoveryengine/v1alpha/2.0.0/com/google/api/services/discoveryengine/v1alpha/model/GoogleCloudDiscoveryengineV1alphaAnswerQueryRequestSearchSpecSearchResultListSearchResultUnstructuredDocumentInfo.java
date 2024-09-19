@@ -37,14 +37,16 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpec
   private java.lang.String document;
 
   /**
-   * List of document contexts.
+   * List of document contexts. The content will be used for Answer Generation. This is supposed to
+   * be the main content of the document that can be long and comprehensive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpecSearchResultListSearchResultUnstructuredDocumentInfoDocumentContext> documentContexts;
 
   /**
-   * List of extractive answers.
+   * Deprecated: This field is deprecated and will have no effect on the Answer generation. Please
+   * use document_contexts and extractive_segments fields. List of extractive answers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +91,8 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpec
   }
 
   /**
-   * List of document contexts.
+   * List of document contexts. The content will be used for Answer Generation. This is supposed to
+   * be the main content of the document that can be long and comprehensive.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpecSearchResultListSearchResultUnstructuredDocumentInfoDocumentContext> getDocumentContexts() {
@@ -97,7 +100,8 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpec
   }
 
   /**
-   * List of document contexts.
+   * List of document contexts. The content will be used for Answer Generation. This is supposed to
+   * be the main content of the document that can be long and comprehensive.
    * @param documentContexts documentContexts or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpecSearchResultListSearchResultUnstructuredDocumentInfo setDocumentContexts(java.util.List<GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpecSearchResultListSearchResultUnstructuredDocumentInfoDocumentContext> documentContexts) {
@@ -106,7 +110,8 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpec
   }
 
   /**
-   * List of extractive answers.
+   * Deprecated: This field is deprecated and will have no effect on the Answer generation. Please
+   * use document_contexts and extractive_segments fields. List of extractive answers.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpecSearchResultListSearchResultUnstructuredDocumentInfoExtractiveAnswer> getExtractiveAnswers() {
@@ -114,7 +119,8 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpec
   }
 
   /**
-   * List of extractive answers.
+   * Deprecated: This field is deprecated and will have no effect on the Answer generation. Please
+   * use document_contexts and extractive_segments fields. List of extractive answers.
    * @param extractiveAnswers extractiveAnswers or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpecSearchResultListSearchResultUnstructuredDocumentInfo setExtractiveAnswers(java.util.List<GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpecSearchResultListSearchResultUnstructuredDocumentInfoExtractiveAnswer> extractiveAnswers) {

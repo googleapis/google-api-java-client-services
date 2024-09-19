@@ -2386,41 +2386,39 @@ public class VMMigrationService extends com.google.api.client.googleapis.service
             return this;
           }
 
-          /** Optional. The filter request (according to https://google.aip.dev/160). */
+          /** Optional. The filter request (according to AIP-160). */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. The filter request (according to https://google.aip.dev/160).
+          /** Optional. The filter request (according to AIP-160).
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. The filter request (according to https://google.aip.dev/160). */
+          /** Optional. The filter request (according to AIP-160). */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
           /**
-           * Optional. The order by fields for the result (according to
-           * https://google.aip.dev/132#ordering). Currently ordering is only possible by "name"
-           * field.
+           * Optional. The order by fields for the result (according to AIP-132). Currently ordering
+           * is only possible by "name" field.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. The order by fields for the result (according to https://google.aip.dev/132#ordering).
-         Currently ordering is only possible by "name" field.
+          /** Optional. The order by fields for the result (according to AIP-132). Currently ordering is only
+         possible by "name" field.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
           /**
-           * Optional. The order by fields for the result (according to
-           * https://google.aip.dev/132#ordering). Currently ordering is only possible by "name"
-           * field.
+           * Optional. The order by fields for the result (according to AIP-132). Currently ordering
+           * is only possible by "name" field.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -2907,41 +2905,39 @@ public class VMMigrationService extends com.google.api.client.googleapis.service
               return this;
             }
 
-            /** Optional. The filter request (according to https://google.aip.dev/160). */
+            /** Optional. The filter request (according to AIP-160). */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. The filter request (according to https://google.aip.dev/160).
+            /** Optional. The filter request (according to AIP-160).
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
-            /** Optional. The filter request (according to https://google.aip.dev/160). */
+            /** Optional. The filter request (according to AIP-160). */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
             }
 
             /**
-             * Optional. The order by fields for the result (according to
-             * https://google.aip.dev/132#ordering). Currently ordering is only possible by "name"
-             * field.
+             * Optional. The order by fields for the result (according to AIP-132). Currently
+             * ordering is only possible by "name" field.
              */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
-            /** Optional. The order by fields for the result (according to https://google.aip.dev/132#ordering).
-           Currently ordering is only possible by "name" field.
+            /** Optional. The order by fields for the result (according to AIP-132). Currently ordering is only
+           possible by "name" field.
              */
             public java.lang.String getOrderBy() {
               return orderBy;
             }
 
             /**
-             * Optional. The order by fields for the result (according to
-             * https://google.aip.dev/132#ordering). Currently ordering is only possible by "name"
-             * field.
+             * Optional. The order by fields for the result (according to AIP-132). Currently
+             * ordering is only possible by "name" field.
              */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;

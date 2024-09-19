@@ -100,6 +100,12 @@ public final class Video extends com.google.api.client.json.GenericJson {
   private VideoMonetizationDetails monetizationDetails;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VideoPaidProductPlacementDetails paidProductPlacementDetails;
+
+  /**
    * The player object contains information that you would use to play the video in an embedded
    * player.
    * The value may be {@code null}.
@@ -338,6 +344,21 @@ public final class Video extends com.google.api.client.json.GenericJson {
    */
   public Video setMonetizationDetails(VideoMonetizationDetails monetizationDetails) {
     this.monetizationDetails = monetizationDetails;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public VideoPaidProductPlacementDetails getPaidProductPlacementDetails() {
+    return paidProductPlacementDetails;
+  }
+
+  /**
+   * @param paidProductPlacementDetails paidProductPlacementDetails or {@code null} for none
+   */
+  public Video setPaidProductPlacementDetails(VideoPaidProductPlacementDetails paidProductPlacementDetails) {
+    this.paidProductPlacementDetails = paidProductPlacementDetails;
     return this;
   }
 

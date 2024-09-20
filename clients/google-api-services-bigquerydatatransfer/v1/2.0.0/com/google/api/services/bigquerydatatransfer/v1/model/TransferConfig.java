@@ -100,6 +100,13 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
   private EncryptionConfiguration encryptionConfiguration;
 
   /**
+   * Output only. Error code with detailed information about reason of the latest config failure.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Status error;
+
+  /**
    * Identifier. The resource name of the transfer config. Transfer config names have the form
    * either `projects/{project_id}/locations/{region}/transferConfigs/{config_id}` or
    * `projects/{project_id}/transferConfigs/{config_id}`, where `config_id` is usually a UUID, even
@@ -163,6 +170,15 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private ScheduleOptions scheduleOptions;
+
+  /**
+   * Options customizing different types of data transfer schedule. This field replaces "schedule"
+   * and "schedule_options" fields. ScheduleOptionsV2 cannot be used together with
+   * ScheduleOptions/Schedule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ScheduleOptionsV2 scheduleOptionsV2;
 
   /**
    * Output only. State of the most recently updated transfer run.
@@ -342,6 +358,23 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Output only. Error code with detailed information about reason of the latest config failure.
+   * @return value or {@code null} for none
+   */
+  public Status getError() {
+    return error;
+  }
+
+  /**
+   * Output only. Error code with detailed information about reason of the latest config failure.
+   * @param error error or {@code null} for none
+   */
+  public TransferConfig setError(Status error) {
+    this.error = error;
+    return this;
+  }
+
+  /**
    * Identifier. The resource name of the transfer config. Transfer config names have the form
    * either `projects/{project_id}/locations/{region}/transferConfigs/{config_id}` or
    * `projects/{project_id}/transferConfigs/{config_id}`, where `config_id` is usually a UUID, even
@@ -489,6 +522,27 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
    */
   public TransferConfig setScheduleOptions(ScheduleOptions scheduleOptions) {
     this.scheduleOptions = scheduleOptions;
+    return this;
+  }
+
+  /**
+   * Options customizing different types of data transfer schedule. This field replaces "schedule"
+   * and "schedule_options" fields. ScheduleOptionsV2 cannot be used together with
+   * ScheduleOptions/Schedule.
+   * @return value or {@code null} for none
+   */
+  public ScheduleOptionsV2 getScheduleOptionsV2() {
+    return scheduleOptionsV2;
+  }
+
+  /**
+   * Options customizing different types of data transfer schedule. This field replaces "schedule"
+   * and "schedule_options" fields. ScheduleOptionsV2 cannot be used together with
+   * ScheduleOptions/Schedule.
+   * @param scheduleOptionsV2 scheduleOptionsV2 or {@code null} for none
+   */
+  public TransferConfig setScheduleOptionsV2(ScheduleOptionsV2 scheduleOptionsV2) {
+    this.scheduleOptionsV2 = scheduleOptionsV2;
     return this;
   }
 

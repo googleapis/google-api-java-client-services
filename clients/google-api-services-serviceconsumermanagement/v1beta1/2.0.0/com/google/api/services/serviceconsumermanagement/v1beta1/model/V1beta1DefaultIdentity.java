@@ -31,7 +31,9 @@ package com.google.api.services.serviceconsumermanagement.v1beta1.model;
 public final class V1beta1DefaultIdentity extends com.google.api.client.json.GenericJson {
 
   /**
-   * The email address of the default identity.
+   * The email address of the default identity. Calling GenerateDefaultIdentity with a deleted or
+   * purged default identity should expect does_not_exist@invalid-project.iam.gserviceaccount.com
+   * placeholder email.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +64,9 @@ public final class V1beta1DefaultIdentity extends com.google.api.client.json.Gen
   private java.lang.String uniqueId;
 
   /**
-   * The email address of the default identity.
+   * The email address of the default identity. Calling GenerateDefaultIdentity with a deleted or
+   * purged default identity should expect does_not_exist@invalid-project.iam.gserviceaccount.com
+   * placeholder email.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmail() {
@@ -70,7 +74,9 @@ public final class V1beta1DefaultIdentity extends com.google.api.client.json.Gen
   }
 
   /**
-   * The email address of the default identity.
+   * The email address of the default identity. Calling GenerateDefaultIdentity with a deleted or
+   * purged default identity should expect does_not_exist@invalid-project.iam.gserviceaccount.com
+   * placeholder email.
    * @param email email or {@code null} for none
    */
   public V1beta1DefaultIdentity setEmail(java.lang.String email) {

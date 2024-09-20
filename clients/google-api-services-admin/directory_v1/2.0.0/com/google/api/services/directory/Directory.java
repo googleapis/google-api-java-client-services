@@ -7175,13 +7175,15 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Email or immutable ID of the user if only those groups are to be listed, the given user is
-       * a member of. If it's an ID, it should match with the ID of the user object.
+       * a member of. If it's an ID, it should match with the ID of the user object. Cannot be used
+       * with the `customer` parameter.
        */
       @com.google.api.client.util.Key
       private java.lang.String userKey;
 
       /** Email or immutable ID of the user if only those groups are to be listed, the given user is a member
-     of. If it's an ID, it should match with the ID of the user object.
+     of. If it's an ID, it should match with the ID of the user object. Cannot be used with the
+     `customer` parameter.
        */
       public java.lang.String getUserKey() {
         return userKey;
@@ -7189,7 +7191,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Email or immutable ID of the user if only those groups are to be listed, the given user is
-       * a member of. If it's an ID, it should match with the ID of the user object.
+       * a member of. If it's an ID, it should match with the ID of the user object. Cannot be used
+       * with the `customer` parameter.
        */
       public List setUserKey(java.lang.String userKey) {
         this.userKey = userKey;

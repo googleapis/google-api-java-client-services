@@ -70,6 +70,22 @@ public final class GoogleMapsPlacesV1SearchTextResponse extends com.google.api.c
   }
 
   /**
+   * A list of routing summaries where each entry associates to the corresponding place in the same
+   * index in the `places` field. If the routing summary is not available for one of the places, it
+   * will contain an empty entry. This list will have as many entries as the list of places if
+   * requested.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleMapsPlacesV1RoutingSummary> routingSummaries;
+
+  static {
+    // hack to force ProGuard to consider GoogleMapsPlacesV1RoutingSummary used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleMapsPlacesV1RoutingSummary.class);
+  }
+
+  /**
    * Experimental: See https://developers.google.com/maps/documentation/places/web-
    * service/experimental/places-generative for more details. A list of contextual contents where
    * each entry associates to the corresponding place in the same index in the places field. The
@@ -131,6 +147,29 @@ public final class GoogleMapsPlacesV1SearchTextResponse extends com.google.api.c
    */
   public GoogleMapsPlacesV1SearchTextResponse setPlaces(java.util.List<GoogleMapsPlacesV1Place> places) {
     this.places = places;
+    return this;
+  }
+
+  /**
+   * A list of routing summaries where each entry associates to the corresponding place in the same
+   * index in the `places` field. If the routing summary is not available for one of the places, it
+   * will contain an empty entry. This list will have as many entries as the list of places if
+   * requested.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleMapsPlacesV1RoutingSummary> getRoutingSummaries() {
+    return routingSummaries;
+  }
+
+  /**
+   * A list of routing summaries where each entry associates to the corresponding place in the same
+   * index in the `places` field. If the routing summary is not available for one of the places, it
+   * will contain an empty entry. This list will have as many entries as the list of places if
+   * requested.
+   * @param routingSummaries routingSummaries or {@code null} for none
+   */
+  public GoogleMapsPlacesV1SearchTextResponse setRoutingSummaries(java.util.List<GoogleMapsPlacesV1RoutingSummary> routingSummaries) {
+    this.routingSummaries = routingSummaries;
     return this;
   }
 

@@ -150,6 +150,20 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
   private java.lang.String regionCode;
 
   /**
+   * Optional. Additional parameters for routing to results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleMapsPlacesV1RoutingParameters routingParameters;
+
+  /**
+   * Optional. Additional parameters proto for searching along a route.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleMapsPlacesV1SearchTextRequestSearchAlongRouteParameters searchAlongRouteParameters;
+
+  /**
    * Used to set strict type filtering for included_type. If set to true, only results of the same
    * type will be returned. Default to false.
    * The value may be {@code null}.
@@ -440,6 +454,40 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
    */
   public GoogleMapsPlacesV1SearchTextRequest setRegionCode(java.lang.String regionCode) {
     this.regionCode = regionCode;
+    return this;
+  }
+
+  /**
+   * Optional. Additional parameters for routing to results.
+   * @return value or {@code null} for none
+   */
+  public GoogleMapsPlacesV1RoutingParameters getRoutingParameters() {
+    return routingParameters;
+  }
+
+  /**
+   * Optional. Additional parameters for routing to results.
+   * @param routingParameters routingParameters or {@code null} for none
+   */
+  public GoogleMapsPlacesV1SearchTextRequest setRoutingParameters(GoogleMapsPlacesV1RoutingParameters routingParameters) {
+    this.routingParameters = routingParameters;
+    return this;
+  }
+
+  /**
+   * Optional. Additional parameters proto for searching along a route.
+   * @return value or {@code null} for none
+   */
+  public GoogleMapsPlacesV1SearchTextRequestSearchAlongRouteParameters getSearchAlongRouteParameters() {
+    return searchAlongRouteParameters;
+  }
+
+  /**
+   * Optional. Additional parameters proto for searching along a route.
+   * @param searchAlongRouteParameters searchAlongRouteParameters or {@code null} for none
+   */
+  public GoogleMapsPlacesV1SearchTextRequest setSearchAlongRouteParameters(GoogleMapsPlacesV1SearchTextRequestSearchAlongRouteParameters searchAlongRouteParameters) {
+    this.searchAlongRouteParameters = searchAlongRouteParameters;
     return this;
   }
 

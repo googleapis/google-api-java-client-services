@@ -138,6 +138,13 @@ public final class GoogleMapsPlacesV1SearchNearbyRequest extends com.google.api.
   private java.lang.String regionCode;
 
   /**
+   * Optional. Parameters that affect the routing to the search results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleMapsPlacesV1RoutingParameters routingParameters;
+
+  /**
    * Excluded primary Place type (e.g. "restaurant" or "gas_station") from
    * https://developers.google.com/maps/documentation/places/web-service/place-types. Up to 50 types
    * from [Table A](https://developers.google.com/maps/documentation/places/web-service/place-
@@ -377,6 +384,23 @@ public final class GoogleMapsPlacesV1SearchNearbyRequest extends com.google.api.
    */
   public GoogleMapsPlacesV1SearchNearbyRequest setRegionCode(java.lang.String regionCode) {
     this.regionCode = regionCode;
+    return this;
+  }
+
+  /**
+   * Optional. Parameters that affect the routing to the search results.
+   * @return value or {@code null} for none
+   */
+  public GoogleMapsPlacesV1RoutingParameters getRoutingParameters() {
+    return routingParameters;
+  }
+
+  /**
+   * Optional. Parameters that affect the routing to the search results.
+   * @param routingParameters routingParameters or {@code null} for none
+   */
+  public GoogleMapsPlacesV1SearchNearbyRequest setRoutingParameters(GoogleMapsPlacesV1RoutingParameters routingParameters) {
+    this.routingParameters = routingParameters;
     return this;
   }
 

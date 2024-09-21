@@ -85,9 +85,8 @@ public final class GoogleCloudDataplexV1TaskSparkTaskConfig extends com.google.a
   private java.lang.String sqlScript;
 
   /**
-   * A reference to a query file. This can be the Cloud Storage URI of the query file or it can the
-   * path to a SqlScript Content. The execution args are used to declare a set of script variables
-   * (set key="value";).
+   * A reference to a query file. This should be the Cloud Storage URI of the query file. The
+   * execution args are used to declare a set of script variables (set key="value";).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -225,9 +224,8 @@ public final class GoogleCloudDataplexV1TaskSparkTaskConfig extends com.google.a
   }
 
   /**
-   * A reference to a query file. This can be the Cloud Storage URI of the query file or it can the
-   * path to a SqlScript Content. The execution args are used to declare a set of script variables
-   * (set key="value";).
+   * A reference to a query file. This should be the Cloud Storage URI of the query file. The
+   * execution args are used to declare a set of script variables (set key="value";).
    * @return value or {@code null} for none
    */
   public java.lang.String getSqlScriptFile() {
@@ -235,9 +233,8 @@ public final class GoogleCloudDataplexV1TaskSparkTaskConfig extends com.google.a
   }
 
   /**
-   * A reference to a query file. This can be the Cloud Storage URI of the query file or it can the
-   * path to a SqlScript Content. The execution args are used to declare a set of script variables
-   * (set key="value";).
+   * A reference to a query file. This should be the Cloud Storage URI of the query file. The
+   * execution args are used to declare a set of script variables (set key="value";).
    * @param sqlScriptFile sqlScriptFile or {@code null} for none
    */
   public GoogleCloudDataplexV1TaskSparkTaskConfig setSqlScriptFile(java.lang.String sqlScriptFile) {

@@ -58,6 +58,13 @@ public final class GoogleCloudDataplexV1DiscoveryEvent extends com.google.api.cl
   private java.lang.String dataLocation;
 
   /**
+   * The id of the associated datascan for standalone discovery.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String datascanId;
+
+  /**
    * Details about the entity associated with the event.
    * The value may be {@code null}.
    */
@@ -84,6 +91,13 @@ public final class GoogleCloudDataplexV1DiscoveryEvent extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1DiscoveryEventPartitionDetails partition;
+
+  /**
+   * Details about the BigQuery table publishing associated with the event.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DiscoveryEventTableDetails table;
 
   /**
    * The type of the event being logged.
@@ -168,6 +182,23 @@ public final class GoogleCloudDataplexV1DiscoveryEvent extends com.google.api.cl
   }
 
   /**
+   * The id of the associated datascan for standalone discovery.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatascanId() {
+    return datascanId;
+  }
+
+  /**
+   * The id of the associated datascan for standalone discovery.
+   * @param datascanId datascanId or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DiscoveryEvent setDatascanId(java.lang.String datascanId) {
+    this.datascanId = datascanId;
+    return this;
+  }
+
+  /**
    * Details about the entity associated with the event.
    * @return value or {@code null} for none
    */
@@ -232,6 +263,23 @@ public final class GoogleCloudDataplexV1DiscoveryEvent extends com.google.api.cl
    */
   public GoogleCloudDataplexV1DiscoveryEvent setPartition(GoogleCloudDataplexV1DiscoveryEventPartitionDetails partition) {
     this.partition = partition;
+    return this;
+  }
+
+  /**
+   * Details about the BigQuery table publishing associated with the event.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DiscoveryEventTableDetails getTable() {
+    return table;
+  }
+
+  /**
+   * Details about the BigQuery table publishing associated with the event.
+   * @param table table or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DiscoveryEvent setTable(GoogleCloudDataplexV1DiscoveryEventTableDetails table) {
+    this.table = table;
     return this;
   }
 

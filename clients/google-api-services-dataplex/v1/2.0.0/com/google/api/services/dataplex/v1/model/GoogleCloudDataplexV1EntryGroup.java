@@ -74,6 +74,14 @@ public final class GoogleCloudDataplexV1EntryGroup extends com.google.api.client
   private java.lang.String name;
 
   /**
+   * Output only. Denotes the transfer status of the Entry Group. It is unspecified for Entry Group
+   * created from Dataplex API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String transferStatus;
+
+  /**
    * Output only. System generated globally unique ID for the EntryGroup. If you delete and recreate
    * the EntryGroup with the same name, this ID will be different.
    * The value may be {@code null}.
@@ -191,6 +199,25 @@ public final class GoogleCloudDataplexV1EntryGroup extends com.google.api.client
    */
   public GoogleCloudDataplexV1EntryGroup setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Denotes the transfer status of the Entry Group. It is unspecified for Entry Group
+   * created from Dataplex API.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTransferStatus() {
+    return transferStatus;
+  }
+
+  /**
+   * Output only. Denotes the transfer status of the Entry Group. It is unspecified for Entry Group
+   * created from Dataplex API.
+   * @param transferStatus transferStatus or {@code null} for none
+   */
+  public GoogleCloudDataplexV1EntryGroup setTransferStatus(java.lang.String transferStatus) {
+    this.transferStatus = transferStatus;
     return this;
   }
 

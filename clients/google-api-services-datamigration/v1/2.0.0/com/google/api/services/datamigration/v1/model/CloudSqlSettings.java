@@ -105,11 +105,18 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
   private java.util.Map<String, java.lang.String> databaseFlags;
 
   /**
-   * The database engine type and version.
+   * The database engine type and version. Deprecated. Use database_version_name instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String databaseVersion;
+
+  /**
+   * Optional. The database engine type and version name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String databaseVersionName;
 
   /**
    * Optional. The edition of the given Cloud SQL instance.
@@ -366,7 +373,7 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The database engine type and version.
+   * The database engine type and version. Deprecated. Use database_version_name instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabaseVersion() {
@@ -374,11 +381,28 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The database engine type and version.
+   * The database engine type and version. Deprecated. Use database_version_name instead.
    * @param databaseVersion databaseVersion or {@code null} for none
    */
   public CloudSqlSettings setDatabaseVersion(java.lang.String databaseVersion) {
     this.databaseVersion = databaseVersion;
+    return this;
+  }
+
+  /**
+   * Optional. The database engine type and version name.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatabaseVersionName() {
+    return databaseVersionName;
+  }
+
+  /**
+   * Optional. The database engine type and version name.
+   * @param databaseVersionName databaseVersionName or {@code null} for none
+   */
+  public CloudSqlSettings setDatabaseVersionName(java.lang.String databaseVersionName) {
+    this.databaseVersionName = databaseVersionName;
     return this;
   }
 

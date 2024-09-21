@@ -47,6 +47,13 @@ public final class PrimaryInstanceSettings extends com.google.api.client.json.Ge
   private java.lang.String id;
 
   /**
+   * Optional. Metadata related to instance level network configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceNetworkConfig instanceNetworkConfig;
+
+  /**
    * Labels for the AlloyDB primary instance created by DMS. An object containing a list of 'key',
    * 'value' pairs.
    * The value may be {@code null}.
@@ -60,6 +67,13 @@ public final class PrimaryInstanceSettings extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private MachineConfig machineConfig;
+
+  /**
+   * Output only. All outbound public IP addresses configured for the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> outboundPublicIpAddresses;
 
   /**
    * Output only. The private IP address for the Instance. This is the connection endpoint for an
@@ -108,6 +122,23 @@ public final class PrimaryInstanceSettings extends com.google.api.client.json.Ge
   }
 
   /**
+   * Optional. Metadata related to instance level network configuration.
+   * @return value or {@code null} for none
+   */
+  public InstanceNetworkConfig getInstanceNetworkConfig() {
+    return instanceNetworkConfig;
+  }
+
+  /**
+   * Optional. Metadata related to instance level network configuration.
+   * @param instanceNetworkConfig instanceNetworkConfig or {@code null} for none
+   */
+  public PrimaryInstanceSettings setInstanceNetworkConfig(InstanceNetworkConfig instanceNetworkConfig) {
+    this.instanceNetworkConfig = instanceNetworkConfig;
+    return this;
+  }
+
+  /**
    * Labels for the AlloyDB primary instance created by DMS. An object containing a list of 'key',
    * 'value' pairs.
    * @return value or {@code null} for none
@@ -140,6 +171,23 @@ public final class PrimaryInstanceSettings extends com.google.api.client.json.Ge
    */
   public PrimaryInstanceSettings setMachineConfig(MachineConfig machineConfig) {
     this.machineConfig = machineConfig;
+    return this;
+  }
+
+  /**
+   * Output only. All outbound public IP addresses configured for the instance.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getOutboundPublicIpAddresses() {
+    return outboundPublicIpAddresses;
+  }
+
+  /**
+   * Output only. All outbound public IP addresses configured for the instance.
+   * @param outboundPublicIpAddresses outboundPublicIpAddresses or {@code null} for none
+   */
+  public PrimaryInstanceSettings setOutboundPublicIpAddresses(java.util.List<java.lang.String> outboundPublicIpAddresses) {
+    this.outboundPublicIpAddresses = outboundPublicIpAddresses;
     return this;
   }
 

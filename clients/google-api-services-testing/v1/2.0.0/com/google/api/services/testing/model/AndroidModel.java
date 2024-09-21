@@ -65,6 +65,13 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
+   * Output only. Lab info of this device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LabInfo labInfo;
+
+  /**
    * True if and only if tests with this model are recorded by stitching together screenshots. See
    * use_low_spec_video_recording in device config.
    * The value may be {@code null}.
@@ -228,6 +235,23 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
    */
   public AndroidModel setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Output only. Lab info of this device.
+   * @return value or {@code null} for none
+   */
+  public LabInfo getLabInfo() {
+    return labInfo;
+  }
+
+  /**
+   * Output only. Lab info of this device.
+   * @param labInfo labInfo or {@code null} for none
+   */
+  public AndroidModel setLabInfo(LabInfo labInfo) {
+    this.labInfo = labInfo;
     return this;
   }
 

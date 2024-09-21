@@ -161,6 +161,19 @@ public final class Node extends com.google.api.client.json.GenericJson {
   private NetworkConfig networkConfig;
 
   /**
+   * Optional. Repeated network configurations for the TPU node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<NetworkConfig> networkConfigs;
+
+  static {
+    // hack to force ProGuard to consider NetworkConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(NetworkConfig.class);
+  }
+
+  /**
    * Output only. The network endpoints where TPU workers can be accessed and sent work. It is
    * recommended that runtime clients of the node reach out to the 0th entry in this map first.
    * The value may be {@code null}.
@@ -530,6 +543,23 @@ public final class Node extends com.google.api.client.json.GenericJson {
    */
   public Node setNetworkConfig(NetworkConfig networkConfig) {
     this.networkConfig = networkConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Repeated network configurations for the TPU node.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<NetworkConfig> getNetworkConfigs() {
+    return networkConfigs;
+  }
+
+  /**
+   * Optional. Repeated network configurations for the TPU node.
+   * @param networkConfigs networkConfigs or {@code null} for none
+   */
+  public Node setNetworkConfigs(java.util.List<NetworkConfig> networkConfigs) {
+    this.networkConfigs = networkConfigs;
     return this;
   }
 

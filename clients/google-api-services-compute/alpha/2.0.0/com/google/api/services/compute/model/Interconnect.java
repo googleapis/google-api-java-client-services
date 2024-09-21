@@ -57,9 +57,9 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output only] List of features available for this Interconnect connection, which can take one
-   * of the following values: - MACSEC If present then the Interconnect connection is provisioned on
-   * MACsec capable hardware ports. If not present then the Interconnect connection is provisioned
-   * on non-MACsec capable ports and MACsec isn't supported and enabling MACsec fails.
+   * of the following values: - IF_MACSEC If present then the Interconnect connection is provisioned
+   * on MACsec capable hardware ports. If not present then the Interconnect connection is
+   * provisioned on non-MACsec capable ports and MACsec isn't supported and enabling MACsec fails.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -263,7 +263,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. List of features requested for this Interconnect connection, which can take one of
-   * the following values: - MACSEC If specified then the connection is created on MACsec capable
+   * the following values: - IF_MACSEC If specified then the connection is created on MACsec capable
    * hardware ports. If not specified, the default value is false, which allocates non-MACsec
    * capable ports first if available. This parameter can be provided only with Interconnect INSERT.
    * It isn't valid for Interconnect PATCH.
@@ -371,9 +371,9 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output only] List of features available for this Interconnect connection, which can take one
-   * of the following values: - MACSEC If present then the Interconnect connection is provisioned on
-   * MACsec capable hardware ports. If not present then the Interconnect connection is provisioned
-   * on non-MACsec capable ports and MACsec isn't supported and enabling MACsec fails.
+   * of the following values: - IF_MACSEC If present then the Interconnect connection is provisioned
+   * on MACsec capable hardware ports. If not present then the Interconnect connection is
+   * provisioned on non-MACsec capable ports and MACsec isn't supported and enabling MACsec fails.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAvailableFeatures() {
@@ -382,9 +382,9 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output only] List of features available for this Interconnect connection, which can take one
-   * of the following values: - MACSEC If present then the Interconnect connection is provisioned on
-   * MACsec capable hardware ports. If not present then the Interconnect connection is provisioned
-   * on non-MACsec capable ports and MACsec isn't supported and enabling MACsec fails.
+   * of the following values: - IF_MACSEC If present then the Interconnect connection is provisioned
+   * on MACsec capable hardware ports. If not present then the Interconnect connection is
+   * provisioned on non-MACsec capable ports and MACsec isn't supported and enabling MACsec fails.
    * @param availableFeatures availableFeatures or {@code null} for none
    */
   public Interconnect setAvailableFeatures(java.util.List<java.lang.String> availableFeatures) {
@@ -893,7 +893,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. List of features requested for this Interconnect connection, which can take one of
-   * the following values: - MACSEC If specified then the connection is created on MACsec capable
+   * the following values: - IF_MACSEC If specified then the connection is created on MACsec capable
    * hardware ports. If not specified, the default value is false, which allocates non-MACsec
    * capable ports first if available. This parameter can be provided only with Interconnect INSERT.
    * It isn't valid for Interconnect PATCH.
@@ -905,7 +905,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. List of features requested for this Interconnect connection, which can take one of
-   * the following values: - MACSEC If specified then the connection is created on MACsec capable
+   * the following values: - IF_MACSEC If specified then the connection is created on MACsec capable
    * hardware ports. If not specified, the default value is false, which allocates non-MACsec
    * capable ports first if available. This parameter can be provided only with Interconnect INSERT.
    * It isn't valid for Interconnect PATCH.

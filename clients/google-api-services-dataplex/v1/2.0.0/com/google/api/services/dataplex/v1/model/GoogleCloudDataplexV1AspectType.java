@@ -89,6 +89,14 @@ public final class GoogleCloudDataplexV1AspectType extends com.google.api.client
   private java.lang.String name;
 
   /**
+   * Output only. Denotes the transfer status of the Aspect Type. It is unspecified for Aspect Types
+   * created from Dataplex API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String transferStatus;
+
+  /**
    * Output only. System generated globally unique ID for the AspectType. If you delete and recreate
    * the AspectType with the same name, then this ID will be different.
    * The value may be {@code null}.
@@ -240,6 +248,25 @@ public final class GoogleCloudDataplexV1AspectType extends com.google.api.client
    */
   public GoogleCloudDataplexV1AspectType setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Denotes the transfer status of the Aspect Type. It is unspecified for Aspect Types
+   * created from Dataplex API.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTransferStatus() {
+    return transferStatus;
+  }
+
+  /**
+   * Output only. Denotes the transfer status of the Aspect Type. It is unspecified for Aspect Types
+   * created from Dataplex API.
+   * @param transferStatus transferStatus or {@code null} for none
+   */
+  public GoogleCloudDataplexV1AspectType setTransferStatus(java.lang.String transferStatus) {
+    this.transferStatus = transferStatus;
     return this;
   }
 

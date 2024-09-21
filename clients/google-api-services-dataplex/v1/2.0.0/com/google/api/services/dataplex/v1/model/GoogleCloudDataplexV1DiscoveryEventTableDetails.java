@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Model definition for CloudReliabilityZicyWs3DataplaneProtosCloudAsset.
+ * Details about the published table.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -27,58 +27,64 @@ package com.google.api.services.dataplex.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CloudReliabilityZicyWs3DataplaneProtosCloudAsset extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDataplexV1DiscoveryEventTableDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * The fully-qualified resource name of the table resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String assetName;
+  private java.lang.String table;
 
   /**
+   * The type of the table resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String assetType;
+  private java.lang.String type;
 
   /**
+   * The fully-qualified resource name of the table resource.
    * @return value or {@code null} for none
    */
-  public java.lang.String getAssetName() {
-    return assetName;
+  public java.lang.String getTable() {
+    return table;
   }
 
   /**
-   * @param assetName assetName or {@code null} for none
+   * The fully-qualified resource name of the table resource.
+   * @param table table or {@code null} for none
    */
-  public CloudReliabilityZicyWs3DataplaneProtosCloudAsset setAssetName(java.lang.String assetName) {
-    this.assetName = assetName;
+  public GoogleCloudDataplexV1DiscoveryEventTableDetails setTable(java.lang.String table) {
+    this.table = table;
     return this;
   }
 
   /**
+   * The type of the table resource.
    * @return value or {@code null} for none
    */
-  public java.lang.String getAssetType() {
-    return assetType;
+  public java.lang.String getType() {
+    return type;
   }
 
   /**
-   * @param assetType assetType or {@code null} for none
+   * The type of the table resource.
+   * @param type type or {@code null} for none
    */
-  public CloudReliabilityZicyWs3DataplaneProtosCloudAsset setAssetType(java.lang.String assetType) {
-    this.assetType = assetType;
+  public GoogleCloudDataplexV1DiscoveryEventTableDetails setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 
   @Override
-  public CloudReliabilityZicyWs3DataplaneProtosCloudAsset set(String fieldName, Object value) {
-    return (CloudReliabilityZicyWs3DataplaneProtosCloudAsset) super.set(fieldName, value);
+  public GoogleCloudDataplexV1DiscoveryEventTableDetails set(String fieldName, Object value) {
+    return (GoogleCloudDataplexV1DiscoveryEventTableDetails) super.set(fieldName, value);
   }
 
   @Override
-  public CloudReliabilityZicyWs3DataplaneProtosCloudAsset clone() {
-    return (CloudReliabilityZicyWs3DataplaneProtosCloudAsset) super.clone();
+  public GoogleCloudDataplexV1DiscoveryEventTableDetails clone() {
+    return (GoogleCloudDataplexV1DiscoveryEventTableDetails) super.clone();
   }
 
 }

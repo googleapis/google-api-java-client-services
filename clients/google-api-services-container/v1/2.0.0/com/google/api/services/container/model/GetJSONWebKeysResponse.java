@@ -31,7 +31,7 @@ package com.google.api.services.container.model;
 public final class GetJSONWebKeysResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * OnePlatform automatically extracts this field and uses it to set the HTTP Cache-Control header.
+   * For HTTP requests, this field is automatically extracted into the Cache-Control HTTP header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GetJSONWebKeysResponse extends com.google.api.client.json.Gen
   private java.util.List<Jwk> keys;
 
   /**
-   * OnePlatform automatically extracts this field and uses it to set the HTTP Cache-Control header.
+   * For HTTP requests, this field is automatically extracted into the Cache-Control HTTP header.
    * @return value or {@code null} for none
    */
   public HttpCacheControlResponseHeader getCacheHeader() {
@@ -53,7 +53,7 @@ public final class GetJSONWebKeysResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * OnePlatform automatically extracts this field and uses it to set the HTTP Cache-Control header.
+   * For HTTP requests, this field is automatically extracted into the Cache-Control HTTP header.
    * @param cacheHeader cacheHeader or {@code null} for none
    */
   public GetJSONWebKeysResponse setCacheHeader(HttpCacheControlResponseHeader cacheHeader) {

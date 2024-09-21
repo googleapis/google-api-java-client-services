@@ -31,6 +31,23 @@ package com.google.api.services.networkmanagement.v1beta1.model;
 public final class RouteInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * For advertised routes, the URI of their next hop, i.e. the URI of the hybrid endpoint (VPN
+   * tunnel, Interconnect attachment, NCC router appliance) the advertised prefix is advertised
+   * through, or URI of the source peered network.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String advertisedRouteNextHopUri;
+
+  /**
+   * For advertised dynamic routes, the URI of the Cloud Router that advertised the corresponding IP
+   * prefix.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String advertisedRouteSourceRouterUri;
+
+  /**
    * Destination IP range of the route.
    * The value may be {@code null}.
    */
@@ -108,6 +125,13 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> protocols;
 
   /**
+   * Region of the route (if applicable).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
+
+  /**
    * Indicates where route is applicable.
    * The value may be {@code null}.
    */
@@ -136,12 +160,51 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> srcPortRanges;
 
   /**
-   * URI of a route. Dynamic, peering static and peering dynamic routes do not have an URI.
-   * Advertised route from Google Cloud VPC to on-premises network also does not have an URI.
+   * URI of a route (if applicable).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * For advertised routes, the URI of their next hop, i.e. the URI of the hybrid endpoint (VPN
+   * tunnel, Interconnect attachment, NCC router appliance) the advertised prefix is advertised
+   * through, or URI of the source peered network.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAdvertisedRouteNextHopUri() {
+    return advertisedRouteNextHopUri;
+  }
+
+  /**
+   * For advertised routes, the URI of their next hop, i.e. the URI of the hybrid endpoint (VPN
+   * tunnel, Interconnect attachment, NCC router appliance) the advertised prefix is advertised
+   * through, or URI of the source peered network.
+   * @param advertisedRouteNextHopUri advertisedRouteNextHopUri or {@code null} for none
+   */
+  public RouteInfo setAdvertisedRouteNextHopUri(java.lang.String advertisedRouteNextHopUri) {
+    this.advertisedRouteNextHopUri = advertisedRouteNextHopUri;
+    return this;
+  }
+
+  /**
+   * For advertised dynamic routes, the URI of the Cloud Router that advertised the corresponding IP
+   * prefix.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAdvertisedRouteSourceRouterUri() {
+    return advertisedRouteSourceRouterUri;
+  }
+
+  /**
+   * For advertised dynamic routes, the URI of the Cloud Router that advertised the corresponding IP
+   * prefix.
+   * @param advertisedRouteSourceRouterUri advertisedRouteSourceRouterUri or {@code null} for none
+   */
+  public RouteInfo setAdvertisedRouteSourceRouterUri(java.lang.String advertisedRouteSourceRouterUri) {
+    this.advertisedRouteSourceRouterUri = advertisedRouteSourceRouterUri;
+    return this;
+  }
 
   /**
    * Destination IP range of the route.
@@ -331,6 +394,23 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Region of the route (if applicable).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * Region of the route (if applicable).
+   * @param region region or {@code null} for none
+   */
+  public RouteInfo setRegion(java.lang.String region) {
+    this.region = region;
+    return this;
+  }
+
+  /**
    * Indicates where route is applicable.
    * @return value or {@code null} for none
    */
@@ -399,8 +479,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a route. Dynamic, peering static and peering dynamic routes do not have an URI.
-   * Advertised route from Google Cloud VPC to on-premises network also does not have an URI.
+   * URI of a route (if applicable).
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -408,8 +487,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a route. Dynamic, peering static and peering dynamic routes do not have an URI.
-   * Advertised route from Google Cloud VPC to on-premises network also does not have an URI.
+   * URI of a route (if applicable).
    * @param uri uri or {@code null} for none
    */
   public RouteInfo setUri(java.lang.String uri) {

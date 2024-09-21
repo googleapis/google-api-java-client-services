@@ -10194,6 +10194,35 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
+       * Restore token used to differentiate soft-deleted objects with the same name and generation.
+       * Only applicable for hierarchical namespace buckets and if softDeleted is set to true. This
+       * parameter is optional, and is only required in the rare case when there are multiple soft-
+       * deleted objects with the same name and generation.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String restoreToken;
+
+      /** Restore token used to differentiate soft-deleted objects with the same name and generation. Only
+     applicable for hierarchical namespace buckets and if softDeleted is set to true. This parameter is
+     optional, and is only required in the rare case when there are multiple soft-deleted objects with
+     the same name and generation.
+       */
+      public java.lang.String getRestoreToken() {
+        return restoreToken;
+      }
+
+      /**
+       * Restore token used to differentiate soft-deleted objects with the same name and generation.
+       * Only applicable for hierarchical namespace buckets and if softDeleted is set to true. This
+       * parameter is optional, and is only required in the rare case when there are multiple soft-
+       * deleted objects with the same name and generation.
+       */
+      public Get setRestoreToken(java.lang.String restoreToken) {
+        this.restoreToken = restoreToken;
+        return this;
+      }
+
+      /**
        * If true, only soft-deleted object versions will be listed. The default is false. For more
        * information, see [Soft Delete](https://cloud.google.com/storage/docs/soft-delete).
        */
@@ -11817,6 +11846,34 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /** Set of properties to return. Defaults to full. */
       public Restore setProjection(java.lang.String projection) {
         this.projection = projection;
+        return this;
+      }
+
+      /**
+       * Restore token used to differentiate sof-deleted objects with the same name and generation.
+       * Only applicable for hierarchical namespace buckets. This parameter is optional, and is only
+       * required in the rare case when there are multiple soft-deleted objects with the same name
+       * and generation.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String restoreToken;
+
+      /** Restore token used to differentiate sof-deleted objects with the same name and generation. Only
+     applicable for hierarchical namespace buckets. This parameter is optional, and is only required in
+     the rare case when there are multiple soft-deleted objects with the same name and generation.
+       */
+      public java.lang.String getRestoreToken() {
+        return restoreToken;
+      }
+
+      /**
+       * Restore token used to differentiate sof-deleted objects with the same name and generation.
+       * Only applicable for hierarchical namespace buckets. This parameter is optional, and is only
+       * required in the rare case when there are multiple soft-deleted objects with the same name
+       * and generation.
+       */
+      public Restore setRestoreToken(java.lang.String restoreToken) {
+        this.restoreToken = restoreToken;
         return this;
       }
 

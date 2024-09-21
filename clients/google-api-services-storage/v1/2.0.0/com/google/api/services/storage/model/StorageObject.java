@@ -217,6 +217,14 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
   private Owner owner;
 
   /**
+   * Restore token used to differentiate deleted objects with the same name and generation. This
+   * field is only returned for deleted objects in hierarchical namespace buckets.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String restoreToken;
+
+  /**
    * A collection of object level retention parameters.
    * The value may be {@code null}.
    */
@@ -747,6 +755,25 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
    */
   public StorageObject setOwner(Owner owner) {
     this.owner = owner;
+    return this;
+  }
+
+  /**
+   * Restore token used to differentiate deleted objects with the same name and generation. This
+   * field is only returned for deleted objects in hierarchical namespace buckets.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRestoreToken() {
+    return restoreToken;
+  }
+
+  /**
+   * Restore token used to differentiate deleted objects with the same name and generation. This
+   * field is only returned for deleted objects in hierarchical namespace buckets.
+   * @param restoreToken restoreToken or {@code null} for none
+   */
+  public StorageObject setRestoreToken(java.lang.String restoreToken) {
+    this.restoreToken = restoreToken;
     return this;
   }
 

@@ -38,6 +38,14 @@ public final class AuthorizationCodeLink extends com.google.api.client.json.Gene
   private java.lang.String clientId;
 
   /**
+   * Optional. The client secret assigned to the Google Cloud Connectors OAuth app for the connector
+   * data source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Secret clientSecret;
+
+  /**
    * Whether to enable PKCE for the auth code flow.
    * The value may be {@code null}.
    */
@@ -80,6 +88,25 @@ public final class AuthorizationCodeLink extends com.google.api.client.json.Gene
    */
   public AuthorizationCodeLink setClientId(java.lang.String clientId) {
     this.clientId = clientId;
+    return this;
+  }
+
+  /**
+   * Optional. The client secret assigned to the Google Cloud Connectors OAuth app for the connector
+   * data source.
+   * @return value or {@code null} for none
+   */
+  public Secret getClientSecret() {
+    return clientSecret;
+  }
+
+  /**
+   * Optional. The client secret assigned to the Google Cloud Connectors OAuth app for the connector
+   * data source.
+   * @param clientSecret clientSecret or {@code null} for none
+   */
+  public AuthorizationCodeLink setClientSecret(Secret clientSecret) {
+    this.clientSecret = clientSecret;
     return this;
   }
 

@@ -103,6 +103,13 @@ public final class GoogleCloudAiplatformV1beta1RagFile extends com.google.api.cl
   private java.lang.String ragFileType;
 
   /**
+   * The RagFile is imported from a SharePoint source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1SharePointSources sharePointSources;
+
+  /**
    * Output only. The size of the RagFile in bytes.
    * The value may be {@code null}.
    */
@@ -296,6 +303,23 @@ public final class GoogleCloudAiplatformV1beta1RagFile extends com.google.api.cl
    */
   public GoogleCloudAiplatformV1beta1RagFile setRagFileType(java.lang.String ragFileType) {
     this.ragFileType = ragFileType;
+    return this;
+  }
+
+  /**
+   * The RagFile is imported from a SharePoint source.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SharePointSources getSharePointSources() {
+    return sharePointSources;
+  }
+
+  /**
+   * The RagFile is imported from a SharePoint source.
+   * @param sharePointSources sharePointSources or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagFile setSharePointSources(GoogleCloudAiplatformV1beta1SharePointSources sharePointSources) {
+    this.sharePointSources = sharePointSources;
     return this;
   }
 

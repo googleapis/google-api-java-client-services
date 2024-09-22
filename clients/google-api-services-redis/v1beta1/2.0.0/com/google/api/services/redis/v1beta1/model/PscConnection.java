@@ -31,14 +31,14 @@ package com.google.api.services.redis.v1beta1.model;
 public final class PscConnection extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The IP allocated on the consumer network for the PSC forwarding rule.
+   * Required. The IP allocated on the consumer network for the PSC forwarding rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String address;
 
   /**
-   * Output only. The URI of the consumer side forwarding rule. Example:
+   * Required. The URI of the consumer side forwarding rule. Example:
    * projects/{projectNumOrId}/regions/us-east1/forwardingRules/{resourceId}.
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   private java.lang.String forwardingRule;
 
   /**
-   * The consumer network where the IP address resides, in the form of
+   * Required. The consumer network where the IP address resides, in the form of
    * projects/{project_id}/global/networks/{network_id}.
    * The value may be {@code null}.
    */
@@ -54,21 +54,29 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   private java.lang.String network;
 
   /**
-   * Output only. The consumer project_id where the forwarding rule is created from.
+   * Optional. Project ID of the consumer project where the forwarding rule is created in.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * Output only. The PSC connection id of the forwarding rule connected to the service attachment.
+   * Optional. The PSC connection id of the forwarding rule connected to the service attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pscConnectionId;
 
   /**
-   * Output only. The IP allocated on the consumer network for the PSC forwarding rule.
+   * Required. The service attachment which is the target of the PSC connection, in the form of
+   * projects/{project-id}/regions/{region}/serviceAttachments/{service-attachment-id}.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAttachment;
+
+  /**
+   * Required. The IP allocated on the consumer network for the PSC forwarding rule.
    * @return value or {@code null} for none
    */
   public java.lang.String getAddress() {
@@ -76,7 +84,7 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The IP allocated on the consumer network for the PSC forwarding rule.
+   * Required. The IP allocated on the consumer network for the PSC forwarding rule.
    * @param address address or {@code null} for none
    */
   public PscConnection setAddress(java.lang.String address) {
@@ -85,7 +93,7 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The URI of the consumer side forwarding rule. Example:
+   * Required. The URI of the consumer side forwarding rule. Example:
    * projects/{projectNumOrId}/regions/us-east1/forwardingRules/{resourceId}.
    * @return value or {@code null} for none
    */
@@ -94,7 +102,7 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The URI of the consumer side forwarding rule. Example:
+   * Required. The URI of the consumer side forwarding rule. Example:
    * projects/{projectNumOrId}/regions/us-east1/forwardingRules/{resourceId}.
    * @param forwardingRule forwardingRule or {@code null} for none
    */
@@ -104,7 +112,7 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The consumer network where the IP address resides, in the form of
+   * Required. The consumer network where the IP address resides, in the form of
    * projects/{project_id}/global/networks/{network_id}.
    * @return value or {@code null} for none
    */
@@ -113,7 +121,7 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The consumer network where the IP address resides, in the form of
+   * Required. The consumer network where the IP address resides, in the form of
    * projects/{project_id}/global/networks/{network_id}.
    * @param network network or {@code null} for none
    */
@@ -123,7 +131,7 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The consumer project_id where the forwarding rule is created from.
+   * Optional. Project ID of the consumer project where the forwarding rule is created in.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -131,7 +139,7 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The consumer project_id where the forwarding rule is created from.
+   * Optional. Project ID of the consumer project where the forwarding rule is created in.
    * @param projectId projectId or {@code null} for none
    */
   public PscConnection setProjectId(java.lang.String projectId) {
@@ -140,7 +148,7 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The PSC connection id of the forwarding rule connected to the service attachment.
+   * Optional. The PSC connection id of the forwarding rule connected to the service attachment.
    * @return value or {@code null} for none
    */
   public java.lang.String getPscConnectionId() {
@@ -148,11 +156,30 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The PSC connection id of the forwarding rule connected to the service attachment.
+   * Optional. The PSC connection id of the forwarding rule connected to the service attachment.
    * @param pscConnectionId pscConnectionId or {@code null} for none
    */
   public PscConnection setPscConnectionId(java.lang.String pscConnectionId) {
     this.pscConnectionId = pscConnectionId;
+    return this;
+  }
+
+  /**
+   * Required. The service attachment which is the target of the PSC connection, in the form of
+   * projects/{project-id}/regions/{region}/serviceAttachments/{service-attachment-id}.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAttachment() {
+    return serviceAttachment;
+  }
+
+  /**
+   * Required. The service attachment which is the target of the PSC connection, in the form of
+   * projects/{project-id}/regions/{region}/serviceAttachments/{service-attachment-id}.
+   * @param serviceAttachment serviceAttachment or {@code null} for none
+   */
+  public PscConnection setServiceAttachment(java.lang.String serviceAttachment) {
+    this.serviceAttachment = serviceAttachment;
     return this;
   }
 

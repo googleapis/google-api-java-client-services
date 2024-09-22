@@ -121,7 +121,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.util.List<PscConfig> pscConfigs;
 
   /**
-   * Output only. PSC connections for discovery of the cluster topology and accessing the cluster.
+   * Output only. The list of PSC connections that are auto-created through service connectivity
+   * automation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -410,7 +411,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. PSC connections for discovery of the cluster topology and accessing the cluster.
+   * Output only. The list of PSC connections that are auto-created through service connectivity
+   * automation.
    * @return value or {@code null} for none
    */
   public java.util.List<PscConnection> getPscConnections() {
@@ -418,7 +420,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. PSC connections for discovery of the cluster topology and accessing the cluster.
+   * Output only. The list of PSC connections that are auto-created through service connectivity
+   * automation.
    * @param pscConnections pscConnections or {@code null} for none
    */
   public Cluster setPscConnections(java.util.List<PscConnection> pscConnections) {

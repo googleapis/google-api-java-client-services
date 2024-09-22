@@ -39,6 +39,16 @@ public final class Transaction extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
+   * A precommit token will be included in the response of a BeginTransaction request if the read-
+   * write transaction is on a multiplexed session and a mutation_key was specified in the
+   * BeginTransaction. The precommit token with the highest sequence number from this transaction
+   * attempt should be passed to the Commit request for this transaction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MultiplexedSessionPrecommitToken precommitToken;
+
+  /**
    * For snapshot read-only transactions, the read timestamp chosen for the transaction. Not
    * returned by default: see TransactionOptions.ReadOnly.return_read_timestamp. A timestamp in
    * RFC3339 UTC \"Zulu\" format, accurate to nanoseconds. Example:
@@ -98,6 +108,29 @@ public final class Transaction extends com.google.api.client.json.GenericJson {
    */
   public Transaction encodeId(byte[] id) {
     this.id = com.google.api.client.util.Base64.encodeBase64URLSafeString(id);
+    return this;
+  }
+
+  /**
+   * A precommit token will be included in the response of a BeginTransaction request if the read-
+   * write transaction is on a multiplexed session and a mutation_key was specified in the
+   * BeginTransaction. The precommit token with the highest sequence number from this transaction
+   * attempt should be passed to the Commit request for this transaction.
+   * @return value or {@code null} for none
+   */
+  public MultiplexedSessionPrecommitToken getPrecommitToken() {
+    return precommitToken;
+  }
+
+  /**
+   * A precommit token will be included in the response of a BeginTransaction request if the read-
+   * write transaction is on a multiplexed session and a mutation_key was specified in the
+   * BeginTransaction. The precommit token with the highest sequence number from this transaction
+   * attempt should be passed to the Commit request for this transaction.
+   * @param precommitToken precommitToken or {@code null} for none
+   */
+  public Transaction setPrecommitToken(MultiplexedSessionPrecommitToken precommitToken) {
+    this.precommitToken = precommitToken;
     return this;
   }
 

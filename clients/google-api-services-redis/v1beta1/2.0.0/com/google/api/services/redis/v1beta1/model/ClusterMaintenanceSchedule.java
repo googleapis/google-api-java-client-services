@@ -38,14 +38,6 @@ public final class ClusterMaintenanceSchedule extends com.google.api.client.json
   private String endTime;
 
   /**
-   * Output only. The deadline that the maintenance schedule start time can not go beyond, including
-   * reschedule.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String scheduleDeadlineTime;
-
-  /**
    * Output only. The start time of any upcoming scheduled maintenance for this instance.
    * The value may be {@code null}.
    */
@@ -66,25 +58,6 @@ public final class ClusterMaintenanceSchedule extends com.google.api.client.json
    */
   public ClusterMaintenanceSchedule setEndTime(String endTime) {
     this.endTime = endTime;
-    return this;
-  }
-
-  /**
-   * Output only. The deadline that the maintenance schedule start time can not go beyond, including
-   * reschedule.
-   * @return value or {@code null} for none
-   */
-  public String getScheduleDeadlineTime() {
-    return scheduleDeadlineTime;
-  }
-
-  /**
-   * Output only. The deadline that the maintenance schedule start time can not go beyond, including
-   * reschedule.
-   * @param scheduleDeadlineTime scheduleDeadlineTime or {@code null} for none
-   */
-  public ClusterMaintenanceSchedule setScheduleDeadlineTime(String scheduleDeadlineTime) {
-    this.scheduleDeadlineTime = scheduleDeadlineTime;
     return this;
   }
 

@@ -38,13 +38,6 @@ public final class ClusterWeeklyMaintenanceWindow extends com.google.api.client.
   private java.lang.String day;
 
   /**
-   * Duration of the time window.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String duration;
-
-  /**
    * Start time of the window in UTC.
    * The value may be {@code null}.
    */
@@ -65,23 +58,6 @@ public final class ClusterWeeklyMaintenanceWindow extends com.google.api.client.
    */
   public ClusterWeeklyMaintenanceWindow setDay(java.lang.String day) {
     this.day = day;
-    return this;
-  }
-
-  /**
-   * Duration of the time window.
-   * @return value or {@code null} for none
-   */
-  public String getDuration() {
-    return duration;
-  }
-
-  /**
-   * Duration of the time window.
-   * @param duration duration or {@code null} for none
-   */
-  public ClusterWeeklyMaintenanceWindow setDuration(String duration) {
-    this.duration = duration;
     return this;
   }
 

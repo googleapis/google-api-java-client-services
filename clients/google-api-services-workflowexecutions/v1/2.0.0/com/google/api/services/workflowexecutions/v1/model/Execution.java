@@ -123,7 +123,8 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   private java.lang.String result;
 
   /**
-   * Output only. Marks the beginning of execution.
+   * Output only. Marks the beginning of execution. Note that this will be the same as `createTime`
+   * for executions that start immediately.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -374,7 +375,8 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Marks the beginning of execution.
+   * Output only. Marks the beginning of execution. Note that this will be the same as `createTime`
+   * for executions that start immediately.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -382,7 +384,8 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Marks the beginning of execution.
+   * Output only. Marks the beginning of execution. Note that this will be the same as `createTime`
+   * for executions that start immediately.
    * @param startTime startTime or {@code null} for none
    */
   public Execution setStartTime(String startTime) {

@@ -32,6 +32,14 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1Schema extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The value should be validated against any (one or more) of the subschemas in the
+   * list.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1Schema> anyOf;
+
+  /**
    * Optional. Default value of the data.
    * The value may be {@code null}.
    */
@@ -182,6 +190,25 @@ public final class GoogleCloudAiplatformV1Schema extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Optional. The value should be validated against any (one or more) of the subschemas in the
+   * list.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1Schema> getAnyOf() {
+    return anyOf;
+  }
+
+  /**
+   * Optional. The value should be validated against any (one or more) of the subschemas in the
+   * list.
+   * @param anyOf anyOf or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Schema setAnyOf(java.util.List<GoogleCloudAiplatformV1Schema> anyOf) {
+    this.anyOf = anyOf;
+    return this;
+  }
 
   /**
    * Optional. Default value of the data.

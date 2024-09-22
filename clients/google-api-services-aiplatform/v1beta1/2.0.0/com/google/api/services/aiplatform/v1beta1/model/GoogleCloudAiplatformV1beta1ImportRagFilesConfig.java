@@ -94,6 +94,13 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
   private GoogleCloudAiplatformV1beta1RagFileParsingConfig ragFileParsingConfig;
 
   /**
+   * SharePoint sources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1SharePointSources sharePointSources;
+
+  /**
    * Slack channels with their corresponding access tokens.
    * The value may be {@code null}.
    */
@@ -249,6 +256,23 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
    */
   public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setRagFileParsingConfig(GoogleCloudAiplatformV1beta1RagFileParsingConfig ragFileParsingConfig) {
     this.ragFileParsingConfig = ragFileParsingConfig;
+    return this;
+  }
+
+  /**
+   * SharePoint sources.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SharePointSources getSharePointSources() {
+    return sharePointSources;
+  }
+
+  /**
+   * SharePoint sources.
+   * @param sharePointSources sharePointSources or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setSharePointSources(GoogleCloudAiplatformV1beta1SharePointSources sharePointSources) {
+    this.sharePointSources = sharePointSources;
     return this;
   }
 

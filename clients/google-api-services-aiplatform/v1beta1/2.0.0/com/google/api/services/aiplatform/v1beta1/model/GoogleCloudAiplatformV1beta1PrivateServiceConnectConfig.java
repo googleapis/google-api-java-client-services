@@ -37,6 +37,15 @@ public final class GoogleCloudAiplatformV1beta1PrivateServiceConnectConfig exten
   private java.lang.Boolean enablePrivateServiceConnect;
 
   /**
+   * Optional. If set to true, enable secure private service connect with IAM authorization.
+   * Otherwise, private service connect will be done without authorization. Note latency will be
+   * slightly increased if authorization is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableSecurePrivateServiceConnect;
+
+  /**
    * A list of Projects from which the forwarding rule will target the service attachment.
    * The value may be {@code null}.
    */
@@ -65,6 +74,27 @@ public final class GoogleCloudAiplatformV1beta1PrivateServiceConnectConfig exten
    */
   public GoogleCloudAiplatformV1beta1PrivateServiceConnectConfig setEnablePrivateServiceConnect(java.lang.Boolean enablePrivateServiceConnect) {
     this.enablePrivateServiceConnect = enablePrivateServiceConnect;
+    return this;
+  }
+
+  /**
+   * Optional. If set to true, enable secure private service connect with IAM authorization.
+   * Otherwise, private service connect will be done without authorization. Note latency will be
+   * slightly increased if authorization is enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableSecurePrivateServiceConnect() {
+    return enableSecurePrivateServiceConnect;
+  }
+
+  /**
+   * Optional. If set to true, enable secure private service connect with IAM authorization.
+   * Otherwise, private service connect will be done without authorization. Note latency will be
+   * slightly increased if authorization is enabled.
+   * @param enableSecurePrivateServiceConnect enableSecurePrivateServiceConnect or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PrivateServiceConnectConfig setEnableSecurePrivateServiceConnect(java.lang.Boolean enableSecurePrivateServiceConnect) {
+    this.enableSecurePrivateServiceConnect = enableSecurePrivateServiceConnect;
     return this;
   }
 

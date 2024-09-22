@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1.model;
 
 /**
- * Common model for database resource instance metadata.
+ * Common model for database resource instance metadata. Next ID: 21
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -149,6 +149,13 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceName;
+
+  /**
+   * Optional. Tags associated with this resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StorageDatabasecenterPartnerapiV1mainTags tagsSet;
 
   /**
    * The time at which the resource was updated and recorded at partner service.
@@ -451,6 +458,23 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setResourceName(java.lang.String resourceName) {
     this.resourceName = resourceName;
+    return this;
+  }
+
+  /**
+   * Optional. Tags associated with this resources.
+   * @return value or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainTags getTagsSet() {
+    return tagsSet;
+  }
+
+  /**
+   * Optional. Tags associated with this resources.
+   * @param tagsSet tagsSet or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setTagsSet(StorageDatabasecenterPartnerapiV1mainTags tagsSet) {
+    this.tagsSet = tagsSet;
     return this;
   }
 

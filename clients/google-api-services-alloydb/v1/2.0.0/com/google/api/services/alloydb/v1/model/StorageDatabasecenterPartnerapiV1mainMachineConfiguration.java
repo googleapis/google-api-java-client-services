@@ -44,6 +44,13 @@ public final class StorageDatabasecenterPartnerapiV1mainMachineConfiguration ext
   private java.lang.Long memorySizeInBytes;
 
   /**
+   * Optional. Number of shards (if applicable).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer shardCount;
+
+  /**
    * The number of CPUs. TODO(b/342344482, b/342346271) add proto validations again after bug fix.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class StorageDatabasecenterPartnerapiV1mainMachineConfiguration ext
    */
   public StorageDatabasecenterPartnerapiV1mainMachineConfiguration setMemorySizeInBytes(java.lang.Long memorySizeInBytes) {
     this.memorySizeInBytes = memorySizeInBytes;
+    return this;
+  }
+
+  /**
+   * Optional. Number of shards (if applicable).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getShardCount() {
+    return shardCount;
+  }
+
+  /**
+   * Optional. Number of shards (if applicable).
+   * @param shardCount shardCount or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainMachineConfiguration setShardCount(java.lang.Integer shardCount) {
+    this.shardCount = shardCount;
     return this;
   }
 

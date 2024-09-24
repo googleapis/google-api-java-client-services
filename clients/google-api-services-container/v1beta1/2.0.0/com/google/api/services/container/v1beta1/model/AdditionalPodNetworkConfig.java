@@ -39,6 +39,14 @@ public final class AdditionalPodNetworkConfig extends com.google.api.client.json
   private MaxPodsConstraint maxPodsPerNode;
 
   /**
+   * The name of the network attachment for pods to communicate to; cannot be specified along with
+   * subnetwork or secondary_pod_range.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String networkAttachment;
+
+  /**
    * The name of the secondary range on the subnet which provides IP address for this pod range.
    * The value may be {@code null}.
    */
@@ -66,6 +74,25 @@ public final class AdditionalPodNetworkConfig extends com.google.api.client.json
    */
   public AdditionalPodNetworkConfig setMaxPodsPerNode(MaxPodsConstraint maxPodsPerNode) {
     this.maxPodsPerNode = maxPodsPerNode;
+    return this;
+  }
+
+  /**
+   * The name of the network attachment for pods to communicate to; cannot be specified along with
+   * subnetwork or secondary_pod_range.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetworkAttachment() {
+    return networkAttachment;
+  }
+
+  /**
+   * The name of the network attachment for pods to communicate to; cannot be specified along with
+   * subnetwork or secondary_pod_range.
+   * @param networkAttachment networkAttachment or {@code null} for none
+   */
+  public AdditionalPodNetworkConfig setNetworkAttachment(java.lang.String networkAttachment) {
+    this.networkAttachment = networkAttachment;
     return this;
   }
 

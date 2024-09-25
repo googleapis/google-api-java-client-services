@@ -2200,6 +2200,155 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
+         * Manages overal generative question feature state -- enables toggling feature on and off.
+         *
+         * Create a request for the method "catalogs.getGenerativeQuestionFeature".
+         *
+         * This request holds the parameters needed by the retail server.  After setting any optional
+         * parameters, call the {@link GetGenerativeQuestionFeature#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param catalog Required. Resource name of the parent catalog. Format:
+         *        projects/{project}/locations/{location}/catalogs/{catalog}
+         * @return the request
+         */
+        public GetGenerativeQuestionFeature getGenerativeQuestionFeature(java.lang.String catalog) throws java.io.IOException {
+          GetGenerativeQuestionFeature result = new GetGenerativeQuestionFeature(catalog);
+          initialize(result);
+          return result;
+        }
+
+        public class GetGenerativeQuestionFeature extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaGenerativeQuestionsFeatureConfig> {
+
+          private static final String REST_PATH = "v2alpha/{+catalog}/generativeQuestionFeature";
+
+          private final java.util.regex.Pattern CATALOG_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+
+          /**
+           * Manages overal generative question feature state -- enables toggling feature on and off.
+           *
+           * Create a request for the method "catalogs.getGenerativeQuestionFeature".
+           *
+           * This request holds the parameters needed by the the retail server.  After setting any optional
+           * parameters, call the {@link GetGenerativeQuestionFeature#execute()} method to invoke the remote
+           * operation. <p> {@link GetGenerativeQuestionFeature#initialize(com.google.api.client.googleapis.
+           * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param catalog Required. Resource name of the parent catalog. Format:
+         *        projects/{project}/locations/{location}/catalogs/{catalog}
+           * @since 1.13
+           */
+          protected GetGenerativeQuestionFeature(java.lang.String catalog) {
+            super(CloudRetail.this, "GET", REST_PATH, null, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaGenerativeQuestionsFeatureConfig.class);
+            this.catalog = com.google.api.client.util.Preconditions.checkNotNull(catalog, "Required parameter catalog must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CATALOG_PATTERN.matcher(catalog).matches(),
+                  "Parameter catalog must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetGenerativeQuestionFeature set$Xgafv(java.lang.String $Xgafv) {
+            return (GetGenerativeQuestionFeature) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetGenerativeQuestionFeature setAccessToken(java.lang.String accessToken) {
+            return (GetGenerativeQuestionFeature) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetGenerativeQuestionFeature setAlt(java.lang.String alt) {
+            return (GetGenerativeQuestionFeature) super.setAlt(alt);
+          }
+
+          @Override
+          public GetGenerativeQuestionFeature setCallback(java.lang.String callback) {
+            return (GetGenerativeQuestionFeature) super.setCallback(callback);
+          }
+
+          @Override
+          public GetGenerativeQuestionFeature setFields(java.lang.String fields) {
+            return (GetGenerativeQuestionFeature) super.setFields(fields);
+          }
+
+          @Override
+          public GetGenerativeQuestionFeature setKey(java.lang.String key) {
+            return (GetGenerativeQuestionFeature) super.setKey(key);
+          }
+
+          @Override
+          public GetGenerativeQuestionFeature setOauthToken(java.lang.String oauthToken) {
+            return (GetGenerativeQuestionFeature) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetGenerativeQuestionFeature setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetGenerativeQuestionFeature) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetGenerativeQuestionFeature setQuotaUser(java.lang.String quotaUser) {
+            return (GetGenerativeQuestionFeature) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetGenerativeQuestionFeature setUploadType(java.lang.String uploadType) {
+            return (GetGenerativeQuestionFeature) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetGenerativeQuestionFeature setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetGenerativeQuestionFeature) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the parent catalog. Format:
+           * projects/{project}/locations/{location}/catalogs/{catalog}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String catalog;
+
+          /** Required. Resource name of the parent catalog. Format:
+         projects/{project}/locations/{location}/catalogs/{catalog}
+           */
+          public java.lang.String getCatalog() {
+            return catalog;
+          }
+
+          /**
+           * Required. Resource name of the parent catalog. Format:
+           * projects/{project}/locations/{location}/catalogs/{catalog}
+           */
+          public GetGenerativeQuestionFeature setCatalog(java.lang.String catalog) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CATALOG_PATTERN.matcher(catalog).matches(),
+                  "Parameter catalog must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+            }
+            this.catalog = catalog;
+            return this;
+          }
+
+          @Override
+          public GetGenerativeQuestionFeature set(String parameterName, Object value) {
+            return (GetGenerativeQuestionFeature) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists all the Catalogs associated with the project.
          *
          * Create a request for the method "catalogs.list".
@@ -3065,6 +3214,337 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           @Override
           public UpdateCompletionConfig set(String parameterName, Object value) {
             return (UpdateCompletionConfig) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Allows management of individual questions.
+         *
+         * Create a request for the method "catalogs.updateGenerativeQuestion".
+         *
+         * This request holds the parameters needed by the retail server.  After setting any optional
+         * parameters, call the {@link UpdateGenerativeQuestion#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param catalog Required. Resource name of the catalog. Format:
+         *        projects/{project}/locations/{location}/catalogs/{catalog}
+         * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaGenerativeQuestionConfig}
+         * @return the request
+         */
+        public UpdateGenerativeQuestion updateGenerativeQuestion(java.lang.String catalog, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaGenerativeQuestionConfig content) throws java.io.IOException {
+          UpdateGenerativeQuestion result = new UpdateGenerativeQuestion(catalog, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateGenerativeQuestion extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaGenerativeQuestionConfig> {
+
+          private static final String REST_PATH = "v2alpha/{+catalog}/generativeQuestion";
+
+          private final java.util.regex.Pattern CATALOG_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+
+          /**
+           * Allows management of individual questions.
+           *
+           * Create a request for the method "catalogs.updateGenerativeQuestion".
+           *
+           * This request holds the parameters needed by the the retail server.  After setting any optional
+           * parameters, call the {@link UpdateGenerativeQuestion#execute()} method to invoke the remote
+           * operation. <p> {@link UpdateGenerativeQuestion#initialize(com.google.api.client.googleapis.serv
+           * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param catalog Required. Resource name of the catalog. Format:
+         *        projects/{project}/locations/{location}/catalogs/{catalog}
+           * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaGenerativeQuestionConfig}
+           * @since 1.13
+           */
+          protected UpdateGenerativeQuestion(java.lang.String catalog, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaGenerativeQuestionConfig content) {
+            super(CloudRetail.this, "PATCH", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaGenerativeQuestionConfig.class);
+            this.catalog = com.google.api.client.util.Preconditions.checkNotNull(catalog, "Required parameter catalog must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CATALOG_PATTERN.matcher(catalog).matches(),
+                  "Parameter catalog must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+            }
+          }
+
+          @Override
+          public UpdateGenerativeQuestion set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateGenerativeQuestion) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateGenerativeQuestion setAccessToken(java.lang.String accessToken) {
+            return (UpdateGenerativeQuestion) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateGenerativeQuestion setAlt(java.lang.String alt) {
+            return (UpdateGenerativeQuestion) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateGenerativeQuestion setCallback(java.lang.String callback) {
+            return (UpdateGenerativeQuestion) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateGenerativeQuestion setFields(java.lang.String fields) {
+            return (UpdateGenerativeQuestion) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateGenerativeQuestion setKey(java.lang.String key) {
+            return (UpdateGenerativeQuestion) super.setKey(key);
+          }
+
+          @Override
+          public UpdateGenerativeQuestion setOauthToken(java.lang.String oauthToken) {
+            return (UpdateGenerativeQuestion) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateGenerativeQuestion setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateGenerativeQuestion) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateGenerativeQuestion setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateGenerativeQuestion) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateGenerativeQuestion setUploadType(java.lang.String uploadType) {
+            return (UpdateGenerativeQuestion) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateGenerativeQuestion setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateGenerativeQuestion) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the catalog. Format:
+           * projects/{project}/locations/{location}/catalogs/{catalog}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String catalog;
+
+          /** Required. Resource name of the catalog. Format:
+         projects/{project}/locations/{location}/catalogs/{catalog}
+           */
+          public java.lang.String getCatalog() {
+            return catalog;
+          }
+
+          /**
+           * Required. Resource name of the catalog. Format:
+           * projects/{project}/locations/{location}/catalogs/{catalog}
+           */
+          public UpdateGenerativeQuestion setCatalog(java.lang.String catalog) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CATALOG_PATTERN.matcher(catalog).matches(),
+                  "Parameter catalog must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+            }
+            this.catalog = catalog;
+            return this;
+          }
+
+          /**
+           * Optional. Indicates which fields in the provided GenerativeQuestionConfig to update.
+           * The following are NOT supported: * GenerativeQuestionConfig.frequency If not set or
+           * empty, all supported fields are updated.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Indicates which fields in the provided GenerativeQuestionConfig to update. The following
+         are NOT supported: * GenerativeQuestionConfig.frequency If not set or empty, all supported fields
+         are updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. Indicates which fields in the provided GenerativeQuestionConfig to update.
+           * The following are NOT supported: * GenerativeQuestionConfig.frequency If not set or
+           * empty, all supported fields are updated.
+           */
+          public UpdateGenerativeQuestion setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public UpdateGenerativeQuestion set(String parameterName, Object value) {
+            return (UpdateGenerativeQuestion) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Manages overal generative question feature state -- enables toggling feature on and off.
+         *
+         * Create a request for the method "catalogs.updateGenerativeQuestionFeature".
+         *
+         * This request holds the parameters needed by the retail server.  After setting any optional
+         * parameters, call the {@link UpdateGenerativeQuestionFeature#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param catalog Required. Resource name of the affected catalog. Format:
+         *        projects/{project}/locations/{location}/catalogs/{catalog}
+         * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaGenerativeQuestionsFeatureConfig}
+         * @return the request
+         */
+        public UpdateGenerativeQuestionFeature updateGenerativeQuestionFeature(java.lang.String catalog, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaGenerativeQuestionsFeatureConfig content) throws java.io.IOException {
+          UpdateGenerativeQuestionFeature result = new UpdateGenerativeQuestionFeature(catalog, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateGenerativeQuestionFeature extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaGenerativeQuestionsFeatureConfig> {
+
+          private static final String REST_PATH = "v2alpha/{+catalog}/generativeQuestionFeature";
+
+          private final java.util.regex.Pattern CATALOG_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+
+          /**
+           * Manages overal generative question feature state -- enables toggling feature on and off.
+           *
+           * Create a request for the method "catalogs.updateGenerativeQuestionFeature".
+           *
+           * This request holds the parameters needed by the the retail server.  After setting any optional
+           * parameters, call the {@link UpdateGenerativeQuestionFeature#execute()} method to invoke the
+           * remote operation. <p> {@link UpdateGenerativeQuestionFeature#initialize(com.google.api.client.g
+           * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param catalog Required. Resource name of the affected catalog. Format:
+         *        projects/{project}/locations/{location}/catalogs/{catalog}
+           * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaGenerativeQuestionsFeatureConfig}
+           * @since 1.13
+           */
+          protected UpdateGenerativeQuestionFeature(java.lang.String catalog, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaGenerativeQuestionsFeatureConfig content) {
+            super(CloudRetail.this, "PATCH", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaGenerativeQuestionsFeatureConfig.class);
+            this.catalog = com.google.api.client.util.Preconditions.checkNotNull(catalog, "Required parameter catalog must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CATALOG_PATTERN.matcher(catalog).matches(),
+                  "Parameter catalog must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+            }
+          }
+
+          @Override
+          public UpdateGenerativeQuestionFeature set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateGenerativeQuestionFeature) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateGenerativeQuestionFeature setAccessToken(java.lang.String accessToken) {
+            return (UpdateGenerativeQuestionFeature) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateGenerativeQuestionFeature setAlt(java.lang.String alt) {
+            return (UpdateGenerativeQuestionFeature) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateGenerativeQuestionFeature setCallback(java.lang.String callback) {
+            return (UpdateGenerativeQuestionFeature) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateGenerativeQuestionFeature setFields(java.lang.String fields) {
+            return (UpdateGenerativeQuestionFeature) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateGenerativeQuestionFeature setKey(java.lang.String key) {
+            return (UpdateGenerativeQuestionFeature) super.setKey(key);
+          }
+
+          @Override
+          public UpdateGenerativeQuestionFeature setOauthToken(java.lang.String oauthToken) {
+            return (UpdateGenerativeQuestionFeature) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateGenerativeQuestionFeature setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateGenerativeQuestionFeature) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateGenerativeQuestionFeature setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateGenerativeQuestionFeature) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateGenerativeQuestionFeature setUploadType(java.lang.String uploadType) {
+            return (UpdateGenerativeQuestionFeature) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateGenerativeQuestionFeature setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateGenerativeQuestionFeature) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the affected catalog. Format:
+           * projects/{project}/locations/{location}/catalogs/{catalog}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String catalog;
+
+          /** Required. Resource name of the affected catalog. Format:
+         projects/{project}/locations/{location}/catalogs/{catalog}
+           */
+          public java.lang.String getCatalog() {
+            return catalog;
+          }
+
+          /**
+           * Required. Resource name of the affected catalog. Format:
+           * projects/{project}/locations/{location}/catalogs/{catalog}
+           */
+          public UpdateGenerativeQuestionFeature setCatalog(java.lang.String catalog) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CATALOG_PATTERN.matcher(catalog).matches(),
+                  "Parameter catalog must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+            }
+            this.catalog = catalog;
+            return this;
+          }
+
+          /**
+           * Optional. Indicates which fields in the provided GenerativeQuestionsFeatureConfig to
+           * update. If not set or empty, all supported fields are updated.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Indicates which fields in the provided GenerativeQuestionsFeatureConfig to update. If not
+         set or empty, all supported fields are updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. Indicates which fields in the provided GenerativeQuestionsFeatureConfig to
+           * update. If not set or empty, all supported fields are updated.
+           */
+          public UpdateGenerativeQuestionFeature setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public UpdateGenerativeQuestionFeature set(String parameterName, Object value) {
+            return (UpdateGenerativeQuestionFeature) super.set(parameterName, value);
           }
         }
 
@@ -7749,6 +8229,337 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             @Override
             public Patch set(String parameterName, Object value) {
               return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the GenerativeQuestion collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudRetail retail = new CloudRetail(...);}
+         *   {@code CloudRetail.GenerativeQuestion.List request = retail.generativeQuestion().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public GenerativeQuestion generativeQuestion() {
+          return new GenerativeQuestion();
+        }
+
+        /**
+         * The "generativeQuestion" collection of methods.
+         */
+        public class GenerativeQuestion {
+
+          /**
+           * Allows management of multiple questions.
+           *
+           * Create a request for the method "generativeQuestion.batchUpdate".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link BatchUpdate#execute()} method to invoke the remote operation.
+           *
+           * @param parent Optional. Resource name of the parent catalog. Format:
+           *        projects/{project}/locations/{location}/catalogs/{catalog}
+           * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaBatchUpdateGenerativeQuestionConfigsRequest}
+           * @return the request
+           */
+          public BatchUpdate batchUpdate(java.lang.String parent, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaBatchUpdateGenerativeQuestionConfigsRequest content) throws java.io.IOException {
+            BatchUpdate result = new BatchUpdate(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BatchUpdate extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaBatchUpdateGenerativeQuestionConfigsResponse> {
+
+            private static final String REST_PATH = "v2alpha/{+parent}/generativeQuestion:batchUpdate";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+
+            /**
+             * Allows management of multiple questions.
+             *
+             * Create a request for the method "generativeQuestion.batchUpdate".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link BatchUpdate#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * BatchUpdate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Optional. Resource name of the parent catalog. Format:
+           *        projects/{project}/locations/{location}/catalogs/{catalog}
+             * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaBatchUpdateGenerativeQuestionConfigsRequest}
+             * @since 1.13
+             */
+            protected BatchUpdate(java.lang.String parent, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaBatchUpdateGenerativeQuestionConfigsRequest content) {
+              super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaBatchUpdateGenerativeQuestionConfigsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
+            }
+
+            @Override
+            public BatchUpdate set$Xgafv(java.lang.String $Xgafv) {
+              return (BatchUpdate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BatchUpdate setAccessToken(java.lang.String accessToken) {
+              return (BatchUpdate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BatchUpdate setAlt(java.lang.String alt) {
+              return (BatchUpdate) super.setAlt(alt);
+            }
+
+            @Override
+            public BatchUpdate setCallback(java.lang.String callback) {
+              return (BatchUpdate) super.setCallback(callback);
+            }
+
+            @Override
+            public BatchUpdate setFields(java.lang.String fields) {
+              return (BatchUpdate) super.setFields(fields);
+            }
+
+            @Override
+            public BatchUpdate setKey(java.lang.String key) {
+              return (BatchUpdate) super.setKey(key);
+            }
+
+            @Override
+            public BatchUpdate setOauthToken(java.lang.String oauthToken) {
+              return (BatchUpdate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BatchUpdate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BatchUpdate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BatchUpdate setQuotaUser(java.lang.String quotaUser) {
+              return (BatchUpdate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BatchUpdate setUploadType(java.lang.String uploadType) {
+              return (BatchUpdate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BatchUpdate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BatchUpdate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Optional. Resource name of the parent catalog. Format:
+             * projects/{project}/locations/{location}/catalogs/{catalog}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Optional. Resource name of the parent catalog. Format:
+           projects/{project}/locations/{location}/catalogs/{catalog}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Optional. Resource name of the parent catalog. Format:
+             * projects/{project}/locations/{location}/catalogs/{catalog}
+             */
+            public BatchUpdate setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public BatchUpdate set(String parameterName, Object value) {
+              return (BatchUpdate) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the GenerativeQuestions collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudRetail retail = new CloudRetail(...);}
+         *   {@code CloudRetail.GenerativeQuestions.List request = retail.generativeQuestions().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public GenerativeQuestions generativeQuestions() {
+          return new GenerativeQuestions();
+        }
+
+        /**
+         * The "generativeQuestions" collection of methods.
+         */
+        public class GenerativeQuestions {
+
+          /**
+           * Returns all questions for a given catalog.
+           *
+           * Create a request for the method "generativeQuestions.list".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Resource name of the parent catalog. Format:
+           *        projects/{project}/locations/{location}/catalogs/{catalog}
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaListGenerativeQuestionConfigsResponse> {
+
+            private static final String REST_PATH = "v2alpha/{+parent}/generativeQuestions";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+
+            /**
+             * Returns all questions for a given catalog.
+             *
+             * Create a request for the method "generativeQuestions.list".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Resource name of the parent catalog. Format:
+           *        projects/{project}/locations/{location}/catalogs/{catalog}
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudRetail.this, "GET", REST_PATH, null, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaListGenerativeQuestionConfigsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Resource name of the parent catalog. Format:
+             * projects/{project}/locations/{location}/catalogs/{catalog}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Resource name of the parent catalog. Format:
+           projects/{project}/locations/{location}/catalogs/{catalog}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Resource name of the parent catalog. Format:
+             * projects/{project}/locations/{location}/catalogs/{catalog}
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
             }
           }
 

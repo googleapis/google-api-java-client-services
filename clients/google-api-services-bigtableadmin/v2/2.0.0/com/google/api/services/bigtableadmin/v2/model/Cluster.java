@@ -71,6 +71,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Immutable. The node scaling factor of this cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nodeScalingFactor;
+
+  /**
    * The number of nodes in the cluster. If no value is set, Cloud Bigtable automatically allocates
    * nodes based on your data footprint and optimized for 50% storage utilization.
    * The value may be {@code null}.
@@ -175,6 +182,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Immutable. The node scaling factor of this cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNodeScalingFactor() {
+    return nodeScalingFactor;
+  }
+
+  /**
+   * Immutable. The node scaling factor of this cluster.
+   * @param nodeScalingFactor nodeScalingFactor or {@code null} for none
+   */
+  public Cluster setNodeScalingFactor(java.lang.String nodeScalingFactor) {
+    this.nodeScalingFactor = nodeScalingFactor;
     return this;
   }
 

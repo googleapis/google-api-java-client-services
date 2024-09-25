@@ -2502,6 +2502,29 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showEligibleModulesOnly;
+
+        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
+       be shown.
+         */
+        public java.lang.Boolean getShowEligibleModulesOnly() {
+          return showEligibleModulesOnly;
+        }
+
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
+          this.showEligibleModulesOnly = showEligibleModulesOnly;
+          return this;
+        }
+
         @Override
         public Calculate set(String parameterName, Object value) {
           return (Calculate) super.set(parameterName, value);
@@ -2688,6 +2711,29 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
                 "^folders/[^/]+/eventThreatDetectionSettings$");
           }
           this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showEligibleModulesOnly;
+
+        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
+       be shown.
+         */
+        public java.lang.Boolean getShowEligibleModulesOnly() {
+          return showEligibleModulesOnly;
+        }
+
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
+          this.showEligibleModulesOnly = showEligibleModulesOnly;
           return this;
         }
 
@@ -3071,6 +3117,29 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showEligibleModulesOnly;
+
+        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
+       be shown.
+         */
+        public java.lang.Boolean getShowEligibleModulesOnly() {
+          return showEligibleModulesOnly;
+        }
+
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
+          this.showEligibleModulesOnly = showEligibleModulesOnly;
+          return this;
+        }
+
         @Override
         public Calculate set(String parameterName, Object value) {
           return (Calculate) super.set(parameterName, value);
@@ -3261,6 +3330,29 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showEligibleModulesOnly;
+
+        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
+       be shown.
+         */
+        public java.lang.Boolean getShowEligibleModulesOnly() {
+          return showEligibleModulesOnly;
+        }
+
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
+          this.showEligibleModulesOnly = showEligibleModulesOnly;
+          return this;
+        }
+
         @Override
         public Calculate set(String parameterName, Object value) {
           return (Calculate) super.set(parameterName, value);
@@ -3447,6 +3539,29 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
                 "^folders/[^/]+/webSecurityScannerSettings$");
           }
           this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showEligibleModulesOnly;
+
+        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
+       be shown.
+         */
+        public java.lang.Boolean getShowEligibleModulesOnly() {
+          return showEligibleModulesOnly;
+        }
+
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
+          this.showEligibleModulesOnly = showEligibleModulesOnly;
           return this;
         }
 
@@ -5977,6 +6092,29 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showEligibleModulesOnly;
+
+        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
+       be shown.
+         */
+        public java.lang.Boolean getShowEligibleModulesOnly() {
+          return showEligibleModulesOnly;
+        }
+
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
+          this.showEligibleModulesOnly = showEligibleModulesOnly;
+          return this;
+        }
+
         @Override
         public Calculate set(String parameterName, Object value) {
           return (Calculate) super.set(parameterName, value);
@@ -6163,6 +6301,29 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
                 "^organizations/[^/]+/eventThreatDetectionSettings$");
           }
           this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showEligibleModulesOnly;
+
+        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
+       be shown.
+         */
+        public java.lang.Boolean getShowEligibleModulesOnly() {
+          return showEligibleModulesOnly;
+        }
+
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
+          this.showEligibleModulesOnly = showEligibleModulesOnly;
           return this;
         }
 
@@ -6546,6 +6707,29 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showEligibleModulesOnly;
+
+        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
+       be shown.
+         */
+        public java.lang.Boolean getShowEligibleModulesOnly() {
+          return showEligibleModulesOnly;
+        }
+
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
+          this.showEligibleModulesOnly = showEligibleModulesOnly;
+          return this;
+        }
+
         @Override
         public Calculate set(String parameterName, Object value) {
           return (Calculate) super.set(parameterName, value);
@@ -6736,6 +6920,29 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showEligibleModulesOnly;
+
+        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
+       be shown.
+         */
+        public java.lang.Boolean getShowEligibleModulesOnly() {
+          return showEligibleModulesOnly;
+        }
+
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
+          this.showEligibleModulesOnly = showEligibleModulesOnly;
+          return this;
+        }
+
         @Override
         public Calculate set(String parameterName, Object value) {
           return (Calculate) super.set(parameterName, value);
@@ -6922,6 +7129,29 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
                 "^organizations/[^/]+/webSecurityScannerSettings$");
           }
           this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showEligibleModulesOnly;
+
+        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
+       be shown.
+         */
+        public java.lang.Boolean getShowEligibleModulesOnly() {
+          return showEligibleModulesOnly;
+        }
+
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
+          this.showEligibleModulesOnly = showEligibleModulesOnly;
           return this;
         }
 
@@ -9303,6 +9533,29 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showEligibleModulesOnly;
+
+        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
+       be shown.
+         */
+        public java.lang.Boolean getShowEligibleModulesOnly() {
+          return showEligibleModulesOnly;
+        }
+
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
+          this.showEligibleModulesOnly = showEligibleModulesOnly;
+          return this;
+        }
+
         @Override
         public Calculate set(String parameterName, Object value) {
           return (Calculate) super.set(parameterName, value);
@@ -9489,6 +9742,29 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
                 "^projects/[^/]+/eventThreatDetectionSettings$");
           }
           this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showEligibleModulesOnly;
+
+        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
+       be shown.
+         */
+        public java.lang.Boolean getShowEligibleModulesOnly() {
+          return showEligibleModulesOnly;
+        }
+
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
+          this.showEligibleModulesOnly = showEligibleModulesOnly;
           return this;
         }
 
@@ -10072,6 +10348,29 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               return this;
             }
 
+            /**
+             * Optional. When set, will only retrieve the modules that are in scope. By default, all
+             * modules will be shown.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean showEligibleModulesOnly;
+
+            /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
+           be shown.
+             */
+            public java.lang.Boolean getShowEligibleModulesOnly() {
+              return showEligibleModulesOnly;
+            }
+
+            /**
+             * Optional. When set, will only retrieve the modules that are in scope. By default, all
+             * modules will be shown.
+             */
+            public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
+              this.showEligibleModulesOnly = showEligibleModulesOnly;
+              return this;
+            }
+
             @Override
             public Calculate set(String parameterName, Object value) {
               return (Calculate) super.set(parameterName, value);
@@ -10454,6 +10753,29 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showEligibleModulesOnly;
+
+        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
+       be shown.
+         */
+        public java.lang.Boolean getShowEligibleModulesOnly() {
+          return showEligibleModulesOnly;
+        }
+
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
+          this.showEligibleModulesOnly = showEligibleModulesOnly;
+          return this;
+        }
+
         @Override
         public Calculate set(String parameterName, Object value) {
           return (Calculate) super.set(parameterName, value);
@@ -10644,6 +10966,29 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showEligibleModulesOnly;
+
+        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
+       be shown.
+         */
+        public java.lang.Boolean getShowEligibleModulesOnly() {
+          return showEligibleModulesOnly;
+        }
+
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
+          this.showEligibleModulesOnly = showEligibleModulesOnly;
+          return this;
+        }
+
         @Override
         public Calculate set(String parameterName, Object value) {
           return (Calculate) super.set(parameterName, value);
@@ -10830,6 +11175,29 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
                 "^projects/[^/]+/webSecurityScannerSettings$");
           }
           this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showEligibleModulesOnly;
+
+        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
+       be shown.
+         */
+        public java.lang.Boolean getShowEligibleModulesOnly() {
+          return showEligibleModulesOnly;
+        }
+
+        /**
+         * Optional. When set, will only retrieve the modules that are in scope. By default, all
+         * modules will be shown.
+         */
+        public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
+          this.showEligibleModulesOnly = showEligibleModulesOnly;
           return this;
         }
 

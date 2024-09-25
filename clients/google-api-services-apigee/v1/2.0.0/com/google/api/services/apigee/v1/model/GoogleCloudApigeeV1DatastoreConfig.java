@@ -51,7 +51,7 @@ public final class GoogleCloudApigeeV1DatastoreConfig extends com.google.api.cli
   private java.lang.String path;
 
   /**
-   * Required. GCP project in which the datastore exists
+   * Required. Google Cloud project in which the datastore exists
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +116,7 @@ public final class GoogleCloudApigeeV1DatastoreConfig extends com.google.api.cli
   }
 
   /**
-   * Required. GCP project in which the datastore exists
+   * Required. Google Cloud project in which the datastore exists
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -124,7 +124,7 @@ public final class GoogleCloudApigeeV1DatastoreConfig extends com.google.api.cli
   }
 
   /**
-   * Required. GCP project in which the datastore exists
+   * Required. Google Cloud project in which the datastore exists
    * @param projectId projectId or {@code null} for none
    */
   public GoogleCloudApigeeV1DatastoreConfig setProjectId(java.lang.String projectId) {

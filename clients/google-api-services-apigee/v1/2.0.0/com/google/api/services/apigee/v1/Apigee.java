@@ -616,7 +616,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
        * after the initial delete operation completes. During this period, the Organization may be
        * restored to its last known state. After this period, the Organization will no longer be
        * able to be restored. **Note: During the data retention period specified using this field,
-       * the Apigee organization cannot be recreated in the same GCP project.**
+       * the Apigee organization cannot be recreated in the same Google Cloud project.**
        */
       @com.google.api.client.util.Key
       private java.lang.String retention;
@@ -626,7 +626,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
      initial delete operation completes. During this period, the Organization may be restored to its
      last known state. After this period, the Organization will no longer be able to be restored.
      **Note: During the data retention period specified using this field, the Apigee organization cannot
-     be recreated in the same GCP project.**
+     be recreated in the same Google Cloud project.**
        */
       public java.lang.String getRetention() {
         return retention;
@@ -638,7 +638,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
        * after the initial delete operation completes. During this period, the Organization may be
        * restored to its last known state. After this period, the Organization will no longer be
        * able to be restored. **Note: During the data retention period specified using this field,
-       * the Apigee organization cannot be recreated in the same GCP project.**
+       * the Apigee organization cannot be recreated in the same Google Cloud project.**
        */
       public Delete setRetention(java.lang.String retention) {
         this.retention = retention;

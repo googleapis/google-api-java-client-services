@@ -35,7 +35,8 @@ public final class ScreenBrightnessSettings extends com.google.api.client.json.G
    * brightness. A value of 0 (default) means no screen brightness set. Any other value is rejected.
    * screenBrightnessMode must be either BRIGHTNESS_AUTOMATIC or BRIGHTNESS_FIXED to set this.
    * Supported on Android 9 and above on fully managed devices. A NonComplianceDetail with API_LEVEL
-   * is reported if the Android version is less than 9.
+   * is reported if the Android version is less than 9. Supported on work profiles on company-owned
+   * devices on Android 15 and above.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +54,8 @@ public final class ScreenBrightnessSettings extends com.google.api.client.json.G
    * brightness. A value of 0 (default) means no screen brightness set. Any other value is rejected.
    * screenBrightnessMode must be either BRIGHTNESS_AUTOMATIC or BRIGHTNESS_FIXED to set this.
    * Supported on Android 9 and above on fully managed devices. A NonComplianceDetail with API_LEVEL
-   * is reported if the Android version is less than 9.
+   * is reported if the Android version is less than 9. Supported on work profiles on company-owned
+   * devices on Android 15 and above.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getScreenBrightness() {
@@ -65,7 +67,8 @@ public final class ScreenBrightnessSettings extends com.google.api.client.json.G
    * brightness. A value of 0 (default) means no screen brightness set. Any other value is rejected.
    * screenBrightnessMode must be either BRIGHTNESS_AUTOMATIC or BRIGHTNESS_FIXED to set this.
    * Supported on Android 9 and above on fully managed devices. A NonComplianceDetail with API_LEVEL
-   * is reported if the Android version is less than 9.
+   * is reported if the Android version is less than 9. Supported on work profiles on company-owned
+   * devices on Android 15 and above.
    * @param screenBrightness screenBrightness or {@code null} for none
    */
   public ScreenBrightnessSettings setScreenBrightness(java.lang.Integer screenBrightness) {

@@ -41,6 +41,13 @@ public final class CommonCriteriaModeInfo extends com.google.api.client.json.Gen
   private java.lang.String commonCriteriaModeStatus;
 
   /**
+   * Output only. The status of policy signature verification.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String policySignatureVerificationStatus;
+
+  /**
    * Whether Common Criteria Mode is enabled.
    * @return value or {@code null} for none
    */
@@ -54,6 +61,23 @@ public final class CommonCriteriaModeInfo extends com.google.api.client.json.Gen
    */
   public CommonCriteriaModeInfo setCommonCriteriaModeStatus(java.lang.String commonCriteriaModeStatus) {
     this.commonCriteriaModeStatus = commonCriteriaModeStatus;
+    return this;
+  }
+
+  /**
+   * Output only. The status of policy signature verification.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPolicySignatureVerificationStatus() {
+    return policySignatureVerificationStatus;
+  }
+
+  /**
+   * Output only. The status of policy signature verification.
+   * @param policySignatureVerificationStatus policySignatureVerificationStatus or {@code null} for none
+   */
+  public CommonCriteriaModeInfo setPolicySignatureVerificationStatus(java.lang.String policySignatureVerificationStatus) {
+    this.policySignatureVerificationStatus = policySignatureVerificationStatus;
     return this;
   }
 

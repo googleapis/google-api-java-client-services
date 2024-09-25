@@ -39,7 +39,8 @@ public final class ScreenTimeoutSettings extends com.google.api.client.json.Gene
    * timeout is less than a certain lower bound, it is set to the lower bound. The lower bound may
    * vary across devices. If this is set, screenTimeoutMode must be SCREEN_TIMEOUT_ENFORCED.
    * Supported on Android 9 and above on fully managed devices. A NonComplianceDetail with API_LEVEL
-   * is reported if the Android version is less than 9.
+   * is reported if the Android version is less than 9. Supported on work profiles on company-owned
+   * devices on Android 15 and above.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +62,8 @@ public final class ScreenTimeoutSettings extends com.google.api.client.json.Gene
    * timeout is less than a certain lower bound, it is set to the lower bound. The lower bound may
    * vary across devices. If this is set, screenTimeoutMode must be SCREEN_TIMEOUT_ENFORCED.
    * Supported on Android 9 and above on fully managed devices. A NonComplianceDetail with API_LEVEL
-   * is reported if the Android version is less than 9.
+   * is reported if the Android version is less than 9. Supported on work profiles on company-owned
+   * devices on Android 15 and above.
    * @return value or {@code null} for none
    */
   public String getScreenTimeout() {
@@ -77,7 +79,8 @@ public final class ScreenTimeoutSettings extends com.google.api.client.json.Gene
    * timeout is less than a certain lower bound, it is set to the lower bound. The lower bound may
    * vary across devices. If this is set, screenTimeoutMode must be SCREEN_TIMEOUT_ENFORCED.
    * Supported on Android 9 and above on fully managed devices. A NonComplianceDetail with API_LEVEL
-   * is reported if the Android version is less than 9.
+   * is reported if the Android version is less than 9. Supported on work profiles on company-owned
+   * devices on Android 15 and above.
    * @param screenTimeout screenTimeout or {@code null} for none
    */
   public ScreenTimeoutSettings setScreenTimeout(String screenTimeout) {

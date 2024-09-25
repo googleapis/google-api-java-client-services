@@ -33,12 +33,12 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
   /**
    * Controls Common Criteria Mode—security standards defined in the Common Criteria for Information
    * Technology Security Evaluation (https://www.commoncriteriaportal.org/) (CC). Enabling Common
-   * Criteria Mode increases certain security components on a device, including AES-GCM encryption
-   * of Bluetooth Long Term Keys, and Wi-Fi configuration stores.Common Criteria Mode is only
-   * supported on company-owned devices running Android 11 or above.Warning: Common Criteria Mode
-   * enforces a strict security model typically only required for IT products used in national
-   * security systems and other highly sensitive organizations. Standard device use may be affected.
-   * Only enabled if required.
+   * Criteria Mode increases certain security components on a device, see CommonCriteriaMode for
+   * details.Warning: Common Criteria Mode enforces a strict security model typically only required
+   * for IT products used in national security systems and other highly sensitive organizations.
+   * Standard device use may be affected. Only enabled if required. If Common Criteria Mode is
+   * turned off after being enabled previously, all user-configured Wi-Fi networks may be lost and
+   * any enterprise-configured Wi-Fi networks that require user input may need to be reconfigured.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,12 +98,12 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
   /**
    * Controls Common Criteria Mode—security standards defined in the Common Criteria for Information
    * Technology Security Evaluation (https://www.commoncriteriaportal.org/) (CC). Enabling Common
-   * Criteria Mode increases certain security components on a device, including AES-GCM encryption
-   * of Bluetooth Long Term Keys, and Wi-Fi configuration stores.Common Criteria Mode is only
-   * supported on company-owned devices running Android 11 or above.Warning: Common Criteria Mode
-   * enforces a strict security model typically only required for IT products used in national
-   * security systems and other highly sensitive organizations. Standard device use may be affected.
-   * Only enabled if required.
+   * Criteria Mode increases certain security components on a device, see CommonCriteriaMode for
+   * details.Warning: Common Criteria Mode enforces a strict security model typically only required
+   * for IT products used in national security systems and other highly sensitive organizations.
+   * Standard device use may be affected. Only enabled if required. If Common Criteria Mode is
+   * turned off after being enabled previously, all user-configured Wi-Fi networks may be lost and
+   * any enterprise-configured Wi-Fi networks that require user input may need to be reconfigured.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommonCriteriaMode() {
@@ -113,12 +113,12 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
   /**
    * Controls Common Criteria Mode—security standards defined in the Common Criteria for Information
    * Technology Security Evaluation (https://www.commoncriteriaportal.org/) (CC). Enabling Common
-   * Criteria Mode increases certain security components on a device, including AES-GCM encryption
-   * of Bluetooth Long Term Keys, and Wi-Fi configuration stores.Common Criteria Mode is only
-   * supported on company-owned devices running Android 11 or above.Warning: Common Criteria Mode
-   * enforces a strict security model typically only required for IT products used in national
-   * security systems and other highly sensitive organizations. Standard device use may be affected.
-   * Only enabled if required.
+   * Criteria Mode increases certain security components on a device, see CommonCriteriaMode for
+   * details.Warning: Common Criteria Mode enforces a strict security model typically only required
+   * for IT products used in national security systems and other highly sensitive organizations.
+   * Standard device use may be affected. Only enabled if required. If Common Criteria Mode is
+   * turned off after being enabled previously, all user-configured Wi-Fi networks may be lost and
+   * any enterprise-configured Wi-Fi networks that require user input may need to be reconfigured.
    * @param commonCriteriaMode commonCriteriaMode or {@code null} for none
    */
   public AdvancedSecurityOverrides setCommonCriteriaMode(java.lang.String commonCriteriaMode) {

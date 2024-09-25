@@ -47,7 +47,7 @@ public final class SpreadsheetProperties extends com.google.api.client.json.Gene
   /**
    * Whether to allow external URL access for image and import functions. Read only when true. When
    * false, you can set to true. This value will be bypassed and always return true if the admin has
-   * enabled the allowlisting feature.
+   * enabled the [allowlisting feature](https://support.google.com/a?p=url_allowlist).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,7 +132,7 @@ public final class SpreadsheetProperties extends com.google.api.client.json.Gene
   /**
    * Whether to allow external URL access for image and import functions. Read only when true. When
    * false, you can set to true. This value will be bypassed and always return true if the admin has
-   * enabled the allowlisting feature.
+   * enabled the [allowlisting feature](https://support.google.com/a?p=url_allowlist).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getImportFunctionsExternalUrlAccessAllowed() {
@@ -142,7 +142,7 @@ public final class SpreadsheetProperties extends com.google.api.client.json.Gene
   /**
    * Whether to allow external URL access for image and import functions. Read only when true. When
    * false, you can set to true. This value will be bypassed and always return true if the admin has
-   * enabled the allowlisting feature.
+   * enabled the [allowlisting feature](https://support.google.com/a?p=url_allowlist).
    * @param importFunctionsExternalUrlAccessAllowed importFunctionsExternalUrlAccessAllowed or {@code null} for none
    */
   public SpreadsheetProperties setImportFunctionsExternalUrlAccessAllowed(java.lang.Boolean importFunctionsExternalUrlAccessAllowed) {

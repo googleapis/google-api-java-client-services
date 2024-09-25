@@ -36,7 +36,9 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
 
   /**
    * Output only. The end of the current commitment period. It is applicable only for ACTIVE
-   * capacity commitments.
+   * capacity commitments. Note after renewal, commitment_end_time is the time the renewed
+   * commitment expires. So itwould be at a time after commitment_start_time + committed period,
+   * because we don't change commitment_start_time ,
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +46,8 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
 
   /**
    * Output only. The start of the current commitment period. It is applicable only for ACTIVE
-   * capacity commitments.
+   * capacity commitments. Note after the commitment is renewed, commitment_start_time won't be
+   * changed. It refers to the start time of the original commitment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +128,9 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
 
   /**
    * Output only. The end of the current commitment period. It is applicable only for ACTIVE
-   * capacity commitments.
+   * capacity commitments. Note after renewal, commitment_end_time is the time the renewed
+   * commitment expires. So itwould be at a time after commitment_start_time + committed period,
+   * because we don't change commitment_start_time ,
    * @return value or {@code null} for none
    */
   public String getCommitmentEndTime() {
@@ -134,7 +139,9 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
 
   /**
    * Output only. The end of the current commitment period. It is applicable only for ACTIVE
-   * capacity commitments.
+   * capacity commitments. Note after renewal, commitment_end_time is the time the renewed
+   * commitment expires. So itwould be at a time after commitment_start_time + committed period,
+   * because we don't change commitment_start_time ,
    * @param commitmentEndTime commitmentEndTime or {@code null} for none
    */
   public CapacityCommitment setCommitmentEndTime(String commitmentEndTime) {
@@ -144,7 +151,8 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
 
   /**
    * Output only. The start of the current commitment period. It is applicable only for ACTIVE
-   * capacity commitments.
+   * capacity commitments. Note after the commitment is renewed, commitment_start_time won't be
+   * changed. It refers to the start time of the original commitment.
    * @return value or {@code null} for none
    */
   public String getCommitmentStartTime() {
@@ -153,7 +161,8 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
 
   /**
    * Output only. The start of the current commitment period. It is applicable only for ACTIVE
-   * capacity commitments.
+   * capacity commitments. Note after the commitment is renewed, commitment_start_time won't be
+   * changed. It refers to the start time of the original commitment.
    * @param commitmentStartTime commitmentStartTime or {@code null} for none
    */
   public CapacityCommitment setCommitmentStartTime(String commitmentStartTime) {

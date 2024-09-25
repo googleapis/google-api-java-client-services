@@ -35,6 +35,9 @@ public class MapsPlacesScopes {
   /** Private Service: https://www.googleapis.com/auth/maps-platform.places.details. */
   public static final String MAPS_PLATFORM_PLACES_DETAILS = "https://www.googleapis.com/auth/maps-platform.places.details";
 
+  /** Private Service: https://www.googleapis.com/auth/maps-platform.places.getphotomedia. */
+  public static final String MAPS_PLATFORM_PLACES_GETPHOTOMEDIA = "https://www.googleapis.com/auth/maps-platform.places.getphotomedia";
+
   /** Private Service: https://www.googleapis.com/auth/maps-platform.places.nearbysearch. */
   public static final String MAPS_PLATFORM_PLACES_NEARBYSEARCH = "https://www.googleapis.com/auth/maps-platform.places.nearbysearch";
 
@@ -52,6 +55,7 @@ public class MapsPlacesScopes {
     set.add(MAPS_PLATFORM_PLACES);
     set.add(MAPS_PLATFORM_PLACES_AUTOCOMPLETE);
     set.add(MAPS_PLATFORM_PLACES_DETAILS);
+    set.add(MAPS_PLATFORM_PLACES_GETPHOTOMEDIA);
     set.add(MAPS_PLATFORM_PLACES_NEARBYSEARCH);
     set.add(MAPS_PLATFORM_PLACES_TEXTSEARCH);
     return java.util.Collections.unmodifiableSet(set);

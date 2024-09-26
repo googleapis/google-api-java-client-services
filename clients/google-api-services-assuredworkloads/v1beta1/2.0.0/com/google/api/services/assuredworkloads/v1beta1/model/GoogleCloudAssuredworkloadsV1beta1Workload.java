@@ -31,6 +31,13 @@ package com.google.api.services.assuredworkloads.v1beta1.model;
 public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The number of updates available for the workload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer availableUpdates;
+
+  /**
    * Optional. The billing account used for the resources which are direct children of workload.
    * This billing account is initially associated with the resources created as part of Workload
    * creation. After the initial creation of these resources, the customer can change the assigned
@@ -250,6 +257,23 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean violationNotificationsEnabled;
+
+  /**
+   * Output only. The number of updates available for the workload.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAvailableUpdates() {
+    return availableUpdates;
+  }
+
+  /**
+   * Output only. The number of updates available for the workload.
+   * @param availableUpdates availableUpdates or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1Workload setAvailableUpdates(java.lang.Integer availableUpdates) {
+    this.availableUpdates = availableUpdates;
+    return this;
+  }
 
   /**
    * Optional. The billing account used for the resources which are direct children of workload.

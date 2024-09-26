@@ -1648,7 +1648,8 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
          * This request holds the parameters needed by the privateca server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The resource name for this CaPool in the format `projects/locations/caPools`.
+         * @param name Output only. Identifier. The resource name for this CaPool in the format
+         *        `projects/locations/caPools`.
          * @param content the {@link com.google.api.services.privateca.v1.model.CaPool}
          * @return the request
          */
@@ -1676,7 +1677,8 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The resource name for this CaPool in the format `projects/locations/caPools`.
+           * @param name Output only. Identifier. The resource name for this CaPool in the format
+         *        `projects/locations/caPools`.
            * @param content the {@link com.google.api.services.privateca.v1.model.CaPool}
            * @since 1.13
            */
@@ -1746,20 +1748,21 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
           }
 
           /**
-           * Output only. The resource name for this CaPool in the format
+           * Output only. Identifier. The resource name for this CaPool in the format
            * `projects/locations/caPools`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The resource name for this CaPool in the format `projects/locations/caPools`.
+          /** Output only. Identifier. The resource name for this CaPool in the format
+         `projects/locations/caPools`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Output only. The resource name for this CaPool in the format
+           * Output only. Identifier. The resource name for this CaPool in the format
            * `projects/locations/caPools`.
            */
           public Patch setName(java.lang.String name) {

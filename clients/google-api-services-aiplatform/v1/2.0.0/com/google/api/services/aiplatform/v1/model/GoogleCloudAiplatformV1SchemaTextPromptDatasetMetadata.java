@@ -58,6 +58,13 @@ public final class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extend
   private java.lang.Boolean hasPromptVariable;
 
   /**
+   * Whether or not the user has enabled logit probabilities in the model parameters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean logprobs;
+
+  /**
    * Value of the maximum number of tokens generated set when the dataset was saved.
    * The value may be {@code null}.
    */
@@ -77,6 +84,21 @@ public final class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extend
    */
   @com.google.api.client.util.Key
   private java.lang.String promptType;
+
+  /**
+   * Seeding enables model to return a deterministic response on a best effort basis. Determinism
+   * isn't guaranteed. This field determines whether or not seeding is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean seedEnabled;
+
+  /**
+   * The actual value of the seed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long seedValue;
 
   /**
    * Customized stop sequences.
@@ -199,6 +221,23 @@ public final class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extend
   }
 
   /**
+   * Whether or not the user has enabled logit probabilities in the model parameters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLogprobs() {
+    return logprobs;
+  }
+
+  /**
+   * Whether or not the user has enabled logit probabilities in the model parameters.
+   * @param logprobs logprobs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata setLogprobs(java.lang.Boolean logprobs) {
+    this.logprobs = logprobs;
+    return this;
+  }
+
+  /**
    * Value of the maximum number of tokens generated set when the dataset was saved.
    * @return value or {@code null} for none
    */
@@ -246,6 +285,42 @@ public final class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extend
    */
   public GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata setPromptType(java.lang.String promptType) {
     this.promptType = promptType;
+    return this;
+  }
+
+  /**
+   * Seeding enables model to return a deterministic response on a best effort basis. Determinism
+   * isn't guaranteed. This field determines whether or not seeding is enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSeedEnabled() {
+    return seedEnabled;
+  }
+
+  /**
+   * Seeding enables model to return a deterministic response on a best effort basis. Determinism
+   * isn't guaranteed. This field determines whether or not seeding is enabled.
+   * @param seedEnabled seedEnabled or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata setSeedEnabled(java.lang.Boolean seedEnabled) {
+    this.seedEnabled = seedEnabled;
+    return this;
+  }
+
+  /**
+   * The actual value of the seed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getSeedValue() {
+    return seedValue;
+  }
+
+  /**
+   * The actual value of the seed.
+   * @param seedValue seedValue or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata setSeedValue(java.lang.Long seedValue) {
+    this.seedValue = seedValue;
     return this;
   }
 

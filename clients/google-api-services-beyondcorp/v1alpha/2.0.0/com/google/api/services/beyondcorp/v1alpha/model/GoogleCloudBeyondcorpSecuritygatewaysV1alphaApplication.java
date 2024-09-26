@@ -37,7 +37,8 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication exten
   private String createTime;
 
   /**
-   * Optional. An arbitrary user-provided name for the Route resource. Cannot exceed 64 characters.
+   * Optional. An arbitrary user-provided name for the Application resource. Cannot exceed 64
+   * characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +88,8 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication exten
   }
 
   /**
-   * Optional. An arbitrary user-provided name for the Route resource. Cannot exceed 64 characters.
+   * Optional. An arbitrary user-provided name for the Application resource. Cannot exceed 64
+   * characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -95,7 +97,8 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication exten
   }
 
   /**
-   * Optional. An arbitrary user-provided name for the Route resource. Cannot exceed 64 characters.
+   * Optional. An arbitrary user-provided name for the Application resource. Cannot exceed 64
+   * characters.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1alphaApplication setDisplayName(java.lang.String displayName) {

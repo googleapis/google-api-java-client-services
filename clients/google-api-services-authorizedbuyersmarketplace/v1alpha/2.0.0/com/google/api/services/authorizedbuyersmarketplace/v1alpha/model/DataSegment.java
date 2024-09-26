@@ -34,7 +34,8 @@ public final class DataSegment extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. This will be charged when other accounts use this data segment. For example, when
-   * other accounts add this data segment to a deal or auction package.
+   * other accounts add this data segment to a deal or auction package. Once set, the currency code
+   * cannot be changed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +73,8 @@ public final class DataSegment extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. This will be charged when other accounts use this data segment. For example, when
-   * other accounts add this data segment to a deal or auction package.
+   * other accounts add this data segment to a deal or auction package. Once set, the currency code
+   * cannot be changed.
    * @return value or {@code null} for none
    */
   public Money getCpmFee() {
@@ -81,7 +83,8 @@ public final class DataSegment extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. This will be charged when other accounts use this data segment. For example, when
-   * other accounts add this data segment to a deal or auction package.
+   * other accounts add this data segment to a deal or auction package. Once set, the currency code
+   * cannot be changed.
    * @param cpmFee cpmFee or {@code null} for none
    */
   public DataSegment setCpmFee(Money cpmFee) {

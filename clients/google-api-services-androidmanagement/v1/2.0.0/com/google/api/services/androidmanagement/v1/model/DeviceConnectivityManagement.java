@@ -64,6 +64,13 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
   private java.lang.String wifiDirectSettings;
 
   /**
+   * Optional. Wi-Fi roaming policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WifiRoamingPolicy wifiRoamingPolicy;
+
+  /**
    * Restrictions on which Wi-Fi SSIDs the device can connect to. Note that this does not affect
    * which networks can be configured on the device. Supported on company-owned devices running
    * Android 13 and above.
@@ -145,6 +152,23 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
    */
   public DeviceConnectivityManagement setWifiDirectSettings(java.lang.String wifiDirectSettings) {
     this.wifiDirectSettings = wifiDirectSettings;
+    return this;
+  }
+
+  /**
+   * Optional. Wi-Fi roaming policy.
+   * @return value or {@code null} for none
+   */
+  public WifiRoamingPolicy getWifiRoamingPolicy() {
+    return wifiRoamingPolicy;
+  }
+
+  /**
+   * Optional. Wi-Fi roaming policy.
+   * @param wifiRoamingPolicy wifiRoamingPolicy or {@code null} for none
+   */
+  public DeviceConnectivityManagement setWifiRoamingPolicy(WifiRoamingPolicy wifiRoamingPolicy) {
+    this.wifiRoamingPolicy = wifiRoamingPolicy;
     return this;
   }
 

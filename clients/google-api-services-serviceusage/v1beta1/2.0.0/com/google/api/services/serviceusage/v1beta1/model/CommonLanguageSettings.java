@@ -45,6 +45,13 @@ public final class CommonLanguageSettings extends com.google.api.client.json.Gen
   private java.lang.String referenceDocsUri;
 
   /**
+   * Configuration for which RPCs should be generated in the GAPIC client.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SelectiveGapicGeneration selectiveGapicGeneration;
+
+  /**
    * The destination where API teams want this client library to be published.
    * @return value or {@code null} for none
    */
@@ -77,6 +84,23 @@ public final class CommonLanguageSettings extends com.google.api.client.json.Gen
    */
   public CommonLanguageSettings setReferenceDocsUri(java.lang.String referenceDocsUri) {
     this.referenceDocsUri = referenceDocsUri;
+    return this;
+  }
+
+  /**
+   * Configuration for which RPCs should be generated in the GAPIC client.
+   * @return value or {@code null} for none
+   */
+  public SelectiveGapicGeneration getSelectiveGapicGeneration() {
+    return selectiveGapicGeneration;
+  }
+
+  /**
+   * Configuration for which RPCs should be generated in the GAPIC client.
+   * @param selectiveGapicGeneration selectiveGapicGeneration or {@code null} for none
+   */
+  public CommonLanguageSettings setSelectiveGapicGeneration(SelectiveGapicGeneration selectiveGapicGeneration) {
+    this.selectiveGapicGeneration = selectiveGapicGeneration;
     return this;
   }
 

@@ -37,6 +37,20 @@ public final class IngestionDataSourceSettings extends com.google.api.client.jso
   private AwsKinesis awsKinesis;
 
   /**
+   * Optional. Cloud Storage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudStorage cloudStorage;
+
+  /**
+   * Optional. Platform Logs settings. If unset, no Platform Logs will be generated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PlatformLogsSettings platformLogsSettings;
+
+  /**
    * Optional. Amazon Kinesis Data Streams.
    * @return value or {@code null} for none
    */
@@ -50,6 +64,40 @@ public final class IngestionDataSourceSettings extends com.google.api.client.jso
    */
   public IngestionDataSourceSettings setAwsKinesis(AwsKinesis awsKinesis) {
     this.awsKinesis = awsKinesis;
+    return this;
+  }
+
+  /**
+   * Optional. Cloud Storage.
+   * @return value or {@code null} for none
+   */
+  public CloudStorage getCloudStorage() {
+    return cloudStorage;
+  }
+
+  /**
+   * Optional. Cloud Storage.
+   * @param cloudStorage cloudStorage or {@code null} for none
+   */
+  public IngestionDataSourceSettings setCloudStorage(CloudStorage cloudStorage) {
+    this.cloudStorage = cloudStorage;
+    return this;
+  }
+
+  /**
+   * Optional. Platform Logs settings. If unset, no Platform Logs will be generated.
+   * @return value or {@code null} for none
+   */
+  public PlatformLogsSettings getPlatformLogsSettings() {
+    return platformLogsSettings;
+  }
+
+  /**
+   * Optional. Platform Logs settings. If unset, no Platform Logs will be generated.
+   * @param platformLogsSettings platformLogsSettings or {@code null} for none
+   */
+  public IngestionDataSourceSettings setPlatformLogsSettings(PlatformLogsSettings platformLogsSettings) {
+    this.platformLogsSettings = platformLogsSettings;
     return this;
   }
 

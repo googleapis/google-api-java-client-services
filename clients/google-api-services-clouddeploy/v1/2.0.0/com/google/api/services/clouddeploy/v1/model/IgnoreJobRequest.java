@@ -37,6 +37,14 @@ public final class IgnoreJobRequest extends com.google.api.client.json.GenericJs
   private java.lang.String jobId;
 
   /**
+   * Optional. Deploy policies to override. Format is
+   * `projects/{project}/locations/{location}/deployPolicies/{deployPolicy}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> overrideDeployPolicy;
+
+  /**
    * Required. The phase ID the Job to ignore belongs to.
    * The value may be {@code null}.
    */
@@ -57,6 +65,25 @@ public final class IgnoreJobRequest extends com.google.api.client.json.GenericJs
    */
   public IgnoreJobRequest setJobId(java.lang.String jobId) {
     this.jobId = jobId;
+    return this;
+  }
+
+  /**
+   * Optional. Deploy policies to override. Format is
+   * `projects/{project}/locations/{location}/deployPolicies/{deployPolicy}`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getOverrideDeployPolicy() {
+    return overrideDeployPolicy;
+  }
+
+  /**
+   * Optional. Deploy policies to override. Format is
+   * `projects/{project}/locations/{location}/deployPolicies/{deployPolicy}`.
+   * @param overrideDeployPolicy overrideDeployPolicy or {@code null} for none
+   */
+  public IgnoreJobRequest setOverrideDeployPolicy(java.util.List<java.lang.String> overrideDeployPolicy) {
+    this.overrideDeployPolicy = overrideDeployPolicy;
     return this;
   }
 

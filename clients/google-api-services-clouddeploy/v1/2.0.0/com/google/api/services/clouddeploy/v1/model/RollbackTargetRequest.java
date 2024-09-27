@@ -30,6 +30,14 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class RollbackTargetRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Deploy policies to override. Format is
+   * `projects/{project}/locations/{location}/deployPolicies/{deploy_policy}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> overrideDeployPolicy;
+
+  /**
    * Optional. ID of the `Release` to roll back to. If this isn't specified, the previous successful
    * `Rollout` to the specified target will be used to determine the `Release`.
    * The value may be {@code null}.
@@ -72,6 +80,25 @@ public final class RollbackTargetRequest extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean validateOnly;
+
+  /**
+   * Optional. Deploy policies to override. Format is
+   * `projects/{project}/locations/{location}/deployPolicies/{deploy_policy}`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getOverrideDeployPolicy() {
+    return overrideDeployPolicy;
+  }
+
+  /**
+   * Optional. Deploy policies to override. Format is
+   * `projects/{project}/locations/{location}/deployPolicies/{deploy_policy}`.
+   * @param overrideDeployPolicy overrideDeployPolicy or {@code null} for none
+   */
+  public RollbackTargetRequest setOverrideDeployPolicy(java.util.List<java.lang.String> overrideDeployPolicy) {
+    this.overrideDeployPolicy = overrideDeployPolicy;
+    return this;
+  }
 
   /**
    * Optional. ID of the `Release` to roll back to. If this isn't specified, the previous successful

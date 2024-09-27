@@ -17,7 +17,8 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * The request object used by `TerminateJobRun`.
+ * Returned from an action if one or more policies were violated, and therefore the action was
+ * prevented. Contains information about what policies were violated and why.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
@@ -27,43 +28,40 @@ package com.google.api.services.clouddeploy.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class TerminateJobRunRequest extends com.google.api.client.json.GenericJson {
+public final class PolicyViolation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Deploy policies to override. Format is
-   * `projects/{project}/locations/{location}/deployPolicies/{deployPolicy}`.
+   * Policy violation details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> overrideDeployPolicy;
+  private java.util.List<PolicyViolationDetails> policyViolationDetails;
 
   /**
-   * Optional. Deploy policies to override. Format is
-   * `projects/{project}/locations/{location}/deployPolicies/{deployPolicy}`.
+   * Policy violation details.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getOverrideDeployPolicy() {
-    return overrideDeployPolicy;
+  public java.util.List<PolicyViolationDetails> getPolicyViolationDetails() {
+    return policyViolationDetails;
   }
 
   /**
-   * Optional. Deploy policies to override. Format is
-   * `projects/{project}/locations/{location}/deployPolicies/{deployPolicy}`.
-   * @param overrideDeployPolicy overrideDeployPolicy or {@code null} for none
+   * Policy violation details.
+   * @param policyViolationDetails policyViolationDetails or {@code null} for none
    */
-  public TerminateJobRunRequest setOverrideDeployPolicy(java.util.List<java.lang.String> overrideDeployPolicy) {
-    this.overrideDeployPolicy = overrideDeployPolicy;
+  public PolicyViolation setPolicyViolationDetails(java.util.List<PolicyViolationDetails> policyViolationDetails) {
+    this.policyViolationDetails = policyViolationDetails;
     return this;
   }
 
   @Override
-  public TerminateJobRunRequest set(String fieldName, Object value) {
-    return (TerminateJobRunRequest) super.set(fieldName, value);
+  public PolicyViolation set(String fieldName, Object value) {
+    return (PolicyViolation) super.set(fieldName, value);
   }
 
   @Override
-  public TerminateJobRunRequest clone() {
-    return (TerminateJobRunRequest) super.clone();
+  public PolicyViolation clone() {
+    return (PolicyViolation) super.clone();
   }
 
 }

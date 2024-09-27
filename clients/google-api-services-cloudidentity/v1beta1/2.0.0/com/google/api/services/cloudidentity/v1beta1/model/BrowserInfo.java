@@ -17,7 +17,9 @@
 package com.google.api.services.cloudidentity.v1beta1.model;
 
 /**
- * Browser-specific fields reported by the Endpoint Verification extension. LINT.IfChange
+ * Browser-specific fields reported by the [Endpoint Verification
+ * extension](https://chromewebstore.google.com/detail/endpoint-
+ * verification/callobklhcbilhphinckomhgkigmfocg?pli=1).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -37,7 +39,7 @@ public final class BrowserInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String browserManagementState;
 
   /**
-   * Version of the request initiating browser.
+   * Version of the request initiating browser. E.g. `91.0.4442.4`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,7 +164,7 @@ public final class BrowserInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Version of the request initiating browser.
+   * Version of the request initiating browser. E.g. `91.0.4442.4`.
    * @return value or {@code null} for none
    */
   public java.lang.String getBrowserVersion() {
@@ -170,7 +172,7 @@ public final class BrowserInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Version of the request initiating browser.
+   * Version of the request initiating browser. E.g. `91.0.4442.4`.
    * @param browserVersion browserVersion or {@code null} for none
    */
   public BrowserInfo setBrowserVersion(java.lang.String browserVersion) {

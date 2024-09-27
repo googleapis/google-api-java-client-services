@@ -49,7 +49,7 @@ public final class GoogleAppsCloudidentityDevicesV1BrowserAttributes extends com
   private java.lang.String chromeProfileId;
 
   /**
-   * Timestamp in milliseconds since Epoch when the profile/gcm id was last synced.
+   * Timestamp in milliseconds since the Unix epoch when the profile/gcm id was last synced.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +96,7 @@ public final class GoogleAppsCloudidentityDevicesV1BrowserAttributes extends com
   }
 
   /**
-   * Timestamp in milliseconds since Epoch when the profile/gcm id was last synced.
+   * Timestamp in milliseconds since the Unix epoch when the profile/gcm id was last synced.
    * @return value or {@code null} for none
    */
   public String getLastProfileSyncTime() {
@@ -104,7 +104,7 @@ public final class GoogleAppsCloudidentityDevicesV1BrowserAttributes extends com
   }
 
   /**
-   * Timestamp in milliseconds since Epoch when the profile/gcm id was last synced.
+   * Timestamp in milliseconds since the Unix epoch when the profile/gcm id was last synced.
    * @param lastProfileSyncTime lastProfileSyncTime or {@code null} for none
    */
   public GoogleAppsCloudidentityDevicesV1BrowserAttributes setLastProfileSyncTime(String lastProfileSyncTime) {

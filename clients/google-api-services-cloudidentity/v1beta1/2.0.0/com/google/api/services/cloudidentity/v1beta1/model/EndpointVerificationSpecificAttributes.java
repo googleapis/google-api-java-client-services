@@ -31,10 +31,12 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 public final class EndpointVerificationSpecificAttributes extends com.google.api.client.json.GenericJson {
 
   /**
-   * Additional signals reported by Endpoint Verification. It includes the following attributes: 1.
-   * Non-configurable attributes: hotfixes, av_installed, av_enabled, windows_domain_name,
-   * is_os_native_firewall_enabled, and is_secure_boot_enabled. 2. Configurable attributes:
-   * file_config, registry_config, and plist_config.
+   * [Additional signals](https://cloud.google.com/endpoint-verification/docs/device-information)
+   * reported by Endpoint Verification. It includes the following attributes: * Non-configurable
+   * attributes: hotfixes, av_installed, av_enabled, windows_domain_name,
+   * is_os_native_firewall_enabled, and is_secure_boot_enabled. * [Configurable
+   * attributes](https://cloud.google.com/endpoint-verification/docs/collect-config-attributes):
+   * file, folder, and binary attributes; registry entries; and properties in a plist.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,10 +69,12 @@ public final class EndpointVerificationSpecificAttributes extends com.google.api
   }
 
   /**
-   * Additional signals reported by Endpoint Verification. It includes the following attributes: 1.
-   * Non-configurable attributes: hotfixes, av_installed, av_enabled, windows_domain_name,
-   * is_os_native_firewall_enabled, and is_secure_boot_enabled. 2. Configurable attributes:
-   * file_config, registry_config, and plist_config.
+   * [Additional signals](https://cloud.google.com/endpoint-verification/docs/device-information)
+   * reported by Endpoint Verification. It includes the following attributes: * Non-configurable
+   * attributes: hotfixes, av_installed, av_enabled, windows_domain_name,
+   * is_os_native_firewall_enabled, and is_secure_boot_enabled. * [Configurable
+   * attributes](https://cloud.google.com/endpoint-verification/docs/collect-config-attributes):
+   * file, folder, and binary attributes; registry entries; and properties in a plist.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getAdditionalSignals() {
@@ -78,10 +82,12 @@ public final class EndpointVerificationSpecificAttributes extends com.google.api
   }
 
   /**
-   * Additional signals reported by Endpoint Verification. It includes the following attributes: 1.
-   * Non-configurable attributes: hotfixes, av_installed, av_enabled, windows_domain_name,
-   * is_os_native_firewall_enabled, and is_secure_boot_enabled. 2. Configurable attributes:
-   * file_config, registry_config, and plist_config.
+   * [Additional signals](https://cloud.google.com/endpoint-verification/docs/device-information)
+   * reported by Endpoint Verification. It includes the following attributes: * Non-configurable
+   * attributes: hotfixes, av_installed, av_enabled, windows_domain_name,
+   * is_os_native_firewall_enabled, and is_secure_boot_enabled. * [Configurable
+   * attributes](https://cloud.google.com/endpoint-verification/docs/collect-config-attributes):
+   * file, folder, and binary attributes; registry entries; and properties in a plist.
    * @param additionalSignals additionalSignals or {@code null} for none
    */
   public EndpointVerificationSpecificAttributes setAdditionalSignals(java.util.Map<String, java.lang.Object> additionalSignals) {

@@ -17,7 +17,9 @@
 package com.google.api.services.cloudidentity.v1beta1.model;
 
 /**
- * Contains information about browser profiles reported by the Endpoint Verification extension.
+ * Contains information about browser profiles reported by the [Endpoint Verification
+ * extension](https://chromewebstore.google.com/detail/endpoint-
+ * verification/callobklhcbilhphinckomhgkigmfocg?pli=1).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -32,7 +34,8 @@ public final class BrowserAttributes extends com.google.api.client.json.GenericJ
   /**
    * Represents the current state of the [Chrome browser
    * attributes](https://cloud.google.com/access-context-manager/docs/browser-attributes) sent by
-   * the Endpoint Verification extension.
+   * the [Endpoint Verification extension](https://chromewebstore.google.com/detail/endpoint-
+   * verification/callobklhcbilhphinckomhgkigmfocg?pli=1).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +49,7 @@ public final class BrowserAttributes extends com.google.api.client.json.GenericJ
   private java.lang.String chromeProfileId;
 
   /**
-   * Timestamp in milliseconds since Epoch when the profile/gcm id was last synced.
+   * Timestamp in milliseconds since the Unix epoch when the profile/gcm id was last synced.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +58,8 @@ public final class BrowserAttributes extends com.google.api.client.json.GenericJ
   /**
    * Represents the current state of the [Chrome browser
    * attributes](https://cloud.google.com/access-context-manager/docs/browser-attributes) sent by
-   * the Endpoint Verification extension.
+   * the [Endpoint Verification extension](https://chromewebstore.google.com/detail/endpoint-
+   * verification/callobklhcbilhphinckomhgkigmfocg?pli=1).
    * @return value or {@code null} for none
    */
   public BrowserInfo getChromeBrowserInfo() {
@@ -65,7 +69,8 @@ public final class BrowserAttributes extends com.google.api.client.json.GenericJ
   /**
    * Represents the current state of the [Chrome browser
    * attributes](https://cloud.google.com/access-context-manager/docs/browser-attributes) sent by
-   * the Endpoint Verification extension.
+   * the [Endpoint Verification extension](https://chromewebstore.google.com/detail/endpoint-
+   * verification/callobklhcbilhphinckomhgkigmfocg?pli=1).
    * @param chromeBrowserInfo chromeBrowserInfo or {@code null} for none
    */
   public BrowserAttributes setChromeBrowserInfo(BrowserInfo chromeBrowserInfo) {
@@ -91,7 +96,7 @@ public final class BrowserAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Timestamp in milliseconds since Epoch when the profile/gcm id was last synced.
+   * Timestamp in milliseconds since the Unix epoch when the profile/gcm id was last synced.
    * @return value or {@code null} for none
    */
   public String getLastProfileSyncTime() {
@@ -99,7 +104,7 @@ public final class BrowserAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Timestamp in milliseconds since Epoch when the profile/gcm id was last synced.
+   * Timestamp in milliseconds since the Unix epoch when the profile/gcm id was last synced.
    * @param lastProfileSyncTime lastProfileSyncTime or {@code null} for none
    */
   public BrowserAttributes setLastProfileSyncTime(String lastProfileSyncTime) {

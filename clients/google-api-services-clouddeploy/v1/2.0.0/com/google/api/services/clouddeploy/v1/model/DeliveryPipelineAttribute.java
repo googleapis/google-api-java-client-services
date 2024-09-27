@@ -17,7 +17,7 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * The request object used by `ApproveRollout`.
+ * Contains criteria for selecting DeliveryPipelines.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
@@ -27,67 +27,67 @@ package com.google.api.services.clouddeploy.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ApproveRolloutRequest extends com.google.api.client.json.GenericJson {
+public final class DeliveryPipelineAttribute extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. True = approve; false = reject
+   * ID of the `DeliveryPipeline`. The value of this field could be one of the following: * The last
+   * segment of a pipeline name * "*", all delivery pipelines in a location
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean approved;
+  private java.lang.String id;
 
   /**
-   * Optional. Deploy policies to override. Format is
-   * `projects/{project}/locations/{location}/deployPolicies/{deployPolicy}`.
+   * DeliveryPipeline labels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> overrideDeployPolicy;
+  private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. True = approve; false = reject
+   * ID of the `DeliveryPipeline`. The value of this field could be one of the following: * The last
+   * segment of a pipeline name * "*", all delivery pipelines in a location
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getApproved() {
-    return approved;
+  public java.lang.String getId() {
+    return id;
   }
 
   /**
-   * Required. True = approve; false = reject
-   * @param approved approved or {@code null} for none
+   * ID of the `DeliveryPipeline`. The value of this field could be one of the following: * The last
+   * segment of a pipeline name * "*", all delivery pipelines in a location
+   * @param id id or {@code null} for none
    */
-  public ApproveRolloutRequest setApproved(java.lang.Boolean approved) {
-    this.approved = approved;
+  public DeliveryPipelineAttribute setId(java.lang.String id) {
+    this.id = id;
     return this;
   }
 
   /**
-   * Optional. Deploy policies to override. Format is
-   * `projects/{project}/locations/{location}/deployPolicies/{deployPolicy}`.
+   * DeliveryPipeline labels.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getOverrideDeployPolicy() {
-    return overrideDeployPolicy;
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
   }
 
   /**
-   * Optional. Deploy policies to override. Format is
-   * `projects/{project}/locations/{location}/deployPolicies/{deployPolicy}`.
-   * @param overrideDeployPolicy overrideDeployPolicy or {@code null} for none
+   * DeliveryPipeline labels.
+   * @param labels labels or {@code null} for none
    */
-  public ApproveRolloutRequest setOverrideDeployPolicy(java.util.List<java.lang.String> overrideDeployPolicy) {
-    this.overrideDeployPolicy = overrideDeployPolicy;
+  public DeliveryPipelineAttribute setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 
   @Override
-  public ApproveRolloutRequest set(String fieldName, Object value) {
-    return (ApproveRolloutRequest) super.set(fieldName, value);
+  public DeliveryPipelineAttribute set(String fieldName, Object value) {
+    return (DeliveryPipelineAttribute) super.set(fieldName, value);
   }
 
   @Override
-  public ApproveRolloutRequest clone() {
-    return (ApproveRolloutRequest) super.clone();
+  public DeliveryPipelineAttribute clone() {
+    return (DeliveryPipelineAttribute) super.clone();
   }
 
 }

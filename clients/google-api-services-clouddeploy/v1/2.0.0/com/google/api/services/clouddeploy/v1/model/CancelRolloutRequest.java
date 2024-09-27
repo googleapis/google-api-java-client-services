@@ -29,6 +29,33 @@ package com.google.api.services.clouddeploy.v1.model;
 @SuppressWarnings("javadoc")
 public final class CancelRolloutRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. Deploy policies to override. Format is
+   * `projects/{project}/locations/{location}/deployPolicies/{deployPolicy}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> overrideDeployPolicy;
+
+  /**
+   * Optional. Deploy policies to override. Format is
+   * `projects/{project}/locations/{location}/deployPolicies/{deployPolicy}`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getOverrideDeployPolicy() {
+    return overrideDeployPolicy;
+  }
+
+  /**
+   * Optional. Deploy policies to override. Format is
+   * `projects/{project}/locations/{location}/deployPolicies/{deployPolicy}`.
+   * @param overrideDeployPolicy overrideDeployPolicy or {@code null} for none
+   */
+  public CancelRolloutRequest setOverrideDeployPolicy(java.util.List<java.lang.String> overrideDeployPolicy) {
+    this.overrideDeployPolicy = overrideDeployPolicy;
+    return this;
+  }
+
   @Override
   public CancelRolloutRequest set(String fieldName, Object value) {
     return (CancelRolloutRequest) super.set(fieldName, value);

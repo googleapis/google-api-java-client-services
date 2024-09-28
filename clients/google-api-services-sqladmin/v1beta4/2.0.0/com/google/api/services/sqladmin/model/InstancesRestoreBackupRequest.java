@@ -30,11 +30,50 @@ package com.google.api.services.sqladmin.model;
 public final class InstancesRestoreBackupRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * The name of the backup to restore from in following format: projects/{project-
+   * id}/backups/{backup-uid} Only one of restore_backup_context or backup can be passed to the
+   * input.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backup;
+
+  /**
    * Parameters required to perform the restore backup operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RestoreBackupContext restoreBackupContext;
+
+  /**
+   * Optional. Restore instance settings overrides the instance settings stored as part of the
+   * backup. Instance's major database version cannot be changed and the disk size can only be
+   * increased. This feature is only available for restores to new instances using the backup name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DatabaseInstance restoreInstanceSettings;
+
+  /**
+   * The name of the backup to restore from in following format: projects/{project-
+   * id}/backups/{backup-uid} Only one of restore_backup_context or backup can be passed to the
+   * input.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackup() {
+    return backup;
+  }
+
+  /**
+   * The name of the backup to restore from in following format: projects/{project-
+   * id}/backups/{backup-uid} Only one of restore_backup_context or backup can be passed to the
+   * input.
+   * @param backup backup or {@code null} for none
+   */
+  public InstancesRestoreBackupRequest setBackup(java.lang.String backup) {
+    this.backup = backup;
+    return this;
+  }
 
   /**
    * Parameters required to perform the restore backup operation.
@@ -50,6 +89,27 @@ public final class InstancesRestoreBackupRequest extends com.google.api.client.j
    */
   public InstancesRestoreBackupRequest setRestoreBackupContext(RestoreBackupContext restoreBackupContext) {
     this.restoreBackupContext = restoreBackupContext;
+    return this;
+  }
+
+  /**
+   * Optional. Restore instance settings overrides the instance settings stored as part of the
+   * backup. Instance's major database version cannot be changed and the disk size can only be
+   * increased. This feature is only available for restores to new instances using the backup name.
+   * @return value or {@code null} for none
+   */
+  public DatabaseInstance getRestoreInstanceSettings() {
+    return restoreInstanceSettings;
+  }
+
+  /**
+   * Optional. Restore instance settings overrides the instance settings stored as part of the
+   * backup. Instance's major database version cannot be changed and the disk size can only be
+   * increased. This feature is only available for restores to new instances using the backup name.
+   * @param restoreInstanceSettings restoreInstanceSettings or {@code null} for none
+   */
+  public InstancesRestoreBackupRequest setRestoreInstanceSettings(DatabaseInstance restoreInstanceSettings) {
+    this.restoreInstanceSettings = restoreInstanceSettings;
     return this;
   }
 

@@ -2258,6 +2258,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
       public class BackupVaults {
 
         /**
+         * Creates a new BackupVault in a given project and location.
+         *
          * Create a request for the method "backupVaults.create".
          *
          * This request holds the parameters needed by the backupdr server.  After setting any optional
@@ -2281,6 +2283,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
+           * Creates a new BackupVault in a given project and location.
+           *
            * Create a request for the method "backupVaults.create".
            *
            * This request holds the parameters needed by the the backupdr server.  After setting any
@@ -3378,7 +3382,10 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the backupdr server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. Identifier. The resource name.
+         * @param name Output only. Identifier. Name of the backup vault to create. It must have the
+         *        format`"projects/{project}/locations/{location}/backupVaults/{backupvault}"`.
+         *        `{backupvault}` cannot be changed after creation. It must be between 3-63 characters long
+         *        and must be unique within the project and location.
          * @param content the {@link com.google.api.services.backupdr.v1.model.BackupVault}
          * @return the request
          */
@@ -3406,7 +3413,10 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. Identifier. The resource name.
+           * @param name Output only. Identifier. Name of the backup vault to create. It must have the
+         *        format`"projects/{project}/locations/{location}/backupVaults/{backupvault}"`.
+         *        `{backupvault}` cannot be changed after creation. It must be between 3-63 characters long
+         *        and must be unique within the project and location.
            * @param content the {@link com.google.api.services.backupdr.v1.model.BackupVault}
            * @since 1.13
            */
@@ -3475,17 +3485,30 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Output only. Identifier. The resource name. */
+          /**
+           * Output only. Identifier. Name of the backup vault to create. It must have the
+           * format`"projects/{project}/locations/{location}/backupVaults/{backupvault}"`.
+           * `{backupvault}` cannot be changed after creation. It must be between 3-63 characters
+           * long and must be unique within the project and location.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. Identifier. The resource name.
+          /** Output only. Identifier. Name of the backup vault to create. It must have the
+         format`"projects/{project}/locations/{location}/backupVaults/{backupvault}"`. `{backupvault}`
+         cannot be changed after creation. It must be between 3-63 characters long and must be unique within
+         the project and location.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Output only. Identifier. The resource name. */
+          /**
+           * Output only. Identifier. Name of the backup vault to create. It must have the
+           * format`"projects/{project}/locations/{location}/backupVaults/{backupvault}"`.
+           * `{backupvault}` cannot be changed after creation. It must be between 3-63 characters
+           * long and must be unique within the project and location.
+           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4730,7 +4753,10 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the backupdr server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. Identifier. The resource name.
+           * @param name Output only. Identifier. Name of the datasource to create. It must have the format`"projects/{projec
+           *        t}/locations/{location}/backupVaults/{backupvault}/dataSources/{datasource}"`.
+           *        `{datasource}` cannot be changed after creation. It must be between 3-63 characters long
+           *        and must be unique within the backup vault.
            * @param content the {@link com.google.api.services.backupdr.v1.model.DataSource}
            * @return the request
            */
@@ -4758,7 +4784,10 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. Identifier. The resource name.
+             * @param name Output only. Identifier. Name of the datasource to create. It must have the format`"projects/{projec
+           *        t}/locations/{location}/backupVaults/{backupvault}/dataSources/{datasource}"`.
+           *        `{datasource}` cannot be changed after creation. It must be between 3-63 characters long
+           *        and must be unique within the backup vault.
              * @param content the {@link com.google.api.services.backupdr.v1.model.DataSource}
              * @since 1.13
              */
@@ -4827,17 +4856,30 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
               return (Patch) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Output only. Identifier. The resource name. */
+            /**
+             * Output only. Identifier. Name of the datasource to create. It must have the format`"p
+             * rojects/{project}/locations/{location}/backupVaults/{backupvault}/dataSources/{dataso
+             * urce}"`. `{datasource}` cannot be changed after creation. It must be between 3-63
+             * characters long and must be unique within the backup vault.
+             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. Identifier. The resource name.
+            /** Output only. Identifier. Name of the datasource to create. It must have the format`"projects/{proje
+           ct}/locations/{location}/backupVaults/{backupvault}/dataSources/{datasource}"`. `{datasource}`
+           cannot be changed after creation. It must be between 3-63 characters long and must be unique within
+           the backup vault.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Output only. Identifier. The resource name. */
+            /**
+             * Output only. Identifier. Name of the datasource to create. It must have the format`"p
+             * rojects/{project}/locations/{location}/backupVaults/{backupvault}/dataSources/{dataso
+             * urce}"`. `{datasource}` cannot be changed after creation. It must be between 3-63
+             * characters long and must be unique within the backup vault.
+             */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5838,7 +5880,10 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
              * This request holds the parameters needed by the backupdr server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name Output only. Identifier. Name of the resource.
+             * @param name Output only. Identifier. Name of the backup to create. It must have the
+             *        format`"projects//locations//backupVaults//dataSources/{datasource}/backups/{backup}"`.
+             *        `{backup}` cannot be changed after creation. It must be between 3-63 characters long and
+             *        must be unique within the datasource.
              * @param content the {@link com.google.api.services.backupdr.v1.model.Backup}
              * @return the request
              */
@@ -5866,7 +5911,10 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Output only. Identifier. Name of the resource.
+               * @param name Output only. Identifier. Name of the backup to create. It must have the
+             *        format`"projects//locations//backupVaults//dataSources/{datasource}/backups/{backup}"`.
+             *        `{backup}` cannot be changed after creation. It must be between 3-63 characters long and
+             *        must be unique within the datasource.
                * @param content the {@link com.google.api.services.backupdr.v1.model.Backup}
                * @since 1.13
                */
@@ -5935,17 +5983,30 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
                 return (Patch) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Output only. Identifier. Name of the resource. */
+              /**
+               * Output only. Identifier. Name of the backup to create. It must have the format`"pro
+               * jects//locations//backupVaults//dataSources/{datasource}/backups/{backup}"`.
+               * `{backup}` cannot be changed after creation. It must be between 3-63 characters
+               * long and must be unique within the datasource.
+               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Output only. Identifier. Name of the resource.
+              /** Output only. Identifier. Name of the backup to create. It must have the
+             format`"projects//locations//backupVaults//dataSources/{datasource}/backups/{backup}"`. `{backup}`
+             cannot be changed after creation. It must be between 3-63 characters long and must be unique within
+             the datasource.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** Output only. Identifier. Name of the resource. */
+              /**
+               * Output only. Identifier. Name of the backup to create. It must have the format`"pro
+               * jects//locations//backupVaults//dataSources/{datasource}/backups/{backup}"`.
+               * `{backup}` cannot be changed after creation. It must be between 3-63 characters
+               * long and must be unique within the datasource.
+               */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

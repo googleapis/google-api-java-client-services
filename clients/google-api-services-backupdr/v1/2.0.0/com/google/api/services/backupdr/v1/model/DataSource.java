@@ -91,7 +91,10 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. Identifier. The resource name.
+   * Output only. Identifier. Name of the datasource to create. It must have the format`"projects/{p
+   * roject}/locations/{location}/backupVaults/{backupvault}/dataSources/{datasource}"`.
+   * `{datasource}` cannot be changed after creation. It must be between 3-63 characters long and
+   * must be unique within the backup vault.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -261,7 +264,10 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Identifier. The resource name.
+   * Output only. Identifier. Name of the datasource to create. It must have the format`"projects/{p
+   * roject}/locations/{location}/backupVaults/{backupvault}/dataSources/{datasource}"`.
+   * `{datasource}` cannot be changed after creation. It must be between 3-63 characters long and
+   * must be unique within the backup vault.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -269,7 +275,10 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Identifier. The resource name.
+   * Output only. Identifier. Name of the datasource to create. It must have the format`"projects/{p
+   * roject}/locations/{location}/backupVaults/{backupvault}/dataSources/{datasource}"`.
+   * `{datasource}` cannot be changed after creation. It must be between 3-63 characters long and
+   * must be unique within the backup vault.
    * @param name name or {@code null} for none
    */
   public DataSource setName(java.lang.String name) {

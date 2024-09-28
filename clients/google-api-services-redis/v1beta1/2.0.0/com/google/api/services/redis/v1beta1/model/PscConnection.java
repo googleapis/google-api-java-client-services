@@ -61,7 +61,7 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   private java.lang.String projectId;
 
   /**
-   * Optional. The PSC connection id of the forwarding rule connected to the service attachment.
+   * Required. The PSC connection id of the forwarding rule connected to the service attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,7 +148,7 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The PSC connection id of the forwarding rule connected to the service attachment.
+   * Required. The PSC connection id of the forwarding rule connected to the service attachment.
    * @return value or {@code null} for none
    */
   public java.lang.String getPscConnectionId() {
@@ -156,7 +156,7 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The PSC connection id of the forwarding rule connected to the service attachment.
+   * Required. The PSC connection id of the forwarding rule connected to the service attachment.
    * @param pscConnectionId pscConnectionId or {@code null} for none
    */
   public PscConnection setPscConnectionId(java.lang.String pscConnectionId) {

@@ -17,7 +17,7 @@
 package com.google.api.services.redis.v1beta1.model;
 
 /**
- * Common model for database resource instance metadata. Next ID: 21
+ * Common model for database resource instance metadata. Next ID: 23
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Memorystore for Redis API. For a
@@ -74,6 +74,14 @@ public final class DatabaseResourceMetadata extends com.google.api.client.json.G
   private CustomMetadataData customMetadata;
 
   /**
+   * Optional. Edition represents whether the instance is ENTERPRISE or ENTERPRISE_PLUS. This
+   * information is core to Cloud SQL only and is used to identify the edition of the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String edition;
+
+  /**
    * Entitlements associated with the resource
    * The value may be {@code null}.
    */
@@ -124,6 +132,14 @@ public final class DatabaseResourceMetadata extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private DatabaseResourceId primaryResourceId;
+
+  /**
+   * Primary resource location. REQUIRED if the immediate parent exists when first time resource is
+   * getting ingested, otherwise optional.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String primaryResourceLocation;
 
   /**
    * The product this resource represents.
@@ -277,6 +293,25 @@ public final class DatabaseResourceMetadata extends com.google.api.client.json.G
   }
 
   /**
+   * Optional. Edition represents whether the instance is ENTERPRISE or ENTERPRISE_PLUS. This
+   * information is core to Cloud SQL only and is used to identify the edition of the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEdition() {
+    return edition;
+  }
+
+  /**
+   * Optional. Edition represents whether the instance is ENTERPRISE or ENTERPRISE_PLUS. This
+   * information is core to Cloud SQL only and is used to identify the edition of the instance.
+   * @param edition edition or {@code null} for none
+   */
+  public DatabaseResourceMetadata setEdition(java.lang.String edition) {
+    this.edition = edition;
+    return this;
+  }
+
+  /**
    * Entitlements associated with the resource
    * @return value or {@code null} for none
    */
@@ -398,6 +433,25 @@ public final class DatabaseResourceMetadata extends com.google.api.client.json.G
    */
   public DatabaseResourceMetadata setPrimaryResourceId(DatabaseResourceId primaryResourceId) {
     this.primaryResourceId = primaryResourceId;
+    return this;
+  }
+
+  /**
+   * Primary resource location. REQUIRED if the immediate parent exists when first time resource is
+   * getting ingested, otherwise optional.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrimaryResourceLocation() {
+    return primaryResourceLocation;
+  }
+
+  /**
+   * Primary resource location. REQUIRED if the immediate parent exists when first time resource is
+   * getting ingested, otherwise optional.
+   * @param primaryResourceLocation primaryResourceLocation or {@code null} for none
+   */
+  public DatabaseResourceMetadata setPrimaryResourceLocation(java.lang.String primaryResourceLocation) {
+    this.primaryResourceLocation = primaryResourceLocation;
     return this;
   }
 

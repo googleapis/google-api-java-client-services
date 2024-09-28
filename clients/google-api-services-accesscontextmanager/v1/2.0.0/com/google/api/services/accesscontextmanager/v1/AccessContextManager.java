@@ -5981,16 +5981,49 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
+         * Optional. This field will be used to control whether or not scoped access settings are
+         * appended to the existing list of scoped access settings. If true, the scoped access
+         * settings in the request will be appended to the existing list of scoped access settings.
+         * If false, the scoped access settings in the request replace the existing list of scoped
+         * access settings.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean appendScopedAccessSettings;
+
+        /** Optional. This field will be used to control whether or not scoped access settings are appended to
+       the existing list of scoped access settings. If true, the scoped access settings in the request
+       will be appended to the existing list of scoped access settings. If false, the scoped access
+       settings in the request replace the existing list of scoped access settings.
+         */
+        public java.lang.Boolean getAppendScopedAccessSettings() {
+          return appendScopedAccessSettings;
+        }
+
+        /**
+         * Optional. This field will be used to control whether or not scoped access settings are
+         * appended to the existing list of scoped access settings. If true, the scoped access
+         * settings in the request will be appended to the existing list of scoped access settings.
+         * If false, the scoped access settings in the request replace the existing list of scoped
+         * access settings.
+         */
+        public Patch setAppendScopedAccessSettings(java.lang.Boolean appendScopedAccessSettings) {
+          this.appendScopedAccessSettings = appendScopedAccessSettings;
+          return this;
+        }
+
+        /**
          * Required. Only the fields specified in this mask are updated. Because name and group_key
          * cannot be changed, update_mask is required and may only contain the following fields:
-         * `access_levels`, `dry_run_access_levels`. update_mask { paths: "access_levels" }
+         * `access_levels`, `dry_run_access_levels`, `reauth_settings`, `scoped_access_settings`.
+         * update_mask { paths: "access_levels" }
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
         /** Required. Only the fields specified in this mask are updated. Because name and group_key cannot be
        changed, update_mask is required and may only contain the following fields: `access_levels`,
-       `dry_run_access_levels`. update_mask { paths: "access_levels" }
+       `dry_run_access_levels`, `reauth_settings`, `scoped_access_settings`. update_mask { paths:
+       "access_levels" }
          */
         public String getUpdateMask() {
           return updateMask;
@@ -5999,7 +6032,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         /**
          * Required. Only the fields specified in this mask are updated. Because name and group_key
          * cannot be changed, update_mask is required and may only contain the following fields:
-         * `access_levels`, `dry_run_access_levels`. update_mask { paths: "access_levels" }
+         * `access_levels`, `dry_run_access_levels`, `reauth_settings`, `scoped_access_settings`.
+         * update_mask { paths: "access_levels" }
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;

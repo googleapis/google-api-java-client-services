@@ -31,6 +31,13 @@ package com.google.api.services.redis.v1beta1.model;
 public final class RetentionSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Duration based retention period i.e. 172800 seconds (2 days)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String durationBasedRetention;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,6 +55,23 @@ public final class RetentionSettings extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private String timeBasedRetention;
+
+  /**
+   * Duration based retention period i.e. 172800 seconds (2 days)
+   * @return value or {@code null} for none
+   */
+  public String getDurationBasedRetention() {
+    return durationBasedRetention;
+  }
+
+  /**
+   * Duration based retention period i.e. 172800 seconds (2 days)
+   * @param durationBasedRetention durationBasedRetention or {@code null} for none
+   */
+  public RetentionSettings setDurationBasedRetention(String durationBasedRetention) {
+    this.durationBasedRetention = durationBasedRetention;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

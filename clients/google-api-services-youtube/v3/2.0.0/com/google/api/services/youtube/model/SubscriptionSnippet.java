@@ -38,13 +38,6 @@ public final class SubscriptionSnippet extends com.google.api.client.json.Generi
   private java.lang.String channelId;
 
   /**
-   * Channel title for the channel that the subscription belongs to.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String channelTitle;
-
-  /**
    * The subscription's details.
    * The value may be {@code null}.
    */
@@ -95,23 +88,6 @@ public final class SubscriptionSnippet extends com.google.api.client.json.Generi
    */
   public SubscriptionSnippet setChannelId(java.lang.String channelId) {
     this.channelId = channelId;
-    return this;
-  }
-
-  /**
-   * Channel title for the channel that the subscription belongs to.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getChannelTitle() {
-    return channelTitle;
-  }
-
-  /**
-   * Channel title for the channel that the subscription belongs to.
-   * @param channelTitle channelTitle or {@code null} for none
-   */
-  public SubscriptionSnippet setChannelTitle(java.lang.String channelTitle) {
-    this.channelTitle = channelTitle;
     return this;
   }
 

@@ -50,7 +50,7 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Optional. The customer-managed encryption configuration of the Regionalised Secrets. If no
+   * Optional. The customer-managed encryption configuration of the regionalized secrets. If no
    * configuration is provided, Google-managed default encryption is used. Updates to the Secret
    * encryption configuration only apply to SecretVersions added afterwards. They do not apply
    * retroactively to existing SecretVersions.
@@ -190,7 +190,7 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The customer-managed encryption configuration of the Regionalised Secrets. If no
+   * Optional. The customer-managed encryption configuration of the regionalized secrets. If no
    * configuration is provided, Google-managed default encryption is used. Updates to the Secret
    * encryption configuration only apply to SecretVersions added afterwards. They do not apply
    * retroactively to existing SecretVersions.
@@ -201,7 +201,7 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The customer-managed encryption configuration of the Regionalised Secrets. If no
+   * Optional. The customer-managed encryption configuration of the regionalized secrets. If no
    * configuration is provided, Google-managed default encryption is used. Updates to the Secret
    * encryption configuration only apply to SecretVersions added afterwards. They do not apply
    * retroactively to existing SecretVersions.

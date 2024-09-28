@@ -46,7 +46,7 @@ public final class SecretVersion extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The customer-managed encryption status of the SecretVersion. Only populated if
-   * customer-managed encryption is used and Secret is a Regionalised Secret.
+   * customer-managed encryption is used and Secret is a regionalized secret.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +137,7 @@ public final class SecretVersion extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The customer-managed encryption status of the SecretVersion. Only populated if
-   * customer-managed encryption is used and Secret is a Regionalised Secret.
+   * customer-managed encryption is used and Secret is a regionalized secret.
    * @return value or {@code null} for none
    */
   public CustomerManagedEncryptionStatus getCustomerManagedEncryption() {
@@ -146,7 +146,7 @@ public final class SecretVersion extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The customer-managed encryption status of the SecretVersion. Only populated if
-   * customer-managed encryption is used and Secret is a Regionalised Secret.
+   * customer-managed encryption is used and Secret is a regionalized secret.
    * @param customerManagedEncryption customerManagedEncryption or {@code null} for none
    */
   public SecretVersion setCustomerManagedEncryption(CustomerManagedEncryptionStatus customerManagedEncryption) {

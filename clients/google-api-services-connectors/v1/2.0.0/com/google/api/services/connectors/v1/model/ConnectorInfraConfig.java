@@ -31,6 +31,13 @@ package com.google.api.services.connectors.v1.model;
 public final class ConnectorInfraConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Indicates that the Cloud Run CPU should always be allocated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean alwaysAllocateCpu;
+
+  /**
    * The window used for ratelimiting runtime requests to connections.
    * The value may be {@code null}.
    */
@@ -80,6 +87,13 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
   private java.lang.Boolean migrateTls;
 
   /**
+   * Indicate whether cloud spanner is required for connector job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean provisionCloudSpanner;
+
+  /**
    * Max QPS supported by the connector version before throttling of requests.
    * The value may be {@code null}.
    */
@@ -106,6 +120,23 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String sharedDeployment;
+
+  /**
+   * Indicates that the Cloud Run CPU should always be allocated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAlwaysAllocateCpu() {
+    return alwaysAllocateCpu;
+  }
+
+  /**
+   * Indicates that the Cloud Run CPU should always be allocated.
+   * @param alwaysAllocateCpu alwaysAllocateCpu or {@code null} for none
+   */
+  public ConnectorInfraConfig setAlwaysAllocateCpu(java.lang.Boolean alwaysAllocateCpu) {
+    this.alwaysAllocateCpu = alwaysAllocateCpu;
+    return this;
+  }
 
   /**
    * The window used for ratelimiting runtime requests to connections.
@@ -223,6 +254,23 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
    */
   public ConnectorInfraConfig setMigrateTls(java.lang.Boolean migrateTls) {
     this.migrateTls = migrateTls;
+    return this;
+  }
+
+  /**
+   * Indicate whether cloud spanner is required for connector job.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getProvisionCloudSpanner() {
+    return provisionCloudSpanner;
+  }
+
+  /**
+   * Indicate whether cloud spanner is required for connector job.
+   * @param provisionCloudSpanner provisionCloudSpanner or {@code null} for none
+   */
+  public ConnectorInfraConfig setProvisionCloudSpanner(java.lang.Boolean provisionCloudSpanner) {
+    this.provisionCloudSpanner = provisionCloudSpanner;
     return this;
   }
 

@@ -3363,6 +3363,109 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
+     * Initiates a long-running Relocate Bucket operation on the specified bucket.
+     *
+     * Create a request for the method "buckets.relocate".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link Relocate#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the bucket to be moved.
+     * @param content the {@link com.google.api.services.storage.model.RelocateBucketRequest}
+     * @return the request
+     */
+    public Relocate relocate(java.lang.String bucket, com.google.api.services.storage.model.RelocateBucketRequest content) throws java.io.IOException {
+      Relocate result = new Relocate(bucket, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Relocate extends StorageRequest<com.google.api.services.storage.model.GoogleLongrunningOperation> {
+
+      private static final String REST_PATH = "b/{bucket}/relocate";
+
+      /**
+       * Initiates a long-running Relocate Bucket operation on the specified bucket.
+       *
+       * Create a request for the method "buckets.relocate".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link Relocate#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Relocate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the bucket to be moved.
+       * @param content the {@link com.google.api.services.storage.model.RelocateBucketRequest}
+       * @since 1.13
+       */
+      protected Relocate(java.lang.String bucket, com.google.api.services.storage.model.RelocateBucketRequest content) {
+        super(Storage.this, "POST", REST_PATH, content, com.google.api.services.storage.model.GoogleLongrunningOperation.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+      }
+
+      @Override
+      public Relocate setAlt(java.lang.String alt) {
+        return (Relocate) super.setAlt(alt);
+      }
+
+      @Override
+      public Relocate setFields(java.lang.String fields) {
+        return (Relocate) super.setFields(fields);
+      }
+
+      @Override
+      public Relocate setKey(java.lang.String key) {
+        return (Relocate) super.setKey(key);
+      }
+
+      @Override
+      public Relocate setOauthToken(java.lang.String oauthToken) {
+        return (Relocate) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Relocate setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Relocate) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Relocate setQuotaUser(java.lang.String quotaUser) {
+        return (Relocate) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Relocate setUploadType(java.lang.String uploadType) {
+        return (Relocate) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Relocate setUserIp(java.lang.String userIp) {
+        return (Relocate) super.setUserIp(userIp);
+      }
+
+      /** Name of the bucket to be moved. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the bucket to be moved.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the bucket to be moved. */
+      public Relocate setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      @Override
+      public Relocate set(String parameterName, Object value) {
+        return (Relocate) super.set(parameterName, value);
+      }
+    }
+    /**
      * Restores a soft-deleted bucket.
      *
      * Create a request for the method "buckets.restore".

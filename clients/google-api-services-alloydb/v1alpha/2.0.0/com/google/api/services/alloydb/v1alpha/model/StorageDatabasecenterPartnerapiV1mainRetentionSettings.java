@@ -30,6 +30,13 @@ package com.google.api.services.alloydb.v1alpha.model;
 public final class StorageDatabasecenterPartnerapiV1mainRetentionSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Duration based retention period i.e. 172800 seconds (2 days)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String durationBasedRetention;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,6 +54,23 @@ public final class StorageDatabasecenterPartnerapiV1mainRetentionSettings extend
    */
   @com.google.api.client.util.Key
   private String timeBasedRetention;
+
+  /**
+   * Duration based retention period i.e. 172800 seconds (2 days)
+   * @return value or {@code null} for none
+   */
+  public String getDurationBasedRetention() {
+    return durationBasedRetention;
+  }
+
+  /**
+   * Duration based retention period i.e. 172800 seconds (2 days)
+   * @param durationBasedRetention durationBasedRetention or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainRetentionSettings setDurationBasedRetention(String durationBasedRetention) {
+    this.durationBasedRetention = durationBasedRetention;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

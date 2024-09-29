@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1.model;
 
 /**
- * Common model for database resource instance metadata. Next ID: 21
+ * Common model for database resource instance metadata. Next ID: 22
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -123,6 +123,14 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainDatabaseResourceId primaryResourceId;
+
+  /**
+   * Primary resource location. REQUIRED if the immediate parent exists when first time resource is
+   * getting ingested, otherwise optional.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String primaryResourceLocation;
 
   /**
    * The product this resource represents.
@@ -397,6 +405,25 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setPrimaryResourceId(StorageDatabasecenterPartnerapiV1mainDatabaseResourceId primaryResourceId) {
     this.primaryResourceId = primaryResourceId;
+    return this;
+  }
+
+  /**
+   * Primary resource location. REQUIRED if the immediate parent exists when first time resource is
+   * getting ingested, otherwise optional.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrimaryResourceLocation() {
+    return primaryResourceLocation;
+  }
+
+  /**
+   * Primary resource location. REQUIRED if the immediate parent exists when first time resource is
+   * getting ingested, otherwise optional.
+   * @param primaryResourceLocation primaryResourceLocation or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setPrimaryResourceLocation(java.lang.String primaryResourceLocation) {
+    this.primaryResourceLocation = primaryResourceLocation;
     return this;
   }
 

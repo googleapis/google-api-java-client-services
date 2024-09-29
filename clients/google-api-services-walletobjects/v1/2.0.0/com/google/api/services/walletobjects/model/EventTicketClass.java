@@ -381,6 +381,14 @@ public final class EventTicketClass extends com.google.api.client.json.GenericJs
   private java.util.List<TextModuleData> textModulesData;
 
   /**
+   * Optional value added module data. Maximum of ten on the class. For a pass only ten will be
+   * displayed, prioritizing those from the object.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ValueAddedModuleData> valueAddedModuleData;
+
+  /**
    * Event venue details.
    * The value may be {@code null}.
    */
@@ -1232,6 +1240,25 @@ public final class EventTicketClass extends com.google.api.client.json.GenericJs
    */
   public EventTicketClass setTextModulesData(java.util.List<TextModuleData> textModulesData) {
     this.textModulesData = textModulesData;
+    return this;
+  }
+
+  /**
+   * Optional value added module data. Maximum of ten on the class. For a pass only ten will be
+   * displayed, prioritizing those from the object.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ValueAddedModuleData> getValueAddedModuleData() {
+    return valueAddedModuleData;
+  }
+
+  /**
+   * Optional value added module data. Maximum of ten on the class. For a pass only ten will be
+   * displayed, prioritizing those from the object.
+   * @param valueAddedModuleData valueAddedModuleData or {@code null} for none
+   */
+  public EventTicketClass setValueAddedModuleData(java.util.List<ValueAddedModuleData> valueAddedModuleData) {
+    this.valueAddedModuleData = valueAddedModuleData;
     return this;
   }
 

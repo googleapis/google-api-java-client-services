@@ -3242,6 +3242,77 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Flag to opt-in for final backup. By default, it is turned off. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean enableFinalBackup;
+
+      /** Flag to opt-in for final backup. By default, it is turned off.
+       */
+      public java.lang.Boolean getEnableFinalBackup() {
+        return enableFinalBackup;
+      }
+
+      /** Flag to opt-in for final backup. By default, it is turned off. */
+      public Delete setEnableFinalBackup(java.lang.Boolean enableFinalBackup) {
+        this.enableFinalBackup = enableFinalBackup;
+        return this;
+      }
+
+      /** Optional. The description of the final backup. */
+      @com.google.api.client.util.Key
+      private java.lang.String finalBackupDescription;
+
+      /** Optional. The description of the final backup.
+       */
+      public java.lang.String getFinalBackupDescription() {
+        return finalBackupDescription;
+      }
+
+      /** Optional. The description of the final backup. */
+      public Delete setFinalBackupDescription(java.lang.String finalBackupDescription) {
+        this.finalBackupDescription = finalBackupDescription;
+        return this;
+      }
+
+      /**
+       * Optional. Final Backup expiration time. Timestamp in UTC of when this resource is
+       * considered expired.
+       */
+      @com.google.api.client.util.Key
+      private String finalBackupExpiryTime;
+
+      /** Optional. Final Backup expiration time. Timestamp in UTC of when this resource is considered
+     expired.
+       */
+      public String getFinalBackupExpiryTime() {
+        return finalBackupExpiryTime;
+      }
+
+      /**
+       * Optional. Final Backup expiration time. Timestamp in UTC of when this resource is
+       * considered expired.
+       */
+      public Delete setFinalBackupExpiryTime(String finalBackupExpiryTime) {
+        this.finalBackupExpiryTime = finalBackupExpiryTime;
+        return this;
+      }
+
+      /** Optional. Retention period of the final backup. */
+      @com.google.api.client.util.Key
+      private java.lang.Long finalBackupTtlDays;
+
+      /** Optional. Retention period of the final backup.
+       */
+      public java.lang.Long getFinalBackupTtlDays() {
+        return finalBackupTtlDays;
+      }
+
+      /** Optional. Retention period of the final backup. */
+      public Delete setFinalBackupTtlDays(java.lang.Long finalBackupTtlDays) {
+        this.finalBackupTtlDays = finalBackupTtlDays;
+        return this;
+      }
+
       @Override
       public Delete set(String parameterName, Object value) {
         return (Delete) super.set(parameterName, value);
@@ -6839,6 +6910,32 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Project ID of the project that contains the instance. */
       public List setProject(java.lang.String project) {
         this.project = project;
+        return this;
+      }
+
+      /**
+       * Optional. A filter string that follows the rules of EBNF grammar
+       * (https://google.aip.dev/assets/misc/ebnf-filtering.txt). Cloud SQL provides filters for
+       * status, operationType, and startTime.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** Optional. A filter string that follows the rules of EBNF grammar
+     (https://google.aip.dev/assets/misc/ebnf-filtering.txt). Cloud SQL provides filters for status,
+     operationType, and startTime.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * Optional. A filter string that follows the rules of EBNF grammar
+       * (https://google.aip.dev/assets/misc/ebnf-filtering.txt). Cloud SQL provides filters for
+       * status, operationType, and startTime.
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
         return this;
       }
 

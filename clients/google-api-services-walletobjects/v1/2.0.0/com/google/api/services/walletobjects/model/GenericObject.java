@@ -240,6 +240,13 @@ public final class GenericObject extends com.google.api.client.json.GenericJson 
   private TimeInterval validTimeInterval;
 
   /**
+   * Optional value added module data. Maximum of ten on the object.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ValueAddedModuleData> valueAddedModuleData;
+
+  /**
    * The wide logo of the pass. When provided, this will be used in place of the logo in the top
    * left of the card view.
    * The value may be {@code null}.
@@ -739,6 +746,23 @@ public final class GenericObject extends com.google.api.client.json.GenericJson 
    */
   public GenericObject setValidTimeInterval(TimeInterval validTimeInterval) {
     this.validTimeInterval = validTimeInterval;
+    return this;
+  }
+
+  /**
+   * Optional value added module data. Maximum of ten on the object.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ValueAddedModuleData> getValueAddedModuleData() {
+    return valueAddedModuleData;
+  }
+
+  /**
+   * Optional value added module data. Maximum of ten on the object.
+   * @param valueAddedModuleData valueAddedModuleData or {@code null} for none
+   */
+  public GenericObject setValueAddedModuleData(java.util.List<ValueAddedModuleData> valueAddedModuleData) {
+    this.valueAddedModuleData = valueAddedModuleData;
     return this;
   }
 

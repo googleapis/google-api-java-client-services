@@ -157,7 +157,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Optional. Instance level network configuration.
+   * Optional. Instance-level network configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -574,7 +574,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Instance level network configuration.
+   * Optional. Instance-level network configuration.
    * @return value or {@code null} for none
    */
   public InstanceNetworkConfig getNetworkConfig() {
@@ -582,7 +582,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Instance level network configuration.
+   * Optional. Instance-level network configuration.
    * @param networkConfig networkConfig or {@code null} for none
    */
   public Instance setNetworkConfig(InstanceNetworkConfig networkConfig) {

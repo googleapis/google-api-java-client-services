@@ -37,7 +37,7 @@ public final class ClientConnectionConfig extends com.google.api.client.json.Gen
   private java.lang.Boolean requireConnectors;
 
   /**
-   * Optional. SSL config option for this instance.
+   * Optional. SSL configuration option for this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class ClientConnectionConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. SSL config option for this instance.
+   * Optional. SSL configuration option for this instance.
    * @return value or {@code null} for none
    */
   public SslConfig getSslConfig() {
@@ -69,7 +69,7 @@ public final class ClientConnectionConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. SSL config option for this instance.
+   * Optional. SSL configuration option for this instance.
    * @param sslConfig sslConfig or {@code null} for none
    */
   public ClientConnectionConfig setSslConfig(SslConfig sslConfig) {

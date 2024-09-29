@@ -31,6 +31,13 @@ package com.google.api.services.artifactregistry.v1.model;
 public final class GoogleDevtoolsArtifactregistryV1File extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Client specified annotations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> annotations;
+
+  /**
    * Output only. The time when the File was created.
    * The value may be {@code null}.
    */
@@ -81,6 +88,23 @@ public final class GoogleDevtoolsArtifactregistryV1File extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. Client specified annotations.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getAnnotations() {
+    return annotations;
+  }
+
+  /**
+   * Optional. Client specified annotations.
+   * @param annotations annotations or {@code null} for none
+   */
+  public GoogleDevtoolsArtifactregistryV1File setAnnotations(java.util.Map<String, java.lang.String> annotations) {
+    this.annotations = annotations;
+    return this;
+  }
 
   /**
    * Output only. The time when the File was created.

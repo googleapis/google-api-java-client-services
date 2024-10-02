@@ -31,6 +31,13 @@ package com.google.api.services.texttospeech.v1beta1.model;
 public final class SynthesizeSpeechRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Adnanced voice options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdvancedVoiceOptions advancedVoiceOptions;
+
+  /**
    * Required. The configuration of the synthesized audio.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class SynthesizeSpeechRequest extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private VoiceSelectionParams voice;
+
+  /**
+   * Adnanced voice options.
+   * @return value or {@code null} for none
+   */
+  public AdvancedVoiceOptions getAdvancedVoiceOptions() {
+    return advancedVoiceOptions;
+  }
+
+  /**
+   * Adnanced voice options.
+   * @param advancedVoiceOptions advancedVoiceOptions or {@code null} for none
+   */
+  public SynthesizeSpeechRequest setAdvancedVoiceOptions(AdvancedVoiceOptions advancedVoiceOptions) {
+    this.advancedVoiceOptions = advancedVoiceOptions;
+    return this;
+  }
 
   /**
    * Required. The configuration of the synthesized audio.

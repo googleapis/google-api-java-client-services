@@ -32,6 +32,19 @@ package com.google.api.services.texttospeech.v1beta1.model;
 public final class SynthesisInput extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The pronunciation customizations to be applied to the input. If this is set, the
+   * input will be synthesized using the given pronunciation customizations. The initial support
+   * will be for EFIGS (English, French, Italian, German, Spanish) languages, as provided in
+   * VoiceSelectionParams. Journey and Instant Clone voices are not supported yet. In order to
+   * customize the pronunciation of a phrase, there must be an exact match of the phrase in the
+   * input types. If using SSML, the phrase must not be inside a phoneme tag (entirely or
+   * partially).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomPronunciations customPronunciations;
+
+  /**
    * The SSML document to be synthesized. The SSML document must be valid and well-formed. Otherwise
    * the RPC will fail and return google.rpc.Code.INVALID_ARGUMENT. For more information, see
    * [SSML](https://cloud.google.com/text-to-speech/docs/ssml).
@@ -46,6 +59,35 @@ public final class SynthesisInput extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
+
+  /**
+   * Optional. The pronunciation customizations to be applied to the input. If this is set, the
+   * input will be synthesized using the given pronunciation customizations. The initial support
+   * will be for EFIGS (English, French, Italian, German, Spanish) languages, as provided in
+   * VoiceSelectionParams. Journey and Instant Clone voices are not supported yet. In order to
+   * customize the pronunciation of a phrase, there must be an exact match of the phrase in the
+   * input types. If using SSML, the phrase must not be inside a phoneme tag (entirely or
+   * partially).
+   * @return value or {@code null} for none
+   */
+  public CustomPronunciations getCustomPronunciations() {
+    return customPronunciations;
+  }
+
+  /**
+   * Optional. The pronunciation customizations to be applied to the input. If this is set, the
+   * input will be synthesized using the given pronunciation customizations. The initial support
+   * will be for EFIGS (English, French, Italian, German, Spanish) languages, as provided in
+   * VoiceSelectionParams. Journey and Instant Clone voices are not supported yet. In order to
+   * customize the pronunciation of a phrase, there must be an exact match of the phrase in the
+   * input types. If using SSML, the phrase must not be inside a phoneme tag (entirely or
+   * partially).
+   * @param customPronunciations customPronunciations or {@code null} for none
+   */
+  public SynthesisInput setCustomPronunciations(CustomPronunciations customPronunciations) {
+    this.customPronunciations = customPronunciations;
+    return this;
+  }
 
   /**
    * The SSML document to be synthesized. The SSML document must be valid and well-formed. Otherwise

@@ -33015,9 +33015,9 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * This request holds the parameters needed by the aiplatform server.  After setting any optional
              * parameters, call the {@link BatchCreate#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The resource name of the EntityType to create the batch of Features under. Format:
-             *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
-             *        type}`
+             * @param parent Required. The resource name of the EntityType/FeatureGroup to create the batch of Features under.
+             *        Format: `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/
+             *        {entity_type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
              * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchCreateFeaturesRequest}
              * @return the request
              */
@@ -33045,9 +33045,9 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * BatchCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The resource name of the EntityType to create the batch of Features under. Format:
-             *        `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_
-             *        type}`
+               * @param parent Required. The resource name of the EntityType/FeatureGroup to create the batch of Features under.
+             *        Format: `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/
+             *        {entity_type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchCreateFeaturesRequest}
                * @since 1.13
                */
@@ -33117,24 +33117,28 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               }
 
               /**
-               * Required. The resource name of the EntityType to create the batch of Features
-               * under. Format: `projects/{project}/locations/{location}/featurestores/{featurestore
-               * }/entityTypes/{entity_type}`
+               * Required. The resource name of the EntityType/FeatureGroup to create the batch of
+               * Features under. Format: `projects/{project}/locations/{location}/featurestores/{fea
+               * turestore}/entityTypes/{entity_type}`
+               * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The resource name of the EntityType to create the batch of Features under. Format:
+              /** Required. The resource name of the EntityType/FeatureGroup to create the batch of Features under.
+             Format:
              `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+             `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The resource name of the EntityType to create the batch of Features
-               * under. Format: `projects/{project}/locations/{location}/featurestores/{featurestore
-               * }/entityTypes/{entity_type}`
+               * Required. The resource name of the EntityType/FeatureGroup to create the batch of
+               * Features under. Format: `projects/{project}/locations/{location}/featurestores/{fea
+               * turestore}/entityTypes/{entity_type}`
+               * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
                */
               public BatchCreate setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {

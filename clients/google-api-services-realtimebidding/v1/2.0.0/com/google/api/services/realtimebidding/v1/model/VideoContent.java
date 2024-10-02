@@ -38,15 +38,16 @@ public final class VideoContent extends com.google.api.client.json.GenericJson {
   private VideoMetadata videoMetadata;
 
   /**
-   * The URL to fetch a video ad.
+   * The URL to fetch a video ad. The URL should return an XML response that conforms to the VAST
+   * 2.0, 3.0 or 4.x standard.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String videoUrl;
 
   /**
-   * The contents of a VAST document for a video ad. This document should conform to the VAST 2.0 or
-   * 3.0 standard.
+   * The contents of a VAST document for a video ad. This document should conform to the VAST 2.0,
+   * 3.0, or 4.x standard.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +71,8 @@ public final class VideoContent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL to fetch a video ad.
+   * The URL to fetch a video ad. The URL should return an XML response that conforms to the VAST
+   * 2.0, 3.0 or 4.x standard.
    * @return value or {@code null} for none
    */
   public java.lang.String getVideoUrl() {
@@ -78,7 +80,8 @@ public final class VideoContent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL to fetch a video ad.
+   * The URL to fetch a video ad. The URL should return an XML response that conforms to the VAST
+   * 2.0, 3.0 or 4.x standard.
    * @param videoUrl videoUrl or {@code null} for none
    */
   public VideoContent setVideoUrl(java.lang.String videoUrl) {
@@ -87,8 +90,8 @@ public final class VideoContent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The contents of a VAST document for a video ad. This document should conform to the VAST 2.0 or
-   * 3.0 standard.
+   * The contents of a VAST document for a video ad. This document should conform to the VAST 2.0,
+   * 3.0, or 4.x standard.
    * @return value or {@code null} for none
    */
   public java.lang.String getVideoVastXml() {
@@ -96,8 +99,8 @@ public final class VideoContent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The contents of a VAST document for a video ad. This document should conform to the VAST 2.0 or
-   * 3.0 standard.
+   * The contents of a VAST document for a video ad. This document should conform to the VAST 2.0,
+   * 3.0, or 4.x standard.
    * @param videoVastXml videoVastXml or {@code null} for none
    */
   public VideoContent setVideoVastXml(java.lang.String videoVastXml) {

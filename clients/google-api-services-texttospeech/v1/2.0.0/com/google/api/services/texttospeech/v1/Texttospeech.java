@@ -1100,6 +1100,110 @@ public class Texttospeech extends com.google.api.client.googleapis.services.json
   public class Voices {
 
     /**
+     * Generates voice clone key given a short voice prompt. This method validates the voice prompts
+     * with a series of checks against the voice talent statement to verify the voice clone is safe to
+     * generate.
+     *
+     * Create a request for the method "voices.generateVoiceCloningKey".
+     *
+     * This request holds the parameters needed by the texttospeech server.  After setting any optional
+     * parameters, call the {@link GenerateVoiceCloningKey#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param content the {@link com.google.api.services.texttospeech.v1.model.GenerateVoiceCloningKeyRequest}
+     * @return the request
+     */
+    public GenerateVoiceCloningKey generateVoiceCloningKey(com.google.api.services.texttospeech.v1.model.GenerateVoiceCloningKeyRequest content) throws java.io.IOException {
+      GenerateVoiceCloningKey result = new GenerateVoiceCloningKey(content);
+      initialize(result);
+      return result;
+    }
+
+    public class GenerateVoiceCloningKey extends TexttospeechRequest<com.google.api.services.texttospeech.v1.model.GenerateVoiceCloningKeyResponse> {
+
+      private static final String REST_PATH = "v1/voices:generateVoiceCloningKey";
+
+      /**
+       * Generates voice clone key given a short voice prompt. This method validates the voice prompts
+       * with a series of checks against the voice talent statement to verify the voice clone is safe to
+       * generate.
+       *
+       * Create a request for the method "voices.generateVoiceCloningKey".
+       *
+       * This request holds the parameters needed by the the texttospeech server.  After setting any
+       * optional parameters, call the {@link GenerateVoiceCloningKey#execute()} method to invoke the
+       * remote operation. <p> {@link GenerateVoiceCloningKey#initialize(com.google.api.client.googleapi
+       * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.texttospeech.v1.model.GenerateVoiceCloningKeyRequest}
+       * @since 1.13
+       */
+      protected GenerateVoiceCloningKey(com.google.api.services.texttospeech.v1.model.GenerateVoiceCloningKeyRequest content) {
+        super(Texttospeech.this, "POST", REST_PATH, content, com.google.api.services.texttospeech.v1.model.GenerateVoiceCloningKeyResponse.class);
+      }
+
+      @Override
+      public GenerateVoiceCloningKey set$Xgafv(java.lang.String $Xgafv) {
+        return (GenerateVoiceCloningKey) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GenerateVoiceCloningKey setAccessToken(java.lang.String accessToken) {
+        return (GenerateVoiceCloningKey) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GenerateVoiceCloningKey setAlt(java.lang.String alt) {
+        return (GenerateVoiceCloningKey) super.setAlt(alt);
+      }
+
+      @Override
+      public GenerateVoiceCloningKey setCallback(java.lang.String callback) {
+        return (GenerateVoiceCloningKey) super.setCallback(callback);
+      }
+
+      @Override
+      public GenerateVoiceCloningKey setFields(java.lang.String fields) {
+        return (GenerateVoiceCloningKey) super.setFields(fields);
+      }
+
+      @Override
+      public GenerateVoiceCloningKey setKey(java.lang.String key) {
+        return (GenerateVoiceCloningKey) super.setKey(key);
+      }
+
+      @Override
+      public GenerateVoiceCloningKey setOauthToken(java.lang.String oauthToken) {
+        return (GenerateVoiceCloningKey) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GenerateVoiceCloningKey setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GenerateVoiceCloningKey) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GenerateVoiceCloningKey setQuotaUser(java.lang.String quotaUser) {
+        return (GenerateVoiceCloningKey) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GenerateVoiceCloningKey setUploadType(java.lang.String uploadType) {
+        return (GenerateVoiceCloningKey) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GenerateVoiceCloningKey setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GenerateVoiceCloningKey) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public GenerateVoiceCloningKey set(String parameterName, Object value) {
+        return (GenerateVoiceCloningKey) super.set(parameterName, value);
+      }
+    }
+    /**
      * Returns a list of Voice supported for synthesis.
      *
      * Create a request for the method "voices.list".

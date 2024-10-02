@@ -37,9 +37,9 @@ public final class GoogleCloudAiplatformV1beta1RagContextsContext extends com.go
   private java.lang.Double distance;
 
   /**
-   * For vertex RagStore, if the file is imported from Cloud Storage or Google Drive, source_uri
-   * will be original file URI in Cloud Storage or Google Drive; if file is uploaded, source_uri
-   * will be file display name.
+   * If the file is imported from Cloud Storage or Google Drive, source_uri will be original file
+   * URI in Cloud Storage or Google Drive; if file is uploaded, source_uri will be file display
+   * name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,9 +77,9 @@ public final class GoogleCloudAiplatformV1beta1RagContextsContext extends com.go
   }
 
   /**
-   * For vertex RagStore, if the file is imported from Cloud Storage or Google Drive, source_uri
-   * will be original file URI in Cloud Storage or Google Drive; if file is uploaded, source_uri
-   * will be file display name.
+   * If the file is imported from Cloud Storage or Google Drive, source_uri will be original file
+   * URI in Cloud Storage or Google Drive; if file is uploaded, source_uri will be file display
+   * name.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceUri() {
@@ -87,9 +87,9 @@ public final class GoogleCloudAiplatformV1beta1RagContextsContext extends com.go
   }
 
   /**
-   * For vertex RagStore, if the file is imported from Cloud Storage or Google Drive, source_uri
-   * will be original file URI in Cloud Storage or Google Drive; if file is uploaded, source_uri
-   * will be file display name.
+   * If the file is imported from Cloud Storage or Google Drive, source_uri will be original file
+   * URI in Cloud Storage or Google Drive; if file is uploaded, source_uri will be file display
+   * name.
    * @param sourceUri sourceUri or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RagContextsContext setSourceUri(java.lang.String sourceUri) {

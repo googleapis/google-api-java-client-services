@@ -17,7 +17,8 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Request message for FeaturestoreService.BatchCreateFeatures.
+ * Request message for FeaturestoreService.BatchCreateFeatures. Request message for
+ * FeatureRegistryService.BatchCreateFeatures.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -31,9 +32,9 @@ public final class GoogleCloudAiplatformV1BatchCreateFeaturesRequest extends com
 
   /**
    * Required. The request message specifying the Features to create. All Features must be created
-   * under the same parent EntityType. The `parent` field in each child request message can be
-   * omitted. If `parent` is set in a child request, then the value must match the `parent` value in
-   * this request message.
+   * under the same parent EntityType / FeatureGroup. The `parent` field in each child request
+   * message can be omitted. If `parent` is set in a child request, then the value must match the
+   * `parent` value in this request message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,9 +42,9 @@ public final class GoogleCloudAiplatformV1BatchCreateFeaturesRequest extends com
 
   /**
    * Required. The request message specifying the Features to create. All Features must be created
-   * under the same parent EntityType. The `parent` field in each child request message can be
-   * omitted. If `parent` is set in a child request, then the value must match the `parent` value in
-   * this request message.
+   * under the same parent EntityType / FeatureGroup. The `parent` field in each child request
+   * message can be omitted. If `parent` is set in a child request, then the value must match the
+   * `parent` value in this request message.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1CreateFeatureRequest> getRequests() {
@@ -52,9 +53,9 @@ public final class GoogleCloudAiplatformV1BatchCreateFeaturesRequest extends com
 
   /**
    * Required. The request message specifying the Features to create. All Features must be created
-   * under the same parent EntityType. The `parent` field in each child request message can be
-   * omitted. If `parent` is set in a child request, then the value must match the `parent` value in
-   * this request message.
+   * under the same parent EntityType / FeatureGroup. The `parent` field in each child request
+   * message can be omitted. If `parent` is set in a child request, then the value must match the
+   * `parent` value in this request message.
    * @param requests requests or {@code null} for none
    */
   public GoogleCloudAiplatformV1BatchCreateFeaturesRequest setRequests(java.util.List<GoogleCloudAiplatformV1CreateFeatureRequest> requests) {

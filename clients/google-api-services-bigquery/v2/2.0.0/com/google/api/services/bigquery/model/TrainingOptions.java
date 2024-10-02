@@ -152,6 +152,15 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Double colsampleBytree;
 
   /**
+   * The contribution metric. Applies to contribution analysis models. Allowed formats supported are
+   * for summable and summable ratio contribution metrics. These include expressions such as
+   * "SUM(x)" or "SUM(x)/SUM(y)", where x and y are column names from the base table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String contributionMetric;
+
+  /**
    * Type of normalization algorithm for boosted tree models using dart booster.
    * The value may be {@code null}.
    */
@@ -200,6 +209,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean decomposeTimeSeries;
+
+  /**
+   * Optional. Names of the columns to slice on. Applies to contribution analysis models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> dimensionIdColumns;
 
   /**
    * Distance type for clustering models.
@@ -316,6 +332,14 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Long integratedGradientsNumSteps;
 
   /**
+   * Name of the column used to determine the rows corresponding to control and test. Applies to
+   * contribution analysis models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String isTestColumn;
+
+  /**
    * Item column specified for matrix factorization models.
    * The value may be {@code null}.
    */
@@ -416,6 +440,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxTreeDepth;
+
+  /**
+   * The apriori support minimum. Applies to contribution analysis models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double minAprioriSupport;
 
   /**
    * When early_stop is true, stops training when accuracy improvement is less than
@@ -964,6 +995,27 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * The contribution metric. Applies to contribution analysis models. Allowed formats supported are
+   * for summable and summable ratio contribution metrics. These include expressions such as
+   * "SUM(x)" or "SUM(x)/SUM(y)", where x and y are column names from the base table.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContributionMetric() {
+    return contributionMetric;
+  }
+
+  /**
+   * The contribution metric. Applies to contribution analysis models. Allowed formats supported are
+   * for summable and summable ratio contribution metrics. These include expressions such as
+   * "SUM(x)" or "SUM(x)/SUM(y)", where x and y are column names from the base table.
+   * @param contributionMetric contributionMetric or {@code null} for none
+   */
+  public TrainingOptions setContributionMetric(java.lang.String contributionMetric) {
+    this.contributionMetric = contributionMetric;
+    return this;
+  }
+
+  /**
    * Type of normalization algorithm for boosted tree models using dart booster.
    * @return value or {@code null} for none
    */
@@ -1078,6 +1130,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setDecomposeTimeSeries(java.lang.Boolean decomposeTimeSeries) {
     this.decomposeTimeSeries = decomposeTimeSeries;
+    return this;
+  }
+
+  /**
+   * Optional. Names of the columns to slice on. Applies to contribution analysis models.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDimensionIdColumns() {
+    return dimensionIdColumns;
+  }
+
+  /**
+   * Optional. Names of the columns to slice on. Applies to contribution analysis models.
+   * @param dimensionIdColumns dimensionIdColumns or {@code null} for none
+   */
+  public TrainingOptions setDimensionIdColumns(java.util.List<java.lang.String> dimensionIdColumns) {
+    this.dimensionIdColumns = dimensionIdColumns;
     return this;
   }
 
@@ -1358,6 +1427,25 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Name of the column used to determine the rows corresponding to control and test. Applies to
+   * contribution analysis models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIsTestColumn() {
+    return isTestColumn;
+  }
+
+  /**
+   * Name of the column used to determine the rows corresponding to control and test. Applies to
+   * contribution analysis models.
+   * @param isTestColumn isTestColumn or {@code null} for none
+   */
+  public TrainingOptions setIsTestColumn(java.lang.String isTestColumn) {
+    this.isTestColumn = isTestColumn;
+    return this;
+  }
+
+  /**
    * Item column specified for matrix factorization models.
    * @return value or {@code null} for none
    */
@@ -1600,6 +1688,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setMaxTreeDepth(java.lang.Long maxTreeDepth) {
     this.maxTreeDepth = maxTreeDepth;
+    return this;
+  }
+
+  /**
+   * The apriori support minimum. Applies to contribution analysis models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getMinAprioriSupport() {
+    return minAprioriSupport;
+  }
+
+  /**
+   * The apriori support minimum. Applies to contribution analysis models.
+   * @param minAprioriSupport minAprioriSupport or {@code null} for none
+   */
+  public TrainingOptions setMinAprioriSupport(java.lang.Double minAprioriSupport) {
+    this.minAprioriSupport = minAprioriSupport;
     return this;
   }
 

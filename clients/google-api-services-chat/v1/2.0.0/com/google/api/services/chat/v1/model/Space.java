@@ -118,6 +118,24 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. Exact permission settings which can be set to update the space. Input for updating a
+   * space. Otherwise, output only. For space creation, use `predefined_permission_settings`
+   * instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PermissionSettings permissionSettings;
+
+  /**
+   * Optional. Input only. Space permission settings. Input for creating a space, a collaboration
+   * space is created if this field is not set. After you create the space, settings are populated
+   * in the `PermissionSettings` field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String predefinedPermissionSettings;
+
+  /**
    * Optional. Whether the space is a DM between a Chat app and a single human.
    * The value may be {@code null}.
    */
@@ -373,6 +391,48 @@ public final class Space extends com.google.api.client.json.GenericJson {
    */
   public Space setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Exact permission settings which can be set to update the space. Input for updating a
+   * space. Otherwise, output only. For space creation, use `predefined_permission_settings`
+   * instead.
+   * @return value or {@code null} for none
+   */
+  public PermissionSettings getPermissionSettings() {
+    return permissionSettings;
+  }
+
+  /**
+   * Optional. Exact permission settings which can be set to update the space. Input for updating a
+   * space. Otherwise, output only. For space creation, use `predefined_permission_settings`
+   * instead.
+   * @param permissionSettings permissionSettings or {@code null} for none
+   */
+  public Space setPermissionSettings(PermissionSettings permissionSettings) {
+    this.permissionSettings = permissionSettings;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. Space permission settings. Input for creating a space, a collaboration
+   * space is created if this field is not set. After you create the space, settings are populated
+   * in the `PermissionSettings` field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPredefinedPermissionSettings() {
+    return predefinedPermissionSettings;
+  }
+
+  /**
+   * Optional. Input only. Space permission settings. Input for creating a space, a collaboration
+   * space is created if this field is not set. After you create the space, settings are populated
+   * in the `PermissionSettings` field.
+   * @param predefinedPermissionSettings predefinedPermissionSettings or {@code null} for none
+   */
+  public Space setPredefinedPermissionSettings(java.lang.String predefinedPermissionSettings) {
+    this.predefinedPermissionSettings = predefinedPermissionSettings;
     return this;
   }
 

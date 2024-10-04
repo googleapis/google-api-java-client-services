@@ -3821,15 +3821,15 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
            * Optional. Optional limit on the number of KeyHandles to include in the response. The
            * service may return fewer than this value. Further KeyHandles can subsequently be
            * obtained by including the ListKeyHandlesResponse.next_page_token in a subsequent
-           * request. If unspecified, at most KeyHandles 100 will be returned.
+           * request. If unspecified, at most 100 KeyHandles will be returned.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
           /** Optional. Optional limit on the number of KeyHandles to include in the response. The service may
          return fewer than this value. Further KeyHandles can subsequently be obtained by including the
-         ListKeyHandlesResponse.next_page_token in a subsequent request. If unspecified, at most KeyHandles
-         100 will be returned.
+         ListKeyHandlesResponse.next_page_token in a subsequent request. If unspecified, at most 100
+         KeyHandles will be returned.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
@@ -3839,7 +3839,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
            * Optional. Optional limit on the number of KeyHandles to include in the response. The
            * service may return fewer than this value. Further KeyHandles can subsequently be
            * obtained by including the ListKeyHandlesResponse.next_page_token in a subsequent
-           * request. If unspecified, at most KeyHandles 100 will be returned.
+           * request. If unspecified, at most 100 KeyHandles will be returned.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;

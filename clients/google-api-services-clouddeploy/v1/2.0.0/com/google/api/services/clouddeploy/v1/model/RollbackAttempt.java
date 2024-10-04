@@ -37,6 +37,13 @@ public final class RollbackAttempt extends com.google.api.client.json.GenericJso
   private java.lang.String destinationPhase;
 
   /**
+   * Output only. If active rollout exists on the target, abort this rollback.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableRollbackIfRolloutPending;
+
+  /**
    * Output only. ID of the rollback `Rollout` to create.
    * The value may be {@code null}.
    */
@@ -71,6 +78,23 @@ public final class RollbackAttempt extends com.google.api.client.json.GenericJso
    */
   public RollbackAttempt setDestinationPhase(java.lang.String destinationPhase) {
     this.destinationPhase = destinationPhase;
+    return this;
+  }
+
+  /**
+   * Output only. If active rollout exists on the target, abort this rollback.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableRollbackIfRolloutPending() {
+    return disableRollbackIfRolloutPending;
+  }
+
+  /**
+   * Output only. If active rollout exists on the target, abort this rollback.
+   * @param disableRollbackIfRolloutPending disableRollbackIfRolloutPending or {@code null} for none
+   */
+  public RollbackAttempt setDisableRollbackIfRolloutPending(java.lang.Boolean disableRollbackIfRolloutPending) {
+    this.disableRollbackIfRolloutPending = disableRollbackIfRolloutPending;
     return this;
   }
 

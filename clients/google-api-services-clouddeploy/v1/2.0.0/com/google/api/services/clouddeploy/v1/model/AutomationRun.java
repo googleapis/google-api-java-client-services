@@ -84,7 +84,8 @@ public final class AutomationRun extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
-   * Output only. Contains information about what policies prevented the `AutomationRun` to proceed.
+   * Output only. Contains information about what policies prevented the `AutomationRun` from
+   * proceeding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -285,7 +286,8 @@ public final class AutomationRun extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Contains information about what policies prevented the `AutomationRun` to proceed.
+   * Output only. Contains information about what policies prevented the `AutomationRun` from
+   * proceeding.
    * @return value or {@code null} for none
    */
   public PolicyViolation getPolicyViolation() {
@@ -293,7 +295,8 @@ public final class AutomationRun extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Contains information about what policies prevented the `AutomationRun` to proceed.
+   * Output only. Contains information about what policies prevented the `AutomationRun` from
+   * proceeding.
    * @param policyViolation policyViolation or {@code null} for none
    */
   public AutomationRun setPolicyViolation(PolicyViolation policyViolation) {

@@ -17,8 +17,8 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * A `DeployPolicy` resource in the Cloud Deploy API. A `DeployPolicy` inhibits manual or automation
- * driven actions within a Delivery Pipeline or Target.
+ * A `DeployPolicy` resource in the Cloud Deploy API. A `DeployPolicy` inhibits manual or
+ * automation-driven actions within a Delivery Pipeline or Target.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:

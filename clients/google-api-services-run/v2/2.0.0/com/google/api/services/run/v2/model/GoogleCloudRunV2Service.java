@@ -158,6 +158,14 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   private java.lang.String ingress;
 
   /**
+   * Optional. Disables IAM permission check for run.routes.invoke for callers of this service. This
+   * setting should not be used with external ingress.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean invokerIamDisabled;
+
+  /**
    * Optional. Unstructured key value map that can be used to organize and categorize objects. User-
    * provided labels are shared with Google's billing system, so they can be used to filter, or
    * break down billing charges by team, component, environment, state, etc. For more information,
@@ -601,6 +609,25 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
    */
   public GoogleCloudRunV2Service setIngress(java.lang.String ingress) {
     this.ingress = ingress;
+    return this;
+  }
+
+  /**
+   * Optional. Disables IAM permission check for run.routes.invoke for callers of this service. This
+   * setting should not be used with external ingress.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getInvokerIamDisabled() {
+    return invokerIamDisabled;
+  }
+
+  /**
+   * Optional. Disables IAM permission check for run.routes.invoke for callers of this service. This
+   * setting should not be used with external ingress.
+   * @param invokerIamDisabled invokerIamDisabled or {@code null} for none
+   */
+  public GoogleCloudRunV2Service setInvokerIamDisabled(java.lang.Boolean invokerIamDisabled) {
+    this.invokerIamDisabled = invokerIamDisabled;
     return this;
   }
 

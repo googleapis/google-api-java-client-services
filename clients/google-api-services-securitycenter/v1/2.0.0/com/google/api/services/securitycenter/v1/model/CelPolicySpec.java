@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.securitycenter.v1beta2.model;
+package com.google.api.services.securitycenter.v1.model;
 
 /**
  * YAML-based rule that uses CEL, which supports the declaration of variables and a filtering

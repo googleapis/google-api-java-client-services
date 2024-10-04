@@ -31,11 +31,35 @@ package com.google.api.services.securitycenter.v1.model;
 public final class AzureResourceGroup extends com.google.api.client.json.GenericJson {
 
   /**
+   * The ID of the Azure resource group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String id;
+
+  /**
    * The name of the Azure resource group. This is not a UUID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * The ID of the Azure resource group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getId() {
+    return id;
+  }
+
+  /**
+   * The ID of the Azure resource group.
+   * @param id id or {@code null} for none
+   */
+  public AzureResourceGroup setId(java.lang.String id) {
+    this.id = id;
+    return this;
+  }
 
   /**
    * The name of the Azure resource group. This is not a UUID.

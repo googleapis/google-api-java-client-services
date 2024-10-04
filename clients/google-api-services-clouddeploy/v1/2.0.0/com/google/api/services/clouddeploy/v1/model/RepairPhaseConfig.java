@@ -17,8 +17,7 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * Contains criteria for selecting Targets. This could be used to select targets for a Deploy Policy
- * or for an Automation.
+ * Configuration of the repair phase.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
@@ -28,67 +27,64 @@ package com.google.api.services.clouddeploy.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class TargetAttribute extends com.google.api.client.json.GenericJson {
+public final class RepairPhaseConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * ID of the `Target`. The value of this field could be one of the following: * The last segment
-   * of a target name * "*", all targets in a location
+   * Optional. Retries a failed job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String id;
+  private Retry retry;
 
   /**
-   * Target labels.
+   * Optional. Rolls back a `Rollout`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.String> labels;
+  private Rollback rollback;
 
   /**
-   * ID of the `Target`. The value of this field could be one of the following: * The last segment
-   * of a target name * "*", all targets in a location
+   * Optional. Retries a failed job.
    * @return value or {@code null} for none
    */
-  public java.lang.String getId() {
-    return id;
+  public Retry getRetry() {
+    return retry;
   }
 
   /**
-   * ID of the `Target`. The value of this field could be one of the following: * The last segment
-   * of a target name * "*", all targets in a location
-   * @param id id or {@code null} for none
+   * Optional. Retries a failed job.
+   * @param retry retry or {@code null} for none
    */
-  public TargetAttribute setId(java.lang.String id) {
-    this.id = id;
+  public RepairPhaseConfig setRetry(Retry retry) {
+    this.retry = retry;
     return this;
   }
 
   /**
-   * Target labels.
+   * Optional. Rolls back a `Rollout`.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.String> getLabels() {
-    return labels;
+  public Rollback getRollback() {
+    return rollback;
   }
 
   /**
-   * Target labels.
-   * @param labels labels or {@code null} for none
+   * Optional. Rolls back a `Rollout`.
+   * @param rollback rollback or {@code null} for none
    */
-  public TargetAttribute setLabels(java.util.Map<String, java.lang.String> labels) {
-    this.labels = labels;
+  public RepairPhaseConfig setRollback(Rollback rollback) {
+    this.rollback = rollback;
     return this;
   }
 
   @Override
-  public TargetAttribute set(String fieldName, Object value) {
-    return (TargetAttribute) super.set(fieldName, value);
+  public RepairPhaseConfig set(String fieldName, Object value) {
+    return (RepairPhaseConfig) super.set(fieldName, value);
   }
 
   @Override
-  public TargetAttribute clone() {
-    return (TargetAttribute) super.clone();
+  public RepairPhaseConfig clone() {
+    return (RepairPhaseConfig) super.clone();
   }
 
 }

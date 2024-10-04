@@ -31,6 +31,13 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class Rollout extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The AutomationRun actively repairing the rollout.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String activeRepairAutomationRun;
+
+  /**
    * User annotations. These attributes can only be set and used by the user, and not by Cloud
    * Deploy. See https://google.aip.dev/128#annotations for more details such as format and size
    * limitations.
@@ -203,6 +210,23 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String uid;
+
+  /**
+   * Output only. The AutomationRun actively repairing the rollout.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getActiveRepairAutomationRun() {
+    return activeRepairAutomationRun;
+  }
+
+  /**
+   * Output only. The AutomationRun actively repairing the rollout.
+   * @param activeRepairAutomationRun activeRepairAutomationRun or {@code null} for none
+   */
+  public Rollout setActiveRepairAutomationRun(java.lang.String activeRepairAutomationRun) {
+    this.activeRepairAutomationRun = activeRepairAutomationRun;
+    return this;
+  }
 
   /**
    * User annotations. These attributes can only be set and used by the user, and not by Cloud

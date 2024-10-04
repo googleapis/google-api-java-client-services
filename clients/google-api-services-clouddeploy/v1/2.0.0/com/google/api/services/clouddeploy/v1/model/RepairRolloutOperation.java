@@ -30,6 +30,13 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class RepairRolloutOperation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The index of the current repair action in the repair sequence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long currentRepairPhaseIndex;
+
+  /**
    * Output only. The job ID for the Job to repair.
    * The value may be {@code null}.
    */
@@ -63,6 +70,23 @@ public final class RepairRolloutOperation extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String rollout;
+
+  /**
+   * Output only. The index of the current repair action in the repair sequence.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCurrentRepairPhaseIndex() {
+    return currentRepairPhaseIndex;
+  }
+
+  /**
+   * Output only. The index of the current repair action in the repair sequence.
+   * @param currentRepairPhaseIndex currentRepairPhaseIndex or {@code null} for none
+   */
+  public RepairRolloutOperation setCurrentRepairPhaseIndex(java.lang.Long currentRepairPhaseIndex) {
+    this.currentRepairPhaseIndex = currentRepairPhaseIndex;
+    return this;
+  }
 
   /**
    * Output only. The job ID for the Job to repair.

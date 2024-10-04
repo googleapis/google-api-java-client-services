@@ -17,7 +17,9 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * Time windows within which actions are restricted.
+ * Time windows within which actions are restricted. See the
+ * [documentation](https://cloud.google.com/deploy/docs/deploy-policy#dates_times) for more
+ * information on how to configure dates/times.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:

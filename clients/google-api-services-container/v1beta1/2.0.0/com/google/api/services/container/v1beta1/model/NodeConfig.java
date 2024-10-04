@@ -94,6 +94,15 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String diskType;
 
   /**
+   * Output only. effective_cgroup_mode is the cgroup mode actually used by the node pool. It is
+   * determined by the cgroup mode specified in the LinuxNodeConfig or the default cgroup mode based
+   * on the cluster creation version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String effectiveCgroupMode;
+
+  /**
    * Optional. Reserved for future use.
    * The value may be {@code null}.
    */
@@ -516,6 +525,27 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setDiskType(java.lang.String diskType) {
     this.diskType = diskType;
+    return this;
+  }
+
+  /**
+   * Output only. effective_cgroup_mode is the cgroup mode actually used by the node pool. It is
+   * determined by the cgroup mode specified in the LinuxNodeConfig or the default cgroup mode based
+   * on the cluster creation version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEffectiveCgroupMode() {
+    return effectiveCgroupMode;
+  }
+
+  /**
+   * Output only. effective_cgroup_mode is the cgroup mode actually used by the node pool. It is
+   * determined by the cgroup mode specified in the LinuxNodeConfig or the default cgroup mode based
+   * on the cluster creation version.
+   * @param effectiveCgroupMode effectiveCgroupMode or {@code null} for none
+   */
+  public NodeConfig setEffectiveCgroupMode(java.lang.String effectiveCgroupMode) {
+    this.effectiveCgroupMode = effectiveCgroupMode;
     return this;
   }
 

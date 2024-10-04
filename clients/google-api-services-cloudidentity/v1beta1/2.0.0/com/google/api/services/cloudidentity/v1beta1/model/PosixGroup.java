@@ -17,7 +17,9 @@
 package com.google.api.services.cloudidentity.v1beta1.model;
 
 /**
- * POSIX Group definition to represent a group in a POSIX compliant system.
+ * POSIX Group definition to represent a group in a POSIX compliant system. Caution: POSIX groups
+ * are deprecated. As of September 26, 2024, you can no longer create new POSIX groups. For more
+ * information, see https://cloud.google.com/identity/docs/deprecations/posix-groups
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:

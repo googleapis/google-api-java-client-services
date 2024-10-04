@@ -90,7 +90,8 @@ public final class InstancePolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. If specified, VMs will consume only the specified reservation. If not specified
-   * (default), VMs will consume any applicable reservation.
+   * (default), VMs will consume any applicable reservation. Additionally, VMs will not consume any
+   * reservation if "NO_RESERVATION" is specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -208,7 +209,8 @@ public final class InstancePolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. If specified, VMs will consume only the specified reservation. If not specified
-   * (default), VMs will consume any applicable reservation.
+   * (default), VMs will consume any applicable reservation. Additionally, VMs will not consume any
+   * reservation if "NO_RESERVATION" is specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getReservation() {
@@ -217,7 +219,8 @@ public final class InstancePolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. If specified, VMs will consume only the specified reservation. If not specified
-   * (default), VMs will consume any applicable reservation.
+   * (default), VMs will consume any applicable reservation. Additionally, VMs will not consume any
+   * reservation if "NO_RESERVATION" is specified.
    * @param reservation reservation or {@code null} for none
    */
   public InstancePolicy setReservation(java.lang.String reservation) {

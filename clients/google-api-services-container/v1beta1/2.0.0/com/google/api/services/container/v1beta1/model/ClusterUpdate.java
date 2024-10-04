@@ -557,6 +557,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private AdditionalPodRangesConfig removedAdditionalPodRangesConfig;
 
   /**
+   * The Custom keys configuration for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UserManagedKeysConfig userManagedKeysConfig;
+
+  /**
    * The additional pod ranges to be added to the cluster. These pod ranges can be used by node
    * pools to allocate pod IPs.
    * @return value or {@code null} for none
@@ -1810,6 +1817,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setRemovedAdditionalPodRangesConfig(AdditionalPodRangesConfig removedAdditionalPodRangesConfig) {
     this.removedAdditionalPodRangesConfig = removedAdditionalPodRangesConfig;
+    return this;
+  }
+
+  /**
+   * The Custom keys configuration for the cluster.
+   * @return value or {@code null} for none
+   */
+  public UserManagedKeysConfig getUserManagedKeysConfig() {
+    return userManagedKeysConfig;
+  }
+
+  /**
+   * The Custom keys configuration for the cluster.
+   * @param userManagedKeysConfig userManagedKeysConfig or {@code null} for none
+   */
+  public ClusterUpdate setUserManagedKeysConfig(UserManagedKeysConfig userManagedKeysConfig) {
+    this.userManagedKeysConfig = userManagedKeysConfig;
     return this;
   }
 

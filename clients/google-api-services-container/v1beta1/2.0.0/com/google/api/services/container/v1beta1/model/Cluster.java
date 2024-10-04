@@ -660,6 +660,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String tpuIpv4CidrBlock;
 
   /**
+   * The Custom keys configuration for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UserManagedKeysConfig userManagedKeysConfig;
+
+  /**
    * Cluster-level Vertical Pod Autoscaling configuration.
    * The value may be {@code null}.
    */
@@ -2182,6 +2189,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setTpuIpv4CidrBlock(java.lang.String tpuIpv4CidrBlock) {
     this.tpuIpv4CidrBlock = tpuIpv4CidrBlock;
+    return this;
+  }
+
+  /**
+   * The Custom keys configuration for the cluster.
+   * @return value or {@code null} for none
+   */
+  public UserManagedKeysConfig getUserManagedKeysConfig() {
+    return userManagedKeysConfig;
+  }
+
+  /**
+   * The Custom keys configuration for the cluster.
+   * @param userManagedKeysConfig userManagedKeysConfig or {@code null} for none
+   */
+  public Cluster setUserManagedKeysConfig(UserManagedKeysConfig userManagedKeysConfig) {
+    this.userManagedKeysConfig = userManagedKeysConfig;
     return this;
   }
 

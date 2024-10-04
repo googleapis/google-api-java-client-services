@@ -31,7 +31,7 @@ public final class GoogleCloudRunV2ServiceScaling extends com.google.api.client.
 
   /**
    * Optional. total min instances for the service. This number of instances is divided among all
-   * revisions with specified traffic based on the percent of traffic they are receiving. (BETA)
+   * revisions with specified traffic based on the percent of traffic they are receiving.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class GoogleCloudRunV2ServiceScaling extends com.google.api.client.
 
   /**
    * Optional. total min instances for the service. This number of instances is divided among all
-   * revisions with specified traffic based on the percent of traffic they are receiving. (BETA)
+   * revisions with specified traffic based on the percent of traffic they are receiving.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinInstanceCount() {
@@ -55,7 +55,7 @@ public final class GoogleCloudRunV2ServiceScaling extends com.google.api.client.
 
   /**
    * Optional. total min instances for the service. This number of instances is divided among all
-   * revisions with specified traffic based on the percent of traffic they are receiving. (BETA)
+   * revisions with specified traffic based on the percent of traffic they are receiving.
    * @param minInstanceCount minInstanceCount or {@code null} for none
    */
   public GoogleCloudRunV2ServiceScaling setMinInstanceCount(java.lang.Integer minInstanceCount) {

@@ -104,6 +104,13 @@ public final class GitRepositoryLink extends com.google.api.client.json.GenericJ
   private String updateTime;
 
   /**
+   * Output only. External ID of the webhook created for the repository.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String webhookId;
+
+  /**
    * Optional. Allows clients to store small amounts of arbitrary data.
    * @return value or {@code null} for none
    */
@@ -276,6 +283,23 @@ public final class GitRepositoryLink extends com.google.api.client.json.GenericJ
    */
   public GitRepositoryLink setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Output only. External ID of the webhook created for the repository.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWebhookId() {
+    return webhookId;
+  }
+
+  /**
+   * Output only. External ID of the webhook created for the repository.
+   * @param webhookId webhookId or {@code null} for none
+   */
+  public GitRepositoryLink setWebhookId(java.lang.String webhookId) {
+    this.webhookId = webhookId;
     return this;
   }
 

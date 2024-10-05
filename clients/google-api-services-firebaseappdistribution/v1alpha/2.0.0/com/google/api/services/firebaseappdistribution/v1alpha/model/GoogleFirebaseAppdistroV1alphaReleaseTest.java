@@ -73,6 +73,13 @@ public final class GoogleFirebaseAppdistroV1alphaReleaseTest extends com.google.
   private java.lang.String name;
 
   /**
+   * Output only. The state of the release test.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String testState;
+
+  /**
    * Optional. Instructions for AI driven test.
    * @return value or {@code null} for none
    */
@@ -156,6 +163,23 @@ public final class GoogleFirebaseAppdistroV1alphaReleaseTest extends com.google.
    */
   public GoogleFirebaseAppdistroV1alphaReleaseTest setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The state of the release test.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTestState() {
+    return testState;
+  }
+
+  /**
+   * Output only. The state of the release test.
+   * @param testState testState or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaReleaseTest setTestState(java.lang.String testState) {
+    this.testState = testState;
     return this;
   }
 

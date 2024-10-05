@@ -17,7 +17,7 @@
 package com.google.api.services.firebaseappcheck.v1beta.model;
 
 /**
- * Encapsulates an *App Check token*, which are used to access Firebase services protected by App
+ * Encapsulates an *App Check token*, which are used to access backend services protected by App
  * Check.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -32,18 +32,22 @@ package com.google.api.services.firebaseappcheck.v1beta.model;
 public final class GoogleFirebaseAppcheckV1betaAppCheckToken extends com.google.api.client.json.GenericJson {
 
   /**
-   * An App Check token. App Check tokens are signed [JWTs](https://tools.ietf.org/html/rfc7519)
-   * containing claims that identify the attested app and Firebase project. This token is used to
-   * access Firebase services protected by App Check.
+   * The App Check token. App Check tokens are signed [JWTs](https://tools.ietf.org/html/rfc7519)
+   * containing claims that identify the attested app and GCP project. This token is used to access
+   * Google services protected by App Check. These tokens can also be [verified by your own custom
+   * backends](https://firebase.google.com/docs/app-check/custom-resource-backend) using the
+   * Firebase Admin SDK or third-party libraries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String attestationToken;
 
   /**
-   * An App Check token. App Check tokens are signed [JWTs](https://tools.ietf.org/html/rfc7519)
-   * containing claims that identify the attested app and Firebase project. This token is used to
-   * access Firebase services protected by App Check.
+   * The App Check token. App Check tokens are signed [JWTs](https://tools.ietf.org/html/rfc7519)
+   * containing claims that identify the attested app and GCP project. This token is used to access
+   * Google services protected by App Check. These tokens can also be [verified by your own custom
+   * backends](https://firebase.google.com/docs/app-check/custom-resource-backend) using the
+   * Firebase Admin SDK or third-party libraries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,9 +63,11 @@ public final class GoogleFirebaseAppcheckV1betaAppCheckToken extends com.google.
   private String ttl;
 
   /**
-   * An App Check token. App Check tokens are signed [JWTs](https://tools.ietf.org/html/rfc7519)
-   * containing claims that identify the attested app and Firebase project. This token is used to
-   * access Firebase services protected by App Check.
+   * The App Check token. App Check tokens are signed [JWTs](https://tools.ietf.org/html/rfc7519)
+   * containing claims that identify the attested app and GCP project. This token is used to access
+   * Google services protected by App Check. These tokens can also be [verified by your own custom
+   * backends](https://firebase.google.com/docs/app-check/custom-resource-backend) using the
+   * Firebase Admin SDK or third-party libraries.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttestationToken() {
@@ -69,9 +75,11 @@ public final class GoogleFirebaseAppcheckV1betaAppCheckToken extends com.google.
   }
 
   /**
-   * An App Check token. App Check tokens are signed [JWTs](https://tools.ietf.org/html/rfc7519)
-   * containing claims that identify the attested app and Firebase project. This token is used to
-   * access Firebase services protected by App Check.
+   * The App Check token. App Check tokens are signed [JWTs](https://tools.ietf.org/html/rfc7519)
+   * containing claims that identify the attested app and GCP project. This token is used to access
+   * Google services protected by App Check. These tokens can also be [verified by your own custom
+   * backends](https://firebase.google.com/docs/app-check/custom-resource-backend) using the
+   * Firebase Admin SDK or third-party libraries.
    * @param attestationToken attestationToken or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaAppCheckToken setAttestationToken(java.lang.String attestationToken) {
@@ -80,9 +88,11 @@ public final class GoogleFirebaseAppcheckV1betaAppCheckToken extends com.google.
   }
 
   /**
-   * An App Check token. App Check tokens are signed [JWTs](https://tools.ietf.org/html/rfc7519)
-   * containing claims that identify the attested app and Firebase project. This token is used to
-   * access Firebase services protected by App Check.
+   * The App Check token. App Check tokens are signed [JWTs](https://tools.ietf.org/html/rfc7519)
+   * containing claims that identify the attested app and GCP project. This token is used to access
+   * Google services protected by App Check. These tokens can also be [verified by your own custom
+   * backends](https://firebase.google.com/docs/app-check/custom-resource-backend) using the
+   * Firebase Admin SDK or third-party libraries.
    * @return value or {@code null} for none
    */
   public java.lang.String getToken() {
@@ -90,9 +100,11 @@ public final class GoogleFirebaseAppcheckV1betaAppCheckToken extends com.google.
   }
 
   /**
-   * An App Check token. App Check tokens are signed [JWTs](https://tools.ietf.org/html/rfc7519)
-   * containing claims that identify the attested app and Firebase project. This token is used to
-   * access Firebase services protected by App Check.
+   * The App Check token. App Check tokens are signed [JWTs](https://tools.ietf.org/html/rfc7519)
+   * containing claims that identify the attested app and GCP project. This token is used to access
+   * Google services protected by App Check. These tokens can also be [verified by your own custom
+   * backends](https://firebase.google.com/docs/app-check/custom-resource-backend) using the
+   * Firebase Admin SDK or third-party libraries.
    * @param token token or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaAppCheckToken setToken(java.lang.String token) {

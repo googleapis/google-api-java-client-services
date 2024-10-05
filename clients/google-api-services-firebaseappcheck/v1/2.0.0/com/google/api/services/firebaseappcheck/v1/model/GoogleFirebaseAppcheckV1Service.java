@@ -43,7 +43,7 @@ public final class GoogleFirebaseAppcheckV1Service extends com.google.api.client
    * a supported service ID. Currently, the following service IDs are supported: *
    * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
    * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com`
-   * (Cloud Firestore)
+   * (Cloud Firestore) * `oauth2.googleapis.com` (Google Identity for iOS)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,7 @@ public final class GoogleFirebaseAppcheckV1Service extends com.google.api.client
    * a supported service ID. Currently, the following service IDs are supported: *
    * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
    * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com`
-   * (Cloud Firestore)
+   * (Cloud Firestore) * `oauth2.googleapis.com` (Google Identity for iOS)
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -85,7 +85,7 @@ public final class GoogleFirebaseAppcheckV1Service extends com.google.api.client
    * a supported service ID. Currently, the following service IDs are supported: *
    * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
    * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com`
-   * (Cloud Firestore)
+   * (Cloud Firestore) * `oauth2.googleapis.com` (Google Identity for iOS)
    * @param name name or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1Service setName(java.lang.String name) {

@@ -17,8 +17,8 @@
 package com.google.api.services.firebaseappcheck.v1beta.model;
 
 /**
- * App Check enforcement policy for a specific resource of a Firebase service supported by App
- * Check. Note that this policy will override the service-level configuration.
+ * App Check enforcement policy for a specific resource of a Google service supported by App Check.
+ * Note that this policy will override the service-level configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase App Check API. For a detailed explanation
@@ -61,11 +61,12 @@ public final class GoogleFirebaseAppcheckV1betaResourcePolicy extends com.google
 
   /**
    * Required. Service specific name of the resource object to which this policy applies, in the
-   * format: * `//oauth2.googleapis.com/projects/{project_number}/oauthClients/{oauth_client_id}`
-   * (Google Identity for iOS) Note that the resource must belong to the service specified in the
-   * `name` and be from the same project as this policy, but the resource is allowed to be missing
-   * at the time of creation of this policy; in that case, we make a best-effort attempt at
-   * respecting this policy, but it may not have any effect until the resource is fully created.
+   * format: * **iOS OAuth clients** (Google Identity for iOS):
+   * `//oauth2.googleapis.com/projects/{project_number}/oauthClients/{oauth_client_id}` Note that
+   * the resource must belong to the service specified in the `name` and be from the same project as
+   * this policy, but the resource is allowed to be missing at the time of creation of this policy;
+   * in that case, we make a best-effort attempt at respecting this policy, but it may not have any
+   * effect until the resource is fully created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,11 +147,12 @@ public final class GoogleFirebaseAppcheckV1betaResourcePolicy extends com.google
 
   /**
    * Required. Service specific name of the resource object to which this policy applies, in the
-   * format: * `//oauth2.googleapis.com/projects/{project_number}/oauthClients/{oauth_client_id}`
-   * (Google Identity for iOS) Note that the resource must belong to the service specified in the
-   * `name` and be from the same project as this policy, but the resource is allowed to be missing
-   * at the time of creation of this policy; in that case, we make a best-effort attempt at
-   * respecting this policy, but it may not have any effect until the resource is fully created.
+   * format: * **iOS OAuth clients** (Google Identity for iOS):
+   * `//oauth2.googleapis.com/projects/{project_number}/oauthClients/{oauth_client_id}` Note that
+   * the resource must belong to the service specified in the `name` and be from the same project as
+   * this policy, but the resource is allowed to be missing at the time of creation of this policy;
+   * in that case, we make a best-effort attempt at respecting this policy, but it may not have any
+   * effect until the resource is fully created.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetResource() {
@@ -159,11 +161,12 @@ public final class GoogleFirebaseAppcheckV1betaResourcePolicy extends com.google
 
   /**
    * Required. Service specific name of the resource object to which this policy applies, in the
-   * format: * `//oauth2.googleapis.com/projects/{project_number}/oauthClients/{oauth_client_id}`
-   * (Google Identity for iOS) Note that the resource must belong to the service specified in the
-   * `name` and be from the same project as this policy, but the resource is allowed to be missing
-   * at the time of creation of this policy; in that case, we make a best-effort attempt at
-   * respecting this policy, but it may not have any effect until the resource is fully created.
+   * format: * **iOS OAuth clients** (Google Identity for iOS):
+   * `//oauth2.googleapis.com/projects/{project_number}/oauthClients/{oauth_client_id}` Note that
+   * the resource must belong to the service specified in the `name` and be from the same project as
+   * this policy, but the resource is allowed to be missing at the time of creation of this policy;
+   * in that case, we make a best-effort attempt at respecting this policy, but it may not have any
+   * effect until the resource is fully created.
    * @param targetResource targetResource or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaResourcePolicy setTargetResource(java.lang.String targetResource) {

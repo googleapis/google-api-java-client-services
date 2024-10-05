@@ -6798,7 +6798,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
        *        must be a supported service ID. Currently, the following service IDs are supported: *
        *        `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
        *        `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
-       *        `firestore.googleapis.com` (Cloud Firestore)
+       *        `firestore.googleapis.com` (Cloud Firestore) * `oauth2.googleapis.com` (Google Identity
+       *        for iOS)
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -6829,7 +6830,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
        *        must be a supported service ID. Currently, the following service IDs are supported: *
        *        `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
        *        `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
-       *        `firestore.googleapis.com` (Cloud Firestore)
+       *        `firestore.googleapis.com` (Cloud Firestore) * `oauth2.googleapis.com` (Google Identity
+       *        for iOS)
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -6913,7 +6915,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * must be a supported service ID. Currently, the following service IDs are supported: *
          * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
          * `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
-         * `firestore.googleapis.com` (Cloud Firestore)
+         * `firestore.googleapis.com` (Cloud Firestore) * `oauth2.googleapis.com` (Google Identity
+         * for iOS)
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
@@ -6922,7 +6925,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
        projects/{project_number}/services/{service_id} ``` Note that the `service_id` element must be a
        supported service ID. Currently, the following service IDs are supported: *
        `firebasestorage.googleapis.com` (Cloud Storage for Firebase) * `firebasedatabase.googleapis.com`
-       (Firebase Realtime Database) * `firestore.googleapis.com` (Cloud Firestore)
+       (Firebase Realtime Database) * `firestore.googleapis.com` (Cloud Firestore) *
+       `oauth2.googleapis.com` (Google Identity for iOS)
          */
         public java.lang.String getName() {
           return name;
@@ -6934,7 +6938,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * must be a supported service ID. Currently, the following service IDs are supported: *
          * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
          * `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
-         * `firestore.googleapis.com` (Cloud Firestore)
+         * `firestore.googleapis.com` (Cloud Firestore) * `oauth2.googleapis.com` (Google Identity
+         * for iOS)
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -7170,7 +7175,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
        *        must be a supported service ID. Currently, the following service IDs are supported: *
        *        `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
        *        `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
-       *        `firestore.googleapis.com` (Cloud Firestore)
+       *        `firestore.googleapis.com` (Cloud Firestore) * `oauth2.googleapis.com` (Google Identity
+       *        for iOS)
        * @param content the {@link com.google.api.services.firebaseappcheck.v1.model.GoogleFirebaseAppcheckV1Service}
        * @return the request
        */
@@ -7203,7 +7209,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
        *        must be a supported service ID. Currently, the following service IDs are supported: *
        *        `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
        *        `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
-       *        `firestore.googleapis.com` (Cloud Firestore)
+       *        `firestore.googleapis.com` (Cloud Firestore) * `oauth2.googleapis.com` (Google Identity
+       *        for iOS)
          * @param content the {@link com.google.api.services.firebaseappcheck.v1.model.GoogleFirebaseAppcheckV1Service}
          * @since 1.13
          */
@@ -7278,7 +7285,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * element must be a supported service ID. Currently, the following service IDs are
          * supported: * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
          * `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
-         * `firestore.googleapis.com` (Cloud Firestore)
+         * `firestore.googleapis.com` (Cloud Firestore) * `oauth2.googleapis.com` (Google Identity
+         * for iOS)
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
@@ -7287,7 +7295,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
        projects/{project_number}/services/{service_id} ``` Note that the `service_id` element must be a
        supported service ID. Currently, the following service IDs are supported: *
        `firebasestorage.googleapis.com` (Cloud Storage for Firebase) * `firebasedatabase.googleapis.com`
-       (Firebase Realtime Database) * `firestore.googleapis.com` (Cloud Firestore)
+       (Firebase Realtime Database) * `firestore.googleapis.com` (Cloud Firestore) *
+       `oauth2.googleapis.com` (Google Identity for iOS)
          */
         public java.lang.String getName() {
           return name;
@@ -7299,7 +7308,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * element must be a supported service ID. Currently, the following service IDs are
          * supported: * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
          * `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
-         * `firestore.googleapis.com` (Cloud Firestore)
+         * `firestore.googleapis.com` (Cloud Firestore) * `oauth2.googleapis.com` (Google Identity
+         * for iOS)
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

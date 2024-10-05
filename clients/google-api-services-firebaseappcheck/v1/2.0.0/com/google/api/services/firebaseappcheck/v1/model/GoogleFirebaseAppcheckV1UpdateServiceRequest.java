@@ -37,7 +37,7 @@ public final class GoogleFirebaseAppcheckV1UpdateServiceRequest extends com.goog
    * the `service_id` element must be a supported service ID. Currently, the following service IDs
    * are supported: * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
    * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com`
-   * (Cloud Firestore)
+   * (Cloud Firestore) * `oauth2.googleapis.com` (Google Identity for iOS)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,7 @@ public final class GoogleFirebaseAppcheckV1UpdateServiceRequest extends com.goog
    * the `service_id` element must be a supported service ID. Currently, the following service IDs
    * are supported: * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
    * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com`
-   * (Cloud Firestore)
+   * (Cloud Firestore) * `oauth2.googleapis.com` (Google Identity for iOS)
    * @return value or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1Service getService() {
@@ -70,7 +70,7 @@ public final class GoogleFirebaseAppcheckV1UpdateServiceRequest extends com.goog
    * the `service_id` element must be a supported service ID. Currently, the following service IDs
    * are supported: * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
    * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com`
-   * (Cloud Firestore)
+   * (Cloud Firestore) * `oauth2.googleapis.com` (Google Identity for iOS)
    * @param service service or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1UpdateServiceRequest setService(GoogleFirebaseAppcheckV1Service service) {

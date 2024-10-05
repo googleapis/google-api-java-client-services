@@ -17,8 +17,8 @@
 package com.google.api.services.artifactregistry.v1.model;
 
 /**
- * An Attachment refers to additional metadata that can be attached to artifacts in
- * ArtifactRegistry. An attachment consists of one or more files.
+ * An Attachment refers to additional metadata that can be attached to artifacts in Artifact
+ * Registry. An attachment consists of one or more files.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Artifact Registry API. For a detailed explanation
@@ -34,7 +34,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   /**
    * Optional. User annotations. These attributes can only be set and used by the user, and not by
    * Artifact Registry. See https://google.aip.dev/128#annotations for more details such as format
-   * and size limitations. Client specified annotations.
+   * and size limitations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,7 +42,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
    * The namespace this attachment belongs to. E.g. If an Attachment is created by artifact
-   * analysis, namespace is set to artifactanalysis.googleapis.com.
+   * analysis, namespace is set to `artifactanalysis.googleapis.com`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +56,8 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Required. The files that blong to this Attachment. If the file ID part contains slashes, they
-   * are escaped. E.g. "projects/p1/locations/us-central1/repositories/repo1/files/sha:".
+   * Required. The files that belong to this attachment. If the file ID part contains slashes, they
+   * are escaped. E.g. `projects/p1/locations/us-central1/repositories/repo1/files/sha:`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,8 +72,8 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The name of the OCI version that this attachment created. Only populated for
-   * Docker attachments. E.g. "projects/p1/locations/us-
-   * central1/repositories/repo1/packages/p1/versions/v1".
+   * Docker attachments. E.g. `projects/p1/locations/us-
+   * central1/repositories/repo1/packages/p1/versions/v1`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +88,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   private java.lang.String target;
 
   /**
-   * Type of Attachment. E.g. application/vnd.spdx+jsonn
+   * Type of Attachment. E.g. `application/vnd.spdx+json`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +104,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   /**
    * Optional. User annotations. These attributes can only be set and used by the user, and not by
    * Artifact Registry. See https://google.aip.dev/128#annotations for more details such as format
-   * and size limitations. Client specified annotations.
+   * and size limitations.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -114,7 +114,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   /**
    * Optional. User annotations. These attributes can only be set and used by the user, and not by
    * Artifact Registry. See https://google.aip.dev/128#annotations for more details such as format
-   * and size limitations. Client specified annotations.
+   * and size limitations.
    * @param annotations annotations or {@code null} for none
    */
   public Attachment setAnnotations(java.util.Map<String, java.lang.String> annotations) {
@@ -124,7 +124,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
    * The namespace this attachment belongs to. E.g. If an Attachment is created by artifact
-   * analysis, namespace is set to artifactanalysis.googleapis.com.
+   * analysis, namespace is set to `artifactanalysis.googleapis.com`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttachmentNamespace() {
@@ -133,7 +133,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
    * The namespace this attachment belongs to. E.g. If an Attachment is created by artifact
-   * analysis, namespace is set to artifactanalysis.googleapis.com.
+   * analysis, namespace is set to `artifactanalysis.googleapis.com`.
    * @param attachmentNamespace attachmentNamespace or {@code null} for none
    */
   public Attachment setAttachmentNamespace(java.lang.String attachmentNamespace) {
@@ -159,8 +159,8 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The files that blong to this Attachment. If the file ID part contains slashes, they
-   * are escaped. E.g. "projects/p1/locations/us-central1/repositories/repo1/files/sha:".
+   * Required. The files that belong to this attachment. If the file ID part contains slashes, they
+   * are escaped. E.g. `projects/p1/locations/us-central1/repositories/repo1/files/sha:`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFiles() {
@@ -168,8 +168,8 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The files that blong to this Attachment. If the file ID part contains slashes, they
-   * are escaped. E.g. "projects/p1/locations/us-central1/repositories/repo1/files/sha:".
+   * Required. The files that belong to this attachment. If the file ID part contains slashes, they
+   * are escaped. E.g. `projects/p1/locations/us-central1/repositories/repo1/files/sha:`.
    * @param files files or {@code null} for none
    */
   public Attachment setFiles(java.util.List<java.lang.String> files) {
@@ -196,8 +196,8 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The name of the OCI version that this attachment created. Only populated for
-   * Docker attachments. E.g. "projects/p1/locations/us-
-   * central1/repositories/repo1/packages/p1/versions/v1".
+   * Docker attachments. E.g. `projects/p1/locations/us-
+   * central1/repositories/repo1/packages/p1/versions/v1`.
    * @return value or {@code null} for none
    */
   public java.lang.String getOciVersionName() {
@@ -206,8 +206,8 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The name of the OCI version that this attachment created. Only populated for
-   * Docker attachments. E.g. "projects/p1/locations/us-
-   * central1/repositories/repo1/packages/p1/versions/v1".
+   * Docker attachments. E.g. `projects/p1/locations/us-
+   * central1/repositories/repo1/packages/p1/versions/v1`.
    * @param ociVersionName ociVersionName or {@code null} for none
    */
   public Attachment setOciVersionName(java.lang.String ociVersionName) {
@@ -235,7 +235,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of Attachment. E.g. application/vnd.spdx+jsonn
+   * Type of Attachment. E.g. `application/vnd.spdx+json`
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -243,7 +243,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of Attachment. E.g. application/vnd.spdx+jsonn
+   * Type of Attachment. E.g. `application/vnd.spdx+json`
    * @param type type or {@code null} for none
    */
   public Attachment setType(java.lang.String type) {

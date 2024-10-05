@@ -55,8 +55,8 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.Object> metadata;
 
   /**
-   * The name of the version, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1/packages/pkg1/versions/art1". If the package or version ID parts
+   * The name of the version, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1/packages/pkg1/versions/art1`. If the package or version ID parts
    * contain slashes, the slashes are escaped.
    * The value may be {@code null}.
    */
@@ -139,8 +139,8 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the version, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1/packages/pkg1/versions/art1". If the package or version ID parts
+   * The name of the version, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1/packages/pkg1/versions/art1`. If the package or version ID parts
    * contain slashes, the slashes are escaped.
    * @return value or {@code null} for none
    */
@@ -149,8 +149,8 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the version, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1/packages/pkg1/versions/art1". If the package or version ID parts
+   * The name of the version, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1/packages/pkg1/versions/art1`. If the package or version ID parts
    * contain slashes, the slashes are escaped.
    * @param name name or {@code null} for none
    */

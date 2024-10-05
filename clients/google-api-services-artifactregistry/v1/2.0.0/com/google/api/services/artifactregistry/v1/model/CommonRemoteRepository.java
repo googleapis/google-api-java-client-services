@@ -31,14 +31,14 @@ package com.google.api.services.artifactregistry.v1.model;
 public final class CommonRemoteRepository extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. A common public repository base for Remote Repository.
+   * Required. A common public repository base for remote repository.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Required. A common public repository base for Remote Repository.
+   * Required. A common public repository base for remote repository.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -46,7 +46,7 @@ public final class CommonRemoteRepository extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. A common public repository base for Remote Repository.
+   * Required. A common public repository base for remote repository.
    * @param uri uri or {@code null} for none
    */
   public CommonRemoteRepository setUri(java.lang.String uri) {

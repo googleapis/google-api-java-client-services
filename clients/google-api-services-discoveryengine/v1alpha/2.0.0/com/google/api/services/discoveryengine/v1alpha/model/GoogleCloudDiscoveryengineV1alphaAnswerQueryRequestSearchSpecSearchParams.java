@@ -78,6 +78,14 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpec
   private java.lang.Integer maxReturnResults;
 
   /**
+   * Optional. Specification to enable natural language understanding capabilities for search
+   * requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguageQueryUnderstandingSpec naturalLanguageQueryUnderstandingSpec;
+
+  /**
    * The order in which documents are returned. Documents can be ordered by a field in an Document
    * object. Leave it unset if ordered by relevance. `order_by` expression is case-sensitive. For
    * more information on ordering, see [Ordering](https://cloud.google.com/retail/docs/filter-and-
@@ -204,6 +212,25 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpec
    */
   public GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpecSearchParams setMaxReturnResults(java.lang.Integer maxReturnResults) {
     this.maxReturnResults = maxReturnResults;
+    return this;
+  }
+
+  /**
+   * Optional. Specification to enable natural language understanding capabilities for search
+   * requests.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguageQueryUnderstandingSpec getNaturalLanguageQueryUnderstandingSpec() {
+    return naturalLanguageQueryUnderstandingSpec;
+  }
+
+  /**
+   * Optional. Specification to enable natural language understanding capabilities for search
+   * requests.
+   * @param naturalLanguageQueryUnderstandingSpec naturalLanguageQueryUnderstandingSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpecSearchParams setNaturalLanguageQueryUnderstandingSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguageQueryUnderstandingSpec naturalLanguageQueryUnderstandingSpec) {
+    this.naturalLanguageQueryUnderstandingSpec = naturalLanguageQueryUnderstandingSpec;
     return this;
   }
 

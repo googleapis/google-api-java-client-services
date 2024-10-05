@@ -39,6 +39,15 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestDataStoreSpec ex
   private java.lang.String dataStore;
 
   /**
+   * Optional. Filter specification to filter documents in the data store specified by data_store
+   * field. For more information on filtering, see [Filtering](https://cloud.google.com/generative-
+   * ai-app-builder/docs/filter-search-metadata)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String filter;
+
+  /**
    * Required. Full resource name of DataStore, such as `projects/{project}/locations/{location}/col
    * lections/{collection_id}/dataStores/{data_store_id}`.
    * @return value or {@code null} for none
@@ -54,6 +63,27 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestDataStoreSpec ex
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequestDataStoreSpec setDataStore(java.lang.String dataStore) {
     this.dataStore = dataStore;
+    return this;
+  }
+
+  /**
+   * Optional. Filter specification to filter documents in the data store specified by data_store
+   * field. For more information on filtering, see [Filtering](https://cloud.google.com/generative-
+   * ai-app-builder/docs/filter-search-metadata)
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFilter() {
+    return filter;
+  }
+
+  /**
+   * Optional. Filter specification to filter documents in the data store specified by data_store
+   * field. For more information on filtering, see [Filtering](https://cloud.google.com/generative-
+   * ai-app-builder/docs/filter-search-metadata)
+   * @param filter filter or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchRequestDataStoreSpec setFilter(java.lang.String filter) {
+    this.filter = filter;
     return this;
   }
 

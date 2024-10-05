@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1DataStore extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Data size estimation for billing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1DataStoreBillingEstimation billingEstimation;
+
+  /**
    * Immutable. The content config of the data store. If this field is unset, the server behavior
    * defaults to ContentConfig.NO_CONTENT.
    * The value may be {@code null}.
@@ -117,6 +124,23 @@ public final class GoogleCloudDiscoveryengineV1DataStore extends com.google.api.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1WorkspaceConfig workspaceConfig;
+
+  /**
+   * Output only. Data size estimation for billing.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DataStoreBillingEstimation getBillingEstimation() {
+    return billingEstimation;
+  }
+
+  /**
+   * Output only. Data size estimation for billing.
+   * @param billingEstimation billingEstimation or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DataStore setBillingEstimation(GoogleCloudDiscoveryengineV1DataStoreBillingEstimation billingEstimation) {
+    this.billingEstimation = billingEstimation;
+    return this;
+  }
 
   /**
    * Immutable. The content config of the data store. If this field is unset, the server behavior

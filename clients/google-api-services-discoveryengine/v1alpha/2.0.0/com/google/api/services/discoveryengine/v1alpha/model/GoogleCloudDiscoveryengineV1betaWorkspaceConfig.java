@@ -37,6 +37,22 @@ public final class GoogleCloudDiscoveryengineV1betaWorkspaceConfig extends com.g
   private java.lang.String dasherCustomerId;
 
   /**
+   * Optional. The super admin email address for the workspace that will be used for access token
+   * generation. For now we only use it for Native Google Drive connector data ingestion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String superAdminEmailAddress;
+
+  /**
+   * Optional. The super admin service account for the workspace that will be used for access token
+   * generation. For now we only use it for Native Google Drive connector data ingestion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String superAdminServiceAccount;
+
+  /**
    * The Google Workspace data source.
    * The value may be {@code null}.
    */
@@ -57,6 +73,44 @@ public final class GoogleCloudDiscoveryengineV1betaWorkspaceConfig extends com.g
    */
   public GoogleCloudDiscoveryengineV1betaWorkspaceConfig setDasherCustomerId(java.lang.String dasherCustomerId) {
     this.dasherCustomerId = dasherCustomerId;
+    return this;
+  }
+
+  /**
+   * Optional. The super admin email address for the workspace that will be used for access token
+   * generation. For now we only use it for Native Google Drive connector data ingestion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSuperAdminEmailAddress() {
+    return superAdminEmailAddress;
+  }
+
+  /**
+   * Optional. The super admin email address for the workspace that will be used for access token
+   * generation. For now we only use it for Native Google Drive connector data ingestion.
+   * @param superAdminEmailAddress superAdminEmailAddress or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaWorkspaceConfig setSuperAdminEmailAddress(java.lang.String superAdminEmailAddress) {
+    this.superAdminEmailAddress = superAdminEmailAddress;
+    return this;
+  }
+
+  /**
+   * Optional. The super admin service account for the workspace that will be used for access token
+   * generation. For now we only use it for Native Google Drive connector data ingestion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSuperAdminServiceAccount() {
+    return superAdminServiceAccount;
+  }
+
+  /**
+   * Optional. The super admin service account for the workspace that will be used for access token
+   * generation. For now we only use it for Native Google Drive connector data ingestion.
+   * @param superAdminServiceAccount superAdminServiceAccount or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaWorkspaceConfig setSuperAdminServiceAccount(java.lang.String superAdminServiceAccount) {
+    this.superAdminServiceAccount = superAdminServiceAccount;
     return this;
   }
 

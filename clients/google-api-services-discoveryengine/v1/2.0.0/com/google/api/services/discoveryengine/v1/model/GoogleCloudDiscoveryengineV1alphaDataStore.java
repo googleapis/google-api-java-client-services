@@ -41,6 +41,13 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
   private java.lang.Boolean aclEnabled;
 
   /**
+   * Output only. Data size estimation for billing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaDataStoreBillingEstimation billingEstimation;
+
+  /**
    * Immutable. The content config of the data store. If this field is unset, the server behavior
    * defaults to ContentConfig.NO_CONTENT.
    * The value may be {@code null}.
@@ -172,6 +179,23 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
    */
   public GoogleCloudDiscoveryengineV1alphaDataStore setAclEnabled(java.lang.Boolean aclEnabled) {
     this.aclEnabled = aclEnabled;
+    return this;
+  }
+
+  /**
+   * Output only. Data size estimation for billing.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataStoreBillingEstimation getBillingEstimation() {
+    return billingEstimation;
+  }
+
+  /**
+   * Output only. Data size estimation for billing.
+   * @param billingEstimation billingEstimation or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataStore setBillingEstimation(GoogleCloudDiscoveryengineV1alphaDataStoreBillingEstimation billingEstimation) {
+    this.billingEstimation = billingEstimation;
     return this;
   }
 

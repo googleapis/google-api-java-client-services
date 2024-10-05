@@ -192,6 +192,15 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   private java.util.Map<String, java.lang.Object> params;
 
   /**
+   * The specification for personalization. Notice that if both ServingConfig.personalization_spec
+   * and SearchRequest.personalization_spec are set, SearchRequest.personalization_spec overrides
+   * ServingConfig.personalization_spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaSearchRequestPersonalizationSpec personalizationSpec;
+
+  /**
    * Raw search query.
    * The value may be {@code null}.
    */
@@ -706,6 +715,27 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequest setParams(java.util.Map<String, java.lang.Object> params) {
     this.params = params;
+    return this;
+  }
+
+  /**
+   * The specification for personalization. Notice that if both ServingConfig.personalization_spec
+   * and SearchRequest.personalization_spec are set, SearchRequest.personalization_spec overrides
+   * ServingConfig.personalization_spec.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchRequestPersonalizationSpec getPersonalizationSpec() {
+    return personalizationSpec;
+  }
+
+  /**
+   * The specification for personalization. Notice that if both ServingConfig.personalization_spec
+   * and SearchRequest.personalization_spec are set, SearchRequest.personalization_spec overrides
+   * ServingConfig.personalization_spec.
+   * @param personalizationSpec personalizationSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchRequest setPersonalizationSpec(GoogleCloudDiscoveryengineV1betaSearchRequestPersonalizationSpec personalizationSpec) {
+    this.personalizationSpec = personalizationSpec;
     return this;
   }
 

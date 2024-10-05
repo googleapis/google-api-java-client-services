@@ -105,6 +105,15 @@ public final class GoogleCloudDiscoveryengineV1alphaFieldConfig extends com.goog
   private java.lang.String keyPropertyType;
 
   /**
+   * Optional. The metatag name found in the HTML page. If user defines this field, the value of
+   * this metatag name will be used to extract metatag. If the user does not define this field, the
+   * FieldConfig.field_path will be used to extract metatag.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String metatagName;
+
+  /**
    * If recs_filterable_option is FILTERABLE_ENABLED, field values are filterable by filter
    * expression in RecommendationService.Recommend. If FILTERABLE_ENABLED but the field type is
    * numerical, field values are not filterable by text queries in RecommendationService.Recommend.
@@ -319,6 +328,27 @@ public final class GoogleCloudDiscoveryengineV1alphaFieldConfig extends com.goog
    */
   public GoogleCloudDiscoveryengineV1alphaFieldConfig setKeyPropertyType(java.lang.String keyPropertyType) {
     this.keyPropertyType = keyPropertyType;
+    return this;
+  }
+
+  /**
+   * Optional. The metatag name found in the HTML page. If user defines this field, the value of
+   * this metatag name will be used to extract metatag. If the user does not define this field, the
+   * FieldConfig.field_path will be used to extract metatag.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMetatagName() {
+    return metatagName;
+  }
+
+  /**
+   * Optional. The metatag name found in the HTML page. If user defines this field, the value of
+   * this metatag name will be used to extract metatag. If the user does not define this field, the
+   * FieldConfig.field_path will be used to extract metatag.
+   * @param metatagName metatagName or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaFieldConfig setMetatagName(java.lang.String metatagName) {
+    this.metatagName = metatagName;
     return this;
   }
 

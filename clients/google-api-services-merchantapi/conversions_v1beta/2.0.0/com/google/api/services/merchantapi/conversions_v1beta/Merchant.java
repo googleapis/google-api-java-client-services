@@ -461,7 +461,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the conversion source to be fetched. Format:
-       *        accounts/{account}/conversionsources/{conversion_source}
+       *        accounts/{account}/conversionSources/{conversion_source}
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -488,7 +488,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The name of the conversion source to be fetched. Format:
-       *        accounts/{account}/conversionsources/{conversion_source}
+       *        accounts/{account}/conversionSources/{conversion_source}
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -568,13 +568,13 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The name of the conversion source to be fetched. Format:
-         * accounts/{account}/conversionsources/{conversion_source}
+         * accounts/{account}/conversionSources/{conversion_source}
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the conversion source to be fetched. Format:
-       accounts/{account}/conversionsources/{conversion_source}
+       accounts/{account}/conversionSources/{conversion_source}
          */
         public java.lang.String getName() {
           return name;
@@ -582,7 +582,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The name of the conversion source to be fetched. Format:
-         * accounts/{account}/conversionsources/{conversion_source}
+         * accounts/{account}/conversionSources/{conversion_source}
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

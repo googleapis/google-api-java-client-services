@@ -90,7 +90,9 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifier. The name of the product input. Format:
-   * `"{productinput.name=accounts/{account}/productInputs/{productinput}}"`
+   * `"{productinput.name=accounts/{account}/productInputs/{productinput}}"` where the last section
+   * `productinput` consists of 4 parts: channel~content_language~feed_label~offer_id example for
+   * product input name is "accounts/123/productInputs/online~en~US~sku123"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,7 +233,9 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifier. The name of the product input. Format:
-   * `"{productinput.name=accounts/{account}/productInputs/{productinput}}"`
+   * `"{productinput.name=accounts/{account}/productInputs/{productinput}}"` where the last section
+   * `productinput` consists of 4 parts: channel~content_language~feed_label~offer_id example for
+   * product input name is "accounts/123/productInputs/online~en~US~sku123"
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -240,7 +244,9 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifier. The name of the product input. Format:
-   * `"{productinput.name=accounts/{account}/productInputs/{productinput}}"`
+   * `"{productinput.name=accounts/{account}/productInputs/{productinput}}"` where the last section
+   * `productinput` consists of 4 parts: channel~content_language~feed_label~offer_id example for
+   * product input name is "accounts/123/productInputs/online~en~US~sku123"
    * @param name name or {@code null} for none
    */
   public ProductInput setName(java.lang.String name) {

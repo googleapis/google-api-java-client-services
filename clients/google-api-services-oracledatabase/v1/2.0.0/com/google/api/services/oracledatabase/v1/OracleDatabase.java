@@ -20,7 +20,7 @@ package com.google.api.services.oracledatabase.v1;
  * Service definition for OracleDatabase (v1).
  *
  * <p>
- * The Oracle Database@Google Cloud API provides set of APIs to manage Oracle databases such as Exadata and Autonomous Databases.
+ * The Oracle Database@Google Cloud API provides a set of APIs to manage Oracle database services, such as Exadata and Autonomous Databases.
  * </p>
  *
  * <p>
@@ -535,7 +535,7 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
       public class AutonomousDatabaseBackups {
 
         /**
-         * Lists the long term and automatic backups of an Autonomous Database.
+         * Lists the long-term and automatic backups of an Autonomous Database.
          *
          * Create a request for the method "autonomousDatabaseBackups.list".
          *
@@ -560,7 +560,7 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists the long term and automatic backups of an Autonomous Database.
+           * Lists the long-term and automatic backups of an Autonomous Database.
            *
            * Create a request for the method "autonomousDatabaseBackups.list".
            *
@@ -1386,7 +1386,7 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           }
         }
         /**
-         * Generates a wallet for a single Autonomous Database.
+         * Generates a wallet for an Autonomous Database.
          *
          * Create a request for the method "autonomousDatabases.generateWallet".
          *
@@ -1413,7 +1413,7 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autonomousDatabases/[^/]+$");
 
           /**
-           * Generates a wallet for a single Autonomous Database.
+           * Generates a wallet for an Autonomous Database.
            *
            * Create a request for the method "autonomousDatabases.generateWallet".
            *
@@ -4427,7 +4427,7 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the oracledatabase server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent value for Entitlement in the following format:
+         * @param parent Required. The parent value for the entitlement in the following format:
          *        projects/{project}/locations/{location}.
          * @return the request
          */
@@ -4454,7 +4454,7 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent value for Entitlement in the following format:
+           * @param parent Required. The parent value for the entitlement in the following format:
          *        projects/{project}/locations/{location}.
            * @since 1.13
            */
@@ -4534,13 +4534,13 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Required. The parent value for Entitlement in the following format:
+           * Required. The parent value for the entitlement in the following format:
            * projects/{project}/locations/{location}.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent value for Entitlement in the following format:
+          /** Required. The parent value for the entitlement in the following format:
          projects/{project}/locations/{location}.
            */
           public java.lang.String getParent() {
@@ -4548,7 +4548,7 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Required. The parent value for Entitlement in the following format:
+           * Required. The parent value for the entitlement in the following format:
            * projects/{project}/locations/{location}.
            */
           public List setParent(java.lang.String parent) {

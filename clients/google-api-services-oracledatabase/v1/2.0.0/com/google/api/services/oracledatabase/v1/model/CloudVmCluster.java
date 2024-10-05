@@ -69,8 +69,8 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   private java.lang.String exadataInfrastructure;
 
   /**
-   * Output only. GCP location where Oracle Exadata is hosted. It is same as GCP Oracle zone of
-   * Exadata infrastructure.
+   * Output only. Google Cloud Platform location where Oracle Exadata is hosted. It is same as
+   * Google Cloud Platform Oracle zone of Exadata infrastructure.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,8 +195,8 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. GCP location where Oracle Exadata is hosted. It is same as GCP Oracle zone of
-   * Exadata infrastructure.
+   * Output only. Google Cloud Platform location where Oracle Exadata is hosted. It is same as
+   * Google Cloud Platform Oracle zone of Exadata infrastructure.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcpOracleZone() {
@@ -204,8 +204,8 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. GCP location where Oracle Exadata is hosted. It is same as GCP Oracle zone of
-   * Exadata infrastructure.
+   * Output only. Google Cloud Platform location where Oracle Exadata is hosted. It is same as
+   * Google Cloud Platform Oracle zone of Exadata infrastructure.
    * @param gcpOracleZone gcpOracleZone or {@code null} for none
    */
   public CloudVmCluster setGcpOracleZone(java.lang.String gcpOracleZone) {

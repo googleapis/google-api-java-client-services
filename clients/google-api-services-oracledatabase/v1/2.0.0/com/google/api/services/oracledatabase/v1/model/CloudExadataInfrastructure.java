@@ -54,7 +54,7 @@ public final class CloudExadataInfrastructure extends com.google.api.client.json
   private java.lang.String entitlementId;
 
   /**
-   * Optional. GCP location where Oracle Exadata is hosted.
+   * Optional. Google Cloud Platform location where Oracle Exadata is hosted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,7 +136,7 @@ public final class CloudExadataInfrastructure extends com.google.api.client.json
   }
 
   /**
-   * Optional. GCP location where Oracle Exadata is hosted.
+   * Optional. Google Cloud Platform location where Oracle Exadata is hosted.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcpOracleZone() {
@@ -144,7 +144,7 @@ public final class CloudExadataInfrastructure extends com.google.api.client.json
   }
 
   /**
-   * Optional. GCP location where Oracle Exadata is hosted.
+   * Optional. Google Cloud Platform location where Oracle Exadata is hosted.
    * @param gcpOracleZone gcpOracleZone or {@code null} for none
    */
   public CloudExadataInfrastructure setGcpOracleZone(java.lang.String gcpOracleZone) {

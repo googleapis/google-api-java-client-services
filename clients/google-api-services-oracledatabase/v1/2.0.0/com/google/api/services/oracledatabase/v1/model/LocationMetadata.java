@@ -31,14 +31,14 @@ package com.google.api.services.oracledatabase.v1.model;
 public final class LocationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. GCP Oracle zones in a location.
+   * Output only. Google Cloud Platform Oracle zones in a location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> gcpOracleZones;
 
   /**
-   * Output only. GCP Oracle zones in a location.
+   * Output only. Google Cloud Platform Oracle zones in a location.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getGcpOracleZones() {
@@ -46,7 +46,7 @@ public final class LocationMetadata extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. GCP Oracle zones in a location.
+   * Output only. Google Cloud Platform Oracle zones in a location.
    * @param gcpOracleZones gcpOracleZones or {@code null} for none
    */
   public LocationMetadata setGcpOracleZones(java.util.List<java.lang.String> gcpOracleZones) {

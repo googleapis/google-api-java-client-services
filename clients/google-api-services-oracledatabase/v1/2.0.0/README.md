@@ -1,6 +1,6 @@
 # Oracle Database@Google Cloud API Client Library for Java
 
-The Oracle Database@Google Cloud API provides set of APIs to manage Oracle databases such as Exadata and Autonomous Databases.
+The Oracle Database@Google Cloud API provides a set of APIs to manage Oracle database services, such as Exadata and Autonomous Databases.
 
 This page contains information about getting started with the Oracle Database@Google Cloud API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-oracledatabase</artifactId>
-      <version>v1-rev20240913-2.0.0</version>
+      <version>v1-rev20240918-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-oracledatabase:v1-rev20240913-2.0.0'
+  implementation 'com.google.apis:google-api-services-oracledatabase:v1-rev20240918-2.0.0'
 }
 ```
 

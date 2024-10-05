@@ -45,7 +45,7 @@ public final class DatabasePreferencesCloudSqlCommon extends com.google.api.clie
   private java.lang.String commitmentPlan;
 
   /**
-   * Optional. Cloud SQL edition. For SQL Server, only Enterprise is available.
+   * Optional. Preferred Cloud SQL edition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +114,7 @@ public final class DatabasePreferencesCloudSqlCommon extends com.google.api.clie
   }
 
   /**
-   * Optional. Cloud SQL edition. For SQL Server, only Enterprise is available.
+   * Optional. Preferred Cloud SQL edition.
    * @return value or {@code null} for none
    */
   public java.lang.String getEdition() {
@@ -122,7 +122,7 @@ public final class DatabasePreferencesCloudSqlCommon extends com.google.api.clie
   }
 
   /**
-   * Optional. Cloud SQL edition. For SQL Server, only Enterprise is available.
+   * Optional. Preferred Cloud SQL edition.
    * @param edition edition or {@code null} for none
    */
   public DatabasePreferencesCloudSqlCommon setEdition(java.lang.String edition) {

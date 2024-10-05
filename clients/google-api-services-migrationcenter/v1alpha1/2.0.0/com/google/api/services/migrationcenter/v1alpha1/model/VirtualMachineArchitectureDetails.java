@@ -65,7 +65,8 @@ public final class VirtualMachineArchitectureDetails extends com.google.api.clie
   private java.lang.Integer cpuSocketCount;
 
   /**
-   * Number of CPU threads allocated to the machine.
+   * Deprecated: use VirtualMachineDetails.core_count instead. Number of CPU threads allocated to
+   * the machine.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -178,7 +179,8 @@ public final class VirtualMachineArchitectureDetails extends com.google.api.clie
   }
 
   /**
-   * Number of CPU threads allocated to the machine.
+   * Deprecated: use VirtualMachineDetails.core_count instead. Number of CPU threads allocated to
+   * the machine.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCpuThreadCount() {
@@ -186,7 +188,8 @@ public final class VirtualMachineArchitectureDetails extends com.google.api.clie
   }
 
   /**
-   * Number of CPU threads allocated to the machine.
+   * Deprecated: use VirtualMachineDetails.core_count instead. Number of CPU threads allocated to
+   * the machine.
    * @param cpuThreadCount cpuThreadCount or {@code null} for none
    */
   public VirtualMachineArchitectureDetails setCpuThreadCount(java.lang.Integer cpuThreadCount) {

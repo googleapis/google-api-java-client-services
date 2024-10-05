@@ -103,8 +103,8 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   private Money monthlyCostNetworkEgress;
 
   /**
-   * Output only. Operating system licensing monthly cost for this preference set. Only present for
-   * virtual machines.
+   * Output only. All operating systems licensing monthly cost for this preference set. Only present
+   * for virtual machines.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -361,8 +361,8 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * Output only. Operating system licensing monthly cost for this preference set. Only present for
-   * virtual machines.
+   * Output only. All operating systems licensing monthly cost for this preference set. Only present
+   * for virtual machines.
    * @return value or {@code null} for none
    */
   public Money getMonthlyCostOsLicense() {
@@ -370,8 +370,8 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
-   * Output only. Operating system licensing monthly cost for this preference set. Only present for
-   * virtual machines.
+   * Output only. All operating systems licensing monthly cost for this preference set. Only present
+   * for virtual machines.
    * @param monthlyCostOsLicense monthlyCostOsLicense or {@code null} for none
    */
   public ReportSummaryGroupPreferenceSetFinding setMonthlyCostOsLicense(Money monthlyCostOsLicense) {

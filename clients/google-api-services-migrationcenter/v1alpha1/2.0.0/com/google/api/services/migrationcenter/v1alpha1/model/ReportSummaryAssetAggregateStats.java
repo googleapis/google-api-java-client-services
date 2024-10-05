@@ -37,7 +37,7 @@ public final class ReportSummaryAssetAggregateStats extends com.google.api.clien
   private ReportSummaryChartData assetAge;
 
   /**
-   * Histogram showing a distribution of CPU core counts.
+   * Histogram showing a distribution of logical CPU core counts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,7 +146,7 @@ public final class ReportSummaryAssetAggregateStats extends com.google.api.clien
   }
 
   /**
-   * Histogram showing a distribution of CPU core counts.
+   * Histogram showing a distribution of logical CPU core counts.
    * @return value or {@code null} for none
    */
   public ReportSummaryHistogramChartData getCoreCountHistogram() {
@@ -154,7 +154,7 @@ public final class ReportSummaryAssetAggregateStats extends com.google.api.clien
   }
 
   /**
-   * Histogram showing a distribution of CPU core counts.
+   * Histogram showing a distribution of logical CPU core counts.
    * @param coreCountHistogram coreCountHistogram or {@code null} for none
    */
   public ReportSummaryAssetAggregateStats setCoreCountHistogram(ReportSummaryHistogramChartData coreCountHistogram) {

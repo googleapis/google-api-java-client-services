@@ -30,6 +30,33 @@ package com.google.api.services.integrations.v1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudIntegrationsV1alphaCancelExecutionRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. Reason for cancelling the execution This is provided by the client requesting the
+   * cancellation Platform will not use this field
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cancelReason;
+
+  /**
+   * Optional. Reason for cancelling the execution This is provided by the client requesting the
+   * cancellation Platform will not use this field
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCancelReason() {
+    return cancelReason;
+  }
+
+  /**
+   * Optional. Reason for cancelling the execution This is provided by the client requesting the
+   * cancellation Platform will not use this field
+   * @param cancelReason cancelReason or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaCancelExecutionRequest setCancelReason(java.lang.String cancelReason) {
+    this.cancelReason = cancelReason;
+    return this;
+  }
+
   @Override
   public GoogleCloudIntegrationsV1alphaCancelExecutionRequest set(String fieldName, Object value) {
     return (GoogleCloudIntegrationsV1alphaCancelExecutionRequest) super.set(fieldName, value);

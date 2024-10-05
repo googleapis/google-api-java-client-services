@@ -34,7 +34,7 @@ public final class AuthzPolicyAuthzRuleFromRequestSource extends com.google.api.
    * on a request unless mutual TLS is enabled for the Forwarding rule or Gateway. Each identity is
    * a string whose value is matched against the URI SAN, or DNS SAN or the subject field in the
    * client's certificate. The match can be exact, prefix, suffix or a substring match. One of
-   * exact, prefix, suffix or contains must be specified. Limited to 10 principals.
+   * exact, prefix, suffix or contains must be specified. Limited to 5 principals.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,7 +42,7 @@ public final class AuthzPolicyAuthzRuleFromRequestSource extends com.google.api.
 
   /**
    * Optional. A list of resources to match against the resource of the source VM of a request.
-   * Limited to 10 resources.
+   * Limited to 5 resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class AuthzPolicyAuthzRuleFromRequestSource extends com.google.api.
    * on a request unless mutual TLS is enabled for the Forwarding rule or Gateway. Each identity is
    * a string whose value is matched against the URI SAN, or DNS SAN or the subject field in the
    * client's certificate. The match can be exact, prefix, suffix or a substring match. One of
-   * exact, prefix, suffix or contains must be specified. Limited to 10 principals.
+   * exact, prefix, suffix or contains must be specified. Limited to 5 principals.
    * @return value or {@code null} for none
    */
   public java.util.List<AuthzPolicyAuthzRuleStringMatch> getPrincipals() {
@@ -65,7 +65,7 @@ public final class AuthzPolicyAuthzRuleFromRequestSource extends com.google.api.
    * on a request unless mutual TLS is enabled for the Forwarding rule or Gateway. Each identity is
    * a string whose value is matched against the URI SAN, or DNS SAN or the subject field in the
    * client's certificate. The match can be exact, prefix, suffix or a substring match. One of
-   * exact, prefix, suffix or contains must be specified. Limited to 10 principals.
+   * exact, prefix, suffix or contains must be specified. Limited to 5 principals.
    * @param principals principals or {@code null} for none
    */
   public AuthzPolicyAuthzRuleFromRequestSource setPrincipals(java.util.List<AuthzPolicyAuthzRuleStringMatch> principals) {
@@ -75,7 +75,7 @@ public final class AuthzPolicyAuthzRuleFromRequestSource extends com.google.api.
 
   /**
    * Optional. A list of resources to match against the resource of the source VM of a request.
-   * Limited to 10 resources.
+   * Limited to 5 resources.
    * @return value or {@code null} for none
    */
   public java.util.List<AuthzPolicyAuthzRuleRequestResource> getResources() {
@@ -84,7 +84,7 @@ public final class AuthzPolicyAuthzRuleFromRequestSource extends com.google.api.
 
   /**
    * Optional. A list of resources to match against the resource of the source VM of a request.
-   * Limited to 10 resources.
+   * Limited to 5 resources.
    * @param resources resources or {@code null} for none
    */
   public AuthzPolicyAuthzRuleFromRequestSource setResources(java.util.List<AuthzPolicyAuthzRuleRequestResource> resources) {

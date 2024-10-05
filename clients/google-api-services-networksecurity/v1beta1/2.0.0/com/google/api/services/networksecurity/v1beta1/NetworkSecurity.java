@@ -9958,7 +9958,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. Used to specify the fields to be overwritten in the `AuthzPolicy` resource by
-           * the update. The fields specified in the update_mask are relative to the resource, not
+           * the update. The fields specified in the `update_mask` are relative to the resource, not
            * the full request. A field is overwritten if it is in the mask. If the user does not
            * specify a mask, then all fields are overwritten.
            */
@@ -9966,8 +9966,8 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           private String updateMask;
 
           /** Required. Used to specify the fields to be overwritten in the `AuthzPolicy` resource by the update.
-         The fields specified in the update_mask are relative to the resource, not the full request. A field
-         is overwritten if it is in the mask. If the user does not specify a mask, then all fields are
+         The fields specified in the `update_mask` are relative to the resource, not the full request. A
+         field is overwritten if it is in the mask. If the user does not specify a mask, then all fields are
          overwritten.
            */
           public String getUpdateMask() {
@@ -9976,7 +9976,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. Used to specify the fields to be overwritten in the `AuthzPolicy` resource by
-           * the update. The fields specified in the update_mask are relative to the resource, not
+           * the update. The fields specified in the `update_mask` are relative to the resource, not
            * the full request. A field is overwritten if it is in the mask. If the user does not
            * specify a mask, then all fields are overwritten.
            */

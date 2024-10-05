@@ -38,6 +38,13 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   private String createTime;
 
   /**
+   * Optional. Reference to a SecurityProfile with the CustomMirroring configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customMirroringProfile;
+
+  /**
    * Optional. An optional description of the profile group. Max length 2048 characters.
    * The value may be {@code null}.
    */
@@ -96,6 +103,23 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
    */
   public SecurityProfileGroup setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Reference to a SecurityProfile with the CustomMirroring configuration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomMirroringProfile() {
+    return customMirroringProfile;
+  }
+
+  /**
+   * Optional. Reference to a SecurityProfile with the CustomMirroring configuration.
+   * @param customMirroringProfile customMirroringProfile or {@code null} for none
+   */
+  public SecurityProfileGroup setCustomMirroringProfile(java.lang.String customMirroringProfile) {
+    this.customMirroringProfile = customMirroringProfile;
     return this;
   }
 

@@ -33,7 +33,7 @@ public final class AuthzPolicyAuthzRuleRequestResourceTagValueIdSet extends com.
   /**
    * Required. A list of resource tag value permanent IDs to match against the resource manager tags
    * value associated with the source VM of a request. The match follows AND semantics which means
-   * all the ids must match. Limited to 10 matches.
+   * all the ids must match. Limited to 5 matches.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -42,7 +42,7 @@ public final class AuthzPolicyAuthzRuleRequestResourceTagValueIdSet extends com.
   /**
    * Required. A list of resource tag value permanent IDs to match against the resource manager tags
    * value associated with the source VM of a request. The match follows AND semantics which means
-   * all the ids must match. Limited to 10 matches.
+   * all the ids must match. Limited to 5 matches.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getIds() {
@@ -52,7 +52,7 @@ public final class AuthzPolicyAuthzRuleRequestResourceTagValueIdSet extends com.
   /**
    * Required. A list of resource tag value permanent IDs to match against the resource manager tags
    * value associated with the source VM of a request. The match follows AND semantics which means
-   * all the ids must match. Limited to 10 matches.
+   * all the ids must match. Limited to 5 matches.
    * @param ids ids or {@code null} for none
    */
   public AuthzPolicyAuthzRuleRequestResourceTagValueIdSet setIds(java.util.List<java.lang.Long> ids) {

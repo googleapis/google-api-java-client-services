@@ -91,7 +91,7 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   private java.lang.String name;
 
   /**
-   * Required. The name of the VPC network used by the Autonomous Database. Format:
+   * Required. The name of the VPC network used by the Autonomous Database in the following format:
    * projects/{project}/global/networks/{network}
    * The value may be {@code null}.
    */
@@ -248,7 +248,7 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. The name of the VPC network used by the Autonomous Database. Format:
+   * Required. The name of the VPC network used by the Autonomous Database in the following format:
    * projects/{project}/global/networks/{network}
    * @return value or {@code null} for none
    */
@@ -257,7 +257,7 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. The name of the VPC network used by the Autonomous Database. Format:
+   * Required. The name of the VPC network used by the Autonomous Database in the following format:
    * projects/{project}/global/networks/{network}
    * @param network network or {@code null} for none
    */

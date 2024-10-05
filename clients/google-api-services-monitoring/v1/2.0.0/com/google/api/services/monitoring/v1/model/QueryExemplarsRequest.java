@@ -38,7 +38,7 @@ public final class QueryExemplarsRequest extends com.google.api.client.json.Gene
   private java.lang.String end;
 
   /**
-   * A PromQL query string. Query lanauge documentation:
+   * A PromQL query string. Query language documentation:
    * https://prometheus.io/docs/prometheus/latest/querying/basics/.
    * The value may be {@code null}.
    */
@@ -73,7 +73,7 @@ public final class QueryExemplarsRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * A PromQL query string. Query lanauge documentation:
+   * A PromQL query string. Query language documentation:
    * https://prometheus.io/docs/prometheus/latest/querying/basics/.
    * @return value or {@code null} for none
    */
@@ -82,7 +82,7 @@ public final class QueryExemplarsRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * A PromQL query string. Query lanauge documentation:
+   * A PromQL query string. Query language documentation:
    * https://prometheus.io/docs/prometheus/latest/querying/basics/.
    * @param query query or {@code null} for none
    */

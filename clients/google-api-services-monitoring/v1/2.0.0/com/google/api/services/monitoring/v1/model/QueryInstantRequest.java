@@ -31,7 +31,7 @@ package com.google.api.services.monitoring.v1.model;
 public final class QueryInstantRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * A PromQL query string. Query lanauge documentation:
+   * A PromQL query string. Query language documentation:
    * https://prometheus.io/docs/prometheus/latest/querying/basics/.
    * The value may be {@code null}.
    */
@@ -57,7 +57,7 @@ public final class QueryInstantRequest extends com.google.api.client.json.Generi
   private java.lang.String timeout;
 
   /**
-   * A PromQL query string. Query lanauge documentation:
+   * A PromQL query string. Query language documentation:
    * https://prometheus.io/docs/prometheus/latest/querying/basics/.
    * @return value or {@code null} for none
    */
@@ -66,7 +66,7 @@ public final class QueryInstantRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * A PromQL query string. Query lanauge documentation:
+   * A PromQL query string. Query language documentation:
    * https://prometheus.io/docs/prometheus/latest/querying/basics/.
    * @param query query or {@code null} for none
    */

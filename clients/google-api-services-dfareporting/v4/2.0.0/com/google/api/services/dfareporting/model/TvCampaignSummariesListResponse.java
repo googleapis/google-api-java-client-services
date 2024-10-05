@@ -17,8 +17,7 @@
 package com.google.api.services.dfareporting.model;
 
 /**
- * A custom floodlight variable. This field may only be used when calling batchinsert; it is not
- * supported by batchupdate.
+ * Response message for TvCampaignSummariesService.List.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation
@@ -29,35 +28,26 @@ package com.google.api.services.dfareporting.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CustomFloodlightVariable extends com.google.api.client.json.GenericJson {
+public final class TvCampaignSummariesListResponse extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "dfareporting#customFloodlightVariable".
+   * "dfareporting#tvCampaignSummariesListResponse".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The type of custom floodlight variable to supply a value for. These map to the "u[1-100]=" in
-   * the tags.
+   * List of TV campaign summaries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String type;
-
-  /**
-   * The value of the custom floodlight variable. The length of string must not exceed 100
-   * characters.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String value;
+  private java.util.List<TvCampaignSummary> tvCampaignSummaries;
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "dfareporting#customFloodlightVariable".
+   * "dfareporting#tvCampaignSummariesListResponse".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -66,60 +56,39 @@ public final class CustomFloodlightVariable extends com.google.api.client.json.G
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "dfareporting#customFloodlightVariable".
+   * "dfareporting#tvCampaignSummariesListResponse".
    * @param kind kind or {@code null} for none
    */
-  public CustomFloodlightVariable setKind(java.lang.String kind) {
+  public TvCampaignSummariesListResponse setKind(java.lang.String kind) {
     this.kind = kind;
     return this;
   }
 
   /**
-   * The type of custom floodlight variable to supply a value for. These map to the "u[1-100]=" in
-   * the tags.
+   * List of TV campaign summaries.
    * @return value or {@code null} for none
    */
-  public java.lang.String getType() {
-    return type;
+  public java.util.List<TvCampaignSummary> getTvCampaignSummaries() {
+    return tvCampaignSummaries;
   }
 
   /**
-   * The type of custom floodlight variable to supply a value for. These map to the "u[1-100]=" in
-   * the tags.
-   * @param type type or {@code null} for none
+   * List of TV campaign summaries.
+   * @param tvCampaignSummaries tvCampaignSummaries or {@code null} for none
    */
-  public CustomFloodlightVariable setType(java.lang.String type) {
-    this.type = type;
-    return this;
-  }
-
-  /**
-   * The value of the custom floodlight variable. The length of string must not exceed 100
-   * characters.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getValue() {
-    return value;
-  }
-
-  /**
-   * The value of the custom floodlight variable. The length of string must not exceed 100
-   * characters.
-   * @param value value or {@code null} for none
-   */
-  public CustomFloodlightVariable setValue(java.lang.String value) {
-    this.value = value;
+  public TvCampaignSummariesListResponse setTvCampaignSummaries(java.util.List<TvCampaignSummary> tvCampaignSummaries) {
+    this.tvCampaignSummaries = tvCampaignSummaries;
     return this;
   }
 
   @Override
-  public CustomFloodlightVariable set(String fieldName, Object value) {
-    return (CustomFloodlightVariable) super.set(fieldName, value);
+  public TvCampaignSummariesListResponse set(String fieldName, Object value) {
+    return (TvCampaignSummariesListResponse) super.set(fieldName, value);
   }
 
   @Override
-  public CustomFloodlightVariable clone() {
-    return (CustomFloodlightVariable) super.clone();
+  public TvCampaignSummariesListResponse clone() {
+    return (TvCampaignSummariesListResponse) super.clone();
   }
 
 }

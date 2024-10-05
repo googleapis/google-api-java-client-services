@@ -106,6 +106,13 @@ public final class GooglePrivacyDlpV2DiscoveryConfig extends com.google.api.clie
   private GooglePrivacyDlpV2OrgConfig orgConfig;
 
   /**
+   * Must be set only when scanning other clouds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2OtherCloudDiscoveryStartingLocation otherCloudStartingLocation;
+
+  /**
    * Required. A status for this configuration.
    * The value may be {@code null}.
    */
@@ -279,6 +286,23 @@ public final class GooglePrivacyDlpV2DiscoveryConfig extends com.google.api.clie
    */
   public GooglePrivacyDlpV2DiscoveryConfig setOrgConfig(GooglePrivacyDlpV2OrgConfig orgConfig) {
     this.orgConfig = orgConfig;
+    return this;
+  }
+
+  /**
+   * Must be set only when scanning other clouds.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2OtherCloudDiscoveryStartingLocation getOtherCloudStartingLocation() {
+    return otherCloudStartingLocation;
+  }
+
+  /**
+   * Must be set only when scanning other clouds.
+   * @param otherCloudStartingLocation otherCloudStartingLocation or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DiscoveryConfig setOtherCloudStartingLocation(GooglePrivacyDlpV2OtherCloudDiscoveryStartingLocation otherCloudStartingLocation) {
+    this.otherCloudStartingLocation = otherCloudStartingLocation;
     return this;
   }
 

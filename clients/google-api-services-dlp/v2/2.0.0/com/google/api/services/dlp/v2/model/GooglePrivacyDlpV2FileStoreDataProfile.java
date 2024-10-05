@@ -17,7 +17,8 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * The profile for a file store. * Cloud Storage: maps 1:1 with a bucket.
+ * The profile for a file store. * Cloud Storage: maps 1:1 with a bucket. * Amazon S3: maps 1:1 with
+ * a bucket.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed
@@ -97,14 +98,15 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
 
   /**
    * The location of the file store. * Cloud Storage:
-   * https://cloud.google.com/storage/docs/locations#available-locations
+   * https://cloud.google.com/storage/docs/locations#available-locations * Amazon S3:
+   * https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fileStoreLocation;
 
   /**
-   * The file store path. * Cloud Storage: `gs://{bucket}`
+   * The file store path. * Cloud Storage: `gs://{bucket}` * Amazon S3: `s3://{bucket}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +114,9 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
 
   /**
    * The resource name of the resource profiled.
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name Example format of an S3
+   * bucket full resource name: `//cloudasset.googleapis.com/organizations/{org_id}/otherCloudConnec
+   * tions/aws/arn:aws:s3:::{bucket_name}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,7 +167,8 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   private java.lang.String projectDataProfile;
 
   /**
-   * The Google Cloud project ID that owns the resource.
+   * The Google Cloud project ID that owns the resource. For Amazon S3 buckets, this is the AWS
+   * Account Id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -350,7 +355,8 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
 
   /**
    * The location of the file store. * Cloud Storage:
-   * https://cloud.google.com/storage/docs/locations#available-locations
+   * https://cloud.google.com/storage/docs/locations#available-locations * Amazon S3:
+   * https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints
    * @return value or {@code null} for none
    */
   public java.lang.String getFileStoreLocation() {
@@ -359,7 +365,8 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
 
   /**
    * The location of the file store. * Cloud Storage:
-   * https://cloud.google.com/storage/docs/locations#available-locations
+   * https://cloud.google.com/storage/docs/locations#available-locations * Amazon S3:
+   * https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints
    * @param fileStoreLocation fileStoreLocation or {@code null} for none
    */
   public GooglePrivacyDlpV2FileStoreDataProfile setFileStoreLocation(java.lang.String fileStoreLocation) {
@@ -368,7 +375,7 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   }
 
   /**
-   * The file store path. * Cloud Storage: `gs://{bucket}`
+   * The file store path. * Cloud Storage: `gs://{bucket}` * Amazon S3: `s3://{bucket}`
    * @return value or {@code null} for none
    */
   public java.lang.String getFileStorePath() {
@@ -376,7 +383,7 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   }
 
   /**
-   * The file store path. * Cloud Storage: `gs://{bucket}`
+   * The file store path. * Cloud Storage: `gs://{bucket}` * Amazon S3: `s3://{bucket}`
    * @param fileStorePath fileStorePath or {@code null} for none
    */
   public GooglePrivacyDlpV2FileStoreDataProfile setFileStorePath(java.lang.String fileStorePath) {
@@ -386,7 +393,9 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
 
   /**
    * The resource name of the resource profiled.
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name Example format of an S3
+   * bucket full resource name: `//cloudasset.googleapis.com/organizations/{org_id}/otherCloudConnec
+   * tions/aws/arn:aws:s3:::{bucket_name}`
    * @return value or {@code null} for none
    */
   public java.lang.String getFullResource() {
@@ -395,7 +404,9 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
 
   /**
    * The resource name of the resource profiled.
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name Example format of an S3
+   * bucket full resource name: `//cloudasset.googleapis.com/organizations/{org_id}/otherCloudConnec
+   * tions/aws/arn:aws:s3:::{bucket_name}`
    * @param fullResource fullResource or {@code null} for none
    */
   public GooglePrivacyDlpV2FileStoreDataProfile setFullResource(java.lang.String fullResource) {
@@ -510,7 +521,8 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   }
 
   /**
-   * The Google Cloud project ID that owns the resource.
+   * The Google Cloud project ID that owns the resource. For Amazon S3 buckets, this is the AWS
+   * Account Id.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -518,7 +530,8 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   }
 
   /**
-   * The Google Cloud project ID that owns the resource.
+   * The Google Cloud project ID that owns the resource. For Amazon S3 buckets, this is the AWS
+   * Account Id.
    * @param projectId projectId or {@code null} for none
    */
   public GooglePrivacyDlpV2FileStoreDataProfile setProjectId(java.lang.String projectId) {

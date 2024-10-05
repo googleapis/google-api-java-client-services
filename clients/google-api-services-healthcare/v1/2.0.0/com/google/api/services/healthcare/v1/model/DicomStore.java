@@ -50,7 +50,7 @@ public final class DicomStore extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Notification destination for new DICOM instances. Supplied by the client.
+   * Optional. Notification destination for new DICOM instances. Supplied by the client.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +114,7 @@ public final class DicomStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Notification destination for new DICOM instances. Supplied by the client.
+   * Optional. Notification destination for new DICOM instances. Supplied by the client.
    * @return value or {@code null} for none
    */
   public NotificationConfig getNotificationConfig() {
@@ -122,7 +122,7 @@ public final class DicomStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Notification destination for new DICOM instances. Supplied by the client.
+   * Optional. Notification destination for new DICOM instances. Supplied by the client.
    * @param notificationConfig notificationConfig or {@code null} for none
    */
   public DicomStore setNotificationConfig(NotificationConfig notificationConfig) {

@@ -30,12 +30,12 @@ package com.google.api.services.healthcare.v1.model;
 public final class FhirNotificationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The [Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes are
-   * published on. Supplied by the client. The notification is a `PubsubMessage` with the following
-   * fields: * `PubsubMessage.Data` contains the resource name. * `PubsubMessage.MessageId` is the
-   * ID of this notification. It is guaranteed to be unique within the topic. *
-   * `PubsubMessage.PublishTime` is the time when the message was published. Note that notifications
-   * are only sent if the topic is non-empty. [Topic
+   * Optional. The [Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of
+   * changes are published on. Supplied by the client. The notification is a `PubsubMessage` with
+   * the following fields: * `PubsubMessage.Data` contains the resource name. *
+   * `PubsubMessage.MessageId` is the ID of this notification. It is guaranteed to be unique within
+   * the topic. * `PubsubMessage.PublishTime` is the time when the message was published. Note that
+   * notifications are only sent if the topic is non-empty. [Topic
    * names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. The
    * Cloud Healthcare API service account, service-@gcp-sa-healthcare.iam.gserviceaccount.com, must
    * have publisher permissions on the given Pub/Sub topic. Not having adequate permissions causes
@@ -50,15 +50,15 @@ public final class FhirNotificationConfig extends com.google.api.client.json.Gen
   private java.lang.String pubsubTopic;
 
   /**
-   * Whether to send full FHIR resource to this Pub/Sub topic. The default value is false.
+   * Optional. Whether to send full FHIR resource to this Pub/Sub topic. The default value is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean sendFullResource;
 
   /**
-   * Whether to send full FHIR resource to this Pub/Sub topic for deleting FHIR resource. The
-   * default value is false. Note that setting this to true does not guarantee that all previous
+   * Optional. Whether to send full FHIR resource to this Pub/Sub topic for deleting FHIR resource.
+   * The default value is false. Note that setting this to true does not guarantee that all previous
    * resources will be sent in the format of full FHIR resource. When a resource change is too large
    * or during heavy traffic, only the resource name will be sent. Clients should always check the
    * "payloadType" label from a Pub/Sub message to determine whether it needs to fetch the full
@@ -69,12 +69,12 @@ public final class FhirNotificationConfig extends com.google.api.client.json.Gen
   private java.lang.Boolean sendPreviousResourceOnDelete;
 
   /**
-   * The [Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes are
-   * published on. Supplied by the client. The notification is a `PubsubMessage` with the following
-   * fields: * `PubsubMessage.Data` contains the resource name. * `PubsubMessage.MessageId` is the
-   * ID of this notification. It is guaranteed to be unique within the topic. *
-   * `PubsubMessage.PublishTime` is the time when the message was published. Note that notifications
-   * are only sent if the topic is non-empty. [Topic
+   * Optional. The [Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of
+   * changes are published on. Supplied by the client. The notification is a `PubsubMessage` with
+   * the following fields: * `PubsubMessage.Data` contains the resource name. *
+   * `PubsubMessage.MessageId` is the ID of this notification. It is guaranteed to be unique within
+   * the topic. * `PubsubMessage.PublishTime` is the time when the message was published. Note that
+   * notifications are only sent if the topic is non-empty. [Topic
    * names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. The
    * Cloud Healthcare API service account, service-@gcp-sa-healthcare.iam.gserviceaccount.com, must
    * have publisher permissions on the given Pub/Sub topic. Not having adequate permissions causes
@@ -90,12 +90,12 @@ public final class FhirNotificationConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * The [Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of changes are
-   * published on. Supplied by the client. The notification is a `PubsubMessage` with the following
-   * fields: * `PubsubMessage.Data` contains the resource name. * `PubsubMessage.MessageId` is the
-   * ID of this notification. It is guaranteed to be unique within the topic. *
-   * `PubsubMessage.PublishTime` is the time when the message was published. Note that notifications
-   * are only sent if the topic is non-empty. [Topic
+   * Optional. The [Pub/Sub](https://cloud.google.com/pubsub/docs/) topic that notifications of
+   * changes are published on. Supplied by the client. The notification is a `PubsubMessage` with
+   * the following fields: * `PubsubMessage.Data` contains the resource name. *
+   * `PubsubMessage.MessageId` is the ID of this notification. It is guaranteed to be unique within
+   * the topic. * `PubsubMessage.PublishTime` is the time when the message was published. Note that
+   * notifications are only sent if the topic is non-empty. [Topic
    * names](https://cloud.google.com/pubsub/docs/overview#names) must be scoped to a project. The
    * Cloud Healthcare API service account, service-@gcp-sa-healthcare.iam.gserviceaccount.com, must
    * have publisher permissions on the given Pub/Sub topic. Not having adequate permissions causes
@@ -112,7 +112,7 @@ public final class FhirNotificationConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Whether to send full FHIR resource to this Pub/Sub topic. The default value is false.
+   * Optional. Whether to send full FHIR resource to this Pub/Sub topic. The default value is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSendFullResource() {
@@ -120,7 +120,7 @@ public final class FhirNotificationConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Whether to send full FHIR resource to this Pub/Sub topic. The default value is false.
+   * Optional. Whether to send full FHIR resource to this Pub/Sub topic. The default value is false.
    * @param sendFullResource sendFullResource or {@code null} for none
    */
   public FhirNotificationConfig setSendFullResource(java.lang.Boolean sendFullResource) {
@@ -129,8 +129,8 @@ public final class FhirNotificationConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Whether to send full FHIR resource to this Pub/Sub topic for deleting FHIR resource. The
-   * default value is false. Note that setting this to true does not guarantee that all previous
+   * Optional. Whether to send full FHIR resource to this Pub/Sub topic for deleting FHIR resource.
+   * The default value is false. Note that setting this to true does not guarantee that all previous
    * resources will be sent in the format of full FHIR resource. When a resource change is too large
    * or during heavy traffic, only the resource name will be sent. Clients should always check the
    * "payloadType" label from a Pub/Sub message to determine whether it needs to fetch the full
@@ -142,8 +142,8 @@ public final class FhirNotificationConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Whether to send full FHIR resource to this Pub/Sub topic for deleting FHIR resource. The
-   * default value is false. Note that setting this to true does not guarantee that all previous
+   * Optional. Whether to send full FHIR resource to this Pub/Sub topic for deleting FHIR resource.
+   * The default value is false. Note that setting this to true does not guarantee that all previous
    * resources will be sent in the format of full FHIR resource. When a resource change is too large
    * or during heavy traffic, only the resource name will be sent. Clients should always check the
    * "payloadType" label from a Pub/Sub message to determine whether it needs to fetch the full

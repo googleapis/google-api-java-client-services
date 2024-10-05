@@ -30,12 +30,12 @@ package com.google.api.services.healthcare.v1.model;
 public final class Hl7V2NotificationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Restricts notifications sent for messages matching a filter. If this is empty, all messages are
-   * matched. The following syntax is available: * A string field value can be written as text
-   * inside quotation marks, for example `"query text"`. The only valid relational operation for
-   * text fields is equality (`=`), where text is searched within the field, rather than having the
-   * field be equal to the text. For example, `"Comment = great"` returns messages with `great` in
-   * the comment field. * A number field value can be written as an integer, a decimal, or an
+   * Optional. Restricts notifications sent for messages matching a filter. If this is empty, all
+   * messages are matched. The following syntax is available: * A string field value can be written
+   * as text inside quotation marks, for example `"query text"`. The only valid relational operation
+   * for text fields is equality (`=`), where text is searched within the field, rather than having
+   * the field be equal to the text. For example, `"Comment = great"` returns messages with `great`
+   * in the comment field. * A number field value can be written as an integer, a decimal, or an
    * exponential. The valid relational operators for number fields are the equality operator (`=`),
    * along with the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no
    * inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to negate it. *
@@ -86,12 +86,12 @@ public final class Hl7V2NotificationConfig extends com.google.api.client.json.Ge
   private java.lang.String pubsubTopic;
 
   /**
-   * Restricts notifications sent for messages matching a filter. If this is empty, all messages are
-   * matched. The following syntax is available: * A string field value can be written as text
-   * inside quotation marks, for example `"query text"`. The only valid relational operation for
-   * text fields is equality (`=`), where text is searched within the field, rather than having the
-   * field be equal to the text. For example, `"Comment = great"` returns messages with `great` in
-   * the comment field. * A number field value can be written as an integer, a decimal, or an
+   * Optional. Restricts notifications sent for messages matching a filter. If this is empty, all
+   * messages are matched. The following syntax is available: * A string field value can be written
+   * as text inside quotation marks, for example `"query text"`. The only valid relational operation
+   * for text fields is equality (`=`), where text is searched within the field, rather than having
+   * the field be equal to the text. For example, `"Comment = great"` returns messages with `great`
+   * in the comment field. * A number field value can be written as an integer, a decimal, or an
    * exponential. The valid relational operators for number fields are the equality operator (`=`),
    * along with the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no
    * inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to negate it. *
@@ -124,12 +124,12 @@ public final class Hl7V2NotificationConfig extends com.google.api.client.json.Ge
   }
 
   /**
-   * Restricts notifications sent for messages matching a filter. If this is empty, all messages are
-   * matched. The following syntax is available: * A string field value can be written as text
-   * inside quotation marks, for example `"query text"`. The only valid relational operation for
-   * text fields is equality (`=`), where text is searched within the field, rather than having the
-   * field be equal to the text. For example, `"Comment = great"` returns messages with `great` in
-   * the comment field. * A number field value can be written as an integer, a decimal, or an
+   * Optional. Restricts notifications sent for messages matching a filter. If this is empty, all
+   * messages are matched. The following syntax is available: * A string field value can be written
+   * as text inside quotation marks, for example `"query text"`. The only valid relational operation
+   * for text fields is equality (`=`), where text is searched within the field, rather than having
+   * the field be equal to the text. For example, `"Comment = great"` returns messages with `great`
+   * in the comment field. * A number field value can be written as an integer, a decimal, or an
    * exponential. The valid relational operators for number fields are the equality operator (`=`),
    * along with the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no
    * inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to negate it. *

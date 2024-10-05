@@ -42,11 +42,11 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   private java.lang.String complexDataTypeReferenceParsing;
 
   /**
-   * If true, overrides the default search behavior for this FHIR store to `handling=strict` which
-   * returns an error for unrecognized search parameters. If false, uses the FHIR specification
-   * default `handling=lenient` which ignores unrecognized search parameters. The handling can
-   * always be changed from the default on an individual API call by setting the HTTP header
-   * `Prefer: handling=strict` or `Prefer: handling=lenient`. Defaults to false.
+   * Optional. If true, overrides the default search behavior for this FHIR store to
+   * `handling=strict` which returns an error for unrecognized search parameters. If false, uses the
+   * FHIR specification default `handling=lenient` which ignores unrecognized search parameters. The
+   * handling can always be changed from the default on an individual API call by setting the HTTP
+   * header `Prefer: handling=strict` or `Prefer: handling=lenient`. Defaults to false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean disableResourceVersioning;
 
   /**
-   * Whether this FHIR store has the [updateCreate
+   * Optional. Whether this FHIR store has the [updateCreate
    * capability](https://www.hl7.org/fhir/capabilitystatement-
    * definitions.html#CapabilityStatement.rest.resource.updateCreate). This determines if the client
    * can use an Update operation to create a new resource with a client-specified ID. If false, all
@@ -121,7 +121,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   private NotificationConfig notificationConfig;
 
   /**
-   * Specifies where and whether to send notifications upon changes to a FHIR store.
+   * Optional. Specifies where and whether to send notifications upon changes to a FHIR store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,11 +134,11 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of streaming configs that configure the destinations of streaming export for every
-   * resource mutation in this FHIR store. Each store is allowed to have up to 10 streaming configs.
-   * After a new config is added, the next resource mutation is streamed to the new location in
-   * addition to the existing ones. When a location is removed from the list, the server stops
-   * streaming to that location. Before adding a new config, you must add the required
+   * Optional. A list of streaming configs that configure the destinations of streaming export for
+   * every resource mutation in this FHIR store. Each store is allowed to have up to 10 streaming
+   * configs. After a new config is added, the next resource mutation is streamed to the new
+   * location in addition to the existing ones. When a location is removed from the list, the server
+   * stops streaming to that location. Before adding a new config, you must add the required
    * [`bigquery.dataEditor`](https://cloud.google.com/bigquery/docs/access-
    * control#bigquery.dataEditor) role to your project's **Cloud Healthcare Service Agent** [service
    * account](https://cloud.google.com/iam/docs/service-accounts). Some lag (typically on the order
@@ -192,11 +192,11 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If true, overrides the default search behavior for this FHIR store to `handling=strict` which
-   * returns an error for unrecognized search parameters. If false, uses the FHIR specification
-   * default `handling=lenient` which ignores unrecognized search parameters. The handling can
-   * always be changed from the default on an individual API call by setting the HTTP header
-   * `Prefer: handling=strict` or `Prefer: handling=lenient`. Defaults to false.
+   * Optional. If true, overrides the default search behavior for this FHIR store to
+   * `handling=strict` which returns an error for unrecognized search parameters. If false, uses the
+   * FHIR specification default `handling=lenient` which ignores unrecognized search parameters. The
+   * handling can always be changed from the default on an individual API call by setting the HTTP
+   * header `Prefer: handling=strict` or `Prefer: handling=lenient`. Defaults to false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDefaultSearchHandlingStrict() {
@@ -204,11 +204,11 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If true, overrides the default search behavior for this FHIR store to `handling=strict` which
-   * returns an error for unrecognized search parameters. If false, uses the FHIR specification
-   * default `handling=lenient` which ignores unrecognized search parameters. The handling can
-   * always be changed from the default on an individual API call by setting the HTTP header
-   * `Prefer: handling=strict` or `Prefer: handling=lenient`. Defaults to false.
+   * Optional. If true, overrides the default search behavior for this FHIR store to
+   * `handling=strict` which returns an error for unrecognized search parameters. If false, uses the
+   * FHIR specification default `handling=lenient` which ignores unrecognized search parameters. The
+   * handling can always be changed from the default on an individual API call by setting the HTTP
+   * header `Prefer: handling=strict` or `Prefer: handling=lenient`. Defaults to false.
    * @param defaultSearchHandlingStrict defaultSearchHandlingStrict or {@code null} for none
    */
   public FhirStore setDefaultSearchHandlingStrict(java.lang.Boolean defaultSearchHandlingStrict) {
@@ -269,7 +269,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this FHIR store has the [updateCreate
+   * Optional. Whether this FHIR store has the [updateCreate
    * capability](https://www.hl7.org/fhir/capabilitystatement-
    * definitions.html#CapabilityStatement.rest.resource.updateCreate). This determines if the client
    * can use an Update operation to create a new resource with a client-specified ID. If false, all
@@ -285,7 +285,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this FHIR store has the [updateCreate
+   * Optional. Whether this FHIR store has the [updateCreate
    * capability](https://www.hl7.org/fhir/capabilitystatement-
    * definitions.html#CapabilityStatement.rest.resource.updateCreate). This determines if the client
    * can use an Update operation to create a new resource with a client-specified ID. If false, all
@@ -371,7 +371,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies where and whether to send notifications upon changes to a FHIR store.
+   * Optional. Specifies where and whether to send notifications upon changes to a FHIR store.
    * @return value or {@code null} for none
    */
   public java.util.List<FhirNotificationConfig> getNotificationConfigs() {
@@ -379,7 +379,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies where and whether to send notifications upon changes to a FHIR store.
+   * Optional. Specifies where and whether to send notifications upon changes to a FHIR store.
    * @param notificationConfigs notificationConfigs or {@code null} for none
    */
   public FhirStore setNotificationConfigs(java.util.List<FhirNotificationConfig> notificationConfigs) {
@@ -388,11 +388,11 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of streaming configs that configure the destinations of streaming export for every
-   * resource mutation in this FHIR store. Each store is allowed to have up to 10 streaming configs.
-   * After a new config is added, the next resource mutation is streamed to the new location in
-   * addition to the existing ones. When a location is removed from the list, the server stops
-   * streaming to that location. Before adding a new config, you must add the required
+   * Optional. A list of streaming configs that configure the destinations of streaming export for
+   * every resource mutation in this FHIR store. Each store is allowed to have up to 10 streaming
+   * configs. After a new config is added, the next resource mutation is streamed to the new
+   * location in addition to the existing ones. When a location is removed from the list, the server
+   * stops streaming to that location. Before adding a new config, you must add the required
    * [`bigquery.dataEditor`](https://cloud.google.com/bigquery/docs/access-
    * control#bigquery.dataEditor) role to your project's **Cloud Healthcare Service Agent** [service
    * account](https://cloud.google.com/iam/docs/service-accounts). Some lag (typically on the order
@@ -404,11 +404,11 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of streaming configs that configure the destinations of streaming export for every
-   * resource mutation in this FHIR store. Each store is allowed to have up to 10 streaming configs.
-   * After a new config is added, the next resource mutation is streamed to the new location in
-   * addition to the existing ones. When a location is removed from the list, the server stops
-   * streaming to that location. Before adding a new config, you must add the required
+   * Optional. A list of streaming configs that configure the destinations of streaming export for
+   * every resource mutation in this FHIR store. Each store is allowed to have up to 10 streaming
+   * configs. After a new config is added, the next resource mutation is streamed to the new
+   * location in addition to the existing ones. When a location is removed from the list, the server
+   * stops streaming to that location. Before adding a new config, you must add the required
    * [`bigquery.dataEditor`](https://cloud.google.com/bigquery/docs/access-
    * control#bigquery.dataEditor) role to your project's **Cloud Healthcare Service Agent** [service
    * account](https://cloud.google.com/iam/docs/service-accounts). Some lag (typically on the order

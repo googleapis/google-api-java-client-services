@@ -117,10 +117,11 @@ public final class GoogleCloudIdentitytoolkitV1CreateAuthUriRequest extends com.
 
   /**
    * The provider ID of the IdP for the user to sign in with. This should be a provider ID enabled
-   * for sign-in, which is either from the list of [default supported IdPs](https://cloud.google.com
-   * /identity-platform/docs/reference/rest/v2/defaultSupportedIdps/list), or of the format `oidc.*`
-   * or `saml.*`. Some examples are `google.com`, `facebook.com`, `oidc.testapp`, and
-   * `saml.testapp`. At least one of the fields `identifier` and `provider_id` must be set.
+   * for sign-in, which is either from the list of [default supported
+   * IdPs](https://cloud.google.com/identity-
+   * platform/docs/reference/rest/v2/defaultSupportedIdps/list), or of the format `oidc.*` or
+   * `saml.*`. Some examples are `google.com`, `facebook.com`, `oidc.testapp`, and `saml.testapp`.
+   * At least one of the fields `identifier` and `provider_id` must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -350,10 +351,11 @@ public final class GoogleCloudIdentitytoolkitV1CreateAuthUriRequest extends com.
 
   /**
    * The provider ID of the IdP for the user to sign in with. This should be a provider ID enabled
-   * for sign-in, which is either from the list of [default supported IdPs](https://cloud.google.com
-   * /identity-platform/docs/reference/rest/v2/defaultSupportedIdps/list), or of the format `oidc.*`
-   * or `saml.*`. Some examples are `google.com`, `facebook.com`, `oidc.testapp`, and
-   * `saml.testapp`. At least one of the fields `identifier` and `provider_id` must be set.
+   * for sign-in, which is either from the list of [default supported
+   * IdPs](https://cloud.google.com/identity-
+   * platform/docs/reference/rest/v2/defaultSupportedIdps/list), or of the format `oidc.*` or
+   * `saml.*`. Some examples are `google.com`, `facebook.com`, `oidc.testapp`, and `saml.testapp`.
+   * At least one of the fields `identifier` and `provider_id` must be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getProviderId() {
@@ -362,10 +364,11 @@ public final class GoogleCloudIdentitytoolkitV1CreateAuthUriRequest extends com.
 
   /**
    * The provider ID of the IdP for the user to sign in with. This should be a provider ID enabled
-   * for sign-in, which is either from the list of [default supported IdPs](https://cloud.google.com
-   * /identity-platform/docs/reference/rest/v2/defaultSupportedIdps/list), or of the format `oidc.*`
-   * or `saml.*`. Some examples are `google.com`, `facebook.com`, `oidc.testapp`, and
-   * `saml.testapp`. At least one of the fields `identifier` and `provider_id` must be set.
+   * for sign-in, which is either from the list of [default supported
+   * IdPs](https://cloud.google.com/identity-
+   * platform/docs/reference/rest/v2/defaultSupportedIdps/list), or of the format `oidc.*` or
+   * `saml.*`. Some examples are `google.com`, `facebook.com`, `oidc.testapp`, and `saml.testapp`.
+   * At least one of the fields `identifier` and `provider_id` must be set.
    * @param providerId providerId or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1CreateAuthUriRequest setProviderId(java.lang.String providerId) {

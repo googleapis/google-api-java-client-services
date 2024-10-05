@@ -30,6 +30,36 @@ package com.google.api.services.dialogflow.v3beta1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudDialogflowCxV3beta1ToolAuthenticationServiceAgentAuthConfig extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. Indicate the auth token type generated from the [Diglogflow service
+   * agent](https://cloud.google.com/iam/docs/service-agents#dialogflow-service-agent). The
+   * generated token is sent in the Authorization header.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAgentAuth;
+
+  /**
+   * Optional. Indicate the auth token type generated from the [Diglogflow service
+   * agent](https://cloud.google.com/iam/docs/service-agents#dialogflow-service-agent). The
+   * generated token is sent in the Authorization header.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAgentAuth() {
+    return serviceAgentAuth;
+  }
+
+  /**
+   * Optional. Indicate the auth token type generated from the [Diglogflow service
+   * agent](https://cloud.google.com/iam/docs/service-agents#dialogflow-service-agent). The
+   * generated token is sent in the Authorization header.
+   * @param serviceAgentAuth serviceAgentAuth or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ToolAuthenticationServiceAgentAuthConfig setServiceAgentAuth(java.lang.String serviceAgentAuth) {
+    this.serviceAgentAuth = serviceAgentAuth;
+    return this;
+  }
+
   @Override
   public GoogleCloudDialogflowCxV3beta1ToolAuthenticationServiceAgentAuthConfig set(String fieldName, Object value) {
     return (GoogleCloudDialogflowCxV3beta1ToolAuthenticationServiceAgentAuthConfig) super.set(fieldName, value);

@@ -30,16 +30,6 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SpeechToTextConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Defines the list of other language codes in addition to the one provided by the conversation
-   * profile that may be detected as the language code for the utterances over the conversation. See
-   * [Language Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of
-   * the currently supported language codes.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> alternativeLanguageCodes;
-
-  /**
    * Audio encoding of the audio content to process.
    * The value may be {@code null}.
    */
@@ -107,29 +97,6 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfig extends com.google.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useTimeoutBasedEndpointing;
-
-  /**
-   * Defines the list of other language codes in addition to the one provided by the conversation
-   * profile that may be detected as the language code for the utterances over the conversation. See
-   * [Language Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of
-   * the currently supported language codes.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getAlternativeLanguageCodes() {
-    return alternativeLanguageCodes;
-  }
-
-  /**
-   * Defines the list of other language codes in addition to the one provided by the conversation
-   * profile that may be detected as the language code for the utterances over the conversation. See
-   * [Language Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of
-   * the currently supported language codes.
-   * @param alternativeLanguageCodes alternativeLanguageCodes or {@code null} for none
-   */
-  public GoogleCloudDialogflowV2SpeechToTextConfig setAlternativeLanguageCodes(java.util.List<java.lang.String> alternativeLanguageCodes) {
-    this.alternativeLanguageCodes = alternativeLanguageCodes;
-    return this;
-  }
 
   /**
    * Audio encoding of the audio content to process.

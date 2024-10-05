@@ -45,11 +45,18 @@ public final class GoogleCloudDialogflowCxV3beta1ParameterDefinition extends com
   private java.lang.String name;
 
   /**
-   * Required. Type of parameter.
+   * Type of parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Optional. Type schema of parameter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1TypeSchema typeSchema;
 
   /**
    * Human-readable description of the parameter. Limited to 300 characters.
@@ -86,7 +93,7 @@ public final class GoogleCloudDialogflowCxV3beta1ParameterDefinition extends com
   }
 
   /**
-   * Required. Type of parameter.
+   * Type of parameter.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -94,11 +101,28 @@ public final class GoogleCloudDialogflowCxV3beta1ParameterDefinition extends com
   }
 
   /**
-   * Required. Type of parameter.
+   * Type of parameter.
    * @param type type or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ParameterDefinition setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * Optional. Type schema of parameter.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1TypeSchema getTypeSchema() {
+    return typeSchema;
+  }
+
+  /**
+   * Optional. Type schema of parameter.
+   * @param typeSchema typeSchema or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ParameterDefinition setTypeSchema(GoogleCloudDialogflowCxV3beta1TypeSchema typeSchema) {
+    this.typeSchema = typeSchema;
     return this;
   }
 

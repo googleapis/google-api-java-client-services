@@ -37,6 +37,13 @@ public final class GoogleCloudDialogflowCxV3beta1SafetySettings extends com.goog
   private java.util.List<GoogleCloudDialogflowCxV3beta1SafetySettingsPhrase> bannedPhrases;
 
   /**
+   * Optional. Default phrase match strategy for banned phrases.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultBannedPhraseMatchStrategy;
+
+  /**
    * Banned phrases for generated text.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class GoogleCloudDialogflowCxV3beta1SafetySettings extends com.goog
    */
   public GoogleCloudDialogflowCxV3beta1SafetySettings setBannedPhrases(java.util.List<GoogleCloudDialogflowCxV3beta1SafetySettingsPhrase> bannedPhrases) {
     this.bannedPhrases = bannedPhrases;
+    return this;
+  }
+
+  /**
+   * Optional. Default phrase match strategy for banned phrases.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultBannedPhraseMatchStrategy() {
+    return defaultBannedPhraseMatchStrategy;
+  }
+
+  /**
+   * Optional. Default phrase match strategy for banned phrases.
+   * @param defaultBannedPhraseMatchStrategy defaultBannedPhraseMatchStrategy or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1SafetySettings setDefaultBannedPhraseMatchStrategy(java.lang.String defaultBannedPhraseMatchStrategy) {
+    this.defaultBannedPhraseMatchStrategy = defaultBannedPhraseMatchStrategy;
     return this;
   }
 

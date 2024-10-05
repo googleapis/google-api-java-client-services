@@ -44,6 +44,13 @@ public final class InstanceFlexibilityPolicy extends com.google.api.client.json.
   private java.util.List<InstanceSelectionResult> instanceSelectionResults;
 
   /**
+   * Optional. Defines how the Group selects the provisioning model to ensure required reliability.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProvisioningModelMix provisioningModelMix;
+
+  /**
    * Optional. List of instance selection options that the group will use when creating new VMs.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class InstanceFlexibilityPolicy extends com.google.api.client.json.
    */
   public InstanceFlexibilityPolicy setInstanceSelectionResults(java.util.List<InstanceSelectionResult> instanceSelectionResults) {
     this.instanceSelectionResults = instanceSelectionResults;
+    return this;
+  }
+
+  /**
+   * Optional. Defines how the Group selects the provisioning model to ensure required reliability.
+   * @return value or {@code null} for none
+   */
+  public ProvisioningModelMix getProvisioningModelMix() {
+    return provisioningModelMix;
+  }
+
+  /**
+   * Optional. Defines how the Group selects the provisioning model to ensure required reliability.
+   * @param provisioningModelMix provisioningModelMix or {@code null} for none
+   */
+  public InstanceFlexibilityPolicy setProvisioningModelMix(ProvisioningModelMix provisioningModelMix) {
+    this.provisioningModelMix = provisioningModelMix;
     return this;
   }
 

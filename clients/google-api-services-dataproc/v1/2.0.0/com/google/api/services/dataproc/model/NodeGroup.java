@@ -34,7 +34,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
    * Optional. Node group labels. Label keys must consist of from 1 to 63 characters and conform to
    * RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values can be empty. If specified, they
    * must consist of from 1 to 63 characters and conform to RFC 1035
-   * (https://www.ietf.org/rfc/rfc1035.txt). The node group must have no more than 32 labelsn.
+   * (https://www.ietf.org/rfc/rfc1035.txt). The node group must have no more than 32 labels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
    * Optional. Node group labels. Label keys must consist of from 1 to 63 characters and conform to
    * RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values can be empty. If specified, they
    * must consist of from 1 to 63 characters and conform to RFC 1035
-   * (https://www.ietf.org/rfc/rfc1035.txt). The node group must have no more than 32 labelsn.
+   * (https://www.ietf.org/rfc/rfc1035.txt). The node group must have no more than 32 labels.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -76,7 +76,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
    * Optional. Node group labels. Label keys must consist of from 1 to 63 characters and conform to
    * RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values can be empty. If specified, they
    * must consist of from 1 to 63 characters and conform to RFC 1035
-   * (https://www.ietf.org/rfc/rfc1035.txt). The node group must have no more than 32 labelsn.
+   * (https://www.ietf.org/rfc/rfc1035.txt). The node group must have no more than 32 labels.
    * @param labels labels or {@code null} for none
    */
   public NodeGroup setLabels(java.util.Map<String, java.lang.String> labels) {

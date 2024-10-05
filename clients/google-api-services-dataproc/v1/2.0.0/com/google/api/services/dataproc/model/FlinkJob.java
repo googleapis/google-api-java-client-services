@@ -69,8 +69,8 @@ public final class FlinkJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure Flink. Properties that
-   * conflict with values set by the Dataproc API might beoverwritten. Can include properties set
-   * in/etc/flink/conf/flink-defaults.conf and classes in user code.
+   * conflict with values set by the Dataproc API might be overwritten. Can include properties set
+   * in /etc/flink/conf/flink-defaults.conf and classes in user code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,8 +177,8 @@ public final class FlinkJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure Flink. Properties that
-   * conflict with values set by the Dataproc API might beoverwritten. Can include properties set
-   * in/etc/flink/conf/flink-defaults.conf and classes in user code.
+   * conflict with values set by the Dataproc API might be overwritten. Can include properties set
+   * in /etc/flink/conf/flink-defaults.conf and classes in user code.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getProperties() {
@@ -187,8 +187,8 @@ public final class FlinkJob extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A mapping of property names to values, used to configure Flink. Properties that
-   * conflict with values set by the Dataproc API might beoverwritten. Can include properties set
-   * in/etc/flink/conf/flink-defaults.conf and classes in user code.
+   * conflict with values set by the Dataproc API might be overwritten. Can include properties set
+   * in /etc/flink/conf/flink-defaults.conf and classes in user code.
    * @param properties properties or {@code null} for none
    */
   public FlinkJob setProperties(java.util.Map<String, java.lang.String> properties) {

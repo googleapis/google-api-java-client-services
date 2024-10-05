@@ -30,16 +30,16 @@ package com.google.api.services.healthcare.v1.model;
 public final class StreamConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The destination BigQuery structure that contains both the dataset location and corresponding
-   * schema config. The output is organized in one table per resource type. The server reuses the
-   * existing tables (if any) that are named after the resource types. For example, "Patient",
-   * "Observation". When there is no existing table for a given resource type, the server attempts
-   * to create one. When a table schema doesn't align with the schema config, either because of
-   * existing incompatible schema or out of band incompatible modification, the server does not
-   * stream in new data. BigQuery imposes a 1 MB limit on streaming insert row size, therefore any
-   * resource mutation that generates more than 1 MB of BigQuery data is not streamed. One
-   * resolution in this case is to delete the incompatible table and let the server recreate one,
-   * though the newly created table only contains data after the table recreation. Results are
+   * Optional. The destination BigQuery structure that contains both the dataset location and
+   * corresponding schema config. The output is organized in one table per resource type. The server
+   * reuses the existing tables (if any) that are named after the resource types. For example,
+   * "Patient", "Observation". When there is no existing table for a given resource type, the server
+   * attempts to create one. When a table schema doesn't align with the schema config, either
+   * because of existing incompatible schema or out of band incompatible modification, the server
+   * does not stream in new data. BigQuery imposes a 1 MB limit on streaming insert row size,
+   * therefore any resource mutation that generates more than 1 MB of BigQuery data is not streamed.
+   * One resolution in this case is to delete the incompatible table and let the server recreate
+   * one, though the newly created table only contains data after the table recreation. Results are
    * written to BigQuery tables according to the parameters in BigQueryDestination.WriteDisposition.
    * Different versions of the same resource are distinguishable by the meta.versionId and
    * meta.lastUpdated columns. The operation (CREATE/UPDATE/DELETE) that results in the new version
@@ -79,7 +79,7 @@ public final class StreamConfig extends com.google.api.client.json.GenericJson {
   private DeidentifiedStoreDestination deidentifiedStoreDestination;
 
   /**
-   * Supply a FHIR resource type (such as "Patient" or "Observation"). See
+   * Optional. Supply a FHIR resource type (such as "Patient" or "Observation"). See
    * https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types.
    * The server treats an empty list as an intent to stream all the supported resource types in this
    * FHIR store.
@@ -89,16 +89,16 @@ public final class StreamConfig extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> resourceTypes;
 
   /**
-   * The destination BigQuery structure that contains both the dataset location and corresponding
-   * schema config. The output is organized in one table per resource type. The server reuses the
-   * existing tables (if any) that are named after the resource types. For example, "Patient",
-   * "Observation". When there is no existing table for a given resource type, the server attempts
-   * to create one. When a table schema doesn't align with the schema config, either because of
-   * existing incompatible schema or out of band incompatible modification, the server does not
-   * stream in new data. BigQuery imposes a 1 MB limit on streaming insert row size, therefore any
-   * resource mutation that generates more than 1 MB of BigQuery data is not streamed. One
-   * resolution in this case is to delete the incompatible table and let the server recreate one,
-   * though the newly created table only contains data after the table recreation. Results are
+   * Optional. The destination BigQuery structure that contains both the dataset location and
+   * corresponding schema config. The output is organized in one table per resource type. The server
+   * reuses the existing tables (if any) that are named after the resource types. For example,
+   * "Patient", "Observation". When there is no existing table for a given resource type, the server
+   * attempts to create one. When a table schema doesn't align with the schema config, either
+   * because of existing incompatible schema or out of band incompatible modification, the server
+   * does not stream in new data. BigQuery imposes a 1 MB limit on streaming insert row size,
+   * therefore any resource mutation that generates more than 1 MB of BigQuery data is not streamed.
+   * One resolution in this case is to delete the incompatible table and let the server recreate
+   * one, though the newly created table only contains data after the table recreation. Results are
    * written to BigQuery tables according to the parameters in BigQueryDestination.WriteDisposition.
    * Different versions of the same resource are distinguishable by the meta.versionId and
    * meta.lastUpdated columns. The operation (CREATE/UPDATE/DELETE) that results in the new version
@@ -119,16 +119,16 @@ public final class StreamConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The destination BigQuery structure that contains both the dataset location and corresponding
-   * schema config. The output is organized in one table per resource type. The server reuses the
-   * existing tables (if any) that are named after the resource types. For example, "Patient",
-   * "Observation". When there is no existing table for a given resource type, the server attempts
-   * to create one. When a table schema doesn't align with the schema config, either because of
-   * existing incompatible schema or out of band incompatible modification, the server does not
-   * stream in new data. BigQuery imposes a 1 MB limit on streaming insert row size, therefore any
-   * resource mutation that generates more than 1 MB of BigQuery data is not streamed. One
-   * resolution in this case is to delete the incompatible table and let the server recreate one,
-   * though the newly created table only contains data after the table recreation. Results are
+   * Optional. The destination BigQuery structure that contains both the dataset location and
+   * corresponding schema config. The output is organized in one table per resource type. The server
+   * reuses the existing tables (if any) that are named after the resource types. For example,
+   * "Patient", "Observation". When there is no existing table for a given resource type, the server
+   * attempts to create one. When a table schema doesn't align with the schema config, either
+   * because of existing incompatible schema or out of band incompatible modification, the server
+   * does not stream in new data. BigQuery imposes a 1 MB limit on streaming insert row size,
+   * therefore any resource mutation that generates more than 1 MB of BigQuery data is not streamed.
+   * One resolution in this case is to delete the incompatible table and let the server recreate
+   * one, though the newly created table only contains data after the table recreation. Results are
    * written to BigQuery tables according to the parameters in BigQueryDestination.WriteDisposition.
    * Different versions of the same resource are distinguishable by the meta.versionId and
    * meta.lastUpdated columns. The operation (CREATE/UPDATE/DELETE) that results in the new version
@@ -193,7 +193,7 @@ public final class StreamConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Supply a FHIR resource type (such as "Patient" or "Observation"). See
+   * Optional. Supply a FHIR resource type (such as "Patient" or "Observation"). See
    * https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types.
    * The server treats an empty list as an intent to stream all the supported resource types in this
    * FHIR store.
@@ -204,7 +204,7 @@ public final class StreamConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Supply a FHIR resource type (such as "Patient" or "Observation"). See
+   * Optional. Supply a FHIR resource type (such as "Patient" or "Observation"). See
    * https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types.
    * The server treats an empty list as an intent to stream all the supported resource types in this
    * FHIR store.

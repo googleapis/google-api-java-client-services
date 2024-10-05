@@ -30,17 +30,17 @@ package com.google.api.services.healthcare.v1.model;
 public final class SchemaPackage extends com.google.api.client.json.GenericJson {
 
   /**
-   * Flag to ignore all min_occurs restrictions in the schema. This means that incoming messages can
-   * omit any group, segment, field, component, or subcomponent.
+   * Optional. Flag to ignore all min_occurs restrictions in the schema. This means that incoming
+   * messages can omit any group, segment, field, component, or subcomponent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean ignoreMinOccurs;
 
   /**
-   * Schema configs that are layered based on their VersionSources that match the incoming message.
-   * Schema configs present in higher indices override those in lower indices with the same message
-   * type and trigger event if their VersionSources all match an incoming message.
+   * Optional. Schema configs that are layered based on their VersionSources that match the incoming
+   * message. Schema configs present in higher indices override those in lower indices with the same
+   * message type and trigger event if their VersionSources all match an incoming message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,16 +53,16 @@ public final class SchemaPackage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Determines how messages that fail to parse are handled.
+   * Optional. Determines how messages that fail to parse are handled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String schematizedParsingType;
 
   /**
-   * Schema type definitions that are layered based on their VersionSources that match the incoming
-   * message. Type definitions present in higher indices override those in lower indices with the
-   * same type name if their VersionSources all match an incoming message.
+   * Optional. Schema type definitions that are layered based on their VersionSources that match the
+   * incoming message. Type definitions present in higher indices override those in lower indices
+   * with the same type name if their VersionSources all match an incoming message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,15 +75,15 @@ public final class SchemaPackage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Determines how unexpected segments (segments not matched to the schema) are handled.
+   * Optional. Determines how unexpected segments (segments not matched to the schema) are handled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String unexpectedSegmentHandling;
 
   /**
-   * Flag to ignore all min_occurs restrictions in the schema. This means that incoming messages can
-   * omit any group, segment, field, component, or subcomponent.
+   * Optional. Flag to ignore all min_occurs restrictions in the schema. This means that incoming
+   * messages can omit any group, segment, field, component, or subcomponent.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIgnoreMinOccurs() {
@@ -91,8 +91,8 @@ public final class SchemaPackage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Flag to ignore all min_occurs restrictions in the schema. This means that incoming messages can
-   * omit any group, segment, field, component, or subcomponent.
+   * Optional. Flag to ignore all min_occurs restrictions in the schema. This means that incoming
+   * messages can omit any group, segment, field, component, or subcomponent.
    * @param ignoreMinOccurs ignoreMinOccurs or {@code null} for none
    */
   public SchemaPackage setIgnoreMinOccurs(java.lang.Boolean ignoreMinOccurs) {
@@ -101,9 +101,9 @@ public final class SchemaPackage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Schema configs that are layered based on their VersionSources that match the incoming message.
-   * Schema configs present in higher indices override those in lower indices with the same message
-   * type and trigger event if their VersionSources all match an incoming message.
+   * Optional. Schema configs that are layered based on their VersionSources that match the incoming
+   * message. Schema configs present in higher indices override those in lower indices with the same
+   * message type and trigger event if their VersionSources all match an incoming message.
    * @return value or {@code null} for none
    */
   public java.util.List<Hl7SchemaConfig> getSchemas() {
@@ -111,9 +111,9 @@ public final class SchemaPackage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Schema configs that are layered based on their VersionSources that match the incoming message.
-   * Schema configs present in higher indices override those in lower indices with the same message
-   * type and trigger event if their VersionSources all match an incoming message.
+   * Optional. Schema configs that are layered based on their VersionSources that match the incoming
+   * message. Schema configs present in higher indices override those in lower indices with the same
+   * message type and trigger event if their VersionSources all match an incoming message.
    * @param schemas schemas or {@code null} for none
    */
   public SchemaPackage setSchemas(java.util.List<Hl7SchemaConfig> schemas) {
@@ -122,7 +122,7 @@ public final class SchemaPackage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Determines how messages that fail to parse are handled.
+   * Optional. Determines how messages that fail to parse are handled.
    * @return value or {@code null} for none
    */
   public java.lang.String getSchematizedParsingType() {
@@ -130,7 +130,7 @@ public final class SchemaPackage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Determines how messages that fail to parse are handled.
+   * Optional. Determines how messages that fail to parse are handled.
    * @param schematizedParsingType schematizedParsingType or {@code null} for none
    */
   public SchemaPackage setSchematizedParsingType(java.lang.String schematizedParsingType) {
@@ -139,9 +139,9 @@ public final class SchemaPackage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Schema type definitions that are layered based on their VersionSources that match the incoming
-   * message. Type definitions present in higher indices override those in lower indices with the
-   * same type name if their VersionSources all match an incoming message.
+   * Optional. Schema type definitions that are layered based on their VersionSources that match the
+   * incoming message. Type definitions present in higher indices override those in lower indices
+   * with the same type name if their VersionSources all match an incoming message.
    * @return value or {@code null} for none
    */
   public java.util.List<Hl7TypesConfig> getTypes() {
@@ -149,9 +149,9 @@ public final class SchemaPackage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Schema type definitions that are layered based on their VersionSources that match the incoming
-   * message. Type definitions present in higher indices override those in lower indices with the
-   * same type name if their VersionSources all match an incoming message.
+   * Optional. Schema type definitions that are layered based on their VersionSources that match the
+   * incoming message. Type definitions present in higher indices override those in lower indices
+   * with the same type name if their VersionSources all match an incoming message.
    * @param types types or {@code null} for none
    */
   public SchemaPackage setTypes(java.util.List<Hl7TypesConfig> types) {
@@ -160,7 +160,7 @@ public final class SchemaPackage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Determines how unexpected segments (segments not matched to the schema) are handled.
+   * Optional. Determines how unexpected segments (segments not matched to the schema) are handled.
    * @return value or {@code null} for none
    */
   public java.lang.String getUnexpectedSegmentHandling() {
@@ -168,7 +168,7 @@ public final class SchemaPackage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Determines how unexpected segments (segments not matched to the schema) are handled.
+   * Optional. Determines how unexpected segments (segments not matched to the schema) are handled.
    * @param unexpectedSegmentHandling unexpectedSegmentHandling or {@code null} for none
    */
   public SchemaPackage setUnexpectedSegmentHandling(java.lang.String unexpectedSegmentHandling) {

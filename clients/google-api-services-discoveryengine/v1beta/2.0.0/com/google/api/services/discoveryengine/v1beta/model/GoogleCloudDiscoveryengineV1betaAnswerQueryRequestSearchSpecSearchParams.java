@@ -71,6 +71,14 @@ public final class GoogleCloudDiscoveryengineV1betaAnswerQueryRequestSearchSpecS
   private java.lang.Integer maxReturnResults;
 
   /**
+   * Optional. Specification to enable natural language understanding capabilities for search
+   * requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaSearchRequestNaturalLanguageQueryUnderstandingSpec naturalLanguageQueryUnderstandingSpec;
+
+  /**
    * The order in which documents are returned. Documents can be ordered by a field in an Document
    * object. Leave it unset if ordered by relevance. `order_by` expression is case-sensitive. For
    * more information on ordering, see [Ordering](https://cloud.google.com/retail/docs/filter-and-
@@ -180,6 +188,25 @@ public final class GoogleCloudDiscoveryengineV1betaAnswerQueryRequestSearchSpecS
    */
   public GoogleCloudDiscoveryengineV1betaAnswerQueryRequestSearchSpecSearchParams setMaxReturnResults(java.lang.Integer maxReturnResults) {
     this.maxReturnResults = maxReturnResults;
+    return this;
+  }
+
+  /**
+   * Optional. Specification to enable natural language understanding capabilities for search
+   * requests.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchRequestNaturalLanguageQueryUnderstandingSpec getNaturalLanguageQueryUnderstandingSpec() {
+    return naturalLanguageQueryUnderstandingSpec;
+  }
+
+  /**
+   * Optional. Specification to enable natural language understanding capabilities for search
+   * requests.
+   * @param naturalLanguageQueryUnderstandingSpec naturalLanguageQueryUnderstandingSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAnswerQueryRequestSearchSpecSearchParams setNaturalLanguageQueryUnderstandingSpec(GoogleCloudDiscoveryengineV1betaSearchRequestNaturalLanguageQueryUnderstandingSpec naturalLanguageQueryUnderstandingSpec) {
+    this.naturalLanguageQueryUnderstandingSpec = naturalLanguageQueryUnderstandingSpec;
     return this;
   }
 

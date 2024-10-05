@@ -144,6 +144,15 @@ public final class GoogleCloudDiscoveryengineV1betaServingConfig extends com.goo
   private java.util.List<java.lang.String> onewaySynonymsControlIds;
 
   /**
+   * The specification for personalization spec. Notice that if both
+   * ServingConfig.personalization_spec and SearchRequest.personalization_spec are set,
+   * SearchRequest.personalization_spec overrides ServingConfig.personalization_spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaSearchRequestPersonalizationSpec personalizationSpec;
+
+  /**
    * The ranking expression controls the customized ranking on retrieval documents. To leverage
    * this, document embedding is required. The ranking expression setting in ServingConfig applies
    * to all search requests served by the serving config. However, if
@@ -462,6 +471,27 @@ public final class GoogleCloudDiscoveryengineV1betaServingConfig extends com.goo
    */
   public GoogleCloudDiscoveryengineV1betaServingConfig setOnewaySynonymsControlIds(java.util.List<java.lang.String> onewaySynonymsControlIds) {
     this.onewaySynonymsControlIds = onewaySynonymsControlIds;
+    return this;
+  }
+
+  /**
+   * The specification for personalization spec. Notice that if both
+   * ServingConfig.personalization_spec and SearchRequest.personalization_spec are set,
+   * SearchRequest.personalization_spec overrides ServingConfig.personalization_spec.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchRequestPersonalizationSpec getPersonalizationSpec() {
+    return personalizationSpec;
+  }
+
+  /**
+   * The specification for personalization spec. Notice that if both
+   * ServingConfig.personalization_spec and SearchRequest.personalization_spec are set,
+   * SearchRequest.personalization_spec overrides ServingConfig.personalization_spec.
+   * @param personalizationSpec personalizationSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaServingConfig setPersonalizationSpec(GoogleCloudDiscoveryengineV1betaSearchRequestPersonalizationSpec personalizationSpec) {
+    this.personalizationSpec = personalizationSpec;
     return this;
   }
 

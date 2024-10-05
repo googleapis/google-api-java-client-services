@@ -44,6 +44,13 @@ public final class GoogleCloudDiscoveryengineV1betaCustomTuningModel extends com
   private java.lang.String displayName;
 
   /**
+   * Currently this is only populated if the model state is `INPUT_VALIDATION_FAILED`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String errorMessage;
+
+  /**
    * The metrics of the trained model.
    * The value may be {@code null}.
    */
@@ -111,6 +118,23 @@ public final class GoogleCloudDiscoveryengineV1betaCustomTuningModel extends com
    */
   public GoogleCloudDiscoveryengineV1betaCustomTuningModel setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Currently this is only populated if the model state is `INPUT_VALIDATION_FAILED`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getErrorMessage() {
+    return errorMessage;
+  }
+
+  /**
+   * Currently this is only populated if the model state is `INPUT_VALIDATION_FAILED`.
+   * @param errorMessage errorMessage or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaCustomTuningModel setErrorMessage(java.lang.String errorMessage) {
+    this.errorMessage = errorMessage;
     return this;
   }
 

@@ -70,6 +70,13 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
   private java.util.List<java.lang.String> dataStoreIds;
 
   /**
+   * Optional. Whether to disable analytics for searches performed on this engine.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableAnalytics;
+
+  /**
    * Required. The display name of the engine. Should be human readable. UTF-8 encoded string with
    * limit of 1024 characters.
    * The value may be {@code null}.
@@ -210,6 +217,23 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
    */
   public GoogleCloudDiscoveryengineV1Engine setDataStoreIds(java.util.List<java.lang.String> dataStoreIds) {
     this.dataStoreIds = dataStoreIds;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to disable analytics for searches performed on this engine.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableAnalytics() {
+    return disableAnalytics;
+  }
+
+  /**
+   * Optional. Whether to disable analytics for searches performed on this engine.
+   * @param disableAnalytics disableAnalytics or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1Engine setDisableAnalytics(java.lang.Boolean disableAnalytics) {
+    this.disableAnalytics = disableAnalytics;
     return this;
   }
 

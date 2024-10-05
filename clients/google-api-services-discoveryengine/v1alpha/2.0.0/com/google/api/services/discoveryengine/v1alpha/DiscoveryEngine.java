@@ -35476,7 +35476,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * The "identity_mapping_stores" collection of methods.
+       * The "identityMappingStores" collection of methods.
        */
       public class IdentityMappingStores {
 
@@ -35523,7 +35523,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             private static final String REST_PATH = "v1alpha/{+name}";
 
             private final java.util.regex.Pattern NAME_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/identity_mapping_stores/[^/]+/operations/[^/]+$");
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/identityMappingStores/[^/]+/operations/[^/]+$");
 
             /**
              * Gets the latest state of a long-running operation. Clients can use this method to poll the
@@ -35545,7 +35545,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                     "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/identity_mapping_stores/[^/]+/operations/[^/]+$");
+                    "^projects/[^/]+/locations/[^/]+/identityMappingStores/[^/]+/operations/[^/]+$");
               }
             }
 
@@ -35629,7 +35629,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                     "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/identity_mapping_stores/[^/]+/operations/[^/]+$");
+                    "^projects/[^/]+/locations/[^/]+/identityMappingStores/[^/]+/operations/[^/]+$");
               }
               this.name = name;
               return this;
@@ -35663,7 +35663,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             private static final String REST_PATH = "v1alpha/{+name}/operations";
 
             private final java.util.regex.Pattern NAME_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/identity_mapping_stores/[^/]+$");
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/identityMappingStores/[^/]+$");
 
             /**
              * Lists operations that match the specified filter in the request. If the server doesn't support
@@ -35685,7 +35685,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                     "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/identity_mapping_stores/[^/]+$");
+                    "^projects/[^/]+/locations/[^/]+/identityMappingStores/[^/]+$");
               }
             }
 
@@ -35769,7 +35769,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                     "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/identity_mapping_stores/[^/]+$");
+                    "^projects/[^/]+/locations/[^/]+/identityMappingStores/[^/]+$");
               }
               this.name = name;
               return this;

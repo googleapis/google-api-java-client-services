@@ -30,7 +30,7 @@ package com.google.api.services.migrationcenter.v1.model;
 public final class ReportSummaryAssetAggregateStats extends com.google.api.client.json.GenericJson {
 
   /**
-   * Histogram showing a distribution of CPU core counts.
+   * Histogram showing a distribution of logical CPU core counts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class ReportSummaryAssetAggregateStats extends com.google.api.clien
   private java.lang.Long totalStorageBytes;
 
   /**
-   * Histogram showing a distribution of CPU core counts.
+   * Histogram showing a distribution of logical CPU core counts.
    * @return value or {@code null} for none
    */
   public ReportSummaryHistogramChartData getCoreCountHistogram() {
@@ -108,7 +108,7 @@ public final class ReportSummaryAssetAggregateStats extends com.google.api.clien
   }
 
   /**
-   * Histogram showing a distribution of CPU core counts.
+   * Histogram showing a distribution of logical CPU core counts.
    * @param coreCountHistogram coreCountHistogram or {@code null} for none
    */
   public ReportSummaryAssetAggregateStats setCoreCountHistogram(ReportSummaryHistogramChartData coreCountHistogram) {

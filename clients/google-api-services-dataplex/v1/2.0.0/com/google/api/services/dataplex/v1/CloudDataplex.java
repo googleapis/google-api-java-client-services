@@ -12603,21 +12603,24 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Optional. The map keys of the Aspects which the service should modify. It supports
              * the following syntaxes: - matches an aspect of the given type and empty path. @path -
-             * matches an aspect of the given type and specified path. * - matches aspects of the
-             * given type for all paths. *@path - matches aspects of all types on the given path.The
-             * service will not remove existing aspects matching the syntax unless
-             * delete_missing_aspects is set to true.If this field is left empty, the service treats
-             * it as specifying exactly those Aspects present in the request.
+             * matches an aspect of the given type and specified path. For example, to attach an
+             * aspect to a field that is specified by the schema aspect, the path should have the
+             * format Schema.. * - matches aspects of the given type for all paths. *@path - matches
+             * aspects of all types on the given path.The service will not remove existing aspects
+             * matching the syntax unless delete_missing_aspects is set to true.If this field is
+             * left empty, the service treats it as specifying exactly those Aspects present in the
+             * request.
              */
             @com.google.api.client.util.Key
             private java.util.List<java.lang.String> aspectKeys;
 
             /** Optional. The map keys of the Aspects which the service should modify. It supports the following
            syntaxes: - matches an aspect of the given type and empty path. @path - matches an aspect of the
-           given type and specified path. * - matches aspects of the given type for all paths. *@path -
-           matches aspects of all types on the given path.The service will not remove existing aspects
-           matching the syntax unless delete_missing_aspects is set to true.If this field is left empty, the
-           service treats it as specifying exactly those Aspects present in the request.
+           given type and specified path. For example, to attach an aspect to a field that is specified by the
+           schema aspect, the path should have the format Schema.. * - matches aspects of the given type for
+           all paths. *@path - matches aspects of all types on the given path.The service will not remove
+           existing aspects matching the syntax unless delete_missing_aspects is set to true.If this field is
+           left empty, the service treats it as specifying exactly those Aspects present in the request.
              */
             public java.util.List<java.lang.String> getAspectKeys() {
               return aspectKeys;
@@ -12626,11 +12629,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Optional. The map keys of the Aspects which the service should modify. It supports
              * the following syntaxes: - matches an aspect of the given type and empty path. @path -
-             * matches an aspect of the given type and specified path. * - matches aspects of the
-             * given type for all paths. *@path - matches aspects of all types on the given path.The
-             * service will not remove existing aspects matching the syntax unless
-             * delete_missing_aspects is set to true.If this field is left empty, the service treats
-             * it as specifying exactly those Aspects present in the request.
+             * matches an aspect of the given type and specified path. For example, to attach an
+             * aspect to a field that is specified by the schema aspect, the path should have the
+             * format Schema.. * - matches aspects of the given type for all paths. *@path - matches
+             * aspects of all types on the given path.The service will not remove existing aspects
+             * matching the syntax unless delete_missing_aspects is set to true.If this field is
+             * left empty, the service treats it as specifying exactly those Aspects present in the
+             * request.
              */
             public Patch setAspectKeys(java.util.List<java.lang.String> aspectKeys) {
               this.aspectKeys = aspectKeys;

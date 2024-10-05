@@ -257,7 +257,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
     /**
      * Deletes the specified account regardless of its type: standalone, MCA or sub-account. Deleting an
      * MCA leads to the deletion of all of its sub-accounts. Executing this method requires admin
-     * access.
+     * access. The deletion succeeds only if the account does not provide services to any other account
+     * and has no processed offers. You can use the `force` parameter to override this.
      *
      * Create a request for the method "accounts.delete".
      *
@@ -283,7 +284,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
       /**
        * Deletes the specified account regardless of its type: standalone, MCA or sub-account. Deleting
        * an MCA leads to the deletion of all of its sub-accounts. Executing this method requires admin
-       * access.
+       * access. The deletion succeeds only if the account does not provide services to any other
+       * account and has no processed offers. You can use the `force` parameter to override this.
        *
        * Create a request for the method "accounts.delete".
        *
@@ -379,6 +381,29 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
               "^accounts/[^/]+$");
         }
         this.name = name;
+        return this;
+      }
+
+      /**
+       * Optional. If set to `true`, the account is deleted even if it provides services to other
+       * accounts or has processed offers.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean force;
+
+      /** Optional. If set to `true`, the account is deleted even if it provides services to other accounts
+     or has processed offers.
+       */
+      public java.lang.Boolean getForce() {
+        return force;
+      }
+
+      /**
+       * Optional. If set to `true`, the account is deleted even if it provides services to other
+       * accounts or has processed offers.
+       */
+      public Delete setForce(java.lang.Boolean force) {
+        this.force = force;
         return this;
       }
 
@@ -531,6 +556,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
      * Lists accounts accessible to the calling user and matching the constraints of the request such as
      * page size or filters. This is not just listing the sub-accounts of an MCA, but all accounts the
      * calling user has access to including other MCAs, linked accounts, standalone accounts and so on.
+     * If no filter is provided, then it returns accounts the user is directly added to.
      *
      * Create a request for the method "accounts.list".
      *
@@ -553,7 +579,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * Lists accounts accessible to the calling user and matching the constraints of the request such
        * as page size or filters. This is not just listing the sub-accounts of an MCA, but all accounts
        * the calling user has access to including other MCAs, linked accounts, standalone accounts and
-       * so on.
+       * so on. If no filter is provided, then it returns accounts the user is directly added to.
        *
        * Create a request for the method "accounts.list".
        *
@@ -3196,35 +3222,28 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** IANA Time Zone Database time zone, e.g. "America/New_York". */
-        @com.google.api.client.util.Key("timeZone.id")
-        private java.lang.String timeZoneId;
-
-        /** IANA Time Zone Database time zone, e.g. "America/New_York".
+        /**
+         * Optional. The [IANA](https://www.iana.org/time-zones) timezone used to localize times in
+         * human-readable fields. For example 'America/Los_Angeles'. If not set,
+         * 'America/Los_Angeles' will be used.
          */
-        public java.lang.String getTimeZoneId() {
-          return timeZoneId;
-        }
+        @com.google.api.client.util.Key
+        private java.lang.String timeZone;
 
-        /** IANA Time Zone Database time zone, e.g. "America/New_York". */
-        public List setTimeZoneId(java.lang.String timeZoneId) {
-          this.timeZoneId = timeZoneId;
-          return this;
-        }
-
-        /** Optional. IANA Time Zone Database version number, e.g. "2019a". */
-        @com.google.api.client.util.Key("timeZone.version")
-        private java.lang.String timeZoneVersion;
-
-        /** Optional. IANA Time Zone Database version number, e.g. "2019a".
+        /** Optional. The [IANA](https://www.iana.org/time-zones) timezone used to localize times in human-
+       readable fields. For example 'America/Los_Angeles'. If not set, 'America/Los_Angeles' will be used.
          */
-        public java.lang.String getTimeZoneVersion() {
-          return timeZoneVersion;
+        public java.lang.String getTimeZone() {
+          return timeZone;
         }
 
-        /** Optional. IANA Time Zone Database version number, e.g. "2019a". */
-        public List setTimeZoneVersion(java.lang.String timeZoneVersion) {
-          this.timeZoneVersion = timeZoneVersion;
+        /**
+         * Optional. The [IANA](https://www.iana.org/time-zones) timezone used to localize times in
+         * human-readable fields. For example 'America/Los_Angeles'. If not set,
+         * 'America/Los_Angeles' will be used.
+         */
+        public List setTimeZone(java.lang.String timeZone) {
+          this.timeZone = timeZone;
           return this;
         }
 
@@ -6956,39 +6975,39 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         return (RetrieveLatest) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The Kind this terms of service version applies to. */
+      /** Required. The Kind this terms of service version applies to. */
       @com.google.api.client.util.Key
       private java.lang.String kind;
 
-      /** The Kind this terms of service version applies to.
+      /** Required. The Kind this terms of service version applies to.
        */
       public java.lang.String getKind() {
         return kind;
       }
 
-      /** The Kind this terms of service version applies to. */
+      /** Required. The Kind this terms of service version applies to. */
       public RetrieveLatest setKind(java.lang.String kind) {
         this.kind = kind;
         return this;
       }
 
       /**
-       * Region code as defined by [CLDR](https://cldr.unicode.org/). This is either a country when
-       * the ToS applies specifically to that country or 001 when it applies globally.
+       * Required. Region code as defined by [CLDR](https://cldr.unicode.org/). This is either a
+       * country when the ToS applies specifically to that country or 001 when it applies globally.
        */
       @com.google.api.client.util.Key
       private java.lang.String regionCode;
 
-      /** Region code as defined by [CLDR](https://cldr.unicode.org/). This is either a country when the ToS
-     applies specifically to that country or 001 when it applies globally.
+      /** Required. Region code as defined by [CLDR](https://cldr.unicode.org/). This is either a country
+     when the ToS applies specifically to that country or 001 when it applies globally.
        */
       public java.lang.String getRegionCode() {
         return regionCode;
       }
 
       /**
-       * Region code as defined by [CLDR](https://cldr.unicode.org/). This is either a country when
-       * the ToS applies specifically to that country or 001 when it applies globally.
+       * Required. Region code as defined by [CLDR](https://cldr.unicode.org/). This is either a
+       * country when the ToS applies specifically to that country or 001 when it applies globally.
        */
       public RetrieveLatest setRegionCode(java.lang.String regionCode) {
         this.regionCode = regionCode;

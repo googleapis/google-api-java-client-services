@@ -142,8 +142,8 @@ public final class GceSetup extends com.google.api.client.json.GenericJson {
   private ShieldedInstanceConfig shieldedInstanceConfig;
 
   /**
-   * Optional. The Compute Engine tags to add to runtime (see [Tagging
-   * instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+   * Optional. The Compute Engine network tags to add to runtime (see [Add network
+   * tags](https://cloud.google.com/vpc/docs/add-remove-network-tags)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -396,8 +396,8 @@ public final class GceSetup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The Compute Engine tags to add to runtime (see [Tagging
-   * instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+   * Optional. The Compute Engine network tags to add to runtime (see [Add network
+   * tags](https://cloud.google.com/vpc/docs/add-remove-network-tags)).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTags() {
@@ -405,8 +405,8 @@ public final class GceSetup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The Compute Engine tags to add to runtime (see [Tagging
-   * instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+   * Optional. The Compute Engine network tags to add to runtime (see [Add network
+   * tags](https://cloud.google.com/vpc/docs/add-remove-network-tags)).
    * @param tags tags or {@code null} for none
    */
   public GceSetup setTags(java.util.List<java.lang.String> tags) {

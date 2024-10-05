@@ -1986,13 +1986,13 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
             /**
              * Optional. The ID to use for the test, which will become the final component of the
-             * tests's resource name. This value should be 4-63 characters, and valid characters are
+             * test's resource name. This value should be 4-63 characters, and valid characters are
              * /a-z-/. If it is not provided one will be automatically generated.
              */
             @com.google.api.client.util.Key
             private java.lang.String releaseTestId;
 
-            /** Optional. The ID to use for the test, which will become the final component of the tests's resource
+            /** Optional. The ID to use for the test, which will become the final component of the test's resource
            name. This value should be 4-63 characters, and valid characters are /a-z-/. If it is not provided
            one will be automatically generated.
              */
@@ -2002,7 +2002,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
             /**
              * Optional. The ID to use for the test, which will become the final component of the
-             * tests's resource name. This value should be 4-63 characters, and valid characters are
+             * test's resource name. This value should be 4-63 characters, and valid characters are
              * /a-z-/. If it is not provided one will be automatically generated.
              */
             public Create setReleaseTestId(java.lang.String releaseTestId) {

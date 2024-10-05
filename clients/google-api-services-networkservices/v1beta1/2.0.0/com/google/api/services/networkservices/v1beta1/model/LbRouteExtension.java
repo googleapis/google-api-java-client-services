@@ -81,7 +81,7 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
   /**
    * Required. All backend services and forwarding rules referenced by this extension must share the
    * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. For more
-   * information, refer to [Choosing a load balancer](https://cloud.google.com/load-
+   * information, refer to [Backend services overview](https://cloud.google.com/load-
    * balancing/docs/backend-service).
    * The value may be {@code null}.
    */
@@ -93,8 +93,7 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
    * `google.protobuf.Struct`) in the `ProcessingRequest` message sent to the extension server. The
    * metadata is available under the namespace `com.google.lb_route_extension.`. The following
    * variables are supported in the metadata Struct: `{forwarding_rule_id}` - substituted with the
-   * forwarding rule's fully qualified resource name. Only one of the resource level metadata and
-   * extension level metadata can be set.
+   * forwarding rule's fully qualified resource name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -217,7 +216,7 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
   /**
    * Required. All backend services and forwarding rules referenced by this extension must share the
    * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. For more
-   * information, refer to [Choosing a load balancer](https://cloud.google.com/load-
+   * information, refer to [Backend services overview](https://cloud.google.com/load-
    * balancing/docs/backend-service).
    * @return value or {@code null} for none
    */
@@ -228,7 +227,7 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
   /**
    * Required. All backend services and forwarding rules referenced by this extension must share the
    * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. For more
-   * information, refer to [Choosing a load balancer](https://cloud.google.com/load-
+   * information, refer to [Backend services overview](https://cloud.google.com/load-
    * balancing/docs/backend-service).
    * @param loadBalancingScheme loadBalancingScheme or {@code null} for none
    */
@@ -242,8 +241,7 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
    * `google.protobuf.Struct`) in the `ProcessingRequest` message sent to the extension server. The
    * metadata is available under the namespace `com.google.lb_route_extension.`. The following
    * variables are supported in the metadata Struct: `{forwarding_rule_id}` - substituted with the
-   * forwarding rule's fully qualified resource name. Only one of the resource level metadata and
-   * extension level metadata can be set.
+   * forwarding rule's fully qualified resource name.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getMetadata() {
@@ -255,8 +253,7 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
    * `google.protobuf.Struct`) in the `ProcessingRequest` message sent to the extension server. The
    * metadata is available under the namespace `com.google.lb_route_extension.`. The following
    * variables are supported in the metadata Struct: `{forwarding_rule_id}` - substituted with the
-   * forwarding rule's fully qualified resource name. Only one of the resource level metadata and
-   * extension level metadata can be set.
+   * forwarding rule's fully qualified resource name.
    * @param metadata metadata or {@code null} for none
    */
   public LbRouteExtension setMetadata(java.util.Map<String, java.lang.Object> metadata) {

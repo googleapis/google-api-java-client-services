@@ -45,6 +45,14 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Optional. The crypto key configuration. This field is used by the Customer-Managed Encryption
+   * Keys (CMEK) feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CryptoKeyConfig cryptoKeyConfig;
+
+  /**
    * Output only. [Output only] Delete timestamp
    * The value may be {@code null}.
    */
@@ -74,6 +82,27 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private GitHubConfig githubConfig;
+
+  /**
+   * Configuration for connections to an instance of GitHub Enterprise.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GitHubEnterpriseConfig githubEnterpriseConfig;
+
+  /**
+   * Configuration for connections to gitlab.com.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GitLabConfig gitlabConfig;
+
+  /**
+   * Configuration for connections to an instance of GitLab Enterprise.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GitLabEnterpriseConfig gitlabEnterpriseConfig;
 
   /**
    * Output only. Installation state of the Connection.
@@ -153,6 +182,25 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The crypto key configuration. This field is used by the Customer-Managed Encryption
+   * Keys (CMEK) feature.
+   * @return value or {@code null} for none
+   */
+  public CryptoKeyConfig getCryptoKeyConfig() {
+    return cryptoKeyConfig;
+  }
+
+  /**
+   * Optional. The crypto key configuration. This field is used by the Customer-Managed Encryption
+   * Keys (CMEK) feature.
+   * @param cryptoKeyConfig cryptoKeyConfig or {@code null} for none
+   */
+  public Connection setCryptoKeyConfig(CryptoKeyConfig cryptoKeyConfig) {
+    this.cryptoKeyConfig = cryptoKeyConfig;
+    return this;
+  }
+
+  /**
    * Output only. [Output only] Delete timestamp
    * @return value or {@code null} for none
    */
@@ -223,6 +271,57 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   public Connection setGithubConfig(GitHubConfig githubConfig) {
     this.githubConfig = githubConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for connections to an instance of GitHub Enterprise.
+   * @return value or {@code null} for none
+   */
+  public GitHubEnterpriseConfig getGithubEnterpriseConfig() {
+    return githubEnterpriseConfig;
+  }
+
+  /**
+   * Configuration for connections to an instance of GitHub Enterprise.
+   * @param githubEnterpriseConfig githubEnterpriseConfig or {@code null} for none
+   */
+  public Connection setGithubEnterpriseConfig(GitHubEnterpriseConfig githubEnterpriseConfig) {
+    this.githubEnterpriseConfig = githubEnterpriseConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for connections to gitlab.com.
+   * @return value or {@code null} for none
+   */
+  public GitLabConfig getGitlabConfig() {
+    return gitlabConfig;
+  }
+
+  /**
+   * Configuration for connections to gitlab.com.
+   * @param gitlabConfig gitlabConfig or {@code null} for none
+   */
+  public Connection setGitlabConfig(GitLabConfig gitlabConfig) {
+    this.gitlabConfig = gitlabConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for connections to an instance of GitLab Enterprise.
+   * @return value or {@code null} for none
+   */
+  public GitLabEnterpriseConfig getGitlabEnterpriseConfig() {
+    return gitlabEnterpriseConfig;
+  }
+
+  /**
+   * Configuration for connections to an instance of GitLab Enterprise.
+   * @param gitlabEnterpriseConfig gitlabEnterpriseConfig or {@code null} for none
+   */
+  public Connection setGitlabEnterpriseConfig(GitLabEnterpriseConfig gitlabEnterpriseConfig) {
+    this.gitlabEnterpriseConfig = gitlabEnterpriseConfig;
     return this;
   }
 

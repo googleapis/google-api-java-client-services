@@ -78,6 +78,13 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
   private LinkedInterconnectAttachments linkedInterconnectAttachments;
 
   /**
+   * Optional. The linked producer VPC that is associated with the spoke.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LinkedProducerVpcNetwork linkedProducerVpcNetwork;
+
+  /**
    * Router appliance instances that are associated with the spoke.
    * The value may be {@code null}.
    */
@@ -247,6 +254,23 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
    */
   public Spoke setLinkedInterconnectAttachments(LinkedInterconnectAttachments linkedInterconnectAttachments) {
     this.linkedInterconnectAttachments = linkedInterconnectAttachments;
+    return this;
+  }
+
+  /**
+   * Optional. The linked producer VPC that is associated with the spoke.
+   * @return value or {@code null} for none
+   */
+  public LinkedProducerVpcNetwork getLinkedProducerVpcNetwork() {
+    return linkedProducerVpcNetwork;
+  }
+
+  /**
+   * Optional. The linked producer VPC that is associated with the spoke.
+   * @param linkedProducerVpcNetwork linkedProducerVpcNetwork or {@code null} for none
+   */
+  public Spoke setLinkedProducerVpcNetwork(LinkedProducerVpcNetwork linkedProducerVpcNetwork) {
+    this.linkedProducerVpcNetwork = linkedProducerVpcNetwork;
     return this;
   }
 

@@ -151,6 +151,14 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Configuration for heterogeneous **Oracle to Cloud SQL for PostgreSQL** and **Oracle to AlloyDB
+   * for PostgreSQL** migrations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OracleToPostgresConfig oracleToPostgresConfig;
+
+  /**
    * Optional. Data dump parallelism settings used by the migration.
    * The value may be {@code null}.
    */
@@ -510,6 +518,25 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
    */
   public MigrationJob setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Configuration for heterogeneous **Oracle to Cloud SQL for PostgreSQL** and **Oracle to AlloyDB
+   * for PostgreSQL** migrations.
+   * @return value or {@code null} for none
+   */
+  public OracleToPostgresConfig getOracleToPostgresConfig() {
+    return oracleToPostgresConfig;
+  }
+
+  /**
+   * Configuration for heterogeneous **Oracle to Cloud SQL for PostgreSQL** and **Oracle to AlloyDB
+   * for PostgreSQL** migrations.
+   * @param oracleToPostgresConfig oracleToPostgresConfig or {@code null} for none
+   */
+  public MigrationJob setOracleToPostgresConfig(OracleToPostgresConfig oracleToPostgresConfig) {
+    this.oracleToPostgresConfig = oracleToPostgresConfig;
     return this;
   }
 

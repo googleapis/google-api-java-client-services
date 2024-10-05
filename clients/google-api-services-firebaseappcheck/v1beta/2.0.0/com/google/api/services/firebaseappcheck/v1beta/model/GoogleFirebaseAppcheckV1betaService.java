@@ -53,7 +53,7 @@ public final class GoogleFirebaseAppcheckV1betaService extends com.google.api.cl
    * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
    * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com`
    * (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase Authentication with Identity
-   * Platform)
+   * Platform) * `oauth2.googleapis.com` (Google Identity for iOS)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,7 +111,7 @@ public final class GoogleFirebaseAppcheckV1betaService extends com.google.api.cl
    * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
    * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com`
    * (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase Authentication with Identity
-   * Platform)
+   * Platform) * `oauth2.googleapis.com` (Google Identity for iOS)
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -125,7 +125,7 @@ public final class GoogleFirebaseAppcheckV1betaService extends com.google.api.cl
    * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
    * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com`
    * (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase Authentication with Identity
-   * Platform)
+   * Platform) * `oauth2.googleapis.com` (Google Identity for iOS)
    * @param name name or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaService setName(java.lang.String name) {

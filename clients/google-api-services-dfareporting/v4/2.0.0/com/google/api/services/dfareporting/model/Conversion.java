@@ -53,8 +53,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean childDirectedTreatment;
 
   /**
-   * Custom floodlight variables. This field may only be used when calling batchinsert; it is not
-   * supported by batchupdate.
+   * Custom floodlight variables.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -268,8 +267,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Custom floodlight variables. This field may only be used when calling batchinsert; it is not
-   * supported by batchupdate.
+   * Custom floodlight variables.
    * @return value or {@code null} for none
    */
   public java.util.List<CustomFloodlightVariable> getCustomVariables() {
@@ -277,8 +275,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Custom floodlight variables. This field may only be used when calling batchinsert; it is not
-   * supported by batchupdate.
+   * Custom floodlight variables.
    * @param customVariables customVariables or {@code null} for none
    */
   public Conversion setCustomVariables(java.util.List<CustomFloodlightVariable> customVariables) {

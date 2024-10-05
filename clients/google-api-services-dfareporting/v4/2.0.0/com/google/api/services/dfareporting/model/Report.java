@@ -52,6 +52,13 @@ public final class Report extends com.google.api.client.json.GenericJson {
   private CrossDimensionReachCriteria crossDimensionReachCriteria;
 
   /**
+   * Optional. The report criteria for a report of type "CROSS_MEDIA_REACH".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CrossMediaReachCriteria crossMediaReachCriteria;
+
+  /**
    * The report's email delivery settings.
    * The value may be {@code null}.
    */
@@ -207,6 +214,23 @@ public final class Report extends com.google.api.client.json.GenericJson {
    */
   public Report setCrossDimensionReachCriteria(CrossDimensionReachCriteria crossDimensionReachCriteria) {
     this.crossDimensionReachCriteria = crossDimensionReachCriteria;
+    return this;
+  }
+
+  /**
+   * Optional. The report criteria for a report of type "CROSS_MEDIA_REACH".
+   * @return value or {@code null} for none
+   */
+  public CrossMediaReachCriteria getCrossMediaReachCriteria() {
+    return crossMediaReachCriteria;
+  }
+
+  /**
+   * Optional. The report criteria for a report of type "CROSS_MEDIA_REACH".
+   * @param crossMediaReachCriteria crossMediaReachCriteria or {@code null} for none
+   */
+  public Report setCrossMediaReachCriteria(CrossMediaReachCriteria crossMediaReachCriteria) {
+    this.crossMediaReachCriteria = crossMediaReachCriteria;
     return this;
   }
 
@@ -838,6 +862,128 @@ public final class Report extends com.google.api.client.json.GenericJson {
     @Override
     public CrossDimensionReachCriteria clone() {
       return (CrossDimensionReachCriteria) super.clone();
+    }
+
+  }
+
+  /**
+   * Optional. The report criteria for a report of type "CROSS_MEDIA_REACH".
+   */
+  public static final class CrossMediaReachCriteria extends com.google.api.client.json.GenericJson {
+
+    /**
+     * Required. The date range this report should be run for.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private DateRange dateRange;
+
+    /**
+     * Required. The list of filters on which dimensions are filtered. Filters for different
+     * dimensions are ANDed, filters for the same dimension are grouped together and ORed.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.util.List<DimensionValue> dimensionFilters;
+
+    static {
+      // hack to force ProGuard to consider DimensionValue used, since otherwise it would be stripped out
+      // see https://github.com/google/google-api-java-client/issues/543
+      com.google.api.client.util.Data.nullOf(DimensionValue.class);
+    }
+
+    /**
+     * Required. The list of dimensions the report should include.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.util.List<SortedDimension> dimensions;
+
+    /**
+     * Required. The list of names of metrics the report should include.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.util.List<java.lang.String> metricNames;
+
+    /**
+     * Required. The date range this report should be run for.
+     * @return value or {@code null} for none
+     */
+    public DateRange getDateRange() {
+      return dateRange;
+    }
+
+    /**
+     * Required. The date range this report should be run for.
+     * @param dateRange dateRange or {@code null} for none
+     */
+    public CrossMediaReachCriteria setDateRange(DateRange dateRange) {
+      this.dateRange = dateRange;
+      return this;
+    }
+
+    /**
+     * Required. The list of filters on which dimensions are filtered. Filters for different
+     * dimensions are ANDed, filters for the same dimension are grouped together and ORed.
+     * @return value or {@code null} for none
+     */
+    public java.util.List<DimensionValue> getDimensionFilters() {
+      return dimensionFilters;
+    }
+
+    /**
+     * Required. The list of filters on which dimensions are filtered. Filters for different
+     * dimensions are ANDed, filters for the same dimension are grouped together and ORed.
+     * @param dimensionFilters dimensionFilters or {@code null} for none
+     */
+    public CrossMediaReachCriteria setDimensionFilters(java.util.List<DimensionValue> dimensionFilters) {
+      this.dimensionFilters = dimensionFilters;
+      return this;
+    }
+
+    /**
+     * Required. The list of dimensions the report should include.
+     * @return value or {@code null} for none
+     */
+    public java.util.List<SortedDimension> getDimensions() {
+      return dimensions;
+    }
+
+    /**
+     * Required. The list of dimensions the report should include.
+     * @param dimensions dimensions or {@code null} for none
+     */
+    public CrossMediaReachCriteria setDimensions(java.util.List<SortedDimension> dimensions) {
+      this.dimensions = dimensions;
+      return this;
+    }
+
+    /**
+     * Required. The list of names of metrics the report should include.
+     * @return value or {@code null} for none
+     */
+    public java.util.List<java.lang.String> getMetricNames() {
+      return metricNames;
+    }
+
+    /**
+     * Required. The list of names of metrics the report should include.
+     * @param metricNames metricNames or {@code null} for none
+     */
+    public CrossMediaReachCriteria setMetricNames(java.util.List<java.lang.String> metricNames) {
+      this.metricNames = metricNames;
+      return this;
+    }
+
+    @Override
+    public CrossMediaReachCriteria set(String fieldName, Object value) {
+      return (CrossMediaReachCriteria) super.set(fieldName, value);
+    }
+
+    @Override
+    public CrossMediaReachCriteria clone() {
+      return (CrossMediaReachCriteria) super.clone();
     }
 
   }

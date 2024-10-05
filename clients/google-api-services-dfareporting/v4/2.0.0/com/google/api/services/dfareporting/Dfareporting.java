@@ -34359,6 +34359,395 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
   }
 
   /**
+   * An accessor for creating requests from the TvCampaignDetails collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Dfareporting dfareporting = new Dfareporting(...);}
+   *   {@code Dfareporting.TvCampaignDetails.List request = dfareporting.tvCampaignDetails().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public TvCampaignDetails tvCampaignDetails() {
+    return new TvCampaignDetails();
+  }
+
+  /**
+   * The "tvCampaignDetails" collection of methods.
+   */
+  public class TvCampaignDetails {
+
+    /**
+     * Gets one TvCampaignDetail by ID.
+     *
+     * Create a request for the method "tvCampaignDetails.get".
+     *
+     * This request holds the parameters needed by the dfareporting server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param profileId Required. User profile ID associated with this request.
+     * @param id Required. TV Campaign ID.
+     * @return the request
+     */
+    public Get get(java.lang.Long profileId, java.lang.String id) throws java.io.IOException {
+      Get result = new Get(profileId, id);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.TvCampaignDetail> {
+
+      private static final String REST_PATH = "userprofiles/{+profileId}/tvCampaignDetails/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Gets one TvCampaignDetail by ID.
+       *
+       * Create a request for the method "tvCampaignDetails.get".
+       *
+       * This request holds the parameters needed by the the dfareporting server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param profileId Required. User profile ID associated with this request.
+       * @param id Required. TV Campaign ID.
+       * @since 1.13
+       */
+      protected Get(java.lang.Long profileId, java.lang.String id) {
+        super(Dfareporting.this, "GET", REST_PATH, null, com.google.api.services.dfareporting.model.TvCampaignDetail.class);
+        this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ID_PATTERN.matcher(id).matches(),
+              "Parameter id must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. User profile ID associated with this request. */
+      @com.google.api.client.util.Key
+      private java.lang.Long profileId;
+
+      /** Required. User profile ID associated with this request.
+       */
+      public java.lang.Long getProfileId() {
+        return profileId;
+      }
+
+      /** Required. User profile ID associated with this request. */
+      public Get setProfileId(java.lang.Long profileId) {
+        this.profileId = profileId;
+        return this;
+      }
+
+      /** Required. TV Campaign ID. */
+      @com.google.api.client.util.Key
+      private java.lang.String id;
+
+      /** Required. TV Campaign ID.
+       */
+      public java.lang.String getId() {
+        return id;
+      }
+
+      /** Required. TV Campaign ID. */
+      public Get setId(java.lang.String id) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ID_PATTERN.matcher(id).matches(),
+              "Parameter id must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.id = id;
+        return this;
+      }
+
+      /** Required. Account ID associated with this request. */
+      @com.google.api.client.util.Key
+      private java.lang.Long accountId;
+
+      /** Required. Account ID associated with this request.
+       */
+      public java.lang.Long getAccountId() {
+        return accountId;
+      }
+
+      /** Required. Account ID associated with this request. */
+      public Get setAccountId(java.lang.Long accountId) {
+        this.accountId = accountId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the TvCampaignSummaries collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Dfareporting dfareporting = new Dfareporting(...);}
+   *   {@code Dfareporting.TvCampaignSummaries.List request = dfareporting.tvCampaignSummaries().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public TvCampaignSummaries tvCampaignSummaries() {
+    return new TvCampaignSummaries();
+  }
+
+  /**
+   * The "tvCampaignSummaries" collection of methods.
+   */
+  public class TvCampaignSummaries {
+
+    /**
+     * Retrieves a list of TV campaign summaries.
+     *
+     * Create a request for the method "tvCampaignSummaries.list".
+     *
+     * This request holds the parameters needed by the dfareporting server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param profileId Required. User profile ID associated with this request.
+     * @return the request
+     */
+    public List list(java.lang.Long profileId) throws java.io.IOException {
+      List result = new List(profileId);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.TvCampaignSummariesListResponse> {
+
+      private static final String REST_PATH = "userprofiles/{+profileId}/tvCampaignSummaries";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Retrieves a list of TV campaign summaries.
+       *
+       * Create a request for the method "tvCampaignSummaries.list".
+       *
+       * This request holds the parameters needed by the the dfareporting server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param profileId Required. User profile ID associated with this request.
+       * @since 1.13
+       */
+      protected List(java.lang.Long profileId) {
+        super(Dfareporting.this, "GET", REST_PATH, null, com.google.api.services.dfareporting.model.TvCampaignSummariesListResponse.class);
+        this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. User profile ID associated with this request. */
+      @com.google.api.client.util.Key
+      private java.lang.Long profileId;
+
+      /** Required. User profile ID associated with this request.
+       */
+      public java.lang.Long getProfileId() {
+        return profileId;
+      }
+
+      /** Required. User profile ID associated with this request. */
+      public List setProfileId(java.lang.Long profileId) {
+        this.profileId = profileId;
+        return this;
+      }
+
+      /** Required. Account ID associated with this request. */
+      @com.google.api.client.util.Key
+      private java.lang.Long accountId;
+
+      /** Required. Account ID associated with this request.
+       */
+      public java.lang.Long getAccountId() {
+        return accountId;
+      }
+
+      /** Required. Account ID associated with this request. */
+      public List setAccountId(java.lang.Long accountId) {
+        this.accountId = accountId;
+        return this;
+      }
+
+      /**
+       * Required. Search string to filter the list of TV campaign summaries. Matches any substring.
+       * Required field.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Search string to filter the list of TV campaign summaries. Matches any substring.
+     Required field.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. Search string to filter the list of TV campaign summaries. Matches any substring.
+       * Required field.
+       */
+      public List setName(java.lang.String name) {
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the UserProfiles collection.
    *
    * <p>The typical use is:</p>

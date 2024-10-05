@@ -17,7 +17,8 @@
 package com.google.api.services.dfareporting.model;
 
 /**
- * Contains additional information about cart data.
+ * Contains additional information about cart data. This field may only be used when calling
+ * batchinsert; it is not supported by batchupdate.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation
@@ -56,7 +57,7 @@ public final class CartData extends com.google.api.client.json.GenericJson {
   private java.lang.String merchantFeedLanguage;
 
   /**
-   * The Merchant Center ID where the items are uploaded.
+   * The Merchant Center ID where the items are uploaded. This is a required field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -122,7 +123,7 @@ public final class CartData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Merchant Center ID where the items are uploaded.
+   * The Merchant Center ID where the items are uploaded. This is a required field.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMerchantId() {
@@ -130,7 +131,7 @@ public final class CartData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Merchant Center ID where the items are uploaded.
+   * The Merchant Center ID where the items are uploaded. This is a required field.
    * @param merchantId merchantId or {@code null} for none
    */
   public CartData setMerchantId(java.lang.Long merchantId) {

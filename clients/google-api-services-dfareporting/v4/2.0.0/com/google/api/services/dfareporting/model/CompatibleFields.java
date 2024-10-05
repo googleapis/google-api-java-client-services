@@ -17,7 +17,7 @@
 package com.google.api.services.dfareporting.model;
 
 /**
- * Represents a response to the queryCompatibleFields method.
+ * Represents a response to the queryCompatibleFields method. Next ID: 10
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation
@@ -36,6 +36,13 @@ public final class CompatibleFields extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private CrossDimensionReachReportCompatibleFields crossDimensionReachReportCompatibleFields;
+
+  /**
+   * Contains items that are compatible to be selected for a report of type "CROSS_MEDIA_REACH".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CrossMediaReachReportCompatibleFields crossMediaReachReportCompatibleFields;
 
   /**
    * Contains items that are compatible to be selected for a report of type "FLOODLIGHT".
@@ -86,6 +93,23 @@ public final class CompatibleFields extends com.google.api.client.json.GenericJs
    */
   public CompatibleFields setCrossDimensionReachReportCompatibleFields(CrossDimensionReachReportCompatibleFields crossDimensionReachReportCompatibleFields) {
     this.crossDimensionReachReportCompatibleFields = crossDimensionReachReportCompatibleFields;
+    return this;
+  }
+
+  /**
+   * Contains items that are compatible to be selected for a report of type "CROSS_MEDIA_REACH".
+   * @return value or {@code null} for none
+   */
+  public CrossMediaReachReportCompatibleFields getCrossMediaReachReportCompatibleFields() {
+    return crossMediaReachReportCompatibleFields;
+  }
+
+  /**
+   * Contains items that are compatible to be selected for a report of type "CROSS_MEDIA_REACH".
+   * @param crossMediaReachReportCompatibleFields crossMediaReachReportCompatibleFields or {@code null} for none
+   */
+  public CompatibleFields setCrossMediaReachReportCompatibleFields(CrossMediaReachReportCompatibleFields crossMediaReachReportCompatibleFields) {
+    this.crossMediaReachReportCompatibleFields = crossMediaReachReportCompatibleFields;
     return this;
   }
 

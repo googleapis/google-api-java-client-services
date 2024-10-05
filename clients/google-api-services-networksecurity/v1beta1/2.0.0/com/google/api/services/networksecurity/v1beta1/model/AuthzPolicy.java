@@ -31,15 +31,16 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class AuthzPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Can be one of ALLOW, DENY, CUSTOM. When the action is CUSTOM, customProvider must be
-   * specified. When the action is ALLOW, only requests matching the policy will be allowed. When
-   * the action is DENY, only requests matching the policy will be denied. When a request arrives,
-   * the policies are evaluated in the following order: 1. If there is a CUSTOM policy that matches
-   * the request, the CUSTOM policy is evaluated using the custom authorization providers and the
-   * request is denied if the provider rejects the request. 2. If there are any DENY policies that
-   * match the request, the request is denied. 3. If there are no ALLOW policies for the resource or
-   * if any of the ALLOW policies match the request, the request is allowed. 4. Else the request is
-   * denied by default if none of the configured AuthzPolicies with ALLOW action match the request.
+   * Required. Can be one of `ALLOW`, `DENY`, `CUSTOM`. When the action is `CUSTOM`,
+   * `customProvider` must be specified. When the action is `ALLOW`, only requests matching the
+   * policy will be allowed. When the action is `DENY`, only requests matching the policy will be
+   * denied. When a request arrives, the policies are evaluated in the following order: 1. If there
+   * is a `CUSTOM` policy that matches the request, the `CUSTOM` policy is evaluated using the
+   * custom authorization providers and the request is denied if the provider rejects the request.
+   * 2. If there are any `DENY` policies that match the request, the request is denied. 3. If there
+   * are no `ALLOW` policies for the resource or if any of the `ALLOW` policies match the request,
+   * the request is allowed. 4. Else the request is denied by default if none of the configured
+   * AuthzPolicies with `ALLOW` action match the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +54,8 @@ public final class AuthzPolicy extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Optional. Required if the action is CUSTOM. Allows delegating authorization decisions to Cloud
-   * IAP or to Service Extensions. One of cloudIap or authzExtension must be specified.
+   * Optional. Required if the action is `CUSTOM`. Allows delegating authorization decisions to
+   * Cloud IAP or to Service Extensions. One of `cloudIap` or `authzExtension` must be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +71,8 @@ public final class AuthzPolicy extends com.google.api.client.json.GenericJson {
   /**
    * Optional. A list of authorization HTTP rules to match against the incoming request. A policy
    * match occurs when at least one HTTP rule matches the request or when no HTTP rules are
-   * specified in the policy. At least one HTTP Rule is required for Allow or Deny Action.
+   * specified in the policy. At least one HTTP Rule is required for Allow or Deny Action. Limited
+   * to 5 rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,15 +109,16 @@ public final class AuthzPolicy extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Required. Can be one of ALLOW, DENY, CUSTOM. When the action is CUSTOM, customProvider must be
-   * specified. When the action is ALLOW, only requests matching the policy will be allowed. When
-   * the action is DENY, only requests matching the policy will be denied. When a request arrives,
-   * the policies are evaluated in the following order: 1. If there is a CUSTOM policy that matches
-   * the request, the CUSTOM policy is evaluated using the custom authorization providers and the
-   * request is denied if the provider rejects the request. 2. If there are any DENY policies that
-   * match the request, the request is denied. 3. If there are no ALLOW policies for the resource or
-   * if any of the ALLOW policies match the request, the request is allowed. 4. Else the request is
-   * denied by default if none of the configured AuthzPolicies with ALLOW action match the request.
+   * Required. Can be one of `ALLOW`, `DENY`, `CUSTOM`. When the action is `CUSTOM`,
+   * `customProvider` must be specified. When the action is `ALLOW`, only requests matching the
+   * policy will be allowed. When the action is `DENY`, only requests matching the policy will be
+   * denied. When a request arrives, the policies are evaluated in the following order: 1. If there
+   * is a `CUSTOM` policy that matches the request, the `CUSTOM` policy is evaluated using the
+   * custom authorization providers and the request is denied if the provider rejects the request.
+   * 2. If there are any `DENY` policies that match the request, the request is denied. 3. If there
+   * are no `ALLOW` policies for the resource or if any of the `ALLOW` policies match the request,
+   * the request is allowed. 4. Else the request is denied by default if none of the configured
+   * AuthzPolicies with `ALLOW` action match the request.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -123,15 +126,16 @@ public final class AuthzPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Can be one of ALLOW, DENY, CUSTOM. When the action is CUSTOM, customProvider must be
-   * specified. When the action is ALLOW, only requests matching the policy will be allowed. When
-   * the action is DENY, only requests matching the policy will be denied. When a request arrives,
-   * the policies are evaluated in the following order: 1. If there is a CUSTOM policy that matches
-   * the request, the CUSTOM policy is evaluated using the custom authorization providers and the
-   * request is denied if the provider rejects the request. 2. If there are any DENY policies that
-   * match the request, the request is denied. 3. If there are no ALLOW policies for the resource or
-   * if any of the ALLOW policies match the request, the request is allowed. 4. Else the request is
-   * denied by default if none of the configured AuthzPolicies with ALLOW action match the request.
+   * Required. Can be one of `ALLOW`, `DENY`, `CUSTOM`. When the action is `CUSTOM`,
+   * `customProvider` must be specified. When the action is `ALLOW`, only requests matching the
+   * policy will be allowed. When the action is `DENY`, only requests matching the policy will be
+   * denied. When a request arrives, the policies are evaluated in the following order: 1. If there
+   * is a `CUSTOM` policy that matches the request, the `CUSTOM` policy is evaluated using the
+   * custom authorization providers and the request is denied if the provider rejects the request.
+   * 2. If there are any `DENY` policies that match the request, the request is denied. 3. If there
+   * are no `ALLOW` policies for the resource or if any of the `ALLOW` policies match the request,
+   * the request is allowed. 4. Else the request is denied by default if none of the configured
+   * AuthzPolicies with `ALLOW` action match the request.
    * @param action action or {@code null} for none
    */
   public AuthzPolicy setAction(java.lang.String action) {
@@ -157,8 +161,8 @@ public final class AuthzPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Required if the action is CUSTOM. Allows delegating authorization decisions to Cloud
-   * IAP or to Service Extensions. One of cloudIap or authzExtension must be specified.
+   * Optional. Required if the action is `CUSTOM`. Allows delegating authorization decisions to
+   * Cloud IAP or to Service Extensions. One of `cloudIap` or `authzExtension` must be specified.
    * @return value or {@code null} for none
    */
   public AuthzPolicyCustomProvider getCustomProvider() {
@@ -166,8 +170,8 @@ public final class AuthzPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Required if the action is CUSTOM. Allows delegating authorization decisions to Cloud
-   * IAP or to Service Extensions. One of cloudIap or authzExtension must be specified.
+   * Optional. Required if the action is `CUSTOM`. Allows delegating authorization decisions to
+   * Cloud IAP or to Service Extensions. One of `cloudIap` or `authzExtension` must be specified.
    * @param customProvider customProvider or {@code null} for none
    */
   public AuthzPolicy setCustomProvider(AuthzPolicyCustomProvider customProvider) {
@@ -195,7 +199,8 @@ public final class AuthzPolicy extends com.google.api.client.json.GenericJson {
   /**
    * Optional. A list of authorization HTTP rules to match against the incoming request. A policy
    * match occurs when at least one HTTP rule matches the request or when no HTTP rules are
-   * specified in the policy. At least one HTTP Rule is required for Allow or Deny Action.
+   * specified in the policy. At least one HTTP Rule is required for Allow or Deny Action. Limited
+   * to 5 rules.
    * @return value or {@code null} for none
    */
   public java.util.List<AuthzPolicyAuthzRule> getHttpRules() {
@@ -205,7 +210,8 @@ public final class AuthzPolicy extends com.google.api.client.json.GenericJson {
   /**
    * Optional. A list of authorization HTTP rules to match against the incoming request. A policy
    * match occurs when at least one HTTP rule matches the request or when no HTTP rules are
-   * specified in the policy. At least one HTTP Rule is required for Allow or Deny Action.
+   * specified in the policy. At least one HTTP Rule is required for Allow or Deny Action. Limited
+   * to 5 rules.
    * @param httpRules httpRules or {@code null} for none
    */
   public AuthzPolicy setHttpRules(java.util.List<AuthzPolicyAuthzRule> httpRules) {

@@ -33,7 +33,7 @@ public final class AuthzPolicyAuthzRuleToRequestOperationHeaderSet extends com.g
    * Required. A list of headers to match against in http header. The match can be one of exact,
    * prefix, suffix, or contains (substring match). The match follows AND semantics which means all
    * the headers must match. Matches are always case sensitive unless the ignoreCase is set. Limited
-   * to 10 matches.
+   * to 5 matches.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +49,7 @@ public final class AuthzPolicyAuthzRuleToRequestOperationHeaderSet extends com.g
    * Required. A list of headers to match against in http header. The match can be one of exact,
    * prefix, suffix, or contains (substring match). The match follows AND semantics which means all
    * the headers must match. Matches are always case sensitive unless the ignoreCase is set. Limited
-   * to 10 matches.
+   * to 5 matches.
    * @return value or {@code null} for none
    */
   public java.util.List<AuthzPolicyAuthzRuleHeaderMatch> getHeaders() {
@@ -60,7 +60,7 @@ public final class AuthzPolicyAuthzRuleToRequestOperationHeaderSet extends com.g
    * Required. A list of headers to match against in http header. The match can be one of exact,
    * prefix, suffix, or contains (substring match). The match follows AND semantics which means all
    * the headers must match. Matches are always case sensitive unless the ignoreCase is set. Limited
-   * to 10 matches.
+   * to 5 matches.
    * @param headers headers or {@code null} for none
    */
   public AuthzPolicyAuthzRuleToRequestOperationHeaderSet setHeaders(java.util.List<AuthzPolicyAuthzRuleHeaderMatch> headers) {

@@ -37,6 +37,13 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   private String createTime;
 
   /**
+   * The custom Packet Mirroring v2 configuration for the SecurityProfile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomMirroringProfile customMirroringProfile;
+
+  /**
    * Optional. An optional description of the profile. Max length 512 characters.
    * The value may be {@code null}.
    */
@@ -102,6 +109,23 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
    */
   public SecurityProfile setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * The custom Packet Mirroring v2 configuration for the SecurityProfile.
+   * @return value or {@code null} for none
+   */
+  public CustomMirroringProfile getCustomMirroringProfile() {
+    return customMirroringProfile;
+  }
+
+  /**
+   * The custom Packet Mirroring v2 configuration for the SecurityProfile.
+   * @param customMirroringProfile customMirroringProfile or {@code null} for none
+   */
+  public SecurityProfile setCustomMirroringProfile(CustomMirroringProfile customMirroringProfile) {
+    this.customMirroringProfile = customMirroringProfile;
     return this;
   }
 

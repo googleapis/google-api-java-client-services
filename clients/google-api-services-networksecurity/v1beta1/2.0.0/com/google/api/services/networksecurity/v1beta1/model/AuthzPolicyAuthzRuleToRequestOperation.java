@@ -39,7 +39,7 @@ public final class AuthzPolicyAuthzRuleToRequestOperation extends com.google.api
   /**
    * Optional. A list of HTTP Hosts to match against. The match can be one of exact, prefix, suffix,
    * or contains (substring match). Matches are always case sensitive unless the ignoreCase is set.
-   * Limited to 10 matches.
+   * Limited to 5 matches.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class AuthzPolicyAuthzRuleToRequestOperation extends com.google.api
   /**
    * Optional. A list of paths to match against. The match can be one of exact, prefix, suffix, or
    * contains (substring match). Matches are always case sensitive unless the ignoreCase is set.
-   * Limited to 10 matches. Note that this path match includes the query parameters. For gRPC
+   * Limited to 5 matches. Note that this path match includes the query parameters. For gRPC
    * services, this should be a fully-qualified name of the form /package.service/method.
    * The value may be {@code null}.
    */
@@ -96,7 +96,7 @@ public final class AuthzPolicyAuthzRuleToRequestOperation extends com.google.api
   /**
    * Optional. A list of HTTP Hosts to match against. The match can be one of exact, prefix, suffix,
    * or contains (substring match). Matches are always case sensitive unless the ignoreCase is set.
-   * Limited to 10 matches.
+   * Limited to 5 matches.
    * @return value or {@code null} for none
    */
   public java.util.List<AuthzPolicyAuthzRuleStringMatch> getHosts() {
@@ -106,7 +106,7 @@ public final class AuthzPolicyAuthzRuleToRequestOperation extends com.google.api
   /**
    * Optional. A list of HTTP Hosts to match against. The match can be one of exact, prefix, suffix,
    * or contains (substring match). Matches are always case sensitive unless the ignoreCase is set.
-   * Limited to 10 matches.
+   * Limited to 5 matches.
    * @param hosts hosts or {@code null} for none
    */
   public AuthzPolicyAuthzRuleToRequestOperation setHosts(java.util.List<AuthzPolicyAuthzRuleStringMatch> hosts) {
@@ -138,7 +138,7 @@ public final class AuthzPolicyAuthzRuleToRequestOperation extends com.google.api
   /**
    * Optional. A list of paths to match against. The match can be one of exact, prefix, suffix, or
    * contains (substring match). Matches are always case sensitive unless the ignoreCase is set.
-   * Limited to 10 matches. Note that this path match includes the query parameters. For gRPC
+   * Limited to 5 matches. Note that this path match includes the query parameters. For gRPC
    * services, this should be a fully-qualified name of the form /package.service/method.
    * @return value or {@code null} for none
    */
@@ -149,7 +149,7 @@ public final class AuthzPolicyAuthzRuleToRequestOperation extends com.google.api
   /**
    * Optional. A list of paths to match against. The match can be one of exact, prefix, suffix, or
    * contains (substring match). Matches are always case sensitive unless the ignoreCase is set.
-   * Limited to 10 matches. Note that this path match includes the query parameters. For gRPC
+   * Limited to 5 matches. Note that this path match includes the query parameters. For gRPC
    * services, this should be a fully-qualified name of the form /package.service/method.
    * @param paths paths or {@code null} for none
    */

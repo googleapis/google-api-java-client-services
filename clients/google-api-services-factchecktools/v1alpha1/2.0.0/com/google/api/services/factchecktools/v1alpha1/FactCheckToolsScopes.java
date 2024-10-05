@@ -26,9 +26,6 @@ public class FactCheckToolsScopes {
   /** Read, create, update, and delete your ClaimReview data.. */
   public static final String FACTCHECKTOOLS = "https://www.googleapis.com/auth/factchecktools";
 
-  /** See your primary Google Account email address. */
-  public static final String USERINFO_EMAIL = "https://www.googleapis.com/auth/userinfo.email";
-
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -37,7 +34,6 @@ public class FactCheckToolsScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(FACTCHECKTOOLS);
-    set.add(USERINFO_EMAIL);
     return java.util.Collections.unmodifiableSet(set);
   }
 

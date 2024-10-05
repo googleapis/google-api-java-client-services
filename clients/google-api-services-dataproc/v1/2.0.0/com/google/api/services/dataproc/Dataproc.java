@@ -2412,6 +2412,4257 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
 
+        /**
+         * An accessor for creating requests from the SparkApplications collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Dataproc dataproc = new Dataproc(...);}
+         *   {@code Dataproc.SparkApplications.List request = dataproc.sparkApplications().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public SparkApplications sparkApplications() {
+          return new SparkApplications();
+        }
+
+        /**
+         * The "sparkApplications" collection of methods.
+         */
+        public class SparkApplications {
+
+          /**
+           * Obtain high level information corresponding to a single Spark Application.
+           *
+           * Create a request for the method "sparkApplications.access".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link Access#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+           * @return the request
+           */
+          public Access access(java.lang.String name) throws java.io.IOException {
+            Access result = new Access(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Access extends DataprocRequest<com.google.api.services.dataproc.model.AccessSparkApplicationResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:access";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain high level information corresponding to a single Spark Application.
+             *
+             * Create a request for the method "sparkApplications.access".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link Access#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Access#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+             * @since 1.13
+             */
+            protected Access(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.AccessSparkApplicationResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Access set$Xgafv(java.lang.String $Xgafv) {
+              return (Access) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Access setAccessToken(java.lang.String accessToken) {
+              return (Access) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Access setAlt(java.lang.String alt) {
+              return (Access) super.setAlt(alt);
+            }
+
+            @Override
+            public Access setCallback(java.lang.String callback) {
+              return (Access) super.setCallback(callback);
+            }
+
+            @Override
+            public Access setFields(java.lang.String fields) {
+              return (Access) super.setFields(fields);
+            }
+
+            @Override
+            public Access setKey(java.lang.String key) {
+              return (Access) super.setKey(key);
+            }
+
+            @Override
+            public Access setOauthToken(java.lang.String oauthToken) {
+              return (Access) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Access setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Access) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Access setQuotaUser(java.lang.String quotaUser) {
+              return (Access) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Access setUploadType(java.lang.String uploadType) {
+              return (Access) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Access setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Access) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the batch to retrieve in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            public Access setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Batch) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            public Access setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Access set(String parameterName, Object value) {
+              return (Access) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain environment details for a Spark Application
+           *
+           * Create a request for the method "sparkApplications.accessEnvironmentInfo".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link AccessEnvironmentInfo#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+           * @return the request
+           */
+          public AccessEnvironmentInfo accessEnvironmentInfo(java.lang.String name) throws java.io.IOException {
+            AccessEnvironmentInfo result = new AccessEnvironmentInfo(name);
+            initialize(result);
+            return result;
+          }
+
+          public class AccessEnvironmentInfo extends DataprocRequest<com.google.api.services.dataproc.model.AccessSparkApplicationEnvironmentInfoResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:accessEnvironmentInfo";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain environment details for a Spark Application
+             *
+             * Create a request for the method "sparkApplications.accessEnvironmentInfo".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link AccessEnvironmentInfo#execute()} method to invoke the
+             * remote operation. <p> {@link AccessEnvironmentInfo#initialize(com.google.api.client.googleapis.
+             * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+             * @since 1.13
+             */
+            protected AccessEnvironmentInfo(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.AccessSparkApplicationEnvironmentInfoResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public AccessEnvironmentInfo set$Xgafv(java.lang.String $Xgafv) {
+              return (AccessEnvironmentInfo) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AccessEnvironmentInfo setAccessToken(java.lang.String accessToken) {
+              return (AccessEnvironmentInfo) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AccessEnvironmentInfo setAlt(java.lang.String alt) {
+              return (AccessEnvironmentInfo) super.setAlt(alt);
+            }
+
+            @Override
+            public AccessEnvironmentInfo setCallback(java.lang.String callback) {
+              return (AccessEnvironmentInfo) super.setCallback(callback);
+            }
+
+            @Override
+            public AccessEnvironmentInfo setFields(java.lang.String fields) {
+              return (AccessEnvironmentInfo) super.setFields(fields);
+            }
+
+            @Override
+            public AccessEnvironmentInfo setKey(java.lang.String key) {
+              return (AccessEnvironmentInfo) super.setKey(key);
+            }
+
+            @Override
+            public AccessEnvironmentInfo setOauthToken(java.lang.String oauthToken) {
+              return (AccessEnvironmentInfo) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AccessEnvironmentInfo setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AccessEnvironmentInfo) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AccessEnvironmentInfo setQuotaUser(java.lang.String quotaUser) {
+              return (AccessEnvironmentInfo) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AccessEnvironmentInfo setUploadType(java.lang.String uploadType) {
+              return (AccessEnvironmentInfo) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AccessEnvironmentInfo setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AccessEnvironmentInfo) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the batch to retrieve in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            public AccessEnvironmentInfo setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Batch) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            public AccessEnvironmentInfo setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public AccessEnvironmentInfo set(String parameterName, Object value) {
+              return (AccessEnvironmentInfo) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain data corresponding to a spark job for a Spark Application.
+           *
+           * Create a request for the method "sparkApplications.accessJob".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link AccessJob#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+           * @return the request
+           */
+          public AccessJob accessJob(java.lang.String name) throws java.io.IOException {
+            AccessJob result = new AccessJob(name);
+            initialize(result);
+            return result;
+          }
+
+          public class AccessJob extends DataprocRequest<com.google.api.services.dataproc.model.AccessSparkApplicationJobResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:accessJob";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain data corresponding to a spark job for a Spark Application.
+             *
+             * Create a request for the method "sparkApplications.accessJob".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link AccessJob#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * AccessJob#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+             * @since 1.13
+             */
+            protected AccessJob(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.AccessSparkApplicationJobResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public AccessJob set$Xgafv(java.lang.String $Xgafv) {
+              return (AccessJob) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AccessJob setAccessToken(java.lang.String accessToken) {
+              return (AccessJob) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AccessJob setAlt(java.lang.String alt) {
+              return (AccessJob) super.setAlt(alt);
+            }
+
+            @Override
+            public AccessJob setCallback(java.lang.String callback) {
+              return (AccessJob) super.setCallback(callback);
+            }
+
+            @Override
+            public AccessJob setFields(java.lang.String fields) {
+              return (AccessJob) super.setFields(fields);
+            }
+
+            @Override
+            public AccessJob setKey(java.lang.String key) {
+              return (AccessJob) super.setKey(key);
+            }
+
+            @Override
+            public AccessJob setOauthToken(java.lang.String oauthToken) {
+              return (AccessJob) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AccessJob setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AccessJob) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AccessJob setQuotaUser(java.lang.String quotaUser) {
+              return (AccessJob) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AccessJob setUploadType(java.lang.String uploadType) {
+              return (AccessJob) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AccessJob setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AccessJob) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the batch to retrieve in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            public AccessJob setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Job ID to fetch data for. */
+            @com.google.api.client.util.Key
+            private java.lang.Long jobId;
+
+            /** Required. Job ID to fetch data for.
+             */
+            public java.lang.Long getJobId() {
+              return jobId;
+            }
+
+            /** Required. Job ID to fetch data for. */
+            public AccessJob setJobId(java.lang.Long jobId) {
+              this.jobId = jobId;
+              return this;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Batch) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            public AccessJob setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public AccessJob set(String parameterName, Object value) {
+              return (AccessJob) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain Spark Plan Graph for a Spark Application SQL execution. Limits the number of clusters
+           * returned as part of the graph to 10000.
+           *
+           * Create a request for the method "sparkApplications.accessSqlPlan".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link AccessSqlPlan#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+           * @return the request
+           */
+          public AccessSqlPlan accessSqlPlan(java.lang.String name) throws java.io.IOException {
+            AccessSqlPlan result = new AccessSqlPlan(name);
+            initialize(result);
+            return result;
+          }
+
+          public class AccessSqlPlan extends DataprocRequest<com.google.api.services.dataproc.model.AccessSparkApplicationSqlSparkPlanGraphResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:accessSqlPlan";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain Spark Plan Graph for a Spark Application SQL execution. Limits the number of clusters
+             * returned as part of the graph to 10000.
+             *
+             * Create a request for the method "sparkApplications.accessSqlPlan".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link AccessSqlPlan#execute()} method to invoke the remote
+             * operation. <p> {@link AccessSqlPlan#initialize(com.google.api.client.googleapis.services.Abstra
+             * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+             * @since 1.13
+             */
+            protected AccessSqlPlan(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.AccessSparkApplicationSqlSparkPlanGraphResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public AccessSqlPlan set$Xgafv(java.lang.String $Xgafv) {
+              return (AccessSqlPlan) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AccessSqlPlan setAccessToken(java.lang.String accessToken) {
+              return (AccessSqlPlan) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AccessSqlPlan setAlt(java.lang.String alt) {
+              return (AccessSqlPlan) super.setAlt(alt);
+            }
+
+            @Override
+            public AccessSqlPlan setCallback(java.lang.String callback) {
+              return (AccessSqlPlan) super.setCallback(callback);
+            }
+
+            @Override
+            public AccessSqlPlan setFields(java.lang.String fields) {
+              return (AccessSqlPlan) super.setFields(fields);
+            }
+
+            @Override
+            public AccessSqlPlan setKey(java.lang.String key) {
+              return (AccessSqlPlan) super.setKey(key);
+            }
+
+            @Override
+            public AccessSqlPlan setOauthToken(java.lang.String oauthToken) {
+              return (AccessSqlPlan) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AccessSqlPlan setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AccessSqlPlan) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AccessSqlPlan setQuotaUser(java.lang.String quotaUser) {
+              return (AccessSqlPlan) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AccessSqlPlan setUploadType(java.lang.String uploadType) {
+              return (AccessSqlPlan) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AccessSqlPlan setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AccessSqlPlan) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the batch to retrieve in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            public AccessSqlPlan setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Execution ID */
+            @com.google.api.client.util.Key
+            private java.lang.Long executionId;
+
+            /** Required. Execution ID
+             */
+            public java.lang.Long getExecutionId() {
+              return executionId;
+            }
+
+            /** Required. Execution ID */
+            public AccessSqlPlan setExecutionId(java.lang.Long executionId) {
+              this.executionId = executionId;
+              return this;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Batch) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            public AccessSqlPlan setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public AccessSqlPlan set(String parameterName, Object value) {
+              return (AccessSqlPlan) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain data corresponding to a particular SQL Query for a Spark Application.
+           *
+           * Create a request for the method "sparkApplications.accessSqlQuery".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link AccessSqlQuery#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+           * @return the request
+           */
+          public AccessSqlQuery accessSqlQuery(java.lang.String name) throws java.io.IOException {
+            AccessSqlQuery result = new AccessSqlQuery(name);
+            initialize(result);
+            return result;
+          }
+
+          public class AccessSqlQuery extends DataprocRequest<com.google.api.services.dataproc.model.AccessSparkApplicationSqlQueryResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:accessSqlQuery";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain data corresponding to a particular SQL Query for a Spark Application.
+             *
+             * Create a request for the method "sparkApplications.accessSqlQuery".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link AccessSqlQuery#execute()} method to invoke the remote
+             * operation. <p> {@link AccessSqlQuery#initialize(com.google.api.client.googleapis.services.Abstr
+             * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+             * @since 1.13
+             */
+            protected AccessSqlQuery(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.AccessSparkApplicationSqlQueryResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public AccessSqlQuery set$Xgafv(java.lang.String $Xgafv) {
+              return (AccessSqlQuery) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AccessSqlQuery setAccessToken(java.lang.String accessToken) {
+              return (AccessSqlQuery) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AccessSqlQuery setAlt(java.lang.String alt) {
+              return (AccessSqlQuery) super.setAlt(alt);
+            }
+
+            @Override
+            public AccessSqlQuery setCallback(java.lang.String callback) {
+              return (AccessSqlQuery) super.setCallback(callback);
+            }
+
+            @Override
+            public AccessSqlQuery setFields(java.lang.String fields) {
+              return (AccessSqlQuery) super.setFields(fields);
+            }
+
+            @Override
+            public AccessSqlQuery setKey(java.lang.String key) {
+              return (AccessSqlQuery) super.setKey(key);
+            }
+
+            @Override
+            public AccessSqlQuery setOauthToken(java.lang.String oauthToken) {
+              return (AccessSqlQuery) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AccessSqlQuery setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AccessSqlQuery) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AccessSqlQuery setQuotaUser(java.lang.String quotaUser) {
+              return (AccessSqlQuery) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AccessSqlQuery setUploadType(java.lang.String uploadType) {
+              return (AccessSqlQuery) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AccessSqlQuery setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AccessSqlQuery) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the batch to retrieve in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            public AccessSqlQuery setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Lists/ hides details of Spark plan nodes. True is set to list and false to
+             * hide.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean details;
+
+            /** Optional. Lists/ hides details of Spark plan nodes. True is set to list and false to hide.
+             */
+            public java.lang.Boolean getDetails() {
+              return details;
+            }
+
+            /**
+             * Optional. Lists/ hides details of Spark plan nodes. True is set to list and false to
+             * hide.
+             */
+            public AccessSqlQuery setDetails(java.lang.Boolean details) {
+              this.details = details;
+              return this;
+            }
+
+            /** Required. Execution ID */
+            @com.google.api.client.util.Key
+            private java.lang.Long executionId;
+
+            /** Required. Execution ID
+             */
+            public java.lang.Long getExecutionId() {
+              return executionId;
+            }
+
+            /** Required. Execution ID */
+            public AccessSqlQuery setExecutionId(java.lang.Long executionId) {
+              this.executionId = executionId;
+              return this;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Batch) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            public AccessSqlQuery setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. Enables/ disables physical plan description on demand */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean planDescription;
+
+            /** Optional. Enables/ disables physical plan description on demand
+             */
+            public java.lang.Boolean getPlanDescription() {
+              return planDescription;
+            }
+
+            /** Optional. Enables/ disables physical plan description on demand */
+            public AccessSqlQuery setPlanDescription(java.lang.Boolean planDescription) {
+              this.planDescription = planDescription;
+              return this;
+            }
+
+            @Override
+            public AccessSqlQuery set(String parameterName, Object value) {
+              return (AccessSqlQuery) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain data corresponding to a spark stage attempt for a Spark Application.
+           *
+           * Create a request for the method "sparkApplications.accessStageAttempt".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link AccessStageAttempt#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+           * @return the request
+           */
+          public AccessStageAttempt accessStageAttempt(java.lang.String name) throws java.io.IOException {
+            AccessStageAttempt result = new AccessStageAttempt(name);
+            initialize(result);
+            return result;
+          }
+
+          public class AccessStageAttempt extends DataprocRequest<com.google.api.services.dataproc.model.AccessSparkApplicationStageAttemptResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:accessStageAttempt";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain data corresponding to a spark stage attempt for a Spark Application.
+             *
+             * Create a request for the method "sparkApplications.accessStageAttempt".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link AccessStageAttempt#execute()} method to invoke the remote
+             * operation. <p> {@link AccessStageAttempt#initialize(com.google.api.client.googleapis.services.A
+             * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+             * @since 1.13
+             */
+            protected AccessStageAttempt(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.AccessSparkApplicationStageAttemptResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public AccessStageAttempt set$Xgafv(java.lang.String $Xgafv) {
+              return (AccessStageAttempt) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AccessStageAttempt setAccessToken(java.lang.String accessToken) {
+              return (AccessStageAttempt) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AccessStageAttempt setAlt(java.lang.String alt) {
+              return (AccessStageAttempt) super.setAlt(alt);
+            }
+
+            @Override
+            public AccessStageAttempt setCallback(java.lang.String callback) {
+              return (AccessStageAttempt) super.setCallback(callback);
+            }
+
+            @Override
+            public AccessStageAttempt setFields(java.lang.String fields) {
+              return (AccessStageAttempt) super.setFields(fields);
+            }
+
+            @Override
+            public AccessStageAttempt setKey(java.lang.String key) {
+              return (AccessStageAttempt) super.setKey(key);
+            }
+
+            @Override
+            public AccessStageAttempt setOauthToken(java.lang.String oauthToken) {
+              return (AccessStageAttempt) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AccessStageAttempt setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AccessStageAttempt) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AccessStageAttempt setQuotaUser(java.lang.String quotaUser) {
+              return (AccessStageAttempt) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AccessStageAttempt setUploadType(java.lang.String uploadType) {
+              return (AccessStageAttempt) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AccessStageAttempt setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AccessStageAttempt) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the batch to retrieve in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            public AccessStageAttempt setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Batch) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            public AccessStageAttempt setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            /** Required. Stage Attempt ID */
+            @com.google.api.client.util.Key
+            private java.lang.Integer stageAttemptId;
+
+            /** Required. Stage Attempt ID
+             */
+            public java.lang.Integer getStageAttemptId() {
+              return stageAttemptId;
+            }
+
+            /** Required. Stage Attempt ID */
+            public AccessStageAttempt setStageAttemptId(java.lang.Integer stageAttemptId) {
+              this.stageAttemptId = stageAttemptId;
+              return this;
+            }
+
+            /** Required. Stage ID */
+            @com.google.api.client.util.Key
+            private java.lang.Long stageId;
+
+            /** Required. Stage ID
+             */
+            public java.lang.Long getStageId() {
+              return stageId;
+            }
+
+            /** Required. Stage ID */
+            public AccessStageAttempt setStageId(java.lang.Long stageId) {
+              this.stageId = stageId;
+              return this;
+            }
+
+            /**
+             * Optional. The list of summary metrics fields to include. Empty list will default to
+             * skip all summary metrics fields. Example, if the response should include
+             * TaskQuantileMetrics, the request should have task_quantile_metrics in
+             * summary_metrics_mask field
+             */
+            @com.google.api.client.util.Key
+            private String summaryMetricsMask;
+
+            /** Optional. The list of summary metrics fields to include. Empty list will default to skip all
+           summary metrics fields. Example, if the response should include TaskQuantileMetrics, the request
+           should have task_quantile_metrics in summary_metrics_mask field
+             */
+            public String getSummaryMetricsMask() {
+              return summaryMetricsMask;
+            }
+
+            /**
+             * Optional. The list of summary metrics fields to include. Empty list will default to
+             * skip all summary metrics fields. Example, if the response should include
+             * TaskQuantileMetrics, the request should have task_quantile_metrics in
+             * summary_metrics_mask field
+             */
+            public AccessStageAttempt setSummaryMetricsMask(String summaryMetricsMask) {
+              this.summaryMetricsMask = summaryMetricsMask;
+              return this;
+            }
+
+            @Override
+            public AccessStageAttempt set(String parameterName, Object value) {
+              return (AccessStageAttempt) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain RDD operation graph for a Spark Application Stage. Limits the number of clusters returned
+           * as part of the graph to 10000.
+           *
+           * Create a request for the method "sparkApplications.accessStageRddGraph".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link AccessStageRddGraph#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+           * @return the request
+           */
+          public AccessStageRddGraph accessStageRddGraph(java.lang.String name) throws java.io.IOException {
+            AccessStageRddGraph result = new AccessStageRddGraph(name);
+            initialize(result);
+            return result;
+          }
+
+          public class AccessStageRddGraph extends DataprocRequest<com.google.api.services.dataproc.model.AccessSparkApplicationStageRddOperationGraphResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:accessStageRddGraph";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain RDD operation graph for a Spark Application Stage. Limits the number of clusters
+             * returned as part of the graph to 10000.
+             *
+             * Create a request for the method "sparkApplications.accessStageRddGraph".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link AccessStageRddGraph#execute()} method to invoke the remote
+             * operation. <p> {@link AccessStageRddGraph#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+             * @since 1.13
+             */
+            protected AccessStageRddGraph(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.AccessSparkApplicationStageRddOperationGraphResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public AccessStageRddGraph set$Xgafv(java.lang.String $Xgafv) {
+              return (AccessStageRddGraph) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AccessStageRddGraph setAccessToken(java.lang.String accessToken) {
+              return (AccessStageRddGraph) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AccessStageRddGraph setAlt(java.lang.String alt) {
+              return (AccessStageRddGraph) super.setAlt(alt);
+            }
+
+            @Override
+            public AccessStageRddGraph setCallback(java.lang.String callback) {
+              return (AccessStageRddGraph) super.setCallback(callback);
+            }
+
+            @Override
+            public AccessStageRddGraph setFields(java.lang.String fields) {
+              return (AccessStageRddGraph) super.setFields(fields);
+            }
+
+            @Override
+            public AccessStageRddGraph setKey(java.lang.String key) {
+              return (AccessStageRddGraph) super.setKey(key);
+            }
+
+            @Override
+            public AccessStageRddGraph setOauthToken(java.lang.String oauthToken) {
+              return (AccessStageRddGraph) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AccessStageRddGraph setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AccessStageRddGraph) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AccessStageRddGraph setQuotaUser(java.lang.String quotaUser) {
+              return (AccessStageRddGraph) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AccessStageRddGraph setUploadType(java.lang.String uploadType) {
+              return (AccessStageRddGraph) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AccessStageRddGraph setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AccessStageRddGraph) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the batch to retrieve in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            public AccessStageRddGraph setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Batch) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            public AccessStageRddGraph setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            /** Required. Stage ID */
+            @com.google.api.client.util.Key
+            private java.lang.Long stageId;
+
+            /** Required. Stage ID
+             */
+            public java.lang.Long getStageId() {
+              return stageId;
+            }
+
+            /** Required. Stage ID */
+            public AccessStageRddGraph setStageId(java.lang.Long stageId) {
+              this.stageId = stageId;
+              return this;
+            }
+
+            @Override
+            public AccessStageRddGraph set(String parameterName, Object value) {
+              return (AccessStageRddGraph) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain high level information and list of Spark Applications corresponding to a batch
+           *
+           * Create a request for the method "sparkApplications.search".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link Search#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
+           * @return the request
+           */
+          public Search search(java.lang.String parent) throws java.io.IOException {
+            Search result = new Search(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class Search extends DataprocRequest<com.google.api.services.dataproc.model.SearchSparkApplicationsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/sparkApplications:search";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+$");
+
+            /**
+             * Obtain high level information and list of Spark Applications corresponding to a batch
+             *
+             * Create a request for the method "sparkApplications.search".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
+             * @since 1.13
+             */
+            protected Search(java.lang.String parent) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SearchSparkApplicationsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Search set$Xgafv(java.lang.String $Xgafv) {
+              return (Search) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Search setAccessToken(java.lang.String accessToken) {
+              return (Search) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Search setAlt(java.lang.String alt) {
+              return (Search) super.setAlt(alt);
+            }
+
+            @Override
+            public Search setCallback(java.lang.String callback) {
+              return (Search) super.setCallback(callback);
+            }
+
+            @Override
+            public Search setFields(java.lang.String fields) {
+              return (Search) super.setFields(fields);
+            }
+
+            @Override
+            public Search setKey(java.lang.String key) {
+              return (Search) super.setKey(key);
+            }
+
+            @Override
+            public Search setOauthToken(java.lang.String oauthToken) {
+              return (Search) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Search) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Search setQuotaUser(java.lang.String quotaUser) {
+              return (Search) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Search setUploadType(java.lang.String uploadType) {
+              return (Search) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Search setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Search) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format
+             * "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The fully qualified name of the batch to retrieve in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format
+             * "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
+             */
+            public Search setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. Search only applications in the chosen state. */
+            @com.google.api.client.util.Key
+            private java.lang.String applicationStatus;
+
+            /** Optional. Search only applications in the chosen state.
+             */
+            public java.lang.String getApplicationStatus() {
+              return applicationStatus;
+            }
+
+            /** Optional. Search only applications in the chosen state. */
+            public Search setApplicationStatus(java.lang.String applicationStatus) {
+              this.applicationStatus = applicationStatus;
+              return this;
+            }
+
+            /** Optional. Latest end timestamp to list. */
+            @com.google.api.client.util.Key
+            private String maxEndTime;
+
+            /** Optional. Latest end timestamp to list.
+             */
+            public String getMaxEndTime() {
+              return maxEndTime;
+            }
+
+            /** Optional. Latest end timestamp to list. */
+            public Search setMaxEndTime(String maxEndTime) {
+              this.maxEndTime = maxEndTime;
+              return this;
+            }
+
+            /** Optional. Latest start timestamp to list. */
+            @com.google.api.client.util.Key
+            private String maxTime;
+
+            /** Optional. Latest start timestamp to list.
+             */
+            public String getMaxTime() {
+              return maxTime;
+            }
+
+            /** Optional. Latest start timestamp to list. */
+            public Search setMaxTime(String maxTime) {
+              this.maxTime = maxTime;
+              return this;
+            }
+
+            /** Optional. Earliest end timestamp to list. */
+            @com.google.api.client.util.Key
+            private String minEndTime;
+
+            /** Optional. Earliest end timestamp to list.
+             */
+            public String getMinEndTime() {
+              return minEndTime;
+            }
+
+            /** Optional. Earliest end timestamp to list. */
+            public Search setMinEndTime(String minEndTime) {
+              this.minEndTime = minEndTime;
+              return this;
+            }
+
+            /** Optional. Earliest start timestamp to list. */
+            @com.google.api.client.util.Key
+            private String minTime;
+
+            /** Optional. Earliest start timestamp to list.
+             */
+            public String getMinTime() {
+              return minTime;
+            }
+
+            /** Optional. Earliest start timestamp to list. */
+            public Search setMinTime(String minTime) {
+              this.minTime = minTime;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of applications to return in each response. The service may
+             * return fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of applications to return in each response. The service may return fewer
+           than this. The default page size is 10; the maximum page size is 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of applications to return in each response. The service may
+             * return fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            public Search setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token received from a previous SearchSparkApplications call. Provide
+             * this token to retrieve the subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token received from a previous SearchSparkApplications call. Provide this token to
+           retrieve the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token received from a previous SearchSparkApplications call. Provide
+             * this token to retrieve the subsequent page.
+             */
+            public Search setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public Search set(String parameterName, Object value) {
+              return (Search) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain executor summary with respect to a spark stage attempt.
+           *
+           * Create a request for the method "sparkApplications.searchExecutorStageSummary".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link SearchExecutorStageSummary#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+           * @return the request
+           */
+          public SearchExecutorStageSummary searchExecutorStageSummary(java.lang.String name) throws java.io.IOException {
+            SearchExecutorStageSummary result = new SearchExecutorStageSummary(name);
+            initialize(result);
+            return result;
+          }
+
+          public class SearchExecutorStageSummary extends DataprocRequest<com.google.api.services.dataproc.model.SearchSparkApplicationExecutorStageSummaryResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:searchExecutorStageSummary";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain executor summary with respect to a spark stage attempt.
+             *
+             * Create a request for the method "sparkApplications.searchExecutorStageSummary".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link SearchExecutorStageSummary#execute()} method to invoke the
+             * remote operation. <p> {@link SearchExecutorStageSummary#initialize(com.google.api.client.google
+             * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+             * immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+             * @since 1.13
+             */
+            protected SearchExecutorStageSummary(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SearchSparkApplicationExecutorStageSummaryResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SearchExecutorStageSummary set$Xgafv(java.lang.String $Xgafv) {
+              return (SearchExecutorStageSummary) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SearchExecutorStageSummary setAccessToken(java.lang.String accessToken) {
+              return (SearchExecutorStageSummary) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SearchExecutorStageSummary setAlt(java.lang.String alt) {
+              return (SearchExecutorStageSummary) super.setAlt(alt);
+            }
+
+            @Override
+            public SearchExecutorStageSummary setCallback(java.lang.String callback) {
+              return (SearchExecutorStageSummary) super.setCallback(callback);
+            }
+
+            @Override
+            public SearchExecutorStageSummary setFields(java.lang.String fields) {
+              return (SearchExecutorStageSummary) super.setFields(fields);
+            }
+
+            @Override
+            public SearchExecutorStageSummary setKey(java.lang.String key) {
+              return (SearchExecutorStageSummary) super.setKey(key);
+            }
+
+            @Override
+            public SearchExecutorStageSummary setOauthToken(java.lang.String oauthToken) {
+              return (SearchExecutorStageSummary) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SearchExecutorStageSummary setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SearchExecutorStageSummary) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SearchExecutorStageSummary setQuotaUser(java.lang.String quotaUser) {
+              return (SearchExecutorStageSummary) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SearchExecutorStageSummary setUploadType(java.lang.String uploadType) {
+              return (SearchExecutorStageSummary) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SearchExecutorStageSummary setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SearchExecutorStageSummary) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the batch to retrieve in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            public SearchExecutorStageSummary setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of executors to return in each response. The service may
+             * return fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of executors to return in each response. The service may return fewer than
+           this. The default page size is 10; the maximum page size is 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of executors to return in each response. The service may
+             * return fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            public SearchExecutorStageSummary setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token received from a previous AccessSparkApplicationExecutorsList
+             * call. Provide this token to retrieve the subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token received from a previous AccessSparkApplicationExecutorsList call. Provide
+           this token to retrieve the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token received from a previous AccessSparkApplicationExecutorsList
+             * call. Provide this token to retrieve the subsequent page.
+             */
+            public SearchExecutorStageSummary setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Batch) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            public SearchExecutorStageSummary setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            /** Required. Stage Attempt ID */
+            @com.google.api.client.util.Key
+            private java.lang.Integer stageAttemptId;
+
+            /** Required. Stage Attempt ID
+             */
+            public java.lang.Integer getStageAttemptId() {
+              return stageAttemptId;
+            }
+
+            /** Required. Stage Attempt ID */
+            public SearchExecutorStageSummary setStageAttemptId(java.lang.Integer stageAttemptId) {
+              this.stageAttemptId = stageAttemptId;
+              return this;
+            }
+
+            /** Required. Stage ID */
+            @com.google.api.client.util.Key
+            private java.lang.Long stageId;
+
+            /** Required. Stage ID
+             */
+            public java.lang.Long getStageId() {
+              return stageId;
+            }
+
+            /** Required. Stage ID */
+            public SearchExecutorStageSummary setStageId(java.lang.Long stageId) {
+              this.stageId = stageId;
+              return this;
+            }
+
+            @Override
+            public SearchExecutorStageSummary set(String parameterName, Object value) {
+              return (SearchExecutorStageSummary) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain data corresponding to executors for a Spark Application.
+           *
+           * Create a request for the method "sparkApplications.searchExecutors".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link SearchExecutors#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+           * @return the request
+           */
+          public SearchExecutors searchExecutors(java.lang.String name) throws java.io.IOException {
+            SearchExecutors result = new SearchExecutors(name);
+            initialize(result);
+            return result;
+          }
+
+          public class SearchExecutors extends DataprocRequest<com.google.api.services.dataproc.model.SearchSparkApplicationExecutorsResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:searchExecutors";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain data corresponding to executors for a Spark Application.
+             *
+             * Create a request for the method "sparkApplications.searchExecutors".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link SearchExecutors#execute()} method to invoke the remote
+             * operation. <p> {@link SearchExecutors#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+             * @since 1.13
+             */
+            protected SearchExecutors(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SearchSparkApplicationExecutorsResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SearchExecutors set$Xgafv(java.lang.String $Xgafv) {
+              return (SearchExecutors) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SearchExecutors setAccessToken(java.lang.String accessToken) {
+              return (SearchExecutors) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SearchExecutors setAlt(java.lang.String alt) {
+              return (SearchExecutors) super.setAlt(alt);
+            }
+
+            @Override
+            public SearchExecutors setCallback(java.lang.String callback) {
+              return (SearchExecutors) super.setCallback(callback);
+            }
+
+            @Override
+            public SearchExecutors setFields(java.lang.String fields) {
+              return (SearchExecutors) super.setFields(fields);
+            }
+
+            @Override
+            public SearchExecutors setKey(java.lang.String key) {
+              return (SearchExecutors) super.setKey(key);
+            }
+
+            @Override
+            public SearchExecutors setOauthToken(java.lang.String oauthToken) {
+              return (SearchExecutors) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SearchExecutors setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SearchExecutors) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SearchExecutors setQuotaUser(java.lang.String quotaUser) {
+              return (SearchExecutors) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SearchExecutors setUploadType(java.lang.String uploadType) {
+              return (SearchExecutors) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SearchExecutors setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SearchExecutors) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the batch to retrieve in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            public SearchExecutors setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Filter to select whether active/ dead or all executors should be selected.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String executorStatus;
+
+            /** Optional. Filter to select whether active/ dead or all executors should be selected.
+             */
+            public java.lang.String getExecutorStatus() {
+              return executorStatus;
+            }
+
+            /**
+             * Optional. Filter to select whether active/ dead or all executors should be selected.
+             */
+            public SearchExecutors setExecutorStatus(java.lang.String executorStatus) {
+              this.executorStatus = executorStatus;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of executors to return in each response. The service may
+             * return fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of executors to return in each response. The service may return fewer than
+           this. The default page size is 10; the maximum page size is 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of executors to return in each response. The service may
+             * return fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            public SearchExecutors setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token received from a previous AccessSparkApplicationExecutorsList
+             * call. Provide this token to retrieve the subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token received from a previous AccessSparkApplicationExecutorsList call. Provide
+           this token to retrieve the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token received from a previous AccessSparkApplicationExecutorsList
+             * call. Provide this token to retrieve the subsequent page.
+             */
+            public SearchExecutors setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Batch) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            public SearchExecutors setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public SearchExecutors set(String parameterName, Object value) {
+              return (SearchExecutors) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain list of spark jobs corresponding to a Spark Application.
+           *
+           * Create a request for the method "sparkApplications.searchJobs".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link SearchJobs#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+           * @return the request
+           */
+          public SearchJobs searchJobs(java.lang.String name) throws java.io.IOException {
+            SearchJobs result = new SearchJobs(name);
+            initialize(result);
+            return result;
+          }
+
+          public class SearchJobs extends DataprocRequest<com.google.api.services.dataproc.model.SearchSparkApplicationJobsResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:searchJobs";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain list of spark jobs corresponding to a Spark Application.
+             *
+             * Create a request for the method "sparkApplications.searchJobs".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link SearchJobs#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * SearchJobs#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+             * @since 1.13
+             */
+            protected SearchJobs(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SearchSparkApplicationJobsResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SearchJobs set$Xgafv(java.lang.String $Xgafv) {
+              return (SearchJobs) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SearchJobs setAccessToken(java.lang.String accessToken) {
+              return (SearchJobs) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SearchJobs setAlt(java.lang.String alt) {
+              return (SearchJobs) super.setAlt(alt);
+            }
+
+            @Override
+            public SearchJobs setCallback(java.lang.String callback) {
+              return (SearchJobs) super.setCallback(callback);
+            }
+
+            @Override
+            public SearchJobs setFields(java.lang.String fields) {
+              return (SearchJobs) super.setFields(fields);
+            }
+
+            @Override
+            public SearchJobs setKey(java.lang.String key) {
+              return (SearchJobs) super.setKey(key);
+            }
+
+            @Override
+            public SearchJobs setOauthToken(java.lang.String oauthToken) {
+              return (SearchJobs) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SearchJobs setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SearchJobs) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SearchJobs setQuotaUser(java.lang.String quotaUser) {
+              return (SearchJobs) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SearchJobs setUploadType(java.lang.String uploadType) {
+              return (SearchJobs) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SearchJobs setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SearchJobs) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the batch to retrieve in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            public SearchJobs setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Optional. List only jobs in the specific state. */
+            @com.google.api.client.util.Key
+            private java.lang.String jobStatus;
+
+            /** Optional. List only jobs in the specific state.
+             */
+            public java.lang.String getJobStatus() {
+              return jobStatus;
+            }
+
+            /** Optional. List only jobs in the specific state. */
+            public SearchJobs setJobStatus(java.lang.String jobStatus) {
+              this.jobStatus = jobStatus;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of jobs to return in each response. The service may return
+             * fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of jobs to return in each response. The service may return fewer than
+           this. The default page size is 10; the maximum page size is 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of jobs to return in each response. The service may return
+             * fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            public SearchJobs setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token received from a previous SearchSparkApplicationJobs call.
+             * Provide this token to retrieve the subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token received from a previous SearchSparkApplicationJobs call. Provide this token
+           to retrieve the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token received from a previous SearchSparkApplicationJobs call.
+             * Provide this token to retrieve the subsequent page.
+             */
+            public SearchJobs setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Batch) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            public SearchJobs setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public SearchJobs set(String parameterName, Object value) {
+              return (SearchJobs) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain data corresponding to SQL Queries for a Spark Application.
+           *
+           * Create a request for the method "sparkApplications.searchSqlQueries".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link SearchSqlQueries#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+           * @return the request
+           */
+          public SearchSqlQueries searchSqlQueries(java.lang.String name) throws java.io.IOException {
+            SearchSqlQueries result = new SearchSqlQueries(name);
+            initialize(result);
+            return result;
+          }
+
+          public class SearchSqlQueries extends DataprocRequest<com.google.api.services.dataproc.model.SearchSparkApplicationSqlQueriesResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:searchSqlQueries";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain data corresponding to SQL Queries for a Spark Application.
+             *
+             * Create a request for the method "sparkApplications.searchSqlQueries".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link SearchSqlQueries#execute()} method to invoke the remote
+             * operation. <p> {@link SearchSqlQueries#initialize(com.google.api.client.googleapis.services.Abs
+             * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+             * @since 1.13
+             */
+            protected SearchSqlQueries(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SearchSparkApplicationSqlQueriesResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SearchSqlQueries set$Xgafv(java.lang.String $Xgafv) {
+              return (SearchSqlQueries) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SearchSqlQueries setAccessToken(java.lang.String accessToken) {
+              return (SearchSqlQueries) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SearchSqlQueries setAlt(java.lang.String alt) {
+              return (SearchSqlQueries) super.setAlt(alt);
+            }
+
+            @Override
+            public SearchSqlQueries setCallback(java.lang.String callback) {
+              return (SearchSqlQueries) super.setCallback(callback);
+            }
+
+            @Override
+            public SearchSqlQueries setFields(java.lang.String fields) {
+              return (SearchSqlQueries) super.setFields(fields);
+            }
+
+            @Override
+            public SearchSqlQueries setKey(java.lang.String key) {
+              return (SearchSqlQueries) super.setKey(key);
+            }
+
+            @Override
+            public SearchSqlQueries setOauthToken(java.lang.String oauthToken) {
+              return (SearchSqlQueries) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SearchSqlQueries setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SearchSqlQueries) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SearchSqlQueries setQuotaUser(java.lang.String quotaUser) {
+              return (SearchSqlQueries) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SearchSqlQueries setUploadType(java.lang.String uploadType) {
+              return (SearchSqlQueries) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SearchSqlQueries setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SearchSqlQueries) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the batch to retrieve in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            public SearchSqlQueries setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Lists/ hides details of Spark plan nodes. True is set to list and false to
+             * hide.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean details;
+
+            /** Optional. Lists/ hides details of Spark plan nodes. True is set to list and false to hide.
+             */
+            public java.lang.Boolean getDetails() {
+              return details;
+            }
+
+            /**
+             * Optional. Lists/ hides details of Spark plan nodes. True is set to list and false to
+             * hide.
+             */
+            public SearchSqlQueries setDetails(java.lang.Boolean details) {
+              this.details = details;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of queries to return in each response. The service may
+             * return fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of queries to return in each response. The service may return fewer than
+           this. The default page size is 10; the maximum page size is 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of queries to return in each response. The service may
+             * return fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            public SearchSqlQueries setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token received from a previous SearchSparkApplicationSqlQueries
+             * call. Provide this token to retrieve the subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token received from a previous SearchSparkApplicationSqlQueries call. Provide this
+           token to retrieve the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token received from a previous SearchSparkApplicationSqlQueries
+             * call. Provide this token to retrieve the subsequent page.
+             */
+            public SearchSqlQueries setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Batch) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            public SearchSqlQueries setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. Enables/ disables physical plan description on demand */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean planDescription;
+
+            /** Optional. Enables/ disables physical plan description on demand
+             */
+            public java.lang.Boolean getPlanDescription() {
+              return planDescription;
+            }
+
+            /** Optional. Enables/ disables physical plan description on demand */
+            public SearchSqlQueries setPlanDescription(java.lang.Boolean planDescription) {
+              this.planDescription = planDescription;
+              return this;
+            }
+
+            @Override
+            public SearchSqlQueries set(String parameterName, Object value) {
+              return (SearchSqlQueries) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain data corresponding to tasks for a spark stage attempt for a Spark Application.
+           *
+           * Create a request for the method "sparkApplications.searchStageAttemptTasks".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link SearchStageAttemptTasks#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+           * @return the request
+           */
+          public SearchStageAttemptTasks searchStageAttemptTasks(java.lang.String name) throws java.io.IOException {
+            SearchStageAttemptTasks result = new SearchStageAttemptTasks(name);
+            initialize(result);
+            return result;
+          }
+
+          public class SearchStageAttemptTasks extends DataprocRequest<com.google.api.services.dataproc.model.SearchSparkApplicationStageAttemptTasksResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:searchStageAttemptTasks";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain data corresponding to tasks for a spark stage attempt for a Spark Application.
+             *
+             * Create a request for the method "sparkApplications.searchStageAttemptTasks".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link SearchStageAttemptTasks#execute()} method to invoke the
+             * remote operation. <p> {@link SearchStageAttemptTasks#initialize(com.google.api.client.googleapi
+             * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+             * @since 1.13
+             */
+            protected SearchStageAttemptTasks(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SearchSparkApplicationStageAttemptTasksResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SearchStageAttemptTasks set$Xgafv(java.lang.String $Xgafv) {
+              return (SearchStageAttemptTasks) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SearchStageAttemptTasks setAccessToken(java.lang.String accessToken) {
+              return (SearchStageAttemptTasks) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SearchStageAttemptTasks setAlt(java.lang.String alt) {
+              return (SearchStageAttemptTasks) super.setAlt(alt);
+            }
+
+            @Override
+            public SearchStageAttemptTasks setCallback(java.lang.String callback) {
+              return (SearchStageAttemptTasks) super.setCallback(callback);
+            }
+
+            @Override
+            public SearchStageAttemptTasks setFields(java.lang.String fields) {
+              return (SearchStageAttemptTasks) super.setFields(fields);
+            }
+
+            @Override
+            public SearchStageAttemptTasks setKey(java.lang.String key) {
+              return (SearchStageAttemptTasks) super.setKey(key);
+            }
+
+            @Override
+            public SearchStageAttemptTasks setOauthToken(java.lang.String oauthToken) {
+              return (SearchStageAttemptTasks) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SearchStageAttemptTasks setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SearchStageAttemptTasks) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SearchStageAttemptTasks setQuotaUser(java.lang.String quotaUser) {
+              return (SearchStageAttemptTasks) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SearchStageAttemptTasks setUploadType(java.lang.String uploadType) {
+              return (SearchStageAttemptTasks) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SearchStageAttemptTasks setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SearchStageAttemptTasks) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the batch to retrieve in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            public SearchStageAttemptTasks setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of tasks to return in each response. The service may return
+             * fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of tasks to return in each response. The service may return fewer than
+           this. The default page size is 10; the maximum page size is 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of tasks to return in each response. The service may return
+             * fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            public SearchStageAttemptTasks setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token received from a previous ListSparkApplicationStageAttemptTasks
+             * call. Provide this token to retrieve the subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token received from a previous ListSparkApplicationStageAttemptTasks call. Provide
+           this token to retrieve the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token received from a previous ListSparkApplicationStageAttemptTasks
+             * call. Provide this token to retrieve the subsequent page.
+             */
+            public SearchStageAttemptTasks setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Batch) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            public SearchStageAttemptTasks setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. Sort the tasks by runtime. */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean sortRuntime;
+
+            /** Optional. Sort the tasks by runtime.
+             */
+            public java.lang.Boolean getSortRuntime() {
+              return sortRuntime;
+            }
+
+            /** Optional. Sort the tasks by runtime. */
+            public SearchStageAttemptTasks setSortRuntime(java.lang.Boolean sortRuntime) {
+              this.sortRuntime = sortRuntime;
+              return this;
+            }
+
+            /** Optional. Stage Attempt ID */
+            @com.google.api.client.util.Key
+            private java.lang.Integer stageAttemptId;
+
+            /** Optional. Stage Attempt ID
+             */
+            public java.lang.Integer getStageAttemptId() {
+              return stageAttemptId;
+            }
+
+            /** Optional. Stage Attempt ID */
+            public SearchStageAttemptTasks setStageAttemptId(java.lang.Integer stageAttemptId) {
+              this.stageAttemptId = stageAttemptId;
+              return this;
+            }
+
+            /** Optional. Stage ID */
+            @com.google.api.client.util.Key
+            private java.lang.Long stageId;
+
+            /** Optional. Stage ID
+             */
+            public java.lang.Long getStageId() {
+              return stageId;
+            }
+
+            /** Optional. Stage ID */
+            public SearchStageAttemptTasks setStageId(java.lang.Long stageId) {
+              this.stageId = stageId;
+              return this;
+            }
+
+            /** Optional. List only tasks in the state. */
+            @com.google.api.client.util.Key
+            private java.lang.String taskStatus;
+
+            /** Optional. List only tasks in the state.
+             */
+            public java.lang.String getTaskStatus() {
+              return taskStatus;
+            }
+
+            /** Optional. List only tasks in the state. */
+            public SearchStageAttemptTasks setTaskStatus(java.lang.String taskStatus) {
+              this.taskStatus = taskStatus;
+              return this;
+            }
+
+            @Override
+            public SearchStageAttemptTasks set(String parameterName, Object value) {
+              return (SearchStageAttemptTasks) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain data corresponding to a spark stage attempts for a Spark Application.
+           *
+           * Create a request for the method "sparkApplications.searchStageAttempts".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link SearchStageAttempts#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+           * @return the request
+           */
+          public SearchStageAttempts searchStageAttempts(java.lang.String name) throws java.io.IOException {
+            SearchStageAttempts result = new SearchStageAttempts(name);
+            initialize(result);
+            return result;
+          }
+
+          public class SearchStageAttempts extends DataprocRequest<com.google.api.services.dataproc.model.SearchSparkApplicationStageAttemptsResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:searchStageAttempts";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain data corresponding to a spark stage attempts for a Spark Application.
+             *
+             * Create a request for the method "sparkApplications.searchStageAttempts".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link SearchStageAttempts#execute()} method to invoke the remote
+             * operation. <p> {@link SearchStageAttempts#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+             * @since 1.13
+             */
+            protected SearchStageAttempts(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SearchSparkApplicationStageAttemptsResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SearchStageAttempts set$Xgafv(java.lang.String $Xgafv) {
+              return (SearchStageAttempts) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SearchStageAttempts setAccessToken(java.lang.String accessToken) {
+              return (SearchStageAttempts) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SearchStageAttempts setAlt(java.lang.String alt) {
+              return (SearchStageAttempts) super.setAlt(alt);
+            }
+
+            @Override
+            public SearchStageAttempts setCallback(java.lang.String callback) {
+              return (SearchStageAttempts) super.setCallback(callback);
+            }
+
+            @Override
+            public SearchStageAttempts setFields(java.lang.String fields) {
+              return (SearchStageAttempts) super.setFields(fields);
+            }
+
+            @Override
+            public SearchStageAttempts setKey(java.lang.String key) {
+              return (SearchStageAttempts) super.setKey(key);
+            }
+
+            @Override
+            public SearchStageAttempts setOauthToken(java.lang.String oauthToken) {
+              return (SearchStageAttempts) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SearchStageAttempts setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SearchStageAttempts) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SearchStageAttempts setQuotaUser(java.lang.String quotaUser) {
+              return (SearchStageAttempts) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SearchStageAttempts setUploadType(java.lang.String uploadType) {
+              return (SearchStageAttempts) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SearchStageAttempts setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SearchStageAttempts) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the batch to retrieve in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            public SearchStageAttempts setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of stage attempts (paging based on stage_attempt_id) to
+             * return in each response. The service may return fewer than this. The default page
+             * size is 10; the maximum page size is 100.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of stage attempts (paging based on stage_attempt_id) to return in each
+           response. The service may return fewer than this. The default page size is 10; the maximum page
+           size is 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of stage attempts (paging based on stage_attempt_id) to
+             * return in each response. The service may return fewer than this. The default page
+             * size is 10; the maximum page size is 100.
+             */
+            public SearchStageAttempts setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token received from a previous SearchSparkApplicationStageAttempts
+             * call. Provide this token to retrieve the subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token received from a previous SearchSparkApplicationStageAttempts call. Provide
+           this token to retrieve the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token received from a previous SearchSparkApplicationStageAttempts
+             * call. Provide this token to retrieve the subsequent page.
+             */
+            public SearchStageAttempts setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Batch) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            public SearchStageAttempts setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            /** Required. Stage ID for which attempts are to be fetched */
+            @com.google.api.client.util.Key
+            private java.lang.Long stageId;
+
+            /** Required. Stage ID for which attempts are to be fetched
+             */
+            public java.lang.Long getStageId() {
+              return stageId;
+            }
+
+            /** Required. Stage ID for which attempts are to be fetched */
+            public SearchStageAttempts setStageId(java.lang.Long stageId) {
+              this.stageId = stageId;
+              return this;
+            }
+
+            /**
+             * Optional. The list of summary metrics fields to include. Empty list will default to
+             * skip all summary metrics fields. Example, if the response should include
+             * TaskQuantileMetrics, the request should have task_quantile_metrics in
+             * summary_metrics_mask field
+             */
+            @com.google.api.client.util.Key
+            private String summaryMetricsMask;
+
+            /** Optional. The list of summary metrics fields to include. Empty list will default to skip all
+           summary metrics fields. Example, if the response should include TaskQuantileMetrics, the request
+           should have task_quantile_metrics in summary_metrics_mask field
+             */
+            public String getSummaryMetricsMask() {
+              return summaryMetricsMask;
+            }
+
+            /**
+             * Optional. The list of summary metrics fields to include. Empty list will default to
+             * skip all summary metrics fields. Example, if the response should include
+             * TaskQuantileMetrics, the request should have task_quantile_metrics in
+             * summary_metrics_mask field
+             */
+            public SearchStageAttempts setSummaryMetricsMask(String summaryMetricsMask) {
+              this.summaryMetricsMask = summaryMetricsMask;
+              return this;
+            }
+
+            @Override
+            public SearchStageAttempts set(String parameterName, Object value) {
+              return (SearchStageAttempts) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain data corresponding to stages for a Spark Application.
+           *
+           * Create a request for the method "sparkApplications.searchStages".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link SearchStages#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+           * @return the request
+           */
+          public SearchStages searchStages(java.lang.String name) throws java.io.IOException {
+            SearchStages result = new SearchStages(name);
+            initialize(result);
+            return result;
+          }
+
+          public class SearchStages extends DataprocRequest<com.google.api.services.dataproc.model.SearchSparkApplicationStagesResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:searchStages";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain data corresponding to stages for a Spark Application.
+             *
+             * Create a request for the method "sparkApplications.searchStages".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link SearchStages#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * SearchStages#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+             * @since 1.13
+             */
+            protected SearchStages(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SearchSparkApplicationStagesResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SearchStages set$Xgafv(java.lang.String $Xgafv) {
+              return (SearchStages) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SearchStages setAccessToken(java.lang.String accessToken) {
+              return (SearchStages) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SearchStages setAlt(java.lang.String alt) {
+              return (SearchStages) super.setAlt(alt);
+            }
+
+            @Override
+            public SearchStages setCallback(java.lang.String callback) {
+              return (SearchStages) super.setCallback(callback);
+            }
+
+            @Override
+            public SearchStages setFields(java.lang.String fields) {
+              return (SearchStages) super.setFields(fields);
+            }
+
+            @Override
+            public SearchStages setKey(java.lang.String key) {
+              return (SearchStages) super.setKey(key);
+            }
+
+            @Override
+            public SearchStages setOauthToken(java.lang.String oauthToken) {
+              return (SearchStages) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SearchStages setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SearchStages) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SearchStages setQuotaUser(java.lang.String quotaUser) {
+              return (SearchStages) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SearchStages setUploadType(java.lang.String uploadType) {
+              return (SearchStages) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SearchStages setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SearchStages) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the batch to retrieve in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            public SearchStages setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of stages (paging based on stage_id) to return in each
+             * response. The service may return fewer than this. The default page size is 10; the
+             * maximum page size is 100.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of stages (paging based on stage_id) to return in each response. The
+           service may return fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of stages (paging based on stage_id) to return in each
+             * response. The service may return fewer than this. The default page size is 10; the
+             * maximum page size is 100.
+             */
+            public SearchStages setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token received from a previous FetchSparkApplicationStagesList call.
+             * Provide this token to retrieve the subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token received from a previous FetchSparkApplicationStagesList call. Provide this
+           token to retrieve the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token received from a previous FetchSparkApplicationStagesList call.
+             * Provide this token to retrieve the subsequent page.
+             */
+            public SearchStages setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Batch) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            public SearchStages setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. List only stages in the given state. */
+            @com.google.api.client.util.Key
+            private java.lang.String stageStatus;
+
+            /** Optional. List only stages in the given state.
+             */
+            public java.lang.String getStageStatus() {
+              return stageStatus;
+            }
+
+            /** Optional. List only stages in the given state. */
+            public SearchStages setStageStatus(java.lang.String stageStatus) {
+              this.stageStatus = stageStatus;
+              return this;
+            }
+
+            /**
+             * Optional. The list of summary metrics fields to include. Empty list will default to
+             * skip all summary metrics fields. Example, if the response should include
+             * TaskQuantileMetrics, the request should have task_quantile_metrics in
+             * summary_metrics_mask field
+             */
+            @com.google.api.client.util.Key
+            private String summaryMetricsMask;
+
+            /** Optional. The list of summary metrics fields to include. Empty list will default to skip all
+           summary metrics fields. Example, if the response should include TaskQuantileMetrics, the request
+           should have task_quantile_metrics in summary_metrics_mask field
+             */
+            public String getSummaryMetricsMask() {
+              return summaryMetricsMask;
+            }
+
+            /**
+             * Optional. The list of summary metrics fields to include. Empty list will default to
+             * skip all summary metrics fields. Example, if the response should include
+             * TaskQuantileMetrics, the request should have task_quantile_metrics in
+             * summary_metrics_mask field
+             */
+            public SearchStages setSummaryMetricsMask(String summaryMetricsMask) {
+              this.summaryMetricsMask = summaryMetricsMask;
+              return this;
+            }
+
+            @Override
+            public SearchStages set(String parameterName, Object value) {
+              return (SearchStages) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain summary of Executor Summary for a Spark Application
+           *
+           * Create a request for the method "sparkApplications.summarizeExecutors".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link SummarizeExecutors#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+           * @return the request
+           */
+          public SummarizeExecutors summarizeExecutors(java.lang.String name) throws java.io.IOException {
+            SummarizeExecutors result = new SummarizeExecutors(name);
+            initialize(result);
+            return result;
+          }
+
+          public class SummarizeExecutors extends DataprocRequest<com.google.api.services.dataproc.model.SummarizeSparkApplicationExecutorsResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:summarizeExecutors";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain summary of Executor Summary for a Spark Application
+             *
+             * Create a request for the method "sparkApplications.summarizeExecutors".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link SummarizeExecutors#execute()} method to invoke the remote
+             * operation. <p> {@link SummarizeExecutors#initialize(com.google.api.client.googleapis.services.A
+             * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+             * @since 1.13
+             */
+            protected SummarizeExecutors(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SummarizeSparkApplicationExecutorsResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SummarizeExecutors set$Xgafv(java.lang.String $Xgafv) {
+              return (SummarizeExecutors) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SummarizeExecutors setAccessToken(java.lang.String accessToken) {
+              return (SummarizeExecutors) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SummarizeExecutors setAlt(java.lang.String alt) {
+              return (SummarizeExecutors) super.setAlt(alt);
+            }
+
+            @Override
+            public SummarizeExecutors setCallback(java.lang.String callback) {
+              return (SummarizeExecutors) super.setCallback(callback);
+            }
+
+            @Override
+            public SummarizeExecutors setFields(java.lang.String fields) {
+              return (SummarizeExecutors) super.setFields(fields);
+            }
+
+            @Override
+            public SummarizeExecutors setKey(java.lang.String key) {
+              return (SummarizeExecutors) super.setKey(key);
+            }
+
+            @Override
+            public SummarizeExecutors setOauthToken(java.lang.String oauthToken) {
+              return (SummarizeExecutors) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SummarizeExecutors setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SummarizeExecutors) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SummarizeExecutors setQuotaUser(java.lang.String quotaUser) {
+              return (SummarizeExecutors) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SummarizeExecutors setUploadType(java.lang.String uploadType) {
+              return (SummarizeExecutors) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SummarizeExecutors setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SummarizeExecutors) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the batch to retrieve in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            public SummarizeExecutors setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Batch) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            public SummarizeExecutors setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public SummarizeExecutors set(String parameterName, Object value) {
+              return (SummarizeExecutors) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain summary of Jobs for a Spark Application
+           *
+           * Create a request for the method "sparkApplications.summarizeJobs".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link SummarizeJobs#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+           * @return the request
+           */
+          public SummarizeJobs summarizeJobs(java.lang.String name) throws java.io.IOException {
+            SummarizeJobs result = new SummarizeJobs(name);
+            initialize(result);
+            return result;
+          }
+
+          public class SummarizeJobs extends DataprocRequest<com.google.api.services.dataproc.model.SummarizeSparkApplicationJobsResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:summarizeJobs";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain summary of Jobs for a Spark Application
+             *
+             * Create a request for the method "sparkApplications.summarizeJobs".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link SummarizeJobs#execute()} method to invoke the remote
+             * operation. <p> {@link SummarizeJobs#initialize(com.google.api.client.googleapis.services.Abstra
+             * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+             * @since 1.13
+             */
+            protected SummarizeJobs(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SummarizeSparkApplicationJobsResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SummarizeJobs set$Xgafv(java.lang.String $Xgafv) {
+              return (SummarizeJobs) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SummarizeJobs setAccessToken(java.lang.String accessToken) {
+              return (SummarizeJobs) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SummarizeJobs setAlt(java.lang.String alt) {
+              return (SummarizeJobs) super.setAlt(alt);
+            }
+
+            @Override
+            public SummarizeJobs setCallback(java.lang.String callback) {
+              return (SummarizeJobs) super.setCallback(callback);
+            }
+
+            @Override
+            public SummarizeJobs setFields(java.lang.String fields) {
+              return (SummarizeJobs) super.setFields(fields);
+            }
+
+            @Override
+            public SummarizeJobs setKey(java.lang.String key) {
+              return (SummarizeJobs) super.setKey(key);
+            }
+
+            @Override
+            public SummarizeJobs setOauthToken(java.lang.String oauthToken) {
+              return (SummarizeJobs) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SummarizeJobs setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SummarizeJobs) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SummarizeJobs setQuotaUser(java.lang.String quotaUser) {
+              return (SummarizeJobs) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SummarizeJobs setUploadType(java.lang.String uploadType) {
+              return (SummarizeJobs) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SummarizeJobs setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SummarizeJobs) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the batch to retrieve in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            public SummarizeJobs setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Batch) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            public SummarizeJobs setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public SummarizeJobs set(String parameterName, Object value) {
+              return (SummarizeJobs) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain summary of Tasks for a Spark Application Stage Attempt
+           *
+           * Create a request for the method "sparkApplications.summarizeStageAttemptTasks".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link SummarizeStageAttemptTasks#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+           * @return the request
+           */
+          public SummarizeStageAttemptTasks summarizeStageAttemptTasks(java.lang.String name) throws java.io.IOException {
+            SummarizeStageAttemptTasks result = new SummarizeStageAttemptTasks(name);
+            initialize(result);
+            return result;
+          }
+
+          public class SummarizeStageAttemptTasks extends DataprocRequest<com.google.api.services.dataproc.model.SummarizeSparkApplicationStageAttemptTasksResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:summarizeStageAttemptTasks";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain summary of Tasks for a Spark Application Stage Attempt
+             *
+             * Create a request for the method "sparkApplications.summarizeStageAttemptTasks".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link SummarizeStageAttemptTasks#execute()} method to invoke the
+             * remote operation. <p> {@link SummarizeStageAttemptTasks#initialize(com.google.api.client.google
+             * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+             * immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+             * @since 1.13
+             */
+            protected SummarizeStageAttemptTasks(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SummarizeSparkApplicationStageAttemptTasksResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SummarizeStageAttemptTasks set$Xgafv(java.lang.String $Xgafv) {
+              return (SummarizeStageAttemptTasks) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SummarizeStageAttemptTasks setAccessToken(java.lang.String accessToken) {
+              return (SummarizeStageAttemptTasks) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SummarizeStageAttemptTasks setAlt(java.lang.String alt) {
+              return (SummarizeStageAttemptTasks) super.setAlt(alt);
+            }
+
+            @Override
+            public SummarizeStageAttemptTasks setCallback(java.lang.String callback) {
+              return (SummarizeStageAttemptTasks) super.setCallback(callback);
+            }
+
+            @Override
+            public SummarizeStageAttemptTasks setFields(java.lang.String fields) {
+              return (SummarizeStageAttemptTasks) super.setFields(fields);
+            }
+
+            @Override
+            public SummarizeStageAttemptTasks setKey(java.lang.String key) {
+              return (SummarizeStageAttemptTasks) super.setKey(key);
+            }
+
+            @Override
+            public SummarizeStageAttemptTasks setOauthToken(java.lang.String oauthToken) {
+              return (SummarizeStageAttemptTasks) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SummarizeStageAttemptTasks setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SummarizeStageAttemptTasks) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SummarizeStageAttemptTasks setQuotaUser(java.lang.String quotaUser) {
+              return (SummarizeStageAttemptTasks) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SummarizeStageAttemptTasks setUploadType(java.lang.String uploadType) {
+              return (SummarizeStageAttemptTasks) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SummarizeStageAttemptTasks setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SummarizeStageAttemptTasks) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the batch to retrieve in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            public SummarizeStageAttemptTasks setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Batch) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            public SummarizeStageAttemptTasks setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            /** Required. Stage Attempt ID */
+            @com.google.api.client.util.Key
+            private java.lang.Integer stageAttemptId;
+
+            /** Required. Stage Attempt ID
+             */
+            public java.lang.Integer getStageAttemptId() {
+              return stageAttemptId;
+            }
+
+            /** Required. Stage Attempt ID */
+            public SummarizeStageAttemptTasks setStageAttemptId(java.lang.Integer stageAttemptId) {
+              this.stageAttemptId = stageAttemptId;
+              return this;
+            }
+
+            /** Required. Stage ID */
+            @com.google.api.client.util.Key
+            private java.lang.Long stageId;
+
+            /** Required. Stage ID
+             */
+            public java.lang.Long getStageId() {
+              return stageId;
+            }
+
+            /** Required. Stage ID */
+            public SummarizeStageAttemptTasks setStageId(java.lang.Long stageId) {
+              this.stageId = stageId;
+              return this;
+            }
+
+            @Override
+            public SummarizeStageAttemptTasks set(String parameterName, Object value) {
+              return (SummarizeStageAttemptTasks) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain summary of Stages for a Spark Application
+           *
+           * Create a request for the method "sparkApplications.summarizeStages".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link SummarizeStages#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+           * @return the request
+           */
+          public SummarizeStages summarizeStages(java.lang.String name) throws java.io.IOException {
+            SummarizeStages result = new SummarizeStages(name);
+            initialize(result);
+            return result;
+          }
+
+          public class SummarizeStages extends DataprocRequest<com.google.api.services.dataproc.model.SummarizeSparkApplicationStagesResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:summarizeStages";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain summary of Stages for a Spark Application
+             *
+             * Create a request for the method "sparkApplications.summarizeStages".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link SummarizeStages#execute()} method to invoke the remote
+             * operation. <p> {@link SummarizeStages#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+             * @since 1.13
+             */
+            protected SummarizeStages(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SummarizeSparkApplicationStagesResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SummarizeStages set$Xgafv(java.lang.String $Xgafv) {
+              return (SummarizeStages) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SummarizeStages setAccessToken(java.lang.String accessToken) {
+              return (SummarizeStages) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SummarizeStages setAlt(java.lang.String alt) {
+              return (SummarizeStages) super.setAlt(alt);
+            }
+
+            @Override
+            public SummarizeStages setCallback(java.lang.String callback) {
+              return (SummarizeStages) super.setCallback(callback);
+            }
+
+            @Override
+            public SummarizeStages setFields(java.lang.String fields) {
+              return (SummarizeStages) super.setFields(fields);
+            }
+
+            @Override
+            public SummarizeStages setKey(java.lang.String key) {
+              return (SummarizeStages) super.setKey(key);
+            }
+
+            @Override
+            public SummarizeStages setOauthToken(java.lang.String oauthToken) {
+              return (SummarizeStages) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SummarizeStages setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SummarizeStages) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SummarizeStages setQuotaUser(java.lang.String quotaUser) {
+              return (SummarizeStages) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SummarizeStages setUploadType(java.lang.String uploadType) {
+              return (SummarizeStages) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SummarizeStages setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SummarizeStages) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the batch to retrieve in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            public SummarizeStages setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Batch) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            public SummarizeStages setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public SummarizeStages set(String parameterName, Object value) {
+              return (SummarizeStages) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Write wrapper objects from dataplane to spanner
+           *
+           * Create a request for the method "sparkApplications.write".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link Write#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the spark application to write data about in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+           * @param content the {@link com.google.api.services.dataproc.model.WriteSparkApplicationContextRequest}
+           * @return the request
+           */
+          public Write write(java.lang.String name, com.google.api.services.dataproc.model.WriteSparkApplicationContextRequest content) throws java.io.IOException {
+            Write result = new Write(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Write extends DataprocRequest<com.google.api.services.dataproc.model.WriteSparkApplicationContextResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:write";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Write wrapper objects from dataplane to spanner
+             *
+             * Create a request for the method "sparkApplications.write".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link Write#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Write#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the spark application to write data about in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+             * @param content the {@link com.google.api.services.dataproc.model.WriteSparkApplicationContextRequest}
+             * @since 1.13
+             */
+            protected Write(java.lang.String name, com.google.api.services.dataproc.model.WriteSparkApplicationContextRequest content) {
+              super(Dataproc.this, "POST", REST_PATH, content, com.google.api.services.dataproc.model.WriteSparkApplicationContextResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public Write set$Xgafv(java.lang.String $Xgafv) {
+              return (Write) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Write setAccessToken(java.lang.String accessToken) {
+              return (Write) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Write setAlt(java.lang.String alt) {
+              return (Write) super.setAlt(alt);
+            }
+
+            @Override
+            public Write setCallback(java.lang.String callback) {
+              return (Write) super.setCallback(callback);
+            }
+
+            @Override
+            public Write setFields(java.lang.String fields) {
+              return (Write) super.setFields(fields);
+            }
+
+            @Override
+            public Write setKey(java.lang.String key) {
+              return (Write) super.setKey(key);
+            }
+
+            @Override
+            public Write setOauthToken(java.lang.String oauthToken) {
+              return (Write) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Write setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Write) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Write setQuotaUser(java.lang.String quotaUser) {
+              return (Write) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Write setUploadType(java.lang.String uploadType) {
+              return (Write) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Write setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Write) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the spark application to write data about in
+             * the format "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkAppli
+             * cations/APPLICATION_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the spark application to write data about in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the spark application to write data about in
+             * the format "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkAppli
+             * cations/APPLICATION_ID"
+             */
+            public Write setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Write set(String parameterName, Object value) {
+              return (Write) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the Operations collection.
@@ -4675,6 +8926,4267 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
 
+        /**
+         * An accessor for creating requests from the SparkApplications collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Dataproc dataproc = new Dataproc(...);}
+         *   {@code Dataproc.SparkApplications.List request = dataproc.sparkApplications().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public SparkApplications sparkApplications() {
+          return new SparkApplications();
+        }
+
+        /**
+         * The "sparkApplications" collection of methods.
+         */
+        public class SparkApplications {
+
+          /**
+           * Obtain high level information corresponding to a single Spark Application.
+           *
+           * Create a request for the method "sparkApplications.access".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link Access#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+           * @return the request
+           */
+          public Access access(java.lang.String name) throws java.io.IOException {
+            Access result = new Access(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Access extends DataprocRequest<com.google.api.services.dataproc.model.AccessSessionSparkApplicationResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:access";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain high level information corresponding to a single Spark Application.
+             *
+             * Create a request for the method "sparkApplications.access".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link Access#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Access#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+             * @since 1.13
+             */
+            protected Access(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.AccessSessionSparkApplicationResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Access set$Xgafv(java.lang.String $Xgafv) {
+              return (Access) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Access setAccessToken(java.lang.String accessToken) {
+              return (Access) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Access setAlt(java.lang.String alt) {
+              return (Access) super.setAlt(alt);
+            }
+
+            @Override
+            public Access setCallback(java.lang.String callback) {
+              return (Access) super.setCallback(callback);
+            }
+
+            @Override
+            public Access setFields(java.lang.String fields) {
+              return (Access) super.setFields(fields);
+            }
+
+            @Override
+            public Access setKey(java.lang.String key) {
+              return (Access) super.setKey(key);
+            }
+
+            @Override
+            public Access setOauthToken(java.lang.String oauthToken) {
+              return (Access) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Access setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Access) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Access setQuotaUser(java.lang.String quotaUser) {
+              return (Access) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Access setUploadType(java.lang.String uploadType) {
+              return (Access) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Access setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Access) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the session to retrieve in the format "projects/PROJECT_ID/lo
+           cations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            public Access setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Session) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            public Access setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Access set(String parameterName, Object value) {
+              return (Access) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain environment details for a Spark Application
+           *
+           * Create a request for the method "sparkApplications.accessEnvironmentInfo".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link AccessEnvironmentInfo#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+           * @return the request
+           */
+          public AccessEnvironmentInfo accessEnvironmentInfo(java.lang.String name) throws java.io.IOException {
+            AccessEnvironmentInfo result = new AccessEnvironmentInfo(name);
+            initialize(result);
+            return result;
+          }
+
+          public class AccessEnvironmentInfo extends DataprocRequest<com.google.api.services.dataproc.model.AccessSessionSparkApplicationEnvironmentInfoResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:accessEnvironmentInfo";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain environment details for a Spark Application
+             *
+             * Create a request for the method "sparkApplications.accessEnvironmentInfo".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link AccessEnvironmentInfo#execute()} method to invoke the
+             * remote operation. <p> {@link AccessEnvironmentInfo#initialize(com.google.api.client.googleapis.
+             * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+             * @since 1.13
+             */
+            protected AccessEnvironmentInfo(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.AccessSessionSparkApplicationEnvironmentInfoResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public AccessEnvironmentInfo set$Xgafv(java.lang.String $Xgafv) {
+              return (AccessEnvironmentInfo) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AccessEnvironmentInfo setAccessToken(java.lang.String accessToken) {
+              return (AccessEnvironmentInfo) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AccessEnvironmentInfo setAlt(java.lang.String alt) {
+              return (AccessEnvironmentInfo) super.setAlt(alt);
+            }
+
+            @Override
+            public AccessEnvironmentInfo setCallback(java.lang.String callback) {
+              return (AccessEnvironmentInfo) super.setCallback(callback);
+            }
+
+            @Override
+            public AccessEnvironmentInfo setFields(java.lang.String fields) {
+              return (AccessEnvironmentInfo) super.setFields(fields);
+            }
+
+            @Override
+            public AccessEnvironmentInfo setKey(java.lang.String key) {
+              return (AccessEnvironmentInfo) super.setKey(key);
+            }
+
+            @Override
+            public AccessEnvironmentInfo setOauthToken(java.lang.String oauthToken) {
+              return (AccessEnvironmentInfo) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AccessEnvironmentInfo setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AccessEnvironmentInfo) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AccessEnvironmentInfo setQuotaUser(java.lang.String quotaUser) {
+              return (AccessEnvironmentInfo) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AccessEnvironmentInfo setUploadType(java.lang.String uploadType) {
+              return (AccessEnvironmentInfo) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AccessEnvironmentInfo setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AccessEnvironmentInfo) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the session to retrieve in the format "projects/PROJECT_ID/lo
+           cations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            public AccessEnvironmentInfo setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Session) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            public AccessEnvironmentInfo setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public AccessEnvironmentInfo set(String parameterName, Object value) {
+              return (AccessEnvironmentInfo) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain data corresponding to a spark job for a Spark Application.
+           *
+           * Create a request for the method "sparkApplications.accessJob".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link AccessJob#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+           * @return the request
+           */
+          public AccessJob accessJob(java.lang.String name) throws java.io.IOException {
+            AccessJob result = new AccessJob(name);
+            initialize(result);
+            return result;
+          }
+
+          public class AccessJob extends DataprocRequest<com.google.api.services.dataproc.model.AccessSessionSparkApplicationJobResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:accessJob";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain data corresponding to a spark job for a Spark Application.
+             *
+             * Create a request for the method "sparkApplications.accessJob".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link AccessJob#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * AccessJob#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+             * @since 1.13
+             */
+            protected AccessJob(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.AccessSessionSparkApplicationJobResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public AccessJob set$Xgafv(java.lang.String $Xgafv) {
+              return (AccessJob) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AccessJob setAccessToken(java.lang.String accessToken) {
+              return (AccessJob) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AccessJob setAlt(java.lang.String alt) {
+              return (AccessJob) super.setAlt(alt);
+            }
+
+            @Override
+            public AccessJob setCallback(java.lang.String callback) {
+              return (AccessJob) super.setCallback(callback);
+            }
+
+            @Override
+            public AccessJob setFields(java.lang.String fields) {
+              return (AccessJob) super.setFields(fields);
+            }
+
+            @Override
+            public AccessJob setKey(java.lang.String key) {
+              return (AccessJob) super.setKey(key);
+            }
+
+            @Override
+            public AccessJob setOauthToken(java.lang.String oauthToken) {
+              return (AccessJob) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AccessJob setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AccessJob) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AccessJob setQuotaUser(java.lang.String quotaUser) {
+              return (AccessJob) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AccessJob setUploadType(java.lang.String uploadType) {
+              return (AccessJob) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AccessJob setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AccessJob) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the session to retrieve in the format "projects/PROJECT_ID/lo
+           cations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            public AccessJob setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Job ID to fetch data for. */
+            @com.google.api.client.util.Key
+            private java.lang.Long jobId;
+
+            /** Required. Job ID to fetch data for.
+             */
+            public java.lang.Long getJobId() {
+              return jobId;
+            }
+
+            /** Required. Job ID to fetch data for. */
+            public AccessJob setJobId(java.lang.Long jobId) {
+              this.jobId = jobId;
+              return this;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Session) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            public AccessJob setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public AccessJob set(String parameterName, Object value) {
+              return (AccessJob) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain Spark Plan Graph for a Spark Application SQL execution. Limits the number of clusters
+           * returned as part of the graph to 10000.
+           *
+           * Create a request for the method "sparkApplications.accessSqlPlan".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link AccessSqlPlan#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+           * @return the request
+           */
+          public AccessSqlPlan accessSqlPlan(java.lang.String name) throws java.io.IOException {
+            AccessSqlPlan result = new AccessSqlPlan(name);
+            initialize(result);
+            return result;
+          }
+
+          public class AccessSqlPlan extends DataprocRequest<com.google.api.services.dataproc.model.AccessSessionSparkApplicationSqlSparkPlanGraphResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:accessSqlPlan";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain Spark Plan Graph for a Spark Application SQL execution. Limits the number of clusters
+             * returned as part of the graph to 10000.
+             *
+             * Create a request for the method "sparkApplications.accessSqlPlan".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link AccessSqlPlan#execute()} method to invoke the remote
+             * operation. <p> {@link AccessSqlPlan#initialize(com.google.api.client.googleapis.services.Abstra
+             * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+             * @since 1.13
+             */
+            protected AccessSqlPlan(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.AccessSessionSparkApplicationSqlSparkPlanGraphResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public AccessSqlPlan set$Xgafv(java.lang.String $Xgafv) {
+              return (AccessSqlPlan) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AccessSqlPlan setAccessToken(java.lang.String accessToken) {
+              return (AccessSqlPlan) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AccessSqlPlan setAlt(java.lang.String alt) {
+              return (AccessSqlPlan) super.setAlt(alt);
+            }
+
+            @Override
+            public AccessSqlPlan setCallback(java.lang.String callback) {
+              return (AccessSqlPlan) super.setCallback(callback);
+            }
+
+            @Override
+            public AccessSqlPlan setFields(java.lang.String fields) {
+              return (AccessSqlPlan) super.setFields(fields);
+            }
+
+            @Override
+            public AccessSqlPlan setKey(java.lang.String key) {
+              return (AccessSqlPlan) super.setKey(key);
+            }
+
+            @Override
+            public AccessSqlPlan setOauthToken(java.lang.String oauthToken) {
+              return (AccessSqlPlan) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AccessSqlPlan setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AccessSqlPlan) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AccessSqlPlan setQuotaUser(java.lang.String quotaUser) {
+              return (AccessSqlPlan) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AccessSqlPlan setUploadType(java.lang.String uploadType) {
+              return (AccessSqlPlan) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AccessSqlPlan setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AccessSqlPlan) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the session to retrieve in the format "projects/PROJECT_ID/lo
+           cations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            public AccessSqlPlan setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Execution ID */
+            @com.google.api.client.util.Key
+            private java.lang.Long executionId;
+
+            /** Required. Execution ID
+             */
+            public java.lang.Long getExecutionId() {
+              return executionId;
+            }
+
+            /** Required. Execution ID */
+            public AccessSqlPlan setExecutionId(java.lang.Long executionId) {
+              this.executionId = executionId;
+              return this;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Session) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            public AccessSqlPlan setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public AccessSqlPlan set(String parameterName, Object value) {
+              return (AccessSqlPlan) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain data corresponding to a particular SQL Query for a Spark Application.
+           *
+           * Create a request for the method "sparkApplications.accessSqlQuery".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link AccessSqlQuery#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+           * @return the request
+           */
+          public AccessSqlQuery accessSqlQuery(java.lang.String name) throws java.io.IOException {
+            AccessSqlQuery result = new AccessSqlQuery(name);
+            initialize(result);
+            return result;
+          }
+
+          public class AccessSqlQuery extends DataprocRequest<com.google.api.services.dataproc.model.AccessSessionSparkApplicationSqlQueryResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:accessSqlQuery";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain data corresponding to a particular SQL Query for a Spark Application.
+             *
+             * Create a request for the method "sparkApplications.accessSqlQuery".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link AccessSqlQuery#execute()} method to invoke the remote
+             * operation. <p> {@link AccessSqlQuery#initialize(com.google.api.client.googleapis.services.Abstr
+             * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+             * @since 1.13
+             */
+            protected AccessSqlQuery(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.AccessSessionSparkApplicationSqlQueryResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public AccessSqlQuery set$Xgafv(java.lang.String $Xgafv) {
+              return (AccessSqlQuery) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AccessSqlQuery setAccessToken(java.lang.String accessToken) {
+              return (AccessSqlQuery) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AccessSqlQuery setAlt(java.lang.String alt) {
+              return (AccessSqlQuery) super.setAlt(alt);
+            }
+
+            @Override
+            public AccessSqlQuery setCallback(java.lang.String callback) {
+              return (AccessSqlQuery) super.setCallback(callback);
+            }
+
+            @Override
+            public AccessSqlQuery setFields(java.lang.String fields) {
+              return (AccessSqlQuery) super.setFields(fields);
+            }
+
+            @Override
+            public AccessSqlQuery setKey(java.lang.String key) {
+              return (AccessSqlQuery) super.setKey(key);
+            }
+
+            @Override
+            public AccessSqlQuery setOauthToken(java.lang.String oauthToken) {
+              return (AccessSqlQuery) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AccessSqlQuery setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AccessSqlQuery) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AccessSqlQuery setQuotaUser(java.lang.String quotaUser) {
+              return (AccessSqlQuery) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AccessSqlQuery setUploadType(java.lang.String uploadType) {
+              return (AccessSqlQuery) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AccessSqlQuery setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AccessSqlQuery) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the session to retrieve in the format "projects/PROJECT_ID/lo
+           cations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            public AccessSqlQuery setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Lists/ hides details of Spark plan nodes. True is set to list and false to
+             * hide.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean details;
+
+            /** Optional. Lists/ hides details of Spark plan nodes. True is set to list and false to hide.
+             */
+            public java.lang.Boolean getDetails() {
+              return details;
+            }
+
+            /**
+             * Optional. Lists/ hides details of Spark plan nodes. True is set to list and false to
+             * hide.
+             */
+            public AccessSqlQuery setDetails(java.lang.Boolean details) {
+              this.details = details;
+              return this;
+            }
+
+            /** Required. Execution ID */
+            @com.google.api.client.util.Key
+            private java.lang.Long executionId;
+
+            /** Required. Execution ID
+             */
+            public java.lang.Long getExecutionId() {
+              return executionId;
+            }
+
+            /** Required. Execution ID */
+            public AccessSqlQuery setExecutionId(java.lang.Long executionId) {
+              this.executionId = executionId;
+              return this;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Session) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            public AccessSqlQuery setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. Enables/ disables physical plan description on demand */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean planDescription;
+
+            /** Optional. Enables/ disables physical plan description on demand
+             */
+            public java.lang.Boolean getPlanDescription() {
+              return planDescription;
+            }
+
+            /** Optional. Enables/ disables physical plan description on demand */
+            public AccessSqlQuery setPlanDescription(java.lang.Boolean planDescription) {
+              this.planDescription = planDescription;
+              return this;
+            }
+
+            @Override
+            public AccessSqlQuery set(String parameterName, Object value) {
+              return (AccessSqlQuery) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain data corresponding to a spark stage attempt for a Spark Application.
+           *
+           * Create a request for the method "sparkApplications.accessStageAttempt".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link AccessStageAttempt#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+           * @return the request
+           */
+          public AccessStageAttempt accessStageAttempt(java.lang.String name) throws java.io.IOException {
+            AccessStageAttempt result = new AccessStageAttempt(name);
+            initialize(result);
+            return result;
+          }
+
+          public class AccessStageAttempt extends DataprocRequest<com.google.api.services.dataproc.model.AccessSessionSparkApplicationStageAttemptResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:accessStageAttempt";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain data corresponding to a spark stage attempt for a Spark Application.
+             *
+             * Create a request for the method "sparkApplications.accessStageAttempt".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link AccessStageAttempt#execute()} method to invoke the remote
+             * operation. <p> {@link AccessStageAttempt#initialize(com.google.api.client.googleapis.services.A
+             * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+             * @since 1.13
+             */
+            protected AccessStageAttempt(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.AccessSessionSparkApplicationStageAttemptResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public AccessStageAttempt set$Xgafv(java.lang.String $Xgafv) {
+              return (AccessStageAttempt) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AccessStageAttempt setAccessToken(java.lang.String accessToken) {
+              return (AccessStageAttempt) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AccessStageAttempt setAlt(java.lang.String alt) {
+              return (AccessStageAttempt) super.setAlt(alt);
+            }
+
+            @Override
+            public AccessStageAttempt setCallback(java.lang.String callback) {
+              return (AccessStageAttempt) super.setCallback(callback);
+            }
+
+            @Override
+            public AccessStageAttempt setFields(java.lang.String fields) {
+              return (AccessStageAttempt) super.setFields(fields);
+            }
+
+            @Override
+            public AccessStageAttempt setKey(java.lang.String key) {
+              return (AccessStageAttempt) super.setKey(key);
+            }
+
+            @Override
+            public AccessStageAttempt setOauthToken(java.lang.String oauthToken) {
+              return (AccessStageAttempt) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AccessStageAttempt setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AccessStageAttempt) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AccessStageAttempt setQuotaUser(java.lang.String quotaUser) {
+              return (AccessStageAttempt) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AccessStageAttempt setUploadType(java.lang.String uploadType) {
+              return (AccessStageAttempt) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AccessStageAttempt setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AccessStageAttempt) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the session to retrieve in the format "projects/PROJECT_ID/lo
+           cations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            public AccessStageAttempt setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Session) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            public AccessStageAttempt setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            /** Required. Stage Attempt ID */
+            @com.google.api.client.util.Key
+            private java.lang.Integer stageAttemptId;
+
+            /** Required. Stage Attempt ID
+             */
+            public java.lang.Integer getStageAttemptId() {
+              return stageAttemptId;
+            }
+
+            /** Required. Stage Attempt ID */
+            public AccessStageAttempt setStageAttemptId(java.lang.Integer stageAttemptId) {
+              this.stageAttemptId = stageAttemptId;
+              return this;
+            }
+
+            /** Required. Stage ID */
+            @com.google.api.client.util.Key
+            private java.lang.Long stageId;
+
+            /** Required. Stage ID
+             */
+            public java.lang.Long getStageId() {
+              return stageId;
+            }
+
+            /** Required. Stage ID */
+            public AccessStageAttempt setStageId(java.lang.Long stageId) {
+              this.stageId = stageId;
+              return this;
+            }
+
+            /**
+             * Optional. The list of summary metrics fields to include. Empty list will default to
+             * skip all summary metrics fields. Example, if the response should include
+             * TaskQuantileMetrics, the request should have task_quantile_metrics in
+             * summary_metrics_mask field
+             */
+            @com.google.api.client.util.Key
+            private String summaryMetricsMask;
+
+            /** Optional. The list of summary metrics fields to include. Empty list will default to skip all
+           summary metrics fields. Example, if the response should include TaskQuantileMetrics, the request
+           should have task_quantile_metrics in summary_metrics_mask field
+             */
+            public String getSummaryMetricsMask() {
+              return summaryMetricsMask;
+            }
+
+            /**
+             * Optional. The list of summary metrics fields to include. Empty list will default to
+             * skip all summary metrics fields. Example, if the response should include
+             * TaskQuantileMetrics, the request should have task_quantile_metrics in
+             * summary_metrics_mask field
+             */
+            public AccessStageAttempt setSummaryMetricsMask(String summaryMetricsMask) {
+              this.summaryMetricsMask = summaryMetricsMask;
+              return this;
+            }
+
+            @Override
+            public AccessStageAttempt set(String parameterName, Object value) {
+              return (AccessStageAttempt) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain RDD operation graph for a Spark Application Stage. Limits the number of clusters returned
+           * as part of the graph to 10000.
+           *
+           * Create a request for the method "sparkApplications.accessStageRddGraph".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link AccessStageRddGraph#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+           * @return the request
+           */
+          public AccessStageRddGraph accessStageRddGraph(java.lang.String name) throws java.io.IOException {
+            AccessStageRddGraph result = new AccessStageRddGraph(name);
+            initialize(result);
+            return result;
+          }
+
+          public class AccessStageRddGraph extends DataprocRequest<com.google.api.services.dataproc.model.AccessSessionSparkApplicationStageRddOperationGraphResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:accessStageRddGraph";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain RDD operation graph for a Spark Application Stage. Limits the number of clusters
+             * returned as part of the graph to 10000.
+             *
+             * Create a request for the method "sparkApplications.accessStageRddGraph".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link AccessStageRddGraph#execute()} method to invoke the remote
+             * operation. <p> {@link AccessStageRddGraph#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+             * @since 1.13
+             */
+            protected AccessStageRddGraph(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.AccessSessionSparkApplicationStageRddOperationGraphResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public AccessStageRddGraph set$Xgafv(java.lang.String $Xgafv) {
+              return (AccessStageRddGraph) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AccessStageRddGraph setAccessToken(java.lang.String accessToken) {
+              return (AccessStageRddGraph) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AccessStageRddGraph setAlt(java.lang.String alt) {
+              return (AccessStageRddGraph) super.setAlt(alt);
+            }
+
+            @Override
+            public AccessStageRddGraph setCallback(java.lang.String callback) {
+              return (AccessStageRddGraph) super.setCallback(callback);
+            }
+
+            @Override
+            public AccessStageRddGraph setFields(java.lang.String fields) {
+              return (AccessStageRddGraph) super.setFields(fields);
+            }
+
+            @Override
+            public AccessStageRddGraph setKey(java.lang.String key) {
+              return (AccessStageRddGraph) super.setKey(key);
+            }
+
+            @Override
+            public AccessStageRddGraph setOauthToken(java.lang.String oauthToken) {
+              return (AccessStageRddGraph) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AccessStageRddGraph setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AccessStageRddGraph) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AccessStageRddGraph setQuotaUser(java.lang.String quotaUser) {
+              return (AccessStageRddGraph) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AccessStageRddGraph setUploadType(java.lang.String uploadType) {
+              return (AccessStageRddGraph) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AccessStageRddGraph setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AccessStageRddGraph) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the session to retrieve in the format "projects/PROJECT_ID/lo
+           cations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            public AccessStageRddGraph setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Session) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            public AccessStageRddGraph setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            /** Required. Stage ID */
+            @com.google.api.client.util.Key
+            private java.lang.Long stageId;
+
+            /** Required. Stage ID
+             */
+            public java.lang.Long getStageId() {
+              return stageId;
+            }
+
+            /** Required. Stage ID */
+            public AccessStageRddGraph setStageId(java.lang.Long stageId) {
+              this.stageId = stageId;
+              return this;
+            }
+
+            @Override
+            public AccessStageRddGraph set(String parameterName, Object value) {
+              return (AccessStageRddGraph) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain high level information and list of Spark Applications corresponding to a batch
+           *
+           * Create a request for the method "sparkApplications.search".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link Search#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID"
+           * @return the request
+           */
+          public Search search(java.lang.String parent) throws java.io.IOException {
+            Search result = new Search(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class Search extends DataprocRequest<com.google.api.services.dataproc.model.SearchSessionSparkApplicationsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/sparkApplications:search";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+$");
+
+            /**
+             * Obtain high level information and list of Spark Applications corresponding to a batch
+             *
+             * Create a request for the method "sparkApplications.search".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID"
+             * @since 1.13
+             */
+            protected Search(java.lang.String parent) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SearchSessionSparkApplicationsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Search set$Xgafv(java.lang.String $Xgafv) {
+              return (Search) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Search setAccessToken(java.lang.String accessToken) {
+              return (Search) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Search setAlt(java.lang.String alt) {
+              return (Search) super.setAlt(alt);
+            }
+
+            @Override
+            public Search setCallback(java.lang.String callback) {
+              return (Search) super.setCallback(callback);
+            }
+
+            @Override
+            public Search setFields(java.lang.String fields) {
+              return (Search) super.setFields(fields);
+            }
+
+            @Override
+            public Search setKey(java.lang.String key) {
+              return (Search) super.setKey(key);
+            }
+
+            @Override
+            public Search setOauthToken(java.lang.String oauthToken) {
+              return (Search) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Search) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Search setQuotaUser(java.lang.String quotaUser) {
+              return (Search) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Search setUploadType(java.lang.String uploadType) {
+              return (Search) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Search setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Search) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format
+             * "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The fully qualified name of the session to retrieve in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID"
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format
+             * "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID"
+             */
+            public Search setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. Search only applications in the chosen state. */
+            @com.google.api.client.util.Key
+            private java.lang.String applicationStatus;
+
+            /** Optional. Search only applications in the chosen state.
+             */
+            public java.lang.String getApplicationStatus() {
+              return applicationStatus;
+            }
+
+            /** Optional. Search only applications in the chosen state. */
+            public Search setApplicationStatus(java.lang.String applicationStatus) {
+              this.applicationStatus = applicationStatus;
+              return this;
+            }
+
+            /** Optional. Latest end timestamp to list. */
+            @com.google.api.client.util.Key
+            private String maxEndTime;
+
+            /** Optional. Latest end timestamp to list.
+             */
+            public String getMaxEndTime() {
+              return maxEndTime;
+            }
+
+            /** Optional. Latest end timestamp to list. */
+            public Search setMaxEndTime(String maxEndTime) {
+              this.maxEndTime = maxEndTime;
+              return this;
+            }
+
+            /** Optional. Latest start timestamp to list. */
+            @com.google.api.client.util.Key
+            private String maxTime;
+
+            /** Optional. Latest start timestamp to list.
+             */
+            public String getMaxTime() {
+              return maxTime;
+            }
+
+            /** Optional. Latest start timestamp to list. */
+            public Search setMaxTime(String maxTime) {
+              this.maxTime = maxTime;
+              return this;
+            }
+
+            /** Optional. Earliest end timestamp to list. */
+            @com.google.api.client.util.Key
+            private String minEndTime;
+
+            /** Optional. Earliest end timestamp to list.
+             */
+            public String getMinEndTime() {
+              return minEndTime;
+            }
+
+            /** Optional. Earliest end timestamp to list. */
+            public Search setMinEndTime(String minEndTime) {
+              this.minEndTime = minEndTime;
+              return this;
+            }
+
+            /** Optional. Earliest start timestamp to list. */
+            @com.google.api.client.util.Key
+            private String minTime;
+
+            /** Optional. Earliest start timestamp to list.
+             */
+            public String getMinTime() {
+              return minTime;
+            }
+
+            /** Optional. Earliest start timestamp to list. */
+            public Search setMinTime(String minTime) {
+              this.minTime = minTime;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of applications to return in each response. The service may
+             * return fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of applications to return in each response. The service may return fewer
+           than this. The default page size is 10; the maximum page size is 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of applications to return in each response. The service may
+             * return fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            public Search setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token received from a previous SearchSessionSparkApplications call.
+             * Provide this token to retrieve the subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token received from a previous SearchSessionSparkApplications call. Provide this
+           token to retrieve the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token received from a previous SearchSessionSparkApplications call.
+             * Provide this token to retrieve the subsequent page.
+             */
+            public Search setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public Search set(String parameterName, Object value) {
+              return (Search) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain executor summary with respect to a spark stage attempt.
+           *
+           * Create a request for the method "sparkApplications.searchExecutorStageSummary".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link SearchExecutorStageSummary#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+           * @return the request
+           */
+          public SearchExecutorStageSummary searchExecutorStageSummary(java.lang.String name) throws java.io.IOException {
+            SearchExecutorStageSummary result = new SearchExecutorStageSummary(name);
+            initialize(result);
+            return result;
+          }
+
+          public class SearchExecutorStageSummary extends DataprocRequest<com.google.api.services.dataproc.model.SearchSessionSparkApplicationExecutorStageSummaryResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:searchExecutorStageSummary";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain executor summary with respect to a spark stage attempt.
+             *
+             * Create a request for the method "sparkApplications.searchExecutorStageSummary".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link SearchExecutorStageSummary#execute()} method to invoke the
+             * remote operation. <p> {@link SearchExecutorStageSummary#initialize(com.google.api.client.google
+             * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+             * immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+             * @since 1.13
+             */
+            protected SearchExecutorStageSummary(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SearchSessionSparkApplicationExecutorStageSummaryResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SearchExecutorStageSummary set$Xgafv(java.lang.String $Xgafv) {
+              return (SearchExecutorStageSummary) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SearchExecutorStageSummary setAccessToken(java.lang.String accessToken) {
+              return (SearchExecutorStageSummary) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SearchExecutorStageSummary setAlt(java.lang.String alt) {
+              return (SearchExecutorStageSummary) super.setAlt(alt);
+            }
+
+            @Override
+            public SearchExecutorStageSummary setCallback(java.lang.String callback) {
+              return (SearchExecutorStageSummary) super.setCallback(callback);
+            }
+
+            @Override
+            public SearchExecutorStageSummary setFields(java.lang.String fields) {
+              return (SearchExecutorStageSummary) super.setFields(fields);
+            }
+
+            @Override
+            public SearchExecutorStageSummary setKey(java.lang.String key) {
+              return (SearchExecutorStageSummary) super.setKey(key);
+            }
+
+            @Override
+            public SearchExecutorStageSummary setOauthToken(java.lang.String oauthToken) {
+              return (SearchExecutorStageSummary) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SearchExecutorStageSummary setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SearchExecutorStageSummary) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SearchExecutorStageSummary setQuotaUser(java.lang.String quotaUser) {
+              return (SearchExecutorStageSummary) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SearchExecutorStageSummary setUploadType(java.lang.String uploadType) {
+              return (SearchExecutorStageSummary) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SearchExecutorStageSummary setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SearchExecutorStageSummary) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the session to retrieve in the format "projects/PROJECT_ID/lo
+           cations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            public SearchExecutorStageSummary setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of executors to return in each response. The service may
+             * return fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of executors to return in each response. The service may return fewer than
+           this. The default page size is 10; the maximum page size is 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of executors to return in each response. The service may
+             * return fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            public SearchExecutorStageSummary setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token received from a previous
+             * SearchSessionSparkApplicationExecutorStageSummary call. Provide this token to
+             * retrieve the subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token received from a previous SearchSessionSparkApplicationExecutorStageSummary
+           call. Provide this token to retrieve the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token received from a previous
+             * SearchSessionSparkApplicationExecutorStageSummary call. Provide this token to
+             * retrieve the subsequent page.
+             */
+            public SearchExecutorStageSummary setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Session) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            public SearchExecutorStageSummary setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            /** Required. Stage Attempt ID */
+            @com.google.api.client.util.Key
+            private java.lang.Integer stageAttemptId;
+
+            /** Required. Stage Attempt ID
+             */
+            public java.lang.Integer getStageAttemptId() {
+              return stageAttemptId;
+            }
+
+            /** Required. Stage Attempt ID */
+            public SearchExecutorStageSummary setStageAttemptId(java.lang.Integer stageAttemptId) {
+              this.stageAttemptId = stageAttemptId;
+              return this;
+            }
+
+            /** Required. Stage ID */
+            @com.google.api.client.util.Key
+            private java.lang.Long stageId;
+
+            /** Required. Stage ID
+             */
+            public java.lang.Long getStageId() {
+              return stageId;
+            }
+
+            /** Required. Stage ID */
+            public SearchExecutorStageSummary setStageId(java.lang.Long stageId) {
+              this.stageId = stageId;
+              return this;
+            }
+
+            @Override
+            public SearchExecutorStageSummary set(String parameterName, Object value) {
+              return (SearchExecutorStageSummary) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain data corresponding to executors for a Spark Application.
+           *
+           * Create a request for the method "sparkApplications.searchExecutors".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link SearchExecutors#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+           * @return the request
+           */
+          public SearchExecutors searchExecutors(java.lang.String name) throws java.io.IOException {
+            SearchExecutors result = new SearchExecutors(name);
+            initialize(result);
+            return result;
+          }
+
+          public class SearchExecutors extends DataprocRequest<com.google.api.services.dataproc.model.SearchSessionSparkApplicationExecutorsResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:searchExecutors";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain data corresponding to executors for a Spark Application.
+             *
+             * Create a request for the method "sparkApplications.searchExecutors".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link SearchExecutors#execute()} method to invoke the remote
+             * operation. <p> {@link SearchExecutors#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+             * @since 1.13
+             */
+            protected SearchExecutors(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SearchSessionSparkApplicationExecutorsResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SearchExecutors set$Xgafv(java.lang.String $Xgafv) {
+              return (SearchExecutors) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SearchExecutors setAccessToken(java.lang.String accessToken) {
+              return (SearchExecutors) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SearchExecutors setAlt(java.lang.String alt) {
+              return (SearchExecutors) super.setAlt(alt);
+            }
+
+            @Override
+            public SearchExecutors setCallback(java.lang.String callback) {
+              return (SearchExecutors) super.setCallback(callback);
+            }
+
+            @Override
+            public SearchExecutors setFields(java.lang.String fields) {
+              return (SearchExecutors) super.setFields(fields);
+            }
+
+            @Override
+            public SearchExecutors setKey(java.lang.String key) {
+              return (SearchExecutors) super.setKey(key);
+            }
+
+            @Override
+            public SearchExecutors setOauthToken(java.lang.String oauthToken) {
+              return (SearchExecutors) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SearchExecutors setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SearchExecutors) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SearchExecutors setQuotaUser(java.lang.String quotaUser) {
+              return (SearchExecutors) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SearchExecutors setUploadType(java.lang.String uploadType) {
+              return (SearchExecutors) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SearchExecutors setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SearchExecutors) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the session to retrieve in the format "projects/PROJECT_ID/lo
+           cations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            public SearchExecutors setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Filter to select whether active/ dead or all executors should be selected.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String executorStatus;
+
+            /** Optional. Filter to select whether active/ dead or all executors should be selected.
+             */
+            public java.lang.String getExecutorStatus() {
+              return executorStatus;
+            }
+
+            /**
+             * Optional. Filter to select whether active/ dead or all executors should be selected.
+             */
+            public SearchExecutors setExecutorStatus(java.lang.String executorStatus) {
+              this.executorStatus = executorStatus;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of executors to return in each response. The service may
+             * return fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of executors to return in each response. The service may return fewer than
+           this. The default page size is 10; the maximum page size is 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of executors to return in each response. The service may
+             * return fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            public SearchExecutors setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token received from a previous
+             * SearchSessionSparkApplicationExecutors call. Provide this token to retrieve the
+             * subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token received from a previous SearchSessionSparkApplicationExecutors call.
+           Provide this token to retrieve the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token received from a previous
+             * SearchSessionSparkApplicationExecutors call. Provide this token to retrieve the
+             * subsequent page.
+             */
+            public SearchExecutors setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Session) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            public SearchExecutors setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public SearchExecutors set(String parameterName, Object value) {
+              return (SearchExecutors) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain list of spark jobs corresponding to a Spark Application.
+           *
+           * Create a request for the method "sparkApplications.searchJobs".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link SearchJobs#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+           * @return the request
+           */
+          public SearchJobs searchJobs(java.lang.String name) throws java.io.IOException {
+            SearchJobs result = new SearchJobs(name);
+            initialize(result);
+            return result;
+          }
+
+          public class SearchJobs extends DataprocRequest<com.google.api.services.dataproc.model.SearchSessionSparkApplicationJobsResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:searchJobs";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain list of spark jobs corresponding to a Spark Application.
+             *
+             * Create a request for the method "sparkApplications.searchJobs".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link SearchJobs#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * SearchJobs#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+             * @since 1.13
+             */
+            protected SearchJobs(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SearchSessionSparkApplicationJobsResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SearchJobs set$Xgafv(java.lang.String $Xgafv) {
+              return (SearchJobs) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SearchJobs setAccessToken(java.lang.String accessToken) {
+              return (SearchJobs) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SearchJobs setAlt(java.lang.String alt) {
+              return (SearchJobs) super.setAlt(alt);
+            }
+
+            @Override
+            public SearchJobs setCallback(java.lang.String callback) {
+              return (SearchJobs) super.setCallback(callback);
+            }
+
+            @Override
+            public SearchJobs setFields(java.lang.String fields) {
+              return (SearchJobs) super.setFields(fields);
+            }
+
+            @Override
+            public SearchJobs setKey(java.lang.String key) {
+              return (SearchJobs) super.setKey(key);
+            }
+
+            @Override
+            public SearchJobs setOauthToken(java.lang.String oauthToken) {
+              return (SearchJobs) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SearchJobs setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SearchJobs) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SearchJobs setQuotaUser(java.lang.String quotaUser) {
+              return (SearchJobs) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SearchJobs setUploadType(java.lang.String uploadType) {
+              return (SearchJobs) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SearchJobs setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SearchJobs) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the session to retrieve in the format "projects/PROJECT_ID/lo
+           cations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            public SearchJobs setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Optional. List only jobs in the specific state. */
+            @com.google.api.client.util.Key
+            private java.lang.String jobStatus;
+
+            /** Optional. List only jobs in the specific state.
+             */
+            public java.lang.String getJobStatus() {
+              return jobStatus;
+            }
+
+            /** Optional. List only jobs in the specific state. */
+            public SearchJobs setJobStatus(java.lang.String jobStatus) {
+              this.jobStatus = jobStatus;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of jobs to return in each response. The service may return
+             * fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of jobs to return in each response. The service may return fewer than
+           this. The default page size is 10; the maximum page size is 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of jobs to return in each response. The service may return
+             * fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            public SearchJobs setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token received from a previous SearchSessionSparkApplicationJobs
+             * call. Provide this token to retrieve the subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token received from a previous SearchSessionSparkApplicationJobs call. Provide
+           this token to retrieve the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token received from a previous SearchSessionSparkApplicationJobs
+             * call. Provide this token to retrieve the subsequent page.
+             */
+            public SearchJobs setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Session) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            public SearchJobs setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public SearchJobs set(String parameterName, Object value) {
+              return (SearchJobs) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain data corresponding to SQL Queries for a Spark Application.
+           *
+           * Create a request for the method "sparkApplications.searchSqlQueries".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link SearchSqlQueries#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+           * @return the request
+           */
+          public SearchSqlQueries searchSqlQueries(java.lang.String name) throws java.io.IOException {
+            SearchSqlQueries result = new SearchSqlQueries(name);
+            initialize(result);
+            return result;
+          }
+
+          public class SearchSqlQueries extends DataprocRequest<com.google.api.services.dataproc.model.SearchSessionSparkApplicationSqlQueriesResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:searchSqlQueries";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain data corresponding to SQL Queries for a Spark Application.
+             *
+             * Create a request for the method "sparkApplications.searchSqlQueries".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link SearchSqlQueries#execute()} method to invoke the remote
+             * operation. <p> {@link SearchSqlQueries#initialize(com.google.api.client.googleapis.services.Abs
+             * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+             * @since 1.13
+             */
+            protected SearchSqlQueries(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SearchSessionSparkApplicationSqlQueriesResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SearchSqlQueries set$Xgafv(java.lang.String $Xgafv) {
+              return (SearchSqlQueries) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SearchSqlQueries setAccessToken(java.lang.String accessToken) {
+              return (SearchSqlQueries) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SearchSqlQueries setAlt(java.lang.String alt) {
+              return (SearchSqlQueries) super.setAlt(alt);
+            }
+
+            @Override
+            public SearchSqlQueries setCallback(java.lang.String callback) {
+              return (SearchSqlQueries) super.setCallback(callback);
+            }
+
+            @Override
+            public SearchSqlQueries setFields(java.lang.String fields) {
+              return (SearchSqlQueries) super.setFields(fields);
+            }
+
+            @Override
+            public SearchSqlQueries setKey(java.lang.String key) {
+              return (SearchSqlQueries) super.setKey(key);
+            }
+
+            @Override
+            public SearchSqlQueries setOauthToken(java.lang.String oauthToken) {
+              return (SearchSqlQueries) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SearchSqlQueries setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SearchSqlQueries) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SearchSqlQueries setQuotaUser(java.lang.String quotaUser) {
+              return (SearchSqlQueries) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SearchSqlQueries setUploadType(java.lang.String uploadType) {
+              return (SearchSqlQueries) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SearchSqlQueries setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SearchSqlQueries) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the session to retrieve in the format "projects/PROJECT_ID/lo
+           cations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            public SearchSqlQueries setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Lists/ hides details of Spark plan nodes. True is set to list and false to
+             * hide.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean details;
+
+            /** Optional. Lists/ hides details of Spark plan nodes. True is set to list and false to hide.
+             */
+            public java.lang.Boolean getDetails() {
+              return details;
+            }
+
+            /**
+             * Optional. Lists/ hides details of Spark plan nodes. True is set to list and false to
+             * hide.
+             */
+            public SearchSqlQueries setDetails(java.lang.Boolean details) {
+              this.details = details;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of queries to return in each response. The service may
+             * return fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of queries to return in each response. The service may return fewer than
+           this. The default page size is 10; the maximum page size is 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of queries to return in each response. The service may
+             * return fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            public SearchSqlQueries setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token received from a previous
+             * SearchSessionSparkApplicationSqlQueries call. Provide this token to retrieve the
+             * subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token received from a previous SearchSessionSparkApplicationSqlQueries call.
+           Provide this token to retrieve the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token received from a previous
+             * SearchSessionSparkApplicationSqlQueries call. Provide this token to retrieve the
+             * subsequent page.
+             */
+            public SearchSqlQueries setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Session) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            public SearchSqlQueries setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. Enables/ disables physical plan description on demand */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean planDescription;
+
+            /** Optional. Enables/ disables physical plan description on demand
+             */
+            public java.lang.Boolean getPlanDescription() {
+              return planDescription;
+            }
+
+            /** Optional. Enables/ disables physical plan description on demand */
+            public SearchSqlQueries setPlanDescription(java.lang.Boolean planDescription) {
+              this.planDescription = planDescription;
+              return this;
+            }
+
+            @Override
+            public SearchSqlQueries set(String parameterName, Object value) {
+              return (SearchSqlQueries) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain data corresponding to tasks for a spark stage attempt for a Spark Application.
+           *
+           * Create a request for the method "sparkApplications.searchStageAttemptTasks".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link SearchStageAttemptTasks#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+           * @return the request
+           */
+          public SearchStageAttemptTasks searchStageAttemptTasks(java.lang.String name) throws java.io.IOException {
+            SearchStageAttemptTasks result = new SearchStageAttemptTasks(name);
+            initialize(result);
+            return result;
+          }
+
+          public class SearchStageAttemptTasks extends DataprocRequest<com.google.api.services.dataproc.model.SearchSessionSparkApplicationStageAttemptTasksResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:searchStageAttemptTasks";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain data corresponding to tasks for a spark stage attempt for a Spark Application.
+             *
+             * Create a request for the method "sparkApplications.searchStageAttemptTasks".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link SearchStageAttemptTasks#execute()} method to invoke the
+             * remote operation. <p> {@link SearchStageAttemptTasks#initialize(com.google.api.client.googleapi
+             * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+             * @since 1.13
+             */
+            protected SearchStageAttemptTasks(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SearchSessionSparkApplicationStageAttemptTasksResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SearchStageAttemptTasks set$Xgafv(java.lang.String $Xgafv) {
+              return (SearchStageAttemptTasks) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SearchStageAttemptTasks setAccessToken(java.lang.String accessToken) {
+              return (SearchStageAttemptTasks) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SearchStageAttemptTasks setAlt(java.lang.String alt) {
+              return (SearchStageAttemptTasks) super.setAlt(alt);
+            }
+
+            @Override
+            public SearchStageAttemptTasks setCallback(java.lang.String callback) {
+              return (SearchStageAttemptTasks) super.setCallback(callback);
+            }
+
+            @Override
+            public SearchStageAttemptTasks setFields(java.lang.String fields) {
+              return (SearchStageAttemptTasks) super.setFields(fields);
+            }
+
+            @Override
+            public SearchStageAttemptTasks setKey(java.lang.String key) {
+              return (SearchStageAttemptTasks) super.setKey(key);
+            }
+
+            @Override
+            public SearchStageAttemptTasks setOauthToken(java.lang.String oauthToken) {
+              return (SearchStageAttemptTasks) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SearchStageAttemptTasks setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SearchStageAttemptTasks) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SearchStageAttemptTasks setQuotaUser(java.lang.String quotaUser) {
+              return (SearchStageAttemptTasks) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SearchStageAttemptTasks setUploadType(java.lang.String uploadType) {
+              return (SearchStageAttemptTasks) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SearchStageAttemptTasks setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SearchStageAttemptTasks) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the session to retrieve in the format "projects/PROJECT_ID/lo
+           cations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            public SearchStageAttemptTasks setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of tasks to return in each response. The service may return
+             * fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of tasks to return in each response. The service may return fewer than
+           this. The default page size is 10; the maximum page size is 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of tasks to return in each response. The service may return
+             * fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            public SearchStageAttemptTasks setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token received from a previous
+             * SearchSessionSparkApplicationStageAttemptTasks call. Provide this token to retrieve
+             * the subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token received from a previous SearchSessionSparkApplicationStageAttemptTasks
+           call. Provide this token to retrieve the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token received from a previous
+             * SearchSessionSparkApplicationStageAttemptTasks call. Provide this token to retrieve
+             * the subsequent page.
+             */
+            public SearchStageAttemptTasks setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Session) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            public SearchStageAttemptTasks setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. Sort the tasks by runtime. */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean sortRuntime;
+
+            /** Optional. Sort the tasks by runtime.
+             */
+            public java.lang.Boolean getSortRuntime() {
+              return sortRuntime;
+            }
+
+            /** Optional. Sort the tasks by runtime. */
+            public SearchStageAttemptTasks setSortRuntime(java.lang.Boolean sortRuntime) {
+              this.sortRuntime = sortRuntime;
+              return this;
+            }
+
+            /** Optional. Stage Attempt ID */
+            @com.google.api.client.util.Key
+            private java.lang.Integer stageAttemptId;
+
+            /** Optional. Stage Attempt ID
+             */
+            public java.lang.Integer getStageAttemptId() {
+              return stageAttemptId;
+            }
+
+            /** Optional. Stage Attempt ID */
+            public SearchStageAttemptTasks setStageAttemptId(java.lang.Integer stageAttemptId) {
+              this.stageAttemptId = stageAttemptId;
+              return this;
+            }
+
+            /** Optional. Stage ID */
+            @com.google.api.client.util.Key
+            private java.lang.Long stageId;
+
+            /** Optional. Stage ID
+             */
+            public java.lang.Long getStageId() {
+              return stageId;
+            }
+
+            /** Optional. Stage ID */
+            public SearchStageAttemptTasks setStageId(java.lang.Long stageId) {
+              this.stageId = stageId;
+              return this;
+            }
+
+            /** Optional. List only tasks in the state. */
+            @com.google.api.client.util.Key
+            private java.lang.String taskStatus;
+
+            /** Optional. List only tasks in the state.
+             */
+            public java.lang.String getTaskStatus() {
+              return taskStatus;
+            }
+
+            /** Optional. List only tasks in the state. */
+            public SearchStageAttemptTasks setTaskStatus(java.lang.String taskStatus) {
+              this.taskStatus = taskStatus;
+              return this;
+            }
+
+            @Override
+            public SearchStageAttemptTasks set(String parameterName, Object value) {
+              return (SearchStageAttemptTasks) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain data corresponding to a spark stage attempts for a Spark Application.
+           *
+           * Create a request for the method "sparkApplications.searchStageAttempts".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link SearchStageAttempts#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+           * @return the request
+           */
+          public SearchStageAttempts searchStageAttempts(java.lang.String name) throws java.io.IOException {
+            SearchStageAttempts result = new SearchStageAttempts(name);
+            initialize(result);
+            return result;
+          }
+
+          public class SearchStageAttempts extends DataprocRequest<com.google.api.services.dataproc.model.SearchSessionSparkApplicationStageAttemptsResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:searchStageAttempts";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain data corresponding to a spark stage attempts for a Spark Application.
+             *
+             * Create a request for the method "sparkApplications.searchStageAttempts".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link SearchStageAttempts#execute()} method to invoke the remote
+             * operation. <p> {@link SearchStageAttempts#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+             * @since 1.13
+             */
+            protected SearchStageAttempts(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SearchSessionSparkApplicationStageAttemptsResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SearchStageAttempts set$Xgafv(java.lang.String $Xgafv) {
+              return (SearchStageAttempts) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SearchStageAttempts setAccessToken(java.lang.String accessToken) {
+              return (SearchStageAttempts) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SearchStageAttempts setAlt(java.lang.String alt) {
+              return (SearchStageAttempts) super.setAlt(alt);
+            }
+
+            @Override
+            public SearchStageAttempts setCallback(java.lang.String callback) {
+              return (SearchStageAttempts) super.setCallback(callback);
+            }
+
+            @Override
+            public SearchStageAttempts setFields(java.lang.String fields) {
+              return (SearchStageAttempts) super.setFields(fields);
+            }
+
+            @Override
+            public SearchStageAttempts setKey(java.lang.String key) {
+              return (SearchStageAttempts) super.setKey(key);
+            }
+
+            @Override
+            public SearchStageAttempts setOauthToken(java.lang.String oauthToken) {
+              return (SearchStageAttempts) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SearchStageAttempts setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SearchStageAttempts) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SearchStageAttempts setQuotaUser(java.lang.String quotaUser) {
+              return (SearchStageAttempts) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SearchStageAttempts setUploadType(java.lang.String uploadType) {
+              return (SearchStageAttempts) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SearchStageAttempts setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SearchStageAttempts) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the session to retrieve in the format "projects/PROJECT_ID/lo
+           cations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            public SearchStageAttempts setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of stage attempts (paging based on stage_attempt_id) to
+             * return in each response. The service may return fewer than this. The default page
+             * size is 10; the maximum page size is 100.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of stage attempts (paging based on stage_attempt_id) to return in each
+           response. The service may return fewer than this. The default page size is 10; the maximum page
+           size is 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of stage attempts (paging based on stage_attempt_id) to
+             * return in each response. The service may return fewer than this. The default page
+             * size is 10; the maximum page size is 100.
+             */
+            public SearchStageAttempts setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token received from a previous
+             * SearchSessionSparkApplicationStageAttempts call. Provide this token to retrieve the
+             * subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token received from a previous SearchSessionSparkApplicationStageAttempts call.
+           Provide this token to retrieve the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token received from a previous
+             * SearchSessionSparkApplicationStageAttempts call. Provide this token to retrieve the
+             * subsequent page.
+             */
+            public SearchStageAttempts setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Session) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            public SearchStageAttempts setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            /** Required. Stage ID for which attempts are to be fetched */
+            @com.google.api.client.util.Key
+            private java.lang.Long stageId;
+
+            /** Required. Stage ID for which attempts are to be fetched
+             */
+            public java.lang.Long getStageId() {
+              return stageId;
+            }
+
+            /** Required. Stage ID for which attempts are to be fetched */
+            public SearchStageAttempts setStageId(java.lang.Long stageId) {
+              this.stageId = stageId;
+              return this;
+            }
+
+            /**
+             * Optional. The list of summary metrics fields to include. Empty list will default to
+             * skip all summary metrics fields. Example, if the response should include
+             * TaskQuantileMetrics, the request should have task_quantile_metrics in
+             * summary_metrics_mask field
+             */
+            @com.google.api.client.util.Key
+            private String summaryMetricsMask;
+
+            /** Optional. The list of summary metrics fields to include. Empty list will default to skip all
+           summary metrics fields. Example, if the response should include TaskQuantileMetrics, the request
+           should have task_quantile_metrics in summary_metrics_mask field
+             */
+            public String getSummaryMetricsMask() {
+              return summaryMetricsMask;
+            }
+
+            /**
+             * Optional. The list of summary metrics fields to include. Empty list will default to
+             * skip all summary metrics fields. Example, if the response should include
+             * TaskQuantileMetrics, the request should have task_quantile_metrics in
+             * summary_metrics_mask field
+             */
+            public SearchStageAttempts setSummaryMetricsMask(String summaryMetricsMask) {
+              this.summaryMetricsMask = summaryMetricsMask;
+              return this;
+            }
+
+            @Override
+            public SearchStageAttempts set(String parameterName, Object value) {
+              return (SearchStageAttempts) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain data corresponding to stages for a Spark Application.
+           *
+           * Create a request for the method "sparkApplications.searchStages".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link SearchStages#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+           * @return the request
+           */
+          public SearchStages searchStages(java.lang.String name) throws java.io.IOException {
+            SearchStages result = new SearchStages(name);
+            initialize(result);
+            return result;
+          }
+
+          public class SearchStages extends DataprocRequest<com.google.api.services.dataproc.model.SearchSessionSparkApplicationStagesResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:searchStages";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain data corresponding to stages for a Spark Application.
+             *
+             * Create a request for the method "sparkApplications.searchStages".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link SearchStages#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * SearchStages#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+             * @since 1.13
+             */
+            protected SearchStages(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SearchSessionSparkApplicationStagesResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SearchStages set$Xgafv(java.lang.String $Xgafv) {
+              return (SearchStages) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SearchStages setAccessToken(java.lang.String accessToken) {
+              return (SearchStages) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SearchStages setAlt(java.lang.String alt) {
+              return (SearchStages) super.setAlt(alt);
+            }
+
+            @Override
+            public SearchStages setCallback(java.lang.String callback) {
+              return (SearchStages) super.setCallback(callback);
+            }
+
+            @Override
+            public SearchStages setFields(java.lang.String fields) {
+              return (SearchStages) super.setFields(fields);
+            }
+
+            @Override
+            public SearchStages setKey(java.lang.String key) {
+              return (SearchStages) super.setKey(key);
+            }
+
+            @Override
+            public SearchStages setOauthToken(java.lang.String oauthToken) {
+              return (SearchStages) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SearchStages setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SearchStages) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SearchStages setQuotaUser(java.lang.String quotaUser) {
+              return (SearchStages) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SearchStages setUploadType(java.lang.String uploadType) {
+              return (SearchStages) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SearchStages setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SearchStages) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the session to retrieve in the format "projects/PROJECT_ID/lo
+           cations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            public SearchStages setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of stages (paging based on stage_id) to return in each
+             * response. The service may return fewer than this. The default page size is 10; the
+             * maximum page size is 100.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of stages (paging based on stage_id) to return in each response. The
+           service may return fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of stages (paging based on stage_id) to return in each
+             * response. The service may return fewer than this. The default page size is 10; the
+             * maximum page size is 100.
+             */
+            public SearchStages setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token received from a previous SearchSessionSparkApplicationStages
+             * call. Provide this token to retrieve the subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token received from a previous SearchSessionSparkApplicationStages call. Provide
+           this token to retrieve the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token received from a previous SearchSessionSparkApplicationStages
+             * call. Provide this token to retrieve the subsequent page.
+             */
+            public SearchStages setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Session) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            public SearchStages setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. List only stages in the given state. */
+            @com.google.api.client.util.Key
+            private java.lang.String stageStatus;
+
+            /** Optional. List only stages in the given state.
+             */
+            public java.lang.String getStageStatus() {
+              return stageStatus;
+            }
+
+            /** Optional. List only stages in the given state. */
+            public SearchStages setStageStatus(java.lang.String stageStatus) {
+              this.stageStatus = stageStatus;
+              return this;
+            }
+
+            /**
+             * Optional. The list of summary metrics fields to include. Empty list will default to
+             * skip all summary metrics fields. Example, if the response should include
+             * TaskQuantileMetrics, the request should have task_quantile_metrics in
+             * summary_metrics_mask field
+             */
+            @com.google.api.client.util.Key
+            private String summaryMetricsMask;
+
+            /** Optional. The list of summary metrics fields to include. Empty list will default to skip all
+           summary metrics fields. Example, if the response should include TaskQuantileMetrics, the request
+           should have task_quantile_metrics in summary_metrics_mask field
+             */
+            public String getSummaryMetricsMask() {
+              return summaryMetricsMask;
+            }
+
+            /**
+             * Optional. The list of summary metrics fields to include. Empty list will default to
+             * skip all summary metrics fields. Example, if the response should include
+             * TaskQuantileMetrics, the request should have task_quantile_metrics in
+             * summary_metrics_mask field
+             */
+            public SearchStages setSummaryMetricsMask(String summaryMetricsMask) {
+              this.summaryMetricsMask = summaryMetricsMask;
+              return this;
+            }
+
+            @Override
+            public SearchStages set(String parameterName, Object value) {
+              return (SearchStages) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain summary of Executor Summary for a Spark Application
+           *
+           * Create a request for the method "sparkApplications.summarizeExecutors".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link SummarizeExecutors#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+           * @return the request
+           */
+          public SummarizeExecutors summarizeExecutors(java.lang.String name) throws java.io.IOException {
+            SummarizeExecutors result = new SummarizeExecutors(name);
+            initialize(result);
+            return result;
+          }
+
+          public class SummarizeExecutors extends DataprocRequest<com.google.api.services.dataproc.model.SummarizeSessionSparkApplicationExecutorsResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:summarizeExecutors";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain summary of Executor Summary for a Spark Application
+             *
+             * Create a request for the method "sparkApplications.summarizeExecutors".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link SummarizeExecutors#execute()} method to invoke the remote
+             * operation. <p> {@link SummarizeExecutors#initialize(com.google.api.client.googleapis.services.A
+             * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+             * @since 1.13
+             */
+            protected SummarizeExecutors(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SummarizeSessionSparkApplicationExecutorsResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SummarizeExecutors set$Xgafv(java.lang.String $Xgafv) {
+              return (SummarizeExecutors) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SummarizeExecutors setAccessToken(java.lang.String accessToken) {
+              return (SummarizeExecutors) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SummarizeExecutors setAlt(java.lang.String alt) {
+              return (SummarizeExecutors) super.setAlt(alt);
+            }
+
+            @Override
+            public SummarizeExecutors setCallback(java.lang.String callback) {
+              return (SummarizeExecutors) super.setCallback(callback);
+            }
+
+            @Override
+            public SummarizeExecutors setFields(java.lang.String fields) {
+              return (SummarizeExecutors) super.setFields(fields);
+            }
+
+            @Override
+            public SummarizeExecutors setKey(java.lang.String key) {
+              return (SummarizeExecutors) super.setKey(key);
+            }
+
+            @Override
+            public SummarizeExecutors setOauthToken(java.lang.String oauthToken) {
+              return (SummarizeExecutors) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SummarizeExecutors setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SummarizeExecutors) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SummarizeExecutors setQuotaUser(java.lang.String quotaUser) {
+              return (SummarizeExecutors) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SummarizeExecutors setUploadType(java.lang.String uploadType) {
+              return (SummarizeExecutors) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SummarizeExecutors setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SummarizeExecutors) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the session to retrieve in the format "projects/PROJECT_ID/lo
+           cations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            public SummarizeExecutors setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Session) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            public SummarizeExecutors setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public SummarizeExecutors set(String parameterName, Object value) {
+              return (SummarizeExecutors) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain summary of Jobs for a Spark Application
+           *
+           * Create a request for the method "sparkApplications.summarizeJobs".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link SummarizeJobs#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+           * @return the request
+           */
+          public SummarizeJobs summarizeJobs(java.lang.String name) throws java.io.IOException {
+            SummarizeJobs result = new SummarizeJobs(name);
+            initialize(result);
+            return result;
+          }
+
+          public class SummarizeJobs extends DataprocRequest<com.google.api.services.dataproc.model.SummarizeSessionSparkApplicationJobsResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:summarizeJobs";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain summary of Jobs for a Spark Application
+             *
+             * Create a request for the method "sparkApplications.summarizeJobs".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link SummarizeJobs#execute()} method to invoke the remote
+             * operation. <p> {@link SummarizeJobs#initialize(com.google.api.client.googleapis.services.Abstra
+             * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+             * @since 1.13
+             */
+            protected SummarizeJobs(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SummarizeSessionSparkApplicationJobsResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SummarizeJobs set$Xgafv(java.lang.String $Xgafv) {
+              return (SummarizeJobs) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SummarizeJobs setAccessToken(java.lang.String accessToken) {
+              return (SummarizeJobs) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SummarizeJobs setAlt(java.lang.String alt) {
+              return (SummarizeJobs) super.setAlt(alt);
+            }
+
+            @Override
+            public SummarizeJobs setCallback(java.lang.String callback) {
+              return (SummarizeJobs) super.setCallback(callback);
+            }
+
+            @Override
+            public SummarizeJobs setFields(java.lang.String fields) {
+              return (SummarizeJobs) super.setFields(fields);
+            }
+
+            @Override
+            public SummarizeJobs setKey(java.lang.String key) {
+              return (SummarizeJobs) super.setKey(key);
+            }
+
+            @Override
+            public SummarizeJobs setOauthToken(java.lang.String oauthToken) {
+              return (SummarizeJobs) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SummarizeJobs setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SummarizeJobs) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SummarizeJobs setQuotaUser(java.lang.String quotaUser) {
+              return (SummarizeJobs) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SummarizeJobs setUploadType(java.lang.String uploadType) {
+              return (SummarizeJobs) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SummarizeJobs setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SummarizeJobs) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the session to retrieve in the format "projects/PROJECT_ID/lo
+           cations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            public SummarizeJobs setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Session) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            public SummarizeJobs setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public SummarizeJobs set(String parameterName, Object value) {
+              return (SummarizeJobs) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain summary of Tasks for a Spark Application Stage Attempt
+           *
+           * Create a request for the method "sparkApplications.summarizeStageAttemptTasks".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link SummarizeStageAttemptTasks#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+           * @return the request
+           */
+          public SummarizeStageAttemptTasks summarizeStageAttemptTasks(java.lang.String name) throws java.io.IOException {
+            SummarizeStageAttemptTasks result = new SummarizeStageAttemptTasks(name);
+            initialize(result);
+            return result;
+          }
+
+          public class SummarizeStageAttemptTasks extends DataprocRequest<com.google.api.services.dataproc.model.SummarizeSessionSparkApplicationStageAttemptTasksResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:summarizeStageAttemptTasks";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain summary of Tasks for a Spark Application Stage Attempt
+             *
+             * Create a request for the method "sparkApplications.summarizeStageAttemptTasks".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link SummarizeStageAttemptTasks#execute()} method to invoke the
+             * remote operation. <p> {@link SummarizeStageAttemptTasks#initialize(com.google.api.client.google
+             * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+             * immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+             * @since 1.13
+             */
+            protected SummarizeStageAttemptTasks(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SummarizeSessionSparkApplicationStageAttemptTasksResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SummarizeStageAttemptTasks set$Xgafv(java.lang.String $Xgafv) {
+              return (SummarizeStageAttemptTasks) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SummarizeStageAttemptTasks setAccessToken(java.lang.String accessToken) {
+              return (SummarizeStageAttemptTasks) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SummarizeStageAttemptTasks setAlt(java.lang.String alt) {
+              return (SummarizeStageAttemptTasks) super.setAlt(alt);
+            }
+
+            @Override
+            public SummarizeStageAttemptTasks setCallback(java.lang.String callback) {
+              return (SummarizeStageAttemptTasks) super.setCallback(callback);
+            }
+
+            @Override
+            public SummarizeStageAttemptTasks setFields(java.lang.String fields) {
+              return (SummarizeStageAttemptTasks) super.setFields(fields);
+            }
+
+            @Override
+            public SummarizeStageAttemptTasks setKey(java.lang.String key) {
+              return (SummarizeStageAttemptTasks) super.setKey(key);
+            }
+
+            @Override
+            public SummarizeStageAttemptTasks setOauthToken(java.lang.String oauthToken) {
+              return (SummarizeStageAttemptTasks) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SummarizeStageAttemptTasks setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SummarizeStageAttemptTasks) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SummarizeStageAttemptTasks setQuotaUser(java.lang.String quotaUser) {
+              return (SummarizeStageAttemptTasks) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SummarizeStageAttemptTasks setUploadType(java.lang.String uploadType) {
+              return (SummarizeStageAttemptTasks) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SummarizeStageAttemptTasks setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SummarizeStageAttemptTasks) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the session to retrieve in the format "projects/PROJECT_ID/lo
+           cations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            public SummarizeStageAttemptTasks setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Session) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            public SummarizeStageAttemptTasks setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            /** Required. Stage Attempt ID */
+            @com.google.api.client.util.Key
+            private java.lang.Integer stageAttemptId;
+
+            /** Required. Stage Attempt ID
+             */
+            public java.lang.Integer getStageAttemptId() {
+              return stageAttemptId;
+            }
+
+            /** Required. Stage Attempt ID */
+            public SummarizeStageAttemptTasks setStageAttemptId(java.lang.Integer stageAttemptId) {
+              this.stageAttemptId = stageAttemptId;
+              return this;
+            }
+
+            /** Required. Stage ID */
+            @com.google.api.client.util.Key
+            private java.lang.Long stageId;
+
+            /** Required. Stage ID
+             */
+            public java.lang.Long getStageId() {
+              return stageId;
+            }
+
+            /** Required. Stage ID */
+            public SummarizeStageAttemptTasks setStageId(java.lang.Long stageId) {
+              this.stageId = stageId;
+              return this;
+            }
+
+            @Override
+            public SummarizeStageAttemptTasks set(String parameterName, Object value) {
+              return (SummarizeStageAttemptTasks) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain summary of Stages for a Spark Application
+           *
+           * Create a request for the method "sparkApplications.summarizeStages".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link SummarizeStages#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+           * @return the request
+           */
+          public SummarizeStages summarizeStages(java.lang.String name) throws java.io.IOException {
+            SummarizeStages result = new SummarizeStages(name);
+            initialize(result);
+            return result;
+          }
+
+          public class SummarizeStages extends DataprocRequest<com.google.api.services.dataproc.model.SummarizeSessionSparkApplicationStagesResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:summarizeStages";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain summary of Stages for a Spark Application
+             *
+             * Create a request for the method "sparkApplications.summarizeStages".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link SummarizeStages#execute()} method to invoke the remote
+             * operation. <p> {@link SummarizeStages#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+             * @since 1.13
+             */
+            protected SummarizeStages(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SummarizeSessionSparkApplicationStagesResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SummarizeStages set$Xgafv(java.lang.String $Xgafv) {
+              return (SummarizeStages) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SummarizeStages setAccessToken(java.lang.String accessToken) {
+              return (SummarizeStages) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SummarizeStages setAlt(java.lang.String alt) {
+              return (SummarizeStages) super.setAlt(alt);
+            }
+
+            @Override
+            public SummarizeStages setCallback(java.lang.String callback) {
+              return (SummarizeStages) super.setCallback(callback);
+            }
+
+            @Override
+            public SummarizeStages setFields(java.lang.String fields) {
+              return (SummarizeStages) super.setFields(fields);
+            }
+
+            @Override
+            public SummarizeStages setKey(java.lang.String key) {
+              return (SummarizeStages) super.setKey(key);
+            }
+
+            @Override
+            public SummarizeStages setOauthToken(java.lang.String oauthToken) {
+              return (SummarizeStages) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SummarizeStages setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SummarizeStages) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SummarizeStages setQuotaUser(java.lang.String quotaUser) {
+              return (SummarizeStages) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SummarizeStages setUploadType(java.lang.String uploadType) {
+              return (SummarizeStages) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SummarizeStages setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SummarizeStages) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the session to retrieve in the format "projects/PROJECT_ID/lo
+           cations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            public SummarizeStages setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Session) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            public SummarizeStages setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public SummarizeStages set(String parameterName, Object value) {
+              return (SummarizeStages) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Write wrapper objects from dataplane to spanner
+           *
+           * Create a request for the method "sparkApplications.write".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link Write#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the spark application to write data about in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+           * @param content the {@link com.google.api.services.dataproc.model.WriteSessionSparkApplicationContextRequest}
+           * @return the request
+           */
+          public Write write(java.lang.String name, com.google.api.services.dataproc.model.WriteSessionSparkApplicationContextRequest content) throws java.io.IOException {
+            Write result = new Write(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Write extends DataprocRequest<com.google.api.services.dataproc.model.WriteSessionSparkApplicationContextResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:write";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Write wrapper objects from dataplane to spanner
+             *
+             * Create a request for the method "sparkApplications.write".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link Write#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Write#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the spark application to write data about in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+             * @param content the {@link com.google.api.services.dataproc.model.WriteSessionSparkApplicationContextRequest}
+             * @since 1.13
+             */
+            protected Write(java.lang.String name, com.google.api.services.dataproc.model.WriteSessionSparkApplicationContextRequest content) {
+              super(Dataproc.this, "POST", REST_PATH, content, com.google.api.services.dataproc.model.WriteSessionSparkApplicationContextResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public Write set$Xgafv(java.lang.String $Xgafv) {
+              return (Write) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Write setAccessToken(java.lang.String accessToken) {
+              return (Write) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Write setAlt(java.lang.String alt) {
+              return (Write) super.setAlt(alt);
+            }
+
+            @Override
+            public Write setCallback(java.lang.String callback) {
+              return (Write) super.setCallback(callback);
+            }
+
+            @Override
+            public Write setFields(java.lang.String fields) {
+              return (Write) super.setFields(fields);
+            }
+
+            @Override
+            public Write setKey(java.lang.String key) {
+              return (Write) super.setKey(key);
+            }
+
+            @Override
+            public Write setOauthToken(java.lang.String oauthToken) {
+              return (Write) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Write setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Write) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Write setQuotaUser(java.lang.String quotaUser) {
+              return (Write) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Write setUploadType(java.lang.String uploadType) {
+              return (Write) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Write setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Write) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the spark application to write data about in
+             * the format "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkAp
+             * plications/APPLICATION_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the spark application to write data about in the format "proj
+           ects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the spark application to write data about in
+             * the format "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkAp
+             * plications/APPLICATION_ID"
+             */
+            public Write setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Write set(String parameterName, Object value) {
+              return (Write) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the WorkflowTemplates collection.

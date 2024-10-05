@@ -30,6 +30,13 @@ package com.google.api.services.dataproc.model;
 public final class RepairClusterRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Cluster to be repaired
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ClusterToRepair cluster;
+
+  /**
    * Optional. Specifying the cluster_uuid means the RPC will fail (with error NOT_FOUND) if a
    * cluster with the specified UUID does not exist.
    * The value may be {@code null}.
@@ -82,6 +89,23 @@ public final class RepairClusterRequest extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String requestId;
+
+  /**
+   * Optional. Cluster to be repaired
+   * @return value or {@code null} for none
+   */
+  public ClusterToRepair getCluster() {
+    return cluster;
+  }
+
+  /**
+   * Optional. Cluster to be repaired
+   * @param cluster cluster or {@code null} for none
+   */
+  public RepairClusterRequest setCluster(ClusterToRepair cluster) {
+    this.cluster = cluster;
+    return this;
+  }
 
   /**
    * Optional. Specifying the cluster_uuid means the RPC will fail (with error NOT_FOUND) if a

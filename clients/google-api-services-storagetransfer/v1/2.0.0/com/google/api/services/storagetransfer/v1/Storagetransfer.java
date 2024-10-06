@@ -1571,12 +1571,17 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
      * This request holds the parameters needed by the storagetransfer server.  After setting any
      * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param filter Required. A list of query parameters specified as JSON text in the form of:
-     *        `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
-     *        "jobStatuses":["status1","status2",...]}` Since `jobNames` and `jobStatuses` support
-     *        multiple values, their values must be specified with array notation. `projectId` is
-     *        required. `jobNames` and `jobStatuses` are optional. The valid values for `jobStatuses`
-     *        are case-insensitive: ENABLED, DISABLED, and DELETED.
+     * @param filter Required. A list of query parameters specified as JSON text in the form of: ``` {
+     *        "projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
+     *        "jobStatuses":["status1","status2",...], "dataBackend":"QUERY_REPLICATION_CONFIGS",
+     *        "sourceBucket":"source-bucket-name", "sinkBucket":"sink-bucket-name", } ``` The JSON
+     *        formatting in the example is for display only; provide the query parameters without spaces
+     *        or line breaks. * `projectId` is required. * Since `jobNames` and `jobStatuses` support
+     *        multiple values, their values must be specified with array notation. `jobNames` and
+     *        `jobStatuses` are optional. Valid values are case-insensitive: * ENABLED * DISABLED *
+     *        DELETED * Specify `"dataBackend":"QUERY_REPLICATION_CONFIGS"` to return a list of cross-
+     *        bucket replication jobs. * Limit the results to jobs from a particular bucket with
+     *        `sourceBucket` and/or to a particular bucket with `sinkBucket`.
      * @return the request
      */
     public List list(java.lang.String filter) throws java.io.IOException {
@@ -1599,12 +1604,17 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param filter Required. A list of query parameters specified as JSON text in the form of:
-     *        `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
-     *        "jobStatuses":["status1","status2",...]}` Since `jobNames` and `jobStatuses` support
-     *        multiple values, their values must be specified with array notation. `projectId` is
-     *        required. `jobNames` and `jobStatuses` are optional. The valid values for `jobStatuses`
-     *        are case-insensitive: ENABLED, DISABLED, and DELETED.
+       * @param filter Required. A list of query parameters specified as JSON text in the form of: ``` {
+     *        "projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
+     *        "jobStatuses":["status1","status2",...], "dataBackend":"QUERY_REPLICATION_CONFIGS",
+     *        "sourceBucket":"source-bucket-name", "sinkBucket":"sink-bucket-name", } ``` The JSON
+     *        formatting in the example is for display only; provide the query parameters without spaces
+     *        or line breaks. * `projectId` is required. * Since `jobNames` and `jobStatuses` support
+     *        multiple values, their values must be specified with array notation. `jobNames` and
+     *        `jobStatuses` are optional. Valid values are case-insensitive: * ENABLED * DISABLED *
+     *        DELETED * Specify `"dataBackend":"QUERY_REPLICATION_CONFIGS"` to return a list of cross-
+     *        bucket replication jobs. * Limit the results to jobs from a particular bucket with
+     *        `sourceBucket` and/or to a particular bucket with `sinkBucket`.
        * @since 1.13
        */
       protected List(java.lang.String filter) {
@@ -1678,34 +1688,49 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * Required. A list of query parameters specified as JSON text in the form of:
-       * `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
-       * "jobStatuses":["status1","status2",...]}` Since `jobNames` and `jobStatuses` support
-       * multiple values, their values must be specified with array notation. `projectId` is
-       * required. `jobNames` and `jobStatuses` are optional. The valid values for `jobStatuses` are
-       * case-insensitive: ENABLED, DISABLED, and DELETED.
+       * Required. A list of query parameters specified as JSON text in the form of: ``` {
+       * "projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
+       * "jobStatuses":["status1","status2",...], "dataBackend":"QUERY_REPLICATION_CONFIGS",
+       * "sourceBucket":"source-bucket-name", "sinkBucket":"sink-bucket-name", } ``` The JSON
+       * formatting in the example is for display only; provide the query parameters without spaces
+       * or line breaks. * `projectId` is required. * Since `jobNames` and `jobStatuses` support
+       * multiple values, their values must be specified with array notation. `jobNames` and
+       * `jobStatuses` are optional. Valid values are case-insensitive: * ENABLED * DISABLED *
+       * DELETED * Specify `"dataBackend":"QUERY_REPLICATION_CONFIGS"` to return a list of cross-
+       * bucket replication jobs. * Limit the results to jobs from a particular bucket with
+       * `sourceBucket` and/or to a particular bucket with `sinkBucket`.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Required. A list of query parameters specified as JSON text in the form of:
-     `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
-     "jobStatuses":["status1","status2",...]}` Since `jobNames` and `jobStatuses` support multiple
-     values, their values must be specified with array notation. `projectId` is required. `jobNames` and
-     `jobStatuses` are optional. The valid values for `jobStatuses` are case-insensitive: ENABLED,
-     DISABLED, and DELETED.
+      /** Required. A list of query parameters specified as JSON text in the form of: ``` {
+     "projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
+     "jobStatuses":["status1","status2",...], "dataBackend":"QUERY_REPLICATION_CONFIGS",
+     "sourceBucket":"source-bucket-name", "sinkBucket":"sink-bucket-name", } ``` The JSON formatting in
+     the example is for display only; provide the query parameters without spaces or line breaks. *
+     `projectId` is required. * Since `jobNames` and `jobStatuses` support multiple values, their values
+     must be specified with array notation. `jobNames` and `jobStatuses` are optional. Valid values are
+     case-insensitive: * ENABLED * DISABLED * DELETED * Specify
+     `"dataBackend":"QUERY_REPLICATION_CONFIGS"` to return a list of cross-bucket replication jobs. *
+     Limit the results to jobs from a particular bucket with `sourceBucket` and/or to a particular
+     bucket with `sinkBucket`.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * Required. A list of query parameters specified as JSON text in the form of:
-       * `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
-       * "jobStatuses":["status1","status2",...]}` Since `jobNames` and `jobStatuses` support
-       * multiple values, their values must be specified with array notation. `projectId` is
-       * required. `jobNames` and `jobStatuses` are optional. The valid values for `jobStatuses` are
-       * case-insensitive: ENABLED, DISABLED, and DELETED.
+       * Required. A list of query parameters specified as JSON text in the form of: ``` {
+       * "projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
+       * "jobStatuses":["status1","status2",...], "dataBackend":"QUERY_REPLICATION_CONFIGS",
+       * "sourceBucket":"source-bucket-name", "sinkBucket":"sink-bucket-name", } ``` The JSON
+       * formatting in the example is for display only; provide the query parameters without spaces
+       * or line breaks. * `projectId` is required. * Since `jobNames` and `jobStatuses` support
+       * multiple values, their values must be specified with array notation. `jobNames` and
+       * `jobStatuses` are optional. Valid values are case-insensitive: * ENABLED * DISABLED *
+       * DELETED * Specify `"dataBackend":"QUERY_REPLICATION_CONFIGS"` to return a list of cross-
+       * bucket replication jobs. * Limit the results to jobs from a particular bucket with
+       * `sourceBucket` and/or to a particular bucket with `sinkBucket`.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;

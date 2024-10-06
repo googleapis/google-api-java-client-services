@@ -17,7 +17,9 @@
 package com.google.api.services.storagetransfer.v1.model;
 
 /**
- * Specifies the configuration for running a replication job.
+ * Specifies the configuration for a cross-bucket replication job. Cross-bucket replication copies
+ * new or updated objects from a source Cloud Storage bucket to a destination Cloud Storage bucket.
+ * Existing objects in the source bucket are not copied by a new cross-bucket replication job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Storage Transfer API. For a detailed explanation see:
@@ -30,38 +32,37 @@ package com.google.api.services.storagetransfer.v1.model;
 public final class ReplicationSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies cloud Storage data sink.
+   * The Cloud Storage bucket to which to replicate objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GcsData gcsDataSink;
 
   /**
-   * Specifies cloud Storage data source.
+   * The Cloud Storage bucket from which to replicate objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GcsData gcsDataSource;
 
   /**
-   * Specifies the object conditions to only include objects that satisfy these conditions in the
-   * set of data source objects. Object conditions based on objects' "last modification time" do not
-   * exclude objects in a data sink.
+   * Object conditions that determine which objects are transferred. For replication jobs, only
+   * `include_prefixes` and `exclude_prefixes` are supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ObjectConditions objectConditions;
 
   /**
-   * Specifies the actions to be performed on the object during replication. Delete options are not
-   * supported for replication and when specified, the request fails with an INVALID_ARGUMENT error.
+   * Specifies the metadata options to be applied during replication. Delete options are not
+   * supported. If a delete option is specified, the request fails with an INVALID_ARGUMENT error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TransferOptions transferOptions;
 
   /**
-   * Specifies cloud Storage data sink.
+   * The Cloud Storage bucket to which to replicate objects.
    * @return value or {@code null} for none
    */
   public GcsData getGcsDataSink() {
@@ -69,7 +70,7 @@ public final class ReplicationSpec extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies cloud Storage data sink.
+   * The Cloud Storage bucket to which to replicate objects.
    * @param gcsDataSink gcsDataSink or {@code null} for none
    */
   public ReplicationSpec setGcsDataSink(GcsData gcsDataSink) {
@@ -78,7 +79,7 @@ public final class ReplicationSpec extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies cloud Storage data source.
+   * The Cloud Storage bucket from which to replicate objects.
    * @return value or {@code null} for none
    */
   public GcsData getGcsDataSource() {
@@ -86,7 +87,7 @@ public final class ReplicationSpec extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies cloud Storage data source.
+   * The Cloud Storage bucket from which to replicate objects.
    * @param gcsDataSource gcsDataSource or {@code null} for none
    */
   public ReplicationSpec setGcsDataSource(GcsData gcsDataSource) {
@@ -95,9 +96,8 @@ public final class ReplicationSpec extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies the object conditions to only include objects that satisfy these conditions in the
-   * set of data source objects. Object conditions based on objects' "last modification time" do not
-   * exclude objects in a data sink.
+   * Object conditions that determine which objects are transferred. For replication jobs, only
+   * `include_prefixes` and `exclude_prefixes` are supported.
    * @return value or {@code null} for none
    */
   public ObjectConditions getObjectConditions() {
@@ -105,9 +105,8 @@ public final class ReplicationSpec extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies the object conditions to only include objects that satisfy these conditions in the
-   * set of data source objects. Object conditions based on objects' "last modification time" do not
-   * exclude objects in a data sink.
+   * Object conditions that determine which objects are transferred. For replication jobs, only
+   * `include_prefixes` and `exclude_prefixes` are supported.
    * @param objectConditions objectConditions or {@code null} for none
    */
   public ReplicationSpec setObjectConditions(ObjectConditions objectConditions) {
@@ -116,8 +115,8 @@ public final class ReplicationSpec extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies the actions to be performed on the object during replication. Delete options are not
-   * supported for replication and when specified, the request fails with an INVALID_ARGUMENT error.
+   * Specifies the metadata options to be applied during replication. Delete options are not
+   * supported. If a delete option is specified, the request fails with an INVALID_ARGUMENT error.
    * @return value or {@code null} for none
    */
   public TransferOptions getTransferOptions() {
@@ -125,8 +124,8 @@ public final class ReplicationSpec extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies the actions to be performed on the object during replication. Delete options are not
-   * supported for replication and when specified, the request fails with an INVALID_ARGUMENT error.
+   * Specifies the metadata options to be applied during replication. Delete options are not
+   * supported. If a delete option is specified, the request fails with an INVALID_ARGUMENT error.
    * @param transferOptions transferOptions or {@code null} for none
    */
   public ReplicationSpec setTransferOptions(TransferOptions transferOptions) {

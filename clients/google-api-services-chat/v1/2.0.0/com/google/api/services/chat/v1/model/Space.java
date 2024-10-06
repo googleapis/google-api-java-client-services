@@ -85,7 +85,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Whether this space is created in `Import Mode` as part of a data migration into
    * Google Workspace. While spaces are being imported, they aren't visible to users until the
-   * import is complete.
+   * import is complete. Creating a space in `Import Mode`requires [user
+   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -315,7 +316,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Whether this space is created in `Import Mode` as part of a data migration into
    * Google Workspace. While spaces are being imported, they aren't visible to users until the
-   * import is complete.
+   * import is complete. Creating a space in `Import Mode`requires [user
+   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getImportMode() {
@@ -325,7 +327,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Whether this space is created in `Import Mode` as part of a data migration into
    * Google Workspace. While spaces are being imported, they aren't visible to users until the
-   * import is complete.
+   * import is complete. Creating a space in `Import Mode`requires [user
+   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
    * @param importMode importMode or {@code null} for none
    */
   public Space setImportMode(java.lang.Boolean importMode) {

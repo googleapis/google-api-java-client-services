@@ -793,6 +793,157 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       }
     }
     /**
+     * Lists the service accounts allowed to access Apigee control plane directly for limited
+     * functionality. **Note**: Available to Apigee hybrid only.
+     *
+     * Create a request for the method "organizations.getControlPlaneAccess".
+     *
+     * This request holds the parameters needed by the apigee server.  After setting any optional
+     * parameters, call the {@link GetControlPlaneAccess#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Required. Resource name of the Control Plane Access. Use the following structure in your request:
+     *        `organizations/{org}/controlPlaneAccess`
+     * @return the request
+     */
+    public GetControlPlaneAccess getControlPlaneAccess(java.lang.String name) throws java.io.IOException {
+      GetControlPlaneAccess result = new GetControlPlaneAccess(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetControlPlaneAccess extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ControlPlaneAccess> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+/controlPlaneAccess$");
+
+      /**
+       * Lists the service accounts allowed to access Apigee control plane directly for limited
+       * functionality. **Note**: Available to Apigee hybrid only.
+       *
+       * Create a request for the method "organizations.getControlPlaneAccess".
+       *
+       * This request holds the parameters needed by the the apigee server.  After setting any optional
+       * parameters, call the {@link GetControlPlaneAccess#execute()} method to invoke the remote
+       * operation. <p> {@link GetControlPlaneAccess#initialize(com.google.api.client.googleapis.service
+       * s.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. Resource name of the Control Plane Access. Use the following structure in your request:
+     *        `organizations/{org}/controlPlaneAccess`
+       * @since 1.13
+       */
+      protected GetControlPlaneAccess(java.lang.String name) {
+        super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ControlPlaneAccess.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/controlPlaneAccess$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetControlPlaneAccess set$Xgafv(java.lang.String $Xgafv) {
+        return (GetControlPlaneAccess) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetControlPlaneAccess setAccessToken(java.lang.String accessToken) {
+        return (GetControlPlaneAccess) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetControlPlaneAccess setAlt(java.lang.String alt) {
+        return (GetControlPlaneAccess) super.setAlt(alt);
+      }
+
+      @Override
+      public GetControlPlaneAccess setCallback(java.lang.String callback) {
+        return (GetControlPlaneAccess) super.setCallback(callback);
+      }
+
+      @Override
+      public GetControlPlaneAccess setFields(java.lang.String fields) {
+        return (GetControlPlaneAccess) super.setFields(fields);
+      }
+
+      @Override
+      public GetControlPlaneAccess setKey(java.lang.String key) {
+        return (GetControlPlaneAccess) super.setKey(key);
+      }
+
+      @Override
+      public GetControlPlaneAccess setOauthToken(java.lang.String oauthToken) {
+        return (GetControlPlaneAccess) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetControlPlaneAccess setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetControlPlaneAccess) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetControlPlaneAccess setQuotaUser(java.lang.String quotaUser) {
+        return (GetControlPlaneAccess) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetControlPlaneAccess setUploadType(java.lang.String uploadType) {
+        return (GetControlPlaneAccess) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetControlPlaneAccess setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetControlPlaneAccess) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Resource name of the Control Plane Access. Use the following structure in your
+       * request: `organizations/{org}/controlPlaneAccess`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Resource name of the Control Plane Access. Use the following structure in your request:
+     `organizations/{org}/controlPlaneAccess`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. Resource name of the Control Plane Access. Use the following structure in your
+       * request: `organizations/{org}/controlPlaneAccess`
+       */
+      public GetControlPlaneAccess setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/controlPlaneAccess$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetControlPlaneAccess set(String parameterName, Object value) {
+        return (GetControlPlaneAccess) super.set(parameterName, value);
+      }
+    }
+    /**
      * Gets the deployed ingress configuration for an organization.
      *
      * Create a request for the method "organizations.getDeployedIngressConfig".
@@ -2123,6 +2274,174 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       @Override
       public Update set(String parameterName, Object value) {
         return (Update) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates the permissions required to allow Apigee runtime-plane components access to the control
+     * plane. Currently, the permissions required are to: 1. Allow runtime components to publish
+     * analytics data to the control plane. **Note**: Available to Apigee hybrid only.
+     *
+     * Create a request for the method "organizations.updateControlPlaneAccess".
+     *
+     * This request holds the parameters needed by the apigee server.  After setting any optional
+     * parameters, call the {@link UpdateControlPlaneAccess#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Identifier. The resource name of the ControlPlaneAccess. Format:
+     *        "organizations/{org}/controlPlaneAccess"
+     * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ControlPlaneAccess}
+     * @return the request
+     */
+    public UpdateControlPlaneAccess updateControlPlaneAccess(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ControlPlaneAccess content) throws java.io.IOException {
+      UpdateControlPlaneAccess result = new UpdateControlPlaneAccess(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateControlPlaneAccess extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleLongrunningOperation> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+/controlPlaneAccess$");
+
+      /**
+       * Updates the permissions required to allow Apigee runtime-plane components access to the control
+       * plane. Currently, the permissions required are to: 1. Allow runtime components to publish
+       * analytics data to the control plane. **Note**: Available to Apigee hybrid only.
+       *
+       * Create a request for the method "organizations.updateControlPlaneAccess".
+       *
+       * This request holds the parameters needed by the the apigee server.  After setting any optional
+       * parameters, call the {@link UpdateControlPlaneAccess#execute()} method to invoke the remote
+       * operation. <p> {@link UpdateControlPlaneAccess#initialize(com.google.api.client.googleapis.serv
+       * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Identifier. The resource name of the ControlPlaneAccess. Format:
+     *        "organizations/{org}/controlPlaneAccess"
+       * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ControlPlaneAccess}
+       * @since 1.13
+       */
+      protected UpdateControlPlaneAccess(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ControlPlaneAccess content) {
+        super(Apigee.this, "PATCH", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleLongrunningOperation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/controlPlaneAccess$");
+        }
+      }
+
+      @Override
+      public UpdateControlPlaneAccess set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateControlPlaneAccess) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateControlPlaneAccess setAccessToken(java.lang.String accessToken) {
+        return (UpdateControlPlaneAccess) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateControlPlaneAccess setAlt(java.lang.String alt) {
+        return (UpdateControlPlaneAccess) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateControlPlaneAccess setCallback(java.lang.String callback) {
+        return (UpdateControlPlaneAccess) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateControlPlaneAccess setFields(java.lang.String fields) {
+        return (UpdateControlPlaneAccess) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateControlPlaneAccess setKey(java.lang.String key) {
+        return (UpdateControlPlaneAccess) super.setKey(key);
+      }
+
+      @Override
+      public UpdateControlPlaneAccess setOauthToken(java.lang.String oauthToken) {
+        return (UpdateControlPlaneAccess) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateControlPlaneAccess setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateControlPlaneAccess) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateControlPlaneAccess setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateControlPlaneAccess) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateControlPlaneAccess setUploadType(java.lang.String uploadType) {
+        return (UpdateControlPlaneAccess) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateControlPlaneAccess setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateControlPlaneAccess) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Identifier. The resource name of the ControlPlaneAccess. Format:
+       * "organizations/{org}/controlPlaneAccess"
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Identifier. The resource name of the ControlPlaneAccess. Format:
+     "organizations/{org}/controlPlaneAccess"
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Identifier. The resource name of the ControlPlaneAccess. Format:
+       * "organizations/{org}/controlPlaneAccess"
+       */
+      public UpdateControlPlaneAccess setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/controlPlaneAccess$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * List of fields to be updated. Fields that can be updated: synchronizer_identities,
+       * publisher_identities.
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** List of fields to be updated. Fields that can be updated: synchronizer_identities,
+     publisher_identities.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * List of fields to be updated. Fields that can be updated: synchronizer_identities,
+       * publisher_identities.
+       */
+      public UpdateControlPlaneAccess setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateControlPlaneAccess set(String parameterName, Object value) {
+        return (UpdateControlPlaneAccess) super.set(parameterName, value);
       }
     }
     /**

@@ -43,9 +43,16 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
    * been individually invited or added to the space can access it. For details, see [Make a space
    * discoverable to a target audience](https://developers.google.com/workspace/chat/space-target-
    * audience). Format: `audiences/{audience}` To use the default target audience for the Google
-   * Workspace organization, set to `audiences/default`. This field is not populated when using the
-   * `chat.bot` scope with [app
+   * Workspace organization, set to `audiences/default`. Reading the target audience supports: -
+   * [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+   * user) - [App authentication](https://developers.google.com/workspace/chat/authenticate-
+   * authorize-chat-app) with [administrator approval](https://support.google.com/a?p=chat-app-auth)
+   * with the `chat.app.spaces` scope in [Developer
+   * Preview](https://developers.google.com/workspace/preview). This field is not populated when
+   * using the `chat.bot` scope with [app
    * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+   * Setting the target audience requires [user
+   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,9 +82,16 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
    * been individually invited or added to the space can access it. For details, see [Make a space
    * discoverable to a target audience](https://developers.google.com/workspace/chat/space-target-
    * audience). Format: `audiences/{audience}` To use the default target audience for the Google
-   * Workspace organization, set to `audiences/default`. This field is not populated when using the
-   * `chat.bot` scope with [app
+   * Workspace organization, set to `audiences/default`. Reading the target audience supports: -
+   * [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+   * user) - [App authentication](https://developers.google.com/workspace/chat/authenticate-
+   * authorize-chat-app) with [administrator approval](https://support.google.com/a?p=chat-app-auth)
+   * with the `chat.app.spaces` scope in [Developer
+   * Preview](https://developers.google.com/workspace/preview). This field is not populated when
+   * using the `chat.bot` scope with [app
    * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+   * Setting the target audience requires [user
+   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
    * @return value or {@code null} for none
    */
   public java.lang.String getAudience() {
@@ -91,9 +105,16 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
    * been individually invited or added to the space can access it. For details, see [Make a space
    * discoverable to a target audience](https://developers.google.com/workspace/chat/space-target-
    * audience). Format: `audiences/{audience}` To use the default target audience for the Google
-   * Workspace organization, set to `audiences/default`. This field is not populated when using the
-   * `chat.bot` scope with [app
+   * Workspace organization, set to `audiences/default`. Reading the target audience supports: -
+   * [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+   * user) - [App authentication](https://developers.google.com/workspace/chat/authenticate-
+   * authorize-chat-app) with [administrator approval](https://support.google.com/a?p=chat-app-auth)
+   * with the `chat.app.spaces` scope in [Developer
+   * Preview](https://developers.google.com/workspace/preview). This field is not populated when
+   * using the `chat.bot` scope with [app
    * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+   * Setting the target audience requires [user
+   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
    * @param audience audience or {@code null} for none
    */
   public AccessSettings setAudience(java.lang.String audience) {

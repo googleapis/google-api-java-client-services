@@ -49,7 +49,9 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private String deleteTime;
 
   /**
-   * The Google Group the membership corresponds to.
+   * The Google Group the membership corresponds to. Reading or mutating memberships for Google
+   * Groups requires [user
+   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,7 +134,9 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Google Group the membership corresponds to.
+   * The Google Group the membership corresponds to. Reading or mutating memberships for Google
+   * Groups requires [user
+   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
    * @return value or {@code null} for none
    */
   public Group getGroupMember() {
@@ -140,7 +144,9 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Google Group the membership corresponds to.
+   * The Google Group the membership corresponds to. Reading or mutating memberships for Google
+   * Groups requires [user
+   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
    * @param groupMember groupMember or {@code null} for none
    */
   public Membership setGroupMember(Group groupMember) {

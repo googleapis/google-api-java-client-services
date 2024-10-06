@@ -53,6 +53,14 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroup extends com.google.ap
   private java.lang.String creationTime;
 
   /**
+   * Output only. The resource names of effective labels attached to this ad group. An effective
+   * label is a label inherited or directly assigned to this ad group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> effectiveLabels;
+
+  /**
    * Output only. Date when the ad group ends serving ads. By default, the ad group ends on the ad
    * group's end date. If this field is set, then the ad group ends at the end of the specified date
    * in the customer's time zone. This field is only available for Microsoft Advertising and
@@ -209,6 +217,25 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroup extends com.google.ap
    */
   public GoogleAdsSearchads360V0ResourcesAdGroup setCreationTime(java.lang.String creationTime) {
     this.creationTime = creationTime;
+    return this;
+  }
+
+  /**
+   * Output only. The resource names of effective labels attached to this ad group. An effective
+   * label is a label inherited or directly assigned to this ad group.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getEffectiveLabels() {
+    return effectiveLabels;
+  }
+
+  /**
+   * Output only. The resource names of effective labels attached to this ad group. An effective
+   * label is a label inherited or directly assigned to this ad group.
+   * @param effectiveLabels effectiveLabels or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroup setEffectiveLabels(java.util.List<java.lang.String> effectiveLabels) {
+    this.effectiveLabels = effectiveLabels;
     return this;
   }
 

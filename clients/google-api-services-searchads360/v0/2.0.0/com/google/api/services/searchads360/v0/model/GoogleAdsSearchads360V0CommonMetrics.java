@@ -496,11 +496,27 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   private java.lang.Double crossDeviceConversions;
 
   /**
+   * The number of cross-device conversions by conversion date. Details for the by_conversion_date
+   * columns are available at https://support.google.com/sa360/answer/9250611.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double crossDeviceConversionsByConversionDate;
+
+  /**
    * The sum of the value of cross-device conversions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double crossDeviceConversionsValue;
+
+  /**
+   * The sum of cross-device conversions value by conversion date. Details for the
+   * by_conversion_date columns are available at https://support.google.com/sa360/answer/9250611.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double crossDeviceConversionsValueByConversionDate;
 
   /**
    * Cross-sell cost of goods sold (COGS) is the total cost of products sold as a result of
@@ -580,6 +596,29 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.lang.Double ctr;
+
+  /**
+   * The percentage of clicks that have been filtered out of your total number of clicks (filtered +
+   * non-filtered clicks) due to being general invalid clicks. These are clicks Google considers
+   * illegitimate that are detected through routine means of filtration (that is, known invalid
+   * data-center traffic, bots and spiders or other crawlers, irregular patterns, etc). You're not
+   * charged for them, and they don't affect your account statistics. See the help page at
+   * https://support.google.com/campaignmanager/answer/6076504 for details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double generalInvalidClickRate;
+
+  /**
+   * Number of general invalid clicks. These are a subset of your invalid clicks that are detected
+   * through routine means of filtration (such as known invalid data-center traffic, bots and
+   * spiders or other crawlers, irregular patterns, etc.). You're not charged for them, and they
+   * don't affect your account statistics. See the help page at
+   * https://support.google.com/campaignmanager/answer/6076504 for details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long generalInvalidClicks;
 
   /**
    * The creative historical quality score.
@@ -1961,6 +2000,25 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
+   * The number of cross-device conversions by conversion date. Details for the by_conversion_date
+   * columns are available at https://support.google.com/sa360/answer/9250611.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getCrossDeviceConversionsByConversionDate() {
+    return crossDeviceConversionsByConversionDate;
+  }
+
+  /**
+   * The number of cross-device conversions by conversion date. Details for the by_conversion_date
+   * columns are available at https://support.google.com/sa360/answer/9250611.
+   * @param crossDeviceConversionsByConversionDate crossDeviceConversionsByConversionDate or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setCrossDeviceConversionsByConversionDate(java.lang.Double crossDeviceConversionsByConversionDate) {
+    this.crossDeviceConversionsByConversionDate = crossDeviceConversionsByConversionDate;
+    return this;
+  }
+
+  /**
    * The sum of the value of cross-device conversions.
    * @return value or {@code null} for none
    */
@@ -1974,6 +2032,25 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
    */
   public GoogleAdsSearchads360V0CommonMetrics setCrossDeviceConversionsValue(java.lang.Double crossDeviceConversionsValue) {
     this.crossDeviceConversionsValue = crossDeviceConversionsValue;
+    return this;
+  }
+
+  /**
+   * The sum of cross-device conversions value by conversion date. Details for the
+   * by_conversion_date columns are available at https://support.google.com/sa360/answer/9250611.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getCrossDeviceConversionsValueByConversionDate() {
+    return crossDeviceConversionsValueByConversionDate;
+  }
+
+  /**
+   * The sum of cross-device conversions value by conversion date. Details for the
+   * by_conversion_date columns are available at https://support.google.com/sa360/answer/9250611.
+   * @param crossDeviceConversionsValueByConversionDate crossDeviceConversionsValueByConversionDate or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setCrossDeviceConversionsValueByConversionDate(java.lang.Double crossDeviceConversionsValueByConversionDate) {
+    this.crossDeviceConversionsValueByConversionDate = crossDeviceConversionsValueByConversionDate;
     return this;
   }
 
@@ -2147,6 +2224,58 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
    */
   public GoogleAdsSearchads360V0CommonMetrics setCtr(java.lang.Double ctr) {
     this.ctr = ctr;
+    return this;
+  }
+
+  /**
+   * The percentage of clicks that have been filtered out of your total number of clicks (filtered +
+   * non-filtered clicks) due to being general invalid clicks. These are clicks Google considers
+   * illegitimate that are detected through routine means of filtration (that is, known invalid
+   * data-center traffic, bots and spiders or other crawlers, irregular patterns, etc). You're not
+   * charged for them, and they don't affect your account statistics. See the help page at
+   * https://support.google.com/campaignmanager/answer/6076504 for details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getGeneralInvalidClickRate() {
+    return generalInvalidClickRate;
+  }
+
+  /**
+   * The percentage of clicks that have been filtered out of your total number of clicks (filtered +
+   * non-filtered clicks) due to being general invalid clicks. These are clicks Google considers
+   * illegitimate that are detected through routine means of filtration (that is, known invalid
+   * data-center traffic, bots and spiders or other crawlers, irregular patterns, etc). You're not
+   * charged for them, and they don't affect your account statistics. See the help page at
+   * https://support.google.com/campaignmanager/answer/6076504 for details.
+   * @param generalInvalidClickRate generalInvalidClickRate or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setGeneralInvalidClickRate(java.lang.Double generalInvalidClickRate) {
+    this.generalInvalidClickRate = generalInvalidClickRate;
+    return this;
+  }
+
+  /**
+   * Number of general invalid clicks. These are a subset of your invalid clicks that are detected
+   * through routine means of filtration (such as known invalid data-center traffic, bots and
+   * spiders or other crawlers, irregular patterns, etc.). You're not charged for them, and they
+   * don't affect your account statistics. See the help page at
+   * https://support.google.com/campaignmanager/answer/6076504 for details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getGeneralInvalidClicks() {
+    return generalInvalidClicks;
+  }
+
+  /**
+   * Number of general invalid clicks. These are a subset of your invalid clicks that are detected
+   * through routine means of filtration (such as known invalid data-center traffic, bots and
+   * spiders or other crawlers, irregular patterns, etc.). You're not charged for them, and they
+   * don't affect your account statistics. See the help page at
+   * https://support.google.com/campaignmanager/answer/6076504 for details.
+   * @param generalInvalidClicks generalInvalidClicks or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setGeneralInvalidClicks(java.lang.Long generalInvalidClicks) {
+    this.generalInvalidClicks = generalInvalidClicks;
     return this;
   }
 

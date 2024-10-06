@@ -101,6 +101,13 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
   private GoogleAdsSearchads360V0ResourcesAdGroupCriterionLabel adGroupCriterionLabel;
 
   /**
+   * The ad group effective label referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesAdGroupEffectiveLabel adGroupEffectiveLabel;
+
+  /**
    * The ad group label referenced in the query.
    * The value may be {@code null}.
    */
@@ -225,6 +232,13 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   @com.google.api.client.util.Key
   private GoogleAdsSearchads360V0ResourcesCampaignCriterion campaignCriterion;
+
+  /**
+   * The campaign effective label referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesCampaignEffectiveLabel campaignEffectiveLabel;
 
   /**
    * The campaign label referenced in the query.
@@ -585,6 +599,23 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
   }
 
   /**
+   * The ad group effective label referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroupEffectiveLabel getAdGroupEffectiveLabel() {
+    return adGroupEffectiveLabel;
+  }
+
+  /**
+   * The ad group effective label referenced in the query.
+   * @param adGroupEffectiveLabel adGroupEffectiveLabel or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setAdGroupEffectiveLabel(GoogleAdsSearchads360V0ResourcesAdGroupEffectiveLabel adGroupEffectiveLabel) {
+    this.adGroupEffectiveLabel = adGroupEffectiveLabel;
+    return this;
+  }
+
+  /**
    * The ad group label referenced in the query.
    * @return value or {@code null} for none
    */
@@ -887,6 +918,23 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   public GoogleAdsSearchads360V0ServicesSearchAds360Row setCampaignCriterion(GoogleAdsSearchads360V0ResourcesCampaignCriterion campaignCriterion) {
     this.campaignCriterion = campaignCriterion;
+    return this;
+  }
+
+  /**
+   * The campaign effective label referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCampaignEffectiveLabel getCampaignEffectiveLabel() {
+    return campaignEffectiveLabel;
+  }
+
+  /**
+   * The campaign effective label referenced in the query.
+   * @param campaignEffectiveLabel campaignEffectiveLabel or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setCampaignEffectiveLabel(GoogleAdsSearchads360V0ResourcesCampaignEffectiveLabel campaignEffectiveLabel) {
+    this.campaignEffectiveLabel = campaignEffectiveLabel;
     return this;
   }
 

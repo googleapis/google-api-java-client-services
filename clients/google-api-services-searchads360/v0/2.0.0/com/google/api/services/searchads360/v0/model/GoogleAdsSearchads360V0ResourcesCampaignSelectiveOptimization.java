@@ -34,14 +34,14 @@ package com.google.api.services.searchads360.v0.model;
 public final class GoogleAdsSearchads360V0ResourcesCampaignSelectiveOptimization extends com.google.api.client.json.GenericJson {
 
   /**
-   * The selected set of conversion actions for optimizing this campaign.
+   * The selected set of resource names for conversion actions for optimizing this campaign.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> conversionActions;
 
   /**
-   * The selected set of conversion actions for optimizing this campaign.
+   * The selected set of resource names for conversion actions for optimizing this campaign.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getConversionActions() {
@@ -49,7 +49,7 @@ public final class GoogleAdsSearchads360V0ResourcesCampaignSelectiveOptimization
   }
 
   /**
-   * The selected set of conversion actions for optimizing this campaign.
+   * The selected set of resource names for conversion actions for optimizing this campaign.
    * @param conversionActions conversionActions or {@code null} for none
    */
   public GoogleAdsSearchads360V0ResourcesCampaignSelectiveOptimization setConversionActions(java.util.List<java.lang.String> conversionActions) {

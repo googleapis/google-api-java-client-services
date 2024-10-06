@@ -70,7 +70,7 @@ public final class GoogleAdsSearchads360V0ResourcesCampaign extends com.google.a
   private java.lang.String advertisingChannelType;
 
   /**
-   * Portfolio bidding strategy used by campaign.
+   * The resource name of the portfolio bidding strategy used by the campaign.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class GoogleAdsSearchads360V0ResourcesCampaign extends com.google.a
   private java.lang.String biddingStrategyType;
 
   /**
-   * The budget of the campaign.
+   * The resource name of the campaign budget of the campaign.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,6 +122,14 @@ public final class GoogleAdsSearchads360V0ResourcesCampaign extends com.google.a
    */
   @com.google.api.client.util.Key
   private GoogleAdsSearchads360V0ResourcesCampaignDynamicSearchAdsSetting dynamicSearchAdsSetting;
+
+  /**
+   * Output only. The resource names of effective labels attached to this campaign. An effective
+   * label is a label inherited or directly assigned to this campaign.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> effectiveLabels;
 
   /**
    * The last day of the campaign in serving customer's timezone in YYYY-MM-DD format. On create,
@@ -490,7 +498,7 @@ public final class GoogleAdsSearchads360V0ResourcesCampaign extends com.google.a
   }
 
   /**
-   * Portfolio bidding strategy used by campaign.
+   * The resource name of the portfolio bidding strategy used by the campaign.
    * @return value or {@code null} for none
    */
   public java.lang.String getBiddingStrategy() {
@@ -498,7 +506,7 @@ public final class GoogleAdsSearchads360V0ResourcesCampaign extends com.google.a
   }
 
   /**
-   * Portfolio bidding strategy used by campaign.
+   * The resource name of the portfolio bidding strategy used by the campaign.
    * @param biddingStrategy biddingStrategy or {@code null} for none
    */
   public GoogleAdsSearchads360V0ResourcesCampaign setBiddingStrategy(java.lang.String biddingStrategy) {
@@ -545,7 +553,7 @@ public final class GoogleAdsSearchads360V0ResourcesCampaign extends com.google.a
   }
 
   /**
-   * The budget of the campaign.
+   * The resource name of the campaign budget of the campaign.
    * @return value or {@code null} for none
    */
   public java.lang.String getCampaignBudget() {
@@ -553,7 +561,7 @@ public final class GoogleAdsSearchads360V0ResourcesCampaign extends com.google.a
   }
 
   /**
-   * The budget of the campaign.
+   * The resource name of the campaign budget of the campaign.
    * @param campaignBudget campaignBudget or {@code null} for none
    */
   public GoogleAdsSearchads360V0ResourcesCampaign setCampaignBudget(java.lang.String campaignBudget) {
@@ -615,6 +623,25 @@ public final class GoogleAdsSearchads360V0ResourcesCampaign extends com.google.a
    */
   public GoogleAdsSearchads360V0ResourcesCampaign setDynamicSearchAdsSetting(GoogleAdsSearchads360V0ResourcesCampaignDynamicSearchAdsSetting dynamicSearchAdsSetting) {
     this.dynamicSearchAdsSetting = dynamicSearchAdsSetting;
+    return this;
+  }
+
+  /**
+   * Output only. The resource names of effective labels attached to this campaign. An effective
+   * label is a label inherited or directly assigned to this campaign.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getEffectiveLabels() {
+    return effectiveLabels;
+  }
+
+  /**
+   * Output only. The resource names of effective labels attached to this campaign. An effective
+   * label is a label inherited or directly assigned to this campaign.
+   * @param effectiveLabels effectiveLabels or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCampaign setEffectiveLabels(java.util.List<java.lang.String> effectiveLabels) {
+    this.effectiveLabels = effectiveLabels;
     return this;
   }
 

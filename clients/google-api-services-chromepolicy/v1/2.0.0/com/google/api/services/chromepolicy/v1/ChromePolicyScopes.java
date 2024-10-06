@@ -23,10 +23,10 @@ package com.google.api.services.chromepolicy.v1;
  */
 public class ChromePolicyScopes {
 
-  /** See, edit, create or delete policies applied to Chrome OS and Chrome Browsers managed within your organization. */
+  /** See, edit, create or delete policies applied to ChromeOS and Chrome Browsers managed within your organization. */
   public static final String CHROME_MANAGEMENT_POLICY = "https://www.googleapis.com/auth/chrome.management.policy";
 
-  /** See policies applied to Chrome OS and Chrome Browsers managed within your organization. */
+  /** See policies applied to ChromeOS and Chrome Browsers managed within your organization. */
   public static final String CHROME_MANAGEMENT_POLICY_READONLY = "https://www.googleapis.com/auth/chrome.management.policy.readonly";
 
   /**

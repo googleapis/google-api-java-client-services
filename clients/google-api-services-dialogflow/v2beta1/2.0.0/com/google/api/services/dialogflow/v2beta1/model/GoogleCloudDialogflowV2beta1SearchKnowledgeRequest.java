@@ -69,7 +69,7 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequest extends co
   private GoogleCloudDialogflowV2beta1TextInput query;
 
   /**
-   * Optional. The ID of the search session. The session_id can be combined with Dialogflow V3 Agent
+   * Required. The ID of the search session. The session_id can be combined with Dialogflow V3 Agent
    * ID retrieved from conversation profile or on its own to identify a search session. The search
    * history of the same session will impact the search result. It's up to the API caller to choose
    * an appropriate `Session ID`. It can be a random number or some type of session identifiers
@@ -173,7 +173,7 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequest extends co
   }
 
   /**
-   * Optional. The ID of the search session. The session_id can be combined with Dialogflow V3 Agent
+   * Required. The ID of the search session. The session_id can be combined with Dialogflow V3 Agent
    * ID retrieved from conversation profile or on its own to identify a search session. The search
    * history of the same session will impact the search result. It's up to the API caller to choose
    * an appropriate `Session ID`. It can be a random number or some type of session identifiers
@@ -185,7 +185,7 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequest extends co
   }
 
   /**
-   * Optional. The ID of the search session. The session_id can be combined with Dialogflow V3 Agent
+   * Required. The ID of the search session. The session_id can be combined with Dialogflow V3 Agent
    * ID retrieved from conversation profile or on its own to identify a search session. The search
    * history of the same session will impact the search result. It's up to the API caller to choose
    * an appropriate `Session ID`. It can be a random number or some type of session identifiers

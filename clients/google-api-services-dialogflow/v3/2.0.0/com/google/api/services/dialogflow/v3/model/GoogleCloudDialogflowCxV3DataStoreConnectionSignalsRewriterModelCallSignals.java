@@ -30,6 +30,14 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3DataStoreConnectionSignalsRewriterModelCallSignals extends com.google.api.client.json.GenericJson {
 
   /**
+   * Name of the generative model. For example, "gemini-ultra", "gemini-pro", "gemini-1.5-flash"
+   * etc. Defaults to "Other" if the model is unknown.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String model;
+
+  /**
    * Output of the generative model.
    * The value may be {@code null}.
    */
@@ -42,6 +50,25 @@ public final class GoogleCloudDialogflowCxV3DataStoreConnectionSignalsRewriterMo
    */
   @com.google.api.client.util.Key
   private java.lang.String renderedPrompt;
+
+  /**
+   * Name of the generative model. For example, "gemini-ultra", "gemini-pro", "gemini-1.5-flash"
+   * etc. Defaults to "Other" if the model is unknown.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModel() {
+    return model;
+  }
+
+  /**
+   * Name of the generative model. For example, "gemini-ultra", "gemini-pro", "gemini-1.5-flash"
+   * etc. Defaults to "Other" if the model is unknown.
+   * @param model model or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3DataStoreConnectionSignalsRewriterModelCallSignals setModel(java.lang.String model) {
+    this.model = model;
+    return this;
+  }
 
   /**
    * Output of the generative model.

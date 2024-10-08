@@ -55,15 +55,6 @@ public final class ExternalTransaction extends com.google.api.client.json.Generi
   private Price currentTaxAmount;
 
   /**
-   * Optional. Details about the first time a user/device completed a transaction using external
-   * offers. Not required for transactions made using user choice billing or alternative billing
-   * only.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ExternalOfferInitialAcquisitionDetails externalOfferInitialAcquisitionDetails;
-
-  /**
    * Output only. The id of this transaction. All transaction ids under the same package name must
    * be unique. Set when creating the external transaction.
    * The value may be {@code null}.
@@ -204,27 +195,6 @@ public final class ExternalTransaction extends com.google.api.client.json.Generi
    */
   public ExternalTransaction setCurrentTaxAmount(Price currentTaxAmount) {
     this.currentTaxAmount = currentTaxAmount;
-    return this;
-  }
-
-  /**
-   * Optional. Details about the first time a user/device completed a transaction using external
-   * offers. Not required for transactions made using user choice billing or alternative billing
-   * only.
-   * @return value or {@code null} for none
-   */
-  public ExternalOfferInitialAcquisitionDetails getExternalOfferInitialAcquisitionDetails() {
-    return externalOfferInitialAcquisitionDetails;
-  }
-
-  /**
-   * Optional. Details about the first time a user/device completed a transaction using external
-   * offers. Not required for transactions made using user choice billing or alternative billing
-   * only.
-   * @param externalOfferInitialAcquisitionDetails externalOfferInitialAcquisitionDetails or {@code null} for none
-   */
-  public ExternalTransaction setExternalOfferInitialAcquisitionDetails(ExternalOfferInitialAcquisitionDetails externalOfferInitialAcquisitionDetails) {
-    this.externalOfferInitialAcquisitionDetails = externalOfferInitialAcquisitionDetails;
     return this;
   }
 

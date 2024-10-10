@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Model definition for GoogleProtobufStruct.
+ * Response for UploadTestCase.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -28,16 +28,40 @@ package com.google.api.services.integrations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleProtobufStruct extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudIntegrationsV1alphaUploadTestCaseResponse extends com.google.api.client.json.GenericJson {
 
-  @Override
-  public GoogleProtobufStruct set(String fieldName, Object value) {
-    return (GoogleProtobufStruct) super.set(fieldName, value);
+  /**
+   * The uploaded TestCase
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIntegrationsV1alphaTestCase testCase;
+
+  /**
+   * The uploaded TestCase
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaTestCase getTestCase() {
+    return testCase;
+  }
+
+  /**
+   * The uploaded TestCase
+   * @param testCase testCase or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaUploadTestCaseResponse setTestCase(GoogleCloudIntegrationsV1alphaTestCase testCase) {
+    this.testCase = testCase;
+    return this;
   }
 
   @Override
-  public GoogleProtobufStruct clone() {
-    return (GoogleProtobufStruct) super.clone();
+  public GoogleCloudIntegrationsV1alphaUploadTestCaseResponse set(String fieldName, Object value) {
+    return (GoogleCloudIntegrationsV1alphaUploadTestCaseResponse) super.set(fieldName, value);
+  }
+
+  @Override
+  public GoogleCloudIntegrationsV1alphaUploadTestCaseResponse clone() {
+    return (GoogleCloudIntegrationsV1alphaUploadTestCaseResponse) super.clone();
   }
 
 }

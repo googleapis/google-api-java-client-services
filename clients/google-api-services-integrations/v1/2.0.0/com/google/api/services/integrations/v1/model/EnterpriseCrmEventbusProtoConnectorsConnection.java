@@ -46,6 +46,13 @@ public final class EnterpriseCrmEventbusProtoConnectorsConnection extends com.go
   private java.lang.String connectorVersion;
 
   /**
+   * The name of the Hostname of the Service Directory service with TLS if used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String host;
+
+  /**
    * Service name Format:
    * projects/{project}/locations/{location}/namespaces/{namespace}/services/{service}
    * The value may be {@code null}.
@@ -86,6 +93,23 @@ public final class EnterpriseCrmEventbusProtoConnectorsConnection extends com.go
    */
   public EnterpriseCrmEventbusProtoConnectorsConnection setConnectorVersion(java.lang.String connectorVersion) {
     this.connectorVersion = connectorVersion;
+    return this;
+  }
+
+  /**
+   * The name of the Hostname of the Service Directory service with TLS if used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHost() {
+    return host;
+  }
+
+  /**
+   * The name of the Hostname of the Service Directory service with TLS if used.
+   * @param host host or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoConnectorsConnection setHost(java.lang.String host) {
+    this.host = host;
     return this;
   }
 

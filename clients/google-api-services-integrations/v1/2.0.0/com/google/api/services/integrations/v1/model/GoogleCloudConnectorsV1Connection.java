@@ -31,12 +31,29 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudConnectorsV1Connection extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Async operations enabled for the connection. If Async Operations is enabled,
+   * Connection allows the customers to initiate async long running operations using the actions
+   * API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean asyncOperationsEnabled;
+
+  /**
    * Optional. Configuration for establishing the connection's authentication with an external
    * system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudConnectorsV1AuthConfig authConfig;
+
+  /**
+   * Optional. Auth override enabled for the connection. If Auth Override is enabled, Connection
+   * allows the backend service auth to be overridden in the entities/actions API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean authOverrideEnabled;
 
   /**
    * Output only. Billing config for the connection.
@@ -141,6 +158,13 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   private GoogleCloudConnectorsV1EventingRuntimeData eventingRuntimeData;
 
   /**
+   * Output only. The name of the Hostname of the Service Directory service with TLS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String host;
+
+  /**
    * Output only. GCR location where the runtime image is stored. formatted like:
    * gcr.io/{bucketName}/{imageName}
    * The value may be {@code null}.
@@ -237,11 +261,39 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   private java.lang.Boolean suspended;
 
   /**
+   * Output only. The name of the Service Directory service with TLS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tlsServiceDirectory;
+
+  /**
    * Output only. Updated time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. Async operations enabled for the connection. If Async Operations is enabled,
+   * Connection allows the customers to initiate async long running operations using the actions
+   * API.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAsyncOperationsEnabled() {
+    return asyncOperationsEnabled;
+  }
+
+  /**
+   * Optional. Async operations enabled for the connection. If Async Operations is enabled,
+   * Connection allows the customers to initiate async long running operations using the actions
+   * API.
+   * @param asyncOperationsEnabled asyncOperationsEnabled or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1Connection setAsyncOperationsEnabled(java.lang.Boolean asyncOperationsEnabled) {
+    this.asyncOperationsEnabled = asyncOperationsEnabled;
+    return this;
+  }
 
   /**
    * Optional. Configuration for establishing the connection's authentication with an external
@@ -259,6 +311,25 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
    */
   public GoogleCloudConnectorsV1Connection setAuthConfig(GoogleCloudConnectorsV1AuthConfig authConfig) {
     this.authConfig = authConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Auth override enabled for the connection. If Auth Override is enabled, Connection
+   * allows the backend service auth to be overridden in the entities/actions API.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAuthOverrideEnabled() {
+    return authOverrideEnabled;
+  }
+
+  /**
+   * Optional. Auth override enabled for the connection. If Auth Override is enabled, Connection
+   * allows the backend service auth to be overridden in the entities/actions API.
+   * @param authOverrideEnabled authOverrideEnabled or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1Connection setAuthOverrideEnabled(java.lang.Boolean authOverrideEnabled) {
+    this.authOverrideEnabled = authOverrideEnabled;
     return this;
   }
 
@@ -494,6 +565,23 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   }
 
   /**
+   * Output only. The name of the Hostname of the Service Directory service with TLS.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHost() {
+    return host;
+  }
+
+  /**
+   * Output only. The name of the Hostname of the Service Directory service with TLS.
+   * @param host host or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1Connection setHost(java.lang.String host) {
+    this.host = host;
+    return this;
+  }
+
+  /**
    * Output only. GCR location where the runtime image is stored. formatted like:
    * gcr.io/{bucketName}/{imageName}
    * @return value or {@code null} for none
@@ -721,6 +809,23 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
    */
   public GoogleCloudConnectorsV1Connection setSuspended(java.lang.Boolean suspended) {
     this.suspended = suspended;
+    return this;
+  }
+
+  /**
+   * Output only. The name of the Service Directory service with TLS.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTlsServiceDirectory() {
+    return tlsServiceDirectory;
+  }
+
+  /**
+   * Output only. The name of the Service Directory service with TLS.
+   * @param tlsServiceDirectory tlsServiceDirectory or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1Connection setTlsServiceDirectory(java.lang.String tlsServiceDirectory) {
+    this.tlsServiceDirectory = tlsServiceDirectory;
     return this;
   }
 

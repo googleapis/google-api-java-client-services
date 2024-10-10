@@ -182,10 +182,10 @@ public final class GoogleCloudIdentitytoolkitV1SignInWithIdpResponse extends com
 
   /**
    * Whether or not there is an existing Identity Platform user account with the same email address
-   * as the current account signed in at the IdP, and the account's email addresss is not verified
-   * at the IdP. The user will need to sign in to the existing Identity Platform account and then
-   * link the current credential from the IdP to it. Only present if the "One account per email
-   * address" setting is enabled.
+   * as the current account signed in at the IdP, and the account's email address is not verified at
+   * the IdP. The user will need to sign in to the existing Identity Platform account and then link
+   * the current credential from the IdP to it. Only present if the "One account per email address"
+   * setting is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -676,10 +676,10 @@ public final class GoogleCloudIdentitytoolkitV1SignInWithIdpResponse extends com
 
   /**
    * Whether or not there is an existing Identity Platform user account with the same email address
-   * as the current account signed in at the IdP, and the account's email addresss is not verified
-   * at the IdP. The user will need to sign in to the existing Identity Platform account and then
-   * link the current credential from the IdP to it. Only present if the "One account per email
-   * address" setting is enabled.
+   * as the current account signed in at the IdP, and the account's email address is not verified at
+   * the IdP. The user will need to sign in to the existing Identity Platform account and then link
+   * the current credential from the IdP to it. Only present if the "One account per email address"
+   * setting is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNeedConfirmation() {
@@ -688,10 +688,10 @@ public final class GoogleCloudIdentitytoolkitV1SignInWithIdpResponse extends com
 
   /**
    * Whether or not there is an existing Identity Platform user account with the same email address
-   * as the current account signed in at the IdP, and the account's email addresss is not verified
-   * at the IdP. The user will need to sign in to the existing Identity Platform account and then
-   * link the current credential from the IdP to it. Only present if the "One account per email
-   * address" setting is enabled.
+   * as the current account signed in at the IdP, and the account's email address is not verified at
+   * the IdP. The user will need to sign in to the existing Identity Platform account and then link
+   * the current credential from the IdP to it. Only present if the "One account per email address"
+   * setting is enabled.
    * @param needConfirmation needConfirmation or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1SignInWithIdpResponse setNeedConfirmation(java.lang.Boolean needConfirmation) {

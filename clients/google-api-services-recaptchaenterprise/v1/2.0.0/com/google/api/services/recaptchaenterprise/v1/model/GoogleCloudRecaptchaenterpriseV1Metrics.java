@@ -31,8 +31,8 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1Metrics extends com.google.api.client.json.GenericJson {
 
   /**
-   * Metrics will be continuous and in order by dates, and in the granularity of day. Only
-   * challenge-based keys (CHECKBOX, INVISIBLE), will have challenge-based data.
+   * Metrics are continuous and in order by dates, and in the granularity of day. Only challenge-
+   * based keys (CHECKBOX, INVISIBLE) have challenge-based data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Metrics extends com.google.ap
   private java.lang.String name;
 
   /**
-   * Metrics will be continuous and in order by dates, and in the granularity of day. All Key types
+   * Metrics are continuous and in order by dates, and in the granularity of day. All Key types
    * should have score-based data.
    * The value may be {@code null}.
    */
@@ -68,8 +68,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Metrics extends com.google.ap
   private String startTime;
 
   /**
-   * Metrics will be continuous and in order by dates, and in the granularity of day. Only
-   * challenge-based keys (CHECKBOX, INVISIBLE), will have challenge-based data.
+   * Metrics are continuous and in order by dates, and in the granularity of day. Only challenge-
+   * based keys (CHECKBOX, INVISIBLE) have challenge-based data.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRecaptchaenterpriseV1ChallengeMetrics> getChallengeMetrics() {
@@ -77,8 +77,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Metrics extends com.google.ap
   }
 
   /**
-   * Metrics will be continuous and in order by dates, and in the granularity of day. Only
-   * challenge-based keys (CHECKBOX, INVISIBLE), will have challenge-based data.
+   * Metrics are continuous and in order by dates, and in the granularity of day. Only challenge-
+   * based keys (CHECKBOX, INVISIBLE) have challenge-based data.
    * @param challengeMetrics challengeMetrics or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Metrics setChallengeMetrics(java.util.List<GoogleCloudRecaptchaenterpriseV1ChallengeMetrics> challengeMetrics) {
@@ -106,7 +106,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Metrics extends com.google.ap
   }
 
   /**
-   * Metrics will be continuous and in order by dates, and in the granularity of day. All Key types
+   * Metrics are continuous and in order by dates, and in the granularity of day. All Key types
    * should have score-based data.
    * @return value or {@code null} for none
    */
@@ -115,7 +115,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Metrics extends com.google.ap
   }
 
   /**
-   * Metrics will be continuous and in order by dates, and in the granularity of day. All Key types
+   * Metrics are continuous and in order by dates, and in the granularity of day. All Key types
    * should have score-based data.
    * @param scoreMetrics scoreMetrics or {@code null} for none
    */

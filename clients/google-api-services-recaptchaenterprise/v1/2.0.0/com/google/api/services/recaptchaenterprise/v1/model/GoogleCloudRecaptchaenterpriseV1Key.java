@@ -53,6 +53,13 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   private java.lang.String displayName;
 
   /**
+   * Settings for keys that can be used by reCAPTCHA Express.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRecaptchaenterpriseV1ExpressKeySettings expressSettings;
+
+  /**
    * Settings for keys that can be used by iOS apps.
    * The value may be {@code null}.
    */
@@ -60,8 +67,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   private GoogleCloudRecaptchaenterpriseV1IOSKeySettings iosSettings;
 
   /**
-   * Optional. See [Creating and managing labels] (https://cloud.google.com/recaptcha-
-   * enterprise/docs/labels).
+   * Optional. See [Creating and managing labels] (https://cloud.google.com/recaptcha/docs/labels).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,6 +153,23 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   }
 
   /**
+   * Settings for keys that can be used by reCAPTCHA Express.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1ExpressKeySettings getExpressSettings() {
+    return expressSettings;
+  }
+
+  /**
+   * Settings for keys that can be used by reCAPTCHA Express.
+   * @param expressSettings expressSettings or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1Key setExpressSettings(GoogleCloudRecaptchaenterpriseV1ExpressKeySettings expressSettings) {
+    this.expressSettings = expressSettings;
+    return this;
+  }
+
+  /**
    * Settings for keys that can be used by iOS apps.
    * @return value or {@code null} for none
    */
@@ -164,8 +187,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   }
 
   /**
-   * Optional. See [Creating and managing labels] (https://cloud.google.com/recaptcha-
-   * enterprise/docs/labels).
+   * Optional. See [Creating and managing labels] (https://cloud.google.com/recaptcha/docs/labels).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -173,8 +195,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   }
 
   /**
-   * Optional. See [Creating and managing labels] (https://cloud.google.com/recaptcha-
-   * enterprise/docs/labels).
+   * Optional. See [Creating and managing labels] (https://cloud.google.com/recaptcha/docs/labels).
    * @param labels labels or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Key setLabels(java.util.Map<String, java.lang.String> labels) {

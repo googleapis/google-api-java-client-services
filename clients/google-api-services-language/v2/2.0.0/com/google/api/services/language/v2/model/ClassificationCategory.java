@@ -46,6 +46,15 @@ public final class ClassificationCategory extends com.google.api.client.json.Gen
   private java.lang.String name;
 
   /**
+   * Optional. The classifier's severity of the category. This is only present when the
+   * ModerateTextRequest.ModelVersion is set to MODEL_VERSION_2, and the corresponding category has
+   * a severity score.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float severity;
+
+  /**
    * The classifier's confidence of the category. Number represents how certain the classifier is
    * that this category represents the given text.
    * @return value or {@code null} for none
@@ -78,6 +87,27 @@ public final class ClassificationCategory extends com.google.api.client.json.Gen
    */
   public ClassificationCategory setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The classifier's severity of the category. This is only present when the
+   * ModerateTextRequest.ModelVersion is set to MODEL_VERSION_2, and the corresponding category has
+   * a severity score.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getSeverity() {
+    return severity;
+  }
+
+  /**
+   * Optional. The classifier's severity of the category. This is only present when the
+   * ModerateTextRequest.ModelVersion is set to MODEL_VERSION_2, and the corresponding category has
+   * a severity score.
+   * @param severity severity or {@code null} for none
+   */
+  public ClassificationCategory setSeverity(java.lang.Float severity) {
+    this.severity = severity;
     return this;
   }
 

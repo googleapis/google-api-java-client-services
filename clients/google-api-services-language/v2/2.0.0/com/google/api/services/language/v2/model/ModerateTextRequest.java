@@ -38,6 +38,13 @@ public final class ModerateTextRequest extends com.google.api.client.json.Generi
   private Document document;
 
   /**
+   * Optional. The model version to use for ModerateText.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String modelVersion;
+
+  /**
    * Required. Input document.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class ModerateTextRequest extends com.google.api.client.json.Generi
    */
   public ModerateTextRequest setDocument(Document document) {
     this.document = document;
+    return this;
+  }
+
+  /**
+   * Optional. The model version to use for ModerateText.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModelVersion() {
+    return modelVersion;
+  }
+
+  /**
+   * Optional. The model version to use for ModerateText.
+   * @param modelVersion modelVersion or {@code null} for none
+   */
+  public ModerateTextRequest setModelVersion(java.lang.String modelVersion) {
+    this.modelVersion = modelVersion;
     return this;
   }
 

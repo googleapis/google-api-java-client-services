@@ -30,13 +30,6 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
 public final class CreateAndConfigureAccountRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The Terms of Service (ToS) to be accepted immediately upon account creation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AcceptTermsOfService acceptTermsOfService;
-
-  /**
    * Required. The account to be created.
    * The value may be {@code null}.
    */
@@ -66,23 +59,6 @@ public final class CreateAndConfigureAccountRequest extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private java.util.List<CreateUserRequest> users;
-
-  /**
-   * Optional. The Terms of Service (ToS) to be accepted immediately upon account creation.
-   * @return value or {@code null} for none
-   */
-  public AcceptTermsOfService getAcceptTermsOfService() {
-    return acceptTermsOfService;
-  }
-
-  /**
-   * Optional. The Terms of Service (ToS) to be accepted immediately upon account creation.
-   * @param acceptTermsOfService acceptTermsOfService or {@code null} for none
-   */
-  public CreateAndConfigureAccountRequest setAcceptTermsOfService(AcceptTermsOfService acceptTermsOfService) {
-    this.acceptTermsOfService = acceptTermsOfService;
-    return this;
-  }
 
   /**
    * Required. The account to be created.

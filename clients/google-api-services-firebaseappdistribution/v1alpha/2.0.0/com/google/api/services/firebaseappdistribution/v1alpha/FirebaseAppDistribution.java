@@ -1850,6 +1850,154 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
         public class Tests {
 
           /**
+           * Abort automated test run on release.
+           *
+           * Create a request for the method "tests.cancel".
+           *
+           * This request holds the parameters needed by the firebaseappdistribution server.  After setting
+           * any optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the release test resource. Format:
+           *        `projects/{project_number}/apps/{app_id}/releases/{release_id}/tests/{test_id}`
+           * @return the request
+           */
+          public Cancel cancel(java.lang.String name) throws java.io.IOException {
+            Cancel result = new Cancel(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Cancel extends FirebaseAppDistributionRequest<com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaCancelReleaseTestResponse> {
+
+            private static final String REST_PATH = "v1alpha/{+name}:cancel";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+/releases/[^/]+/tests/[^/]+$");
+
+            /**
+             * Abort automated test run on release.
+             *
+             * Create a request for the method "tests.cancel".
+             *
+             * This request holds the parameters needed by the the firebaseappdistribution server.  After
+             * setting any optional parameters, call the {@link Cancel#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the release test resource. Format:
+           *        `projects/{project_number}/apps/{app_id}/releases/{release_id}/tests/{test_id}`
+             * @since 1.13
+             */
+            protected Cancel(java.lang.String name) {
+              super(FirebaseAppDistribution.this, "GET", REST_PATH, null, com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaCancelReleaseTestResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/apps/[^/]+/releases/[^/]+/tests/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Cancel set$Xgafv(java.lang.String $Xgafv) {
+              return (Cancel) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Cancel setAccessToken(java.lang.String accessToken) {
+              return (Cancel) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Cancel setAlt(java.lang.String alt) {
+              return (Cancel) super.setAlt(alt);
+            }
+
+            @Override
+            public Cancel setCallback(java.lang.String callback) {
+              return (Cancel) super.setCallback(callback);
+            }
+
+            @Override
+            public Cancel setFields(java.lang.String fields) {
+              return (Cancel) super.setFields(fields);
+            }
+
+            @Override
+            public Cancel setKey(java.lang.String key) {
+              return (Cancel) super.setKey(key);
+            }
+
+            @Override
+            public Cancel setOauthToken(java.lang.String oauthToken) {
+              return (Cancel) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Cancel) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Cancel setQuotaUser(java.lang.String quotaUser) {
+              return (Cancel) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Cancel setUploadType(java.lang.String uploadType) {
+              return (Cancel) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Cancel) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the release test resource. Format:
+             * `projects/{project_number}/apps/{app_id}/releases/{release_id}/tests/{test_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the release test resource. Format:
+           `projects/{project_number}/apps/{app_id}/releases/{release_id}/tests/{test_id}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the release test resource. Format:
+             * `projects/{project_number}/apps/{app_id}/releases/{release_id}/tests/{test_id}`
+             */
+            public Cancel setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/apps/[^/]+/releases/[^/]+/tests/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Cancel set(String parameterName, Object value) {
+              return (Cancel) super.set(parameterName, value);
+            }
+          }
+          /**
            * Run automated test(s) on release.
            *
            * Create a request for the method "tests.create".

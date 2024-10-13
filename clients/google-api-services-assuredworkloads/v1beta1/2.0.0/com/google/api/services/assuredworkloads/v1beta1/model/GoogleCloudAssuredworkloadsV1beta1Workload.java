@@ -259,6 +259,13 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   private java.lang.Boolean violationNotificationsEnabled;
 
   /**
+   * Optional. Options to be set for the given created workload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAssuredworkloadsV1beta1WorkloadWorkloadOptions workloadOptions;
+
+  /**
    * Output only. The number of updates available for the workload.
    * @return value or {@code null} for none
    */
@@ -795,6 +802,23 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
    */
   public GoogleCloudAssuredworkloadsV1beta1Workload setViolationNotificationsEnabled(java.lang.Boolean violationNotificationsEnabled) {
     this.violationNotificationsEnabled = violationNotificationsEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. Options to be set for the given created workload.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1WorkloadWorkloadOptions getWorkloadOptions() {
+    return workloadOptions;
+  }
+
+  /**
+   * Optional. Options to be set for the given created workload.
+   * @param workloadOptions workloadOptions or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1Workload setWorkloadOptions(GoogleCloudAssuredworkloadsV1beta1WorkloadWorkloadOptions workloadOptions) {
+    this.workloadOptions = workloadOptions;
     return this;
   }
 

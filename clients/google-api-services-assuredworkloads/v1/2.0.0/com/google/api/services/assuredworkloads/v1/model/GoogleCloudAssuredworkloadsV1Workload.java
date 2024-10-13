@@ -216,6 +216,13 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
   private java.lang.Boolean violationNotificationsEnabled;
 
   /**
+   * Optional. Options to be set for the given created workload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAssuredworkloadsV1WorkloadWorkloadOptions workloadOptions;
+
+  /**
    * Optional. The billing account used for the resources which are direct children of workload.
    * This billing account is initially associated with the resources created as part of Workload
    * creation. After the initial creation of these resources, the customer can change the assigned
@@ -648,6 +655,23 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
    */
   public GoogleCloudAssuredworkloadsV1Workload setViolationNotificationsEnabled(java.lang.Boolean violationNotificationsEnabled) {
     this.violationNotificationsEnabled = violationNotificationsEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. Options to be set for the given created workload.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1WorkloadWorkloadOptions getWorkloadOptions() {
+    return workloadOptions;
+  }
+
+  /**
+   * Optional. Options to be set for the given created workload.
+   * @param workloadOptions workloadOptions or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1Workload setWorkloadOptions(GoogleCloudAssuredworkloadsV1WorkloadWorkloadOptions workloadOptions) {
+    this.workloadOptions = workloadOptions;
     return this;
   }
 

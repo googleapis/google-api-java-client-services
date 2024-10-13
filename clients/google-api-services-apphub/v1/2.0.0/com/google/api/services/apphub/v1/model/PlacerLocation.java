@@ -17,7 +17,7 @@
 package com.google.api.services.apphub.v1.model;
 
 /**
- * Reference to an underlying networking resource that can comprise a Service.
+ * Message describing that the location of the customer resource is tied to placer allocations
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the App Hub API. For a detailed explanation see:
@@ -27,43 +27,40 @@ package com.google.api.services.apphub.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ServiceReference extends com.google.api.client.json.GenericJson {
+public final class PlacerLocation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The underlying resource URI. For example, URI of Forwarding Rule, URL Map, and
-   * Backend Service.
+   * Directory with a config related to it in placer (e.g. "/placer/prod/home/my-root/my-dir")
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String uri;
+  private java.lang.String placerConfig;
 
   /**
-   * Output only. The underlying resource URI. For example, URI of Forwarding Rule, URL Map, and
-   * Backend Service.
+   * Directory with a config related to it in placer (e.g. "/placer/prod/home/my-root/my-dir")
    * @return value or {@code null} for none
    */
-  public java.lang.String getUri() {
-    return uri;
+  public java.lang.String getPlacerConfig() {
+    return placerConfig;
   }
 
   /**
-   * Output only. The underlying resource URI. For example, URI of Forwarding Rule, URL Map, and
-   * Backend Service.
-   * @param uri uri or {@code null} for none
+   * Directory with a config related to it in placer (e.g. "/placer/prod/home/my-root/my-dir")
+   * @param placerConfig placerConfig or {@code null} for none
    */
-  public ServiceReference setUri(java.lang.String uri) {
-    this.uri = uri;
+  public PlacerLocation setPlacerConfig(java.lang.String placerConfig) {
+    this.placerConfig = placerConfig;
     return this;
   }
 
   @Override
-  public ServiceReference set(String fieldName, Object value) {
-    return (ServiceReference) super.set(fieldName, value);
+  public PlacerLocation set(String fieldName, Object value) {
+    return (PlacerLocation) super.set(fieldName, value);
   }
 
   @Override
-  public ServiceReference clone() {
-    return (ServiceReference) super.clone();
+  public PlacerLocation clone() {
+    return (PlacerLocation) super.clone();
   }
 
 }

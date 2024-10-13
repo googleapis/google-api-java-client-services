@@ -31,22 +31,23 @@ public final class WorkloadProperties extends com.google.api.client.json.Generic
 
   /**
    * Output only. The service project identifier that the underlying cloud resource resides in.
-   * Empty for non cloud resources.
+   * Empty for non-cloud resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gcpProject;
 
   /**
-   * Output only. The location that the underlying compute resource resides in (e.g us-west1).
+   * Output only. The location that the underlying compute resource resides in (for example, us-
+   * west1).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String location;
 
   /**
-   * Output only. The location that the underlying compute resource resides in if it is zonal (e.g
-   * us-west1-a).
+   * Output only. The location that the underlying compute resource resides in if it is zonal (for
+   * example, us-west1-a).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +55,7 @@ public final class WorkloadProperties extends com.google.api.client.json.Generic
 
   /**
    * Output only. The service project identifier that the underlying cloud resource resides in.
-   * Empty for non cloud resources.
+   * Empty for non-cloud resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcpProject() {
@@ -63,7 +64,7 @@ public final class WorkloadProperties extends com.google.api.client.json.Generic
 
   /**
    * Output only. The service project identifier that the underlying cloud resource resides in.
-   * Empty for non cloud resources.
+   * Empty for non-cloud resources.
    * @param gcpProject gcpProject or {@code null} for none
    */
   public WorkloadProperties setGcpProject(java.lang.String gcpProject) {
@@ -72,7 +73,8 @@ public final class WorkloadProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The location that the underlying compute resource resides in (e.g us-west1).
+   * Output only. The location that the underlying compute resource resides in (for example, us-
+   * west1).
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -80,7 +82,8 @@ public final class WorkloadProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The location that the underlying compute resource resides in (e.g us-west1).
+   * Output only. The location that the underlying compute resource resides in (for example, us-
+   * west1).
    * @param location location or {@code null} for none
    */
   public WorkloadProperties setLocation(java.lang.String location) {
@@ -89,8 +92,8 @@ public final class WorkloadProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The location that the underlying compute resource resides in if it is zonal (e.g
-   * us-west1-a).
+   * Output only. The location that the underlying compute resource resides in if it is zonal (for
+   * example, us-west1-a).
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -98,8 +101,8 @@ public final class WorkloadProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The location that the underlying compute resource resides in if it is zonal (e.g
-   * us-west1-a).
+   * Output only. The location that the underlying compute resource resides in if it is zonal (for
+   * example, us-west1-a).
    * @param zone zone or {@code null} for none
    */
   public WorkloadProperties setZone(java.lang.String zone) {

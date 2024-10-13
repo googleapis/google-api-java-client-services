@@ -17,7 +17,7 @@
 package com.google.api.services.apphub.v1.model;
 
 /**
- * Reference to an underlying networking resource that can comprise a Service.
+ * Defines parameters that should only be used for specific asset types.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the App Hub API. For a detailed explanation see:
@@ -27,43 +27,43 @@ package com.google.api.services.apphub.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ServiceReference extends com.google.api.client.json.GenericJson {
+public final class ExtraParameter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The underlying resource URI. For example, URI of Forwarding Rule, URL Map, and
-   * Backend Service.
+   * Details about zones used by regional compute.googleapis.com/InstanceGroupManager to create
+   * instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String uri;
+  private RegionalMigDistributionPolicy regionalMigDistributionPolicy;
 
   /**
-   * Output only. The underlying resource URI. For example, URI of Forwarding Rule, URL Map, and
-   * Backend Service.
+   * Details about zones used by regional compute.googleapis.com/InstanceGroupManager to create
+   * instances.
    * @return value or {@code null} for none
    */
-  public java.lang.String getUri() {
-    return uri;
+  public RegionalMigDistributionPolicy getRegionalMigDistributionPolicy() {
+    return regionalMigDistributionPolicy;
   }
 
   /**
-   * Output only. The underlying resource URI. For example, URI of Forwarding Rule, URL Map, and
-   * Backend Service.
-   * @param uri uri or {@code null} for none
+   * Details about zones used by regional compute.googleapis.com/InstanceGroupManager to create
+   * instances.
+   * @param regionalMigDistributionPolicy regionalMigDistributionPolicy or {@code null} for none
    */
-  public ServiceReference setUri(java.lang.String uri) {
-    this.uri = uri;
+  public ExtraParameter setRegionalMigDistributionPolicy(RegionalMigDistributionPolicy regionalMigDistributionPolicy) {
+    this.regionalMigDistributionPolicy = regionalMigDistributionPolicy;
     return this;
   }
 
   @Override
-  public ServiceReference set(String fieldName, Object value) {
-    return (ServiceReference) super.set(fieldName, value);
+  public ExtraParameter set(String fieldName, Object value) {
+    return (ExtraParameter) super.set(fieldName, value);
   }
 
   @Override
-  public ServiceReference clone() {
-    return (ServiceReference) super.clone();
+  public ExtraParameter clone() {
+    return (ExtraParameter) super.clone();
   }
 
 }

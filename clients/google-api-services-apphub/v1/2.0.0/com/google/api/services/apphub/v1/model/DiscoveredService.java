@@ -17,7 +17,7 @@
 package com.google.api.services.apphub.v1.model;
 
 /**
- * DiscoveredService is a network/api interface that exposes some functionality to clients for
+ * DiscoveredService is a network or API interface that exposes some functionality to clients for
  * consumption over the network. A discovered service can be registered to a App Hub service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -31,8 +31,8 @@ package com.google.api.services.apphub.v1.model;
 public final class DiscoveredService extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifier. The resource name of the discovered service. Format: "projects/{host-project-
-   * id}/locations/{location}/discoveredServices/{uuid}""
+   * Identifier. The resource name of the discovered service. Format: `"projects/{host-project-
+   * id}/locations/{location}/discoveredServices/{uuid}"`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,8 +55,8 @@ public final class DiscoveredService extends com.google.api.client.json.GenericJ
   private ServiceReference serviceReference;
 
   /**
-   * Identifier. The resource name of the discovered service. Format: "projects/{host-project-
-   * id}/locations/{location}/discoveredServices/{uuid}""
+   * Identifier. The resource name of the discovered service. Format: `"projects/{host-project-
+   * id}/locations/{location}/discoveredServices/{uuid}"`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -64,8 +64,8 @@ public final class DiscoveredService extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifier. The resource name of the discovered service. Format: "projects/{host-project-
-   * id}/locations/{location}/discoveredServices/{uuid}""
+   * Identifier. The resource name of the discovered service. Format: `"projects/{host-project-
+   * id}/locations/{location}/discoveredServices/{uuid}"`
    * @param name name or {@code null} for none
    */
   public DiscoveredService setName(java.lang.String name) {

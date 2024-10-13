@@ -38,8 +38,8 @@ public final class ServiceReference extends com.google.api.client.json.GenericJs
   private java.lang.String path;
 
   /**
-   * Output only. The underlying resource URI (For example, URI of Forwarding Rule, URL Map, and
-   * Backend Service).
+   * Output only. The underlying resource URI. For example, URI of Forwarding Rule, URL Map, and
+   * Backend Service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,8 +65,8 @@ public final class ServiceReference extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The underlying resource URI (For example, URI of Forwarding Rule, URL Map, and
-   * Backend Service).
+   * Output only. The underlying resource URI. For example, URI of Forwarding Rule, URL Map, and
+   * Backend Service.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -74,8 +74,8 @@ public final class ServiceReference extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The underlying resource URI (For example, URI of Forwarding Rule, URL Map, and
-   * Backend Service).
+   * Output only. The underlying resource URI. For example, URI of Forwarding Rule, URL Map, and
+   * Backend Service.
    * @param uri uri or {@code null} for none
    */
   public ServiceReference setUri(java.lang.String uri) {

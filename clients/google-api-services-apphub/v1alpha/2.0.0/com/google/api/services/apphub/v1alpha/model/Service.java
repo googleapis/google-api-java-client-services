@@ -17,9 +17,8 @@
 package com.google.api.services.apphub.v1alpha.model;
 
 /**
- * Service is an App Hub data model that contains a discovered service, which represents a
- * network/api interface that exposes some functionality to clients for consumption over the
- * network.
+ * Service is an App Hub data model that contains a discovered service, which represents a network
+ * or API interface that exposes some functionality to clients for consumption over the network.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the App Hub API. For a detailed explanation see:
@@ -67,8 +66,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Identifier. The resource name of a Service. Format: "projects/{host-project-
-   * id}/locations/{location}/applications/{application-id}/services/{service-id}"
+   * Identifier. The resource name of a Service. Format: `"projects/{host-project-
+   * id}/locations/{location}/applications/{application-id}/services/{service-id}"`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -197,8 +196,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The resource name of a Service. Format: "projects/{host-project-
-   * id}/locations/{location}/applications/{application-id}/services/{service-id}"
+   * Identifier. The resource name of a Service. Format: `"projects/{host-project-
+   * id}/locations/{location}/applications/{application-id}/services/{service-id}"`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -206,8 +205,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The resource name of a Service. Format: "projects/{host-project-
-   * id}/locations/{location}/applications/{application-id}/services/{service-id}"
+   * Identifier. The resource name of a Service. Format: `"projects/{host-project-
+   * id}/locations/{location}/applications/{application-id}/services/{service-id}"`
    * @param name name or {@code null} for none
    */
   public Service setName(java.lang.String name) {

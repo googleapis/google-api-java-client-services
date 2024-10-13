@@ -67,8 +67,8 @@ public final class Workload extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Identifier. The resource name of the Workload. Format: "projects/{host-project-
-   * id}/locations/{location}/applications/{application-id}/workloads/{workload-id}"
+   * Identifier. The resource name of the Workload. Format: `"projects/{host-project-
+   * id}/locations/{location}/applications/{application-id}/workloads/{workload-id}"`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -197,8 +197,8 @@ public final class Workload extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The resource name of the Workload. Format: "projects/{host-project-
-   * id}/locations/{location}/applications/{application-id}/workloads/{workload-id}"
+   * Identifier. The resource name of the Workload. Format: `"projects/{host-project-
+   * id}/locations/{location}/applications/{application-id}/workloads/{workload-id}"`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -206,8 +206,8 @@ public final class Workload extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The resource name of the Workload. Format: "projects/{host-project-
-   * id}/locations/{location}/applications/{application-id}/workloads/{workload-id}"
+   * Identifier. The resource name of the Workload. Format: `"projects/{host-project-
+   * id}/locations/{location}/applications/{application-id}/workloads/{workload-id}"`
    * @param name name or {@code null} for none
    */
   public Workload setName(java.lang.String name) {

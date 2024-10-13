@@ -40,17 +40,17 @@ public final class ServiceProjectAttachment extends com.google.api.client.json.G
   private String createTime;
 
   /**
-   * Identifier. The resource name of a ServiceProjectAttachment. Format: "projects/{host-project-
-   * id}/locations/global/serviceProjectAttachments/{service-project-id}."
+   * Identifier. The resource name of a ServiceProjectAttachment. Format: `"projects/{host-project-
+   * id}/locations/global/serviceProjectAttachments/{service-project-id}."`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. Immutable. Service project name in the format: "projects/abc" or "projects/123". As
-   * input, project name with either project id or number are accepted. As output, this field will
-   * contain project number.
+   * Required. Immutable. Service project name in the format: `"projects/abc"` or `"projects/123"`.
+   * As input, project name with either project id or number are accepted. As output, this field
+   * will contain project number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,8 +88,8 @@ public final class ServiceProjectAttachment extends com.google.api.client.json.G
   }
 
   /**
-   * Identifier. The resource name of a ServiceProjectAttachment. Format: "projects/{host-project-
-   * id}/locations/global/serviceProjectAttachments/{service-project-id}."
+   * Identifier. The resource name of a ServiceProjectAttachment. Format: `"projects/{host-project-
+   * id}/locations/global/serviceProjectAttachments/{service-project-id}."`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -97,8 +97,8 @@ public final class ServiceProjectAttachment extends com.google.api.client.json.G
   }
 
   /**
-   * Identifier. The resource name of a ServiceProjectAttachment. Format: "projects/{host-project-
-   * id}/locations/global/serviceProjectAttachments/{service-project-id}."
+   * Identifier. The resource name of a ServiceProjectAttachment. Format: `"projects/{host-project-
+   * id}/locations/global/serviceProjectAttachments/{service-project-id}."`
    * @param name name or {@code null} for none
    */
   public ServiceProjectAttachment setName(java.lang.String name) {
@@ -107,9 +107,9 @@ public final class ServiceProjectAttachment extends com.google.api.client.json.G
   }
 
   /**
-   * Required. Immutable. Service project name in the format: "projects/abc" or "projects/123". As
-   * input, project name with either project id or number are accepted. As output, this field will
-   * contain project number.
+   * Required. Immutable. Service project name in the format: `"projects/abc"` or `"projects/123"`.
+   * As input, project name with either project id or number are accepted. As output, this field
+   * will contain project number.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceProject() {
@@ -117,9 +117,9 @@ public final class ServiceProjectAttachment extends com.google.api.client.json.G
   }
 
   /**
-   * Required. Immutable. Service project name in the format: "projects/abc" or "projects/123". As
-   * input, project name with either project id or number are accepted. As output, this field will
-   * contain project number.
+   * Required. Immutable. Service project name in the format: `"projects/abc"` or `"projects/123"`.
+   * As input, project name with either project id or number are accepted. As output, this field
+   * will contain project number.
    * @param serviceProject serviceProject or {@code null} for none
    */
   public ServiceProjectAttachment setServiceProject(java.lang.String serviceProject) {

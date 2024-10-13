@@ -1025,8 +1025,7 @@ public class WorkspaceEvents extends com.google.api.client.googleapis.services.j
      * This request holds the parameters needed by the workspaceevents server.  After setting any
      * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param name Optional. Immutable. Identifier. Resource name of the subscription. Format:
-     *        `subscriptions/{subscription}`
+     * @param name Identifier. Resource name of the subscription. Format: `subscriptions/{subscription}`
      * @param content the {@link com.google.api.services.workspaceevents.v1.model.Subscription}
      * @return the request
      */
@@ -1057,8 +1056,7 @@ public class WorkspaceEvents extends com.google.api.client.googleapis.services.j
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Optional. Immutable. Identifier. Resource name of the subscription. Format:
-     *        `subscriptions/{subscription}`
+       * @param name Identifier. Resource name of the subscription. Format: `subscriptions/{subscription}`
        * @param content the {@link com.google.api.services.workspaceevents.v1.model.Subscription}
        * @since 1.13
        */
@@ -1127,24 +1125,17 @@ public class WorkspaceEvents extends com.google.api.client.googleapis.services.j
         return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Optional. Immutable. Identifier. Resource name of the subscription. Format:
-       * `subscriptions/{subscription}`
-       */
+      /** Identifier. Resource name of the subscription. Format: `subscriptions/{subscription}` */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Optional. Immutable. Identifier. Resource name of the subscription. Format:
-     `subscriptions/{subscription}`
+      /** Identifier. Resource name of the subscription. Format: `subscriptions/{subscription}`
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Optional. Immutable. Identifier. Resource name of the subscription. Format:
-       * `subscriptions/{subscription}`
-       */
+      /** Identifier. Resource name of the subscription. Format: `subscriptions/{subscription}` */
       public Patch setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

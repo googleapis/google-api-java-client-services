@@ -13608,6 +13608,135 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
   public class Operations {
 
     /**
+     * Starts asynchronous advancement of the relocate bucket operation in the case of required write
+     * downtime, to allow it to lock the bucket at the source location, and proceed with the bucket
+     * location swap. The server makes a best effort to advance the relocate bucket operation, but
+     * success is not guaranteed.
+     *
+     * Create a request for the method "operations.advanceRelocateBucket".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link AdvanceRelocateBucket#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param bucket Name of the bucket to advance the relocate for.
+     * @param operationId ID of the operation resource.
+     * @param content the {@link com.google.api.services.storage.model.AdvanceRelocateBucketOperationRequest}
+     * @return the request
+     */
+    public AdvanceRelocateBucket advanceRelocateBucket(java.lang.String bucket, java.lang.String operationId, com.google.api.services.storage.model.AdvanceRelocateBucketOperationRequest content) throws java.io.IOException {
+      AdvanceRelocateBucket result = new AdvanceRelocateBucket(bucket, operationId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class AdvanceRelocateBucket extends StorageRequest<Void> {
+
+      private static final String REST_PATH = "b/{bucket}/operations/{operationId}/advanceRelocateBucket";
+
+      /**
+       * Starts asynchronous advancement of the relocate bucket operation in the case of required write
+       * downtime, to allow it to lock the bucket at the source location, and proceed with the bucket
+       * location swap. The server makes a best effort to advance the relocate bucket operation, but
+       * success is not guaranteed.
+       *
+       * Create a request for the method "operations.advanceRelocateBucket".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link AdvanceRelocateBucket#execute()} method to invoke the remote
+       * operation. <p> {@link AdvanceRelocateBucket#initialize(com.google.api.client.googleapis.service
+       * s.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param bucket Name of the bucket to advance the relocate for.
+       * @param operationId ID of the operation resource.
+       * @param content the {@link com.google.api.services.storage.model.AdvanceRelocateBucketOperationRequest}
+       * @since 1.13
+       */
+      protected AdvanceRelocateBucket(java.lang.String bucket, java.lang.String operationId, com.google.api.services.storage.model.AdvanceRelocateBucketOperationRequest content) {
+        super(Storage.this, "POST", REST_PATH, content, Void.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.operationId = com.google.api.client.util.Preconditions.checkNotNull(operationId, "Required parameter operationId must be specified.");
+      }
+
+      @Override
+      public AdvanceRelocateBucket setAlt(java.lang.String alt) {
+        return (AdvanceRelocateBucket) super.setAlt(alt);
+      }
+
+      @Override
+      public AdvanceRelocateBucket setFields(java.lang.String fields) {
+        return (AdvanceRelocateBucket) super.setFields(fields);
+      }
+
+      @Override
+      public AdvanceRelocateBucket setKey(java.lang.String key) {
+        return (AdvanceRelocateBucket) super.setKey(key);
+      }
+
+      @Override
+      public AdvanceRelocateBucket setOauthToken(java.lang.String oauthToken) {
+        return (AdvanceRelocateBucket) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public AdvanceRelocateBucket setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (AdvanceRelocateBucket) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public AdvanceRelocateBucket setQuotaUser(java.lang.String quotaUser) {
+        return (AdvanceRelocateBucket) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public AdvanceRelocateBucket setUploadType(java.lang.String uploadType) {
+        return (AdvanceRelocateBucket) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public AdvanceRelocateBucket setUserIp(java.lang.String userIp) {
+        return (AdvanceRelocateBucket) super.setUserIp(userIp);
+      }
+
+      /** Name of the bucket to advance the relocate for. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the bucket to advance the relocate for.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the bucket to advance the relocate for. */
+      public AdvanceRelocateBucket setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** ID of the operation resource. */
+      @com.google.api.client.util.Key
+      private java.lang.String operationId;
+
+      /** ID of the operation resource.
+       */
+      public java.lang.String getOperationId() {
+        return operationId;
+      }
+
+      /** ID of the operation resource. */
+      public AdvanceRelocateBucket setOperationId(java.lang.String operationId) {
+        this.operationId = operationId;
+        return this;
+      }
+
+      @Override
+      public AdvanceRelocateBucket set(String parameterName, Object value) {
+        return (AdvanceRelocateBucket) super.set(parameterName, value);
+      }
+    }
+    /**
      * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
      * cancel the operation, but success is not guaranteed.
      *

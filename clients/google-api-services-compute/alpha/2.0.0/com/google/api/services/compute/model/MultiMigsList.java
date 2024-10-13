@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for FutureReservationsListResponse.
+ * Model definition for MultiMigsList.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -27,7 +27,7 @@ package com.google.api.services.compute.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class FutureReservationsListResponse extends com.google.api.client.json.GenericJson {
+public final class MultiMigsList extends com.google.api.client.json.GenericJson {
 
   /**
    * The value may be {@code null}.
@@ -36,59 +36,57 @@ public final class FutureReservationsListResponse extends com.google.api.client.
   private java.lang.String etag;
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Unique identifier for the resource; defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * [Output Only] A list of future reservation resources.
+   * A list of multi-MIG resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<FutureReservation> items;
+  private java.util.List<MultiMig> items;
 
   static {
-    // hack to force ProGuard to consider FutureReservation used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider MultiMig used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(FutureReservation.class);
+    com.google.api.client.util.Data.nullOf(MultiMig.class);
   }
 
   /**
-   * [Output Only] Type of resource.Always compute#FutureReservationsListResponse for lists of
-   * reservations
+   * Type of resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * [Output Only] This token allows you to get the next page of results for list requests. If the
-   * number of results is larger than maxResults, use the nextPageToken as a value for the query
-   * parameter pageToken in the next list request. Subsequent list requests will have their own
-   * nextPageToken to continue paging through the results.
+   * This token allows you to get the next page of results for maxResults, use the nextPageToken as
+   * a value for the query parameter pageToken in the next list request. Subsequent list requests
+   * will have their own nextPageToken to continue paging through the results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * [Output only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Unreachable resources.
+   * [Output only] Unreachable resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> unreachables;
 
   /**
-   * [Output Only] Informational warning message.
+   * Informational warning message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,13 +102,13 @@ public final class FutureReservationsListResponse extends com.google.api.client.
   /**
    * @param etag etag or {@code null} for none
    */
-  public FutureReservationsListResponse setEtag(java.lang.String etag) {
+  public MultiMigsList setEtag(java.lang.String etag) {
     this.etag = etag;
     return this;
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Unique identifier for the resource; defined by the server.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -118,34 +116,33 @@ public final class FutureReservationsListResponse extends com.google.api.client.
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Unique identifier for the resource; defined by the server.
    * @param id id or {@code null} for none
    */
-  public FutureReservationsListResponse setId(java.lang.String id) {
+  public MultiMigsList setId(java.lang.String id) {
     this.id = id;
     return this;
   }
 
   /**
-   * [Output Only] A list of future reservation resources.
+   * A list of multi-MIG resources.
    * @return value or {@code null} for none
    */
-  public java.util.List<FutureReservation> getItems() {
+  public java.util.List<MultiMig> getItems() {
     return items;
   }
 
   /**
-   * [Output Only] A list of future reservation resources.
+   * A list of multi-MIG resources.
    * @param items items or {@code null} for none
    */
-  public FutureReservationsListResponse setItems(java.util.List<FutureReservation> items) {
+  public MultiMigsList setItems(java.util.List<MultiMig> items) {
     this.items = items;
     return this;
   }
 
   /**
-   * [Output Only] Type of resource.Always compute#FutureReservationsListResponse for lists of
-   * reservations
+   * Type of resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -153,20 +150,18 @@ public final class FutureReservationsListResponse extends com.google.api.client.
   }
 
   /**
-   * [Output Only] Type of resource.Always compute#FutureReservationsListResponse for lists of
-   * reservations
+   * Type of resource.
    * @param kind kind or {@code null} for none
    */
-  public FutureReservationsListResponse setKind(java.lang.String kind) {
+  public MultiMigsList setKind(java.lang.String kind) {
     this.kind = kind;
     return this;
   }
 
   /**
-   * [Output Only] This token allows you to get the next page of results for list requests. If the
-   * number of results is larger than maxResults, use the nextPageToken as a value for the query
-   * parameter pageToken in the next list request. Subsequent list requests will have their own
-   * nextPageToken to continue paging through the results.
+   * This token allows you to get the next page of results for maxResults, use the nextPageToken as
+   * a value for the query parameter pageToken in the next list request. Subsequent list requests
+   * will have their own nextPageToken to continue paging through the results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -174,19 +169,18 @@ public final class FutureReservationsListResponse extends com.google.api.client.
   }
 
   /**
-   * [Output Only] This token allows you to get the next page of results for list requests. If the
-   * number of results is larger than maxResults, use the nextPageToken as a value for the query
-   * parameter pageToken in the next list request. Subsequent list requests will have their own
-   * nextPageToken to continue paging through the results.
+   * This token allows you to get the next page of results for maxResults, use the nextPageToken as
+   * a value for the query parameter pageToken in the next list request. Subsequent list requests
+   * will have their own nextPageToken to continue paging through the results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public FutureReservationsListResponse setNextPageToken(java.lang.String nextPageToken) {
+  public MultiMigsList setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
     return this;
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * [Output only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -194,16 +188,16 @@ public final class FutureReservationsListResponse extends com.google.api.client.
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * [Output only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
-  public FutureReservationsListResponse setSelfLink(java.lang.String selfLink) {
+  public MultiMigsList setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
     return this;
   }
 
   /**
-   * [Output Only] Unreachable resources.
+   * [Output only] Unreachable resources.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -211,16 +205,16 @@ public final class FutureReservationsListResponse extends com.google.api.client.
   }
 
   /**
-   * [Output Only] Unreachable resources.
+   * [Output only] Unreachable resources.
    * @param unreachables unreachables or {@code null} for none
    */
-  public FutureReservationsListResponse setUnreachables(java.util.List<java.lang.String> unreachables) {
+  public MultiMigsList setUnreachables(java.util.List<java.lang.String> unreachables) {
     this.unreachables = unreachables;
     return this;
   }
 
   /**
-   * [Output Only] Informational warning message.
+   * Informational warning message.
    * @return value or {@code null} for none
    */
   public Warning getWarning() {
@@ -228,26 +222,26 @@ public final class FutureReservationsListResponse extends com.google.api.client.
   }
 
   /**
-   * [Output Only] Informational warning message.
+   * Informational warning message.
    * @param warning warning or {@code null} for none
    */
-  public FutureReservationsListResponse setWarning(Warning warning) {
+  public MultiMigsList setWarning(Warning warning) {
     this.warning = warning;
     return this;
   }
 
   @Override
-  public FutureReservationsListResponse set(String fieldName, Object value) {
-    return (FutureReservationsListResponse) super.set(fieldName, value);
+  public MultiMigsList set(String fieldName, Object value) {
+    return (MultiMigsList) super.set(fieldName, value);
   }
 
   @Override
-  public FutureReservationsListResponse clone() {
-    return (FutureReservationsListResponse) super.clone();
+  public MultiMigsList clone() {
+    return (MultiMigsList) super.clone();
   }
 
   /**
-   * [Output Only] Informational warning message.
+   * Informational warning message.
    */
   public static final class Warning extends com.google.api.client.json.GenericJson {
 
@@ -346,7 +340,7 @@ public final class FutureReservationsListResponse extends com.google.api.client.
     }
 
     /**
-     * Model definition for FutureReservationsListResponseWarningData.
+     * Model definition for MultiMigsListWarningData.
      */
     public static final class Data extends com.google.api.client.json.GenericJson {
 

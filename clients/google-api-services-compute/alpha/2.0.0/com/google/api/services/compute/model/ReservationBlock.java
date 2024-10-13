@@ -84,6 +84,16 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
+   * [Output Only] Maintenance information for the group of hosts on this reservation including
+   * running VMs and unused hosts. Applicable only to accelerator optimized VM families beyond A3
+   * only. For both DENSE or STANDARD reservation, granular maintenance information can be retried
+   * at reservation block level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GroupMaintenanceInfo reservationMaintenance;
+
+  /**
    * [Output Only] Server-defined fully-qualified URL for this resource.
    * The value may be {@code null}.
    */
@@ -237,6 +247,29 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
    */
   public ReservationBlock setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * [Output Only] Maintenance information for the group of hosts on this reservation including
+   * running VMs and unused hosts. Applicable only to accelerator optimized VM families beyond A3
+   * only. For both DENSE or STANDARD reservation, granular maintenance information can be retried
+   * at reservation block level.
+   * @return value or {@code null} for none
+   */
+  public GroupMaintenanceInfo getReservationMaintenance() {
+    return reservationMaintenance;
+  }
+
+  /**
+   * [Output Only] Maintenance information for the group of hosts on this reservation including
+   * running VMs and unused hosts. Applicable only to accelerator optimized VM families beyond A3
+   * only. For both DENSE or STANDARD reservation, granular maintenance information can be retried
+   * at reservation block level.
+   * @param reservationMaintenance reservationMaintenance or {@code null} for none
+   */
+  public ReservationBlock setReservationMaintenance(GroupMaintenanceInfo reservationMaintenance) {
+    this.reservationMaintenance = reservationMaintenance;
     return this;
   }
 

@@ -60,6 +60,15 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private java.lang.String creationTimestamp;
 
   /**
+   * [Input Only] Optional, specifies the CUD end time requested by the customer in RFC3339 text
+   * format. Needed when the customer wants CUD's end date is later than the start date + term
+   * duration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customEndTimestamp;
+
+  /**
    * An optional description of this resource. Provide this property when you create the resource.
    * The value may be {@code null}.
    */
@@ -143,6 +152,13 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<Reservation> reservations;
+
+  /**
+   * [Output Only] Status information for Commitment resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CommitmentResourceStatus resourceStatus;
 
   /**
    * A list of commitment amounts for particular resources. Note that VCPU and MEMORY resource
@@ -258,6 +274,27 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
    */
   public Commitment setCreationTimestamp(java.lang.String creationTimestamp) {
     this.creationTimestamp = creationTimestamp;
+    return this;
+  }
+
+  /**
+   * [Input Only] Optional, specifies the CUD end time requested by the customer in RFC3339 text
+   * format. Needed when the customer wants CUD's end date is later than the start date + term
+   * duration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomEndTimestamp() {
+    return customEndTimestamp;
+  }
+
+  /**
+   * [Input Only] Optional, specifies the CUD end time requested by the customer in RFC3339 text
+   * format. Needed when the customer wants CUD's end date is later than the start date + term
+   * duration.
+   * @param customEndTimestamp customEndTimestamp or {@code null} for none
+   */
+  public Commitment setCustomEndTimestamp(java.lang.String customEndTimestamp) {
+    this.customEndTimestamp = customEndTimestamp;
     return this;
   }
 
@@ -461,6 +498,23 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
    */
   public Commitment setReservations(java.util.List<Reservation> reservations) {
     this.reservations = reservations;
+    return this;
+  }
+
+  /**
+   * [Output Only] Status information for Commitment resource.
+   * @return value or {@code null} for none
+   */
+  public CommitmentResourceStatus getResourceStatus() {
+    return resourceStatus;
+  }
+
+  /**
+   * [Output Only] Status information for Commitment resource.
+   * @param resourceStatus resourceStatus or {@code null} for none
+   */
+  public Commitment setResourceStatus(CommitmentResourceStatus resourceStatus) {
+    this.resourceStatus = resourceStatus;
     return this;
   }
 

@@ -29,9 +29,9 @@ package com.google.api.services.compute.model;
  * Traffic Director, see the Traffic Director features: Routing and traffic management table. This
  * resource defines mappings from hostnames and URL paths to either a backend service or a backend
  * bucket. To use the global urlMaps resource, the backend service must have a loadBalancingScheme
- * of either EXTERNAL or INTERNAL_SELF_MANAGED. To use the regionUrlMaps resource, the backend
- * service must have a loadBalancingScheme of INTERNAL_MANAGED. For more information, read URL Map
- * Concepts.
+ * of either EXTERNAL, EXTERNAL_MANAGED, or INTERNAL_SELF_MANAGED. To use the regionUrlMaps
+ * resource, the backend service must have a loadBalancingScheme of INTERNAL_MANAGED. For more
+ * information, read URL Map Concepts.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

@@ -122,6 +122,13 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String creationTimestamp;
 
   /**
+   * List of custom metrics that are used for the WEIGHTED_ROUND_ROBIN locality_lb_policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<BackendServiceCustomMetric> customMetrics;
+
+  /**
    * Headers that the load balancer adds to proxied requests. See [Creating custom
    * headers](https://cloud.google.com/load-balancing/docs/custom-headers).
    * The value may be {@code null}.
@@ -686,6 +693,23 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   public BackendService setCreationTimestamp(java.lang.String creationTimestamp) {
     this.creationTimestamp = creationTimestamp;
+    return this;
+  }
+
+  /**
+   * List of custom metrics that are used for the WEIGHTED_ROUND_ROBIN locality_lb_policy.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<BackendServiceCustomMetric> getCustomMetrics() {
+    return customMetrics;
+  }
+
+  /**
+   * List of custom metrics that are used for the WEIGHTED_ROUND_ROBIN locality_lb_policy.
+   * @param customMetrics customMetrics or {@code null} for none
+   */
+  public BackendService setCustomMetrics(java.util.List<BackendServiceCustomMetric> customMetrics) {
+    this.customMetrics = customMetrics;
     return this;
   }
 

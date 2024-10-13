@@ -39,6 +39,13 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.Boolean adminEnabled;
 
   /**
+   * [Output Only] URL of the AttachmentGroup that includes this Attachment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String attachmentGroup;
+
+  /**
    * Provisioned bandwidth capacity for the interconnect attachment. For attachments of type
    * DEDICATED, the user can set the bandwidth. For attachments of type PARTNER, the Google Partner
    * that is operating the interconnect must set the bandwidth. Output only for PARTNER type,
@@ -431,6 +438,23 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    */
   public InterconnectAttachment setAdminEnabled(java.lang.Boolean adminEnabled) {
     this.adminEnabled = adminEnabled;
+    return this;
+  }
+
+  /**
+   * [Output Only] URL of the AttachmentGroup that includes this Attachment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAttachmentGroup() {
+    return attachmentGroup;
+  }
+
+  /**
+   * [Output Only] URL of the AttachmentGroup that includes this Attachment.
+   * @param attachmentGroup attachmentGroup or {@code null} for none
+   */
+  public InterconnectAttachment setAttachmentGroup(java.lang.String attachmentGroup) {
+    this.attachmentGroup = attachmentGroup;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for FutureReservationsScopedList.
+ * Model definition for InterconnectGroupsListResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -27,47 +27,194 @@ package com.google.api.services.compute.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class FutureReservationsScopedList extends com.google.api.client.json.GenericJson {
+public final class InterconnectGroupsListResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of future reservations contained in this scope.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<FutureReservation> futureReservations;
+  private java.lang.String etag;
+
+  /**
+   * [Output Only] Unique identifier for the resource; defined by the server.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String id;
+
+  /**
+   * A list of InterconnectGroup resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<InterconnectGroup> items;
 
   static {
-    // hack to force ProGuard to consider FutureReservation used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider InterconnectGroup used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(FutureReservation.class);
+    com.google.api.client.util.Data.nullOf(InterconnectGroup.class);
   }
 
   /**
-   * Informational warning which replaces the list of future reservations when the list is empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kind;
+
+  /**
+   * [Output Only] This token allows you to get the next page of results for list requests. If the
+   * number of results is larger than maxResults, use the nextPageToken as a value for the query
+   * parameter pageToken in the next list request. Subsequent list requests will have their own
+   * nextPageToken to continue paging through the results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nextPageToken;
+
+  /**
+   * [Output Only] Server-defined URL for this resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String selfLink;
+
+  /**
+   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachables;
+
+  /**
+   * [Output Only] Informational warning message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Warning warning;
 
   /**
-   * A list of future reservations contained in this scope.
    * @return value or {@code null} for none
    */
-  public java.util.List<FutureReservation> getFutureReservations() {
-    return futureReservations;
+  public java.lang.String getEtag() {
+    return etag;
   }
 
   /**
-   * A list of future reservations contained in this scope.
-   * @param futureReservations futureReservations or {@code null} for none
+   * @param etag etag or {@code null} for none
    */
-  public FutureReservationsScopedList setFutureReservations(java.util.List<FutureReservation> futureReservations) {
-    this.futureReservations = futureReservations;
+  public InterconnectGroupsListResponse setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 
   /**
-   * Informational warning which replaces the list of future reservations when the list is empty.
+   * [Output Only] Unique identifier for the resource; defined by the server.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getId() {
+    return id;
+  }
+
+  /**
+   * [Output Only] Unique identifier for the resource; defined by the server.
+   * @param id id or {@code null} for none
+   */
+  public InterconnectGroupsListResponse setId(java.lang.String id) {
+    this.id = id;
+    return this;
+  }
+
+  /**
+   * A list of InterconnectGroup resources.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<InterconnectGroup> getItems() {
+    return items;
+  }
+
+  /**
+   * A list of InterconnectGroup resources.
+   * @param items items or {@code null} for none
+   */
+  public InterconnectGroupsListResponse setItems(java.util.List<InterconnectGroup> items) {
+    this.items = items;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKind() {
+    return kind;
+  }
+
+  /**
+   * @param kind kind or {@code null} for none
+   */
+  public InterconnectGroupsListResponse setKind(java.lang.String kind) {
+    this.kind = kind;
+    return this;
+  }
+
+  /**
+   * [Output Only] This token allows you to get the next page of results for list requests. If the
+   * number of results is larger than maxResults, use the nextPageToken as a value for the query
+   * parameter pageToken in the next list request. Subsequent list requests will have their own
+   * nextPageToken to continue paging through the results.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNextPageToken() {
+    return nextPageToken;
+  }
+
+  /**
+   * [Output Only] This token allows you to get the next page of results for list requests. If the
+   * number of results is larger than maxResults, use the nextPageToken as a value for the query
+   * parameter pageToken in the next list request. Subsequent list requests will have their own
+   * nextPageToken to continue paging through the results.
+   * @param nextPageToken nextPageToken or {@code null} for none
+   */
+  public InterconnectGroupsListResponse setNextPageToken(java.lang.String nextPageToken) {
+    this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * [Output Only] Server-defined URL for this resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSelfLink() {
+    return selfLink;
+  }
+
+  /**
+   * [Output Only] Server-defined URL for this resource.
+   * @param selfLink selfLink or {@code null} for none
+   */
+  public InterconnectGroupsListResponse setSelfLink(java.lang.String selfLink) {
+    this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachables() {
+    return unreachables;
+  }
+
+  /**
+   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
+   * @param unreachables unreachables or {@code null} for none
+   */
+  public InterconnectGroupsListResponse setUnreachables(java.util.List<java.lang.String> unreachables) {
+    this.unreachables = unreachables;
+    return this;
+  }
+
+  /**
+   * [Output Only] Informational warning message.
    * @return value or {@code null} for none
    */
   public Warning getWarning() {
@@ -75,26 +222,26 @@ public final class FutureReservationsScopedList extends com.google.api.client.js
   }
 
   /**
-   * Informational warning which replaces the list of future reservations when the list is empty.
+   * [Output Only] Informational warning message.
    * @param warning warning or {@code null} for none
    */
-  public FutureReservationsScopedList setWarning(Warning warning) {
+  public InterconnectGroupsListResponse setWarning(Warning warning) {
     this.warning = warning;
     return this;
   }
 
   @Override
-  public FutureReservationsScopedList set(String fieldName, Object value) {
-    return (FutureReservationsScopedList) super.set(fieldName, value);
+  public InterconnectGroupsListResponse set(String fieldName, Object value) {
+    return (InterconnectGroupsListResponse) super.set(fieldName, value);
   }
 
   @Override
-  public FutureReservationsScopedList clone() {
-    return (FutureReservationsScopedList) super.clone();
+  public InterconnectGroupsListResponse clone() {
+    return (InterconnectGroupsListResponse) super.clone();
   }
 
   /**
-   * Informational warning which replaces the list of future reservations when the list is empty.
+   * [Output Only] Informational warning message.
    */
   public static final class Warning extends com.google.api.client.json.GenericJson {
 
@@ -193,7 +340,7 @@ public final class FutureReservationsScopedList extends com.google.api.client.js
     }
 
     /**
-     * Model definition for FutureReservationsScopedListWarningData.
+     * Model definition for InterconnectGroupsListResponseWarningData.
      */
     public static final class Data extends com.google.api.client.json.GenericJson {
 

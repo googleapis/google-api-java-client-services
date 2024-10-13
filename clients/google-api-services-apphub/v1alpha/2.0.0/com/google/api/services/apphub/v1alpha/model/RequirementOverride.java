@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.apphub.v1.model;
+package com.google.api.services.apphub.v1alpha.model;
 
 /**
- * Reference to an underlying networking resource that can comprise a Service.
+ * Model definition for RequirementOverride.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the App Hub API. For a detailed explanation see:
@@ -27,43 +27,58 @@ package com.google.api.services.apphub.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ServiceReference extends com.google.api.client.json.GenericJson {
+public final class RequirementOverride extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The underlying resource URI. For example, URI of Forwarding Rule, URL Map, and
-   * Backend Service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String uri;
+  private java.lang.String ziOverride;
 
   /**
-   * Output only. The underlying resource URI. For example, URI of Forwarding Rule, URL Map, and
-   * Backend Service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String zsOverride;
+
+  /**
    * @return value or {@code null} for none
    */
-  public java.lang.String getUri() {
-    return uri;
+  public java.lang.String getZiOverride() {
+    return ziOverride;
   }
 
   /**
-   * Output only. The underlying resource URI. For example, URI of Forwarding Rule, URL Map, and
-   * Backend Service.
-   * @param uri uri or {@code null} for none
+   * @param ziOverride ziOverride or {@code null} for none
    */
-  public ServiceReference setUri(java.lang.String uri) {
-    this.uri = uri;
+  public RequirementOverride setZiOverride(java.lang.String ziOverride) {
+    this.ziOverride = ziOverride;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getZsOverride() {
+    return zsOverride;
+  }
+
+  /**
+   * @param zsOverride zsOverride or {@code null} for none
+   */
+  public RequirementOverride setZsOverride(java.lang.String zsOverride) {
+    this.zsOverride = zsOverride;
     return this;
   }
 
   @Override
-  public ServiceReference set(String fieldName, Object value) {
-    return (ServiceReference) super.set(fieldName, value);
+  public RequirementOverride set(String fieldName, Object value) {
+    return (RequirementOverride) super.set(fieldName, value);
   }
 
   @Override
-  public ServiceReference clone() {
-    return (ServiceReference) super.clone();
+  public RequirementOverride clone() {
+    return (RequirementOverride) super.clone();
   }
 
 }

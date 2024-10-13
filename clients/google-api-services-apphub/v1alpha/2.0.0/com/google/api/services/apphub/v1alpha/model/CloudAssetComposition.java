@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.apphub.v1.model;
+package com.google.api.services.apphub.v1alpha.model;
 
 /**
- * Reference to an underlying networking resource that can comprise a Service.
+ * Model definition for CloudAssetComposition.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the App Hub API. For a detailed explanation see:
@@ -27,43 +27,43 @@ package com.google.api.services.apphub.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ServiceReference extends com.google.api.client.json.GenericJson {
+public final class CloudAssetComposition extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The underlying resource URI. For example, URI of Forwarding Rule, URL Map, and
-   * Backend Service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String uri;
+  private java.util.List<CloudAsset> childAsset;
 
-  /**
-   * Output only. The underlying resource URI. For example, URI of Forwarding Rule, URL Map, and
-   * Backend Service.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getUri() {
-    return uri;
+  static {
+    // hack to force ProGuard to consider CloudAsset used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CloudAsset.class);
   }
 
   /**
-   * Output only. The underlying resource URI. For example, URI of Forwarding Rule, URL Map, and
-   * Backend Service.
-   * @param uri uri or {@code null} for none
+   * @return value or {@code null} for none
    */
-  public ServiceReference setUri(java.lang.String uri) {
-    this.uri = uri;
+  public java.util.List<CloudAsset> getChildAsset() {
+    return childAsset;
+  }
+
+  /**
+   * @param childAsset childAsset or {@code null} for none
+   */
+  public CloudAssetComposition setChildAsset(java.util.List<CloudAsset> childAsset) {
+    this.childAsset = childAsset;
     return this;
   }
 
   @Override
-  public ServiceReference set(String fieldName, Object value) {
-    return (ServiceReference) super.set(fieldName, value);
+  public CloudAssetComposition set(String fieldName, Object value) {
+    return (CloudAssetComposition) super.set(fieldName, value);
   }
 
   @Override
-  public ServiceReference clone() {
-    return (ServiceReference) super.clone();
+  public CloudAssetComposition clone() {
+    return (CloudAssetComposition) super.clone();
   }
 
 }

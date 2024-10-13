@@ -32,8 +32,8 @@ package com.google.api.services.apphub.v1.model;
 public final class DiscoveredWorkload extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifier. The resource name of the discovered workload. Format: "projects/{host-project-
-   * id}/locations/{location}/discoveredWorkloads/{uuid}"
+   * Identifier. The resource name of the discovered workload. Format: `"projects/{host-project-
+   * id}/locations/{location}/discoveredWorkloads/{uuid}"`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +56,8 @@ public final class DiscoveredWorkload extends com.google.api.client.json.Generic
   private WorkloadReference workloadReference;
 
   /**
-   * Identifier. The resource name of the discovered workload. Format: "projects/{host-project-
-   * id}/locations/{location}/discoveredWorkloads/{uuid}"
+   * Identifier. The resource name of the discovered workload. Format: `"projects/{host-project-
+   * id}/locations/{location}/discoveredWorkloads/{uuid}"`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -65,8 +65,8 @@ public final class DiscoveredWorkload extends com.google.api.client.json.Generic
   }
 
   /**
-   * Identifier. The resource name of the discovered workload. Format: "projects/{host-project-
-   * id}/locations/{location}/discoveredWorkloads/{uuid}"
+   * Identifier. The resource name of the discovered workload. Format: `"projects/{host-project-
+   * id}/locations/{location}/discoveredWorkloads/{uuid}"`
    * @param name name or {@code null} for none
    */
   public DiscoveredWorkload setName(java.lang.String name) {

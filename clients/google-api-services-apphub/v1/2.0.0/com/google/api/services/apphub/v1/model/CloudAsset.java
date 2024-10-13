@@ -17,7 +17,7 @@
 package com.google.api.services.apphub.v1.model;
 
 /**
- * Reference to an underlying networking resource that can comprise a Service.
+ * Model definition for CloudAsset.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the App Hub API. For a detailed explanation see:
@@ -27,43 +27,58 @@ package com.google.api.services.apphub.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ServiceReference extends com.google.api.client.json.GenericJson {
+public final class CloudAsset extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The underlying resource URI. For example, URI of Forwarding Rule, URL Map, and
-   * Backend Service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String uri;
+  private java.lang.String assetName;
 
   /**
-   * Output only. The underlying resource URI. For example, URI of Forwarding Rule, URL Map, and
-   * Backend Service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String assetType;
+
+  /**
    * @return value or {@code null} for none
    */
-  public java.lang.String getUri() {
-    return uri;
+  public java.lang.String getAssetName() {
+    return assetName;
   }
 
   /**
-   * Output only. The underlying resource URI. For example, URI of Forwarding Rule, URL Map, and
-   * Backend Service.
-   * @param uri uri or {@code null} for none
+   * @param assetName assetName or {@code null} for none
    */
-  public ServiceReference setUri(java.lang.String uri) {
-    this.uri = uri;
+  public CloudAsset setAssetName(java.lang.String assetName) {
+    this.assetName = assetName;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAssetType() {
+    return assetType;
+  }
+
+  /**
+   * @param assetType assetType or {@code null} for none
+   */
+  public CloudAsset setAssetType(java.lang.String assetType) {
+    this.assetType = assetType;
     return this;
   }
 
   @Override
-  public ServiceReference set(String fieldName, Object value) {
-    return (ServiceReference) super.set(fieldName, value);
+  public CloudAsset set(String fieldName, Object value) {
+    return (CloudAsset) super.set(fieldName, value);
   }
 
   @Override
-  public ServiceReference clone() {
-    return (ServiceReference) super.clone();
+  public CloudAsset clone() {
+    return (CloudAsset) super.clone();
   }
 
 }

@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.apphub.v1.model;
+package com.google.api.services.apphub.v1alpha.model;
 
 /**
- * Reference to an underlying networking resource that can comprise a Service.
+ * Model definition for LocationAssignment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the App Hub API. For a detailed explanation see:
@@ -27,43 +27,58 @@ package com.google.api.services.apphub.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ServiceReference extends com.google.api.client.json.GenericJson {
+public final class LocationAssignment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The underlying resource URI. For example, URI of Forwarding Rule, URL Map, and
-   * Backend Service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String uri;
+  private java.lang.String location;
 
   /**
-   * Output only. The underlying resource URI. For example, URI of Forwarding Rule, URL Map, and
-   * Backend Service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String locationType;
+
+  /**
    * @return value or {@code null} for none
    */
-  public java.lang.String getUri() {
-    return uri;
+  public java.lang.String getLocation() {
+    return location;
   }
 
   /**
-   * Output only. The underlying resource URI. For example, URI of Forwarding Rule, URL Map, and
-   * Backend Service.
-   * @param uri uri or {@code null} for none
+   * @param location location or {@code null} for none
    */
-  public ServiceReference setUri(java.lang.String uri) {
-    this.uri = uri;
+  public LocationAssignment setLocation(java.lang.String location) {
+    this.location = location;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocationType() {
+    return locationType;
+  }
+
+  /**
+   * @param locationType locationType or {@code null} for none
+   */
+  public LocationAssignment setLocationType(java.lang.String locationType) {
+    this.locationType = locationType;
     return this;
   }
 
   @Override
-  public ServiceReference set(String fieldName, Object value) {
-    return (ServiceReference) super.set(fieldName, value);
+  public LocationAssignment set(String fieldName, Object value) {
+    return (LocationAssignment) super.set(fieldName, value);
   }
 
   @Override
-  public ServiceReference clone() {
-    return (ServiceReference) super.clone();
+  public LocationAssignment clone() {
+    return (LocationAssignment) super.clone();
   }
 
 }

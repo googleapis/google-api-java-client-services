@@ -17,7 +17,7 @@
 package com.google.api.services.apphub.v1.model;
 
 /**
- * Reference to an underlying networking resource that can comprise a Service.
+ * Model definition for DirectLocationAssignment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the App Hub API. For a detailed explanation see:
@@ -27,43 +27,37 @@ package com.google.api.services.apphub.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ServiceReference extends com.google.api.client.json.GenericJson {
+public final class DirectLocationAssignment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The underlying resource URI. For example, URI of Forwarding Rule, URL Map, and
-   * Backend Service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String uri;
+  private java.util.List<LocationAssignment> location;
 
   /**
-   * Output only. The underlying resource URI. For example, URI of Forwarding Rule, URL Map, and
-   * Backend Service.
    * @return value or {@code null} for none
    */
-  public java.lang.String getUri() {
-    return uri;
+  public java.util.List<LocationAssignment> getLocation() {
+    return location;
   }
 
   /**
-   * Output only. The underlying resource URI. For example, URI of Forwarding Rule, URL Map, and
-   * Backend Service.
-   * @param uri uri or {@code null} for none
+   * @param location location or {@code null} for none
    */
-  public ServiceReference setUri(java.lang.String uri) {
-    this.uri = uri;
+  public DirectLocationAssignment setLocation(java.util.List<LocationAssignment> location) {
+    this.location = location;
     return this;
   }
 
   @Override
-  public ServiceReference set(String fieldName, Object value) {
-    return (ServiceReference) super.set(fieldName, value);
+  public DirectLocationAssignment set(String fieldName, Object value) {
+    return (DirectLocationAssignment) super.set(fieldName, value);
   }
 
   @Override
-  public ServiceReference clone() {
-    return (ServiceReference) super.clone();
+  public DirectLocationAssignment clone() {
+    return (DirectLocationAssignment) super.clone();
   }
 
 }

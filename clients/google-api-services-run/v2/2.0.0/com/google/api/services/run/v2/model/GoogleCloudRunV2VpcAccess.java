@@ -32,9 +32,9 @@ public final class GoogleCloudRunV2VpcAccess extends com.google.api.client.json.
 
   /**
    * VPC Access connector name. Format:
-   * projects/{project}/locations/{location}/connectors/{connector}, where {project} can be project
-   * id or number. For more information on sending traffic to a VPC network via a connector, visit
-   * https://cloud.google.com/run/docs/configuring/vpc-connectors.
+   * `projects/{project}/locations/{location}/connectors/{connector}`, where `{project}` can be
+   * project id or number. For more information on sending traffic to a VPC network via a connector,
+   * visit https://cloud.google.com/run/docs/configuring/vpc-connectors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,9 +62,9 @@ public final class GoogleCloudRunV2VpcAccess extends com.google.api.client.json.
 
   /**
    * VPC Access connector name. Format:
-   * projects/{project}/locations/{location}/connectors/{connector}, where {project} can be project
-   * id or number. For more information on sending traffic to a VPC network via a connector, visit
-   * https://cloud.google.com/run/docs/configuring/vpc-connectors.
+   * `projects/{project}/locations/{location}/connectors/{connector}`, where `{project}` can be
+   * project id or number. For more information on sending traffic to a VPC network via a connector,
+   * visit https://cloud.google.com/run/docs/configuring/vpc-connectors.
    * @return value or {@code null} for none
    */
   public java.lang.String getConnector() {
@@ -73,9 +73,9 @@ public final class GoogleCloudRunV2VpcAccess extends com.google.api.client.json.
 
   /**
    * VPC Access connector name. Format:
-   * projects/{project}/locations/{location}/connectors/{connector}, where {project} can be project
-   * id or number. For more information on sending traffic to a VPC network via a connector, visit
-   * https://cloud.google.com/run/docs/configuring/vpc-connectors.
+   * `projects/{project}/locations/{location}/connectors/{connector}`, where `{project}` can be
+   * project id or number. For more information on sending traffic to a VPC network via a connector,
+   * visit https://cloud.google.com/run/docs/configuring/vpc-connectors.
    * @param connector connector or {@code null} for none
    */
   public GoogleCloudRunV2VpcAccess setConnector(java.lang.String connector) {

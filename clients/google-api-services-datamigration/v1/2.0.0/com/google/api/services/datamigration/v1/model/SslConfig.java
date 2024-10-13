@@ -57,7 +57,7 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String clientKey;
 
   /**
-   * Output only. The ssl config type according to 'client_key', 'client_certificate' and
+   * Optional. The ssl config type according to 'client_key', 'client_certificate' and
    * 'ca_certificate'.
    * The value may be {@code null}.
    */
@@ -126,7 +126,7 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The ssl config type according to 'client_key', 'client_certificate' and
+   * Optional. The ssl config type according to 'client_key', 'client_certificate' and
    * 'ca_certificate'.
    * @return value or {@code null} for none
    */
@@ -135,7 +135,7 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The ssl config type according to 'client_key', 'client_certificate' and
+   * Optional. The ssl config type according to 'client_key', 'client_certificate' and
    * 'ca_certificate'.
    * @param type type or {@code null} for none
    */

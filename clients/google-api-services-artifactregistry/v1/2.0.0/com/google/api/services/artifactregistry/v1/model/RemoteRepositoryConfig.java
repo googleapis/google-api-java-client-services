@@ -38,9 +38,7 @@ public final class RemoteRepositoryConfig extends com.google.api.client.json.Gen
   private AptRepository aptRepository;
 
   /**
-   * Common remote repository settings. Used as the RemoteRepository upstream URL instead of
-   * Predefined and Custom remote repositories. Google Cloud Console and Google Cloud CLI will map
-   * all the new remote repositories to this field.
+   * Common remote repository settings. Used as the remote repository upstream URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,9 +119,7 @@ public final class RemoteRepositoryConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Common remote repository settings. Used as the RemoteRepository upstream URL instead of
-   * Predefined and Custom remote repositories. Google Cloud Console and Google Cloud CLI will map
-   * all the new remote repositories to this field.
+   * Common remote repository settings. Used as the remote repository upstream URL.
    * @return value or {@code null} for none
    */
   public CommonRemoteRepository getCommonRepository() {
@@ -131,9 +127,7 @@ public final class RemoteRepositoryConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Common remote repository settings. Used as the RemoteRepository upstream URL instead of
-   * Predefined and Custom remote repositories. Google Cloud Console and Google Cloud CLI will map
-   * all the new remote repositories to this field.
+   * Common remote repository settings. Used as the remote repository upstream URL.
    * @param commonRepository commonRepository or {@code null} for none
    */
   public RemoteRepositoryConfig setCommonRepository(CommonRemoteRepository commonRepository) {

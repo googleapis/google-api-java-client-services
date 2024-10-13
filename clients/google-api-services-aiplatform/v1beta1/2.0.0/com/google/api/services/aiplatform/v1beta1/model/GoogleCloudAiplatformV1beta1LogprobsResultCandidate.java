@@ -37,14 +37,14 @@ public final class GoogleCloudAiplatformV1beta1LogprobsResultCandidate extends c
   private java.lang.Float logProbability;
 
   /**
-   * The candidate’s token string value.
+   * The candidate's token string value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String token;
 
   /**
-   * The candidate’s token id value.
+   * The candidate's token id value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class GoogleCloudAiplatformV1beta1LogprobsResultCandidate extends c
   }
 
   /**
-   * The candidate’s token string value.
+   * The candidate's token string value.
    * @return value or {@code null} for none
    */
   public java.lang.String getToken() {
@@ -76,7 +76,7 @@ public final class GoogleCloudAiplatformV1beta1LogprobsResultCandidate extends c
   }
 
   /**
-   * The candidate’s token string value.
+   * The candidate's token string value.
    * @param token token or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1LogprobsResultCandidate setToken(java.lang.String token) {
@@ -85,7 +85,7 @@ public final class GoogleCloudAiplatformV1beta1LogprobsResultCandidate extends c
   }
 
   /**
-   * The candidate’s token id value.
+   * The candidate's token id value.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTokenId() {
@@ -93,7 +93,7 @@ public final class GoogleCloudAiplatformV1beta1LogprobsResultCandidate extends c
   }
 
   /**
-   * The candidate’s token id value.
+   * The candidate's token id value.
    * @param tokenId tokenId or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1LogprobsResultCandidate setTokenId(java.lang.Integer tokenId) {

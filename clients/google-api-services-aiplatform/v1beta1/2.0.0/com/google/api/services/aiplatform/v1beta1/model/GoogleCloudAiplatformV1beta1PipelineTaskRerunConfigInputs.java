@@ -30,7 +30,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1PipelineTaskRerunConfigInputs extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Input artifacts.
+   * Optional. Input artifacts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,14 +43,14 @@ public final class GoogleCloudAiplatformV1beta1PipelineTaskRerunConfigInputs ext
   }
 
   /**
-   * Output only. Input parameters.
+   * Optional. Input parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> parameterValues;
 
   /**
-   * Output only. Input artifacts.
+   * Optional. Input artifacts.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudAiplatformV1beta1PipelineTaskRerunConfigArtifactList> getArtifacts() {
@@ -58,7 +58,7 @@ public final class GoogleCloudAiplatformV1beta1PipelineTaskRerunConfigInputs ext
   }
 
   /**
-   * Output only. Input artifacts.
+   * Optional. Input artifacts.
    * @param artifacts artifacts or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1PipelineTaskRerunConfigInputs setArtifacts(java.util.Map<String, GoogleCloudAiplatformV1beta1PipelineTaskRerunConfigArtifactList> artifacts) {
@@ -67,7 +67,7 @@ public final class GoogleCloudAiplatformV1beta1PipelineTaskRerunConfigInputs ext
   }
 
   /**
-   * Output only. Input parameters.
+   * Optional. Input parameters.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParameterValues() {
@@ -75,7 +75,7 @@ public final class GoogleCloudAiplatformV1beta1PipelineTaskRerunConfigInputs ext
   }
 
   /**
-   * Output only. Input parameters.
+   * Optional. Input parameters.
    * @param parameterValues parameterValues or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1PipelineTaskRerunConfigInputs setParameterValues(java.util.Map<String, java.lang.Object> parameterValues) {

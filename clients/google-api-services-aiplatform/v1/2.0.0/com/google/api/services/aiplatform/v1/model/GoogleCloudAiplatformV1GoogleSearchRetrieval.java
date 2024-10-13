@@ -29,6 +29,30 @@ package com.google.api.services.aiplatform.v1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudAiplatformV1GoogleSearchRetrieval extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Specifies the dynamic retrieval configuration for the given source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1DynamicRetrievalConfig dynamicRetrievalConfig;
+
+  /**
+   * Specifies the dynamic retrieval configuration for the given source.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1DynamicRetrievalConfig getDynamicRetrievalConfig() {
+    return dynamicRetrievalConfig;
+  }
+
+  /**
+   * Specifies the dynamic retrieval configuration for the given source.
+   * @param dynamicRetrievalConfig dynamicRetrievalConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GoogleSearchRetrieval setDynamicRetrievalConfig(GoogleCloudAiplatformV1DynamicRetrievalConfig dynamicRetrievalConfig) {
+    this.dynamicRetrievalConfig = dynamicRetrievalConfig;
+    return this;
+  }
+
   @Override
   public GoogleCloudAiplatformV1GoogleSearchRetrieval set(String fieldName, Object value) {
     return (GoogleCloudAiplatformV1GoogleSearchRetrieval) super.set(fieldName, value);

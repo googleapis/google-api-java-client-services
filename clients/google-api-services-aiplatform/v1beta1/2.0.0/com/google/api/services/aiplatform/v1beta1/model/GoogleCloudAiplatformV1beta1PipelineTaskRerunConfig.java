@@ -31,42 +31,42 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1PipelineTaskRerunConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The runtime input of the task overridden by the user.
+   * Optional. The runtime input of the task overridden by the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1PipelineTaskRerunConfigInputs inputs;
 
   /**
-   * Output only. Whether to skip downstream tasks. Default value is False.
+   * Optional. Whether to skip downstream tasks. Default value is False.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean skipDownstreamTasks;
 
   /**
-   * Output only. Whether to skip this task. Default value is False.
+   * Optional. Whether to skip this task. Default value is False.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean skipTask;
 
   /**
-   * Output only. The system generated ID of the task. Retrieved from original run.
+   * Optional. The system generated ID of the task. Retrieved from original run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long taskId;
 
   /**
-   * Output only. The name of the task.
+   * Optional. The name of the task.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String taskName;
 
   /**
-   * Output only. The runtime input of the task overridden by the user.
+   * Optional. The runtime input of the task overridden by the user.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1PipelineTaskRerunConfigInputs getInputs() {
@@ -74,7 +74,7 @@ public final class GoogleCloudAiplatformV1beta1PipelineTaskRerunConfig extends c
   }
 
   /**
-   * Output only. The runtime input of the task overridden by the user.
+   * Optional. The runtime input of the task overridden by the user.
    * @param inputs inputs or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1PipelineTaskRerunConfig setInputs(GoogleCloudAiplatformV1beta1PipelineTaskRerunConfigInputs inputs) {
@@ -83,7 +83,7 @@ public final class GoogleCloudAiplatformV1beta1PipelineTaskRerunConfig extends c
   }
 
   /**
-   * Output only. Whether to skip downstream tasks. Default value is False.
+   * Optional. Whether to skip downstream tasks. Default value is False.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSkipDownstreamTasks() {
@@ -91,7 +91,7 @@ public final class GoogleCloudAiplatformV1beta1PipelineTaskRerunConfig extends c
   }
 
   /**
-   * Output only. Whether to skip downstream tasks. Default value is False.
+   * Optional. Whether to skip downstream tasks. Default value is False.
    * @param skipDownstreamTasks skipDownstreamTasks or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1PipelineTaskRerunConfig setSkipDownstreamTasks(java.lang.Boolean skipDownstreamTasks) {
@@ -100,7 +100,7 @@ public final class GoogleCloudAiplatformV1beta1PipelineTaskRerunConfig extends c
   }
 
   /**
-   * Output only. Whether to skip this task. Default value is False.
+   * Optional. Whether to skip this task. Default value is False.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSkipTask() {
@@ -108,7 +108,7 @@ public final class GoogleCloudAiplatformV1beta1PipelineTaskRerunConfig extends c
   }
 
   /**
-   * Output only. Whether to skip this task. Default value is False.
+   * Optional. Whether to skip this task. Default value is False.
    * @param skipTask skipTask or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1PipelineTaskRerunConfig setSkipTask(java.lang.Boolean skipTask) {
@@ -117,7 +117,7 @@ public final class GoogleCloudAiplatformV1beta1PipelineTaskRerunConfig extends c
   }
 
   /**
-   * Output only. The system generated ID of the task. Retrieved from original run.
+   * Optional. The system generated ID of the task. Retrieved from original run.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTaskId() {
@@ -125,7 +125,7 @@ public final class GoogleCloudAiplatformV1beta1PipelineTaskRerunConfig extends c
   }
 
   /**
-   * Output only. The system generated ID of the task. Retrieved from original run.
+   * Optional. The system generated ID of the task. Retrieved from original run.
    * @param taskId taskId or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1PipelineTaskRerunConfig setTaskId(java.lang.Long taskId) {
@@ -134,7 +134,7 @@ public final class GoogleCloudAiplatformV1beta1PipelineTaskRerunConfig extends c
   }
 
   /**
-   * Output only. The name of the task.
+   * Optional. The name of the task.
    * @return value or {@code null} for none
    */
   public java.lang.String getTaskName() {
@@ -142,7 +142,7 @@ public final class GoogleCloudAiplatformV1beta1PipelineTaskRerunConfig extends c
   }
 
   /**
-   * Output only. The name of the task.
+   * Optional. The name of the task.
    * @param taskName taskName or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1PipelineTaskRerunConfig setTaskName(java.lang.String taskName) {

@@ -109,8 +109,8 @@ public final class GoogleCloudAiplatformV1beta1PipelineJob extends com.google.ap
   private java.lang.String network;
 
   /**
-   * Output only. The original pipeline job id if this pipeline job is a rerun of a previous
-   * pipeline job.
+   * Optional. The original pipeline job id if this pipeline job is a rerun of a previous pipeline
+   * job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -124,8 +124,8 @@ public final class GoogleCloudAiplatformV1beta1PipelineJob extends com.google.ap
   private java.util.Map<String, java.lang.Object> pipelineSpec;
 
   /**
-   * Output only. The rerun configs for each task in the pipeline job. By default, the rerun will:
-   * 1. Use the same input artifacts as the original run. 2. Use the same input parameters as the
+   * Optional. The rerun configs for each task in the pipeline job. By default, the rerun will: 1.
+   * Use the same input artifacts as the original run. 2. Use the same input parameters as the
    * original run. 3. Skip all the tasks that are already succeeded in the original run. 4. Rerun
    * all the tasks that are not succeeded in the original run. By providing this field, users can
    * override the default behavior and specify the rerun config for each task.
@@ -415,8 +415,8 @@ public final class GoogleCloudAiplatformV1beta1PipelineJob extends com.google.ap
   }
 
   /**
-   * Output only. The original pipeline job id if this pipeline job is a rerun of a previous
-   * pipeline job.
+   * Optional. The original pipeline job id if this pipeline job is a rerun of a previous pipeline
+   * job.
    * @return value or {@code null} for none
    */
   public java.lang.Long getOriginalPipelineJobId() {
@@ -424,8 +424,8 @@ public final class GoogleCloudAiplatformV1beta1PipelineJob extends com.google.ap
   }
 
   /**
-   * Output only. The original pipeline job id if this pipeline job is a rerun of a previous
-   * pipeline job.
+   * Optional. The original pipeline job id if this pipeline job is a rerun of a previous pipeline
+   * job.
    * @param originalPipelineJobId originalPipelineJobId or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1PipelineJob setOriginalPipelineJobId(java.lang.Long originalPipelineJobId) {
@@ -451,8 +451,8 @@ public final class GoogleCloudAiplatformV1beta1PipelineJob extends com.google.ap
   }
 
   /**
-   * Output only. The rerun configs for each task in the pipeline job. By default, the rerun will:
-   * 1. Use the same input artifacts as the original run. 2. Use the same input parameters as the
+   * Optional. The rerun configs for each task in the pipeline job. By default, the rerun will: 1.
+   * Use the same input artifacts as the original run. 2. Use the same input parameters as the
    * original run. 3. Skip all the tasks that are already succeeded in the original run. 4. Rerun
    * all the tasks that are not succeeded in the original run. By providing this field, users can
    * override the default behavior and specify the rerun config for each task.
@@ -463,8 +463,8 @@ public final class GoogleCloudAiplatformV1beta1PipelineJob extends com.google.ap
   }
 
   /**
-   * Output only. The rerun configs for each task in the pipeline job. By default, the rerun will:
-   * 1. Use the same input artifacts as the original run. 2. Use the same input parameters as the
+   * Optional. The rerun configs for each task in the pipeline job. By default, the rerun will: 1.
+   * Use the same input artifacts as the original run. 2. Use the same input parameters as the
    * original run. 3. Skip all the tasks that are already succeeded in the original run. 4. Rerun
    * all the tasks that are not succeeded in the original run. By providing this field, users can
    * override the default behavior and specify the rerun config for each task.

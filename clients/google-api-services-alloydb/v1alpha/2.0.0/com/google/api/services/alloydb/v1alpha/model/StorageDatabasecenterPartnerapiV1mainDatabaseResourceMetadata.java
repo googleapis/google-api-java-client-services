@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1alpha.model;
 
 /**
- * Common model for database resource instance metadata. Next ID: 22
+ * Common model for database resource instance metadata. Next ID: 23
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -71,6 +71,14 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainCustomMetadataData customMetadata;
+
+  /**
+   * Optional. Edition represents whether the instance is ENTERPRISE or ENTERPRISE_PLUS. This
+   * information is core to Cloud SQL only and is used to identify the edition of the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String edition;
 
   /**
    * Entitlements associated with the resource
@@ -280,6 +288,25 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setCustomMetadata(StorageDatabasecenterPartnerapiV1mainCustomMetadataData customMetadata) {
     this.customMetadata = customMetadata;
+    return this;
+  }
+
+  /**
+   * Optional. Edition represents whether the instance is ENTERPRISE or ENTERPRISE_PLUS. This
+   * information is core to Cloud SQL only and is used to identify the edition of the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEdition() {
+    return edition;
+  }
+
+  /**
+   * Optional. Edition represents whether the instance is ENTERPRISE or ENTERPRISE_PLUS. This
+   * information is core to Cloud SQL only and is used to identify the edition of the instance.
+   * @param edition edition or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setEdition(java.lang.String edition) {
+    this.edition = edition;
     return this;
   }
 

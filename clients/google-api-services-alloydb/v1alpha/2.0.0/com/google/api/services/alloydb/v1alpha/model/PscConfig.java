@@ -38,6 +38,14 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean pscEnabled;
 
   /**
+   * Output only. The project number that needs to be allowlisted on the network attachment to
+   * enable outbound connectivity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long serviceOwnedProjectNumber;
+
+  /**
    * Optional. Create an instance that allows connections from Private Service Connect endpoints to
    * the instance.
    * @return value or {@code null} for none
@@ -53,6 +61,25 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
    */
   public PscConfig setPscEnabled(java.lang.Boolean pscEnabled) {
     this.pscEnabled = pscEnabled;
+    return this;
+  }
+
+  /**
+   * Output only. The project number that needs to be allowlisted on the network attachment to
+   * enable outbound connectivity.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getServiceOwnedProjectNumber() {
+    return serviceOwnedProjectNumber;
+  }
+
+  /**
+   * Output only. The project number that needs to be allowlisted on the network attachment to
+   * enable outbound connectivity.
+   * @param serviceOwnedProjectNumber serviceOwnedProjectNumber or {@code null} for none
+   */
+  public PscConfig setServiceOwnedProjectNumber(java.lang.Long serviceOwnedProjectNumber) {
+    this.serviceOwnedProjectNumber = serviceOwnedProjectNumber;
     return this;
   }
 

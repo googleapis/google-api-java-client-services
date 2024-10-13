@@ -31,16 +31,16 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2ServiceMesh extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Mesh resource name. Format: projects/{project}/locations/global/meshes/{mesh}, where
-   * {project} can be project id or number.
+   * The Mesh resource name. Format: `projects/{project}/locations/global/meshes/{mesh}`, where
+   * `{project}` can be project id or number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mesh;
 
   /**
-   * The Mesh resource name. Format: projects/{project}/locations/global/meshes/{mesh}, where
-   * {project} can be project id or number.
+   * The Mesh resource name. Format: `projects/{project}/locations/global/meshes/{mesh}`, where
+   * `{project}` can be project id or number.
    * @return value or {@code null} for none
    */
   public java.lang.String getMesh() {
@@ -48,8 +48,8 @@ public final class GoogleCloudRunV2ServiceMesh extends com.google.api.client.jso
   }
 
   /**
-   * The Mesh resource name. Format: projects/{project}/locations/global/meshes/{mesh}, where
-   * {project} can be project id or number.
+   * The Mesh resource name. Format: `projects/{project}/locations/global/meshes/{mesh}`, where
+   * `{project}` can be project id or number.
    * @param mesh mesh or {@code null} for none
    */
   public GoogleCloudRunV2ServiceMesh setMesh(java.lang.String mesh) {

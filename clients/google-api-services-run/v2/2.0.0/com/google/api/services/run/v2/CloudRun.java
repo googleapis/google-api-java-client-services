@@ -836,7 +836,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          *
          * @param parent Required. The project and location to build in. Location must be a region, e.g., 'us-central1' or
          *        'global' if the global builder is to be used. Format:
-         *        projects/{project}/locations/{location}
+         *        `projects/{project}/locations/{location}`
          * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2SubmitBuildRequest}
          * @return the request
          */
@@ -865,7 +865,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            *
            * @param parent Required. The project and location to build in. Location must be a region, e.g., 'us-central1' or
          *        'global' if the global builder is to be used. Format:
-         *        projects/{project}/locations/{location}
+         *        `projects/{project}/locations/{location}`
            * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2SubmitBuildRequest}
            * @since 1.13
            */
@@ -937,13 +937,13 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The project and location to build in. Location must be a region, e.g., 'us-
            * central1' or 'global' if the global builder is to be used. Format:
-           * projects/{project}/locations/{location}
+           * `projects/{project}/locations/{location}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The project and location to build in. Location must be a region, e.g., 'us-central1' or
-         'global' if the global builder is to be used. Format: projects/{project}/locations/{location}
+         'global' if the global builder is to be used. Format: `projects/{project}/locations/{location}`
            */
           public java.lang.String getParent() {
             return parent;
@@ -952,7 +952,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The project and location to build in. Location must be a region, e.g., 'us-
            * central1' or 'global' if the global builder is to be used. Format:
-           * projects/{project}/locations/{location}
+           * `projects/{project}/locations/{location}`
            */
           public Submit setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

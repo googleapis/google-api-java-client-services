@@ -40,7 +40,7 @@ public final class GoogleCloudRunV2BinaryAuthorization extends com.google.api.cl
 
   /**
    * Optional. The path to a binary authorization policy. Format:
-   * projects/{project}/platforms/cloudRun/{policy-name}
+   * `projects/{project}/platforms/cloudRun/{policy-name}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class GoogleCloudRunV2BinaryAuthorization extends com.google.api.cl
 
   /**
    * Optional. The path to a binary authorization policy. Format:
-   * projects/{project}/platforms/cloudRun/{policy-name}
+   * `projects/{project}/platforms/cloudRun/{policy-name}`
    * @return value or {@code null} for none
    */
   public java.lang.String getPolicy() {
@@ -86,7 +86,7 @@ public final class GoogleCloudRunV2BinaryAuthorization extends com.google.api.cl
 
   /**
    * Optional. The path to a binary authorization policy. Format:
-   * projects/{project}/platforms/cloudRun/{policy-name}
+   * `projects/{project}/platforms/cloudRun/{policy-name}`
    * @param policy policy or {@code null} for none
    */
   public GoogleCloudRunV2BinaryAuthorization setPolicy(java.lang.String policy) {

@@ -94,7 +94,7 @@ public final class DeveloperMetadataLookup extends com.google.api.client.json.Ge
 
   /**
    * Limits the selected developer metadata to that which has a matching
-   * DeveloperMetadata.visibility. If left unspecified, all developer metadata visibile to the
+   * DeveloperMetadata.visibility. If left unspecified, all developer metadata visible to the
    * requesting project is considered.
    * The value may be {@code null}.
    */
@@ -235,7 +235,7 @@ public final class DeveloperMetadataLookup extends com.google.api.client.json.Ge
 
   /**
    * Limits the selected developer metadata to that which has a matching
-   * DeveloperMetadata.visibility. If left unspecified, all developer metadata visibile to the
+   * DeveloperMetadata.visibility. If left unspecified, all developer metadata visible to the
    * requesting project is considered.
    * @return value or {@code null} for none
    */
@@ -245,7 +245,7 @@ public final class DeveloperMetadataLookup extends com.google.api.client.json.Ge
 
   /**
    * Limits the selected developer metadata to that which has a matching
-   * DeveloperMetadata.visibility. If left unspecified, all developer metadata visibile to the
+   * DeveloperMetadata.visibility. If left unspecified, all developer metadata visible to the
    * requesting project is considered.
    * @param visibility visibility or {@code null} for none
    */

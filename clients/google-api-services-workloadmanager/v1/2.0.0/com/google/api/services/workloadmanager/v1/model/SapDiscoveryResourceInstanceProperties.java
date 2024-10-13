@@ -58,6 +58,13 @@ public final class SapDiscoveryResourceInstanceProperties extends com.google.api
   private java.lang.String instanceRole;
 
   /**
+   * Optional. Instance is part of a DR site.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isDrSite;
+
+  /**
    * Optional. A virtual hostname of the instance if it has one.
    * The value may be {@code null}.
    */
@@ -129,6 +136,23 @@ public final class SapDiscoveryResourceInstanceProperties extends com.google.api
    */
   public SapDiscoveryResourceInstanceProperties setInstanceRole(java.lang.String instanceRole) {
     this.instanceRole = instanceRole;
+    return this;
+  }
+
+  /**
+   * Optional. Instance is part of a DR site.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsDrSite() {
+    return isDrSite;
+  }
+
+  /**
+   * Optional. Instance is part of a DR site.
+   * @param isDrSite isDrSite or {@code null} for none
+   */
+  public SapDiscoveryResourceInstanceProperties setIsDrSite(java.lang.Boolean isDrSite) {
+    this.isDrSite = isDrSite;
     return this;
   }
 

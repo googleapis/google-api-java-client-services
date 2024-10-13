@@ -38,6 +38,13 @@ public final class GoogleCloudRetailV2alphaModelModelFeaturesConfig extends com.
   private GoogleCloudRetailV2alphaModelFrequentlyBoughtTogetherFeaturesConfig frequentlyBoughtTogetherConfig;
 
   /**
+   * Optional. LLM embedding config to use for this model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2alphaModelModelFeaturesConfigLlmEmbeddingConfig llmEmbeddingConfig;
+
+  /**
    * Additional configs for frequently-bought-together models.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class GoogleCloudRetailV2alphaModelModelFeaturesConfig extends com.
    */
   public GoogleCloudRetailV2alphaModelModelFeaturesConfig setFrequentlyBoughtTogetherConfig(GoogleCloudRetailV2alphaModelFrequentlyBoughtTogetherFeaturesConfig frequentlyBoughtTogetherConfig) {
     this.frequentlyBoughtTogetherConfig = frequentlyBoughtTogetherConfig;
+    return this;
+  }
+
+  /**
+   * Optional. LLM embedding config to use for this model.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaModelModelFeaturesConfigLlmEmbeddingConfig getLlmEmbeddingConfig() {
+    return llmEmbeddingConfig;
+  }
+
+  /**
+   * Optional. LLM embedding config to use for this model.
+   * @param llmEmbeddingConfig llmEmbeddingConfig or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaModelModelFeaturesConfig setLlmEmbeddingConfig(GoogleCloudRetailV2alphaModelModelFeaturesConfigLlmEmbeddingConfig llmEmbeddingConfig) {
+    this.llmEmbeddingConfig = llmEmbeddingConfig;
     return this;
   }
 

@@ -19524,6 +19524,168 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
+         * An accessor for creating requests from the Chat collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Aiplatform aiplatform = new Aiplatform(...);}
+         *   {@code Aiplatform.Chat.List request = aiplatform.chat().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Chat chat() {
+          return new Chat();
+        }
+
+        /**
+         * The "chat" collection of methods.
+         */
+        public class Chat {
+
+          /**
+           * Exposes an OpenAI-compatible endpoint for chat completions.
+           *
+           * Create a request for the method "chat.completions".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link Completions#execute()} method to invoke the remote operation.
+           *
+           * @param endpoint Required. The name of the endpoint requested to serve the prediction. Format:
+           *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody}
+           * @return the request
+           */
+          public Completions completions(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody content) throws java.io.IOException {
+            Completions result = new Completions(endpoint, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Completions extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody> {
+
+            private static final String REST_PATH = "v1/{+endpoint}/chat/completions";
+
+            private final java.util.regex.Pattern ENDPOINT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+
+            /**
+             * Exposes an OpenAI-compatible endpoint for chat completions.
+             *
+             * Create a request for the method "chat.completions".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Completions#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * Completions#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param endpoint Required. The name of the endpoint requested to serve the prediction. Format:
+           *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
+             * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody}
+             * @since 1.13
+             */
+            protected Completions(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody.class);
+              this.endpoint = com.google.api.client.util.Preconditions.checkNotNull(endpoint, "Required parameter endpoint must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                    "Parameter endpoint must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+              }
+            }
+
+            @Override
+            public Completions set$Xgafv(java.lang.String $Xgafv) {
+              return (Completions) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Completions setAccessToken(java.lang.String accessToken) {
+              return (Completions) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Completions setAlt(java.lang.String alt) {
+              return (Completions) super.setAlt(alt);
+            }
+
+            @Override
+            public Completions setCallback(java.lang.String callback) {
+              return (Completions) super.setCallback(callback);
+            }
+
+            @Override
+            public Completions setFields(java.lang.String fields) {
+              return (Completions) super.setFields(fields);
+            }
+
+            @Override
+            public Completions setKey(java.lang.String key) {
+              return (Completions) super.setKey(key);
+            }
+
+            @Override
+            public Completions setOauthToken(java.lang.String oauthToken) {
+              return (Completions) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Completions setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Completions) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Completions setQuotaUser(java.lang.String quotaUser) {
+              return (Completions) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Completions setUploadType(java.lang.String uploadType) {
+              return (Completions) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Completions setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Completions) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the endpoint requested to serve the prediction. Format:
+             * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String endpoint;
+
+            /** Required. The name of the endpoint requested to serve the prediction. Format:
+           `projects/{project}/locations/{location}/endpoints/{endpoint}`
+             */
+            public java.lang.String getEndpoint() {
+              return endpoint;
+            }
+
+            /**
+             * Required. The name of the endpoint requested to serve the prediction. Format:
+             * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+             */
+            public Completions setEndpoint(java.lang.String endpoint) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                    "Parameter endpoint must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+              }
+              this.endpoint = endpoint;
+              return this;
+            }
+
+            @Override
+            public Completions set(String parameterName, Object value) {
+              return (Completions) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
          * An accessor for creating requests from the Operations collection.
          *
          * <p>The typical use is:</p>

@@ -30,14 +30,14 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1PipelineTaskRerunConfigArtifactList extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. A list of artifact metadata.
+   * Optional. A list of artifact metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1beta1RuntimeArtifact> artifacts;
 
   /**
-   * Output only. A list of artifact metadata.
+   * Optional. A list of artifact metadata.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1RuntimeArtifact> getArtifacts() {
@@ -45,7 +45,7 @@ public final class GoogleCloudAiplatformV1beta1PipelineTaskRerunConfigArtifactLi
   }
 
   /**
-   * Output only. A list of artifact metadata.
+   * Optional. A list of artifact metadata.
    * @param artifacts artifacts or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1PipelineTaskRerunConfigArtifactList setArtifacts(java.util.List<GoogleCloudAiplatformV1beta1RuntimeArtifact> artifacts) {

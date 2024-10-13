@@ -107,6 +107,13 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
   private java.lang.String name;
 
   /**
+   * Tuning Spec for open sourced and third party Partner models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1PartnerModelTuningSpec partnerModelTuningSpec;
+
+  /**
    * Output only. The resource name of the PipelineJob associated with the TuningJob. Format:
    * `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`.
    * The value may be {@code null}.
@@ -345,6 +352,23 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1TuningJob setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Tuning Spec for open sourced and third party Partner models.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PartnerModelTuningSpec getPartnerModelTuningSpec() {
+    return partnerModelTuningSpec;
+  }
+
+  /**
+   * Tuning Spec for open sourced and third party Partner models.
+   * @param partnerModelTuningSpec partnerModelTuningSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setPartnerModelTuningSpec(GoogleCloudAiplatformV1beta1PartnerModelTuningSpec partnerModelTuningSpec) {
+    this.partnerModelTuningSpec = partnerModelTuningSpec;
     return this;
   }
 

@@ -50,6 +50,13 @@ public final class GoogleCloudAiplatformV1GroundingMetadata extends com.google.a
   private java.util.List<GoogleCloudAiplatformV1GroundingSupport> groundingSupports;
 
   /**
+   * Optional. Output only. Retrieval metadata.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1RetrievalMetadata retrievalMetadata;
+
+  /**
    * Optional. Google search entry for the following-up web searches.
    * The value may be {@code null}.
    */
@@ -94,6 +101,23 @@ public final class GoogleCloudAiplatformV1GroundingMetadata extends com.google.a
    */
   public GoogleCloudAiplatformV1GroundingMetadata setGroundingSupports(java.util.List<GoogleCloudAiplatformV1GroundingSupport> groundingSupports) {
     this.groundingSupports = groundingSupports;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. Retrieval metadata.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RetrievalMetadata getRetrievalMetadata() {
+    return retrievalMetadata;
+  }
+
+  /**
+   * Optional. Output only. Retrieval metadata.
+   * @param retrievalMetadata retrievalMetadata or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GroundingMetadata setRetrievalMetadata(GoogleCloudAiplatformV1RetrievalMetadata retrievalMetadata) {
+    this.retrievalMetadata = retrievalMetadata;
     return this;
   }
 

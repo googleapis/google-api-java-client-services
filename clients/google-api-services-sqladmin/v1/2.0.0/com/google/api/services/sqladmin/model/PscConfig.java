@@ -40,6 +40,20 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> allowedConsumerProjects;
 
   /**
+   * Optional. The list of settings for requested Private Service Connect consumer endpoints that
+   * can be used to connect to this Cloud SQL instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PscAutoConnectionConfig> pscAutoConnections;
+
+  static {
+    // hack to force ProGuard to consider PscAutoConnectionConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(PscAutoConnectionConfig.class);
+  }
+
+  /**
    * Whether PSC connectivity is enabled for this instance.
    * The value may be {@code null}.
    */
@@ -66,6 +80,25 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
    */
   public PscConfig setAllowedConsumerProjects(java.util.List<java.lang.String> allowedConsumerProjects) {
     this.allowedConsumerProjects = allowedConsumerProjects;
+    return this;
+  }
+
+  /**
+   * Optional. The list of settings for requested Private Service Connect consumer endpoints that
+   * can be used to connect to this Cloud SQL instance.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PscAutoConnectionConfig> getPscAutoConnections() {
+    return pscAutoConnections;
+  }
+
+  /**
+   * Optional. The list of settings for requested Private Service Connect consumer endpoints that
+   * can be used to connect to this Cloud SQL instance.
+   * @param pscAutoConnections pscAutoConnections or {@code null} for none
+   */
+  public PscConfig setPscAutoConnections(java.util.List<PscAutoConnectionConfig> pscAutoConnections) {
+    this.pscAutoConnections = pscAutoConnections;
     return this;
   }
 

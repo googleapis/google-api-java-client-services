@@ -71,6 +71,13 @@ public final class ExecutionResult extends com.google.api.client.json.GenericJso
   private java.lang.String severity;
 
   /**
+   * Execution result type of the scanned resource
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
    * The details of violation in an evaluation result.
    * The value may be {@code null}.
    */
@@ -166,6 +173,23 @@ public final class ExecutionResult extends com.google.api.client.json.GenericJso
    */
   public ExecutionResult setSeverity(java.lang.String severity) {
     this.severity = severity;
+    return this;
+  }
+
+  /**
+   * Execution result type of the scanned resource
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Execution result type of the scanned resource
+   * @param type type or {@code null} for none
+   */
+  public ExecutionResult setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

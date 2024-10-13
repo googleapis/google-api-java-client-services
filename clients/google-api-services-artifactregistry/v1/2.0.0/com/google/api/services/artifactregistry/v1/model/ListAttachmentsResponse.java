@@ -31,7 +31,7 @@ package com.google.api.services.artifactregistry.v1.model;
 public final class ListAttachmentsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Attachments returned.
+   * The attachments returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class ListAttachmentsResponse extends com.google.api.client.json.Ge
   private java.lang.String nextPageToken;
 
   /**
-   * The Attachments returned.
+   * The attachments returned.
    * @return value or {@code null} for none
    */
   public java.util.List<Attachment> getAttachments() {
@@ -60,7 +60,7 @@ public final class ListAttachmentsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * The Attachments returned.
+   * The attachments returned.
    * @param attachments attachments or {@code null} for none
    */
   public ListAttachmentsResponse setAttachments(java.util.List<Attachment> attachments) {

@@ -41,8 +41,8 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The name of the version the tag refers to, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1/packages/pkg1/versions/sha256:5243811" If the package or version ID
+   * The name of the version the tag refers to, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1/packages/pkg1/versions/sha256:5243811` If the package or version ID
    * parts contain slashes, the slashes are escaped.
    * The value may be {@code null}.
    */
@@ -73,8 +73,8 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the version the tag refers to, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1/packages/pkg1/versions/sha256:5243811" If the package or version ID
+   * The name of the version the tag refers to, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1/packages/pkg1/versions/sha256:5243811` If the package or version ID
    * parts contain slashes, the slashes are escaped.
    * @return value or {@code null} for none
    */
@@ -83,8 +83,8 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the version the tag refers to, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1/packages/pkg1/versions/sha256:5243811" If the package or version ID
+   * The name of the version the tag refers to, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1/packages/pkg1/versions/sha256:5243811` If the package or version ID
    * parts contain slashes, the slashes are escaped.
    * @param version version or {@code null} for none
    */

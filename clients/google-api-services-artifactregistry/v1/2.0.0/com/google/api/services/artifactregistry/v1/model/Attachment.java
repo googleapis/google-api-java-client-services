@@ -41,7 +41,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
-   * The namespace this attachment belongs to. E.g. If an Attachment is created by artifact
+   * The namespace this attachment belongs to. E.g. If an attachment is created by artifact
    * analysis, namespace is set to `artifactanalysis.googleapis.com`.
    * The value may be {@code null}.
    */
@@ -64,7 +64,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> files;
 
   /**
-   * The name of the attachment. E.g. "projects/p1/locations/us/repositories/repo/attachments/sbom".
+   * The name of the attachment. E.g. `projects/p1/locations/us/repositories/repo/attachments/sbom`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,14 +81,14 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The target the attachment is for, can be a Version, Package or Repository. E.g.
-   * "projects/p1/locations/us-central1/repositories/repo1/packages/p1/versions/v1".
+   * `projects/p1/locations/us-central1/repositories/repo1/packages/p1/versions/v1`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String target;
 
   /**
-   * Type of Attachment. E.g. `application/vnd.spdx+json`
+   * Type of attachment. E.g. `application/vnd.spdx+json`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +123,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The namespace this attachment belongs to. E.g. If an Attachment is created by artifact
+   * The namespace this attachment belongs to. E.g. If an attachment is created by artifact
    * analysis, namespace is set to `artifactanalysis.googleapis.com`.
    * @return value or {@code null} for none
    */
@@ -132,7 +132,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The namespace this attachment belongs to. E.g. If an Attachment is created by artifact
+   * The namespace this attachment belongs to. E.g. If an attachment is created by artifact
    * analysis, namespace is set to `artifactanalysis.googleapis.com`.
    * @param attachmentNamespace attachmentNamespace or {@code null} for none
    */
@@ -178,7 +178,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the attachment. E.g. "projects/p1/locations/us/repositories/repo/attachments/sbom".
+   * The name of the attachment. E.g. `projects/p1/locations/us/repositories/repo/attachments/sbom`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -186,7 +186,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the attachment. E.g. "projects/p1/locations/us/repositories/repo/attachments/sbom".
+   * The name of the attachment. E.g. `projects/p1/locations/us/repositories/repo/attachments/sbom`.
    * @param name name or {@code null} for none
    */
   public Attachment setName(java.lang.String name) {
@@ -217,7 +217,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The target the attachment is for, can be a Version, Package or Repository. E.g.
-   * "projects/p1/locations/us-central1/repositories/repo1/packages/p1/versions/v1".
+   * `projects/p1/locations/us-central1/repositories/repo1/packages/p1/versions/v1`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTarget() {
@@ -226,7 +226,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The target the attachment is for, can be a Version, Package or Repository. E.g.
-   * "projects/p1/locations/us-central1/repositories/repo1/packages/p1/versions/v1".
+   * `projects/p1/locations/us-central1/repositories/repo1/packages/p1/versions/v1`.
    * @param target target or {@code null} for none
    */
   public Attachment setTarget(java.lang.String target) {
@@ -235,7 +235,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of Attachment. E.g. `application/vnd.spdx+json`
+   * Type of attachment. E.g. `application/vnd.spdx+json`
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -243,7 +243,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of Attachment. E.g. `application/vnd.spdx+json`
+   * Type of attachment. E.g. `application/vnd.spdx+json`
    * @param type type or {@code null} for none
    */
   public Attachment setType(java.lang.String type) {

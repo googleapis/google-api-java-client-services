@@ -186,8 +186,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   /**
    * Indicates whether the auto-created reservation can be consumed by VMs with affinity for "any"
    * reservation. If the field is set, then only VMs that target the reservation by name can consume
-   * from the delivered reservation. If set to true,the delivered resevervation will have the same
-   * name as the future reservation.
+   * from the delivered reservation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -589,8 +588,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   /**
    * Indicates whether the auto-created reservation can be consumed by VMs with affinity for "any"
    * reservation. If the field is set, then only VMs that target the reservation by name can consume
-   * from the delivered reservation. If set to true,the delivered resevervation will have the same
-   * name as the future reservation.
+   * from the delivered reservation.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSpecificReservationRequired() {
@@ -600,8 +598,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   /**
    * Indicates whether the auto-created reservation can be consumed by VMs with affinity for "any"
    * reservation. If the field is set, then only VMs that target the reservation by name can consume
-   * from the delivered reservation. If set to true,the delivered resevervation will have the same
-   * name as the future reservation.
+   * from the delivered reservation.
    * @param specificReservationRequired specificReservationRequired or {@code null} for none
    */
   public FutureReservation setSpecificReservationRequired(java.lang.Boolean specificReservationRequired) {

@@ -37,6 +37,16 @@ public final class AllocationResourceStatus extends com.google.api.client.json.G
   private java.lang.Integer reservationBlockCount;
 
   /**
+   * Maintenance information for the group of hosts on this reservation including running VMs and
+   * unused hosts. Applicable only to accelerator optimized VM families beyond A3 only. For both
+   * DENSE or STANDARD reservation, granular maintenance information can be retried at reservation
+   * block level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GroupMaintenanceInfo reservationMaintenance;
+
+  /**
    * Allocation Properties of this reservation.
    * The value may be {@code null}.
    */
@@ -57,6 +67,29 @@ public final class AllocationResourceStatus extends com.google.api.client.json.G
    */
   public AllocationResourceStatus setReservationBlockCount(java.lang.Integer reservationBlockCount) {
     this.reservationBlockCount = reservationBlockCount;
+    return this;
+  }
+
+  /**
+   * Maintenance information for the group of hosts on this reservation including running VMs and
+   * unused hosts. Applicable only to accelerator optimized VM families beyond A3 only. For both
+   * DENSE or STANDARD reservation, granular maintenance information can be retried at reservation
+   * block level.
+   * @return value or {@code null} for none
+   */
+  public GroupMaintenanceInfo getReservationMaintenance() {
+    return reservationMaintenance;
+  }
+
+  /**
+   * Maintenance information for the group of hosts on this reservation including running VMs and
+   * unused hosts. Applicable only to accelerator optimized VM families beyond A3 only. For both
+   * DENSE or STANDARD reservation, granular maintenance information can be retried at reservation
+   * block level.
+   * @param reservationMaintenance reservationMaintenance or {@code null} for none
+   */
+  public AllocationResourceStatus setReservationMaintenance(GroupMaintenanceInfo reservationMaintenance) {
+    this.reservationMaintenance = reservationMaintenance;
     return this;
   }
 

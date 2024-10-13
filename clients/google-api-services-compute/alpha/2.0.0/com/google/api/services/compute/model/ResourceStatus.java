@@ -31,6 +31,16 @@ package com.google.api.services.compute.model;
 public final class ResourceStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output Only] Accelerators status show results of GPU scans. These scans are specialized
+   * diagnostic tests designed to uncover latent manufacturing defects or other issues that could
+   * potentially lead to data corruption or impede the customer's ability to efficiently execute GPU
+   * workloads.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ResourceStatusAcceleratorStatus> acceleratorStatus;
+
+  /**
    * [Output Only] Contains last termination details why the instance was terminated.
    * The value may be {@code null}.
    */
@@ -70,6 +80,29 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private UpcomingMaintenance upcomingMaintenance;
+
+  /**
+   * [Output Only] Accelerators status show results of GPU scans. These scans are specialized
+   * diagnostic tests designed to uncover latent manufacturing defects or other issues that could
+   * potentially lead to data corruption or impede the customer's ability to efficiently execute GPU
+   * workloads.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ResourceStatusAcceleratorStatus> getAcceleratorStatus() {
+    return acceleratorStatus;
+  }
+
+  /**
+   * [Output Only] Accelerators status show results of GPU scans. These scans are specialized
+   * diagnostic tests designed to uncover latent manufacturing defects or other issues that could
+   * potentially lead to data corruption or impede the customer's ability to efficiently execute GPU
+   * workloads.
+   * @param acceleratorStatus acceleratorStatus or {@code null} for none
+   */
+  public ResourceStatus setAcceleratorStatus(java.util.List<ResourceStatusAcceleratorStatus> acceleratorStatus) {
+    this.acceleratorStatus = acceleratorStatus;
+    return this;
+  }
 
   /**
    * [Output Only] Contains last termination details why the instance was terminated.

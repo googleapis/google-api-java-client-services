@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for FutureReservationTimeWindow.
+ * [Output Only] The facilities used for this group's Attachments' Interconnects.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -27,82 +27,61 @@ package com.google.api.services.compute.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class FutureReservationTimeWindow extends com.google.api.client.json.GenericJson {
+public final class InterconnectAttachmentGroupLogicalStructureRegionMetroFacility extends com.google.api.client.json.GenericJson {
+
+  /**
+   * [Output Only] The name of a facility, like "iad-1234".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String facility;
 
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Duration duration;
+  private java.util.List<InterconnectAttachmentGroupLogicalStructureRegionMetroFacilityZone> zones;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String endTime;
-
-  /**
-   * Start time of the Future Reservation. The start_time is an RFC3339 string.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String startTime;
-
-  /**
+   * [Output Only] The name of a facility, like "iad-1234".
    * @return value or {@code null} for none
    */
-  public Duration getDuration() {
-    return duration;
+  public java.lang.String getFacility() {
+    return facility;
   }
 
   /**
-   * @param duration duration or {@code null} for none
+   * [Output Only] The name of a facility, like "iad-1234".
+   * @param facility facility or {@code null} for none
    */
-  public FutureReservationTimeWindow setDuration(Duration duration) {
-    this.duration = duration;
+  public InterconnectAttachmentGroupLogicalStructureRegionMetroFacility setFacility(java.lang.String facility) {
+    this.facility = facility;
     return this;
   }
 
   /**
    * @return value or {@code null} for none
    */
-  public java.lang.String getEndTime() {
-    return endTime;
+  public java.util.List<InterconnectAttachmentGroupLogicalStructureRegionMetroFacilityZone> getZones() {
+    return zones;
   }
 
   /**
-   * @param endTime endTime or {@code null} for none
+   * @param zones zones or {@code null} for none
    */
-  public FutureReservationTimeWindow setEndTime(java.lang.String endTime) {
-    this.endTime = endTime;
-    return this;
-  }
-
-  /**
-   * Start time of the Future Reservation. The start_time is an RFC3339 string.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getStartTime() {
-    return startTime;
-  }
-
-  /**
-   * Start time of the Future Reservation. The start_time is an RFC3339 string.
-   * @param startTime startTime or {@code null} for none
-   */
-  public FutureReservationTimeWindow setStartTime(java.lang.String startTime) {
-    this.startTime = startTime;
+  public InterconnectAttachmentGroupLogicalStructureRegionMetroFacility setZones(java.util.List<InterconnectAttachmentGroupLogicalStructureRegionMetroFacilityZone> zones) {
+    this.zones = zones;
     return this;
   }
 
   @Override
-  public FutureReservationTimeWindow set(String fieldName, Object value) {
-    return (FutureReservationTimeWindow) super.set(fieldName, value);
+  public InterconnectAttachmentGroupLogicalStructureRegionMetroFacility set(String fieldName, Object value) {
+    return (InterconnectAttachmentGroupLogicalStructureRegionMetroFacility) super.set(fieldName, value);
   }
 
   @Override
-  public FutureReservationTimeWindow clone() {
-    return (FutureReservationTimeWindow) super.clone();
+  public InterconnectAttachmentGroupLogicalStructureRegionMetroFacility clone() {
+    return (InterconnectAttachmentGroupLogicalStructureRegionMetroFacility) super.clone();
   }
 
 }

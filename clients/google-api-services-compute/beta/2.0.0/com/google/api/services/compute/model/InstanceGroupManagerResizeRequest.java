@@ -78,6 +78,14 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   private java.lang.String name;
 
   /**
+   * [Output Only] The URL of a region where the resize request is located. Populated only for
+   * regional resize requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
+
+  /**
    * Requested run duration for instances that will be created by this request. At the end of the
    * run duration instance will be deleted.
    * The value may be {@code null}.
@@ -234,6 +242,25 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
    */
   public InstanceGroupManagerResizeRequest setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * [Output Only] The URL of a region where the resize request is located. Populated only for
+   * regional resize requests.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * [Output Only] The URL of a region where the resize request is located. Populated only for
+   * regional resize requests.
+   * @param region region or {@code null} for none
+   */
+  public InstanceGroupManagerResizeRequest setRegion(java.lang.String region) {
+    this.region = region;
     return this;
   }
 

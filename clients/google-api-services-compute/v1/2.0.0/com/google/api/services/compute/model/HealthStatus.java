@@ -74,6 +74,19 @@ public final class HealthStatus extends com.google.api.client.json.GenericJson {
   private java.lang.String ipAddress;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv6Address;
+
+  /**
+   * Health state of the IPv6 address of the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv6HealthState;
+
+  /**
    * The named port of the instance group, not necessarily the port that is health-checked.
    * The value may be {@code null}.
    */
@@ -195,6 +208,38 @@ public final class HealthStatus extends com.google.api.client.json.GenericJson {
    */
   public HealthStatus setIpAddress(java.lang.String ipAddress) {
     this.ipAddress = ipAddress;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv6Address() {
+    return ipv6Address;
+  }
+
+  /**
+   * @param ipv6Address ipv6Address or {@code null} for none
+   */
+  public HealthStatus setIpv6Address(java.lang.String ipv6Address) {
+    this.ipv6Address = ipv6Address;
+    return this;
+  }
+
+  /**
+   * Health state of the IPv6 address of the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv6HealthState() {
+    return ipv6HealthState;
+  }
+
+  /**
+   * Health state of the IPv6 address of the instance.
+   * @param ipv6HealthState ipv6HealthState or {@code null} for none
+   */
+  public HealthStatus setIpv6HealthState(java.lang.String ipv6HealthState) {
+    this.ipv6HealthState = ipv6HealthState;
     return this;
   }
 

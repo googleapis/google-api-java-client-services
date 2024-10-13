@@ -62,6 +62,14 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   private java.math.BigInteger id;
 
   /**
+   * The list of specifications of per-instance configs to be created. This field cannot be used
+   * together with 'resize_by'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PerInstanceConfig> instances;
+
+  /**
    * [Output Only] The resource type, which is always compute#instanceGroupManagerResizeRequest for
    * resize requests.
    * The value may be {@code null}.
@@ -214,6 +222,25 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
    */
   public InstanceGroupManagerResizeRequest setId(java.math.BigInteger id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * The list of specifications of per-instance configs to be created. This field cannot be used
+   * together with 'resize_by'.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PerInstanceConfig> getInstances() {
+    return instances;
+  }
+
+  /**
+   * The list of specifications of per-instance configs to be created. This field cannot be used
+   * together with 'resize_by'.
+   * @param instances instances or {@code null} for none
+   */
+  public InstanceGroupManagerResizeRequest setInstances(java.util.List<PerInstanceConfig> instances) {
+    this.instances = instances;
     return this;
   }
 

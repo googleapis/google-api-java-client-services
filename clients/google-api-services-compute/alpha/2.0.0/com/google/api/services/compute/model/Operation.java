@@ -214,7 +214,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The URL of the resource that the operation modifies. For operations related to
-   * creating a snapshot, this points to the persistent disk that the snapshot was created from.
+   * creating a snapshot, this points to the disk that the snapshot was created from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -671,7 +671,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The URL of the resource that the operation modifies. For operations related to
-   * creating a snapshot, this points to the persistent disk that the snapshot was created from.
+   * creating a snapshot, this points to the disk that the snapshot was created from.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetLink() {
@@ -680,7 +680,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The URL of the resource that the operation modifies. For operations related to
-   * creating a snapshot, this points to the persistent disk that the snapshot was created from.
+   * creating a snapshot, this points to the disk that the snapshot was created from.
    * @param targetLink targetLink or {@code null} for none
    */
   public Operation setTargetLink(java.lang.String targetLink) {

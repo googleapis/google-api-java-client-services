@@ -17,7 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * Properties to be set for the Future Reservation.
+ * Policy regarding where to create managed instance groups. Initially only zonal managed instance
+ * groups in the same zone are supported.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -27,40 +28,40 @@ package com.google.api.services.compute.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class FutureReservationStatusSpecificSKUProperties extends com.google.api.client.json.GenericJson {
+public final class MultiMigLocationPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * ID of the instance template used to populate the Future Reservation properties.
+   * List of zones where managed instance groups will be provisioned. Should be valid RFC1035 name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String sourceInstanceTemplateId;
+  private java.util.List<java.lang.String> provisioningZones;
 
   /**
-   * ID of the instance template used to populate the Future Reservation properties.
+   * List of zones where managed instance groups will be provisioned. Should be valid RFC1035 name.
    * @return value or {@code null} for none
    */
-  public java.lang.String getSourceInstanceTemplateId() {
-    return sourceInstanceTemplateId;
+  public java.util.List<java.lang.String> getProvisioningZones() {
+    return provisioningZones;
   }
 
   /**
-   * ID of the instance template used to populate the Future Reservation properties.
-   * @param sourceInstanceTemplateId sourceInstanceTemplateId or {@code null} for none
+   * List of zones where managed instance groups will be provisioned. Should be valid RFC1035 name.
+   * @param provisioningZones provisioningZones or {@code null} for none
    */
-  public FutureReservationStatusSpecificSKUProperties setSourceInstanceTemplateId(java.lang.String sourceInstanceTemplateId) {
-    this.sourceInstanceTemplateId = sourceInstanceTemplateId;
+  public MultiMigLocationPolicy setProvisioningZones(java.util.List<java.lang.String> provisioningZones) {
+    this.provisioningZones = provisioningZones;
     return this;
   }
 
   @Override
-  public FutureReservationStatusSpecificSKUProperties set(String fieldName, Object value) {
-    return (FutureReservationStatusSpecificSKUProperties) super.set(fieldName, value);
+  public MultiMigLocationPolicy set(String fieldName, Object value) {
+    return (MultiMigLocationPolicy) super.set(fieldName, value);
   }
 
   @Override
-  public FutureReservationStatusSpecificSKUProperties clone() {
-    return (FutureReservationStatusSpecificSKUProperties) super.clone();
+  public MultiMigLocationPolicy clone() {
+    return (MultiMigLocationPolicy) super.clone();
   }
 
 }

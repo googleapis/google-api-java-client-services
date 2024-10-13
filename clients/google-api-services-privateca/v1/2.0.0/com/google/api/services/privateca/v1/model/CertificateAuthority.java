@@ -113,7 +113,7 @@ public final class CertificateAuthority extends com.google.api.client.json.Gener
   private String lifetime;
 
   /**
-   * Output only. The resource name for this CertificateAuthority in the format
+   * Output only. Identifier. The resource name for this CertificateAuthority in the format
    * `projects/locations/caPools/certificateAuthorities`.
    * The value may be {@code null}.
    */
@@ -374,7 +374,7 @@ public final class CertificateAuthority extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. The resource name for this CertificateAuthority in the format
+   * Output only. Identifier. The resource name for this CertificateAuthority in the format
    * `projects/locations/caPools/certificateAuthorities`.
    * @return value or {@code null} for none
    */
@@ -383,7 +383,7 @@ public final class CertificateAuthority extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. The resource name for this CertificateAuthority in the format
+   * Output only. Identifier. The resource name for this CertificateAuthority in the format
    * `projects/locations/caPools/certificateAuthorities`.
    * @param name name or {@code null} for none
    */

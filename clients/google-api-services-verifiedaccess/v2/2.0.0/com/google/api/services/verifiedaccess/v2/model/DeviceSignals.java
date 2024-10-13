@@ -154,7 +154,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
 
   /**
    * The state of the OS level firewall. On ChromeOS, the value will always be ENABLED on regular
-   * devices and UNKNOWN on devices in developer mode.
+   * devices and UNKNOWN on devices in developer mode. The signal is currently not available on
+   * MacOS 15 (Sequoia) and later.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -574,7 +575,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
 
   /**
    * The state of the OS level firewall. On ChromeOS, the value will always be ENABLED on regular
-   * devices and UNKNOWN on devices in developer mode.
+   * devices and UNKNOWN on devices in developer mode. The signal is currently not available on
+   * MacOS 15 (Sequoia) and later.
    * @return value or {@code null} for none
    */
   public java.lang.String getOsFirewall() {
@@ -583,7 +585,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
 
   /**
    * The state of the OS level firewall. On ChromeOS, the value will always be ENABLED on regular
-   * devices and UNKNOWN on devices in developer mode.
+   * devices and UNKNOWN on devices in developer mode. The signal is currently not available on
+   * MacOS 15 (Sequoia) and later.
    * @param osFirewall osFirewall or {@code null} for none
    */
   public DeviceSignals setOsFirewall(java.lang.String osFirewall) {

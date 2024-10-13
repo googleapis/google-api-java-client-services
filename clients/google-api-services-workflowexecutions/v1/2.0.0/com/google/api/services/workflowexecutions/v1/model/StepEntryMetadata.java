@@ -39,7 +39,8 @@ public final class StepEntryMetadata extends com.google.api.client.json.GenericJ
 
   /**
    * Progress number represents the current state of the current progress. eg: A step entry
-   * represents the 4th iteration in a progress of PROGRESS_TYPE_FOR.
+   * represents the 4th iteration in a progress of PROGRESS_TYPE_FOR. Note: This field is only
+   * populated when an iteration exists and the starting value is 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -78,7 +79,8 @@ public final class StepEntryMetadata extends com.google.api.client.json.GenericJ
 
   /**
    * Progress number represents the current state of the current progress. eg: A step entry
-   * represents the 4th iteration in a progress of PROGRESS_TYPE_FOR.
+   * represents the 4th iteration in a progress of PROGRESS_TYPE_FOR. Note: This field is only
+   * populated when an iteration exists and the starting value is 1.
    * @return value or {@code null} for none
    */
   public java.lang.Long getProgressNumber() {
@@ -87,7 +89,8 @@ public final class StepEntryMetadata extends com.google.api.client.json.GenericJ
 
   /**
    * Progress number represents the current state of the current progress. eg: A step entry
-   * represents the 4th iteration in a progress of PROGRESS_TYPE_FOR.
+   * represents the 4th iteration in a progress of PROGRESS_TYPE_FOR. Note: This field is only
+   * populated when an iteration exists and the starting value is 1.
    * @param progressNumber progressNumber or {@code null} for none
    */
   public StepEntryMetadata setProgressNumber(java.lang.Long progressNumber) {

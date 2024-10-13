@@ -96,6 +96,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private ContainerdConfig desiredContainerdConfig;
 
   /**
+   * Control plane endpoints configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ControlPlaneEndpointsConfig desiredControlPlaneEndpointsConfig;
+
+  /**
    * The desired configuration for the fine-grained cost management feature.
    * The value may be {@code null}.
    */
@@ -115,6 +122,14 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String desiredDatapathProvider;
+
+  /**
+   * Override the default setting of whether future created nodes have private IP addresses only,
+   * namely NetworkConfig.default_enable_private_nodes
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean desiredDefaultEnablePrivateNodes;
 
   /**
    * The desired status of whether to disable default sNAT for this cluster.
@@ -152,7 +167,10 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean desiredEnableMultiNetworking;
 
   /**
-   * Enable/Disable private endpoint for the cluster's master.
+   * Enable/Disable private endpoint for the cluster's master. Deprecated: Use
+   * desired_control_plane_endpoints_config.ip_endpoints_config.enable_public_endpoint instead. Note
+   * that the value of enable_public_endpoint is reversed: if enable_private_endpoint is false, then
+   * enable_public_endpoint will be true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -267,7 +285,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private Master desiredMaster;
 
   /**
-   * The desired configuration options for master authorized networks feature.
+   * The desired configuration options for master authorized networks feature. Deprecated: Use
+   * desired_control_plane_endpoints_config.ip_endpoints_config.authorized_networks_config instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -410,7 +429,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   /**
    * The desired private cluster configuration. master_global_access_config is the only field that
    * can be changed via this field. See also ClusterUpdate.desired_enable_private_endpoint for
-   * modifying other fields within PrivateClusterConfig.
+   * modifying other fields within PrivateClusterConfig. Deprecated: Use
+   * desired_control_plane_endpoints_config.ip_endpoints_config.global_access instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -719,6 +739,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Control plane endpoints configuration.
+   * @return value or {@code null} for none
+   */
+  public ControlPlaneEndpointsConfig getDesiredControlPlaneEndpointsConfig() {
+    return desiredControlPlaneEndpointsConfig;
+  }
+
+  /**
+   * Control plane endpoints configuration.
+   * @param desiredControlPlaneEndpointsConfig desiredControlPlaneEndpointsConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredControlPlaneEndpointsConfig(ControlPlaneEndpointsConfig desiredControlPlaneEndpointsConfig) {
+    this.desiredControlPlaneEndpointsConfig = desiredControlPlaneEndpointsConfig;
+    return this;
+  }
+
+  /**
    * The desired configuration for the fine-grained cost management feature.
    * @return value or {@code null} for none
    */
@@ -766,6 +803,25 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredDatapathProvider(java.lang.String desiredDatapathProvider) {
     this.desiredDatapathProvider = desiredDatapathProvider;
+    return this;
+  }
+
+  /**
+   * Override the default setting of whether future created nodes have private IP addresses only,
+   * namely NetworkConfig.default_enable_private_nodes
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDesiredDefaultEnablePrivateNodes() {
+    return desiredDefaultEnablePrivateNodes;
+  }
+
+  /**
+   * Override the default setting of whether future created nodes have private IP addresses only,
+   * namely NetworkConfig.default_enable_private_nodes
+   * @param desiredDefaultEnablePrivateNodes desiredDefaultEnablePrivateNodes or {@code null} for none
+   */
+  public ClusterUpdate setDesiredDefaultEnablePrivateNodes(java.lang.Boolean desiredDefaultEnablePrivateNodes) {
+    this.desiredDefaultEnablePrivateNodes = desiredDefaultEnablePrivateNodes;
     return this;
   }
 
@@ -855,7 +911,10 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Enable/Disable private endpoint for the cluster's master.
+   * Enable/Disable private endpoint for the cluster's master. Deprecated: Use
+   * desired_control_plane_endpoints_config.ip_endpoints_config.enable_public_endpoint instead. Note
+   * that the value of enable_public_endpoint is reversed: if enable_private_endpoint is false, then
+   * enable_public_endpoint will be true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDesiredEnablePrivateEndpoint() {
@@ -863,7 +922,10 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Enable/Disable private endpoint for the cluster's master.
+   * Enable/Disable private endpoint for the cluster's master. Deprecated: Use
+   * desired_control_plane_endpoints_config.ip_endpoints_config.enable_public_endpoint instead. Note
+   * that the value of enable_public_endpoint is reversed: if enable_private_endpoint is false, then
+   * enable_public_endpoint will be true.
    * @param desiredEnablePrivateEndpoint desiredEnablePrivateEndpoint or {@code null} for none
    */
   public ClusterUpdate setDesiredEnablePrivateEndpoint(java.lang.Boolean desiredEnablePrivateEndpoint) {
@@ -1130,7 +1192,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The desired configuration options for master authorized networks feature.
+   * The desired configuration options for master authorized networks feature. Deprecated: Use
+   * desired_control_plane_endpoints_config.ip_endpoints_config.authorized_networks_config instead.
    * @return value or {@code null} for none
    */
   public MasterAuthorizedNetworksConfig getDesiredMasterAuthorizedNetworksConfig() {
@@ -1138,7 +1201,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The desired configuration options for master authorized networks feature.
+   * The desired configuration options for master authorized networks feature. Deprecated: Use
+   * desired_control_plane_endpoints_config.ip_endpoints_config.authorized_networks_config instead.
    * @param desiredMasterAuthorizedNetworksConfig desiredMasterAuthorizedNetworksConfig or {@code null} for none
    */
   public ClusterUpdate setDesiredMasterAuthorizedNetworksConfig(MasterAuthorizedNetworksConfig desiredMasterAuthorizedNetworksConfig) {
@@ -1465,7 +1529,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   /**
    * The desired private cluster configuration. master_global_access_config is the only field that
    * can be changed via this field. See also ClusterUpdate.desired_enable_private_endpoint for
-   * modifying other fields within PrivateClusterConfig.
+   * modifying other fields within PrivateClusterConfig. Deprecated: Use
+   * desired_control_plane_endpoints_config.ip_endpoints_config.global_access instead.
    * @return value or {@code null} for none
    */
   public PrivateClusterConfig getDesiredPrivateClusterConfig() {
@@ -1475,7 +1540,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   /**
    * The desired private cluster configuration. master_global_access_config is the only field that
    * can be changed via this field. See also ClusterUpdate.desired_enable_private_endpoint for
-   * modifying other fields within PrivateClusterConfig.
+   * modifying other fields within PrivateClusterConfig. Deprecated: Use
+   * desired_control_plane_endpoints_config.ip_endpoints_config.global_access instead.
    * @param desiredPrivateClusterConfig desiredPrivateClusterConfig or {@code null} for none
    */
   public ClusterUpdate setDesiredPrivateClusterConfig(PrivateClusterConfig desiredPrivateClusterConfig) {

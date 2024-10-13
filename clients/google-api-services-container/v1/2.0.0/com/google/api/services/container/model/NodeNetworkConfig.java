@@ -72,7 +72,7 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Whether nodes have internal IP addresses only. If enable_private_nodes is not specified, then
-   * the value is derived from cluster.privateClusterConfig.enablePrivateNodes
+   * the value is derived from Cluster.NetworkConfig.default_enable_private_nodes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,7 +195,7 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Whether nodes have internal IP addresses only. If enable_private_nodes is not specified, then
-   * the value is derived from cluster.privateClusterConfig.enablePrivateNodes
+   * the value is derived from Cluster.NetworkConfig.default_enable_private_nodes
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnablePrivateNodes() {
@@ -204,7 +204,7 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Whether nodes have internal IP addresses only. If enable_private_nodes is not specified, then
-   * the value is derived from cluster.privateClusterConfig.enablePrivateNodes
+   * the value is derived from Cluster.NetworkConfig.default_enable_private_nodes
    * @param enablePrivateNodes enablePrivateNodes or {@code null} for none
    */
   public NodeNetworkConfig setEnablePrivateNodes(java.lang.Boolean enablePrivateNodes) {

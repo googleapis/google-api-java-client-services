@@ -119,18 +119,18 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Optional. Exact permission settings which can be set to update the space. Input for updating a
-   * space. Otherwise, output only. For space creation, use `predefined_permission_settings`
-   * instead.
+   * Optional. Space permission settings for existing spaces. Input for updating exact space
+   * permission settings, where existing permission settings are replaced. Output lists current
+   * permission settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PermissionSettings permissionSettings;
 
   /**
-   * Optional. Input only. Space permission settings. Input for creating a space, a collaboration
-   * space is created if this field is not set. After you create the space, settings are populated
-   * in the `PermissionSettings` field.
+   * Optional. Input only. Predefined space permission settings, input only when creating a space.
+   * If the field is not set, a collaboration space is created. After you create the space, settings
+   * are populated in the `PermissionSettings` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -398,9 +398,9 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Exact permission settings which can be set to update the space. Input for updating a
-   * space. Otherwise, output only. For space creation, use `predefined_permission_settings`
-   * instead.
+   * Optional. Space permission settings for existing spaces. Input for updating exact space
+   * permission settings, where existing permission settings are replaced. Output lists current
+   * permission settings.
    * @return value or {@code null} for none
    */
   public PermissionSettings getPermissionSettings() {
@@ -408,9 +408,9 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Exact permission settings which can be set to update the space. Input for updating a
-   * space. Otherwise, output only. For space creation, use `predefined_permission_settings`
-   * instead.
+   * Optional. Space permission settings for existing spaces. Input for updating exact space
+   * permission settings, where existing permission settings are replaced. Output lists current
+   * permission settings.
    * @param permissionSettings permissionSettings or {@code null} for none
    */
   public Space setPermissionSettings(PermissionSettings permissionSettings) {
@@ -419,9 +419,9 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. Space permission settings. Input for creating a space, a collaboration
-   * space is created if this field is not set. After you create the space, settings are populated
-   * in the `PermissionSettings` field.
+   * Optional. Input only. Predefined space permission settings, input only when creating a space.
+   * If the field is not set, a collaboration space is created. After you create the space, settings
+   * are populated in the `PermissionSettings` field.
    * @return value or {@code null} for none
    */
   public java.lang.String getPredefinedPermissionSettings() {
@@ -429,9 +429,9 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. Space permission settings. Input for creating a space, a collaboration
-   * space is created if this field is not set. After you create the space, settings are populated
-   * in the `PermissionSettings` field.
+   * Optional. Input only. Predefined space permission settings, input only when creating a space.
+   * If the field is not set, a collaboration space is created. After you create the space, settings
+   * are populated in the `PermissionSettings` field.
    * @param predefinedPermissionSettings predefinedPermissionSettings or {@code null} for none
    */
   public Space setPredefinedPermissionSettings(java.lang.String predefinedPermissionSettings) {

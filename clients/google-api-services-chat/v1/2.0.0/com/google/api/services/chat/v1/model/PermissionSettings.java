@@ -17,9 +17,9 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * [Permission settings](https://support.google.com/chat/answer/13340792) for a named space. To set
- * permission settings when creating a space, specify the `PredefinedPermissionSettings` field in
- * your request.
+ * [Permission settings](https://support.google.com/chat/answer/13340792) that you can specify when
+ * updating an existing named space. To set permission settings when creating a space, specify the
+ * `PredefinedPermissionSettings` field in your request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

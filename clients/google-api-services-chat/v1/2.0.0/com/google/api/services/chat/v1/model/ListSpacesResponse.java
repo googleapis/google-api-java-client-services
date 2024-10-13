@@ -38,7 +38,8 @@ public final class ListSpacesResponse extends com.google.api.client.json.Generic
   private java.lang.String nextPageToken;
 
   /**
-   * List of spaces in the requested (or first) page.
+   * List of spaces in the requested (or first) page. Note: The `permissionSettings` field is not
+   * returned in the Space object for list requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +65,8 @@ public final class ListSpacesResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * List of spaces in the requested (or first) page.
+   * List of spaces in the requested (or first) page. Note: The `permissionSettings` field is not
+   * returned in the Space object for list requests.
    * @return value or {@code null} for none
    */
   public java.util.List<Space> getSpaces() {
@@ -72,7 +74,8 @@ public final class ListSpacesResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * List of spaces in the requested (or first) page.
+   * List of spaces in the requested (or first) page. Note: The `permissionSettings` field is not
+   * returned in the Space object for list requests.
    * @param spaces spaces or {@code null} for none
    */
   public ListSpacesResponse setSpaces(java.util.List<Space> spaces) {

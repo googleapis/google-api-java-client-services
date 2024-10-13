@@ -38,7 +38,8 @@ public final class ListSpaceEventsResponse extends com.google.api.client.json.Ge
   private java.lang.String nextPageToken;
 
   /**
-   * Results are returned in chronological order (oldest event first).
+   * Results are returned in chronological order (oldest event first). Note: The
+   * `permissionSettings` field is not returned in the Space object for list requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +65,8 @@ public final class ListSpaceEventsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * Results are returned in chronological order (oldest event first).
+   * Results are returned in chronological order (oldest event first). Note: The
+   * `permissionSettings` field is not returned in the Space object for list requests.
    * @return value or {@code null} for none
    */
   public java.util.List<SpaceEvent> getSpaceEvents() {
@@ -72,7 +74,8 @@ public final class ListSpaceEventsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * Results are returned in chronological order (oldest event first).
+   * Results are returned in chronological order (oldest event first). Note: The
+   * `permissionSettings` field is not returned in the Space object for list requests.
    * @param spaceEvents spaceEvents or {@code null} for none
    */
   public ListSpaceEventsResponse setSpaceEvents(java.util.List<SpaceEvent> spaceEvents) {

@@ -31,7 +31,10 @@ package com.google.api.services.container.v1beta1.model;
 public final class PrivateClusterConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the master's internal IP address is used as the cluster endpoint.
+   * Whether the master's internal IP address is used as the cluster endpoint. Use
+   * ControlPlaneEndpointsConfig.IPEndpointsConfig.enable_public_endpoint instead. Note that the
+   * value of enable_public_endpoint is reversed: if enable_private_endpoint is false, then
+   * enable_public_endpoint will be true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,14 +42,16 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
 
   /**
    * Whether nodes have internal IP addresses only. If enabled, all nodes are given only RFC 1918
-   * private addresses and communicate with the master via private networking.
+   * private addresses and communicate with the master via private networking. Deprecated: Use
+   * NetworkConfig.default_enable_private_nodes instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enablePrivateNodes;
 
   /**
-   * Controls master global access settings.
+   * Controls master global access settings. Deprecated: Use
+   * ControlPlaneEndpointsConfig.IPEndpointsConfig.enable_global_access instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +74,8 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   private java.lang.String peeringName;
 
   /**
-   * Output only. The internal IP address of this cluster's master endpoint.
+   * Output only. The internal IP address of this cluster's master endpoint. Deprecated: Use
+   * ControlPlaneEndpointsConfig.IPEndpointsConfig.private_endpoint instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,21 +83,26 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
 
   /**
    * Subnet to provision the master's private endpoint during cluster creation. Specified in
-   * projects/regions/subnetworks format.
+   * projects/regions/subnetworks format. Deprecated: Use
+   * ControlPlaneEndpointsConfig.IPEndpointsConfig.private_endpoint_subnetwork instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String privateEndpointSubnetwork;
 
   /**
-   * Output only. The external IP address of this cluster's master endpoint.
+   * Output only. The external IP address of this cluster's master endpoint. Deprecated: Use
+   * ControlPlaneEndpointsConfig.IPEndpointsConfig.public_endpoint instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String publicEndpoint;
 
   /**
-   * Whether the master's internal IP address is used as the cluster endpoint.
+   * Whether the master's internal IP address is used as the cluster endpoint. Use
+   * ControlPlaneEndpointsConfig.IPEndpointsConfig.enable_public_endpoint instead. Note that the
+   * value of enable_public_endpoint is reversed: if enable_private_endpoint is false, then
+   * enable_public_endpoint will be true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnablePrivateEndpoint() {
@@ -99,7 +110,10 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Whether the master's internal IP address is used as the cluster endpoint.
+   * Whether the master's internal IP address is used as the cluster endpoint. Use
+   * ControlPlaneEndpointsConfig.IPEndpointsConfig.enable_public_endpoint instead. Note that the
+   * value of enable_public_endpoint is reversed: if enable_private_endpoint is false, then
+   * enable_public_endpoint will be true.
    * @param enablePrivateEndpoint enablePrivateEndpoint or {@code null} for none
    */
   public PrivateClusterConfig setEnablePrivateEndpoint(java.lang.Boolean enablePrivateEndpoint) {
@@ -109,7 +123,8 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
 
   /**
    * Whether nodes have internal IP addresses only. If enabled, all nodes are given only RFC 1918
-   * private addresses and communicate with the master via private networking.
+   * private addresses and communicate with the master via private networking. Deprecated: Use
+   * NetworkConfig.default_enable_private_nodes instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnablePrivateNodes() {
@@ -118,7 +133,8 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
 
   /**
    * Whether nodes have internal IP addresses only. If enabled, all nodes are given only RFC 1918
-   * private addresses and communicate with the master via private networking.
+   * private addresses and communicate with the master via private networking. Deprecated: Use
+   * NetworkConfig.default_enable_private_nodes instead.
    * @param enablePrivateNodes enablePrivateNodes or {@code null} for none
    */
   public PrivateClusterConfig setEnablePrivateNodes(java.lang.Boolean enablePrivateNodes) {
@@ -127,7 +143,8 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Controls master global access settings.
+   * Controls master global access settings. Deprecated: Use
+   * ControlPlaneEndpointsConfig.IPEndpointsConfig.enable_global_access instead.
    * @return value or {@code null} for none
    */
   public PrivateClusterMasterGlobalAccessConfig getMasterGlobalAccessConfig() {
@@ -135,7 +152,8 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Controls master global access settings.
+   * Controls master global access settings. Deprecated: Use
+   * ControlPlaneEndpointsConfig.IPEndpointsConfig.enable_global_access instead.
    * @param masterGlobalAccessConfig masterGlobalAccessConfig or {@code null} for none
    */
   public PrivateClusterConfig setMasterGlobalAccessConfig(PrivateClusterMasterGlobalAccessConfig masterGlobalAccessConfig) {
@@ -182,7 +200,8 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. The internal IP address of this cluster's master endpoint.
+   * Output only. The internal IP address of this cluster's master endpoint. Deprecated: Use
+   * ControlPlaneEndpointsConfig.IPEndpointsConfig.private_endpoint instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivateEndpoint() {
@@ -190,7 +209,8 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. The internal IP address of this cluster's master endpoint.
+   * Output only. The internal IP address of this cluster's master endpoint. Deprecated: Use
+   * ControlPlaneEndpointsConfig.IPEndpointsConfig.private_endpoint instead.
    * @param privateEndpoint privateEndpoint or {@code null} for none
    */
   public PrivateClusterConfig setPrivateEndpoint(java.lang.String privateEndpoint) {
@@ -200,7 +220,8 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
 
   /**
    * Subnet to provision the master's private endpoint during cluster creation. Specified in
-   * projects/regions/subnetworks format.
+   * projects/regions/subnetworks format. Deprecated: Use
+   * ControlPlaneEndpointsConfig.IPEndpointsConfig.private_endpoint_subnetwork instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivateEndpointSubnetwork() {
@@ -209,7 +230,8 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
 
   /**
    * Subnet to provision the master's private endpoint during cluster creation. Specified in
-   * projects/regions/subnetworks format.
+   * projects/regions/subnetworks format. Deprecated: Use
+   * ControlPlaneEndpointsConfig.IPEndpointsConfig.private_endpoint_subnetwork instead.
    * @param privateEndpointSubnetwork privateEndpointSubnetwork or {@code null} for none
    */
   public PrivateClusterConfig setPrivateEndpointSubnetwork(java.lang.String privateEndpointSubnetwork) {
@@ -218,7 +240,8 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. The external IP address of this cluster's master endpoint.
+   * Output only. The external IP address of this cluster's master endpoint. Deprecated: Use
+   * ControlPlaneEndpointsConfig.IPEndpointsConfig.public_endpoint instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getPublicEndpoint() {
@@ -226,7 +249,8 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. The external IP address of this cluster's master endpoint.
+   * Output only. The external IP address of this cluster's master endpoint. Deprecated: Use
+   * ControlPlaneEndpointsConfig.IPEndpointsConfig.public_endpoint instead.
    * @param publicEndpoint publicEndpoint or {@code null} for none
    */
   public PrivateClusterConfig setPublicEndpoint(java.lang.String publicEndpoint) {

@@ -98,6 +98,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private ConfidentialNodes confidentialNodes;
 
   /**
+   * Configuration for all cluster's control plane endpoints.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ControlPlaneEndpointsConfig controlPlaneEndpointsConfig;
+
+  /**
    * Configuration for the fine-grained cost management feature.
    * The value may be {@code null}.
    */
@@ -352,7 +359,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private MasterAuth masterAuth;
 
   /**
-   * The configuration options for master authorized networks feature.
+   * The configuration options for master authorized networks feature. Deprecated: Use
+   * ControlPlaneEndpointsConfig.IPEndpointsConfig.authorized_networks_config instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -792,6 +800,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setConfidentialNodes(ConfidentialNodes confidentialNodes) {
     this.confidentialNodes = confidentialNodes;
+    return this;
+  }
+
+  /**
+   * Configuration for all cluster's control plane endpoints.
+   * @return value or {@code null} for none
+   */
+  public ControlPlaneEndpointsConfig getControlPlaneEndpointsConfig() {
+    return controlPlaneEndpointsConfig;
+  }
+
+  /**
+   * Configuration for all cluster's control plane endpoints.
+   * @param controlPlaneEndpointsConfig controlPlaneEndpointsConfig or {@code null} for none
+   */
+  public Cluster setControlPlaneEndpointsConfig(ControlPlaneEndpointsConfig controlPlaneEndpointsConfig) {
+    this.controlPlaneEndpointsConfig = controlPlaneEndpointsConfig;
     return this;
   }
 
@@ -1394,7 +1419,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The configuration options for master authorized networks feature.
+   * The configuration options for master authorized networks feature. Deprecated: Use
+   * ControlPlaneEndpointsConfig.IPEndpointsConfig.authorized_networks_config instead.
    * @return value or {@code null} for none
    */
   public MasterAuthorizedNetworksConfig getMasterAuthorizedNetworksConfig() {
@@ -1402,7 +1428,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The configuration options for master authorized networks feature.
+   * The configuration options for master authorized networks feature. Deprecated: Use
+   * ControlPlaneEndpointsConfig.IPEndpointsConfig.authorized_networks_config instead.
    * @param masterAuthorizedNetworksConfig masterAuthorizedNetworksConfig or {@code null} for none
    */
   public Cluster setMasterAuthorizedNetworksConfig(MasterAuthorizedNetworksConfig masterAuthorizedNetworksConfig) {

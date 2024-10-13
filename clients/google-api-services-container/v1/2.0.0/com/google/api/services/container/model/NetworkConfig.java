@@ -39,6 +39,15 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String datapathProvider;
 
   /**
+   * Controls whether by default nodes have private IP addresses only. It is invalid to specify both
+   * PrivateClusterConfig.enablePrivateNodes and this field at the same time. To update the default
+   * setting, use ClusterUpdate.desired_default_enable_private_nodes
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean defaultEnablePrivateNodes;
+
+  /**
    * Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled
    * when default_snat_status is disabled. When disabled is set to false, default IP masquerade
    * rules will be applied to the nodes to prevent sNAT on cluster internal traffic.
@@ -160,6 +169,27 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   public NetworkConfig setDatapathProvider(java.lang.String datapathProvider) {
     this.datapathProvider = datapathProvider;
+    return this;
+  }
+
+  /**
+   * Controls whether by default nodes have private IP addresses only. It is invalid to specify both
+   * PrivateClusterConfig.enablePrivateNodes and this field at the same time. To update the default
+   * setting, use ClusterUpdate.desired_default_enable_private_nodes
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDefaultEnablePrivateNodes() {
+    return defaultEnablePrivateNodes;
+  }
+
+  /**
+   * Controls whether by default nodes have private IP addresses only. It is invalid to specify both
+   * PrivateClusterConfig.enablePrivateNodes and this field at the same time. To update the default
+   * setting, use ClusterUpdate.desired_default_enable_private_nodes
+   * @param defaultEnablePrivateNodes defaultEnablePrivateNodes or {@code null} for none
+   */
+  public NetworkConfig setDefaultEnablePrivateNodes(java.lang.Boolean defaultEnablePrivateNodes) {
+    this.defaultEnablePrivateNodes = defaultEnablePrivateNodes;
     return this;
   }
 

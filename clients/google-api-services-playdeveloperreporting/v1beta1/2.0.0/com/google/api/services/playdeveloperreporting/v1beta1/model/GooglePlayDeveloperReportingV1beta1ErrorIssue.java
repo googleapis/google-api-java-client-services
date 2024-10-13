@@ -36,6 +36,14 @@ package com.google.api.services.playdeveloperreporting.v1beta1.model;
 public final class GooglePlayDeveloperReportingV1beta1ErrorIssue extends com.google.api.client.json.GenericJson {
 
   /**
+   * List of annotations for an issue. Annotations provide additional information that may help in
+   * diagnosing and fixing the issue.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GooglePlayDeveloperReportingV1beta1IssueAnnotation> annotations;
+
+  /**
    * Cause of the issue. Depending on the type this can be either: * APPLICATION_NOT_RESPONDING: the
    * type of ANR that occurred, e.g., 'Input dispatching timed out'. * CRASH: for Java unhandled
    * exception errors, the type of the innermost exception that was thrown, e.g.,
@@ -145,6 +153,25 @@ public final class GooglePlayDeveloperReportingV1beta1ErrorIssue extends com.goo
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * List of annotations for an issue. Annotations provide additional information that may help in
+   * diagnosing and fixing the issue.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GooglePlayDeveloperReportingV1beta1IssueAnnotation> getAnnotations() {
+    return annotations;
+  }
+
+  /**
+   * List of annotations for an issue. Annotations provide additional information that may help in
+   * diagnosing and fixing the issue.
+   * @param annotations annotations or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1beta1ErrorIssue setAnnotations(java.util.List<GooglePlayDeveloperReportingV1beta1IssueAnnotation> annotations) {
+    this.annotations = annotations;
+    return this;
+  }
 
   /**
    * Cause of the issue. Depending on the type this can be either: * APPLICATION_NOT_RESPONDING: the

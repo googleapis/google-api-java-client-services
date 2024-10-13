@@ -2393,8 +2393,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
     }
     /**
      * Rotates the server certificate version to one previously added with the addServerCertificate
-     * method. For instances not using Certificate Authority Service (CAS) server CA, please use
-     * RotateServerCa instead.
+     * method. For instances not using Certificate Authority Service (CAS) server CA, use RotateServerCa
+     * instead.
      *
      * Create a request for the method "instances.RotateServerCertificate".
      *
@@ -2419,7 +2419,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Rotates the server certificate version to one previously added with the addServerCertificate
-       * method. For instances not using Certificate Authority Service (CAS) server CA, please use
+       * method. For instances not using Certificate Authority Service (CAS) server CA, use
        * RotateServerCa instead.
        *
        * Create a request for the method "instances.RotateServerCertificate".
@@ -2689,7 +2689,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      * prepare for a certificate rotation. If a CA version was previously added but never used in a
      * certificate rotation, this operation replaces that version. There cannot be more than one CA
      * version waiting to be rotated in. For instances that have enabled Certificate Authority Service
-     * (CAS) based server CA, please use AddServerCertificate to add a new server certificate.
+     * (CAS) based server CA, use AddServerCertificate to add a new server certificate.
      *
      * Create a request for the method "instances.addServerCa".
      *
@@ -2715,7 +2715,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        * prepare for a certificate rotation. If a CA version was previously added but never used in a
        * certificate rotation, this operation replaces that version. There cannot be more than one CA
        * version waiting to be rotated in. For instances that have enabled Certificate Authority Service
-       * (CAS) based server CA, please use AddServerCertificate to add a new server certificate.
+       * (CAS) based server CA, use AddServerCertificate to add a new server certificate.
        *
        * Create a request for the method "instances.addServerCa".
        *
@@ -2832,7 +2832,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      * Authority Service (CAS) server CA. Required to prepare for a certificate rotation. If a server
      * certificate version was previously added but never used in a certificate rotation, this operation
      * replaces that version. There cannot be more than one certificate version waiting to be rotated
-     * in. For instances not using CAS server CA, please use AddServerCa instead.
+     * in. For instances not using CAS server CA, use AddServerCa instead.
      *
      * Create a request for the method "instances.addServerCertificate".
      *
@@ -2859,7 +2859,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        * Authority Service (CAS) server CA. Required to prepare for a certificate rotation. If a server
        * certificate version was previously added but never used in a certificate rotation, this
        * operation replaces that version. There cannot be more than one certificate version waiting to
-       * be rotated in. For instances not using CAS server CA, please use AddServerCa instead.
+       * be rotated in. For instances not using CAS server CA, use AddServerCa instead.
        *
        * Create a request for the method "instances.addServerCertificate".
        *
@@ -3243,38 +3243,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Cloud SQL instance ID. This does not include the project ID. */
       public Delete setInstance(java.lang.String instance) {
         this.instance = instance;
-        return this;
-      }
-
-      /** Flag to opt-in for final backup. By default, it is turned off. */
-      @com.google.api.client.util.Key
-      private java.lang.Boolean enableFinalBackup;
-
-      /** Flag to opt-in for final backup. By default, it is turned off.
-       */
-      public java.lang.Boolean getEnableFinalBackup() {
-        return enableFinalBackup;
-      }
-
-      /** Flag to opt-in for final backup. By default, it is turned off. */
-      public Delete setEnableFinalBackup(java.lang.Boolean enableFinalBackup) {
-        this.enableFinalBackup = enableFinalBackup;
-        return this;
-      }
-
-      /** Optional. The description of the final backup. */
-      @com.google.api.client.util.Key
-      private java.lang.String finalBackupDescription;
-
-      /** Optional. The description of the final backup.
-       */
-      public java.lang.String getFinalBackupDescription() {
-        return finalBackupDescription;
-      }
-
-      /** Optional. The description of the final backup. */
-      public Delete setFinalBackupDescription(java.lang.String finalBackupDescription) {
-        this.finalBackupDescription = finalBackupDescription;
         return this;
       }
 
@@ -5648,7 +5616,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
     /**
      * Rotates the server certificate to one signed by the Certificate Authority (CA) version previously
      * added with the addServerCA method. For instances that have enabled Certificate Authority Service
-     * (CAS) based server CA, please use RotateServerCertificate to rotate the server certificate.
+     * (CAS) based server CA, use RotateServerCertificate to rotate the server certificate.
      *
      * Create a request for the method "instances.rotateServerCa".
      *
@@ -5673,8 +5641,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /**
        * Rotates the server certificate to one signed by the Certificate Authority (CA) version
        * previously added with the addServerCA method. For instances that have enabled Certificate
-       * Authority Service (CAS) based server CA, please use RotateServerCertificate to rotate the
-       * server certificate.
+       * Authority Service (CAS) based server CA, use RotateServerCertificate to rotate the server
+       * certificate.
        *
        * Create a request for the method "instances.rotateServerCa".
        *
@@ -6914,32 +6882,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Project ID of the project that contains the instance. */
       public List setProject(java.lang.String project) {
         this.project = project;
-        return this;
-      }
-
-      /**
-       * Optional. A filter string that follows the rules of EBNF grammar
-       * (https://google.aip.dev/assets/misc/ebnf-filtering.txt). Cloud SQL provides filters for
-       * status, operationType, and startTime.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String filter;
-
-      /** Optional. A filter string that follows the rules of EBNF grammar
-     (https://google.aip.dev/assets/misc/ebnf-filtering.txt). Cloud SQL provides filters for status,
-     operationType, and startTime.
-       */
-      public java.lang.String getFilter() {
-        return filter;
-      }
-
-      /**
-       * Optional. A filter string that follows the rules of EBNF grammar
-       * (https://google.aip.dev/assets/misc/ebnf-filtering.txt). Cloud SQL provides filters for
-       * status, operationType, and startTime.
-       */
-      public List setFilter(java.lang.String filter) {
-        this.filter = filter;
         return this;
       }
 

@@ -71,7 +71,7 @@ public final class BackupPlanAssociation extends com.google.api.client.json.Gene
   private java.lang.String resource;
 
   /**
-   * Output only. Output Only. Resource type of workload on which backupplan is applied
+   * Optional. Resource type of workload on which backupplan is applied
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -192,7 +192,7 @@ public final class BackupPlanAssociation extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Output Only. Resource type of workload on which backupplan is applied
+   * Optional. Resource type of workload on which backupplan is applied
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceType() {
@@ -200,7 +200,7 @@ public final class BackupPlanAssociation extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Output Only. Resource type of workload on which backupplan is applied
+   * Optional. Resource type of workload on which backupplan is applied
    * @param resourceType resourceType or {@code null} for none
    */
   public BackupPlanAssociation setResourceType(java.lang.String resourceType) {

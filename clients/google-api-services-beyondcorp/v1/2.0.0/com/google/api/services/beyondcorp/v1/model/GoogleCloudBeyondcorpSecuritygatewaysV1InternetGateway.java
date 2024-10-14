@@ -17,7 +17,7 @@
 package com.google.api.services.beyondcorp.v1.model;
 
 /**
- * Represents the NAT Gateway configuration.
+ * Represents the Internet Gateway configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BeyondCorp API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.beyondcorp.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudBeyondcorpSecuritygatewaysV1NatGatewayConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudBeyondcorpSecuritygatewaysV1InternetGateway extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. List of NAT IPs that will be used for establishing connection to the endpoints.
+   * Output only. List of IP addresses assigned to the Cloud NAT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> natIps;
+  private java.util.List<java.lang.String> assignedIps;
 
   /**
-   * Output only. List of NAT IPs that will be used for establishing connection to the endpoints.
+   * Output only. List of IP addresses assigned to the Cloud NAT.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getNatIps() {
-    return natIps;
+  public java.util.List<java.lang.String> getAssignedIps() {
+    return assignedIps;
   }
 
   /**
-   * Output only. List of NAT IPs that will be used for establishing connection to the endpoints.
-   * @param natIps natIps or {@code null} for none
+   * Output only. List of IP addresses assigned to the Cloud NAT.
+   * @param assignedIps assignedIps or {@code null} for none
    */
-  public GoogleCloudBeyondcorpSecuritygatewaysV1NatGatewayConfig setNatIps(java.util.List<java.lang.String> natIps) {
-    this.natIps = natIps;
+  public GoogleCloudBeyondcorpSecuritygatewaysV1InternetGateway setAssignedIps(java.util.List<java.lang.String> assignedIps) {
+    this.assignedIps = assignedIps;
     return this;
   }
 
   @Override
-  public GoogleCloudBeyondcorpSecuritygatewaysV1NatGatewayConfig set(String fieldName, Object value) {
-    return (GoogleCloudBeyondcorpSecuritygatewaysV1NatGatewayConfig) super.set(fieldName, value);
+  public GoogleCloudBeyondcorpSecuritygatewaysV1InternetGateway set(String fieldName, Object value) {
+    return (GoogleCloudBeyondcorpSecuritygatewaysV1InternetGateway) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudBeyondcorpSecuritygatewaysV1NatGatewayConfig clone() {
-    return (GoogleCloudBeyondcorpSecuritygatewaysV1NatGatewayConfig) super.clone();
+  public GoogleCloudBeyondcorpSecuritygatewaysV1InternetGateway clone() {
+    return (GoogleCloudBeyondcorpSecuritygatewaysV1InternetGateway) super.clone();
   }
 
 }

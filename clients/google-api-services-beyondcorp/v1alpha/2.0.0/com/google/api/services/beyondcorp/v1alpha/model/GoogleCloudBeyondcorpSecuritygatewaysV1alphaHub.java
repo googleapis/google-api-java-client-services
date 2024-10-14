@@ -30,32 +30,26 @@ package com.google.api.services.beyondcorp.v1alpha.model;
 public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaHub extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. NAT gateway setup to ensure enough NAT IP addresses are available to handle the
-   * traffic needed to access the applications. Allows to explicitly enable or disable the NAT in
-   * the Hub along with the total IPs allocated to handle the capacity limits.
+   * Optional. Internet Gateway configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudBeyondcorpSecuritygatewaysV1alphaNatGatewayConfig natGatewayConfig;
+  private GoogleCloudBeyondcorpSecuritygatewaysV1alphaInternetGateway internetGateway;
 
   /**
-   * Optional. NAT gateway setup to ensure enough NAT IP addresses are available to handle the
-   * traffic needed to access the applications. Allows to explicitly enable or disable the NAT in
-   * the Hub along with the total IPs allocated to handle the capacity limits.
+   * Optional. Internet Gateway configuration.
    * @return value or {@code null} for none
    */
-  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaNatGatewayConfig getNatGatewayConfig() {
-    return natGatewayConfig;
+  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaInternetGateway getInternetGateway() {
+    return internetGateway;
   }
 
   /**
-   * Optional. NAT gateway setup to ensure enough NAT IP addresses are available to handle the
-   * traffic needed to access the applications. Allows to explicitly enable or disable the NAT in
-   * the Hub along with the total IPs allocated to handle the capacity limits.
-   * @param natGatewayConfig natGatewayConfig or {@code null} for none
+   * Optional. Internet Gateway configuration.
+   * @param internetGateway internetGateway or {@code null} for none
    */
-  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaHub setNatGatewayConfig(GoogleCloudBeyondcorpSecuritygatewaysV1alphaNatGatewayConfig natGatewayConfig) {
-    this.natGatewayConfig = natGatewayConfig;
+  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaHub setInternetGateway(GoogleCloudBeyondcorpSecuritygatewaysV1alphaInternetGateway internetGateway) {
+    this.internetGateway = internetGateway;
     return this;
   }
 

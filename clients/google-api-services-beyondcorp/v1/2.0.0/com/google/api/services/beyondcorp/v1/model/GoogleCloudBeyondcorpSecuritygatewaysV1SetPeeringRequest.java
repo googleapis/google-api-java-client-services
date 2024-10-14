@@ -30,6 +30,19 @@ package com.google.api.services.beyondcorp.v1.model;
 public final class GoogleCloudBeyondcorpSecuritygatewaysV1SetPeeringRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Required. List of Peering connection information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudBeyondcorpSecuritygatewaysV1Peering> peerings;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudBeyondcorpSecuritygatewaysV1Peering used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudBeyondcorpSecuritygatewaysV1Peering.class);
+  }
+
+  /**
    * Optional. An optional request ID to identify requests. Specify a unique request ID so that if
    * you must retry your request, the server will know to ignore the request if it has already been
    * completed. The server will guarantee that for at least 60 minutes since the first request. For
@@ -53,15 +66,19 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1SetPeeringRequest exte
 
   /**
    * Required. List of Peering connection information.
-   * The value may be {@code null}.
+   * @return value or {@code null} for none
    */
-  @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudBeyondcorpSecuritygatewaysV1Peering> vpcPeerings;
+  public java.util.List<GoogleCloudBeyondcorpSecuritygatewaysV1Peering> getPeerings() {
+    return peerings;
+  }
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudBeyondcorpSecuritygatewaysV1Peering used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudBeyondcorpSecuritygatewaysV1Peering.class);
+  /**
+   * Required. List of Peering connection information.
+   * @param peerings peerings or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpSecuritygatewaysV1SetPeeringRequest setPeerings(java.util.List<GoogleCloudBeyondcorpSecuritygatewaysV1Peering> peerings) {
+    this.peerings = peerings;
+    return this;
   }
 
   /**
@@ -111,23 +128,6 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1SetPeeringRequest exte
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1SetPeeringRequest setValidateOnly(java.lang.Boolean validateOnly) {
     this.validateOnly = validateOnly;
-    return this;
-  }
-
-  /**
-   * Required. List of Peering connection information.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<GoogleCloudBeyondcorpSecuritygatewaysV1Peering> getVpcPeerings() {
-    return vpcPeerings;
-  }
-
-  /**
-   * Required. List of Peering connection information.
-   * @param vpcPeerings vpcPeerings or {@code null} for none
-   */
-  public GoogleCloudBeyondcorpSecuritygatewaysV1SetPeeringRequest setVpcPeerings(java.util.List<GoogleCloudBeyondcorpSecuritygatewaysV1Peering> vpcPeerings) {
-    this.vpcPeerings = vpcPeerings;
     return this;
   }
 

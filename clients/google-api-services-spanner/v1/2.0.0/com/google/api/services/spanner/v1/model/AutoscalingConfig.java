@@ -30,6 +30,24 @@ package com.google.api.services.spanner.v1.model;
 public final class AutoscalingConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Optional asymmetric autoscaling options. Replicas matching the replica selection
+   * criteria will be autoscaled independently from other replicas. The autoscaler will scale the
+   * replicas based on the utilization of replicas identified by the replica selection. Replica
+   * selections should not overlap with each other. Other replicas (those do not match any replica
+   * selection) will be autoscaled together and will have the same compute capacity allocated to
+   * them.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AsymmetricAutoscalingOption> asymmetricAutoscalingOptions;
+
+  static {
+    // hack to force ProGuard to consider AsymmetricAutoscalingOption used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AsymmetricAutoscalingOption.class);
+  }
+
+  /**
    * Required. Autoscaling limits for an instance.
    * The value may be {@code null}.
    */
@@ -42,6 +60,33 @@ public final class AutoscalingConfig extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private AutoscalingTargets autoscalingTargets;
+
+  /**
+   * Optional. Optional asymmetric autoscaling options. Replicas matching the replica selection
+   * criteria will be autoscaled independently from other replicas. The autoscaler will scale the
+   * replicas based on the utilization of replicas identified by the replica selection. Replica
+   * selections should not overlap with each other. Other replicas (those do not match any replica
+   * selection) will be autoscaled together and will have the same compute capacity allocated to
+   * them.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AsymmetricAutoscalingOption> getAsymmetricAutoscalingOptions() {
+    return asymmetricAutoscalingOptions;
+  }
+
+  /**
+   * Optional. Optional asymmetric autoscaling options. Replicas matching the replica selection
+   * criteria will be autoscaled independently from other replicas. The autoscaler will scale the
+   * replicas based on the utilization of replicas identified by the replica selection. Replica
+   * selections should not overlap with each other. Other replicas (those do not match any replica
+   * selection) will be autoscaled together and will have the same compute capacity allocated to
+   * them.
+   * @param asymmetricAutoscalingOptions asymmetricAutoscalingOptions or {@code null} for none
+   */
+  public AutoscalingConfig setAsymmetricAutoscalingOptions(java.util.List<AsymmetricAutoscalingOption> asymmetricAutoscalingOptions) {
+    this.asymmetricAutoscalingOptions = asymmetricAutoscalingOptions;
+    return this;
+  }
 
   /**
    * Required. Autoscaling limits for an instance.

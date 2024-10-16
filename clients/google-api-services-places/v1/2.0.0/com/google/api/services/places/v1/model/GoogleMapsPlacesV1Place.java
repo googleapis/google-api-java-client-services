@@ -53,6 +53,15 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.util.List<GoogleMapsPlacesV1PlaceAddressComponent> addressComponents;
 
   /**
+   * The address descriptor of the place. Address descriptors include additional information that
+   * help describe a location using landmarks and areas. See address descriptor regional coverage in
+   * https://developers.google.com/maps/documentation/geocoding/address-descriptors/coverage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleMapsPlacesV1AddressDescriptor addressDescriptor;
+
+  /**
    * The place's address in adr microformat: http://microformats.org/wiki/adr.
    * The value may be {@code null}.
    */
@@ -566,6 +575,27 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   public GoogleMapsPlacesV1Place setAddressComponents(java.util.List<GoogleMapsPlacesV1PlaceAddressComponent> addressComponents) {
     this.addressComponents = addressComponents;
+    return this;
+  }
+
+  /**
+   * The address descriptor of the place. Address descriptors include additional information that
+   * help describe a location using landmarks and areas. See address descriptor regional coverage in
+   * https://developers.google.com/maps/documentation/geocoding/address-descriptors/coverage.
+   * @return value or {@code null} for none
+   */
+  public GoogleMapsPlacesV1AddressDescriptor getAddressDescriptor() {
+    return addressDescriptor;
+  }
+
+  /**
+   * The address descriptor of the place. Address descriptors include additional information that
+   * help describe a location using landmarks and areas. See address descriptor regional coverage in
+   * https://developers.google.com/maps/documentation/geocoding/address-descriptors/coverage.
+   * @param addressDescriptor addressDescriptor or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setAddressDescriptor(GoogleMapsPlacesV1AddressDescriptor addressDescriptor) {
+    this.addressDescriptor = addressDescriptor;
     return this;
   }
 

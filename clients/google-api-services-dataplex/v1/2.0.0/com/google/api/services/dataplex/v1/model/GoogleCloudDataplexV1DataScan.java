@@ -47,28 +47,28 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   private GoogleCloudDataplexV1DataSource data;
 
   /**
-   * Output only. The result of the data profile scan.
+   * Output only. The result of a data profile scan.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1DataProfileResult dataProfileResult;
 
   /**
-   * DataProfileScan related setting.
+   * Settings for a data profile scan.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1DataProfileSpec dataProfileSpec;
 
   /**
-   * Output only. The result of the data quality scan.
+   * Output only. The result of a data quality scan.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1DataQualityResult dataQualityResult;
 
   /**
-   * DataQualityScan related setting.
+   * Settings for a data quality scan.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,7 +183,7 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   }
 
   /**
-   * Output only. The result of the data profile scan.
+   * Output only. The result of a data profile scan.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResult getDataProfileResult() {
@@ -191,7 +191,7 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   }
 
   /**
-   * Output only. The result of the data profile scan.
+   * Output only. The result of a data profile scan.
    * @param dataProfileResult dataProfileResult or {@code null} for none
    */
   public GoogleCloudDataplexV1DataScan setDataProfileResult(GoogleCloudDataplexV1DataProfileResult dataProfileResult) {
@@ -200,7 +200,7 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   }
 
   /**
-   * DataProfileScan related setting.
+   * Settings for a data profile scan.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileSpec getDataProfileSpec() {
@@ -208,7 +208,7 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   }
 
   /**
-   * DataProfileScan related setting.
+   * Settings for a data profile scan.
    * @param dataProfileSpec dataProfileSpec or {@code null} for none
    */
   public GoogleCloudDataplexV1DataScan setDataProfileSpec(GoogleCloudDataplexV1DataProfileSpec dataProfileSpec) {
@@ -217,7 +217,7 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   }
 
   /**
-   * Output only. The result of the data quality scan.
+   * Output only. The result of a data quality scan.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityResult getDataQualityResult() {
@@ -225,7 +225,7 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   }
 
   /**
-   * Output only. The result of the data quality scan.
+   * Output only. The result of a data quality scan.
    * @param dataQualityResult dataQualityResult or {@code null} for none
    */
   public GoogleCloudDataplexV1DataScan setDataQualityResult(GoogleCloudDataplexV1DataQualityResult dataQualityResult) {
@@ -234,7 +234,7 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   }
 
   /**
-   * DataQualityScan related setting.
+   * Settings for a data quality scan.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualitySpec getDataQualitySpec() {
@@ -242,7 +242,7 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   }
 
   /**
-   * DataQualityScan related setting.
+   * Settings for a data quality scan.
    * @param dataQualitySpec dataQualitySpec or {@code null} for none
    */
   public GoogleCloudDataplexV1DataScan setDataQualitySpec(GoogleCloudDataplexV1DataQualitySpec dataQualitySpec) {

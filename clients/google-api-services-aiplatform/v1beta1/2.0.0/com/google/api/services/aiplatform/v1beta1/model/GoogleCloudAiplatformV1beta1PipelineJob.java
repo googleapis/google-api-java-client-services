@@ -142,6 +142,13 @@ public final class GoogleCloudAiplatformV1beta1PipelineJob extends com.google.ap
   private java.lang.Boolean preflightValidations;
 
   /**
+   * Optional. Configuration for PSC-I for PipelineJob.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1PscInterfaceConfig pscInterfaceConfig;
+
+  /**
    * A list of names for the reserved ip ranges under the VPC network that can be used for this
    * Pipeline Job's workload. If set, we will deploy the Pipeline Job's workload within the provided
    * ip ranges. Otherwise, the job will be deployed to any ip ranges under the provided VPC network.
@@ -489,6 +496,23 @@ public final class GoogleCloudAiplatformV1beta1PipelineJob extends com.google.ap
    */
   public GoogleCloudAiplatformV1beta1PipelineJob setPreflightValidations(java.lang.Boolean preflightValidations) {
     this.preflightValidations = preflightValidations;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for PSC-I for PipelineJob.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PscInterfaceConfig getPscInterfaceConfig() {
+    return pscInterfaceConfig;
+  }
+
+  /**
+   * Optional. Configuration for PSC-I for PipelineJob.
+   * @param pscInterfaceConfig pscInterfaceConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PipelineJob setPscInterfaceConfig(GoogleCloudAiplatformV1beta1PscInterfaceConfig pscInterfaceConfig) {
+    this.pscInterfaceConfig = pscInterfaceConfig;
     return this;
   }
 

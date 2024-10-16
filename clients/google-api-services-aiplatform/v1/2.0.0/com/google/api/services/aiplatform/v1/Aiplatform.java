@@ -21422,6 +21422,154 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
         public class Features {
 
           /**
+           * Creates a batch of Features in a given FeatureGroup.
+           *
+           * Create a request for the method "features.batchCreate".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link BatchCreate#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the EntityType/FeatureGroup to create the batch of Features under.
+           *        Format: `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/
+           *        {entity_type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchCreateFeaturesRequest}
+           * @return the request
+           */
+          public BatchCreate batchCreate(java.lang.String parent, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchCreateFeaturesRequest content) throws java.io.IOException {
+            BatchCreate result = new BatchCreate(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BatchCreate extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1/{+parent}/features:batchCreate";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+$");
+
+            /**
+             * Creates a batch of Features in a given FeatureGroup.
+             *
+             * Create a request for the method "features.batchCreate".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * BatchCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the EntityType/FeatureGroup to create the batch of Features under.
+           *        Format: `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/
+           *        {entity_type}` `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchCreateFeaturesRequest}
+             * @since 1.13
+             */
+            protected BatchCreate(java.lang.String parent, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchCreateFeaturesRequest content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+$");
+              }
+            }
+
+            @Override
+            public BatchCreate set$Xgafv(java.lang.String $Xgafv) {
+              return (BatchCreate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BatchCreate setAccessToken(java.lang.String accessToken) {
+              return (BatchCreate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BatchCreate setAlt(java.lang.String alt) {
+              return (BatchCreate) super.setAlt(alt);
+            }
+
+            @Override
+            public BatchCreate setCallback(java.lang.String callback) {
+              return (BatchCreate) super.setCallback(callback);
+            }
+
+            @Override
+            public BatchCreate setFields(java.lang.String fields) {
+              return (BatchCreate) super.setFields(fields);
+            }
+
+            @Override
+            public BatchCreate setKey(java.lang.String key) {
+              return (BatchCreate) super.setKey(key);
+            }
+
+            @Override
+            public BatchCreate setOauthToken(java.lang.String oauthToken) {
+              return (BatchCreate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BatchCreate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BatchCreate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BatchCreate setQuotaUser(java.lang.String quotaUser) {
+              return (BatchCreate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BatchCreate setUploadType(java.lang.String uploadType) {
+              return (BatchCreate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BatchCreate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BatchCreate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the EntityType/FeatureGroup to create the batch of
+             * Features under. Format: `projects/{project}/locations/{location}/featurestores/{featu
+             * restore}/entityTypes/{entity_type}`
+             * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the EntityType/FeatureGroup to create the batch of Features under.
+           Format:
+           `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+           `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the EntityType/FeatureGroup to create the batch of
+             * Features under. Format: `projects/{project}/locations/{location}/featurestores/{featu
+             * restore}/entityTypes/{entity_type}`
+             * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+             */
+            public BatchCreate setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/featureGroups/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public BatchCreate set(String parameterName, Object value) {
+              return (BatchCreate) super.set(parameterName, value);
+            }
+          }
+          /**
            * Creates a new Feature in a given FeatureGroup.
            *
            * Create a request for the method "features.create".

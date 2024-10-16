@@ -79,6 +79,13 @@ public final class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extend
   private java.lang.String note;
 
   /**
+   * The API schema of the prompt to support both UI and SDK usages.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1SchemaPromptApiSchema promptApiSchema;
+
+  /**
    * Type of the prompt dataset.
    * The value may be {@code null}.
    */
@@ -268,6 +275,23 @@ public final class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extend
    */
   public GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata setNote(java.lang.String note) {
     this.note = note;
+    return this;
+  }
+
+  /**
+   * The API schema of the prompt to support both UI and SDK usages.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SchemaPromptApiSchema getPromptApiSchema() {
+    return promptApiSchema;
+  }
+
+  /**
+   * The API schema of the prompt to support both UI and SDK usages.
+   * @param promptApiSchema promptApiSchema or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata setPromptApiSchema(GoogleCloudAiplatformV1SchemaPromptApiSchema promptApiSchema) {
+    this.promptApiSchema = promptApiSchema;
     return this;
   }
 

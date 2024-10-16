@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If enabled, audio timestamp will be included in the request to the model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean audioTimestamp;
+
+  /**
    * Optional. Number of candidates to generate.
    * The value may be {@code null}.
    */
@@ -133,6 +140,23 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.lang.Float topP;
+
+  /**
+   * Optional. If enabled, audio timestamp will be included in the request to the model.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAudioTimestamp() {
+    return audioTimestamp;
+  }
+
+  /**
+   * Optional. If enabled, audio timestamp will be included in the request to the model.
+   * @param audioTimestamp audioTimestamp or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerationConfig setAudioTimestamp(java.lang.Boolean audioTimestamp) {
+    this.audioTimestamp = audioTimestamp;
+    return this;
+  }
 
   /**
    * Optional. Number of candidates to generate.

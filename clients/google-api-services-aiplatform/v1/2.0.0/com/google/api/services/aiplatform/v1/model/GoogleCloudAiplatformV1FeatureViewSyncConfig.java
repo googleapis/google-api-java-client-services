@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1FeatureViewSyncConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If true, syncs the FeatureView in a continuous manner to Online Store.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean continuous;
+
+  /**
    * Cron schedule (https://en.wikipedia.org/wiki/Cron) to launch scheduled runs. To explicitly set
    * a timezone to the cron tab, apply a prefix in the cron tab: "CRON_TZ=${IANA_TIME_ZONE}" or
    * "TZ=${IANA_TIME_ZONE}". The ${IANA_TIME_ZONE} may only be a valid string from IANA time zone
@@ -39,6 +46,23 @@ public final class GoogleCloudAiplatformV1FeatureViewSyncConfig extends com.goog
    */
   @com.google.api.client.util.Key
   private java.lang.String cron;
+
+  /**
+   * Optional. If true, syncs the FeatureView in a continuous manner to Online Store.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getContinuous() {
+    return continuous;
+  }
+
+  /**
+   * Optional. If true, syncs the FeatureView in a continuous manner to Online Store.
+   * @param continuous continuous or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FeatureViewSyncConfig setContinuous(java.lang.Boolean continuous) {
+    this.continuous = continuous;
+    return this;
+  }
 
   /**
    * Cron schedule (https://en.wikipedia.org/wiki/Cron) to launch scheduled runs. To explicitly set

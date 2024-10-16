@@ -130,6 +130,13 @@ public final class GoogleCloudAiplatformV1CustomJobSpec extends com.google.api.c
   private java.lang.String protectedArtifactLocationId;
 
   /**
+   * Optional. Configuration for PSC-I for CustomJob.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1PscInterfaceConfig pscInterfaceConfig;
+
+  /**
    * Optional. A list of names for the reserved ip ranges under the VPC network that can be used for
    * this job. If set, we will deploy the job within the provided ip ranges. Otherwise, the job will
    * be deployed to any ip ranges under the provided VPC network. Example: ['vertex-ai-ip-range'].
@@ -395,6 +402,23 @@ public final class GoogleCloudAiplatformV1CustomJobSpec extends com.google.api.c
    */
   public GoogleCloudAiplatformV1CustomJobSpec setProtectedArtifactLocationId(java.lang.String protectedArtifactLocationId) {
     this.protectedArtifactLocationId = protectedArtifactLocationId;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for PSC-I for CustomJob.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1PscInterfaceConfig getPscInterfaceConfig() {
+    return pscInterfaceConfig;
+  }
+
+  /**
+   * Optional. Configuration for PSC-I for CustomJob.
+   * @param pscInterfaceConfig pscInterfaceConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1CustomJobSpec setPscInterfaceConfig(GoogleCloudAiplatformV1PscInterfaceConfig pscInterfaceConfig) {
+    this.pscInterfaceConfig = pscInterfaceConfig;
     return this;
   }
 

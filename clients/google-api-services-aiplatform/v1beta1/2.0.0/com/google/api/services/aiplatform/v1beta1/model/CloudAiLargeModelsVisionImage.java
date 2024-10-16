@@ -60,6 +60,13 @@ public final class CloudAiLargeModelsVisionImage extends com.google.api.client.j
   private CloudAiLargeModelsVisionImageRAIScores imageRaiScores;
 
   /**
+   * Image size. The size of the image. Can be self reported, or computed from the image bytes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudAiLargeModelsVisionImageImageSize imageSize;
+
+  /**
    * RAI info for image.
    * The value may be {@code null}.
    */
@@ -184,6 +191,23 @@ public final class CloudAiLargeModelsVisionImage extends com.google.api.client.j
    */
   public CloudAiLargeModelsVisionImage setImageRaiScores(CloudAiLargeModelsVisionImageRAIScores imageRaiScores) {
     this.imageRaiScores = imageRaiScores;
+    return this;
+  }
+
+  /**
+   * Image size. The size of the image. Can be self reported, or computed from the image bytes.
+   * @return value or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionImageImageSize getImageSize() {
+    return imageSize;
+  }
+
+  /**
+   * Image size. The size of the image. Can be self reported, or computed from the image bytes.
+   * @param imageSize imageSize or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionImage setImageSize(CloudAiLargeModelsVisionImageImageSize imageSize) {
+    this.imageSize = imageSize;
     return this;
   }
 

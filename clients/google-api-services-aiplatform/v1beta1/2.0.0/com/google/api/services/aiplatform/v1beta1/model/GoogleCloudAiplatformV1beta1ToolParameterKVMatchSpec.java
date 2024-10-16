@@ -30,14 +30,14 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ToolParameterKVMatchSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Whether to use STRCIT string match on parameter values.
+   * Optional. Whether to use STRICT string match on parameter values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useStrictStringMatch;
 
   /**
-   * Optional. Whether to use STRCIT string match on parameter values.
+   * Optional. Whether to use STRICT string match on parameter values.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseStrictStringMatch() {
@@ -45,7 +45,7 @@ public final class GoogleCloudAiplatformV1beta1ToolParameterKVMatchSpec extends 
   }
 
   /**
-   * Optional. Whether to use STRCIT string match on parameter values.
+   * Optional. Whether to use STRICT string match on parameter values.
    * @param useStrictStringMatch useStrictStringMatch or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ToolParameterKVMatchSpec setUseStrictStringMatch(java.lang.Boolean useStrictStringMatch) {

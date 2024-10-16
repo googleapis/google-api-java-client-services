@@ -31,6 +31,18 @@ package com.google.api.services.cloudbilling.model;
 public final class BillingAccount extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The currency in which the billing account is billed and charged, represented as an
+   * ISO 4217 code such as `USD`. Billing account currency is determined at the time of billing
+   * account creation and cannot be updated subsequently, so this field should not be set on update
+   * requests. In addition, a subaccount always matches the currency of its parent billing account,
+   * so this field should not be set on subaccount creation requests. Clients can read this field to
+   * determine the currency of an existing billing account.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String currencyCode;
+
+  /**
    * The display name given to the billing account, such as `My Billing Account`. This name is
    * displayed in the Google Cloud Console.
    * The value may be {@code null}.
@@ -74,6 +86,33 @@ public final class BillingAccount extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String parent;
+
+  /**
+   * Optional. The currency in which the billing account is billed and charged, represented as an
+   * ISO 4217 code such as `USD`. Billing account currency is determined at the time of billing
+   * account creation and cannot be updated subsequently, so this field should not be set on update
+   * requests. In addition, a subaccount always matches the currency of its parent billing account,
+   * so this field should not be set on subaccount creation requests. Clients can read this field to
+   * determine the currency of an existing billing account.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCurrencyCode() {
+    return currencyCode;
+  }
+
+  /**
+   * Optional. The currency in which the billing account is billed and charged, represented as an
+   * ISO 4217 code such as `USD`. Billing account currency is determined at the time of billing
+   * account creation and cannot be updated subsequently, so this field should not be set on update
+   * requests. In addition, a subaccount always matches the currency of its parent billing account,
+   * so this field should not be set on subaccount creation requests. Clients can read this field to
+   * determine the currency of an existing billing account.
+   * @param currencyCode currencyCode or {@code null} for none
+   */
+  public BillingAccount setCurrencyCode(java.lang.String currencyCode) {
+    this.currencyCode = currencyCode;
+    return this;
+  }
 
   /**
    * The display name given to the billing account, such as `My Billing Account`. This name is

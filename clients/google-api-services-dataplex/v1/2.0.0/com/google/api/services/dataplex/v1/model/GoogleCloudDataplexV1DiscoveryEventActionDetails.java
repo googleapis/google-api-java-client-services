@@ -30,11 +30,35 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DiscoveryEventActionDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * The human readable issue associated with the action.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String issue;
+
+  /**
    * The type of action. Eg. IncompatibleDataSchema, InvalidDataFormat
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * The human readable issue associated with the action.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIssue() {
+    return issue;
+  }
+
+  /**
+   * The human readable issue associated with the action.
+   * @param issue issue or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DiscoveryEventActionDetails setIssue(java.lang.String issue) {
+    this.issue = issue;
+    return this;
+  }
 
   /**
    * The type of action. Eg. IncompatibleDataSchema, InvalidDataFormat

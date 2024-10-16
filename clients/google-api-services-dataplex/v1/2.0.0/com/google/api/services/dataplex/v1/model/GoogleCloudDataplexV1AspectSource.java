@@ -37,6 +37,15 @@ public final class GoogleCloudDataplexV1AspectSource extends com.google.api.clie
   private String createTime;
 
   /**
+   * The version of the data format used to produce this data. This field is used to indicated when
+   * the underlying data format changes (e.g., schema modifications, changes to the source URL
+   * format definition, etc).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataVersion;
+
+  /**
    * The time the aspect was last updated in the source system.
    * The value may be {@code null}.
    */
@@ -57,6 +66,27 @@ public final class GoogleCloudDataplexV1AspectSource extends com.google.api.clie
    */
   public GoogleCloudDataplexV1AspectSource setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * The version of the data format used to produce this data. This field is used to indicated when
+   * the underlying data format changes (e.g., schema modifications, changes to the source URL
+   * format definition, etc).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataVersion() {
+    return dataVersion;
+  }
+
+  /**
+   * The version of the data format used to produce this data. This field is used to indicated when
+   * the underlying data format changes (e.g., schema modifications, changes to the source URL
+   * format definition, etc).
+   * @param dataVersion dataVersion or {@code null} for none
+   */
+  public GoogleCloudDataplexV1AspectSource setDataVersion(java.lang.String dataVersion) {
+    this.dataVersion = dataVersion;
     return this;
   }
 

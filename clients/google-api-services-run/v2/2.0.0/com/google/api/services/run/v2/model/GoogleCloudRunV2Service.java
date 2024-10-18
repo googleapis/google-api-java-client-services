@@ -159,7 +159,8 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
 
   /**
    * Optional. Disables IAM permission check for run.routes.invoke for callers of this service. This
-   * setting should not be used with external ingress.
+   * feature is available by invitation only. For more information, visit
+   * https://cloud.google.com/run/docs/securing/managing-access#invoker_check.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -614,7 +615,8 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
 
   /**
    * Optional. Disables IAM permission check for run.routes.invoke for callers of this service. This
-   * setting should not be used with external ingress.
+   * feature is available by invitation only. For more information, visit
+   * https://cloud.google.com/run/docs/securing/managing-access#invoker_check.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getInvokerIamDisabled() {
@@ -623,7 +625,8 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
 
   /**
    * Optional. Disables IAM permission check for run.routes.invoke for callers of this service. This
-   * setting should not be used with external ingress.
+   * feature is available by invitation only. For more information, visit
+   * https://cloud.google.com/run/docs/securing/managing-access#invoker_check.
    * @param invokerIamDisabled invokerIamDisabled or {@code null} for none
    */
   public GoogleCloudRunV2Service setInvokerIamDisabled(java.lang.Boolean invokerIamDisabled) {

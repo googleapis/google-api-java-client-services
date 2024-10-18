@@ -44,6 +44,14 @@ public final class GoogleCloudRecommenderV1beta1Impact extends com.google.api.cl
   private GoogleCloudRecommenderV1beta1CostProjection costProjection;
 
   /**
+   * If populated, the impact contains multiple components. In this case, the top-level impact
+   * contains aggregated values and each component contains per-service details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudRecommenderV1beta1Impact> impactComponents;
+
+  /**
    * Use with CategoryType.RELIABILITY
    * The value may be {@code null}.
    */
@@ -56,6 +64,13 @@ public final class GoogleCloudRecommenderV1beta1Impact extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private GoogleCloudRecommenderV1beta1SecurityProjection securityProjection;
+
+  /**
+   * The service that this impact is associated with.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String service;
 
   /**
    * Use with CategoryType.SUSTAINABILITY
@@ -99,6 +114,25 @@ public final class GoogleCloudRecommenderV1beta1Impact extends com.google.api.cl
   }
 
   /**
+   * If populated, the impact contains multiple components. In this case, the top-level impact
+   * contains aggregated values and each component contains per-service details.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudRecommenderV1beta1Impact> getImpactComponents() {
+    return impactComponents;
+  }
+
+  /**
+   * If populated, the impact contains multiple components. In this case, the top-level impact
+   * contains aggregated values and each component contains per-service details.
+   * @param impactComponents impactComponents or {@code null} for none
+   */
+  public GoogleCloudRecommenderV1beta1Impact setImpactComponents(java.util.List<GoogleCloudRecommenderV1beta1Impact> impactComponents) {
+    this.impactComponents = impactComponents;
+    return this;
+  }
+
+  /**
    * Use with CategoryType.RELIABILITY
    * @return value or {@code null} for none
    */
@@ -129,6 +163,23 @@ public final class GoogleCloudRecommenderV1beta1Impact extends com.google.api.cl
    */
   public GoogleCloudRecommenderV1beta1Impact setSecurityProjection(GoogleCloudRecommenderV1beta1SecurityProjection securityProjection) {
     this.securityProjection = securityProjection;
+    return this;
+  }
+
+  /**
+   * The service that this impact is associated with.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getService() {
+    return service;
+  }
+
+  /**
+   * The service that this impact is associated with.
+   * @param service service or {@code null} for none
+   */
+  public GoogleCloudRecommenderV1beta1Impact setService(java.lang.String service) {
+    this.service = service;
     return this;
   }
 

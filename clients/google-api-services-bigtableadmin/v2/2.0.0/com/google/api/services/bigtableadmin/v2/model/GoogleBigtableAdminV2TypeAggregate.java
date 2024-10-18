@@ -18,8 +18,8 @@ package com.google.api.services.bigtableadmin.v2.model;
 
 /**
  * A value that combines incremental updates into a summarized value. Data is never directly written
- * or read using type `Aggregate`. Writes will provide either the `input_type` or `state_type`, and
- * reads will always return the `state_type` .
+ * or read using type `Aggregate`. Writes provide either the `input_type` or `state_type`, and reads
+ * always return the `state_type` .
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Bigtable Admin API. For a detailed explanation
@@ -40,8 +40,8 @@ public final class GoogleBigtableAdminV2TypeAggregate extends com.google.api.cli
   private GoogleBigtableAdminV2TypeAggregateHyperLogLogPlusPlusUniqueCount hllppUniqueCount;
 
   /**
-   * Type of the inputs that are accumulated by this `Aggregate`, which must specify a full
-   * encoding. Use `AddInput` mutations to accumulate new inputs.
+   * Type of the inputs that are accumulated by this `Aggregate`. Use `AddInput` mutations to
+   * accumulate new inputs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class GoogleBigtableAdminV2TypeAggregate extends com.google.api.cli
 
   /**
    * Output only. Type that holds the internal accumulator state for the `Aggregate`. This is a
-   * function of the `input_type` and `aggregator` chosen, and will always specify a full encoding.
+   * function of the `input_type` and `aggregator` chosen.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,8 +94,8 @@ public final class GoogleBigtableAdminV2TypeAggregate extends com.google.api.cli
   }
 
   /**
-   * Type of the inputs that are accumulated by this `Aggregate`, which must specify a full
-   * encoding. Use `AddInput` mutations to accumulate new inputs.
+   * Type of the inputs that are accumulated by this `Aggregate`. Use `AddInput` mutations to
+   * accumulate new inputs.
    * @return value or {@code null} for none
    */
   public Type getInputType() {
@@ -103,8 +103,8 @@ public final class GoogleBigtableAdminV2TypeAggregate extends com.google.api.cli
   }
 
   /**
-   * Type of the inputs that are accumulated by this `Aggregate`, which must specify a full
-   * encoding. Use `AddInput` mutations to accumulate new inputs.
+   * Type of the inputs that are accumulated by this `Aggregate`. Use `AddInput` mutations to
+   * accumulate new inputs.
    * @param inputType inputType or {@code null} for none
    */
   public GoogleBigtableAdminV2TypeAggregate setInputType(Type inputType) {
@@ -148,7 +148,7 @@ public final class GoogleBigtableAdminV2TypeAggregate extends com.google.api.cli
 
   /**
    * Output only. Type that holds the internal accumulator state for the `Aggregate`. This is a
-   * function of the `input_type` and `aggregator` chosen, and will always specify a full encoding.
+   * function of the `input_type` and `aggregator` chosen.
    * @return value or {@code null} for none
    */
   public Type getStateType() {
@@ -157,7 +157,7 @@ public final class GoogleBigtableAdminV2TypeAggregate extends com.google.api.cli
 
   /**
    * Output only. Type that holds the internal accumulator state for the `Aggregate`. This is a
-   * function of the `input_type` and `aggregator` chosen, and will always specify a full encoding.
+   * function of the `input_type` and `aggregator` chosen.
    * @param stateType stateType or {@code null} for none
    */
   public GoogleBigtableAdminV2TypeAggregate setStateType(Type stateType) {

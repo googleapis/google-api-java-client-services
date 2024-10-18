@@ -17,9 +17,9 @@
 package com.google.api.services.bigtableadmin.v2.model;
 
 /**
- * UTF-8 encoding * Order-preserving? Yes (code point order) * Self-delimiting? No * Compatibility?
- * - BigQuery Federation `TEXT` encoding - HBase `Bytes.toBytes` - Java
- * `String#getBytes(StandardCharsets.UTF_8)`
+ * UTF-8 encoding. Sorted mode: - All values are supported. - Code point order is preserved.
+ * Distinct mode: all values are supported. Compatible with: - BigQuery `TEXT` encoding - HBase
+ * `Bytes.toBytes` - Java `String#getBytes(StandardCharsets.UTF_8)`
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Bigtable Admin API. For a detailed explanation

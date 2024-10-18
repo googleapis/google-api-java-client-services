@@ -17,9 +17,10 @@
 package com.google.api.services.bigtableadmin.v2.model;
 
 /**
- * Encodes the value as an 8-byte big endian twos complement `Bytes` value. * Order-preserving? No
- * (positive values only) * Self-delimiting? Yes * Compatibility? - BigQuery Federation `BINARY`
- * encoding - HBase `Bytes.toBytes` - Java `ByteBuffer.putLong()` with `ByteOrder.BIG_ENDIAN`
+ * Encodes the value as an 8-byte big-endian two's complement value. Sorted mode: non-negative
+ * values are supported. Distinct mode: all values are supported. Compatible with: - BigQuery
+ * `BINARY` encoding - HBase `Bytes.toBytes` - Java `ByteBuffer.putLong()` with
+ * `ByteOrder.BIG_ENDIAN`
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Bigtable Admin API. For a detailed explanation

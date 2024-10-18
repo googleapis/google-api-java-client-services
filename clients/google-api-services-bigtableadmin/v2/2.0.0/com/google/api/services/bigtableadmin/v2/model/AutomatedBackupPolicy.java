@@ -31,8 +31,8 @@ package com.google.api.services.bigtableadmin.v2.model;
 public final class AutomatedBackupPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. How frequently automated backups should occur. The only supported value at this time
-   * is 24 hours.
+   * How frequently automated backups should occur. The only supported value at this time is 24
+   * hours. An undefined frequency is treated as 24 hours.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +47,8 @@ public final class AutomatedBackupPolicy extends com.google.api.client.json.Gene
   private String retentionPeriod;
 
   /**
-   * Required. How frequently automated backups should occur. The only supported value at this time
-   * is 24 hours.
+   * How frequently automated backups should occur. The only supported value at this time is 24
+   * hours. An undefined frequency is treated as 24 hours.
    * @return value or {@code null} for none
    */
   public String getFrequency() {
@@ -56,8 +56,8 @@ public final class AutomatedBackupPolicy extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. How frequently automated backups should occur. The only supported value at this time
-   * is 24 hours.
+   * How frequently automated backups should occur. The only supported value at this time is 24
+   * hours. An undefined frequency is treated as 24 hours.
    * @param frequency frequency or {@code null} for none
    */
   public AutomatedBackupPolicy setFrequency(String frequency) {

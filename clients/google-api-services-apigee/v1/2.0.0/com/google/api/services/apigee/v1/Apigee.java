@@ -50564,7 +50564,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the apigee server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name.
+       * @param parent Required. The parent resource name. Format: `organizations/{org}`
        * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityProfileV2}
        * @return the request
        */
@@ -50591,7 +50591,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name.
+         * @param parent Required. The parent resource name. Format: `organizations/{org}`
          * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityProfileV2}
          * @since 1.13
          */
@@ -50660,17 +50660,17 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The parent resource name. */
+        /** Required. The parent resource name. Format: `organizations/{org}` */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name.
+        /** Required. The parent resource name. Format: `organizations/{org}`
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The parent resource name. */
+        /** Required. The parent resource name. Format: `organizations/{org}` */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -50710,7 +50710,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the apigee server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the security profile v2 to delete.
+       * @param name Required. The name of the security profile v2 to delete. Format:
+       *        `organizations/{org}/securityProfilesV2/{profile}`
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -50736,7 +50737,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the security profile v2 to delete.
+         * @param name Required. The name of the security profile v2 to delete. Format:
+       *        `organizations/{org}/securityProfilesV2/{profile}`
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -50804,17 +50806,24 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The name of the security profile v2 to delete. */
+        /**
+         * Required. The name of the security profile v2 to delete. Format:
+         * `organizations/{org}/securityProfilesV2/{profile}`
+         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the security profile v2 to delete.
+        /** Required. The name of the security profile v2 to delete. Format:
+       `organizations/{org}/securityProfilesV2/{profile}`
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Required. The name of the security profile v2 to delete. */
+        /**
+         * Required. The name of the security profile v2 to delete. Format:
+         * `organizations/{org}/securityProfilesV2/{profile}`
+         */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -50838,7 +50847,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the apigee server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The security profile id.
+       * @param name Required. The name of the security profile v2 to get. Format:
+       *        `organizations/{org}/securityProfilesV2/{profile}`
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -50864,7 +50874,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The security profile id.
+         * @param name Required. The name of the security profile v2 to get. Format:
+       *        `organizations/{org}/securityProfilesV2/{profile}`
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -50942,17 +50953,24 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The security profile id. */
+        /**
+         * Required. The name of the security profile v2 to get. Format:
+         * `organizations/{org}/securityProfilesV2/{profile}`
+         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The security profile id.
+        /** Required. The name of the security profile v2 to get. Format:
+       `organizations/{org}/securityProfilesV2/{profile}`
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Required. The security profile id. */
+        /**
+         * Required. The name of the security profile v2 to get. Format:
+         * `organizations/{org}/securityProfilesV2/{profile}`
+         */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -51288,17 +51306,24 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /** Required. The list of fields to update. */
+        /**
+         * Optional. The list of fields to update. Valid fields to update are `description` and
+         * `profileAssessmentConfigs`.
+         */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Required. The list of fields to update.
+        /** Optional. The list of fields to update. Valid fields to update are `description` and
+       `profileAssessmentConfigs`.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** Required. The list of fields to update. */
+        /**
+         * Optional. The list of fields to update. Valid fields to update are `description` and
+         * `profileAssessmentConfigs`.
+         */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;

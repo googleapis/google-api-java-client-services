@@ -511,7 +511,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.lang.Integer utcOffsetMinutes;
 
   /**
-   * A viewport suitable for displaying the place on an average-sized map.
+   * A viewport suitable for displaying the place on an average-sized map. This viewport should not
+   * be used as the physical boundary or the service area of the business.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1663,7 +1664,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * A viewport suitable for displaying the place on an average-sized map.
+   * A viewport suitable for displaying the place on an average-sized map. This viewport should not
+   * be used as the physical boundary or the service area of the business.
    * @return value or {@code null} for none
    */
   public GoogleGeoTypeViewport getViewport() {
@@ -1671,7 +1673,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * A viewport suitable for displaying the place on an average-sized map.
+   * A viewport suitable for displaying the place on an average-sized map. This viewport should not
+   * be used as the physical boundary or the service area of the business.
    * @param viewport viewport or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setViewport(GoogleGeoTypeViewport viewport) {

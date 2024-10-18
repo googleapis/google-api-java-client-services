@@ -43,7 +43,7 @@ public final class MultiMigsList extends com.google.api.client.json.GenericJson 
   private java.lang.String id;
 
   /**
-   * A list of multi-MIG resources.
+   * A list of multi-MIGs in the specified project and region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +125,7 @@ public final class MultiMigsList extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A list of multi-MIG resources.
+   * A list of multi-MIGs in the specified project and region.
    * @return value or {@code null} for none
    */
   public java.util.List<MultiMig> getItems() {
@@ -133,7 +133,7 @@ public final class MultiMigsList extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A list of multi-MIG resources.
+   * A list of multi-MIGs in the specified project and region.
    * @param items items or {@code null} for none
    */
   public MultiMigsList setItems(java.util.List<MultiMig> items) {

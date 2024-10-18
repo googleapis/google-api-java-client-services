@@ -52,7 +52,7 @@ public final class NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy 
   private java.lang.Integer priority;
 
   /**
-   * The rules that apply to the network.
+   * [Output Only] The rules that apply to the network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,7 +132,7 @@ public final class NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy 
   }
 
   /**
-   * The rules that apply to the network.
+   * [Output Only] The rules that apply to the network.
    * @return value or {@code null} for none
    */
   public java.util.List<FirewallPolicyRule> getRules() {
@@ -140,7 +140,7 @@ public final class NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy 
   }
 
   /**
-   * The rules that apply to the network.
+   * [Output Only] The rules that apply to the network.
    * @param rules rules or {@code null} for none
    */
   public NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy setRules(java.util.List<FirewallPolicyRule> rules) {

@@ -83,6 +83,13 @@ public final class DeviceSelector extends com.google.api.client.json.GenericJson
   private java.util.List<SystemFeature> requiredSystemFeatures;
 
   /**
+   * Optional. The SoCs included by this selector. Only works for Android S+ devices.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SystemOnChip> systemOnChips;
+
+  /**
    * Conditions on the device's RAM.
    * @return value or {@code null} for none
    */
@@ -166,6 +173,23 @@ public final class DeviceSelector extends com.google.api.client.json.GenericJson
    */
   public DeviceSelector setRequiredSystemFeatures(java.util.List<SystemFeature> requiredSystemFeatures) {
     this.requiredSystemFeatures = requiredSystemFeatures;
+    return this;
+  }
+
+  /**
+   * Optional. The SoCs included by this selector. Only works for Android S+ devices.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SystemOnChip> getSystemOnChips() {
+    return systemOnChips;
+  }
+
+  /**
+   * Optional. The SoCs included by this selector. Only works for Android S+ devices.
+   * @param systemOnChips systemOnChips or {@code null} for none
+   */
+  public DeviceSelector setSystemOnChips(java.util.List<SystemOnChip> systemOnChips) {
+    this.systemOnChips = systemOnChips;
     return this;
   }
 

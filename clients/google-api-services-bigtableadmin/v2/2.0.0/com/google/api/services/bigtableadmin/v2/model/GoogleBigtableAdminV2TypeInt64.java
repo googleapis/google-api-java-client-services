@@ -31,14 +31,14 @@ package com.google.api.services.bigtableadmin.v2.model;
 public final class GoogleBigtableAdminV2TypeInt64 extends com.google.api.client.json.GenericJson {
 
   /**
-   * The encoding to use when converting to/from lower level types.
+   * The encoding to use when converting to or from lower level types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleBigtableAdminV2TypeInt64Encoding encoding;
 
   /**
-   * The encoding to use when converting to/from lower level types.
+   * The encoding to use when converting to or from lower level types.
    * @return value or {@code null} for none
    */
   public GoogleBigtableAdminV2TypeInt64Encoding getEncoding() {
@@ -46,7 +46,7 @@ public final class GoogleBigtableAdminV2TypeInt64 extends com.google.api.client.
   }
 
   /**
-   * The encoding to use when converting to/from lower level types.
+   * The encoding to use when converting to or from lower level types.
    * @param encoding encoding or {@code null} for none
    */
   public GoogleBigtableAdminV2TypeInt64 setEncoding(GoogleBigtableAdminV2TypeInt64Encoding encoding) {

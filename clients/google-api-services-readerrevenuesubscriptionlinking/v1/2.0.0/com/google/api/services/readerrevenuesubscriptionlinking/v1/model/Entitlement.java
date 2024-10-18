@@ -42,9 +42,7 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Expiration time of the entitlement. Entitlements that have expired over 30 days will
-   * be purged. The max expire_time is 398 days from now(). LINT.ThenChange(//depot/google3/java/com
-   * /google/subscribewithgoogle/accountlinking/subscriptionlink/service/config/protoconf.pi:max_exp
-   * iry_age)
+   * be purged. The max expire_time is 398 days from now().
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,9 +89,7 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Expiration time of the entitlement. Entitlements that have expired over 30 days will
-   * be purged. The max expire_time is 398 days from now(). LINT.ThenChange(//depot/google3/java/com
-   * /google/subscribewithgoogle/accountlinking/subscriptionlink/service/config/protoconf.pi:max_exp
-   * iry_age)
+   * be purged. The max expire_time is 398 days from now().
    * @return value or {@code null} for none
    */
   public String getExpireTime() {
@@ -102,9 +98,7 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Expiration time of the entitlement. Entitlements that have expired over 30 days will
-   * be purged. The max expire_time is 398 days from now(). LINT.ThenChange(//depot/google3/java/com
-   * /google/subscribewithgoogle/accountlinking/subscriptionlink/service/config/protoconf.pi:max_exp
-   * iry_age)
+   * be purged. The max expire_time is 398 days from now().
    * @param expireTime expireTime or {@code null} for none
    */
   public Entitlement setExpireTime(String expireTime) {

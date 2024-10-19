@@ -371,6 +371,18 @@ public final class TransitClass extends com.google.api.client.json.GenericJson {
   private java.lang.String multipleDevicesAndHoldersAllowedStatus;
 
   /**
+   * Whether or not field updates to this class should trigger notifications. When set to NOTIFY, we
+   * will attempt to trigger a field update notification to users. These notifications will only be
+   * sent to users if the field is part of an allowlist. If set to DO_NOT_NOTIFY or
+   * NOTIFICATION_SETTINGS_UNSPECIFIED, no notification will be triggered. This setting is ephemeral
+   * and needs to be set with each PATCH or UPDATE request, otherwise a notification will not be
+   * triggered.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String notifyPreference;
+
+  /**
    * Identifies which redemption issuers can redeem the pass over Smart Tap. Redemption issuers are
    * identified by their issuer ID. Redemption issuers must have at least one Smart Tap key
    * configured. The `enableSmartTap` and object level `smartTapRedemptionLevel` fields must also be
@@ -1246,6 +1258,33 @@ public final class TransitClass extends com.google.api.client.json.GenericJson {
    */
   public TransitClass setMultipleDevicesAndHoldersAllowedStatus(java.lang.String multipleDevicesAndHoldersAllowedStatus) {
     this.multipleDevicesAndHoldersAllowedStatus = multipleDevicesAndHoldersAllowedStatus;
+    return this;
+  }
+
+  /**
+   * Whether or not field updates to this class should trigger notifications. When set to NOTIFY, we
+   * will attempt to trigger a field update notification to users. These notifications will only be
+   * sent to users if the field is part of an allowlist. If set to DO_NOT_NOTIFY or
+   * NOTIFICATION_SETTINGS_UNSPECIFIED, no notification will be triggered. This setting is ephemeral
+   * and needs to be set with each PATCH or UPDATE request, otherwise a notification will not be
+   * triggered.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNotifyPreference() {
+    return notifyPreference;
+  }
+
+  /**
+   * Whether or not field updates to this class should trigger notifications. When set to NOTIFY, we
+   * will attempt to trigger a field update notification to users. These notifications will only be
+   * sent to users if the field is part of an allowlist. If set to DO_NOT_NOTIFY or
+   * NOTIFICATION_SETTINGS_UNSPECIFIED, no notification will be triggered. This setting is ephemeral
+   * and needs to be set with each PATCH or UPDATE request, otherwise a notification will not be
+   * triggered.
+   * @param notifyPreference notifyPreference or {@code null} for none
+   */
+  public TransitClass setNotifyPreference(java.lang.String notifyPreference) {
+    this.notifyPreference = notifyPreference;
     return this;
   }
 

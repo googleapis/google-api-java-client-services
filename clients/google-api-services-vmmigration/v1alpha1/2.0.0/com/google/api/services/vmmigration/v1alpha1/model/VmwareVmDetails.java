@@ -30,6 +30,13 @@ package com.google.api.services.vmmigration.v1alpha1.model;
 public final class VmwareVmDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The CPU architecture.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String architecture;
+
+  /**
    * Output only. The VM Boot Option.
    * The value may be {@code null}.
    */
@@ -122,6 +129,23 @@ public final class VmwareVmDetails extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String vmId;
+
+  /**
+   * Output only. The CPU architecture.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getArchitecture() {
+    return architecture;
+  }
+
+  /**
+   * Output only. The CPU architecture.
+   * @param architecture architecture or {@code null} for none
+   */
+  public VmwareVmDetails setArchitecture(java.lang.String architecture) {
+    this.architecture = architecture;
+    return this;
+  }
 
   /**
    * Output only. The VM Boot Option.

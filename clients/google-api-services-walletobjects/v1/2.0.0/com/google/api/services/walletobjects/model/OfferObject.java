@@ -191,6 +191,18 @@ public final class OfferObject extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Whether or not field updates to this object should trigger notifications. When set to NOTIFY,
+   * we will attempt to trigger a field update notification to users. These notifications will only
+   * be sent to users if the field is part of an allowlist. If set to DO_NOT_NOTIFY or
+   * NOTIFICATION_SETTINGS_UNSPECIFIED, no notification will be triggered. This setting is ephemeral
+   * and needs to be set with each PATCH or UPDATE request, otherwise a notification will not be
+   * triggered.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String notifyPreference;
+
+  /**
    * Pass constraints for the object. Includes limiting NFC and screenshot behaviors.
    * The value may be {@code null}.
    */
@@ -594,6 +606,33 @@ public final class OfferObject extends com.google.api.client.json.GenericJson {
    */
   public OfferObject setMessages(java.util.List<Message> messages) {
     this.messages = messages;
+    return this;
+  }
+
+  /**
+   * Whether or not field updates to this object should trigger notifications. When set to NOTIFY,
+   * we will attempt to trigger a field update notification to users. These notifications will only
+   * be sent to users if the field is part of an allowlist. If set to DO_NOT_NOTIFY or
+   * NOTIFICATION_SETTINGS_UNSPECIFIED, no notification will be triggered. This setting is ephemeral
+   * and needs to be set with each PATCH or UPDATE request, otherwise a notification will not be
+   * triggered.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNotifyPreference() {
+    return notifyPreference;
+  }
+
+  /**
+   * Whether or not field updates to this object should trigger notifications. When set to NOTIFY,
+   * we will attempt to trigger a field update notification to users. These notifications will only
+   * be sent to users if the field is part of an allowlist. If set to DO_NOT_NOTIFY or
+   * NOTIFICATION_SETTINGS_UNSPECIFIED, no notification will be triggered. This setting is ephemeral
+   * and needs to be set with each PATCH or UPDATE request, otherwise a notification will not be
+   * triggered.
+   * @param notifyPreference notifyPreference or {@code null} for none
+   */
+  public OfferObject setNotifyPreference(java.lang.String notifyPreference) {
+    this.notifyPreference = notifyPreference;
     return this;
   }
 

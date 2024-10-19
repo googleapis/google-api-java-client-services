@@ -2667,6 +2667,29 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
+           * Optional. If set to true, backupvault deletion will proceed even if there are backup
+           * plans referencing the backupvault. The default is 'false'.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean ignoreBackupPlanReferences;
+
+          /** Optional. If set to true, backupvault deletion will proceed even if there are backup plans
+         referencing the backupvault. The default is 'false'.
+           */
+          public java.lang.Boolean getIgnoreBackupPlanReferences() {
+            return ignoreBackupPlanReferences;
+          }
+
+          /**
+           * Optional. If set to true, backupvault deletion will proceed even if there are backup
+           * plans referencing the backupvault. The default is 'false'.
+           */
+          public Delete setIgnoreBackupPlanReferences(java.lang.Boolean ignoreBackupPlanReferences) {
+            this.ignoreBackupPlanReferences = ignoreBackupPlanReferences;
+            return this;
+          }
+
+          /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
            * that if you must retry your request, the server will know to ignore the request if it
            * has already been completed. The server will guarantee that for at least 60 minutes

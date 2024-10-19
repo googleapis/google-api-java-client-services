@@ -17,8 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Configuration information for enabling Application Aware Interconnect (AAI) on this Cloud
- * Interconnect connection between Google and your on-premises router.
+ * Configuration information for application awareness on this Cloud Interconnect.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -37,7 +36,7 @@ public final class InterconnectApplicationAwareInterconnect extends com.google.a
   private InterconnectApplicationAwareInterconnectBandwidthPercentagePolicy bandwidthPercentagePolicy;
 
   /**
-   * A description for the AAI profile on this interconnect.
+   * Description for the application awareness profile on this Cloud Interconnect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +72,7 @@ public final class InterconnectApplicationAwareInterconnect extends com.google.a
   }
 
   /**
-   * A description for the AAI profile on this interconnect.
+   * Description for the application awareness profile on this Cloud Interconnect.
    * @return value or {@code null} for none
    */
   public java.lang.String getProfileDescription() {
@@ -81,7 +80,7 @@ public final class InterconnectApplicationAwareInterconnect extends com.google.a
   }
 
   /**
-   * A description for the AAI profile on this interconnect.
+   * Description for the application awareness profile on this Cloud Interconnect.
    * @param profileDescription profileDescription or {@code null} for none
    */
   public InterconnectApplicationAwareInterconnect setProfileDescription(java.lang.String profileDescription) {

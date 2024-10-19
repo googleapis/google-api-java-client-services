@@ -65,6 +65,13 @@ public final class HealthStatusForNetworkEndpoint extends com.google.api.client.
   private java.lang.String healthState;
 
   /**
+   * Health state of the ipv6 network endpoint determined based on the health checks configured.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv6HealthState;
+
+  /**
    * URL of the backend service associated with the health state of the network endpoint.
    * @return value or {@code null} for none
    */
@@ -146,6 +153,23 @@ public final class HealthStatusForNetworkEndpoint extends com.google.api.client.
    */
   public HealthStatusForNetworkEndpoint setHealthState(java.lang.String healthState) {
     this.healthState = healthState;
+    return this;
+  }
+
+  /**
+   * Health state of the ipv6 network endpoint determined based on the health checks configured.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv6HealthState() {
+    return ipv6HealthState;
+  }
+
+  /**
+   * Health state of the ipv6 network endpoint determined based on the health checks configured.
+   * @param ipv6HealthState ipv6HealthState or {@code null} for none
+   */
+  public HealthStatusForNetworkEndpoint setIpv6HealthState(java.lang.String ipv6HealthState) {
+    this.ipv6HealthState = ipv6HealthState;
     return this;
   }
 

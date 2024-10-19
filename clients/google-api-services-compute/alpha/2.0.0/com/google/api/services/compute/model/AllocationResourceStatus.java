@@ -30,17 +30,14 @@ package com.google.api.services.compute.model;
 public final class AllocationResourceStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicates number of blocks for accelerator optimized family (applicable beyond A3 only).
+   * The number of reservation blocks associated with this reservation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer reservationBlockCount;
 
   /**
-   * Maintenance information for the group of hosts on this reservation including running VMs and
-   * unused hosts. Applicable only to accelerator optimized VM families beyond A3 only. For both
-   * DENSE or STANDARD reservation, granular maintenance information can be retried at reservation
-   * block level.
+   * Maintenance information for this reservation
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +51,7 @@ public final class AllocationResourceStatus extends com.google.api.client.json.G
   private AllocationResourceStatusSpecificSKUAllocation specificSkuAllocation;
 
   /**
-   * Indicates number of blocks for accelerator optimized family (applicable beyond A3 only).
+   * The number of reservation blocks associated with this reservation.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getReservationBlockCount() {
@@ -62,7 +59,7 @@ public final class AllocationResourceStatus extends com.google.api.client.json.G
   }
 
   /**
-   * Indicates number of blocks for accelerator optimized family (applicable beyond A3 only).
+   * The number of reservation blocks associated with this reservation.
    * @param reservationBlockCount reservationBlockCount or {@code null} for none
    */
   public AllocationResourceStatus setReservationBlockCount(java.lang.Integer reservationBlockCount) {
@@ -71,10 +68,7 @@ public final class AllocationResourceStatus extends com.google.api.client.json.G
   }
 
   /**
-   * Maintenance information for the group of hosts on this reservation including running VMs and
-   * unused hosts. Applicable only to accelerator optimized VM families beyond A3 only. For both
-   * DENSE or STANDARD reservation, granular maintenance information can be retried at reservation
-   * block level.
+   * Maintenance information for this reservation
    * @return value or {@code null} for none
    */
   public GroupMaintenanceInfo getReservationMaintenance() {
@@ -82,10 +76,7 @@ public final class AllocationResourceStatus extends com.google.api.client.json.G
   }
 
   /**
-   * Maintenance information for the group of hosts on this reservation including running VMs and
-   * unused hosts. Applicable only to accelerator optimized VM families beyond A3 only. For both
-   * DENSE or STANDARD reservation, granular maintenance information can be retried at reservation
-   * block level.
+   * Maintenance information for this reservation
    * @param reservationMaintenance reservationMaintenance or {@code null} for none
    */
   public AllocationResourceStatus setReservationMaintenance(GroupMaintenanceInfo reservationMaintenance) {

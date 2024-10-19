@@ -155,8 +155,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   private java.lang.String reservationName;
 
   /**
-   * Indicates the maintenance type for this group of VMs. This will be set on the reservation via
-   * FR, and will be inherited for reservation blocks.
+   * Maintenance information for this reservation
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -516,8 +515,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Indicates the maintenance type for this group of VMs. This will be set on the reservation via
-   * FR, and will be inherited for reservation blocks.
+   * Maintenance information for this reservation
    * @return value or {@code null} for none
    */
   public java.lang.String getSchedulingType() {
@@ -525,8 +523,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Indicates the maintenance type for this group of VMs. This will be set on the reservation via
-   * FR, and will be inherited for reservation blocks.
+   * Maintenance information for this reservation
    * @param schedulingType schedulingType or {@code null} for none
    */
   public FutureReservation setSchedulingType(java.lang.String schedulingType) {

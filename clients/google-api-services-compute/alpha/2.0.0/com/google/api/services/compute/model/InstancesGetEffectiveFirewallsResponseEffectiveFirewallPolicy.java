@@ -52,7 +52,9 @@ public final class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy
   private java.lang.Integer priority;
 
   /**
-   * The rules that apply to the network.
+   * [Output Only] The rules that apply to the instance. Only rules that target the specific VM
+   * instance are returned if target service accounts or target secure tags are specified in the
+   * rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,7 +135,9 @@ public final class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy
   }
 
   /**
-   * The rules that apply to the network.
+   * [Output Only] The rules that apply to the instance. Only rules that target the specific VM
+   * instance are returned if target service accounts or target secure tags are specified in the
+   * rules.
    * @return value or {@code null} for none
    */
   public java.util.List<FirewallPolicyRule> getRules() {
@@ -141,7 +145,9 @@ public final class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy
   }
 
   /**
-   * The rules that apply to the network.
+   * [Output Only] The rules that apply to the instance. Only rules that target the specific VM
+   * instance are returned if target service accounts or target secure tags are specified in the
+   * rules.
    * @param rules rules or {@code null} for none
    */
   public InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy setRules(java.util.List<FirewallPolicyRule> rules) {

@@ -45,7 +45,7 @@ public final class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEff
   private java.lang.String name;
 
   /**
-   * The rules that apply to the network.
+   * [Output only] The rules that apply to the network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEff
   }
 
   /**
-   * The rules that apply to the network.
+   * [Output only] The rules that apply to the network.
    * @return value or {@code null} for none
    */
   public java.util.List<FirewallPolicyRule> getRules() {
@@ -108,7 +108,7 @@ public final class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEff
   }
 
   /**
-   * The rules that apply to the network.
+   * [Output only] The rules that apply to the network.
    * @param rules rules or {@code null} for none
    */
   public RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewallPolicy setRules(java.util.List<FirewallPolicyRule> rules) {

@@ -30,7 +30,10 @@ package com.google.api.services.compute.model;
 public final class NetworksGetEffectiveFirewallsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Effective firewalls from firewall policy.
+   * [Output Only] Effective firewalls from firewall policy. It returns Global Network Firewall
+   * Policies and Hierarchical Firewall Policies. Use
+   * regionNetworkFirewallPolicies.getEffectiveFirewalls to get Regional Network Firewall Policies
+   * as well.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +60,10 @@ public final class NetworksGetEffectiveFirewallsResponse extends com.google.api.
   private java.util.List<NetworksGetEffectiveFirewallsResponseOrganizationFirewallPolicy> organizationFirewalls;
 
   /**
-   * Effective firewalls from firewall policy.
+   * [Output Only] Effective firewalls from firewall policy. It returns Global Network Firewall
+   * Policies and Hierarchical Firewall Policies. Use
+   * regionNetworkFirewallPolicies.getEffectiveFirewalls to get Regional Network Firewall Policies
+   * as well.
    * @return value or {@code null} for none
    */
   public java.util.List<NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy> getFirewallPolicys() {
@@ -65,7 +71,10 @@ public final class NetworksGetEffectiveFirewallsResponse extends com.google.api.
   }
 
   /**
-   * Effective firewalls from firewall policy.
+   * [Output Only] Effective firewalls from firewall policy. It returns Global Network Firewall
+   * Policies and Hierarchical Firewall Policies. Use
+   * regionNetworkFirewallPolicies.getEffectiveFirewalls to get Regional Network Firewall Policies
+   * as well.
    * @param firewallPolicys firewallPolicys or {@code null} for none
    */
   public NetworksGetEffectiveFirewallsResponse setFirewallPolicys(java.util.List<NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy> firewallPolicys) {

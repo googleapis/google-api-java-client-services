@@ -56,7 +56,7 @@ public final class AudioStream extends com.google.api.client.json.GenericJson {
 
   /**
    * The codec for this audio stream. The default is `aac`. Supported audio codecs: - `aac` - `aac-
-   * he` - `aac-he-v2` - `mp3` - `ac3` - `eac3`
+   * he` - `aac-he-v2` - `mp3` - `ac3` - `eac3` - `vorbis`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,7 +159,7 @@ public final class AudioStream extends com.google.api.client.json.GenericJson {
 
   /**
    * The codec for this audio stream. The default is `aac`. Supported audio codecs: - `aac` - `aac-
-   * he` - `aac-he-v2` - `mp3` - `ac3` - `eac3`
+   * he` - `aac-he-v2` - `mp3` - `ac3` - `eac3` - `vorbis`
    * @return value or {@code null} for none
    */
   public java.lang.String getCodec() {
@@ -168,7 +168,7 @@ public final class AudioStream extends com.google.api.client.json.GenericJson {
 
   /**
    * The codec for this audio stream. The default is `aac`. Supported audio codecs: - `aac` - `aac-
-   * he` - `aac-he-v2` - `mp3` - `ac3` - `eac3`
+   * he` - `aac-he-v2` - `mp3` - `ac3` - `eac3` - `vorbis`
    * @param codec codec or {@code null} for none
    */
   public AudioStream setCodec(java.lang.String codec) {

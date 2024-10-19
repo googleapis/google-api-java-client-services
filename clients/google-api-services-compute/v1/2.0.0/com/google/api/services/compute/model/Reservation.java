@@ -139,7 +139,10 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean specificReservationRequired;
 
   /**
-   * [Output Only] The status of the reservation.
+   * [Output Only] The status of the reservation. - CREATING: Reservation resources are being
+   * allocated. - READY: Reservation resources have been allocated, and the reservation is ready for
+   * use. - DELETING: Reservation deletion is in progress. - UPDATING: Reservation update is in
+   * progress.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -412,7 +415,10 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of the reservation.
+   * [Output Only] The status of the reservation. - CREATING: Reservation resources are being
+   * allocated. - READY: Reservation resources have been allocated, and the reservation is ready for
+   * use. - DELETING: Reservation deletion is in progress. - UPDATING: Reservation update is in
+   * progress.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -420,7 +426,10 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of the reservation.
+   * [Output Only] The status of the reservation. - CREATING: Reservation resources are being
+   * allocated. - READY: Reservation resources have been allocated, and the reservation is ready for
+   * use. - DELETING: Reservation deletion is in progress. - UPDATING: Reservation update is in
+   * progress.
    * @param status status or {@code null} for none
    */
   public Reservation setStatus(java.lang.String status) {

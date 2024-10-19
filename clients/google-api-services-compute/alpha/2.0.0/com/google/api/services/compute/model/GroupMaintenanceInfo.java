@@ -30,8 +30,8 @@ package com.google.api.services.compute.model;
 public final class GroupMaintenanceInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicates if this group of VMs have opportunistic maintenance enabled. This will be set on the
-   * reservation, and will be inherited for reservation blocks.
+   * This setting enables or disables opportunistic maintenance. If enabled, maintenance is
+   * performed on unused reservations whenever possible.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +54,7 @@ public final class GroupMaintenanceInfo extends com.google.api.client.json.Gener
   private java.lang.Integer maintenancePendingCount;
 
   /**
-   * Indicates the maintenance type for this group of VMs. This will be set on the reservation, and
-   * will be inherited for reservation blocks.
+   * The type of maintenance for the reservation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +68,8 @@ public final class GroupMaintenanceInfo extends com.google.api.client.json.Gener
   private UpcomingMaintenance upcomingGroupMaintenance;
 
   /**
-   * Indicates if this group of VMs have opportunistic maintenance enabled. This will be set on the
-   * reservation, and will be inherited for reservation blocks.
+   * This setting enables or disables opportunistic maintenance. If enabled, maintenance is
+   * performed on unused reservations whenever possible.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableOpportunisticMaintenance() {
@@ -78,8 +77,8 @@ public final class GroupMaintenanceInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * Indicates if this group of VMs have opportunistic maintenance enabled. This will be set on the
-   * reservation, and will be inherited for reservation blocks.
+   * This setting enables or disables opportunistic maintenance. If enabled, maintenance is
+   * performed on unused reservations whenever possible.
    * @param enableOpportunisticMaintenance enableOpportunisticMaintenance or {@code null} for none
    */
   public GroupMaintenanceInfo setEnableOpportunisticMaintenance(java.lang.Boolean enableOpportunisticMaintenance) {
@@ -126,8 +125,7 @@ public final class GroupMaintenanceInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * Indicates the maintenance type for this group of VMs. This will be set on the reservation, and
-   * will be inherited for reservation blocks.
+   * The type of maintenance for the reservation.
    * @return value or {@code null} for none
    */
   public java.lang.String getSchedulingType() {
@@ -135,8 +133,7 @@ public final class GroupMaintenanceInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * Indicates the maintenance type for this group of VMs. This will be set on the reservation, and
-   * will be inherited for reservation blocks.
+   * The type of maintenance for the reservation.
    * @param schedulingType schedulingType or {@code null} for none
    */
   public GroupMaintenanceInfo setSchedulingType(java.lang.String schedulingType) {

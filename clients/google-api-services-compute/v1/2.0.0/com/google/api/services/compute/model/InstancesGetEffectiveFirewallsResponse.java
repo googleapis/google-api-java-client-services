@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class InstancesGetEffectiveFirewallsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Effective firewalls from firewall policies.
+   * [Output Only] Effective firewalls from firewall policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class InstancesGetEffectiveFirewallsResponse extends com.google.api
   }
 
   /**
-   * Effective firewalls from firewall policies.
+   * [Output Only] Effective firewalls from firewall policies.
    * @return value or {@code null} for none
    */
   public java.util.List<InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy> getFirewallPolicys() {
@@ -58,7 +58,7 @@ public final class InstancesGetEffectiveFirewallsResponse extends com.google.api
   }
 
   /**
-   * Effective firewalls from firewall policies.
+   * [Output Only] Effective firewalls from firewall policies.
    * @param firewallPolicys firewallPolicys or {@code null} for none
    */
   public InstancesGetEffectiveFirewallsResponse setFirewallPolicys(java.util.List<InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy> firewallPolicys) {

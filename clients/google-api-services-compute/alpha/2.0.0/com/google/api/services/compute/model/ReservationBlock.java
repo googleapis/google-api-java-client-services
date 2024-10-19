@@ -30,8 +30,7 @@ package com.google.api.services.compute.model;
 public final class ReservationBlock extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Specifies the number of resources that are allocated in this block. It indicates
-   * the maximum number of VMs that a user can run on this particular block.
+   * [Output Only] The number of resources that are allocated in this reservation block.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +51,7 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Indicates how many instances are in use on this block.
+   * [Output Only] The number of instances that are currently in use on this reservation block.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,10 +83,14 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * [Output Only] Maintenance information for the group of hosts on this reservation including
-   * running VMs and unused hosts. Applicable only to accelerator optimized VM families beyond A3
-   * only. For both DENSE or STANDARD reservation, granular maintenance information can be retried
-   * at reservation block level.
+   * [Output Only] The physical topology of the reservation block.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReservationBlockPhysicalTopology physicalHostTopology;
+
+  /**
+   * [Output Only] Maintenance information for this reservation block.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,8 +125,7 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
   private java.lang.String zone;
 
   /**
-   * [Output Only] Specifies the number of resources that are allocated in this block. It indicates
-   * the maximum number of VMs that a user can run on this particular block.
+   * [Output Only] The number of resources that are allocated in this reservation block.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCount() {
@@ -131,8 +133,7 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] Specifies the number of resources that are allocated in this block. It indicates
-   * the maximum number of VMs that a user can run on this particular block.
+   * [Output Only] The number of resources that are allocated in this reservation block.
    * @param count count or {@code null} for none
    */
   public ReservationBlock setCount(java.lang.Integer count) {
@@ -175,7 +176,7 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] Indicates how many instances are in use on this block.
+   * [Output Only] The number of instances that are currently in use on this reservation block.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getInUseCount() {
@@ -183,7 +184,7 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] Indicates how many instances are in use on this block.
+   * [Output Only] The number of instances that are currently in use on this reservation block.
    * @param inUseCount inUseCount or {@code null} for none
    */
   public ReservationBlock setInUseCount(java.lang.Integer inUseCount) {
@@ -251,10 +252,24 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] Maintenance information for the group of hosts on this reservation including
-   * running VMs and unused hosts. Applicable only to accelerator optimized VM families beyond A3
-   * only. For both DENSE or STANDARD reservation, granular maintenance information can be retried
-   * at reservation block level.
+   * [Output Only] The physical topology of the reservation block.
+   * @return value or {@code null} for none
+   */
+  public ReservationBlockPhysicalTopology getPhysicalHostTopology() {
+    return physicalHostTopology;
+  }
+
+  /**
+   * [Output Only] The physical topology of the reservation block.
+   * @param physicalHostTopology physicalHostTopology or {@code null} for none
+   */
+  public ReservationBlock setPhysicalHostTopology(ReservationBlockPhysicalTopology physicalHostTopology) {
+    this.physicalHostTopology = physicalHostTopology;
+    return this;
+  }
+
+  /**
+   * [Output Only] Maintenance information for this reservation block.
    * @return value or {@code null} for none
    */
   public GroupMaintenanceInfo getReservationMaintenance() {
@@ -262,10 +277,7 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] Maintenance information for the group of hosts on this reservation including
-   * running VMs and unused hosts. Applicable only to accelerator optimized VM families beyond A3
-   * only. For both DENSE or STANDARD reservation, granular maintenance information can be retried
-   * at reservation block level.
+   * [Output Only] Maintenance information for this reservation block.
    * @param reservationMaintenance reservationMaintenance or {@code null} for none
    */
   public ReservationBlock setReservationMaintenance(GroupMaintenanceInfo reservationMaintenance) {

@@ -73,6 +73,13 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. execution result summary per rule
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<RuleExecutionResult> ruleResults;
+
+  /**
    * type represent whether the execution executed directly by user or scheduled according
    * evaluation.schedule field.
    * The value may be {@code null}.
@@ -195,6 +202,23 @@ public final class Execution extends com.google.api.client.json.GenericJson {
    */
   public Execution setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. execution result summary per rule
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RuleExecutionResult> getRuleResults() {
+    return ruleResults;
+  }
+
+  /**
+   * Output only. execution result summary per rule
+   * @param ruleResults ruleResults or {@code null} for none
+   */
+  public Execution setRuleResults(java.util.List<RuleExecutionResult> ruleResults) {
+    this.ruleResults = ruleResults;
     return this;
   }
 

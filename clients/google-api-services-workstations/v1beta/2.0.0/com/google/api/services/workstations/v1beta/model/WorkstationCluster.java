@@ -167,6 +167,14 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   private java.lang.String subnetwork;
 
   /**
+   * Optional. Tag keys/values directly bound to this resource. For example: "123/environment":
+   * "production", "123/costCenter": "marketing"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> tags;
+
+  /**
    * Output only. A system-assigned unique identifier for this workstation cluster.
    * The value may be {@code null}.
    */
@@ -486,6 +494,25 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
    */
   public WorkstationCluster setSubnetwork(java.lang.String subnetwork) {
     this.subnetwork = subnetwork;
+    return this;
+  }
+
+  /**
+   * Optional. Tag keys/values directly bound to this resource. For example: "123/environment":
+   * "production", "123/costCenter": "marketing"
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getTags() {
+    return tags;
+  }
+
+  /**
+   * Optional. Tag keys/values directly bound to this resource. For example: "123/environment":
+   * "production", "123/costCenter": "marketing"
+   * @param tags tags or {@code null} for none
+   */
+  public WorkstationCluster setTags(java.util.Map<String, java.lang.String> tags) {
+    this.tags = tags;
     return this;
   }
 

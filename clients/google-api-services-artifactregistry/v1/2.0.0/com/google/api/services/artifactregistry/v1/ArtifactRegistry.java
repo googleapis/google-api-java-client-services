@@ -10122,8 +10122,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * This request holds the parameters needed by the artifactregistry server.  After setting any
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name The name of the rule, for example: "projects/p1/locations/us-
-           *        central1/repositories/repo1/rules/rule1".
+           * @param name The name of the rule, for example: `projects/p1/locations/us-
+           *        central1/repositories/repo1/rules/rule1`.
            * @param content the {@link com.google.api.services.artifactregistry.v1.model.GoogleDevtoolsArtifactregistryV1Rule}
            * @return the request
            */
@@ -10151,8 +10151,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The name of the rule, for example: "projects/p1/locations/us-
-           *        central1/repositories/repo1/rules/rule1".
+             * @param name The name of the rule, for example: `projects/p1/locations/us-
+           *        central1/repositories/repo1/rules/rule1`.
              * @param content the {@link com.google.api.services.artifactregistry.v1.model.GoogleDevtoolsArtifactregistryV1Rule}
              * @since 1.13
              */
@@ -10222,22 +10222,22 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
             }
 
             /**
-             * The name of the rule, for example: "projects/p1/locations/us-
-             * central1/repositories/repo1/rules/rule1".
+             * The name of the rule, for example: `projects/p1/locations/us-
+             * central1/repositories/repo1/rules/rule1`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The name of the rule, for example: "projects/p1/locations/us-
-           central1/repositories/repo1/rules/rule1".
+            /** The name of the rule, for example: `projects/p1/locations/us-
+           central1/repositories/repo1/rules/rule1`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * The name of the rule, for example: "projects/p1/locations/us-
-             * central1/repositories/repo1/rules/rule1".
+             * The name of the rule, for example: `projects/p1/locations/us-
+             * central1/repositories/repo1/rules/rule1`.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

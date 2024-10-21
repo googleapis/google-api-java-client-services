@@ -17,8 +17,9 @@
 package com.google.api.services.artifactregistry.v1.model;
 
 /**
- * A Rule applies to repository or package level. It defines the deny or allow action of the
- * operation when the conditions in the rule are met.
+ * A rule defines the deny or allow action of the operation it applies to and the conditions
+ * required for the rule to apply. You can set one rule for an entire repository and one rule for
+ * each package within.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Artifact Registry API. For a detailed explanation
@@ -32,23 +33,23 @@ package com.google.api.services.artifactregistry.v1.model;
 public final class GoogleDevtoolsArtifactregistryV1Rule extends com.google.api.client.json.GenericJson {
 
   /**
-   * The action this rule makes.
+   * The action this rule takes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String action;
 
   /**
-   * Optional. The condition of the rule in CEL expression. If not provided, the rule matches all
-   * the objects.
+   * Optional. A CEL expression for conditions that must be met in order for the rule to apply. If
+   * not provided, the rule matches all objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Expr condition;
 
   /**
-   * The name of the rule, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1/rules/rule1".
+   * The name of the rule, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1/rules/rule1`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +62,7 @@ public final class GoogleDevtoolsArtifactregistryV1Rule extends com.google.api.c
   private java.lang.String operation;
 
   /**
-   * The package ID the rule applies to. If empty, this rule applies to all the packages inside the
+   * The package ID the rule applies to. If empty, this rule applies to all packages inside the
    * repository.
    * The value may be {@code null}.
    */
@@ -69,7 +70,7 @@ public final class GoogleDevtoolsArtifactregistryV1Rule extends com.google.api.c
   private java.lang.String packageId;
 
   /**
-   * The action this rule makes.
+   * The action this rule takes.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -77,7 +78,7 @@ public final class GoogleDevtoolsArtifactregistryV1Rule extends com.google.api.c
   }
 
   /**
-   * The action this rule makes.
+   * The action this rule takes.
    * @param action action or {@code null} for none
    */
   public GoogleDevtoolsArtifactregistryV1Rule setAction(java.lang.String action) {
@@ -86,8 +87,8 @@ public final class GoogleDevtoolsArtifactregistryV1Rule extends com.google.api.c
   }
 
   /**
-   * Optional. The condition of the rule in CEL expression. If not provided, the rule matches all
-   * the objects.
+   * Optional. A CEL expression for conditions that must be met in order for the rule to apply. If
+   * not provided, the rule matches all objects.
    * @return value or {@code null} for none
    */
   public Expr getCondition() {
@@ -95,8 +96,8 @@ public final class GoogleDevtoolsArtifactregistryV1Rule extends com.google.api.c
   }
 
   /**
-   * Optional. The condition of the rule in CEL expression. If not provided, the rule matches all
-   * the objects.
+   * Optional. A CEL expression for conditions that must be met in order for the rule to apply. If
+   * not provided, the rule matches all objects.
    * @param condition condition or {@code null} for none
    */
   public GoogleDevtoolsArtifactregistryV1Rule setCondition(Expr condition) {
@@ -105,8 +106,8 @@ public final class GoogleDevtoolsArtifactregistryV1Rule extends com.google.api.c
   }
 
   /**
-   * The name of the rule, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1/rules/rule1".
+   * The name of the rule, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1/rules/rule1`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -114,8 +115,8 @@ public final class GoogleDevtoolsArtifactregistryV1Rule extends com.google.api.c
   }
 
   /**
-   * The name of the rule, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1/rules/rule1".
+   * The name of the rule, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1/rules/rule1`.
    * @param name name or {@code null} for none
    */
   public GoogleDevtoolsArtifactregistryV1Rule setName(java.lang.String name) {
@@ -139,7 +140,7 @@ public final class GoogleDevtoolsArtifactregistryV1Rule extends com.google.api.c
   }
 
   /**
-   * The package ID the rule applies to. If empty, this rule applies to all the packages inside the
+   * The package ID the rule applies to. If empty, this rule applies to all packages inside the
    * repository.
    * @return value or {@code null} for none
    */
@@ -148,7 +149,7 @@ public final class GoogleDevtoolsArtifactregistryV1Rule extends com.google.api.c
   }
 
   /**
-   * The package ID the rule applies to. If empty, this rule applies to all the packages inside the
+   * The package ID the rule applies to. If empty, this rule applies to all packages inside the
    * repository.
    * @param packageId packageId or {@code null} for none
    */

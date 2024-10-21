@@ -174,6 +174,13 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private VirtualRepositoryConfig virtualRepositoryConfig;
 
   /**
+   * Optional. Config and state for vulnerability scanning of resources within this Repository.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VulnerabilityScanningConfig vulnerabilityScanningConfig;
+
+  /**
    * Optional. Cleanup policies for this repository. Cleanup policies indicate when certain package
    * versions can be automatically deleted. Map keys are policy IDs supplied by users during policy
    * creation. They must unique within a repository and be under 128 characters in length.
@@ -498,6 +505,23 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   public Repository setVirtualRepositoryConfig(VirtualRepositoryConfig virtualRepositoryConfig) {
     this.virtualRepositoryConfig = virtualRepositoryConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Config and state for vulnerability scanning of resources within this Repository.
+   * @return value or {@code null} for none
+   */
+  public VulnerabilityScanningConfig getVulnerabilityScanningConfig() {
+    return vulnerabilityScanningConfig;
+  }
+
+  /**
+   * Optional. Config and state for vulnerability scanning of resources within this Repository.
+   * @param vulnerabilityScanningConfig vulnerabilityScanningConfig or {@code null} for none
+   */
+  public Repository setVulnerabilityScanningConfig(VulnerabilityScanningConfig vulnerabilityScanningConfig) {
+    this.vulnerabilityScanningConfig = vulnerabilityScanningConfig;
     return this;
   }
 

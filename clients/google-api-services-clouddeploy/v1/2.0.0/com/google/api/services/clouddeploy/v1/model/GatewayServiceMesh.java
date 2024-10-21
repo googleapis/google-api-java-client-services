@@ -53,6 +53,16 @@ public final class GatewayServiceMesh extends com.google.api.client.json.Generic
   private java.lang.String podSelectorLabel;
 
   /**
+   * Optional. Route destinations allow configuring the Gateway API HTTPRoute to be deployed to
+   * additional clusters. This option is available for multi-cluster service mesh set ups that
+   * require the route to exist in the clusters that call the service. If unspecified, the HTTPRoute
+   * will only be deployed to the Target cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RouteDestinations routeDestinations;
+
+  /**
    * Optional. The time to wait for route updates to propagate. The maximum configurable time is 3
    * hours, in seconds format. If unspecified, there is no wait time.
    * The value may be {@code null}.
@@ -128,6 +138,29 @@ public final class GatewayServiceMesh extends com.google.api.client.json.Generic
    */
   public GatewayServiceMesh setPodSelectorLabel(java.lang.String podSelectorLabel) {
     this.podSelectorLabel = podSelectorLabel;
+    return this;
+  }
+
+  /**
+   * Optional. Route destinations allow configuring the Gateway API HTTPRoute to be deployed to
+   * additional clusters. This option is available for multi-cluster service mesh set ups that
+   * require the route to exist in the clusters that call the service. If unspecified, the HTTPRoute
+   * will only be deployed to the Target cluster.
+   * @return value or {@code null} for none
+   */
+  public RouteDestinations getRouteDestinations() {
+    return routeDestinations;
+  }
+
+  /**
+   * Optional. Route destinations allow configuring the Gateway API HTTPRoute to be deployed to
+   * additional clusters. This option is available for multi-cluster service mesh set ups that
+   * require the route to exist in the clusters that call the service. If unspecified, the HTTPRoute
+   * will only be deployed to the Target cluster.
+   * @param routeDestinations routeDestinations or {@code null} for none
+   */
+  public GatewayServiceMesh setRouteDestinations(RouteDestinations routeDestinations) {
+    this.routeDestinations = routeDestinations;
     return this;
   }
 

@@ -47,6 +47,25 @@ public final class Target extends com.google.api.client.json.GenericJson {
   private AnthosCluster anthosCluster;
 
   /**
+   * Optional. Map of entity IDs to their associated entities. Associated entities allows specifying
+   * places other than the deployment target for specific features. For example, the Gateway API
+   * canary can be configured to deploy the HTTPRoute to a different cluster(s) than the deployment
+   * cluster using associated entities. An entity ID must consist of lower-case letters, numbers,
+   * and hyphens, start with a letter and end with a letter or a number, and have a max length of 63
+   * characters. In other words, it must match the following regex:
+   * `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, AssociatedEntities> associatedEntities;
+
+  static {
+    // hack to force ProGuard to consider AssociatedEntities used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AssociatedEntities.class);
+  }
+
+  /**
    * Output only. Time at which the `Target` was created.
    * The value may be {@code null}.
    */
@@ -205,6 +224,35 @@ public final class Target extends com.google.api.client.json.GenericJson {
    */
   public Target setAnthosCluster(AnthosCluster anthosCluster) {
     this.anthosCluster = anthosCluster;
+    return this;
+  }
+
+  /**
+   * Optional. Map of entity IDs to their associated entities. Associated entities allows specifying
+   * places other than the deployment target for specific features. For example, the Gateway API
+   * canary can be configured to deploy the HTTPRoute to a different cluster(s) than the deployment
+   * cluster using associated entities. An entity ID must consist of lower-case letters, numbers,
+   * and hyphens, start with a letter and end with a letter or a number, and have a max length of 63
+   * characters. In other words, it must match the following regex:
+   * `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, AssociatedEntities> getAssociatedEntities() {
+    return associatedEntities;
+  }
+
+  /**
+   * Optional. Map of entity IDs to their associated entities. Associated entities allows specifying
+   * places other than the deployment target for specific features. For example, the Gateway API
+   * canary can be configured to deploy the HTTPRoute to a different cluster(s) than the deployment
+   * cluster using associated entities. An entity ID must consist of lower-case letters, numbers,
+   * and hyphens, start with a letter and end with a letter or a number, and have a max length of 63
+   * characters. In other words, it must match the following regex:
+   * `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+   * @param associatedEntities associatedEntities or {@code null} for none
+   */
+  public Target setAssociatedEntities(java.util.Map<String, AssociatedEntities> associatedEntities) {
+    this.associatedEntities = associatedEntities;
     return this;
   }
 

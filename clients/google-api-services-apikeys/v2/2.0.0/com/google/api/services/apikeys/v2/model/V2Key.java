@@ -96,6 +96,14 @@ public final class V2Key extends com.google.api.client.json.GenericJson {
   private V2Restrictions restrictions;
 
   /**
+   * Optional. The email address of [the service account](https://cloud.google.com/iam/docs/service-
+   * accounts) the key is bound to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccountEmail;
+
+  /**
    * Output only. Unique id in UUID4 format.
    * The value may be {@code null}.
    */
@@ -262,6 +270,25 @@ public final class V2Key extends com.google.api.client.json.GenericJson {
    */
   public V2Key setRestrictions(V2Restrictions restrictions) {
     this.restrictions = restrictions;
+    return this;
+  }
+
+  /**
+   * Optional. The email address of [the service account](https://cloud.google.com/iam/docs/service-
+   * accounts) the key is bound to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccountEmail() {
+    return serviceAccountEmail;
+  }
+
+  /**
+   * Optional. The email address of [the service account](https://cloud.google.com/iam/docs/service-
+   * accounts) the key is bound to.
+   * @param serviceAccountEmail serviceAccountEmail or {@code null} for none
+   */
+  public V2Key setServiceAccountEmail(java.lang.String serviceAccountEmail) {
+    this.serviceAccountEmail = serviceAccountEmail;
     return this;
   }
 

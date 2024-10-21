@@ -42,7 +42,7 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaPeering extends c
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String targetVpcNetwork;
+  private java.lang.String targetNetwork;
 
   /**
    * Optional. List of DNS zones for DNS peering with the customer VPC network.
@@ -66,17 +66,17 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaPeering extends c
    * `projects/{project}/global/networks/{network}
    * @return value or {@code null} for none
    */
-  public java.lang.String getTargetVpcNetwork() {
-    return targetVpcNetwork;
+  public java.lang.String getTargetNetwork() {
+    return targetNetwork;
   }
 
   /**
    * Required. The name of the Target VPC network name in the format:
    * `projects/{project}/global/networks/{network}
-   * @param targetVpcNetwork targetVpcNetwork or {@code null} for none
+   * @param targetNetwork targetNetwork or {@code null} for none
    */
-  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaPeering setTargetVpcNetwork(java.lang.String targetVpcNetwork) {
-    this.targetVpcNetwork = targetVpcNetwork;
+  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaPeering setTargetNetwork(java.lang.String targetNetwork) {
+    this.targetNetwork = targetNetwork;
     return this;
   }
 

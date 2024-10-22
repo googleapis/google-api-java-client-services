@@ -112,6 +112,13 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   private java.lang.String provider;
 
   /**
+   * Optional. The connection profile role.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String role;
+
+  /**
    * Connection profile for a SQL Server data source.
    * The value may be {@code null}.
    */
@@ -325,6 +332,23 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
    */
   public ConnectionProfile setProvider(java.lang.String provider) {
     this.provider = provider;
+    return this;
+  }
+
+  /**
+   * Optional. The connection profile role.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRole() {
+    return role;
+  }
+
+  /**
+   * Optional. The connection profile role.
+   * @param role role or {@code null} for none
+   */
+  public ConnectionProfile setRole(java.lang.String role) {
+    this.role = role;
     return this;
   }
 

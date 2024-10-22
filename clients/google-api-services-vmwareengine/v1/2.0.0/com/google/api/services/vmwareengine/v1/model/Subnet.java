@@ -45,9 +45,9 @@ public final class Subnet extends com.google.api.client.json.GenericJson {
   private java.lang.String ipCidrRange;
 
   /**
-   * Output only. The resource name of this subnet. Resource names are schemeless URIs that follow
-   * the conventions in https://cloud.google.com/apis/design/resource_names. For example:
-   * `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
+   * Output only. Identifier. The resource name of this subnet. Resource names are schemeless URIs
+   * that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+   * example: `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,9 +109,9 @@ public final class Subnet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource name of this subnet. Resource names are schemeless URIs that follow
-   * the conventions in https://cloud.google.com/apis/design/resource_names. For example:
-   * `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
+   * Output only. Identifier. The resource name of this subnet. Resource names are schemeless URIs
+   * that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+   * example: `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -119,9 +119,9 @@ public final class Subnet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource name of this subnet. Resource names are schemeless URIs that follow
-   * the conventions in https://cloud.google.com/apis/design/resource_names. For example:
-   * `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
+   * Output only. Identifier. The resource name of this subnet. Resource names are schemeless URIs
+   * that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+   * example: `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
    * @param name name or {@code null} for none
    */
   public Subnet setName(java.lang.String name) {

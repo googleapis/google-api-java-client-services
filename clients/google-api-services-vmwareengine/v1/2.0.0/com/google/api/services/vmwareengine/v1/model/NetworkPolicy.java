@@ -73,9 +73,10 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   private NetworkService internetAccess;
 
   /**
-   * Output only. The resource name of this network policy. Resource names are schemeless URIs that
-   * follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
-   * `projects/my-project/locations/us-central1/networkPolicies/my-network-policy`
+   * Output only. Identifier. The resource name of this network policy. Resource names are
+   * schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+   * project/locations/us-central1/networkPolicies/my-network-policy`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -207,9 +208,10 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The resource name of this network policy. Resource names are schemeless URIs that
-   * follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
-   * `projects/my-project/locations/us-central1/networkPolicies/my-network-policy`
+   * Output only. Identifier. The resource name of this network policy. Resource names are
+   * schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+   * project/locations/us-central1/networkPolicies/my-network-policy`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -217,9 +219,10 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The resource name of this network policy. Resource names are schemeless URIs that
-   * follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
-   * `projects/my-project/locations/us-central1/networkPolicies/my-network-policy`
+   * Output only. Identifier. The resource name of this network policy. Resource names are
+   * schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+   * project/locations/us-central1/networkPolicies/my-network-policy`
    * @param name name or {@code null} for none
    */
   public NetworkPolicy setName(java.lang.String name) {

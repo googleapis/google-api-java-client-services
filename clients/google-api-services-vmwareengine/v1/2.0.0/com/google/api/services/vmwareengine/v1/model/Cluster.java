@@ -52,9 +52,10 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean management;
 
   /**
-   * Output only. The resource name of this cluster. Resource names are schemeless URIs that follow
-   * the conventions in https://cloud.google.com/apis/design/resource_names. For example:
-   * `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
+   * Output only. Identifier. The resource name of this cluster. Resource names are schemeless URIs
+   * that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+   * example: `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-
+   * cluster`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,9 +152,10 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource name of this cluster. Resource names are schemeless URIs that follow
-   * the conventions in https://cloud.google.com/apis/design/resource_names. For example:
-   * `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
+   * Output only. Identifier. The resource name of this cluster. Resource names are schemeless URIs
+   * that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+   * example: `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-
+   * cluster`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -161,9 +163,10 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource name of this cluster. Resource names are schemeless URIs that follow
-   * the conventions in https://cloud.google.com/apis/design/resource_names. For example:
-   * `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
+   * Output only. Identifier. The resource name of this cluster. Resource names are schemeless URIs
+   * that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+   * example: `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-
+   * cluster`
    * @param name name or {@code null} for none
    */
   public Cluster setName(java.lang.String name) {

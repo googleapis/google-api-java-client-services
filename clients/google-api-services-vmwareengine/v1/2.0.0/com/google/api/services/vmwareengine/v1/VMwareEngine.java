@@ -1923,9 +1923,9 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the vmwareengine server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The resource name of the network peering. NetworkPeering is a global resource and
-         *        location can only be global. Resource names are scheme-less URIs that follow the
-         *        conventions in https://cloud.google.com/apis/design/resource_names. For example:
+         * @param name Output only. Identifier. The resource name of the network peering. NetworkPeering is a global
+         *        resource and location can only be global. Resource names are scheme-less URIs that follow
+         *        the conventions in https://cloud.google.com/apis/design/resource_names. For example:
          *        `projects/my-project/locations/global/networkPeerings/my-peering`
          * @param content the {@link com.google.api.services.vmwareengine.v1.model.NetworkPeering}
          * @return the request
@@ -1956,9 +1956,9 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The resource name of the network peering. NetworkPeering is a global resource and
-         *        location can only be global. Resource names are scheme-less URIs that follow the
-         *        conventions in https://cloud.google.com/apis/design/resource_names. For example:
+           * @param name Output only. Identifier. The resource name of the network peering. NetworkPeering is a global
+         *        resource and location can only be global. Resource names are scheme-less URIs that follow
+         *        the conventions in https://cloud.google.com/apis/design/resource_names. For example:
          *        `projects/my-project/locations/global/networkPeerings/my-peering`
            * @param content the {@link com.google.api.services.vmwareengine.v1.model.NetworkPeering}
            * @since 1.13
@@ -2029,17 +2029,17 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Output only. The resource name of the network peering. NetworkPeering is a global
-           * resource and location can only be global. Resource names are scheme-less URIs that
-           * follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+           * Output only. Identifier. The resource name of the network peering. NetworkPeering is a
+           * global resource and location can only be global. Resource names are scheme-less URIs
+           * that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
            * example: `projects/my-project/locations/global/networkPeerings/my-peering`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The resource name of the network peering. NetworkPeering is a global resource and
-         location can only be global. Resource names are scheme-less URIs that follow the conventions in
-         https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+          /** Output only. Identifier. The resource name of the network peering. NetworkPeering is a global
+         resource and location can only be global. Resource names are scheme-less URIs that follow the
+         conventions in https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
          project/locations/global/networkPeerings/my-peering`
            */
           public java.lang.String getName() {
@@ -2047,9 +2047,9 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Output only. The resource name of the network peering. NetworkPeering is a global
-           * resource and location can only be global. Resource names are scheme-less URIs that
-           * follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+           * Output only. Identifier. The resource name of the network peering. NetworkPeering is a
+           * global resource and location can only be global. Resource names are scheme-less URIs
+           * that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
            * example: `projects/my-project/locations/global/networkPeerings/my-peering`
            */
           public Patch setName(java.lang.String name) {
@@ -3524,9 +3524,9 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the vmwareengine server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The resource name of this network policy. Resource names are schemeless URIs that
-         *        follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-         *        example: `projects/my-project/locations/us-central1/networkPolicies/my-network-policy`
+         * @param name Output only. Identifier. The resource name of this network policy. Resource names are schemeless
+         *        URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names.
+         *        For example: `projects/my-project/locations/us-central1/networkPolicies/my-network-policy`
          * @param content the {@link com.google.api.services.vmwareengine.v1.model.NetworkPolicy}
          * @return the request
          */
@@ -3561,9 +3561,9 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The resource name of this network policy. Resource names are schemeless URIs that
-         *        follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-         *        example: `projects/my-project/locations/us-central1/networkPolicies/my-network-policy`
+           * @param name Output only. Identifier. The resource name of this network policy. Resource names are schemeless
+         *        URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names.
+         *        For example: `projects/my-project/locations/us-central1/networkPolicies/my-network-policy`
            * @param content the {@link com.google.api.services.vmwareengine.v1.model.NetworkPolicy}
            * @since 1.13
            */
@@ -3633,25 +3633,25 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Output only. The resource name of this network policy. Resource names are schemeless
-           * URIs that follow the conventions in
+           * Output only. Identifier. The resource name of this network policy. Resource names are
+           * schemeless URIs that follow the conventions in
            * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
            * project/locations/us-central1/networkPolicies/my-network-policy`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The resource name of this network policy. Resource names are schemeless URIs that
-         follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
-         `projects/my-project/locations/us-central1/networkPolicies/my-network-policy`
+          /** Output only. Identifier. The resource name of this network policy. Resource names are schemeless
+         URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+         example: `projects/my-project/locations/us-central1/networkPolicies/my-network-policy`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Output only. The resource name of this network policy. Resource names are schemeless
-           * URIs that follow the conventions in
+           * Output only. Identifier. The resource name of this network policy. Resource names are
+           * schemeless URIs that follow the conventions in
            * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
            * project/locations/us-central1/networkPolicies/my-network-policy`
            */
@@ -7091,9 +7091,9 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the vmwareengine server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The resource name of this private cloud. Resource names are schemeless URIs that follow
-         *        the conventions in https://cloud.google.com/apis/design/resource_names. For example:
-         *        `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+         * @param name Output only. Identifier. The resource name of this private cloud. Resource names are schemeless URIs
+         *        that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+         *        example: `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
          * @param content the {@link com.google.api.services.vmwareengine.v1.model.PrivateCloud}
          * @return the request
          */
@@ -7125,9 +7125,9 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The resource name of this private cloud. Resource names are schemeless URIs that follow
-         *        the conventions in https://cloud.google.com/apis/design/resource_names. For example:
-         *        `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+           * @param name Output only. Identifier. The resource name of this private cloud. Resource names are schemeless URIs
+         *        that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+         *        example: `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
            * @param content the {@link com.google.api.services.vmwareengine.v1.model.PrivateCloud}
            * @since 1.13
            */
@@ -7197,25 +7197,25 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Output only. The resource name of this private cloud. Resource names are schemeless
-           * URIs that follow the conventions in
+           * Output only. Identifier. The resource name of this private cloud. Resource names are
+           * schemeless URIs that follow the conventions in
            * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
            * project/locations/us-central1-a/privateClouds/my-cloud`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The resource name of this private cloud. Resource names are schemeless URIs that
-         follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
-         `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+          /** Output only. Identifier. The resource name of this private cloud. Resource names are schemeless
+         URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+         example: `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Output only. The resource name of this private cloud. Resource names are schemeless
-           * URIs that follow the conventions in
+           * Output only. Identifier. The resource name of this private cloud. Resource names are
+           * schemeless URIs that follow the conventions in
            * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
            * project/locations/us-central1-a/privateClouds/my-cloud`
            */
@@ -8391,9 +8391,10 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the vmwareengine server.  After setting any optional
          * parameters, call the {@link UpdateDnsForwarding#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The resource name of this DNS profile. Resource names are schemeless URIs that follow
-         *        the conventions in https://cloud.google.com/apis/design/resource_names. For example:
-         *        `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/dnsForwarding`
+         * @param name Output only. Identifier. The resource name of this DNS profile. Resource names are schemeless URIs
+         *        that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+         *        example: `projects/my-project/locations/us-central1-a/privateClouds/my-
+         *        cloud/dnsForwarding`
          * @param content the {@link com.google.api.services.vmwareengine.v1.model.DnsForwarding}
          * @return the request
          */
@@ -8422,9 +8423,10 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
            * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name Output only. The resource name of this DNS profile. Resource names are schemeless URIs that follow
-         *        the conventions in https://cloud.google.com/apis/design/resource_names. For example:
-         *        `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/dnsForwarding`
+           * @param name Output only. Identifier. The resource name of this DNS profile. Resource names are schemeless URIs
+         *        that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+         *        example: `projects/my-project/locations/us-central1-a/privateClouds/my-
+         *        cloud/dnsForwarding`
            * @param content the {@link com.google.api.services.vmwareengine.v1.model.DnsForwarding}
            * @since 1.13
            */
@@ -8494,27 +8496,27 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Output only. The resource name of this DNS profile. Resource names are schemeless URIs
-           * that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-           * example: `projects/my-project/locations/us-central1-a/privateClouds/my-
-           * cloud/dnsForwarding`
+           * Output only. Identifier. The resource name of this DNS profile. Resource names are
+           * schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/us-central1-a/privateClouds/my-cloud/dnsForwarding`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The resource name of this DNS profile. Resource names are schemeless URIs that follow
-         the conventions in https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-         project/locations/us-central1-a/privateClouds/my-cloud/dnsForwarding`
+          /** Output only. Identifier. The resource name of this DNS profile. Resource names are schemeless URIs
+         that follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
+         `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/dnsForwarding`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Output only. The resource name of this DNS profile. Resource names are schemeless URIs
-           * that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-           * example: `projects/my-project/locations/us-central1-a/privateClouds/my-
-           * cloud/dnsForwarding`
+           * Output only. Identifier. The resource name of this DNS profile. Resource names are
+           * schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/us-central1-a/privateClouds/my-cloud/dnsForwarding`
            */
           public UpdateDnsForwarding setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -9660,9 +9662,10 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the vmwareengine server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. The resource name of this cluster. Resource names are schemeless URIs that follow the
-           *        conventions in https://cloud.google.com/apis/design/resource_names. For example:
-           *        `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
+           * @param name Output only. Identifier. The resource name of this cluster. Resource names are schemeless URIs that
+           *        follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+           *        example: `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-
+           *        cluster`
            * @param content the {@link com.google.api.services.vmwareengine.v1.model.Cluster}
            * @return the request
            */
@@ -9693,9 +9696,10 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. The resource name of this cluster. Resource names are schemeless URIs that follow the
-           *        conventions in https://cloud.google.com/apis/design/resource_names. For example:
-           *        `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
+             * @param name Output only. Identifier. The resource name of this cluster. Resource names are schemeless URIs that
+           *        follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+           *        example: `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-
+           *        cluster`
              * @param content the {@link com.google.api.services.vmwareengine.v1.model.Cluster}
              * @since 1.13
              */
@@ -9765,27 +9769,27 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Output only. The resource name of this cluster. Resource names are schemeless URIs
-             * that follow the conventions in https://cloud.google.com/apis/design/resource_names.
-             * For example: `projects/my-project/locations/us-central1-a/privateClouds/my-
-             * cloud/clusters/my-cluster`
+             * Output only. Identifier. The resource name of this cluster. Resource names are
+             * schemeless URIs that follow the conventions in
+             * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+             * project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. The resource name of this cluster. Resource names are schemeless URIs that follow the
-           conventions in https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-           project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
+            /** Output only. Identifier. The resource name of this cluster. Resource names are schemeless URIs that
+           follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
+           `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Output only. The resource name of this cluster. Resource names are schemeless URIs
-             * that follow the conventions in https://cloud.google.com/apis/design/resource_names.
-             * For example: `projects/my-project/locations/us-central1-a/privateClouds/my-
-             * cloud/clusters/my-cluster`
+             * Output only. Identifier. The resource name of this cluster. Resource names are
+             * schemeless URIs that follow the conventions in
+             * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+             * project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -11459,10 +11463,10 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the vmwareengine server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. The resource name of this external IP address. Resource names are schemeless URIs that
-           *        follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-           *        example: `projects/my-project/locations/us-central1-a/privateClouds/my-
-           *        cloud/externalAddresses/my-address`
+           * @param name Output only. Identifier. The resource name of this external IP address. Resource names are
+           *        schemeless URIs that follow the conventions in
+           *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           *        project/locations/us-central1-a/privateClouds/my-cloud/externalAddresses/my-address`
            * @param content the {@link com.google.api.services.vmwareengine.v1.model.ExternalAddress}
            * @return the request
            */
@@ -11493,10 +11497,10 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. The resource name of this external IP address. Resource names are schemeless URIs that
-           *        follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-           *        example: `projects/my-project/locations/us-central1-a/privateClouds/my-
-           *        cloud/externalAddresses/my-address`
+             * @param name Output only. Identifier. The resource name of this external IP address. Resource names are
+           *        schemeless URIs that follow the conventions in
+           *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           *        project/locations/us-central1-a/privateClouds/my-cloud/externalAddresses/my-address`
              * @param content the {@link com.google.api.services.vmwareengine.v1.model.ExternalAddress}
              * @since 1.13
              */
@@ -11566,25 +11570,26 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Output only. The resource name of this external IP address. Resource names are
-             * schemeless URIs that follow the conventions in
+             * Output only. Identifier. The resource name of this external IP address. Resource
+             * names are schemeless URIs that follow the conventions in
              * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
              * project/locations/us-central1-a/privateClouds/my-cloud/externalAddresses/my-address`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. The resource name of this external IP address. Resource names are schemeless URIs that
-           follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
-           `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/externalAddresses/my-address`
+            /** Output only. Identifier. The resource name of this external IP address. Resource names are
+           schemeless URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names.
+           For example: `projects/my-project/locations/us-central1-a/privateClouds/my-
+           cloud/externalAddresses/my-address`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Output only. The resource name of this external IP address. Resource names are
-             * schemeless URIs that follow the conventions in
+             * Output only. Identifier. The resource name of this external IP address. Resource
+             * names are schemeless URIs that follow the conventions in
              * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
              * project/locations/us-central1-a/privateClouds/my-cloud/externalAddresses/my-address`
              */
@@ -15605,9 +15610,10 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the vmwareengine server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. The resource name of this subnet. Resource names are schemeless URIs that follow the
-           *        conventions in https://cloud.google.com/apis/design/resource_names. For example:
-           *        `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
+           * @param name Output only. Identifier. The resource name of this subnet. Resource names are schemeless URIs that
+           *        follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+           *        example: `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-
+           *        subnet`
            * @param content the {@link com.google.api.services.vmwareengine.v1.model.Subnet}
            * @return the request
            */
@@ -15637,9 +15643,10 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. The resource name of this subnet. Resource names are schemeless URIs that follow the
-           *        conventions in https://cloud.google.com/apis/design/resource_names. For example:
-           *        `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
+             * @param name Output only. Identifier. The resource name of this subnet. Resource names are schemeless URIs that
+           *        follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+           *        example: `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-
+           *        subnet`
              * @param content the {@link com.google.api.services.vmwareengine.v1.model.Subnet}
              * @since 1.13
              */
@@ -15709,27 +15716,27 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Output only. The resource name of this subnet. Resource names are schemeless URIs
-             * that follow the conventions in https://cloud.google.com/apis/design/resource_names.
-             * For example: `projects/my-project/locations/us-central1-a/privateClouds/my-
-             * cloud/subnets/my-subnet`
+             * Output only. Identifier. The resource name of this subnet. Resource names are
+             * schemeless URIs that follow the conventions in
+             * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+             * project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. The resource name of this subnet. Resource names are schemeless URIs that follow the
-           conventions in https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
-           project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
+            /** Output only. Identifier. The resource name of this subnet. Resource names are schemeless URIs that
+           follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
+           `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Output only. The resource name of this subnet. Resource names are schemeless URIs
-             * that follow the conventions in https://cloud.google.com/apis/design/resource_names.
-             * For example: `projects/my-project/locations/us-central1-a/privateClouds/my-
-             * cloud/subnets/my-subnet`
+             * Output only. Identifier. The resource name of this subnet. Resource names are
+             * schemeless URIs that follow the conventions in
+             * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+             * project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -18052,9 +18059,10 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the vmwareengine server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The resource name of the VMware Engine network. Resource names are schemeless URIs that
-         *        follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-         *        example: `projects/my-project/locations/global/vmwareEngineNetworks/my-network`
+         * @param name Output only. Identifier. The resource name of the VMware Engine network. Resource names are
+         *        schemeless URIs that follow the conventions in
+         *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+         *        project/locations/global/vmwareEngineNetworks/my-network`
          * @param content the {@link com.google.api.services.vmwareengine.v1.model.VmwareEngineNetwork}
          * @return the request
          */
@@ -18083,9 +18091,10 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The resource name of the VMware Engine network. Resource names are schemeless URIs that
-         *        follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-         *        example: `projects/my-project/locations/global/vmwareEngineNetworks/my-network`
+           * @param name Output only. Identifier. The resource name of the VMware Engine network. Resource names are
+         *        schemeless URIs that follow the conventions in
+         *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+         *        project/locations/global/vmwareEngineNetworks/my-network`
            * @param content the {@link com.google.api.services.vmwareengine.v1.model.VmwareEngineNetwork}
            * @since 1.13
            */
@@ -18155,25 +18164,25 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Output only. The resource name of the VMware Engine network. Resource names are
-           * schemeless URIs that follow the conventions in
+           * Output only. Identifier. The resource name of the VMware Engine network. Resource names
+           * are schemeless URIs that follow the conventions in
            * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
            * project/locations/global/vmwareEngineNetworks/my-network`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The resource name of the VMware Engine network. Resource names are schemeless URIs
-         that follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
-         `projects/my-project/locations/global/vmwareEngineNetworks/my-network`
+          /** Output only. Identifier. The resource name of the VMware Engine network. Resource names are
+         schemeless URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names.
+         For example: `projects/my-project/locations/global/vmwareEngineNetworks/my-network`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Output only. The resource name of the VMware Engine network. Resource names are
-           * schemeless URIs that follow the conventions in
+           * Output only. Identifier. The resource name of the VMware Engine network. Resource names
+           * are schemeless URIs that follow the conventions in
            * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
            * project/locations/global/vmwareEngineNetworks/my-network`
            */

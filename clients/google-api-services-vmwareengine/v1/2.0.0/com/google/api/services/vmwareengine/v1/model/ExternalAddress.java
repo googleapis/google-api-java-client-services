@@ -59,10 +59,10 @@ public final class ExternalAddress extends com.google.api.client.json.GenericJso
   private java.lang.String internalIp;
 
   /**
-   * Output only. The resource name of this external IP address. Resource names are schemeless URIs
-   * that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-   * example: `projects/my-project/locations/us-central1-a/privateClouds/my-
-   * cloud/externalAddresses/my-address`
+   * Output only. Identifier. The resource name of this external IP address. Resource names are
+   * schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+   * project/locations/us-central1-a/privateClouds/my-cloud/externalAddresses/my-address`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,10 +158,10 @@ public final class ExternalAddress extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. The resource name of this external IP address. Resource names are schemeless URIs
-   * that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-   * example: `projects/my-project/locations/us-central1-a/privateClouds/my-
-   * cloud/externalAddresses/my-address`
+   * Output only. Identifier. The resource name of this external IP address. Resource names are
+   * schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+   * project/locations/us-central1-a/privateClouds/my-cloud/externalAddresses/my-address`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -169,10 +169,10 @@ public final class ExternalAddress extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. The resource name of this external IP address. Resource names are schemeless URIs
-   * that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-   * example: `projects/my-project/locations/us-central1-a/privateClouds/my-
-   * cloud/externalAddresses/my-address`
+   * Output only. Identifier. The resource name of this external IP address. Resource names are
+   * schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+   * project/locations/us-central1-a/privateClouds/my-cloud/externalAddresses/my-address`
    * @param name name or {@code null} for none
    */
   public ExternalAddress setName(java.lang.String name) {

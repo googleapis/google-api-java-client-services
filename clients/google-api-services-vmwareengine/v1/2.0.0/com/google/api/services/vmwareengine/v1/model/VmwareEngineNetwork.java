@@ -53,9 +53,10 @@ public final class VmwareEngineNetwork extends com.google.api.client.json.Generi
   private java.lang.String etag;
 
   /**
-   * Output only. The resource name of the VMware Engine network. Resource names are schemeless URIs
-   * that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-   * example: `projects/my-project/locations/global/vmwareEngineNetworks/my-network`
+   * Output only. Identifier. The resource name of the VMware Engine network. Resource names are
+   * schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+   * project/locations/global/vmwareEngineNetworks/my-network`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,9 +154,10 @@ public final class VmwareEngineNetwork extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The resource name of the VMware Engine network. Resource names are schemeless URIs
-   * that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-   * example: `projects/my-project/locations/global/vmwareEngineNetworks/my-network`
+   * Output only. Identifier. The resource name of the VMware Engine network. Resource names are
+   * schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+   * project/locations/global/vmwareEngineNetworks/my-network`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -163,9 +165,10 @@ public final class VmwareEngineNetwork extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The resource name of the VMware Engine network. Resource names are schemeless URIs
-   * that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-   * example: `projects/my-project/locations/global/vmwareEngineNetworks/my-network`
+   * Output only. Identifier. The resource name of the VMware Engine network. Resource names are
+   * schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+   * project/locations/global/vmwareEngineNetworks/my-network`
    * @param name name or {@code null} for none
    */
   public VmwareEngineNetwork setName(java.lang.String name) {

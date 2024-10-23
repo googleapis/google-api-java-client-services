@@ -2239,7 +2239,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      * Lists all versions of server certificates and certificate authorities (CAs) for the specified
      * instance. There can be up to three sets of certs listed: the certificate that is currently in
      * use, a future that has been added but not yet used to sign a certificate, and a certificate that
-     * has been rotated out.
+     * has been rotated out. For instances not using Certificate Authority Service (CAS) server CA, use
+     * ListServerCas instead.
      *
      * Create a request for the method "instances.ListServerCertificates".
      *
@@ -2265,7 +2266,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        * Lists all versions of server certificates and certificate authorities (CAs) for the specified
        * instance. There can be up to three sets of certs listed: the certificate that is currently in
        * use, a future that has been added but not yet used to sign a certificate, and a certificate
-       * that has been rotated out.
+       * that has been rotated out. For instances not using Certificate Authority Service (CAS) server
+       * CA, use ListServerCas instead.
        *
        * Create a request for the method "instances.ListServerCertificates".
        *

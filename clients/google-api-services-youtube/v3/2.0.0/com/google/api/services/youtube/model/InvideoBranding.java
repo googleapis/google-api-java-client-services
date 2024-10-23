@@ -17,7 +17,7 @@
 package com.google.api.services.youtube.model;
 
 /**
- * LINT.IfChange Describes an invideo branding.
+ * Describes an invideo branding.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:

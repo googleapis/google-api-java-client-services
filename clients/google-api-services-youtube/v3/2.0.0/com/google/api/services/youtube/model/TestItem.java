@@ -30,6 +30,13 @@ package com.google.api.services.youtube.model;
 public final class TestItem extends com.google.api.client.json.GenericJson {
 
   /**
+   * Etag for the resource. See https://en.wikipedia.org/wiki/HTTP_ETag.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,6 +59,23 @@ public final class TestItem extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private TestItemTestItemSnippet snippet;
+
+  /**
+   * Etag for the resource. See https://en.wikipedia.org/wiki/HTTP_ETag.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * Etag for the resource. See https://en.wikipedia.org/wiki/HTTP_ETag.
+   * @param etag etag or {@code null} for none
+   */
+  public TestItem setEtag(java.lang.String etag) {
+    this.etag = etag;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

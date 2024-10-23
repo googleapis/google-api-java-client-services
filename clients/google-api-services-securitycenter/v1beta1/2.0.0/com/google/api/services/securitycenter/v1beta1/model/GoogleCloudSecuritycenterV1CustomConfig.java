@@ -33,13 +33,6 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV1CustomConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The CEL policy spec attached to the custom module.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private CelPolicySpec celPolicy;
-
-  /**
    * Custom output properties.
    * The value may be {@code null}.
    */
@@ -86,23 +79,6 @@ public final class GoogleCloudSecuritycenterV1CustomConfig extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.lang.String severity;
-
-  /**
-   * The CEL policy spec attached to the custom module.
-   * @return value or {@code null} for none
-   */
-  public CelPolicySpec getCelPolicy() {
-    return celPolicy;
-  }
-
-  /**
-   * The CEL policy spec attached to the custom module.
-   * @param celPolicy celPolicy or {@code null} for none
-   */
-  public GoogleCloudSecuritycenterV1CustomConfig setCelPolicy(CelPolicySpec celPolicy) {
-    this.celPolicy = celPolicy;
-    return this;
-  }
 
   /**
    * Custom output properties.

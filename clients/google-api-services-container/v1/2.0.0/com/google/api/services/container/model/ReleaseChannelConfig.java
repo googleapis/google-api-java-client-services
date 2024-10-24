@@ -45,6 +45,13 @@ public final class ReleaseChannelConfig extends com.google.api.client.json.Gener
   private java.lang.String defaultVersion;
 
   /**
+   * The auto upgrade target version for clusters on the channel.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String upgradeTargetVersion;
+
+  /**
    * List of valid versions for the channel.
    * The value may be {@code null}.
    */
@@ -82,6 +89,23 @@ public final class ReleaseChannelConfig extends com.google.api.client.json.Gener
    */
   public ReleaseChannelConfig setDefaultVersion(java.lang.String defaultVersion) {
     this.defaultVersion = defaultVersion;
+    return this;
+  }
+
+  /**
+   * The auto upgrade target version for clusters on the channel.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUpgradeTargetVersion() {
+    return upgradeTargetVersion;
+  }
+
+  /**
+   * The auto upgrade target version for clusters on the channel.
+   * @param upgradeTargetVersion upgradeTargetVersion or {@code null} for none
+   */
+  public ReleaseChannelConfig setUpgradeTargetVersion(java.lang.String upgradeTargetVersion) {
+    this.upgradeTargetVersion = upgradeTargetVersion;
     return this;
   }
 

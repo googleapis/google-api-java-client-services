@@ -41,6 +41,15 @@ package com.google.api.services.spanner.v1.model;
 public final class ExecuteBatchDmlResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. A precommit token will be included if the read-write transaction is on a multiplexed
+   * session. The precommit token with the highest sequence number from this transaction attempt
+   * should be passed to the Commit request for this transaction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MultiplexedSessionPrecommitToken precommitToken;
+
+  /**
    * One ResultSet for each statement in the request that ran successfully, in the same order as the
    * statements in the request. Each ResultSet does not contain any rows. The ResultSetStats in each
    * ResultSet contain the number of rows modified by the statement. Only the first ResultSet in the
@@ -57,6 +66,27 @@ public final class ExecuteBatchDmlResponse extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private Status status;
+
+  /**
+   * Optional. A precommit token will be included if the read-write transaction is on a multiplexed
+   * session. The precommit token with the highest sequence number from this transaction attempt
+   * should be passed to the Commit request for this transaction.
+   * @return value or {@code null} for none
+   */
+  public MultiplexedSessionPrecommitToken getPrecommitToken() {
+    return precommitToken;
+  }
+
+  /**
+   * Optional. A precommit token will be included if the read-write transaction is on a multiplexed
+   * session. The precommit token with the highest sequence number from this transaction attempt
+   * should be passed to the Commit request for this transaction.
+   * @param precommitToken precommitToken or {@code null} for none
+   */
+  public ExecuteBatchDmlResponse setPrecommitToken(MultiplexedSessionPrecommitToken precommitToken) {
+    this.precommitToken = precommitToken;
+    return this;
+  }
 
   /**
    * One ResultSet for each statement in the request that ran successfully, in the same order as the

@@ -31,11 +31,68 @@ package com.google.api.services.spanner.v1.model;
 public final class ReadWrite extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Clients should pass the transaction ID of the previous transaction attempt that was
+   * aborted if this transaction is being executed on a multiplexed session.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String multiplexedSessionPreviousTransactionId;
+
+  /**
    * Read lock mode for the transaction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String readLockMode;
+
+  /**
+   * Optional. Clients should pass the transaction ID of the previous transaction attempt that was
+   * aborted if this transaction is being executed on a multiplexed session.
+   * @see #decodeMultiplexedSessionPreviousTransactionId()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMultiplexedSessionPreviousTransactionId() {
+    return multiplexedSessionPreviousTransactionId;
+  }
+
+  /**
+   * Optional. Clients should pass the transaction ID of the previous transaction attempt that was
+   * aborted if this transaction is being executed on a multiplexed session.
+   * @see #getMultiplexedSessionPreviousTransactionId()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeMultiplexedSessionPreviousTransactionId() {
+    return com.google.api.client.util.Base64.decodeBase64(multiplexedSessionPreviousTransactionId);
+  }
+
+  /**
+   * Optional. Clients should pass the transaction ID of the previous transaction attempt that was
+   * aborted if this transaction is being executed on a multiplexed session.
+   * @see #encodeMultiplexedSessionPreviousTransactionId()
+   * @param multiplexedSessionPreviousTransactionId multiplexedSessionPreviousTransactionId or {@code null} for none
+   */
+  public ReadWrite setMultiplexedSessionPreviousTransactionId(java.lang.String multiplexedSessionPreviousTransactionId) {
+    this.multiplexedSessionPreviousTransactionId = multiplexedSessionPreviousTransactionId;
+    return this;
+  }
+
+  /**
+   * Optional. Clients should pass the transaction ID of the previous transaction attempt that was
+   * aborted if this transaction is being executed on a multiplexed session.
+   * @see #setMultiplexedSessionPreviousTransactionId()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public ReadWrite encodeMultiplexedSessionPreviousTransactionId(byte[] multiplexedSessionPreviousTransactionId) {
+    this.multiplexedSessionPreviousTransactionId = com.google.api.client.util.Base64.encodeBase64URLSafeString(multiplexedSessionPreviousTransactionId);
+    return this;
+  }
 
   /**
    * Read lock mode for the transaction.

@@ -5016,6 +5016,22 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
+            /** Optional. Flag to indicate if schema should be returned as string or not */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean schemaAsString;
+
+            /** Optional. Flag to indicate if schema should be returned as string or not
+             */
+            public java.lang.Boolean getSchemaAsString() {
+              return schemaAsString;
+            }
+
+            /** Optional. Flag to indicate if schema should be returned as string or not */
+            public List setSchemaAsString(java.lang.Boolean schemaAsString) {
+              this.schemaAsString = schemaAsString;
+              return this;
+            }
+
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);

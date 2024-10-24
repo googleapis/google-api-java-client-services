@@ -5229,7 +5229,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * Gets the access control policy for a database or backup resource. Returns an empty policy if a
          * database or backup exists but does not have a policy set. Authorization requires
          * `spanner.databases.getIamPolicy` permission on resource. For backups, authorization requires
-         * `spanner.backups.getIamPolicy` permission on resource.
+         * `spanner.backups.getIamPolicy` permission on resource. For backup schedules, authorization
+         * requires `spanner.backupSchedules.getIamPolicy` permission on resource.
          *
          * Create a request for the method "backups.getIamPolicy".
          *
@@ -5259,7 +5260,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * Gets the access control policy for a database or backup resource. Returns an empty policy if a
            * database or backup exists but does not have a policy set. Authorization requires
            * `spanner.databases.getIamPolicy` permission on resource. For backups, authorization requires
-           * `spanner.backups.getIamPolicy` permission on resource.
+           * `spanner.backups.getIamPolicy` permission on resource. For backup schedules, authorization
+           * requires `spanner.backupSchedules.getIamPolicy` permission on resource.
            *
            * Create a request for the method "backups.getIamPolicy".
            *
@@ -5833,7 +5835,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         /**
          * Sets the access control policy on a database or backup resource. Replaces any existing policy.
          * Authorization requires `spanner.databases.setIamPolicy` permission on resource. For backups,
-         * authorization requires `spanner.backups.setIamPolicy` permission on resource.
+         * authorization requires `spanner.backups.setIamPolicy` permission on resource. For backup
+         * schedules, authorization requires `spanner.backupSchedules.setIamPolicy` permission on resource.
          *
          * Create a request for the method "backups.setIamPolicy".
          *
@@ -5862,7 +5865,9 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Sets the access control policy on a database or backup resource. Replaces any existing policy.
            * Authorization requires `spanner.databases.setIamPolicy` permission on resource. For backups,
-           * authorization requires `spanner.backups.setIamPolicy` permission on resource.
+           * authorization requires `spanner.backups.setIamPolicy` permission on resource. For backup
+           * schedules, authorization requires `spanner.backupSchedules.setIamPolicy` permission on
+           * resource.
            *
            * Create a request for the method "backups.setIamPolicy".
            *
@@ -5985,7 +5990,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * has `spanner.databases.list` permission on the containing Cloud Spanner instance. Otherwise
          * returns an empty set of permissions. Calling this method on a backup that does not exist will
          * result in a NOT_FOUND error if the user has `spanner.backups.list` permission on the containing
-         * instance.
+         * instance. Calling this method on a backup schedule that does not exist will result in a NOT_FOUND
+         * error if the user has `spanner.backupSchedules.list` permission on the containing database.
          *
          * Create a request for the method "backups.testIamPermissions".
          *
@@ -6017,7 +6023,9 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * if the user has `spanner.databases.list` permission on the containing Cloud Spanner instance.
            * Otherwise returns an empty set of permissions. Calling this method on a backup that does not
            * exist will result in a NOT_FOUND error if the user has `spanner.backups.list` permission on the
-           * containing instance.
+           * containing instance. Calling this method on a backup schedule that does not exist will result
+           * in a NOT_FOUND error if the user has `spanner.backupSchedules.list` permission on the
+           * containing database.
            *
            * Create a request for the method "backups.testIamPermissions".
            *
@@ -7808,7 +7816,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * Gets the access control policy for a database or backup resource. Returns an empty policy if a
          * database or backup exists but does not have a policy set. Authorization requires
          * `spanner.databases.getIamPolicy` permission on resource. For backups, authorization requires
-         * `spanner.backups.getIamPolicy` permission on resource.
+         * `spanner.backups.getIamPolicy` permission on resource. For backup schedules, authorization
+         * requires `spanner.backupSchedules.getIamPolicy` permission on resource.
          *
          * Create a request for the method "databases.getIamPolicy".
          *
@@ -7838,7 +7847,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * Gets the access control policy for a database or backup resource. Returns an empty policy if a
            * database or backup exists but does not have a policy set. Authorization requires
            * `spanner.databases.getIamPolicy` permission on resource. For backups, authorization requires
-           * `spanner.backups.getIamPolicy` permission on resource.
+           * `spanner.backups.getIamPolicy` permission on resource. For backup schedules, authorization
+           * requires `spanner.backupSchedules.getIamPolicy` permission on resource.
            *
            * Create a request for the method "databases.getIamPolicy".
            *
@@ -8717,7 +8727,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         /**
          * Sets the access control policy on a database or backup resource. Replaces any existing policy.
          * Authorization requires `spanner.databases.setIamPolicy` permission on resource. For backups,
-         * authorization requires `spanner.backups.setIamPolicy` permission on resource.
+         * authorization requires `spanner.backups.setIamPolicy` permission on resource. For backup
+         * schedules, authorization requires `spanner.backupSchedules.setIamPolicy` permission on resource.
          *
          * Create a request for the method "databases.setIamPolicy".
          *
@@ -8746,7 +8757,9 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Sets the access control policy on a database or backup resource. Replaces any existing policy.
            * Authorization requires `spanner.databases.setIamPolicy` permission on resource. For backups,
-           * authorization requires `spanner.backups.setIamPolicy` permission on resource.
+           * authorization requires `spanner.backups.setIamPolicy` permission on resource. For backup
+           * schedules, authorization requires `spanner.backupSchedules.setIamPolicy` permission on
+           * resource.
            *
            * Create a request for the method "databases.setIamPolicy".
            *
@@ -8869,7 +8882,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * has `spanner.databases.list` permission on the containing Cloud Spanner instance. Otherwise
          * returns an empty set of permissions. Calling this method on a backup that does not exist will
          * result in a NOT_FOUND error if the user has `spanner.backups.list` permission on the containing
-         * instance.
+         * instance. Calling this method on a backup schedule that does not exist will result in a NOT_FOUND
+         * error if the user has `spanner.backupSchedules.list` permission on the containing database.
          *
          * Create a request for the method "databases.testIamPermissions".
          *
@@ -8901,7 +8915,9 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * if the user has `spanner.databases.list` permission on the containing Cloud Spanner instance.
            * Otherwise returns an empty set of permissions. Calling this method on a backup that does not
            * exist will result in a NOT_FOUND error if the user has `spanner.backups.list` permission on the
-           * containing instance.
+           * containing instance. Calling this method on a backup schedule that does not exist will result
+           * in a NOT_FOUND error if the user has `spanner.backupSchedules.list` permission on the
+           * containing database.
            *
            * Create a request for the method "databases.testIamPermissions".
            *
@@ -9619,7 +9635,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * Gets the access control policy for a database or backup resource. Returns an empty policy if a
            * database or backup exists but does not have a policy set. Authorization requires
            * `spanner.databases.getIamPolicy` permission on resource. For backups, authorization requires
-           * `spanner.backups.getIamPolicy` permission on resource.
+           * `spanner.backups.getIamPolicy` permission on resource. For backup schedules, authorization
+           * requires `spanner.backupSchedules.getIamPolicy` permission on resource.
            *
            * Create a request for the method "backupSchedules.getIamPolicy".
            *
@@ -9649,7 +9666,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
              * Gets the access control policy for a database or backup resource. Returns an empty policy if a
              * database or backup exists but does not have a policy set. Authorization requires
              * `spanner.databases.getIamPolicy` permission on resource. For backups, authorization requires
-             * `spanner.backups.getIamPolicy` permission on resource.
+             * `spanner.backups.getIamPolicy` permission on resource. For backup schedules, authorization
+             * requires `spanner.backupSchedules.getIamPolicy` permission on resource.
              *
              * Create a request for the method "backupSchedules.getIamPolicy".
              *
@@ -10143,7 +10161,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Sets the access control policy on a database or backup resource. Replaces any existing policy.
            * Authorization requires `spanner.databases.setIamPolicy` permission on resource. For backups,
-           * authorization requires `spanner.backups.setIamPolicy` permission on resource.
+           * authorization requires `spanner.backups.setIamPolicy` permission on resource. For backup
+           * schedules, authorization requires `spanner.backupSchedules.setIamPolicy` permission on resource.
            *
            * Create a request for the method "backupSchedules.setIamPolicy".
            *
@@ -10172,7 +10191,9 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             /**
              * Sets the access control policy on a database or backup resource. Replaces any existing policy.
              * Authorization requires `spanner.databases.setIamPolicy` permission on resource. For backups,
-             * authorization requires `spanner.backups.setIamPolicy` permission on resource.
+             * authorization requires `spanner.backups.setIamPolicy` permission on resource. For backup
+             * schedules, authorization requires `spanner.backupSchedules.setIamPolicy` permission on
+             * resource.
              *
              * Create a request for the method "backupSchedules.setIamPolicy".
              *
@@ -10295,7 +10316,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * has `spanner.databases.list` permission on the containing Cloud Spanner instance. Otherwise
            * returns an empty set of permissions. Calling this method on a backup that does not exist will
            * result in a NOT_FOUND error if the user has `spanner.backups.list` permission on the containing
-           * instance.
+           * instance. Calling this method on a backup schedule that does not exist will result in a NOT_FOUND
+           * error if the user has `spanner.backupSchedules.list` permission on the containing database.
            *
            * Create a request for the method "backupSchedules.testIamPermissions".
            *
@@ -10327,7 +10349,9 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
              * if the user has `spanner.databases.list` permission on the containing Cloud Spanner instance.
              * Otherwise returns an empty set of permissions. Calling this method on a backup that does not
              * exist will result in a NOT_FOUND error if the user has `spanner.backups.list` permission on the
-             * containing instance.
+             * containing instance. Calling this method on a backup schedule that does not exist will result
+             * in a NOT_FOUND error if the user has `spanner.backupSchedules.list` permission on the
+             * containing database.
              *
              * Create a request for the method "backupSchedules.testIamPermissions".
              *
@@ -10665,7 +10689,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * has `spanner.databases.list` permission on the containing Cloud Spanner instance. Otherwise
            * returns an empty set of permissions. Calling this method on a backup that does not exist will
            * result in a NOT_FOUND error if the user has `spanner.backups.list` permission on the containing
-           * instance.
+           * instance. Calling this method on a backup schedule that does not exist will result in a NOT_FOUND
+           * error if the user has `spanner.backupSchedules.list` permission on the containing database.
            *
            * Create a request for the method "databaseRoles.testIamPermissions".
            *
@@ -10697,7 +10722,9 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
              * if the user has `spanner.databases.list` permission on the containing Cloud Spanner instance.
              * Otherwise returns an empty set of permissions. Calling this method on a backup that does not
              * exist will result in a NOT_FOUND error if the user has `spanner.backups.list` permission on the
-             * containing instance.
+             * containing instance. Calling this method on a backup schedule that does not exist will result
+             * in a NOT_FOUND error if the user has `spanner.backupSchedules.list` permission on the
+             * containing database.
              *
              * Create a request for the method "databaseRoles.testIamPermissions".
              *

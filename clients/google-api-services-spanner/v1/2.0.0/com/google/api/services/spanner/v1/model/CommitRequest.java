@@ -48,6 +48,15 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
   private java.util.List<Mutation> mutations;
 
   /**
+   * Optional. If the read-write transaction was executed on a multiplexed session, the precommit
+   * token with the highest sequence number received in this transaction attempt, should be included
+   * here. Failing to do so will result in a FailedPrecondition error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MultiplexedSessionPrecommitToken precommitToken;
+
+  /**
    * Common options for this request.
    * The value may be {@code null}.
    */
@@ -119,6 +128,27 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
    */
   public CommitRequest setMutations(java.util.List<Mutation> mutations) {
     this.mutations = mutations;
+    return this;
+  }
+
+  /**
+   * Optional. If the read-write transaction was executed on a multiplexed session, the precommit
+   * token with the highest sequence number received in this transaction attempt, should be included
+   * here. Failing to do so will result in a FailedPrecondition error.
+   * @return value or {@code null} for none
+   */
+  public MultiplexedSessionPrecommitToken getPrecommitToken() {
+    return precommitToken;
+  }
+
+  /**
+   * Optional. If the read-write transaction was executed on a multiplexed session, the precommit
+   * token with the highest sequence number received in this transaction attempt, should be included
+   * here. Failing to do so will result in a FailedPrecondition error.
+   * @param precommitToken precommitToken or {@code null} for none
+   */
+  public CommitRequest setPrecommitToken(MultiplexedSessionPrecommitToken precommitToken) {
+    this.precommitToken = precommitToken;
     return this;
   }
 

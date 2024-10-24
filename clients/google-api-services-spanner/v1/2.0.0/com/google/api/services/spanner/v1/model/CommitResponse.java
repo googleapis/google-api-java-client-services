@@ -45,6 +45,14 @@ public final class CommitResponse extends com.google.api.client.json.GenericJson
   private String commitTimestamp;
 
   /**
+   * If specified, transaction has not committed yet. Clients must retry the commit with the new
+   * precommit token.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MultiplexedSessionPrecommitToken precommitToken;
+
+  /**
    * The statistics about this Commit. Not returned by default. For more information, see
    * CommitRequest.return_commit_stats.
    * @return value or {@code null} for none
@@ -77,6 +85,25 @@ public final class CommitResponse extends com.google.api.client.json.GenericJson
    */
   public CommitResponse setCommitTimestamp(String commitTimestamp) {
     this.commitTimestamp = commitTimestamp;
+    return this;
+  }
+
+  /**
+   * If specified, transaction has not committed yet. Clients must retry the commit with the new
+   * precommit token.
+   * @return value or {@code null} for none
+   */
+  public MultiplexedSessionPrecommitToken getPrecommitToken() {
+    return precommitToken;
+  }
+
+  /**
+   * If specified, transaction has not committed yet. Clients must retry the commit with the new
+   * precommit token.
+   * @param precommitToken precommitToken or {@code null} for none
+   */
+  public CommitResponse setPrecommitToken(MultiplexedSessionPrecommitToken precommitToken) {
+    this.precommitToken = precommitToken;
     return this;
   }
 

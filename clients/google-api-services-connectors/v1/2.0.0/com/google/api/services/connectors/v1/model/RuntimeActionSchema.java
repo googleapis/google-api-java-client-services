@@ -71,6 +71,13 @@ public final class RuntimeActionSchema extends com.google.api.client.json.Generi
   }
 
   /**
+   * Output only. Input schema as string.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String inputSchemaAsString;
+
+  /**
    * Output only. JsonSchema representation of this action's result metadata
    * The value may be {@code null}.
    */
@@ -89,6 +96,13 @@ public final class RuntimeActionSchema extends com.google.api.client.json.Generi
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(ResultMetadata.class);
   }
+
+  /**
+   * Output only. Result schema as string.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resultSchemaAsString;
 
   /**
    * Output only. Name of the action.
@@ -176,6 +190,23 @@ public final class RuntimeActionSchema extends com.google.api.client.json.Generi
   }
 
   /**
+   * Output only. Input schema as string.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInputSchemaAsString() {
+    return inputSchemaAsString;
+  }
+
+  /**
+   * Output only. Input schema as string.
+   * @param inputSchemaAsString inputSchemaAsString or {@code null} for none
+   */
+  public RuntimeActionSchema setInputSchemaAsString(java.lang.String inputSchemaAsString) {
+    this.inputSchemaAsString = inputSchemaAsString;
+    return this;
+  }
+
+  /**
    * Output only. JsonSchema representation of this action's result metadata
    * @return value or {@code null} for none
    */
@@ -206,6 +237,23 @@ public final class RuntimeActionSchema extends com.google.api.client.json.Generi
    */
   public RuntimeActionSchema setResultMetadata(java.util.List<ResultMetadata> resultMetadata) {
     this.resultMetadata = resultMetadata;
+    return this;
+  }
+
+  /**
+   * Output only. Result schema as string.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResultSchemaAsString() {
+    return resultSchemaAsString;
+  }
+
+  /**
+   * Output only. Result schema as string.
+   * @param resultSchemaAsString resultSchemaAsString or {@code null} for none
+   */
+  public RuntimeActionSchema setResultSchemaAsString(java.lang.String resultSchemaAsString) {
+    this.resultSchemaAsString = resultSchemaAsString;
     return this;
   }
 

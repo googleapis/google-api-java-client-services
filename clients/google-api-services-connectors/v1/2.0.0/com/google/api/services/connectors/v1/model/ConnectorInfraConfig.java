@@ -45,6 +45,13 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
   private java.lang.Long connectionRatelimitWindowSeconds;
 
   /**
+   * Indicate whether connector versioning is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean connectorVersioningEnabled;
+
+  /**
    * Indicate whether connector is deployed on GKE/CloudRun
    * The value may be {@code null}.
    */
@@ -152,6 +159,23 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
    */
   public ConnectorInfraConfig setConnectionRatelimitWindowSeconds(java.lang.Long connectionRatelimitWindowSeconds) {
     this.connectionRatelimitWindowSeconds = connectionRatelimitWindowSeconds;
+    return this;
+  }
+
+  /**
+   * Indicate whether connector versioning is enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getConnectorVersioningEnabled() {
+    return connectorVersioningEnabled;
+  }
+
+  /**
+   * Indicate whether connector versioning is enabled.
+   * @param connectorVersioningEnabled connectorVersioningEnabled or {@code null} for none
+   */
+  public ConnectorInfraConfig setConnectorVersioningEnabled(java.lang.Boolean connectorVersioningEnabled) {
+    this.connectorVersioningEnabled = connectorVersioningEnabled;
     return this;
   }
 

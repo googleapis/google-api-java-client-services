@@ -14,10 +14,12 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.redis.v1.model;
+package com.google.api.services.redis.v1beta1.model;
 
 /**
- * Defines parameters that should only be used for specific asset types.
+ * ClusterEndpoint consists of PSC connections that are created as a group in each VPC network for
+ * accessing the cluster. In each group, there shall be one connection for each service attachment
+ * in the cluster.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Memorystore for Redis API. For a
@@ -28,43 +30,43 @@ package com.google.api.services.redis.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ExtraParameter extends com.google.api.client.json.GenericJson {
+public final class ClusterEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * Details about zones used by regional compute.googleapis.com/InstanceGroupManager to create
-   * instances.
+   * A group of PSC connections. They are created in the same VPC network, one for each service
+   * attachment in the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private RegionalMigDistributionPolicy regionalMigDistributionPolicy;
+  private java.util.List<ConnectionDetail> connections;
 
   /**
-   * Details about zones used by regional compute.googleapis.com/InstanceGroupManager to create
-   * instances.
+   * A group of PSC connections. They are created in the same VPC network, one for each service
+   * attachment in the cluster.
    * @return value or {@code null} for none
    */
-  public RegionalMigDistributionPolicy getRegionalMigDistributionPolicy() {
-    return regionalMigDistributionPolicy;
+  public java.util.List<ConnectionDetail> getConnections() {
+    return connections;
   }
 
   /**
-   * Details about zones used by regional compute.googleapis.com/InstanceGroupManager to create
-   * instances.
-   * @param regionalMigDistributionPolicy regionalMigDistributionPolicy or {@code null} for none
+   * A group of PSC connections. They are created in the same VPC network, one for each service
+   * attachment in the cluster.
+   * @param connections connections or {@code null} for none
    */
-  public ExtraParameter setRegionalMigDistributionPolicy(RegionalMigDistributionPolicy regionalMigDistributionPolicy) {
-    this.regionalMigDistributionPolicy = regionalMigDistributionPolicy;
+  public ClusterEndpoint setConnections(java.util.List<ConnectionDetail> connections) {
+    this.connections = connections;
     return this;
   }
 
   @Override
-  public ExtraParameter set(String fieldName, Object value) {
-    return (ExtraParameter) super.set(fieldName, value);
+  public ClusterEndpoint set(String fieldName, Object value) {
+    return (ClusterEndpoint) super.set(fieldName, value);
   }
 
   @Override
-  public ExtraParameter clone() {
-    return (ExtraParameter) super.clone();
+  public ClusterEndpoint clone() {
+    return (ClusterEndpoint) super.clone();
   }
 
 }

@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.redis.v1beta1.model;
+package com.google.api.services.redis.v1.model;
 
 /**
- * Model definition for CloudAsset.
+ * Detailed information of each PSC connection.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Memorystore for Redis API. For a
@@ -28,58 +28,40 @@ package com.google.api.services.redis.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CloudAsset extends com.google.api.client.json.GenericJson {
+public final class ConnectionDetail extends com.google.api.client.json.GenericJson {
 
   /**
+   * Detailed information of a PSC connection that is created by the customer who owns the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String assetName;
+  private PscConnection pscConnection;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String assetType;
-
-  /**
+   * Detailed information of a PSC connection that is created by the customer who owns the cluster.
    * @return value or {@code null} for none
    */
-  public java.lang.String getAssetName() {
-    return assetName;
+  public PscConnection getPscConnection() {
+    return pscConnection;
   }
 
   /**
-   * @param assetName assetName or {@code null} for none
+   * Detailed information of a PSC connection that is created by the customer who owns the cluster.
+   * @param pscConnection pscConnection or {@code null} for none
    */
-  public CloudAsset setAssetName(java.lang.String assetName) {
-    this.assetName = assetName;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getAssetType() {
-    return assetType;
-  }
-
-  /**
-   * @param assetType assetType or {@code null} for none
-   */
-  public CloudAsset setAssetType(java.lang.String assetType) {
-    this.assetType = assetType;
+  public ConnectionDetail setPscConnection(PscConnection pscConnection) {
+    this.pscConnection = pscConnection;
     return this;
   }
 
   @Override
-  public CloudAsset set(String fieldName, Object value) {
-    return (CloudAsset) super.set(fieldName, value);
+  public ConnectionDetail set(String fieldName, Object value) {
+    return (ConnectionDetail) super.set(fieldName, value);
   }
 
   @Override
-  public CloudAsset clone() {
-    return (CloudAsset) super.clone();
+  public ConnectionDetail clone() {
+    return (ConnectionDetail) super.clone();
   }
 
 }

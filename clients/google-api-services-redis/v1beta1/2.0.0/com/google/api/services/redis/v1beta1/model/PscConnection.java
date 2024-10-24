@@ -38,6 +38,13 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   private java.lang.String address;
 
   /**
+   * Output only. Type of the PSC connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String connectionType;
+
+  /**
    * Required. The URI of the consumer side forwarding rule. Example:
    * projects/{projectNumOrId}/regions/us-east1/forwardingRules/{resourceId}.
    * The value may be {@code null}.
@@ -68,6 +75,15 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   private java.lang.String pscConnectionId;
 
   /**
+   * Output only. The status of the PSC connection. Please note that this value is updated
+   * periodically. To get the latest status of a PSC connection, follow
+   * https://cloud.google.com/vpc/docs/configure-private-service-connect-services#endpoint-details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pscConnectionStatus;
+
+  /**
    * Required. The service attachment which is the target of the PSC connection, in the form of
    * projects/{project-id}/regions/{region}/serviceAttachments/{service-attachment-id}.
    * The value may be {@code null}.
@@ -89,6 +105,23 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
    */
   public PscConnection setAddress(java.lang.String address) {
     this.address = address;
+    return this;
+  }
+
+  /**
+   * Output only. Type of the PSC connection.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConnectionType() {
+    return connectionType;
+  }
+
+  /**
+   * Output only. Type of the PSC connection.
+   * @param connectionType connectionType or {@code null} for none
+   */
+  public PscConnection setConnectionType(java.lang.String connectionType) {
+    this.connectionType = connectionType;
     return this;
   }
 
@@ -161,6 +194,27 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
    */
   public PscConnection setPscConnectionId(java.lang.String pscConnectionId) {
     this.pscConnectionId = pscConnectionId;
+    return this;
+  }
+
+  /**
+   * Output only. The status of the PSC connection. Please note that this value is updated
+   * periodically. To get the latest status of a PSC connection, follow
+   * https://cloud.google.com/vpc/docs/configure-private-service-connect-services#endpoint-details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPscConnectionStatus() {
+    return pscConnectionStatus;
+  }
+
+  /**
+   * Output only. The status of the PSC connection. Please note that this value is updated
+   * periodically. To get the latest status of a PSC connection, follow
+   * https://cloud.google.com/vpc/docs/configure-private-service-connect-services#endpoint-details.
+   * @param pscConnectionStatus pscConnectionStatus or {@code null} for none
+   */
+  public PscConnection setPscConnectionStatus(java.lang.String pscConnectionStatus) {
+    this.pscConnectionStatus = pscConnectionStatus;
     return this;
   }
 

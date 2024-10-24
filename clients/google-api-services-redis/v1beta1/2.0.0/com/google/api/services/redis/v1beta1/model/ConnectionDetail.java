@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.redis.v1.model;
+package com.google.api.services.redis.v1beta1.model;
 
 /**
- * Model definition for ZoneConfiguration.
+ * Detailed information of each PSC connection.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Memorystore for Redis API. For a
@@ -28,37 +28,40 @@ package com.google.api.services.redis.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ZoneConfiguration extends com.google.api.client.json.GenericJson {
+public final class ConnectionDetail extends com.google.api.client.json.GenericJson {
 
   /**
+   * Detailed information of a PSC connection that is created by the customer who owns the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String zone;
+  private PscConnection pscConnection;
 
   /**
+   * Detailed information of a PSC connection that is created by the customer who owns the cluster.
    * @return value or {@code null} for none
    */
-  public java.lang.String getZone() {
-    return zone;
+  public PscConnection getPscConnection() {
+    return pscConnection;
   }
 
   /**
-   * @param zone zone or {@code null} for none
+   * Detailed information of a PSC connection that is created by the customer who owns the cluster.
+   * @param pscConnection pscConnection or {@code null} for none
    */
-  public ZoneConfiguration setZone(java.lang.String zone) {
-    this.zone = zone;
+  public ConnectionDetail setPscConnection(PscConnection pscConnection) {
+    this.pscConnection = pscConnection;
     return this;
   }
 
   @Override
-  public ZoneConfiguration set(String fieldName, Object value) {
-    return (ZoneConfiguration) super.set(fieldName, value);
+  public ConnectionDetail set(String fieldName, Object value) {
+    return (ConnectionDetail) super.set(fieldName, value);
   }
 
   @Override
-  public ZoneConfiguration clone() {
-    return (ZoneConfiguration) super.clone();
+  public ConnectionDetail clone() {
+    return (ConnectionDetail) super.clone();
   }
 
 }

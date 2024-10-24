@@ -17,8 +17,7 @@
 package com.google.api.services.redis.v1.model;
 
 /**
- * To be used for specifying the intended distribution of regional
- * compute.googleapis.com/InstanceGroupManager instances
+ * Configuration of a service attachment of the cluster, for creating PSC connections.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Memorystore for Redis API. For a
@@ -29,67 +28,64 @@ package com.google.api.services.redis.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RegionalMigDistributionPolicy extends com.google.api.client.json.GenericJson {
+public final class PscServiceAttachment extends com.google.api.client.json.GenericJson {
 
   /**
-   * The shape in which the group converges around distribution of resources. Instance of proto2
-   * enum
+   * Output only. Type of a PSC connection targeting this service attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer targetShape;
+  private java.lang.String connectionType;
 
   /**
-   * Cloud zones used by regional MIG to create instances.
+   * Output only. Service attachment URI which your self-created PscConnection should use as target
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ZoneConfiguration> zones;
+  private java.lang.String serviceAttachment;
 
   /**
-   * The shape in which the group converges around distribution of resources. Instance of proto2
-   * enum
+   * Output only. Type of a PSC connection targeting this service attachment.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getTargetShape() {
-    return targetShape;
+  public java.lang.String getConnectionType() {
+    return connectionType;
   }
 
   /**
-   * The shape in which the group converges around distribution of resources. Instance of proto2
-   * enum
-   * @param targetShape targetShape or {@code null} for none
+   * Output only. Type of a PSC connection targeting this service attachment.
+   * @param connectionType connectionType or {@code null} for none
    */
-  public RegionalMigDistributionPolicy setTargetShape(java.lang.Integer targetShape) {
-    this.targetShape = targetShape;
+  public PscServiceAttachment setConnectionType(java.lang.String connectionType) {
+    this.connectionType = connectionType;
     return this;
   }
 
   /**
-   * Cloud zones used by regional MIG to create instances.
+   * Output only. Service attachment URI which your self-created PscConnection should use as target
    * @return value or {@code null} for none
    */
-  public java.util.List<ZoneConfiguration> getZones() {
-    return zones;
+  public java.lang.String getServiceAttachment() {
+    return serviceAttachment;
   }
 
   /**
-   * Cloud zones used by regional MIG to create instances.
-   * @param zones zones or {@code null} for none
+   * Output only. Service attachment URI which your self-created PscConnection should use as target
+   * @param serviceAttachment serviceAttachment or {@code null} for none
    */
-  public RegionalMigDistributionPolicy setZones(java.util.List<ZoneConfiguration> zones) {
-    this.zones = zones;
+  public PscServiceAttachment setServiceAttachment(java.lang.String serviceAttachment) {
+    this.serviceAttachment = serviceAttachment;
     return this;
   }
 
   @Override
-  public RegionalMigDistributionPolicy set(String fieldName, Object value) {
-    return (RegionalMigDistributionPolicy) super.set(fieldName, value);
+  public PscServiceAttachment set(String fieldName, Object value) {
+    return (PscServiceAttachment) super.set(fieldName, value);
   }
 
   @Override
-  public RegionalMigDistributionPolicy clone() {
-    return (RegionalMigDistributionPolicy) super.clone();
+  public PscServiceAttachment clone() {
+    return (PscServiceAttachment) super.clone();
   }
 
 }

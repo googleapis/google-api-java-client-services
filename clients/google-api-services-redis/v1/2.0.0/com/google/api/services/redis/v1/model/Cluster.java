@@ -39,6 +39,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String authorizationMode;
 
   /**
+   * Optional. A list of cluster enpoints.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ClusterEndpoint> clusterEndpoints;
+
+  /**
    * Output only. The timestamp associated with the cluster creation request.
    * The value may be {@code null}.
    */
@@ -112,7 +119,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.Double preciseSizeGb;
 
   /**
-   * Required. Each PscConfig configures the consumer network where IPs will be designated to the
+   * Optional. Each PscConfig configures the consumer network where IPs will be designated to the
    * cluster for client access through Private Service Connect Automation. Currently, only one
    * PscConfig is supported.
    * The value may be {@code null}.
@@ -127,6 +134,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<PscConnection> pscConnections;
+
+  /**
+   * Output only. Service attachment details to configure Psc connections
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PscServiceAttachment> pscServiceAttachments;
 
   /**
    * Optional. Key/Value pairs of customer overrides for mutable Redis Configs
@@ -210,6 +224,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setAuthorizationMode(java.lang.String authorizationMode) {
     this.authorizationMode = authorizationMode;
+    return this;
+  }
+
+  /**
+   * Optional. A list of cluster enpoints.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ClusterEndpoint> getClusterEndpoints() {
+    return clusterEndpoints;
+  }
+
+  /**
+   * Optional. A list of cluster enpoints.
+   * @param clusterEndpoints clusterEndpoints or {@code null} for none
+   */
+  public Cluster setClusterEndpoints(java.util.List<ClusterEndpoint> clusterEndpoints) {
+    this.clusterEndpoints = clusterEndpoints;
     return this;
   }
 
@@ -390,7 +421,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Each PscConfig configures the consumer network where IPs will be designated to the
+   * Optional. Each PscConfig configures the consumer network where IPs will be designated to the
    * cluster for client access through Private Service Connect Automation. Currently, only one
    * PscConfig is supported.
    * @return value or {@code null} for none
@@ -400,7 +431,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Each PscConfig configures the consumer network where IPs will be designated to the
+   * Optional. Each PscConfig configures the consumer network where IPs will be designated to the
    * cluster for client access through Private Service Connect Automation. Currently, only one
    * PscConfig is supported.
    * @param pscConfigs pscConfigs or {@code null} for none
@@ -426,6 +457,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setPscConnections(java.util.List<PscConnection> pscConnections) {
     this.pscConnections = pscConnections;
+    return this;
+  }
+
+  /**
+   * Output only. Service attachment details to configure Psc connections
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PscServiceAttachment> getPscServiceAttachments() {
+    return pscServiceAttachments;
+  }
+
+  /**
+   * Output only. Service attachment details to configure Psc connections
+   * @param pscServiceAttachments pscServiceAttachments or {@code null} for none
+   */
+  public Cluster setPscServiceAttachments(java.util.List<PscServiceAttachment> pscServiceAttachments) {
+    this.pscServiceAttachments = pscServiceAttachments;
     return this;
   }
 

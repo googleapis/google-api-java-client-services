@@ -17,7 +17,9 @@
 package com.google.api.services.redis.v1.model;
 
 /**
- * Model definition for DirectLocationAssignment.
+ * ClusterEndpoint consists of PSC connections that are created as a group in each VPC network for
+ * accessing the cluster. In each group, there shall be one connection for each service attachment
+ * in the cluster.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Memorystore for Redis API. For a
@@ -28,37 +30,43 @@ package com.google.api.services.redis.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DirectLocationAssignment extends com.google.api.client.json.GenericJson {
+public final class ClusterEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
+   * A group of PSC connections. They are created in the same VPC network, one for each service
+   * attachment in the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<LocationAssignment> location;
+  private java.util.List<ConnectionDetail> connections;
 
   /**
+   * A group of PSC connections. They are created in the same VPC network, one for each service
+   * attachment in the cluster.
    * @return value or {@code null} for none
    */
-  public java.util.List<LocationAssignment> getLocation() {
-    return location;
+  public java.util.List<ConnectionDetail> getConnections() {
+    return connections;
   }
 
   /**
-   * @param location location or {@code null} for none
+   * A group of PSC connections. They are created in the same VPC network, one for each service
+   * attachment in the cluster.
+   * @param connections connections or {@code null} for none
    */
-  public DirectLocationAssignment setLocation(java.util.List<LocationAssignment> location) {
-    this.location = location;
+  public ClusterEndpoint setConnections(java.util.List<ConnectionDetail> connections) {
+    this.connections = connections;
     return this;
   }
 
   @Override
-  public DirectLocationAssignment set(String fieldName, Object value) {
-    return (DirectLocationAssignment) super.set(fieldName, value);
+  public ClusterEndpoint set(String fieldName, Object value) {
+    return (ClusterEndpoint) super.set(fieldName, value);
   }
 
   @Override
-  public DirectLocationAssignment clone() {
-    return (DirectLocationAssignment) super.clone();
+  public ClusterEndpoint clone() {
+    return (ClusterEndpoint) super.clone();
   }
 
 }

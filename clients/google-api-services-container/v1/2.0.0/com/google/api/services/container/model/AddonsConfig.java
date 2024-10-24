@@ -117,6 +117,13 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   private NetworkPolicyConfig networkPolicyConfig;
 
   /**
+   * Configuration for the Cloud Storage Parallelstore CSI driver.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ParallelstoreCsiDriverConfig parallelstoreCsiDriverConfig;
+
+  /**
    * Optional. Configuration for Ray Operator addon.
    * The value may be {@code null}.
    */
@@ -330,6 +337,23 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    */
   public AddonsConfig setNetworkPolicyConfig(NetworkPolicyConfig networkPolicyConfig) {
     this.networkPolicyConfig = networkPolicyConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for the Cloud Storage Parallelstore CSI driver.
+   * @return value or {@code null} for none
+   */
+  public ParallelstoreCsiDriverConfig getParallelstoreCsiDriverConfig() {
+    return parallelstoreCsiDriverConfig;
+  }
+
+  /**
+   * Configuration for the Cloud Storage Parallelstore CSI driver.
+   * @param parallelstoreCsiDriverConfig parallelstoreCsiDriverConfig or {@code null} for none
+   */
+  public AddonsConfig setParallelstoreCsiDriverConfig(ParallelstoreCsiDriverConfig parallelstoreCsiDriverConfig) {
+    this.parallelstoreCsiDriverConfig = parallelstoreCsiDriverConfig;
     return this;
   }
 

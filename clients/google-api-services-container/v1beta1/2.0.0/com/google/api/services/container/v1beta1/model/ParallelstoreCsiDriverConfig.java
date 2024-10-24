@@ -17,8 +17,7 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * ManagedPrometheusConfig defines the configuration for Google Cloud Managed Service for
- * Prometheus.
+ * Configuration for the Cloud Storage Parallelstore CSI driver.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -29,41 +28,17 @@ package com.google.api.services.container.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ManagedPrometheusConfig extends com.google.api.client.json.GenericJson {
+public final class ParallelstoreCsiDriverConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * GKE Workload Auto-Monitoring Configuration.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AutoMonitoringConfig autoMonitoringConfig;
-
-  /**
-   * Enable Managed Collection.
+   * Whether the Cloud Storage Parallelstore CSI driver is enabled for this cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
 
   /**
-   * GKE Workload Auto-Monitoring Configuration.
-   * @return value or {@code null} for none
-   */
-  public AutoMonitoringConfig getAutoMonitoringConfig() {
-    return autoMonitoringConfig;
-  }
-
-  /**
-   * GKE Workload Auto-Monitoring Configuration.
-   * @param autoMonitoringConfig autoMonitoringConfig or {@code null} for none
-   */
-  public ManagedPrometheusConfig setAutoMonitoringConfig(AutoMonitoringConfig autoMonitoringConfig) {
-    this.autoMonitoringConfig = autoMonitoringConfig;
-    return this;
-  }
-
-  /**
-   * Enable Managed Collection.
+   * Whether the Cloud Storage Parallelstore CSI driver is enabled for this cluster.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -71,22 +46,22 @@ public final class ManagedPrometheusConfig extends com.google.api.client.json.Ge
   }
 
   /**
-   * Enable Managed Collection.
+   * Whether the Cloud Storage Parallelstore CSI driver is enabled for this cluster.
    * @param enabled enabled or {@code null} for none
    */
-  public ManagedPrometheusConfig setEnabled(java.lang.Boolean enabled) {
+  public ParallelstoreCsiDriverConfig setEnabled(java.lang.Boolean enabled) {
     this.enabled = enabled;
     return this;
   }
 
   @Override
-  public ManagedPrometheusConfig set(String fieldName, Object value) {
-    return (ManagedPrometheusConfig) super.set(fieldName, value);
+  public ParallelstoreCsiDriverConfig set(String fieldName, Object value) {
+    return (ParallelstoreCsiDriverConfig) super.set(fieldName, value);
   }
 
   @Override
-  public ManagedPrometheusConfig clone() {
-    return (ManagedPrometheusConfig) super.clone();
+  public ParallelstoreCsiDriverConfig clone() {
+    return (ParallelstoreCsiDriverConfig) super.clone();
   }
 
 }

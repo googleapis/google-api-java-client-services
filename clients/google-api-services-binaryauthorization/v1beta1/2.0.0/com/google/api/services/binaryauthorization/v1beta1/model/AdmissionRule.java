@@ -48,11 +48,6 @@ public final class AdmissionRule extends com.google.api.client.json.GenericJson 
   private java.lang.String evaluationMode;
 
   /**
-   * Optional. The resource names of the attestors that must attest to a container image, in the
-   * format `projects/attestors`. Each attestor must exist before a policy can reference it. To add
-   * an attestor to a policy the principal issuing the policy change request must be able to read
-   * the attestor resource. Note: this field must be non-empty when the evaluation_mode field
-   * specifies REQUIRE_ATTESTATION, otherwise it must be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,11 +88,6 @@ public final class AdmissionRule extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The resource names of the attestors that must attest to a container image, in the
-   * format `projects/attestors`. Each attestor must exist before a policy can reference it. To add
-   * an attestor to a policy the principal issuing the policy change request must be able to read
-   * the attestor resource. Note: this field must be non-empty when the evaluation_mode field
-   * specifies REQUIRE_ATTESTATION, otherwise it must be empty.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRequireAttestationsBy() {
@@ -105,11 +95,6 @@ public final class AdmissionRule extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The resource names of the attestors that must attest to a container image, in the
-   * format `projects/attestors`. Each attestor must exist before a policy can reference it. To add
-   * an attestor to a policy the principal issuing the policy change request must be able to read
-   * the attestor resource. Note: this field must be non-empty when the evaluation_mode field
-   * specifies REQUIRE_ATTESTATION, otherwise it must be empty.
    * @param requireAttestationsBy requireAttestationsBy or {@code null} for none
    */
   public AdmissionRule setRequireAttestationsBy(java.util.List<java.lang.String> requireAttestationsBy) {

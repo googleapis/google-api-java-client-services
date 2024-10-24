@@ -507,6 +507,55 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
+       * Optional. The version of the access policy schema to fetch. Valid values are 0, 1, and 3.
+       * Requests specifying an invalid value will be rejected. Requests for conditional access
+       * policy binding in datasets must specify version 3. Dataset with no conditional role
+       * bindings in access policy may specify any valid value or leave the field unset. This field
+       * will be maped to [IAM Policy version] (https://cloud.google.com/iam/docs/policies#versions)
+       * and will be used to fetch policy from IAM. If unset or if 0 or 1 value is used for dataset
+       * with conditional bindings, access entry with condition will have role string appended by
+       * 'withcond' string followed by a hash value. For example : { "access": [ { "role":
+       * "roles/bigquery.dataViewer_with_conditionalbinding_7a34awqsda", "userByEmail":
+       * "user@example.com", } ] } Please refer https://cloud.google.com/iam/docs/troubleshooting-
+       * withcond for more details.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer accessPolicyVersion;
+
+      /** Optional. The version of the access policy schema to fetch. Valid values are 0, 1, and 3. Requests
+     specifying an invalid value will be rejected. Requests for conditional access policy binding in
+     datasets must specify version 3. Dataset with no conditional role bindings in access policy may
+     specify any valid value or leave the field unset. This field will be maped to [IAM Policy version]
+     (https://cloud.google.com/iam/docs/policies#versions) and will be used to fetch policy from IAM. If
+     unset or if 0 or 1 value is used for dataset with conditional bindings, access entry with condition
+     will have role string appended by 'withcond' string followed by a hash value. For example : {
+     "access": [ { "role": "roles/bigquery.dataViewer_with_conditionalbinding_7a34awqsda",
+     "userByEmail": "user@example.com", } ] } Please refer
+     https://cloud.google.com/iam/docs/troubleshooting-withcond for more details.
+       */
+      public java.lang.Integer getAccessPolicyVersion() {
+        return accessPolicyVersion;
+      }
+
+      /**
+       * Optional. The version of the access policy schema to fetch. Valid values are 0, 1, and 3.
+       * Requests specifying an invalid value will be rejected. Requests for conditional access
+       * policy binding in datasets must specify version 3. Dataset with no conditional role
+       * bindings in access policy may specify any valid value or leave the field unset. This field
+       * will be maped to [IAM Policy version] (https://cloud.google.com/iam/docs/policies#versions)
+       * and will be used to fetch policy from IAM. If unset or if 0 or 1 value is used for dataset
+       * with conditional bindings, access entry with condition will have role string appended by
+       * 'withcond' string followed by a hash value. For example : { "access": [ { "role":
+       * "roles/bigquery.dataViewer_with_conditionalbinding_7a34awqsda", "userByEmail":
+       * "user@example.com", } ] } Please refer https://cloud.google.com/iam/docs/troubleshooting-
+       * withcond for more details.
+       */
+      public Get setAccessPolicyVersion(java.lang.Integer accessPolicyVersion) {
+        this.accessPolicyVersion = accessPolicyVersion;
+        return this;
+      }
+
+      /**
        * Optional. Specifies the view that determines which dataset information is returned. By
        * default, metadata and ACL information are returned.
        */
@@ -657,6 +706,52 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
               "^[^/]+$");
         }
         this.projectId = projectId;
+        return this;
+      }
+
+      /**
+       * Optional. The version of the provided access policy schema. Valid values are 0, 1, and 3.
+       * Requests specifying an invalid value will be rejected. This version refers to the schema
+       * version of the access policy and not the version of access policy. This field's value can
+       * be equal or more than the access policy schema provided in the request. For example, *
+       * Requests with conditional access policy binding in datasets must specify version 3. * But
+       * dataset with no conditional role bindings in access policy may specify any valid value or
+       * leave the field unset. If unset or if 0 or 1 value is used for dataset with conditional
+       * bindings, request will be rejected. This field will be maped to IAM Policy version
+       * (https://cloud.google.com/iam/docs/policies#versions) and will be used to set policy in
+       * IAM.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer accessPolicyVersion;
+
+      /** Optional. The version of the provided access policy schema. Valid values are 0, 1, and 3. Requests
+     specifying an invalid value will be rejected. This version refers to the schema version of the
+     access policy and not the version of access policy. This field's value can be equal or more than
+     the access policy schema provided in the request. For example, * Requests with conditional access
+     policy binding in datasets must specify version 3. * But dataset with no conditional role bindings
+     in access policy may specify any valid value or leave the field unset. If unset or if 0 or 1 value
+     is used for dataset with conditional bindings, request will be rejected. This field will be maped
+     to IAM Policy version (https://cloud.google.com/iam/docs/policies#versions) and will be used to set
+     policy in IAM.
+       */
+      public java.lang.Integer getAccessPolicyVersion() {
+        return accessPolicyVersion;
+      }
+
+      /**
+       * Optional. The version of the provided access policy schema. Valid values are 0, 1, and 3.
+       * Requests specifying an invalid value will be rejected. This version refers to the schema
+       * version of the access policy and not the version of access policy. This field's value can
+       * be equal or more than the access policy schema provided in the request. For example, *
+       * Requests with conditional access policy binding in datasets must specify version 3. * But
+       * dataset with no conditional role bindings in access policy may specify any valid value or
+       * leave the field unset. If unset or if 0 or 1 value is used for dataset with conditional
+       * bindings, request will be rejected. This field will be maped to IAM Policy version
+       * (https://cloud.google.com/iam/docs/policies#versions) and will be used to set policy in
+       * IAM.
+       */
+      public Insert setAccessPolicyVersion(java.lang.Integer accessPolicyVersion) {
+        this.accessPolicyVersion = accessPolicyVersion;
         return this;
       }
 
@@ -1054,6 +1149,58 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /**
+       * Optional. The version of the provided access policy schema. Valid values are 0, 1, and 3.
+       * Requests specifying an invalid value will be rejected. This version refers to the schema
+       * version of the access policy and not the version of access policy. This field's value can
+       * be equal or more than the access policy schema provided in the request. For example, *
+       * Operations updating conditional access policy binding in datasets must specify version 3.
+       * Some of the operations are : - Adding a new access policy entry with condition. - Removing
+       * an access policy entry with condition. - Updating an access policy entry with condition. *
+       * But dataset with no conditional role bindings in access policy may specify any valid value
+       * or leave the field unset. If unset or if 0 or 1 value is used for dataset with conditional
+       * bindings, request will be rejected. This field will be maped to IAM Policy version
+       * (https://cloud.google.com/iam/docs/policies#versions) and will be used to set policy in
+       * IAM.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer accessPolicyVersion;
+
+      /** Optional. The version of the provided access policy schema. Valid values are 0, 1, and 3. Requests
+     specifying an invalid value will be rejected. This version refers to the schema version of the
+     access policy and not the version of access policy. This field's value can be equal or more than
+     the access policy schema provided in the request. For example, * Operations updating conditional
+     access policy binding in datasets must specify version 3. Some of the operations are : - Adding a
+     new access policy entry with condition. - Removing an access policy entry with condition. -
+     Updating an access policy entry with condition. * But dataset with no conditional role bindings in
+     access policy may specify any valid value or leave the field unset. If unset or if 0 or 1 value is
+     used for dataset with conditional bindings, request will be rejected. This field will be maped to
+     IAM Policy version (https://cloud.google.com/iam/docs/policies#versions) and will be used to set
+     policy in IAM.
+       */
+      public java.lang.Integer getAccessPolicyVersion() {
+        return accessPolicyVersion;
+      }
+
+      /**
+       * Optional. The version of the provided access policy schema. Valid values are 0, 1, and 3.
+       * Requests specifying an invalid value will be rejected. This version refers to the schema
+       * version of the access policy and not the version of access policy. This field's value can
+       * be equal or more than the access policy schema provided in the request. For example, *
+       * Operations updating conditional access policy binding in datasets must specify version 3.
+       * Some of the operations are : - Adding a new access policy entry with condition. - Removing
+       * an access policy entry with condition. - Updating an access policy entry with condition. *
+       * But dataset with no conditional role bindings in access policy may specify any valid value
+       * or leave the field unset. If unset or if 0 or 1 value is used for dataset with conditional
+       * bindings, request will be rejected. This field will be maped to IAM Policy version
+       * (https://cloud.google.com/iam/docs/policies#versions) and will be used to set policy in
+       * IAM.
+       */
+      public Patch setAccessPolicyVersion(java.lang.Integer accessPolicyVersion) {
+        this.accessPolicyVersion = accessPolicyVersion;
+        return this;
+      }
+
       @Override
       public Patch set(String parameterName, Object value) {
         return (Patch) super.set(parameterName, value);
@@ -1385,6 +1532,58 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
               "^[^/]+$");
         }
         this.datasetId = datasetId;
+        return this;
+      }
+
+      /**
+       * Optional. The version of the provided access policy schema. Valid values are 0, 1, and 3.
+       * Requests specifying an invalid value will be rejected. This version refers to the schema
+       * version of the access policy and not the version of access policy. This field's value can
+       * be equal or more than the access policy schema provided in the request. For example, *
+       * Operations updating conditional access policy binding in datasets must specify version 3.
+       * Some of the operations are : - Adding a new access policy entry with condition. - Removing
+       * an access policy entry with condition. - Updating an access policy entry with condition. *
+       * But dataset with no conditional role bindings in access policy may specify any valid value
+       * or leave the field unset. If unset or if 0 or 1 value is used for dataset with conditional
+       * bindings, request will be rejected. This field will be maped to IAM Policy version
+       * (https://cloud.google.com/iam/docs/policies#versions) and will be used to set policy in
+       * IAM.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer accessPolicyVersion;
+
+      /** Optional. The version of the provided access policy schema. Valid values are 0, 1, and 3. Requests
+     specifying an invalid value will be rejected. This version refers to the schema version of the
+     access policy and not the version of access policy. This field's value can be equal or more than
+     the access policy schema provided in the request. For example, * Operations updating conditional
+     access policy binding in datasets must specify version 3. Some of the operations are : - Adding a
+     new access policy entry with condition. - Removing an access policy entry with condition. -
+     Updating an access policy entry with condition. * But dataset with no conditional role bindings in
+     access policy may specify any valid value or leave the field unset. If unset or if 0 or 1 value is
+     used for dataset with conditional bindings, request will be rejected. This field will be maped to
+     IAM Policy version (https://cloud.google.com/iam/docs/policies#versions) and will be used to set
+     policy in IAM.
+       */
+      public java.lang.Integer getAccessPolicyVersion() {
+        return accessPolicyVersion;
+      }
+
+      /**
+       * Optional. The version of the provided access policy schema. Valid values are 0, 1, and 3.
+       * Requests specifying an invalid value will be rejected. This version refers to the schema
+       * version of the access policy and not the version of access policy. This field's value can
+       * be equal or more than the access policy schema provided in the request. For example, *
+       * Operations updating conditional access policy binding in datasets must specify version 3.
+       * Some of the operations are : - Adding a new access policy entry with condition. - Removing
+       * an access policy entry with condition. - Updating an access policy entry with condition. *
+       * But dataset with no conditional role bindings in access policy may specify any valid value
+       * or leave the field unset. If unset or if 0 or 1 value is used for dataset with conditional
+       * bindings, request will be rejected. This field will be maped to IAM Policy version
+       * (https://cloud.google.com/iam/docs/policies#versions) and will be used to set policy in
+       * IAM.
+       */
+      public Update setAccessPolicyVersion(java.lang.Integer accessPolicyVersion) {
+        this.accessPolicyVersion = accessPolicyVersion;
         return this;
       }
 

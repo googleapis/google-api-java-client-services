@@ -954,6 +954,14 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   public static final class Access extends com.google.api.client.json.GenericJson {
 
     /**
+     * Optional. condition for the binding. If CEL expression in this field is true, this access
+     * binding will be considered
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private Expr condition;
+
+    /**
      * [Pick one] A grant authorizing all resources of a particular type in a particular dataset
      * access to this dataset. Only views are supported for now. The role field is not required when
      * this field is set. If that dataset is deleted and re-created, its access needs to be granted
@@ -1036,6 +1044,25 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
      */
     @com.google.api.client.util.Key
     private TableReference view;
+
+    /**
+     * Optional. condition for the binding. If CEL expression in this field is true, this access
+     * binding will be considered
+     * @return value or {@code null} for none
+     */
+    public Expr getCondition() {
+      return condition;
+    }
+
+    /**
+     * Optional. condition for the binding. If CEL expression in this field is true, this access
+     * binding will be considered
+     * @param condition condition or {@code null} for none
+     */
+    public Access setCondition(Expr condition) {
+      this.condition = condition;
+      return this;
+    }
 
     /**
      * [Pick one] A grant authorizing all resources of a particular type in a particular dataset

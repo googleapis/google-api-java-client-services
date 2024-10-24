@@ -56,6 +56,14 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private MaintenanceWindow maintenanceWindow;
 
   /**
+   * An identifier for the policy that will be passed with the app install feedback sent from the
+   * Play Store.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String policyId;
+
+  /**
    * The availability granted to the device for the specified products. "all" gives the device
    * access to all products, regardless of approval status. "all" does not enable automatic
    * visibility of "alpha" or "beta" tracks. "whitelist" grants the device access the products
@@ -133,6 +141,25 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setMaintenanceWindow(MaintenanceWindow maintenanceWindow) {
     this.maintenanceWindow = maintenanceWindow;
+    return this;
+  }
+
+  /**
+   * An identifier for the policy that will be passed with the app install feedback sent from the
+   * Play Store.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPolicyId() {
+    return policyId;
+  }
+
+  /**
+   * An identifier for the policy that will be passed with the app install feedback sent from the
+   * Play Store.
+   * @param policyId policyId or {@code null} for none
+   */
+  public Policy setPolicyId(java.lang.String policyId) {
+    this.policyId = policyId;
     return this;
   }
 

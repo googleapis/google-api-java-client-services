@@ -110,6 +110,13 @@ public final class GoogleChromeManagementV1InstalledApp extends com.google.api.c
   private java.util.List<java.lang.String> permissions;
 
   /**
+   * Output only. If available, the risk assessment data about this extension.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleChromeManagementV1RiskAssessmentData riskAssessment;
+
+  /**
    * Output only. Unique identifier of the app. For Chrome apps and extensions, the 32-character id
    * (e.g. ehoadneljpdggcbbknedodolkkjodefl). For Android apps, the package name (e.g.
    * com.evernote).
@@ -297,6 +304,23 @@ public final class GoogleChromeManagementV1InstalledApp extends com.google.api.c
    */
   public GoogleChromeManagementV1InstalledApp setPermissions(java.util.List<java.lang.String> permissions) {
     this.permissions = permissions;
+    return this;
+  }
+
+  /**
+   * Output only. If available, the risk assessment data about this extension.
+   * @return value or {@code null} for none
+   */
+  public GoogleChromeManagementV1RiskAssessmentData getRiskAssessment() {
+    return riskAssessment;
+  }
+
+  /**
+   * Output only. If available, the risk assessment data about this extension.
+   * @param riskAssessment riskAssessment or {@code null} for none
+   */
+  public GoogleChromeManagementV1InstalledApp setRiskAssessment(GoogleChromeManagementV1RiskAssessmentData riskAssessment) {
+    this.riskAssessment = riskAssessment;
     return this;
   }
 

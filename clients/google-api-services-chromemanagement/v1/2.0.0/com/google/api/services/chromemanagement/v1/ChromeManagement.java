@@ -2721,7 +2721,7 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
          * Query string to filter results, AND-separated fields in EBNF syntax. Note: OR operations
          * are not supported in this filter. Supported filter fields: * app_name * app_type *
          * install_type * number_of_permissions * total_install_count * latest_profile_active_date *
-         * permission_name * app_id * manifest_versions
+         * permission_name * app_id * manifest_versions * risk_score
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -2729,7 +2729,7 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
         /** Query string to filter results, AND-separated fields in EBNF syntax. Note: OR operations are not
        supported in this filter. Supported filter fields: * app_name * app_type * install_type *
        number_of_permissions * total_install_count * latest_profile_active_date * permission_name * app_id
-       * manifest_versions
+       * manifest_versions * risk_score
          */
         public java.lang.String getFilter() {
           return filter;
@@ -2739,7 +2739,7 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
          * Query string to filter results, AND-separated fields in EBNF syntax. Note: OR operations
          * are not supported in this filter. Supported filter fields: * app_name * app_type *
          * install_type * number_of_permissions * total_install_count * latest_profile_active_date *
-         * permission_name * app_id * manifest_versions
+         * permission_name * app_id * manifest_versions * risk_score
          */
         public CountInstalledApps setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -2748,13 +2748,14 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
 
         /**
          * Field used to order results. Supported order by fields: * app_name * app_type *
-         * install_type * number_of_permissions * total_install_count * app_id * manifest_versions
+         * install_type * number_of_permissions * total_install_count * app_id * manifest_versions *
+         * risk_score
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
         /** Field used to order results. Supported order by fields: * app_name * app_type * install_type *
-       number_of_permissions * total_install_count * app_id * manifest_versions
+       number_of_permissions * total_install_count * app_id * manifest_versions * risk_score
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -2762,7 +2763,8 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
 
         /**
          * Field used to order results. Supported order by fields: * app_name * app_type *
-         * install_type * number_of_permissions * total_install_count * app_id * manifest_versions
+         * install_type * number_of_permissions * total_install_count * app_id * manifest_versions *
+         * risk_score
          */
         public CountInstalledApps setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;

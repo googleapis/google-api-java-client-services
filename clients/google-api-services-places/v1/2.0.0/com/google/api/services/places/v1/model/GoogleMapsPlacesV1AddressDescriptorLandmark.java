@@ -59,15 +59,18 @@ public final class GoogleMapsPlacesV1AddressDescriptorLandmark extends com.googl
   private java.lang.String spatialRelationship;
 
   /**
-   * The straight line distance in meters between the target location and the landmark.
+   * The straight line distance, in meters, between the center point of the target and the center
+   * point of the landmark. In some situations, this value can be longer than
+   * `travel_distance_meters`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float straightLineDistanceMeters;
 
   /**
-   * The travel distance in meters along the road network if known. This does not take into account
-   * the mode of transportation (walking/driving).
+   * The travel distance, in meters, along the road network from the target to the landmark, if
+   * known. This value does not take into account the mode of transportation, such as walking,
+   * driving, or biking.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,7 +153,9 @@ public final class GoogleMapsPlacesV1AddressDescriptorLandmark extends com.googl
   }
 
   /**
-   * The straight line distance in meters between the target location and the landmark.
+   * The straight line distance, in meters, between the center point of the target and the center
+   * point of the landmark. In some situations, this value can be longer than
+   * `travel_distance_meters`.
    * @return value or {@code null} for none
    */
   public java.lang.Float getStraightLineDistanceMeters() {
@@ -158,7 +163,9 @@ public final class GoogleMapsPlacesV1AddressDescriptorLandmark extends com.googl
   }
 
   /**
-   * The straight line distance in meters between the target location and the landmark.
+   * The straight line distance, in meters, between the center point of the target and the center
+   * point of the landmark. In some situations, this value can be longer than
+   * `travel_distance_meters`.
    * @param straightLineDistanceMeters straightLineDistanceMeters or {@code null} for none
    */
   public GoogleMapsPlacesV1AddressDescriptorLandmark setStraightLineDistanceMeters(java.lang.Float straightLineDistanceMeters) {
@@ -167,8 +174,9 @@ public final class GoogleMapsPlacesV1AddressDescriptorLandmark extends com.googl
   }
 
   /**
-   * The travel distance in meters along the road network if known. This does not take into account
-   * the mode of transportation (walking/driving).
+   * The travel distance, in meters, along the road network from the target to the landmark, if
+   * known. This value does not take into account the mode of transportation, such as walking,
+   * driving, or biking.
    * @return value or {@code null} for none
    */
   public java.lang.Float getTravelDistanceMeters() {
@@ -176,8 +184,9 @@ public final class GoogleMapsPlacesV1AddressDescriptorLandmark extends com.googl
   }
 
   /**
-   * The travel distance in meters along the road network if known. This does not take into account
-   * the mode of transportation (walking/driving).
+   * The travel distance, in meters, along the road network from the target to the landmark, if
+   * known. This value does not take into account the mode of transportation, such as walking,
+   * driving, or biking.
    * @param travelDistanceMeters travelDistanceMeters or {@code null} for none
    */
   public GoogleMapsPlacesV1AddressDescriptorLandmark setTravelDistanceMeters(java.lang.Float travelDistanceMeters) {

@@ -110,6 +110,14 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   private PreservedState preservedStateFromPolicy;
 
   /**
+   * [Output Only] Instance properties selected for this instance resulting from
+   * InstanceFlexibilityPolicy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedInstancePropertiesFromFlexibilityPolicy propertiesFromFlexibilityPolicy;
+
+  /**
    * [Output Only] Intended version of this instance.
    * The value may be {@code null}.
    */
@@ -300,6 +308,25 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
    */
   public ManagedInstance setPreservedStateFromPolicy(PreservedState preservedStateFromPolicy) {
     this.preservedStateFromPolicy = preservedStateFromPolicy;
+    return this;
+  }
+
+  /**
+   * [Output Only] Instance properties selected for this instance resulting from
+   * InstanceFlexibilityPolicy.
+   * @return value or {@code null} for none
+   */
+  public ManagedInstancePropertiesFromFlexibilityPolicy getPropertiesFromFlexibilityPolicy() {
+    return propertiesFromFlexibilityPolicy;
+  }
+
+  /**
+   * [Output Only] Instance properties selected for this instance resulting from
+   * InstanceFlexibilityPolicy.
+   * @param propertiesFromFlexibilityPolicy propertiesFromFlexibilityPolicy or {@code null} for none
+   */
+  public ManagedInstance setPropertiesFromFlexibilityPolicy(ManagedInstancePropertiesFromFlexibilityPolicy propertiesFromFlexibilityPolicy) {
+    this.propertiesFromFlexibilityPolicy = propertiesFromFlexibilityPolicy;
     return this;
   }
 

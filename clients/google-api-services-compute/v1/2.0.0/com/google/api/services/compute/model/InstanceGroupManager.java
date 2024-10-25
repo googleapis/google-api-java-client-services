@@ -109,6 +109,14 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.math.BigInteger id;
 
   /**
+   * Instance flexibility allowing MIG to create VMs from multiple types of machines. Instance
+   * flexibility configuration on MIG overrides instance template configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceGroupManagerInstanceFlexibilityPolicy instanceFlexibilityPolicy;
+
+  /**
    * [Output Only] The URL of the Instance Group resource.
    * The value may be {@code null}.
    */
@@ -156,7 +164,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.lang.String name;
 
   /**
-   * Named ports configured for the Instance Groups complementary to this Instance Group Manager.
+   * [Output Only] Named ports configured on the Instance Groups complementary to this Instance
+   * Group Manager.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -465,6 +474,25 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
+   * Instance flexibility allowing MIG to create VMs from multiple types of machines. Instance
+   * flexibility configuration on MIG overrides instance template configuration.
+   * @return value or {@code null} for none
+   */
+  public InstanceGroupManagerInstanceFlexibilityPolicy getInstanceFlexibilityPolicy() {
+    return instanceFlexibilityPolicy;
+  }
+
+  /**
+   * Instance flexibility allowing MIG to create VMs from multiple types of machines. Instance
+   * flexibility configuration on MIG overrides instance template configuration.
+   * @param instanceFlexibilityPolicy instanceFlexibilityPolicy or {@code null} for none
+   */
+  public InstanceGroupManager setInstanceFlexibilityPolicy(InstanceGroupManagerInstanceFlexibilityPolicy instanceFlexibilityPolicy) {
+    this.instanceFlexibilityPolicy = instanceFlexibilityPolicy;
+    return this;
+  }
+
+  /**
    * [Output Only] The URL of the Instance Group resource.
    * @return value or {@code null} for none
    */
@@ -577,7 +605,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * Named ports configured for the Instance Groups complementary to this Instance Group Manager.
+   * [Output Only] Named ports configured on the Instance Groups complementary to this Instance
+   * Group Manager.
    * @return value or {@code null} for none
    */
   public java.util.List<NamedPort> getNamedPorts() {
@@ -585,7 +614,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * Named ports configured for the Instance Groups complementary to this Instance Group Manager.
+   * [Output Only] Named ports configured on the Instance Groups complementary to this Instance
+   * Group Manager.
    * @param namedPorts namedPorts or {@code null} for none
    */
   public InstanceGroupManager setNamedPorts(java.util.List<NamedPort> namedPorts) {

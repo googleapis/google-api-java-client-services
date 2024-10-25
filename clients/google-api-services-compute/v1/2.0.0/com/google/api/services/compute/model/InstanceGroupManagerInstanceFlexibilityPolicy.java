@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * This is deprecated and has no effect. Do not use.
+ * Model definition for InstanceGroupManagerInstanceFlexibilityPolicy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.compute.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LogConfigCloudAuditOptions extends com.google.api.client.json.GenericJson {
+public final class InstanceGroupManagerInstanceFlexibilityPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * This is deprecated and has no effect. Do not use.
+   * Named instance selections configuring properties that the group will use when creating new VMs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String logName;
+  private java.util.Map<String, InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelection> instanceSelections;
 
   /**
-   * This is deprecated and has no effect. Do not use.
+   * Named instance selections configuring properties that the group will use when creating new VMs.
    * @return value or {@code null} for none
    */
-  public java.lang.String getLogName() {
-    return logName;
+  public java.util.Map<String, InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelection> getInstanceSelections() {
+    return instanceSelections;
   }
 
   /**
-   * This is deprecated and has no effect. Do not use.
-   * @param logName logName or {@code null} for none
+   * Named instance selections configuring properties that the group will use when creating new VMs.
+   * @param instanceSelections instanceSelections or {@code null} for none
    */
-  public LogConfigCloudAuditOptions setLogName(java.lang.String logName) {
-    this.logName = logName;
+  public InstanceGroupManagerInstanceFlexibilityPolicy setInstanceSelections(java.util.Map<String, InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelection> instanceSelections) {
+    this.instanceSelections = instanceSelections;
     return this;
   }
 
   @Override
-  public LogConfigCloudAuditOptions set(String fieldName, Object value) {
-    return (LogConfigCloudAuditOptions) super.set(fieldName, value);
+  public InstanceGroupManagerInstanceFlexibilityPolicy set(String fieldName, Object value) {
+    return (InstanceGroupManagerInstanceFlexibilityPolicy) super.set(fieldName, value);
   }
 
   @Override
-  public LogConfigCloudAuditOptions clone() {
-    return (LogConfigCloudAuditOptions) super.clone();
+  public InstanceGroupManagerInstanceFlexibilityPolicy clone() {
+    return (InstanceGroupManagerInstanceFlexibilityPolicy) super.clone();
   }
 
 }

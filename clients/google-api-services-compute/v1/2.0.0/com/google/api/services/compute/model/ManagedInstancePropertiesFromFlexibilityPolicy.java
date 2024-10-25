@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * This is deprecated and has no effect. Do not use.
+ * Model definition for ManagedInstancePropertiesFromFlexibilityPolicy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.compute.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LogConfigDataAccessOptions extends com.google.api.client.json.GenericJson {
+public final class ManagedInstancePropertiesFromFlexibilityPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * This is deprecated and has no effect. Do not use.
+   * The machine type to be used for this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String logMode;
+  private java.lang.String machineType;
 
   /**
-   * This is deprecated and has no effect. Do not use.
+   * The machine type to be used for this instance.
    * @return value or {@code null} for none
    */
-  public java.lang.String getLogMode() {
-    return logMode;
+  public java.lang.String getMachineType() {
+    return machineType;
   }
 
   /**
-   * This is deprecated and has no effect. Do not use.
-   * @param logMode logMode or {@code null} for none
+   * The machine type to be used for this instance.
+   * @param machineType machineType or {@code null} for none
    */
-  public LogConfigDataAccessOptions setLogMode(java.lang.String logMode) {
-    this.logMode = logMode;
+  public ManagedInstancePropertiesFromFlexibilityPolicy setMachineType(java.lang.String machineType) {
+    this.machineType = machineType;
     return this;
   }
 
   @Override
-  public LogConfigDataAccessOptions set(String fieldName, Object value) {
-    return (LogConfigDataAccessOptions) super.set(fieldName, value);
+  public ManagedInstancePropertiesFromFlexibilityPolicy set(String fieldName, Object value) {
+    return (ManagedInstancePropertiesFromFlexibilityPolicy) super.set(fieldName, value);
   }
 
   @Override
-  public LogConfigDataAccessOptions clone() {
-    return (LogConfigDataAccessOptions) super.clone();
+  public ManagedInstancePropertiesFromFlexibilityPolicy clone() {
+    return (ManagedInstancePropertiesFromFlexibilityPolicy) super.clone();
   }
 
 }

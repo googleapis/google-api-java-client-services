@@ -37,15 +37,6 @@ public final class ResultSet extends com.google.api.client.json.GenericJson {
   private ResultSetMetadata metadata;
 
   /**
-   * Optional. A precommit token will be included if the read-write transaction is on a multiplexed
-   * session. The precommit token with the highest sequence number from this transaction attempt
-   * should be passed to the Commit request for this transaction.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private MultiplexedSessionPrecommitToken precommitToken;
-
-  /**
    * Each element in `rows` is a row whose format is defined by metadata.row_type. The ith element
    * in each row matches the ith field in metadata.row_type. Elements are encoded based on type as
    * described here.
@@ -79,27 +70,6 @@ public final class ResultSet extends com.google.api.client.json.GenericJson {
    */
   public ResultSet setMetadata(ResultSetMetadata metadata) {
     this.metadata = metadata;
-    return this;
-  }
-
-  /**
-   * Optional. A precommit token will be included if the read-write transaction is on a multiplexed
-   * session. The precommit token with the highest sequence number from this transaction attempt
-   * should be passed to the Commit request for this transaction.
-   * @return value or {@code null} for none
-   */
-  public MultiplexedSessionPrecommitToken getPrecommitToken() {
-    return precommitToken;
-  }
-
-  /**
-   * Optional. A precommit token will be included if the read-write transaction is on a multiplexed
-   * session. The precommit token with the highest sequence number from this transaction attempt
-   * should be passed to the Commit request for this transaction.
-   * @param precommitToken precommitToken or {@code null} for none
-   */
-  public ResultSet setPrecommitToken(MultiplexedSessionPrecommitToken precommitToken) {
-    this.precommitToken = precommitToken;
     return this;
   }
 

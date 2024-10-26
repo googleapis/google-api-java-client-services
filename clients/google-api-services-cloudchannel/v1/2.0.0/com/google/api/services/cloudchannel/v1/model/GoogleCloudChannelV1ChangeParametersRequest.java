@@ -17,7 +17,7 @@
 package com.google.api.services.cloudchannel.v1.model;
 
 /**
- * Request message for CloudChannelService.ChangeParametersRequest.
+ * Request message for CloudChannelService.ChangeParameters.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Channel API. For a detailed explanation see:

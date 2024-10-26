@@ -30,11 +30,65 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1UnregisterSubscriberRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Resource name of the account. Required if integrator is not provided. Otherwise,
+   * leave this field empty/unset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String account;
+
+  /**
+   * Optional. Resource name of the integrator. Required if account is not provided. Otherwise,
+   * leave this field empty/unset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String integrator;
+
+  /**
    * Required. Service account to unregister from subscriber access to the topic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAccount;
+
+  /**
+   * Optional. Resource name of the account. Required if integrator is not provided. Otherwise,
+   * leave this field empty/unset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAccount() {
+    return account;
+  }
+
+  /**
+   * Optional. Resource name of the account. Required if integrator is not provided. Otherwise,
+   * leave this field empty/unset.
+   * @param account account or {@code null} for none
+   */
+  public GoogleCloudChannelV1UnregisterSubscriberRequest setAccount(java.lang.String account) {
+    this.account = account;
+    return this;
+  }
+
+  /**
+   * Optional. Resource name of the integrator. Required if account is not provided. Otherwise,
+   * leave this field empty/unset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIntegrator() {
+    return integrator;
+  }
+
+  /**
+   * Optional. Resource name of the integrator. Required if account is not provided. Otherwise,
+   * leave this field empty/unset.
+   * @param integrator integrator or {@code null} for none
+   */
+  public GoogleCloudChannelV1UnregisterSubscriberRequest setIntegrator(java.lang.String integrator) {
+    this.integrator = integrator;
+    return this;
+  }
 
   /**
    * Required. Service account to unregister from subscriber access to the topic.

@@ -43,8 +43,8 @@ public final class GoogleCloudChannelV1ListSkuGroupBillableSkusResponse extends 
   }
 
   /**
-   * A token to retrieve the next page of results. Pass to ListSkuGroupBillableSkus.page_token to
-   * obtain that page.
+   * A token to retrieve the next page of results. Pass to
+   * ListSkuGroupBillableSkusRequest.page_token to obtain that page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,8 +68,8 @@ public final class GoogleCloudChannelV1ListSkuGroupBillableSkusResponse extends 
   }
 
   /**
-   * A token to retrieve the next page of results. Pass to ListSkuGroupBillableSkus.page_token to
-   * obtain that page.
+   * A token to retrieve the next page of results. Pass to
+   * ListSkuGroupBillableSkusRequest.page_token to obtain that page.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -77,8 +77,8 @@ public final class GoogleCloudChannelV1ListSkuGroupBillableSkusResponse extends 
   }
 
   /**
-   * A token to retrieve the next page of results. Pass to ListSkuGroupBillableSkus.page_token to
-   * obtain that page.
+   * A token to retrieve the next page of results. Pass to
+   * ListSkuGroupBillableSkusRequest.page_token to obtain that page.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudChannelV1ListSkuGroupBillableSkusResponse setNextPageToken(java.lang.String nextPageToken) {

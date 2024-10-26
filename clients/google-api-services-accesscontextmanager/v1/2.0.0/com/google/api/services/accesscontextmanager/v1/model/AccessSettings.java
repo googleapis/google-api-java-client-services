@@ -48,6 +48,14 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   private ReauthSettings reauthSettings;
 
   /**
+   * Optional. Session settings applied to user access on a given AccessScope. Migrated from
+   * ReauthSettings
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SessionSettings sessionSettings;
+
+  /**
    * Optional. Access level that a user must have to be granted access. Only one access level is
    * supported, not multiple. This repeated field must have exactly one element. Example:
    * "accessPolicies/9522/accessLevels/device_trusted"
@@ -82,6 +90,25 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
    */
   public AccessSettings setReauthSettings(ReauthSettings reauthSettings) {
     this.reauthSettings = reauthSettings;
+    return this;
+  }
+
+  /**
+   * Optional. Session settings applied to user access on a given AccessScope. Migrated from
+   * ReauthSettings
+   * @return value or {@code null} for none
+   */
+  public SessionSettings getSessionSettings() {
+    return sessionSettings;
+  }
+
+  /**
+   * Optional. Session settings applied to user access on a given AccessScope. Migrated from
+   * ReauthSettings
+   * @param sessionSettings sessionSettings or {@code null} for none
+   */
+  public AccessSettings setSessionSettings(SessionSettings sessionSettings) {
+    this.sessionSettings = sessionSettings;
     return this;
   }
 

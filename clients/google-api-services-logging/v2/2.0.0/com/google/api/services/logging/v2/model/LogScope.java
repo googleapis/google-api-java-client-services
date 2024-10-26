@@ -44,8 +44,8 @@ public final class LogScope extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Output only. The resource name of the log scope.For example:projects/my-
-   * project/locations/global/logScopes/my-log-scope
+   * Output only. The resource name of the log scope.Log scopes are only available in the global
+   * location. For example:projects/my-project/locations/global/logScopes/my-log-scope
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +55,7 @@ public final class LogScope extends com.google.api.client.json.GenericJson {
    * Required. Names of one or more parent resources: projects/[PROJECT_ID]May alternatively be one
    * or more views:
    * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]A log scope
-   * can include a maximum of 50 projects and a maximum of 100 resources in total.
+   * can include a maximum of 5 projects and a maximum of 100 resources in total.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,8 +103,8 @@ public final class LogScope extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource name of the log scope.For example:projects/my-
-   * project/locations/global/logScopes/my-log-scope
+   * Output only. The resource name of the log scope.Log scopes are only available in the global
+   * location. For example:projects/my-project/locations/global/logScopes/my-log-scope
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -112,8 +112,8 @@ public final class LogScope extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource name of the log scope.For example:projects/my-
-   * project/locations/global/logScopes/my-log-scope
+   * Output only. The resource name of the log scope.Log scopes are only available in the global
+   * location. For example:projects/my-project/locations/global/logScopes/my-log-scope
    * @param name name or {@code null} for none
    */
   public LogScope setName(java.lang.String name) {
@@ -125,7 +125,7 @@ public final class LogScope extends com.google.api.client.json.GenericJson {
    * Required. Names of one or more parent resources: projects/[PROJECT_ID]May alternatively be one
    * or more views:
    * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]A log scope
-   * can include a maximum of 50 projects and a maximum of 100 resources in total.
+   * can include a maximum of 5 projects and a maximum of 100 resources in total.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourceNames() {
@@ -136,7 +136,7 @@ public final class LogScope extends com.google.api.client.json.GenericJson {
    * Required. Names of one or more parent resources: projects/[PROJECT_ID]May alternatively be one
    * or more views:
    * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]A log scope
-   * can include a maximum of 50 projects and a maximum of 100 resources in total.
+   * can include a maximum of 5 projects and a maximum of 100 resources in total.
    * @param resourceNames resourceNames or {@code null} for none
    */
   public LogScope setResourceNames(java.util.List<java.lang.String> resourceNames) {

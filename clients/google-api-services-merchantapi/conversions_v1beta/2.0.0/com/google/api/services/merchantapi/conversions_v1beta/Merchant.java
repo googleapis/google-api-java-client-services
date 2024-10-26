@@ -964,17 +964,17 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** Required. List of fields being updated. */
+        /** Optional. List of fields being updated. */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Required. List of fields being updated.
+        /** Optional. List of fields being updated.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** Required. List of fields being updated. */
+        /** Optional. List of fields being updated. */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;

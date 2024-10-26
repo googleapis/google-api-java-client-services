@@ -38,7 +38,7 @@ public final class AddAccountService extends com.google.api.client.json.GenericJ
   private AccountAggregation accountAggregation;
 
   /**
-   * Optional. The provider of the service. Format: `accounts/{account}`
+   * Required. The provider of the service. Format: `accounts/{account}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class AddAccountService extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The provider of the service. Format: `accounts/{account}`
+   * Required. The provider of the service. Format: `accounts/{account}`
    * @return value or {@code null} for none
    */
   public java.lang.String getProvider() {
@@ -72,7 +72,7 @@ public final class AddAccountService extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The provider of the service. Format: `accounts/{account}`
+   * Required. The provider of the service. Format: `accounts/{account}`
    * @param provider provider or {@code null} for none
    */
   public AddAccountService setProvider(java.lang.String provider) {

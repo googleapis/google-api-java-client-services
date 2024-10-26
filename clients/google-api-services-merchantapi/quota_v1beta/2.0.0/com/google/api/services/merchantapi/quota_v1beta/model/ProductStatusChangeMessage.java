@@ -57,6 +57,13 @@ public final class ProductStatusChangeMessage extends com.google.api.client.json
   }
 
   /**
+   * The product expiration time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String expirationTime;
+
+  /**
    * The account that manages the merchant's account. can be the same as merchant id if it is
    * standalone account. Format : `accounts/{service_provider_id}`
    * The value may be {@code null}.
@@ -133,6 +140,23 @@ public final class ProductStatusChangeMessage extends com.google.api.client.json
    */
   public ProductStatusChangeMessage setChanges(java.util.List<ProductChange> changes) {
     this.changes = changes;
+    return this;
+  }
+
+  /**
+   * The product expiration time.
+   * @return value or {@code null} for none
+   */
+  public String getExpirationTime() {
+    return expirationTime;
+  }
+
+  /**
+   * The product expiration time.
+   * @param expirationTime expirationTime or {@code null} for none
+   */
+  public ProductStatusChangeMessage setExpirationTime(String expirationTime) {
+    this.expirationTime = expirationTime;
     return this;
   }
 

@@ -68,6 +68,14 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   private LocalInventoryDataSource localInventoryDataSource;
 
   /**
+   * Required. The [merchant review](https://support.google.com/merchants/answer/7045996) data
+   * source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MerchantReviewDataSource merchantReviewDataSource;
+
+  /**
    * Identifier. The name of the data source. Format:
    * `{datasource.name=accounts/{account}/dataSources/{datasource}}`
    * The value may be {@code null}.
@@ -82,6 +90,14 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private PrimaryProductDataSource primaryProductDataSource;
+
+  /**
+   * Required. The [product review](https://support.google.com/merchants/answer/7045996) data
+   * source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProductReviewDataSource productReviewDataSource;
 
   /**
    * Required. The [promotion](https://support.google.com/merchants/answer/2906014) data source.
@@ -196,6 +212,25 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Required. The [merchant review](https://support.google.com/merchants/answer/7045996) data
+   * source.
+   * @return value or {@code null} for none
+   */
+  public MerchantReviewDataSource getMerchantReviewDataSource() {
+    return merchantReviewDataSource;
+  }
+
+  /**
+   * Required. The [merchant review](https://support.google.com/merchants/answer/7045996) data
+   * source.
+   * @param merchantReviewDataSource merchantReviewDataSource or {@code null} for none
+   */
+  public DataSource setMerchantReviewDataSource(MerchantReviewDataSource merchantReviewDataSource) {
+    this.merchantReviewDataSource = merchantReviewDataSource;
+    return this;
+  }
+
+  /**
    * Identifier. The name of the data source. Format:
    * `{datasource.name=accounts/{account}/dataSources/{datasource}}`
    * @return value or {@code null} for none
@@ -230,6 +265,25 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
    */
   public DataSource setPrimaryProductDataSource(PrimaryProductDataSource primaryProductDataSource) {
     this.primaryProductDataSource = primaryProductDataSource;
+    return this;
+  }
+
+  /**
+   * Required. The [product review](https://support.google.com/merchants/answer/7045996) data
+   * source.
+   * @return value or {@code null} for none
+   */
+  public ProductReviewDataSource getProductReviewDataSource() {
+    return productReviewDataSource;
+  }
+
+  /**
+   * Required. The [product review](https://support.google.com/merchants/answer/7045996) data
+   * source.
+   * @param productReviewDataSource productReviewDataSource or {@code null} for none
+   */
+  public DataSource setProductReviewDataSource(ProductReviewDataSource productReviewDataSource) {
+    this.productReviewDataSource = productReviewDataSource;
     return this;
   }
 

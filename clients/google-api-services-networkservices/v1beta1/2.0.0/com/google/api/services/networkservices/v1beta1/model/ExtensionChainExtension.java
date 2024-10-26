@@ -31,7 +31,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. The `:authority` header in the gRPC request sent from Envoy to the extension service.
-   * Required for Callout extensions.
+   * Required for Callout extensions. This field is not supported for plugin extensions and must not
+   * be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,6 +60,19 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   private java.util.List<java.lang.String> forwardHeaders;
 
   /**
+   * Optional. The metadata provided here is included as part of the `metadata_context` (of type
+   * `google.protobuf.Struct`) in the `ProcessingRequest` message sent to the extension server. The
+   * metadata is available under the namespace `com.google....`. For example:
+   * `com.google.lb_traffic_extension.lbtrafficextension1.chain1.ext1`. The following variables are
+   * supported in the metadata: `{forwarding_rule_id}` - substituted with the forwarding rule's
+   * fully qualified resource name. This field is not supported for plugin extensions and must not
+   * be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> metadata;
+
+  /**
    * Required. The name for this extension. The name is logged as part of the HTTP request logs. The
    * name must conform with RFC-1034, is restricted to lower-cased letters, numbers and hyphens, and
    * can have a maximum length of 63 characters. Additionally, the first character must be a letter
@@ -75,7 +89,11 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    * service](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices) in the
    * format: `https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/backendServi
    * ces/{backendService}` or `https://www.googleapis.com/compute/v1/projects/{project}/global/backe
-   * ndServices/{backendService}`.
+   * ndServices/{backendService}`. To configure a plugin extension, this must be a reference to a
+   * [wasm plugin](https://cloud.google.com/service-
+   * extensions/docs/reference/rest/v1beta1/projects.locations.wasmPlugins) in the format:
+   * `projects/{project}/locations/{location}/wasmPlugins/{plugin}` or `//networkservices.googleapis
+   * .com/projects/{project}/locations/{location}/wasmPlugins/{wasmPlugin}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +110,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. Specifies the timeout for each individual message on the stream. The timeout must be
-   * between 10-1000 milliseconds. Required for Callout extensions.
+   * between 10-1000 milliseconds. Required for callout extensions. This field is not supported for
+   * plugin extensions and must not be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +119,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. The `:authority` header in the gRPC request sent from Envoy to the extension service.
-   * Required for Callout extensions.
+   * Required for Callout extensions. This field is not supported for plugin extensions and must not
+   * be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthority() {
@@ -109,7 +129,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. The `:authority` header in the gRPC request sent from Envoy to the extension service.
-   * Required for Callout extensions.
+   * Required for Callout extensions. This field is not supported for plugin extensions and must not
+   * be set.
    * @param authority authority or {@code null} for none
    */
   public ExtensionChainExtension setAuthority(java.lang.String authority) {
@@ -166,6 +187,35 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   }
 
   /**
+   * Optional. The metadata provided here is included as part of the `metadata_context` (of type
+   * `google.protobuf.Struct`) in the `ProcessingRequest` message sent to the extension server. The
+   * metadata is available under the namespace `com.google....`. For example:
+   * `com.google.lb_traffic_extension.lbtrafficextension1.chain1.ext1`. The following variables are
+   * supported in the metadata: `{forwarding_rule_id}` - substituted with the forwarding rule's
+   * fully qualified resource name. This field is not supported for plugin extensions and must not
+   * be set.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Optional. The metadata provided here is included as part of the `metadata_context` (of type
+   * `google.protobuf.Struct`) in the `ProcessingRequest` message sent to the extension server. The
+   * metadata is available under the namespace `com.google....`. For example:
+   * `com.google.lb_traffic_extension.lbtrafficextension1.chain1.ext1`. The following variables are
+   * supported in the metadata: `{forwarding_rule_id}` - substituted with the forwarding rule's
+   * fully qualified resource name. This field is not supported for plugin extensions and must not
+   * be set.
+   * @param metadata metadata or {@code null} for none
+   */
+  public ExtensionChainExtension setMetadata(java.util.Map<String, java.lang.Object> metadata) {
+    this.metadata = metadata;
+    return this;
+  }
+
+  /**
    * Required. The name for this extension. The name is logged as part of the HTTP request logs. The
    * name must conform with RFC-1034, is restricted to lower-cased letters, numbers and hyphens, and
    * can have a maximum length of 63 characters. Additionally, the first character must be a letter
@@ -195,7 +245,11 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    * service](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices) in the
    * format: `https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/backendServi
    * ces/{backendService}` or `https://www.googleapis.com/compute/v1/projects/{project}/global/backe
-   * ndServices/{backendService}`.
+   * ndServices/{backendService}`. To configure a plugin extension, this must be a reference to a
+   * [wasm plugin](https://cloud.google.com/service-
+   * extensions/docs/reference/rest/v1beta1/projects.locations.wasmPlugins) in the format:
+   * `projects/{project}/locations/{location}/wasmPlugins/{plugin}` or `//networkservices.googleapis
+   * .com/projects/{project}/locations/{location}/wasmPlugins/{wasmPlugin}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -209,7 +263,11 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    * service](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices) in the
    * format: `https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/backendServi
    * ces/{backendService}` or `https://www.googleapis.com/compute/v1/projects/{project}/global/backe
-   * ndServices/{backendService}`.
+   * ndServices/{backendService}`. To configure a plugin extension, this must be a reference to a
+   * [wasm plugin](https://cloud.google.com/service-
+   * extensions/docs/reference/rest/v1beta1/projects.locations.wasmPlugins) in the format:
+   * `projects/{project}/locations/{location}/wasmPlugins/{plugin}` or `//networkservices.googleapis
+   * .com/projects/{project}/locations/{location}/wasmPlugins/{wasmPlugin}`.
    * @param service service or {@code null} for none
    */
   public ExtensionChainExtension setService(java.lang.String service) {
@@ -240,7 +298,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. Specifies the timeout for each individual message on the stream. The timeout must be
-   * between 10-1000 milliseconds. Required for Callout extensions.
+   * between 10-1000 milliseconds. Required for callout extensions. This field is not supported for
+   * plugin extensions and must not be set.
    * @return value or {@code null} for none
    */
   public String getTimeout() {
@@ -249,7 +308,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. Specifies the timeout for each individual message on the stream. The timeout must be
-   * between 10-1000 milliseconds. Required for Callout extensions.
+   * between 10-1000 milliseconds. Required for callout extensions. This field is not supported for
+   * plugin extensions and must not be set.
    * @param timeout timeout or {@code null} for none
    */
   public ExtensionChainExtension setTimeout(String timeout) {

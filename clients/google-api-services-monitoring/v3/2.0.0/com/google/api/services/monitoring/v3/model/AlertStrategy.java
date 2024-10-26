@@ -31,7 +31,7 @@ package com.google.api.services.monitoring.v3.model;
 public final class AlertStrategy extends com.google.api.client.json.GenericJson {
 
   /**
-   * If an alert policy that was active has no data for this long, any open incidents will close
+   * If an alerting policy that was active has no data for this long, any open incidents will close
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,15 +45,23 @@ public final class AlertStrategy extends com.google.api.client.json.GenericJson 
   private java.util.List<NotificationChannelStrategy> notificationChannelStrategy;
 
   /**
-   * Required for log-based alert policies, i.e. policies with a LogMatch condition.This limit is
-   * not implemented for alert policies that do not have a LogMatch condition.
+   * For log-based alert policies, the notification prompts is always OPENED. For non log-based
+   * alert policies, the notification prompts can be OPENED or OPENED, CLOSED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> notificationPrompts;
+
+  /**
+   * Required for log-based alerting policies, i.e. policies with a LogMatch condition.This limit is
+   * not implemented for alerting policies that do not have a LogMatch condition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private NotificationRateLimit notificationRateLimit;
 
   /**
-   * If an alert policy that was active has no data for this long, any open incidents will close
+   * If an alerting policy that was active has no data for this long, any open incidents will close
    * @return value or {@code null} for none
    */
   public String getAutoClose() {
@@ -61,7 +69,7 @@ public final class AlertStrategy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * If an alert policy that was active has no data for this long, any open incidents will close
+   * If an alerting policy that was active has no data for this long, any open incidents will close
    * @param autoClose autoClose or {@code null} for none
    */
   public AlertStrategy setAutoClose(String autoClose) {
@@ -87,8 +95,27 @@ public final class AlertStrategy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required for log-based alert policies, i.e. policies with a LogMatch condition.This limit is
-   * not implemented for alert policies that do not have a LogMatch condition.
+   * For log-based alert policies, the notification prompts is always OPENED. For non log-based
+   * alert policies, the notification prompts can be OPENED or OPENED, CLOSED.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getNotificationPrompts() {
+    return notificationPrompts;
+  }
+
+  /**
+   * For log-based alert policies, the notification prompts is always OPENED. For non log-based
+   * alert policies, the notification prompts can be OPENED or OPENED, CLOSED.
+   * @param notificationPrompts notificationPrompts or {@code null} for none
+   */
+  public AlertStrategy setNotificationPrompts(java.util.List<java.lang.String> notificationPrompts) {
+    this.notificationPrompts = notificationPrompts;
+    return this;
+  }
+
+  /**
+   * Required for log-based alerting policies, i.e. policies with a LogMatch condition.This limit is
+   * not implemented for alerting policies that do not have a LogMatch condition.
    * @return value or {@code null} for none
    */
   public NotificationRateLimit getNotificationRateLimit() {
@@ -96,8 +123,8 @@ public final class AlertStrategy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required for log-based alert policies, i.e. policies with a LogMatch condition.This limit is
-   * not implemented for alert policies that do not have a LogMatch condition.
+   * Required for log-based alerting policies, i.e. policies with a LogMatch condition.This limit is
+   * not implemented for alerting policies that do not have a LogMatch condition.
    * @param notificationRateLimit notificationRateLimit or {@code null} for none
    */
   public AlertStrategy setNotificationRateLimit(NotificationRateLimit notificationRateLimit) {

@@ -17,7 +17,7 @@
 package com.google.api.services.monitoring.v3.model;
 
 /**
- * A condition that allows alert policies to be defined using GoogleSQL. SQL conditions examine a
+ * A condition that allows alerting policies to be defined using GoogleSQL. SQL conditions examine a
  * sliding window of logs using GoogleSQL. Alert policies with SQL conditions may incur additional
  * billing.
  *
@@ -63,9 +63,9 @@ public final class SqlCondition extends com.google.api.client.json.GenericJson {
    * Required. The Log Analytics SQL query to run, as a string. The query must conform to the
    * required shape. Specifically, the query must not try to filter the input by time. A filter will
    * automatically be applied to filter the input so that the query receives all rows received since
-   * the last time the query was run.E.g. Extract all log entries containing an HTTP request:SELECT
-   * timestamp, log_name, severity, http_request, resource, labels FROM my-
-   * project.global._Default._AllLogs WHERE http_request IS NOT NULL
+   * the last time the query was run.For example, the following query extracts all log entries
+   * containing an HTTP request:SELECT timestamp, log_name, severity, http_request, resource, labels
+   * FROM my-project.global._Default._AllLogs WHERE http_request IS NOT NULL
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,9 +150,9 @@ public final class SqlCondition extends com.google.api.client.json.GenericJson {
    * Required. The Log Analytics SQL query to run, as a string. The query must conform to the
    * required shape. Specifically, the query must not try to filter the input by time. A filter will
    * automatically be applied to filter the input so that the query receives all rows received since
-   * the last time the query was run.E.g. Extract all log entries containing an HTTP request:SELECT
-   * timestamp, log_name, severity, http_request, resource, labels FROM my-
-   * project.global._Default._AllLogs WHERE http_request IS NOT NULL
+   * the last time the query was run.For example, the following query extracts all log entries
+   * containing an HTTP request:SELECT timestamp, log_name, severity, http_request, resource, labels
+   * FROM my-project.global._Default._AllLogs WHERE http_request IS NOT NULL
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -163,9 +163,9 @@ public final class SqlCondition extends com.google.api.client.json.GenericJson {
    * Required. The Log Analytics SQL query to run, as a string. The query must conform to the
    * required shape. Specifically, the query must not try to filter the input by time. A filter will
    * automatically be applied to filter the input so that the query receives all rows received since
-   * the last time the query was run.E.g. Extract all log entries containing an HTTP request:SELECT
-   * timestamp, log_name, severity, http_request, resource, labels FROM my-
-   * project.global._Default._AllLogs WHERE http_request IS NOT NULL
+   * the last time the query was run.For example, the following query extracts all log entries
+   * containing an HTTP request:SELECT timestamp, log_name, severity, http_request, resource, labels
+   * FROM my-project.global._Default._AllLogs WHERE http_request IS NOT NULL
    * @param query query or {@code null} for none
    */
   public SqlCondition setQuery(java.lang.String query) {

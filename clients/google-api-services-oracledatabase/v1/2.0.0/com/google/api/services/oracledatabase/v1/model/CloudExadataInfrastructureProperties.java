@@ -61,7 +61,7 @@ public final class CloudExadataInfrastructureProperties extends com.google.api.c
   private java.lang.Integer computeCount;
 
   /**
-   * Optional. The number of enabled CPU cores.
+   * Output only. The number of enabled CPU cores.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class CloudExadataInfrastructureProperties extends com.google.api.c
   private java.lang.Double dataStorageSizeTb;
 
   /**
-   * Optional. The local node storage allocated in GBs.
+   * Output only. The local node storage allocated in GBs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,7 +131,7 @@ public final class CloudExadataInfrastructureProperties extends com.google.api.c
   private java.lang.Integer maxMemoryGb;
 
   /**
-   * Optional. The memory allocated in GBs.
+   * Output only. The memory allocated in GBs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -299,7 +299,7 @@ public final class CloudExadataInfrastructureProperties extends com.google.api.c
   }
 
   /**
-   * Optional. The number of enabled CPU cores.
+   * Output only. The number of enabled CPU cores.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCpuCount() {
@@ -307,7 +307,7 @@ public final class CloudExadataInfrastructureProperties extends com.google.api.c
   }
 
   /**
-   * Optional. The number of enabled CPU cores.
+   * Output only. The number of enabled CPU cores.
    * @param cpuCount cpuCount or {@code null} for none
    */
   public CloudExadataInfrastructureProperties setCpuCount(java.lang.Integer cpuCount) {
@@ -350,7 +350,7 @@ public final class CloudExadataInfrastructureProperties extends com.google.api.c
   }
 
   /**
-   * Optional. The local node storage allocated in GBs.
+   * Output only. The local node storage allocated in GBs.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDbNodeStorageSizeGb() {
@@ -358,7 +358,7 @@ public final class CloudExadataInfrastructureProperties extends com.google.api.c
   }
 
   /**
-   * Optional. The local node storage allocated in GBs.
+   * Output only. The local node storage allocated in GBs.
    * @param dbNodeStorageSizeGb dbNodeStorageSizeGb or {@code null} for none
    */
   public CloudExadataInfrastructureProperties setDbNodeStorageSizeGb(java.lang.Integer dbNodeStorageSizeGb) {
@@ -469,7 +469,7 @@ public final class CloudExadataInfrastructureProperties extends com.google.api.c
   }
 
   /**
-   * Optional. The memory allocated in GBs.
+   * Output only. The memory allocated in GBs.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMemorySizeGb() {
@@ -477,7 +477,7 @@ public final class CloudExadataInfrastructureProperties extends com.google.api.c
   }
 
   /**
-   * Optional. The memory allocated in GBs.
+   * Output only. The memory allocated in GBs.
    * @param memorySizeGb memorySizeGb or {@code null} for none
    */
   public CloudExadataInfrastructureProperties setMemorySizeGb(java.lang.Integer memorySizeGb) {

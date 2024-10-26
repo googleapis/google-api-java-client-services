@@ -34,7 +34,8 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettings extends com.google.
    * for your agent, you can tune the machine learning classification threshold. If the returned
    * score value is less than the threshold value, then a no-match event will be triggered. The
    * score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0,
-   * the default of 0.3 is used.
+   * the default of 0.3 is used. You can set a separate classification threshold for the flow in
+   * each language enabled for the agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +60,8 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettings extends com.google.
    * for your agent, you can tune the machine learning classification threshold. If the returned
    * score value is less than the threshold value, then a no-match event will be triggered. The
    * score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0,
-   * the default of 0.3 is used.
+   * the default of 0.3 is used. You can set a separate classification threshold for the flow in
+   * each language enabled for the agent.
    * @return value or {@code null} for none
    */
   public java.lang.Float getClassificationThreshold() {
@@ -71,7 +73,8 @@ public final class GoogleCloudDialogflowCxV3beta1NluSettings extends com.google.
    * for your agent, you can tune the machine learning classification threshold. If the returned
    * score value is less than the threshold value, then a no-match event will be triggered. The
    * score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0,
-   * the default of 0.3 is used.
+   * the default of 0.3 is used. You can set a separate classification threshold for the flow in
+   * each language enabled for the agent.
    * @param classificationThreshold classificationThreshold or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1NluSettings setClassificationThreshold(java.lang.Float classificationThreshold) {

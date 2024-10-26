@@ -38,7 +38,8 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageText extends com.goog
   private java.lang.Boolean allowPlaybackInterruption;
 
   /**
-   * Required. A collection of text responses.
+   * Required. A collection of text response variants. If multiple variants are defined, only one
+   * text response variant is returned at runtime.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +65,8 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageText extends com.goog
   }
 
   /**
-   * Required. A collection of text responses.
+   * Required. A collection of text response variants. If multiple variants are defined, only one
+   * text response variant is returned at runtime.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getText() {
@@ -72,7 +74,8 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageText extends com.goog
   }
 
   /**
-   * Required. A collection of text responses.
+   * Required. A collection of text response variants. If multiple variants are defined, only one
+   * text response variant is returned at runtime.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ResponseMessageText setText(java.util.List<java.lang.String> text) {

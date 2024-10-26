@@ -58,6 +58,23 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   private java.lang.String avatarUri;
 
   /**
+   * Optional. The BigQuery export settings for this agent. The conversation data will be exported
+   * to BigQuery tables if it is enabled. By default, BigQuery export settings will not be exported
+   * with agent. You need to set include_bigquery_export_settings to include it in the exported
+   * agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1BigQueryExportSettings bigqueryExportSettings;
+
+  /**
+   * Optional. Settings for custom client certificates.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1AgentClientCertificateSettings clientCertificateSettings;
+
+  /**
    * Required. Immutable. The default language of the agent as a language tag. See [Language
    * Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the
    * currently supported language codes. This field cannot be set by the Agents.UpdateAgent method.
@@ -252,6 +269,46 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
    */
   public GoogleCloudDialogflowCxV3beta1Agent setAvatarUri(java.lang.String avatarUri) {
     this.avatarUri = avatarUri;
+    return this;
+  }
+
+  /**
+   * Optional. The BigQuery export settings for this agent. The conversation data will be exported
+   * to BigQuery tables if it is enabled. By default, BigQuery export settings will not be exported
+   * with agent. You need to set include_bigquery_export_settings to include it in the exported
+   * agent.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1BigQueryExportSettings getBigqueryExportSettings() {
+    return bigqueryExportSettings;
+  }
+
+  /**
+   * Optional. The BigQuery export settings for this agent. The conversation data will be exported
+   * to BigQuery tables if it is enabled. By default, BigQuery export settings will not be exported
+   * with agent. You need to set include_bigquery_export_settings to include it in the exported
+   * agent.
+   * @param bigqueryExportSettings bigqueryExportSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Agent setBigqueryExportSettings(GoogleCloudDialogflowCxV3beta1BigQueryExportSettings bigqueryExportSettings) {
+    this.bigqueryExportSettings = bigqueryExportSettings;
+    return this;
+  }
+
+  /**
+   * Optional. Settings for custom client certificates.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1AgentClientCertificateSettings getClientCertificateSettings() {
+    return clientCertificateSettings;
+  }
+
+  /**
+   * Optional. Settings for custom client certificates.
+   * @param clientCertificateSettings clientCertificateSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Agent setClientCertificateSettings(GoogleCloudDialogflowCxV3beta1AgentClientCertificateSettings clientCertificateSettings) {
+    this.clientCertificateSettings = clientCertificateSettings;
     return this;
   }
 

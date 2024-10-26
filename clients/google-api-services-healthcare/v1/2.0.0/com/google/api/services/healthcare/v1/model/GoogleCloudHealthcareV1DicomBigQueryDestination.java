@@ -30,8 +30,8 @@ package com.google.api.services.healthcare.v1.model;
 public final class GoogleCloudHealthcareV1DicomBigQueryDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * Use `write_disposition` instead. If `write_disposition` is specified, this parameter is
-   * ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is
+   * Optional. Use `write_disposition` instead. If `write_disposition` is specified, this parameter
+   * is ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is
    * equivalent to write_disposition=WRITE_TRUNCATE.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class GoogleCloudHealthcareV1DicomBigQueryDestination extends com.g
   private java.lang.Boolean force;
 
   /**
-   * BigQuery URI to a table, up to 2000 characters long, in the format
+   * Optional. BigQuery URI to a table, up to 2000 characters long, in the format
    * `bq://projectId.bqDatasetId.tableId`
    * The value may be {@code null}.
    */
@@ -47,16 +47,16 @@ public final class GoogleCloudHealthcareV1DicomBigQueryDestination extends com.g
   private java.lang.String tableUri;
 
   /**
-   * Determines whether the existing table in the destination is to be overwritten or appended to.
-   * If a write_disposition is specified, the `force` parameter is ignored.
+   * Optional. Determines whether the existing table in the destination is to be overwritten or
+   * appended to. If a write_disposition is specified, the `force` parameter is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String writeDisposition;
 
   /**
-   * Use `write_disposition` instead. If `write_disposition` is specified, this parameter is
-   * ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is
+   * Optional. Use `write_disposition` instead. If `write_disposition` is specified, this parameter
+   * is ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is
    * equivalent to write_disposition=WRITE_TRUNCATE.
    * @return value or {@code null} for none
    */
@@ -65,8 +65,8 @@ public final class GoogleCloudHealthcareV1DicomBigQueryDestination extends com.g
   }
 
   /**
-   * Use `write_disposition` instead. If `write_disposition` is specified, this parameter is
-   * ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is
+   * Optional. Use `write_disposition` instead. If `write_disposition` is specified, this parameter
+   * is ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is
    * equivalent to write_disposition=WRITE_TRUNCATE.
    * @param force force or {@code null} for none
    */
@@ -76,7 +76,7 @@ public final class GoogleCloudHealthcareV1DicomBigQueryDestination extends com.g
   }
 
   /**
-   * BigQuery URI to a table, up to 2000 characters long, in the format
+   * Optional. BigQuery URI to a table, up to 2000 characters long, in the format
    * `bq://projectId.bqDatasetId.tableId`
    * @return value or {@code null} for none
    */
@@ -85,7 +85,7 @@ public final class GoogleCloudHealthcareV1DicomBigQueryDestination extends com.g
   }
 
   /**
-   * BigQuery URI to a table, up to 2000 characters long, in the format
+   * Optional. BigQuery URI to a table, up to 2000 characters long, in the format
    * `bq://projectId.bqDatasetId.tableId`
    * @param tableUri tableUri or {@code null} for none
    */
@@ -95,8 +95,8 @@ public final class GoogleCloudHealthcareV1DicomBigQueryDestination extends com.g
   }
 
   /**
-   * Determines whether the existing table in the destination is to be overwritten or appended to.
-   * If a write_disposition is specified, the `force` parameter is ignored.
+   * Optional. Determines whether the existing table in the destination is to be overwritten or
+   * appended to. If a write_disposition is specified, the `force` parameter is ignored.
    * @return value or {@code null} for none
    */
   public java.lang.String getWriteDisposition() {
@@ -104,8 +104,8 @@ public final class GoogleCloudHealthcareV1DicomBigQueryDestination extends com.g
   }
 
   /**
-   * Determines whether the existing table in the destination is to be overwritten or appended to.
-   * If a write_disposition is specified, the `force` parameter is ignored.
+   * Optional. Determines whether the existing table in the destination is to be overwritten or
+   * appended to. If a write_disposition is specified, the `force` parameter is ignored.
    * @param writeDisposition writeDisposition or {@code null} for none
    */
   public GoogleCloudHealthcareV1DicomBigQueryDestination setWriteDisposition(java.lang.String writeDisposition) {

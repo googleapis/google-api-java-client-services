@@ -30,8 +30,8 @@ package com.google.api.services.healthcare.v1.model;
 public final class ValidationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether to disable FHIRPath validation for incoming resources. The default value is false. Set
-   * this to true to disable checking incoming resources for conformance against FHIRPath
+   * Optional. Whether to disable FHIRPath validation for incoming resources. The default value is
+   * false. Set this to true to disable checking incoming resources for conformance against FHIRPath
    * requirement defined in the FHIR specification. This property only affects resource types that
    * do not have profiles configured for them, any rules in enabled implementation guides will still
    * be enforced.
@@ -41,17 +41,17 @@ public final class ValidationConfig extends com.google.api.client.json.GenericJs
   private java.lang.Boolean disableFhirpathValidation;
 
   /**
-   * Whether to disable profile validation for this FHIR store. The default value is false. Set this
-   * to true to disable checking incoming resources for conformance against structure definitions in
-   * this FHIR store.
+   * Optional. Whether to disable profile validation for this FHIR store. The default value is
+   * false. Set this to true to disable checking incoming resources for conformance against
+   * structure definitions in this FHIR store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disableProfileValidation;
 
   /**
-   * Whether to disable reference type validation for incoming resources. The default value is
-   * false. Set this to true to disable checking incoming resources for conformance against
+   * Optional. Whether to disable reference type validation for incoming resources. The default
+   * value is false. Set this to true to disable checking incoming resources for conformance against
    * reference type requirement defined in the FHIR specification. This property only affects
    * resource types that do not have profiles configured for them, any rules in enabled
    * implementation guides will still be enforced.
@@ -61,19 +61,19 @@ public final class ValidationConfig extends com.google.api.client.json.GenericJs
   private java.lang.Boolean disableReferenceTypeValidation;
 
   /**
-   * Whether to disable required fields validation for incoming resources. The default value is
-   * false. Set this to true to disable checking incoming resources for conformance against required
-   * fields requirement defined in the FHIR specification. This property only affects resource types
-   * that do not have profiles configured for them, any rules in enabled implementation guides will
-   * still be enforced.
+   * Optional. Whether to disable required fields validation for incoming resources. The default
+   * value is false. Set this to true to disable checking incoming resources for conformance against
+   * required fields requirement defined in the FHIR specification. This property only affects
+   * resource types that do not have profiles configured for them, any rules in enabled
+   * implementation guides will still be enforced.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disableRequiredFieldValidation;
 
   /**
-   * A list of implementation guide URLs in this FHIR store that are used to configure the profiles
-   * to use for validation. For example, to use the US Core profiles for validation, set
+   * Optional. A list of implementation guide URLs in this FHIR store that are used to configure the
+   * profiles to use for validation. For example, to use the US Core profiles for validation, set
    * `enabled_implementation_guides` to `["http://hl7.org/fhir/us/core/ImplementationGuide/ig"]`. If
    * `enabled_implementation_guides` is empty or omitted, then incoming resources are only required
    * to conform to the base FHIR profiles. Otherwise, a resource must conform to at least one
@@ -88,8 +88,8 @@ public final class ValidationConfig extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> enabledImplementationGuides;
 
   /**
-   * Whether to disable FHIRPath validation for incoming resources. The default value is false. Set
-   * this to true to disable checking incoming resources for conformance against FHIRPath
+   * Optional. Whether to disable FHIRPath validation for incoming resources. The default value is
+   * false. Set this to true to disable checking incoming resources for conformance against FHIRPath
    * requirement defined in the FHIR specification. This property only affects resource types that
    * do not have profiles configured for them, any rules in enabled implementation guides will still
    * be enforced.
@@ -100,8 +100,8 @@ public final class ValidationConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Whether to disable FHIRPath validation for incoming resources. The default value is false. Set
-   * this to true to disable checking incoming resources for conformance against FHIRPath
+   * Optional. Whether to disable FHIRPath validation for incoming resources. The default value is
+   * false. Set this to true to disable checking incoming resources for conformance against FHIRPath
    * requirement defined in the FHIR specification. This property only affects resource types that
    * do not have profiles configured for them, any rules in enabled implementation guides will still
    * be enforced.
@@ -113,9 +113,9 @@ public final class ValidationConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Whether to disable profile validation for this FHIR store. The default value is false. Set this
-   * to true to disable checking incoming resources for conformance against structure definitions in
-   * this FHIR store.
+   * Optional. Whether to disable profile validation for this FHIR store. The default value is
+   * false. Set this to true to disable checking incoming resources for conformance against
+   * structure definitions in this FHIR store.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableProfileValidation() {
@@ -123,9 +123,9 @@ public final class ValidationConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Whether to disable profile validation for this FHIR store. The default value is false. Set this
-   * to true to disable checking incoming resources for conformance against structure definitions in
-   * this FHIR store.
+   * Optional. Whether to disable profile validation for this FHIR store. The default value is
+   * false. Set this to true to disable checking incoming resources for conformance against
+   * structure definitions in this FHIR store.
    * @param disableProfileValidation disableProfileValidation or {@code null} for none
    */
   public ValidationConfig setDisableProfileValidation(java.lang.Boolean disableProfileValidation) {
@@ -134,8 +134,8 @@ public final class ValidationConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Whether to disable reference type validation for incoming resources. The default value is
-   * false. Set this to true to disable checking incoming resources for conformance against
+   * Optional. Whether to disable reference type validation for incoming resources. The default
+   * value is false. Set this to true to disable checking incoming resources for conformance against
    * reference type requirement defined in the FHIR specification. This property only affects
    * resource types that do not have profiles configured for them, any rules in enabled
    * implementation guides will still be enforced.
@@ -146,8 +146,8 @@ public final class ValidationConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Whether to disable reference type validation for incoming resources. The default value is
-   * false. Set this to true to disable checking incoming resources for conformance against
+   * Optional. Whether to disable reference type validation for incoming resources. The default
+   * value is false. Set this to true to disable checking incoming resources for conformance against
    * reference type requirement defined in the FHIR specification. This property only affects
    * resource types that do not have profiles configured for them, any rules in enabled
    * implementation guides will still be enforced.
@@ -159,11 +159,11 @@ public final class ValidationConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Whether to disable required fields validation for incoming resources. The default value is
-   * false. Set this to true to disable checking incoming resources for conformance against required
-   * fields requirement defined in the FHIR specification. This property only affects resource types
-   * that do not have profiles configured for them, any rules in enabled implementation guides will
-   * still be enforced.
+   * Optional. Whether to disable required fields validation for incoming resources. The default
+   * value is false. Set this to true to disable checking incoming resources for conformance against
+   * required fields requirement defined in the FHIR specification. This property only affects
+   * resource types that do not have profiles configured for them, any rules in enabled
+   * implementation guides will still be enforced.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableRequiredFieldValidation() {
@@ -171,11 +171,11 @@ public final class ValidationConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Whether to disable required fields validation for incoming resources. The default value is
-   * false. Set this to true to disable checking incoming resources for conformance against required
-   * fields requirement defined in the FHIR specification. This property only affects resource types
-   * that do not have profiles configured for them, any rules in enabled implementation guides will
-   * still be enforced.
+   * Optional. Whether to disable required fields validation for incoming resources. The default
+   * value is false. Set this to true to disable checking incoming resources for conformance against
+   * required fields requirement defined in the FHIR specification. This property only affects
+   * resource types that do not have profiles configured for them, any rules in enabled
+   * implementation guides will still be enforced.
    * @param disableRequiredFieldValidation disableRequiredFieldValidation or {@code null} for none
    */
   public ValidationConfig setDisableRequiredFieldValidation(java.lang.Boolean disableRequiredFieldValidation) {
@@ -184,8 +184,8 @@ public final class ValidationConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A list of implementation guide URLs in this FHIR store that are used to configure the profiles
-   * to use for validation. For example, to use the US Core profiles for validation, set
+   * Optional. A list of implementation guide URLs in this FHIR store that are used to configure the
+   * profiles to use for validation. For example, to use the US Core profiles for validation, set
    * `enabled_implementation_guides` to `["http://hl7.org/fhir/us/core/ImplementationGuide/ig"]`. If
    * `enabled_implementation_guides` is empty or omitted, then incoming resources are only required
    * to conform to the base FHIR profiles. Otherwise, a resource must conform to at least one
@@ -201,8 +201,8 @@ public final class ValidationConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A list of implementation guide URLs in this FHIR store that are used to configure the profiles
-   * to use for validation. For example, to use the US Core profiles for validation, set
+   * Optional. A list of implementation guide URLs in this FHIR store that are used to configure the
+   * profiles to use for validation. For example, to use the US Core profiles for validation, set
    * `enabled_implementation_guides` to `["http://hl7.org/fhir/us/core/ImplementationGuide/ig"]`. If
    * `enabled_implementation_guides` is empty or omitted, then incoming resources are only required
    * to conform to the base FHIR profiles. Otherwise, a resource must conform to at least one

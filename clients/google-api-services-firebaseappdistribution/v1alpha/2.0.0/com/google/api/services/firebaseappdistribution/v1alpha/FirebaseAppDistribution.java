@@ -2499,6 +2499,28 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
               return this;
             }
 
+            /**
+             * Optional. The requested view on the returned ReleaseTests. Defaults to the basic
+             * view.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** Optional. The requested view on the returned ReleaseTests. Defaults to the basic view.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /**
+             * Optional. The requested view on the returned ReleaseTests. Defaults to the basic
+             * view.
+             */
+            public List setView(java.lang.String view) {
+              this.view = view;
+              return this;
+            }
+
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);

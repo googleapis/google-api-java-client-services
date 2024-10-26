@@ -87,7 +87,7 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ReservationBlockPhysicalTopology physicalHostTopology;
+  private ReservationBlockPhysicalTopology physicalTopology;
 
   /**
    * [Output Only] Maintenance information for this reservation block.
@@ -255,16 +255,16 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
    * [Output Only] The physical topology of the reservation block.
    * @return value or {@code null} for none
    */
-  public ReservationBlockPhysicalTopology getPhysicalHostTopology() {
-    return physicalHostTopology;
+  public ReservationBlockPhysicalTopology getPhysicalTopology() {
+    return physicalTopology;
   }
 
   /**
    * [Output Only] The physical topology of the reservation block.
-   * @param physicalHostTopology physicalHostTopology or {@code null} for none
+   * @param physicalTopology physicalTopology or {@code null} for none
    */
-  public ReservationBlock setPhysicalHostTopology(ReservationBlockPhysicalTopology physicalHostTopology) {
-    this.physicalHostTopology = physicalHostTopology;
+  public ReservationBlock setPhysicalTopology(ReservationBlockPhysicalTopology physicalTopology) {
+    this.physicalTopology = physicalTopology;
     return this;
   }
 

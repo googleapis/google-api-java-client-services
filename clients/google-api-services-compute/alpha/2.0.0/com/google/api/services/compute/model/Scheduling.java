@@ -183,6 +183,16 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.String provisioningModel;
 
   /**
+   * Timeout between GCE ACPI G2 Soft Off and ACPI G3 Mechanical Off during shutdown operation of
+   * VM. For Standard VMs values between 0s and 120s are allowed. For Spot and Preemptible VMs
+   * supported values are between 0s and 30s. If no value is specified for shutdownDuration, default
+   * values are 90s for Standard VMs and 30s for Spot/Preemptible VMs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Duration shutdownTimeout;
+
+  /**
    * Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If
    * specified, the instance termination action will be performed at the termination time.
    * The value may be {@code null}.
@@ -558,6 +568,29 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setProvisioningModel(java.lang.String provisioningModel) {
     this.provisioningModel = provisioningModel;
+    return this;
+  }
+
+  /**
+   * Timeout between GCE ACPI G2 Soft Off and ACPI G3 Mechanical Off during shutdown operation of
+   * VM. For Standard VMs values between 0s and 120s are allowed. For Spot and Preemptible VMs
+   * supported values are between 0s and 30s. If no value is specified for shutdownDuration, default
+   * values are 90s for Standard VMs and 30s for Spot/Preemptible VMs.
+   * @return value or {@code null} for none
+   */
+  public Duration getShutdownTimeout() {
+    return shutdownTimeout;
+  }
+
+  /**
+   * Timeout between GCE ACPI G2 Soft Off and ACPI G3 Mechanical Off during shutdown operation of
+   * VM. For Standard VMs values between 0s and 120s are allowed. For Spot and Preemptible VMs
+   * supported values are between 0s and 30s. If no value is specified for shutdownDuration, default
+   * values are 90s for Standard VMs and 30s for Spot/Preemptible VMs.
+   * @param shutdownTimeout shutdownTimeout or {@code null} for none
+   */
+  public Scheduling setShutdownTimeout(Duration shutdownTimeout) {
+    this.shutdownTimeout = shutdownTimeout;
     return this;
   }
 

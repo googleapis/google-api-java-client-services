@@ -179,7 +179,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.lang.String name;
 
   /**
-   * Named ports configured for the Instance Groups complementary to this Instance Group Manager.
+   * [Output Only] Named ports configured on the Instance Groups complementary to this Instance
+   * Group Manager.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -726,7 +727,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * Named ports configured for the Instance Groups complementary to this Instance Group Manager.
+   * [Output Only] Named ports configured on the Instance Groups complementary to this Instance
+   * Group Manager.
    * @return value or {@code null} for none
    */
   public java.util.List<NamedPort> getNamedPorts() {
@@ -734,7 +736,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * Named ports configured for the Instance Groups complementary to this Instance Group Manager.
+   * [Output Only] Named ports configured on the Instance Groups complementary to this Instance
+   * Group Manager.
    * @param namedPorts namedPorts or {@code null} for none
    */
   public InstanceGroupManager setNamedPorts(java.util.List<NamedPort> namedPorts) {

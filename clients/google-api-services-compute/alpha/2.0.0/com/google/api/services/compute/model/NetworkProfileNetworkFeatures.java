@@ -157,26 +157,26 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
   private java.lang.String allowVpn;
 
   /**
-   * Specifies which subnetwork purposes are supported.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> allowedSubnetPurposes;
-
-  /**
-   * Specifies which subnetwork stack types are supported.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> allowedSubnetStackTypes;
-
-  /**
    * If set, limits the interface types that the network supports. If empty, all interface types are
    * supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> interfaceTypes;
+
+  /**
+   * Specifies which subnetwork purposes are supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> subnetPurposes;
+
+  /**
+   * Specifies which subnetwork stack types are supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> subnetStackTypes;
 
   /**
    * Specifies which type of unicast is supported.
@@ -494,40 +494,6 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
   }
 
   /**
-   * Specifies which subnetwork purposes are supported.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getAllowedSubnetPurposes() {
-    return allowedSubnetPurposes;
-  }
-
-  /**
-   * Specifies which subnetwork purposes are supported.
-   * @param allowedSubnetPurposes allowedSubnetPurposes or {@code null} for none
-   */
-  public NetworkProfileNetworkFeatures setAllowedSubnetPurposes(java.util.List<java.lang.String> allowedSubnetPurposes) {
-    this.allowedSubnetPurposes = allowedSubnetPurposes;
-    return this;
-  }
-
-  /**
-   * Specifies which subnetwork stack types are supported.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getAllowedSubnetStackTypes() {
-    return allowedSubnetStackTypes;
-  }
-
-  /**
-   * Specifies which subnetwork stack types are supported.
-   * @param allowedSubnetStackTypes allowedSubnetStackTypes or {@code null} for none
-   */
-  public NetworkProfileNetworkFeatures setAllowedSubnetStackTypes(java.util.List<java.lang.String> allowedSubnetStackTypes) {
-    this.allowedSubnetStackTypes = allowedSubnetStackTypes;
-    return this;
-  }
-
-  /**
    * If set, limits the interface types that the network supports. If empty, all interface types are
    * supported.
    * @return value or {@code null} for none
@@ -543,6 +509,40 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
    */
   public NetworkProfileNetworkFeatures setInterfaceTypes(java.util.List<java.lang.String> interfaceTypes) {
     this.interfaceTypes = interfaceTypes;
+    return this;
+  }
+
+  /**
+   * Specifies which subnetwork purposes are supported.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSubnetPurposes() {
+    return subnetPurposes;
+  }
+
+  /**
+   * Specifies which subnetwork purposes are supported.
+   * @param subnetPurposes subnetPurposes or {@code null} for none
+   */
+  public NetworkProfileNetworkFeatures setSubnetPurposes(java.util.List<java.lang.String> subnetPurposes) {
+    this.subnetPurposes = subnetPurposes;
+    return this;
+  }
+
+  /**
+   * Specifies which subnetwork stack types are supported.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSubnetStackTypes() {
+    return subnetStackTypes;
+  }
+
+  /**
+   * Specifies which subnetwork stack types are supported.
+   * @param subnetStackTypes subnetStackTypes or {@code null} for none
+   */
+  public NetworkProfileNetworkFeatures setSubnetStackTypes(java.util.List<java.lang.String> subnetStackTypes) {
+    this.subnetStackTypes = subnetStackTypes;
     return this;
   }
 

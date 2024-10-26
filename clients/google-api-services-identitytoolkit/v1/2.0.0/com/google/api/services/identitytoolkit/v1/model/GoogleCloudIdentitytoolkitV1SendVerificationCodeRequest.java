@@ -39,6 +39,21 @@ public final class GoogleCloudIdentitytoolkitV1SendVerificationCodeRequest exten
   private GoogleCloudIdentitytoolkitV1AutoRetrievalInfo autoRetrievalInfo;
 
   /**
+   * Optional. The reCAPTCHA Enterprise token provided by the reCAPTCHA client-side integration.
+   * Required when reCAPTCHA enterprise is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String captchaResponse;
+
+  /**
+   * Optional. The client type, web, android or ios. Required when reCAPTCHA Enterprise is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clientType;
+
+  /**
    * Receipt of successful iOS app token validation. At least one of (`ios_receipt` and
    * `ios_secret`), `recaptcha_token`, or `safety_net_token` must be specified to verify the
    * verification code is being sent on behalf of a real app and not an emulator. This should come
@@ -89,6 +104,13 @@ public final class GoogleCloudIdentitytoolkitV1SendVerificationCodeRequest exten
   private java.lang.String recaptchaToken;
 
   /**
+   * Optional. The reCAPTCHA version of the reCAPTCHA token in the captcha_response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String recaptchaVersion;
+
+  /**
    * Android only. Used to assert application identity in place of a recaptcha token. At least one
    * of (`ios_receipt` and `ios_secret`), `recaptcha_token`, or `safety_net_token` must be specified
    * to verify the verification code is being sent on behalf of a real app and not an emulator. A
@@ -121,6 +143,42 @@ public final class GoogleCloudIdentitytoolkitV1SendVerificationCodeRequest exten
    */
   public GoogleCloudIdentitytoolkitV1SendVerificationCodeRequest setAutoRetrievalInfo(GoogleCloudIdentitytoolkitV1AutoRetrievalInfo autoRetrievalInfo) {
     this.autoRetrievalInfo = autoRetrievalInfo;
+    return this;
+  }
+
+  /**
+   * Optional. The reCAPTCHA Enterprise token provided by the reCAPTCHA client-side integration.
+   * Required when reCAPTCHA enterprise is enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCaptchaResponse() {
+    return captchaResponse;
+  }
+
+  /**
+   * Optional. The reCAPTCHA Enterprise token provided by the reCAPTCHA client-side integration.
+   * Required when reCAPTCHA enterprise is enabled.
+   * @param captchaResponse captchaResponse or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV1SendVerificationCodeRequest setCaptchaResponse(java.lang.String captchaResponse) {
+    this.captchaResponse = captchaResponse;
+    return this;
+  }
+
+  /**
+   * Optional. The client type, web, android or ios. Required when reCAPTCHA Enterprise is enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClientType() {
+    return clientType;
+  }
+
+  /**
+   * Optional. The client type, web, android or ios. Required when reCAPTCHA Enterprise is enabled.
+   * @param clientType clientType or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV1SendVerificationCodeRequest setClientType(java.lang.String clientType) {
+    this.clientType = clientType;
     return this;
   }
 
@@ -236,6 +294,23 @@ public final class GoogleCloudIdentitytoolkitV1SendVerificationCodeRequest exten
    */
   public GoogleCloudIdentitytoolkitV1SendVerificationCodeRequest setRecaptchaToken(java.lang.String recaptchaToken) {
     this.recaptchaToken = recaptchaToken;
+    return this;
+  }
+
+  /**
+   * Optional. The reCAPTCHA version of the reCAPTCHA token in the captcha_response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRecaptchaVersion() {
+    return recaptchaVersion;
+  }
+
+  /**
+   * Optional. The reCAPTCHA version of the reCAPTCHA token in the captcha_response.
+   * @param recaptchaVersion recaptchaVersion or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV1SendVerificationCodeRequest setRecaptchaVersion(java.lang.String recaptchaVersion) {
+    this.recaptchaVersion = recaptchaVersion;
     return this;
   }
 

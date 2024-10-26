@@ -126,6 +126,14 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
   private java.lang.Integer offset;
 
   /**
+   * The maximum number of results to return for OneBox. This applies to each OneBox type
+   * individually. Default number is 10.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer oneBoxPageSize;
+
+  /**
    * The order in which documents are returned. Documents can be ordered by a field in an Document
    * object. Leave it unset if ordered by relevance. `order_by` expression is case-sensitive. For
    * more information on ordering the website search results, see [Order web search
@@ -492,6 +500,25 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
    */
   public GoogleCloudDiscoveryengineV1SearchRequest setOffset(java.lang.Integer offset) {
     this.offset = offset;
+    return this;
+  }
+
+  /**
+   * The maximum number of results to return for OneBox. This applies to each OneBox type
+   * individually. Default number is 10.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getOneBoxPageSize() {
+    return oneBoxPageSize;
+  }
+
+  /**
+   * The maximum number of results to return for OneBox. This applies to each OneBox type
+   * individually. Default number is 10.
+   * @param oneBoxPageSize oneBoxPageSize or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchRequest setOneBoxPageSize(java.lang.Integer oneBoxPageSize) {
+    this.oneBoxPageSize = oneBoxPageSize;
     return this;
   }
 

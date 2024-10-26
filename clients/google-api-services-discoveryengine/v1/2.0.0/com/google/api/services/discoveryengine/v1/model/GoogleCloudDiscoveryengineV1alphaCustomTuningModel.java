@@ -30,7 +30,7 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1alphaCustomTuningModel extends com.google.api.client.json.GenericJson {
 
   /**
-   * Timestamp the Model was created at.
+   * Deprecated: Timestamp the Model was created at.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +88,7 @@ public final class GoogleCloudDiscoveryengineV1alphaCustomTuningModel extends co
   private String trainingStartTime;
 
   /**
-   * Timestamp the Model was created at.
+   * Deprecated: Timestamp the Model was created at.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -96,7 +96,7 @@ public final class GoogleCloudDiscoveryengineV1alphaCustomTuningModel extends co
   }
 
   /**
-   * Timestamp the Model was created at.
+   * Deprecated: Timestamp the Model was created at.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaCustomTuningModel setCreateTime(String createTime) {

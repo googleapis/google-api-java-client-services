@@ -30,8 +30,8 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaBatchGetDocumentsMetadataResponseDocumentMetadataMatcherValue extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Format: projects/{project}/locations/{location}/datasets/{dataset}/fhirStores/{fhir_s
-   * tore}/fhir/{resource_type}/{fhir_resource_id}
+   * Format: projects/{project}/locations/{location}/datasets/{dataset}/fhirStores/{fhir_store}/fhir
+   * /{resource_type}/{fhir_resource_id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +45,8 @@ public final class GoogleCloudDiscoveryengineV1betaBatchGetDocumentsMetadataResp
   private java.lang.String uri;
 
   /**
-   * Required. Format: projects/{project}/locations/{location}/datasets/{dataset}/fhirStores/{fhir_s
-   * tore}/fhir/{resource_type}/{fhir_resource_id}
+   * Format: projects/{project}/locations/{location}/datasets/{dataset}/fhirStores/{fhir_store}/fhir
+   * /{resource_type}/{fhir_resource_id}
    * @return value or {@code null} for none
    */
   public java.lang.String getFhirResource() {
@@ -54,8 +54,8 @@ public final class GoogleCloudDiscoveryengineV1betaBatchGetDocumentsMetadataResp
   }
 
   /**
-   * Required. Format: projects/{project}/locations/{location}/datasets/{dataset}/fhirStores/{fhir_s
-   * tore}/fhir/{resource_type}/{fhir_resource_id}
+   * Format: projects/{project}/locations/{location}/datasets/{dataset}/fhirStores/{fhir_store}/fhir
+   * /{resource_type}/{fhir_resource_id}
    * @param fhirResource fhirResource or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaBatchGetDocumentsMetadataResponseDocumentMetadataMatcherValue setFhirResource(java.lang.String fhirResource) {

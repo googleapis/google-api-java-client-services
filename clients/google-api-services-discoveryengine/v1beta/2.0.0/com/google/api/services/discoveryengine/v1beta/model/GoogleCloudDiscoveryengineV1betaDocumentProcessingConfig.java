@@ -17,9 +17,8 @@
 package com.google.api.services.discoveryengine.v1beta.model;
 
 /**
- * A singleton resource of DataStore. It's empty when DataStore is created, which defaults to
- * digital parser. The first call to DataStoreService.UpdateDocumentProcessingConfig method will
- * initialize the config.
+ * A singleton resource of DataStore. If it's empty when DataStore is created and DataStore is set
+ * to DataStore.ContentConfig.CONTENT_REQUIRED, the default parser will default to digital parser.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:

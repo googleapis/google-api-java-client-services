@@ -30,11 +30,25 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1DataStore extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Configuration for advanced site search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1AdvancedSiteSearchConfig advancedSiteSearchConfig;
+
+  /**
    * Output only. Data size estimation for billing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1DataStoreBillingEstimation billingEstimation;
+
+  /**
+   * Output only. CMEK-related information for the DataStore.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1CmekConfig cmekConfig;
 
   /**
    * Immutable. The content config of the data store. If this field is unset, the server behavior
@@ -81,6 +95,16 @@ public final class GoogleCloudDiscoveryengineV1DataStore extends com.google.api.
   private java.lang.String industryVertical;
 
   /**
+   * Input only. The KMS key to be used to protect this DataStore at creation time. Must be set for
+   * requests that need to comply with CMEK Org Policy protections. If this field is set and
+   * processed successfully, the DataStore will be protected by the KMS key, as indicated in the
+   * cmek_config field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKeyName;
+
+  /**
    * Immutable. The full resource name of the data store. Format: `projects/{project}/locations/{loc
    * ation}/collections/{collection_id}/dataStores/{data_store_id}`. This field must be a UTF-8
    * encoded string with a length limit of 1024 characters.
@@ -94,7 +118,7 @@ public final class GoogleCloudDiscoveryengineV1DataStore extends com.google.api.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudDiscoveryengineV1ServingConfigDataStore servingConfigDataStore;
+  private GoogleCloudDiscoveryengineV1DataStoreServingConfigDataStore servingConfigDataStore;
 
   /**
    * The solutions that the data store enrolls. Available solutions for each industry_vertical: *
@@ -126,6 +150,23 @@ public final class GoogleCloudDiscoveryengineV1DataStore extends com.google.api.
   private GoogleCloudDiscoveryengineV1WorkspaceConfig workspaceConfig;
 
   /**
+   * Optional. Configuration for advanced site search.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1AdvancedSiteSearchConfig getAdvancedSiteSearchConfig() {
+    return advancedSiteSearchConfig;
+  }
+
+  /**
+   * Optional. Configuration for advanced site search.
+   * @param advancedSiteSearchConfig advancedSiteSearchConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DataStore setAdvancedSiteSearchConfig(GoogleCloudDiscoveryengineV1AdvancedSiteSearchConfig advancedSiteSearchConfig) {
+    this.advancedSiteSearchConfig = advancedSiteSearchConfig;
+    return this;
+  }
+
+  /**
    * Output only. Data size estimation for billing.
    * @return value or {@code null} for none
    */
@@ -139,6 +180,23 @@ public final class GoogleCloudDiscoveryengineV1DataStore extends com.google.api.
    */
   public GoogleCloudDiscoveryengineV1DataStore setBillingEstimation(GoogleCloudDiscoveryengineV1DataStoreBillingEstimation billingEstimation) {
     this.billingEstimation = billingEstimation;
+    return this;
+  }
+
+  /**
+   * Output only. CMEK-related information for the DataStore.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1CmekConfig getCmekConfig() {
+    return cmekConfig;
+  }
+
+  /**
+   * Output only. CMEK-related information for the DataStore.
+   * @param cmekConfig cmekConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DataStore setCmekConfig(GoogleCloudDiscoveryengineV1CmekConfig cmekConfig) {
+    this.cmekConfig = cmekConfig;
     return this;
   }
 
@@ -249,6 +307,29 @@ public final class GoogleCloudDiscoveryengineV1DataStore extends com.google.api.
   }
 
   /**
+   * Input only. The KMS key to be used to protect this DataStore at creation time. Must be set for
+   * requests that need to comply with CMEK Org Policy protections. If this field is set and
+   * processed successfully, the DataStore will be protected by the KMS key, as indicated in the
+   * cmek_config field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKeyName() {
+    return kmsKeyName;
+  }
+
+  /**
+   * Input only. The KMS key to be used to protect this DataStore at creation time. Must be set for
+   * requests that need to comply with CMEK Org Policy protections. If this field is set and
+   * processed successfully, the DataStore will be protected by the KMS key, as indicated in the
+   * cmek_config field.
+   * @param kmsKeyName kmsKeyName or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DataStore setKmsKeyName(java.lang.String kmsKeyName) {
+    this.kmsKeyName = kmsKeyName;
+    return this;
+  }
+
+  /**
    * Immutable. The full resource name of the data store. Format: `projects/{project}/locations/{loc
    * ation}/collections/{collection_id}/dataStores/{data_store_id}`. This field must be a UTF-8
    * encoded string with a length limit of 1024 characters.
@@ -273,7 +354,7 @@ public final class GoogleCloudDiscoveryengineV1DataStore extends com.google.api.
    * Optional. Stores serving config at DataStore level.
    * @return value or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1ServingConfigDataStore getServingConfigDataStore() {
+  public GoogleCloudDiscoveryengineV1DataStoreServingConfigDataStore getServingConfigDataStore() {
     return servingConfigDataStore;
   }
 
@@ -281,7 +362,7 @@ public final class GoogleCloudDiscoveryengineV1DataStore extends com.google.api.
    * Optional. Stores serving config at DataStore level.
    * @param servingConfigDataStore servingConfigDataStore or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1DataStore setServingConfigDataStore(GoogleCloudDiscoveryengineV1ServingConfigDataStore servingConfigDataStore) {
+  public GoogleCloudDiscoveryengineV1DataStore setServingConfigDataStore(GoogleCloudDiscoveryengineV1DataStoreServingConfigDataStore servingConfigDataStore) {
     this.servingConfigDataStore = servingConfigDataStore;
     return this;
   }

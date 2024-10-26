@@ -35,7 +35,7 @@ public final class GoogleCloudDiscoveryengineV1CheckGroundingResponse extends co
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudDiscoveryengineV1FactChunk> citedChunks;
+  private java.util.List<GoogleCloudDiscoveryengineV1CheckGroundingResponseFactChunk> citedChunks;
 
   /**
    * Claim texts and citation info across all claims in the answer candidate.
@@ -58,7 +58,7 @@ public final class GoogleCloudDiscoveryengineV1CheckGroundingResponse extends co
    * supplied in the request.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudDiscoveryengineV1FactChunk> getCitedChunks() {
+  public java.util.List<GoogleCloudDiscoveryengineV1CheckGroundingResponseFactChunk> getCitedChunks() {
     return citedChunks;
   }
 
@@ -67,7 +67,7 @@ public final class GoogleCloudDiscoveryengineV1CheckGroundingResponse extends co
    * supplied in the request.
    * @param citedChunks citedChunks or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1CheckGroundingResponse setCitedChunks(java.util.List<GoogleCloudDiscoveryengineV1FactChunk> citedChunks) {
+  public GoogleCloudDiscoveryengineV1CheckGroundingResponse setCitedChunks(java.util.List<GoogleCloudDiscoveryengineV1CheckGroundingResponseFactChunk> citedChunks) {
     this.citedChunks = citedChunks;
     return this;
   }

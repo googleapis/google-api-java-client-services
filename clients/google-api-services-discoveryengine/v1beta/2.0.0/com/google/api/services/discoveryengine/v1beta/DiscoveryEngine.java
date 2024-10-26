@@ -1138,6 +1138,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               return this;
             }
 
+            /** Resource name of the CmekConfig to use for protecting this DataStore. */
+            @com.google.api.client.util.Key
+            private java.lang.String cmekConfigName;
+
+            /** Resource name of the CmekConfig to use for protecting this DataStore.
+             */
+            public java.lang.String getCmekConfigName() {
+              return cmekConfigName;
+            }
+
+            /** Resource name of the CmekConfig to use for protecting this DataStore. */
+            public Create setCmekConfigName(java.lang.String cmekConfigName) {
+              this.cmekConfigName = cmekConfigName;
+              return this;
+            }
+
             /**
              * A boolean flag indicating whether user want to directly create an advanced data store
              * for site search. If the data store is not configured as site search (GENERIC vertical
@@ -1189,6 +1205,29 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              */
             public Create setDataStoreId(java.lang.String dataStoreId) {
               this.dataStoreId = dataStoreId;
+              return this;
+            }
+
+            /**
+             * DataStore without CMEK protections. If a default CmekConfig is set for the project,
+             * setting this field will override the default CmekConfig as well.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean disableCmek;
+
+            /** DataStore without CMEK protections. If a default CmekConfig is set for the project, setting this
+           field will override the default CmekConfig as well.
+             */
+            public java.lang.Boolean getDisableCmek() {
+              return disableCmek;
+            }
+
+            /**
+             * DataStore without CMEK protections. If a default CmekConfig is set for the project,
+             * setting this field will override the default CmekConfig as well.
+             */
+            public Create setDisableCmek(java.lang.Boolean disableCmek) {
+              this.disableCmek = disableCmek;
               return this;
             }
 
@@ -20396,6 +20435,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             return this;
           }
 
+          /** Resource name of the CmekConfig to use for protecting this DataStore. */
+          @com.google.api.client.util.Key
+          private java.lang.String cmekConfigName;
+
+          /** Resource name of the CmekConfig to use for protecting this DataStore.
+           */
+          public java.lang.String getCmekConfigName() {
+            return cmekConfigName;
+          }
+
+          /** Resource name of the CmekConfig to use for protecting this DataStore. */
+          public Create setCmekConfigName(java.lang.String cmekConfigName) {
+            this.cmekConfigName = cmekConfigName;
+            return this;
+          }
+
           /**
            * A boolean flag indicating whether user want to directly create an advanced data store
            * for site search. If the data store is not configured as site search (GENERIC vertical
@@ -20447,6 +20502,29 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            */
           public Create setDataStoreId(java.lang.String dataStoreId) {
             this.dataStoreId = dataStoreId;
+            return this;
+          }
+
+          /**
+           * DataStore without CMEK protections. If a default CmekConfig is set for the project,
+           * setting this field will override the default CmekConfig as well.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean disableCmek;
+
+          /** DataStore without CMEK protections. If a default CmekConfig is set for the project, setting this
+         field will override the default CmekConfig as well.
+           */
+          public java.lang.Boolean getDisableCmek() {
+            return disableCmek;
+          }
+
+          /**
+           * DataStore without CMEK protections. If a default CmekConfig is set for the project,
+           * setting this field will override the default CmekConfig as well.
+           */
+          public Create setDisableCmek(java.lang.Boolean disableCmek) {
+            this.disableCmek = disableCmek;
             return this;
           }
 

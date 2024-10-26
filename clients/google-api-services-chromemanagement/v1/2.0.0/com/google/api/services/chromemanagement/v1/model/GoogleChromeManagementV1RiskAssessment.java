@@ -31,8 +31,8 @@ package com.google.api.services.chromemanagement.v1.model;
 public final class GoogleChromeManagementV1RiskAssessment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Risk assessment for the extension. Currently, this is a numerical value, and higher values
-   * denote higher risk.
+   * Risk assessment for the extension. Currently, this is a numerical value, and its interpretation
+   * is specific to each risk assessment provider.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +53,8 @@ public final class GoogleChromeManagementV1RiskAssessment extends com.google.api
   private java.lang.String version;
 
   /**
-   * Risk assessment for the extension. Currently, this is a numerical value, and higher values
-   * denote higher risk.
+   * Risk assessment for the extension. Currently, this is a numerical value, and its interpretation
+   * is specific to each risk assessment provider.
    * @return value or {@code null} for none
    */
   public java.lang.String getAssessment() {
@@ -62,8 +62,8 @@ public final class GoogleChromeManagementV1RiskAssessment extends com.google.api
   }
 
   /**
-   * Risk assessment for the extension. Currently, this is a numerical value, and higher values
-   * denote higher risk.
+   * Risk assessment for the extension. Currently, this is a numerical value, and its interpretation
+   * is specific to each risk assessment provider.
    * @param assessment assessment or {@code null} for none
    */
   public GoogleChromeManagementV1RiskAssessment setAssessment(java.lang.String assessment) {

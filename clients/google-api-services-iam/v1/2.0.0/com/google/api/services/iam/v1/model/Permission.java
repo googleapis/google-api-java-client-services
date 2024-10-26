@@ -45,8 +45,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   private java.lang.String customRolesSupportLevel;
 
   /**
-   * A brief description of what this Permission is used for. This permission can ONLY be used in
-   * predefined roles.
+   * A brief description of what this Permission is used for.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,8 +121,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A brief description of what this Permission is used for. This permission can ONLY be used in
-   * predefined roles.
+   * A brief description of what this Permission is used for.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -131,8 +129,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A brief description of what this Permission is used for. This permission can ONLY be used in
-   * predefined roles.
+   * A brief description of what this Permission is used for.
    * @param description description or {@code null} for none
    */
   public Permission setDescription(java.lang.String description) {

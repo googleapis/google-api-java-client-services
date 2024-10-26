@@ -8073,6 +8073,406 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
 
+    /**
+     * An accessor for creating requests from the Accessproposals collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Drive drive = new Drive(...);}
+     *   {@code Drive.Accessproposals.List request = drive.accessproposals().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Accessproposals accessproposals() {
+      return new Accessproposals();
+    }
+
+    /**
+     * The "accessproposals" collection of methods.
+     */
+    public class Accessproposals {
+
+      /**
+       * List the AccessProposals on a file. Note: Only approvers are able to list AccessProposals on a
+       * file. If the user is not an approver, returns a 403.
+       *
+       * Create a request for the method "accessproposals.list".
+       *
+       * This request holds the parameters needed by the drive server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param fileId Required. The id of the item the request is on.
+       * @return the request
+       */
+      public List list(java.lang.String fileId) throws java.io.IOException {
+        List result = new List(fileId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends DriveRequest<com.google.api.services.drive.model.ListAccessProposalsResponse> {
+
+        private static final String REST_PATH = "files/{fileId}/accessproposals";
+
+        /**
+         * List the AccessProposals on a file. Note: Only approvers are able to list AccessProposals on a
+         * file. If the user is not an approver, returns a 403.
+         *
+         * Create a request for the method "accessproposals.list".
+         *
+         * This request holds the parameters needed by the the drive server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param fileId Required. The id of the item the request is on.
+         * @since 1.13
+         */
+        protected List(java.lang.String fileId) {
+          super(Drive.this, "GET", REST_PATH, null, com.google.api.services.drive.model.ListAccessProposalsResponse.class);
+          this.fileId = com.google.api.client.util.Preconditions.checkNotNull(fileId, "Required parameter fileId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The id of the item the request is on. */
+        @com.google.api.client.util.Key
+        private java.lang.String fileId;
+
+        /** Required. The id of the item the request is on.
+         */
+        public java.lang.String getFileId() {
+          return fileId;
+        }
+
+        /** Required. The id of the item the request is on. */
+        public List setFileId(java.lang.String fileId) {
+          this.fileId = fileId;
+          return this;
+        }
+
+        /** Optional. The number of results per page */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The number of results per page
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Optional. The number of results per page */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Optional. The continuation token on the list of access requests. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. The continuation token on the list of access requests.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Optional. The continuation token on the list of access requests. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Used to approve or deny an Access Proposal.
+       *
+       * Create a request for the method "accessproposals.resolve".
+       *
+       * This request holds the parameters needed by the drive server.  After setting any optional
+       * parameters, call the {@link Resolve#execute()} method to invoke the remote operation.
+       *
+       * @param fileId Required. The id of the item the request is on.
+       * @param proposalId Required. The id of the access proposal to resolve.
+       * @return the request
+       */
+      public Resolve resolve(java.lang.String fileId, java.lang.String proposalId) throws java.io.IOException {
+        Resolve result = new Resolve(fileId, proposalId);
+        initialize(result);
+        return result;
+      }
+
+      public class Resolve extends DriveRequest<Void> {
+
+        private static final String REST_PATH = "files/{fileId}/accessproposals/{proposalId}:resolve";
+
+        /**
+         * Used to approve or deny an Access Proposal.
+         *
+         * Create a request for the method "accessproposals.resolve".
+         *
+         * This request holds the parameters needed by the the drive server.  After setting any optional
+         * parameters, call the {@link Resolve#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * Resolve#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param fileId Required. The id of the item the request is on.
+         * @param proposalId Required. The id of the access proposal to resolve.
+         * @since 1.13
+         */
+        protected Resolve(java.lang.String fileId, java.lang.String proposalId) {
+          super(Drive.this, "POST", REST_PATH, null, Void.class);
+          this.fileId = com.google.api.client.util.Preconditions.checkNotNull(fileId, "Required parameter fileId must be specified.");
+          this.proposalId = com.google.api.client.util.Preconditions.checkNotNull(proposalId, "Required parameter proposalId must be specified.");
+        }
+
+        @Override
+        public Resolve set$Xgafv(java.lang.String $Xgafv) {
+          return (Resolve) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Resolve setAccessToken(java.lang.String accessToken) {
+          return (Resolve) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Resolve setAlt(java.lang.String alt) {
+          return (Resolve) super.setAlt(alt);
+        }
+
+        @Override
+        public Resolve setCallback(java.lang.String callback) {
+          return (Resolve) super.setCallback(callback);
+        }
+
+        @Override
+        public Resolve setFields(java.lang.String fields) {
+          return (Resolve) super.setFields(fields);
+        }
+
+        @Override
+        public Resolve setKey(java.lang.String key) {
+          return (Resolve) super.setKey(key);
+        }
+
+        @Override
+        public Resolve setOauthToken(java.lang.String oauthToken) {
+          return (Resolve) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Resolve setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Resolve) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Resolve setQuotaUser(java.lang.String quotaUser) {
+          return (Resolve) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Resolve setUploadType(java.lang.String uploadType) {
+          return (Resolve) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Resolve setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Resolve) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The id of the item the request is on. */
+        @com.google.api.client.util.Key
+        private java.lang.String fileId;
+
+        /** Required. The id of the item the request is on.
+         */
+        public java.lang.String getFileId() {
+          return fileId;
+        }
+
+        /** Required. The id of the item the request is on. */
+        public Resolve setFileId(java.lang.String fileId) {
+          this.fileId = fileId;
+          return this;
+        }
+
+        /** Required. The id of the access proposal to resolve. */
+        @com.google.api.client.util.Key
+        private java.lang.String proposalId;
+
+        /** Required. The id of the access proposal to resolve.
+         */
+        public java.lang.String getProposalId() {
+          return proposalId;
+        }
+
+        /** Required. The id of the access proposal to resolve. */
+        public Resolve setProposalId(java.lang.String proposalId) {
+          this.proposalId = proposalId;
+          return this;
+        }
+
+        /** Required. The action to take on the AccessProposal. */
+        @com.google.api.client.util.Key
+        private java.lang.String action;
+
+        /** Required. The action to take on the AccessProposal.
+         */
+        public java.lang.String getAction() {
+          return action;
+        }
+
+        /** Required. The action to take on the AccessProposal. */
+        public Resolve setAction(java.lang.String action) {
+          this.action = action;
+          return this;
+        }
+
+        /**
+         * Optional. The roles the approver has allowed, if any. Note: This field is required for
+         * the `ACCEPT` action.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> role;
+
+        /** Optional. The roles the approver has allowed, if any. Note: This field is required for the `ACCEPT`
+       action.
+         */
+        public java.util.List<java.lang.String> getRole() {
+          return role;
+        }
+
+        /**
+         * Optional. The roles the approver has allowed, if any. Note: This field is required for
+         * the `ACCEPT` action.
+         */
+        public Resolve setRole(java.util.List<java.lang.String> role) {
+          this.role = role;
+          return this;
+        }
+
+        /**
+         * Optional. Whether to send an email to the requester when the AccessProposal is denied or
+         * accepted.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean sendNotification;
+
+        /** Optional. Whether to send an email to the requester when the AccessProposal is denied or accepted.
+         */
+        public java.lang.Boolean getSendNotification() {
+          return sendNotification;
+        }
+
+        /**
+         * Optional. Whether to send an email to the requester when the AccessProposal is denied or
+         * accepted.
+         */
+        public Resolve setSendNotification(java.lang.Boolean sendNotification) {
+          this.sendNotification = sendNotification;
+          return this;
+        }
+
+        /**
+         * Optional. Indicates the view for this access proposal. This should only be set when the
+         * proposal belongs to a view. `published` is the only supported value.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String view;
+
+        /** Optional. Indicates the view for this access proposal. This should only be set when the proposal
+       belongs to a view. `published` is the only supported value.
+         */
+        public java.lang.String getView() {
+          return view;
+        }
+
+        /**
+         * Optional. Indicates the view for this access proposal. This should only be set when the
+         * proposal belongs to a view. `published` is the only supported value.
+         */
+        public Resolve setView(java.lang.String view) {
+          this.view = view;
+          return this;
+        }
+
+        @Override
+        public Resolve set(String parameterName, Object value) {
+          return (Resolve) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

@@ -30,6 +30,13 @@ package com.google.api.services.migrationcenter.v1.model;
 public final class AzureVmPlatformDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether the machine is hyperthreaded.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String hyperthreading;
+
+  /**
    * The location of the machine in the Azure format.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class AzureVmPlatformDetails extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String provisioningState;
+
+  /**
+   * Whether the machine is hyperthreaded.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHyperthreading() {
+    return hyperthreading;
+  }
+
+  /**
+   * Whether the machine is hyperthreaded.
+   * @param hyperthreading hyperthreading or {@code null} for none
+   */
+  public AzureVmPlatformDetails setHyperthreading(java.lang.String hyperthreading) {
+    this.hyperthreading = hyperthreading;
+    return this;
+  }
 
   /**
    * The location of the machine in the Azure format.

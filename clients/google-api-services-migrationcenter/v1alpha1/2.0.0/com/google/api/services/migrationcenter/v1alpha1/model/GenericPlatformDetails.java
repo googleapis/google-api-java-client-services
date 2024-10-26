@@ -30,12 +30,36 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class GenericPlatformDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether the machine is hyperthreaded.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String hyperthreading;
+
+  /**
    * Free text representation of the machine location. The format of this field should not be relied
    * on. Different VMs in the same location may have different string values for this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String location;
+
+  /**
+   * Whether the machine is hyperthreaded.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHyperthreading() {
+    return hyperthreading;
+  }
+
+  /**
+   * Whether the machine is hyperthreaded.
+   * @param hyperthreading hyperthreading or {@code null} for none
+   */
+  public GenericPlatformDetails setHyperthreading(java.lang.String hyperthreading) {
+    this.hyperthreading = hyperthreading;
+    return this;
+  }
 
   /**
    * Free text representation of the machine location. The format of this field should not be relied

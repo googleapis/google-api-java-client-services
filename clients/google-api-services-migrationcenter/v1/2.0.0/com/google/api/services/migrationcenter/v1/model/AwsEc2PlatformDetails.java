@@ -30,6 +30,13 @@ package com.google.api.services.migrationcenter.v1.model;
 public final class AwsEc2PlatformDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Whether the machine is hyperthreaded.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String hyperthreading;
+
+  /**
    * The location of the machine in the AWS format.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class AwsEc2PlatformDetails extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.String machineTypeLabel;
+
+  /**
+   * Optional. Whether the machine is hyperthreaded.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHyperthreading() {
+    return hyperthreading;
+  }
+
+  /**
+   * Optional. Whether the machine is hyperthreaded.
+   * @param hyperthreading hyperthreading or {@code null} for none
+   */
+  public AwsEc2PlatformDetails setHyperthreading(java.lang.String hyperthreading) {
+    this.hyperthreading = hyperthreading;
+    return this;
+  }
 
   /**
    * The location of the machine in the AWS format.

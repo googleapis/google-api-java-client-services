@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.discoveryengine.v1alpha.model;
+package com.google.api.services.discoveryengine.v1.model;
 
 /**
  * Stores information regarding the serving configurations at DataStore level.
@@ -27,7 +27,7 @@ package com.google.api.services.discoveryengine.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1betaServingConfigDataStore extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1alphaDataStoreServingConfigDataStore extends com.google.api.client.json.GenericJson {
 
   /**
    * If set true, the DataStore will not be available for serving search requests.
@@ -48,19 +48,19 @@ public final class GoogleCloudDiscoveryengineV1betaServingConfigDataStore extend
    * If set true, the DataStore will not be available for serving search requests.
    * @param disabledForServing disabledForServing or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1betaServingConfigDataStore setDisabledForServing(java.lang.Boolean disabledForServing) {
+  public GoogleCloudDiscoveryengineV1alphaDataStoreServingConfigDataStore setDisabledForServing(java.lang.Boolean disabledForServing) {
     this.disabledForServing = disabledForServing;
     return this;
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1betaServingConfigDataStore set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1betaServingConfigDataStore) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1alphaDataStoreServingConfigDataStore set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1alphaDataStoreServingConfigDataStore) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1betaServingConfigDataStore clone() {
-    return (GoogleCloudDiscoveryengineV1betaServingConfigDataStore) super.clone();
+  public GoogleCloudDiscoveryengineV1alphaDataStoreServingConfigDataStore clone() {
+    return (GoogleCloudDiscoveryengineV1alphaDataStoreServingConfigDataStore) super.clone();
   }
 
 }

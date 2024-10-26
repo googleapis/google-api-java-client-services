@@ -27,7 +27,7 @@ package com.google.api.services.discoveryengine.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1alphaServingConfigDataStore extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1betaDataStoreServingConfigDataStore extends com.google.api.client.json.GenericJson {
 
   /**
    * If set true, the DataStore will not be available for serving search requests.
@@ -48,19 +48,19 @@ public final class GoogleCloudDiscoveryengineV1alphaServingConfigDataStore exten
    * If set true, the DataStore will not be available for serving search requests.
    * @param disabledForServing disabledForServing or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaServingConfigDataStore setDisabledForServing(java.lang.Boolean disabledForServing) {
+  public GoogleCloudDiscoveryengineV1betaDataStoreServingConfigDataStore setDisabledForServing(java.lang.Boolean disabledForServing) {
     this.disabledForServing = disabledForServing;
     return this;
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaServingConfigDataStore set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1alphaServingConfigDataStore) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1betaDataStoreServingConfigDataStore set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1betaDataStoreServingConfigDataStore) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaServingConfigDataStore clone() {
-    return (GoogleCloudDiscoveryengineV1alphaServingConfigDataStore) super.clone();
+  public GoogleCloudDiscoveryengineV1betaDataStoreServingConfigDataStore clone() {
+    return (GoogleCloudDiscoveryengineV1betaDataStoreServingConfigDataStore) super.clone();
   }
 
 }

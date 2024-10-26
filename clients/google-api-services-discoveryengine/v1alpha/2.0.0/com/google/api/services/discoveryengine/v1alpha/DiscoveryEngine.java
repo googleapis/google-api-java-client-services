@@ -876,6 +876,162 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         }
       }
       /**
+       * Gets the CmekConfig.
+       *
+       * Create a request for the method "locations.getCmekConfig".
+       *
+       * This request holds the parameters needed by the discoveryengine server.  After setting any
+       * optional parameters, call the {@link GetCmekConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. Resource name of CmekConfig, such as `projects/locations/cmekConfig` or
+       *        `projects/locations/cmekConfigs`. If the caller does not have permission to access the
+       *        CmekConfig, regardless of whether or not it exists, a PERMISSION_DENIED error is returned.
+       * @return the request
+       */
+      public GetCmekConfig getCmekConfig(java.lang.String name) throws java.io.IOException {
+        GetCmekConfig result = new GetCmekConfig(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetCmekConfig extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCmekConfig> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/cmekConfig$");
+
+        /**
+         * Gets the CmekConfig.
+         *
+         * Create a request for the method "locations.getCmekConfig".
+         *
+         * This request holds the parameters needed by the the discoveryengine server.  After setting any
+         * optional parameters, call the {@link GetCmekConfig#execute()} method to invoke the remote
+         * operation. <p> {@link GetCmekConfig#initialize(com.google.api.client.googleapis.services.Abstra
+         * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param name Required. Resource name of CmekConfig, such as `projects/locations/cmekConfig` or
+       *        `projects/locations/cmekConfigs`. If the caller does not have permission to access the
+       *        CmekConfig, regardless of whether or not it exists, a PERMISSION_DENIED error is returned.
+         * @since 1.13
+         */
+        protected GetCmekConfig(java.lang.String name) {
+          super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCmekConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/cmekConfig$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetCmekConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (GetCmekConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetCmekConfig setAccessToken(java.lang.String accessToken) {
+          return (GetCmekConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetCmekConfig setAlt(java.lang.String alt) {
+          return (GetCmekConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public GetCmekConfig setCallback(java.lang.String callback) {
+          return (GetCmekConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public GetCmekConfig setFields(java.lang.String fields) {
+          return (GetCmekConfig) super.setFields(fields);
+        }
+
+        @Override
+        public GetCmekConfig setKey(java.lang.String key) {
+          return (GetCmekConfig) super.setKey(key);
+        }
+
+        @Override
+        public GetCmekConfig setOauthToken(java.lang.String oauthToken) {
+          return (GetCmekConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetCmekConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetCmekConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetCmekConfig setQuotaUser(java.lang.String quotaUser) {
+          return (GetCmekConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetCmekConfig setUploadType(java.lang.String uploadType) {
+          return (GetCmekConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetCmekConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetCmekConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource name of CmekConfig, such as `projects/locations/cmekConfig` or
+         * `projects/locations/cmekConfigs`. If the caller does not have permission to access the
+         * CmekConfig, regardless of whether or not it exists, a PERMISSION_DENIED error is
+         * returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Resource name of CmekConfig, such as `projects/locations/cmekConfig` or
+       `projects/locations/cmekConfigs`. If the caller does not have permission to access the CmekConfig,
+       regardless of whether or not it exists, a PERMISSION_DENIED error is returned.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Resource name of CmekConfig, such as `projects/locations/cmekConfig` or
+         * `projects/locations/cmekConfigs`. If the caller does not have permission to access the
+         * CmekConfig, regardless of whether or not it exists, a PERMISSION_DENIED error is
+         * returned.
+         */
+        public GetCmekConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/cmekConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetCmekConfig set(String parameterName, Object value) {
+          return (GetCmekConfig) super.set(parameterName, value);
+        }
+      }
+      /**
        * Default ACL configuration for use in a location of a customer's project. Updates will only
        * reflect to new data stores. Existing data stores will still use the old value.
        *
@@ -1023,7 +1179,674 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           return (UpdateAclConfig) super.set(parameterName, value);
         }
       }
+      /**
+       * Provisions a CMEK key for use in a location of a customer's project. This method will also
+       * conduct location validation on the provided cmekConfig to make sure the key is valid and can be
+       * used in the selected location.
+       *
+       * Create a request for the method "locations.updateCmekConfig".
+       *
+       * This request holds the parameters needed by the discoveryengine server.  After setting any
+       * optional parameters, call the {@link UpdateCmekConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. Name of the CmekConfig, of the form `projects/{project}/locations/{location}/cmekConfig`
+       *        or `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
+       * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCmekConfig}
+       * @return the request
+       */
+      public UpdateCmekConfig updateCmekConfig(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCmekConfig content) throws java.io.IOException {
+        UpdateCmekConfig result = new UpdateCmekConfig(name, content);
+        initialize(result);
+        return result;
+      }
 
+      public class UpdateCmekConfig extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/cmekConfig$");
+
+        /**
+         * Provisions a CMEK key for use in a location of a customer's project. This method will also
+         * conduct location validation on the provided cmekConfig to make sure the key is valid and can be
+         * used in the selected location.
+         *
+         * Create a request for the method "locations.updateCmekConfig".
+         *
+         * This request holds the parameters needed by the the discoveryengine server.  After setting any
+         * optional parameters, call the {@link UpdateCmekConfig#execute()} method to invoke the remote
+         * operation. <p> {@link UpdateCmekConfig#initialize(com.google.api.client.googleapis.services.Abs
+         * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. Name of the CmekConfig, of the form `projects/{project}/locations/{location}/cmekConfig`
+       *        or `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
+         * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCmekConfig}
+         * @since 1.13
+         */
+        protected UpdateCmekConfig(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCmekConfig content) {
+          super(DiscoveryEngine.this, "PATCH", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/cmekConfig$");
+          }
+        }
+
+        @Override
+        public UpdateCmekConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateCmekConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateCmekConfig setAccessToken(java.lang.String accessToken) {
+          return (UpdateCmekConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateCmekConfig setAlt(java.lang.String alt) {
+          return (UpdateCmekConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateCmekConfig setCallback(java.lang.String callback) {
+          return (UpdateCmekConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateCmekConfig setFields(java.lang.String fields) {
+          return (UpdateCmekConfig) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateCmekConfig setKey(java.lang.String key) {
+          return (UpdateCmekConfig) super.setKey(key);
+        }
+
+        @Override
+        public UpdateCmekConfig setOauthToken(java.lang.String oauthToken) {
+          return (UpdateCmekConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateCmekConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateCmekConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateCmekConfig setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateCmekConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateCmekConfig setUploadType(java.lang.String uploadType) {
+          return (UpdateCmekConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateCmekConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateCmekConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the CmekConfig, of the form
+         * `projects/{project}/locations/{location}/cmekConfig` or
+         * `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the CmekConfig, of the form `projects/{project}/locations/{location}/cmekConfig`
+       or `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the CmekConfig, of the form
+         * `projects/{project}/locations/{location}/cmekConfig` or
+         * `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
+         */
+        public UpdateCmekConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/cmekConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Set the following CmekConfig as the default to be used for child resources if one is not
+         * specified.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean setDefault;
+
+        /** Set the following CmekConfig as the default to be used for child resources if one is not specified.
+         */
+        public java.lang.Boolean getSetDefault() {
+          return setDefault;
+        }
+
+        /**
+         * Set the following CmekConfig as the default to be used for child resources if one is not
+         * specified.
+         */
+        public UpdateCmekConfig setSetDefault(java.lang.Boolean setDefault) {
+          this.setDefault = setDefault;
+          return this;
+        }
+
+        @Override
+        public UpdateCmekConfig set(String parameterName, Object value) {
+          return (UpdateCmekConfig) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the CmekConfigs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+       *   {@code DiscoveryEngine.CmekConfigs.List request = discoveryengine.cmekConfigs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public CmekConfigs cmekConfigs() {
+        return new CmekConfigs();
+      }
+
+      /**
+       * The "cmekConfigs" collection of methods.
+       */
+      public class CmekConfigs {
+
+        /**
+         * Gets the CmekConfig.
+         *
+         * Create a request for the method "cmekConfigs.get".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of CmekConfig, such as `projects/locations/cmekConfig` or
+         *        `projects/locations/cmekConfigs`. If the caller does not have permission to access the
+         *        CmekConfig, regardless of whether or not it exists, a PERMISSION_DENIED error is returned.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCmekConfig> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/cmekConfigs/[^/]+$");
+
+          /**
+           * Gets the CmekConfig.
+           *
+           * Create a request for the method "cmekConfigs.get".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of CmekConfig, such as `projects/locations/cmekConfig` or
+         *        `projects/locations/cmekConfigs`. If the caller does not have permission to access the
+         *        CmekConfig, regardless of whether or not it exists, a PERMISSION_DENIED error is returned.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCmekConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/cmekConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of CmekConfig, such as `projects/locations/cmekConfig` or
+           * `projects/locations/cmekConfigs`. If the caller does not have permission to access the
+           * CmekConfig, regardless of whether or not it exists, a PERMISSION_DENIED error is
+           * returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of CmekConfig, such as `projects/locations/cmekConfig` or
+         `projects/locations/cmekConfigs`. If the caller does not have permission to access the CmekConfig,
+         regardless of whether or not it exists, a PERMISSION_DENIED error is returned.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of CmekConfig, such as `projects/locations/cmekConfig` or
+           * `projects/locations/cmekConfigs`. If the caller does not have permission to access the
+           * CmekConfig, regardless of whether or not it exists, a PERMISSION_DENIED error is
+           * returned.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/cmekConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all the CmekConfigs with the project.
+         *
+         * Create a request for the method "cmekConfigs.list".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent location resource name, such as `projects/{project}/locations/{location}`. If
+         *        the caller does not have permission to list CmekConfigs under this location, regardless of
+         *        whether or not a CmekConfig exists, a PERMISSION_DENIED error is returned.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListCmekConfigsResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/cmekConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists all the CmekConfigs with the project.
+           *
+           * Create a request for the method "cmekConfigs.list".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent location resource name, such as `projects/{project}/locations/{location}`. If
+         *        the caller does not have permission to list CmekConfigs under this location, regardless of
+         *        whether or not a CmekConfig exists, a PERMISSION_DENIED error is returned.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListCmekConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent location resource name, such as
+           * `projects/{project}/locations/{location}`. If the caller does not have permission to
+           * list CmekConfigs under this location, regardless of whether or not a CmekConfig exists,
+           * a PERMISSION_DENIED error is returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent location resource name, such as `projects/{project}/locations/{location}`. If
+         the caller does not have permission to list CmekConfigs under this location, regardless of whether
+         or not a CmekConfig exists, a PERMISSION_DENIED error is returned.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent location resource name, such as
+           * `projects/{project}/locations/{location}`. If the caller does not have permission to
+           * list CmekConfigs under this location, regardless of whether or not a CmekConfig exists,
+           * a PERMISSION_DENIED error is returned.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Provisions a CMEK key for use in a location of a customer's project. This method will also
+         * conduct location validation on the provided cmekConfig to make sure the key is valid and can be
+         * used in the selected location.
+         *
+         * Create a request for the method "cmekConfigs.patch".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the CmekConfig, of the form `projects/{project}/locations/{location}/cmekConfig`
+         *        or `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
+         * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCmekConfig}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCmekConfig content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/cmekConfigs/[^/]+$");
+
+          /**
+           * Provisions a CMEK key for use in a location of a customer's project. This method will also
+           * conduct location validation on the provided cmekConfig to make sure the key is valid and can be
+           * used in the selected location.
+           *
+           * Create a request for the method "cmekConfigs.patch".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the CmekConfig, of the form `projects/{project}/locations/{location}/cmekConfig`
+         *        or `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCmekConfig}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCmekConfig content) {
+            super(DiscoveryEngine.this, "PATCH", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/cmekConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the CmekConfig, of the form
+           * `projects/{project}/locations/{location}/cmekConfig` or
+           * `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the CmekConfig, of the form `projects/{project}/locations/{location}/cmekConfig`
+         or `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the CmekConfig, of the form
+           * `projects/{project}/locations/{location}/cmekConfig` or
+           * `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/cmekConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Set the following CmekConfig as the default to be used for child resources if one is
+           * not specified.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean setDefault;
+
+          /** Set the following CmekConfig as the default to be used for child resources if one is not specified.
+           */
+          public java.lang.Boolean getSetDefault() {
+            return setDefault;
+          }
+
+          /**
+           * Set the following CmekConfig as the default to be used for child resources if one is
+           * not specified.
+           */
+          public Patch setSetDefault(java.lang.Boolean setDefault) {
+            this.setDefault = setDefault;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
       /**
        * An accessor for creating requests from the Collections collection.
        *
@@ -1853,6 +2676,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               return this;
             }
 
+            /** Resource name of the CmekConfig to use for protecting this DataStore. */
+            @com.google.api.client.util.Key
+            private java.lang.String cmekConfigName;
+
+            /** Resource name of the CmekConfig to use for protecting this DataStore.
+             */
+            public java.lang.String getCmekConfigName() {
+              return cmekConfigName;
+            }
+
+            /** Resource name of the CmekConfig to use for protecting this DataStore. */
+            public Create setCmekConfigName(java.lang.String cmekConfigName) {
+              this.cmekConfigName = cmekConfigName;
+              return this;
+            }
+
             /**
              * A boolean flag indicating whether user want to directly create an advanced data store
              * for site search. If the data store is not configured as site search (GENERIC vertical
@@ -1904,6 +2743,29 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              */
             public Create setDataStoreId(java.lang.String dataStoreId) {
               this.dataStoreId = dataStoreId;
+              return this;
+            }
+
+            /**
+             * DataStore without CMEK protections. If a default CmekConfig is set for the project,
+             * setting this field will override the default CmekConfig as well.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean disableCmek;
+
+            /** DataStore without CMEK protections. If a default CmekConfig is set for the project, setting this
+           field will override the default CmekConfig as well.
+             */
+            public java.lang.Boolean getDisableCmek() {
+              return disableCmek;
+            }
+
+            /**
+             * DataStore without CMEK protections. If a default CmekConfig is set for the project,
+             * setting this field will override the default CmekConfig as well.
+             */
+            public Create setDisableCmek(java.lang.Boolean disableCmek) {
+              this.disableCmek = disableCmek;
               return this;
             }
 
@@ -22321,6 +23183,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             return this;
           }
 
+          /** Resource name of the CmekConfig to use for protecting this DataStore. */
+          @com.google.api.client.util.Key
+          private java.lang.String cmekConfigName;
+
+          /** Resource name of the CmekConfig to use for protecting this DataStore.
+           */
+          public java.lang.String getCmekConfigName() {
+            return cmekConfigName;
+          }
+
+          /** Resource name of the CmekConfig to use for protecting this DataStore. */
+          public Create setCmekConfigName(java.lang.String cmekConfigName) {
+            this.cmekConfigName = cmekConfigName;
+            return this;
+          }
+
           /**
            * A boolean flag indicating whether user want to directly create an advanced data store
            * for site search. If the data store is not configured as site search (GENERIC vertical
@@ -22372,6 +23250,29 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            */
           public Create setDataStoreId(java.lang.String dataStoreId) {
             this.dataStoreId = dataStoreId;
+            return this;
+          }
+
+          /**
+           * DataStore without CMEK protections. If a default CmekConfig is set for the project,
+           * setting this field will override the default CmekConfig as well.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean disableCmek;
+
+          /** DataStore without CMEK protections. If a default CmekConfig is set for the project, setting this
+         field will override the default CmekConfig as well.
+           */
+          public java.lang.Boolean getDisableCmek() {
+            return disableCmek;
+          }
+
+          /**
+           * DataStore without CMEK protections. If a default CmekConfig is set for the project,
+           * setting this field will override the default CmekConfig as well.
+           */
+          public Create setDisableCmek(java.lang.Boolean disableCmek) {
+            this.disableCmek = disableCmek;
             return this;
           }
 

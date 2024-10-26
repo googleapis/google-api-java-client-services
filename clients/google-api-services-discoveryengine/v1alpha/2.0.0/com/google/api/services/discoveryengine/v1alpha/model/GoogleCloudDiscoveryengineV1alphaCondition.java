@@ -37,7 +37,16 @@ public final class GoogleCloudDiscoveryengineV1alphaCondition extends com.google
   private java.util.List<GoogleCloudDiscoveryengineV1alphaConditionTimeRange> activeTimeRange;
 
   /**
-   * Search only A list of terms to match the query on. Maximum of 10 query terms.
+   * Optional. Query regex to match the whole search query. Cannot be set when Condition.query_terms
+   * is set. This is currently supporting promotion use case.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String queryRegex;
+
+  /**
+   * Search only A list of terms to match the query on. Cannot be set when Condition.query_regex is
+   * set. Maximum of 10 query terms.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +70,27 @@ public final class GoogleCloudDiscoveryengineV1alphaCondition extends com.google
   }
 
   /**
-   * Search only A list of terms to match the query on. Maximum of 10 query terms.
+   * Optional. Query regex to match the whole search query. Cannot be set when Condition.query_terms
+   * is set. This is currently supporting promotion use case.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getQueryRegex() {
+    return queryRegex;
+  }
+
+  /**
+   * Optional. Query regex to match the whole search query. Cannot be set when Condition.query_terms
+   * is set. This is currently supporting promotion use case.
+   * @param queryRegex queryRegex or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaCondition setQueryRegex(java.lang.String queryRegex) {
+    this.queryRegex = queryRegex;
+    return this;
+  }
+
+  /**
+   * Search only A list of terms to match the query on. Cannot be set when Condition.query_regex is
+   * set. Maximum of 10 query terms.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDiscoveryengineV1alphaConditionQueryTerm> getQueryTerms() {
@@ -69,7 +98,8 @@ public final class GoogleCloudDiscoveryengineV1alphaCondition extends com.google
   }
 
   /**
-   * Search only A list of terms to match the query on. Maximum of 10 query terms.
+   * Search only A list of terms to match the query on. Cannot be set when Condition.query_regex is
+   * set. Maximum of 10 query terms.
    * @param queryTerms queryTerms or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaCondition setQueryTerms(java.util.List<GoogleCloudDiscoveryengineV1alphaConditionQueryTerm> queryTerms) {

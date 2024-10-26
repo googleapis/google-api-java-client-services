@@ -41,11 +41,25 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
   private java.lang.Boolean aclEnabled;
 
   /**
+   * Optional. Configuration for advanced site search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaAdvancedSiteSearchConfig advancedSiteSearchConfig;
+
+  /**
    * Output only. Data size estimation for billing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1alphaDataStoreBillingEstimation billingEstimation;
+
+  /**
+   * Output only. CMEK-related information for the DataStore.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaCmekConfig cmekConfig;
 
   /**
    * Immutable. The content config of the data store. If this field is unset, the server behavior
@@ -99,6 +113,16 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
   private java.lang.String industryVertical;
 
   /**
+   * Input only. The KMS key to be used to protect this DataStore at creation time. Must be set for
+   * requests that need to comply with CMEK Org Policy protections. If this field is set and
+   * processed successfully, the DataStore will be protected by the KMS key, as indicated in the
+   * cmek_config field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKeyName;
+
+  /**
    * Language info for DataStore.
    * The value may be {@code null}.
    */
@@ -126,7 +150,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudDiscoveryengineV1alphaServingConfigDataStore servingConfigDataStore;
+  private GoogleCloudDiscoveryengineV1alphaDataStoreServingConfigDataStore servingConfigDataStore;
 
   /**
    * The solutions that the data store enrolls. Available solutions for each industry_vertical: *
@@ -183,6 +207,23 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
   }
 
   /**
+   * Optional. Configuration for advanced site search.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAdvancedSiteSearchConfig getAdvancedSiteSearchConfig() {
+    return advancedSiteSearchConfig;
+  }
+
+  /**
+   * Optional. Configuration for advanced site search.
+   * @param advancedSiteSearchConfig advancedSiteSearchConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataStore setAdvancedSiteSearchConfig(GoogleCloudDiscoveryengineV1alphaAdvancedSiteSearchConfig advancedSiteSearchConfig) {
+    this.advancedSiteSearchConfig = advancedSiteSearchConfig;
+    return this;
+  }
+
+  /**
    * Output only. Data size estimation for billing.
    * @return value or {@code null} for none
    */
@@ -196,6 +237,23 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
    */
   public GoogleCloudDiscoveryengineV1alphaDataStore setBillingEstimation(GoogleCloudDiscoveryengineV1alphaDataStoreBillingEstimation billingEstimation) {
     this.billingEstimation = billingEstimation;
+    return this;
+  }
+
+  /**
+   * Output only. CMEK-related information for the DataStore.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaCmekConfig getCmekConfig() {
+    return cmekConfig;
+  }
+
+  /**
+   * Output only. CMEK-related information for the DataStore.
+   * @param cmekConfig cmekConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataStore setCmekConfig(GoogleCloudDiscoveryengineV1alphaCmekConfig cmekConfig) {
+    this.cmekConfig = cmekConfig;
     return this;
   }
 
@@ -323,6 +381,29 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
   }
 
   /**
+   * Input only. The KMS key to be used to protect this DataStore at creation time. Must be set for
+   * requests that need to comply with CMEK Org Policy protections. If this field is set and
+   * processed successfully, the DataStore will be protected by the KMS key, as indicated in the
+   * cmek_config field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKeyName() {
+    return kmsKeyName;
+  }
+
+  /**
+   * Input only. The KMS key to be used to protect this DataStore at creation time. Must be set for
+   * requests that need to comply with CMEK Org Policy protections. If this field is set and
+   * processed successfully, the DataStore will be protected by the KMS key, as indicated in the
+   * cmek_config field.
+   * @param kmsKeyName kmsKeyName or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataStore setKmsKeyName(java.lang.String kmsKeyName) {
+    this.kmsKeyName = kmsKeyName;
+    return this;
+  }
+
+  /**
    * Language info for DataStore.
    * @return value or {@code null} for none
    */
@@ -381,7 +462,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
    * Optional. Stores serving config at DataStore level.
    * @return value or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaServingConfigDataStore getServingConfigDataStore() {
+  public GoogleCloudDiscoveryengineV1alphaDataStoreServingConfigDataStore getServingConfigDataStore() {
     return servingConfigDataStore;
   }
 
@@ -389,7 +470,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
    * Optional. Stores serving config at DataStore level.
    * @param servingConfigDataStore servingConfigDataStore or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaDataStore setServingConfigDataStore(GoogleCloudDiscoveryengineV1alphaServingConfigDataStore servingConfigDataStore) {
+  public GoogleCloudDiscoveryengineV1alphaDataStore setServingConfigDataStore(GoogleCloudDiscoveryengineV1alphaDataStoreServingConfigDataStore servingConfigDataStore) {
     this.servingConfigDataStore = servingConfigDataStore;
     return this;
   }

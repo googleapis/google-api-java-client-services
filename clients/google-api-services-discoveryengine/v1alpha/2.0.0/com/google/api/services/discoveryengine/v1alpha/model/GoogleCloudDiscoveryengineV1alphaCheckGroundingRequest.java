@@ -30,7 +30,7 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaCheckGroundingRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Answer candidate to check. Can have a maximum length of 1024 characters.
+   * Answer candidate to check. It can have a maximum length of 4096 tokens.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class GoogleCloudDiscoveryengineV1alphaCheckGroundingRequest extend
   private java.util.Map<String, java.lang.String> userLabels;
 
   /**
-   * Answer candidate to check. Can have a maximum length of 1024 characters.
+   * Answer candidate to check. It can have a maximum length of 4096 tokens.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnswerCandidate() {
@@ -75,7 +75,7 @@ public final class GoogleCloudDiscoveryengineV1alphaCheckGroundingRequest extend
   }
 
   /**
-   * Answer candidate to check. Can have a maximum length of 1024 characters.
+   * Answer candidate to check. It can have a maximum length of 4096 tokens.
    * @param answerCandidate answerCandidate or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaCheckGroundingRequest setAnswerCandidate(java.lang.String answerCandidate) {

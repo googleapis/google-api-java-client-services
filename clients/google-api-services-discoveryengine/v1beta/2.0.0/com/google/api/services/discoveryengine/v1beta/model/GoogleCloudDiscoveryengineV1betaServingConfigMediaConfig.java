@@ -60,6 +60,14 @@ public final class GoogleCloudDiscoveryengineV1betaServingConfigMediaConfig exte
   private java.lang.Float contentWatchedSecondsThreshold;
 
   /**
+   * Optional. Specifies the number of days to look back for demoting watched content. If set to
+   * zero or unset, defaults to the maximum of 365 days.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer demoteContentWatchedPastDays;
+
+  /**
    * Specifies the event type used for demoting recommendation result. Currently supported values: *
    * `view-item`: Item viewed. * `media-play`: Start/resume watching a video, playing a song, etc. *
    * `media-complete`: Finished or stopped midway through a video, song, etc. If unset, watch
@@ -121,6 +129,25 @@ public final class GoogleCloudDiscoveryengineV1betaServingConfigMediaConfig exte
    */
   public GoogleCloudDiscoveryengineV1betaServingConfigMediaConfig setContentWatchedSecondsThreshold(java.lang.Float contentWatchedSecondsThreshold) {
     this.contentWatchedSecondsThreshold = contentWatchedSecondsThreshold;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the number of days to look back for demoting watched content. If set to
+   * zero or unset, defaults to the maximum of 365 days.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getDemoteContentWatchedPastDays() {
+    return demoteContentWatchedPastDays;
+  }
+
+  /**
+   * Optional. Specifies the number of days to look back for demoting watched content. If set to
+   * zero or unset, defaults to the maximum of 365 days.
+   * @param demoteContentWatchedPastDays demoteContentWatchedPastDays or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaServingConfigMediaConfig setDemoteContentWatchedPastDays(java.lang.Integer demoteContentWatchedPastDays) {
+    this.demoteContentWatchedPastDays = demoteContentWatchedPastDays;
     return this;
   }
 

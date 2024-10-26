@@ -82,6 +82,13 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   private java.lang.String gceOperation;
 
   /**
+   * The requested IP version for the PSC connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipVersion;
+
+  /**
    * Immutable. Deprecated. Use producer_instance_metadata instead. An immutable identifier for the
    * producer instance.
    * The value may be {@code null}.
@@ -245,6 +252,23 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
    */
   public PscConnection setGceOperation(java.lang.String gceOperation) {
     this.gceOperation = gceOperation;
+    return this;
+  }
+
+  /**
+   * The requested IP version for the PSC connection.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpVersion() {
+    return ipVersion;
+  }
+
+  /**
+   * The requested IP version for the PSC connection.
+   * @param ipVersion ipVersion or {@code null} for none
+   */
+  public PscConnection setIpVersion(java.lang.String ipVersion) {
+    this.ipVersion = ipVersion;
     return this;
   }
 

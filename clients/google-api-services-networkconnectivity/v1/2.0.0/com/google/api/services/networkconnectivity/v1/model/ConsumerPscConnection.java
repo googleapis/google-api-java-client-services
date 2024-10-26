@@ -76,6 +76,13 @@ public final class ConsumerPscConnection extends com.google.api.client.json.Gene
   private java.lang.String ip;
 
   /**
+   * The requested IP version for the PSC connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipVersion;
+
+  /**
    * The consumer network whose PSC forwarding rule is connected to the service attachments in this
    * service connection map. Note that the network could be on a different project (shared VPC).
    * The value may be {@code null}.
@@ -241,6 +248,23 @@ public final class ConsumerPscConnection extends com.google.api.client.json.Gene
    */
   public ConsumerPscConnection setIp(java.lang.String ip) {
     this.ip = ip;
+    return this;
+  }
+
+  /**
+   * The requested IP version for the PSC connection.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpVersion() {
+    return ipVersion;
+  }
+
+  /**
+   * The requested IP version for the PSC connection.
+   * @param ipVersion ipVersion or {@code null} for none
+   */
+  public ConsumerPscConnection setIpVersion(java.lang.String ipVersion) {
+    this.ipVersion = ipVersion;
     return this;
   }
 

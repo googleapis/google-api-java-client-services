@@ -31,6 +31,13 @@ package com.google.api.services.firebaseappdistribution.v1alpha.model;
 public final class GoogleFirebaseAppdistroV1alphaDeviceInteraction extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Key code for a key event action.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String keyCode;
+
+  /**
    * Output only. The screenshot used in the context of this action. The screen may have changed
    * before the action was actually taken.
    * The value may be {@code null}.
@@ -65,6 +72,23 @@ public final class GoogleFirebaseAppdistroV1alphaDeviceInteraction extends com.g
    */
   @com.google.api.client.util.Key
   private GoogleFirebaseAppdistroV1alphaDeviceInteractionWait wait;
+
+  /**
+   * Output only. Key code for a key event action.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKeyCode() {
+    return keyCode;
+  }
+
+  /**
+   * Output only. Key code for a key event action.
+   * @param keyCode keyCode or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaDeviceInteraction setKeyCode(java.lang.String keyCode) {
+    this.keyCode = keyCode;
+    return this;
+  }
 
   /**
    * Output only. The screenshot used in the context of this action. The screen may have changed

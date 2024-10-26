@@ -17,7 +17,7 @@
 package com.google.api.services.datastream.v1.model;
 
 /**
- * Oracle database profile.
+ * Oracle database profile. Next ID: 10.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Datastream API. For a detailed explanation see:
@@ -58,7 +58,8 @@ public final class OracleProfile extends com.google.api.client.json.GenericJson 
   private OracleSslConfig oracleSslConfig;
 
   /**
-   * Required. Password for the Oracle connection.
+   * Optional. Password for the Oracle connection. Mutually exclusive with the
+   * `secret_manager_stored_password` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,7 +148,8 @@ public final class OracleProfile extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. Password for the Oracle connection.
+   * Optional. Password for the Oracle connection. Mutually exclusive with the
+   * `secret_manager_stored_password` field.
    * @return value or {@code null} for none
    */
   public java.lang.String getPassword() {
@@ -155,7 +157,8 @@ public final class OracleProfile extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. Password for the Oracle connection.
+   * Optional. Password for the Oracle connection. Mutually exclusive with the
+   * `secret_manager_stored_password` field.
    * @param password password or {@code null} for none
    */
   public OracleProfile setPassword(java.lang.String password) {

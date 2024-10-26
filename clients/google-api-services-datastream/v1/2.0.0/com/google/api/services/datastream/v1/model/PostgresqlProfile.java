@@ -17,7 +17,7 @@
 package com.google.api.services.datastream.v1.model;
 
 /**
- * PostgreSQL database profile.
+ * PostgreSQL database profile. Next ID: 7.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Datastream API. For a detailed explanation see:
@@ -44,7 +44,8 @@ public final class PostgresqlProfile extends com.google.api.client.json.GenericJ
   private java.lang.String hostname;
 
   /**
-   * Required. Password for the PostgreSQL connection.
+   * Optional. Password for the PostgreSQL connection. Mutually exclusive with the
+   * `secret_manager_stored_password` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +100,8 @@ public final class PostgresqlProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. Password for the PostgreSQL connection.
+   * Optional. Password for the PostgreSQL connection. Mutually exclusive with the
+   * `secret_manager_stored_password` field.
    * @return value or {@code null} for none
    */
   public java.lang.String getPassword() {
@@ -107,7 +109,8 @@ public final class PostgresqlProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. Password for the PostgreSQL connection.
+   * Optional. Password for the PostgreSQL connection. Mutually exclusive with the
+   * `secret_manager_stored_password` field.
    * @param password password or {@code null} for none
    */
   public PostgresqlProfile setPassword(java.lang.String password) {

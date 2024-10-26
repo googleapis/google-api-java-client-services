@@ -38,6 +38,14 @@ public final class Mutation extends com.google.api.client.json.GenericJson {
   private java.lang.Long baseVersion;
 
   /**
+   * The strategy to use when a conflict is detected. Defaults to `SERVER_VALUE`. If this is set,
+   * then `conflict_detection_strategy` must also be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String conflictResolutionStrategy;
+
+  /**
    * The key of the entity to delete. The entity may or may not already exist. Must have a complete
    * key path and must not be reserved/read-only.
    * The value may be {@code null}.
@@ -62,6 +70,15 @@ public final class Mutation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private PropertyMask propertyMask;
+
+  /**
+   * Optional. The transforms to perform on the entity. This field can be set only when the
+   * operation is `insert`, `update`, or `upsert`. If present, the transforms are be applied to the
+   * entity regardless of the property mask, in order, after the operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PropertyTransform> propertyTransforms;
 
   /**
    * The entity to update. The entity must already exist. Must have a complete key path.
@@ -102,6 +119,25 @@ public final class Mutation extends com.google.api.client.json.GenericJson {
    */
   public Mutation setBaseVersion(java.lang.Long baseVersion) {
     this.baseVersion = baseVersion;
+    return this;
+  }
+
+  /**
+   * The strategy to use when a conflict is detected. Defaults to `SERVER_VALUE`. If this is set,
+   * then `conflict_detection_strategy` must also be set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConflictResolutionStrategy() {
+    return conflictResolutionStrategy;
+  }
+
+  /**
+   * The strategy to use when a conflict is detected. Defaults to `SERVER_VALUE`. If this is set,
+   * then `conflict_detection_strategy` must also be set.
+   * @param conflictResolutionStrategy conflictResolutionStrategy or {@code null} for none
+   */
+  public Mutation setConflictResolutionStrategy(java.lang.String conflictResolutionStrategy) {
+    this.conflictResolutionStrategy = conflictResolutionStrategy;
     return this;
   }
 
@@ -163,6 +199,27 @@ public final class Mutation extends com.google.api.client.json.GenericJson {
    */
   public Mutation setPropertyMask(PropertyMask propertyMask) {
     this.propertyMask = propertyMask;
+    return this;
+  }
+
+  /**
+   * Optional. The transforms to perform on the entity. This field can be set only when the
+   * operation is `insert`, `update`, or `upsert`. If present, the transforms are be applied to the
+   * entity regardless of the property mask, in order, after the operation.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PropertyTransform> getPropertyTransforms() {
+    return propertyTransforms;
+  }
+
+  /**
+   * Optional. The transforms to perform on the entity. This field can be set only when the
+   * operation is `insert`, `update`, or `upsert`. If present, the transforms are be applied to the
+   * entity regardless of the property mask, in order, after the operation.
+   * @param propertyTransforms propertyTransforms or {@code null} for none
+   */
+  public Mutation setPropertyTransforms(java.util.List<PropertyTransform> propertyTransforms) {
+    this.propertyTransforms = propertyTransforms;
     return this;
   }
 

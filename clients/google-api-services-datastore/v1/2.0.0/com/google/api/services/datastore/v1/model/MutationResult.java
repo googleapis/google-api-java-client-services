@@ -52,6 +52,13 @@ public final class MutationResult extends com.google.api.client.json.GenericJson
   private Key key;
 
   /**
+   * The results of applying each PropertyTransform, in the same order of the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Value> transformResults;
+
+  /**
    * The update time of the entity on the server after processing the mutation. If the mutation
    * doesn't change anything on the server, then the timestamp will be the update timestamp of the
    * current entity. This field will not be set after a 'delete'.
@@ -120,6 +127,23 @@ public final class MutationResult extends com.google.api.client.json.GenericJson
    */
   public MutationResult setKey(Key key) {
     this.key = key;
+    return this;
+  }
+
+  /**
+   * The results of applying each PropertyTransform, in the same order of the request.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Value> getTransformResults() {
+    return transformResults;
+  }
+
+  /**
+   * The results of applying each PropertyTransform, in the same order of the request.
+   * @param transformResults transformResults or {@code null} for none
+   */
+  public MutationResult setTransformResults(java.util.List<Value> transformResults) {
+    this.transformResults = transformResults;
     return this;
   }
 

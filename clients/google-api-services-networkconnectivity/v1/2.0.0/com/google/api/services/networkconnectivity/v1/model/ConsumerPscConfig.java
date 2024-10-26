@@ -49,6 +49,13 @@ public final class ConsumerPscConfig extends com.google.api.client.json.GenericJ
   private java.lang.Boolean disableGlobalAccess;
 
   /**
+   * The requested IP version for the PSC connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipVersion;
+
+  /**
    * The resource path of the consumer network where PSC connections are allowed to be created in.
    * Note, this network does not need be in the ConsumerPscConfig.project in the case of SharedVPC.
    * Example: projects/{projectNumOrId}/global/networks/{networkId}.
@@ -133,6 +140,23 @@ public final class ConsumerPscConfig extends com.google.api.client.json.GenericJ
    */
   public ConsumerPscConfig setDisableGlobalAccess(java.lang.Boolean disableGlobalAccess) {
     this.disableGlobalAccess = disableGlobalAccess;
+    return this;
+  }
+
+  /**
+   * The requested IP version for the PSC connection.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpVersion() {
+    return ipVersion;
+  }
+
+  /**
+   * The requested IP version for the PSC connection.
+   * @param ipVersion ipVersion or {@code null} for none
+   */
+  public ConsumerPscConfig setIpVersion(java.lang.String ipVersion) {
+    this.ipVersion = ipVersion;
     return this;
   }
 

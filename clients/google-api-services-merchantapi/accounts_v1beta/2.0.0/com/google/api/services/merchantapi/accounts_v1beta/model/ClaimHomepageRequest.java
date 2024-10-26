@@ -29,6 +29,33 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
 @SuppressWarnings("javadoc")
 public final class ClaimHomepageRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. When set to `true`, this option removes any existing claim on the requested website
+   * and replaces it with a claim from the account that makes the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean overwrite;
+
+  /**
+   * Optional. When set to `true`, this option removes any existing claim on the requested website
+   * and replaces it with a claim from the account that makes the request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getOverwrite() {
+    return overwrite;
+  }
+
+  /**
+   * Optional. When set to `true`, this option removes any existing claim on the requested website
+   * and replaces it with a claim from the account that makes the request.
+   * @param overwrite overwrite or {@code null} for none
+   */
+  public ClaimHomepageRequest setOverwrite(java.lang.Boolean overwrite) {
+    this.overwrite = overwrite;
+    return this;
+  }
+
   @Override
   public ClaimHomepageRequest set(String fieldName, Object value) {
     return (ClaimHomepageRequest) super.set(fieldName, value);

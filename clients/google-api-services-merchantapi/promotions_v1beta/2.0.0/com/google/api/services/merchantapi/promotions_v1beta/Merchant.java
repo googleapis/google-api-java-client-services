@@ -600,14 +600,14 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Output only. The maximum number of promotions to return. The service may return fewer
-         * than this value. The maximum value is 1000; values above 1000 will be coerced to 1000. If
+         * than this value. The maximum value is 250; values above 250 will be coerced to 250. If
          * unspecified, the maximum number of promotions will be returned.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Output only. The maximum number of promotions to return. The service may return fewer than this
-       value. The maximum value is 1000; values above 1000 will be coerced to 1000. If unspecified, the
+       value. The maximum value is 250; values above 250 will be coerced to 250. If unspecified, the
        maximum number of promotions will be returned.
          */
         public java.lang.Integer getPageSize() {
@@ -616,7 +616,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Output only. The maximum number of promotions to return. The service may return fewer
-         * than this value. The maximum value is 1000; values above 1000 will be coerced to 1000. If
+         * than this value. The maximum value is 250; values above 250 will be coerced to 250. If
          * unspecified, the maximum number of promotions will be returned.
          */
         public List setPageSize(java.lang.Integer pageSize) {

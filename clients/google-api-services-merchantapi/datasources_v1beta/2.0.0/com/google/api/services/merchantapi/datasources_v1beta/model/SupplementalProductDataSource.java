@@ -17,7 +17,8 @@
 package com.google.api.services.merchantapi.datasources_v1beta.model;
 
 /**
- * The supplemental data source for local and online products.
+ * The supplemental data source for local and online products. After creation, you should make sure
+ * to link the supplemental product data source into one or more primary product data sources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:
@@ -45,9 +46,10 @@ public final class SupplementalProductDataSource extends com.google.api.client.j
    * than or equal to 20 uppercase letters (A-Z), numbers (0-9), and dashes (-). See also [migration
    * to feed labels](https://developers.google.com/shopping-content/guides/products/feed-labels).
    * `feedLabel` and `contentLanguage` must be either both set or unset for data sources with
-   * product content type. They must be set for data sources with a file input. If set, the data
-   * source will only accept products matching this combination. If unset, the data source will
-   * accept produts without that restriction.
+   * product content type. They must be set for data sources with a file input. The fields must be
+   * unset for data sources without file input. If set, the data source will only accept products
+   * matching this combination. If unset, the data source will accept produts without that
+   * restriction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,9 +100,10 @@ public final class SupplementalProductDataSource extends com.google.api.client.j
    * than or equal to 20 uppercase letters (A-Z), numbers (0-9), and dashes (-). See also [migration
    * to feed labels](https://developers.google.com/shopping-content/guides/products/feed-labels).
    * `feedLabel` and `contentLanguage` must be either both set or unset for data sources with
-   * product content type. They must be set for data sources with a file input. If set, the data
-   * source will only accept products matching this combination. If unset, the data source will
-   * accept produts without that restriction.
+   * product content type. They must be set for data sources with a file input. The fields must be
+   * unset for data sources without file input. If set, the data source will only accept products
+   * matching this combination. If unset, the data source will accept produts without that
+   * restriction.
    * @return value or {@code null} for none
    */
   public java.lang.String getFeedLabel() {
@@ -112,9 +115,10 @@ public final class SupplementalProductDataSource extends com.google.api.client.j
    * than or equal to 20 uppercase letters (A-Z), numbers (0-9), and dashes (-). See also [migration
    * to feed labels](https://developers.google.com/shopping-content/guides/products/feed-labels).
    * `feedLabel` and `contentLanguage` must be either both set or unset for data sources with
-   * product content type. They must be set for data sources with a file input. If set, the data
-   * source will only accept products matching this combination. If unset, the data source will
-   * accept produts without that restriction.
+   * product content type. They must be set for data sources with a file input. The fields must be
+   * unset for data sources without file input. If set, the data source will only accept products
+   * matching this combination. If unset, the data source will accept produts without that
+   * restriction.
    * @param feedLabel feedLabel or {@code null} for none
    */
   public SupplementalProductDataSource setFeedLabel(java.lang.String feedLabel) {

@@ -183,7 +183,9 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the product input resource to delete. Format:
-       *        accounts/{account}/productInputs/{product}
+       *        accounts/{account}/productInputs/{product} where the last section `product` consists of 4
+       *        parts: channel~content_language~feed_label~offer_id example for product name is
+       *        "accounts/123/productInputs/online~en~US~sku123"
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -213,7 +215,9 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The name of the product input resource to delete. Format:
-       *        accounts/{account}/productInputs/{product}
+       *        accounts/{account}/productInputs/{product} where the last section `product` consists of 4
+       *        parts: channel~content_language~feed_label~offer_id example for product name is
+       *        "accounts/123/productInputs/online~en~US~sku123"
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -283,13 +287,17 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The name of the product input resource to delete. Format:
-         * accounts/{account}/productInputs/{product}
+         * accounts/{account}/productInputs/{product} where the last section `product` consists of 4
+         * parts: channel~content_language~feed_label~offer_id example for product name is
+         * "accounts/123/productInputs/online~en~US~sku123"
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the product input resource to delete. Format:
-       accounts/{account}/productInputs/{product}
+       accounts/{account}/productInputs/{product} where the last section `product` consists of 4 parts:
+       channel~content_language~feed_label~offer_id example for product name is
+       "accounts/123/productInputs/online~en~US~sku123"
          */
         public java.lang.String getName() {
           return name;
@@ -297,7 +305,9 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The name of the product input resource to delete. Format:
-         * accounts/{account}/productInputs/{product}
+         * accounts/{account}/productInputs/{product} where the last section `product` consists of 4
+         * parts: channel~content_language~feed_label~offer_id example for product name is
+         * "accounts/123/productInputs/online~en~US~sku123"
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -536,7 +546,10 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the merchantapi server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the product to retrieve. Format: `accounts/{account}/products/{product}`
+       * @param name Required. The name of the product to retrieve. Format: `accounts/{account}/products/{product}` where
+       *        the last section `product` consists of 4 parts:
+       *        channel~content_language~feed_label~offer_id example for product name is
+       *        "accounts/123/products/online~en~US~sku123"
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -564,7 +577,10 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the product to retrieve. Format: `accounts/{account}/products/{product}`
+         * @param name Required. The name of the product to retrieve. Format: `accounts/{account}/products/{product}` where
+       *        the last section `product` consists of 4 parts:
+       *        channel~content_language~feed_label~offer_id example for product name is
+       *        "accounts/123/products/online~en~US~sku123"
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -644,12 +660,16 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The name of the product to retrieve. Format:
-         * `accounts/{account}/products/{product}`
+         * `accounts/{account}/products/{product}` where the last section `product` consists of 4
+         * parts: channel~content_language~feed_label~offer_id example for product name is
+         * "accounts/123/products/online~en~US~sku123"
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the product to retrieve. Format: `accounts/{account}/products/{product}`
+       where the last section `product` consists of 4 parts: channel~content_language~feed_label~offer_id
+       example for product name is "accounts/123/products/online~en~US~sku123"
          */
         public java.lang.String getName() {
           return name;
@@ -657,7 +677,9 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The name of the product to retrieve. Format:
-         * `accounts/{account}/products/{product}`
+         * `accounts/{account}/products/{product}` where the last section `product` consists of 4
+         * parts: channel~content_language~feed_label~offer_id example for product name is
+         * "accounts/123/products/online~en~US~sku123"
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

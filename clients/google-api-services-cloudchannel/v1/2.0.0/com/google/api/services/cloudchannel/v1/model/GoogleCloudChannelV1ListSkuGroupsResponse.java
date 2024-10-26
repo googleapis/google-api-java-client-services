@@ -30,8 +30,8 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1ListSkuGroupsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A token to retrieve the next page of results. Pass to ListSkuGroups.page_token to obtain that
-   * page.
+   * A token to retrieve the next page of results. Pass to ListSkuGroupsRequest.page_token to obtain
+   * that page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +45,8 @@ public final class GoogleCloudChannelV1ListSkuGroupsResponse extends com.google.
   private java.util.List<GoogleCloudChannelV1SkuGroup> skuGroups;
 
   /**
-   * A token to retrieve the next page of results. Pass to ListSkuGroups.page_token to obtain that
-   * page.
+   * A token to retrieve the next page of results. Pass to ListSkuGroupsRequest.page_token to obtain
+   * that page.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -54,8 +54,8 @@ public final class GoogleCloudChannelV1ListSkuGroupsResponse extends com.google.
   }
 
   /**
-   * A token to retrieve the next page of results. Pass to ListSkuGroups.page_token to obtain that
-   * page.
+   * A token to retrieve the next page of results. Pass to ListSkuGroupsRequest.page_token to obtain
+   * that page.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudChannelV1ListSkuGroupsResponse setNextPageToken(java.lang.String nextPageToken) {

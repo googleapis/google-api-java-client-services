@@ -94,7 +94,7 @@ public final class LbTrafficExtension extends com.google.api.client.json.Generic
    * `ProcessingRequest.metadata_context.filter_metadata` map field. The metadata is available under
    * the key `com.google.lb_traffic_extension.`. The following variables are supported in the
    * metadata: `{forwarding_rule_id}` - substituted with the forwarding rule's fully qualified
-   * resource name.
+   * resource name. This field is not supported for plugin extensions and must not be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -242,7 +242,7 @@ public final class LbTrafficExtension extends com.google.api.client.json.Generic
    * `ProcessingRequest.metadata_context.filter_metadata` map field. The metadata is available under
    * the key `com.google.lb_traffic_extension.`. The following variables are supported in the
    * metadata: `{forwarding_rule_id}` - substituted with the forwarding rule's fully qualified
-   * resource name.
+   * resource name. This field is not supported for plugin extensions and must not be set.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getMetadata() {
@@ -254,7 +254,7 @@ public final class LbTrafficExtension extends com.google.api.client.json.Generic
    * `ProcessingRequest.metadata_context.filter_metadata` map field. The metadata is available under
    * the key `com.google.lb_traffic_extension.`. The following variables are supported in the
    * metadata: `{forwarding_rule_id}` - substituted with the forwarding rule's fully qualified
-   * resource name.
+   * resource name. This field is not supported for plugin extensions and must not be set.
    * @param metadata metadata or {@code null} for none
    */
   public LbTrafficExtension setMetadata(java.util.Map<String, java.lang.Object> metadata) {

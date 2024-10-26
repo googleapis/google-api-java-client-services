@@ -75,7 +75,7 @@ public final class ServiceLbPolicy extends com.google.api.client.json.GenericJso
   private java.lang.String loadBalancingAlgorithm;
 
   /**
-   * Required. Name of the ServiceLbPolicy resource. It matches pattern
+   * Identifier. Name of the ServiceLbPolicy resource. It matches pattern
    * `projects/{project}/locations/{location}/serviceLbPolicies/{service_lb_policy_name}`.
    * The value may be {@code null}.
    */
@@ -196,7 +196,7 @@ public final class ServiceLbPolicy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. Name of the ServiceLbPolicy resource. It matches pattern
+   * Identifier. Name of the ServiceLbPolicy resource. It matches pattern
    * `projects/{project}/locations/{location}/serviceLbPolicies/{service_lb_policy_name}`.
    * @return value or {@code null} for none
    */
@@ -205,7 +205,7 @@ public final class ServiceLbPolicy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. Name of the ServiceLbPolicy resource. It matches pattern
+   * Identifier. Name of the ServiceLbPolicy resource. It matches pattern
    * `projects/{project}/locations/{location}/serviceLbPolicies/{service_lb_policy_name}`.
    * @param name name or {@code null} for none
    */

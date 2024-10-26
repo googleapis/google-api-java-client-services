@@ -1,6 +1,6 @@
 # Firebase Data Connect API Client Library for Java
 
-
+Firebase Data Connect is a relational database service for mobile and web apps that lets you build and scale using a fully-managed PostgreSQL database powered by Cloud SQL. The REST API lets developers manage the connections to their database, change the schema of their database, and query the database.
 
 This page contains information about getting started with the Firebase Data Connect API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-firebasedataconnect</artifactId>
-      <version>v1beta-rev20240924-2.0.0</version>
+      <version>v1beta-rev20241006-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-firebasedataconnect:v1beta-rev20240924-2.0.0'
+  implementation 'com.google.apis:google-api-services-firebasedataconnect:v1beta-rev20241006-2.0.0'
 }
 ```
 

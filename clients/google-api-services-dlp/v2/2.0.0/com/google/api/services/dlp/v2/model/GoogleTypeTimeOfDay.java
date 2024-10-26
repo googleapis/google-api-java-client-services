@@ -33,38 +33,41 @@ package com.google.api.services.dlp.v2.model;
 public final class GoogleTypeTimeOfDay extends com.google.api.client.json.GenericJson {
 
   /**
-   * Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value
-   * "24:00:00" for scenarios like business closing time.
+   * Hours of a day in 24 hour format. Must be greater than or equal to 0 and typically must be less
+   * than or equal to 23. An API may choose to allow the value "24:00:00" for scenarios like
+   * business closing time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer hours;
 
   /**
-   * Minutes of hour of day. Must be from 0 to 59.
+   * Minutes of an hour. Must be greater than or equal to 0 and less than or equal to 59.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minutes;
 
   /**
-   * Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+   * Fractions of seconds, in nanoseconds. Must be greater than or equal to 0 and less than or equal
+   * to 999,999,999.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer nanos;
 
   /**
-   * Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if
-   * it allows leap-seconds.
+   * Seconds of a minute. Must be greater than or equal to 0 and typically must be less than or
+   * equal to 59. An API may allow the value 60 if it allows leap-seconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer seconds;
 
   /**
-   * Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value
-   * "24:00:00" for scenarios like business closing time.
+   * Hours of a day in 24 hour format. Must be greater than or equal to 0 and typically must be less
+   * than or equal to 23. An API may choose to allow the value "24:00:00" for scenarios like
+   * business closing time.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getHours() {
@@ -72,8 +75,9 @@ public final class GoogleTypeTimeOfDay extends com.google.api.client.json.Generi
   }
 
   /**
-   * Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value
-   * "24:00:00" for scenarios like business closing time.
+   * Hours of a day in 24 hour format. Must be greater than or equal to 0 and typically must be less
+   * than or equal to 23. An API may choose to allow the value "24:00:00" for scenarios like
+   * business closing time.
    * @param hours hours or {@code null} for none
    */
   public GoogleTypeTimeOfDay setHours(java.lang.Integer hours) {
@@ -82,7 +86,7 @@ public final class GoogleTypeTimeOfDay extends com.google.api.client.json.Generi
   }
 
   /**
-   * Minutes of hour of day. Must be from 0 to 59.
+   * Minutes of an hour. Must be greater than or equal to 0 and less than or equal to 59.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinutes() {
@@ -90,7 +94,7 @@ public final class GoogleTypeTimeOfDay extends com.google.api.client.json.Generi
   }
 
   /**
-   * Minutes of hour of day. Must be from 0 to 59.
+   * Minutes of an hour. Must be greater than or equal to 0 and less than or equal to 59.
    * @param minutes minutes or {@code null} for none
    */
   public GoogleTypeTimeOfDay setMinutes(java.lang.Integer minutes) {
@@ -99,7 +103,8 @@ public final class GoogleTypeTimeOfDay extends com.google.api.client.json.Generi
   }
 
   /**
-   * Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+   * Fractions of seconds, in nanoseconds. Must be greater than or equal to 0 and less than or equal
+   * to 999,999,999.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNanos() {
@@ -107,7 +112,8 @@ public final class GoogleTypeTimeOfDay extends com.google.api.client.json.Generi
   }
 
   /**
-   * Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+   * Fractions of seconds, in nanoseconds. Must be greater than or equal to 0 and less than or equal
+   * to 999,999,999.
    * @param nanos nanos or {@code null} for none
    */
   public GoogleTypeTimeOfDay setNanos(java.lang.Integer nanos) {
@@ -116,8 +122,8 @@ public final class GoogleTypeTimeOfDay extends com.google.api.client.json.Generi
   }
 
   /**
-   * Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if
-   * it allows leap-seconds.
+   * Seconds of a minute. Must be greater than or equal to 0 and typically must be less than or
+   * equal to 59. An API may allow the value 60 if it allows leap-seconds.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSeconds() {
@@ -125,8 +131,8 @@ public final class GoogleTypeTimeOfDay extends com.google.api.client.json.Generi
   }
 
   /**
-   * Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if
-   * it allows leap-seconds.
+   * Seconds of a minute. Must be greater than or equal to 0 and typically must be less than or
+   * equal to 59. An API may allow the value 60 if it allows leap-seconds.
    * @param seconds seconds or {@code null} for none
    */
   public GoogleTypeTimeOfDay setSeconds(java.lang.Integer seconds) {

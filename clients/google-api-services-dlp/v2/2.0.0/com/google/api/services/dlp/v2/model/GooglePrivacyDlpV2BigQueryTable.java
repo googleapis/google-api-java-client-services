@@ -40,8 +40,8 @@ public final class GooglePrivacyDlpV2BigQueryTable extends com.google.api.client
   private java.lang.String datasetId;
 
   /**
-   * The Google Cloud Platform project ID of the project containing the table. If omitted, project
-   * ID is inferred from the API call.
+   * The Google Cloud project ID of the project containing the table. If omitted, project ID is
+   * inferred from the API call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,8 +72,8 @@ public final class GooglePrivacyDlpV2BigQueryTable extends com.google.api.client
   }
 
   /**
-   * The Google Cloud Platform project ID of the project containing the table. If omitted, project
-   * ID is inferred from the API call.
+   * The Google Cloud project ID of the project containing the table. If omitted, project ID is
+   * inferred from the API call.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -81,8 +81,8 @@ public final class GooglePrivacyDlpV2BigQueryTable extends com.google.api.client
   }
 
   /**
-   * The Google Cloud Platform project ID of the project containing the table. If omitted, project
-   * ID is inferred from the API call.
+   * The Google Cloud project ID of the project containing the table. If omitted, project ID is
+   * inferred from the API call.
    * @param projectId projectId or {@code null} for none
    */
   public GooglePrivacyDlpV2BigQueryTable setProjectId(java.lang.String projectId) {

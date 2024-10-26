@@ -102,8 +102,8 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   private java.lang.Long failedColumnCount;
 
   /**
-   * The resource name of the resource profiled.
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
+   * The Cloud Asset Inventory resource that was profiled in order to generate this
+   * TableDataProfile. https://cloud.google.com/apis/design/resource_names#full_resource_name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -215,7 +215,7 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   private java.lang.String state;
 
   /**
-   * If the resource is BigQuery, the BigQuery table ID.
+   * The table ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -401,8 +401,8 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   }
 
   /**
-   * The resource name of the resource profiled.
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
+   * The Cloud Asset Inventory resource that was profiled in order to generate this
+   * TableDataProfile. https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @return value or {@code null} for none
    */
   public java.lang.String getFullResource() {
@@ -410,8 +410,8 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   }
 
   /**
-   * The resource name of the resource profiled.
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
+   * The Cloud Asset Inventory resource that was profiled in order to generate this
+   * TableDataProfile. https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @param fullResource fullResource or {@code null} for none
    */
   public GooglePrivacyDlpV2TableDataProfile setFullResource(java.lang.String fullResource) {
@@ -645,7 +645,7 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   }
 
   /**
-   * If the resource is BigQuery, the BigQuery table ID.
+   * The table ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getTableId() {
@@ -653,7 +653,7 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   }
 
   /**
-   * If the resource is BigQuery, the BigQuery table ID.
+   * The table ID.
    * @param tableId tableId or {@code null} for none
    */
   public GooglePrivacyDlpV2TableDataProfile setTableId(java.lang.String tableId) {

@@ -51,6 +51,14 @@ public final class EnterpriseCrmEventbusProtoFailurePolicy extends com.google.ap
   private java.lang.Integer maxNumRetries;
 
   /**
+   * Optional. The retry condition that will be evaluated for this failure policy with the
+   * corresponding retry strategy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String retryCondition;
+
+  /**
    * Defines what happens to the task upon failure.
    * The value may be {@code null}.
    */
@@ -96,6 +104,25 @@ public final class EnterpriseCrmEventbusProtoFailurePolicy extends com.google.ap
    */
   public EnterpriseCrmEventbusProtoFailurePolicy setMaxNumRetries(java.lang.Integer maxNumRetries) {
     this.maxNumRetries = maxNumRetries;
+    return this;
+  }
+
+  /**
+   * Optional. The retry condition that will be evaluated for this failure policy with the
+   * corresponding retry strategy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRetryCondition() {
+    return retryCondition;
+  }
+
+  /**
+   * Optional. The retry condition that will be evaluated for this failure policy with the
+   * corresponding retry strategy.
+   * @param retryCondition retryCondition or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoFailurePolicy setRetryCondition(java.lang.String retryCondition) {
+    this.retryCondition = retryCondition;
     return this;
   }
 

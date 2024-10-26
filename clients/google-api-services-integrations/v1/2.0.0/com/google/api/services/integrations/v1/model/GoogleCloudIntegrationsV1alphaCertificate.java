@@ -38,7 +38,7 @@ public final class GoogleCloudIntegrationsV1alphaCertificate extends com.google.
   private java.lang.String certificateStatus;
 
   /**
-   * Immutable. Credential id that will be used to register with trawler INTERNAL_ONLY
+   * Immutable. Credential id that will be used to register with trawler
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,7 +111,7 @@ public final class GoogleCloudIntegrationsV1alphaCertificate extends com.google.
   }
 
   /**
-   * Immutable. Credential id that will be used to register with trawler INTERNAL_ONLY
+   * Immutable. Credential id that will be used to register with trawler
    * @return value or {@code null} for none
    */
   public java.lang.String getCredentialId() {
@@ -119,7 +119,7 @@ public final class GoogleCloudIntegrationsV1alphaCertificate extends com.google.
   }
 
   /**
-   * Immutable. Credential id that will be used to register with trawler INTERNAL_ONLY
+   * Immutable. Credential id that will be used to register with trawler
    * @param credentialId credentialId or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaCertificate setCredentialId(java.lang.String credentialId) {

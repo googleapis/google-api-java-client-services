@@ -1839,28 +1839,28 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Optional. Required. Field mask is used to specify the fields to be overwritten in the
-           * Connection resource by the update. The fields specified in the update_mask are relative
-           * to the resource, not the full request. A field will be overwritten if it is in the
-           * mask. If the user does not provide a mask then all fields will be overwritten.
+           * Required. Field mask is used to specify the fields to be overwritten in the Connection
+           * resource by the update. The fields specified in the update_mask are relative to the
+           * resource, not the full request. A field will be overwritten if it is in the mask. If
+           * the user does not provide a mask then all fields will be overwritten.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Optional. Required. Field mask is used to specify the fields to be overwritten in the Connection
-         resource by the update. The fields specified in the update_mask are relative to the resource, not
-         the full request. A field will be overwritten if it is in the mask. If the user does not provide a
-         mask then all fields will be overwritten.
+          /** Required. Field mask is used to specify the fields to be overwritten in the Connection resource by
+         the update. The fields specified in the update_mask are relative to the resource, not the full
+         request. A field will be overwritten if it is in the mask. If the user does not provide a mask then
+         all fields will be overwritten.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Optional. Required. Field mask is used to specify the fields to be overwritten in the
-           * Connection resource by the update. The fields specified in the update_mask are relative
-           * to the resource, not the full request. A field will be overwritten if it is in the
-           * mask. If the user does not provide a mask then all fields will be overwritten.
+           * Required. Field mask is used to specify the fields to be overwritten in the Connection
+           * resource by the update. The fields specified in the update_mask are relative to the
+           * resource, not the full request. A field will be overwritten if it is in the mask. If
+           * the user does not provide a mask then all fields will be overwritten.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -1886,6 +1886,146 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * ProcessGitHubEnterpriseWebhook is called by the external GitHub Enterprise instances for
+         * notifying events.
+         *
+         * Create a request for the method "connections.processGitHubEnterpriseWebhook".
+         *
+         * This request holds the parameters needed by the developerconnect server.  After setting any
+         * optional parameters, call the {@link ProcessGitHubEnterpriseWebhook#execute()} method to invoke
+         * the remote operation.
+         *
+         * @param parent Required. Project and location where the webhook will be received. Format: `projects/locations`.
+         * @param content the {@link com.google.api.services.developerconnect.v1.model.ProcessGitHubEnterpriseWebhookRequest}
+         * @return the request
+         */
+        public ProcessGitHubEnterpriseWebhook processGitHubEnterpriseWebhook(java.lang.String parent, com.google.api.services.developerconnect.v1.model.ProcessGitHubEnterpriseWebhookRequest content) throws java.io.IOException {
+          ProcessGitHubEnterpriseWebhook result = new ProcessGitHubEnterpriseWebhook(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ProcessGitHubEnterpriseWebhook extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+parent}/connections:processGitHubEnterpriseWebhook";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * ProcessGitHubEnterpriseWebhook is called by the external GitHub Enterprise instances for
+           * notifying events.
+           *
+           * Create a request for the method "connections.processGitHubEnterpriseWebhook".
+           *
+           * This request holds the parameters needed by the the developerconnect server.  After setting any
+           * optional parameters, call the {@link ProcessGitHubEnterpriseWebhook#execute()} method to invoke
+           * the remote operation. <p> {@link ProcessGitHubEnterpriseWebhook#initialize(com.google.api.clien
+           * t.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Project and location where the webhook will be received. Format: `projects/locations`.
+           * @param content the {@link com.google.api.services.developerconnect.v1.model.ProcessGitHubEnterpriseWebhookRequest}
+           * @since 1.13
+           */
+          protected ProcessGitHubEnterpriseWebhook(java.lang.String parent, com.google.api.services.developerconnect.v1.model.ProcessGitHubEnterpriseWebhookRequest content) {
+            super(DeveloperConnect.this, "POST", REST_PATH, content, com.google.api.services.developerconnect.v1.model.Empty.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public ProcessGitHubEnterpriseWebhook set$Xgafv(java.lang.String $Xgafv) {
+            return (ProcessGitHubEnterpriseWebhook) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ProcessGitHubEnterpriseWebhook setAccessToken(java.lang.String accessToken) {
+            return (ProcessGitHubEnterpriseWebhook) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ProcessGitHubEnterpriseWebhook setAlt(java.lang.String alt) {
+            return (ProcessGitHubEnterpriseWebhook) super.setAlt(alt);
+          }
+
+          @Override
+          public ProcessGitHubEnterpriseWebhook setCallback(java.lang.String callback) {
+            return (ProcessGitHubEnterpriseWebhook) super.setCallback(callback);
+          }
+
+          @Override
+          public ProcessGitHubEnterpriseWebhook setFields(java.lang.String fields) {
+            return (ProcessGitHubEnterpriseWebhook) super.setFields(fields);
+          }
+
+          @Override
+          public ProcessGitHubEnterpriseWebhook setKey(java.lang.String key) {
+            return (ProcessGitHubEnterpriseWebhook) super.setKey(key);
+          }
+
+          @Override
+          public ProcessGitHubEnterpriseWebhook setOauthToken(java.lang.String oauthToken) {
+            return (ProcessGitHubEnterpriseWebhook) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ProcessGitHubEnterpriseWebhook setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ProcessGitHubEnterpriseWebhook) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ProcessGitHubEnterpriseWebhook setQuotaUser(java.lang.String quotaUser) {
+            return (ProcessGitHubEnterpriseWebhook) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ProcessGitHubEnterpriseWebhook setUploadType(java.lang.String uploadType) {
+            return (ProcessGitHubEnterpriseWebhook) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ProcessGitHubEnterpriseWebhook setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ProcessGitHubEnterpriseWebhook) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Project and location where the webhook will be received. Format:
+           * `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Project and location where the webhook will be received. Format: `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Project and location where the webhook will be received. Format:
+           * `projects/locations`.
+           */
+          public ProcessGitHubEnterpriseWebhook setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public ProcessGitHubEnterpriseWebhook set(String parameterName, Object value) {
+            return (ProcessGitHubEnterpriseWebhook) super.set(parameterName, value);
           }
         }
 
@@ -3168,6 +3308,290 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * ProcessGitLabEnterpriseWebhook is called by the external GitLab Enterprise instances for
+           * notifying events.
+           *
+           * Create a request for the method "gitRepositoryLinks.processGitLabEnterpriseWebhook".
+           *
+           * This request holds the parameters needed by the developerconnect server.  After setting any
+           * optional parameters, call the {@link ProcessGitLabEnterpriseWebhook#execute()} method to invoke
+           * the remote operation.
+           *
+           * @param name Required. The GitRepositoryLink resource where the webhook will be received. Format:
+           *        `projects/locations/connections/gitRepositoryLinks`.
+           * @param content the {@link com.google.api.services.developerconnect.v1.model.ProcessGitLabEnterpriseWebhookRequest}
+           * @return the request
+           */
+          public ProcessGitLabEnterpriseWebhook processGitLabEnterpriseWebhook(java.lang.String name, com.google.api.services.developerconnect.v1.model.ProcessGitLabEnterpriseWebhookRequest content) throws java.io.IOException {
+            ProcessGitLabEnterpriseWebhook result = new ProcessGitLabEnterpriseWebhook(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ProcessGitLabEnterpriseWebhook extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.Empty> {
+
+            private static final String REST_PATH = "v1/{+name}:processGitLabEnterpriseWebhook";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+
+            /**
+             * ProcessGitLabEnterpriseWebhook is called by the external GitLab Enterprise instances for
+             * notifying events.
+             *
+             * Create a request for the method "gitRepositoryLinks.processGitLabEnterpriseWebhook".
+             *
+             * This request holds the parameters needed by the the developerconnect server.  After setting any
+             * optional parameters, call the {@link ProcessGitLabEnterpriseWebhook#execute()} method to invoke
+             * the remote operation. <p> {@link ProcessGitLabEnterpriseWebhook#initialize(com.google.api.clien
+             * t.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+             * immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The GitRepositoryLink resource where the webhook will be received. Format:
+           *        `projects/locations/connections/gitRepositoryLinks`.
+             * @param content the {@link com.google.api.services.developerconnect.v1.model.ProcessGitLabEnterpriseWebhookRequest}
+             * @since 1.13
+             */
+            protected ProcessGitLabEnterpriseWebhook(java.lang.String name, com.google.api.services.developerconnect.v1.model.ProcessGitLabEnterpriseWebhookRequest content) {
+              super(DeveloperConnect.this, "POST", REST_PATH, content, com.google.api.services.developerconnect.v1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+            }
+
+            @Override
+            public ProcessGitLabEnterpriseWebhook set$Xgafv(java.lang.String $Xgafv) {
+              return (ProcessGitLabEnterpriseWebhook) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ProcessGitLabEnterpriseWebhook setAccessToken(java.lang.String accessToken) {
+              return (ProcessGitLabEnterpriseWebhook) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ProcessGitLabEnterpriseWebhook setAlt(java.lang.String alt) {
+              return (ProcessGitLabEnterpriseWebhook) super.setAlt(alt);
+            }
+
+            @Override
+            public ProcessGitLabEnterpriseWebhook setCallback(java.lang.String callback) {
+              return (ProcessGitLabEnterpriseWebhook) super.setCallback(callback);
+            }
+
+            @Override
+            public ProcessGitLabEnterpriseWebhook setFields(java.lang.String fields) {
+              return (ProcessGitLabEnterpriseWebhook) super.setFields(fields);
+            }
+
+            @Override
+            public ProcessGitLabEnterpriseWebhook setKey(java.lang.String key) {
+              return (ProcessGitLabEnterpriseWebhook) super.setKey(key);
+            }
+
+            @Override
+            public ProcessGitLabEnterpriseWebhook setOauthToken(java.lang.String oauthToken) {
+              return (ProcessGitLabEnterpriseWebhook) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ProcessGitLabEnterpriseWebhook setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ProcessGitLabEnterpriseWebhook) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ProcessGitLabEnterpriseWebhook setQuotaUser(java.lang.String quotaUser) {
+              return (ProcessGitLabEnterpriseWebhook) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ProcessGitLabEnterpriseWebhook setUploadType(java.lang.String uploadType) {
+              return (ProcessGitLabEnterpriseWebhook) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ProcessGitLabEnterpriseWebhook setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ProcessGitLabEnterpriseWebhook) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The GitRepositoryLink resource where the webhook will be received. Format:
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The GitRepositoryLink resource where the webhook will be received. Format:
+           `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The GitRepositoryLink resource where the webhook will be received. Format:
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public ProcessGitLabEnterpriseWebhook setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public ProcessGitLabEnterpriseWebhook set(String parameterName, Object value) {
+              return (ProcessGitLabEnterpriseWebhook) super.set(parameterName, value);
+            }
+          }
+          /**
+           * ProcessGitLabWebhook is called by the GitLab.com for notifying events.
+           *
+           * Create a request for the method "gitRepositoryLinks.processGitLabWebhook".
+           *
+           * This request holds the parameters needed by the developerconnect server.  After setting any
+           * optional parameters, call the {@link ProcessGitLabWebhook#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The GitRepositoryLink resource where the webhook will be received. Format:
+           *        `projects/locations/connections/gitRepositoryLinks`.
+           * @param content the {@link com.google.api.services.developerconnect.v1.model.ProcessGitLabWebhookRequest}
+           * @return the request
+           */
+          public ProcessGitLabWebhook processGitLabWebhook(java.lang.String name, com.google.api.services.developerconnect.v1.model.ProcessGitLabWebhookRequest content) throws java.io.IOException {
+            ProcessGitLabWebhook result = new ProcessGitLabWebhook(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ProcessGitLabWebhook extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.Empty> {
+
+            private static final String REST_PATH = "v1/{+name}:processGitLabWebhook";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+
+            /**
+             * ProcessGitLabWebhook is called by the GitLab.com for notifying events.
+             *
+             * Create a request for the method "gitRepositoryLinks.processGitLabWebhook".
+             *
+             * This request holds the parameters needed by the the developerconnect server.  After setting any
+             * optional parameters, call the {@link ProcessGitLabWebhook#execute()} method to invoke the
+             * remote operation. <p> {@link ProcessGitLabWebhook#initialize(com.google.api.client.googleapis.s
+             * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name Required. The GitRepositoryLink resource where the webhook will be received. Format:
+           *        `projects/locations/connections/gitRepositoryLinks`.
+             * @param content the {@link com.google.api.services.developerconnect.v1.model.ProcessGitLabWebhookRequest}
+             * @since 1.13
+             */
+            protected ProcessGitLabWebhook(java.lang.String name, com.google.api.services.developerconnect.v1.model.ProcessGitLabWebhookRequest content) {
+              super(DeveloperConnect.this, "POST", REST_PATH, content, com.google.api.services.developerconnect.v1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+            }
+
+            @Override
+            public ProcessGitLabWebhook set$Xgafv(java.lang.String $Xgafv) {
+              return (ProcessGitLabWebhook) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ProcessGitLabWebhook setAccessToken(java.lang.String accessToken) {
+              return (ProcessGitLabWebhook) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ProcessGitLabWebhook setAlt(java.lang.String alt) {
+              return (ProcessGitLabWebhook) super.setAlt(alt);
+            }
+
+            @Override
+            public ProcessGitLabWebhook setCallback(java.lang.String callback) {
+              return (ProcessGitLabWebhook) super.setCallback(callback);
+            }
+
+            @Override
+            public ProcessGitLabWebhook setFields(java.lang.String fields) {
+              return (ProcessGitLabWebhook) super.setFields(fields);
+            }
+
+            @Override
+            public ProcessGitLabWebhook setKey(java.lang.String key) {
+              return (ProcessGitLabWebhook) super.setKey(key);
+            }
+
+            @Override
+            public ProcessGitLabWebhook setOauthToken(java.lang.String oauthToken) {
+              return (ProcessGitLabWebhook) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ProcessGitLabWebhook setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ProcessGitLabWebhook) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ProcessGitLabWebhook setQuotaUser(java.lang.String quotaUser) {
+              return (ProcessGitLabWebhook) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ProcessGitLabWebhook setUploadType(java.lang.String uploadType) {
+              return (ProcessGitLabWebhook) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ProcessGitLabWebhook setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ProcessGitLabWebhook) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The GitRepositoryLink resource where the webhook will be received. Format:
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The GitRepositoryLink resource where the webhook will be received. Format:
+           `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The GitRepositoryLink resource where the webhook will be received. Format:
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public ProcessGitLabWebhook setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public ProcessGitLabWebhook set(String parameterName, Object value) {
+              return (ProcessGitLabWebhook) super.set(parameterName, value);
             }
           }
 

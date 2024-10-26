@@ -38,9 +38,8 @@ public final class Daily extends com.google.api.client.json.GenericJson {
   private TimeOfDay executionTime;
 
   /**
-   * Required. LINT.IfChange The number of days between runs. Must be greater than or equal to 1 day
-   * and less than or equal to 31 days.
-   * LINT.ThenChange(//depot/google3/cloud/monitoring/api/alerts/policy_validation.cc)
+   * Required. The number of days between runs. Must be greater than or equal to 1 day and less than
+   * or equal to 31 days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,9 +65,8 @@ public final class Daily extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. LINT.IfChange The number of days between runs. Must be greater than or equal to 1 day
-   * and less than or equal to 31 days.
-   * LINT.ThenChange(//depot/google3/cloud/monitoring/api/alerts/policy_validation.cc)
+   * Required. The number of days between runs. Must be greater than or equal to 1 day and less than
+   * or equal to 31 days.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPeriodicity() {
@@ -76,9 +74,8 @@ public final class Daily extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. LINT.IfChange The number of days between runs. Must be greater than or equal to 1 day
-   * and less than or equal to 31 days.
-   * LINT.ThenChange(//depot/google3/cloud/monitoring/api/alerts/policy_validation.cc)
+   * Required. The number of days between runs. Must be greater than or equal to 1 day and less than
+   * or equal to 31 days.
    * @param periodicity periodicity or {@code null} for none
    */
   public Daily setPeriodicity(java.lang.Integer periodicity) {

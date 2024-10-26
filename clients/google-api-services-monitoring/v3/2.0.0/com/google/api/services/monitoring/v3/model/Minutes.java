@@ -30,18 +30,16 @@ package com.google.api.services.monitoring.v3.model;
 public final class Minutes extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. LINT.IfChange Number of minutes between runs. The interval must be between 5 minutes
-   * and 1440 minutes.
-   * LINT.ThenChange(//depot/google3/cloud/monitoring/api/alerts/policy_validation.cc)
+   * Required. Number of minutes between runs. The interval must be greater than or equal to 5
+   * minutes and less than or equal to 1440 minutes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer periodicity;
 
   /**
-   * Required. LINT.IfChange Number of minutes between runs. The interval must be between 5 minutes
-   * and 1440 minutes.
-   * LINT.ThenChange(//depot/google3/cloud/monitoring/api/alerts/policy_validation.cc)
+   * Required. Number of minutes between runs. The interval must be greater than or equal to 5
+   * minutes and less than or equal to 1440 minutes.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPeriodicity() {
@@ -49,9 +47,8 @@ public final class Minutes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. LINT.IfChange Number of minutes between runs. The interval must be between 5 minutes
-   * and 1440 minutes.
-   * LINT.ThenChange(//depot/google3/cloud/monitoring/api/alerts/policy_validation.cc)
+   * Required. Number of minutes between runs. The interval must be greater than or equal to 5
+   * minutes and less than or equal to 1440 minutes.
    * @param periodicity periodicity or {@code null} for none
    */
   public Minutes setPeriodicity(java.lang.Integer periodicity) {

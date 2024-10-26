@@ -5689,15 +5689,15 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /**
          * If true, the notification channel will be deleted regardless of its use in alert policies
-         * (the policies will be updated to remove the channel). If false, channels that are still
-         * referenced by an existing alerting policy will fail to be deleted in a delete operation.
+         * (the policies will be updated to remove the channel). If false, this operation will fail
+         * if the notification channel is referenced by existing alerting policies.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean force;
 
         /** If true, the notification channel will be deleted regardless of its use in alert policies (the
-       policies will be updated to remove the channel). If false, channels that are still referenced by an
-       existing alerting policy will fail to be deleted in a delete operation.
+       policies will be updated to remove the channel). If false, this operation will fail if the
+       notification channel is referenced by existing alerting policies.
          */
         public java.lang.Boolean getForce() {
           return force;
@@ -5705,8 +5705,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /**
          * If true, the notification channel will be deleted regardless of its use in alert policies
-         * (the policies will be updated to remove the channel). If false, channels that are still
-         * referenced by an existing alerting policy will fail to be deleted in a delete operation.
+         * (the policies will be updated to remove the channel). If false, this operation will fail
+         * if the notification channel is referenced by existing alerting policies.
          */
         public Delete setForce(java.lang.Boolean force) {
           this.force = force;

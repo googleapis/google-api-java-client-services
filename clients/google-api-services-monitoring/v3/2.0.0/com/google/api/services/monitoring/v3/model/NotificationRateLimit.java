@@ -17,7 +17,7 @@
 package com.google.api.services.monitoring.v3.model;
 
 /**
- * Control over the rate of notifications sent to this alert policy's notification channels.
+ * Control over the rate of notifications sent to this alerting policy's notification channels.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:

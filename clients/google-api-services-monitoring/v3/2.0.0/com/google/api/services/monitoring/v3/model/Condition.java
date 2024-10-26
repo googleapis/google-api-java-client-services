@@ -60,7 +60,7 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   private PrometheusQueryLanguageCondition conditionPrometheusQueryLanguage;
 
   /**
-   * A condition that uses SQL to define alerts in Logs Analytics.
+   * A condition that periodically evaluates a SQL query result.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -170,7 +170,7 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A condition that uses SQL to define alerts in Logs Analytics.
+   * A condition that periodically evaluates a SQL query result.
    * @return value or {@code null} for none
    */
   public SqlCondition getConditionSql() {
@@ -178,7 +178,7 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A condition that uses SQL to define alerts in Logs Analytics.
+   * A condition that periodically evaluates a SQL query result.
    * @param conditionSql conditionSql or {@code null} for none
    */
   public Condition setConditionSql(SqlCondition conditionSql) {

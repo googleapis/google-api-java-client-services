@@ -30,27 +30,26 @@ package com.google.api.services.monitoring.v3.model;
 public final class Hourly extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. LINT.IfChange The number of minutes after the hour (in UTC) to run the query. Must be
-   * between 0 and 59 inclusive. If left unspecified, then an arbitrary offset is used.
-   * LINT.ThenChange(//depot/google3/cloud/monitoring/api/alerts/policy_validation.cc)
+   * Optional. The number of minutes after the hour (in UTC) to run the query. Must be greater than
+   * or equal to 0 minutes and less than or equal to 59 minutes. If left unspecified, then an
+   * arbitrary offset is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minuteOffset;
 
   /**
-   * Required. LINT.IfChange The number of hours between runs. Must be greater than or equal to 1
-   * hour and less than or equal to 48 hours.
-   * LINT.ThenChange(//depot/google3/cloud/monitoring/api/alerts/policy_validation.cc)
+   * Required. The number of hours between runs. Must be greater than or equal to 1 hour and less
+   * than or equal to 48 hours.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer periodicity;
 
   /**
-   * Optional. LINT.IfChange The number of minutes after the hour (in UTC) to run the query. Must be
-   * between 0 and 59 inclusive. If left unspecified, then an arbitrary offset is used.
-   * LINT.ThenChange(//depot/google3/cloud/monitoring/api/alerts/policy_validation.cc)
+   * Optional. The number of minutes after the hour (in UTC) to run the query. Must be greater than
+   * or equal to 0 minutes and less than or equal to 59 minutes. If left unspecified, then an
+   * arbitrary offset is used.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinuteOffset() {
@@ -58,9 +57,9 @@ public final class Hourly extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. LINT.IfChange The number of minutes after the hour (in UTC) to run the query. Must be
-   * between 0 and 59 inclusive. If left unspecified, then an arbitrary offset is used.
-   * LINT.ThenChange(//depot/google3/cloud/monitoring/api/alerts/policy_validation.cc)
+   * Optional. The number of minutes after the hour (in UTC) to run the query. Must be greater than
+   * or equal to 0 minutes and less than or equal to 59 minutes. If left unspecified, then an
+   * arbitrary offset is used.
    * @param minuteOffset minuteOffset or {@code null} for none
    */
   public Hourly setMinuteOffset(java.lang.Integer minuteOffset) {
@@ -69,9 +68,8 @@ public final class Hourly extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. LINT.IfChange The number of hours between runs. Must be greater than or equal to 1
-   * hour and less than or equal to 48 hours.
-   * LINT.ThenChange(//depot/google3/cloud/monitoring/api/alerts/policy_validation.cc)
+   * Required. The number of hours between runs. Must be greater than or equal to 1 hour and less
+   * than or equal to 48 hours.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPeriodicity() {
@@ -79,9 +77,8 @@ public final class Hourly extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. LINT.IfChange The number of hours between runs. Must be greater than or equal to 1
-   * hour and less than or equal to 48 hours.
-   * LINT.ThenChange(//depot/google3/cloud/monitoring/api/alerts/policy_validation.cc)
+   * Required. The number of hours between runs. Must be greater than or equal to 1 hour and less
+   * than or equal to 48 hours.
    * @param periodicity periodicity or {@code null} for none
    */
   public Hourly setPeriodicity(java.lang.Integer periodicity) {

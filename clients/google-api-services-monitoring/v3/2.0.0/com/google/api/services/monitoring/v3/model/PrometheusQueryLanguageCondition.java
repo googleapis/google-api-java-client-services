@@ -17,7 +17,7 @@
 package com.google.api.services.monitoring.v3.model;
 
 /**
- * A condition type that allows alert policies to be defined using Prometheus Query Language
+ * A condition type that allows alerting policies to be defined using Prometheus Query Language
  * (PromQL) (https://prometheus.io/docs/prometheus/latest/querying/basics/).The
  * PrometheusQueryLanguageCondition message contains information from a Prometheus alerting rule and
  * its associated rule group.A Prometheus alerting rule is described here

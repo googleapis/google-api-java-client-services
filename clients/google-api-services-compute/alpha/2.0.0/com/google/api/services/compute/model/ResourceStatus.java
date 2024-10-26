@@ -55,6 +55,13 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   private java.lang.String physicalHost;
 
   /**
+   * [Output Only] The physical host topology of the host on which the VM is running.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourceStatusPhysicalHostTopology physicalHostTopology;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,6 +142,23 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
    */
   public ResourceStatus setPhysicalHost(java.lang.String physicalHost) {
     this.physicalHost = physicalHost;
+    return this;
+  }
+
+  /**
+   * [Output Only] The physical host topology of the host on which the VM is running.
+   * @return value or {@code null} for none
+   */
+  public ResourceStatusPhysicalHostTopology getPhysicalHostTopology() {
+    return physicalHostTopology;
+  }
+
+  /**
+   * [Output Only] The physical host topology of the host on which the VM is running.
+   * @param physicalHostTopology physicalHostTopology or {@code null} for none
+   */
+  public ResourceStatus setPhysicalHostTopology(ResourceStatusPhysicalHostTopology physicalHostTopology) {
+    this.physicalHostTopology = physicalHostTopology;
     return this;
   }
 

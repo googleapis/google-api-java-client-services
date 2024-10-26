@@ -99,13 +99,6 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * This is deprecated and has no effect. Do not use.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<Rule> rules;
-
-  /**
    * Specifies the format of the policy. Valid values are `0`, `1`, and `3`. Requests that specify
    * an invalid value are rejected. Any operation that affects conditional role bindings must
    * specify version `3`. This requirement applies to the following operations: * Getting a policy
@@ -243,23 +236,6 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy encodeEtag(byte[] etag) {
     this.etag = com.google.api.client.util.Base64.encodeBase64URLSafeString(etag);
-    return this;
-  }
-
-  /**
-   * This is deprecated and has no effect. Do not use.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Rule> getRules() {
-    return rules;
-  }
-
-  /**
-   * This is deprecated and has no effect. Do not use.
-   * @param rules rules or {@code null} for none
-   */
-  public Policy setRules(java.util.List<Rule> rules) {
-    this.rules = rules;
     return this;
   }
 

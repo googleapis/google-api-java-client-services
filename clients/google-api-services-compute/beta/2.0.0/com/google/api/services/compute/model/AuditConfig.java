@@ -27,8 +27,8 @@ package com.google.api.services.compute.model;
  * }, { "log_type": "DATA_WRITE" }, { "log_type": "ADMIN_READ" } ] }, { "service":
  * "sampleservice.googleapis.com", "audit_log_configs": [ { "log_type": "DATA_READ" }, { "log_type":
  * "DATA_WRITE", "exempted_members": [ "user:aliya@example.com" ] } ] } ] } For sampleservice, this
- * policy enables DATA_READ, DATA_WRITE and ADMIN_READ logging. It also exempts jose@example.com
- * from DATA_READ logging, and aliya@example.com from DATA_WRITE logging.
+ * policy enables DATA_READ, DATA_WRITE and ADMIN_READ logging. It also exempts `jose@example.com`
+ * from DATA_READ logging, and `aliya@example.com` from DATA_WRITE logging.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

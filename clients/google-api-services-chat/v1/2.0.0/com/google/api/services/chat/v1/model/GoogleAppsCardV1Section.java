@@ -32,6 +32,15 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1Section extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Define the expand and collapse button of the section. This button will be shown only
+   * if the section is collapsible. If this field isn't set, the default button is used. [Google
+   * Chat apps](https://developers.google.com/workspace/chat):
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAppsCardV1CollapseControl collapseControl;
+
+  /**
    * Indicates whether this section is collapsible. Collapsible sections hide some or all widgets,
    * but users can expand the section to reveal the hidden widgets by clicking **Show more**. Users
    * can hide the widgets again by clicking **Show less**. To determine which widgets are hidden,
@@ -68,6 +77,27 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleAppsCardV1Widget> widgets;
+
+  /**
+   * Optional. Define the expand and collapse button of the section. This button will be shown only
+   * if the section is collapsible. If this field isn't set, the default button is used. [Google
+   * Chat apps](https://developers.google.com/workspace/chat):
+   * @return value or {@code null} for none
+   */
+  public GoogleAppsCardV1CollapseControl getCollapseControl() {
+    return collapseControl;
+  }
+
+  /**
+   * Optional. Define the expand and collapse button of the section. This button will be shown only
+   * if the section is collapsible. If this field isn't set, the default button is used. [Google
+   * Chat apps](https://developers.google.com/workspace/chat):
+   * @param collapseControl collapseControl or {@code null} for none
+   */
+  public GoogleAppsCardV1Section setCollapseControl(GoogleAppsCardV1CollapseControl collapseControl) {
+    this.collapseControl = collapseControl;
+    return this;
+  }
 
   /**
    * Indicates whether this section is collapsible. Collapsible sections hide some or all widgets,

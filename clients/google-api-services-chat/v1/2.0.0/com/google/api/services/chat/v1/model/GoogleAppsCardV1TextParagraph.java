@@ -36,11 +36,47 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1TextParagraph extends com.google.api.client.json.GenericJson {
 
   /**
+   * The maximum number of lines of text that are displayed in the widget. If the text exceeds the
+   * specified maximum number of lines, the excess content is concealed behind a **show more**
+   * button. If the text is equal or shorter than the specified maximum number of lines, a **show
+   * more** button isn't displayed. The default value is 0, in which case all context is displayed.
+   * Negative values are ignored. [Google Chat apps](https://developers.google.com/workspace/chat):
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxLines;
+
+  /**
    * The text that's shown in the widget.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
+
+  /**
+   * The maximum number of lines of text that are displayed in the widget. If the text exceeds the
+   * specified maximum number of lines, the excess content is concealed behind a **show more**
+   * button. If the text is equal or shorter than the specified maximum number of lines, a **show
+   * more** button isn't displayed. The default value is 0, in which case all context is displayed.
+   * Negative values are ignored. [Google Chat apps](https://developers.google.com/workspace/chat):
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxLines() {
+    return maxLines;
+  }
+
+  /**
+   * The maximum number of lines of text that are displayed in the widget. If the text exceeds the
+   * specified maximum number of lines, the excess content is concealed behind a **show more**
+   * button. If the text is equal or shorter than the specified maximum number of lines, a **show
+   * more** button isn't displayed. The default value is 0, in which case all context is displayed.
+   * Negative values are ignored. [Google Chat apps](https://developers.google.com/workspace/chat):
+   * @param maxLines maxLines or {@code null} for none
+   */
+  public GoogleAppsCardV1TextParagraph setMaxLines(java.lang.Integer maxLines) {
+    this.maxLines = maxLines;
+    return this;
+  }
 
   /**
    * The text that's shown in the widget.

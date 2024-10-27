@@ -63,6 +63,14 @@ public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.Ge
   private GoogleAppsCardV1OpenLink openLink;
 
   /**
+   * If specified, this `onClick` opens an overflow menu. [Google Chat
+   * apps](https://developers.google.com/workspace/chat):
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAppsCardV1OverflowMenu overflowMenu;
+
+  /**
    * If specified, an action is triggered by this `onClick`.
    * @return value or {@code null} for none
    */
@@ -135,6 +143,25 @@ public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.Ge
    */
   public GoogleAppsCardV1OnClick setOpenLink(GoogleAppsCardV1OpenLink openLink) {
     this.openLink = openLink;
+    return this;
+  }
+
+  /**
+   * If specified, this `onClick` opens an overflow menu. [Google Chat
+   * apps](https://developers.google.com/workspace/chat):
+   * @return value or {@code null} for none
+   */
+  public GoogleAppsCardV1OverflowMenu getOverflowMenu() {
+    return overflowMenu;
+  }
+
+  /**
+   * If specified, this `onClick` opens an overflow menu. [Google Chat
+   * apps](https://developers.google.com/workspace/chat):
+   * @param overflowMenu overflowMenu or {@code null} for none
+   */
+  public GoogleAppsCardV1OnClick setOverflowMenu(GoogleAppsCardV1OverflowMenu overflowMenu) {
+    this.overflowMenu = overflowMenu;
     return this;
   }
 

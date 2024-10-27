@@ -42,6 +42,17 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   private GoogleAppsCardV1ButtonList buttonList;
 
   /**
+   * A list of chips. For example, the following JSON creates two chips. The first is a text chip
+   * and the second is an icon chip that opens a link: ``` "chipList": { "chips": [ { "text":
+   * "Edit", "disabled": true, }, { "icon": { "knownIcon": "INVITE", "altText": "check calendar" },
+   * "onClick": { "openLink": { "url": "https://example.com/calendar" } } } ] } ``` [Google Chat
+   * apps](https://developers.google.com/workspace/chat):
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAppsCardV1ChipList chipList;
+
+  /**
    * Displays up to 2 columns. To include more than 2 columns, or to use rows, use the `Grid`
    * widget. For example, the following JSON creates 2 columns that each contain text paragraphs:
    * ``` "columns": { "columnItems": [ { "horizontalSizeStyle": "FILL_AVAILABLE_SPACE",
@@ -173,6 +184,31 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    */
   public GoogleAppsCardV1Widget setButtonList(GoogleAppsCardV1ButtonList buttonList) {
     this.buttonList = buttonList;
+    return this;
+  }
+
+  /**
+   * A list of chips. For example, the following JSON creates two chips. The first is a text chip
+   * and the second is an icon chip that opens a link: ``` "chipList": { "chips": [ { "text":
+   * "Edit", "disabled": true, }, { "icon": { "knownIcon": "INVITE", "altText": "check calendar" },
+   * "onClick": { "openLink": { "url": "https://example.com/calendar" } } } ] } ``` [Google Chat
+   * apps](https://developers.google.com/workspace/chat):
+   * @return value or {@code null} for none
+   */
+  public GoogleAppsCardV1ChipList getChipList() {
+    return chipList;
+  }
+
+  /**
+   * A list of chips. For example, the following JSON creates two chips. The first is a text chip
+   * and the second is an icon chip that opens a link: ``` "chipList": { "chips": [ { "text":
+   * "Edit", "disabled": true, }, { "icon": { "knownIcon": "INVITE", "altText": "check calendar" },
+   * "onClick": { "openLink": { "url": "https://example.com/calendar" } } } ] } ``` [Google Chat
+   * apps](https://developers.google.com/workspace/chat):
+   * @param chipList chipList or {@code null} for none
+   */
+  public GoogleAppsCardV1Widget setChipList(GoogleAppsCardV1ChipList chipList) {
+    this.chipList = chipList;
     return this;
   }
 

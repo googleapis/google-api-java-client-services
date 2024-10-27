@@ -89,6 +89,15 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
   private java.lang.String text;
 
   /**
+   * Optional. The type of a button. If unset, button type defaults to `OUTLINED`. If the `color`
+   * field is set, the button type is forced to `FILLED` and any value set for this field is
+   * ignored. [Google Chat apps](https://developers.google.com/workspace/chat):
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
    * The alternative text that's used for accessibility. Set descriptive text that lets users know
    * what the button does. For example, if a button opens a hyperlink, you might write: "Opens a new
    * browser tab and navigates to the Google Chat developer documentation at
@@ -213,6 +222,27 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
    */
   public GoogleAppsCardV1Button setText(java.lang.String text) {
     this.text = text;
+    return this;
+  }
+
+  /**
+   * Optional. The type of a button. If unset, button type defaults to `OUTLINED`. If the `color`
+   * field is set, the button type is forced to `FILLED` and any value set for this field is
+   * ignored. [Google Chat apps](https://developers.google.com/workspace/chat):
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Optional. The type of a button. If unset, button type defaults to `OUTLINED`. If the `color`
+   * field is set, the button type is forced to `FILLED` and any value set for this field is
+   * ignored. [Google Chat apps](https://developers.google.com/workspace/chat):
+   * @param type type or {@code null} for none
+   */
+  public GoogleAppsCardV1Button setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

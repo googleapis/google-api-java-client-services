@@ -56,6 +56,13 @@ public final class StorageDatabasecenterPartnerapiV1mainRetentionSettings extend
   private String timeBasedRetention;
 
   /**
+   * Timestamp based retention period i.e. 2024-05-01T00:00:00Z
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String timestampBasedRetentionTime;
+
+  /**
    * Duration based retention period i.e. 172800 seconds (2 days)
    * @return value or {@code null} for none
    */
@@ -116,6 +123,23 @@ public final class StorageDatabasecenterPartnerapiV1mainRetentionSettings extend
    */
   public StorageDatabasecenterPartnerapiV1mainRetentionSettings setTimeBasedRetention(String timeBasedRetention) {
     this.timeBasedRetention = timeBasedRetention;
+    return this;
+  }
+
+  /**
+   * Timestamp based retention period i.e. 2024-05-01T00:00:00Z
+   * @return value or {@code null} for none
+   */
+  public String getTimestampBasedRetentionTime() {
+    return timestampBasedRetentionTime;
+  }
+
+  /**
+   * Timestamp based retention period i.e. 2024-05-01T00:00:00Z
+   * @param timestampBasedRetentionTime timestampBasedRetentionTime or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainRetentionSettings setTimestampBasedRetentionTime(String timestampBasedRetentionTime) {
+    this.timestampBasedRetentionTime = timestampBasedRetentionTime;
     return this;
   }
 

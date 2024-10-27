@@ -99,7 +99,8 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The resource type to which the `BackupPlan` will be applied. Examples include,
-   * "compute.googleapis.com/Instance" and "storage.googleapis.com/Bucket".
+   * "compute.googleapis.com/Instance", "sqladmin.googleapis.com/Instance" and
+   * "storage.googleapis.com/Bucket".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -275,7 +276,8 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The resource type to which the `BackupPlan` will be applied. Examples include,
-   * "compute.googleapis.com/Instance" and "storage.googleapis.com/Bucket".
+   * "compute.googleapis.com/Instance", "sqladmin.googleapis.com/Instance" and
+   * "storage.googleapis.com/Bucket".
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceType() {
@@ -284,7 +286,8 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The resource type to which the `BackupPlan` will be applied. Examples include,
-   * "compute.googleapis.com/Instance" and "storage.googleapis.com/Bucket".
+   * "compute.googleapis.com/Instance", "sqladmin.googleapis.com/Instance" and
+   * "storage.googleapis.com/Bucket".
    * @param resourceType resourceType or {@code null} for none
    */
   public BackupPlan setResourceType(java.lang.String resourceType) {

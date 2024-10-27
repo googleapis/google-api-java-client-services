@@ -59,6 +59,14 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. The customer organization domain, extracted from CRM Organization’s display_name
+   * field. e.g. "google.com"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String organizationDomain;
+
+  /**
    * Output only. Container for customer onboarding steps
    * @return value or {@code null} for none
    */
@@ -123,6 +131,25 @@ public final class Customer extends com.google.api.client.json.GenericJson {
    */
   public Customer setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The customer organization domain, extracted from CRM Organization’s display_name
+   * field. e.g. "google.com"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOrganizationDomain() {
+    return organizationDomain;
+  }
+
+  /**
+   * Output only. The customer organization domain, extracted from CRM Organization’s display_name
+   * field. e.g. "google.com"
+   * @param organizationDomain organizationDomain or {@code null} for none
+   */
+  public Customer setOrganizationDomain(java.lang.String organizationDomain) {
+    this.organizationDomain = organizationDomain;
     return this;
   }
 

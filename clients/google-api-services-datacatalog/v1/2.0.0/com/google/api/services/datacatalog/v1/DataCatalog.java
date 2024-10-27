@@ -564,6 +564,469 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
   }
 
   /**
+   * An accessor for creating requests from the Organizations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code DataCatalog datacatalog = new DataCatalog(...);}
+   *   {@code DataCatalog.Organizations.List request = datacatalog.organizations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Organizations organizations() {
+    return new Organizations();
+  }
+
+  /**
+   * The "organizations" collection of methods.
+   */
+  public class Organizations {
+
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code DataCatalog datacatalog = new DataCatalog(...);}
+     *   {@code DataCatalog.Locations.List request = datacatalog.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * Retrieves the configuration related to the migration from Data Catalog to Dataplex for a specific
+       * organization, including all the projects under it which have a separate configuration set.
+       *
+       * Create a request for the method "locations.retrieveConfig".
+       *
+       * This request holds the parameters needed by the datacatalog server.  After setting any optional
+       * parameters, call the {@link RetrieveConfig#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The organization whose config is being retrieved.
+       * @return the request
+       */
+      public RetrieveConfig retrieveConfig(java.lang.String name) throws java.io.IOException {
+        RetrieveConfig result = new RetrieveConfig(name);
+        initialize(result);
+        return result;
+      }
+
+      public class RetrieveConfig extends DataCatalogRequest<com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1OrganizationConfig> {
+
+        private static final String REST_PATH = "v1/{+name}:retrieveConfig";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+        /**
+         * Retrieves the configuration related to the migration from Data Catalog to Dataplex for a
+         * specific organization, including all the projects under it which have a separate configuration
+         * set.
+         *
+         * Create a request for the method "locations.retrieveConfig".
+         *
+         * This request holds the parameters needed by the the datacatalog server.  After setting any
+         * optional parameters, call the {@link RetrieveConfig#execute()} method to invoke the remote
+         * operation. <p> {@link RetrieveConfig#initialize(com.google.api.client.googleapis.services.Abstr
+         * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param name Required. The organization whose config is being retrieved.
+         * @since 1.13
+         */
+        protected RetrieveConfig(java.lang.String name) {
+          super(DataCatalog.this, "GET", REST_PATH, null, com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1OrganizationConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public RetrieveConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (RetrieveConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public RetrieveConfig setAccessToken(java.lang.String accessToken) {
+          return (RetrieveConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public RetrieveConfig setAlt(java.lang.String alt) {
+          return (RetrieveConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public RetrieveConfig setCallback(java.lang.String callback) {
+          return (RetrieveConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public RetrieveConfig setFields(java.lang.String fields) {
+          return (RetrieveConfig) super.setFields(fields);
+        }
+
+        @Override
+        public RetrieveConfig setKey(java.lang.String key) {
+          return (RetrieveConfig) super.setKey(key);
+        }
+
+        @Override
+        public RetrieveConfig setOauthToken(java.lang.String oauthToken) {
+          return (RetrieveConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public RetrieveConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (RetrieveConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public RetrieveConfig setQuotaUser(java.lang.String quotaUser) {
+          return (RetrieveConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public RetrieveConfig setUploadType(java.lang.String uploadType) {
+          return (RetrieveConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public RetrieveConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (RetrieveConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The organization whose config is being retrieved. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The organization whose config is being retrieved.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The organization whose config is being retrieved. */
+        public RetrieveConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/locations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public RetrieveConfig set(String parameterName, Object value) {
+          return (RetrieveConfig) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieves the effective configuration related to the migration from Data Catalog to Dataplex for
+       * a specific organization or project. If there is no specific configuration set for the resource,
+       * the setting is checked hierarchicahlly through the ancestors of the resource, starting from the
+       * resource itself.
+       *
+       * Create a request for the method "locations.retrieveEffectiveConfig".
+       *
+       * This request holds the parameters needed by the datacatalog server.  After setting any optional
+       * parameters, call the {@link RetrieveEffectiveConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The resource whose effective config is being retrieved.
+       * @return the request
+       */
+      public RetrieveEffectiveConfig retrieveEffectiveConfig(java.lang.String name) throws java.io.IOException {
+        RetrieveEffectiveConfig result = new RetrieveEffectiveConfig(name);
+        initialize(result);
+        return result;
+      }
+
+      public class RetrieveEffectiveConfig extends DataCatalogRequest<com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1MigrationConfig> {
+
+        private static final String REST_PATH = "v1/{+name}:retrieveEffectiveConfig";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+        /**
+         * Retrieves the effective configuration related to the migration from Data Catalog to Dataplex
+         * for a specific organization or project. If there is no specific configuration set for the
+         * resource, the setting is checked hierarchicahlly through the ancestors of the resource,
+         * starting from the resource itself.
+         *
+         * Create a request for the method "locations.retrieveEffectiveConfig".
+         *
+         * This request holds the parameters needed by the the datacatalog server.  After setting any
+         * optional parameters, call the {@link RetrieveEffectiveConfig#execute()} method to invoke the
+         * remote operation. <p> {@link RetrieveEffectiveConfig#initialize(com.google.api.client.googleapi
+         * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param name Required. The resource whose effective config is being retrieved.
+         * @since 1.13
+         */
+        protected RetrieveEffectiveConfig(java.lang.String name) {
+          super(DataCatalog.this, "GET", REST_PATH, null, com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1MigrationConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public RetrieveEffectiveConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (RetrieveEffectiveConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public RetrieveEffectiveConfig setAccessToken(java.lang.String accessToken) {
+          return (RetrieveEffectiveConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public RetrieveEffectiveConfig setAlt(java.lang.String alt) {
+          return (RetrieveEffectiveConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public RetrieveEffectiveConfig setCallback(java.lang.String callback) {
+          return (RetrieveEffectiveConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public RetrieveEffectiveConfig setFields(java.lang.String fields) {
+          return (RetrieveEffectiveConfig) super.setFields(fields);
+        }
+
+        @Override
+        public RetrieveEffectiveConfig setKey(java.lang.String key) {
+          return (RetrieveEffectiveConfig) super.setKey(key);
+        }
+
+        @Override
+        public RetrieveEffectiveConfig setOauthToken(java.lang.String oauthToken) {
+          return (RetrieveEffectiveConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public RetrieveEffectiveConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (RetrieveEffectiveConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public RetrieveEffectiveConfig setQuotaUser(java.lang.String quotaUser) {
+          return (RetrieveEffectiveConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public RetrieveEffectiveConfig setUploadType(java.lang.String uploadType) {
+          return (RetrieveEffectiveConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public RetrieveEffectiveConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (RetrieveEffectiveConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The resource whose effective config is being retrieved. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource whose effective config is being retrieved.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The resource whose effective config is being retrieved. */
+        public RetrieveEffectiveConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/locations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public RetrieveEffectiveConfig set(String parameterName, Object value) {
+          return (RetrieveEffectiveConfig) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Sets the configuration related to the migration to Dataplex for an organization or project.
+       *
+       * Create a request for the method "locations.setConfig".
+       *
+       * This request holds the parameters needed by the datacatalog server.  After setting any optional
+       * parameters, call the {@link SetConfig#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The organization or project whose config is being specified.
+       * @param content the {@link com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1SetConfigRequest}
+       * @return the request
+       */
+      public SetConfig setConfig(java.lang.String name, com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1SetConfigRequest content) throws java.io.IOException {
+        SetConfig result = new SetConfig(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class SetConfig extends DataCatalogRequest<com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1MigrationConfig> {
+
+        private static final String REST_PATH = "v1/{+name}:setConfig";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+        /**
+         * Sets the configuration related to the migration to Dataplex for an organization or project.
+         *
+         * Create a request for the method "locations.setConfig".
+         *
+         * This request holds the parameters needed by the the datacatalog server.  After setting any
+         * optional parameters, call the {@link SetConfig#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * SetConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The organization or project whose config is being specified.
+         * @param content the {@link com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1SetConfigRequest}
+         * @since 1.13
+         */
+        protected SetConfig(java.lang.String name, com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1SetConfigRequest content) {
+          super(DataCatalog.this, "POST", REST_PATH, content, com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1MigrationConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public SetConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (SetConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public SetConfig setAccessToken(java.lang.String accessToken) {
+          return (SetConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public SetConfig setAlt(java.lang.String alt) {
+          return (SetConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public SetConfig setCallback(java.lang.String callback) {
+          return (SetConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public SetConfig setFields(java.lang.String fields) {
+          return (SetConfig) super.setFields(fields);
+        }
+
+        @Override
+        public SetConfig setKey(java.lang.String key) {
+          return (SetConfig) super.setKey(key);
+        }
+
+        @Override
+        public SetConfig setOauthToken(java.lang.String oauthToken) {
+          return (SetConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public SetConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (SetConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public SetConfig setQuotaUser(java.lang.String quotaUser) {
+          return (SetConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public SetConfig setUploadType(java.lang.String uploadType) {
+          return (SetConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public SetConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (SetConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The organization or project whose config is being specified. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The organization or project whose config is being specified.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The organization or project whose config is being specified. */
+        public SetConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/locations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public SetConfig set(String parameterName, Object value) {
+          return (SetConfig) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Projects collection.
    *
    * <p>The typical use is:</p>
@@ -602,6 +1065,284 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
      * The "locations" collection of methods.
      */
     public class Locations {
+
+      /**
+       * Retrieves the effective configuration related to the migration from Data Catalog to Dataplex for
+       * a specific organization or project. If there is no specific configuration set for the resource,
+       * the setting is checked hierarchicahlly through the ancestors of the resource, starting from the
+       * resource itself.
+       *
+       * Create a request for the method "locations.retrieveEffectiveConfig".
+       *
+       * This request holds the parameters needed by the datacatalog server.  After setting any optional
+       * parameters, call the {@link RetrieveEffectiveConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The resource whose effective config is being retrieved.
+       * @return the request
+       */
+      public RetrieveEffectiveConfig retrieveEffectiveConfig(java.lang.String name) throws java.io.IOException {
+        RetrieveEffectiveConfig result = new RetrieveEffectiveConfig(name);
+        initialize(result);
+        return result;
+      }
+
+      public class RetrieveEffectiveConfig extends DataCatalogRequest<com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1MigrationConfig> {
+
+        private static final String REST_PATH = "v1/{+name}:retrieveEffectiveConfig";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Retrieves the effective configuration related to the migration from Data Catalog to Dataplex
+         * for a specific organization or project. If there is no specific configuration set for the
+         * resource, the setting is checked hierarchicahlly through the ancestors of the resource,
+         * starting from the resource itself.
+         *
+         * Create a request for the method "locations.retrieveEffectiveConfig".
+         *
+         * This request holds the parameters needed by the the datacatalog server.  After setting any
+         * optional parameters, call the {@link RetrieveEffectiveConfig#execute()} method to invoke the
+         * remote operation. <p> {@link RetrieveEffectiveConfig#initialize(com.google.api.client.googleapi
+         * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param name Required. The resource whose effective config is being retrieved.
+         * @since 1.13
+         */
+        protected RetrieveEffectiveConfig(java.lang.String name) {
+          super(DataCatalog.this, "GET", REST_PATH, null, com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1MigrationConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public RetrieveEffectiveConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (RetrieveEffectiveConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public RetrieveEffectiveConfig setAccessToken(java.lang.String accessToken) {
+          return (RetrieveEffectiveConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public RetrieveEffectiveConfig setAlt(java.lang.String alt) {
+          return (RetrieveEffectiveConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public RetrieveEffectiveConfig setCallback(java.lang.String callback) {
+          return (RetrieveEffectiveConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public RetrieveEffectiveConfig setFields(java.lang.String fields) {
+          return (RetrieveEffectiveConfig) super.setFields(fields);
+        }
+
+        @Override
+        public RetrieveEffectiveConfig setKey(java.lang.String key) {
+          return (RetrieveEffectiveConfig) super.setKey(key);
+        }
+
+        @Override
+        public RetrieveEffectiveConfig setOauthToken(java.lang.String oauthToken) {
+          return (RetrieveEffectiveConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public RetrieveEffectiveConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (RetrieveEffectiveConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public RetrieveEffectiveConfig setQuotaUser(java.lang.String quotaUser) {
+          return (RetrieveEffectiveConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public RetrieveEffectiveConfig setUploadType(java.lang.String uploadType) {
+          return (RetrieveEffectiveConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public RetrieveEffectiveConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (RetrieveEffectiveConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The resource whose effective config is being retrieved. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource whose effective config is being retrieved.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The resource whose effective config is being retrieved. */
+        public RetrieveEffectiveConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public RetrieveEffectiveConfig set(String parameterName, Object value) {
+          return (RetrieveEffectiveConfig) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Sets the configuration related to the migration to Dataplex for an organization or project.
+       *
+       * Create a request for the method "locations.setConfig".
+       *
+       * This request holds the parameters needed by the datacatalog server.  After setting any optional
+       * parameters, call the {@link SetConfig#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The organization or project whose config is being specified.
+       * @param content the {@link com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1SetConfigRequest}
+       * @return the request
+       */
+      public SetConfig setConfig(java.lang.String name, com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1SetConfigRequest content) throws java.io.IOException {
+        SetConfig result = new SetConfig(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class SetConfig extends DataCatalogRequest<com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1MigrationConfig> {
+
+        private static final String REST_PATH = "v1/{+name}:setConfig";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Sets the configuration related to the migration to Dataplex for an organization or project.
+         *
+         * Create a request for the method "locations.setConfig".
+         *
+         * This request holds the parameters needed by the the datacatalog server.  After setting any
+         * optional parameters, call the {@link SetConfig#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * SetConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The organization or project whose config is being specified.
+         * @param content the {@link com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1SetConfigRequest}
+         * @since 1.13
+         */
+        protected SetConfig(java.lang.String name, com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1SetConfigRequest content) {
+          super(DataCatalog.this, "POST", REST_PATH, content, com.google.api.services.datacatalog.v1.model.GoogleCloudDatacatalogV1MigrationConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public SetConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (SetConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public SetConfig setAccessToken(java.lang.String accessToken) {
+          return (SetConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public SetConfig setAlt(java.lang.String alt) {
+          return (SetConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public SetConfig setCallback(java.lang.String callback) {
+          return (SetConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public SetConfig setFields(java.lang.String fields) {
+          return (SetConfig) super.setFields(fields);
+        }
+
+        @Override
+        public SetConfig setKey(java.lang.String key) {
+          return (SetConfig) super.setKey(key);
+        }
+
+        @Override
+        public SetConfig setOauthToken(java.lang.String oauthToken) {
+          return (SetConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public SetConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (SetConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public SetConfig setQuotaUser(java.lang.String quotaUser) {
+          return (SetConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public SetConfig setUploadType(java.lang.String uploadType) {
+          return (SetConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public SetConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (SetConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The organization or project whose config is being specified. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The organization or project whose config is being specified.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The organization or project whose config is being specified. */
+        public SetConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public SetConfig set(String parameterName, Object value) {
+          return (SetConfig) super.set(parameterName, value);
+        }
+      }
 
       /**
        * An accessor for creating requests from the EntryGroups collection.

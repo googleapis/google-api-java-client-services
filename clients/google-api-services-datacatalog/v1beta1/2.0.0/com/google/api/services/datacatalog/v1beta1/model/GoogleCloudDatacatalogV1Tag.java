@@ -42,6 +42,13 @@ public final class GoogleCloudDatacatalogV1Tag extends com.google.api.client.jso
   private java.lang.String column;
 
   /**
+   * Output only. Denotes the transfer status of the Tag Template.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataplexTransferStatus;
+
+  /**
    * Required. Maps the ID of a tag field to its value and additional information about that field.
    * Tag template defines valid field IDs. A tag must have at least 1 field and at most 500 fields.
    * The value may be {@code null}.
@@ -91,6 +98,23 @@ public final class GoogleCloudDatacatalogV1Tag extends com.google.api.client.jso
    */
   public GoogleCloudDatacatalogV1Tag setColumn(java.lang.String column) {
     this.column = column;
+    return this;
+  }
+
+  /**
+   * Output only. Denotes the transfer status of the Tag Template.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataplexTransferStatus() {
+    return dataplexTransferStatus;
+  }
+
+  /**
+   * Output only. Denotes the transfer status of the Tag Template.
+   * @param dataplexTransferStatus dataplexTransferStatus or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1Tag setDataplexTransferStatus(java.lang.String dataplexTransferStatus) {
+    this.dataplexTransferStatus = dataplexTransferStatus;
     return this;
   }
 

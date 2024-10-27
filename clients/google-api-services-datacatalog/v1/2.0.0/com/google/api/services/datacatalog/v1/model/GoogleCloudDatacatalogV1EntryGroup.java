@@ -63,6 +63,16 @@ public final class GoogleCloudDatacatalogV1EntryGroup extends com.google.api.cli
   private java.lang.String name;
 
   /**
+   * Optional. When set to [true], it means DataCatalog EntryGroup was transferred to Dataplex
+   * Catalog Service. It makes EntryGroup and its Entries to be read-only in DataCatalog. However,
+   * new Tags on EntryGroup and its Entries can be created. After setting the flag to [true] it
+   * cannot be unset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean transferredToDataplex;
+
+  /**
    * Output only. Timestamps of the entry group. Default value is empty.
    * @return value or {@code null} for none
    */
@@ -133,6 +143,29 @@ public final class GoogleCloudDatacatalogV1EntryGroup extends com.google.api.cli
    */
   public GoogleCloudDatacatalogV1EntryGroup setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. When set to [true], it means DataCatalog EntryGroup was transferred to Dataplex
+   * Catalog Service. It makes EntryGroup and its Entries to be read-only in DataCatalog. However,
+   * new Tags on EntryGroup and its Entries can be created. After setting the flag to [true] it
+   * cannot be unset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getTransferredToDataplex() {
+    return transferredToDataplex;
+  }
+
+  /**
+   * Optional. When set to [true], it means DataCatalog EntryGroup was transferred to Dataplex
+   * Catalog Service. It makes EntryGroup and its Entries to be read-only in DataCatalog. However,
+   * new Tags on EntryGroup and its Entries can be created. After setting the flag to [true] it
+   * cannot be unset.
+   * @param transferredToDataplex transferredToDataplex or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1EntryGroup setTransferredToDataplex(java.lang.Boolean transferredToDataplex) {
+    this.transferredToDataplex = transferredToDataplex;
     return this;
   }
 

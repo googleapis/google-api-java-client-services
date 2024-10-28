@@ -30,6 +30,13 @@ package com.google.api.services.dataform.v1beta1.model;
 public final class Workspace extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The timestamp of when the workspace was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Output only. A data encryption state of a Git repository if this Workspace is protected by a
    * KMS key.
    * The value may be {@code null}.
@@ -43,6 +50,23 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. The timestamp of when the workspace was created.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. The timestamp of when the workspace was created.
+   * @param createTime createTime or {@code null} for none
+   */
+  public Workspace setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
 
   /**
    * Output only. A data encryption state of a Git repository if this Workspace is protected by a

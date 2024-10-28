@@ -62,7 +62,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    * Optional. The reference to a KMS encryption key. If provided, it will be used to encrypt user
    * data in the repository and all child resources. It is not possible to add or update the
    * encryption key after the repository is created. Example:
-   * `projects/[kms_project_id]/locations/[region]/keyRings/[key_region]/cryptoKeys/[key]`
+   * `projects/{kms_project}/locations/{location}/keyRings/{key_location}/cryptoKeys/{key}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,7 +191,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    * Optional. The reference to a KMS encryption key. If provided, it will be used to encrypt user
    * data in the repository and all child resources. It is not possible to add or update the
    * encryption key after the repository is created. Example:
-   * `projects/[kms_project_id]/locations/[region]/keyRings/[key_region]/cryptoKeys/[key]`
+   * `projects/{kms_project}/locations/{location}/keyRings/{key_location}/cryptoKeys/{key}`
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyName() {
@@ -202,7 +202,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    * Optional. The reference to a KMS encryption key. If provided, it will be used to encrypt user
    * data in the repository and all child resources. It is not possible to add or update the
    * encryption key after the repository is created. Example:
-   * `projects/[kms_project_id]/locations/[region]/keyRings/[key_region]/cryptoKeys/[key]`
+   * `projects/{kms_project}/locations/{location}/keyRings/{key_location}/cryptoKeys/{key}`
    * @param kmsKeyName kmsKeyName or {@code null} for none
    */
   public Repository setKmsKeyName(java.lang.String kmsKeyName) {

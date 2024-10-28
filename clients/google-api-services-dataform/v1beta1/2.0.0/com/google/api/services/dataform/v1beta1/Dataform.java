@@ -2088,14 +2088,16 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Optional. Page token received from a previous `FetchRepositoryHistory` call. Provide
            * this to retrieve the subsequent page. When paginating, all other parameters provided to
-           * `FetchRepositoryHistory` must match the call that provided the page token.
+           * `FetchRepositoryHistory`, with the exception of `page_size`, must match the call that
+           * provided the page token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
           /** Optional. Page token received from a previous `FetchRepositoryHistory` call. Provide this to
          retrieve the subsequent page. When paginating, all other parameters provided to
-         `FetchRepositoryHistory` must match the call that provided the page token.
+         `FetchRepositoryHistory`, with the exception of `page_size`, must match the call that provided the
+         page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
@@ -2104,7 +2106,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Optional. Page token received from a previous `FetchRepositoryHistory` call. Provide
            * this to retrieve the subsequent page. When paginating, all other parameters provided to
-           * `FetchRepositoryHistory` must match the call that provided the page token.
+           * `FetchRepositoryHistory`, with the exception of `page_size`, must match the call that
+           * provided the page token.
            */
           public FetchHistory setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -2795,14 +2798,15 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Optional. Page token received from a previous `ListRepositories` call. Provide this to
            * retrieve the subsequent page. When paginating, all other parameters provided to
-           * `ListRepositories` must match the call that provided the page token.
+           * `ListRepositories`, with the exception of `page_size`, must match the call that
+           * provided the page token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
           /** Optional. Page token received from a previous `ListRepositories` call. Provide this to retrieve the
-         subsequent page. When paginating, all other parameters provided to `ListRepositories` must match
-         the call that provided the page token.
+         subsequent page. When paginating, all other parameters provided to `ListRepositories`, with the
+         exception of `page_size`, must match the call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
@@ -2811,7 +2815,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Optional. Page token received from a previous `ListRepositories` call. Provide this to
            * retrieve the subsequent page. When paginating, all other parameters provided to
-           * `ListRepositories` must match the call that provided the page token.
+           * `ListRepositories`, with the exception of `page_size`, must match the call that
+           * provided the page token.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -3163,15 +3168,16 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Optional. Page token received from a previous `QueryRepositoryDirectoryContents` call.
            * Provide this to retrieve the subsequent page. When paginating, all other parameters
-           * provided to `QueryRepositoryDirectoryContents` must match the call that provided the
-           * page token.
+           * provided to `QueryRepositoryDirectoryContents`, with the exception of `page_size`, must
+           * match the call that provided the page token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
           /** Optional. Page token received from a previous `QueryRepositoryDirectoryContents` call. Provide this
          to retrieve the subsequent page. When paginating, all other parameters provided to
-         `QueryRepositoryDirectoryContents` must match the call that provided the page token.
+         `QueryRepositoryDirectoryContents`, with the exception of `page_size`, must match the call that
+         provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
@@ -3180,8 +3186,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Optional. Page token received from a previous `QueryRepositoryDirectoryContents` call.
            * Provide this to retrieve the subsequent page. When paginating, all other parameters
-           * provided to `QueryRepositoryDirectoryContents` must match the call that provided the
-           * page token.
+           * provided to `QueryRepositoryDirectoryContents`, with the exception of `page_size`, must
+           * match the call that provided the page token.
            */
           public QueryDirectoryContents setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -4939,14 +4945,16 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Optional. Page token received from a previous `ListCompilationResults` call. Provide
              * this to retrieve the subsequent page. When paginating, all other parameters provided
-             * to `ListCompilationResults` must match the call that provided the page token.
+             * to `ListCompilationResults`, with the exception of `page_size`, must match the call
+             * that provided the page token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
             /** Optional. Page token received from a previous `ListCompilationResults` call. Provide this to
            retrieve the subsequent page. When paginating, all other parameters provided to
-           `ListCompilationResults` must match the call that provided the page token.
+           `ListCompilationResults`, with the exception of `page_size`, must match the call that provided the
+           page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
@@ -4955,7 +4963,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Optional. Page token received from a previous `ListCompilationResults` call. Provide
              * this to retrieve the subsequent page. When paginating, all other parameters provided
-             * to `ListCompilationResults` must match the call that provided the page token.
+             * to `ListCompilationResults`, with the exception of `page_size`, must match the call
+             * that provided the page token.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -5152,15 +5161,16 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Optional. Page token received from a previous `QueryCompilationResultActions` call.
              * Provide this to retrieve the subsequent page. When paginating, all other parameters
-             * provided to `QueryCompilationResultActions` must match the call that provided the
-             * page token.
+             * provided to `QueryCompilationResultActions`, with the exception of `page_size`, must
+             * match the call that provided the page token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
             /** Optional. Page token received from a previous `QueryCompilationResultActions` call. Provide this to
            retrieve the subsequent page. When paginating, all other parameters provided to
-           `QueryCompilationResultActions` must match the call that provided the page token.
+           `QueryCompilationResultActions`, with the exception of `page_size`, must match the call that
+           provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
@@ -5169,8 +5179,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Optional. Page token received from a previous `QueryCompilationResultActions` call.
              * Provide this to retrieve the subsequent page. When paginating, all other parameters
-             * provided to `QueryCompilationResultActions` must match the call that provided the
-             * page token.
+             * provided to `QueryCompilationResultActions`, with the exception of `page_size`, must
+             * match the call that provided the page token.
              */
             public Query setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -5802,14 +5812,15 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Optional. Page token received from a previous `ListReleaseConfigs` call. Provide this
              * to retrieve the subsequent page. When paginating, all other parameters provided to
-             * `ListReleaseConfigs` must match the call that provided the page token.
+             * `ListReleaseConfigs`, with the exception of `page_size`, must match the call that
+             * provided the page token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
             /** Optional. Page token received from a previous `ListReleaseConfigs` call. Provide this to retrieve
-           the subsequent page. When paginating, all other parameters provided to `ListReleaseConfigs` must
-           match the call that provided the page token.
+           the subsequent page. When paginating, all other parameters provided to `ListReleaseConfigs`, with
+           the exception of `page_size`, must match the call that provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
@@ -5818,7 +5829,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Optional. Page token received from a previous `ListReleaseConfigs` call. Provide this
              * to retrieve the subsequent page. When paginating, all other parameters provided to
-             * `ListReleaseConfigs` must match the call that provided the page token.
+             * `ListReleaseConfigs`, with the exception of `page_size`, must match the call that
+             * provided the page token.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -6604,14 +6616,15 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Optional. Page token received from a previous `ListWorkflowConfigs` call. Provide
              * this to retrieve the subsequent page. When paginating, all other parameters provided
-             * to `ListWorkflowConfigs` must match the call that provided the page token.
+             * to `ListWorkflowConfigs`, with the exception of `page_size`, must match the call that
+             * provided the page token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
             /** Optional. Page token received from a previous `ListWorkflowConfigs` call. Provide this to retrieve
-           the subsequent page. When paginating, all other parameters provided to `ListWorkflowConfigs` must
-           match the call that provided the page token.
+           the subsequent page. When paginating, all other parameters provided to `ListWorkflowConfigs`, with
+           the exception of `page_size`, must match the call that provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
@@ -6620,7 +6633,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Optional. Page token received from a previous `ListWorkflowConfigs` call. Provide
              * this to retrieve the subsequent page. When paginating, all other parameters provided
-             * to `ListWorkflowConfigs` must match the call that provided the page token.
+             * to `ListWorkflowConfigs`, with the exception of `page_size`, must match the call that
+             * provided the page token.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -7557,14 +7571,16 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Optional. Page token received from a previous `ListWorkflowInvocations` call. Provide
              * this to retrieve the subsequent page. When paginating, all other parameters provided
-             * to `ListWorkflowInvocations` must match the call that provided the page token.
+             * to `ListWorkflowInvocations`, with the exception of `page_size`, must match the call
+             * that provided the page token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
             /** Optional. Page token received from a previous `ListWorkflowInvocations` call. Provide this to
            retrieve the subsequent page. When paginating, all other parameters provided to
-           `ListWorkflowInvocations` must match the call that provided the page token.
+           `ListWorkflowInvocations`, with the exception of `page_size`, must match the call that provided the
+           page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
@@ -7573,7 +7589,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Optional. Page token received from a previous `ListWorkflowInvocations` call. Provide
              * this to retrieve the subsequent page. When paginating, all other parameters provided
-             * to `ListWorkflowInvocations` must match the call that provided the page token.
+             * to `ListWorkflowInvocations`, with the exception of `page_size`, must match the call
+             * that provided the page token.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -7747,15 +7764,16 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Optional. Page token received from a previous `QueryWorkflowInvocationActions` call.
              * Provide this to retrieve the subsequent page. When paginating, all other parameters
-             * provided to `QueryWorkflowInvocationActions` must match the call that provided the
-             * page token.
+             * provided to `QueryWorkflowInvocationActions`, with the exception of `page_size`, must
+             * match the call that provided the page token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
             /** Optional. Page token received from a previous `QueryWorkflowInvocationActions` call. Provide this
            to retrieve the subsequent page. When paginating, all other parameters provided to
-           `QueryWorkflowInvocationActions` must match the call that provided the page token.
+           `QueryWorkflowInvocationActions`, with the exception of `page_size`, must match the call that
+           provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
@@ -7764,8 +7782,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Optional. Page token received from a previous `QueryWorkflowInvocationActions` call.
              * Provide this to retrieve the subsequent page. When paginating, all other parameters
-             * provided to `QueryWorkflowInvocationActions` must match the call that provided the
-             * page token.
+             * provided to `QueryWorkflowInvocationActions`, with the exception of `page_size`, must
+             * match the call that provided the page token.
              */
             public Query setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -9359,14 +9377,15 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Optional. Page token received from a previous `ListWorkspaces` call. Provide this to
              * retrieve the subsequent page. When paginating, all other parameters provided to
-             * `ListWorkspaces` must match the call that provided the page token.
+             * `ListWorkspaces`, with the exception of `page_size`, must match the call that
+             * provided the page token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
             /** Optional. Page token received from a previous `ListWorkspaces` call. Provide this to retrieve the
-           subsequent page. When paginating, all other parameters provided to `ListWorkspaces` must match the
-           call that provided the page token.
+           subsequent page. When paginating, all other parameters provided to `ListWorkspaces`, with the
+           exception of `page_size`, must match the call that provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
@@ -9375,7 +9394,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Optional. Page token received from a previous `ListWorkspaces` call. Provide this to
              * retrieve the subsequent page. When paginating, all other parameters provided to
-             * `ListWorkspaces` must match the call that provided the page token.
+             * `ListWorkspaces`, with the exception of `page_size`, must match the call that
+             * provided the page token.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -10201,14 +10221,16 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Optional. Page token received from a previous `QueryDirectoryContents` call. Provide
              * this to retrieve the subsequent page. When paginating, all other parameters provided
-             * to `QueryDirectoryContents` must match the call that provided the page token.
+             * to `QueryDirectoryContents`, with the exception of `page_size`, must match the call
+             * that provided the page token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
             /** Optional. Page token received from a previous `QueryDirectoryContents` call. Provide this to
            retrieve the subsequent page. When paginating, all other parameters provided to
-           `QueryDirectoryContents` must match the call that provided the page token.
+           `QueryDirectoryContents`, with the exception of `page_size`, must match the call that provided the
+           page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
@@ -10217,7 +10239,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Optional. Page token received from a previous `QueryDirectoryContents` call. Provide
              * this to retrieve the subsequent page. When paginating, all other parameters provided
-             * to `QueryDirectoryContents` must match the call that provided the page token.
+             * to `QueryDirectoryContents`, with the exception of `page_size`, must match the call
+             * that provided the page token.
              */
             public QueryDirectoryContents setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -11012,14 +11035,15 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Optional. Page token received from a previous `SearchFilesRequest` call. Provide this
              * to retrieve the subsequent page. When paginating, all other parameters provided to
-             * `SearchFilesRequest` must match the call that provided the page token.
+             * `SearchFilesRequest`, with the exception of `page_size`, must match the call that
+             * provided the page token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
             /** Optional. Page token received from a previous `SearchFilesRequest` call. Provide this to retrieve
-           the subsequent page. When paginating, all other parameters provided to `SearchFilesRequest` must
-           match the call that provided the page token.
+           the subsequent page. When paginating, all other parameters provided to `SearchFilesRequest`, with
+           the exception of `page_size`, must match the call that provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
@@ -11028,7 +11052,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Optional. Page token received from a previous `SearchFilesRequest` call. Provide this
              * to retrieve the subsequent page. When paginating, all other parameters provided to
-             * `SearchFilesRequest` must match the call that provided the page token.
+             * `SearchFilesRequest`, with the exception of `page_size`, must match the call that
+             * provided the page token.
              */
             public SearchFiles setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;

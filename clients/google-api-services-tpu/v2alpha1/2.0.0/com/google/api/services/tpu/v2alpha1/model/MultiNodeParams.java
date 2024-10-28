@@ -49,6 +49,13 @@ public final class MultiNodeParams extends com.google.api.client.json.GenericJso
   private java.lang.String nodeIdPrefix;
 
   /**
+   * Optional. The workload type for the multi-node request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workloadType;
+
+  /**
    * Required. Number of nodes with this spec. The system will attempt to provison "node_count"
    * nodes as part of the request. This needs to be > 1.
    * @return value or {@code null} for none
@@ -85,6 +92,23 @@ public final class MultiNodeParams extends com.google.api.client.json.GenericJso
    */
   public MultiNodeParams setNodeIdPrefix(java.lang.String nodeIdPrefix) {
     this.nodeIdPrefix = nodeIdPrefix;
+    return this;
+  }
+
+  /**
+   * Optional. The workload type for the multi-node request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkloadType() {
+    return workloadType;
+  }
+
+  /**
+   * Optional. The workload type for the multi-node request.
+   * @param workloadType workloadType or {@code null} for none
+   */
+  public MultiNodeParams setWorkloadType(java.lang.String workloadType) {
+    this.workloadType = workloadType;
     return this;
   }
 

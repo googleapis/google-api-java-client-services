@@ -17,7 +17,7 @@
 package com.google.api.services.texttospeech.v1.model;
 
 /**
- * Used for advanced voice options.
+ * A collection of turns for multi-speaker synthesis.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Text-to-Speech API. For a detailed explanation
@@ -28,40 +28,40 @@ package com.google.api.services.texttospeech.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AdvancedVoiceOptions extends com.google.api.client.json.GenericJson {
+public final class MultiSpeakerMarkup extends com.google.api.client.json.GenericJson {
 
   /**
-   * Only for Journey voices. If false, the synthesis will be context aware and have higher latency.
+   * Required. Speaker turns.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean lowLatencyJourneySynthesis;
+  private java.util.List<Turn> turns;
 
   /**
-   * Only for Journey voices. If false, the synthesis will be context aware and have higher latency.
+   * Required. Speaker turns.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getLowLatencyJourneySynthesis() {
-    return lowLatencyJourneySynthesis;
+  public java.util.List<Turn> getTurns() {
+    return turns;
   }
 
   /**
-   * Only for Journey voices. If false, the synthesis will be context aware and have higher latency.
-   * @param lowLatencyJourneySynthesis lowLatencyJourneySynthesis or {@code null} for none
+   * Required. Speaker turns.
+   * @param turns turns or {@code null} for none
    */
-  public AdvancedVoiceOptions setLowLatencyJourneySynthesis(java.lang.Boolean lowLatencyJourneySynthesis) {
-    this.lowLatencyJourneySynthesis = lowLatencyJourneySynthesis;
+  public MultiSpeakerMarkup setTurns(java.util.List<Turn> turns) {
+    this.turns = turns;
     return this;
   }
 
   @Override
-  public AdvancedVoiceOptions set(String fieldName, Object value) {
-    return (AdvancedVoiceOptions) super.set(fieldName, value);
+  public MultiSpeakerMarkup set(String fieldName, Object value) {
+    return (MultiSpeakerMarkup) super.set(fieldName, value);
   }
 
   @Override
-  public AdvancedVoiceOptions clone() {
-    return (AdvancedVoiceOptions) super.clone();
+  public MultiSpeakerMarkup clone() {
+    return (MultiSpeakerMarkup) super.clone();
   }
 
 }

@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.texttospeech.v1.model;
+package com.google.api.services.texttospeech.v1beta1.model;
 
 /**
- * Used for advanced voice options.
+ * The configuration of Voice Clone feature.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Text-to-Speech API. For a detailed explanation
@@ -28,40 +28,40 @@ package com.google.api.services.texttospeech.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AdvancedVoiceOptions extends com.google.api.client.json.GenericJson {
+public final class VoiceCloneParams extends com.google.api.client.json.GenericJson {
 
   /**
-   * Only for Journey voices. If false, the synthesis will be context aware and have higher latency.
+   * Required. Created by GenerateVoiceCloningKey.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean lowLatencyJourneySynthesis;
+  private java.lang.String voiceCloningKey;
 
   /**
-   * Only for Journey voices. If false, the synthesis will be context aware and have higher latency.
+   * Required. Created by GenerateVoiceCloningKey.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getLowLatencyJourneySynthesis() {
-    return lowLatencyJourneySynthesis;
+  public java.lang.String getVoiceCloningKey() {
+    return voiceCloningKey;
   }
 
   /**
-   * Only for Journey voices. If false, the synthesis will be context aware and have higher latency.
-   * @param lowLatencyJourneySynthesis lowLatencyJourneySynthesis or {@code null} for none
+   * Required. Created by GenerateVoiceCloningKey.
+   * @param voiceCloningKey voiceCloningKey or {@code null} for none
    */
-  public AdvancedVoiceOptions setLowLatencyJourneySynthesis(java.lang.Boolean lowLatencyJourneySynthesis) {
-    this.lowLatencyJourneySynthesis = lowLatencyJourneySynthesis;
+  public VoiceCloneParams setVoiceCloningKey(java.lang.String voiceCloningKey) {
+    this.voiceCloningKey = voiceCloningKey;
     return this;
   }
 
   @Override
-  public AdvancedVoiceOptions set(String fieldName, Object value) {
-    return (AdvancedVoiceOptions) super.set(fieldName, value);
+  public VoiceCloneParams set(String fieldName, Object value) {
+    return (VoiceCloneParams) super.set(fieldName, value);
   }
 
   @Override
-  public AdvancedVoiceOptions clone() {
-    return (AdvancedVoiceOptions) super.clone();
+  public VoiceCloneParams clone() {
+    return (VoiceCloneParams) super.clone();
   }
 
 }

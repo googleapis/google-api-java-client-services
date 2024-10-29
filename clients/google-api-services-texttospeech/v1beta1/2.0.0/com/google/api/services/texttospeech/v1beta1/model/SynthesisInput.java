@@ -45,6 +45,13 @@ public final class SynthesisInput extends com.google.api.client.json.GenericJson
   private CustomPronunciations customPronunciations;
 
   /**
+   * The multi-speaker input to be synthesized. Only applicable for multi-speaker synthesis.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MultiSpeakerMarkup multiSpeakerMarkup;
+
+  /**
    * The SSML document to be synthesized. The SSML document must be valid and well-formed. Otherwise
    * the RPC will fail and return google.rpc.Code.INVALID_ARGUMENT. For more information, see
    * [SSML](https://cloud.google.com/text-to-speech/docs/ssml).
@@ -86,6 +93,23 @@ public final class SynthesisInput extends com.google.api.client.json.GenericJson
    */
   public SynthesisInput setCustomPronunciations(CustomPronunciations customPronunciations) {
     this.customPronunciations = customPronunciations;
+    return this;
+  }
+
+  /**
+   * The multi-speaker input to be synthesized. Only applicable for multi-speaker synthesis.
+   * @return value or {@code null} for none
+   */
+  public MultiSpeakerMarkup getMultiSpeakerMarkup() {
+    return multiSpeakerMarkup;
+  }
+
+  /**
+   * The multi-speaker input to be synthesized. Only applicable for multi-speaker synthesis.
+   * @param multiSpeakerMarkup multiSpeakerMarkup or {@code null} for none
+   */
+  public SynthesisInput setMultiSpeakerMarkup(MultiSpeakerMarkup multiSpeakerMarkup) {
+    this.multiSpeakerMarkup = multiSpeakerMarkup;
     return this;
   }
 

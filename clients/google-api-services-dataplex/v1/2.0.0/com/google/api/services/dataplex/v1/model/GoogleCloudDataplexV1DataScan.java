@@ -47,6 +47,20 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   private GoogleCloudDataplexV1DataSource data;
 
   /**
+   * Output only. The result of a data discovery scan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataDiscoveryResult dataDiscoveryResult;
+
+  /**
+   * Settings for a data discovery scan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataDiscoverySpec dataDiscoverySpec;
+
+  /**
    * Output only. The result of a data profile scan.
    * The value may be {@code null}.
    */
@@ -179,6 +193,40 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
    */
   public GoogleCloudDataplexV1DataScan setData(GoogleCloudDataplexV1DataSource data) {
     this.data = data;
+    return this;
+  }
+
+  /**
+   * Output only. The result of a data discovery scan.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDiscoveryResult getDataDiscoveryResult() {
+    return dataDiscoveryResult;
+  }
+
+  /**
+   * Output only. The result of a data discovery scan.
+   * @param dataDiscoveryResult dataDiscoveryResult or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScan setDataDiscoveryResult(GoogleCloudDataplexV1DataDiscoveryResult dataDiscoveryResult) {
+    this.dataDiscoveryResult = dataDiscoveryResult;
+    return this;
+  }
+
+  /**
+   * Settings for a data discovery scan.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDiscoverySpec getDataDiscoverySpec() {
+    return dataDiscoverySpec;
+  }
+
+  /**
+   * Settings for a data discovery scan.
+   * @param dataDiscoverySpec dataDiscoverySpec or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScan setDataDiscoverySpec(GoogleCloudDataplexV1DataDiscoverySpec dataDiscoverySpec) {
+    this.dataDiscoverySpec = dataDiscoverySpec;
     return this;
   }
 

@@ -37,6 +37,20 @@ public final class GoogleCloudDataplexV1DataScanJob extends com.google.api.clien
   private String createTime;
 
   /**
+   * Output only. The result of a data discovery scan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataDiscoveryResult dataDiscoveryResult;
+
+  /**
+   * Output only. Settings for a data discovery scan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataDiscoverySpec dataDiscoverySpec;
+
+  /**
    * Output only. The result of a data profile scan.
    * The value may be {@code null}.
    */
@@ -129,6 +143,40 @@ public final class GoogleCloudDataplexV1DataScanJob extends com.google.api.clien
    */
   public GoogleCloudDataplexV1DataScanJob setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The result of a data discovery scan.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDiscoveryResult getDataDiscoveryResult() {
+    return dataDiscoveryResult;
+  }
+
+  /**
+   * Output only. The result of a data discovery scan.
+   * @param dataDiscoveryResult dataDiscoveryResult or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanJob setDataDiscoveryResult(GoogleCloudDataplexV1DataDiscoveryResult dataDiscoveryResult) {
+    this.dataDiscoveryResult = dataDiscoveryResult;
+    return this;
+  }
+
+  /**
+   * Output only. Settings for a data discovery scan.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDiscoverySpec getDataDiscoverySpec() {
+    return dataDiscoverySpec;
+  }
+
+  /**
+   * Output only. Settings for a data discovery scan.
+   * @param dataDiscoverySpec dataDiscoverySpec or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanJob setDataDiscoverySpec(GoogleCloudDataplexV1DataDiscoverySpec dataDiscoverySpec) {
+    this.dataDiscoverySpec = dataDiscoverySpec;
     return this;
   }
 

@@ -33,9 +33,8 @@ public final class FlightWithEmissions extends com.google.api.client.json.Generi
   /**
    * Optional. Per-passenger emission estimate numbers. Will not be present if emissions could not
    * be computed. For the list of reasons why emissions could not be computed, see
-   * ComputeFlightEmissions. Note this field is currently equivalent to ttw_emissions_grams_per_pax
-   * until TIM version 1.X.0 which will update this to be total wtw emissions aka
-   * wtt_emissions_grams_per_pax + ttw_emissions_grams_per_pax.
+   * ComputeFlightEmissions. This field uses wtw emissions aka ttw_emissions_grams_per_pax +
+   * wtt_emissions_grams_per_pax.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,9 +50,8 @@ public final class FlightWithEmissions extends com.google.api.client.json.Generi
   /**
    * Optional. Per-passenger emission estimate numbers. Will not be present if emissions could not
    * be computed. For the list of reasons why emissions could not be computed, see
-   * ComputeFlightEmissions. Note this field is currently equivalent to ttw_emissions_grams_per_pax
-   * until TIM version 1.X.0 which will update this to be total wtw emissions aka
-   * wtt_emissions_grams_per_pax + ttw_emissions_grams_per_pax.
+   * ComputeFlightEmissions. This field uses wtw emissions aka ttw_emissions_grams_per_pax +
+   * wtt_emissions_grams_per_pax.
    * @return value or {@code null} for none
    */
   public EmissionsGramsPerPax getEmissionsGramsPerPax() {
@@ -63,9 +61,8 @@ public final class FlightWithEmissions extends com.google.api.client.json.Generi
   /**
    * Optional. Per-passenger emission estimate numbers. Will not be present if emissions could not
    * be computed. For the list of reasons why emissions could not be computed, see
-   * ComputeFlightEmissions. Note this field is currently equivalent to ttw_emissions_grams_per_pax
-   * until TIM version 1.X.0 which will update this to be total wtw emissions aka
-   * wtt_emissions_grams_per_pax + ttw_emissions_grams_per_pax.
+   * ComputeFlightEmissions. This field uses wtw emissions aka ttw_emissions_grams_per_pax +
+   * wtt_emissions_grams_per_pax.
    * @param emissionsGramsPerPax emissionsGramsPerPax or {@code null} for none
    */
   public FlightWithEmissions setEmissionsGramsPerPax(EmissionsGramsPerPax emissionsGramsPerPax) {

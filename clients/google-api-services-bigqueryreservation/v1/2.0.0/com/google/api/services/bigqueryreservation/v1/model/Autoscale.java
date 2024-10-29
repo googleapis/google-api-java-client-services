@@ -32,7 +32,9 @@ public final class Autoscale extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The slot capacity added to this reservation when autoscale happens. Will be
-   * between [0, max_slots].
+   * between [0, max_slots]. Note: after users reduce max_slots, it may take a while before it can
+   * be propagated, so current_slots may stay in the original value and could be larger than
+   * max_slots for that brief period (less than one minute)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -47,7 +49,9 @@ public final class Autoscale extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The slot capacity added to this reservation when autoscale happens. Will be
-   * between [0, max_slots].
+   * between [0, max_slots]. Note: after users reduce max_slots, it may take a while before it can
+   * be propagated, so current_slots may stay in the original value and could be larger than
+   * max_slots for that brief period (less than one minute)
    * @return value or {@code null} for none
    */
   public java.lang.Long getCurrentSlots() {
@@ -56,7 +60,9 @@ public final class Autoscale extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The slot capacity added to this reservation when autoscale happens. Will be
-   * between [0, max_slots].
+   * between [0, max_slots]. Note: after users reduce max_slots, it may take a while before it can
+   * be propagated, so current_slots may stay in the original value and could be larger than
+   * max_slots for that brief period (less than one minute)
    * @param currentSlots currentSlots or {@code null} for none
    */
   public Autoscale setCurrentSlots(java.lang.Long currentSlots) {

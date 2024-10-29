@@ -72,6 +72,14 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean ignoreIdleSlots;
 
   /**
+   * Optional. The labels associated with this reservation. You can use these to organize and group
+   * your reservations. You can set this property when inserting or updating a reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Applicable only for reservations located within one of the BigQuery multi-regions (US or EU).
    * If set to true, this reservation is placed in the organization's secondary region which is
    * designated for disaster recovery purposes. If false, this reservation is placed in the
@@ -240,6 +248,25 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setIgnoreIdleSlots(java.lang.Boolean ignoreIdleSlots) {
     this.ignoreIdleSlots = ignoreIdleSlots;
+    return this;
+  }
+
+  /**
+   * Optional. The labels associated with this reservation. You can use these to organize and group
+   * your reservations. You can set this property when inserting or updating a reservation.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. The labels associated with this reservation. You can use these to organize and group
+   * your reservations. You can set this property when inserting or updating a reservation.
+   * @param labels labels or {@code null} for none
+   */
+  public Reservation setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

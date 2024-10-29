@@ -40,6 +40,18 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
   private java.lang.String assignee;
 
   /**
+   * Optional. This field controls if "Gemini in BigQuery"
+   * (https://cloud.google.com/gemini/docs/bigquery/overview) features should be enabled for this
+   * reservation assignment, which is not on by default. "Gemini in BigQuery" has a distinct
+   * compliance posture from BigQuery. If this field is set to true, the assignment job type is
+   * QUERY, and the parent reservation edition is ENTERPRISE_PLUS, then the assignment will give the
+   * grantee project/organization access to "Gemini in BigQuery" features.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableGeminiInBigquery;
+
+  /**
    * Which type of jobs will use the reservation.
    * The value may be {@code null}.
    */
@@ -79,6 +91,33 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
    */
   public Assignment setAssignee(java.lang.String assignee) {
     this.assignee = assignee;
+    return this;
+  }
+
+  /**
+   * Optional. This field controls if "Gemini in BigQuery"
+   * (https://cloud.google.com/gemini/docs/bigquery/overview) features should be enabled for this
+   * reservation assignment, which is not on by default. "Gemini in BigQuery" has a distinct
+   * compliance posture from BigQuery. If this field is set to true, the assignment job type is
+   * QUERY, and the parent reservation edition is ENTERPRISE_PLUS, then the assignment will give the
+   * grantee project/organization access to "Gemini in BigQuery" features.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableGeminiInBigquery() {
+    return enableGeminiInBigquery;
+  }
+
+  /**
+   * Optional. This field controls if "Gemini in BigQuery"
+   * (https://cloud.google.com/gemini/docs/bigquery/overview) features should be enabled for this
+   * reservation assignment, which is not on by default. "Gemini in BigQuery" has a distinct
+   * compliance posture from BigQuery. If this field is set to true, the assignment job type is
+   * QUERY, and the parent reservation edition is ENTERPRISE_PLUS, then the assignment will give the
+   * grantee project/organization access to "Gemini in BigQuery" features.
+   * @param enableGeminiInBigquery enableGeminiInBigquery or {@code null} for none
+   */
+  public Assignment setEnableGeminiInBigquery(java.lang.Boolean enableGeminiInBigquery) {
+    this.enableGeminiInBigquery = enableGeminiInBigquery;
     return this;
   }
 

@@ -75,7 +75,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The encryption information for the backup, whether it is protected by one or more
    * KMS keys. The information includes all Cloud KMS key versions used to encrypt the backup. The
-   * `encryption_status' field inside of each `EncryptionInfo` is not populated. At least one of the
+   * `encryption_status` field inside of each `EncryptionInfo` is not populated. At least one of the
    * key versions must be available for the backup to be restored. If a key version is revoked in
    * the middle of a restore, the restore behavior is undefined.
    * The value may be {@code null}.
@@ -309,7 +309,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The encryption information for the backup, whether it is protected by one or more
    * KMS keys. The information includes all Cloud KMS key versions used to encrypt the backup. The
-   * `encryption_status' field inside of each `EncryptionInfo` is not populated. At least one of the
+   * `encryption_status` field inside of each `EncryptionInfo` is not populated. At least one of the
    * key versions must be available for the backup to be restored. If a key version is revoked in
    * the middle of a restore, the restore behavior is undefined.
    * @return value or {@code null} for none
@@ -321,7 +321,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The encryption information for the backup, whether it is protected by one or more
    * KMS keys. The information includes all Cloud KMS key versions used to encrypt the backup. The
-   * `encryption_status' field inside of each `EncryptionInfo` is not populated. At least one of the
+   * `encryption_status` field inside of each `EncryptionInfo` is not populated. At least one of the
    * key versions must be available for the backup to be restored. If a key version is revoked in
    * the middle of a restore, the restore behavior is undefined.
    * @param encryptionInformation encryptionInformation or {@code null} for none

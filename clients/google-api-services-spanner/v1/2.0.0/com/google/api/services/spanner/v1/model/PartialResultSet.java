@@ -47,6 +47,15 @@ public final class PartialResultSet extends com.google.api.client.json.GenericJs
   private ResultSetMetadata metadata;
 
   /**
+   * Optional. A precommit token will be included if the read-write transaction is on a multiplexed
+   * session. The precommit token with the highest sequence number from this transaction attempt
+   * should be passed to the Commit request for this transaction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MultiplexedSessionPrecommitToken precommitToken;
+
+  /**
    * Streaming calls might be interrupted for a variety of reasons, such as TCP connection loss. If
    * this occurs, the stream of results can be resumed by re-sending the original request and
    * including `resume_token`. Note that executing any other transaction in the same session
@@ -136,6 +145,27 @@ public final class PartialResultSet extends com.google.api.client.json.GenericJs
    */
   public PartialResultSet setMetadata(ResultSetMetadata metadata) {
     this.metadata = metadata;
+    return this;
+  }
+
+  /**
+   * Optional. A precommit token will be included if the read-write transaction is on a multiplexed
+   * session. The precommit token with the highest sequence number from this transaction attempt
+   * should be passed to the Commit request for this transaction.
+   * @return value or {@code null} for none
+   */
+  public MultiplexedSessionPrecommitToken getPrecommitToken() {
+    return precommitToken;
+  }
+
+  /**
+   * Optional. A precommit token will be included if the read-write transaction is on a multiplexed
+   * session. The precommit token with the highest sequence number from this transaction attempt
+   * should be passed to the Commit request for this transaction.
+   * @param precommitToken precommitToken or {@code null} for none
+   */
+  public PartialResultSet setPrecommitToken(MultiplexedSessionPrecommitToken precommitToken) {
+    this.precommitToken = precommitToken;
     return this;
   }
 

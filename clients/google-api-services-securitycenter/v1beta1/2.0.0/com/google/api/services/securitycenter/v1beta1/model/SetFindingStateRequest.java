@@ -31,7 +31,7 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class SetFindingStateRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The time at which the updated state takes effect.
+   * Optional. The time at which the updated state takes effect. If not set uses the current time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class SetFindingStateRequest extends com.google.api.client.json.Gen
   private java.lang.String state;
 
   /**
-   * Required. The time at which the updated state takes effect.
+   * Optional. The time at which the updated state takes effect. If not set uses the current time.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -53,7 +53,7 @@ public final class SetFindingStateRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The time at which the updated state takes effect.
+   * Optional. The time at which the updated state takes effect. If not set uses the current time.
    * @param startTime startTime or {@code null} for none
    */
   public SetFindingStateRequest setStartTime(String startTime) {

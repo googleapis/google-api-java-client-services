@@ -38,11 +38,25 @@ public final class GoogleMapsPlacesV1PlaceGenerativeSummary extends com.google.a
   private GoogleTypeLocalizedText description;
 
   /**
+   * A link where users can flag a problem with the description summary.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String descriptionFlagContentUri;
+
+  /**
    * The overview of the place.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeLocalizedText overview;
+
+  /**
+   * A link where users can flag a problem with the overview summary.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String overviewFlagContentUri;
 
   /**
    * References that are used to generate the summary description.
@@ -69,6 +83,23 @@ public final class GoogleMapsPlacesV1PlaceGenerativeSummary extends com.google.a
   }
 
   /**
+   * A link where users can flag a problem with the description summary.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescriptionFlagContentUri() {
+    return descriptionFlagContentUri;
+  }
+
+  /**
+   * A link where users can flag a problem with the description summary.
+   * @param descriptionFlagContentUri descriptionFlagContentUri or {@code null} for none
+   */
+  public GoogleMapsPlacesV1PlaceGenerativeSummary setDescriptionFlagContentUri(java.lang.String descriptionFlagContentUri) {
+    this.descriptionFlagContentUri = descriptionFlagContentUri;
+    return this;
+  }
+
+  /**
    * The overview of the place.
    * @return value or {@code null} for none
    */
@@ -82,6 +113,23 @@ public final class GoogleMapsPlacesV1PlaceGenerativeSummary extends com.google.a
    */
   public GoogleMapsPlacesV1PlaceGenerativeSummary setOverview(GoogleTypeLocalizedText overview) {
     this.overview = overview;
+    return this;
+  }
+
+  /**
+   * A link where users can flag a problem with the overview summary.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOverviewFlagContentUri() {
+    return overviewFlagContentUri;
+  }
+
+  /**
+   * A link where users can flag a problem with the overview summary.
+   * @param overviewFlagContentUri overviewFlagContentUri or {@code null} for none
+   */
+  public GoogleMapsPlacesV1PlaceGenerativeSummary setOverviewFlagContentUri(java.lang.String overviewFlagContentUri) {
+    this.overviewFlagContentUri = overviewFlagContentUri;
     return this;
   }
 

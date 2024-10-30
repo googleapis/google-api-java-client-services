@@ -86,6 +86,14 @@ public final class GoogleMapsPlacesV1SearchTextResponse extends com.google.api.c
   }
 
   /**
+   * A link allows the user to search with the same text query as specified in the request on Google
+   * Maps.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String searchUri;
+
+  /**
    * Experimental: See https://developers.google.com/maps/documentation/places/web-
    * service/experimental/places-generative for more details. A list of contextual contents where
    * each entry associates to the corresponding place in the same index in the places field. The
@@ -170,6 +178,25 @@ public final class GoogleMapsPlacesV1SearchTextResponse extends com.google.api.c
    */
   public GoogleMapsPlacesV1SearchTextResponse setRoutingSummaries(java.util.List<GoogleMapsPlacesV1RoutingSummary> routingSummaries) {
     this.routingSummaries = routingSummaries;
+    return this;
+  }
+
+  /**
+   * A link allows the user to search with the same text query as specified in the request on Google
+   * Maps.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSearchUri() {
+    return searchUri;
+  }
+
+  /**
+   * A link allows the user to search with the same text query as specified in the request on Google
+   * Maps.
+   * @param searchUri searchUri or {@code null} for none
+   */
+  public GoogleMapsPlacesV1SearchTextResponse setSearchUri(java.lang.String searchUri) {
+    this.searchUri = searchUri;
     return this;
   }
 

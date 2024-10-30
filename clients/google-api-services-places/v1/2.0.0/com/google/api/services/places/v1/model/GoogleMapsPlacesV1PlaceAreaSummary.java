@@ -45,6 +45,13 @@ public final class GoogleMapsPlacesV1PlaceAreaSummary extends com.google.api.cli
   }
 
   /**
+   * A link where users can flag a problem with the summary.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String flagContentUri;
+
+  /**
    * Content blocks that compose the area summary. Each block has a separate topic about the area.
    * @return value or {@code null} for none
    */
@@ -58,6 +65,23 @@ public final class GoogleMapsPlacesV1PlaceAreaSummary extends com.google.api.cli
    */
   public GoogleMapsPlacesV1PlaceAreaSummary setContentBlocks(java.util.List<GoogleMapsPlacesV1ContentBlock> contentBlocks) {
     this.contentBlocks = contentBlocks;
+    return this;
+  }
+
+  /**
+   * A link where users can flag a problem with the summary.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFlagContentUri() {
+    return flagContentUri;
+  }
+
+  /**
+   * A link where users can flag a problem with the summary.
+   * @param flagContentUri flagContentUri or {@code null} for none
+   */
+  public GoogleMapsPlacesV1PlaceAreaSummary setFlagContentUri(java.lang.String flagContentUri) {
+    this.flagContentUri = flagContentUri;
     return this;
   }
 

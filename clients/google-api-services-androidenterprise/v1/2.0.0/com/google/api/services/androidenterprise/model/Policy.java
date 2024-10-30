@@ -33,9 +33,10 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * Controls when automatic app updates on the device can be applied. Recommended alternative:
    * autoUpdateMode which is set per app, provides greater flexibility around update frequency. When
    * autoUpdateMode is set to AUTO_UPDATE_POSTPONED or AUTO_UPDATE_HIGH_PRIORITY, autoUpdatePolicy
-   * has no effect. "choiceToTheUser" allows the device's user to configure the app update policy.
-   * "always" enables auto updates. "never" disables auto updates. "wifiOnly" enables auto updates
-   * only when the device is connected to wifi.
+   * has no effect. - choiceToTheUser allows the device's user to configure the app update policy. -
+   * always enables auto updates. - never disables auto updates. - wifiOnly enables auto updates
+   * only when the device is connected to wifi. *Important:* Changes to app update policies don't
+   * affect updates that are in progress. Any policy changes will apply to subsequent app updates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,9 +88,10 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * Controls when automatic app updates on the device can be applied. Recommended alternative:
    * autoUpdateMode which is set per app, provides greater flexibility around update frequency. When
    * autoUpdateMode is set to AUTO_UPDATE_POSTPONED or AUTO_UPDATE_HIGH_PRIORITY, autoUpdatePolicy
-   * has no effect. "choiceToTheUser" allows the device's user to configure the app update policy.
-   * "always" enables auto updates. "never" disables auto updates. "wifiOnly" enables auto updates
-   * only when the device is connected to wifi.
+   * has no effect. - choiceToTheUser allows the device's user to configure the app update policy. -
+   * always enables auto updates. - never disables auto updates. - wifiOnly enables auto updates
+   * only when the device is connected to wifi. *Important:* Changes to app update policies don't
+   * affect updates that are in progress. Any policy changes will apply to subsequent app updates.
    * @return value or {@code null} for none
    */
   public java.lang.String getAutoUpdatePolicy() {
@@ -100,9 +102,10 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * Controls when automatic app updates on the device can be applied. Recommended alternative:
    * autoUpdateMode which is set per app, provides greater flexibility around update frequency. When
    * autoUpdateMode is set to AUTO_UPDATE_POSTPONED or AUTO_UPDATE_HIGH_PRIORITY, autoUpdatePolicy
-   * has no effect. "choiceToTheUser" allows the device's user to configure the app update policy.
-   * "always" enables auto updates. "never" disables auto updates. "wifiOnly" enables auto updates
-   * only when the device is connected to wifi.
+   * has no effect. - choiceToTheUser allows the device's user to configure the app update policy. -
+   * always enables auto updates. - never disables auto updates. - wifiOnly enables auto updates
+   * only when the device is connected to wifi. *Important:* Changes to app update policies don't
+   * affect updates that are in progress. Any policy changes will apply to subsequent app updates.
    * @param autoUpdatePolicy autoUpdatePolicy or {@code null} for none
    */
   public Policy setAutoUpdatePolicy(java.lang.String autoUpdatePolicy) {

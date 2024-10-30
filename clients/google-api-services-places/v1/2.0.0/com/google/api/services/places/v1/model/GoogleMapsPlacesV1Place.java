@@ -209,6 +209,13 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.lang.Boolean goodForWatchingSports;
 
   /**
+   * Links to trigger different Google Maps actions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleMapsPlacesV1PlaceGoogleMapsLinks googleMapsLinks;
+
+  /**
    * A URL providing more information about this place.
    * The value may be {@code null}.
    */
@@ -948,6 +955,23 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   public GoogleMapsPlacesV1Place setGoodForWatchingSports(java.lang.Boolean goodForWatchingSports) {
     this.goodForWatchingSports = goodForWatchingSports;
+    return this;
+  }
+
+  /**
+   * Links to trigger different Google Maps actions.
+   * @return value or {@code null} for none
+   */
+  public GoogleMapsPlacesV1PlaceGoogleMapsLinks getGoogleMapsLinks() {
+    return googleMapsLinks;
+  }
+
+  /**
+   * Links to trigger different Google Maps actions.
+   * @param googleMapsLinks googleMapsLinks or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setGoogleMapsLinks(GoogleMapsPlacesV1PlaceGoogleMapsLinks googleMapsLinks) {
+    this.googleMapsLinks = googleMapsLinks;
     return this;
   }
 

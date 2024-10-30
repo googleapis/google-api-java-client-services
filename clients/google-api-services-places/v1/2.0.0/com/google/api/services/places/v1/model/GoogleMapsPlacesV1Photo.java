@@ -43,6 +43,20 @@ public final class GoogleMapsPlacesV1Photo extends com.google.api.client.json.Ge
   }
 
   /**
+   * A link where users can flag a problem with the photo.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String flagContentUri;
+
+  /**
+   * A link to show the photo on Google Maps.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String googleMapsUri;
+
+  /**
    * The maximum available height, in pixels.
    * The value may be {@code null}.
    */
@@ -78,6 +92,40 @@ public final class GoogleMapsPlacesV1Photo extends com.google.api.client.json.Ge
    */
   public GoogleMapsPlacesV1Photo setAuthorAttributions(java.util.List<GoogleMapsPlacesV1AuthorAttribution> authorAttributions) {
     this.authorAttributions = authorAttributions;
+    return this;
+  }
+
+  /**
+   * A link where users can flag a problem with the photo.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFlagContentUri() {
+    return flagContentUri;
+  }
+
+  /**
+   * A link where users can flag a problem with the photo.
+   * @param flagContentUri flagContentUri or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Photo setFlagContentUri(java.lang.String flagContentUri) {
+    this.flagContentUri = flagContentUri;
+    return this;
+  }
+
+  /**
+   * A link to show the photo on Google Maps.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGoogleMapsUri() {
+    return googleMapsUri;
+  }
+
+  /**
+   * A link to show the photo on Google Maps.
+   * @param googleMapsUri googleMapsUri or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Photo setGoogleMapsUri(java.lang.String googleMapsUri) {
+    this.googleMapsUri = googleMapsUri;
     return this;
   }
 

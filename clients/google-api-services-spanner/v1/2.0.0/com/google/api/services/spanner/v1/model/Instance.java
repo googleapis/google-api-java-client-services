@@ -54,6 +54,17 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Optional. Controls the default backup behavior for new databases within the instance. Note that
+   * `AUTOMATIC` is not permitted for free instances, as backups and backup schedules are not
+   * allowed for free instances. In the `GetInstance` or `ListInstances` response, if the value of
+   * default_backup_schedule_type is unset or NONE, no default backup schedule will be created for
+   * new databases within the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultBackupScheduleType;
+
+  /**
    * Required. The descriptive name for this instance as it appears in UIs. Must be unique per
    * project and between 4 and 30 characters in length.
    * The value may be {@code null}.
@@ -123,10 +134,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    * specify the target number of nodes allocated to the instance. If autoscaling is enabled,
    * `node_count` is treated as an `OUTPUT_ONLY` field and reflects the current number of nodes
    * allocated to the instance. This might be zero in API responses for instances that are not yet
-   * in the `READY` state. If the instance has varying node count across replicas (achieved by
-   * setting asymmetric_autoscaling_options in autoscaling config), the node_count here is the
-   * maximum node count across all replicas. For more information, see [Compute capacity, nodes, and
-   * processing units](https://cloud.google.com/spanner/docs/compute-capacity).
+   * in the `READY` state. For more information, see [Compute capacity, nodes, and processing
+   * units](https://cloud.google.com/spanner/docs/compute-capacity).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,10 +147,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    * `processing_units` field to specify the target number of processing units allocated to the
    * instance. If autoscaling is enabled, `processing_units` is treated as an `OUTPUT_ONLY` field
    * and reflects the current number of processing units allocated to the instance. This might be
-   * zero in API responses for instances that are not yet in the `READY` state. If the instance has
-   * varying processing units per replica (achieved by setting asymmetric_autoscaling_options in
-   * autoscaling config), the processing_units here is the maximum processing units across all
-   * replicas. For more information, see [Compute capacity, nodes and processing
+   * zero in API responses for instances that are not yet in the `READY` state. For more
+   * information, see [Compute capacity, nodes and processing
    * units](https://cloud.google.com/spanner/docs/compute-capacity).
    * The value may be {@code null}.
    */
@@ -226,6 +233,31 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Controls the default backup behavior for new databases within the instance. Note that
+   * `AUTOMATIC` is not permitted for free instances, as backups and backup schedules are not
+   * allowed for free instances. In the `GetInstance` or `ListInstances` response, if the value of
+   * default_backup_schedule_type is unset or NONE, no default backup schedule will be created for
+   * new databases within the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultBackupScheduleType() {
+    return defaultBackupScheduleType;
+  }
+
+  /**
+   * Optional. Controls the default backup behavior for new databases within the instance. Note that
+   * `AUTOMATIC` is not permitted for free instances, as backups and backup schedules are not
+   * allowed for free instances. In the `GetInstance` or `ListInstances` response, if the value of
+   * default_backup_schedule_type is unset or NONE, no default backup schedule will be created for
+   * new databases within the instance.
+   * @param defaultBackupScheduleType defaultBackupScheduleType or {@code null} for none
+   */
+  public Instance setDefaultBackupScheduleType(java.lang.String defaultBackupScheduleType) {
+    this.defaultBackupScheduleType = defaultBackupScheduleType;
     return this;
   }
 
@@ -384,10 +416,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    * specify the target number of nodes allocated to the instance. If autoscaling is enabled,
    * `node_count` is treated as an `OUTPUT_ONLY` field and reflects the current number of nodes
    * allocated to the instance. This might be zero in API responses for instances that are not yet
-   * in the `READY` state. If the instance has varying node count across replicas (achieved by
-   * setting asymmetric_autoscaling_options in autoscaling config), the node_count here is the
-   * maximum node count across all replicas. For more information, see [Compute capacity, nodes, and
-   * processing units](https://cloud.google.com/spanner/docs/compute-capacity).
+   * in the `READY` state. For more information, see [Compute capacity, nodes, and processing
+   * units](https://cloud.google.com/spanner/docs/compute-capacity).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNodeCount() {
@@ -400,10 +430,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    * specify the target number of nodes allocated to the instance. If autoscaling is enabled,
    * `node_count` is treated as an `OUTPUT_ONLY` field and reflects the current number of nodes
    * allocated to the instance. This might be zero in API responses for instances that are not yet
-   * in the `READY` state. If the instance has varying node count across replicas (achieved by
-   * setting asymmetric_autoscaling_options in autoscaling config), the node_count here is the
-   * maximum node count across all replicas. For more information, see [Compute capacity, nodes, and
-   * processing units](https://cloud.google.com/spanner/docs/compute-capacity).
+   * in the `READY` state. For more information, see [Compute capacity, nodes, and processing
+   * units](https://cloud.google.com/spanner/docs/compute-capacity).
    * @param nodeCount nodeCount or {@code null} for none
    */
   public Instance setNodeCount(java.lang.Integer nodeCount) {
@@ -417,10 +445,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    * `processing_units` field to specify the target number of processing units allocated to the
    * instance. If autoscaling is enabled, `processing_units` is treated as an `OUTPUT_ONLY` field
    * and reflects the current number of processing units allocated to the instance. This might be
-   * zero in API responses for instances that are not yet in the `READY` state. If the instance has
-   * varying processing units per replica (achieved by setting asymmetric_autoscaling_options in
-   * autoscaling config), the processing_units here is the maximum processing units across all
-   * replicas. For more information, see [Compute capacity, nodes and processing
+   * zero in API responses for instances that are not yet in the `READY` state. For more
+   * information, see [Compute capacity, nodes and processing
    * units](https://cloud.google.com/spanner/docs/compute-capacity).
    * @return value or {@code null} for none
    */
@@ -434,10 +460,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    * `processing_units` field to specify the target number of processing units allocated to the
    * instance. If autoscaling is enabled, `processing_units` is treated as an `OUTPUT_ONLY` field
    * and reflects the current number of processing units allocated to the instance. This might be
-   * zero in API responses for instances that are not yet in the `READY` state. If the instance has
-   * varying processing units per replica (achieved by setting asymmetric_autoscaling_options in
-   * autoscaling config), the processing_units here is the maximum processing units across all
-   * replicas. For more information, see [Compute capacity, nodes and processing
+   * zero in API responses for instances that are not yet in the `READY` state. For more
+   * information, see [Compute capacity, nodes and processing
    * units](https://cloud.google.com/spanner/docs/compute-capacity).
    * @param processingUnits processingUnits or {@code null} for none
    */

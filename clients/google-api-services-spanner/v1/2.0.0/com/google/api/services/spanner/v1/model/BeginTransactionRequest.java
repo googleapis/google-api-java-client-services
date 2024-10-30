@@ -30,6 +30,15 @@ package com.google.api.services.spanner.v1.model;
 public final class BeginTransactionRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Required for read-write transactions on a multiplexed session that commit mutations
+   * but do not perform any reads or queries. Clients should randomly select one of the mutations
+   * from the mutation set and send it as a part of this request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Mutation mutationKey;
+
+  /**
    * Required. Options for the new transaction.
    * The value may be {@code null}.
    */
@@ -44,6 +53,27 @@ public final class BeginTransactionRequest extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private RequestOptions requestOptions;
+
+  /**
+   * Optional. Required for read-write transactions on a multiplexed session that commit mutations
+   * but do not perform any reads or queries. Clients should randomly select one of the mutations
+   * from the mutation set and send it as a part of this request.
+   * @return value or {@code null} for none
+   */
+  public Mutation getMutationKey() {
+    return mutationKey;
+  }
+
+  /**
+   * Optional. Required for read-write transactions on a multiplexed session that commit mutations
+   * but do not perform any reads or queries. Clients should randomly select one of the mutations
+   * from the mutation set and send it as a part of this request.
+   * @param mutationKey mutationKey or {@code null} for none
+   */
+  public BeginTransactionRequest setMutationKey(Mutation mutationKey) {
+    this.mutationKey = mutationKey;
+    return this;
+  }
 
   /**
    * Required. Options for the new transaction.

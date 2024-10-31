@@ -46,11 +46,27 @@ public final class GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig extends com.
   private java.util.List<GoogleCloudIdentitytoolkitAdminV2RecaptchaManagedRule> managedRules;
 
   /**
-   * Output only. The reCAPTCHA keys.
+   * The reCAPTCHA config for phone provider, containing the enforcement status. The phone provider
+   * contains all related user flows protected by reCAPTCHA.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String phoneEnforcementState;
+
+  /**
+   * The reCAPTCHA keys.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudIdentitytoolkitAdminV2RecaptchaKey> recaptchaKeys;
+
+  /**
+   * The managed rules for toll fraud provider, containing the enforcement status. The toll fraud
+   * provider contains all SMS related user flows.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudIdentitytoolkitAdminV2RecaptchaTollFraudManagedRule> tollFraudManagedRules;
 
   /**
    * Whether to use the account defender for reCAPTCHA assessment. Defaults to `false`.
@@ -98,7 +114,26 @@ public final class GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig extends com.
   }
 
   /**
-   * Output only. The reCAPTCHA keys.
+   * The reCAPTCHA config for phone provider, containing the enforcement status. The phone provider
+   * contains all related user flows protected by reCAPTCHA.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPhoneEnforcementState() {
+    return phoneEnforcementState;
+  }
+
+  /**
+   * The reCAPTCHA config for phone provider, containing the enforcement status. The phone provider
+   * contains all related user flows protected by reCAPTCHA.
+   * @param phoneEnforcementState phoneEnforcementState or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig setPhoneEnforcementState(java.lang.String phoneEnforcementState) {
+    this.phoneEnforcementState = phoneEnforcementState;
+    return this;
+  }
+
+  /**
+   * The reCAPTCHA keys.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudIdentitytoolkitAdminV2RecaptchaKey> getRecaptchaKeys() {
@@ -106,11 +141,30 @@ public final class GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig extends com.
   }
 
   /**
-   * Output only. The reCAPTCHA keys.
+   * The reCAPTCHA keys.
    * @param recaptchaKeys recaptchaKeys or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig setRecaptchaKeys(java.util.List<GoogleCloudIdentitytoolkitAdminV2RecaptchaKey> recaptchaKeys) {
     this.recaptchaKeys = recaptchaKeys;
+    return this;
+  }
+
+  /**
+   * The managed rules for toll fraud provider, containing the enforcement status. The toll fraud
+   * provider contains all SMS related user flows.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudIdentitytoolkitAdminV2RecaptchaTollFraudManagedRule> getTollFraudManagedRules() {
+    return tollFraudManagedRules;
+  }
+
+  /**
+   * The managed rules for toll fraud provider, containing the enforcement status. The toll fraud
+   * provider contains all SMS related user flows.
+   * @param tollFraudManagedRules tollFraudManagedRules or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig setTollFraudManagedRules(java.util.List<GoogleCloudIdentitytoolkitAdminV2RecaptchaTollFraudManagedRule> tollFraudManagedRules) {
+    this.tollFraudManagedRules = tollFraudManagedRules;
     return this;
   }
 

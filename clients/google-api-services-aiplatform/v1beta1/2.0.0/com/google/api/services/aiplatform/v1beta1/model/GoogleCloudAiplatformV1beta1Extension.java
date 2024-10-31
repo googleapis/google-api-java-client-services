@@ -82,8 +82,8 @@ public final class GoogleCloudAiplatformV1beta1Extension extends com.google.api.
 
   /**
    * Optional. The PrivateServiceConnect config for the extension. If specified, the service
-   * endpoints associated with the Extension should be registered with private network access in the
-   * provided Service Directory (https://cloud.google.com/service-directory/docs/configuring-
+   * endpoints associated with the Extension should be [registered with private network access in
+   * the provided Service Directory](https://cloud.google.com/service-directory/docs/configuring-
    * private-network-access). If the service contains more than one endpoint with a network, the
    * service will arbitrarilty choose one of the endpoints to use for extension execution.
    * The value may be {@code null}.
@@ -237,8 +237,8 @@ public final class GoogleCloudAiplatformV1beta1Extension extends com.google.api.
 
   /**
    * Optional. The PrivateServiceConnect config for the extension. If specified, the service
-   * endpoints associated with the Extension should be registered with private network access in the
-   * provided Service Directory (https://cloud.google.com/service-directory/docs/configuring-
+   * endpoints associated with the Extension should be [registered with private network access in
+   * the provided Service Directory](https://cloud.google.com/service-directory/docs/configuring-
    * private-network-access). If the service contains more than one endpoint with a network, the
    * service will arbitrarilty choose one of the endpoints to use for extension execution.
    * @return value or {@code null} for none
@@ -249,8 +249,8 @@ public final class GoogleCloudAiplatformV1beta1Extension extends com.google.api.
 
   /**
    * Optional. The PrivateServiceConnect config for the extension. If specified, the service
-   * endpoints associated with the Extension should be registered with private network access in the
-   * provided Service Directory (https://cloud.google.com/service-directory/docs/configuring-
+   * endpoints associated with the Extension should be [registered with private network access in
+   * the provided Service Directory](https://cloud.google.com/service-directory/docs/configuring-
    * private-network-access). If the service contains more than one endpoint with a network, the
    * service will arbitrarilty choose one of the endpoints to use for extension execution.
    * @param privateServiceConnectConfig privateServiceConnectConfig or {@code null} for none

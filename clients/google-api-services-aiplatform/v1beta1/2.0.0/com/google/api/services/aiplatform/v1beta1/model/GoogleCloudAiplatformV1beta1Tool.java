@@ -33,6 +33,14 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1Tool extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. CodeExecution tool type. Enables the model to execute code as part of generation.
+   * This field is only used by the Gemini Developer API services.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ToolCodeExecution codeExecution;
+
+  /**
    * Optional. Function tool type. One or more function declarations to be passed to the model along
    * with the current user query. Model may decide to call a subset of these functions by populating
    * FunctionCall in the response. User should provide a FunctionResponse for each function call in
@@ -65,6 +73,25 @@ public final class GoogleCloudAiplatformV1beta1Tool extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1Retrieval retrieval;
+
+  /**
+   * Optional. CodeExecution tool type. Enables the model to execute code as part of generation.
+   * This field is only used by the Gemini Developer API services.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ToolCodeExecution getCodeExecution() {
+    return codeExecution;
+  }
+
+  /**
+   * Optional. CodeExecution tool type. Enables the model to execute code as part of generation.
+   * This field is only used by the Gemini Developer API services.
+   * @param codeExecution codeExecution or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Tool setCodeExecution(GoogleCloudAiplatformV1beta1ToolCodeExecution codeExecution) {
+    this.codeExecution = codeExecution;
+    return this;
+  }
 
   /**
    * Optional. Function tool type. One or more function declarations to be passed to the model along

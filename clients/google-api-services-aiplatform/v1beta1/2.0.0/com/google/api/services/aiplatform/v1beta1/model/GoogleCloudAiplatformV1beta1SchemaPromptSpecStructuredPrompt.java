@@ -50,6 +50,20 @@ public final class GoogleCloudAiplatformV1beta1SchemaPromptSpecStructuredPrompt 
   }
 
   /**
+   * Preamble: For infill prompt, the prefix before expected model response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String infillPrefix;
+
+  /**
+   * Preamble: For infill prompt, the suffix after expected model response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String infillSuffix;
+
+  /**
    * Preamble: The input prefixes before each example input.
    * The value may be {@code null}.
    */
@@ -62,6 +76,20 @@ public final class GoogleCloudAiplatformV1beta1SchemaPromptSpecStructuredPrompt 
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> outputPrefixes;
+
+  /**
+   * Preamble: The input test data for prediction. Each PartList in this field represents one text-
+   * only input set for a single model request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1SchemaPromptSpecPartList> predictionInputs;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1SchemaPromptSpecPartList used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1SchemaPromptSpecPartList.class);
+  }
 
   /**
    * The prompt message.
@@ -105,6 +133,40 @@ public final class GoogleCloudAiplatformV1beta1SchemaPromptSpecStructuredPrompt 
   }
 
   /**
+   * Preamble: For infill prompt, the prefix before expected model response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInfillPrefix() {
+    return infillPrefix;
+  }
+
+  /**
+   * Preamble: For infill prompt, the prefix before expected model response.
+   * @param infillPrefix infillPrefix or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SchemaPromptSpecStructuredPrompt setInfillPrefix(java.lang.String infillPrefix) {
+    this.infillPrefix = infillPrefix;
+    return this;
+  }
+
+  /**
+   * Preamble: For infill prompt, the suffix after expected model response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInfillSuffix() {
+    return infillSuffix;
+  }
+
+  /**
+   * Preamble: For infill prompt, the suffix after expected model response.
+   * @param infillSuffix infillSuffix or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SchemaPromptSpecStructuredPrompt setInfillSuffix(java.lang.String infillSuffix) {
+    this.infillSuffix = infillSuffix;
+    return this;
+  }
+
+  /**
    * Preamble: The input prefixes before each example input.
    * @return value or {@code null} for none
    */
@@ -135,6 +197,25 @@ public final class GoogleCloudAiplatformV1beta1SchemaPromptSpecStructuredPrompt 
    */
   public GoogleCloudAiplatformV1beta1SchemaPromptSpecStructuredPrompt setOutputPrefixes(java.util.List<java.lang.String> outputPrefixes) {
     this.outputPrefixes = outputPrefixes;
+    return this;
+  }
+
+  /**
+   * Preamble: The input test data for prediction. Each PartList in this field represents one text-
+   * only input set for a single model request.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1SchemaPromptSpecPartList> getPredictionInputs() {
+    return predictionInputs;
+  }
+
+  /**
+   * Preamble: The input test data for prediction. Each PartList in this field represents one text-
+   * only input set for a single model request.
+   * @param predictionInputs predictionInputs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SchemaPromptSpecStructuredPrompt setPredictionInputs(java.util.List<GoogleCloudAiplatformV1beta1SchemaPromptSpecPartList> predictionInputs) {
+    this.predictionInputs = predictionInputs;
     return this;
   }
 

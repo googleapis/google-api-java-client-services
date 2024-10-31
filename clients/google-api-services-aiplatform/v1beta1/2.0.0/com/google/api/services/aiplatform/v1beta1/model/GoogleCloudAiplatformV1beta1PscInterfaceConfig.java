@@ -30,28 +30,22 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1PscInterfaceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The full name of the Compute Engine [network
+   * Optional. The name of the Compute Engine [network
    * attachment](https://cloud.google.com/vpc/docs/about-network-attachments) to attach to the
-   * resource. For example, `projects/12345/regions/us-central1/networkAttachments/myNA`. is of the
-   * form `projects/{project}/regions/{region}/networkAttachments/{networkAttachment}`. Where
-   * {project} is a project number, as in `12345`, and {networkAttachment} is a network attachment
-   * name. To specify this field, you must have already [created a network attachment]
-   * (https://cloud.google.com/vpc/docs/create-manage-network-attachments#create-network-
-   * attachments). This field is only used for resources using PSC-I.
+   * resource within the region and user project. To specify this field, you must have already
+   * [created a network attachment] (https://cloud.google.com/vpc/docs/create-manage-network-
+   * attachments#create-network-attachments). This field is only used for resources using PSC-I.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String networkAttachment;
 
   /**
-   * Optional. The full name of the Compute Engine [network
+   * Optional. The name of the Compute Engine [network
    * attachment](https://cloud.google.com/vpc/docs/about-network-attachments) to attach to the
-   * resource. For example, `projects/12345/regions/us-central1/networkAttachments/myNA`. is of the
-   * form `projects/{project}/regions/{region}/networkAttachments/{networkAttachment}`. Where
-   * {project} is a project number, as in `12345`, and {networkAttachment} is a network attachment
-   * name. To specify this field, you must have already [created a network attachment]
-   * (https://cloud.google.com/vpc/docs/create-manage-network-attachments#create-network-
-   * attachments). This field is only used for resources using PSC-I.
+   * resource within the region and user project. To specify this field, you must have already
+   * [created a network attachment] (https://cloud.google.com/vpc/docs/create-manage-network-
+   * attachments#create-network-attachments). This field is only used for resources using PSC-I.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkAttachment() {
@@ -59,14 +53,11 @@ public final class GoogleCloudAiplatformV1beta1PscInterfaceConfig extends com.go
   }
 
   /**
-   * Optional. The full name of the Compute Engine [network
+   * Optional. The name of the Compute Engine [network
    * attachment](https://cloud.google.com/vpc/docs/about-network-attachments) to attach to the
-   * resource. For example, `projects/12345/regions/us-central1/networkAttachments/myNA`. is of the
-   * form `projects/{project}/regions/{region}/networkAttachments/{networkAttachment}`. Where
-   * {project} is a project number, as in `12345`, and {networkAttachment} is a network attachment
-   * name. To specify this field, you must have already [created a network attachment]
-   * (https://cloud.google.com/vpc/docs/create-manage-network-attachments#create-network-
-   * attachments). This field is only used for resources using PSC-I.
+   * resource within the region and user project. To specify this field, you must have already
+   * [created a network attachment] (https://cloud.google.com/vpc/docs/create-manage-network-
+   * attachments#create-network-attachments). This field is only used for resources using PSC-I.
    * @param networkAttachment networkAttachment or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1PscInterfaceConfig setNetworkAttachment(java.lang.String networkAttachment) {

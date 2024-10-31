@@ -1885,6 +1885,128 @@ public class ChecksService extends com.google.api.client.googleapis.services.jso
   }
 
   /**
+   * An accessor for creating requests from the Aisafety collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code ChecksService checks = new ChecksService(...);}
+   *   {@code ChecksService.Aisafety.List request = checks.aisafety().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Aisafety aisafety() {
+    return new Aisafety();
+  }
+
+  /**
+   * The "aisafety" collection of methods.
+   */
+  public class Aisafety {
+
+    /**
+     * Analyze a piece of content with the provided set of policies.
+     *
+     * Create a request for the method "aisafety.classifyContent".
+     *
+     * This request holds the parameters needed by the checks server.  After setting any optional
+     * parameters, call the {@link ClassifyContent#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.checks.v1alpha.model.GoogleChecksAisafetyV1alphaClassifyContentRequest}
+     * @return the request
+     */
+    public ClassifyContent classifyContent(com.google.api.services.checks.v1alpha.model.GoogleChecksAisafetyV1alphaClassifyContentRequest content) throws java.io.IOException {
+      ClassifyContent result = new ClassifyContent(content);
+      initialize(result);
+      return result;
+    }
+
+    public class ClassifyContent extends ChecksServiceRequest<com.google.api.services.checks.v1alpha.model.GoogleChecksAisafetyV1alphaClassifyContentResponse> {
+
+      private static final String REST_PATH = "v1alpha/aisafety:classifyContent";
+
+      /**
+       * Analyze a piece of content with the provided set of policies.
+       *
+       * Create a request for the method "aisafety.classifyContent".
+       *
+       * This request holds the parameters needed by the the checks server.  After setting any optional
+       * parameters, call the {@link ClassifyContent#execute()} method to invoke the remote operation.
+       * <p> {@link ClassifyContent#initialize(com.google.api.client.googleapis.services.AbstractGoogleC
+       * lientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.checks.v1alpha.model.GoogleChecksAisafetyV1alphaClassifyContentRequest}
+       * @since 1.13
+       */
+      protected ClassifyContent(com.google.api.services.checks.v1alpha.model.GoogleChecksAisafetyV1alphaClassifyContentRequest content) {
+        super(ChecksService.this, "POST", REST_PATH, content, com.google.api.services.checks.v1alpha.model.GoogleChecksAisafetyV1alphaClassifyContentResponse.class);
+      }
+
+      @Override
+      public ClassifyContent set$Xgafv(java.lang.String $Xgafv) {
+        return (ClassifyContent) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ClassifyContent setAccessToken(java.lang.String accessToken) {
+        return (ClassifyContent) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ClassifyContent setAlt(java.lang.String alt) {
+        return (ClassifyContent) super.setAlt(alt);
+      }
+
+      @Override
+      public ClassifyContent setCallback(java.lang.String callback) {
+        return (ClassifyContent) super.setCallback(callback);
+      }
+
+      @Override
+      public ClassifyContent setFields(java.lang.String fields) {
+        return (ClassifyContent) super.setFields(fields);
+      }
+
+      @Override
+      public ClassifyContent setKey(java.lang.String key) {
+        return (ClassifyContent) super.setKey(key);
+      }
+
+      @Override
+      public ClassifyContent setOauthToken(java.lang.String oauthToken) {
+        return (ClassifyContent) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ClassifyContent setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ClassifyContent) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ClassifyContent setQuotaUser(java.lang.String quotaUser) {
+        return (ClassifyContent) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ClassifyContent setUploadType(java.lang.String uploadType) {
+        return (ClassifyContent) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ClassifyContent setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ClassifyContent) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public ClassifyContent set(String parameterName, Object value) {
+        return (ClassifyContent) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Media collection.
    *
    * <p>The typical use is:</p>

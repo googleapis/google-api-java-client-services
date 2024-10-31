@@ -53,6 +53,14 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
   private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettings contextFilterSettings;
 
   /**
+   * Optional. The number of recent messages to include in the context. Supported features:
+   * KNOWLEDGE_ASSIST.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer contextSize;
+
+  /**
    * Query from Dialogflow agent. It is used by DIALOGFLOW_ASSIST, ENTITY_EXTRACTION.
    * The value may be {@code null}.
    */
@@ -137,6 +145,25 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfig setContextFilterSettings(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettings contextFilterSettings) {
     this.contextFilterSettings = contextFilterSettings;
+    return this;
+  }
+
+  /**
+   * Optional. The number of recent messages to include in the context. Supported features:
+   * KNOWLEDGE_ASSIST.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getContextSize() {
+    return contextSize;
+  }
+
+  /**
+   * Optional. The number of recent messages to include in the context. Supported features:
+   * KNOWLEDGE_ASSIST.
+   * @param contextSize contextSize or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfig setContextSize(java.lang.Integer contextSize) {
+    this.contextSize = contextSize;
     return this;
   }
 

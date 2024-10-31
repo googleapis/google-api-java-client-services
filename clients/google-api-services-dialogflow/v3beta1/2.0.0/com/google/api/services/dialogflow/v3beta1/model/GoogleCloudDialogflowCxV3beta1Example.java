@@ -75,7 +75,8 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
 
   /**
    * Optional. The language code of the example. If not specified, the agent's default language is
-   * used. Note: languages must be enabled in the agent before they can be used.
+   * used. Note: languages must be enabled in the agent before they can be used. Note: example's
+   * language code is not currently used in dialogflow agents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -206,7 +207,8 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
 
   /**
    * Optional. The language code of the example. If not specified, the agent's default language is
-   * used. Note: languages must be enabled in the agent before they can be used.
+   * used. Note: languages must be enabled in the agent before they can be used. Note: example's
+   * language code is not currently used in dialogflow agents.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -215,7 +217,8 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
 
   /**
    * Optional. The language code of the example. If not specified, the agent's default language is
-   * used. Note: languages must be enabled in the agent before they can be used.
+   * used. Note: languages must be enabled in the agent before they can be used. Note: example's
+   * language code is not currently used in dialogflow agents.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Example setLanguageCode(java.lang.String languageCode) {

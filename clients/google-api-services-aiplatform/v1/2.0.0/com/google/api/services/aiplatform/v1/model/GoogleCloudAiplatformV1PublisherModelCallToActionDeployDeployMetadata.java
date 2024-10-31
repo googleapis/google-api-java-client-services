@@ -30,8 +30,8 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Labels for the deployment. For managing deployment config like verifying, source of
-   * deployment config, etc.
+   * Optional. Labels for the deployment config. For managing deployment config like verifying,
+   * source of deployment config, etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +45,8 @@ public final class GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeploy
   private java.lang.String sampleRequest;
 
   /**
-   * Optional. Labels for the deployment. For managing deployment config like verifying, source of
-   * deployment config, etc.
+   * Optional. Labels for the deployment config. For managing deployment config like verifying,
+   * source of deployment config, etc.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -54,8 +54,8 @@ public final class GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeploy
   }
 
   /**
-   * Optional. Labels for the deployment. For managing deployment config like verifying, source of
-   * deployment config, etc.
+   * Optional. Labels for the deployment config. For managing deployment config like verifying,
+   * source of deployment config, etc.
    * @param labels labels or {@code null} for none
    */
   public GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata setLabels(java.util.Map<String, java.lang.String> labels) {

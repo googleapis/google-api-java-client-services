@@ -64,16 +64,18 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
 
   /**
    * The BigQuery destination to write partial failures to. It should be a bigquery table resource
-   * name (e.g. "bq://projectId.bqDatasetId.bqTableId"). If the dataset id does not exist, it will
-   * be created. If the table does not exist, it will be created with the expected schema. If the
-   * table exists, the schema will be validated and data will be added to this existing table.
+   * name (e.g. "bq://projectId.bqDatasetId.bqTableId"). The dataset must exist. If the table does
+   * not exist, it will be created with the expected schema. If the table exists, the schema will be
+   * validated and data will be added to this existing table. Deprecated. Prefer to use
+   * `import_result_bq_sink`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1BigQueryDestination partialFailureBigquerySink;
 
   /**
-   * The Cloud Storage path to write partial failures to.
+   * The Cloud Storage path to write partial failures to. Deprecated. Prefer to use
+   * `import_result_gcs_sink`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,9 +189,10 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
 
   /**
    * The BigQuery destination to write partial failures to. It should be a bigquery table resource
-   * name (e.g. "bq://projectId.bqDatasetId.bqTableId"). If the dataset id does not exist, it will
-   * be created. If the table does not exist, it will be created with the expected schema. If the
-   * table exists, the schema will be validated and data will be added to this existing table.
+   * name (e.g. "bq://projectId.bqDatasetId.bqTableId"). The dataset must exist. If the table does
+   * not exist, it will be created with the expected schema. If the table exists, the schema will be
+   * validated and data will be added to this existing table. Deprecated. Prefer to use
+   * `import_result_bq_sink`.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1BigQueryDestination getPartialFailureBigquerySink() {
@@ -198,9 +201,10 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
 
   /**
    * The BigQuery destination to write partial failures to. It should be a bigquery table resource
-   * name (e.g. "bq://projectId.bqDatasetId.bqTableId"). If the dataset id does not exist, it will
-   * be created. If the table does not exist, it will be created with the expected schema. If the
-   * table exists, the schema will be validated and data will be added to this existing table.
+   * name (e.g. "bq://projectId.bqDatasetId.bqTableId"). The dataset must exist. If the table does
+   * not exist, it will be created with the expected schema. If the table exists, the schema will be
+   * validated and data will be added to this existing table. Deprecated. Prefer to use
+   * `import_result_bq_sink`.
    * @param partialFailureBigquerySink partialFailureBigquerySink or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setPartialFailureBigquerySink(GoogleCloudAiplatformV1beta1BigQueryDestination partialFailureBigquerySink) {
@@ -209,7 +213,8 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
   }
 
   /**
-   * The Cloud Storage path to write partial failures to.
+   * The Cloud Storage path to write partial failures to. Deprecated. Prefer to use
+   * `import_result_gcs_sink`.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GcsDestination getPartialFailureGcsSink() {
@@ -217,7 +222,8 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
   }
 
   /**
-   * The Cloud Storage path to write partial failures to.
+   * The Cloud Storage path to write partial failures to. Deprecated. Prefer to use
+   * `import_result_gcs_sink`.
    * @param partialFailureGcsSink partialFailureGcsSink or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setPartialFailureGcsSink(GoogleCloudAiplatformV1beta1GcsDestination partialFailureGcsSink) {

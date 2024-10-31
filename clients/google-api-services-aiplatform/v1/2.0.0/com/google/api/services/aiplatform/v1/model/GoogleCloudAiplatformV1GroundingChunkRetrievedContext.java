@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1GroundingChunkRetrievedContext extends com.google.api.client.json.GenericJson {
 
   /**
+   * Text of the attribution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String text;
+
+  /**
    * Title of the attribution.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class GoogleCloudAiplatformV1GroundingChunkRetrievedContext extends
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * Text of the attribution.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getText() {
+    return text;
+  }
+
+  /**
+   * Text of the attribution.
+   * @param text text or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GroundingChunkRetrievedContext setText(java.lang.String text) {
+    this.text = text;
+    return this;
+  }
 
   /**
    * Title of the attribution.

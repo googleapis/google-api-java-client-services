@@ -26569,7 +26569,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * Updatable fields: * `labels` * `service_agent_type` * `big_query_source` *
              * `big_query_source.uri` * `big_query_source.entity_id_columns` *
              * `feature_registry_source` * `feature_registry_source.feature_groups` * `sync_config`
-             * * `sync_config.cron`
+             * * `sync_config.cron` * `optimized_config.automatic_resources`
              */
             @com.google.api.client.util.Key
             private String updateMask;
@@ -26580,7 +26580,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            non-empty fields present in the request will be overwritten. Set the update_mask to `*` to override
            all fields. Updatable fields: * `labels` * `service_agent_type` * `big_query_source` *
            `big_query_source.uri` * `big_query_source.entity_id_columns` * `feature_registry_source` *
-           `feature_registry_source.feature_groups` * `sync_config` * `sync_config.cron`
+           `feature_registry_source.feature_groups` * `sync_config` * `sync_config.cron` *
+           `optimized_config.automatic_resources`
              */
             public String getUpdateMask() {
               return updateMask;
@@ -26595,7 +26596,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * Updatable fields: * `labels` * `service_agent_type` * `big_query_source` *
              * `big_query_source.uri` * `big_query_source.entity_id_columns` *
              * `feature_registry_source` * `feature_registry_source.feature_groups` * `sync_config`
-             * * `sync_config.cron`
+             * * `sync_config.cron` * `optimized_config.automatic_resources`
              */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
@@ -65707,6 +65708,150 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           @Override
           public Start set(String parameterName, Object value) {
             return (Start) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Stops a NotebookRuntime.
+         *
+         * Create a request for the method "notebookRuntimes.stop".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link Stop#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the NotebookRuntime resource to be stopped. Instead of checking whether the
+         *        name is in valid NotebookRuntime resource name format, directly throw NotFound exception
+         *        if there is no such NotebookRuntime in spanner.
+         * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1StopNotebookRuntimeRequest}
+         * @return the request
+         */
+        public Stop stop(java.lang.String name, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1StopNotebookRuntimeRequest content) throws java.io.IOException {
+          Stop result = new Stop(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Stop extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}:stop";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/notebookRuntimes/[^/]+$");
+
+          /**
+           * Stops a NotebookRuntime.
+           *
+           * Create a request for the method "notebookRuntimes.stop".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link Stop#execute()} method to invoke the remote operation. <p>
+           * {@link Stop#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the NotebookRuntime resource to be stopped. Instead of checking whether the
+         *        name is in valid NotebookRuntime resource name format, directly throw NotFound exception
+         *        if there is no such NotebookRuntime in spanner.
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1StopNotebookRuntimeRequest}
+           * @since 1.13
+           */
+          protected Stop(java.lang.String name, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1StopNotebookRuntimeRequest content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/notebookRuntimes/[^/]+$");
+            }
+          }
+
+          @Override
+          public Stop set$Xgafv(java.lang.String $Xgafv) {
+            return (Stop) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Stop setAccessToken(java.lang.String accessToken) {
+            return (Stop) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Stop setAlt(java.lang.String alt) {
+            return (Stop) super.setAlt(alt);
+          }
+
+          @Override
+          public Stop setCallback(java.lang.String callback) {
+            return (Stop) super.setCallback(callback);
+          }
+
+          @Override
+          public Stop setFields(java.lang.String fields) {
+            return (Stop) super.setFields(fields);
+          }
+
+          @Override
+          public Stop setKey(java.lang.String key) {
+            return (Stop) super.setKey(key);
+          }
+
+          @Override
+          public Stop setOauthToken(java.lang.String oauthToken) {
+            return (Stop) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Stop setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Stop) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Stop setQuotaUser(java.lang.String quotaUser) {
+            return (Stop) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Stop setUploadType(java.lang.String uploadType) {
+            return (Stop) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Stop setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Stop) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the NotebookRuntime resource to be stopped. Instead of checking
+           * whether the name is in valid NotebookRuntime resource name format, directly throw
+           * NotFound exception if there is no such NotebookRuntime in spanner.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the NotebookRuntime resource to be stopped. Instead of checking whether the
+         name is in valid NotebookRuntime resource name format, directly throw NotFound exception if there
+         is no such NotebookRuntime in spanner.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the NotebookRuntime resource to be stopped. Instead of checking
+           * whether the name is in valid NotebookRuntime resource name format, directly throw
+           * NotFound exception if there is no such NotebookRuntime in spanner.
+           */
+          public Stop setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/notebookRuntimes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Stop set(String parameterName, Object value) {
+            return (Stop) super.set(parameterName, value);
           }
         }
         /**

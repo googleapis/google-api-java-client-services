@@ -31,9 +31,9 @@ public final class GoogleCloudAiplatformV1beta1JiraSourceJiraQueries extends com
 
   /**
    * Required. The SecretManager secret version resource name (e.g.
-   * projects/{project}/secrets/{secret}/versions/{version}) storing the Jira API key
-   * (https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-
-   * account/).
+   * projects/{project}/secrets/{secret}/versions/{version}) storing the Jira API key. See [Manage
+   * API tokens for your Atlassian account](https://support.atlassian.com/atlassian-
+   * account/docs/manage-api-tokens-for-your-atlassian-account/).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,9 +71,9 @@ public final class GoogleCloudAiplatformV1beta1JiraSourceJiraQueries extends com
 
   /**
    * Required. The SecretManager secret version resource name (e.g.
-   * projects/{project}/secrets/{secret}/versions/{version}) storing the Jira API key
-   * (https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-
-   * account/).
+   * projects/{project}/secrets/{secret}/versions/{version}) storing the Jira API key. See [Manage
+   * API tokens for your Atlassian account](https://support.atlassian.com/atlassian-
+   * account/docs/manage-api-tokens-for-your-atlassian-account/).
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ApiAuthApiKeyConfig getApiKeyConfig() {
@@ -82,9 +82,9 @@ public final class GoogleCloudAiplatformV1beta1JiraSourceJiraQueries extends com
 
   /**
    * Required. The SecretManager secret version resource name (e.g.
-   * projects/{project}/secrets/{secret}/versions/{version}) storing the Jira API key
-   * (https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-
-   * account/).
+   * projects/{project}/secrets/{secret}/versions/{version}) storing the Jira API key. See [Manage
+   * API tokens for your Atlassian account](https://support.atlassian.com/atlassian-
+   * account/docs/manage-api-tokens-for-your-atlassian-account/).
    * @param apiKeyConfig apiKeyConfig or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1JiraSourceJiraQueries setApiKeyConfig(GoogleCloudAiplatformV1beta1ApiAuthApiKeyConfig apiKeyConfig) {

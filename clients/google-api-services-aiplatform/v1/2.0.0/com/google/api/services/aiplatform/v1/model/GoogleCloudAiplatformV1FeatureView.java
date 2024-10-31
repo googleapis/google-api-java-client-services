@@ -91,6 +91,13 @@ public final class GoogleCloudAiplatformV1FeatureView extends com.google.api.cli
   private java.lang.String name;
 
   /**
+   * Optional. Configuration for FeatureView created under Optimized FeatureOnlineStore.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1FeatureViewOptimizedConfig optimizedConfig;
+
+  /**
    * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
@@ -264,6 +271,23 @@ public final class GoogleCloudAiplatformV1FeatureView extends com.google.api.cli
    */
   public GoogleCloudAiplatformV1FeatureView setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for FeatureView created under Optimized FeatureOnlineStore.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FeatureViewOptimizedConfig getOptimizedConfig() {
+    return optimizedConfig;
+  }
+
+  /**
+   * Optional. Configuration for FeatureView created under Optimized FeatureOnlineStore.
+   * @param optimizedConfig optimizedConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FeatureView setOptimizedConfig(GoogleCloudAiplatformV1FeatureViewOptimizedConfig optimizedConfig) {
+    this.optimizedConfig = optimizedConfig;
     return this;
   }
 

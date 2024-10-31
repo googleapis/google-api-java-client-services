@@ -52,6 +52,19 @@ public final class GoogleCloudAiplatformV1beta1RaySpec extends com.google.api.cl
   private java.lang.String imageUri;
 
   /**
+   * Optional. Use if you want to mount to any NFS storages.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1NfsMount> nfsMounts;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1NfsMount used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1NfsMount.class);
+  }
+
+  /**
    * Optional. OSS Ray logging configurations.
    * The value may be {@code null}.
    */
@@ -118,6 +131,23 @@ public final class GoogleCloudAiplatformV1beta1RaySpec extends com.google.api.cl
    */
   public GoogleCloudAiplatformV1beta1RaySpec setImageUri(java.lang.String imageUri) {
     this.imageUri = imageUri;
+    return this;
+  }
+
+  /**
+   * Optional. Use if you want to mount to any NFS storages.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1NfsMount> getNfsMounts() {
+    return nfsMounts;
+  }
+
+  /**
+   * Optional. Use if you want to mount to any NFS storages.
+   * @param nfsMounts nfsMounts or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RaySpec setNfsMounts(java.util.List<GoogleCloudAiplatformV1beta1NfsMount> nfsMounts) {
+    this.nfsMounts = nfsMounts;
     return this;
   }
 

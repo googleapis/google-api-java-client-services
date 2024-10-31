@@ -1211,8 +1211,9 @@ public class WorkspaceEvents extends com.google.api.client.googleapis.services.j
     /**
      * [Developer Preview](https://developers.google.com/workspace/preview): Reactivates a suspended
      * Google Workspace subscription. This method resets your subscription's `State` field to `ACTIVE`.
-     * Before you use this method, you must fix the error that suspended the subscription. To learn how
-     * to use this method, see [Reactivate a Google Workspace
+     * Before you use this method, you must fix the error that suspended the subscription. This method
+     * will ignore or reject any subscription that isn't currently in a suspended state. To learn how to
+     * use this method, see [Reactivate a Google Workspace
      * subscription](https://developers.google.com/workspace/events/guides/reactivate-subscription).
      *
      * Create a request for the method "subscriptions.reactivate".
@@ -1241,6 +1242,7 @@ public class WorkspaceEvents extends com.google.api.client.googleapis.services.j
        * [Developer Preview](https://developers.google.com/workspace/preview): Reactivates a suspended
        * Google Workspace subscription. This method resets your subscription's `State` field to
        * `ACTIVE`. Before you use this method, you must fix the error that suspended the subscription.
+       * This method will ignore or reject any subscription that isn't currently in a suspended state.
        * To learn how to use this method, see [Reactivate a Google Workspace
        * subscription](https://developers.google.com/workspace/events/guides/reactivate-subscription).
        *

@@ -106,6 +106,15 @@ public final class GoogleCloudRetailV2betaSearchResponse extends com.google.api.
   private java.lang.String nextPageToken;
 
   /**
+   * Metadata for pin controls which were applicable to the request. This contains two map fields,
+   * one for all matched pins and one for pins which were matched but not applied. The two maps are
+   * keyed by pin position, and the values are the product ids which were matched to that pin.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2betaPinControlMetadata pinControlMetadata;
+
+  /**
    * Query expansion information for the returned results.
    * The value may be {@code null}.
    */
@@ -290,6 +299,27 @@ public final class GoogleCloudRetailV2betaSearchResponse extends com.google.api.
    */
   public GoogleCloudRetailV2betaSearchResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * Metadata for pin controls which were applicable to the request. This contains two map fields,
+   * one for all matched pins and one for pins which were matched but not applied. The two maps are
+   * keyed by pin position, and the values are the product ids which were matched to that pin.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaPinControlMetadata getPinControlMetadata() {
+    return pinControlMetadata;
+  }
+
+  /**
+   * Metadata for pin controls which were applicable to the request. This contains two map fields,
+   * one for all matched pins and one for pins which were matched but not applied. The two maps are
+   * keyed by pin position, and the values are the product ids which were matched to that pin.
+   * @param pinControlMetadata pinControlMetadata or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaSearchResponse setPinControlMetadata(GoogleCloudRetailV2betaPinControlMetadata pinControlMetadata) {
+    this.pinControlMetadata = pinControlMetadata;
     return this;
   }
 

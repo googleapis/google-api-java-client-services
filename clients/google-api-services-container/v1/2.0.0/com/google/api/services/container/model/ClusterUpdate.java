@@ -170,6 +170,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean desiredEnablePrivateEndpoint;
 
   /**
+   * The desired enterprise configuration for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DesiredEnterpriseConfig desiredEnterpriseConfig;
+
+  /**
    * The desired fleet configuration for the cluster.
    * The value may be {@code null}.
    */
@@ -846,6 +853,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredEnablePrivateEndpoint(java.lang.Boolean desiredEnablePrivateEndpoint) {
     this.desiredEnablePrivateEndpoint = desiredEnablePrivateEndpoint;
+    return this;
+  }
+
+  /**
+   * The desired enterprise configuration for the cluster.
+   * @return value or {@code null} for none
+   */
+  public DesiredEnterpriseConfig getDesiredEnterpriseConfig() {
+    return desiredEnterpriseConfig;
+  }
+
+  /**
+   * The desired enterprise configuration for the cluster.
+   * @param desiredEnterpriseConfig desiredEnterpriseConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredEnterpriseConfig(DesiredEnterpriseConfig desiredEnterpriseConfig) {
+    this.desiredEnterpriseConfig = desiredEnterpriseConfig;
     return this;
   }
 

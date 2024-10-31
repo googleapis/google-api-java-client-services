@@ -37,6 +37,14 @@ public final class GoogleCloudRunV2GCSVolumeSource extends com.google.api.client
   private java.lang.String bucket;
 
   /**
+   * A list of additional flags to pass to the gcsfuse CLI. Options should be specified without the
+   * leading "--".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> mountOptions;
+
+  /**
    * If true, the volume will be mounted as read only for all mounts.
    * The value may be {@code null}.
    */
@@ -57,6 +65,25 @@ public final class GoogleCloudRunV2GCSVolumeSource extends com.google.api.client
    */
   public GoogleCloudRunV2GCSVolumeSource setBucket(java.lang.String bucket) {
     this.bucket = bucket;
+    return this;
+  }
+
+  /**
+   * A list of additional flags to pass to the gcsfuse CLI. Options should be specified without the
+   * leading "--".
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getMountOptions() {
+    return mountOptions;
+  }
+
+  /**
+   * A list of additional flags to pass to the gcsfuse CLI. Options should be specified without the
+   * leading "--".
+   * @param mountOptions mountOptions or {@code null} for none
+   */
+  public GoogleCloudRunV2GCSVolumeSource setMountOptions(java.util.List<java.lang.String> mountOptions) {
+    this.mountOptions = mountOptions;
     return this;
   }
 

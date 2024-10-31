@@ -50,6 +50,21 @@ public class WorkspaceEventsScopes {
   /** View chat and spaces in Google Chat. */
   public static final String CHAT_SPACES_READONLY = "https://www.googleapis.com/auth/chat.spaces.readonly";
 
+  /** See, edit, create, and delete all of your Google Drive files. */
+  public static final String DRIVE = "https://www.googleapis.com/auth/drive";
+
+  /** See, edit, create, and delete only the specific Google Drive files you use with this app. */
+  public static final String DRIVE_FILE = "https://www.googleapis.com/auth/drive.file";
+
+  /** View and manage metadata of files in your Google Drive. */
+  public static final String DRIVE_METADATA = "https://www.googleapis.com/auth/drive.metadata";
+
+  /** See information about your Google Drive files. */
+  public static final String DRIVE_METADATA_READONLY = "https://www.googleapis.com/auth/drive.metadata.readonly";
+
+  /** See and download all your Google Drive files. */
+  public static final String DRIVE_READONLY = "https://www.googleapis.com/auth/drive.readonly";
+
   /** Create, edit, and see information about your Google Meet conferences created by the app.. */
   public static final String MEETINGS_SPACE_CREATED = "https://www.googleapis.com/auth/meetings.space.created";
 
@@ -72,6 +87,11 @@ public class WorkspaceEventsScopes {
     set.add(CHAT_MESSAGES_READONLY);
     set.add(CHAT_SPACES);
     set.add(CHAT_SPACES_READONLY);
+    set.add(DRIVE);
+    set.add(DRIVE_FILE);
+    set.add(DRIVE_METADATA);
+    set.add(DRIVE_METADATA_READONLY);
+    set.add(DRIVE_READONLY);
     set.add(MEETINGS_SPACE_CREATED);
     set.add(MEETINGS_SPACE_READONLY);
     return java.util.Collections.unmodifiableSet(set);

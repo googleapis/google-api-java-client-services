@@ -192,7 +192,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * The purpose of the resource. This field can be either PRIVATE, GLOBAL_MANAGED_PROXY,
-   * REGIONAL_MANAGED_PROXY, PRIVATE_SERVICE_CONNECT, or PRIVATE is the default purpose for user-
+   * REGIONAL_MANAGED_PROXY, or PRIVATE_SERVICE_CONNECT. PRIVATE is the default purpose for user-
    * created subnets or subnets that are automatically created in auto mode networks. Subnets with
    * purpose set to GLOBAL_MANAGED_PROXY or REGIONAL_MANAGED_PROXY are user-created subnetworks that
    * are reserved for Envoy-based load balancers. A subnet with purpose set to
@@ -678,7 +678,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * The purpose of the resource. This field can be either PRIVATE, GLOBAL_MANAGED_PROXY,
-   * REGIONAL_MANAGED_PROXY, PRIVATE_SERVICE_CONNECT, or PRIVATE is the default purpose for user-
+   * REGIONAL_MANAGED_PROXY, or PRIVATE_SERVICE_CONNECT. PRIVATE is the default purpose for user-
    * created subnets or subnets that are automatically created in auto mode networks. Subnets with
    * purpose set to GLOBAL_MANAGED_PROXY or REGIONAL_MANAGED_PROXY are user-created subnetworks that
    * are reserved for Envoy-based load balancers. A subnet with purpose set to
@@ -693,7 +693,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * The purpose of the resource. This field can be either PRIVATE, GLOBAL_MANAGED_PROXY,
-   * REGIONAL_MANAGED_PROXY, PRIVATE_SERVICE_CONNECT, or PRIVATE is the default purpose for user-
+   * REGIONAL_MANAGED_PROXY, or PRIVATE_SERVICE_CONNECT. PRIVATE is the default purpose for user-
    * created subnets or subnets that are automatically created in auto mode networks. Subnets with
    * purpose set to GLOBAL_MANAGED_PROXY or REGIONAL_MANAGED_PROXY are user-created subnetworks that
    * are reserved for Envoy-based load balancers. A subnet with purpose set to

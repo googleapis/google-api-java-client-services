@@ -31,14 +31,14 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudIntegrationsV1alphaCancelExecutionResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * True if cancellation performed successfully
+   * True if cancellation performed successfully.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isCanceled;
 
   /**
-   * True if cancellation performed successfully
+   * True if cancellation performed successfully.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsCanceled() {
@@ -46,7 +46,7 @@ public final class GoogleCloudIntegrationsV1alphaCancelExecutionResponse extends
   }
 
   /**
-   * True if cancellation performed successfully
+   * True if cancellation performed successfully.
    * @param isCanceled isCanceled or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaCancelExecutionResponse setIsCanceled(java.lang.Boolean isCanceled) {

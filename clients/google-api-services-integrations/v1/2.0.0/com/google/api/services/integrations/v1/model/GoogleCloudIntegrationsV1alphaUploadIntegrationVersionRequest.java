@@ -31,7 +31,7 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The textproto of the integration_version.
+   * The textproto of the IntegrationVersion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest
   private java.lang.String fileFormat;
 
   /**
-   * The textproto of the integration_version.
+   * The textproto of the IntegrationVersion.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -53,7 +53,7 @@ public final class GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest
   }
 
   /**
-   * The textproto of the integration_version.
+   * The textproto of the IntegrationVersion.
    * @param content content or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest setContent(java.lang.String content) {

@@ -87,6 +87,13 @@ public final class GoogleCloudIntegrationsV1alphaExecution extends com.google.ap
   private java.lang.String name;
 
   /**
+   * Output only. Replay info for the execution
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIntegrationsV1alphaExecutionReplayInfo replayInfo;
+
+  /**
    * Event parameters come in as part of the request.
    * The value may be {@code null}.
    */
@@ -107,14 +114,14 @@ public final class GoogleCloudIntegrationsV1alphaExecution extends com.google.ap
   }
 
   /**
-   * Event parameters returned as part of the response.
+   * Event parameters returned as part of the response. In the case of error, the `ErrorInfo` field
+   * is returned in the following format: { "ErrorInfo": { "message": String, "code": Number } }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, GoogleCloudIntegrationsV1alphaValueType> responseParameters;
 
   /**
-   * Event parameters come out as part of the response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -286,6 +293,23 @@ public final class GoogleCloudIntegrationsV1alphaExecution extends com.google.ap
   }
 
   /**
+   * Output only. Replay info for the execution
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaExecutionReplayInfo getReplayInfo() {
+    return replayInfo;
+  }
+
+  /**
+   * Output only. Replay info for the execution
+   * @param replayInfo replayInfo or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaExecution setReplayInfo(GoogleCloudIntegrationsV1alphaExecutionReplayInfo replayInfo) {
+    this.replayInfo = replayInfo;
+    return this;
+  }
+
+  /**
    * Event parameters come in as part of the request.
    * @return value or {@code null} for none
    */
@@ -320,7 +344,8 @@ public final class GoogleCloudIntegrationsV1alphaExecution extends com.google.ap
   }
 
   /**
-   * Event parameters returned as part of the response.
+   * Event parameters returned as part of the response. In the case of error, the `ErrorInfo` field
+   * is returned in the following format: { "ErrorInfo": { "message": String, "code": Number } }
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudIntegrationsV1alphaValueType> getResponseParameters() {
@@ -328,7 +353,8 @@ public final class GoogleCloudIntegrationsV1alphaExecution extends com.google.ap
   }
 
   /**
-   * Event parameters returned as part of the response.
+   * Event parameters returned as part of the response. In the case of error, the `ErrorInfo` field
+   * is returned in the following format: { "ErrorInfo": { "message": String, "code": Number } }
    * @param responseParameters responseParameters or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaExecution setResponseParameters(java.util.Map<String, GoogleCloudIntegrationsV1alphaValueType> responseParameters) {
@@ -337,7 +363,6 @@ public final class GoogleCloudIntegrationsV1alphaExecution extends com.google.ap
   }
 
   /**
-   * Event parameters come out as part of the response.
    * @return value or {@code null} for none
    */
   public java.util.List<EnterpriseCrmFrontendsEventbusProtoParameterEntry> getResponseParams() {
@@ -345,7 +370,6 @@ public final class GoogleCloudIntegrationsV1alphaExecution extends com.google.ap
   }
 
   /**
-   * Event parameters come out as part of the response.
    * @param responseParams responseParams or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaExecution setResponseParams(java.util.List<EnterpriseCrmFrontendsEventbusProtoParameterEntry> responseParams) {

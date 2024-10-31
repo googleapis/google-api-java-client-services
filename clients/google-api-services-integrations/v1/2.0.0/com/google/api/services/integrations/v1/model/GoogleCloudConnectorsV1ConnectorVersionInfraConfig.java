@@ -46,6 +46,13 @@ public final class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends co
   private java.lang.String deploymentModel;
 
   /**
+   * Output only. Status of the deployment model migration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deploymentModelMigrationState;
+
+  /**
    * Output only. HPA autoscaling config.
    * The value may be {@code null}.
    */
@@ -58,6 +65,13 @@ public final class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends co
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long internalclientRatelimitThreshold;
+
+  /**
+   * Output only. Max instance request concurrency.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxInstanceRequestConcurrency;
 
   /**
    * Output only. Max QPS supported by the connector version before throttling of requests.
@@ -86,6 +100,13 @@ public final class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends co
    */
   @com.google.api.client.util.Key
   private java.lang.String sharedDeployment;
+
+  /**
+   * Output only. Status of the TLS migration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tlsMigrationState;
 
   /**
    * Output only. The window used for ratelimiting runtime requests to connections.
@@ -122,6 +143,23 @@ public final class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends co
   }
 
   /**
+   * Output only. Status of the deployment model migration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeploymentModelMigrationState() {
+    return deploymentModelMigrationState;
+  }
+
+  /**
+   * Output only. Status of the deployment model migration.
+   * @param deploymentModelMigrationState deploymentModelMigrationState or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1ConnectorVersionInfraConfig setDeploymentModelMigrationState(java.lang.String deploymentModelMigrationState) {
+    this.deploymentModelMigrationState = deploymentModelMigrationState;
+    return this;
+  }
+
+  /**
    * Output only. HPA autoscaling config.
    * @return value or {@code null} for none
    */
@@ -152,6 +190,23 @@ public final class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends co
    */
   public GoogleCloudConnectorsV1ConnectorVersionInfraConfig setInternalclientRatelimitThreshold(java.lang.Long internalclientRatelimitThreshold) {
     this.internalclientRatelimitThreshold = internalclientRatelimitThreshold;
+    return this;
+  }
+
+  /**
+   * Output only. Max instance request concurrency.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxInstanceRequestConcurrency() {
+    return maxInstanceRequestConcurrency;
+  }
+
+  /**
+   * Output only. Max instance request concurrency.
+   * @param maxInstanceRequestConcurrency maxInstanceRequestConcurrency or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1ConnectorVersionInfraConfig setMaxInstanceRequestConcurrency(java.lang.Integer maxInstanceRequestConcurrency) {
+    this.maxInstanceRequestConcurrency = maxInstanceRequestConcurrency;
     return this;
   }
 
@@ -220,6 +275,23 @@ public final class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends co
    */
   public GoogleCloudConnectorsV1ConnectorVersionInfraConfig setSharedDeployment(java.lang.String sharedDeployment) {
     this.sharedDeployment = sharedDeployment;
+    return this;
+  }
+
+  /**
+   * Output only. Status of the TLS migration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTlsMigrationState() {
+    return tlsMigrationState;
+  }
+
+  /**
+   * Output only. Status of the TLS migration.
+   * @param tlsMigrationState tlsMigrationState or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1ConnectorVersionInfraConfig setTlsMigrationState(java.lang.String tlsMigrationState) {
+    this.tlsMigrationState = tlsMigrationState;
     return this;
   }
 

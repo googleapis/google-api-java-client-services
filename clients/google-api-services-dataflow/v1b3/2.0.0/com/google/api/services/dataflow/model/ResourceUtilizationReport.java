@@ -51,6 +51,19 @@ public final class ResourceUtilizationReport extends com.google.api.client.json.
   }
 
   /**
+   * Optional. GPU usage samples.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GPUUsage> gpuUsage;
+
+  static {
+    // hack to force ProGuard to consider GPUUsage used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GPUUsage.class);
+  }
+
+  /**
    * Memory utilization samples.
    * The value may be {@code null}.
    */
@@ -94,6 +107,23 @@ public final class ResourceUtilizationReport extends com.google.api.client.json.
    */
   public ResourceUtilizationReport setCpuTime(java.util.List<CPUTime> cpuTime) {
     this.cpuTime = cpuTime;
+    return this;
+  }
+
+  /**
+   * Optional. GPU usage samples.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GPUUsage> getGpuUsage() {
+    return gpuUsage;
+  }
+
+  /**
+   * Optional. GPU usage samples.
+   * @param gpuUsage gpuUsage or {@code null} for none
+   */
+  public ResourceUtilizationReport setGpuUsage(java.util.List<GPUUsage> gpuUsage) {
+    this.gpuUsage = gpuUsage;
     return this;
   }
 

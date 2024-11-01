@@ -17,7 +17,7 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * EnterpriseConfig is the cluster enterprise configuration.
+ * DesiredEnterpriseConfig is a wrapper used for updating enterprise_config.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -28,14 +28,7 @@ package com.google.api.services.container.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class EnterpriseConfig extends com.google.api.client.json.GenericJson {
-
-  /**
-   * Output only. cluster_tier indicates the effective tier of the cluster.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String clusterTier;
+public final class DesiredEnterpriseConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * desired_tier specifies the desired tier of the cluster.
@@ -43,23 +36,6 @@ public final class EnterpriseConfig extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String desiredTier;
-
-  /**
-   * Output only. cluster_tier indicates the effective tier of the cluster.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getClusterTier() {
-    return clusterTier;
-  }
-
-  /**
-   * Output only. cluster_tier indicates the effective tier of the cluster.
-   * @param clusterTier clusterTier or {@code null} for none
-   */
-  public EnterpriseConfig setClusterTier(java.lang.String clusterTier) {
-    this.clusterTier = clusterTier;
-    return this;
-  }
 
   /**
    * desired_tier specifies the desired tier of the cluster.
@@ -73,19 +49,19 @@ public final class EnterpriseConfig extends com.google.api.client.json.GenericJs
    * desired_tier specifies the desired tier of the cluster.
    * @param desiredTier desiredTier or {@code null} for none
    */
-  public EnterpriseConfig setDesiredTier(java.lang.String desiredTier) {
+  public DesiredEnterpriseConfig setDesiredTier(java.lang.String desiredTier) {
     this.desiredTier = desiredTier;
     return this;
   }
 
   @Override
-  public EnterpriseConfig set(String fieldName, Object value) {
-    return (EnterpriseConfig) super.set(fieldName, value);
+  public DesiredEnterpriseConfig set(String fieldName, Object value) {
+    return (DesiredEnterpriseConfig) super.set(fieldName, value);
   }
 
   @Override
-  public EnterpriseConfig clone() {
-    return (EnterpriseConfig) super.clone();
+  public DesiredEnterpriseConfig clone() {
+    return (DesiredEnterpriseConfig) super.clone();
   }
 
 }

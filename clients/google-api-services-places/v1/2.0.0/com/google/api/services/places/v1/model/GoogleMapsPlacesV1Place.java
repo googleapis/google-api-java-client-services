@@ -92,7 +92,6 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.util.List<GoogleMapsPlacesV1PlaceAttribution> attributions;
 
   /**
-   * The business status for the place.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -680,7 +679,6 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * The business status for the place.
    * @return value or {@code null} for none
    */
   public java.lang.String getBusinessStatus() {
@@ -688,7 +686,6 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * The business status for the place.
    * @param businessStatus businessStatus or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setBusinessStatus(java.lang.String businessStatus) {

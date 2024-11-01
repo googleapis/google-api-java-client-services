@@ -175,6 +175,13 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   private java.lang.String deviceLicenseType;
 
   /**
+   * Output only. How much disk space the device has available and is currently using.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ByteUsage diskSpaceUsage;
+
+  /**
    * Reports of disk space and other info about mounted/connected volumes.
    * The value may be {@code null}.
    */
@@ -753,6 +760,23 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    */
   public ChromeOsDevice setDeviceLicenseType(java.lang.String deviceLicenseType) {
     this.deviceLicenseType = deviceLicenseType;
+    return this;
+  }
+
+  /**
+   * Output only. How much disk space the device has available and is currently using.
+   * @return value or {@code null} for none
+   */
+  public ByteUsage getDiskSpaceUsage() {
+    return diskSpaceUsage;
+  }
+
+  /**
+   * Output only. How much disk space the device has available and is currently using.
+   * @param diskSpaceUsage diskSpaceUsage or {@code null} for none
+   */
+  public ChromeOsDevice setDiskSpaceUsage(ByteUsage diskSpaceUsage) {
+    this.diskSpaceUsage = diskSpaceUsage;
     return this;
   }
 

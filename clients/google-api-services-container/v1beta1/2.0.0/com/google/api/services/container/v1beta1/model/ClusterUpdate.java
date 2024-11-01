@@ -177,6 +177,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean desiredEnablePrivateEndpoint;
 
   /**
+   * The desired enterprise configuration for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DesiredEnterpriseConfig desiredEnterpriseConfig;
+
+  /**
    * The desired fleet configuration for the cluster.
    * The value may be {@code null}.
    */
@@ -418,6 +425,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private ParentProductConfig desiredParentProductConfig;
+
+  /**
+   * The desired config for pod autoscaling.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PodAutoscaling desiredPodAutoscaling;
 
   /**
    * The desired configuration options for the PodSecurityPolicy feature.
@@ -930,6 +944,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredEnablePrivateEndpoint(java.lang.Boolean desiredEnablePrivateEndpoint) {
     this.desiredEnablePrivateEndpoint = desiredEnablePrivateEndpoint;
+    return this;
+  }
+
+  /**
+   * The desired enterprise configuration for the cluster.
+   * @return value or {@code null} for none
+   */
+  public DesiredEnterpriseConfig getDesiredEnterpriseConfig() {
+    return desiredEnterpriseConfig;
+  }
+
+  /**
+   * The desired enterprise configuration for the cluster.
+   * @param desiredEnterpriseConfig desiredEnterpriseConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredEnterpriseConfig(DesiredEnterpriseConfig desiredEnterpriseConfig) {
+    this.desiredEnterpriseConfig = desiredEnterpriseConfig;
     return this;
   }
 
@@ -1506,6 +1537,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredParentProductConfig(ParentProductConfig desiredParentProductConfig) {
     this.desiredParentProductConfig = desiredParentProductConfig;
+    return this;
+  }
+
+  /**
+   * The desired config for pod autoscaling.
+   * @return value or {@code null} for none
+   */
+  public PodAutoscaling getDesiredPodAutoscaling() {
+    return desiredPodAutoscaling;
+  }
+
+  /**
+   * The desired config for pod autoscaling.
+   * @param desiredPodAutoscaling desiredPodAutoscaling or {@code null} for none
+   */
+  public ClusterUpdate setDesiredPodAutoscaling(PodAutoscaling desiredPodAutoscaling) {
+    this.desiredPodAutoscaling = desiredPodAutoscaling;
     return this;
   }
 

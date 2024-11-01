@@ -511,6 +511,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private ParentProductConfig parentProductConfig;
 
   /**
+   * The config for pod autoscaling.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PodAutoscaling podAutoscaling;
+
+  /**
    * Configuration for the PodSecurityPolicy feature.
    * The value may be {@code null}.
    */
@@ -1842,6 +1849,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setParentProductConfig(ParentProductConfig parentProductConfig) {
     this.parentProductConfig = parentProductConfig;
+    return this;
+  }
+
+  /**
+   * The config for pod autoscaling.
+   * @return value or {@code null} for none
+   */
+  public PodAutoscaling getPodAutoscaling() {
+    return podAutoscaling;
+  }
+
+  /**
+   * The config for pod autoscaling.
+   * @param podAutoscaling podAutoscaling or {@code null} for none
+   */
+  public Cluster setPodAutoscaling(PodAutoscaling podAutoscaling) {
+    this.podAutoscaling = podAutoscaling;
     return this;
   }
 

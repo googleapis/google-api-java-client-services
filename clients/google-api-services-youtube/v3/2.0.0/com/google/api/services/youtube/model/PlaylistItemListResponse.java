@@ -57,7 +57,7 @@ public final class PlaylistItemListResponse extends com.google.api.client.json.G
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "youtube#playlistItemListResponse". Etag of this resource.
+   * "youtube#playlistItemListResponse".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,7 +150,7 @@ public final class PlaylistItemListResponse extends com.google.api.client.json.G
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "youtube#playlistItemListResponse". Etag of this resource.
+   * "youtube#playlistItemListResponse".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -159,7 +159,7 @@ public final class PlaylistItemListResponse extends com.google.api.client.json.G
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "youtube#playlistItemListResponse". Etag of this resource.
+   * "youtube#playlistItemListResponse".
    * @param kind kind or {@code null} for none
    */
   public PlaylistItemListResponse setKind(java.lang.String kind) {

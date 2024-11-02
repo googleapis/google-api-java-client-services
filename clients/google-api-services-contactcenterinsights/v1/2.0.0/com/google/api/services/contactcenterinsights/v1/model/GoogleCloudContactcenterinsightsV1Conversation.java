@@ -118,6 +118,14 @@ public final class GoogleCloudContactcenterinsightsV1Conversation extends com.go
   private java.lang.String medium;
 
   /**
+   * Input only. JSON metadata encoded as a string. This field is primarily used by Insights
+   * integrations with various telphony systems and must be in one of Insight's supported formats.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String metadataJson;
+
+  /**
    * Immutable. The resource name of the conversation. Format:
    * projects/{project}/locations/{location}/conversations/{conversation}
    * The value may be {@code null}.
@@ -389,6 +397,25 @@ public final class GoogleCloudContactcenterinsightsV1Conversation extends com.go
    */
   public GoogleCloudContactcenterinsightsV1Conversation setMedium(java.lang.String medium) {
     this.medium = medium;
+    return this;
+  }
+
+  /**
+   * Input only. JSON metadata encoded as a string. This field is primarily used by Insights
+   * integrations with various telphony systems and must be in one of Insight's supported formats.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMetadataJson() {
+    return metadataJson;
+  }
+
+  /**
+   * Input only. JSON metadata encoded as a string. This field is primarily used by Insights
+   * integrations with various telphony systems and must be in one of Insight's supported formats.
+   * @param metadataJson metadataJson or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1Conversation setMetadataJson(java.lang.String metadataJson) {
+    this.metadataJson = metadataJson;
     return this;
   }
 

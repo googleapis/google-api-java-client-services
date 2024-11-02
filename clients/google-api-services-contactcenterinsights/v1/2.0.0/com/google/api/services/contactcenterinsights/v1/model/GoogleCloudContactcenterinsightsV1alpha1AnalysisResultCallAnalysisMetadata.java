@@ -66,6 +66,13 @@ public final class GoogleCloudContactcenterinsightsV1alpha1AnalysisResultCallAna
   private java.util.Map<String, GoogleCloudContactcenterinsightsV1alpha1PhraseMatchData> phraseMatchers;
 
   /**
+   * Results of scoring QaScorecards.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudContactcenterinsightsV1alpha1QaScorecardResult> qaScorecardResults;
+
+  /**
    * Overall conversation-level sentiment for each channel of the call.
    * The value may be {@code null}.
    */
@@ -161,6 +168,23 @@ public final class GoogleCloudContactcenterinsightsV1alpha1AnalysisResultCallAna
    */
   public GoogleCloudContactcenterinsightsV1alpha1AnalysisResultCallAnalysisMetadata setPhraseMatchers(java.util.Map<String, GoogleCloudContactcenterinsightsV1alpha1PhraseMatchData> phraseMatchers) {
     this.phraseMatchers = phraseMatchers;
+    return this;
+  }
+
+  /**
+   * Results of scoring QaScorecards.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudContactcenterinsightsV1alpha1QaScorecardResult> getQaScorecardResults() {
+    return qaScorecardResults;
+  }
+
+  /**
+   * Results of scoring QaScorecards.
+   * @param qaScorecardResults qaScorecardResults or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1AnalysisResultCallAnalysisMetadata setQaScorecardResults(java.util.List<GoogleCloudContactcenterinsightsV1alpha1QaScorecardResult> qaScorecardResults) {
+    this.qaScorecardResults = qaScorecardResults;
     return this;
   }
 

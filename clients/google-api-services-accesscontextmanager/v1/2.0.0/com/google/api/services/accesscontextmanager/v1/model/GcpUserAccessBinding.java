@@ -18,7 +18,7 @@ package com.google.api.services.accesscontextmanager.v1.model;
 
 /**
  * Restricts access to Cloud Console and Google Cloud APIs for a set of users using Context-Aware
- * Access. Next ID: 11
+ * Access.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Access Context Manager API. For a detailed
@@ -99,6 +99,13 @@ public final class GcpUserAccessBinding extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.util.List<ScopedAccessSettings> scopedAccessSettings;
+
+  /**
+   * Optional. GCSL policy for the group key. Migrated from ReauthSettings
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SessionSettings sessionSettings;
 
   /**
    * Optional. Access level that a user must have to be granted access. Only one access level is
@@ -244,6 +251,23 @@ public final class GcpUserAccessBinding extends com.google.api.client.json.Gener
    */
   public GcpUserAccessBinding setScopedAccessSettings(java.util.List<ScopedAccessSettings> scopedAccessSettings) {
     this.scopedAccessSettings = scopedAccessSettings;
+    return this;
+  }
+
+  /**
+   * Optional. GCSL policy for the group key. Migrated from ReauthSettings
+   * @return value or {@code null} for none
+   */
+  public SessionSettings getSessionSettings() {
+    return sessionSettings;
+  }
+
+  /**
+   * Optional. GCSL policy for the group key. Migrated from ReauthSettings
+   * @param sessionSettings sessionSettings or {@code null} for none
+   */
+  public GcpUserAccessBinding setSessionSettings(SessionSettings sessionSettings) {
+    this.sessionSettings = sessionSettings;
     return this;
   }
 

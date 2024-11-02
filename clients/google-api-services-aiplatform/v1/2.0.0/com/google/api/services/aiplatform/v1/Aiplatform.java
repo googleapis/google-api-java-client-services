@@ -2571,6 +2571,277 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
   public class Projects {
 
     /**
+     * Gets a GenAI cache config.
+     *
+     * Create a request for the method "projects.getCacheConfig".
+     *
+     * This request holds the parameters needed by the aiplatform server.  After setting any optional
+     * parameters, call the {@link GetCacheConfig#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. Name of the cache config. Format: - `projects/{project}/cacheConfig`.
+     * @return the request
+     */
+    public GetCacheConfig getCacheConfig(java.lang.String name) throws java.io.IOException {
+      GetCacheConfig result = new GetCacheConfig(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetCacheConfig extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1CacheConfig> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/cacheConfig$");
+
+      /**
+       * Gets a GenAI cache config.
+       *
+       * Create a request for the method "projects.getCacheConfig".
+       *
+       * This request holds the parameters needed by the the aiplatform server.  After setting any
+       * optional parameters, call the {@link GetCacheConfig#execute()} method to invoke the remote
+       * operation. <p> {@link GetCacheConfig#initialize(com.google.api.client.googleapis.services.Abstr
+       * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+       * the constructor. </p>
+       *
+       * @param name Required. Name of the cache config. Format: - `projects/{project}/cacheConfig`.
+       * @since 1.13
+       */
+      protected GetCacheConfig(java.lang.String name) {
+        super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1CacheConfig.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/cacheConfig$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetCacheConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (GetCacheConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetCacheConfig setAccessToken(java.lang.String accessToken) {
+        return (GetCacheConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetCacheConfig setAlt(java.lang.String alt) {
+        return (GetCacheConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public GetCacheConfig setCallback(java.lang.String callback) {
+        return (GetCacheConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public GetCacheConfig setFields(java.lang.String fields) {
+        return (GetCacheConfig) super.setFields(fields);
+      }
+
+      @Override
+      public GetCacheConfig setKey(java.lang.String key) {
+        return (GetCacheConfig) super.setKey(key);
+      }
+
+      @Override
+      public GetCacheConfig setOauthToken(java.lang.String oauthToken) {
+        return (GetCacheConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetCacheConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetCacheConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetCacheConfig setQuotaUser(java.lang.String quotaUser) {
+        return (GetCacheConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetCacheConfig setUploadType(java.lang.String uploadType) {
+        return (GetCacheConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetCacheConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetCacheConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Name of the cache config. Format: - `projects/{project}/cacheConfig`. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Name of the cache config. Format: - `projects/{project}/cacheConfig`.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. Name of the cache config. Format: - `projects/{project}/cacheConfig`. */
+      public GetCacheConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/cacheConfig$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetCacheConfig set(String parameterName, Object value) {
+        return (GetCacheConfig) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates a cache config.
+     *
+     * Create a request for the method "projects.updateCacheConfig".
+     *
+     * This request holds the parameters needed by the aiplatform server.  After setting any optional
+     * parameters, call the {@link UpdateCacheConfig#execute()} method to invoke the remote operation.
+     *
+     * @param name Identifier. Name of the cache config. Format: - `projects/{project}/cacheConfig`.
+     * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1CacheConfig}
+     * @return the request
+     */
+    public UpdateCacheConfig updateCacheConfig(java.lang.String name, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1CacheConfig content) throws java.io.IOException {
+      UpdateCacheConfig result = new UpdateCacheConfig(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateCacheConfig extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/cacheConfig$");
+
+      /**
+       * Updates a cache config.
+       *
+       * Create a request for the method "projects.updateCacheConfig".
+       *
+       * This request holds the parameters needed by the the aiplatform server.  After setting any
+       * optional parameters, call the {@link UpdateCacheConfig#execute()} method to invoke the remote
+       * operation. <p> {@link UpdateCacheConfig#initialize(com.google.api.client.googleapis.services.Ab
+       * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Identifier. Name of the cache config. Format: - `projects/{project}/cacheConfig`.
+       * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1CacheConfig}
+       * @since 1.13
+       */
+      protected UpdateCacheConfig(java.lang.String name, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1CacheConfig content) {
+        super(Aiplatform.this, "PATCH", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/cacheConfig$");
+        }
+      }
+
+      @Override
+      public UpdateCacheConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateCacheConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateCacheConfig setAccessToken(java.lang.String accessToken) {
+        return (UpdateCacheConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateCacheConfig setAlt(java.lang.String alt) {
+        return (UpdateCacheConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateCacheConfig setCallback(java.lang.String callback) {
+        return (UpdateCacheConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateCacheConfig setFields(java.lang.String fields) {
+        return (UpdateCacheConfig) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateCacheConfig setKey(java.lang.String key) {
+        return (UpdateCacheConfig) super.setKey(key);
+      }
+
+      @Override
+      public UpdateCacheConfig setOauthToken(java.lang.String oauthToken) {
+        return (UpdateCacheConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateCacheConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateCacheConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateCacheConfig setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateCacheConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateCacheConfig setUploadType(java.lang.String uploadType) {
+        return (UpdateCacheConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateCacheConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateCacheConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Identifier. Name of the cache config. Format: - `projects/{project}/cacheConfig`. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Identifier. Name of the cache config. Format: - `projects/{project}/cacheConfig`.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Identifier. Name of the cache config. Format: - `projects/{project}/cacheConfig`. */
+      public UpdateCacheConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/cacheConfig$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public UpdateCacheConfig set(String parameterName, Object value) {
+        return (UpdateCacheConfig) super.set(parameterName, value);
+      }
+    }
+
+    /**
      * An accessor for creating requests from the Locations collection.
      *
      * <p>The typical use is:</p>
@@ -17812,6 +18083,152 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
+         * Fetch an asynchronous online prediction operation.
+         *
+         * Create a request for the method "endpoints.fetchPredictOperation".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link FetchPredictOperation#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
+         *        `projects/{project}/locations/{location}/endpoints/{endpoint}` or
+         *        `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+         * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1FetchPredictOperationRequest}
+         * @return the request
+         */
+        public FetchPredictOperation fetchPredictOperation(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1FetchPredictOperationRequest content) throws java.io.IOException {
+          FetchPredictOperation result = new FetchPredictOperation(endpoint, content);
+          initialize(result);
+          return result;
+        }
+
+        public class FetchPredictOperation extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+endpoint}:fetchPredictOperation";
+
+          private final java.util.regex.Pattern ENDPOINT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+
+          /**
+           * Fetch an asynchronous online prediction operation.
+           *
+           * Create a request for the method "endpoints.fetchPredictOperation".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link FetchPredictOperation#execute()} method to invoke the
+           * remote operation. <p> {@link FetchPredictOperation#initialize(com.google.api.client.googleapis.
+           * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
+         *        `projects/{project}/locations/{location}/endpoints/{endpoint}` or
+         *        `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1FetchPredictOperationRequest}
+           * @since 1.13
+           */
+          protected FetchPredictOperation(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1FetchPredictOperationRequest content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation.class);
+            this.endpoint = com.google.api.client.util.Preconditions.checkNotNull(endpoint, "Required parameter endpoint must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                  "Parameter endpoint must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+            }
+          }
+
+          @Override
+          public FetchPredictOperation set$Xgafv(java.lang.String $Xgafv) {
+            return (FetchPredictOperation) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public FetchPredictOperation setAccessToken(java.lang.String accessToken) {
+            return (FetchPredictOperation) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public FetchPredictOperation setAlt(java.lang.String alt) {
+            return (FetchPredictOperation) super.setAlt(alt);
+          }
+
+          @Override
+          public FetchPredictOperation setCallback(java.lang.String callback) {
+            return (FetchPredictOperation) super.setCallback(callback);
+          }
+
+          @Override
+          public FetchPredictOperation setFields(java.lang.String fields) {
+            return (FetchPredictOperation) super.setFields(fields);
+          }
+
+          @Override
+          public FetchPredictOperation setKey(java.lang.String key) {
+            return (FetchPredictOperation) super.setKey(key);
+          }
+
+          @Override
+          public FetchPredictOperation setOauthToken(java.lang.String oauthToken) {
+            return (FetchPredictOperation) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public FetchPredictOperation setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (FetchPredictOperation) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public FetchPredictOperation setQuotaUser(java.lang.String quotaUser) {
+            return (FetchPredictOperation) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public FetchPredictOperation setUploadType(java.lang.String uploadType) {
+            return (FetchPredictOperation) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public FetchPredictOperation setUploadProtocol(java.lang.String uploadProtocol) {
+            return (FetchPredictOperation) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the Endpoint requested to serve the prediction. Format:
+           * `projects/{project}/locations/{location}/endpoints/{endpoint}` or
+           * `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String endpoint;
+
+          /** Required. The name of the Endpoint requested to serve the prediction. Format:
+         `projects/{project}/locations/{location}/endpoints/{endpoint}` or
+         `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+           */
+          public java.lang.String getEndpoint() {
+            return endpoint;
+          }
+
+          /**
+           * Required. The name of the Endpoint requested to serve the prediction. Format:
+           * `projects/{project}/locations/{location}/endpoints/{endpoint}` or
+           * `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+           */
+          public FetchPredictOperation setEndpoint(java.lang.String endpoint) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                  "Parameter endpoint must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+            }
+            this.endpoint = endpoint;
+            return this;
+          }
+
+          @Override
+          public FetchPredictOperation set(String parameterName, Object value) {
+            return (FetchPredictOperation) super.set(parameterName, value);
+          }
+        }
+        /**
          * Generate content with multimodal inputs.
          *
          * Create a request for the method "endpoints.generateContent".
@@ -18804,6 +19221,147 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           @Override
           public Predict set(String parameterName, Object value) {
             return (Predict) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Create a request for the method "endpoints.predictLongRunning".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link PredictLongRunning#execute()} method to invoke the remote operation.
+         *
+         * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
+         *        `projects/{project}/locations/{location}/endpoints/{endpoint}` or
+         *        `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+         * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1PredictLongRunningRequest}
+         * @return the request
+         */
+        public PredictLongRunning predictLongRunning(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1PredictLongRunningRequest content) throws java.io.IOException {
+          PredictLongRunning result = new PredictLongRunning(endpoint, content);
+          initialize(result);
+          return result;
+        }
+
+        public class PredictLongRunning extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+endpoint}:predictLongRunning";
+
+          private final java.util.regex.Pattern ENDPOINT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+
+          /**
+           * Create a request for the method "endpoints.predictLongRunning".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link PredictLongRunning#execute()} method to invoke the remote
+           * operation. <p> {@link PredictLongRunning#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
+         *        `projects/{project}/locations/{location}/endpoints/{endpoint}` or
+         *        `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1PredictLongRunningRequest}
+           * @since 1.13
+           */
+          protected PredictLongRunning(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1PredictLongRunningRequest content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation.class);
+            this.endpoint = com.google.api.client.util.Preconditions.checkNotNull(endpoint, "Required parameter endpoint must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                  "Parameter endpoint must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+            }
+          }
+
+          @Override
+          public PredictLongRunning set$Xgafv(java.lang.String $Xgafv) {
+            return (PredictLongRunning) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public PredictLongRunning setAccessToken(java.lang.String accessToken) {
+            return (PredictLongRunning) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public PredictLongRunning setAlt(java.lang.String alt) {
+            return (PredictLongRunning) super.setAlt(alt);
+          }
+
+          @Override
+          public PredictLongRunning setCallback(java.lang.String callback) {
+            return (PredictLongRunning) super.setCallback(callback);
+          }
+
+          @Override
+          public PredictLongRunning setFields(java.lang.String fields) {
+            return (PredictLongRunning) super.setFields(fields);
+          }
+
+          @Override
+          public PredictLongRunning setKey(java.lang.String key) {
+            return (PredictLongRunning) super.setKey(key);
+          }
+
+          @Override
+          public PredictLongRunning setOauthToken(java.lang.String oauthToken) {
+            return (PredictLongRunning) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public PredictLongRunning setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (PredictLongRunning) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public PredictLongRunning setQuotaUser(java.lang.String quotaUser) {
+            return (PredictLongRunning) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public PredictLongRunning setUploadType(java.lang.String uploadType) {
+            return (PredictLongRunning) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public PredictLongRunning setUploadProtocol(java.lang.String uploadProtocol) {
+            return (PredictLongRunning) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the Endpoint requested to serve the prediction. Format:
+           * `projects/{project}/locations/{location}/endpoints/{endpoint}` or
+           * `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String endpoint;
+
+          /** Required. The name of the Endpoint requested to serve the prediction. Format:
+         `projects/{project}/locations/{location}/endpoints/{endpoint}` or
+         `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+           */
+          public java.lang.String getEndpoint() {
+            return endpoint;
+          }
+
+          /**
+           * Required. The name of the Endpoint requested to serve the prediction. Format:
+           * `projects/{project}/locations/{location}/endpoints/{endpoint}` or
+           * `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+           */
+          public PredictLongRunning setEndpoint(java.lang.String endpoint) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                  "Parameter endpoint must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+            }
+            this.endpoint = endpoint;
+            return this;
+          }
+
+          @Override
+          public PredictLongRunning set(String parameterName, Object value) {
+            return (PredictLongRunning) super.set(parameterName, value);
           }
         }
         /**
@@ -71656,6 +72214,152 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
+           * Fetch an asynchronous online prediction operation.
+           *
+           * Create a request for the method "models.fetchPredictOperation".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link FetchPredictOperation#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
+           *        `projects/{project}/locations/{location}/endpoints/{endpoint}` or
+           *        `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1FetchPredictOperationRequest}
+           * @return the request
+           */
+          public FetchPredictOperation fetchPredictOperation(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1FetchPredictOperationRequest content) throws java.io.IOException {
+            FetchPredictOperation result = new FetchPredictOperation(endpoint, content);
+            initialize(result);
+            return result;
+          }
+
+          public class FetchPredictOperation extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1/{+endpoint}:fetchPredictOperation";
+
+            private final java.util.regex.Pattern ENDPOINT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/publishers/[^/]+/models/[^/]+$");
+
+            /**
+             * Fetch an asynchronous online prediction operation.
+             *
+             * Create a request for the method "models.fetchPredictOperation".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link FetchPredictOperation#execute()} method to invoke the
+             * remote operation. <p> {@link FetchPredictOperation#initialize(com.google.api.client.googleapis.
+             * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
+           *        `projects/{project}/locations/{location}/endpoints/{endpoint}` or
+           *        `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+             * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1FetchPredictOperationRequest}
+             * @since 1.13
+             */
+            protected FetchPredictOperation(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1FetchPredictOperationRequest content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation.class);
+              this.endpoint = com.google.api.client.util.Preconditions.checkNotNull(endpoint, "Required parameter endpoint must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                    "Parameter endpoint must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/models/[^/]+$");
+              }
+            }
+
+            @Override
+            public FetchPredictOperation set$Xgafv(java.lang.String $Xgafv) {
+              return (FetchPredictOperation) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public FetchPredictOperation setAccessToken(java.lang.String accessToken) {
+              return (FetchPredictOperation) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public FetchPredictOperation setAlt(java.lang.String alt) {
+              return (FetchPredictOperation) super.setAlt(alt);
+            }
+
+            @Override
+            public FetchPredictOperation setCallback(java.lang.String callback) {
+              return (FetchPredictOperation) super.setCallback(callback);
+            }
+
+            @Override
+            public FetchPredictOperation setFields(java.lang.String fields) {
+              return (FetchPredictOperation) super.setFields(fields);
+            }
+
+            @Override
+            public FetchPredictOperation setKey(java.lang.String key) {
+              return (FetchPredictOperation) super.setKey(key);
+            }
+
+            @Override
+            public FetchPredictOperation setOauthToken(java.lang.String oauthToken) {
+              return (FetchPredictOperation) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public FetchPredictOperation setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (FetchPredictOperation) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public FetchPredictOperation setQuotaUser(java.lang.String quotaUser) {
+              return (FetchPredictOperation) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public FetchPredictOperation setUploadType(java.lang.String uploadType) {
+              return (FetchPredictOperation) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public FetchPredictOperation setUploadProtocol(java.lang.String uploadProtocol) {
+              return (FetchPredictOperation) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the Endpoint requested to serve the prediction. Format:
+             * `projects/{project}/locations/{location}/endpoints/{endpoint}` or
+             * `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String endpoint;
+
+            /** Required. The name of the Endpoint requested to serve the prediction. Format:
+           `projects/{project}/locations/{location}/endpoints/{endpoint}` or
+           `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+             */
+            public java.lang.String getEndpoint() {
+              return endpoint;
+            }
+
+            /**
+             * Required. The name of the Endpoint requested to serve the prediction. Format:
+             * `projects/{project}/locations/{location}/endpoints/{endpoint}` or
+             * `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+             */
+            public FetchPredictOperation setEndpoint(java.lang.String endpoint) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                    "Parameter endpoint must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/models/[^/]+$");
+              }
+              this.endpoint = endpoint;
+              return this;
+            }
+
+            @Override
+            public FetchPredictOperation set(String parameterName, Object value) {
+              return (FetchPredictOperation) super.set(parameterName, value);
+            }
+          }
+          /**
            * Generate content with multimodal inputs.
            *
            * Create a request for the method "models.generateContent".
@@ -71940,6 +72644,147 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             @Override
             public Predict set(String parameterName, Object value) {
               return (Predict) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Create a request for the method "models.predictLongRunning".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link PredictLongRunning#execute()} method to invoke the remote operation.
+           *
+           * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
+           *        `projects/{project}/locations/{location}/endpoints/{endpoint}` or
+           *        `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1PredictLongRunningRequest}
+           * @return the request
+           */
+          public PredictLongRunning predictLongRunning(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1PredictLongRunningRequest content) throws java.io.IOException {
+            PredictLongRunning result = new PredictLongRunning(endpoint, content);
+            initialize(result);
+            return result;
+          }
+
+          public class PredictLongRunning extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1/{+endpoint}:predictLongRunning";
+
+            private final java.util.regex.Pattern ENDPOINT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/publishers/[^/]+/models/[^/]+$");
+
+            /**
+             * Create a request for the method "models.predictLongRunning".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link PredictLongRunning#execute()} method to invoke the remote
+             * operation. <p> {@link PredictLongRunning#initialize(com.google.api.client.googleapis.services.A
+             * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
+           *        `projects/{project}/locations/{location}/endpoints/{endpoint}` or
+           *        `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+             * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1PredictLongRunningRequest}
+             * @since 1.13
+             */
+            protected PredictLongRunning(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1PredictLongRunningRequest content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation.class);
+              this.endpoint = com.google.api.client.util.Preconditions.checkNotNull(endpoint, "Required parameter endpoint must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                    "Parameter endpoint must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/models/[^/]+$");
+              }
+            }
+
+            @Override
+            public PredictLongRunning set$Xgafv(java.lang.String $Xgafv) {
+              return (PredictLongRunning) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public PredictLongRunning setAccessToken(java.lang.String accessToken) {
+              return (PredictLongRunning) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public PredictLongRunning setAlt(java.lang.String alt) {
+              return (PredictLongRunning) super.setAlt(alt);
+            }
+
+            @Override
+            public PredictLongRunning setCallback(java.lang.String callback) {
+              return (PredictLongRunning) super.setCallback(callback);
+            }
+
+            @Override
+            public PredictLongRunning setFields(java.lang.String fields) {
+              return (PredictLongRunning) super.setFields(fields);
+            }
+
+            @Override
+            public PredictLongRunning setKey(java.lang.String key) {
+              return (PredictLongRunning) super.setKey(key);
+            }
+
+            @Override
+            public PredictLongRunning setOauthToken(java.lang.String oauthToken) {
+              return (PredictLongRunning) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public PredictLongRunning setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (PredictLongRunning) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public PredictLongRunning setQuotaUser(java.lang.String quotaUser) {
+              return (PredictLongRunning) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public PredictLongRunning setUploadType(java.lang.String uploadType) {
+              return (PredictLongRunning) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public PredictLongRunning setUploadProtocol(java.lang.String uploadProtocol) {
+              return (PredictLongRunning) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the Endpoint requested to serve the prediction. Format:
+             * `projects/{project}/locations/{location}/endpoints/{endpoint}` or
+             * `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String endpoint;
+
+            /** Required. The name of the Endpoint requested to serve the prediction. Format:
+           `projects/{project}/locations/{location}/endpoints/{endpoint}` or
+           `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+             */
+            public java.lang.String getEndpoint() {
+              return endpoint;
+            }
+
+            /**
+             * Required. The name of the Endpoint requested to serve the prediction. Format:
+             * `projects/{project}/locations/{location}/endpoints/{endpoint}` or
+             * `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+             */
+            public PredictLongRunning setEndpoint(java.lang.String endpoint) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                    "Parameter endpoint must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/models/[^/]+$");
+              }
+              this.endpoint = endpoint;
+              return this;
+            }
+
+            @Override
+            public PredictLongRunning set(String parameterName, Object value) {
+              return (PredictLongRunning) super.set(parameterName, value);
             }
           }
           /**

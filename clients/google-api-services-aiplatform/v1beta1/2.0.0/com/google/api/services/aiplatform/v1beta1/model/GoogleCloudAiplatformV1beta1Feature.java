@@ -63,6 +63,14 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
   private java.lang.String etag;
 
   /**
+   * Output only. Only applicable for Vertex AI Feature Store. The list of historical stats and
+   * anomalies.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1FeatureStatsAndAnomaly> featureStatsAndAnomaly;
+
+  /**
    * Optional. The labels with user-defined metadata to organize your Features. Label keys and
    * values can be no longer than 64 characters (Unicode codepoints), can only contain lowercase
    * letters, numeric characters, underscores and dashes. International characters are allowed. See
@@ -222,6 +230,25 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
    */
   public GoogleCloudAiplatformV1beta1Feature setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Output only. Only applicable for Vertex AI Feature Store. The list of historical stats and
+   * anomalies.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1FeatureStatsAndAnomaly> getFeatureStatsAndAnomaly() {
+    return featureStatsAndAnomaly;
+  }
+
+  /**
+   * Output only. Only applicable for Vertex AI Feature Store. The list of historical stats and
+   * anomalies.
+   * @param featureStatsAndAnomaly featureStatsAndAnomaly or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Feature setFeatureStatsAndAnomaly(java.util.List<GoogleCloudAiplatformV1beta1FeatureStatsAndAnomaly> featureStatsAndAnomaly) {
+    this.featureStatsAndAnomaly = featureStatsAndAnomaly;
     return this;
   }
 

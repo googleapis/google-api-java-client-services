@@ -30,6 +30,20 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class CloudAiLargeModelsVisionVideo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Base 64 encoded video bytes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String encodedVideo;
+
+  /**
+   * Video encoding, for example "video/mp4".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String encoding;
+
+  /**
    * Path to another storage (typically Google Cloud Storage).
    * The value may be {@code null}.
    */
@@ -42,6 +56,68 @@ public final class CloudAiLargeModelsVisionVideo extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.String video;
+
+  /**
+   * Base 64 encoded video bytes.
+   * @see #decodeEncodedVideo()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEncodedVideo() {
+    return encodedVideo;
+  }
+
+  /**
+   * Base 64 encoded video bytes.
+   * @see #getEncodedVideo()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeEncodedVideo() {
+    return com.google.api.client.util.Base64.decodeBase64(encodedVideo);
+  }
+
+  /**
+   * Base 64 encoded video bytes.
+   * @see #encodeEncodedVideo()
+   * @param encodedVideo encodedVideo or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionVideo setEncodedVideo(java.lang.String encodedVideo) {
+    this.encodedVideo = encodedVideo;
+    return this;
+  }
+
+  /**
+   * Base 64 encoded video bytes.
+   * @see #setEncodedVideo()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public CloudAiLargeModelsVisionVideo encodeEncodedVideo(byte[] encodedVideo) {
+    this.encodedVideo = com.google.api.client.util.Base64.encodeBase64URLSafeString(encodedVideo);
+    return this;
+  }
+
+  /**
+   * Video encoding, for example "video/mp4".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEncoding() {
+    return encoding;
+  }
+
+  /**
+   * Video encoding, for example "video/mp4".
+   * @param encoding encoding or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionVideo setEncoding(java.lang.String encoding) {
+    this.encoding = encoding;
+    return this;
+  }
 
   /**
    * Path to another storage (typically Google Cloud Storage).

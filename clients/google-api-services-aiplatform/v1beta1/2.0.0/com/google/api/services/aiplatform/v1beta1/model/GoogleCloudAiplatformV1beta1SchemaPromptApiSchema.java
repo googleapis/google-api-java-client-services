@@ -58,6 +58,13 @@ public final class GoogleCloudAiplatformV1beta1SchemaPromptApiSchema extends com
   private GoogleCloudAiplatformV1beta1SchemaPromptSpecStructuredPrompt structuredPrompt;
 
   /**
+   * The prompt variation for Translation use case.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1SchemaPromptSpecTranslationPrompt translationPrompt;
+
+  /**
    * The Schema version that represents changes to the API behavior.
    * @return value or {@code null} for none
    */
@@ -122,6 +129,23 @@ public final class GoogleCloudAiplatformV1beta1SchemaPromptApiSchema extends com
    */
   public GoogleCloudAiplatformV1beta1SchemaPromptApiSchema setStructuredPrompt(GoogleCloudAiplatformV1beta1SchemaPromptSpecStructuredPrompt structuredPrompt) {
     this.structuredPrompt = structuredPrompt;
+    return this;
+  }
+
+  /**
+   * The prompt variation for Translation use case.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SchemaPromptSpecTranslationPrompt getTranslationPrompt() {
+    return translationPrompt;
+  }
+
+  /**
+   * The prompt variation for Translation use case.
+   * @param translationPrompt translationPrompt or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SchemaPromptApiSchema setTranslationPrompt(GoogleCloudAiplatformV1beta1SchemaPromptSpecTranslationPrompt translationPrompt) {
+    this.translationPrompt = translationPrompt;
     return this;
   }
 

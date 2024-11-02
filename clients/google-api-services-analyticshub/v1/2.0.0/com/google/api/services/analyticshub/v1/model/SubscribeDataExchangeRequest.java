@@ -38,6 +38,13 @@ public final class SubscribeDataExchangeRequest extends com.google.api.client.js
   private java.lang.String destination;
 
   /**
+   * Optional. BigQuery destination dataset to create for the subscriber.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DestinationDataset destinationDataset;
+
+  /**
    * Email of the subscriber.
    * The value may be {@code null}.
    */
@@ -67,6 +74,23 @@ public final class SubscribeDataExchangeRequest extends com.google.api.client.js
    */
   public SubscribeDataExchangeRequest setDestination(java.lang.String destination) {
     this.destination = destination;
+    return this;
+  }
+
+  /**
+   * Optional. BigQuery destination dataset to create for the subscriber.
+   * @return value or {@code null} for none
+   */
+  public DestinationDataset getDestinationDataset() {
+    return destinationDataset;
+  }
+
+  /**
+   * Optional. BigQuery destination dataset to create for the subscriber.
+   * @param destinationDataset destinationDataset or {@code null} for none
+   */
+  public SubscribeDataExchangeRequest setDestinationDataset(DestinationDataset destinationDataset) {
+    this.destinationDataset = destinationDataset;
     return this;
   }
 

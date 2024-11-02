@@ -34,13 +34,13 @@ public final class SubscribeListingRequest extends com.google.api.client.json.Ge
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DestinationDataset destinationDataset;
+  private GoogleCloudBigqueryDataexchangeV1beta1DestinationDataset destinationDataset;
 
   /**
    * BigQuery destination dataset to create for the subscriber.
    * @return value or {@code null} for none
    */
-  public DestinationDataset getDestinationDataset() {
+  public GoogleCloudBigqueryDataexchangeV1beta1DestinationDataset getDestinationDataset() {
     return destinationDataset;
   }
 
@@ -48,7 +48,7 @@ public final class SubscribeListingRequest extends com.google.api.client.json.Ge
    * BigQuery destination dataset to create for the subscriber.
    * @param destinationDataset destinationDataset or {@code null} for none
    */
-  public SubscribeListingRequest setDestinationDataset(DestinationDataset destinationDataset) {
+  public SubscribeListingRequest setDestinationDataset(GoogleCloudBigqueryDataexchangeV1beta1DestinationDataset destinationDataset) {
     this.destinationDataset = destinationDataset;
     return this;
   }

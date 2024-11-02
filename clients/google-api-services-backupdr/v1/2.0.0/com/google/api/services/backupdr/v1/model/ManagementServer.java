@@ -84,8 +84,8 @@ public final class ManagementServer extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * Required. VPC networks to which the ManagementServer instance is connected. For this version,
-   * only a single network is supported.
+   * Optional. VPC networks to which the ManagementServer instance is connected. For this version,
+   * only a single network is supported. This field is optional if MS is created without PSA
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -279,8 +279,8 @@ public final class ManagementServer extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. VPC networks to which the ManagementServer instance is connected. For this version,
-   * only a single network is supported.
+   * Optional. VPC networks to which the ManagementServer instance is connected. For this version,
+   * only a single network is supported. This field is optional if MS is created without PSA
    * @return value or {@code null} for none
    */
   public java.util.List<NetworkConfig> getNetworks() {
@@ -288,8 +288,8 @@ public final class ManagementServer extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. VPC networks to which the ManagementServer instance is connected. For this version,
-   * only a single network is supported.
+   * Optional. VPC networks to which the ManagementServer instance is connected. For this version,
+   * only a single network is supported. This field is optional if MS is created without PSA
    * @param networks networks or {@code null} for none
    */
   public ManagementServer setNetworks(java.util.List<NetworkConfig> networks) {

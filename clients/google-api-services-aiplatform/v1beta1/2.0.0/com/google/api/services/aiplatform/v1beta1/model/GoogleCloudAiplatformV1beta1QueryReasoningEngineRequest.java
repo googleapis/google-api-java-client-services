@@ -30,12 +30,39 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1QueryReasoningEngineRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Class method to be used for the query. It is optional and defaults to "query" if
+   * unspecified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String classMethod;
+
+  /**
    * Optional. Input content provided by users in JSON object format. Examples include text query,
    * function calling parameters, media bytes, etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> input;
+
+  /**
+   * Optional. Class method to be used for the query. It is optional and defaults to "query" if
+   * unspecified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClassMethod() {
+    return classMethod;
+  }
+
+  /**
+   * Optional. Class method to be used for the query. It is optional and defaults to "query" if
+   * unspecified.
+   * @param classMethod classMethod or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1QueryReasoningEngineRequest setClassMethod(java.lang.String classMethod) {
+    this.classMethod = classMethod;
+    return this;
+  }
 
   /**
    * Optional. Input content provided by users in JSON object format. Examples include text query,

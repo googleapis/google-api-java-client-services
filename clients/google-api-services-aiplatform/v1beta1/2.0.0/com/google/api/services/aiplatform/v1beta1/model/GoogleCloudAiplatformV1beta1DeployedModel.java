@@ -100,6 +100,13 @@ public final class GoogleCloudAiplatformV1beta1DeployedModel extends com.google.
   private GoogleCloudAiplatformV1beta1ExplanationSpec explanationSpec;
 
   /**
+   * Configuration for faster model deployment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1FasterDeploymentConfig fasterDeploymentConfig;
+
+  /**
    * Immutable. The ID of the DeployedModel. If not provided upon deployment, Vertex AI will
    * generate a value for this ID. This value should be 1-10 characters, and valid characters are
    * `/[0-9]/`.
@@ -323,6 +330,23 @@ public final class GoogleCloudAiplatformV1beta1DeployedModel extends com.google.
    */
   public GoogleCloudAiplatformV1beta1DeployedModel setExplanationSpec(GoogleCloudAiplatformV1beta1ExplanationSpec explanationSpec) {
     this.explanationSpec = explanationSpec;
+    return this;
+  }
+
+  /**
+   * Configuration for faster model deployment.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FasterDeploymentConfig getFasterDeploymentConfig() {
+    return fasterDeploymentConfig;
+  }
+
+  /**
+   * Configuration for faster model deployment.
+   * @param fasterDeploymentConfig fasterDeploymentConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DeployedModel setFasterDeploymentConfig(GoogleCloudAiplatformV1beta1FasterDeploymentConfig fasterDeploymentConfig) {
+    this.fasterDeploymentConfig = fasterDeploymentConfig;
     return this;
   }
 

@@ -27,7 +27,7 @@ package com.google.api.services.analyticshub.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DestinationDatasetReference extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudBigqueryDataexchangeV1beta1DestinationDatasetReference extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. A unique ID for this dataset, without the project name. The ID must contain only
@@ -58,7 +58,7 @@ public final class DestinationDatasetReference extends com.google.api.client.jso
    * letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
    * @param datasetId datasetId or {@code null} for none
    */
-  public DestinationDatasetReference setDatasetId(java.lang.String datasetId) {
+  public GoogleCloudBigqueryDataexchangeV1beta1DestinationDatasetReference setDatasetId(java.lang.String datasetId) {
     this.datasetId = datasetId;
     return this;
   }
@@ -75,19 +75,19 @@ public final class DestinationDatasetReference extends com.google.api.client.jso
    * Required. The ID of the project containing this dataset.
    * @param projectId projectId or {@code null} for none
    */
-  public DestinationDatasetReference setProjectId(java.lang.String projectId) {
+  public GoogleCloudBigqueryDataexchangeV1beta1DestinationDatasetReference setProjectId(java.lang.String projectId) {
     this.projectId = projectId;
     return this;
   }
 
   @Override
-  public DestinationDatasetReference set(String fieldName, Object value) {
-    return (DestinationDatasetReference) super.set(fieldName, value);
+  public GoogleCloudBigqueryDataexchangeV1beta1DestinationDatasetReference set(String fieldName, Object value) {
+    return (GoogleCloudBigqueryDataexchangeV1beta1DestinationDatasetReference) super.set(fieldName, value);
   }
 
   @Override
-  public DestinationDatasetReference clone() {
-    return (DestinationDatasetReference) super.clone();
+  public GoogleCloudBigqueryDataexchangeV1beta1DestinationDatasetReference clone() {
+    return (GoogleCloudBigqueryDataexchangeV1beta1DestinationDatasetReference) super.clone();
   }
 
 }

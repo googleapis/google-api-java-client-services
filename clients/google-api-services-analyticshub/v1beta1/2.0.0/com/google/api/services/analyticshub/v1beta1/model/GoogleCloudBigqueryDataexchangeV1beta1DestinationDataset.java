@@ -27,14 +27,14 @@ package com.google.api.services.analyticshub.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DestinationDataset extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudBigqueryDataexchangeV1beta1DestinationDataset extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. A reference that identifies the destination dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DestinationDatasetReference datasetReference;
+  private GoogleCloudBigqueryDataexchangeV1beta1DestinationDatasetReference datasetReference;
 
   /**
    * Optional. A user-friendly description of the dataset.
@@ -71,7 +71,7 @@ public final class DestinationDataset extends com.google.api.client.json.Generic
    * Required. A reference that identifies the destination dataset.
    * @return value or {@code null} for none
    */
-  public DestinationDatasetReference getDatasetReference() {
+  public GoogleCloudBigqueryDataexchangeV1beta1DestinationDatasetReference getDatasetReference() {
     return datasetReference;
   }
 
@@ -79,7 +79,7 @@ public final class DestinationDataset extends com.google.api.client.json.Generic
    * Required. A reference that identifies the destination dataset.
    * @param datasetReference datasetReference or {@code null} for none
    */
-  public DestinationDataset setDatasetReference(DestinationDatasetReference datasetReference) {
+  public GoogleCloudBigqueryDataexchangeV1beta1DestinationDataset setDatasetReference(GoogleCloudBigqueryDataexchangeV1beta1DestinationDatasetReference datasetReference) {
     this.datasetReference = datasetReference;
     return this;
   }
@@ -96,7 +96,7 @@ public final class DestinationDataset extends com.google.api.client.json.Generic
    * Optional. A user-friendly description of the dataset.
    * @param description description or {@code null} for none
    */
-  public DestinationDataset setDescription(java.lang.String description) {
+  public GoogleCloudBigqueryDataexchangeV1beta1DestinationDataset setDescription(java.lang.String description) {
     this.description = description;
     return this;
   }
@@ -113,7 +113,7 @@ public final class DestinationDataset extends com.google.api.client.json.Generic
    * Optional. A descriptive name for the dataset.
    * @param friendlyName friendlyName or {@code null} for none
    */
-  public DestinationDataset setFriendlyName(java.lang.String friendlyName) {
+  public GoogleCloudBigqueryDataexchangeV1beta1DestinationDataset setFriendlyName(java.lang.String friendlyName) {
     this.friendlyName = friendlyName;
     return this;
   }
@@ -134,7 +134,7 @@ public final class DestinationDataset extends com.google.api.client.json.Generic
    * https://cloud.google.com/resource-manager/docs/creating-managing-labels for more information.
    * @param labels labels or {@code null} for none
    */
-  public DestinationDataset setLabels(java.util.Map<String, java.lang.String> labels) {
+  public GoogleCloudBigqueryDataexchangeV1beta1DestinationDataset setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
     return this;
   }
@@ -153,19 +153,19 @@ public final class DestinationDataset extends com.google.api.client.json.Generic
    * https://cloud.google.com/bigquery/docs/locations for supported locations.
    * @param location location or {@code null} for none
    */
-  public DestinationDataset setLocation(java.lang.String location) {
+  public GoogleCloudBigqueryDataexchangeV1beta1DestinationDataset setLocation(java.lang.String location) {
     this.location = location;
     return this;
   }
 
   @Override
-  public DestinationDataset set(String fieldName, Object value) {
-    return (DestinationDataset) super.set(fieldName, value);
+  public GoogleCloudBigqueryDataexchangeV1beta1DestinationDataset set(String fieldName, Object value) {
+    return (GoogleCloudBigqueryDataexchangeV1beta1DestinationDataset) super.set(fieldName, value);
   }
 
   @Override
-  public DestinationDataset clone() {
-    return (DestinationDataset) super.clone();
+  public GoogleCloudBigqueryDataexchangeV1beta1DestinationDataset clone() {
+    return (GoogleCloudBigqueryDataexchangeV1beta1DestinationDataset) super.clone();
   }
 
 }

@@ -30,6 +30,13 @@ package com.google.api.services.youtube.model;
 public final class VideoStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * Indicates if the video contains altered or synthetic media.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean containsSyntheticMedia;
+
+  /**
    * This value indicates if the video can be embedded on another website. @mutable
    * youtube.videos.insert youtube.videos.update
    * The value may be {@code null}.
@@ -102,6 +109,23 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String uploadStatus;
+
+  /**
+   * Indicates if the video contains altered or synthetic media.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getContainsSyntheticMedia() {
+    return containsSyntheticMedia;
+  }
+
+  /**
+   * Indicates if the video contains altered or synthetic media.
+   * @param containsSyntheticMedia containsSyntheticMedia or {@code null} for none
+   */
+  public VideoStatus setContainsSyntheticMedia(java.lang.Boolean containsSyntheticMedia) {
+    this.containsSyntheticMedia = containsSyntheticMedia;
+    return this;
+  }
 
   /**
    * This value indicates if the video can be embedded on another website. @mutable

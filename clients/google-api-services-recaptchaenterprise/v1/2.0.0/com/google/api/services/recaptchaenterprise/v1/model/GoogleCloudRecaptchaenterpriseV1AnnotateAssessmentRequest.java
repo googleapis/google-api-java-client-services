@@ -40,8 +40,8 @@ public final class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest ext
   private java.lang.String accountId;
 
   /**
-   * Optional. The annotation that will be assigned to the Event. This field can be left empty to
-   * provide reasons that apply to an event without concluding whether the event is legitimate or
+   * Optional. The annotation that is assigned to the Event. This field can be left empty to provide
+   * reasons that apply to an event without concluding whether the event is legitimate or
    * fraudulent.
    * The value may be {@code null}.
    */
@@ -94,8 +94,8 @@ public final class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest ext
   }
 
   /**
-   * Optional. The annotation that will be assigned to the Event. This field can be left empty to
-   * provide reasons that apply to an event without concluding whether the event is legitimate or
+   * Optional. The annotation that is assigned to the Event. This field can be left empty to provide
+   * reasons that apply to an event without concluding whether the event is legitimate or
    * fraudulent.
    * @return value or {@code null} for none
    */
@@ -104,8 +104,8 @@ public final class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest ext
   }
 
   /**
-   * Optional. The annotation that will be assigned to the Event. This field can be left empty to
-   * provide reasons that apply to an event without concluding whether the event is legitimate or
+   * Optional. The annotation that is assigned to the Event. This field can be left empty to provide
+   * reasons that apply to an event without concluding whether the event is legitimate or
    * fraudulent.
    * @param annotation annotation or {@code null} for none
    */

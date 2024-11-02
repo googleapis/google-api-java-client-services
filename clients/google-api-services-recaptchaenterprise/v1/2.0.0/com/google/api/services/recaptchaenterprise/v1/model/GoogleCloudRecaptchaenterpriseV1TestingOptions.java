@@ -32,14 +32,14 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptions extends com.go
 
   /**
    * Optional. For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this
-   * site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
+   * site return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String testingChallenge;
 
   /**
-   * Optional. All assessments for this Key will return this score. Must be between 0 (likely not
+   * Optional. All assessments for this Key return this score. Must be between 0 (likely not
    * legitimate) and 1 (likely legitimate) inclusive.
    * The value may be {@code null}.
    */
@@ -48,7 +48,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptions extends com.go
 
   /**
    * Optional. For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this
-   * site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
+   * site return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
    * @return value or {@code null} for none
    */
   public java.lang.String getTestingChallenge() {
@@ -57,7 +57,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptions extends com.go
 
   /**
    * Optional. For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this
-   * site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
+   * site return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
    * @param testingChallenge testingChallenge or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TestingOptions setTestingChallenge(java.lang.String testingChallenge) {
@@ -66,7 +66,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptions extends com.go
   }
 
   /**
-   * Optional. All assessments for this Key will return this score. Must be between 0 (likely not
+   * Optional. All assessments for this Key return this score. Must be between 0 (likely not
    * legitimate) and 1 (likely legitimate) inclusive.
    * @return value or {@code null} for none
    */
@@ -75,7 +75,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptions extends com.go
   }
 
   /**
-   * Optional. All assessments for this Key will return this score. Must be between 0 (likely not
+   * Optional. All assessments for this Key return this score. Must be between 0 (likely not
    * legitimate) and 1 (likely legitimate) inclusive.
    * @param testingScore testingScore or {@code null} for none
    */

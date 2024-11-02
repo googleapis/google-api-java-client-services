@@ -17,8 +17,7 @@
 package com.google.api.services.recaptchaenterprise.v1.model;
 
 /**
- * A redirect action returns a 307 (temporary redirect) response, pointing the user to a reCAPTCHA
- * interstitial page to attach a token.
+ * The reorder firewall policies response message.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the reCAPTCHA Enterprise API. For a detailed explanation
@@ -29,16 +28,16 @@ package com.google.api.services.recaptchaenterprise.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudRecaptchaenterpriseV1FirewallActionRedirectAction extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudRecaptchaenterpriseV1ReorderFirewallPoliciesResponse extends com.google.api.client.json.GenericJson {
 
   @Override
-  public GoogleCloudRecaptchaenterpriseV1FirewallActionRedirectAction set(String fieldName, Object value) {
-    return (GoogleCloudRecaptchaenterpriseV1FirewallActionRedirectAction) super.set(fieldName, value);
+  public GoogleCloudRecaptchaenterpriseV1ReorderFirewallPoliciesResponse set(String fieldName, Object value) {
+    return (GoogleCloudRecaptchaenterpriseV1ReorderFirewallPoliciesResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudRecaptchaenterpriseV1FirewallActionRedirectAction clone() {
-    return (GoogleCloudRecaptchaenterpriseV1FirewallActionRedirectAction) super.clone();
+  public GoogleCloudRecaptchaenterpriseV1ReorderFirewallPoliciesResponse clone() {
+    return (GoogleCloudRecaptchaenterpriseV1ReorderFirewallPoliciesResponse) super.clone();
   }
 
 }

@@ -17,7 +17,7 @@
 package com.google.api.services.recaptchaenterprise.v1.model;
 
 /**
- * Response to request to list firewall policies belonging to a project.
+ * Response for ListIpOverrides.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the reCAPTCHA Enterprise API. For a detailed explanation
@@ -28,23 +28,23 @@ package com.google.api.services.recaptchaenterprise.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudRecaptchaenterpriseV1ListFirewallPoliciesResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudRecaptchaenterpriseV1ListIpOverridesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Policy details.
+   * IP Overrides details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudRecaptchaenterpriseV1FirewallPolicy> firewallPolicies;
+  private java.util.List<GoogleCloudRecaptchaenterpriseV1IpOverrideData> ipOverrides;
 
   static {
-    // hack to force ProGuard to consider GoogleCloudRecaptchaenterpriseV1FirewallPolicy used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider GoogleCloudRecaptchaenterpriseV1IpOverrideData used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudRecaptchaenterpriseV1FirewallPolicy.class);
+    com.google.api.client.util.Data.nullOf(GoogleCloudRecaptchaenterpriseV1IpOverrideData.class);
   }
 
   /**
-   * Token to retrieve the next page of results. It is set to empty if no policies remain in
+   * Token to retrieve the next page of results. If this field is empty, no keys remain in the
    * results.
    * The value may be {@code null}.
    */
@@ -52,24 +52,24 @@ public final class GoogleCloudRecaptchaenterpriseV1ListFirewallPoliciesResponse 
   private java.lang.String nextPageToken;
 
   /**
-   * Policy details.
+   * IP Overrides details.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudRecaptchaenterpriseV1FirewallPolicy> getFirewallPolicies() {
-    return firewallPolicies;
+  public java.util.List<GoogleCloudRecaptchaenterpriseV1IpOverrideData> getIpOverrides() {
+    return ipOverrides;
   }
 
   /**
-   * Policy details.
-   * @param firewallPolicies firewallPolicies or {@code null} for none
+   * IP Overrides details.
+   * @param ipOverrides ipOverrides or {@code null} for none
    */
-  public GoogleCloudRecaptchaenterpriseV1ListFirewallPoliciesResponse setFirewallPolicies(java.util.List<GoogleCloudRecaptchaenterpriseV1FirewallPolicy> firewallPolicies) {
-    this.firewallPolicies = firewallPolicies;
+  public GoogleCloudRecaptchaenterpriseV1ListIpOverridesResponse setIpOverrides(java.util.List<GoogleCloudRecaptchaenterpriseV1IpOverrideData> ipOverrides) {
+    this.ipOverrides = ipOverrides;
     return this;
   }
 
   /**
-   * Token to retrieve the next page of results. It is set to empty if no policies remain in
+   * Token to retrieve the next page of results. If this field is empty, no keys remain in the
    * results.
    * @return value or {@code null} for none
    */
@@ -78,23 +78,23 @@ public final class GoogleCloudRecaptchaenterpriseV1ListFirewallPoliciesResponse 
   }
 
   /**
-   * Token to retrieve the next page of results. It is set to empty if no policies remain in
+   * Token to retrieve the next page of results. If this field is empty, no keys remain in the
    * results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public GoogleCloudRecaptchaenterpriseV1ListFirewallPoliciesResponse setNextPageToken(java.lang.String nextPageToken) {
+  public GoogleCloudRecaptchaenterpriseV1ListIpOverridesResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
     return this;
   }
 
   @Override
-  public GoogleCloudRecaptchaenterpriseV1ListFirewallPoliciesResponse set(String fieldName, Object value) {
-    return (GoogleCloudRecaptchaenterpriseV1ListFirewallPoliciesResponse) super.set(fieldName, value);
+  public GoogleCloudRecaptchaenterpriseV1ListIpOverridesResponse set(String fieldName, Object value) {
+    return (GoogleCloudRecaptchaenterpriseV1ListIpOverridesResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudRecaptchaenterpriseV1ListFirewallPoliciesResponse clone() {
-    return (GoogleCloudRecaptchaenterpriseV1ListFirewallPoliciesResponse) super.clone();
+  public GoogleCloudRecaptchaenterpriseV1ListIpOverridesResponse clone() {
+    return (GoogleCloudRecaptchaenterpriseV1ListIpOverridesResponse) super.clone();
   }
 
 }

@@ -63,14 +63,16 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Database flags. Set at instance level. * They are copied from primary instance on read instance
-   * creation. * Read instances can set new or override existing flags that are relevant for reads,
-   * e.g. for enabling columnar cache on a read instance. Flags set on read instance may or may not
-   * be present on primary. This is a list of "key": "value" pairs. "key": The name of the flag.
-   * These flags are passed at instance setup time, so include both server options and system
-   * variables for Postgres. Flags are specified with underscores, not hyphens. "value": The value
-   * of the flag. Booleans are set to **on** for true and **off** for false. This field must be
-   * omitted if the flag doesn't take a value.
+   * Database flags. Set at the instance level. They are copied from the primary instance on
+   * secondary instance creation. Flags that have restrictions default to the value at primary
+   * instance on read instances during creation. Read instances can set new flags or override
+   * existing flags that are relevant for reads, for example, for enabling columnar cache on a read
+   * instance. Flags set on read instance might or might not be present on the primary instance.
+   * This is a list of "key": "value" pairs. "key": The name of the flag. These flags are passed at
+   * instance setup time, so include both server options and system variables for Postgres. Flags
+   * are specified with underscores, not hyphens. "value": The value of the flag. Booleans are set
+   * to **on** for true and **off** for false. This field must be omitted if the flag doesn't take a
+   * value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -346,14 +348,16 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Database flags. Set at instance level. * They are copied from primary instance on read instance
-   * creation. * Read instances can set new or override existing flags that are relevant for reads,
-   * e.g. for enabling columnar cache on a read instance. Flags set on read instance may or may not
-   * be present on primary. This is a list of "key": "value" pairs. "key": The name of the flag.
-   * These flags are passed at instance setup time, so include both server options and system
-   * variables for Postgres. Flags are specified with underscores, not hyphens. "value": The value
-   * of the flag. Booleans are set to **on** for true and **off** for false. This field must be
-   * omitted if the flag doesn't take a value.
+   * Database flags. Set at the instance level. They are copied from the primary instance on
+   * secondary instance creation. Flags that have restrictions default to the value at primary
+   * instance on read instances during creation. Read instances can set new flags or override
+   * existing flags that are relevant for reads, for example, for enabling columnar cache on a read
+   * instance. Flags set on read instance might or might not be present on the primary instance.
+   * This is a list of "key": "value" pairs. "key": The name of the flag. These flags are passed at
+   * instance setup time, so include both server options and system variables for Postgres. Flags
+   * are specified with underscores, not hyphens. "value": The value of the flag. Booleans are set
+   * to **on** for true and **off** for false. This field must be omitted if the flag doesn't take a
+   * value.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getDatabaseFlags() {
@@ -361,14 +365,16 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Database flags. Set at instance level. * They are copied from primary instance on read instance
-   * creation. * Read instances can set new or override existing flags that are relevant for reads,
-   * e.g. for enabling columnar cache on a read instance. Flags set on read instance may or may not
-   * be present on primary. This is a list of "key": "value" pairs. "key": The name of the flag.
-   * These flags are passed at instance setup time, so include both server options and system
-   * variables for Postgres. Flags are specified with underscores, not hyphens. "value": The value
-   * of the flag. Booleans are set to **on** for true and **off** for false. This field must be
-   * omitted if the flag doesn't take a value.
+   * Database flags. Set at the instance level. They are copied from the primary instance on
+   * secondary instance creation. Flags that have restrictions default to the value at primary
+   * instance on read instances during creation. Read instances can set new flags or override
+   * existing flags that are relevant for reads, for example, for enabling columnar cache on a read
+   * instance. Flags set on read instance might or might not be present on the primary instance.
+   * This is a list of "key": "value" pairs. "key": The name of the flag. These flags are passed at
+   * instance setup time, so include both server options and system variables for Postgres. Flags
+   * are specified with underscores, not hyphens. "value": The value of the flag. Booleans are set
+   * to **on** for true and **off** for false. This field must be omitted if the flag doesn't take a
+   * value.
    * @param databaseFlags databaseFlags or {@code null} for none
    */
   public Instance setDatabaseFlags(java.util.Map<String, java.lang.String> databaseFlags) {

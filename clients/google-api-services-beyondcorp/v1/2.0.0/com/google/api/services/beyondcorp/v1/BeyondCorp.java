@@ -11406,6 +11406,153 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
+         * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+         * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+         *
+         * Create a request for the method "securityGateways.setIamPolicy".
+         *
+         * This request holds the parameters needed by the beyondcorp server.  After setting any optional
+         * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+         * @param content the {@link com.google.api.services.beyondcorp.v1.model.GoogleIamV1SetIamPolicyRequest}
+         * @return the request
+         */
+        public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.beyondcorp.v1.model.GoogleIamV1SetIamPolicyRequest content) throws java.io.IOException {
+          SetIamPolicy result = new SetIamPolicy(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetIamPolicy extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1.model.GoogleIamV1Policy> {
+
+          private static final String REST_PATH = "v1/{+resource}:setIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/securityGateways/[^/]+$");
+
+          /**
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+           *
+           * Create a request for the method "securityGateways.setIamPolicy".
+           *
+           * This request holds the parameters needed by the the beyondcorp server.  After setting any
+           * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+           * @param content the {@link com.google.api.services.beyondcorp.v1.model.GoogleIamV1SetIamPolicyRequest}
+           * @since 1.13
+           */
+          protected SetIamPolicy(java.lang.String resource, com.google.api.services.beyondcorp.v1.model.GoogleIamV1SetIamPolicyRequest content) {
+            super(BeyondCorp.this, "POST", REST_PATH, content, com.google.api.services.beyondcorp.v1.model.GoogleIamV1Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/securityGateways/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (SetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (SetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetIamPolicy setAlt(java.lang.String alt) {
+            return (SetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public SetIamPolicy setCallback(java.lang.String callback) {
+            return (SetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public SetIamPolicy setFields(java.lang.String fields) {
+            return (SetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public SetIamPolicy setKey(java.lang.String key) {
+            return (SetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (SetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (SetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (SetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being specified. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public SetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/securityGateways/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public SetIamPolicy set(String parameterName, Object value) {
+            return (SetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
          * This is a custom method to allow customers to create a peering connections between Google network
          * and customer networks. This is enabled only for the allowlisted customers.
          *
@@ -12649,239 +12796,6 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
                 com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                     "Parameter resource must conform to the pattern " +
                     "^projects/[^/]+/locations/[^/]+/securityGateways/[^/]+/applications/[^/]+$");
-              }
-              this.resource = resource;
-              return this;
-            }
-
-            @Override
-            public SetIamPolicy set(String parameterName, Object value) {
-              return (SetIamPolicy) super.set(parameterName, value);
-            }
-          }
-
-        }
-      }
-    }
-  }
-
-  /**
-   * An accessor for creating requests from the V collection.
-   *
-   * <p>The typical use is:</p>
-   * <pre>
-   *   {@code BeyondCorp beyondcorp = new BeyondCorp(...);}
-   *   {@code BeyondCorp.V.List request = beyondcorp.v().list(parameters ...)}
-   * </pre>
-   *
-   * @return the resource collection
-   */
-  public V v() {
-    return new V();
-  }
-
-  /**
-   * The "v" collection of methods.
-   */
-  public class V {
-
-    /**
-     * An accessor for creating requests from the Projects collection.
-     *
-     * <p>The typical use is:</p>
-     * <pre>
-     *   {@code BeyondCorp beyondcorp = new BeyondCorp(...);}
-     *   {@code BeyondCorp.Projects.List request = beyondcorp.projects().list(parameters ...)}
-     * </pre>
-     *
-     * @return the resource collection
-     */
-    public Projects projects() {
-      return new Projects();
-    }
-
-    /**
-     * The "projects" collection of methods.
-     */
-    public class Projects {
-
-      /**
-       * An accessor for creating requests from the Locations collection.
-       *
-       * <p>The typical use is:</p>
-       * <pre>
-       *   {@code BeyondCorp beyondcorp = new BeyondCorp(...);}
-       *   {@code BeyondCorp.Locations.List request = beyondcorp.locations().list(parameters ...)}
-       * </pre>
-       *
-       * @return the resource collection
-       */
-      public Locations locations() {
-        return new Locations();
-      }
-
-      /**
-       * The "locations" collection of methods.
-       */
-      public class Locations {
-
-        /**
-         * An accessor for creating requests from the SecurityGateways collection.
-         *
-         * <p>The typical use is:</p>
-         * <pre>
-         *   {@code BeyondCorp beyondcorp = new BeyondCorp(...);}
-         *   {@code BeyondCorp.SecurityGateways.List request = beyondcorp.securityGateways().list(parameters ...)}
-         * </pre>
-         *
-         * @return the resource collection
-         */
-        public SecurityGateways securityGateways() {
-          return new SecurityGateways();
-        }
-
-        /**
-         * The "securityGateways" collection of methods.
-         */
-        public class SecurityGateways {
-
-          /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
-           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-           *
-           * Create a request for the method "securityGateways.setIamPolicy".
-           *
-           * This request holds the parameters needed by the beyondcorp server.  After setting any optional
-           * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
-           *
-           * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
-           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-           *        this field.
-           * @param content the {@link com.google.api.services.beyondcorp.v1.model.GoogleIamV1SetIamPolicyRequest}
-           * @return the request
-           */
-          public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.beyondcorp.v1.model.GoogleIamV1SetIamPolicyRequest content) throws java.io.IOException {
-            SetIamPolicy result = new SetIamPolicy(resource, content);
-            initialize(result);
-            return result;
-          }
-
-          public class SetIamPolicy extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1.model.GoogleIamV1Policy> {
-
-            private static final String REST_PATH = "v/{+resource}:setIamPolicy";
-
-            private final java.util.regex.Pattern RESOURCE_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/securityGateways/[^/]+$");
-
-            /**
-             * Sets the access control policy on the specified resource. Replaces any existing policy. Can
-             * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-             *
-             * Create a request for the method "securityGateways.setIamPolicy".
-             *
-             * This request holds the parameters needed by the the beyondcorp server.  After setting any
-             * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
-             * operation. <p> {@link
-             * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-             * must be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
-           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-           *        this field.
-             * @param content the {@link com.google.api.services.beyondcorp.v1.model.GoogleIamV1SetIamPolicyRequest}
-             * @since 1.13
-             */
-            protected SetIamPolicy(java.lang.String resource, com.google.api.services.beyondcorp.v1.model.GoogleIamV1SetIamPolicyRequest content) {
-              super(BeyondCorp.this, "POST", REST_PATH, content, com.google.api.services.beyondcorp.v1.model.GoogleIamV1Policy.class);
-              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
-                    "Parameter resource must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/securityGateways/[^/]+$");
-              }
-            }
-
-            @Override
-            public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
-              return (SetIamPolicy) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public SetIamPolicy setAccessToken(java.lang.String accessToken) {
-              return (SetIamPolicy) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public SetIamPolicy setAlt(java.lang.String alt) {
-              return (SetIamPolicy) super.setAlt(alt);
-            }
-
-            @Override
-            public SetIamPolicy setCallback(java.lang.String callback) {
-              return (SetIamPolicy) super.setCallback(callback);
-            }
-
-            @Override
-            public SetIamPolicy setFields(java.lang.String fields) {
-              return (SetIamPolicy) super.setFields(fields);
-            }
-
-            @Override
-            public SetIamPolicy setKey(java.lang.String key) {
-              return (SetIamPolicy) super.setKey(key);
-            }
-
-            @Override
-            public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
-              return (SetIamPolicy) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
-              return (SetIamPolicy) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public SetIamPolicy setUploadType(java.lang.String uploadType) {
-              return (SetIamPolicy) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
-              return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /**
-             * REQUIRED: The resource for which the policy is being specified. See [Resource
-             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
-             * for this field.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String resource;
-
-            /** REQUIRED: The resource for which the policy is being specified. See [Resource
-           names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
-           field.
-             */
-            public java.lang.String getResource() {
-              return resource;
-            }
-
-            /**
-             * REQUIRED: The resource for which the policy is being specified. See [Resource
-             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
-             * for this field.
-             */
-            public SetIamPolicy setResource(java.lang.String resource) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
-                    "Parameter resource must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/securityGateways/[^/]+$");
               }
               this.resource = resource;
               return this;

@@ -1927,6 +1927,137 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
+         * Perform manual maintenance on a node.
+         *
+         * Create a request for the method "nodes.performMaintenance".
+         *
+         * This request holds the parameters needed by the tpu server.  After setting any optional
+         * parameters, call the {@link PerformMaintenance#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name.
+         * @param content the {@link com.google.api.services.tpu.v2alpha1.model.PerformMaintenanceRequest}
+         * @return the request
+         */
+        public PerformMaintenance performMaintenance(java.lang.String name, com.google.api.services.tpu.v2alpha1.model.PerformMaintenanceRequest content) throws java.io.IOException {
+          PerformMaintenance result = new PerformMaintenance(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class PerformMaintenance extends TPURequest<com.google.api.services.tpu.v2alpha1.model.Operation> {
+
+          private static final String REST_PATH = "v2alpha1/{+name}:performMaintenance";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/nodes/[^/]+$");
+
+          /**
+           * Perform manual maintenance on a node.
+           *
+           * Create a request for the method "nodes.performMaintenance".
+           *
+           * This request holds the parameters needed by the the tpu server.  After setting any optional
+           * parameters, call the {@link PerformMaintenance#execute()} method to invoke the remote
+           * operation. <p> {@link PerformMaintenance#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. The resource name.
+           * @param content the {@link com.google.api.services.tpu.v2alpha1.model.PerformMaintenanceRequest}
+           * @since 1.13
+           */
+          protected PerformMaintenance(java.lang.String name, com.google.api.services.tpu.v2alpha1.model.PerformMaintenanceRequest content) {
+            super(TPU.this, "POST", REST_PATH, content, com.google.api.services.tpu.v2alpha1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/nodes/[^/]+$");
+            }
+          }
+
+          @Override
+          public PerformMaintenance set$Xgafv(java.lang.String $Xgafv) {
+            return (PerformMaintenance) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public PerformMaintenance setAccessToken(java.lang.String accessToken) {
+            return (PerformMaintenance) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public PerformMaintenance setAlt(java.lang.String alt) {
+            return (PerformMaintenance) super.setAlt(alt);
+          }
+
+          @Override
+          public PerformMaintenance setCallback(java.lang.String callback) {
+            return (PerformMaintenance) super.setCallback(callback);
+          }
+
+          @Override
+          public PerformMaintenance setFields(java.lang.String fields) {
+            return (PerformMaintenance) super.setFields(fields);
+          }
+
+          @Override
+          public PerformMaintenance setKey(java.lang.String key) {
+            return (PerformMaintenance) super.setKey(key);
+          }
+
+          @Override
+          public PerformMaintenance setOauthToken(java.lang.String oauthToken) {
+            return (PerformMaintenance) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public PerformMaintenance setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (PerformMaintenance) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public PerformMaintenance setQuotaUser(java.lang.String quotaUser) {
+            return (PerformMaintenance) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public PerformMaintenance setUploadType(java.lang.String uploadType) {
+            return (PerformMaintenance) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public PerformMaintenance setUploadProtocol(java.lang.String uploadProtocol) {
+            return (PerformMaintenance) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The resource name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The resource name. */
+          public PerformMaintenance setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/nodes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public PerformMaintenance set(String parameterName, Object value) {
+            return (PerformMaintenance) super.set(parameterName, value);
+          }
+        }
+        /**
          * Simulates a maintenance event.
          *
          * Create a request for the method "nodes.simulateMaintenanceEvent".
@@ -3607,6 +3738,144 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Perform manual maintenance on specific nodes of a QueuedResource.
+         *
+         * Create a request for the method "queuedResources.performMaintenanceQueuedResource".
+         *
+         * This request holds the parameters needed by the tpu server.  After setting any optional
+         * parameters, call the {@link PerformMaintenanceQueuedResource#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param name Required. The name of the QueuedResource which holds the nodes to perform maintenance on.
+         * @param content the {@link com.google.api.services.tpu.v2alpha1.model.PerformMaintenanceQueuedResourceRequest}
+         * @return the request
+         */
+        public PerformMaintenanceQueuedResource performMaintenanceQueuedResource(java.lang.String name, com.google.api.services.tpu.v2alpha1.model.PerformMaintenanceQueuedResourceRequest content) throws java.io.IOException {
+          PerformMaintenanceQueuedResource result = new PerformMaintenanceQueuedResource(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class PerformMaintenanceQueuedResource extends TPURequest<com.google.api.services.tpu.v2alpha1.model.Operation> {
+
+          private static final String REST_PATH = "v2alpha1/{+name}:performMaintenanceQueuedResource";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/queuedResources/[^/]+$");
+
+          /**
+           * Perform manual maintenance on specific nodes of a QueuedResource.
+           *
+           * Create a request for the method "queuedResources.performMaintenanceQueuedResource".
+           *
+           * This request holds the parameters needed by the the tpu server.  After setting any optional
+           * parameters, call the {@link PerformMaintenanceQueuedResource#execute()} method to invoke the
+           * remote operation. <p> {@link PerformMaintenanceQueuedResource#initialize(com.google.api.client.
+           * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the QueuedResource which holds the nodes to perform maintenance on.
+           * @param content the {@link com.google.api.services.tpu.v2alpha1.model.PerformMaintenanceQueuedResourceRequest}
+           * @since 1.13
+           */
+          protected PerformMaintenanceQueuedResource(java.lang.String name, com.google.api.services.tpu.v2alpha1.model.PerformMaintenanceQueuedResourceRequest content) {
+            super(TPU.this, "POST", REST_PATH, content, com.google.api.services.tpu.v2alpha1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/queuedResources/[^/]+$");
+            }
+          }
+
+          @Override
+          public PerformMaintenanceQueuedResource set$Xgafv(java.lang.String $Xgafv) {
+            return (PerformMaintenanceQueuedResource) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public PerformMaintenanceQueuedResource setAccessToken(java.lang.String accessToken) {
+            return (PerformMaintenanceQueuedResource) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public PerformMaintenanceQueuedResource setAlt(java.lang.String alt) {
+            return (PerformMaintenanceQueuedResource) super.setAlt(alt);
+          }
+
+          @Override
+          public PerformMaintenanceQueuedResource setCallback(java.lang.String callback) {
+            return (PerformMaintenanceQueuedResource) super.setCallback(callback);
+          }
+
+          @Override
+          public PerformMaintenanceQueuedResource setFields(java.lang.String fields) {
+            return (PerformMaintenanceQueuedResource) super.setFields(fields);
+          }
+
+          @Override
+          public PerformMaintenanceQueuedResource setKey(java.lang.String key) {
+            return (PerformMaintenanceQueuedResource) super.setKey(key);
+          }
+
+          @Override
+          public PerformMaintenanceQueuedResource setOauthToken(java.lang.String oauthToken) {
+            return (PerformMaintenanceQueuedResource) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public PerformMaintenanceQueuedResource setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (PerformMaintenanceQueuedResource) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public PerformMaintenanceQueuedResource setQuotaUser(java.lang.String quotaUser) {
+            return (PerformMaintenanceQueuedResource) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public PerformMaintenanceQueuedResource setUploadType(java.lang.String uploadType) {
+            return (PerformMaintenanceQueuedResource) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public PerformMaintenanceQueuedResource setUploadProtocol(java.lang.String uploadProtocol) {
+            return (PerformMaintenanceQueuedResource) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the QueuedResource which holds the nodes to perform maintenance
+           * on.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the QueuedResource which holds the nodes to perform maintenance on.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the QueuedResource which holds the nodes to perform maintenance
+           * on.
+           */
+          public PerformMaintenanceQueuedResource setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/queuedResources/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public PerformMaintenanceQueuedResource set(String parameterName, Object value) {
+            return (PerformMaintenanceQueuedResource) super.set(parameterName, value);
           }
         }
         /**

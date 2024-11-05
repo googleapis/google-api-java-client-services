@@ -17,7 +17,8 @@
 package com.google.api.services.datastore.v1beta3.model;
 
 /**
- * A query for entities.
+ * A query for entities. The query stages are executed in the following order: 1. kind 2. filter 3.
+ * projection 4. order + start_cursor + end_cursor 5. offset 6. limit 7. find_nearest
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Datastore API. For a detailed explanation see:
@@ -60,6 +61,14 @@ public final class Query extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Filter filter;
+
+  /**
+   * Optional. A potential Nearest Neighbors Search. Applies after all other filters and ordering.
+   * Finds the closest vector embeddings to the given query vector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FindNearest findNearest;
 
   /**
    * The kinds to query (if empty, returns entities of all kinds). Currently at most 1 kind may be
@@ -216,6 +225,25 @@ public final class Query extends com.google.api.client.json.GenericJson {
    */
   public Query setFilter(Filter filter) {
     this.filter = filter;
+    return this;
+  }
+
+  /**
+   * Optional. A potential Nearest Neighbors Search. Applies after all other filters and ordering.
+   * Finds the closest vector embeddings to the given query vector.
+   * @return value or {@code null} for none
+   */
+  public FindNearest getFindNearest() {
+    return findNearest;
+  }
+
+  /**
+   * Optional. A potential Nearest Neighbors Search. Applies after all other filters and ordering.
+   * Finds the closest vector embeddings to the given query vector.
+   * @param findNearest findNearest or {@code null} for none
+   */
+  public Query setFindNearest(FindNearest findNearest) {
+    this.findNearest = findNearest;
     return this;
   }
 

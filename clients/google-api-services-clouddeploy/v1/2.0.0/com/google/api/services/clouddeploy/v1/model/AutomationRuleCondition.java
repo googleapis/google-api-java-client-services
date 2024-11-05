@@ -37,6 +37,14 @@ public final class AutomationRuleCondition extends com.google.api.client.json.Ge
   private TargetsPresentCondition targetsPresentCondition;
 
   /**
+   * Optional. TimedPromoteReleaseCondition contains rule conditions specific to a an Automation
+   * with a timed promote release rule defined.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TimedPromoteReleaseCondition timedPromoteReleaseCondition;
+
+  /**
    * Optional. Details around targets enumerated in the rule.
    * @return value or {@code null} for none
    */
@@ -50,6 +58,25 @@ public final class AutomationRuleCondition extends com.google.api.client.json.Ge
    */
   public AutomationRuleCondition setTargetsPresentCondition(TargetsPresentCondition targetsPresentCondition) {
     this.targetsPresentCondition = targetsPresentCondition;
+    return this;
+  }
+
+  /**
+   * Optional. TimedPromoteReleaseCondition contains rule conditions specific to a an Automation
+   * with a timed promote release rule defined.
+   * @return value or {@code null} for none
+   */
+  public TimedPromoteReleaseCondition getTimedPromoteReleaseCondition() {
+    return timedPromoteReleaseCondition;
+  }
+
+  /**
+   * Optional. TimedPromoteReleaseCondition contains rule conditions specific to a an Automation
+   * with a timed promote release rule defined.
+   * @param timedPromoteReleaseCondition timedPromoteReleaseCondition or {@code null} for none
+   */
+  public AutomationRuleCondition setTimedPromoteReleaseCondition(TimedPromoteReleaseCondition timedPromoteReleaseCondition) {
+    this.timedPromoteReleaseCondition = timedPromoteReleaseCondition;
     return this;
   }
 

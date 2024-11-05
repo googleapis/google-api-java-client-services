@@ -52,6 +52,14 @@ public final class AutomationRule extends com.google.api.client.json.GenericJson
   private RepairRolloutRule repairRolloutRule;
 
   /**
+   * Optional. The `TimedPromoteReleaseRule` will automatically promote a release from the current
+   * target(s) to the specified target(s) on a configured schedule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TimedPromoteReleaseRule timedPromoteReleaseRule;
+
+  /**
    * Optional. The `AdvanceRolloutRule` will automatically advance a successful Rollout.
    * @return value or {@code null} for none
    */
@@ -101,6 +109,25 @@ public final class AutomationRule extends com.google.api.client.json.GenericJson
    */
   public AutomationRule setRepairRolloutRule(RepairRolloutRule repairRolloutRule) {
     this.repairRolloutRule = repairRolloutRule;
+    return this;
+  }
+
+  /**
+   * Optional. The `TimedPromoteReleaseRule` will automatically promote a release from the current
+   * target(s) to the specified target(s) on a configured schedule.
+   * @return value or {@code null} for none
+   */
+  public TimedPromoteReleaseRule getTimedPromoteReleaseRule() {
+    return timedPromoteReleaseRule;
+  }
+
+  /**
+   * Optional. The `TimedPromoteReleaseRule` will automatically promote a release from the current
+   * target(s) to the specified target(s) on a configured schedule.
+   * @param timedPromoteReleaseRule timedPromoteReleaseRule or {@code null} for none
+   */
+  public AutomationRule setTimedPromoteReleaseRule(TimedPromoteReleaseRule timedPromoteReleaseRule) {
+    this.timedPromoteReleaseRule = timedPromoteReleaseRule;
     return this;
   }
 

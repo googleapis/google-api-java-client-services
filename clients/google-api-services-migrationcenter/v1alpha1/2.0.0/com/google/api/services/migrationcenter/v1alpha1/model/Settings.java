@@ -30,6 +30,13 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Customer consent for Google sales to access their Cloud Migration Center project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean customerConsentForGoogleSalesToAccessMigrationCenter;
+
+  /**
    * Disable Cloud Logging for the Migration Center API. Users are billed for the logs.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String preferenceSet;
+
+  /**
+   * Customer consent for Google sales to access their Cloud Migration Center project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCustomerConsentForGoogleSalesToAccessMigrationCenter() {
+    return customerConsentForGoogleSalesToAccessMigrationCenter;
+  }
+
+  /**
+   * Customer consent for Google sales to access their Cloud Migration Center project.
+   * @param customerConsentForGoogleSalesToAccessMigrationCenter customerConsentForGoogleSalesToAccessMigrationCenter or {@code null} for none
+   */
+  public Settings setCustomerConsentForGoogleSalesToAccessMigrationCenter(java.lang.Boolean customerConsentForGoogleSalesToAccessMigrationCenter) {
+    this.customerConsentForGoogleSalesToAccessMigrationCenter = customerConsentForGoogleSalesToAccessMigrationCenter;
+    return this;
+  }
 
   /**
    * Disable Cloud Logging for the Migration Center API. Users are billed for the logs.

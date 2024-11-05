@@ -41,22 +41,24 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
   private AccessRestrictions accessRestrictions;
 
   /**
-   * A user-specified description of the pool. Cannot exceed 256 characters.
+   * Optional. A user-specified description of the pool. Cannot exceed 256 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Disables the workforce pool. You cannot use a disabled pool to exchange tokens, or use existing
-   * tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
+   * Optional. Disables the workforce pool. You cannot use a disabled pool to exchange tokens, or
+   * use existing tokens to access resources. If the pool is re-enabled, existing tokens grant
+   * access again.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disabled;
 
   /**
-   * A user-specified display name of the pool in Google Cloud Console. Cannot exceed 32 characters.
+   * Optional. A user-specified display name of the pool in Google Cloud Console. Cannot exceed 32
+   * characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,9 +88,9 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
   private java.lang.String parent;
 
   /**
-   * Duration that the Google Cloud access tokens, console sign-in sessions, and `gcloud` sign-in
-   * sessions from this pool are valid. Must be greater than 15 minutes (900s) and less than 12
-   * hours (43200s). If `session_duration` is not configured, minted credentials have a default
+   * Optional. Duration that the Google Cloud access tokens, console sign-in sessions, and `gcloud`
+   * sign-in sessions from this pool are valid. Must be greater than 15 minutes (900s) and less than
+   * 12 hours (43200s). If `session_duration` is not configured, minted credentials have a default
    * duration of one hour (3600s). For SAML providers, the lifetime of the token is the minimum of
    * the `session_duration` and the `SessionNotOnOrAfter` claim in the SAML assertion.
    * The value may be {@code null}.
@@ -125,7 +127,7 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A user-specified description of the pool. Cannot exceed 256 characters.
+   * Optional. A user-specified description of the pool. Cannot exceed 256 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -133,7 +135,7 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A user-specified description of the pool. Cannot exceed 256 characters.
+   * Optional. A user-specified description of the pool. Cannot exceed 256 characters.
    * @param description description or {@code null} for none
    */
   public WorkforcePool setDescription(java.lang.String description) {
@@ -142,8 +144,9 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Disables the workforce pool. You cannot use a disabled pool to exchange tokens, or use existing
-   * tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
+   * Optional. Disables the workforce pool. You cannot use a disabled pool to exchange tokens, or
+   * use existing tokens to access resources. If the pool is re-enabled, existing tokens grant
+   * access again.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisabled() {
@@ -151,8 +154,9 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Disables the workforce pool. You cannot use a disabled pool to exchange tokens, or use existing
-   * tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
+   * Optional. Disables the workforce pool. You cannot use a disabled pool to exchange tokens, or
+   * use existing tokens to access resources. If the pool is re-enabled, existing tokens grant
+   * access again.
    * @param disabled disabled or {@code null} for none
    */
   public WorkforcePool setDisabled(java.lang.Boolean disabled) {
@@ -161,7 +165,8 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A user-specified display name of the pool in Google Cloud Console. Cannot exceed 32 characters.
+   * Optional. A user-specified display name of the pool in Google Cloud Console. Cannot exceed 32
+   * characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -169,7 +174,8 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A user-specified display name of the pool in Google Cloud Console. Cannot exceed 32 characters.
+   * Optional. A user-specified display name of the pool in Google Cloud Console. Cannot exceed 32
+   * characters.
    * @param displayName displayName or {@code null} for none
    */
   public WorkforcePool setDisplayName(java.lang.String displayName) {
@@ -233,9 +239,9 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Duration that the Google Cloud access tokens, console sign-in sessions, and `gcloud` sign-in
-   * sessions from this pool are valid. Must be greater than 15 minutes (900s) and less than 12
-   * hours (43200s). If `session_duration` is not configured, minted credentials have a default
+   * Optional. Duration that the Google Cloud access tokens, console sign-in sessions, and `gcloud`
+   * sign-in sessions from this pool are valid. Must be greater than 15 minutes (900s) and less than
+   * 12 hours (43200s). If `session_duration` is not configured, minted credentials have a default
    * duration of one hour (3600s). For SAML providers, the lifetime of the token is the minimum of
    * the `session_duration` and the `SessionNotOnOrAfter` claim in the SAML assertion.
    * @return value or {@code null} for none
@@ -245,9 +251,9 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Duration that the Google Cloud access tokens, console sign-in sessions, and `gcloud` sign-in
-   * sessions from this pool are valid. Must be greater than 15 minutes (900s) and less than 12
-   * hours (43200s). If `session_duration` is not configured, minted credentials have a default
+   * Optional. Duration that the Google Cloud access tokens, console sign-in sessions, and `gcloud`
+   * sign-in sessions from this pool are valid. Must be greater than 15 minutes (900s) and less than
+   * 12 hours (43200s). If `session_duration` is not configured, minted credentials have a default
    * duration of one hour (3600s). For SAML providers, the lifetime of the token is the minimum of
    * the `session_duration` and the `SessionNotOnOrAfter` claim in the SAML assertion.
    * @param sessionDuration sessionDuration or {@code null} for none

@@ -39,7 +39,8 @@ public final class GoogleIamAdminV1WorkforcePoolProviderOidc extends com.google.
   private java.lang.String clientId;
 
   /**
-   * The optional client secret. Required to enable Authorization Code flow for web sign-in.
+   * Optional. The optional client secret. Required to enable Authorization Code flow for web sign-
+   * in.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +54,7 @@ public final class GoogleIamAdminV1WorkforcePoolProviderOidc extends com.google.
   private java.lang.String issuerUri;
 
   /**
-   * OIDC JWKs in JSON String format. For details on the definition of a JWK, see
+   * Optional. OIDC JWKs in JSON String format. For details on the definition of a JWK, see
    * https://tools.ietf.org/html/rfc7517. If not set, the `jwks_uri` from the discovery
    * document(fetched from the .well-known path of the `issuer_uri`) will be used. Currently, RSA
    * and EC asymmetric keys are supported. The JWK must use following format and include only the
@@ -92,7 +93,8 @@ public final class GoogleIamAdminV1WorkforcePoolProviderOidc extends com.google.
   }
 
   /**
-   * The optional client secret. Required to enable Authorization Code flow for web sign-in.
+   * Optional. The optional client secret. Required to enable Authorization Code flow for web sign-
+   * in.
    * @return value or {@code null} for none
    */
   public GoogleIamAdminV1WorkforcePoolProviderOidcClientSecret getClientSecret() {
@@ -100,7 +102,8 @@ public final class GoogleIamAdminV1WorkforcePoolProviderOidc extends com.google.
   }
 
   /**
-   * The optional client secret. Required to enable Authorization Code flow for web sign-in.
+   * Optional. The optional client secret. Required to enable Authorization Code flow for web sign-
+   * in.
    * @param clientSecret clientSecret or {@code null} for none
    */
   public GoogleIamAdminV1WorkforcePoolProviderOidc setClientSecret(GoogleIamAdminV1WorkforcePoolProviderOidcClientSecret clientSecret) {
@@ -126,7 +129,7 @@ public final class GoogleIamAdminV1WorkforcePoolProviderOidc extends com.google.
   }
 
   /**
-   * OIDC JWKs in JSON String format. For details on the definition of a JWK, see
+   * Optional. OIDC JWKs in JSON String format. For details on the definition of a JWK, see
    * https://tools.ietf.org/html/rfc7517. If not set, the `jwks_uri` from the discovery
    * document(fetched from the .well-known path of the `issuer_uri`) will be used. Currently, RSA
    * and EC asymmetric keys are supported. The JWK must use following format and include only the
@@ -139,7 +142,7 @@ public final class GoogleIamAdminV1WorkforcePoolProviderOidc extends com.google.
   }
 
   /**
-   * OIDC JWKs in JSON String format. For details on the definition of a JWK, see
+   * Optional. OIDC JWKs in JSON String format. For details on the definition of a JWK, see
    * https://tools.ietf.org/html/rfc7517. If not set, the `jwks_uri` from the discovery
    * document(fetched from the .well-known path of the `issuer_uri`) will be used. Currently, RSA
    * and EC asymmetric keys are supported. The JWK must use following format and include only the

@@ -31,8 +31,8 @@ package com.google.api.services.iam.v1.model;
 public final class GoogleIamAdminV1WorkforcePoolProviderOidcClientSecretValue extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input only. The plain text of the client secret value. For security reasons, this field is only
-   * used for input and will never be populated in any response.
+   * Optional. Input only. The plain text of the client secret value. For security reasons, this
+   * field is only used for input and will never be populated in any response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,8 @@ public final class GoogleIamAdminV1WorkforcePoolProviderOidcClientSecretValue ex
   private java.lang.String thumbprint;
 
   /**
-   * Input only. The plain text of the client secret value. For security reasons, this field is only
-   * used for input and will never be populated in any response.
+   * Optional. Input only. The plain text of the client secret value. For security reasons, this
+   * field is only used for input and will never be populated in any response.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlainText() {
@@ -55,8 +55,8 @@ public final class GoogleIamAdminV1WorkforcePoolProviderOidcClientSecretValue ex
   }
 
   /**
-   * Input only. The plain text of the client secret value. For security reasons, this field is only
-   * used for input and will never be populated in any response.
+   * Optional. Input only. The plain text of the client secret value. For security reasons, this
+   * field is only used for input and will never be populated in any response.
    * @param plainText plainText or {@code null} for none
    */
   public GoogleIamAdminV1WorkforcePoolProviderOidcClientSecretValue setPlainText(java.lang.String plainText) {

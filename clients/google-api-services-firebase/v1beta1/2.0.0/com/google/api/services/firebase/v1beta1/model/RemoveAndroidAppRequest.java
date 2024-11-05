@@ -48,9 +48,9 @@ public final class RemoveAndroidAppRequest extends com.google.api.client.json.Ge
 
   /**
    * Determines whether to _immediately_ delete the AndroidApp. If set to true, the App is
-   * immediately deleted from the Project and cannot be restored to the Project. If not set,
-   * defaults to false, which means the App will be set to expire in 30 days. Within the 30 days,
-   * the App may be restored to the Project using UndeleteAndroidApp.
+   * immediately deleted from the Project and cannot be undeleted (that is, restored to the
+   * Project). If not set, defaults to false, which means the App will be set to expire in 30 days.
+   * Within the 30 days, the App may be restored to the Project using UndeleteAndroidApp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,9 +103,9 @@ public final class RemoveAndroidAppRequest extends com.google.api.client.json.Ge
 
   /**
    * Determines whether to _immediately_ delete the AndroidApp. If set to true, the App is
-   * immediately deleted from the Project and cannot be restored to the Project. If not set,
-   * defaults to false, which means the App will be set to expire in 30 days. Within the 30 days,
-   * the App may be restored to the Project using UndeleteAndroidApp.
+   * immediately deleted from the Project and cannot be undeleted (that is, restored to the
+   * Project). If not set, defaults to false, which means the App will be set to expire in 30 days.
+   * Within the 30 days, the App may be restored to the Project using UndeleteAndroidApp.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getImmediate() {
@@ -114,9 +114,9 @@ public final class RemoveAndroidAppRequest extends com.google.api.client.json.Ge
 
   /**
    * Determines whether to _immediately_ delete the AndroidApp. If set to true, the App is
-   * immediately deleted from the Project and cannot be restored to the Project. If not set,
-   * defaults to false, which means the App will be set to expire in 30 days. Within the 30 days,
-   * the App may be restored to the Project using UndeleteAndroidApp.
+   * immediately deleted from the Project and cannot be undeleted (that is, restored to the
+   * Project). If not set, defaults to false, which means the App will be set to expire in 30 days.
+   * Within the 30 days, the App may be restored to the Project using UndeleteAndroidApp.
    * @param immediate immediate or {@code null} for none
    */
   public RemoveAndroidAppRequest setImmediate(java.lang.Boolean immediate) {

@@ -3323,6 +3323,505 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
       public class Enrollments {
 
         /**
+         * Create a new Enrollment in a particular project and location.
+         *
+         * Create a request for the method "enrollments.create".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent collection in which to add this enrollment.
+         * @param content the {@link com.google.api.services.eventarc.v1.model.Enrollment}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.eventarc.v1.model.Enrollment content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends EventarcRequest<com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+parent}/enrollments";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Create a new Enrollment in a particular project and location.
+           *
+           * Create a request for the method "enrollments.create".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent collection in which to add this enrollment.
+           * @param content the {@link com.google.api.services.eventarc.v1.model.Enrollment}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.eventarc.v1.model.Enrollment content) {
+            super(Eventarc.this, "POST", REST_PATH, content, com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent collection in which to add this enrollment. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent collection in which to add this enrollment.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent collection in which to add this enrollment. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The user-provided ID to be assigned to the Enrollment. It should match the
+           * format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String enrollmentId;
+
+          /** Required. The user-provided ID to be assigned to the Enrollment. It should match the format
+         (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+           */
+          public java.lang.String getEnrollmentId() {
+            return enrollmentId;
+          }
+
+          /**
+           * Required. The user-provided ID to be assigned to the Enrollment. It should match the
+           * format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+           */
+          public Create setEnrollmentId(java.lang.String enrollmentId) {
+            this.enrollmentId = enrollmentId;
+            return this;
+          }
+
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set, validate the request and preview the review, but do not post it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Delete a single Enrollment.
+         *
+         * Create a request for the method "enrollments.delete".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the Enrollment to be deleted.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends EventarcRequest<com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/enrollments/[^/]+$");
+
+          /**
+           * Delete a single Enrollment.
+           *
+           * Create a request for the method "enrollments.delete".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the Enrollment to be deleted.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Eventarc.this, "DELETE", REST_PATH, null, com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/enrollments/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the Enrollment to be deleted. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the Enrollment to be deleted.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the Enrollment to be deleted. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/enrollments/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, and the Enrollment is not found, the request will succeed but
+           * no action will be taken on the server.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If set to true, and the Enrollment is not found, the request will succeed but no action
+         will be taken on the server.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If set to true, and the Enrollment is not found, the request will succeed but
+           * no action will be taken on the server.
+           */
+          public Delete setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
+          /**
+           * Optional. If provided, the Enrollment will only be deleted if the etag matches the
+           * current etag on the resource.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. If provided, the Enrollment will only be deleted if the etag matches the current etag on
+         the resource.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. If provided, the Enrollment will only be deleted if the etag matches the
+           * current etag on the resource.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set, validate the request and preview the review, but do not post it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
+          public Delete setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Get a single Enrollment.
+         *
+         * Create a request for the method "enrollments.get".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the Enrollment to get.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends EventarcRequest<com.google.api.services.eventarc.v1.model.Enrollment> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/enrollments/[^/]+$");
+
+          /**
+           * Get a single Enrollment.
+           *
+           * Create a request for the method "enrollments.get".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the Enrollment to get.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Eventarc.this, "GET", REST_PATH, null, com.google.api.services.eventarc.v1.model.Enrollment.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/enrollments/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the Enrollment to get. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the Enrollment to get.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the Enrollment to get. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/enrollments/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
          * does not have a policy set.
          *
@@ -3518,6 +4017,446 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public GetIamPolicy set(String parameterName, Object value) {
             return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * List Enrollments.
+         *
+         * Create a request for the method "enrollments.list".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent collection to list triggers on.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends EventarcRequest<com.google.api.services.eventarc.v1.model.ListEnrollmentsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/enrollments";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * List Enrollments.
+           *
+           * Create a request for the method "enrollments.list".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent collection to list triggers on.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Eventarc.this, "GET", REST_PATH, null, com.google.api.services.eventarc.v1.model.ListEnrollmentsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent collection to list triggers on. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent collection to list triggers on.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent collection to list triggers on. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The filter field that the list request will filter on. Possible filtersare
+           * described in https://google.aip.dev/160.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. The filter field that the list request will filter on. Possible filtersare described in
+         https://google.aip.dev/160.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. The filter field that the list request will filter on. Possible filtersare
+           * described in https://google.aip.dev/160.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The sorting order of the resources returned. Value should be a comma-
+           * separated list of fields. The default sorting order is ascending. To specify descending
+           * order for a field, append a `desc` suffix; for example: `name desc, update_time`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. The sorting order of the resources returned. Value should be a comma-separated list of
+         fields. The default sorting order is ascending. To specify descending order for a field, append a
+         `desc` suffix; for example: `name desc, update_time`.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. The sorting order of the resources returned. Value should be a comma-
+           * separated list of fields. The default sorting order is ascending. To specify descending
+           * order for a field, append a `desc` suffix; for example: `name desc, update_time`.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of results to return on each page. Note: The service may
+           * send fewer.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return on each page. Note: The service may send fewer.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of results to return on each page. Note: The service may
+           * send fewer.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. The page token; provide the value from the `next_page_token` field in a
+           * previous call to retrieve the subsequent page. When paginating, all other parameters
+           * provided must match the previous call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The page token; provide the value from the `next_page_token` field in a previous call to
+         retrieve the subsequent page. When paginating, all other parameters provided must match the
+         previous call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. The page token; provide the value from the `next_page_token` field in a
+           * previous call to retrieve the subsequent page. When paginating, all other parameters
+           * provided must match the previous call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Update a single Enrollment.
+         *
+         * Create a request for the method "enrollments.patch".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. Resource name of the form
+         *        projects/{project}/locations/{location}/enrollments/{enrollment}
+         * @param content the {@link com.google.api.services.eventarc.v1.model.Enrollment}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.eventarc.v1.model.Enrollment content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends EventarcRequest<com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/enrollments/[^/]+$");
+
+          /**
+           * Update a single Enrollment.
+           *
+           * Create a request for the method "enrollments.patch".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. Resource name of the form
+         *        projects/{project}/locations/{location}/enrollments/{enrollment}
+           * @param content the {@link com.google.api.services.eventarc.v1.model.Enrollment}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.eventarc.v1.model.Enrollment content) {
+            super(Eventarc.this, "PATCH", REST_PATH, content, com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/enrollments/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. Resource name of the form
+           * projects/{project}/locations/{location}/enrollments/{enrollment}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. Resource name of the form
+         projects/{project}/locations/{location}/enrollments/{enrollment}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. Resource name of the form
+           * projects/{project}/locations/{location}/enrollments/{enrollment}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/enrollments/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, and the Enrollment is not found, a new Enrollment will be
+           * created. In this situation, `update_mask` is ignored.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If set to true, and the Enrollment is not found, a new Enrollment will be created. In
+         this situation, `update_mask` is ignored.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If set to true, and the Enrollment is not found, a new Enrollment will be
+           * created. In this situation, `update_mask` is ignored.
+           */
+          public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
+          /**
+           * Optional. The fields to be updated; only fields explicitly provided are updated. If no
+           * field mask is provided, all provided fields in the request are updated. To update all
+           * fields, provide a field mask of "*".
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. The fields to be updated; only fields explicitly provided are updated. If no field mask
+         is provided, all provided fields in the request are updated. To update all fields, provide a field
+         mask of "*".
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. The fields to be updated; only fields explicitly provided are updated. If no
+           * field mask is provided, all provided fields in the request are updated. To update all
+           * fields, provide a field mask of "*".
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set, validate the request and preview the review, but do not post it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
         /**
@@ -3841,6 +4780,505 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
       public class GoogleApiSources {
 
         /**
+         * Create a new GoogleApiSource in a particular project and location.
+         *
+         * Create a request for the method "googleApiSources.create".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent collection in which to add this google api source.
+         * @param content the {@link com.google.api.services.eventarc.v1.model.GoogleApiSource}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.eventarc.v1.model.GoogleApiSource content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends EventarcRequest<com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+parent}/googleApiSources";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Create a new GoogleApiSource in a particular project and location.
+           *
+           * Create a request for the method "googleApiSources.create".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent collection in which to add this google api source.
+           * @param content the {@link com.google.api.services.eventarc.v1.model.GoogleApiSource}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.eventarc.v1.model.GoogleApiSource content) {
+            super(Eventarc.this, "POST", REST_PATH, content, com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent collection in which to add this google api source. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent collection in which to add this google api source.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent collection in which to add this google api source. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The user-provided ID to be assigned to the GoogleApiSource. It should match
+           * the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String googleApiSourceId;
+
+          /** Required. The user-provided ID to be assigned to the GoogleApiSource. It should match the format
+         (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+           */
+          public java.lang.String getGoogleApiSourceId() {
+            return googleApiSourceId;
+          }
+
+          /**
+           * Required. The user-provided ID to be assigned to the GoogleApiSource. It should match
+           * the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+           */
+          public Create setGoogleApiSourceId(java.lang.String googleApiSourceId) {
+            this.googleApiSourceId = googleApiSourceId;
+            return this;
+          }
+
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set, validate the request and preview the review, but do not post it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Delete a single GoogleApiSource.
+         *
+         * Create a request for the method "googleApiSources.delete".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the GoogleApiSource to be deleted.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends EventarcRequest<com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/googleApiSources/[^/]+$");
+
+          /**
+           * Delete a single GoogleApiSource.
+           *
+           * Create a request for the method "googleApiSources.delete".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the GoogleApiSource to be deleted.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Eventarc.this, "DELETE", REST_PATH, null, com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/googleApiSources/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the GoogleApiSource to be deleted. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the GoogleApiSource to be deleted.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the GoogleApiSource to be deleted. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/googleApiSources/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, and the MessageBus is not found, the request will succeed but
+           * no action will be taken on the server.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If set to true, and the MessageBus is not found, the request will succeed but no action
+         will be taken on the server.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If set to true, and the MessageBus is not found, the request will succeed but
+           * no action will be taken on the server.
+           */
+          public Delete setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
+          /**
+           * Optional. If provided, the MessageBus will only be deleted if the etag matches the
+           * current etag on the resource.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. If provided, the MessageBus will only be deleted if the etag matches the current etag on
+         the resource.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. If provided, the MessageBus will only be deleted if the etag matches the
+           * current etag on the resource.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set, validate the request and preview the review, but do not post it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
+          public Delete setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Get a single GoogleApiSource.
+         *
+         * Create a request for the method "googleApiSources.get".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the google api source to get.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends EventarcRequest<com.google.api.services.eventarc.v1.model.GoogleApiSource> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/googleApiSources/[^/]+$");
+
+          /**
+           * Get a single GoogleApiSource.
+           *
+           * Create a request for the method "googleApiSources.get".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the google api source to get.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Eventarc.this, "GET", REST_PATH, null, com.google.api.services.eventarc.v1.model.GoogleApiSource.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/googleApiSources/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the google api source to get. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the google api source to get.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the google api source to get. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/googleApiSources/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
          * does not have a policy set.
          *
@@ -4036,6 +5474,446 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public GetIamPolicy set(String parameterName, Object value) {
             return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * List GoogleApiSources.
+         *
+         * Create a request for the method "googleApiSources.list".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent collection to list GoogleApiSources on.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends EventarcRequest<com.google.api.services.eventarc.v1.model.ListGoogleApiSourcesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/googleApiSources";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * List GoogleApiSources.
+           *
+           * Create a request for the method "googleApiSources.list".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent collection to list GoogleApiSources on.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Eventarc.this, "GET", REST_PATH, null, com.google.api.services.eventarc.v1.model.ListGoogleApiSourcesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent collection to list GoogleApiSources on. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent collection to list GoogleApiSources on.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent collection to list GoogleApiSources on. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The filter field that the list request will filter on. Possible filtersare
+           * described in https://google.aip.dev/160.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. The filter field that the list request will filter on. Possible filtersare described in
+         https://google.aip.dev/160.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. The filter field that the list request will filter on. Possible filtersare
+           * described in https://google.aip.dev/160.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The sorting order of the resources returned. Value should be a comma-
+           * separated list of fields. The default sorting order is ascending. To specify descending
+           * order for a field, append a `desc` suffix; for example: `name desc, update_time`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. The sorting order of the resources returned. Value should be a comma-separated list of
+         fields. The default sorting order is ascending. To specify descending order for a field, append a
+         `desc` suffix; for example: `name desc, update_time`.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. The sorting order of the resources returned. Value should be a comma-
+           * separated list of fields. The default sorting order is ascending. To specify descending
+           * order for a field, append a `desc` suffix; for example: `name desc, update_time`.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of results to return on each page. Note: The service may
+           * send fewer.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return on each page. Note: The service may send fewer.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of results to return on each page. Note: The service may
+           * send fewer.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. The page token; provide the value from the `next_page_token` field in a
+           * previous call to retrieve the subsequent page. When paginating, all other parameters
+           * provided must match the previous call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The page token; provide the value from the `next_page_token` field in a previous call to
+         retrieve the subsequent page. When paginating, all other parameters provided must match the
+         previous call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. The page token; provide the value from the `next_page_token` field in a
+           * previous call to retrieve the subsequent page. When paginating, all other parameters
+           * provided must match the previous call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Update a single GoogleApiSource.
+         *
+         * Create a request for the method "googleApiSources.patch".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. Resource name of the form
+         *        projects/{project}/locations/{location}/googleApiSources/{google_api_source}
+         * @param content the {@link com.google.api.services.eventarc.v1.model.GoogleApiSource}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.eventarc.v1.model.GoogleApiSource content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends EventarcRequest<com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/googleApiSources/[^/]+$");
+
+          /**
+           * Update a single GoogleApiSource.
+           *
+           * Create a request for the method "googleApiSources.patch".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. Resource name of the form
+         *        projects/{project}/locations/{location}/googleApiSources/{google_api_source}
+           * @param content the {@link com.google.api.services.eventarc.v1.model.GoogleApiSource}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.eventarc.v1.model.GoogleApiSource content) {
+            super(Eventarc.this, "PATCH", REST_PATH, content, com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/googleApiSources/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. Resource name of the form
+           * projects/{project}/locations/{location}/googleApiSources/{google_api_source}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. Resource name of the form
+         projects/{project}/locations/{location}/googleApiSources/{google_api_source}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. Resource name of the form
+           * projects/{project}/locations/{location}/googleApiSources/{google_api_source}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/googleApiSources/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, and the GoogleApiSource is not found, a new GoogleApiSource
+           * will be created. In this situation, `update_mask` is ignored.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If set to true, and the GoogleApiSource is not found, a new GoogleApiSource will be
+         created. In this situation, `update_mask` is ignored.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If set to true, and the GoogleApiSource is not found, a new GoogleApiSource
+           * will be created. In this situation, `update_mask` is ignored.
+           */
+          public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
+          /**
+           * Optional. The fields to be updated; only fields explicitly provided are updated. If no
+           * field mask is provided, all provided fields in the request are updated. To update all
+           * fields, provide a field mask of "*".
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. The fields to be updated; only fields explicitly provided are updated. If no field mask
+         is provided, all provided fields in the request are updated. To update all fields, provide a field
+         mask of "*".
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. The fields to be updated; only fields explicitly provided are updated. If no
+           * field mask is provided, all provided fields in the request are updated. To update all
+           * fields, provide a field mask of "*".
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set, validate the request and preview the review, but do not post it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
         /**
@@ -4359,6 +6237,505 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
       public class MessageBuses {
 
         /**
+         * Create a new MessageBus in a particular project and location.
+         *
+         * Create a request for the method "messageBuses.create".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent collection in which to add this message bus.
+         * @param content the {@link com.google.api.services.eventarc.v1.model.MessageBus}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.eventarc.v1.model.MessageBus content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends EventarcRequest<com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+parent}/messageBuses";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Create a new MessageBus in a particular project and location.
+           *
+           * Create a request for the method "messageBuses.create".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent collection in which to add this message bus.
+           * @param content the {@link com.google.api.services.eventarc.v1.model.MessageBus}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.eventarc.v1.model.MessageBus content) {
+            super(Eventarc.this, "POST", REST_PATH, content, com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent collection in which to add this message bus. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent collection in which to add this message bus.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent collection in which to add this message bus. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The user-provided ID to be assigned to the MessageBus. It should match the
+           * format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$)
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String messageBusId;
+
+          /** Required. The user-provided ID to be assigned to the MessageBus. It should match the format
+         (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$)
+           */
+          public java.lang.String getMessageBusId() {
+            return messageBusId;
+          }
+
+          /**
+           * Required. The user-provided ID to be assigned to the MessageBus. It should match the
+           * format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$)
+           */
+          public Create setMessageBusId(java.lang.String messageBusId) {
+            this.messageBusId = messageBusId;
+            return this;
+          }
+
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set, validate the request and preview the review, but do not post it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Delete a single message bus.
+         *
+         * Create a request for the method "messageBuses.delete".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the MessageBus to be deleted.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends EventarcRequest<com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/messageBuses/[^/]+$");
+
+          /**
+           * Delete a single message bus.
+           *
+           * Create a request for the method "messageBuses.delete".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the MessageBus to be deleted.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Eventarc.this, "DELETE", REST_PATH, null, com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/messageBuses/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the MessageBus to be deleted. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the MessageBus to be deleted.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the MessageBus to be deleted. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/messageBuses/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, and the MessageBus is not found, the request will succeed but
+           * no action will be taken on the server.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If set to true, and the MessageBus is not found, the request will succeed but no action
+         will be taken on the server.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If set to true, and the MessageBus is not found, the request will succeed but
+           * no action will be taken on the server.
+           */
+          public Delete setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
+          /**
+           * Optional. If provided, the MessageBus will only be deleted if the etag matches the
+           * current etag on the resource.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. If provided, the MessageBus will only be deleted if the etag matches the current etag on
+         the resource.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. If provided, the MessageBus will only be deleted if the etag matches the
+           * current etag on the resource.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set, validate the request and preview the review, but do not post it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
+          public Delete setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Get a single MessageBus.
+         *
+         * Create a request for the method "messageBuses.get".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the message bus to get.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends EventarcRequest<com.google.api.services.eventarc.v1.model.MessageBus> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/messageBuses/[^/]+$");
+
+          /**
+           * Get a single MessageBus.
+           *
+           * Create a request for the method "messageBuses.get".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the message bus to get.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Eventarc.this, "GET", REST_PATH, null, com.google.api.services.eventarc.v1.model.MessageBus.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/messageBuses/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the message bus to get. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the message bus to get.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the message bus to get. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/messageBuses/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
          * does not have a policy set.
          *
@@ -4554,6 +6931,633 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public GetIamPolicy set(String parameterName, Object value) {
             return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * List message buses.
+         *
+         * Create a request for the method "messageBuses.list".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent collection to list triggers on.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends EventarcRequest<com.google.api.services.eventarc.v1.model.ListMessageBusesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/messageBuses";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * List message buses.
+           *
+           * Create a request for the method "messageBuses.list".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent collection to list triggers on.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Eventarc.this, "GET", REST_PATH, null, com.google.api.services.eventarc.v1.model.ListMessageBusesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent collection to list triggers on. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent collection to list triggers on.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent collection to list triggers on. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The filter field that the list request will filter on. Possible filtersare
+           * described in https://google.aip.dev/160.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. The filter field that the list request will filter on. Possible filtersare described in
+         https://google.aip.dev/160.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. The filter field that the list request will filter on. Possible filtersare
+           * described in https://google.aip.dev/160.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The sorting order of the resources returned. Value should be a comma-
+           * separated list of fields. The default sorting order is ascending. To specify descending
+           * order for a field, append a `desc` suffix; for example: `name desc, update_time`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. The sorting order of the resources returned. Value should be a comma-separated list of
+         fields. The default sorting order is ascending. To specify descending order for a field, append a
+         `desc` suffix; for example: `name desc, update_time`.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. The sorting order of the resources returned. Value should be a comma-
+           * separated list of fields. The default sorting order is ascending. To specify descending
+           * order for a field, append a `desc` suffix; for example: `name desc, update_time`.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of results to return on each page. Note: The service may
+           * send fewer.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return on each page. Note: The service may send fewer.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of results to return on each page. Note: The service may
+           * send fewer.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. The page token; provide the value from the `next_page_token` field in a
+           * previous call to retrieve the subsequent page. When paginating, all other parameters
+           * provided must match the previous call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The page token; provide the value from the `next_page_token` field in a previous call to
+         retrieve the subsequent page. When paginating, all other parameters provided must match the
+         previous call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. The page token; provide the value from the `next_page_token` field in a
+           * previous call to retrieve the subsequent page. When paginating, all other parameters
+           * provided must match the previous call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * List message bus enrollments.
+         *
+         * Create a request for the method "messageBuses.listEnrollments".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link ListEnrollments#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent message bus to list enrollments on.
+         * @return the request
+         */
+        public ListEnrollments listEnrollments(java.lang.String parent) throws java.io.IOException {
+          ListEnrollments result = new ListEnrollments(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class ListEnrollments extends EventarcRequest<com.google.api.services.eventarc.v1.model.ListMessageBusEnrollmentsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}:listEnrollments";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/messageBuses/[^/]+$");
+
+          /**
+           * List message bus enrollments.
+           *
+           * Create a request for the method "messageBuses.listEnrollments".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link ListEnrollments#execute()} method to invoke the remote
+           * operation. <p> {@link ListEnrollments#initialize(com.google.api.client.googleapis.services.Abst
+           * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param parent Required. The parent message bus to list enrollments on.
+           * @since 1.13
+           */
+          protected ListEnrollments(java.lang.String parent) {
+            super(Eventarc.this, "GET", REST_PATH, null, com.google.api.services.eventarc.v1.model.ListMessageBusEnrollmentsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/messageBuses/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ListEnrollments set$Xgafv(java.lang.String $Xgafv) {
+            return (ListEnrollments) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ListEnrollments setAccessToken(java.lang.String accessToken) {
+            return (ListEnrollments) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ListEnrollments setAlt(java.lang.String alt) {
+            return (ListEnrollments) super.setAlt(alt);
+          }
+
+          @Override
+          public ListEnrollments setCallback(java.lang.String callback) {
+            return (ListEnrollments) super.setCallback(callback);
+          }
+
+          @Override
+          public ListEnrollments setFields(java.lang.String fields) {
+            return (ListEnrollments) super.setFields(fields);
+          }
+
+          @Override
+          public ListEnrollments setKey(java.lang.String key) {
+            return (ListEnrollments) super.setKey(key);
+          }
+
+          @Override
+          public ListEnrollments setOauthToken(java.lang.String oauthToken) {
+            return (ListEnrollments) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ListEnrollments setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ListEnrollments) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ListEnrollments setQuotaUser(java.lang.String quotaUser) {
+            return (ListEnrollments) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ListEnrollments setUploadType(java.lang.String uploadType) {
+            return (ListEnrollments) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ListEnrollments setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ListEnrollments) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent message bus to list enrollments on. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent message bus to list enrollments on.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent message bus to list enrollments on. */
+          public ListEnrollments setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/messageBuses/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of results to return on each page. Note: The service may
+           * send fewer.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return on each page. Note: The service may send fewer.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of results to return on each page. Note: The service may
+           * send fewer.
+           */
+          public ListEnrollments setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. The page token; provide the value from the `next_page_token` field in a
+           * previous call to retrieve the subsequent page. When paginating, all other parameters
+           * provided must match the previous call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The page token; provide the value from the `next_page_token` field in a previous call to
+         retrieve the subsequent page. When paginating, all other parameters provided must match the
+         previous call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. The page token; provide the value from the `next_page_token` field in a
+           * previous call to retrieve the subsequent page. When paginating, all other parameters
+           * provided must match the previous call that provided the page token.
+           */
+          public ListEnrollments setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public ListEnrollments set(String parameterName, Object value) {
+            return (ListEnrollments) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Update a single message bus.
+         *
+         * Create a request for the method "messageBuses.patch".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. Resource name of the form
+         *        projects/{project}/locations/{location}/messageBuses/{message_bus}
+         * @param content the {@link com.google.api.services.eventarc.v1.model.MessageBus}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.eventarc.v1.model.MessageBus content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends EventarcRequest<com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/messageBuses/[^/]+$");
+
+          /**
+           * Update a single message bus.
+           *
+           * Create a request for the method "messageBuses.patch".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. Resource name of the form
+         *        projects/{project}/locations/{location}/messageBuses/{message_bus}
+           * @param content the {@link com.google.api.services.eventarc.v1.model.MessageBus}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.eventarc.v1.model.MessageBus content) {
+            super(Eventarc.this, "PATCH", REST_PATH, content, com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/messageBuses/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. Resource name of the form
+           * projects/{project}/locations/{location}/messageBuses/{message_bus}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. Resource name of the form
+         projects/{project}/locations/{location}/messageBuses/{message_bus}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. Resource name of the form
+           * projects/{project}/locations/{location}/messageBuses/{message_bus}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/messageBuses/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, and the MessageBus is not found, a new MessageBus will be
+           * created. In this situation, `update_mask` is ignored.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If set to true, and the MessageBus is not found, a new MessageBus will be created. In
+         this situation, `update_mask` is ignored.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If set to true, and the MessageBus is not found, a new MessageBus will be
+           * created. In this situation, `update_mask` is ignored.
+           */
+          public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
+          /**
+           * Optional. The fields to be updated; only fields explicitly provided are updated. If no
+           * field mask is provided, all provided fields in the request are updated. To update all
+           * fields, provide a field mask of "*".
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. The fields to be updated; only fields explicitly provided are updated. If no field mask
+         is provided, all provided fields in the request are updated. To update all fields, provide a field
+         mask of "*".
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. The fields to be updated; only fields explicitly provided are updated. If no
+           * field mask is provided, all provided fields in the request are updated. To update all
+           * fields, provide a field mask of "*".
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set, validate the request and preview the review, but do not post it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
         /**
@@ -5503,6 +8507,498 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
       public class Pipelines {
 
         /**
+         * Create a new Pipeline in a particular project and location.
+         *
+         * Create a request for the method "pipelines.create".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent collection in which to add this pipeline.
+         * @param content the {@link com.google.api.services.eventarc.v1.model.Pipeline}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.eventarc.v1.model.Pipeline content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends EventarcRequest<com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+parent}/pipelines";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Create a new Pipeline in a particular project and location.
+           *
+           * Create a request for the method "pipelines.create".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent collection in which to add this pipeline.
+           * @param content the {@link com.google.api.services.eventarc.v1.model.Pipeline}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.eventarc.v1.model.Pipeline content) {
+            super(Eventarc.this, "POST", REST_PATH, content, com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent collection in which to add this pipeline. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent collection in which to add this pipeline.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent collection in which to add this pipeline. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. The user-provided ID to be assigned to the Pipeline. */
+          @com.google.api.client.util.Key
+          private java.lang.String pipelineId;
+
+          /** Required. The user-provided ID to be assigned to the Pipeline.
+           */
+          public java.lang.String getPipelineId() {
+            return pipelineId;
+          }
+
+          /** Required. The user-provided ID to be assigned to the Pipeline. */
+          public Create setPipelineId(java.lang.String pipelineId) {
+            this.pipelineId = pipelineId;
+            return this;
+          }
+
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set, validate the request and preview the review, but do not post it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Delete a single pipeline.
+         *
+         * Create a request for the method "pipelines.delete".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the Pipeline to be deleted.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends EventarcRequest<com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/pipelines/[^/]+$");
+
+          /**
+           * Delete a single pipeline.
+           *
+           * Create a request for the method "pipelines.delete".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the Pipeline to be deleted.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Eventarc.this, "DELETE", REST_PATH, null, com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/pipelines/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the Pipeline to be deleted. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the Pipeline to be deleted.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the Pipeline to be deleted. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/pipelines/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, and the Pipeline is not found, the request will succeed but
+           * no action will be taken on the server.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If set to true, and the Pipeline is not found, the request will succeed but no action
+         will be taken on the server.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If set to true, and the Pipeline is not found, the request will succeed but
+           * no action will be taken on the server.
+           */
+          public Delete setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
+          /**
+           * Optional. If provided, the Pipeline will only be deleted if the etag matches the
+           * current etag on the resource.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. If provided, the Pipeline will only be deleted if the etag matches the current etag on
+         the resource.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. If provided, the Pipeline will only be deleted if the etag matches the
+           * current etag on the resource.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set, validate the request and preview the review, but do not post it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
+          public Delete setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Get a single Pipeline.
+         *
+         * Create a request for the method "pipelines.get".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the pipeline to get.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends EventarcRequest<com.google.api.services.eventarc.v1.model.Pipeline> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/pipelines/[^/]+$");
+
+          /**
+           * Get a single Pipeline.
+           *
+           * Create a request for the method "pipelines.get".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the pipeline to get.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Eventarc.this, "GET", REST_PATH, null, com.google.api.services.eventarc.v1.model.Pipeline.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/pipelines/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the pipeline to get. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the pipeline to get.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the pipeline to get. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/pipelines/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
          * does not have a policy set.
          *
@@ -5698,6 +9194,448 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public GetIamPolicy set(String parameterName, Object value) {
             return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * List pipelines.
+         *
+         * Create a request for the method "pipelines.list".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent collection to list pipelines on.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends EventarcRequest<com.google.api.services.eventarc.v1.model.ListPipelinesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/pipelines";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * List pipelines.
+           *
+           * Create a request for the method "pipelines.list".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent collection to list pipelines on.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Eventarc.this, "GET", REST_PATH, null, com.google.api.services.eventarc.v1.model.ListPipelinesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent collection to list pipelines on. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent collection to list pipelines on.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent collection to list pipelines on. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The filter field that the list request will filter on. Possible filters are
+           * described in https://google.aip.dev/160.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. The filter field that the list request will filter on. Possible filters are described in
+         https://google.aip.dev/160.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. The filter field that the list request will filter on. Possible filters are
+           * described in https://google.aip.dev/160.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The sorting order of the resources returned. Value should be a comma-
+           * separated list of fields. The default sorting order is ascending. To specify descending
+           * order for a field, append a `desc` suffix; for example: `name desc, update_time`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. The sorting order of the resources returned. Value should be a comma-separated list of
+         fields. The default sorting order is ascending. To specify descending order for a field, append a
+         `desc` suffix; for example: `name desc, update_time`.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. The sorting order of the resources returned. Value should be a comma-
+           * separated list of fields. The default sorting order is ascending. To specify descending
+           * order for a field, append a `desc` suffix; for example: `name desc, update_time`.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of results to return on each page. Note: The service may
+           * send fewer.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return on each page. Note: The service may send fewer.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of results to return on each page. Note: The service may
+           * send fewer.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. The page token; provide the value from the `next_page_token` field in a
+           * previous call to retrieve the subsequent page. When paginating, all other parameters
+           * provided must match the previous call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The page token; provide the value from the `next_page_token` field in a previous call to
+         retrieve the subsequent page. When paginating, all other parameters provided must match the
+         previous call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. The page token; provide the value from the `next_page_token` field in a
+           * previous call to retrieve the subsequent page. When paginating, all other parameters
+           * provided must match the previous call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Update a single pipeline.
+         *
+         * Create a request for the method "pipelines.patch".
+         *
+         * This request holds the parameters needed by the eventarc server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The resource name of the Pipeline. Must be unique within the location of the project and
+         *        must be in `projects/{project}/locations/{location}/pipelines/{pipeline}` format.
+         * @param content the {@link com.google.api.services.eventarc.v1.model.Pipeline}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.eventarc.v1.model.Pipeline content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends EventarcRequest<com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/pipelines/[^/]+$");
+
+          /**
+           * Update a single pipeline.
+           *
+           * Create a request for the method "pipelines.patch".
+           *
+           * This request holds the parameters needed by the the eventarc server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The resource name of the Pipeline. Must be unique within the location of the project and
+         *        must be in `projects/{project}/locations/{location}/pipelines/{pipeline}` format.
+           * @param content the {@link com.google.api.services.eventarc.v1.model.Pipeline}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.eventarc.v1.model.Pipeline content) {
+            super(Eventarc.this, "PATCH", REST_PATH, content, com.google.api.services.eventarc.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/pipelines/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The resource name of the Pipeline. Must be unique within the location of
+           * the project and must be in
+           * `projects/{project}/locations/{location}/pipelines/{pipeline}` format.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The resource name of the Pipeline. Must be unique within the location of the project
+         and must be in `projects/{project}/locations/{location}/pipelines/{pipeline}` format.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The resource name of the Pipeline. Must be unique within the location of
+           * the project and must be in
+           * `projects/{project}/locations/{location}/pipelines/{pipeline}` format.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/pipelines/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, and the Pipeline is not found, a new Pipeline will be
+           * created. In this situation, `update_mask` is ignored.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If set to true, and the Pipeline is not found, a new Pipeline will be created. In this
+         situation, `update_mask` is ignored.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If set to true, and the Pipeline is not found, a new Pipeline will be
+           * created. In this situation, `update_mask` is ignored.
+           */
+          public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
+          /**
+           * Optional. The fields to be updated; only fields explicitly provided are updated. If no
+           * field mask is provided, all provided fields in the request are updated. To update all
+           * fields, provide a field mask of "*".
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. The fields to be updated; only fields explicitly provided are updated. If no field mask
+         is provided, all provided fields in the request are updated. To update all fields, provide a field
+         mask of "*".
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. The fields to be updated; only fields explicitly provided are updated. If no
+           * field mask is provided, all provided fields in the request are updated. To update all
+           * fields, provide a field mask of "*".
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set, validate the request and preview the review, but do not post it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
         /**

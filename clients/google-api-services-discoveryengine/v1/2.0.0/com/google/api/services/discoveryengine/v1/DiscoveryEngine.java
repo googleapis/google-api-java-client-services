@@ -9019,6 +9019,173 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 return (Search) super.set(parameterName, value);
               }
             }
+            /**
+             * Performs a search. Similar to the SearchService.Search method, but a lite version that allows API
+             * key for authentication, where OAuth and IAM checks are not required. Only public website search
+             * is supported by this method. If data stores and engines not associated with public website search
+             * are specified, a `FAILED_PRECONDITION` error is returned. This method can be used for easy
+             * onboarding without having to implement an authentication backend. However, it is strongly
+             * recommended to use SearchService.Search instead with required OAuth and IAM checks to provide
+             * better data security.
+             *
+             * Create a request for the method "servingConfigs.searchLite".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link SearchLite#execute()} method to invoke the remote operation.
+             *
+             * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
+             *        ions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
+             *        ions/global/collections/default_collection/dataStores/default_data_store/servingConfigs/de
+             *        fault_serving_config`. This field is used to identify the serving configuration name, set
+             *        of models used to make the search.
+             * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1SearchRequest}
+             * @return the request
+             */
+            public SearchLite searchLite(java.lang.String servingConfig, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1SearchRequest content) throws java.io.IOException {
+              SearchLite result = new SearchLite(servingConfig, content);
+              initialize(result);
+              return result;
+            }
+
+            public class SearchLite extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1SearchResponse> {
+
+              private static final String REST_PATH = "v1/{+servingConfig}:searchLite";
+
+              private final java.util.regex.Pattern SERVING_CONFIG_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/servingConfigs/[^/]+$");
+
+              /**
+               * Performs a search. Similar to the SearchService.Search method, but a lite version that allows
+               * API key for authentication, where OAuth and IAM checks are not required. Only public website
+               * search is supported by this method. If data stores and engines not associated with public
+               * website search are specified, a `FAILED_PRECONDITION` error is returned. This method can be
+               * used for easy onboarding without having to implement an authentication backend. However, it is
+               * strongly recommended to use SearchService.Search instead with required OAuth and IAM checks to
+               * provide better data security.
+               *
+               * Create a request for the method "servingConfigs.searchLite".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link SearchLite#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * SearchLite#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
+             *        ions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
+             *        ions/global/collections/default_collection/dataStores/default_data_store/servingConfigs/de
+             *        fault_serving_config`. This field is used to identify the serving configuration name, set
+             *        of models used to make the search.
+               * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1SearchRequest}
+               * @since 1.13
+               */
+              protected SearchLite(java.lang.String servingConfig, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1SearchRequest content) {
+                super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1SearchResponse.class);
+                this.servingConfig = com.google.api.client.util.Preconditions.checkNotNull(servingConfig, "Required parameter servingConfig must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(SERVING_CONFIG_PATTERN.matcher(servingConfig).matches(),
+                      "Parameter servingConfig must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/servingConfigs/[^/]+$");
+                }
+              }
+
+              @Override
+              public SearchLite set$Xgafv(java.lang.String $Xgafv) {
+                return (SearchLite) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public SearchLite setAccessToken(java.lang.String accessToken) {
+                return (SearchLite) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public SearchLite setAlt(java.lang.String alt) {
+                return (SearchLite) super.setAlt(alt);
+              }
+
+              @Override
+              public SearchLite setCallback(java.lang.String callback) {
+                return (SearchLite) super.setCallback(callback);
+              }
+
+              @Override
+              public SearchLite setFields(java.lang.String fields) {
+                return (SearchLite) super.setFields(fields);
+              }
+
+              @Override
+              public SearchLite setKey(java.lang.String key) {
+                return (SearchLite) super.setKey(key);
+              }
+
+              @Override
+              public SearchLite setOauthToken(java.lang.String oauthToken) {
+                return (SearchLite) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public SearchLite setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (SearchLite) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public SearchLite setQuotaUser(java.lang.String quotaUser) {
+                return (SearchLite) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public SearchLite setUploadType(java.lang.String uploadType) {
+                return (SearchLite) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public SearchLite setUploadProtocol(java.lang.String uploadProtocol) {
+                return (SearchLite) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the Search serving config, such as `projects/locatio
+               * ns/global/collections/default_collection/engines/servingConfigs/default_serving_con
+               * fig`, or `projects/locations/global/collections/default_collection/dataStores/defau
+               * lt_data_store/servingConfigs/default_serving_config`. This field is used to
+               * identify the serving configuration name, set of models used to make the search.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String servingConfig;
+
+              /** Required. The resource name of the Search serving config, such as `projects/locations/global/collec
+             tions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locations/glo
+             bal/collections/default_collection/dataStores/default_data_store/servingConfigs/default_serving_con
+             fig`. This field is used to identify the serving configuration name, set of models used to make the
+             search.
+               */
+              public java.lang.String getServingConfig() {
+                return servingConfig;
+              }
+
+              /**
+               * Required. The resource name of the Search serving config, such as `projects/locatio
+               * ns/global/collections/default_collection/engines/servingConfigs/default_serving_con
+               * fig`, or `projects/locations/global/collections/default_collection/dataStores/defau
+               * lt_data_store/servingConfigs/default_serving_config`. This field is used to
+               * identify the serving configuration name, set of models used to make the search.
+               */
+              public SearchLite setServingConfig(java.lang.String servingConfig) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(SERVING_CONFIG_PATTERN.matcher(servingConfig).matches(),
+                      "Parameter servingConfig must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/servingConfigs/[^/]+$");
+                }
+                this.servingConfig = servingConfig;
+                return this;
+              }
+
+              @Override
+              public SearchLite set(String parameterName, Object value) {
+                return (SearchLite) super.set(parameterName, value);
+              }
+            }
 
           }
           /**
@@ -17177,6 +17344,173 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               @Override
               public Search set(String parameterName, Object value) {
                 return (Search) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Performs a search. Similar to the SearchService.Search method, but a lite version that allows API
+             * key for authentication, where OAuth and IAM checks are not required. Only public website search
+             * is supported by this method. If data stores and engines not associated with public website search
+             * are specified, a `FAILED_PRECONDITION` error is returned. This method can be used for easy
+             * onboarding without having to implement an authentication backend. However, it is strongly
+             * recommended to use SearchService.Search instead with required OAuth and IAM checks to provide
+             * better data security.
+             *
+             * Create a request for the method "servingConfigs.searchLite".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link SearchLite#execute()} method to invoke the remote operation.
+             *
+             * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
+             *        ions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
+             *        ions/global/collections/default_collection/dataStores/default_data_store/servingConfigs/de
+             *        fault_serving_config`. This field is used to identify the serving configuration name, set
+             *        of models used to make the search.
+             * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1SearchRequest}
+             * @return the request
+             */
+            public SearchLite searchLite(java.lang.String servingConfig, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1SearchRequest content) throws java.io.IOException {
+              SearchLite result = new SearchLite(servingConfig, content);
+              initialize(result);
+              return result;
+            }
+
+            public class SearchLite extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1SearchResponse> {
+
+              private static final String REST_PATH = "v1/{+servingConfig}:searchLite";
+
+              private final java.util.regex.Pattern SERVING_CONFIG_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/servingConfigs/[^/]+$");
+
+              /**
+               * Performs a search. Similar to the SearchService.Search method, but a lite version that allows
+               * API key for authentication, where OAuth and IAM checks are not required. Only public website
+               * search is supported by this method. If data stores and engines not associated with public
+               * website search are specified, a `FAILED_PRECONDITION` error is returned. This method can be
+               * used for easy onboarding without having to implement an authentication backend. However, it is
+               * strongly recommended to use SearchService.Search instead with required OAuth and IAM checks to
+               * provide better data security.
+               *
+               * Create a request for the method "servingConfigs.searchLite".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link SearchLite#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * SearchLite#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
+             *        ions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
+             *        ions/global/collections/default_collection/dataStores/default_data_store/servingConfigs/de
+             *        fault_serving_config`. This field is used to identify the serving configuration name, set
+             *        of models used to make the search.
+               * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1SearchRequest}
+               * @since 1.13
+               */
+              protected SearchLite(java.lang.String servingConfig, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1SearchRequest content) {
+                super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1SearchResponse.class);
+                this.servingConfig = com.google.api.client.util.Preconditions.checkNotNull(servingConfig, "Required parameter servingConfig must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(SERVING_CONFIG_PATTERN.matcher(servingConfig).matches(),
+                      "Parameter servingConfig must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/servingConfigs/[^/]+$");
+                }
+              }
+
+              @Override
+              public SearchLite set$Xgafv(java.lang.String $Xgafv) {
+                return (SearchLite) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public SearchLite setAccessToken(java.lang.String accessToken) {
+                return (SearchLite) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public SearchLite setAlt(java.lang.String alt) {
+                return (SearchLite) super.setAlt(alt);
+              }
+
+              @Override
+              public SearchLite setCallback(java.lang.String callback) {
+                return (SearchLite) super.setCallback(callback);
+              }
+
+              @Override
+              public SearchLite setFields(java.lang.String fields) {
+                return (SearchLite) super.setFields(fields);
+              }
+
+              @Override
+              public SearchLite setKey(java.lang.String key) {
+                return (SearchLite) super.setKey(key);
+              }
+
+              @Override
+              public SearchLite setOauthToken(java.lang.String oauthToken) {
+                return (SearchLite) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public SearchLite setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (SearchLite) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public SearchLite setQuotaUser(java.lang.String quotaUser) {
+                return (SearchLite) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public SearchLite setUploadType(java.lang.String uploadType) {
+                return (SearchLite) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public SearchLite setUploadProtocol(java.lang.String uploadProtocol) {
+                return (SearchLite) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the Search serving config, such as `projects/locatio
+               * ns/global/collections/default_collection/engines/servingConfigs/default_serving_con
+               * fig`, or `projects/locations/global/collections/default_collection/dataStores/defau
+               * lt_data_store/servingConfigs/default_serving_config`. This field is used to
+               * identify the serving configuration name, set of models used to make the search.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String servingConfig;
+
+              /** Required. The resource name of the Search serving config, such as `projects/locations/global/collec
+             tions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locations/glo
+             bal/collections/default_collection/dataStores/default_data_store/servingConfigs/default_serving_con
+             fig`. This field is used to identify the serving configuration name, set of models used to make the
+             search.
+               */
+              public java.lang.String getServingConfig() {
+                return servingConfig;
+              }
+
+              /**
+               * Required. The resource name of the Search serving config, such as `projects/locatio
+               * ns/global/collections/default_collection/engines/servingConfigs/default_serving_con
+               * fig`, or `projects/locations/global/collections/default_collection/dataStores/defau
+               * lt_data_store/servingConfigs/default_serving_config`. This field is used to
+               * identify the serving configuration name, set of models used to make the search.
+               */
+              public SearchLite setServingConfig(java.lang.String servingConfig) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(SERVING_CONFIG_PATTERN.matcher(servingConfig).matches(),
+                      "Parameter servingConfig must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/servingConfigs/[^/]+$");
+                }
+                this.servingConfig = servingConfig;
+                return this;
+              }
+
+              @Override
+              public SearchLite set(String parameterName, Object value) {
+                return (SearchLite) super.set(parameterName, value);
               }
             }
 
@@ -26197,6 +26531,173 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             @Override
             public Search set(String parameterName, Object value) {
               return (Search) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Performs a search. Similar to the SearchService.Search method, but a lite version that allows API
+           * key for authentication, where OAuth and IAM checks are not required. Only public website search
+           * is supported by this method. If data stores and engines not associated with public website search
+           * are specified, a `FAILED_PRECONDITION` error is returned. This method can be used for easy
+           * onboarding without having to implement an authentication backend. However, it is strongly
+           * recommended to use SearchService.Search instead with required OAuth and IAM checks to provide
+           * better data security.
+           *
+           * Create a request for the method "servingConfigs.searchLite".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link SearchLite#execute()} method to invoke the remote operation.
+           *
+           * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
+           *        ions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
+           *        ions/global/collections/default_collection/dataStores/default_data_store/servingConfigs/de
+           *        fault_serving_config`. This field is used to identify the serving configuration name, set
+           *        of models used to make the search.
+           * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1SearchRequest}
+           * @return the request
+           */
+          public SearchLite searchLite(java.lang.String servingConfig, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1SearchRequest content) throws java.io.IOException {
+            SearchLite result = new SearchLite(servingConfig, content);
+            initialize(result);
+            return result;
+          }
+
+          public class SearchLite extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1SearchResponse> {
+
+            private static final String REST_PATH = "v1/{+servingConfig}:searchLite";
+
+            private final java.util.regex.Pattern SERVING_CONFIG_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/servingConfigs/[^/]+$");
+
+            /**
+             * Performs a search. Similar to the SearchService.Search method, but a lite version that allows
+             * API key for authentication, where OAuth and IAM checks are not required. Only public website
+             * search is supported by this method. If data stores and engines not associated with public
+             * website search are specified, a `FAILED_PRECONDITION` error is returned. This method can be
+             * used for easy onboarding without having to implement an authentication backend. However, it is
+             * strongly recommended to use SearchService.Search instead with required OAuth and IAM checks to
+             * provide better data security.
+             *
+             * Create a request for the method "servingConfigs.searchLite".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link SearchLite#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * SearchLite#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
+           *        ions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
+           *        ions/global/collections/default_collection/dataStores/default_data_store/servingConfigs/de
+           *        fault_serving_config`. This field is used to identify the serving configuration name, set
+           *        of models used to make the search.
+             * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1SearchRequest}
+             * @since 1.13
+             */
+            protected SearchLite(java.lang.String servingConfig, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1SearchRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1SearchResponse.class);
+              this.servingConfig = com.google.api.client.util.Preconditions.checkNotNull(servingConfig, "Required parameter servingConfig must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(SERVING_CONFIG_PATTERN.matcher(servingConfig).matches(),
+                    "Parameter servingConfig must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/servingConfigs/[^/]+$");
+              }
+            }
+
+            @Override
+            public SearchLite set$Xgafv(java.lang.String $Xgafv) {
+              return (SearchLite) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SearchLite setAccessToken(java.lang.String accessToken) {
+              return (SearchLite) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SearchLite setAlt(java.lang.String alt) {
+              return (SearchLite) super.setAlt(alt);
+            }
+
+            @Override
+            public SearchLite setCallback(java.lang.String callback) {
+              return (SearchLite) super.setCallback(callback);
+            }
+
+            @Override
+            public SearchLite setFields(java.lang.String fields) {
+              return (SearchLite) super.setFields(fields);
+            }
+
+            @Override
+            public SearchLite setKey(java.lang.String key) {
+              return (SearchLite) super.setKey(key);
+            }
+
+            @Override
+            public SearchLite setOauthToken(java.lang.String oauthToken) {
+              return (SearchLite) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SearchLite setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SearchLite) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SearchLite setQuotaUser(java.lang.String quotaUser) {
+              return (SearchLite) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SearchLite setUploadType(java.lang.String uploadType) {
+              return (SearchLite) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SearchLite setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SearchLite) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the Search serving config, such as `projects/locations
+             * /global/collections/default_collection/engines/servingConfigs/default_serving_config`
+             * , or `projects/locations/global/collections/default_collection/dataStores/default_dat
+             * a_store/servingConfigs/default_serving_config`. This field is used to identify the
+             * serving configuration name, set of models used to make the search.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String servingConfig;
+
+            /** Required. The resource name of the Search serving config, such as `projects/locations/global/collec
+           tions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locations/glo
+           bal/collections/default_collection/dataStores/default_data_store/servingConfigs/default_serving_con
+           fig`. This field is used to identify the serving configuration name, set of models used to make the
+           search.
+             */
+            public java.lang.String getServingConfig() {
+              return servingConfig;
+            }
+
+            /**
+             * Required. The resource name of the Search serving config, such as `projects/locations
+             * /global/collections/default_collection/engines/servingConfigs/default_serving_config`
+             * , or `projects/locations/global/collections/default_collection/dataStores/default_dat
+             * a_store/servingConfigs/default_serving_config`. This field is used to identify the
+             * serving configuration name, set of models used to make the search.
+             */
+            public SearchLite setServingConfig(java.lang.String servingConfig) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(SERVING_CONFIG_PATTERN.matcher(servingConfig).matches(),
+                    "Parameter servingConfig must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/servingConfigs/[^/]+$");
+              }
+              this.servingConfig = servingConfig;
+              return this;
+            }
+
+            @Override
+            public SearchLite set(String parameterName, Object value) {
+              return (SearchLite) super.set(parameterName, value);
             }
           }
 

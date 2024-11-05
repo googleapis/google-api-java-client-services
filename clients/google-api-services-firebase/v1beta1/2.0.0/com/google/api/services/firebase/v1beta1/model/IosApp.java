@@ -89,8 +89,10 @@ public final class IosApp extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Output only. Timestamp of when the App will be considered expired and cannot be undeleted. This
-   * value is only provided if the App is in the `DELETED` state.
+   * Output only. If the App has been removed from the Project, this is the timestamp of when the
+   * App is considered expired and will be permanently deleted. After this time, the App cannot be
+   * undeleted (that is, restored to the Project). This value is only provided if the App is in the
+   * `DELETED` state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -267,8 +269,10 @@ public final class IosApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Timestamp of when the App will be considered expired and cannot be undeleted. This
-   * value is only provided if the App is in the `DELETED` state.
+   * Output only. If the App has been removed from the Project, this is the timestamp of when the
+   * App is considered expired and will be permanently deleted. After this time, the App cannot be
+   * undeleted (that is, restored to the Project). This value is only provided if the App is in the
+   * `DELETED` state.
    * @return value or {@code null} for none
    */
   public String getExpireTime() {
@@ -276,8 +280,10 @@ public final class IosApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Timestamp of when the App will be considered expired and cannot be undeleted. This
-   * value is only provided if the App is in the `DELETED` state.
+   * Output only. If the App has been removed from the Project, this is the timestamp of when the
+   * App is considered expired and will be permanently deleted. After this time, the App cannot be
+   * undeleted (that is, restored to the Project). This value is only provided if the App is in the
+   * `DELETED` state.
    * @param expireTime expireTime or {@code null} for none
    */
   public IosApp setExpireTime(String expireTime) {

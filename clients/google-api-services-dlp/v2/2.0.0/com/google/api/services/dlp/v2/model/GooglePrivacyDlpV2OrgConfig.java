@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2OrgConfig extends com.google.api.client.jso
 
   /**
    * The project that will run the scan. The DLP service account that exists within this project
-   * must have access to all resources that are profiled, and the Cloud DLP API must be enabled.
+   * must have access to all resources that are profiled, and the DLP API must be enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class GooglePrivacyDlpV2OrgConfig extends com.google.api.client.jso
 
   /**
    * The project that will run the scan. The DLP service account that exists within this project
-   * must have access to all resources that are profiled, and the Cloud DLP API must be enabled.
+   * must have access to all resources that are profiled, and the DLP API must be enabled.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -73,7 +73,7 @@ public final class GooglePrivacyDlpV2OrgConfig extends com.google.api.client.jso
 
   /**
    * The project that will run the scan. The DLP service account that exists within this project
-   * must have access to all resources that are profiled, and the Cloud DLP API must be enabled.
+   * must have access to all resources that are profiled, and the DLP API must be enabled.
    * @param projectId projectId or {@code null} for none
    */
   public GooglePrivacyDlpV2OrgConfig setProjectId(java.lang.String projectId) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * A data connection to allow DLP to profile data in locations that require additional
+ * A data connection to allow the DLP API to profile data in locations that require additional
  * configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

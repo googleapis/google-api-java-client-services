@@ -45,14 +45,6 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
   private java.lang.String location;
 
   /**
-   * ID of Cloud Run Service this revision belongs to. Was never set, is not exported to v1 proto
-   * and public protos. Do not export to v1beta1 public proto.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String serviceName;
-
-  /**
    * URI of Cloud Run service this revision belongs to.
    * The value may be {@code null}.
    */
@@ -97,25 +89,6 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
    */
   public CloudRunRevisionInfo setLocation(java.lang.String location) {
     this.location = location;
-    return this;
-  }
-
-  /**
-   * ID of Cloud Run Service this revision belongs to. Was never set, is not exported to v1 proto
-   * and public protos. Do not export to v1beta1 public proto.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getServiceName() {
-    return serviceName;
-  }
-
-  /**
-   * ID of Cloud Run Service this revision belongs to. Was never set, is not exported to v1 proto
-   * and public protos. Do not export to v1beta1 public proto.
-   * @param serviceName serviceName or {@code null} for none
-   */
-  public CloudRunRevisionInfo setServiceName(java.lang.String serviceName) {
-    this.serviceName = serviceName;
     return this;
   }
 

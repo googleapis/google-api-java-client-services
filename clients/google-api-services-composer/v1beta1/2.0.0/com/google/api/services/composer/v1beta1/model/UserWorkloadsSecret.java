@@ -34,7 +34,8 @@ public final class UserWorkloadsSecret extends com.google.api.client.json.Generi
    * Optional. The "data" field of Kubernetes Secret, organized in key-value pairs, which can
    * contain sensitive values such as a password, a token, or a key. The values for all keys have to
    * be base64-encoded strings. For details see:
-   * https://kubernetes.io/docs/concepts/configuration/secret/
+   * https://kubernetes.io/docs/concepts/configuration/secret/ Example: { "example":
+   * "ZXhhbXBsZV92YWx1ZQ==", "another-example": "YW5vdGhlcl9leGFtcGxlX3ZhbHVl" }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +53,8 @@ public final class UserWorkloadsSecret extends com.google.api.client.json.Generi
    * Optional. The "data" field of Kubernetes Secret, organized in key-value pairs, which can
    * contain sensitive values such as a password, a token, or a key. The values for all keys have to
    * be base64-encoded strings. For details see:
-   * https://kubernetes.io/docs/concepts/configuration/secret/
+   * https://kubernetes.io/docs/concepts/configuration/secret/ Example: { "example":
+   * "ZXhhbXBsZV92YWx1ZQ==", "another-example": "YW5vdGhlcl9leGFtcGxlX3ZhbHVl" }
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getData() {
@@ -63,7 +65,8 @@ public final class UserWorkloadsSecret extends com.google.api.client.json.Generi
    * Optional. The "data" field of Kubernetes Secret, organized in key-value pairs, which can
    * contain sensitive values such as a password, a token, or a key. The values for all keys have to
    * be base64-encoded strings. For details see:
-   * https://kubernetes.io/docs/concepts/configuration/secret/
+   * https://kubernetes.io/docs/concepts/configuration/secret/ Example: { "example":
+   * "ZXhhbXBsZV92YWx1ZQ==", "another-example": "YW5vdGhlcl9leGFtcGxlX3ZhbHVl" }
    * @param data data or {@code null} for none
    */
   public UserWorkloadsSecret setData(java.util.Map<String, java.lang.String> data) {

@@ -30,7 +30,7 @@ package com.google.api.services.composer.v1beta1.model;
 public final class Environment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Configuration parameters for this environment.
+   * Optional. Configuration parameters for this environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +55,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The resource name of the environment, in the form:
+   * Identifier. The resource name of the environment, in the form:
    * "projects/{projectId}/locations/{locationId}/environments/{environmentId}" EnvironmentId must
    * start with a lowercase letter followed by up to 63 lowercase letters, numbers, or hyphens, and
    * cannot end with a hyphen.
@@ -108,7 +108,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.String uuid;
 
   /**
-   * Configuration parameters for this environment.
+   * Optional. Configuration parameters for this environment.
    * @return value or {@code null} for none
    */
   public EnvironmentConfig getConfig() {
@@ -116,7 +116,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration parameters for this environment.
+   * Optional. Configuration parameters for this environment.
    * @param config config or {@code null} for none
    */
   public Environment setConfig(EnvironmentConfig config) {
@@ -167,7 +167,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the environment, in the form:
+   * Identifier. The resource name of the environment, in the form:
    * "projects/{projectId}/locations/{locationId}/environments/{environmentId}" EnvironmentId must
    * start with a lowercase letter followed by up to 63 lowercase letters, numbers, or hyphens, and
    * cannot end with a hyphen.
@@ -178,7 +178,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the environment, in the form:
+   * Identifier. The resource name of the environment, in the form:
    * "projects/{projectId}/locations/{locationId}/environments/{environmentId}" EnvironmentId must
    * start with a lowercase letter followed by up to 63 lowercase letters, numbers, or hyphens, and
    * cannot end with a hyphen.

@@ -32,7 +32,8 @@ public final class UserWorkloadsConfigMap extends com.google.api.client.json.Gen
 
   /**
    * Optional. The "data" field of Kubernetes ConfigMap, organized in key-value pairs. For details
-   * see: https://kubernetes.io/docs/concepts/configuration/configmap/
+   * see: https://kubernetes.io/docs/concepts/configuration/configmap/ Example: { "example_key":
+   * "example_value", "another_key": "another_value" }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +49,8 @@ public final class UserWorkloadsConfigMap extends com.google.api.client.json.Gen
 
   /**
    * Optional. The "data" field of Kubernetes ConfigMap, organized in key-value pairs. For details
-   * see: https://kubernetes.io/docs/concepts/configuration/configmap/
+   * see: https://kubernetes.io/docs/concepts/configuration/configmap/ Example: { "example_key":
+   * "example_value", "another_key": "another_value" }
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getData() {
@@ -57,7 +59,8 @@ public final class UserWorkloadsConfigMap extends com.google.api.client.json.Gen
 
   /**
    * Optional. The "data" field of Kubernetes ConfigMap, organized in key-value pairs. For details
-   * see: https://kubernetes.io/docs/concepts/configuration/configmap/
+   * see: https://kubernetes.io/docs/concepts/configuration/configmap/ Example: { "example_key":
+   * "example_value", "another_key": "another_value" }
    * @param data data or {@code null} for none
    */
   public UserWorkloadsConfigMap setData(java.util.Map<String, java.lang.String> data) {

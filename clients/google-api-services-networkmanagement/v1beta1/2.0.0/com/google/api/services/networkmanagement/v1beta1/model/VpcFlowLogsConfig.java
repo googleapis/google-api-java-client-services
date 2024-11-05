@@ -116,6 +116,14 @@ public final class VpcFlowLogsConfig extends com.google.api.client.json.GenericJ
   private java.lang.String state;
 
   /**
+   * Output only. A diagnostic bit - describes the state of the configured target resource for
+   * diagnostic purposes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetResourceState;
+
+  /**
    * Output only. The time the config was updated.
    * The value may be {@code null}.
    */
@@ -330,6 +338,25 @@ public final class VpcFlowLogsConfig extends com.google.api.client.json.GenericJ
    */
   public VpcFlowLogsConfig setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. A diagnostic bit - describes the state of the configured target resource for
+   * diagnostic purposes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetResourceState() {
+    return targetResourceState;
+  }
+
+  /**
+   * Output only. A diagnostic bit - describes the state of the configured target resource for
+   * diagnostic purposes.
+   * @param targetResourceState targetResourceState or {@code null} for none
+   */
+  public VpcFlowLogsConfig setTargetResourceState(java.lang.String targetResourceState) {
+    this.targetResourceState = targetResourceState;
     return this;
   }
 

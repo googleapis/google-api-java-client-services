@@ -50,7 +50,7 @@ public final class FindNearest extends com.google.api.client.json.GenericJson {
    * Optional. Option to specify a threshold for which no less similar documents will be returned.
    * The behavior of the specified `distance_measure` will affect the meaning of the distance
    * threshold. Since DOT_PRODUCT distances increase when the vectors are more similar, the
-   * comparison is inverted. For EUCLIDEAN, COSINE: WHERE distance <= distance_threshold For
+   * comparison is inverted. * For EUCLIDEAN, COSINE: WHERE distance <= distance_threshold * For
    * DOT_PRODUCT: WHERE distance >= distance_threshold
    * The value may be {@code null}.
    */
@@ -121,7 +121,7 @@ public final class FindNearest extends com.google.api.client.json.GenericJson {
    * Optional. Option to specify a threshold for which no less similar documents will be returned.
    * The behavior of the specified `distance_measure` will affect the meaning of the distance
    * threshold. Since DOT_PRODUCT distances increase when the vectors are more similar, the
-   * comparison is inverted. For EUCLIDEAN, COSINE: WHERE distance <= distance_threshold For
+   * comparison is inverted. * For EUCLIDEAN, COSINE: WHERE distance <= distance_threshold * For
    * DOT_PRODUCT: WHERE distance >= distance_threshold
    * @return value or {@code null} for none
    */
@@ -133,7 +133,7 @@ public final class FindNearest extends com.google.api.client.json.GenericJson {
    * Optional. Option to specify a threshold for which no less similar documents will be returned.
    * The behavior of the specified `distance_measure` will affect the meaning of the distance
    * threshold. Since DOT_PRODUCT distances increase when the vectors are more similar, the
-   * comparison is inverted. For EUCLIDEAN, COSINE: WHERE distance <= distance_threshold For
+   * comparison is inverted. * For EUCLIDEAN, COSINE: WHERE distance <= distance_threshold * For
    * DOT_PRODUCT: WHERE distance >= distance_threshold
    * @param distanceThreshold distanceThreshold or {@code null} for none
    */

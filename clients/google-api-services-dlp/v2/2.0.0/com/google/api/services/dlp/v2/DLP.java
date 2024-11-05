@@ -154,7 +154,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
   public class InfoTypes {
 
     /**
-     * Returns a list of the sensitive information types that DLP API supports. See
+     * Returns a list of the sensitive information types that the DLP API supports. See
      * https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference to learn more.
      *
      * Create a request for the method "infoTypes.list".
@@ -175,7 +175,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "v2/infoTypes";
 
       /**
-       * Returns a list of the sensitive information types that DLP API supports. See
+       * Returns a list of the sensitive information types that the DLP API supports. See
        * https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference to learn more.
        *
        * Create a request for the method "infoTypes.list".
@@ -387,7 +387,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
     public class InfoTypes {
 
       /**
-       * Returns a list of the sensitive information types that DLP API supports. See
+       * Returns a list of the sensitive information types that the DLP API supports. See
        * https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference to learn more.
        *
        * Create a request for the method "infoTypes.list".
@@ -412,7 +412,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^locations/[^/]+$");
 
         /**
-         * Returns a list of the sensitive information types that DLP API supports. See
+         * Returns a list of the sensitive information types that the DLP API supports. See
          * https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference to learn more.
          *
          * Create a request for the method "infoTypes.list".

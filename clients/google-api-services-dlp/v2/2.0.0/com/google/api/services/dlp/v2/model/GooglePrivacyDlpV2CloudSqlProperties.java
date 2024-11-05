@@ -57,7 +57,7 @@ public final class GooglePrivacyDlpV2CloudSqlProperties extends com.google.api.c
   private java.lang.String databaseEngine;
 
   /**
-   * Required. DLP will limit its connections to max_connections. Must be 2 or greater.
+   * Required. The DLP API will limit its connections to max_connections. Must be 2 or greater.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,7 +132,7 @@ public final class GooglePrivacyDlpV2CloudSqlProperties extends com.google.api.c
   }
 
   /**
-   * Required. DLP will limit its connections to max_connections. Must be 2 or greater.
+   * Required. The DLP API will limit its connections to max_connections. Must be 2 or greater.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxConnections() {
@@ -140,7 +140,7 @@ public final class GooglePrivacyDlpV2CloudSqlProperties extends com.google.api.c
   }
 
   /**
-   * Required. DLP will limit its connections to max_connections. Must be 2 or greater.
+   * Required. The DLP API will limit its connections to max_connections. Must be 2 or greater.
    * @param maxConnections maxConnections or {@code null} for none
    */
   public GooglePrivacyDlpV2CloudSqlProperties setMaxConnections(java.lang.Integer maxConnections) {

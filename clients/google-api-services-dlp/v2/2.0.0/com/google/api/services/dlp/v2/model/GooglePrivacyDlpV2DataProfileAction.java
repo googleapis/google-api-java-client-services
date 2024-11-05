@@ -55,7 +55,7 @@ public final class GooglePrivacyDlpV2DataProfileAction extends com.google.api.cl
   private GooglePrivacyDlpV2PublishToChronicle publishToChronicle;
 
   /**
-   * Publishes findings to SCC for each data profile.
+   * Publishes findings to Security Command Center for each data profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +126,7 @@ public final class GooglePrivacyDlpV2DataProfileAction extends com.google.api.cl
   }
 
   /**
-   * Publishes findings to SCC for each data profile.
+   * Publishes findings to Security Command Center for each data profile.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2PublishToSecurityCommandCenter getPublishToScc() {
@@ -134,7 +134,7 @@ public final class GooglePrivacyDlpV2DataProfileAction extends com.google.api.cl
   }
 
   /**
-   * Publishes findings to SCC for each data profile.
+   * Publishes findings to Security Command Center for each data profile.
    * @param publishToScc publishToScc or {@code null} for none
    */
   public GooglePrivacyDlpV2DataProfileAction setPublishToScc(GooglePrivacyDlpV2PublishToSecurityCommandCenter publishToScc) {

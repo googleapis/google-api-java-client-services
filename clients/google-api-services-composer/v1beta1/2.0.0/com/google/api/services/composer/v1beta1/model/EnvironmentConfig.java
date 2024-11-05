@@ -119,7 +119,7 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
   private MasterAuthorizedNetworksConfig masterAuthorizedNetworksConfig;
 
   /**
-   * The configuration used for the Kubernetes Engine cluster.
+   * Optional. The configuration used for the Kubernetes Engine cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,7 +135,7 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
   private java.lang.Integer nodeCount;
 
   /**
-   * The configuration used for the Private IP Cloud Composer environment.
+   * Optional. The configuration used for the Private IP Cloud Composer environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,7 +158,7 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
   private java.lang.String resilienceMode;
 
   /**
-   * The configuration settings for software inside the environment.
+   * Optional. The configuration settings for software inside the environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -399,7 +399,7 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The configuration used for the Kubernetes Engine cluster.
+   * Optional. The configuration used for the Kubernetes Engine cluster.
    * @return value or {@code null} for none
    */
   public NodeConfig getNodeConfig() {
@@ -407,7 +407,7 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The configuration used for the Kubernetes Engine cluster.
+   * Optional. The configuration used for the Kubernetes Engine cluster.
    * @param nodeConfig nodeConfig or {@code null} for none
    */
   public EnvironmentConfig setNodeConfig(NodeConfig nodeConfig) {
@@ -437,7 +437,7 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The configuration used for the Private IP Cloud Composer environment.
+   * Optional. The configuration used for the Private IP Cloud Composer environment.
    * @return value or {@code null} for none
    */
   public PrivateEnvironmentConfig getPrivateEnvironmentConfig() {
@@ -445,7 +445,7 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The configuration used for the Private IP Cloud Composer environment.
+   * Optional. The configuration used for the Private IP Cloud Composer environment.
    * @param privateEnvironmentConfig privateEnvironmentConfig or {@code null} for none
    */
   public EnvironmentConfig setPrivateEnvironmentConfig(PrivateEnvironmentConfig privateEnvironmentConfig) {
@@ -492,7 +492,7 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The configuration settings for software inside the environment.
+   * Optional. The configuration settings for software inside the environment.
    * @return value or {@code null} for none
    */
   public SoftwareConfig getSoftwareConfig() {
@@ -500,7 +500,7 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The configuration settings for software inside the environment.
+   * Optional. The configuration settings for software inside the environment.
    * @param softwareConfig softwareConfig or {@code null} for none
    */
   public EnvironmentConfig setSoftwareConfig(SoftwareConfig softwareConfig) {

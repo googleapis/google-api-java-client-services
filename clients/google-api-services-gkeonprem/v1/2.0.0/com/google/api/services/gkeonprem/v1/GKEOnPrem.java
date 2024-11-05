@@ -8240,6 +8240,218 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
       public class VmwareAdminClusters {
 
         /**
+         * Creates a new VMware admin cluster in a given project and location. The API needs to be combined
+         * with creating a bootstrap cluster to work.
+         *
+         * Create a request for the method "vmwareAdminClusters.create".
+         *
+         * This request holds the parameters needed by the gkeonprem server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent of the project and location where the cluster is created in. Format:
+         *        "projects/{project}/locations/{location}"
+         * @param content the {@link com.google.api.services.gkeonprem.v1.model.VmwareAdminCluster}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.gkeonprem.v1.model.VmwareAdminCluster content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends GKEOnPremRequest<com.google.api.services.gkeonprem.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/vmwareAdminClusters";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new VMware admin cluster in a given project and location. The API needs to be
+           * combined with creating a bootstrap cluster to work.
+           *
+           * Create a request for the method "vmwareAdminClusters.create".
+           *
+           * This request holds the parameters needed by the the gkeonprem server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent of the project and location where the cluster is created in. Format:
+         *        "projects/{project}/locations/{location}"
+           * @param content the {@link com.google.api.services.gkeonprem.v1.model.VmwareAdminCluster}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.gkeonprem.v1.model.VmwareAdminCluster content) {
+            super(GKEOnPrem.this, "POST", REST_PATH, content, com.google.api.services.gkeonprem.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent of the project and location where the cluster is created in.
+           * Format: "projects/{project}/locations/{location}"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent of the project and location where the cluster is created in. Format:
+         "projects/{project}/locations/{location}"
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent of the project and location where the cluster is created in.
+           * Format: "projects/{project}/locations/{location}"
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, CLM will force CCFE to persist the cluster resource in RMS
+           * when the creation fails during standalone preflight checks. In that case the subsequent
+           * create call will fail with "cluster already exists" error and hence a update cluster is
+           * required to fix the cluster.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowPreflightFailure;
+
+          /** Optional. If set to true, CLM will force CCFE to persist the cluster resource in RMS when the
+         creation fails during standalone preflight checks. In that case the subsequent create call will
+         fail with "cluster already exists" error and hence a update cluster is required to fix the cluster.
+           */
+          public java.lang.Boolean getAllowPreflightFailure() {
+            return allowPreflightFailure;
+          }
+
+          /**
+           * Optional. If set to true, CLM will force CCFE to persist the cluster resource in RMS
+           * when the creation fails during standalone preflight checks. In that case the subsequent
+           * create call will fail with "cluster already exists" error and hence a update cluster is
+           * required to fix the cluster.
+           */
+          public Create setAllowPreflightFailure(java.lang.Boolean allowPreflightFailure) {
+            this.allowPreflightFailure = allowPreflightFailure;
+            return this;
+          }
+
+          /** Validate the request without actually doing any updates. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Validate the request without actually doing any updates.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Validate the request without actually doing any updates. */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          /**
+           * Required. User provided identifier that is used as part of the resource name; must
+           * conform to RFC-1034 and additionally restrict to lower-cased letters. This comes out
+           * roughly to: /^a-z+[a-z0-9]$/
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String vmwareAdminClusterId;
+
+          /** Required. User provided identifier that is used as part of the resource name; must conform to
+         RFC-1034 and additionally restrict to lower-cased letters. This comes out roughly to:
+         /^a-z+[a-z0-9]$/
+           */
+          public java.lang.String getVmwareAdminClusterId() {
+            return vmwareAdminClusterId;
+          }
+
+          /**
+           * Required. User provided identifier that is used as part of the resource name; must
+           * conform to RFC-1034 and additionally restrict to lower-cased letters. This comes out
+           * roughly to: /^a-z+[a-z0-9]$/
+           */
+          public Create setVmwareAdminClusterId(java.lang.String vmwareAdminClusterId) {
+            this.vmwareAdminClusterId = vmwareAdminClusterId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
          * Enrolls an existing VMware admin cluster to the Anthos On-Prem API within a given project and
          * location. Through enrollment, an existing admin cluster will become Anthos On-Prem API managed.
          * The corresponding GCP resources will be created and all future modifications to the cluster will

@@ -48,6 +48,13 @@ public final class GoogleCloudDiscoveryengineV1betaAnswerQueryRequest extends co
   private java.lang.Boolean asynchronousMode;
 
   /**
+   * Optional. Grounding specification.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaAnswerQueryRequestGroundingSpec groundingSpec;
+
+  /**
    * Required. Current user query.
    * The value may be {@code null}.
    */
@@ -157,6 +164,23 @@ public final class GoogleCloudDiscoveryengineV1betaAnswerQueryRequest extends co
    */
   public GoogleCloudDiscoveryengineV1betaAnswerQueryRequest setAsynchronousMode(java.lang.Boolean asynchronousMode) {
     this.asynchronousMode = asynchronousMode;
+    return this;
+  }
+
+  /**
+   * Optional. Grounding specification.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAnswerQueryRequestGroundingSpec getGroundingSpec() {
+    return groundingSpec;
+  }
+
+  /**
+   * Optional. Grounding specification.
+   * @param groundingSpec groundingSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAnswerQueryRequest setGroundingSpec(GoogleCloudDiscoveryengineV1betaAnswerQueryRequestGroundingSpec groundingSpec) {
+    this.groundingSpec = groundingSpec;
     return this;
   }
 

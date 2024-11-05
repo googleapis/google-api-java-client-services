@@ -51,6 +51,13 @@ public final class OracleProfile extends com.google.api.client.json.GenericJson 
   private java.lang.String hostname;
 
   /**
+   * Optional. Configuration for Oracle ASM connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OracleAsmConfig oracleAsmConfig;
+
+  /**
    * Optional. SSL configuration for the Oracle connection.
    * The value may be {@code null}.
    */
@@ -71,6 +78,14 @@ public final class OracleProfile extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.Integer port;
+
+  /**
+   * Optional. A reference to a Secret Manager resource name storing the Oracle connection password.
+   * Mutually exclusive with the `password` field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String secretManagerStoredPassword;
 
   /**
    * Required. Username for the Oracle connection.
@@ -131,6 +146,23 @@ public final class OracleProfile extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Optional. Configuration for Oracle ASM connection.
+   * @return value or {@code null} for none
+   */
+  public OracleAsmConfig getOracleAsmConfig() {
+    return oracleAsmConfig;
+  }
+
+  /**
+   * Optional. Configuration for Oracle ASM connection.
+   * @param oracleAsmConfig oracleAsmConfig or {@code null} for none
+   */
+  public OracleProfile setOracleAsmConfig(OracleAsmConfig oracleAsmConfig) {
+    this.oracleAsmConfig = oracleAsmConfig;
+    return this;
+  }
+
+  /**
    * Optional. SSL configuration for the Oracle connection.
    * @return value or {@code null} for none
    */
@@ -180,6 +212,25 @@ public final class OracleProfile extends com.google.api.client.json.GenericJson 
    */
   public OracleProfile setPort(java.lang.Integer port) {
     this.port = port;
+    return this;
+  }
+
+  /**
+   * Optional. A reference to a Secret Manager resource name storing the Oracle connection password.
+   * Mutually exclusive with the `password` field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecretManagerStoredPassword() {
+    return secretManagerStoredPassword;
+  }
+
+  /**
+   * Optional. A reference to a Secret Manager resource name storing the Oracle connection password.
+   * Mutually exclusive with the `password` field.
+   * @param secretManagerStoredPassword secretManagerStoredPassword or {@code null} for none
+   */
+  public OracleProfile setSecretManagerStoredPassword(java.lang.String secretManagerStoredPassword) {
+    this.secretManagerStoredPassword = secretManagerStoredPassword;
     return this;
   }
 

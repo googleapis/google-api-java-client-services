@@ -30,11 +30,25 @@ package com.google.api.services.datastream.v1.model;
 public final class MysqlSourceConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Use Binary log position based replication.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BinaryLogPosition binaryLogPosition;
+
+  /**
    * MySQL objects to exclude from the stream.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MysqlRdbms excludeObjects;
+
+  /**
+   * Use GTID based replication.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Gtid gtid;
 
   /**
    * MySQL objects to retrieve from the source.
@@ -60,6 +74,23 @@ public final class MysqlSourceConfig extends com.google.api.client.json.GenericJ
   private java.lang.Integer maxConcurrentCdcTasks;
 
   /**
+   * Use Binary log position based replication.
+   * @return value or {@code null} for none
+   */
+  public BinaryLogPosition getBinaryLogPosition() {
+    return binaryLogPosition;
+  }
+
+  /**
+   * Use Binary log position based replication.
+   * @param binaryLogPosition binaryLogPosition or {@code null} for none
+   */
+  public MysqlSourceConfig setBinaryLogPosition(BinaryLogPosition binaryLogPosition) {
+    this.binaryLogPosition = binaryLogPosition;
+    return this;
+  }
+
+  /**
    * MySQL objects to exclude from the stream.
    * @return value or {@code null} for none
    */
@@ -73,6 +104,23 @@ public final class MysqlSourceConfig extends com.google.api.client.json.GenericJ
    */
   public MysqlSourceConfig setExcludeObjects(MysqlRdbms excludeObjects) {
     this.excludeObjects = excludeObjects;
+    return this;
+  }
+
+  /**
+   * Use GTID based replication.
+   * @return value or {@code null} for none
+   */
+  public Gtid getGtid() {
+    return gtid;
+  }
+
+  /**
+   * Use GTID based replication.
+   * @param gtid gtid or {@code null} for none
+   */
+  public MysqlSourceConfig setGtid(Gtid gtid) {
+    this.gtid = gtid;
     return this;
   }
 

@@ -30,6 +30,13 @@ package com.google.api.services.datastream.v1.model;
 public final class OracleSourceConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Use Binary Log Parser.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BinaryLogParser binaryLogParser;
+
+  /**
    * Drop large object values.
    * The value may be {@code null}.
    */
@@ -49,6 +56,13 @@ public final class OracleSourceConfig extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private OracleRdbms includeObjects;
+
+  /**
+   * Use LogMiner.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LogMiner logMiner;
 
   /**
    * Maximum number of concurrent backfill tasks. The number should be non-negative. If not set (or
@@ -72,6 +86,23 @@ public final class OracleSourceConfig extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private StreamLargeObjects streamLargeObjects;
+
+  /**
+   * Use Binary Log Parser.
+   * @return value or {@code null} for none
+   */
+  public BinaryLogParser getBinaryLogParser() {
+    return binaryLogParser;
+  }
+
+  /**
+   * Use Binary Log Parser.
+   * @param binaryLogParser binaryLogParser or {@code null} for none
+   */
+  public OracleSourceConfig setBinaryLogParser(BinaryLogParser binaryLogParser) {
+    this.binaryLogParser = binaryLogParser;
+    return this;
+  }
 
   /**
    * Drop large object values.
@@ -121,6 +152,23 @@ public final class OracleSourceConfig extends com.google.api.client.json.Generic
    */
   public OracleSourceConfig setIncludeObjects(OracleRdbms includeObjects) {
     this.includeObjects = includeObjects;
+    return this;
+  }
+
+  /**
+   * Use LogMiner.
+   * @return value or {@code null} for none
+   */
+  public LogMiner getLogMiner() {
+    return logMiner;
+  }
+
+  /**
+   * Use LogMiner.
+   * @param logMiner logMiner or {@code null} for none
+   */
+  public OracleSourceConfig setLogMiner(LogMiner logMiner) {
+    this.logMiner = logMiner;
     return this;
   }
 

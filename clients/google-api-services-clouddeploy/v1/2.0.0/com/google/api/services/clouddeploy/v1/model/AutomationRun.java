@@ -136,12 +136,20 @@ public final class AutomationRun extends com.google.api.client.json.GenericJson 
   private java.lang.String stateDescription;
 
   /**
-   * Output only. The ID of the target that represents the promotion stage that initiates the
-   * `AutomationRun`. The value of this field is the last segment of a target name.
+   * Output only. The ID of the source target that initiates the `AutomationRun`. The value of this
+   * field is the last segment of a target name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetId;
+
+  /**
+   * Output only. Promotes a release to a specified 'Target' as defined in a Timed Promote Release
+   * rule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TimedPromoteReleaseOperation timedPromoteReleaseOperation;
 
   /**
    * Output only. Time at which the automationRun was updated.
@@ -411,8 +419,8 @@ public final class AutomationRun extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The ID of the target that represents the promotion stage that initiates the
-   * `AutomationRun`. The value of this field is the last segment of a target name.
+   * Output only. The ID of the source target that initiates the `AutomationRun`. The value of this
+   * field is the last segment of a target name.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetId() {
@@ -420,12 +428,31 @@ public final class AutomationRun extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The ID of the target that represents the promotion stage that initiates the
-   * `AutomationRun`. The value of this field is the last segment of a target name.
+   * Output only. The ID of the source target that initiates the `AutomationRun`. The value of this
+   * field is the last segment of a target name.
    * @param targetId targetId or {@code null} for none
    */
   public AutomationRun setTargetId(java.lang.String targetId) {
     this.targetId = targetId;
+    return this;
+  }
+
+  /**
+   * Output only. Promotes a release to a specified 'Target' as defined in a Timed Promote Release
+   * rule.
+   * @return value or {@code null} for none
+   */
+  public TimedPromoteReleaseOperation getTimedPromoteReleaseOperation() {
+    return timedPromoteReleaseOperation;
+  }
+
+  /**
+   * Output only. Promotes a release to a specified 'Target' as defined in a Timed Promote Release
+   * rule.
+   * @param timedPromoteReleaseOperation timedPromoteReleaseOperation or {@code null} for none
+   */
+  public AutomationRun setTimedPromoteReleaseOperation(TimedPromoteReleaseOperation timedPromoteReleaseOperation) {
+    this.timedPromoteReleaseOperation = timedPromoteReleaseOperation;
     return this;
   }
 

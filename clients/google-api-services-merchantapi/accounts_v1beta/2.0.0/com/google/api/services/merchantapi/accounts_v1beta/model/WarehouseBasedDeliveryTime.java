@@ -32,7 +32,9 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
 public final class WarehouseBasedDeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Carrier, such as `"UPS"` or `"Fedex"`.
+   * Required. Carrier, such as `"UPS"` or `"Fedex"`. [supported
+   * carriers](https://support.google.com/merchants/answer/7050921#zippy=%2Ccarrier-rates-au-de-uk-
+   * and-us-only)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +56,9 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
   private java.lang.String warehouse;
 
   /**
-   * Required. Carrier, such as `"UPS"` or `"Fedex"`.
+   * Required. Carrier, such as `"UPS"` or `"Fedex"`. [supported
+   * carriers](https://support.google.com/merchants/answer/7050921#zippy=%2Ccarrier-rates-au-de-uk-
+   * and-us-only)
    * @return value or {@code null} for none
    */
   public java.lang.String getCarrier() {
@@ -62,7 +66,9 @@ public final class WarehouseBasedDeliveryTime extends com.google.api.client.json
   }
 
   /**
-   * Required. Carrier, such as `"UPS"` or `"Fedex"`.
+   * Required. Carrier, such as `"UPS"` or `"Fedex"`. [supported
+   * carriers](https://support.google.com/merchants/answer/7050921#zippy=%2Ccarrier-rates-au-de-uk-
+   * and-us-only)
    * @param carrier carrier or {@code null} for none
    */
   public WarehouseBasedDeliveryTime setCarrier(java.lang.String carrier) {

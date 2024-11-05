@@ -37,7 +37,7 @@ public final class DiagnoseRuntimeRequest extends com.google.api.client.json.Gen
   private DiagnosticConfig diagnosticConfig;
 
   /**
-   * Optional. Maxmium amount of time in minutes before the operation times out.
+   * Optional. Maximum amount of time in minutes before the operation times out.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class DiagnoseRuntimeRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Maxmium amount of time in minutes before the operation times out.
+   * Optional. Maximum amount of time in minutes before the operation times out.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTimeoutMinutes() {
@@ -69,7 +69,7 @@ public final class DiagnoseRuntimeRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Maxmium amount of time in minutes before the operation times out.
+   * Optional. Maximum amount of time in minutes before the operation times out.
    * @param timeoutMinutes timeoutMinutes or {@code null} for none
    */
   public DiagnoseRuntimeRequest setTimeoutMinutes(java.lang.Integer timeoutMinutes) {

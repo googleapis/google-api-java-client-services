@@ -17,7 +17,9 @@
 package com.google.api.services.merchantapi.accounts_v1beta.model;
 
 /**
- * Collection of information related to a business.
+ * The `BusinessInfo` message contains essential information about a merchant's business. This
+ * message captures key business details such as physical address, customer service contacts, and
+ * region-specific identifiers.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:
@@ -30,7 +32,8 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
 public final class BusinessInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The address of the business.
+   * Optional. The address of the business. Only `region_code`, `address_lines`, `postal_code`,
+   * `administrative_area` and `locality` fields are supported. All other fields are ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +77,8 @@ public final class BusinessInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String phoneVerificationState;
 
   /**
-   * Optional. The address of the business.
+   * Optional. The address of the business. Only `region_code`, `address_lines`, `postal_code`,
+   * `administrative_area` and `locality` fields are supported. All other fields are ignored.
    * @return value or {@code null} for none
    */
   public PostalAddress getAddress() {
@@ -82,7 +86,8 @@ public final class BusinessInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The address of the business.
+   * Optional. The address of the business. Only `region_code`, `address_lines`, `postal_code`,
+   * `administrative_area` and `locality` fields are supported. All other fields are ignored.
    * @param address address or {@code null} for none
    */
   public BusinessInfo setAddress(PostalAddress address) {

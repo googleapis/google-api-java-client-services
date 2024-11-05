@@ -17,7 +17,10 @@
 package com.google.api.services.merchantapi.accounts_v1beta.model;
 
 /**
- * A list of carrier rates that can be referred to by `main_table` or `single_value`.
+ * A list of carrier rates that can be referred to by `main_table` or `single_value`. Supported
+ * carrier services are defined in https://support.google.com/merchants/answer/12577710?hl=en&ref_to
+ * pic=12570808&sjid=10662598224319463032-NC#zippy=%2Cdelivery-cost-rate-type%2Ccarrier-rate-au-de-
+ * uk-and-us-only.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

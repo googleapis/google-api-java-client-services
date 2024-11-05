@@ -17,7 +17,10 @@
 package com.google.api.services.merchantapi.accounts_v1beta.model;
 
 /**
- * A [user](https://support.google.com/merchants/answer/12160472).
+ * The `User` message represents a user associated with a Merchant Center account. It is used to
+ * manage user permissions and access rights within the account. For more information, see
+ * [Frequently asked questions about people and access
+ * levels](//support.google.com/merchants/answer/12160472).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

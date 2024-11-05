@@ -58,6 +58,14 @@ public final class GoogleFirebaseAppdistroV1alphaReleaseTest extends com.google.
   }
 
   /**
+   * Optional. Display name of the release test. Required if the release test is created with
+   * multiple goals.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * Optional. Input only. Login credentials for the test. Input only.
    * The value may be {@code null}.
    */
@@ -127,6 +135,25 @@ public final class GoogleFirebaseAppdistroV1alphaReleaseTest extends com.google.
    */
   public GoogleFirebaseAppdistroV1alphaReleaseTest setDeviceExecutions(java.util.List<GoogleFirebaseAppdistroV1alphaDeviceExecution> deviceExecutions) {
     this.deviceExecutions = deviceExecutions;
+    return this;
+  }
+
+  /**
+   * Optional. Display name of the release test. Required if the release test is created with
+   * multiple goals.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Optional. Display name of the release test. Required if the release test is created with
+   * multiple goals.
+   * @param displayName displayName or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaReleaseTest setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
     return this;
   }
 

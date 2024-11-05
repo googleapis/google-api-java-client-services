@@ -31,6 +31,14 @@ package com.google.api.services.firebaseappdistribution.v1alpha.model;
 public final class GoogleFirebaseAppdistroV1alphaTestConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Display name of the AI driven test. Required if the release test is created with
+   * multiple goals.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * Identifier. The name of the test configuration resource. Format:
    * `projects/{project_number}/apps/{app_id}/testConfig`
    * The value may be {@code null}.
@@ -51,6 +59,25 @@ public final class GoogleFirebaseAppdistroV1alphaTestConfig extends com.google.a
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleFirebaseAppdistroV1alphaTestDevice> testDevices;
+
+  /**
+   * Optional. Display name of the AI driven test. Required if the release test is created with
+   * multiple goals.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Optional. Display name of the AI driven test. Required if the release test is created with
+   * multiple goals.
+   * @param displayName displayName or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaTestConfig setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
 
   /**
    * Identifier. The name of the test configuration resource. Format:

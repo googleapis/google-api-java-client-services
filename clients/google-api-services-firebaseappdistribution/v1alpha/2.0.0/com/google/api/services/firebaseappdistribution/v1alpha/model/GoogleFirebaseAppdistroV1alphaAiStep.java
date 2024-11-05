@@ -45,6 +45,21 @@ public final class GoogleFirebaseAppdistroV1alphaAiStep extends com.google.api.c
   private java.lang.String goal;
 
   /**
+   * Optional. Hint text containing suggestions to help the agent accomplish the goal
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String hint;
+
+  /**
+   * Optional. A description of criteria the agent should use to determine if the goal has been
+   * successfully completed
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String successCriteria;
+
+  /**
    * An assertion to be checked by the AI
    * @return value or {@code null} for none
    */
@@ -75,6 +90,42 @@ public final class GoogleFirebaseAppdistroV1alphaAiStep extends com.google.api.c
    */
   public GoogleFirebaseAppdistroV1alphaAiStep setGoal(java.lang.String goal) {
     this.goal = goal;
+    return this;
+  }
+
+  /**
+   * Optional. Hint text containing suggestions to help the agent accomplish the goal
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHint() {
+    return hint;
+  }
+
+  /**
+   * Optional. Hint text containing suggestions to help the agent accomplish the goal
+   * @param hint hint or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaAiStep setHint(java.lang.String hint) {
+    this.hint = hint;
+    return this;
+  }
+
+  /**
+   * Optional. A description of criteria the agent should use to determine if the goal has been
+   * successfully completed
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSuccessCriteria() {
+    return successCriteria;
+  }
+
+  /**
+   * Optional. A description of criteria the agent should use to determine if the goal has been
+   * successfully completed
+   * @param successCriteria successCriteria or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaAiStep setSuccessCriteria(java.lang.String successCriteria) {
+    this.successCriteria = successCriteria;
     return this;
   }
 

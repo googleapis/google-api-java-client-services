@@ -49,6 +49,17 @@ public final class ApnsConfig extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> headers;
 
   /**
+   * Optional. [Apple Live Activity](https://developer.apple.com/design/human-interface-
+   * guidelines/live-activities) token to send updates to. This token can either be a push token or
+   * [push-to-
+   * start](https://developer.apple.com/documentation/activitykit/activity/pushtostarttoken) token
+   * from Apple.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String liveActivityToken;
+
+  /**
    * APNs payload as a JSON object, including both `aps` dictionary and custom payload. See [Payload
    * Key Reference](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_
    * notification_server/generating_a_remote_notification). If present, it overrides
@@ -97,6 +108,31 @@ public final class ApnsConfig extends com.google.api.client.json.GenericJson {
    */
   public ApnsConfig setHeaders(java.util.Map<String, java.lang.String> headers) {
     this.headers = headers;
+    return this;
+  }
+
+  /**
+   * Optional. [Apple Live Activity](https://developer.apple.com/design/human-interface-
+   * guidelines/live-activities) token to send updates to. This token can either be a push token or
+   * [push-to-
+   * start](https://developer.apple.com/documentation/activitykit/activity/pushtostarttoken) token
+   * from Apple.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLiveActivityToken() {
+    return liveActivityToken;
+  }
+
+  /**
+   * Optional. [Apple Live Activity](https://developer.apple.com/design/human-interface-
+   * guidelines/live-activities) token to send updates to. This token can either be a push token or
+   * [push-to-
+   * start](https://developer.apple.com/documentation/activitykit/activity/pushtostarttoken) token
+   * from Apple.
+   * @param liveActivityToken liveActivityToken or {@code null} for none
+   */
+  public ApnsConfig setLiveActivityToken(java.lang.String liveActivityToken) {
+    this.liveActivityToken = liveActivityToken;
     return this;
   }
 

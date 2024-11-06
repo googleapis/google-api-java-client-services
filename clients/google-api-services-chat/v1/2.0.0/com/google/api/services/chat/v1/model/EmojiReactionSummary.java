@@ -30,21 +30,21 @@ package com.google.api.services.chat.v1.model;
 public final class EmojiReactionSummary extends com.google.api.client.json.GenericJson {
 
   /**
-   * Emoji associated with the reactions.
+   * Output only. Emoji associated with the reactions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Emoji emoji;
 
   /**
-   * The total number of reactions using the associated emoji.
+   * Output only. The total number of reactions using the associated emoji.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer reactionCount;
 
   /**
-   * Emoji associated with the reactions.
+   * Output only. Emoji associated with the reactions.
    * @return value or {@code null} for none
    */
   public Emoji getEmoji() {
@@ -52,7 +52,7 @@ public final class EmojiReactionSummary extends com.google.api.client.json.Gener
   }
 
   /**
-   * Emoji associated with the reactions.
+   * Output only. Emoji associated with the reactions.
    * @param emoji emoji or {@code null} for none
    */
   public EmojiReactionSummary setEmoji(Emoji emoji) {
@@ -61,7 +61,7 @@ public final class EmojiReactionSummary extends com.google.api.client.json.Gener
   }
 
   /**
-   * The total number of reactions using the associated emoji.
+   * Output only. The total number of reactions using the associated emoji.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getReactionCount() {
@@ -69,7 +69,7 @@ public final class EmojiReactionSummary extends com.google.api.client.json.Gener
   }
 
   /**
-   * The total number of reactions using the associated emoji.
+   * Output only. The total number of reactions using the associated emoji.
    * @param reactionCount reactionCount or {@code null} for none
    */
   public EmojiReactionSummary setReactionCount(java.lang.Integer reactionCount) {

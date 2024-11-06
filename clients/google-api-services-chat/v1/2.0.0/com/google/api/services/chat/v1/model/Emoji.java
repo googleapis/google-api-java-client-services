@@ -37,7 +37,7 @@ public final class Emoji extends com.google.api.client.json.GenericJson {
   private CustomEmoji customEmoji;
 
   /**
-   * A basic emoji represented by a unicode string.
+   * Optional. A basic emoji represented by a unicode string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class Emoji extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A basic emoji represented by a unicode string.
+   * Optional. A basic emoji represented by a unicode string.
    * @return value or {@code null} for none
    */
   public java.lang.String getUnicode() {
@@ -69,7 +69,7 @@ public final class Emoji extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A basic emoji represented by a unicode string.
+   * Optional. A basic emoji represented by a unicode string.
    * @param unicode unicode or {@code null} for none
    */
   public Emoji setUnicode(java.lang.String unicode) {

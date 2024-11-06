@@ -18,9 +18,9 @@ package com.google.api.services.playdeveloperreporting.v1beta1.model;
 
 /**
  * A representation of a decimal value, such as 2.5. Clients may convert values into language-native
- * decimal formats, such as Java's BigDecimal or Python's decimal.Decimal. [BigDecimal]:
- * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigDecimal.html
- * [decimal.Decimal]: https://docs.python.org/3/library/decimal.html
+ * decimal formats, such as Java's [BigDecimal](https://docs.oracle.com/en/java/javase/11/docs/api/j
+ * ava.base/java/math/BigDecimal.html) or Python's
+ * [decimal.Decimal](https://docs.python.org/3/library/decimal.html).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Developer Reporting API. For a detailed

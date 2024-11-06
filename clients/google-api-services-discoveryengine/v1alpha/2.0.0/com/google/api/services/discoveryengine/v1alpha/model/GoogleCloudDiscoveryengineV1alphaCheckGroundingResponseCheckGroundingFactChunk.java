@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.discoveryengine.v1.model;
+package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
  * Fact chunk for grounding check.
@@ -27,7 +27,7 @@ package com.google.api.services.discoveryengine.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1CheckGroundingResponseFactChunk extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1alphaCheckGroundingResponseCheckGroundingFactChunk extends com.google.api.client.json.GenericJson {
 
   /**
    * Text content of the fact chunk. Can be at most 10K characters long.
@@ -35,14 +35,6 @@ public final class GoogleCloudDiscoveryengineV1CheckGroundingResponseFactChunk e
    */
   @com.google.api.client.util.Key
   private java.lang.String chunkText;
-
-  /**
-   * Source from which this fact chunk was retrieved. For a fact chunk retrieved from inline facts,
-   * this field will contain the index of the specific fact from which this chunk was retrieved.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String source;
 
   /**
    * Text content of the fact chunk. Can be at most 10K characters long.
@@ -56,38 +48,19 @@ public final class GoogleCloudDiscoveryengineV1CheckGroundingResponseFactChunk e
    * Text content of the fact chunk. Can be at most 10K characters long.
    * @param chunkText chunkText or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1CheckGroundingResponseFactChunk setChunkText(java.lang.String chunkText) {
+  public GoogleCloudDiscoveryengineV1alphaCheckGroundingResponseCheckGroundingFactChunk setChunkText(java.lang.String chunkText) {
     this.chunkText = chunkText;
     return this;
   }
 
-  /**
-   * Source from which this fact chunk was retrieved. For a fact chunk retrieved from inline facts,
-   * this field will contain the index of the specific fact from which this chunk was retrieved.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSource() {
-    return source;
-  }
-
-  /**
-   * Source from which this fact chunk was retrieved. For a fact chunk retrieved from inline facts,
-   * this field will contain the index of the specific fact from which this chunk was retrieved.
-   * @param source source or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1CheckGroundingResponseFactChunk setSource(java.lang.String source) {
-    this.source = source;
-    return this;
+  @Override
+  public GoogleCloudDiscoveryengineV1alphaCheckGroundingResponseCheckGroundingFactChunk set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1alphaCheckGroundingResponseCheckGroundingFactChunk) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1CheckGroundingResponseFactChunk set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1CheckGroundingResponseFactChunk) super.set(fieldName, value);
-  }
-
-  @Override
-  public GoogleCloudDiscoveryengineV1CheckGroundingResponseFactChunk clone() {
-    return (GoogleCloudDiscoveryengineV1CheckGroundingResponseFactChunk) super.clone();
+  public GoogleCloudDiscoveryengineV1alphaCheckGroundingResponseCheckGroundingFactChunk clone() {
+    return (GoogleCloudDiscoveryengineV1alphaCheckGroundingResponseCheckGroundingFactChunk) super.clone();
   }
 
 }

@@ -39,7 +39,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> accountTypesWithManagementDisabled;
 
   /**
-   * Whether adding new users and profiles is disabled.
+   * Whether adding new users and profiles is disabled. For devices where managementMode is
+   * DEVICE_OWNER this field is ignored and the user is never allowed to add or remove users.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -842,7 +843,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether adding new users and profiles is disabled.
+   * Whether adding new users and profiles is disabled. For devices where managementMode is
+   * DEVICE_OWNER this field is ignored and the user is never allowed to add or remove users.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAddUserDisabled() {
@@ -850,7 +852,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether adding new users and profiles is disabled.
+   * Whether adding new users and profiles is disabled. For devices where managementMode is
+   * DEVICE_OWNER this field is ignored and the user is never allowed to add or remove users.
    * @param addUserDisabled addUserDisabled or {@code null} for none
    */
   public Policy setAddUserDisabled(java.lang.Boolean addUserDisabled) {

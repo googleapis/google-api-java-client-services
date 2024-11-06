@@ -31,9 +31,9 @@ package com.google.api.services.language.v1beta2.model;
 public final class EntityMention extends com.google.api.client.json.GenericJson {
 
   /**
-   * For calls to AnalyzeEntitySentiment or if AnnotateTextRequest.Features.extract_entity_sentiment
-   * is set to true, this field will contain the sentiment expressed for this mention of the entity
-   * in the provided document.
+   * For calls to AnalyzeEntitySentimentRequest or if
+   * AnnotateTextRequest.Features.extract_entity_sentiment is set to true, this field will contain
+   * the sentiment expressed for this mention of the entity in the provided document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,9 +54,9 @@ public final class EntityMention extends com.google.api.client.json.GenericJson 
   private java.lang.String type;
 
   /**
-   * For calls to AnalyzeEntitySentiment or if AnnotateTextRequest.Features.extract_entity_sentiment
-   * is set to true, this field will contain the sentiment expressed for this mention of the entity
-   * in the provided document.
+   * For calls to AnalyzeEntitySentimentRequest or if
+   * AnnotateTextRequest.Features.extract_entity_sentiment is set to true, this field will contain
+   * the sentiment expressed for this mention of the entity in the provided document.
    * @return value or {@code null} for none
    */
   public Sentiment getSentiment() {
@@ -64,9 +64,9 @@ public final class EntityMention extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * For calls to AnalyzeEntitySentiment or if AnnotateTextRequest.Features.extract_entity_sentiment
-   * is set to true, this field will contain the sentiment expressed for this mention of the entity
-   * in the provided document.
+   * For calls to AnalyzeEntitySentimentRequest or if
+   * AnnotateTextRequest.Features.extract_entity_sentiment is set to true, this field will contain
+   * the sentiment expressed for this mention of the entity in the provided document.
    * @param sentiment sentiment or {@code null} for none
    */
   public EntityMention setSentiment(Sentiment sentiment) {

@@ -18,7 +18,7 @@ package com.google.api.services.language.v1beta2.model;
 
 /**
  * All available features for sentiment, syntax, and semantic analysis. Setting each one to true
- * will enable that specific analysis for the input. Next ID: 12
+ * will enable that specific analysis for the input.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Natural Language API. For a detailed

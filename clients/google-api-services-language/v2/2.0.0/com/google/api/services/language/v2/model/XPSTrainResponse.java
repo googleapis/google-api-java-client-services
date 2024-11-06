@@ -17,7 +17,7 @@
 package com.google.api.services.language.v2.model;
 
 /**
- * Next ID: 18
+ * Model definition for XPSTrainResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Natural Language API. For a detailed

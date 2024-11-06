@@ -17,7 +17,7 @@
 package com.google.api.services.language.v1beta2.model;
 
 /**
- * Represents the feeling associated with the entire text or entities in the text. Next ID: 6
+ * Represents the feeling associated with the entire text or entities in the text.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Natural Language API. For a detailed
@@ -31,7 +31,7 @@ package com.google.api.services.language.v1beta2.model;
 public final class Sentiment extends com.google.api.client.json.GenericJson {
 
   /**
-   * A non-negative number in the [0, +inf) range, which represents the absolute magnitude of
+   * A non-negative number in the [0, +inf] range, which represents the absolute magnitude of
    * sentiment regardless of score (positive or negative).
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class Sentiment extends com.google.api.client.json.GenericJson {
   private java.lang.Float score;
 
   /**
-   * A non-negative number in the [0, +inf) range, which represents the absolute magnitude of
+   * A non-negative number in the [0, +inf] range, which represents the absolute magnitude of
    * sentiment regardless of score (positive or negative).
    * @return value or {@code null} for none
    */
@@ -55,7 +55,7 @@ public final class Sentiment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A non-negative number in the [0, +inf) range, which represents the absolute magnitude of
+   * A non-negative number in the [0, +inf] range, which represents the absolute magnitude of
    * sentiment regardless of score (positive or negative).
    * @param magnitude magnitude or {@code null} for none
    */

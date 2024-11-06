@@ -17,8 +17,7 @@
 package com.google.api.services.language.v1beta2.model;
 
 /**
- * Specification of Model explanation. Feature-based XAI in AutoML Vision ICN is deprecated, see
- * b/288407203 for context.
+ * Specification of Model explanation. Feature-based XAI in AutoML Vision ICN is deprecated.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Natural Language API. For a detailed

@@ -57,16 +57,16 @@ public final class XPSExportModelOutputConfig extends com.google.api.client.json
   private java.lang.Boolean exportFirebaseAuxiliaryInfo;
 
   /**
-   * The Google Contained Registry (GCR) path the exported files to be pushed to. This location is
-   * set if the exported format is DOCKDER.
+   * The Google Contained Registry path the exported files to be pushed to. This location is set if
+   * the exported format is DOCKDER.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String outputGcrUri;
 
   /**
-   * The Google Cloud Storage (GCS) directory where XPS will output the exported models and related
-   * files. Format: gs://bucket/directory
+   * The Google Cloud Storage directory where XPS will output the exported models and related files.
+   * Format: gs://bucket/directory
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,8 +155,8 @@ public final class XPSExportModelOutputConfig extends com.google.api.client.json
   }
 
   /**
-   * The Google Contained Registry (GCR) path the exported files to be pushed to. This location is
-   * set if the exported format is DOCKDER.
+   * The Google Contained Registry path the exported files to be pushed to. This location is set if
+   * the exported format is DOCKDER.
    * @return value or {@code null} for none
    */
   public java.lang.String getOutputGcrUri() {
@@ -164,8 +164,8 @@ public final class XPSExportModelOutputConfig extends com.google.api.client.json
   }
 
   /**
-   * The Google Contained Registry (GCR) path the exported files to be pushed to. This location is
-   * set if the exported format is DOCKDER.
+   * The Google Contained Registry path the exported files to be pushed to. This location is set if
+   * the exported format is DOCKDER.
    * @param outputGcrUri outputGcrUri or {@code null} for none
    */
   public XPSExportModelOutputConfig setOutputGcrUri(java.lang.String outputGcrUri) {
@@ -174,8 +174,8 @@ public final class XPSExportModelOutputConfig extends com.google.api.client.json
   }
 
   /**
-   * The Google Cloud Storage (GCS) directory where XPS will output the exported models and related
-   * files. Format: gs://bucket/directory
+   * The Google Cloud Storage directory where XPS will output the exported models and related files.
+   * Format: gs://bucket/directory
    * @return value or {@code null} for none
    */
   public java.lang.String getOutputGcsUri() {
@@ -183,8 +183,8 @@ public final class XPSExportModelOutputConfig extends com.google.api.client.json
   }
 
   /**
-   * The Google Cloud Storage (GCS) directory where XPS will output the exported models and related
-   * files. Format: gs://bucket/directory
+   * The Google Cloud Storage directory where XPS will output the exported models and related files.
+   * Format: gs://bucket/directory
    * @param outputGcsUri outputGcsUri or {@code null} for none
    */
   public XPSExportModelOutputConfig setOutputGcsUri(java.lang.String outputGcsUri) {

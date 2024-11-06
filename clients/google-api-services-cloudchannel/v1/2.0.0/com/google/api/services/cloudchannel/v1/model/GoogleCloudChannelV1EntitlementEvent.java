@@ -38,7 +38,7 @@ public final class GoogleCloudChannelV1EntitlementEvent extends com.google.api.c
   private java.lang.String entitlement;
 
   /**
-   * Type of event which happened on the entitlement.
+   * Type of event which happened for the entitlement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class GoogleCloudChannelV1EntitlementEvent extends com.google.api.c
   }
 
   /**
-   * Type of event which happened on the entitlement.
+   * Type of event which happened for the entitlement.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventType() {
@@ -72,7 +72,7 @@ public final class GoogleCloudChannelV1EntitlementEvent extends com.google.api.c
   }
 
   /**
-   * Type of event which happened on the entitlement.
+   * Type of event which happened for the entitlement.
    * @param eventType eventType or {@code null} for none
    */
   public GoogleCloudChannelV1EntitlementEvent setEventType(java.lang.String eventType) {

@@ -36,8 +36,8 @@ public final class XPSVideoExportModelSpec extends com.google.api.client.json.Ge
 
   /**
    * Contains the model format and internal location of the model files to be exported/downloaded.
-   * Use the GCS bucket name which is provided via TrainRequest.gcs_bucket_name to store the model
-   * files.
+   * Use the Google Cloud Storage bucket name which is provided via TrainRequest.gcs_bucket_name to
+   * store the model files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,8 +51,8 @@ public final class XPSVideoExportModelSpec extends com.google.api.client.json.Ge
 
   /**
    * Contains the model format and internal location of the model files to be exported/downloaded.
-   * Use the GCS bucket name which is provided via TrainRequest.gcs_bucket_name to store the model
-   * files.
+   * Use the Google Cloud Storage bucket name which is provided via TrainRequest.gcs_bucket_name to
+   * store the model files.
    * @return value or {@code null} for none
    */
   public java.util.List<XPSExportModelOutputConfig> getExportModelOutputConfig() {
@@ -61,8 +61,8 @@ public final class XPSVideoExportModelSpec extends com.google.api.client.json.Ge
 
   /**
    * Contains the model format and internal location of the model files to be exported/downloaded.
-   * Use the GCS bucket name which is provided via TrainRequest.gcs_bucket_name to store the model
-   * files.
+   * Use the Google Cloud Storage bucket name which is provided via TrainRequest.gcs_bucket_name to
+   * store the model files.
    * @param exportModelOutputConfig exportModelOutputConfig or {@code null} for none
    */
   public XPSVideoExportModelSpec setExportModelOutputConfig(java.util.List<XPSExportModelOutputConfig> exportModelOutputConfig) {

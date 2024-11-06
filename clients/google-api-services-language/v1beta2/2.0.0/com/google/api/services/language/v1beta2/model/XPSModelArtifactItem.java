@@ -38,7 +38,7 @@ public final class XPSModelArtifactItem extends com.google.api.client.json.Gener
   private java.lang.String artifactFormat;
 
   /**
-   * The Google Cloud Storage (GCS) uri that stores the model binary files.
+   * The Google Cloud Storage URI that stores the model binary files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class XPSModelArtifactItem extends com.google.api.client.json.Gener
   }
 
   /**
-   * The Google Cloud Storage (GCS) uri that stores the model binary files.
+   * The Google Cloud Storage URI that stores the model binary files.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsUri() {
@@ -70,7 +70,7 @@ public final class XPSModelArtifactItem extends com.google.api.client.json.Gener
   }
 
   /**
-   * The Google Cloud Storage (GCS) uri that stores the model binary files.
+   * The Google Cloud Storage URI that stores the model binary files.
    * @param gcsUri gcsUri or {@code null} for none
    */
   public XPSModelArtifactItem setGcsUri(java.lang.String gcsUri) {

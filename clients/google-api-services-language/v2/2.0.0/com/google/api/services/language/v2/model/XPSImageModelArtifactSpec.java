@@ -46,7 +46,7 @@ public final class XPSImageModelArtifactSpec extends com.google.api.client.json.
   private java.util.List<XPSModelArtifactItem> exportArtifact;
 
   /**
-   * GCS uri of decoded labels file for model export 'dict.txt'.
+   * Google Cloud Storage URI of decoded labels file for model export 'dict.txt'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,14 +61,15 @@ public final class XPSImageModelArtifactSpec extends com.google.api.client.json.
   private XPSModelArtifactItem servingArtifact;
 
   /**
-   * GCS uri prefix of Tensorflow JavaScript binary files 'groupX-shardXofX.bin' Deprecated.
+   * Google Cloud Storage URI prefix of Tensorflow JavaScript binary files 'groupX-shardXofX.bin'.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tfJsBinaryGcsPrefix;
 
   /**
-   * GCS uri of Tensorflow Lite metadata 'tflite_metadata.json'.
+   * Google Cloud Storage URI of Tensorflow Lite metadata 'tflite_metadata.json'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +110,7 @@ public final class XPSImageModelArtifactSpec extends com.google.api.client.json.
   }
 
   /**
-   * GCS uri of decoded labels file for model export 'dict.txt'.
+   * Google Cloud Storage URI of decoded labels file for model export 'dict.txt'.
    * @return value or {@code null} for none
    */
   public java.lang.String getLabelGcsUri() {
@@ -117,7 +118,7 @@ public final class XPSImageModelArtifactSpec extends com.google.api.client.json.
   }
 
   /**
-   * GCS uri of decoded labels file for model export 'dict.txt'.
+   * Google Cloud Storage URI of decoded labels file for model export 'dict.txt'.
    * @param labelGcsUri labelGcsUri or {@code null} for none
    */
   public XPSImageModelArtifactSpec setLabelGcsUri(java.lang.String labelGcsUri) {
@@ -145,7 +146,8 @@ public final class XPSImageModelArtifactSpec extends com.google.api.client.json.
   }
 
   /**
-   * GCS uri prefix of Tensorflow JavaScript binary files 'groupX-shardXofX.bin' Deprecated.
+   * Google Cloud Storage URI prefix of Tensorflow JavaScript binary files 'groupX-shardXofX.bin'.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.String getTfJsBinaryGcsPrefix() {
@@ -153,7 +155,8 @@ public final class XPSImageModelArtifactSpec extends com.google.api.client.json.
   }
 
   /**
-   * GCS uri prefix of Tensorflow JavaScript binary files 'groupX-shardXofX.bin' Deprecated.
+   * Google Cloud Storage URI prefix of Tensorflow JavaScript binary files 'groupX-shardXofX.bin'.
+   * Deprecated.
    * @param tfJsBinaryGcsPrefix tfJsBinaryGcsPrefix or {@code null} for none
    */
   public XPSImageModelArtifactSpec setTfJsBinaryGcsPrefix(java.lang.String tfJsBinaryGcsPrefix) {
@@ -162,7 +165,7 @@ public final class XPSImageModelArtifactSpec extends com.google.api.client.json.
   }
 
   /**
-   * GCS uri of Tensorflow Lite metadata 'tflite_metadata.json'.
+   * Google Cloud Storage URI of Tensorflow Lite metadata 'tflite_metadata.json'.
    * @return value or {@code null} for none
    */
   public java.lang.String getTfLiteMetadataGcsUri() {
@@ -170,7 +173,7 @@ public final class XPSImageModelArtifactSpec extends com.google.api.client.json.
   }
 
   /**
-   * GCS uri of Tensorflow Lite metadata 'tflite_metadata.json'.
+   * Google Cloud Storage URI of Tensorflow Lite metadata 'tflite_metadata.json'.
    * @param tfLiteMetadataGcsUri tfLiteMetadataGcsUri or {@code null} for none
    */
   public XPSImageModelArtifactSpec setTfLiteMetadataGcsUri(java.lang.String tfLiteMetadataGcsUri) {

@@ -17,7 +17,7 @@
 package com.google.api.services.language.v1beta2.model;
 
 /**
- * Metadata for a dataset used for AutoML Tables. Next ID: 6
+ * Metadata for a dataset used for AutoML Tables.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Natural Language API. For a detailed

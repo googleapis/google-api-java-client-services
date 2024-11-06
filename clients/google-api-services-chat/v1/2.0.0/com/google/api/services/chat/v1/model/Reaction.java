@@ -30,14 +30,14 @@ package com.google.api.services.chat.v1.model;
 public final class Reaction extends com.google.api.client.json.GenericJson {
 
   /**
-   * The emoji used in the reaction.
+   * Required. The emoji used in the reaction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Emoji emoji;
 
   /**
-   * The resource name of the reaction. Format:
+   * Identifier. The resource name of the reaction. Format:
    * `spaces/{space}/messages/{message}/reactions/{reaction}`
    * The value may be {@code null}.
    */
@@ -52,7 +52,7 @@ public final class Reaction extends com.google.api.client.json.GenericJson {
   private User user;
 
   /**
-   * The emoji used in the reaction.
+   * Required. The emoji used in the reaction.
    * @return value or {@code null} for none
    */
   public Emoji getEmoji() {
@@ -60,7 +60,7 @@ public final class Reaction extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The emoji used in the reaction.
+   * Required. The emoji used in the reaction.
    * @param emoji emoji or {@code null} for none
    */
   public Reaction setEmoji(Emoji emoji) {
@@ -69,7 +69,7 @@ public final class Reaction extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the reaction. Format:
+   * Identifier. The resource name of the reaction. Format:
    * `spaces/{space}/messages/{message}/reactions/{reaction}`
    * @return value or {@code null} for none
    */
@@ -78,7 +78,7 @@ public final class Reaction extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the reaction. Format:
+   * Identifier. The resource name of the reaction. Format:
    * `spaces/{space}/messages/{message}/reactions/{reaction}`
    * @param name name or {@code null} for none
    */

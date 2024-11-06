@@ -37,6 +37,19 @@ public final class GoogleCloudDiscoveryengineV1betaPanelInfo extends com.google.
   private java.lang.String displayName;
 
   /**
+   * Optional. The document IDs associated with this panel.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1betaDocumentInfo> documents;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudDiscoveryengineV1betaDocumentInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDiscoveryengineV1betaDocumentInfo.class);
+  }
+
+  /**
    * Required. The panel ID.
    * The value may be {@code null}.
    */
@@ -73,6 +86,23 @@ public final class GoogleCloudDiscoveryengineV1betaPanelInfo extends com.google.
    */
   public GoogleCloudDiscoveryengineV1betaPanelInfo setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. The document IDs associated with this panel.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1betaDocumentInfo> getDocuments() {
+    return documents;
+  }
+
+  /**
+   * Optional. The document IDs associated with this panel.
+   * @param documents documents or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaPanelInfo setDocuments(java.util.List<GoogleCloudDiscoveryengineV1betaDocumentInfo> documents) {
+    this.documents = documents;
     return this;
   }
 

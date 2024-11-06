@@ -35,7 +35,15 @@ public final class GoogleCloudDiscoveryengineV1alphaCheckGroundingResponse exten
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudDiscoveryengineV1alphaCheckGroundingResponseFactChunk> citedChunks;
+  private java.util.List<GoogleCloudDiscoveryengineV1alphaFactChunk> citedChunks;
+
+  /**
+   * List of facts cited across all claims in the answer candidate. These are derived from the facts
+   * supplied in the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1alphaCheckGroundingResponseCheckGroundingFactChunk> citedFacts;
 
   /**
    * Claim texts and citation info across all claims in the answer candidate.
@@ -58,7 +66,7 @@ public final class GoogleCloudDiscoveryengineV1alphaCheckGroundingResponse exten
    * supplied in the request.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudDiscoveryengineV1alphaCheckGroundingResponseFactChunk> getCitedChunks() {
+  public java.util.List<GoogleCloudDiscoveryengineV1alphaFactChunk> getCitedChunks() {
     return citedChunks;
   }
 
@@ -67,8 +75,27 @@ public final class GoogleCloudDiscoveryengineV1alphaCheckGroundingResponse exten
    * supplied in the request.
    * @param citedChunks citedChunks or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaCheckGroundingResponse setCitedChunks(java.util.List<GoogleCloudDiscoveryengineV1alphaCheckGroundingResponseFactChunk> citedChunks) {
+  public GoogleCloudDiscoveryengineV1alphaCheckGroundingResponse setCitedChunks(java.util.List<GoogleCloudDiscoveryengineV1alphaFactChunk> citedChunks) {
     this.citedChunks = citedChunks;
+    return this;
+  }
+
+  /**
+   * List of facts cited across all claims in the answer candidate. These are derived from the facts
+   * supplied in the request.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1alphaCheckGroundingResponseCheckGroundingFactChunk> getCitedFacts() {
+    return citedFacts;
+  }
+
+  /**
+   * List of facts cited across all claims in the answer candidate. These are derived from the facts
+   * supplied in the request.
+   * @param citedFacts citedFacts or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaCheckGroundingResponse setCitedFacts(java.util.List<GoogleCloudDiscoveryengineV1alphaCheckGroundingResponseCheckGroundingFactChunk> citedFacts) {
+    this.citedFacts = citedFacts;
     return this;
   }
 

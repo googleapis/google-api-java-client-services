@@ -39,7 +39,7 @@ public final class GoogleCloudChannelV1alpha1ChannelPartnerEvent extends com.goo
   private java.lang.String channelPartner;
 
   /**
-   * Type of event performed on the Channel Partner.
+   * Type of event which happened for the channel partner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class GoogleCloudChannelV1alpha1ChannelPartnerEvent extends com.goo
   }
 
   /**
-   * Type of event performed on the Channel Partner.
+   * Type of event which happened for the channel partner.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventType() {
@@ -73,7 +73,7 @@ public final class GoogleCloudChannelV1alpha1ChannelPartnerEvent extends com.goo
   }
 
   /**
-   * Type of event performed on the Channel Partner.
+   * Type of event which happened for the channel partner.
    * @param eventType eventType or {@code null} for none
    */
   public GoogleCloudChannelV1alpha1ChannelPartnerEvent setEventType(java.lang.String eventType) {

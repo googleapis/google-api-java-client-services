@@ -17,7 +17,7 @@
 package com.google.api.services.cloudchannel.v1.model;
 
 /**
- * Represents Pub/Sub message content describing customer update.
+ * Represents Pub/Sub message content describing opportunity updates.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Channel API. For a detailed explanation see:
@@ -27,41 +27,24 @@ package com.google.api.services.cloudchannel.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudChannelV1alpha1CustomerEvent extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudChannelV1alpha1OpportunityEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Resource name of the customer. Format: accounts/{account_id}/customers/{customer_id}
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String customer;
-
-  /**
-   * Type of event which happened for the customer.
+   * Type of event which happened for the opportunity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String eventType;
 
   /**
-   * Resource name of the customer. Format: accounts/{account_id}/customers/{customer_id}
-   * @return value or {@code null} for none
+   * Resource name of the opportunity. Format: opportunities/{opportunity}
+   * The value may be {@code null}.
    */
-  public java.lang.String getCustomer() {
-    return customer;
-  }
+  @com.google.api.client.util.Key
+  private java.lang.String opportunity;
 
   /**
-   * Resource name of the customer. Format: accounts/{account_id}/customers/{customer_id}
-   * @param customer customer or {@code null} for none
-   */
-  public GoogleCloudChannelV1alpha1CustomerEvent setCustomer(java.lang.String customer) {
-    this.customer = customer;
-    return this;
-  }
-
-  /**
-   * Type of event which happened for the customer.
+   * Type of event which happened for the opportunity.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventType() {
@@ -69,22 +52,39 @@ public final class GoogleCloudChannelV1alpha1CustomerEvent extends com.google.ap
   }
 
   /**
-   * Type of event which happened for the customer.
+   * Type of event which happened for the opportunity.
    * @param eventType eventType or {@code null} for none
    */
-  public GoogleCloudChannelV1alpha1CustomerEvent setEventType(java.lang.String eventType) {
+  public GoogleCloudChannelV1alpha1OpportunityEvent setEventType(java.lang.String eventType) {
     this.eventType = eventType;
     return this;
   }
 
-  @Override
-  public GoogleCloudChannelV1alpha1CustomerEvent set(String fieldName, Object value) {
-    return (GoogleCloudChannelV1alpha1CustomerEvent) super.set(fieldName, value);
+  /**
+   * Resource name of the opportunity. Format: opportunities/{opportunity}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOpportunity() {
+    return opportunity;
+  }
+
+  /**
+   * Resource name of the opportunity. Format: opportunities/{opportunity}
+   * @param opportunity opportunity or {@code null} for none
+   */
+  public GoogleCloudChannelV1alpha1OpportunityEvent setOpportunity(java.lang.String opportunity) {
+    this.opportunity = opportunity;
+    return this;
   }
 
   @Override
-  public GoogleCloudChannelV1alpha1CustomerEvent clone() {
-    return (GoogleCloudChannelV1alpha1CustomerEvent) super.clone();
+  public GoogleCloudChannelV1alpha1OpportunityEvent set(String fieldName, Object value) {
+    return (GoogleCloudChannelV1alpha1OpportunityEvent) super.set(fieldName, value);
+  }
+
+  @Override
+  public GoogleCloudChannelV1alpha1OpportunityEvent clone() {
+    return (GoogleCloudChannelV1alpha1OpportunityEvent) super.clone();
   }
 
 }

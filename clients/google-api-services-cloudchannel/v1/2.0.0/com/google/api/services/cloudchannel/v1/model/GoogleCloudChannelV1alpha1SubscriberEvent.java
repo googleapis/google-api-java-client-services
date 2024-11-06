@@ -51,6 +51,13 @@ public final class GoogleCloudChannelV1alpha1SubscriberEvent extends com.google.
   private GoogleCloudChannelV1alpha1EntitlementEvent entitlementEvent;
 
   /**
+   * Opportunity event sent as part of Pub/Sub event to partners/integrators.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudChannelV1alpha1OpportunityEvent opportunityEvent;
+
+  /**
    * Channel Partner event sent as part of Pub/Sub event to partners.
    * @return value or {@code null} for none
    */
@@ -98,6 +105,23 @@ public final class GoogleCloudChannelV1alpha1SubscriberEvent extends com.google.
    */
   public GoogleCloudChannelV1alpha1SubscriberEvent setEntitlementEvent(GoogleCloudChannelV1alpha1EntitlementEvent entitlementEvent) {
     this.entitlementEvent = entitlementEvent;
+    return this;
+  }
+
+  /**
+   * Opportunity event sent as part of Pub/Sub event to partners/integrators.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudChannelV1alpha1OpportunityEvent getOpportunityEvent() {
+    return opportunityEvent;
+  }
+
+  /**
+   * Opportunity event sent as part of Pub/Sub event to partners/integrators.
+   * @param opportunityEvent opportunityEvent or {@code null} for none
+   */
+  public GoogleCloudChannelV1alpha1SubscriberEvent setOpportunityEvent(GoogleCloudChannelV1alpha1OpportunityEvent opportunityEvent) {
+    this.opportunityEvent = opportunityEvent;
     return this;
   }
 

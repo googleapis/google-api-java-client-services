@@ -54,6 +54,16 @@ public final class GoogleCloudChannelV1ChangeOfferRequest extends com.google.api
   private java.util.List<GoogleCloudChannelV1Parameter> parameters;
 
   /**
+   * Optional. Price reference ID for the offer. Optional field only for offers that require
+   * additional price information. Used to guarantee that the pricing is consistent between quoting
+   * the offer and placing the order. Yet to be implemented: this field is currently not evaluated
+   * in the API if populated in a request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String priceReferenceId;
+
+  /**
    * Optional. Purchase order id provided by the reseller.
    * The value may be {@code null}.
    */
@@ -127,6 +137,29 @@ public final class GoogleCloudChannelV1ChangeOfferRequest extends com.google.api
    */
   public GoogleCloudChannelV1ChangeOfferRequest setParameters(java.util.List<GoogleCloudChannelV1Parameter> parameters) {
     this.parameters = parameters;
+    return this;
+  }
+
+  /**
+   * Optional. Price reference ID for the offer. Optional field only for offers that require
+   * additional price information. Used to guarantee that the pricing is consistent between quoting
+   * the offer and placing the order. Yet to be implemented: this field is currently not evaluated
+   * in the API if populated in a request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPriceReferenceId() {
+    return priceReferenceId;
+  }
+
+  /**
+   * Optional. Price reference ID for the offer. Optional field only for offers that require
+   * additional price information. Used to guarantee that the pricing is consistent between quoting
+   * the offer and placing the order. Yet to be implemented: this field is currently not evaluated
+   * in the API if populated in a request.
+   * @param priceReferenceId priceReferenceId or {@code null} for none
+   */
+  public GoogleCloudChannelV1ChangeOfferRequest setPriceReferenceId(java.lang.String priceReferenceId) {
+    this.priceReferenceId = priceReferenceId;
     return this;
   }
 

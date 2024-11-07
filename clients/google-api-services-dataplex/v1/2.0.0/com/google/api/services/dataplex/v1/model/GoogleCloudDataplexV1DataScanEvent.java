@@ -18,7 +18,7 @@ package com.google.api.services.dataplex.v1.model;
 
 /**
  * These messages contain information about the execution of a datascan. The monitored resource is
- * 'DataScan' Next ID: 13
+ * 'DataScan'
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:

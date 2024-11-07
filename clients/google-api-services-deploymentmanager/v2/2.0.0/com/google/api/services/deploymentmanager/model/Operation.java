@@ -168,6 +168,13 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
+   * [Output Only] Server-defined URL for this resource with the resource id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String selfLinkWithId;
+
+  /**
    * [Output Only] If the operation is for projects.setCommonInstanceMetadata, this field will
    * contain information on all underlying zonal actions and their state.
    * The value may be {@code null}.
@@ -208,7 +215,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The URL of the resource that the operation modifies. For operations related to
-   * creating a snapshot, this points to the persistent disk that the snapshot was created from.
+   * creating a snapshot, this points to the disk that the snapshot was created from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -554,6 +561,23 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * [Output Only] Server-defined URL for this resource with the resource id.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSelfLinkWithId() {
+    return selfLinkWithId;
+  }
+
+  /**
+   * [Output Only] Server-defined URL for this resource with the resource id.
+   * @param selfLinkWithId selfLinkWithId or {@code null} for none
+   */
+  public Operation setSelfLinkWithId(java.lang.String selfLinkWithId) {
+    this.selfLinkWithId = selfLinkWithId;
+    return this;
+  }
+
+  /**
    * [Output Only] If the operation is for projects.setCommonInstanceMetadata, this field will
    * contain information on all underlying zonal actions and their state.
    * @return value or {@code null} for none
@@ -648,7 +672,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The URL of the resource that the operation modifies. For operations related to
-   * creating a snapshot, this points to the persistent disk that the snapshot was created from.
+   * creating a snapshot, this points to the disk that the snapshot was created from.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetLink() {
@@ -657,7 +681,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The URL of the resource that the operation modifies. For operations related to
-   * creating a snapshot, this points to the persistent disk that the snapshot was created from.
+   * creating a snapshot, this points to the disk that the snapshot was created from.
    * @param targetLink targetLink or {@code null} for none
    */
   public Operation setTargetLink(java.lang.String targetLink) {
@@ -784,11 +808,41 @@ public final class Operation extends com.google.api.client.json.GenericJson {
     public static final class Errors extends com.google.api.client.json.GenericJson {
 
       /**
+       * [Output Only] Optional error details WARNING: DO NOT MAKE VISIBLE This is for internal use-only
+       * (like componentization) (thus the visibility "none") and in case of public exposure it is
+       * strongly recommended to follow pattern of: https://aip.dev/193 and expose as details field.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> arguments;
+
+      /**
        * [Output Only] The error type identifier for this error.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.String code;
+
+      /**
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private DebugInfo debugInfo;
+
+      /**
+       * [Output Only] An optional list of messages that contain the error details. There is a set of
+       * defined message types to use for providing details.The syntax depends on the error code. For
+       * example, QuotaExceededInfo will have details when the error code is QUOTA_EXCEEDED.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<ErrorDetails> errorDetails;
+
+      static {
+        // hack to force ProGuard to consider ErrorDetails used, since otherwise it would be stripped out
+        // see https://github.com/google/google-api-java-client/issues/543
+        com.google.api.client.util.Data.nullOf(ErrorDetails.class);
+      }
 
       /**
        * [Output Only] Indicates the field in the request that caused the error. This property is
@@ -806,6 +860,27 @@ public final class Operation extends com.google.api.client.json.GenericJson {
       private java.lang.String message;
 
       /**
+       * [Output Only] Optional error details WARNING: DO NOT MAKE VISIBLE This is for internal use-only
+       * (like componentization) (thus the visibility "none") and in case of public exposure it is
+       * strongly recommended to follow pattern of: https://aip.dev/193 and expose as details field.
+       * @return value or {@code null} for none
+       */
+      public java.util.List<java.lang.String> getArguments() {
+        return arguments;
+      }
+
+      /**
+       * [Output Only] Optional error details WARNING: DO NOT MAKE VISIBLE This is for internal use-only
+       * (like componentization) (thus the visibility "none") and in case of public exposure it is
+       * strongly recommended to follow pattern of: https://aip.dev/193 and expose as details field.
+       * @param arguments arguments or {@code null} for none
+       */
+      public Errors setArguments(java.util.List<java.lang.String> arguments) {
+        this.arguments = arguments;
+        return this;
+      }
+
+      /**
        * [Output Only] The error type identifier for this error.
        * @return value or {@code null} for none
        */
@@ -819,6 +894,42 @@ public final class Operation extends com.google.api.client.json.GenericJson {
        */
       public Errors setCode(java.lang.String code) {
         this.code = code;
+        return this;
+      }
+
+      /**
+       * @return value or {@code null} for none
+       */
+      public DebugInfo getDebugInfo() {
+        return debugInfo;
+      }
+
+      /**
+       * @param debugInfo debugInfo or {@code null} for none
+       */
+      public Errors setDebugInfo(DebugInfo debugInfo) {
+        this.debugInfo = debugInfo;
+        return this;
+      }
+
+      /**
+       * [Output Only] An optional list of messages that contain the error details. There is a set of
+       * defined message types to use for providing details.The syntax depends on the error code. For
+       * example, QuotaExceededInfo will have details when the error code is QUOTA_EXCEEDED.
+       * @return value or {@code null} for none
+       */
+      public java.util.List<ErrorDetails> getErrorDetails() {
+        return errorDetails;
+      }
+
+      /**
+       * [Output Only] An optional list of messages that contain the error details. There is a set of
+       * defined message types to use for providing details.The syntax depends on the error code. For
+       * example, QuotaExceededInfo will have details when the error code is QUOTA_EXCEEDED.
+       * @param errorDetails errorDetails or {@code null} for none
+       */
+      public Errors setErrorDetails(java.util.List<ErrorDetails> errorDetails) {
+        this.errorDetails = errorDetails;
         return this;
       }
 
@@ -868,6 +979,106 @@ public final class Operation extends com.google.api.client.json.GenericJson {
         return (Errors) super.clone();
       }
 
+      /**
+       * Model definition for OperationErrorErrorsErrorDetails.
+       */
+      public static final class ErrorDetails extends com.google.api.client.json.GenericJson {
+
+        /**
+         * The value may be {@code null}.
+         */
+        @com.google.api.client.util.Key
+        private ErrorInfo errorInfo;
+
+        /**
+         * The value may be {@code null}.
+         */
+        @com.google.api.client.util.Key
+        private Help help;
+
+        /**
+         * The value may be {@code null}.
+         */
+        @com.google.api.client.util.Key
+        private LocalizedMessage localizedMessage;
+
+        /**
+         * The value may be {@code null}.
+         */
+        @com.google.api.client.util.Key
+        private QuotaExceededInfo quotaInfo;
+
+        /**
+         * @return value or {@code null} for none
+         */
+        public ErrorInfo getErrorInfo() {
+          return errorInfo;
+        }
+
+        /**
+         * @param errorInfo errorInfo or {@code null} for none
+         */
+        public ErrorDetails setErrorInfo(ErrorInfo errorInfo) {
+          this.errorInfo = errorInfo;
+          return this;
+        }
+
+        /**
+         * @return value or {@code null} for none
+         */
+        public Help getHelp() {
+          return help;
+        }
+
+        /**
+         * @param help help or {@code null} for none
+         */
+        public ErrorDetails setHelp(Help help) {
+          this.help = help;
+          return this;
+        }
+
+        /**
+         * @return value or {@code null} for none
+         */
+        public LocalizedMessage getLocalizedMessage() {
+          return localizedMessage;
+        }
+
+        /**
+         * @param localizedMessage localizedMessage or {@code null} for none
+         */
+        public ErrorDetails setLocalizedMessage(LocalizedMessage localizedMessage) {
+          this.localizedMessage = localizedMessage;
+          return this;
+        }
+
+        /**
+         * @return value or {@code null} for none
+         */
+        public QuotaExceededInfo getQuotaInfo() {
+          return quotaInfo;
+        }
+
+        /**
+         * @param quotaInfo quotaInfo or {@code null} for none
+         */
+        public ErrorDetails setQuotaInfo(QuotaExceededInfo quotaInfo) {
+          this.quotaInfo = quotaInfo;
+          return this;
+        }
+
+        @Override
+        public ErrorDetails set(String fieldName, Object value) {
+          return (ErrorDetails) super.set(fieldName, value);
+        }
+
+        @Override
+        public ErrorDetails clone() {
+          return (ErrorDetails) super.clone();
+        }
+
+      }
     }
   }
 

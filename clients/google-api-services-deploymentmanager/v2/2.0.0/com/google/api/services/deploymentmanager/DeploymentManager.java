@@ -476,6 +476,21 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
         return this;
       }
 
+      @com.google.api.client.util.Key("header.bypassBillingFilter")
+      private java.lang.Boolean headerBypassBillingFilter;
+
+      /**
+
+       */
+      public java.lang.Boolean getHeaderBypassBillingFilter() {
+        return headerBypassBillingFilter;
+      }
+
+      public Delete setHeaderBypassBillingFilter(java.lang.Boolean headerBypassBillingFilter) {
+        this.headerBypassBillingFilter = headerBypassBillingFilter;
+        return this;
+      }
+
       @Override
       public Delete set(String parameterName, Object value) {
         return (Delete) super.set(parameterName, value);
@@ -644,6 +659,21 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
               "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
         }
         this.deployment = deployment;
+        return this;
+      }
+
+      @com.google.api.client.util.Key("header.bypassBillingFilter")
+      private java.lang.Boolean headerBypassBillingFilter;
+
+      /**
+
+       */
+      public java.lang.Boolean getHeaderBypassBillingFilter() {
+        return headerBypassBillingFilter;
+      }
+
+      public Get setHeaderBypassBillingFilter(java.lang.Boolean headerBypassBillingFilter) {
+        this.headerBypassBillingFilter = headerBypassBillingFilter;
         return this;
       }
 
@@ -820,6 +850,21 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
         return this;
       }
 
+      @com.google.api.client.util.Key("header.bypassBillingFilter")
+      private java.lang.Boolean headerBypassBillingFilter;
+
+      /**
+
+       */
+      public java.lang.Boolean getHeaderBypassBillingFilter() {
+        return headerBypassBillingFilter;
+      }
+
+      public GetIamPolicy setHeaderBypassBillingFilter(java.lang.Boolean headerBypassBillingFilter) {
+        this.headerBypassBillingFilter = headerBypassBillingFilter;
+        return this;
+      }
+
       /** Requested IAM Policy version. */
       @com.google.api.client.util.Key
       private java.lang.Integer optionsRequestedPolicyVersion;
@@ -980,6 +1025,21 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       /** Sets the policy to use for creating new resources. */
       public Insert setCreatePolicy(java.lang.String createPolicy) {
         this.createPolicy = createPolicy;
+        return this;
+      }
+
+      @com.google.api.client.util.Key("header.bypassBillingFilter")
+      private java.lang.Boolean headerBypassBillingFilter;
+
+      /**
+
+       */
+      public java.lang.Boolean getHeaderBypassBillingFilter() {
+        return headerBypassBillingFilter;
+      }
+
+      public Insert setHeaderBypassBillingFilter(java.lang.Boolean headerBypassBillingFilter) {
+        this.headerBypassBillingFilter = headerBypassBillingFilter;
         return this;
       }
 
@@ -1529,6 +1589,21 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       /** Sets the policy to use for deleting resources. */
       public Patch setDeletePolicy(java.lang.String deletePolicy) {
         this.deletePolicy = deletePolicy;
+        return this;
+      }
+
+      @com.google.api.client.util.Key("header.bypassBillingFilter")
+      private java.lang.Boolean headerBypassBillingFilter;
+
+      /**
+
+       */
+      public java.lang.Boolean getHeaderBypassBillingFilter() {
+        return headerBypassBillingFilter;
+      }
+
+      public Patch setHeaderBypassBillingFilter(java.lang.Boolean headerBypassBillingFilter) {
+        this.headerBypassBillingFilter = headerBypassBillingFilter;
         return this;
       }
 
@@ -2099,6 +2174,21 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
         return this;
       }
 
+      @com.google.api.client.util.Key("header.bypassBillingFilter")
+      private java.lang.Boolean headerBypassBillingFilter;
+
+      /**
+
+       */
+      public java.lang.Boolean getHeaderBypassBillingFilter() {
+        return headerBypassBillingFilter;
+      }
+
+      public TestIamPermissions setHeaderBypassBillingFilter(java.lang.Boolean headerBypassBillingFilter) {
+        this.headerBypassBillingFilter = headerBypassBillingFilter;
+        return this;
+      }
+
       @Override
       public TestIamPermissions set(String parameterName, Object value) {
         return (TestIamPermissions) super.set(parameterName, value);
@@ -2291,6 +2381,21 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       /** Sets the policy to use for deleting resources. */
       public Update setDeletePolicy(java.lang.String deletePolicy) {
         this.deletePolicy = deletePolicy;
+        return this;
+      }
+
+      @com.google.api.client.util.Key("header.bypassBillingFilter")
+      private java.lang.Boolean headerBypassBillingFilter;
+
+      /**
+
+       */
+      public java.lang.Boolean getHeaderBypassBillingFilter() {
+        return headerBypassBillingFilter;
+      }
+
+      public Update setHeaderBypassBillingFilter(java.lang.Boolean headerBypassBillingFilter) {
+        this.headerBypassBillingFilter = headerBypassBillingFilter;
         return this;
       }
 
@@ -2591,6 +2696,21 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
               "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
         }
         this.manifest = manifest;
+        return this;
+      }
+
+      @com.google.api.client.util.Key("header.bypassBillingFilter")
+      private java.lang.Boolean headerBypassBillingFilter;
+
+      /**
+
+       */
+      public java.lang.Boolean getHeaderBypassBillingFilter() {
+        return headerBypassBillingFilter;
+      }
+
+      public Get setHeaderBypassBillingFilter(java.lang.Boolean headerBypassBillingFilter) {
+        this.headerBypassBillingFilter = headerBypassBillingFilter;
         return this;
       }
 
@@ -3126,6 +3246,21 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
         return this;
       }
 
+      @com.google.api.client.util.Key("header.bypassBillingFilter")
+      private java.lang.Boolean headerBypassBillingFilter;
+
+      /**
+
+       */
+      public java.lang.Boolean getHeaderBypassBillingFilter() {
+        return headerBypassBillingFilter;
+      }
+
+      public Get setHeaderBypassBillingFilter(java.lang.Boolean headerBypassBillingFilter) {
+        this.headerBypassBillingFilter = headerBypassBillingFilter;
+        return this;
+      }
+
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
@@ -3655,6 +3790,21 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       /** The name of the resource for this request. */
       public Get setResource(java.lang.String resource) {
         this.resource = resource;
+        return this;
+      }
+
+      @com.google.api.client.util.Key("header.bypassBillingFilter")
+      private java.lang.Boolean headerBypassBillingFilter;
+
+      /**
+
+       */
+      public java.lang.Boolean getHeaderBypassBillingFilter() {
+        return headerBypassBillingFilter;
+      }
+
+      public Get setHeaderBypassBillingFilter(java.lang.Boolean headerBypassBillingFilter) {
+        this.headerBypassBillingFilter = headerBypassBillingFilter;
         return this;
       }
 

@@ -30,23 +30,23 @@ package com.google.api.services.chat.v1.model;
 public final class MembershipCount extends com.google.api.client.json.GenericJson {
 
   /**
-   * Count of human users that have directly joined the space, not counting users joined by having
-   * membership in a joined group.
+   * Output only. Count of human users that have directly joined the space, not counting users
+   * joined by having membership in a joined group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer joinedDirectHumanUserCount;
 
   /**
-   * Count of all groups that have directly joined the space.
+   * Output only. Count of all groups that have directly joined the space.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer joinedGroupCount;
 
   /**
-   * Count of human users that have directly joined the space, not counting users joined by having
-   * membership in a joined group.
+   * Output only. Count of human users that have directly joined the space, not counting users
+   * joined by having membership in a joined group.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getJoinedDirectHumanUserCount() {
@@ -54,8 +54,8 @@ public final class MembershipCount extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Count of human users that have directly joined the space, not counting users joined by having
-   * membership in a joined group.
+   * Output only. Count of human users that have directly joined the space, not counting users
+   * joined by having membership in a joined group.
    * @param joinedDirectHumanUserCount joinedDirectHumanUserCount or {@code null} for none
    */
   public MembershipCount setJoinedDirectHumanUserCount(java.lang.Integer joinedDirectHumanUserCount) {
@@ -64,7 +64,7 @@ public final class MembershipCount extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Count of all groups that have directly joined the space.
+   * Output only. Count of all groups that have directly joined the space.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getJoinedGroupCount() {
@@ -72,7 +72,7 @@ public final class MembershipCount extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Count of all groups that have directly joined the space.
+   * Output only. Count of all groups that have directly joined the space.
    * @param joinedGroupCount joinedGroupCount or {@code null} for none
    */
   public MembershipCount setJoinedGroupCount(java.lang.Integer joinedGroupCount) {

@@ -34,7 +34,7 @@ package com.google.api.services.chat.v1.model;
 public final class Thread extends com.google.api.client.json.GenericJson {
 
   /**
-   * Resource name of the thread. Example: `spaces/{space}/threads/{thread}`
+   * Identifier. Resource name of the thread. Example: `spaces/{space}/threads/{thread}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class Thread extends com.google.api.client.json.GenericJson {
   private java.lang.String threadKey;
 
   /**
-   * Resource name of the thread. Example: `spaces/{space}/threads/{thread}`
+   * Identifier. Resource name of the thread. Example: `spaces/{space}/threads/{thread}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -60,7 +60,7 @@ public final class Thread extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the thread. Example: `spaces/{space}/threads/{thread}`
+   * Identifier. Resource name of the thread. Example: `spaces/{space}/threads/{thread}`
    * @param name name or {@code null} for none
    */
   public Thread setName(java.lang.String name) {

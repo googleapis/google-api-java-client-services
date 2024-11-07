@@ -976,18 +976,18 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * When `true`, the method runs using the user's Google Workspace administrator privileges.
-       * The calling user must be a Google Workspace administrator with the [manage chat and spaces
-       * conversations privilege](https://support.google.com/a/answer/13369245). Requires the
-       * `chat.admin.delete` [OAuth 2.0
+       * Optional. When `true`, the method runs using the user's Google Workspace administrator
+       * privileges. The calling user must be a Google Workspace administrator with the [manage chat
+       * and spaces conversations privilege](https://support.google.com/a/answer/13369245). Requires
+       * the `chat.admin.delete` [OAuth 2.0
        * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
        * scopes).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useAdminAccess;
 
-      /** When `true`, the method runs using the user's Google Workspace administrator privileges. The
-     calling user must be a Google Workspace administrator with the [manage chat and spaces
+      /** Optional. When `true`, the method runs using the user's Google Workspace administrator privileges.
+     The calling user must be a Google Workspace administrator with the [manage chat and spaces
      conversations privilege](https://support.google.com/a/answer/13369245). Requires the
      `chat.admin.delete` [OAuth 2.0 scope](https://developers.google.com/workspace/chat/authenticate-
      authorize#chat-api-scopes).
@@ -997,10 +997,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * When `true`, the method runs using the user's Google Workspace administrator privileges.
-       * The calling user must be a Google Workspace administrator with the [manage chat and spaces
-       * conversations privilege](https://support.google.com/a/answer/13369245). Requires the
-       * `chat.admin.delete` [OAuth 2.0
+       * Optional. When `true`, the method runs using the user's Google Workspace administrator
+       * privileges. The calling user must be a Google Workspace administrator with the [manage chat
+       * and spaces conversations privilege](https://support.google.com/a/answer/13369245). Requires
+       * the `chat.admin.delete` [OAuth 2.0
        * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
        * scopes).
        */
@@ -1341,18 +1341,18 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * When `true`, the method runs using the user's Google Workspace administrator privileges.
-       * The calling user must be a Google Workspace administrator with the [manage chat and spaces
-       * conversations privilege](https://support.google.com/a/answer/13369245). Requires the
-       * `chat.admin.spaces` or `chat.admin.spaces.readonly` [OAuth 2.0
+       * Optional. When `true`, the method runs using the user's Google Workspace administrator
+       * privileges. The calling user must be a Google Workspace administrator with the [manage chat
+       * and spaces conversations privilege](https://support.google.com/a/answer/13369245). Requires
+       * the `chat.admin.spaces` or `chat.admin.spaces.readonly` [OAuth 2.0
        * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
        * scopes).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useAdminAccess;
 
-      /** When `true`, the method runs using the user's Google Workspace administrator privileges. The
-     calling user must be a Google Workspace administrator with the [manage chat and spaces
+      /** Optional. When `true`, the method runs using the user's Google Workspace administrator privileges.
+     The calling user must be a Google Workspace administrator with the [manage chat and spaces
      conversations privilege](https://support.google.com/a/answer/13369245). Requires the
      `chat.admin.spaces` or `chat.admin.spaces.readonly` [OAuth 2.0
      scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes).
@@ -1362,10 +1362,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * When `true`, the method runs using the user's Google Workspace administrator privileges.
-       * The calling user must be a Google Workspace administrator with the [manage chat and spaces
-       * conversations privilege](https://support.google.com/a/answer/13369245). Requires the
-       * `chat.admin.spaces` or `chat.admin.spaces.readonly` [OAuth 2.0
+       * Optional. When `true`, the method runs using the user's Google Workspace administrator
+       * privileges. The calling user must be a Google Workspace administrator with the [manage chat
+       * and spaces conversations privilege](https://support.google.com/a/answer/13369245). Requires
+       * the `chat.admin.spaces` or `chat.admin.spaces.readonly` [OAuth 2.0
        * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
        * scopes).
        */
@@ -1611,10 +1611,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the chat server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param name Resource name of the space. Format: `spaces/{space}` Where `{space}` represents the system-assigned
-     *        ID for the space. You can obtain the space ID by calling the [`spaces.list()`](https://dev
-     *        elopers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) method or from the
-     *        space URL. For example, if the space URL is
+     * @param name Identifier. Resource name of the space. Format: `spaces/{space}` Where `{space}` represents the
+     *        system-assigned ID for the space. You can obtain the space ID by calling the [`spaces.list
+     *        ()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list)
+     *        method or from the space URL. For example, if the space URL is
      *        `https://mail.google.com/mail/u/0/#chat/space/AAAAAAAAA`, the space ID is `AAAAAAAAA`.
      * @param content the {@link com.google.api.services.chat.v1.model.Space}
      * @return the request
@@ -1653,10 +1653,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Resource name of the space. Format: `spaces/{space}` Where `{space}` represents the system-assigned
-     *        ID for the space. You can obtain the space ID by calling the [`spaces.list()`](https://dev
-     *        elopers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) method or from the
-     *        space URL. For example, if the space URL is
+       * @param name Identifier. Resource name of the space. Format: `spaces/{space}` Where `{space}` represents the
+     *        system-assigned ID for the space. You can obtain the space ID by calling the [`spaces.list
+     *        ()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list)
+     *        method or from the space URL. For example, if the space URL is
      *        `https://mail.google.com/mail/u/0/#chat/space/AAAAAAAAA`, the space ID is `AAAAAAAAA`.
        * @param content the {@link com.google.api.services.chat.v1.model.Space}
        * @since 1.13
@@ -1727,17 +1727,17 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Resource name of the space. Format: `spaces/{space}` Where `{space}` represents the system-
-       * assigned ID for the space. You can obtain the space ID by calling the [`spaces.list()`](htt
-       * ps://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) method or from
-       * the space URL. For example, if the space URL is
+       * Identifier. Resource name of the space. Format: `spaces/{space}` Where `{space}` represents
+       * the system-assigned ID for the space. You can obtain the space ID by calling the [`spaces.l
+       * ist()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list)
+       * method or from the space URL. For example, if the space URL is
        * `https://mail.google.com/mail/u/0/#chat/space/AAAAAAAAA`, the space ID is `AAAAAAAAA`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Resource name of the space. Format: `spaces/{space}` Where `{space}` represents the system-assigned
-     ID for the space. You can obtain the space ID by calling the
+      /** Identifier. Resource name of the space. Format: `spaces/{space}` Where `{space}` represents the
+     system-assigned ID for the space. You can obtain the space ID by calling the
      [`spaces.list()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list)
      method or from the space URL. For example, if the space URL is
      `https://mail.google.com/mail/u/0/#chat/space/AAAAAAAAA`, the space ID is `AAAAAAAAA`.
@@ -1747,10 +1747,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Resource name of the space. Format: `spaces/{space}` Where `{space}` represents the system-
-       * assigned ID for the space. You can obtain the space ID by calling the [`spaces.list()`](htt
-       * ps://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) method or from
-       * the space URL. For example, if the space URL is
+       * Identifier. Resource name of the space. Format: `spaces/{space}` Where `{space}` represents
+       * the system-assigned ID for the space. You can obtain the space ID by calling the [`spaces.l
+       * ist()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list)
+       * method or from the space URL. For example, if the space URL is
        * `https://mail.google.com/mail/u/0/#chat/space/AAAAAAAAA`, the space ID is `AAAAAAAAA`.
        */
       public Patch setName(java.lang.String name) {
@@ -1884,10 +1884,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * When `true`, the method runs using the user's Google Workspace administrator privileges.
-       * The calling user must be a Google Workspace administrator with the [manage chat and spaces
-       * conversations privilege](https://support.google.com/a/answer/13369245). Requires the
-       * `chat.admin.spaces` [OAuth 2.0
+       * Optional. When `true`, the method runs using the user's Google Workspace administrator
+       * privileges. The calling user must be a Google Workspace administrator with the [manage chat
+       * and spaces conversations privilege](https://support.google.com/a/answer/13369245). Requires
+       * the `chat.admin.spaces` [OAuth 2.0
        * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
        * scopes). Some `FieldMask` values are not supported using admin access. For details, see the
        * description of `update_mask`.
@@ -1895,8 +1895,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Boolean useAdminAccess;
 
-      /** When `true`, the method runs using the user's Google Workspace administrator privileges. The
-     calling user must be a Google Workspace administrator with the [manage chat and spaces
+      /** Optional. When `true`, the method runs using the user's Google Workspace administrator privileges.
+     The calling user must be a Google Workspace administrator with the [manage chat and spaces
      conversations privilege](https://support.google.com/a/answer/13369245). Requires the
      `chat.admin.spaces` [OAuth 2.0 scope](https://developers.google.com/workspace/chat/authenticate-
      authorize#chat-api-scopes). Some `FieldMask` values are not supported using admin access. For
@@ -1907,10 +1907,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * When `true`, the method runs using the user's Google Workspace administrator privileges.
-       * The calling user must be a Google Workspace administrator with the [manage chat and spaces
-       * conversations privilege](https://support.google.com/a/answer/13369245). Requires the
-       * `chat.admin.spaces` [OAuth 2.0
+       * Optional. When `true`, the method runs using the user's Google Workspace administrator
+       * privileges. The calling user must be a Google Workspace administrator with the [manage chat
+       * and spaces conversations privilege](https://support.google.com/a/answer/13369245). Requires
+       * the `chat.admin.spaces` [OAuth 2.0
        * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
        * scopes). Some `FieldMask` values are not supported using admin access. For details, see the
        * description of `update_mask`.
@@ -4152,17 +4152,17 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * When `true`, deleting a message also deletes its threaded replies. When `false`, if a
-         * message has threaded replies, deletion fails. Only applies when [authenticating as a
-         * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user). Has
-         * no effect when [authenticating as a Chat app]
+         * Optional. When `true`, deleting a message also deletes its threaded replies. When
+         * `false`, if a message has threaded replies, deletion fails. Only applies when
+         * [authenticating as a user](https://developers.google.com/workspace/chat/authenticate-
+         * authorize-chat-user). Has no effect when [authenticating as a Chat app]
          * (https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean force;
 
-        /** When `true`, deleting a message also deletes its threaded replies. When `false`, if a message has
-       threaded replies, deletion fails. Only applies when [authenticating as a
+        /** Optional. When `true`, deleting a message also deletes its threaded replies. When `false`, if a
+       message has threaded replies, deletion fails. Only applies when [authenticating as a
        user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user). Has no effect
        when [authenticating as a Chat app] (https://developers.google.com/workspace/chat/authenticate-
        authorize-chat-app).
@@ -4172,10 +4172,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * When `true`, deleting a message also deletes its threaded replies. When `false`, if a
-         * message has threaded replies, deletion fails. Only applies when [authenticating as a
-         * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user). Has
-         * no effect when [authenticating as a Chat app]
+         * Optional. When `true`, deleting a message also deletes its threaded replies. When
+         * `false`, if a message has threaded replies, deletion fails. Only applies when
+         * [authenticating as a user](https://developers.google.com/workspace/chat/authenticate-
+         * authorize-chat-user). Has no effect when [authenticating as a Chat app]
          * (https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
          */
         public Delete setForce(java.lang.Boolean force) {
@@ -4505,7 +4505,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * A query filter. You can filter messages by date (`create_time`) and thread
+         * Optional. A query filter. You can filter messages by date (`create_time`) and thread
          * (`thread.name`). To filter messages by the date they were created, specify the
          * `create_time` with a timestamp in [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339)
          * format and double quotation marks. For example, `"2023-04-21T11:30:00-04:00"`. You can
@@ -4524,13 +4524,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** A query filter. You can filter messages by date (`create_time`) and thread (`thread.name`). To
-       filter messages by the date they were created, specify the `create_time` with a timestamp in
-       [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339) format and double quotation marks. For example,
-       `"2023-04-21T11:30:00-04:00"`. You can use the greater than operator `>` to list messages that were
-       created after a timestamp, or the less than operator `<` to list messages that were created before
-       a timestamp. To filter messages within a time interval, use the `AND` operator between two
-       timestamps. To filter by thread, specify the `thread.name`, formatted as
+        /** Optional. A query filter. You can filter messages by date (`create_time`) and thread
+       (`thread.name`). To filter messages by the date they were created, specify the `create_time` with a
+       timestamp in [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339) format and double quotation marks.
+       For example, `"2023-04-21T11:30:00-04:00"`. You can use the greater than operator `>` to list
+       messages that were created after a timestamp, or the less than operator `<` to list messages that
+       were created before a timestamp. To filter messages within a time interval, use the `AND` operator
+       between two timestamps. To filter by thread, specify the `thread.name`, formatted as
        `spaces/{space}/threads/{thread}`. You can only specify one `thread.name` per query. To filter by
        both thread and date, use the `AND` operator in your query. For example, the following queries are
        valid: ``` create_time > "2012-04-21T11:30:00-04:00" create_time > "2012-04-21T11:30:00-04:00" AND
@@ -4544,7 +4544,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * A query filter. You can filter messages by date (`create_time`) and thread
+         * Optional. A query filter. You can filter messages by date (`create_time`) and thread
          * (`thread.name`). To filter messages by the date they were created, specify the
          * `create_time` with a timestamp in [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339)
          * format and double quotation marks. For example, `"2023-04-21T11:30:00-04:00"`. You can
@@ -4566,27 +4566,27 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional, if resuming from a previous query. How the list of messages is ordered. Specify
-         * a value to order by an ordering operation. Valid ordering operation values are as
-         * follows: - `ASC` for ascending. - `DESC` for descending. The default ordering is
-         * `create_time ASC`.
+         * Optional. Optional, if resuming from a previous query. How the list of messages is
+         * ordered. Specify a value to order by an ordering operation. Valid ordering operation
+         * values are as follows: - `ASC` for ascending. - `DESC` for descending. The default
+         * ordering is `create_time ASC`.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Optional, if resuming from a previous query. How the list of messages is ordered. Specify a value
-       to order by an ordering operation. Valid ordering operation values are as follows: - `ASC` for
-       ascending. - `DESC` for descending. The default ordering is `create_time ASC`.
+        /** Optional. Optional, if resuming from a previous query. How the list of messages is ordered. Specify
+       a value to order by an ordering operation. Valid ordering operation values are as follows: - `ASC`
+       for ascending. - `DESC` for descending. The default ordering is `create_time ASC`.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
         }
 
         /**
-         * Optional, if resuming from a previous query. How the list of messages is ordered. Specify
-         * a value to order by an ordering operation. Valid ordering operation values are as
-         * follows: - `ASC` for ascending. - `DESC` for descending. The default ordering is
-         * `create_time ASC`.
+         * Optional. Optional, if resuming from a previous query. How the list of messages is
+         * ordered. Specify a value to order by an ordering operation. Valid ordering operation
+         * values are as follows: - `ASC` for ascending. - `DESC` for descending. The default
+         * ordering is `create_time ASC`.
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -4594,27 +4594,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * The maximum number of messages returned. The service might return fewer messages than
-         * this value. If unspecified, at most 25 are returned. The maximum value is 1000. If you
-         * use a value more than 1000, it's automatically changed to 1000. Negative values return an
-         * `INVALID_ARGUMENT` error.
+         * Optional. The maximum number of messages returned. The service might return fewer
+         * messages than this value. If unspecified, at most 25 are returned. The maximum value is
+         * 1000. If you use a value more than 1000, it's automatically changed to 1000. Negative
+         * values return an `INVALID_ARGUMENT` error.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of messages returned. The service might return fewer messages than this value.
-       If unspecified, at most 25 are returned. The maximum value is 1000. If you use a value more than
-       1000, it's automatically changed to 1000. Negative values return an `INVALID_ARGUMENT` error.
+        /** Optional. The maximum number of messages returned. The service might return fewer messages than
+       this value. If unspecified, at most 25 are returned. The maximum value is 1000. If you use a value
+       more than 1000, it's automatically changed to 1000. Negative values return an `INVALID_ARGUMENT`
+       error.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * The maximum number of messages returned. The service might return fewer messages than
-         * this value. If unspecified, at most 25 are returned. The maximum value is 1000. If you
-         * use a value more than 1000, it's automatically changed to 1000. Negative values return an
-         * `INVALID_ARGUMENT` error.
+         * Optional. The maximum number of messages returned. The service might return fewer
+         * messages than this value. If unspecified, at most 25 are returned. The maximum value is
+         * 1000. If you use a value more than 1000, it's automatically changed to 1000. Negative
+         * values return an `INVALID_ARGUMENT` error.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -4622,28 +4623,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional, if resuming from a previous query. A page token received from a previous list
-         * messages call. Provide this parameter to retrieve the subsequent page. When paginating,
-         * all other parameters provided should match the call that provided the page token. Passing
-         * different values to the other parameters might lead to unexpected results.
+         * Optional. Optional, if resuming from a previous query. A page token received from a
+         * previous list messages call. Provide this parameter to retrieve the subsequent page. When
+         * paginating, all other parameters provided should match the call that provided the page
+         * token. Passing different values to the other parameters might lead to unexpected results.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Optional, if resuming from a previous query. A page token received from a previous list messages
-       call. Provide this parameter to retrieve the subsequent page. When paginating, all other parameters
-       provided should match the call that provided the page token. Passing different values to the other
-       parameters might lead to unexpected results.
+        /** Optional. Optional, if resuming from a previous query. A page token received from a previous list
+       messages call. Provide this parameter to retrieve the subsequent page. When paginating, all other
+       parameters provided should match the call that provided the page token. Passing different values to
+       the other parameters might lead to unexpected results.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * Optional, if resuming from a previous query. A page token received from a previous list
-         * messages call. Provide this parameter to retrieve the subsequent page. When paginating,
-         * all other parameters provided should match the call that provided the page token. Passing
-         * different values to the other parameters might lead to unexpected results.
+         * Optional. Optional, if resuming from a previous query. A page token received from a
+         * previous list messages call. Provide this parameter to retrieve the subsequent page. When
+         * paginating, all other parameters provided should match the call that provided the page
+         * token. Passing different values to the other parameters might lead to unexpected results.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -4651,22 +4652,22 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Whether to include deleted messages. Deleted messages include deleted time and metadata
-         * about their deletion, but message content is unavailable.
+         * Optional. Whether to include deleted messages. Deleted messages include deleted time and
+         * metadata about their deletion, but message content is unavailable.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean showDeleted;
 
-        /** Whether to include deleted messages. Deleted messages include deleted time and metadata about their
-       deletion, but message content is unavailable.
+        /** Optional. Whether to include deleted messages. Deleted messages include deleted time and metadata
+       about their deletion, but message content is unavailable.
          */
         public java.lang.Boolean getShowDeleted() {
           return showDeleted;
         }
 
         /**
-         * Whether to include deleted messages. Deleted messages include deleted time and metadata
-         * about their deletion, but message content is unavailable.
+         * Optional. Whether to include deleted messages. Deleted messages include deleted time and
+         * metadata about their deletion, but message content is unavailable.
          */
         public List setShowDeleted(java.lang.Boolean showDeleted) {
           this.showDeleted = showDeleted;
@@ -4694,12 +4695,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Resource name of the message. Format: `spaces/{space}/messages/{message}` Where `{space}` is the ID
-       *        of the space where the message is posted and `{message}` is a system-assigned ID for the
-       *        message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a
-       *        custom ID when you create a message, you can use this ID to specify the message in a
-       *        request by replacing `{message}` with the value from the `clientAssignedMessageId` field.
-       *        For example, `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a
+       * @param name Identifier. Resource name of the message. Format: `spaces/{space}/messages/{message}` Where
+       *        `{space}` is the ID of the space where the message is posted and `{message}` is a system-
+       *        assigned ID for the message. For example,
+       *        `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a custom ID when you
+       *        create a message, you can use this ID to specify the message in a request by replacing
+       *        `{message}` with the value from the `clientAssignedMessageId` field. For example,
+       *        `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a
        *        message](https://developers.google.com/workspace/chat/create-
        *        messages#name_a_created_message).
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
@@ -4736,12 +4738,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Resource name of the message. Format: `spaces/{space}/messages/{message}` Where `{space}` is the ID
-       *        of the space where the message is posted and `{message}` is a system-assigned ID for the
-       *        message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a
-       *        custom ID when you create a message, you can use this ID to specify the message in a
-       *        request by replacing `{message}` with the value from the `clientAssignedMessageId` field.
-       *        For example, `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a
+         * @param name Identifier. Resource name of the message. Format: `spaces/{space}/messages/{message}` Where
+       *        `{space}` is the ID of the space where the message is posted and `{message}` is a system-
+       *        assigned ID for the message. For example,
+       *        `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a custom ID when you
+       *        create a message, you can use this ID to specify the message in a request by replacing
+       *        `{message}` with the value from the `clientAssignedMessageId` field. For example,
+       *        `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a
        *        message](https://developers.google.com/workspace/chat/create-
        *        messages#name_a_created_message).
          * @param content the {@link com.google.api.services.chat.v1.model.Message}
@@ -4813,24 +4816,24 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Resource name of the message. Format: `spaces/{space}/messages/{message}` Where `{space}`
-         * is the ID of the space where the message is posted and `{message}` is a system-assigned
-         * ID for the message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`.
-         * If you set a custom ID when you create a message, you can use this ID to specify the
-         * message in a request by replacing `{message}` with the value from the
-         * `clientAssignedMessageId` field. For example, `spaces/AAAAAAAAAAA/messages/client-custom-
-         * name`. For details, see [Name a
+         * Identifier. Resource name of the message. Format: `spaces/{space}/messages/{message}`
+         * Where `{space}` is the ID of the space where the message is posted and `{message}` is a
+         * system-assigned ID for the message. For example,
+         * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a custom ID when you
+         * create a message, you can use this ID to specify the message in a request by replacing
+         * `{message}` with the value from the `clientAssignedMessageId` field. For example,
+         * `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a
          * message](https://developers.google.com/workspace/chat/create-
          * messages#name_a_created_message).
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Resource name of the message. Format: `spaces/{space}/messages/{message}` Where `{space}` is the ID
-       of the space where the message is posted and `{message}` is a system-assigned ID for the message.
-       For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a custom ID when you
-       create a message, you can use this ID to specify the message in a request by replacing `{message}`
-       with the value from the `clientAssignedMessageId` field. For example,
+        /** Identifier. Resource name of the message. Format: `spaces/{space}/messages/{message}` Where
+       `{space}` is the ID of the space where the message is posted and `{message}` is a system-assigned
+       ID for the message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set
+       a custom ID when you create a message, you can use this ID to specify the message in a request by
+       replacing `{message}` with the value from the `clientAssignedMessageId` field. For example,
        `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a
        message](https://developers.google.com/workspace/chat/create-messages#name_a_created_message).
          */
@@ -4839,13 +4842,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Resource name of the message. Format: `spaces/{space}/messages/{message}` Where `{space}`
-         * is the ID of the space where the message is posted and `{message}` is a system-assigned
-         * ID for the message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`.
-         * If you set a custom ID when you create a message, you can use this ID to specify the
-         * message in a request by replacing `{message}` with the value from the
-         * `clientAssignedMessageId` field. For example, `spaces/AAAAAAAAAAA/messages/client-custom-
-         * name`. For details, see [Name a
+         * Identifier. Resource name of the message. Format: `spaces/{space}/messages/{message}`
+         * Where `{space}` is the ID of the space where the message is posted and `{message}` is a
+         * system-assigned ID for the message. For example,
+         * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a custom ID when you
+         * create a message, you can use this ID to specify the message in a request by replacing
+         * `{message}` with the value from the `clientAssignedMessageId` field. For example,
+         * `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a
          * message](https://developers.google.com/workspace/chat/create-
          * messages#name_a_created_message).
          */
@@ -4943,12 +4946,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param name Resource name of the message. Format: `spaces/{space}/messages/{message}` Where `{space}` is the ID
-       *        of the space where the message is posted and `{message}` is a system-assigned ID for the
-       *        message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a
-       *        custom ID when you create a message, you can use this ID to specify the message in a
-       *        request by replacing `{message}` with the value from the `clientAssignedMessageId` field.
-       *        For example, `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a
+       * @param name Identifier. Resource name of the message. Format: `spaces/{space}/messages/{message}` Where
+       *        `{space}` is the ID of the space where the message is posted and `{message}` is a system-
+       *        assigned ID for the message. For example,
+       *        `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a custom ID when you
+       *        create a message, you can use this ID to specify the message in a request by replacing
+       *        `{message}` with the value from the `clientAssignedMessageId` field. For example,
+       *        `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a
        *        message](https://developers.google.com/workspace/chat/create-
        *        messages#name_a_created_message).
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
@@ -4985,12 +4989,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Resource name of the message. Format: `spaces/{space}/messages/{message}` Where `{space}` is the ID
-       *        of the space where the message is posted and `{message}` is a system-assigned ID for the
-       *        message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a
-       *        custom ID when you create a message, you can use this ID to specify the message in a
-       *        request by replacing `{message}` with the value from the `clientAssignedMessageId` field.
-       *        For example, `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a
+         * @param name Identifier. Resource name of the message. Format: `spaces/{space}/messages/{message}` Where
+       *        `{space}` is the ID of the space where the message is posted and `{message}` is a system-
+       *        assigned ID for the message. For example,
+       *        `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a custom ID when you
+       *        create a message, you can use this ID to specify the message in a request by replacing
+       *        `{message}` with the value from the `clientAssignedMessageId` field. For example,
+       *        `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a
        *        message](https://developers.google.com/workspace/chat/create-
        *        messages#name_a_created_message).
          * @param content the {@link com.google.api.services.chat.v1.model.Message}
@@ -5062,24 +5067,24 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Resource name of the message. Format: `spaces/{space}/messages/{message}` Where `{space}`
-         * is the ID of the space where the message is posted and `{message}` is a system-assigned
-         * ID for the message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`.
-         * If you set a custom ID when you create a message, you can use this ID to specify the
-         * message in a request by replacing `{message}` with the value from the
-         * `clientAssignedMessageId` field. For example, `spaces/AAAAAAAAAAA/messages/client-custom-
-         * name`. For details, see [Name a
+         * Identifier. Resource name of the message. Format: `spaces/{space}/messages/{message}`
+         * Where `{space}` is the ID of the space where the message is posted and `{message}` is a
+         * system-assigned ID for the message. For example,
+         * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a custom ID when you
+         * create a message, you can use this ID to specify the message in a request by replacing
+         * `{message}` with the value from the `clientAssignedMessageId` field. For example,
+         * `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a
          * message](https://developers.google.com/workspace/chat/create-
          * messages#name_a_created_message).
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Resource name of the message. Format: `spaces/{space}/messages/{message}` Where `{space}` is the ID
-       of the space where the message is posted and `{message}` is a system-assigned ID for the message.
-       For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a custom ID when you
-       create a message, you can use this ID to specify the message in a request by replacing `{message}`
-       with the value from the `clientAssignedMessageId` field. For example,
+        /** Identifier. Resource name of the message. Format: `spaces/{space}/messages/{message}` Where
+       `{space}` is the ID of the space where the message is posted and `{message}` is a system-assigned
+       ID for the message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set
+       a custom ID when you create a message, you can use this ID to specify the message in a request by
+       replacing `{message}` with the value from the `clientAssignedMessageId` field. For example,
        `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a
        message](https://developers.google.com/workspace/chat/create-messages#name_a_created_message).
          */
@@ -5088,13 +5093,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Resource name of the message. Format: `spaces/{space}/messages/{message}` Where `{space}`
-         * is the ID of the space where the message is posted and `{message}` is a system-assigned
-         * ID for the message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`.
-         * If you set a custom ID when you create a message, you can use this ID to specify the
-         * message in a request by replacing `{message}` with the value from the
-         * `clientAssignedMessageId` field. For example, `spaces/AAAAAAAAAAA/messages/client-custom-
-         * name`. For details, see [Name a
+         * Identifier. Resource name of the message. Format: `spaces/{space}/messages/{message}`
+         * Where `{space}` is the ID of the space where the message is posted and `{message}` is a
+         * system-assigned ID for the message. For example,
+         * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a custom ID when you
+         * create a message, you can use this ID to specify the message in a request by replacing
+         * `{message}` with the value from the `clientAssignedMessageId` field. For example,
+         * `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a
          * message](https://developers.google.com/workspace/chat/create-
          * messages#name_a_created_message).
          */

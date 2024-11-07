@@ -60,7 +60,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * The space's display name. Required when [creating a
+   * Optional. The space's display name. Required when [creating a
    * space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/create) with a
    * `spaceType` of `SPACE`. If you receive the error message `ALREADY_EXISTS` when creating a space
    * or updating the `displayName`, try a different `displayName`. An existing space within the
@@ -72,11 +72,11 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Immutable. Whether this space permits any Google Chat user as a member. Input when creating a
-   * space in a Google Workspace organization. Omit this field when creating spaces in the following
-   * conditions: * The authenticated user uses a consumer account (unmanaged user account). By
-   * default, a space created by a consumer account permits any Google Chat user. For existing
-   * spaces, this field is output only.
+   * Optional. Immutable. Whether this space permits any Google Chat user as a member. Input when
+   * creating a space in a Google Workspace organization. Omit this field when creating spaces in
+   * the following conditions: * The authenticated user uses a consumer account (unmanaged user
+   * account). By default, a space created by a consumer account permits any Google Chat user. For
+   * existing spaces, this field is output only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,10 +108,10 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private MembershipCount membershipCount;
 
   /**
-   * Resource name of the space. Format: `spaces/{space}` Where `{space}` represents the system-
-   * assigned ID for the space. You can obtain the space ID by calling the [`spaces.list()`](https:/
-   * /developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) method or from the
-   * space URL. For example, if the space URL is
+   * Identifier. Resource name of the space. Format: `spaces/{space}` Where `{space}` represents the
+   * system-assigned ID for the space. You can obtain the space ID by calling the [`spaces.list()`](
+   * https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) method or from
+   * the space URL. For example, if the space URL is
    * `https://mail.google.com/mail/u/0/#chat/space/AAAAAAAAA`, the space ID is `AAAAAAAAA`.
    * The value may be {@code null}.
    */
@@ -144,14 +144,14 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean singleUserBotDm;
 
   /**
-   * Details about the space including description and rules.
+   * Optional. Details about the space including description and rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SpaceDetails spaceDetails;
 
   /**
-   * The message history state for messages and threads in this space.
+   * Optional. The message history state for messages and threads in this space.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,8 +165,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private java.lang.String spaceThreadingState;
 
   /**
-   * The type of space. Required when creating a space or updating the space type of a space. Output
-   * only for other usage.
+   * Optional. The type of space. Required when creating a space or updating the space type of a
+   * space. Output only for other usage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -262,7 +262,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The space's display name. Required when [creating a
+   * Optional. The space's display name. Required when [creating a
    * space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/create) with a
    * `spaceType` of `SPACE`. If you receive the error message `ALREADY_EXISTS` when creating a space
    * or updating the `displayName`, try a different `displayName`. An existing space within the
@@ -275,7 +275,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The space's display name. Required when [creating a
+   * Optional. The space's display name. Required when [creating a
    * space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/create) with a
    * `spaceType` of `SPACE`. If you receive the error message `ALREADY_EXISTS` when creating a space
    * or updating the `displayName`, try a different `displayName`. An existing space within the
@@ -289,11 +289,11 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. Whether this space permits any Google Chat user as a member. Input when creating a
-   * space in a Google Workspace organization. Omit this field when creating spaces in the following
-   * conditions: * The authenticated user uses a consumer account (unmanaged user account). By
-   * default, a space created by a consumer account permits any Google Chat user. For existing
-   * spaces, this field is output only.
+   * Optional. Immutable. Whether this space permits any Google Chat user as a member. Input when
+   * creating a space in a Google Workspace organization. Omit this field when creating spaces in
+   * the following conditions: * The authenticated user uses a consumer account (unmanaged user
+   * account). By default, a space created by a consumer account permits any Google Chat user. For
+   * existing spaces, this field is output only.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExternalUserAllowed() {
@@ -301,11 +301,11 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. Whether this space permits any Google Chat user as a member. Input when creating a
-   * space in a Google Workspace organization. Omit this field when creating spaces in the following
-   * conditions: * The authenticated user uses a consumer account (unmanaged user account). By
-   * default, a space created by a consumer account permits any Google Chat user. For existing
-   * spaces, this field is output only.
+   * Optional. Immutable. Whether this space permits any Google Chat user as a member. Input when
+   * creating a space in a Google Workspace organization. Omit this field when creating spaces in
+   * the following conditions: * The authenticated user uses a consumer account (unmanaged user
+   * account). By default, a space created by a consumer account permits any Google Chat user. For
+   * existing spaces, this field is output only.
    * @param externalUserAllowed externalUserAllowed or {@code null} for none
    */
   public Space setExternalUserAllowed(java.lang.Boolean externalUserAllowed) {
@@ -373,10 +373,10 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the space. Format: `spaces/{space}` Where `{space}` represents the system-
-   * assigned ID for the space. You can obtain the space ID by calling the [`spaces.list()`](https:/
-   * /developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) method or from the
-   * space URL. For example, if the space URL is
+   * Identifier. Resource name of the space. Format: `spaces/{space}` Where `{space}` represents the
+   * system-assigned ID for the space. You can obtain the space ID by calling the [`spaces.list()`](
+   * https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) method or from
+   * the space URL. For example, if the space URL is
    * `https://mail.google.com/mail/u/0/#chat/space/AAAAAAAAA`, the space ID is `AAAAAAAAA`.
    * @return value or {@code null} for none
    */
@@ -385,10 +385,10 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the space. Format: `spaces/{space}` Where `{space}` represents the system-
-   * assigned ID for the space. You can obtain the space ID by calling the [`spaces.list()`](https:/
-   * /developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) method or from the
-   * space URL. For example, if the space URL is
+   * Identifier. Resource name of the space. Format: `spaces/{space}` Where `{space}` represents the
+   * system-assigned ID for the space. You can obtain the space ID by calling the [`spaces.list()`](
+   * https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) method or from
+   * the space URL. For example, if the space URL is
    * `https://mail.google.com/mail/u/0/#chat/space/AAAAAAAAA`, the space ID is `AAAAAAAAA`.
    * @param name name or {@code null} for none
    */
@@ -457,7 +457,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details about the space including description and rules.
+   * Optional. Details about the space including description and rules.
    * @return value or {@code null} for none
    */
   public SpaceDetails getSpaceDetails() {
@@ -465,7 +465,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details about the space including description and rules.
+   * Optional. Details about the space including description and rules.
    * @param spaceDetails spaceDetails or {@code null} for none
    */
   public Space setSpaceDetails(SpaceDetails spaceDetails) {
@@ -474,7 +474,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The message history state for messages and threads in this space.
+   * Optional. The message history state for messages and threads in this space.
    * @return value or {@code null} for none
    */
   public java.lang.String getSpaceHistoryState() {
@@ -482,7 +482,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The message history state for messages and threads in this space.
+   * Optional. The message history state for messages and threads in this space.
    * @param spaceHistoryState spaceHistoryState or {@code null} for none
    */
   public Space setSpaceHistoryState(java.lang.String spaceHistoryState) {
@@ -508,8 +508,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of space. Required when creating a space or updating the space type of a space. Output
-   * only for other usage.
+   * Optional. The type of space. Required when creating a space or updating the space type of a
+   * space. Output only for other usage.
    * @return value or {@code null} for none
    */
   public java.lang.String getSpaceType() {
@@ -517,8 +517,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of space. Required when creating a space or updating the space type of a space. Output
-   * only for other usage.
+   * Optional. The type of space. Required when creating a space or updating the space type of a
+   * space. Output only for other usage.
    * @param spaceType spaceType or {@code null} for none
    */
   public Space setSpaceType(java.lang.String spaceType) {

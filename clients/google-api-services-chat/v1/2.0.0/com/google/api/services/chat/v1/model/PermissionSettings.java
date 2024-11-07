@@ -32,28 +32,28 @@ package com.google.api.services.chat.v1.model;
 public final class PermissionSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Setting for managing apps in a space.
+   * Optional. Setting for managing apps in a space.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PermissionSetting manageApps;
 
   /**
-   * Setting for managing members and groups in a space.
+   * Optional. Setting for managing members and groups in a space.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PermissionSetting manageMembersAndGroups;
 
   /**
-   * Setting for managing webhooks in a space.
+   * Optional. Setting for managing webhooks in a space.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PermissionSetting manageWebhooks;
 
   /**
-   * Setting for updating space name, avatar, description and guidelines.
+   * Optional. Setting for updating space name, avatar, description and guidelines.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,28 +67,28 @@ public final class PermissionSettings extends com.google.api.client.json.Generic
   private PermissionSetting postMessages;
 
   /**
-   * Setting for replying to messages in a space.
+   * Optional. Setting for replying to messages in a space.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PermissionSetting replyMessages;
 
   /**
-   * Setting for toggling space history on and off.
+   * Optional. Setting for toggling space history on and off.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PermissionSetting toggleHistory;
 
   /**
-   * Setting for using @all in a space.
+   * Optional. Setting for using @all in a space.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PermissionSetting useAtMentionAll;
 
   /**
-   * Setting for managing apps in a space.
+   * Optional. Setting for managing apps in a space.
    * @return value or {@code null} for none
    */
   public PermissionSetting getManageApps() {
@@ -96,7 +96,7 @@ public final class PermissionSettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * Setting for managing apps in a space.
+   * Optional. Setting for managing apps in a space.
    * @param manageApps manageApps or {@code null} for none
    */
   public PermissionSettings setManageApps(PermissionSetting manageApps) {
@@ -105,7 +105,7 @@ public final class PermissionSettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * Setting for managing members and groups in a space.
+   * Optional. Setting for managing members and groups in a space.
    * @return value or {@code null} for none
    */
   public PermissionSetting getManageMembersAndGroups() {
@@ -113,7 +113,7 @@ public final class PermissionSettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * Setting for managing members and groups in a space.
+   * Optional. Setting for managing members and groups in a space.
    * @param manageMembersAndGroups manageMembersAndGroups or {@code null} for none
    */
   public PermissionSettings setManageMembersAndGroups(PermissionSetting manageMembersAndGroups) {
@@ -122,7 +122,7 @@ public final class PermissionSettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * Setting for managing webhooks in a space.
+   * Optional. Setting for managing webhooks in a space.
    * @return value or {@code null} for none
    */
   public PermissionSetting getManageWebhooks() {
@@ -130,7 +130,7 @@ public final class PermissionSettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * Setting for managing webhooks in a space.
+   * Optional. Setting for managing webhooks in a space.
    * @param manageWebhooks manageWebhooks or {@code null} for none
    */
   public PermissionSettings setManageWebhooks(PermissionSetting manageWebhooks) {
@@ -139,7 +139,7 @@ public final class PermissionSettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * Setting for updating space name, avatar, description and guidelines.
+   * Optional. Setting for updating space name, avatar, description and guidelines.
    * @return value or {@code null} for none
    */
   public PermissionSetting getModifySpaceDetails() {
@@ -147,7 +147,7 @@ public final class PermissionSettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * Setting for updating space name, avatar, description and guidelines.
+   * Optional. Setting for updating space name, avatar, description and guidelines.
    * @param modifySpaceDetails modifySpaceDetails or {@code null} for none
    */
   public PermissionSettings setModifySpaceDetails(PermissionSetting modifySpaceDetails) {
@@ -173,7 +173,7 @@ public final class PermissionSettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * Setting for replying to messages in a space.
+   * Optional. Setting for replying to messages in a space.
    * @return value or {@code null} for none
    */
   public PermissionSetting getReplyMessages() {
@@ -181,7 +181,7 @@ public final class PermissionSettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * Setting for replying to messages in a space.
+   * Optional. Setting for replying to messages in a space.
    * @param replyMessages replyMessages or {@code null} for none
    */
   public PermissionSettings setReplyMessages(PermissionSetting replyMessages) {
@@ -190,7 +190,7 @@ public final class PermissionSettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * Setting for toggling space history on and off.
+   * Optional. Setting for toggling space history on and off.
    * @return value or {@code null} for none
    */
   public PermissionSetting getToggleHistory() {
@@ -198,7 +198,7 @@ public final class PermissionSettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * Setting for toggling space history on and off.
+   * Optional. Setting for toggling space history on and off.
    * @param toggleHistory toggleHistory or {@code null} for none
    */
   public PermissionSettings setToggleHistory(PermissionSetting toggleHistory) {
@@ -207,7 +207,7 @@ public final class PermissionSettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * Setting for using @all in a space.
+   * Optional. Setting for using @all in a space.
    * @return value or {@code null} for none
    */
   public PermissionSetting getUseAtMentionAll() {
@@ -215,7 +215,7 @@ public final class PermissionSettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * Setting for using @all in a space.
+   * Optional. Setting for using @all in a space.
    * @param useAtMentionAll useAtMentionAll or {@code null} for none
    */
   public PermissionSettings setUseAtMentionAll(PermissionSetting useAtMentionAll) {

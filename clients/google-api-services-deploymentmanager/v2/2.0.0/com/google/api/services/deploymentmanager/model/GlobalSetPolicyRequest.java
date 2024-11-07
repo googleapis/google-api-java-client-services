@@ -62,6 +62,12 @@ public final class GlobalSetPolicyRequest extends com.google.api.client.json.Gen
   private Policy policy;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateMask;
+
+  /**
    * Flatten Policy to create a backward compatible wire-format. Deprecated. Use 'policy' to specify
    * bindings.
    * @return value or {@code null} for none
@@ -147,6 +153,21 @@ public final class GlobalSetPolicyRequest extends com.google.api.client.json.Gen
    */
   public GlobalSetPolicyRequest setPolicy(Policy policy) {
     this.policy = policy;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public String getUpdateMask() {
+    return updateMask;
+  }
+
+  /**
+   * @param updateMask updateMask or {@code null} for none
+   */
+  public GlobalSetPolicyRequest setUpdateMask(String updateMask) {
+    this.updateMask = updateMask;
     return this;
   }
 

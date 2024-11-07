@@ -69,7 +69,7 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
 
   /**
    * The time that the broadcast is scheduled to end. If the value is empty or the property is not
-   * present, then the broadcast is scheduled to contiue indefinitely.
+   * present, then the broadcast is scheduled to continue indefinitely.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,7 +172,7 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
 
   /**
    * The time that the broadcast is scheduled to end. If the value is empty or the property is not
-   * present, then the broadcast is scheduled to contiue indefinitely.
+   * present, then the broadcast is scheduled to continue indefinitely.
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getScheduledEndTime() {
@@ -181,7 +181,7 @@ public final class VideoLiveStreamingDetails extends com.google.api.client.json.
 
   /**
    * The time that the broadcast is scheduled to end. If the value is empty or the property is not
-   * present, then the broadcast is scheduled to contiue indefinitely.
+   * present, then the broadcast is scheduled to continue indefinitely.
    * @param scheduledEndTime scheduledEndTime or {@code null} for none
    */
   public VideoLiveStreamingDetails setScheduledEndTime(com.google.api.client.util.DateTime scheduledEndTime) {

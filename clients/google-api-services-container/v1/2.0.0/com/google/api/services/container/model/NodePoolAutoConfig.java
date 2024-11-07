@@ -32,6 +32,13 @@ package com.google.api.services.container.model;
 public final class NodePoolAutoConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Configuration options for Linux nodes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LinuxNodeConfig linuxNodeConfig;
+
+  /**
    * The list of instance tags applied to all nodes. Tags are used to identify valid sources or
    * targets for network firewalls and are specified by the client during cluster creation. Each tag
    * within the list must comply with RFC1035.
@@ -55,6 +62,23 @@ public final class NodePoolAutoConfig extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private ResourceManagerTags resourceManagerTags;
+
+  /**
+   * Output only. Configuration options for Linux nodes.
+   * @return value or {@code null} for none
+   */
+  public LinuxNodeConfig getLinuxNodeConfig() {
+    return linuxNodeConfig;
+  }
+
+  /**
+   * Output only. Configuration options for Linux nodes.
+   * @param linuxNodeConfig linuxNodeConfig or {@code null} for none
+   */
+  public NodePoolAutoConfig setLinuxNodeConfig(LinuxNodeConfig linuxNodeConfig) {
+    this.linuxNodeConfig = linuxNodeConfig;
+    return this;
+  }
 
   /**
    * The list of instance tags applied to all nodes. Tags are used to identify valid sources or

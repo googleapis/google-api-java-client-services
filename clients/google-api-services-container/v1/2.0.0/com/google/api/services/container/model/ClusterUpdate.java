@@ -337,6 +337,14 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private NodeKubeletConfig desiredNodePoolAutoConfigKubeletConfig;
 
   /**
+   * The desired Linux node config for all auto-provisioned node pools in autopilot clusters and
+   * node auto-provisioning enabled clusters. Currently only `cgroup_mode` can be set here.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LinuxNodeConfig desiredNodePoolAutoConfigLinuxNodeConfig;
+
+  /**
    * The desired network tags that apply to all auto-provisioned node pools in autopilot clusters
    * and node auto-provisioning enabled clusters.
    * The value may be {@code null}.
@@ -1250,6 +1258,25 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredNodePoolAutoConfigKubeletConfig(NodeKubeletConfig desiredNodePoolAutoConfigKubeletConfig) {
     this.desiredNodePoolAutoConfigKubeletConfig = desiredNodePoolAutoConfigKubeletConfig;
+    return this;
+  }
+
+  /**
+   * The desired Linux node config for all auto-provisioned node pools in autopilot clusters and
+   * node auto-provisioning enabled clusters. Currently only `cgroup_mode` can be set here.
+   * @return value or {@code null} for none
+   */
+  public LinuxNodeConfig getDesiredNodePoolAutoConfigLinuxNodeConfig() {
+    return desiredNodePoolAutoConfigLinuxNodeConfig;
+  }
+
+  /**
+   * The desired Linux node config for all auto-provisioned node pools in autopilot clusters and
+   * node auto-provisioning enabled clusters. Currently only `cgroup_mode` can be set here.
+   * @param desiredNodePoolAutoConfigLinuxNodeConfig desiredNodePoolAutoConfigLinuxNodeConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredNodePoolAutoConfigLinuxNodeConfig(LinuxNodeConfig desiredNodePoolAutoConfigLinuxNodeConfig) {
+    this.desiredNodePoolAutoConfigLinuxNodeConfig = desiredNodePoolAutoConfigLinuxNodeConfig;
     return this;
   }
 

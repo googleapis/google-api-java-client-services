@@ -57,7 +57,7 @@ public final class BusinessIdentity extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * Optional. Whether the identity attributes may be used for promotions.
+   * Required. Whether the identity attributes may be used for promotions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,7 +152,7 @@ public final class BusinessIdentity extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Whether the identity attributes may be used for promotions.
+   * Required. Whether the identity attributes may be used for promotions.
    * @return value or {@code null} for none
    */
   public java.lang.String getPromotionsConsent() {
@@ -160,7 +160,7 @@ public final class BusinessIdentity extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Whether the identity attributes may be used for promotions.
+   * Required. Whether the identity attributes may be used for promotions.
    * @param promotionsConsent promotionsConsent or {@code null} for none
    */
   public BusinessIdentity setPromotionsConsent(java.lang.String promotionsConsent) {

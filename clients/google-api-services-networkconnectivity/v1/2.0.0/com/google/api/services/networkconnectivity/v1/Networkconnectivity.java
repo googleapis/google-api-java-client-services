@@ -2075,6 +2075,276 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             }
           }
           /**
+           * Query PSC propagation status the status of a Network Connectivity Center hub.
+           *
+           * Create a request for the method "hubs.queryStatus".
+           *
+           * This request holds the parameters needed by the networkconnectivity server.  After setting any
+           * optional parameters, call the {@link QueryStatus#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The name of the hub.
+           * @return the request
+           */
+          public QueryStatus queryStatus(java.lang.String name) throws java.io.IOException {
+            QueryStatus result = new QueryStatus(name);
+            initialize(result);
+            return result;
+          }
+
+          public class QueryStatus extends NetworkconnectivityRequest<com.google.api.services.networkconnectivity.v1.model.QueryHubStatusResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:queryStatus";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/hubs/[^/]+$");
+
+            /**
+             * Query PSC propagation status the status of a Network Connectivity Center hub.
+             *
+             * Create a request for the method "hubs.queryStatus".
+             *
+             * This request holds the parameters needed by the the networkconnectivity server.  After setting
+             * any optional parameters, call the {@link QueryStatus#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * QueryStatus#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the hub.
+             * @since 1.13
+             */
+            protected QueryStatus(java.lang.String name) {
+              super(Networkconnectivity.this, "GET", REST_PATH, null, com.google.api.services.networkconnectivity.v1.model.QueryHubStatusResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/hubs/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public QueryStatus set$Xgafv(java.lang.String $Xgafv) {
+              return (QueryStatus) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public QueryStatus setAccessToken(java.lang.String accessToken) {
+              return (QueryStatus) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public QueryStatus setAlt(java.lang.String alt) {
+              return (QueryStatus) super.setAlt(alt);
+            }
+
+            @Override
+            public QueryStatus setCallback(java.lang.String callback) {
+              return (QueryStatus) super.setCallback(callback);
+            }
+
+            @Override
+            public QueryStatus setFields(java.lang.String fields) {
+              return (QueryStatus) super.setFields(fields);
+            }
+
+            @Override
+            public QueryStatus setKey(java.lang.String key) {
+              return (QueryStatus) super.setKey(key);
+            }
+
+            @Override
+            public QueryStatus setOauthToken(java.lang.String oauthToken) {
+              return (QueryStatus) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public QueryStatus setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (QueryStatus) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public QueryStatus setQuotaUser(java.lang.String quotaUser) {
+              return (QueryStatus) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public QueryStatus setUploadType(java.lang.String uploadType) {
+              return (QueryStatus) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public QueryStatus setUploadProtocol(java.lang.String uploadProtocol) {
+              return (QueryStatus) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the hub. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the hub.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the hub. */
+            public QueryStatus setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/hubs/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. An expression that filters the list of results. The filter can be used to
+             * filter the results by the following fields: * psc_propagation_status.source_spoke *
+             * psc_propagation_status.source_group * psc_propagation_status.source_forwarding_rule *
+             * psc_propagation_status.target_spoke * psc_propagation_status.target_group *
+             * psc_propagation_status.code * psc_propagation_status.message
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. An expression that filters the list of results. The filter can be used to filter the
+           results by the following fields: * psc_propagation_status.source_spoke *
+           psc_propagation_status.source_group * psc_propagation_status.source_forwarding_rule *
+           psc_propagation_status.target_spoke * psc_propagation_status.target_group *
+           psc_propagation_status.code * psc_propagation_status.message
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. An expression that filters the list of results. The filter can be used to
+             * filter the results by the following fields: * psc_propagation_status.source_spoke *
+             * psc_propagation_status.source_group * psc_propagation_status.source_forwarding_rule *
+             * psc_propagation_status.target_spoke * psc_propagation_status.target_group *
+             * psc_propagation_status.code * psc_propagation_status.message
+             */
+            public QueryStatus setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. A field that counts are grouped by. A comma-separated list of any of these
+             * fields: * psc_propagation_status.source_spoke * psc_propagation_status.source_group *
+             * psc_propagation_status.source_forwarding_rule * psc_propagation_status.target_spoke *
+             * psc_propagation_status.target_group * psc_propagation_status.code
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String groupBy;
+
+            /** Optional. A field that counts are grouped by. A comma-separated list of any of these fields: *
+           psc_propagation_status.source_spoke * psc_propagation_status.source_group *
+           psc_propagation_status.source_forwarding_rule * psc_propagation_status.target_spoke *
+           psc_propagation_status.target_group * psc_propagation_status.code
+             */
+            public java.lang.String getGroupBy() {
+              return groupBy;
+            }
+
+            /**
+             * Optional. A field that counts are grouped by. A comma-separated list of any of these
+             * fields: * psc_propagation_status.source_spoke * psc_propagation_status.source_group *
+             * psc_propagation_status.source_forwarding_rule * psc_propagation_status.target_spoke *
+             * psc_propagation_status.target_group * psc_propagation_status.code
+             */
+            public QueryStatus setGroupBy(java.lang.String groupBy) {
+              this.groupBy = groupBy;
+              return this;
+            }
+
+            /**
+             * Optional. Sort the results in the ascending order by specific fields returned in the
+             * response. A comma-separated list of any of these fields: *
+             * psc_propagation_status.source_spoke * psc_propagation_status.source_group *
+             * psc_propagation_status.source_forwarding_rule * psc_propagation_status.target_spoke *
+             * psc_propagation_status.target_group * psc_propagation_status.code If `group_by` is
+             * set, the value of the `order_by` field must be the same as or a subset of the
+             * `group_by` field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Sort the results in the ascending order by specific fields returned in the response. A
+           comma-separated list of any of these fields: * psc_propagation_status.source_spoke *
+           psc_propagation_status.source_group * psc_propagation_status.source_forwarding_rule *
+           psc_propagation_status.target_spoke * psc_propagation_status.target_group *
+           psc_propagation_status.code If `group_by` is set, the value of the `order_by` field must be the
+           same as or a subset of the `group_by` field.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * Optional. Sort the results in the ascending order by specific fields returned in the
+             * response. A comma-separated list of any of these fields: *
+             * psc_propagation_status.source_spoke * psc_propagation_status.source_group *
+             * psc_propagation_status.source_forwarding_rule * psc_propagation_status.target_spoke *
+             * psc_propagation_status.target_group * psc_propagation_status.code If `group_by` is
+             * set, the value of the `order_by` field must be the same as or a subset of the
+             * `group_by` field.
+             */
+            public QueryStatus setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /** Optional. The maximum number of results to return per page. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of results to return per page.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Optional. The maximum number of results to return per page. */
+            public QueryStatus setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Optional. The page token. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. The page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Optional. The page token. */
+            public QueryStatus setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public QueryStatus set(String parameterName, Object value) {
+              return (QueryStatus) super.set(parameterName, value);
+            }
+          }
+          /**
            * Rejects a Network Connectivity Center spoke from being attached to a hub. If the spoke was
            * previously in the `ACTIVE` state, it transitions to the `INACTIVE` state and is no longer able to
            * connect to other spokes that are attached to the hub.

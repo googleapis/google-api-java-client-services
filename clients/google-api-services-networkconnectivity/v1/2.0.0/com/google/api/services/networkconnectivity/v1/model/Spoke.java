@@ -114,8 +114,7 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. The reasons for current state of the spoke. Only present when the spoke is in the
-   * `INACTIVE` state.
+   * Output only. The reasons for current state of the spoke.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -345,8 +344,7 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The reasons for current state of the spoke. Only present when the spoke is in the
-   * `INACTIVE` state.
+   * Output only. The reasons for current state of the spoke.
    * @return value or {@code null} for none
    */
   public java.util.List<StateReason> getReasons() {
@@ -354,8 +352,7 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The reasons for current state of the spoke. Only present when the spoke is in the
-   * `INACTIVE` state.
+   * Output only. The reasons for current state of the spoke.
    * @param reasons reasons or {@code null} for none
    */
   public Spoke setReasons(java.util.List<StateReason> reasons) {

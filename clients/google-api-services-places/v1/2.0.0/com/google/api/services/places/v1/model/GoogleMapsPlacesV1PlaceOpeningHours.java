@@ -30,6 +30,22 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1PlaceOpeningHours extends com.google.api.client.json.GenericJson {
 
   /**
+   * The next time the current opening hours period ends up to 7 days in the future. This field is
+   * only populated if the opening hours period is active at the time of serving the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String nextCloseTime;
+
+  /**
+   * The next time the current opening hours period starts up to 7 days in the future. This field is
+   * only populated if the opening hours period is not active at the time of serving the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String nextOpenTime;
+
+  /**
    * Whether the opening hours period is currently active. For regular opening hours and current
    * opening hours, this field means whether the place is open. For secondary opening hours and
    * current secondary opening hours, this field means whether the secondary hours of this place is
@@ -73,6 +89,44 @@ public final class GoogleMapsPlacesV1PlaceOpeningHours extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> weekdayDescriptions;
+
+  /**
+   * The next time the current opening hours period ends up to 7 days in the future. This field is
+   * only populated if the opening hours period is active at the time of serving the request.
+   * @return value or {@code null} for none
+   */
+  public String getNextCloseTime() {
+    return nextCloseTime;
+  }
+
+  /**
+   * The next time the current opening hours period ends up to 7 days in the future. This field is
+   * only populated if the opening hours period is active at the time of serving the request.
+   * @param nextCloseTime nextCloseTime or {@code null} for none
+   */
+  public GoogleMapsPlacesV1PlaceOpeningHours setNextCloseTime(String nextCloseTime) {
+    this.nextCloseTime = nextCloseTime;
+    return this;
+  }
+
+  /**
+   * The next time the current opening hours period starts up to 7 days in the future. This field is
+   * only populated if the opening hours period is not active at the time of serving the request.
+   * @return value or {@code null} for none
+   */
+  public String getNextOpenTime() {
+    return nextOpenTime;
+  }
+
+  /**
+   * The next time the current opening hours period starts up to 7 days in the future. This field is
+   * only populated if the opening hours period is not active at the time of serving the request.
+   * @param nextOpenTime nextOpenTime or {@code null} for none
+   */
+  public GoogleMapsPlacesV1PlaceOpeningHours setNextOpenTime(String nextOpenTime) {
+    this.nextOpenTime = nextOpenTime;
+    return this;
+  }
 
   /**
    * Whether the opening hours period is currently active. For regular opening hours and current

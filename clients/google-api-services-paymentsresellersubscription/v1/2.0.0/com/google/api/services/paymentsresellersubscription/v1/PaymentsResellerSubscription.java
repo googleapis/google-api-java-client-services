@@ -1904,6 +1904,167 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
       }
 
     }
+    /**
+     * An accessor for creating requests from the UserSessions collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code PaymentsResellerSubscription paymentsresellersubscription = new PaymentsResellerSubscription(...);}
+     *   {@code PaymentsResellerSubscription.UserSessions.List request = paymentsresellersubscription.userSessions().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public UserSessions userSessions() {
+      return new UserSessions();
+    }
+
+    /**
+     * The "userSessions" collection of methods.
+     */
+    public class UserSessions {
+
+      /**
+       * This API replaces user authorized OAuth consnet based APIs (Create, Entitle). Generates a short-
+       * lived token for a user session based on the user intent. You can use the session token to
+       * redirect the user to Google to finish the signup flow. You can re-generate new session token
+       * repeatedly for same request if necessary, regardless of the previous tokens being expired or not.
+       *
+       * Create a request for the method "userSessions.generate".
+       *
+       * This request holds the parameters needed by the paymentsresellersubscription server.  After
+       * setting any optional parameters, call the {@link Generate#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. The parent, the partner that can resell. Format: partners/{partner}
+       * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1GenerateUserSessionRequest}
+       * @return the request
+       */
+      public Generate generate(java.lang.String parent, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1GenerateUserSessionRequest content) throws java.io.IOException {
+        Generate result = new Generate(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Generate extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1GenerateUserSessionResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/userSessions:generate";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^partners/[^/]+$");
+
+        /**
+         * This API replaces user authorized OAuth consnet based APIs (Create, Entitle). Generates a
+         * short-lived token for a user session based on the user intent. You can use the session token to
+         * redirect the user to Google to finish the signup flow. You can re-generate new session token
+         * repeatedly for same request if necessary, regardless of the previous tokens being expired or
+         * not.
+         *
+         * Create a request for the method "userSessions.generate".
+         *
+         * This request holds the parameters needed by the the paymentsresellersubscription server.  After
+         * setting any optional parameters, call the {@link Generate#execute()} method to invoke the
+         * remote operation. <p> {@link
+         * Generate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent, the partner that can resell. Format: partners/{partner}
+         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1GenerateUserSessionRequest}
+         * @since 1.13
+         */
+        protected Generate(java.lang.String parent, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1GenerateUserSessionRequest content) {
+          super(PaymentsResellerSubscription.this, "POST", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1GenerateUserSessionResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^partners/[^/]+$");
+          }
+        }
+
+        @Override
+        public Generate set$Xgafv(java.lang.String $Xgafv) {
+          return (Generate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Generate setAccessToken(java.lang.String accessToken) {
+          return (Generate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Generate setAlt(java.lang.String alt) {
+          return (Generate) super.setAlt(alt);
+        }
+
+        @Override
+        public Generate setCallback(java.lang.String callback) {
+          return (Generate) super.setCallback(callback);
+        }
+
+        @Override
+        public Generate setFields(java.lang.String fields) {
+          return (Generate) super.setFields(fields);
+        }
+
+        @Override
+        public Generate setKey(java.lang.String key) {
+          return (Generate) super.setKey(key);
+        }
+
+        @Override
+        public Generate setOauthToken(java.lang.String oauthToken) {
+          return (Generate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Generate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Generate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Generate setQuotaUser(java.lang.String quotaUser) {
+          return (Generate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Generate setUploadType(java.lang.String uploadType) {
+          return (Generate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Generate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Generate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The parent, the partner that can resell. Format: partners/{partner} */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent, the partner that can resell. Format: partners/{partner}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The parent, the partner that can resell. Format: partners/{partner} */
+        public Generate setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^partners/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Generate set(String parameterName, Object value) {
+          return (Generate) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

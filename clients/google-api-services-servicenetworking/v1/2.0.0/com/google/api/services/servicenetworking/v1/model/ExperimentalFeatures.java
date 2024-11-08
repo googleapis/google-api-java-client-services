@@ -32,6 +32,15 @@ package com.google.api.services.servicenetworking.v1.model;
 public final class ExperimentalFeatures extends com.google.api.client.json.GenericJson {
 
   /**
+   * Enables generation of protobuf code using new types that are more Pythonic which are included
+   * in `protobuf>=5.29.x`. This feature will be enabled by default 1 month after launching the
+   * feature in preview packages.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean protobufPythonicTypesEnabled;
+
+  /**
    * Enables generation of asynchronous REST clients if `rest` transport is enabled. By default,
    * asynchronous REST clients will not be generated. This feature will be enabled by default 1
    * month after launching the feature in preview packages.
@@ -39,6 +48,27 @@ public final class ExperimentalFeatures extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean restAsyncIoEnabled;
+
+  /**
+   * Enables generation of protobuf code using new types that are more Pythonic which are included
+   * in `protobuf>=5.29.x`. This feature will be enabled by default 1 month after launching the
+   * feature in preview packages.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getProtobufPythonicTypesEnabled() {
+    return protobufPythonicTypesEnabled;
+  }
+
+  /**
+   * Enables generation of protobuf code using new types that are more Pythonic which are included
+   * in `protobuf>=5.29.x`. This feature will be enabled by default 1 month after launching the
+   * feature in preview packages.
+   * @param protobufPythonicTypesEnabled protobufPythonicTypesEnabled or {@code null} for none
+   */
+  public ExperimentalFeatures setProtobufPythonicTypesEnabled(java.lang.Boolean protobufPythonicTypesEnabled) {
+    this.protobufPythonicTypesEnabled = protobufPythonicTypesEnabled;
+    return this;
+  }
 
   /**
    * Enables generation of asynchronous REST clients if `rest` transport is enabled. By default,

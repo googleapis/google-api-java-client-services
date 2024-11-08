@@ -92,10 +92,18 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.util.List<GoogleMapsPlacesV1PlaceAttribution> attributions;
 
   /**
+   * The business status for the place.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String businessStatus;
+
+  /**
+   * List of places in which the current place is located.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleMapsPlacesV1PlaceContainingPlace> containingPlaces;
 
   /**
    * Specifies if the business supports curbside pickup.
@@ -336,6 +344,13 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.lang.String priceLevel;
 
   /**
+   * The price range associated with a Place.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleMapsPlacesV1PriceRange priceRange;
+
+  /**
    * The primary type of the given result. This type must one of the Places API supported types. For
    * example, "restaurant", "cafe", "airport", etc. A place can only have a single primary type. For
    * the complete list of possible values, see Table A and Table B at
@@ -353,6 +368,16 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private GoogleTypeLocalizedText primaryTypeDisplayName;
+
+  /**
+   * Indicates whether the place is a pure service area business. Pure service area business is a
+   * business that visits or delivers to customers directly but does not serve customers at their
+   * business address. For example, businesses like cleaning services or plumbers. Those businesses
+   * may not have a physical address or location on Google Maps.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean pureServiceAreaBusiness;
 
   /**
    * A rating between 1.0 and 5.0, based on user reviews of this place.
@@ -679,6 +704,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
+   * The business status for the place.
    * @return value or {@code null} for none
    */
   public java.lang.String getBusinessStatus() {
@@ -686,10 +712,28 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
+   * The business status for the place.
    * @param businessStatus businessStatus or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setBusinessStatus(java.lang.String businessStatus) {
     this.businessStatus = businessStatus;
+    return this;
+  }
+
+  /**
+   * List of places in which the current place is located.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleMapsPlacesV1PlaceContainingPlace> getContainingPlaces() {
+    return containingPlaces;
+  }
+
+  /**
+   * List of places in which the current place is located.
+   * @param containingPlaces containingPlaces or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setContainingPlaces(java.util.List<GoogleMapsPlacesV1PlaceContainingPlace> containingPlaces) {
+    this.containingPlaces = containingPlaces;
     return this;
   }
 
@@ -1251,6 +1295,23 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
+   * The price range associated with a Place.
+   * @return value or {@code null} for none
+   */
+  public GoogleMapsPlacesV1PriceRange getPriceRange() {
+    return priceRange;
+  }
+
+  /**
+   * The price range associated with a Place.
+   * @param priceRange priceRange or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setPriceRange(GoogleMapsPlacesV1PriceRange priceRange) {
+    this.priceRange = priceRange;
+    return this;
+  }
+
+  /**
    * The primary type of the given result. This type must one of the Places API supported types. For
    * example, "restaurant", "cafe", "airport", etc. A place can only have a single primary type. For
    * the complete list of possible values, see Table A and Table B at
@@ -1291,6 +1352,29 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   public GoogleMapsPlacesV1Place setPrimaryTypeDisplayName(GoogleTypeLocalizedText primaryTypeDisplayName) {
     this.primaryTypeDisplayName = primaryTypeDisplayName;
+    return this;
+  }
+
+  /**
+   * Indicates whether the place is a pure service area business. Pure service area business is a
+   * business that visits or delivers to customers directly but does not serve customers at their
+   * business address. For example, businesses like cleaning services or plumbers. Those businesses
+   * may not have a physical address or location on Google Maps.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPureServiceAreaBusiness() {
+    return pureServiceAreaBusiness;
+  }
+
+  /**
+   * Indicates whether the place is a pure service area business. Pure service area business is a
+   * business that visits or delivers to customers directly but does not serve customers at their
+   * business address. For example, businesses like cleaning services or plumbers. Those businesses
+   * may not have a physical address or location on Google Maps.
+   * @param pureServiceAreaBusiness pureServiceAreaBusiness or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setPureServiceAreaBusiness(java.lang.Boolean pureServiceAreaBusiness) {
+    this.pureServiceAreaBusiness = pureServiceAreaBusiness;
     return this;
   }
 

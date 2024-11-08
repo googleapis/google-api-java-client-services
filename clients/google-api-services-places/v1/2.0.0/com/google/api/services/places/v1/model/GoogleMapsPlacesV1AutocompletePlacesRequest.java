@@ -30,6 +30,18 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1AutocompletePlacesRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Include pure service area businesses if the field is set to true. Pure service area
+   * business is a business that visits or delivers to customers directly but does not serve
+   * customers at their business address. For example, businesses like cleaning services or
+   * plumbers. Those businesses do not have a physical address or location on Google Maps. Places
+   * will not return fields including `location`, `plus_code`, and other location related fields for
+   * these businesses.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean includePureServiceAreaBusinesses;
+
+  /**
    * Optional. If true, the response will include both Place and query predictions. Otherwise the
    * response will only return Place predictions.
    * The value may be {@code null}.
@@ -142,6 +154,33 @@ public final class GoogleMapsPlacesV1AutocompletePlacesRequest extends com.googl
    */
   @com.google.api.client.util.Key
   private java.lang.String sessionToken;
+
+  /**
+   * Optional. Include pure service area businesses if the field is set to true. Pure service area
+   * business is a business that visits or delivers to customers directly but does not serve
+   * customers at their business address. For example, businesses like cleaning services or
+   * plumbers. Those businesses do not have a physical address or location on Google Maps. Places
+   * will not return fields including `location`, `plus_code`, and other location related fields for
+   * these businesses.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncludePureServiceAreaBusinesses() {
+    return includePureServiceAreaBusinesses;
+  }
+
+  /**
+   * Optional. Include pure service area businesses if the field is set to true. Pure service area
+   * business is a business that visits or delivers to customers directly but does not serve
+   * customers at their business address. For example, businesses like cleaning services or
+   * plumbers. Those businesses do not have a physical address or location on Google Maps. Places
+   * will not return fields including `location`, `plus_code`, and other location related fields for
+   * these businesses.
+   * @param includePureServiceAreaBusinesses includePureServiceAreaBusinesses or {@code null} for none
+   */
+  public GoogleMapsPlacesV1AutocompletePlacesRequest setIncludePureServiceAreaBusinesses(java.lang.Boolean includePureServiceAreaBusinesses) {
+    this.includePureServiceAreaBusinesses = includePureServiceAreaBusinesses;
+    return this;
+  }
 
   /**
    * Optional. If true, the response will include both Place and query predictions. Otherwise the

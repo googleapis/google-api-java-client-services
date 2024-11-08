@@ -37,6 +37,18 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
   private GoogleMapsPlacesV1SearchTextRequestEVOptions evOptions;
 
   /**
+   * Optional. Include pure service area businesses if the field is set to true. Pure service area
+   * business is a business that visits or delivers to customers directly but does not serve
+   * customers at their business address. For example, businesses like cleaning services or
+   * plumbers. Those businesses do not have a physical address or location on Google Maps. Places
+   * will not return fields including `location`, `plus_code`, and other location related fields for
+   * these businesses.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean includePureServiceAreaBusinesses;
+
+  /**
    * The requested place type. Full list of types supported:
    * https://developers.google.com/maps/documentation/places/web-service/place-types. Only support
    * one included type.
@@ -192,6 +204,33 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
    */
   public GoogleMapsPlacesV1SearchTextRequest setEvOptions(GoogleMapsPlacesV1SearchTextRequestEVOptions evOptions) {
     this.evOptions = evOptions;
+    return this;
+  }
+
+  /**
+   * Optional. Include pure service area businesses if the field is set to true. Pure service area
+   * business is a business that visits or delivers to customers directly but does not serve
+   * customers at their business address. For example, businesses like cleaning services or
+   * plumbers. Those businesses do not have a physical address or location on Google Maps. Places
+   * will not return fields including `location`, `plus_code`, and other location related fields for
+   * these businesses.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncludePureServiceAreaBusinesses() {
+    return includePureServiceAreaBusinesses;
+  }
+
+  /**
+   * Optional. Include pure service area businesses if the field is set to true. Pure service area
+   * business is a business that visits or delivers to customers directly but does not serve
+   * customers at their business address. For example, businesses like cleaning services or
+   * plumbers. Those businesses do not have a physical address or location on Google Maps. Places
+   * will not return fields including `location`, `plus_code`, and other location related fields for
+   * these businesses.
+   * @param includePureServiceAreaBusinesses includePureServiceAreaBusinesses or {@code null} for none
+   */
+  public GoogleMapsPlacesV1SearchTextRequest setIncludePureServiceAreaBusinesses(java.lang.Boolean includePureServiceAreaBusinesses) {
+    this.includePureServiceAreaBusinesses = includePureServiceAreaBusinesses;
     return this;
   }
 

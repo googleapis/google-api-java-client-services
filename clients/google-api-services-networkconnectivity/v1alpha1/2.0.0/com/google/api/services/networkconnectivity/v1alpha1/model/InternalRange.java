@@ -47,6 +47,14 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   private java.lang.String description;
 
   /**
+   * Optional. Immutable ranges cannot have their fields modified, except for labels and
+   * description.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean immutable;
+
+  /**
    * IP range that this internal range defines. NOTE: IPv6 ranges are limited to
    * usage=EXTERNAL_TO_VPC and peering=FOR_SELF. NOTE: For IPv6 Ranges this field is compulsory,
    * i.e. the address range must be specified explicitly.
@@ -181,6 +189,25 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
    */
   public InternalRange setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable ranges cannot have their fields modified, except for labels and
+   * description.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getImmutable() {
+    return immutable;
+  }
+
+  /**
+   * Optional. Immutable ranges cannot have their fields modified, except for labels and
+   * description.
+   * @param immutable immutable or {@code null} for none
+   */
+  public InternalRange setImmutable(java.lang.Boolean immutable) {
+    this.immutable = immutable;
     return this;
   }
 

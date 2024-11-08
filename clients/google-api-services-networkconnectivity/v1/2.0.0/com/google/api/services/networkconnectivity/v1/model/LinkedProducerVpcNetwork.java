@@ -17,7 +17,7 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * Next ID: 7
+ * Model definition for LinkedProducerVpcNetwork.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation
@@ -36,6 +36,13 @@ public final class LinkedProducerVpcNetwork extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> excludeExportRanges;
+
+  /**
+   * Optional. IP ranges allowed to be included from peering.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> includeExportRanges;
 
   /**
    * Immutable. The URI of the Service Consumer VPC that the Producer VPC is peered with.
@@ -81,6 +88,23 @@ public final class LinkedProducerVpcNetwork extends com.google.api.client.json.G
    */
   public LinkedProducerVpcNetwork setExcludeExportRanges(java.util.List<java.lang.String> excludeExportRanges) {
     this.excludeExportRanges = excludeExportRanges;
+    return this;
+  }
+
+  /**
+   * Optional. IP ranges allowed to be included from peering.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getIncludeExportRanges() {
+    return includeExportRanges;
+  }
+
+  /**
+   * Optional. IP ranges allowed to be included from peering.
+   * @param includeExportRanges includeExportRanges or {@code null} for none
+   */
+  public LinkedProducerVpcNetwork setIncludeExportRanges(java.util.List<java.lang.String> includeExportRanges) {
+    this.includeExportRanges = includeExportRanges;
     return this;
   }
 

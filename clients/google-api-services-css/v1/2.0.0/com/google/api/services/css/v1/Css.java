@@ -1676,7 +1676,7 @@ public class Css extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Lists the labels assigned to an account.
+       * Lists the labels owned by an account.
        *
        * Create a request for the method "labels.list".
        *
@@ -1700,7 +1700,7 @@ public class Css extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^accounts/[^/]+$");
 
         /**
-         * Lists the labels assigned to an account.
+         * Lists the labels owned by an account.
          *
          * Create a request for the method "labels.list".
          *

@@ -53,7 +53,7 @@ public final class NodePoolAutoscaling extends com.google.api.client.json.Generi
   private java.lang.String locationPolicy;
 
   /**
-   * Maximum number of nodes for one location in the NodePool. Must be >= min_node_count. There has
+   * Maximum number of nodes for one location in the node pool. Must be >= min_node_count. There has
    * to be enough quota to scale up the cluster.
    * The value may be {@code null}.
    */
@@ -61,24 +61,25 @@ public final class NodePoolAutoscaling extends com.google.api.client.json.Generi
   private java.lang.Integer maxNodeCount;
 
   /**
-   * Minimum number of nodes for one location in the NodePool. Must be >= 1 and <= max_node_count.
+   * Minimum number of nodes for one location in the node pool. Must be greater than or equal to 0
+   * and less than or equal to max_node_count.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minNodeCount;
 
   /**
-   * Maximum number of nodes in the node pool. Must be greater than total_min_node_count. There has
-   * to be enough quota to scale up the cluster. The total_*_node_count fields are mutually
-   * exclusive with the *_node_count fields.
+   * Maximum number of nodes in the node pool. Must be greater than or equal to
+   * total_min_node_count. There has to be enough quota to scale up the cluster. The
+   * total_*_node_count fields are mutually exclusive with the *_node_count fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer totalMaxNodeCount;
 
   /**
-   * Minimum number of nodes in the node pool. Must be greater than 1 less than
-   * total_max_node_count. The total_*_node_count fields are mutually exclusive with the
+   * Minimum number of nodes in the node pool. Must be greater than or equal to 0 and less than or
+   * equal to total_max_node_count. The total_*_node_count fields are mutually exclusive with the
    * *_node_count fields.
    * The value may be {@code null}.
    */
@@ -137,7 +138,7 @@ public final class NodePoolAutoscaling extends com.google.api.client.json.Generi
   }
 
   /**
-   * Maximum number of nodes for one location in the NodePool. Must be >= min_node_count. There has
+   * Maximum number of nodes for one location in the node pool. Must be >= min_node_count. There has
    * to be enough quota to scale up the cluster.
    * @return value or {@code null} for none
    */
@@ -146,7 +147,7 @@ public final class NodePoolAutoscaling extends com.google.api.client.json.Generi
   }
 
   /**
-   * Maximum number of nodes for one location in the NodePool. Must be >= min_node_count. There has
+   * Maximum number of nodes for one location in the node pool. Must be >= min_node_count. There has
    * to be enough quota to scale up the cluster.
    * @param maxNodeCount maxNodeCount or {@code null} for none
    */
@@ -156,7 +157,8 @@ public final class NodePoolAutoscaling extends com.google.api.client.json.Generi
   }
 
   /**
-   * Minimum number of nodes for one location in the NodePool. Must be >= 1 and <= max_node_count.
+   * Minimum number of nodes for one location in the node pool. Must be greater than or equal to 0
+   * and less than or equal to max_node_count.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinNodeCount() {
@@ -164,7 +166,8 @@ public final class NodePoolAutoscaling extends com.google.api.client.json.Generi
   }
 
   /**
-   * Minimum number of nodes for one location in the NodePool. Must be >= 1 and <= max_node_count.
+   * Minimum number of nodes for one location in the node pool. Must be greater than or equal to 0
+   * and less than or equal to max_node_count.
    * @param minNodeCount minNodeCount or {@code null} for none
    */
   public NodePoolAutoscaling setMinNodeCount(java.lang.Integer minNodeCount) {
@@ -173,9 +176,9 @@ public final class NodePoolAutoscaling extends com.google.api.client.json.Generi
   }
 
   /**
-   * Maximum number of nodes in the node pool. Must be greater than total_min_node_count. There has
-   * to be enough quota to scale up the cluster. The total_*_node_count fields are mutually
-   * exclusive with the *_node_count fields.
+   * Maximum number of nodes in the node pool. Must be greater than or equal to
+   * total_min_node_count. There has to be enough quota to scale up the cluster. The
+   * total_*_node_count fields are mutually exclusive with the *_node_count fields.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalMaxNodeCount() {
@@ -183,9 +186,9 @@ public final class NodePoolAutoscaling extends com.google.api.client.json.Generi
   }
 
   /**
-   * Maximum number of nodes in the node pool. Must be greater than total_min_node_count. There has
-   * to be enough quota to scale up the cluster. The total_*_node_count fields are mutually
-   * exclusive with the *_node_count fields.
+   * Maximum number of nodes in the node pool. Must be greater than or equal to
+   * total_min_node_count. There has to be enough quota to scale up the cluster. The
+   * total_*_node_count fields are mutually exclusive with the *_node_count fields.
    * @param totalMaxNodeCount totalMaxNodeCount or {@code null} for none
    */
   public NodePoolAutoscaling setTotalMaxNodeCount(java.lang.Integer totalMaxNodeCount) {
@@ -194,8 +197,8 @@ public final class NodePoolAutoscaling extends com.google.api.client.json.Generi
   }
 
   /**
-   * Minimum number of nodes in the node pool. Must be greater than 1 less than
-   * total_max_node_count. The total_*_node_count fields are mutually exclusive with the
+   * Minimum number of nodes in the node pool. Must be greater than or equal to 0 and less than or
+   * equal to total_max_node_count. The total_*_node_count fields are mutually exclusive with the
    * *_node_count fields.
    * @return value or {@code null} for none
    */
@@ -204,8 +207,8 @@ public final class NodePoolAutoscaling extends com.google.api.client.json.Generi
   }
 
   /**
-   * Minimum number of nodes in the node pool. Must be greater than 1 less than
-   * total_max_node_count. The total_*_node_count fields are mutually exclusive with the
+   * Minimum number of nodes in the node pool. Must be greater than or equal to 0 and less than or
+   * equal to total_max_node_count. The total_*_node_count fields are mutually exclusive with the
    * *_node_count fields.
    * @param totalMinNodeCount totalMinNodeCount or {@code null} for none
    */

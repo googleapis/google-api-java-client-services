@@ -46,6 +46,14 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupAd extends com.google.
   private java.lang.String creationTime;
 
   /**
+   * Output only. The resource names of effective labels attached to this ad. An effective label is
+   * a label inherited or directly assigned to this ad.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> effectiveLabels;
+
+  /**
    * Output only. ID of the ad in the external engine account. This field is for Search Ads 360
    * account only, for example, Yahoo Japan, Microsoft, Baidu etc. For non-Search Ads 360 entity,
    * use "ad_group_ad.ad.id" instead.
@@ -125,6 +133,25 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupAd extends com.google.
    */
   public GoogleAdsSearchads360V0ResourcesAdGroupAd setCreationTime(java.lang.String creationTime) {
     this.creationTime = creationTime;
+    return this;
+  }
+
+  /**
+   * Output only. The resource names of effective labels attached to this ad. An effective label is
+   * a label inherited or directly assigned to this ad.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getEffectiveLabels() {
+    return effectiveLabels;
+  }
+
+  /**
+   * Output only. The resource names of effective labels attached to this ad. An effective label is
+   * a label inherited or directly assigned to this ad.
+   * @param effectiveLabels effectiveLabels or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroupAd setEffectiveLabels(java.util.List<java.lang.String> effectiveLabels) {
+    this.effectiveLabels = effectiveLabels;
     return this;
   }
 

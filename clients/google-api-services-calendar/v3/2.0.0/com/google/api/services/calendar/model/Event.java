@@ -64,6 +64,13 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean attendeesOmitted;
 
   /**
+   * Birthday or special event data. Used if eventType is "birthday". Immutable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EventBirthdayProperties birthdayProperties;
+
+  /**
    * The color of the event. This is an ID referring to an entry in the event section of the colors
    * definition (see the  colors endpoint). Optional.
    * The value may be {@code null}.
@@ -534,6 +541,23 @@ public final class Event extends com.google.api.client.json.GenericJson {
       return false;
     }
     return attendeesOmitted;
+  }
+
+  /**
+   * Birthday or special event data. Used if eventType is "birthday". Immutable.
+   * @return value or {@code null} for none
+   */
+  public EventBirthdayProperties getBirthdayProperties() {
+    return birthdayProperties;
+  }
+
+  /**
+   * Birthday or special event data. Used if eventType is "birthday". Immutable.
+   * @param birthdayProperties birthdayProperties or {@code null} for none
+   */
+  public Event setBirthdayProperties(EventBirthdayProperties birthdayProperties) {
+    this.birthdayProperties = birthdayProperties;
+    return this;
   }
 
   /**

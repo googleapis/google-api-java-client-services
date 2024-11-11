@@ -52,6 +52,13 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
   private GoogleAdsSearchads360V0ResourcesAdGroupAd adGroupAd;
 
   /**
+   * The ad group ad effective label referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesAdGroupAdEffectiveLabel adGroupAdEffectiveLabel;
+
+  /**
    * The ad group ad label referenced in the query.
    * The value may be {@code null}.
    */
@@ -92,6 +99,13 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   @com.google.api.client.util.Key
   private GoogleAdsSearchads360V0ResourcesAdGroupCriterion adGroupCriterion;
+
+  /**
+   * The ad group criterion effective label referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesAdGroupCriterionEffectiveLabel adGroupCriterionEffectiveLabel;
 
   /**
    * The ad group criterion label referenced in the query.
@@ -415,6 +429,13 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
   private GoogleAdsSearchads360V0ResourcesUserList userList;
 
   /**
+   * The user location view referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesUserLocationView userLocationView;
+
+  /**
    * The event level visit referenced in the query.
    * The value may be {@code null}.
    */
@@ -476,6 +497,23 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   public GoogleAdsSearchads360V0ServicesSearchAds360Row setAdGroupAd(GoogleAdsSearchads360V0ResourcesAdGroupAd adGroupAd) {
     this.adGroupAd = adGroupAd;
+    return this;
+  }
+
+  /**
+   * The ad group ad effective label referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroupAdEffectiveLabel getAdGroupAdEffectiveLabel() {
+    return adGroupAdEffectiveLabel;
+  }
+
+  /**
+   * The ad group ad effective label referenced in the query.
+   * @param adGroupAdEffectiveLabel adGroupAdEffectiveLabel or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setAdGroupAdEffectiveLabel(GoogleAdsSearchads360V0ResourcesAdGroupAdEffectiveLabel adGroupAdEffectiveLabel) {
+    this.adGroupAdEffectiveLabel = adGroupAdEffectiveLabel;
     return this;
   }
 
@@ -578,6 +616,23 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   public GoogleAdsSearchads360V0ServicesSearchAds360Row setAdGroupCriterion(GoogleAdsSearchads360V0ResourcesAdGroupCriterion adGroupCriterion) {
     this.adGroupCriterion = adGroupCriterion;
+    return this;
+  }
+
+  /**
+   * The ad group criterion effective label referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroupCriterionEffectiveLabel getAdGroupCriterionEffectiveLabel() {
+    return adGroupCriterionEffectiveLabel;
+  }
+
+  /**
+   * The ad group criterion effective label referenced in the query.
+   * @param adGroupCriterionEffectiveLabel adGroupCriterionEffectiveLabel or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setAdGroupCriterionEffectiveLabel(GoogleAdsSearchads360V0ResourcesAdGroupCriterionEffectiveLabel adGroupCriterionEffectiveLabel) {
+    this.adGroupCriterionEffectiveLabel = adGroupCriterionEffectiveLabel;
     return this;
   }
 
@@ -1343,6 +1398,23 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   public GoogleAdsSearchads360V0ServicesSearchAds360Row setUserList(GoogleAdsSearchads360V0ResourcesUserList userList) {
     this.userList = userList;
+    return this;
+  }
+
+  /**
+   * The user location view referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesUserLocationView getUserLocationView() {
+    return userLocationView;
+  }
+
+  /**
+   * The user location view referenced in the query.
+   * @param userLocationView userLocationView or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setUserLocationView(GoogleAdsSearchads360V0ResourcesUserLocationView userLocationView) {
+    this.userLocationView = userLocationView;
     return this;
   }
 

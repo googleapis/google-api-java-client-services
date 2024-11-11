@@ -83,6 +83,14 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends com.
   private java.lang.Long effectiveCpcBidMicros;
 
   /**
+   * Output only. The resource names of effective labels attached to this ad group criterion. An
+   * effective label is a label inherited or directly assigned to this ad group criterion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> effectiveLabels;
+
+  /**
    * Output only. ID of the ad group criterion in the external engine account. This field is for
    * non-Google Ads account only, for example, Yahoo Japan, Microsoft, Baidu etc. For Google Ads
    * entity, use "ad_group_criterion.criterion_id" instead.
@@ -346,6 +354,25 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends com.
    */
   public GoogleAdsSearchads360V0ResourcesAdGroupCriterion setEffectiveCpcBidMicros(java.lang.Long effectiveCpcBidMicros) {
     this.effectiveCpcBidMicros = effectiveCpcBidMicros;
+    return this;
+  }
+
+  /**
+   * Output only. The resource names of effective labels attached to this ad group criterion. An
+   * effective label is a label inherited or directly assigned to this ad group criterion.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getEffectiveLabels() {
+    return effectiveLabels;
+  }
+
+  /**
+   * Output only. The resource names of effective labels attached to this ad group criterion. An
+   * effective label is a label inherited or directly assigned to this ad group criterion.
+   * @param effectiveLabels effectiveLabels or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroupCriterion setEffectiveLabels(java.util.List<java.lang.String> effectiveLabels) {
+    this.effectiveLabels = effectiveLabels;
     return this;
   }
 

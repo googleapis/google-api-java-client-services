@@ -3917,13 +3917,19 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Optional. Specifies whether a message starts a thread or replies to one. Only supported
-         * in named spaces.
+         * in named spaces. When [responding to user
+         * interactions](https://developers.google.com/workspace/chat/receive-respond-interactions),
+         * this field is ignored. For interactions within a thread, the reply is created in the same
+         * thread. Otherwise, the reply is created as a new thread.
          */
         @com.google.api.client.util.Key
         private java.lang.String messageReplyOption;
 
         /** Optional. Specifies whether a message starts a thread or replies to one. Only supported in named
-       spaces.
+       spaces. When [responding to user
+       interactions](https://developers.google.com/workspace/chat/receive-respond-interactions), this
+       field is ignored. For interactions within a thread, the reply is created in the same thread.
+       Otherwise, the reply is created as a new thread.
          */
         public java.lang.String getMessageReplyOption() {
           return messageReplyOption;
@@ -3931,7 +3937,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Optional. Specifies whether a message starts a thread or replies to one. Only supported
-         * in named spaces.
+         * in named spaces. When [responding to user
+         * interactions](https://developers.google.com/workspace/chat/receive-respond-interactions),
+         * this field is ignored. For interactions within a thread, the reply is created in the same
+         * thread. Otherwise, the reply is created as a new thread.
          */
         public Create setMessageReplyOption(java.lang.String messageReplyOption) {
           this.messageReplyOption = messageReplyOption;

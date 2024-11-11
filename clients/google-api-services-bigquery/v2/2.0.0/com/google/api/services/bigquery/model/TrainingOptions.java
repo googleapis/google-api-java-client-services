@@ -154,7 +154,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   /**
    * The contribution metric. Applies to contribution analysis models. Allowed formats supported are
    * for summable and summable ratio contribution metrics. These include expressions such as
-   * "SUM(x)" or "SUM(x)/SUM(y)", where x and y are column names from the base table.
+   * `SUM(x)` or `SUM(x)/SUM(y)`, where x and y are column names from the base table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -997,7 +997,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   /**
    * The contribution metric. Applies to contribution analysis models. Allowed formats supported are
    * for summable and summable ratio contribution metrics. These include expressions such as
-   * "SUM(x)" or "SUM(x)/SUM(y)", where x and y are column names from the base table.
+   * `SUM(x)` or `SUM(x)/SUM(y)`, where x and y are column names from the base table.
    * @return value or {@code null} for none
    */
   public java.lang.String getContributionMetric() {
@@ -1007,7 +1007,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   /**
    * The contribution metric. Applies to contribution analysis models. Allowed formats supported are
    * for summable and summable ratio contribution metrics. These include expressions such as
-   * "SUM(x)" or "SUM(x)/SUM(y)", where x and y are column names from the base table.
+   * `SUM(x)` or `SUM(x)/SUM(y)`, where x and y are column names from the base table.
    * @param contributionMetric contributionMetric or {@code null} for none
    */
   public TrainingOptions setContributionMetric(java.lang.String contributionMetric) {

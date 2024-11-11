@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class BigLakeConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The connection specifying the credentials to be used to read and write to external
+   * Optional. The connection specifying the credentials to be used to read and write to external
    * storage, such as Cloud Storage. The connection_id can have the form
    * `{project}.{location}.{connection_id}` or
    * `projects/{project}/locations/{location}/connections/{connection_id}".
@@ -40,14 +40,14 @@ public final class BigLakeConfiguration extends com.google.api.client.json.Gener
   private java.lang.String connectionId;
 
   /**
-   * Required. The file format the table data is stored in.
+   * Optional. The file format the table data is stored in.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fileFormat;
 
   /**
-   * Required. The fully qualified location prefix of the external folder where table data is
+   * Optional. The fully qualified location prefix of the external folder where table data is
    * stored. The '*' wildcard character is not allowed. The URI should be in the format
    * `gs://bucket/path_to_table/`
    * The value may be {@code null}.
@@ -56,14 +56,14 @@ public final class BigLakeConfiguration extends com.google.api.client.json.Gener
   private java.lang.String storageUri;
 
   /**
-   * Required. The table format the metadata only snapshots are stored in.
+   * Optional. The table format the metadata only snapshots are stored in.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tableFormat;
 
   /**
-   * Required. The connection specifying the credentials to be used to read and write to external
+   * Optional. The connection specifying the credentials to be used to read and write to external
    * storage, such as Cloud Storage. The connection_id can have the form
    * `{project}.{location}.{connection_id}` or
    * `projects/{project}/locations/{location}/connections/{connection_id}".
@@ -74,7 +74,7 @@ public final class BigLakeConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The connection specifying the credentials to be used to read and write to external
+   * Optional. The connection specifying the credentials to be used to read and write to external
    * storage, such as Cloud Storage. The connection_id can have the form
    * `{project}.{location}.{connection_id}` or
    * `projects/{project}/locations/{location}/connections/{connection_id}".
@@ -86,7 +86,7 @@ public final class BigLakeConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The file format the table data is stored in.
+   * Optional. The file format the table data is stored in.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileFormat() {
@@ -94,7 +94,7 @@ public final class BigLakeConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The file format the table data is stored in.
+   * Optional. The file format the table data is stored in.
    * @param fileFormat fileFormat or {@code null} for none
    */
   public BigLakeConfiguration setFileFormat(java.lang.String fileFormat) {
@@ -103,7 +103,7 @@ public final class BigLakeConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The fully qualified location prefix of the external folder where table data is
+   * Optional. The fully qualified location prefix of the external folder where table data is
    * stored. The '*' wildcard character is not allowed. The URI should be in the format
    * `gs://bucket/path_to_table/`
    * @return value or {@code null} for none
@@ -113,7 +113,7 @@ public final class BigLakeConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The fully qualified location prefix of the external folder where table data is
+   * Optional. The fully qualified location prefix of the external folder where table data is
    * stored. The '*' wildcard character is not allowed. The URI should be in the format
    * `gs://bucket/path_to_table/`
    * @param storageUri storageUri or {@code null} for none
@@ -124,7 +124,7 @@ public final class BigLakeConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The table format the metadata only snapshots are stored in.
+   * Optional. The table format the metadata only snapshots are stored in.
    * @return value or {@code null} for none
    */
   public java.lang.String getTableFormat() {
@@ -132,7 +132,7 @@ public final class BigLakeConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The table format the metadata only snapshots are stored in.
+   * Optional. The table format the metadata only snapshots are stored in.
    * @param tableFormat tableFormat or {@code null} for none
    */
   public BigLakeConfiguration setTableFormat(java.lang.String tableFormat) {

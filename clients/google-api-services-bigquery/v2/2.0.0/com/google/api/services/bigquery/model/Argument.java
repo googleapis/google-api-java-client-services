@@ -37,7 +37,7 @@ public final class Argument extends com.google.api.client.json.GenericJson {
   private java.lang.String argumentKind;
 
   /**
-   * Required unless argument_kind = ANY_TYPE.
+   * Set if argument_kind == FIXED_TYPE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class Argument extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required unless argument_kind = ANY_TYPE.
+   * Set if argument_kind == FIXED_TYPE.
    * @return value or {@code null} for none
    */
   public StandardSqlDataType getDataType() {
@@ -93,7 +93,7 @@ public final class Argument extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required unless argument_kind = ANY_TYPE.
+   * Set if argument_kind == FIXED_TYPE.
    * @param dataType dataType or {@code null} for none
    */
   public Argument setDataType(StandardSqlDataType dataType) {

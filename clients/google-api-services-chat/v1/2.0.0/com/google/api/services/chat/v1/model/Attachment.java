@@ -30,8 +30,8 @@ package com.google.api.services.chat.v1.model;
 public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
-   * A reference to the attachment data. This field is used with the media API to download the
-   * attachment data.
+   * Optional. A reference to the attachment data. This field is used to create or update messages
+   * with attachments, or with the media API to download the attachment data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   private DriveDataRef driveDataRef;
 
   /**
-   * Resource name of the attachment, in the form
+   * Optional. Resource name of the attachment, in the form
    * `spaces/{space}/messages/{message}/attachments/{attachment}`.
    * The value may be {@code null}.
    */
@@ -91,8 +91,8 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   private java.lang.String thumbnailUri;
 
   /**
-   * A reference to the attachment data. This field is used with the media API to download the
-   * attachment data.
+   * Optional. A reference to the attachment data. This field is used to create or update messages
+   * with attachments, or with the media API to download the attachment data.
    * @return value or {@code null} for none
    */
   public AttachmentDataRef getAttachmentDataRef() {
@@ -100,8 +100,8 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A reference to the attachment data. This field is used with the media API to download the
-   * attachment data.
+   * Optional. A reference to the attachment data. This field is used to create or update messages
+   * with attachments, or with the media API to download the attachment data.
    * @param attachmentDataRef attachmentDataRef or {@code null} for none
    */
   public Attachment setAttachmentDataRef(AttachmentDataRef attachmentDataRef) {
@@ -182,7 +182,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the attachment, in the form
+   * Optional. Resource name of the attachment, in the form
    * `spaces/{space}/messages/{message}/attachments/{attachment}`.
    * @return value or {@code null} for none
    */
@@ -191,7 +191,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the attachment, in the form
+   * Optional. Resource name of the attachment, in the form
    * `spaces/{space}/messages/{message}/attachments/{attachment}`.
    * @param name name or {@code null} for none
    */

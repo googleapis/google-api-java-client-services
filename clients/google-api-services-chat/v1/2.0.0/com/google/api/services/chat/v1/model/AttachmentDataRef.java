@@ -30,24 +30,24 @@ package com.google.api.services.chat.v1.model;
 public final class AttachmentDataRef extends com.google.api.client.json.GenericJson {
 
   /**
-   * Opaque token containing a reference to an uploaded attachment. Treated by clients as an opaque
-   * string and used to create or update Chat messages with attachments.
+   * Optional. Opaque token containing a reference to an uploaded attachment. Treated by clients as
+   * an opaque string and used to create or update Chat messages with attachments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String attachmentUploadToken;
 
   /**
-   * The resource name of the attachment data. This field is used with the media API to download the
-   * attachment data.
+   * Optional. The resource name of the attachment data. This field is used with the media API to
+   * download the attachment data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceName;
 
   /**
-   * Opaque token containing a reference to an uploaded attachment. Treated by clients as an opaque
-   * string and used to create or update Chat messages with attachments.
+   * Optional. Opaque token containing a reference to an uploaded attachment. Treated by clients as
+   * an opaque string and used to create or update Chat messages with attachments.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttachmentUploadToken() {
@@ -55,8 +55,8 @@ public final class AttachmentDataRef extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Opaque token containing a reference to an uploaded attachment. Treated by clients as an opaque
-   * string and used to create or update Chat messages with attachments.
+   * Optional. Opaque token containing a reference to an uploaded attachment. Treated by clients as
+   * an opaque string and used to create or update Chat messages with attachments.
    * @param attachmentUploadToken attachmentUploadToken or {@code null} for none
    */
   public AttachmentDataRef setAttachmentUploadToken(java.lang.String attachmentUploadToken) {
@@ -65,8 +65,8 @@ public final class AttachmentDataRef extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The resource name of the attachment data. This field is used with the media API to download the
-   * attachment data.
+   * Optional. The resource name of the attachment data. This field is used with the media API to
+   * download the attachment data.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -74,8 +74,8 @@ public final class AttachmentDataRef extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The resource name of the attachment data. This field is used with the media API to download the
-   * attachment data.
+   * Optional. The resource name of the attachment data. This field is used with the media API to
+   * download the attachment data.
    * @param resourceName resourceName or {@code null} for none
    */
   public AttachmentDataRef setResourceName(java.lang.String resourceName) {

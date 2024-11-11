@@ -93,11 +93,17 @@ public final class ApkManifest extends com.google.api.client.json.GenericJson {
   private java.util.List<UsesFeature> usesFeature;
 
   /**
-   * Permissions declared to be used by the application
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> usesPermission;
+
+  /**
+   * Permissions declared to be used by the application
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<UsesPermissionTag> usesPermissionTags;
 
   /**
    * Version number used internally by the app.
@@ -265,7 +271,6 @@ public final class ApkManifest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permissions declared to be used by the application
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUsesPermission() {
@@ -273,11 +278,27 @@ public final class ApkManifest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permissions declared to be used by the application
    * @param usesPermission usesPermission or {@code null} for none
    */
   public ApkManifest setUsesPermission(java.util.List<java.lang.String> usesPermission) {
     this.usesPermission = usesPermission;
+    return this;
+  }
+
+  /**
+   * Permissions declared to be used by the application
+   * @return value or {@code null} for none
+   */
+  public java.util.List<UsesPermissionTag> getUsesPermissionTags() {
+    return usesPermissionTags;
+  }
+
+  /**
+   * Permissions declared to be used by the application
+   * @param usesPermissionTags usesPermissionTags or {@code null} for none
+   */
+  public ApkManifest setUsesPermissionTags(java.util.List<UsesPermissionTag> usesPermissionTags) {
+    this.usesPermissionTags = usesPermissionTags;
     return this;
   }
 

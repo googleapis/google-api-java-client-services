@@ -65,13 +65,6 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   private java.lang.String kind;
 
   /**
-   * [Output Only] Location to which the network is restricted.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private NetworkProfileLocation location;
-
-  /**
    * [Output Only] Name of the resource.
    * The value may be {@code null}.
    */
@@ -181,23 +174,6 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
    */
   public NetworkProfile setKind(java.lang.String kind) {
     this.kind = kind;
-    return this;
-  }
-
-  /**
-   * [Output Only] Location to which the network is restricted.
-   * @return value or {@code null} for none
-   */
-  public NetworkProfileLocation getLocation() {
-    return location;
-  }
-
-  /**
-   * [Output Only] Location to which the network is restricted.
-   * @param location location or {@code null} for none
-   */
-  public NetworkProfile setLocation(NetworkProfileLocation location) {
-    this.location = location;
     return this;
   }
 

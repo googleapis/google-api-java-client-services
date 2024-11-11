@@ -55,8 +55,7 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
    * private, per-user (user identifiable) content. CACHE_ALL_STATIC Automatically cache static
    * content, including common image formats, media (video and audio), and web assets (JavaScript
    * and CSS). Requests and responses that are marked as uncacheable, as well as dynamic content
-   * (including HTML), will not be cached. If no value is provided for cdnPolicy.cacheMode, it
-   * defaults to CACHE_ALL_STATIC.
+   * (including HTML), will not be cached.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -217,8 +216,7 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
    * private, per-user (user identifiable) content. CACHE_ALL_STATIC Automatically cache static
    * content, including common image formats, media (video and audio), and web assets (JavaScript
    * and CSS). Requests and responses that are marked as uncacheable, as well as dynamic content
-   * (including HTML), will not be cached. If no value is provided for cdnPolicy.cacheMode, it
-   * defaults to CACHE_ALL_STATIC.
+   * (including HTML), will not be cached.
    * @return value or {@code null} for none
    */
   public java.lang.String getCacheMode() {
@@ -235,8 +233,7 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
    * private, per-user (user identifiable) content. CACHE_ALL_STATIC Automatically cache static
    * content, including common image formats, media (video and audio), and web assets (JavaScript
    * and CSS). Requests and responses that are marked as uncacheable, as well as dynamic content
-   * (including HTML), will not be cached. If no value is provided for cdnPolicy.cacheMode, it
-   * defaults to CACHE_ALL_STATIC.
+   * (including HTML), will not be cached.
    * @param cacheMode cacheMode or {@code null} for none
    */
   public BackendBucketCdnPolicy setCacheMode(java.lang.String cacheMode) {

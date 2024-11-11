@@ -41,15 +41,7 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> accessLevels;
 
   /**
-   * Optional. Reauth settings applied to user access on a given AccessScope.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ReauthSettings reauthSettings;
-
-  /**
-   * Optional. Session settings applied to user access on a given AccessScope. Migrated from
-   * ReauthSettings
+   * Optional. Session settings applied to user access on a given AccessScope.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,25 +69,7 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Reauth settings applied to user access on a given AccessScope.
-   * @return value or {@code null} for none
-   */
-  public ReauthSettings getReauthSettings() {
-    return reauthSettings;
-  }
-
-  /**
-   * Optional. Reauth settings applied to user access on a given AccessScope.
-   * @param reauthSettings reauthSettings or {@code null} for none
-   */
-  public AccessSettings setReauthSettings(ReauthSettings reauthSettings) {
-    this.reauthSettings = reauthSettings;
-    return this;
-  }
-
-  /**
-   * Optional. Session settings applied to user access on a given AccessScope. Migrated from
-   * ReauthSettings
+   * Optional. Session settings applied to user access on a given AccessScope.
    * @return value or {@code null} for none
    */
   public SessionSettings getSessionSettings() {
@@ -103,8 +77,7 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Session settings applied to user access on a given AccessScope. Migrated from
-   * ReauthSettings
+   * Optional. Session settings applied to user access on a given AccessScope.
    * @param sessionSettings sessionSettings or {@code null} for none
    */
   public AccessSettings setSessionSettings(SessionSettings sessionSettings) {

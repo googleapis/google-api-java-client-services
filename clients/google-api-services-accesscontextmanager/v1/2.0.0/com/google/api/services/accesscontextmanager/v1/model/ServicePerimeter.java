@@ -45,6 +45,15 @@ public final class ServicePerimeter extends com.google.api.client.json.GenericJs
   private java.lang.String description;
 
   /**
+   * Optional. An opaque identifier for the current version of the `ServicePerimeter`. Clients
+   * should not expect this to be in any specific format. If etag is not provided, the operation
+   * will be performed as if a valid etag is provided.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * Identifier. Resource name for the `ServicePerimeter`. Format:
    * `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`. The `service_perimeter`
    * component must begin with a letter, followed by alphanumeric characters or `_`. After you
@@ -116,6 +125,27 @@ public final class ServicePerimeter extends com.google.api.client.json.GenericJs
    */
   public ServicePerimeter setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. An opaque identifier for the current version of the `ServicePerimeter`. Clients
+   * should not expect this to be in any specific format. If etag is not provided, the operation
+   * will be performed as if a valid etag is provided.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * Optional. An opaque identifier for the current version of the `ServicePerimeter`. Clients
+   * should not expect this to be in any specific format. If etag is not provided, the operation
+   * will be performed as if a valid etag is provided.
+   * @param etag etag or {@code null} for none
+   */
+  public ServicePerimeter setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 

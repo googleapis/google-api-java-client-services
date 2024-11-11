@@ -30076,6 +30076,28 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             return this;
           }
 
+          /**
+           * Optional. The service validates the request without performing any mutations. The
+           * default is false.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. The service validates the request without performing any mutations. The default is false.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. The service validates the request without performing any mutations. The
+           * default is false.
+           */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
           @Override
           public Create set(String parameterName, Object value) {
             return (Create) super.set(parameterName, value);

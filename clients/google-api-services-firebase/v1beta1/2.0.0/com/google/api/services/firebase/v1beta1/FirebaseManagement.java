@@ -154,11 +154,12 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
   public class AvailableProjects {
 
     /**
-     * Lists each [Google Cloud Platform (GCP) `Project`] (https://cloud.google.com/resource-
-     * manager/reference/rest/v1/projects) that can have Firebase resources added to it. A Project will
-     * only be listed if: - The caller has sufficient [Google IAM](https://cloud.google.com/iam)
-     * permissions to call AddFirebase. - The Project is not already a FirebaseProject. - The Project is
-     * not in an Organization which has policies that prevent Firebase resources from being added.
+     * Lists each [Google Cloud `Project`](https://cloud.google.com/resource-
+     * manager/reference/rest/v1/projects) that can have Firebase resources added and Firebase services
+     * enabled. A Project will only be listed if: - The caller has sufficient [Google
+     * IAM](https://cloud.google.com/iam) permissions to call AddFirebase. - The Project is not already
+     * a FirebaseProject. - The Project is not in an Organization which has policies that prevent
+     * Firebase resources from being added.
      *
      * Create a request for the method "availableProjects.list".
      *
@@ -178,11 +179,12 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       private static final String REST_PATH = "v1beta1/availableProjects";
 
       /**
-       * Lists each [Google Cloud Platform (GCP) `Project`] (https://cloud.google.com/resource-
-       * manager/reference/rest/v1/projects) that can have Firebase resources added to it. A Project
-       * will only be listed if: - The caller has sufficient [Google IAM](https://cloud.google.com/iam)
-       * permissions to call AddFirebase. - The Project is not already a FirebaseProject. - The Project
-       * is not in an Organization which has policies that prevent Firebase resources from being added.
+       * Lists each [Google Cloud `Project`](https://cloud.google.com/resource-
+       * manager/reference/rest/v1/projects) that can have Firebase resources added and Firebase
+       * services enabled. A Project will only be listed if: - The caller has sufficient [Google
+       * IAM](https://cloud.google.com/iam) permissions to call AddFirebase. - The Project is not
+       * already a FirebaseProject. - The Project is not in an Organization which has policies that
+       * prevent Firebase resources from being added.
        *
        * Create a request for the method "availableProjects.list".
        *
@@ -503,37 +505,37 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
   public class Projects {
 
     /**
-     * Adds Firebase resources to the specified existing [Google Cloud Platform (GCP) `Project`]
-     * (https://cloud.google.com/resource-manager/reference/rest/v1/projects). Since a FirebaseProject
-     * is actually also a GCP `Project`, a `FirebaseProject` has the same underlying GCP identifiers
-     * (`projectNumber` and `projectId`). This allows for easy interop with Google APIs. The result of
-     * this call is an [`Operation`](../../v1beta1/operations). Poll the `Operation` to track the
-     * provisioning process by calling GetOperation until
+     * Adds Firebase resources and enables Firebase services in the specified existing [Google Cloud
+     * `Project`](https://cloud.google.com/resource-manager/reference/rest/v1/projects). Since a
+     * FirebaseProject is actually also a Google Cloud `Project`, a `FirebaseProject` has the same
+     * underlying Google Cloud identifiers (`projectNumber` and `projectId`). This allows for easy
+     * interop with Google APIs. The result of this call is an [`Operation`](../../v1beta1/operations).
+     * Poll the `Operation` to track the provisioning process by calling GetOperation until
      * [`done`](../../v1beta1/operations#Operation.FIELDS.done) is `true`. When `done` is `true`, the
      * `Operation` has either succeeded or failed. If the `Operation` succeeded, its
      * [`response`](../../v1beta1/operations#Operation.FIELDS.response) is set to a FirebaseProject; if
      * the `Operation` failed, its [`error`](../../v1beta1/operations#Operation.FIELDS.error) is set to
      * a google.rpc.Status. The `Operation` is automatically deleted after completion, so there is no
      * need to call DeleteOperation. This method does not modify any billing account information on the
-     * underlying GCP `Project`. To call `AddFirebase`, a project member or service account must have
-     * the following permissions (the IAM roles of Editor and Owner contain these permissions):
-     * `firebase.projects.update`, `resourcemanager.projects.get`, `serviceusage.services.enable`, and
-     * `serviceusage.services.get`.
+     * underlying Google Cloud `Project`. To call `AddFirebase`, a project member or service account
+     * must have the following permissions (the IAM roles of Editor and Owner contain these
+     * permissions): `firebase.projects.update`, `resourcemanager.projects.get`,
+     * `serviceusage.services.enable`, and `serviceusage.services.get`.
      *
      * Create a request for the method "projects.addFirebase".
      *
      * This request holds the parameters needed by the firebase server.  After setting any optional
      * parameters, call the {@link AddFirebase#execute()} method to invoke the remote operation.
      *
-     * @param project The resource name of the GCP `Project` to which Firebase resources will be added, in the format:
-     *        projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
-     *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
-     *        PROJECT_IDENTIFIER values. After calling `AddFirebase`, the unique Project identifiers (
-     *        [`projectNumber`](https://cloud.google.com/resource-
+     * @param project The resource name of the Google Cloud `Project` in which Firebase resources will be added and
+     *        Firebase services enabled, in the format: projects/ PROJECT_IDENTIFIER Refer to the
+     *        `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+     *        about PROJECT_IDENTIFIER values. After calling `AddFirebase`, the unique Project
+     *        identifiers ( [`projectNumber`](https://cloud.google.com/resource-
      *        manager/reference/rest/v1/projects#Project.FIELDS.project_number) and
      *        [`projectId`](https://cloud.google.com/resource-
-     *        manager/reference/rest/v1/projects#Project.FIELDS.project_id)) of the underlying GCP
-     *        `Project` are also the identifiers of the FirebaseProject.
+     *        manager/reference/rest/v1/projects#Project.FIELDS.project_id)) of the underlying Google
+     *        Cloud `Project` are also the identifiers of the FirebaseProject.
      * @param content the {@link com.google.api.services.firebase.v1beta1.model.AddFirebaseRequest}
      * @return the request
      */
@@ -551,22 +553,23 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
           java.util.regex.Pattern.compile("^projects/[^/]+$");
 
       /**
-       * Adds Firebase resources to the specified existing [Google Cloud Platform (GCP) `Project`]
-       * (https://cloud.google.com/resource-manager/reference/rest/v1/projects). Since a FirebaseProject
-       * is actually also a GCP `Project`, a `FirebaseProject` has the same underlying GCP identifiers
-       * (`projectNumber` and `projectId`). This allows for easy interop with Google APIs. The result of
-       * this call is an [`Operation`](../../v1beta1/operations). Poll the `Operation` to track the
-       * provisioning process by calling GetOperation until
-       * [`done`](../../v1beta1/operations#Operation.FIELDS.done) is `true`. When `done` is `true`, the
-       * `Operation` has either succeeded or failed. If the `Operation` succeeded, its
-       * [`response`](../../v1beta1/operations#Operation.FIELDS.response) is set to a FirebaseProject;
-       * if the `Operation` failed, its [`error`](../../v1beta1/operations#Operation.FIELDS.error) is
-       * set to a google.rpc.Status. The `Operation` is automatically deleted after completion, so there
-       * is no need to call DeleteOperation. This method does not modify any billing account information
-       * on the underlying GCP `Project`. To call `AddFirebase`, a project member or service account
-       * must have the following permissions (the IAM roles of Editor and Owner contain these
-       * permissions): `firebase.projects.update`, `resourcemanager.projects.get`,
-       * `serviceusage.services.enable`, and `serviceusage.services.get`.
+       * Adds Firebase resources and enables Firebase services in the specified existing [Google Cloud
+       * `Project`](https://cloud.google.com/resource-manager/reference/rest/v1/projects). Since a
+       * FirebaseProject is actually also a Google Cloud `Project`, a `FirebaseProject` has the same
+       * underlying Google Cloud identifiers (`projectNumber` and `projectId`). This allows for easy
+       * interop with Google APIs. The result of this call is an
+       * [`Operation`](../../v1beta1/operations). Poll the `Operation` to track the provisioning process
+       * by calling GetOperation until [`done`](../../v1beta1/operations#Operation.FIELDS.done) is
+       * `true`. When `done` is `true`, the `Operation` has either succeeded or failed. If the
+       * `Operation` succeeded, its [`response`](../../v1beta1/operations#Operation.FIELDS.response) is
+       * set to a FirebaseProject; if the `Operation` failed, its
+       * [`error`](../../v1beta1/operations#Operation.FIELDS.error) is set to a google.rpc.Status. The
+       * `Operation` is automatically deleted after completion, so there is no need to call
+       * DeleteOperation. This method does not modify any billing account information on the underlying
+       * Google Cloud `Project`. To call `AddFirebase`, a project member or service account must have
+       * the following permissions (the IAM roles of Editor and Owner contain these permissions):
+       * `firebase.projects.update`, `resourcemanager.projects.get`, `serviceusage.services.enable`, and
+       * `serviceusage.services.get`.
        *
        * Create a request for the method "projects.addFirebase".
        *
@@ -576,15 +579,15 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * AddFirebase#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param project The resource name of the GCP `Project` to which Firebase resources will be added, in the format:
-     *        projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
-     *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
-     *        PROJECT_IDENTIFIER values. After calling `AddFirebase`, the unique Project identifiers (
-     *        [`projectNumber`](https://cloud.google.com/resource-
+       * @param project The resource name of the Google Cloud `Project` in which Firebase resources will be added and
+     *        Firebase services enabled, in the format: projects/ PROJECT_IDENTIFIER Refer to the
+     *        `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+     *        about PROJECT_IDENTIFIER values. After calling `AddFirebase`, the unique Project
+     *        identifiers ( [`projectNumber`](https://cloud.google.com/resource-
      *        manager/reference/rest/v1/projects#Project.FIELDS.project_number) and
      *        [`projectId`](https://cloud.google.com/resource-
-     *        manager/reference/rest/v1/projects#Project.FIELDS.project_id)) of the underlying GCP
-     *        `Project` are also the identifiers of the FirebaseProject.
+     *        manager/reference/rest/v1/projects#Project.FIELDS.project_id)) of the underlying Google
+     *        Cloud `Project` are also the identifiers of the FirebaseProject.
        * @param content the {@link com.google.api.services.firebase.v1beta1.model.AddFirebaseRequest}
        * @since 1.13
        */
@@ -654,43 +657,43 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
 
       /**
-       * The resource name of the GCP `Project` to which Firebase resources will be added, in the
-       * format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
-       * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+       * The resource name of the Google Cloud `Project` in which Firebase resources will be added
+       * and Firebase services enabled, in the format: projects/ PROJECT_IDENTIFIER Refer to the
+       * `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
        * PROJECT_IDENTIFIER values. After calling `AddFirebase`, the unique Project identifiers (
        * [`projectNumber`](https://cloud.google.com/resource-
        * manager/reference/rest/v1/projects#Project.FIELDS.project_number) and
        * [`projectId`](https://cloud.google.com/resource-
-       * manager/reference/rest/v1/projects#Project.FIELDS.project_id)) of the underlying GCP
-       * `Project` are also the identifiers of the FirebaseProject.
+       * manager/reference/rest/v1/projects#Project.FIELDS.project_id)) of the underlying Google
+       * Cloud `Project` are also the identifiers of the FirebaseProject.
        */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
-      /** The resource name of the GCP `Project` to which Firebase resources will be added, in the format:
-     projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
-     [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER
-     values. After calling `AddFirebase`, the unique Project identifiers (
+      /** The resource name of the Google Cloud `Project` in which Firebase resources will be added and
+     Firebase services enabled, in the format: projects/ PROJECT_IDENTIFIER Refer to the
+     `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+     PROJECT_IDENTIFIER values. After calling `AddFirebase`, the unique Project identifiers (
      [`projectNumber`](https://cloud.google.com/resource-
      manager/reference/rest/v1/projects#Project.FIELDS.project_number) and
      [`projectId`](https://cloud.google.com/resource-
-     manager/reference/rest/v1/projects#Project.FIELDS.project_id)) of the underlying GCP `Project` are
-     also the identifiers of the FirebaseProject.
+     manager/reference/rest/v1/projects#Project.FIELDS.project_id)) of the underlying Google Cloud
+     `Project` are also the identifiers of the FirebaseProject.
        */
       public java.lang.String getProject() {
         return project;
       }
 
       /**
-       * The resource name of the GCP `Project` to which Firebase resources will be added, in the
-       * format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
-       * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+       * The resource name of the Google Cloud `Project` in which Firebase resources will be added
+       * and Firebase services enabled, in the format: projects/ PROJECT_IDENTIFIER Refer to the
+       * `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
        * PROJECT_IDENTIFIER values. After calling `AddFirebase`, the unique Project identifiers (
        * [`projectNumber`](https://cloud.google.com/resource-
        * manager/reference/rest/v1/projects#Project.FIELDS.project_number) and
        * [`projectId`](https://cloud.google.com/resource-
-       * manager/reference/rest/v1/projects#Project.FIELDS.project_id)) of the underlying GCP
-       * `Project` are also the identifiers of the FirebaseProject.
+       * manager/reference/rest/v1/projects#Project.FIELDS.project_id)) of the underlying Google
+       * Cloud `Project` are also the identifiers of the FirebaseProject.
        */
       public AddFirebase setProject(java.lang.String project) {
         if (!getSuppressPatternChecks()) {
@@ -4028,18 +4031,19 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
     public class AvailableLocations {
 
       /**
-       * **DEPRECATED.** _Instead, use the applicable resource-specific REST API (or associated
-       * documentation, as needed) to determine valid locations for each resource used in your Project._
-       * Lists the valid Google Cloud Platform (GCP) resource locations for the specified Project
-       * (including a FirebaseProject). One of these locations can be selected as the Project's [_default_
-       * GCP resource location](https://firebase.google.com/docs/projects/locations), which is the
-       * geographical location where the Project's resources, such as Cloud Firestore, will be provisioned
-       * by default. However, if the default GCP resource location has already been set for the Project,
-       * then this setting cannot be changed. This call checks for any possible [location
-       * restrictions](https://cloud.google.com/resource-manager/docs/organization-policy/defining-
-       * locations) for the specified Project and, thus, might return a subset of all possible GCP
-       * resource locations. To list all GCP resource locations (regardless of any restrictions), call the
-       * endpoint without specifying a unique project identifier (that is,
+       * **DECOMMISSIONED.** **If called, this endpoint will return a 404 error.** _Instead, use the
+       * applicable resource-specific REST API (or associated documentation, as needed) to determine valid
+       * locations for each resource used in your Project._ Lists the valid ["locations for default Google
+       * Cloud resources"](https://firebase.google.com/docs/projects/locations#default-cloud-location) for
+       * the specified Project (including a FirebaseProject). One of these locations can be selected as
+       * the Project's location for default Google Cloud resources, which is the geographical location
+       * where the Project's resources associated with Google App Engine (such as the default Cloud
+       * Firestore instance) will be provisioned by default. However, if the location for default Google
+       * Cloud resources has already been set for the Project, then this setting cannot be changed. This
+       * call checks for any possible [location restrictions](https://cloud.google.com/resource-
+       * manager/docs/organization-policy/defining-locations) for the specified Project and, thus, might
+       * return a subset of all possible locations. To list all locations (regardless of any
+       * restrictions), call the endpoint without specifying a unique project identifier (that is,
        * `/v1beta1/{parent=projects/-}/listAvailableLocations`). To call `ListAvailableLocations` with a
        * specified project, a member must be at minimum a Viewer of the Project. Calls without a specified
        * project do not require any specific project permissions.
@@ -4049,8 +4053,9 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
        * This request holds the parameters needed by the firebase server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The FirebaseProject for which to list GCP resource locations, in the format:
-       *        projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+       * @param parent The FirebaseProject for which to list [locations for default Google Cloud
+       *        resources](https://firebase.google.com/docs/projects/locations#default-cloud-location), in
+       *        the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
        *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
        *        PROJECT_IDENTIFIER values. If no unique project identifier is specified (that is,
        *        `projects/-`), the returned list does not take into account org-specific or project-
@@ -4071,18 +4076,20 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * **DEPRECATED.** _Instead, use the applicable resource-specific REST API (or associated
-         * documentation, as needed) to determine valid locations for each resource used in your Project._
-         * Lists the valid Google Cloud Platform (GCP) resource locations for the specified Project
-         * (including a FirebaseProject). One of these locations can be selected as the Project's
-         * [_default_ GCP resource location](https://firebase.google.com/docs/projects/locations), which
-         * is the geographical location where the Project's resources, such as Cloud Firestore, will be
-         * provisioned by default. However, if the default GCP resource location has already been set for
-         * the Project, then this setting cannot be changed. This call checks for any possible [location
+         * **DECOMMISSIONED.** **If called, this endpoint will return a 404 error.** _Instead, use the
+         * applicable resource-specific REST API (or associated documentation, as needed) to determine
+         * valid locations for each resource used in your Project._ Lists the valid ["locations for
+         * default Google Cloud resources"](https://firebase.google.com/docs/projects/locations#default-
+         * cloud-location) for the specified Project (including a FirebaseProject). One of these locations
+         * can be selected as the Project's location for default Google Cloud resources, which is the
+         * geographical location where the Project's resources associated with Google App Engine (such as
+         * the default Cloud Firestore instance) will be provisioned by default. However, if the location
+         * for default Google Cloud resources has already been set for the Project, then this setting
+         * cannot be changed. This call checks for any possible [location
          * restrictions](https://cloud.google.com/resource-manager/docs/organization-policy/defining-
-         * locations) for the specified Project and, thus, might return a subset of all possible GCP
-         * resource locations. To list all GCP resource locations (regardless of any restrictions), call
-         * the endpoint without specifying a unique project identifier (that is,
+         * locations) for the specified Project and, thus, might return a subset of all possible
+         * locations. To list all locations (regardless of any restrictions), call the endpoint without
+         * specifying a unique project identifier (that is,
          * `/v1beta1/{parent=projects/-}/listAvailableLocations`). To call `ListAvailableLocations` with a
          * specified project, a member must be at minimum a Viewer of the Project. Calls without a
          * specified project do not require any specific project permissions.
@@ -4094,8 +4101,9 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The FirebaseProject for which to list GCP resource locations, in the format:
-       *        projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+         * @param parent The FirebaseProject for which to list [locations for default Google Cloud
+       *        resources](https://firebase.google.com/docs/projects/locations#default-cloud-location), in
+       *        the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
        *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
        *        PROJECT_IDENTIFIER values. If no unique project identifier is specified (that is,
        *        `projects/-`), the returned list does not take into account org-specific or project-
@@ -4178,8 +4186,9 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The FirebaseProject for which to list GCP resource locations, in the format:
-         * projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+         * The FirebaseProject for which to list [locations for default Google Cloud
+         * resources](https://firebase.google.com/docs/projects/locations#default-cloud-location),
+         * in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
          * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
          * PROJECT_IDENTIFIER values. If no unique project identifier is specified (that is,
          * `projects/-`), the returned list does not take into account org-specific or project-
@@ -4188,8 +4197,9 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The FirebaseProject for which to list GCP resource locations, in the format:
-       projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+        /** The FirebaseProject for which to list [locations for default Google Cloud
+       resources](https://firebase.google.com/docs/projects/locations#default-cloud-location), in the
+       format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
        [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER
        values. If no unique project identifier is specified (that is, `projects/-`), the returned list
        does not take into account org-specific or project-specific location restrictions.
@@ -4199,8 +4209,9 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The FirebaseProject for which to list GCP resource locations, in the format:
-         * projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+         * The FirebaseProject for which to list [locations for default Google Cloud
+         * resources](https://firebase.google.com/docs/projects/locations#default-cloud-location),
+         * in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
          * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
          * PROJECT_IDENTIFIER values. If no unique project identifier is specified (that is,
          * `projects/-`), the returned list does not take into account org-specific or project-
@@ -4293,36 +4304,39 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
     public class DefaultLocation {
 
       /**
-       * **DEPRECATED.** _Instead, use the applicable resource-specific REST API to set the location for
-       * each resource used in your Project._ Sets the default Google Cloud Platform (GCP) resource
-       * location for the specified FirebaseProject. This method creates an App Engine application with a
-       * [default Cloud Storage
+       * **DECOMMISSIONED.** **If called, this endpoint will return a 404 error.** _Instead, use the
+       * applicable resource-specific REST API to set the location for each resource used in your
+       * Project._ Sets the ["location for default Google Cloud
+       * resources"](https://firebase.google.com/docs/projects/locations#default-cloud-location) for the
+       * specified FirebaseProject. This method creates a Google App Engine application with a [default
+       * Cloud Storage
        * bucket](https://cloud.google.com/appengine/docs/standard/python/googlecloudstorageclient/setting-
        * up-cloud-storage#activating_a_cloud_storage_bucket), located in the specified
        * [`locationId`](#body.request_body.FIELDS.location_id). This location must be one of the available
-       * [GCP resource locations](https://firebase.google.com/docs/projects/locations). After the default
-       * GCP resource location is finalized, or if it was already set, it cannot be changed. The default
-       * GCP resource location for the specified `FirebaseProject` might already be set because either the
-       * underlying GCP `Project` already has an App Engine application or `FinalizeDefaultLocation` was
-       * previously called with a specified `locationId`. Any new calls to `FinalizeDefaultLocation` with
-       * a *different* specified `locationId` will return a 409 error. The result of this call is an
-       * [`Operation`](../../v1beta1/operations), which can be used to track the provisioning process. The
-       * [`response`](../../v1beta1/operations#Operation.FIELDS.response) type of the `Operation` is
-       * google.protobuf.Empty. The `Operation` can be polled by its `name` using GetOperation until
-       * `done` is true. When `done` is true, the `Operation` has either succeeded or failed. If the
-       * `Operation` has succeeded, its [`response`](../../v1beta1/operations#Operation.FIELDS.response)
-       * will be set to a google.protobuf.Empty; if the `Operation` has failed, its `error` will be set to
-       * a google.rpc.Status. The `Operation` is automatically deleted after completion, so there is no
-       * need to call DeleteOperation. All fields listed in the [request body](#request-body) are
-       * required. To call `FinalizeDefaultLocation`, a member must be an Owner of the Project.
+       * [App Engine locations](https://cloud.google.com/about/locations#region). After the location for
+       * default Google Cloud resources is finalized, or if it was already set, it cannot be changed. The
+       * location for default Google Cloud resources for the specified `FirebaseProject` might already be
+       * set because either the underlying Google Cloud `Project` already has an App Engine application or
+       * `FinalizeDefaultLocation` was previously called with a specified `locationId`. The result of this
+       * call is an [`Operation`](../../v1beta1/operations), which can be used to track the provisioning
+       * process. The [`response`](../../v1beta1/operations#Operation.FIELDS.response) type of the
+       * `Operation` is google.protobuf.Empty. The `Operation` can be polled by its `name` using
+       * GetOperation until `done` is true. When `done` is true, the `Operation` has either succeeded or
+       * failed. If the `Operation` has succeeded, its
+       * [`response`](../../v1beta1/operations#Operation.FIELDS.response) will be set to a
+       * google.protobuf.Empty; if the `Operation` has failed, its `error` will be set to a
+       * google.rpc.Status. The `Operation` is automatically deleted after completion, so there is no need
+       * to call DeleteOperation. All fields listed in the [request body](#request-body) are required. To
+       * call `FinalizeDefaultLocation`, a member must be an Owner of the Project.
        *
        * Create a request for the method "defaultLocation.finalize".
        *
        * This request holds the parameters needed by the firebase server.  After setting any optional
        * parameters, call the {@link Finalize#execute()} method to invoke the remote operation.
        *
-       * @param parent The resource name of the FirebaseProject for which the default GCP resource location will be set, in
-       *        the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+       * @param parent The resource name of the FirebaseProject for which the ["location for default Google Cloud
+       *        resources"](https://firebase.google.com/docs/projects/locations#default-cloud-location)
+       *        will be set, in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
        *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
        *        PROJECT_IDENTIFIER values.
        * @param content the {@link com.google.api.services.firebase.v1beta1.model.FinalizeDefaultLocationRequest}
@@ -4342,20 +4356,21 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * **DEPRECATED.** _Instead, use the applicable resource-specific REST API to set the location for
-         * each resource used in your Project._ Sets the default Google Cloud Platform (GCP) resource
-         * location for the specified FirebaseProject. This method creates an App Engine application with
-         * a [default Cloud Storage bucket](https://cloud.google.com/appengine/docs/standard/python/google
-         * cloudstorageclient/setting-up-cloud-storage#activating_a_cloud_storage_bucket), located in the
-         * specified [`locationId`](#body.request_body.FIELDS.location_id). This location must be one of
-         * the available [GCP resource locations](https://firebase.google.com/docs/projects/locations).
-         * After the default GCP resource location is finalized, or if it was already set, it cannot be
-         * changed. The default GCP resource location for the specified `FirebaseProject` might already be
-         * set because either the underlying GCP `Project` already has an App Engine application or
-         * `FinalizeDefaultLocation` was previously called with a specified `locationId`. Any new calls to
-         * `FinalizeDefaultLocation` with a *different* specified `locationId` will return a 409 error.
-         * The result of this call is an [`Operation`](../../v1beta1/operations), which can be used to
-         * track the provisioning process. The
+         * **DECOMMISSIONED.** **If called, this endpoint will return a 404 error.** _Instead, use the
+         * applicable resource-specific REST API to set the location for each resource used in your
+         * Project._ Sets the ["location for default Google Cloud
+         * resources"](https://firebase.google.com/docs/projects/locations#default-cloud-location) for the
+         * specified FirebaseProject. This method creates a Google App Engine application with a [default
+         * Cloud Storage bucket](https://cloud.google.com/appengine/docs/standard/python/googlecloudstorag
+         * eclient/setting-up-cloud-storage#activating_a_cloud_storage_bucket), located in the specified
+         * [`locationId`](#body.request_body.FIELDS.location_id). This location must be one of the
+         * available [App Engine locations](https://cloud.google.com/about/locations#region). After the
+         * location for default Google Cloud resources is finalized, or if it was already set, it cannot
+         * be changed. The location for default Google Cloud resources for the specified `FirebaseProject`
+         * might already be set because either the underlying Google Cloud `Project` already has an App
+         * Engine application or `FinalizeDefaultLocation` was previously called with a specified
+         * `locationId`. The result of this call is an [`Operation`](../../v1beta1/operations), which can
+         * be used to track the provisioning process. The
          * [`response`](../../v1beta1/operations#Operation.FIELDS.response) type of the `Operation` is
          * google.protobuf.Empty. The `Operation` can be polled by its `name` using GetOperation until
          * `done` is true. When `done` is true, the `Operation` has either succeeded or failed. If the
@@ -4373,8 +4388,9 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * Finalize#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The resource name of the FirebaseProject for which the default GCP resource location will be set, in
-       *        the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+         * @param parent The resource name of the FirebaseProject for which the ["location for default Google Cloud
+       *        resources"](https://firebase.google.com/docs/projects/locations#default-cloud-location)
+       *        will be set, in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
        *        [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
        *        PROJECT_IDENTIFIER values.
          * @param content the {@link com.google.api.services.firebase.v1beta1.model.FinalizeDefaultLocationRequest}
@@ -4446,16 +4462,18 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The resource name of the FirebaseProject for which the default GCP resource location will
-         * be set, in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
-         * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
-         * PROJECT_IDENTIFIER values.
+         * The resource name of the FirebaseProject for which the ["location for default Google
+         * Cloud resources"](https://firebase.google.com/docs/projects/locations#default-cloud-
+         * location) will be set, in the format: projects/PROJECT_IDENTIFIER Refer to the
+         * `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+         * about PROJECT_IDENTIFIER values.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The resource name of the FirebaseProject for which the default GCP resource location will be set,
-       in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
+        /** The resource name of the FirebaseProject for which the ["location for default Google Cloud
+       resources"](https://firebase.google.com/docs/projects/locations#default-cloud-location) will be
+       set, in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
        [`name`](../projects#FirebaseProject.FIELDS.name) field for details about PROJECT_IDENTIFIER
        values.
          */
@@ -4464,10 +4482,11 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The resource name of the FirebaseProject for which the default GCP resource location will
-         * be set, in the format: projects/PROJECT_IDENTIFIER Refer to the `FirebaseProject`
-         * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
-         * PROJECT_IDENTIFIER values.
+         * The resource name of the FirebaseProject for which the ["location for default Google
+         * Cloud resources"](https://firebase.google.com/docs/projects/locations#default-cloud-
+         * location) will be set, in the format: projects/PROJECT_IDENTIFIER Refer to the
+         * `FirebaseProject` [`name`](../projects#FirebaseProject.FIELDS.name) field for details
+         * about PROJECT_IDENTIFIER values.
          */
         public Finalize setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {

@@ -41,7 +41,7 @@ public final class ListAvailableProjectsResponse extends com.google.api.client.j
   private java.lang.String nextPageToken;
 
   /**
-   * The list of GCP `Projects` which can have Firebase resources added to them.
+   * The list of Google Cloud `Projects` which can have Firebase resources added to them.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class ListAvailableProjectsResponse extends com.google.api.client.j
   }
 
   /**
-   * The list of GCP `Projects` which can have Firebase resources added to them.
+   * The list of Google Cloud `Projects` which can have Firebase resources added to them.
    * @return value or {@code null} for none
    */
   public java.util.List<ProjectInfo> getProjectInfo() {
@@ -79,7 +79,7 @@ public final class ListAvailableProjectsResponse extends com.google.api.client.j
   }
 
   /**
-   * The list of GCP `Projects` which can have Firebase resources added to them.
+   * The list of Google Cloud `Projects` which can have Firebase resources added to them.
    * @param projectInfo projectInfo or {@code null} for none
    */
   public ListAvailableProjectsResponse setProjectInfo(java.util.List<ProjectInfo> projectInfo) {

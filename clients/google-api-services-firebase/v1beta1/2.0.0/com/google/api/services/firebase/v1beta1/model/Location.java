@@ -19,7 +19,9 @@ package com.google.api.services.firebase.v1beta1.model;
 /**
  * **DEPRECATED.** _This Location is no longer used to determine Firebase resource locations.
  * Instead, consult product documentation to determine valid locations for each resource used in
- * your Project._ A GCP resource location that can be selected for a FirebaseProject.
+ * your Project._ A ["location for default Google Cloud
+ * resources"](https://firebase.google.com/docs/projects/locations#default-cloud-location) that can
+ * be selected for a FirebaseProject. These are resources associated with Google App Engine.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Management API. For a detailed explanation
@@ -33,30 +35,31 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class Location extends com.google.api.client.json.GenericJson {
 
   /**
-   * Products and services that are available in the GCP resource location.
+   * Products and services that are available in the location for default Google Cloud resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> features;
 
   /**
-   * The ID of the GCP resource location. It will be one of the available [GCP resource
-   * locations](https://firebase.google.com/docs/projects/locations#types).
+   * The ID of the Project's location for default Google Cloud resources. It will be one of the
+   * available [Google App Engine locations](https://cloud.google.com/about/locations#region).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String locationId;
 
   /**
-   * Indicates whether the GCP resource location is a [regional or multi-regional
-   * location](https://firebase.google.com/docs/projects/locations#types) for data replication.
+   * Indicates whether the location for default Google Cloud resources is a [regional or multi-
+   * regional location](https://firebase.google.com/docs/projects/locations#types) for data
+   * replication.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Products and services that are available in the GCP resource location.
+   * Products and services that are available in the location for default Google Cloud resources.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFeatures() {
@@ -64,7 +67,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Products and services that are available in the GCP resource location.
+   * Products and services that are available in the location for default Google Cloud resources.
    * @param features features or {@code null} for none
    */
   public Location setFeatures(java.util.List<java.lang.String> features) {
@@ -73,8 +76,8 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the GCP resource location. It will be one of the available [GCP resource
-   * locations](https://firebase.google.com/docs/projects/locations#types).
+   * The ID of the Project's location for default Google Cloud resources. It will be one of the
+   * available [Google App Engine locations](https://cloud.google.com/about/locations#region).
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationId() {
@@ -82,8 +85,8 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the GCP resource location. It will be one of the available [GCP resource
-   * locations](https://firebase.google.com/docs/projects/locations#types).
+   * The ID of the Project's location for default Google Cloud resources. It will be one of the
+   * available [Google App Engine locations](https://cloud.google.com/about/locations#region).
    * @param locationId locationId or {@code null} for none
    */
   public Location setLocationId(java.lang.String locationId) {
@@ -92,8 +95,9 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether the GCP resource location is a [regional or multi-regional
-   * location](https://firebase.google.com/docs/projects/locations#types) for data replication.
+   * Indicates whether the location for default Google Cloud resources is a [regional or multi-
+   * regional location](https://firebase.google.com/docs/projects/locations#types) for data
+   * replication.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -101,8 +105,9 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether the GCP resource location is a [regional or multi-regional
-   * location](https://firebase.google.com/docs/projects/locations#types) for data replication.
+   * Indicates whether the location for default Google Cloud resources is a [regional or multi-
+   * regional location](https://firebase.google.com/docs/projects/locations#types) for data
+   * replication.
    * @param type type or {@code null} for none
    */
   public Location setType(java.lang.String type) {

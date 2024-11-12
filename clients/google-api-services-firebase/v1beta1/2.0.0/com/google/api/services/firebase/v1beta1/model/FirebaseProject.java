@@ -19,12 +19,12 @@ package com.google.api.services.firebase.v1beta1.model;
 /**
  * A `FirebaseProject` is the top-level Firebase entity. It is the container for Firebase Apps,
  * Firebase Hosting sites, storage systems (Firebase Realtime Database, Cloud Firestore, Cloud
- * Storage buckets), and other Firebase and Google Cloud Platform (GCP) resources. You create a
- * `FirebaseProject` by calling AddFirebase and specifying an *existing* [GCP
+ * Storage buckets), and other Firebase and Google Cloud resources. You create a `FirebaseProject`
+ * by calling AddFirebase and specifying an *existing* [Google Cloud
  * `Project`](https://cloud.google.com/resource-manager/reference/rest/v1/projects). This adds
- * Firebase resources to the existing GCP `Project`. Since a FirebaseProject is actually also a GCP
- * `Project`, a `FirebaseProject` has the same underlying GCP identifiers (`projectNumber` and
- * `projectId`). This allows for easy interop with Google APIs.
+ * Firebase resources to the existing Google Cloud `Project`. Since a FirebaseProject is actually
+ * also a Google Cloud `Project`, a `FirebaseProject` has the same underlying Google Cloud
+ * identifiers (`projectNumber` and `projectId`). This allows for easy interop with Google APIs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Management API. For a detailed explanation

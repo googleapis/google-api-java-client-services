@@ -31,22 +31,24 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class AddFirebaseRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Deprecated. Instead, to set a Project's default GCP resource location, call
-   * [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase
-   * resources to the GCP `Project`. The ID of the Project's default GCP resource location. The
-   * location must be one of the available [GCP resource
-   * locations](https://firebase.google.com/docs/projects/locations).
+   * **DEPRECATED.** _Instead, use product-specific REST APIs to work with the location of each
+   * resource in a Project. This field may be ignored, especially for newly provisioned projects
+   * after October 30, 2024._ The ID of the Project's ["location for default Google Cloud
+   * resources"](https://firebase.google.com/docs/projects/locations#default-cloud-location), which
+   * are resources associated with Google App Engine. The location must be one of the available
+   * [Google App Engine locations](https://cloud.google.com/about/locations#region).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String locationId;
 
   /**
-   * Deprecated. Instead, to set a Project's default GCP resource location, call
-   * [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase
-   * resources to the GCP `Project`. The ID of the Project's default GCP resource location. The
-   * location must be one of the available [GCP resource
-   * locations](https://firebase.google.com/docs/projects/locations).
+   * **DEPRECATED.** _Instead, use product-specific REST APIs to work with the location of each
+   * resource in a Project. This field may be ignored, especially for newly provisioned projects
+   * after October 30, 2024._ The ID of the Project's ["location for default Google Cloud
+   * resources"](https://firebase.google.com/docs/projects/locations#default-cloud-location), which
+   * are resources associated with Google App Engine. The location must be one of the available
+   * [Google App Engine locations](https://cloud.google.com/about/locations#region).
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationId() {
@@ -54,11 +56,12 @@ public final class AddFirebaseRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Deprecated. Instead, to set a Project's default GCP resource location, call
-   * [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase
-   * resources to the GCP `Project`. The ID of the Project's default GCP resource location. The
-   * location must be one of the available [GCP resource
-   * locations](https://firebase.google.com/docs/projects/locations).
+   * **DEPRECATED.** _Instead, use product-specific REST APIs to work with the location of each
+   * resource in a Project. This field may be ignored, especially for newly provisioned projects
+   * after October 30, 2024._ The ID of the Project's ["location for default Google Cloud
+   * resources"](https://firebase.google.com/docs/projects/locations#default-cloud-location), which
+   * are resources associated with Google App Engine. The location must be one of the available
+   * [Google App Engine locations](https://cloud.google.com/about/locations#region).
    * @param locationId locationId or {@code null} for none
    */
   public AddFirebaseRequest setLocationId(java.lang.String locationId) {

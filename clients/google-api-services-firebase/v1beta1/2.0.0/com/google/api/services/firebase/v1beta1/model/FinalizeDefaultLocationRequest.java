@@ -31,16 +31,20 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class FinalizeDefaultLocationRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the Project's default GCP resource location. The location must be one of the
-   * available [GCP resource locations](https://firebase.google.com/docs/projects/locations).
+   * **DEPRECATED** The ID of the Project's ["location for default Google Cloud
+   * resources"](https://firebase.google.com/docs/projects/locations#default-cloud-location), which
+   * are resources associated with Google App Engine. The location must be one of the available
+   * [Google App Engine locations](https://cloud.google.com/about/locations#region).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String locationId;
 
   /**
-   * The ID of the Project's default GCP resource location. The location must be one of the
-   * available [GCP resource locations](https://firebase.google.com/docs/projects/locations).
+   * **DEPRECATED** The ID of the Project's ["location for default Google Cloud
+   * resources"](https://firebase.google.com/docs/projects/locations#default-cloud-location), which
+   * are resources associated with Google App Engine. The location must be one of the available
+   * [Google App Engine locations](https://cloud.google.com/about/locations#region).
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationId() {
@@ -48,8 +52,10 @@ public final class FinalizeDefaultLocationRequest extends com.google.api.client.
   }
 
   /**
-   * The ID of the Project's default GCP resource location. The location must be one of the
-   * available [GCP resource locations](https://firebase.google.com/docs/projects/locations).
+   * **DEPRECATED** The ID of the Project's ["location for default Google Cloud
+   * resources"](https://firebase.google.com/docs/projects/locations#default-cloud-location), which
+   * are resources associated with Google App Engine. The location must be one of the available
+   * [Google App Engine locations](https://cloud.google.com/about/locations#region).
    * @param locationId locationId or {@code null} for none
    */
   public FinalizeDefaultLocationRequest setLocationId(java.lang.String locationId) {

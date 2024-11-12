@@ -34,16 +34,16 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class DefaultResources extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. **DEPRECATED.** _Instead, find the default Firebase Hosting site name using the [L
-   * istSites](https://firebase.google.com/docs/reference/hosting/rest/v1beta1/projects.sites/list)
-   * within the Firebase Hosting REST API. Note that the default site for the Project might not yet
-   * be provisioned, so the return might not contain a default site._ The default Firebase Hosting
-   * site name, in the format: PROJECT_ID Though rare, your `projectId` might already be used as the
-   * name for an existing Hosting site in another project (learn more about creating non-default,
-   * [additional sites](https://firebase.google.com/docs/hosting/multisites)). In these cases, your
-   * `projectId` is appended with a hyphen then five alphanumeric characters to create your default
-   * Hosting site name. For example, if your `projectId` is `myproject123`, your default Hosting
-   * site name might be: `myproject123-a5c16`
+   * Output only. **DEPRECATED.** _Instead, find the name of the default Firebase Hosting site using
+   * [ListSites](https://firebase.google.com/docs/reference/hosting/rest/v1beta1/projects.sites/list
+   * ) within the Firebase Hosting REST API. If the default Hosting site for the Project has not yet
+   * been provisioned, the return might not contain a default site._ The name of the default
+   * Firebase Hosting site, in the format: PROJECT_ID Though rare, your `projectId` might already be
+   * used as the name for an existing Hosting site in another project (learn more about creating
+   * non-default, [additional sites](https://firebase.google.com/docs/hosting/multisites)). In these
+   * cases, your `projectId` is appended with a hyphen then five alphanumeric characters to create
+   * your default Hosting site name. For example, if your `projectId` is `myproject123`, your
+   * default Hosting site name might be: `myproject123-a5c16`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,58 +51,58 @@ public final class DefaultResources extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. **DEPRECATED.** _Instead, use product-specific REST APIs to find the location of
-   * resources._ The ID of the Project's default GCP resource location. The location is one of the
-   * available [GCP resource locations](https://firebase.google.com/docs/projects/locations). This
-   * field is omitted if the default GCP resource location has not been finalized yet. To set a
-   * Project's default GCP resource location, call
-   * [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase
-   * resources to the Project.
+   * each resource in a Project. This field may not be populated, especially for newly provisioned
+   * projects after October 30, 2024._ The ID of the Project's ["location for default Google Cloud
+   * resources"](https://firebase.google.com/docs/projects/locations#default-cloud-location), which
+   * are resources associated with Google App Engine. The location is one of the available [Google
+   * App Engine locations](https://cloud.google.com/about/locations#region). This field is omitted
+   * if the location for default Google Cloud resources has not been set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String locationId;
 
   /**
-   * Output only. **DEPRECATED.** _Instead, find the default Firebase Realtime Database instance
-   * name using the [list
-   * endpoint](https://firebase.google.com/docs/reference/rest/database/database-
+   * Output only. **DEPRECATED.** _Instead, find the name of the default Realtime Database instance
+   * using the [list endpoint](https://firebase.google.com/docs/reference/rest/database/database-
    * management/rest/v1beta/projects.locations.instances/list) within the Firebase Realtime Database
-   * REST API. Note that the default instance for the Project might not yet be provisioned, so the
-   * return might not contain a default instance._ The default Firebase Realtime Database instance
-   * name, in the format: PROJECT_ID Though rare, your `projectId` might already be used as the name
-   * for an existing Realtime Database instance in another project (learn more about [database
-   * sharding](https://firebase.google.com/docs/database/usage/sharding)). In these cases, your
-   * `projectId` is appended with a hyphen then five alphanumeric characters to create your default
-   * Realtime Database instance name. For example, if your `projectId` is `myproject123`, your
-   * default database instance name might be: `myproject123-a5c16`
+   * REST API. If the default Realtime Database instance for a Project has not yet been provisioned,
+   * the return might not contain a default instance._ The default Firebase Realtime Database
+   * instance name, in the format: PROJECT_ID Though rare, your `projectId` might already be used as
+   * the name for an existing Realtime Database instance in another project (learn more about
+   * [database sharding](https://firebase.google.com/docs/database/usage/sharding)). In these cases,
+   * your `projectId` is appended with a hyphen then five alphanumeric characters to create your
+   * default Realtime Database instance name. For example, if your `projectId` is `myproject123`,
+   * your default database instance name might be: `myproject123-a5c16`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String realtimeDatabaseInstance;
 
   /**
-   * Output only. **DEPRECATED.** _Instead, find the default Cloud Storage for Firebase bucket using
-   * the [list endpoint](https://firebase.google.com/docs/reference/rest/storage/rest/v1beta/project
-   * s.buckets/list) within the Cloud Storage for Firebase REST API. Note that the default bucket
-   * for the Project might not yet be provisioned, so the return might not contain a default
-   * bucket._ The default Cloud Storage for Firebase storage bucket, in the format:
-   * PROJECT_ID.appspot.com
+   * Output only. **DEPRECATED.** _Instead, find the name of the default Cloud Storage for Firebase
+   * bucket using the [list endpoint](https://firebase.google.com/docs/reference/rest/storage/rest/v
+   * 1beta/projects.buckets/list) within the Cloud Storage for Firebase REST API. If the default
+   * bucket for the Project has not yet been provisioned, the return might not contain a default
+   * bucket._ The name of the default Cloud Storage for Firebase bucket, in one of the following
+   * formats: * If provisioned _before_ October 30, 2024: PROJECT_ID.firebasestorage.app * If
+   * provisioned _on or after_ October 30, 2024: PROJECT_ID.firebasestorage.app
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String storageBucket;
 
   /**
-   * Output only. **DEPRECATED.** _Instead, find the default Firebase Hosting site name using the [L
-   * istSites](https://firebase.google.com/docs/reference/hosting/rest/v1beta1/projects.sites/list)
-   * within the Firebase Hosting REST API. Note that the default site for the Project might not yet
-   * be provisioned, so the return might not contain a default site._ The default Firebase Hosting
-   * site name, in the format: PROJECT_ID Though rare, your `projectId` might already be used as the
-   * name for an existing Hosting site in another project (learn more about creating non-default,
-   * [additional sites](https://firebase.google.com/docs/hosting/multisites)). In these cases, your
-   * `projectId` is appended with a hyphen then five alphanumeric characters to create your default
-   * Hosting site name. For example, if your `projectId` is `myproject123`, your default Hosting
-   * site name might be: `myproject123-a5c16`
+   * Output only. **DEPRECATED.** _Instead, find the name of the default Firebase Hosting site using
+   * [ListSites](https://firebase.google.com/docs/reference/hosting/rest/v1beta1/projects.sites/list
+   * ) within the Firebase Hosting REST API. If the default Hosting site for the Project has not yet
+   * been provisioned, the return might not contain a default site._ The name of the default
+   * Firebase Hosting site, in the format: PROJECT_ID Though rare, your `projectId` might already be
+   * used as the name for an existing Hosting site in another project (learn more about creating
+   * non-default, [additional sites](https://firebase.google.com/docs/hosting/multisites)). In these
+   * cases, your `projectId` is appended with a hyphen then five alphanumeric characters to create
+   * your default Hosting site name. For example, if your `projectId` is `myproject123`, your
+   * default Hosting site name might be: `myproject123-a5c16`
    * @return value or {@code null} for none
    */
   public java.lang.String getHostingSite() {
@@ -110,16 +110,16 @@ public final class DefaultResources extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. **DEPRECATED.** _Instead, find the default Firebase Hosting site name using the [L
-   * istSites](https://firebase.google.com/docs/reference/hosting/rest/v1beta1/projects.sites/list)
-   * within the Firebase Hosting REST API. Note that the default site for the Project might not yet
-   * be provisioned, so the return might not contain a default site._ The default Firebase Hosting
-   * site name, in the format: PROJECT_ID Though rare, your `projectId` might already be used as the
-   * name for an existing Hosting site in another project (learn more about creating non-default,
-   * [additional sites](https://firebase.google.com/docs/hosting/multisites)). In these cases, your
-   * `projectId` is appended with a hyphen then five alphanumeric characters to create your default
-   * Hosting site name. For example, if your `projectId` is `myproject123`, your default Hosting
-   * site name might be: `myproject123-a5c16`
+   * Output only. **DEPRECATED.** _Instead, find the name of the default Firebase Hosting site using
+   * [ListSites](https://firebase.google.com/docs/reference/hosting/rest/v1beta1/projects.sites/list
+   * ) within the Firebase Hosting REST API. If the default Hosting site for the Project has not yet
+   * been provisioned, the return might not contain a default site._ The name of the default
+   * Firebase Hosting site, in the format: PROJECT_ID Though rare, your `projectId` might already be
+   * used as the name for an existing Hosting site in another project (learn more about creating
+   * non-default, [additional sites](https://firebase.google.com/docs/hosting/multisites)). In these
+   * cases, your `projectId` is appended with a hyphen then five alphanumeric characters to create
+   * your default Hosting site name. For example, if your `projectId` is `myproject123`, your
+   * default Hosting site name might be: `myproject123-a5c16`
    * @param hostingSite hostingSite or {@code null} for none
    */
   public DefaultResources setHostingSite(java.lang.String hostingSite) {
@@ -129,12 +129,12 @@ public final class DefaultResources extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. **DEPRECATED.** _Instead, use product-specific REST APIs to find the location of
-   * resources._ The ID of the Project's default GCP resource location. The location is one of the
-   * available [GCP resource locations](https://firebase.google.com/docs/projects/locations). This
-   * field is omitted if the default GCP resource location has not been finalized yet. To set a
-   * Project's default GCP resource location, call
-   * [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase
-   * resources to the Project.
+   * each resource in a Project. This field may not be populated, especially for newly provisioned
+   * projects after October 30, 2024._ The ID of the Project's ["location for default Google Cloud
+   * resources"](https://firebase.google.com/docs/projects/locations#default-cloud-location), which
+   * are resources associated with Google App Engine. The location is one of the available [Google
+   * App Engine locations](https://cloud.google.com/about/locations#region). This field is omitted
+   * if the location for default Google Cloud resources has not been set.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationId() {
@@ -143,12 +143,12 @@ public final class DefaultResources extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. **DEPRECATED.** _Instead, use product-specific REST APIs to find the location of
-   * resources._ The ID of the Project's default GCP resource location. The location is one of the
-   * available [GCP resource locations](https://firebase.google.com/docs/projects/locations). This
-   * field is omitted if the default GCP resource location has not been finalized yet. To set a
-   * Project's default GCP resource location, call
-   * [`FinalizeDefaultLocation`](../projects.defaultLocation/finalize) after you add Firebase
-   * resources to the Project.
+   * each resource in a Project. This field may not be populated, especially for newly provisioned
+   * projects after October 30, 2024._ The ID of the Project's ["location for default Google Cloud
+   * resources"](https://firebase.google.com/docs/projects/locations#default-cloud-location), which
+   * are resources associated with Google App Engine. The location is one of the available [Google
+   * App Engine locations](https://cloud.google.com/about/locations#region). This field is omitted
+   * if the location for default Google Cloud resources has not been set.
    * @param locationId locationId or {@code null} for none
    */
   public DefaultResources setLocationId(java.lang.String locationId) {
@@ -157,18 +157,17 @@ public final class DefaultResources extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. **DEPRECATED.** _Instead, find the default Firebase Realtime Database instance
-   * name using the [list
-   * endpoint](https://firebase.google.com/docs/reference/rest/database/database-
+   * Output only. **DEPRECATED.** _Instead, find the name of the default Realtime Database instance
+   * using the [list endpoint](https://firebase.google.com/docs/reference/rest/database/database-
    * management/rest/v1beta/projects.locations.instances/list) within the Firebase Realtime Database
-   * REST API. Note that the default instance for the Project might not yet be provisioned, so the
-   * return might not contain a default instance._ The default Firebase Realtime Database instance
-   * name, in the format: PROJECT_ID Though rare, your `projectId` might already be used as the name
-   * for an existing Realtime Database instance in another project (learn more about [database
-   * sharding](https://firebase.google.com/docs/database/usage/sharding)). In these cases, your
-   * `projectId` is appended with a hyphen then five alphanumeric characters to create your default
-   * Realtime Database instance name. For example, if your `projectId` is `myproject123`, your
-   * default database instance name might be: `myproject123-a5c16`
+   * REST API. If the default Realtime Database instance for a Project has not yet been provisioned,
+   * the return might not contain a default instance._ The default Firebase Realtime Database
+   * instance name, in the format: PROJECT_ID Though rare, your `projectId` might already be used as
+   * the name for an existing Realtime Database instance in another project (learn more about
+   * [database sharding](https://firebase.google.com/docs/database/usage/sharding)). In these cases,
+   * your `projectId` is appended with a hyphen then five alphanumeric characters to create your
+   * default Realtime Database instance name. For example, if your `projectId` is `myproject123`,
+   * your default database instance name might be: `myproject123-a5c16`
    * @return value or {@code null} for none
    */
   public java.lang.String getRealtimeDatabaseInstance() {
@@ -176,18 +175,17 @@ public final class DefaultResources extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. **DEPRECATED.** _Instead, find the default Firebase Realtime Database instance
-   * name using the [list
-   * endpoint](https://firebase.google.com/docs/reference/rest/database/database-
+   * Output only. **DEPRECATED.** _Instead, find the name of the default Realtime Database instance
+   * using the [list endpoint](https://firebase.google.com/docs/reference/rest/database/database-
    * management/rest/v1beta/projects.locations.instances/list) within the Firebase Realtime Database
-   * REST API. Note that the default instance for the Project might not yet be provisioned, so the
-   * return might not contain a default instance._ The default Firebase Realtime Database instance
-   * name, in the format: PROJECT_ID Though rare, your `projectId` might already be used as the name
-   * for an existing Realtime Database instance in another project (learn more about [database
-   * sharding](https://firebase.google.com/docs/database/usage/sharding)). In these cases, your
-   * `projectId` is appended with a hyphen then five alphanumeric characters to create your default
-   * Realtime Database instance name. For example, if your `projectId` is `myproject123`, your
-   * default database instance name might be: `myproject123-a5c16`
+   * REST API. If the default Realtime Database instance for a Project has not yet been provisioned,
+   * the return might not contain a default instance._ The default Firebase Realtime Database
+   * instance name, in the format: PROJECT_ID Though rare, your `projectId` might already be used as
+   * the name for an existing Realtime Database instance in another project (learn more about
+   * [database sharding](https://firebase.google.com/docs/database/usage/sharding)). In these cases,
+   * your `projectId` is appended with a hyphen then five alphanumeric characters to create your
+   * default Realtime Database instance name. For example, if your `projectId` is `myproject123`,
+   * your default database instance name might be: `myproject123-a5c16`
    * @param realtimeDatabaseInstance realtimeDatabaseInstance or {@code null} for none
    */
   public DefaultResources setRealtimeDatabaseInstance(java.lang.String realtimeDatabaseInstance) {
@@ -196,12 +194,13 @@ public final class DefaultResources extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. **DEPRECATED.** _Instead, find the default Cloud Storage for Firebase bucket using
-   * the [list endpoint](https://firebase.google.com/docs/reference/rest/storage/rest/v1beta/project
-   * s.buckets/list) within the Cloud Storage for Firebase REST API. Note that the default bucket
-   * for the Project might not yet be provisioned, so the return might not contain a default
-   * bucket._ The default Cloud Storage for Firebase storage bucket, in the format:
-   * PROJECT_ID.appspot.com
+   * Output only. **DEPRECATED.** _Instead, find the name of the default Cloud Storage for Firebase
+   * bucket using the [list endpoint](https://firebase.google.com/docs/reference/rest/storage/rest/v
+   * 1beta/projects.buckets/list) within the Cloud Storage for Firebase REST API. If the default
+   * bucket for the Project has not yet been provisioned, the return might not contain a default
+   * bucket._ The name of the default Cloud Storage for Firebase bucket, in one of the following
+   * formats: * If provisioned _before_ October 30, 2024: PROJECT_ID.firebasestorage.app * If
+   * provisioned _on or after_ October 30, 2024: PROJECT_ID.firebasestorage.app
    * @return value or {@code null} for none
    */
   public java.lang.String getStorageBucket() {
@@ -209,12 +208,13 @@ public final class DefaultResources extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. **DEPRECATED.** _Instead, find the default Cloud Storage for Firebase bucket using
-   * the [list endpoint](https://firebase.google.com/docs/reference/rest/storage/rest/v1beta/project
-   * s.buckets/list) within the Cloud Storage for Firebase REST API. Note that the default bucket
-   * for the Project might not yet be provisioned, so the return might not contain a default
-   * bucket._ The default Cloud Storage for Firebase storage bucket, in the format:
-   * PROJECT_ID.appspot.com
+   * Output only. **DEPRECATED.** _Instead, find the name of the default Cloud Storage for Firebase
+   * bucket using the [list endpoint](https://firebase.google.com/docs/reference/rest/storage/rest/v
+   * 1beta/projects.buckets/list) within the Cloud Storage for Firebase REST API. If the default
+   * bucket for the Project has not yet been provisioned, the return might not contain a default
+   * bucket._ The name of the default Cloud Storage for Firebase bucket, in one of the following
+   * formats: * If provisioned _before_ October 30, 2024: PROJECT_ID.firebasestorage.app * If
+   * provisioned _on or after_ October 30, 2024: PROJECT_ID.firebasestorage.app
    * @param storageBucket storageBucket or {@code null} for none
    */
   public DefaultResources setStorageBucket(java.lang.String storageBucket) {

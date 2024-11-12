@@ -17,7 +17,9 @@
 package com.google.api.services.firebasedataconnect.v1beta.model;
 
 /**
- * Message for response to listing Connectors.
+ * Message for response to listing Connectors. By default, `connectors.source` will not be included
+ * in the response. To specify the fields included in the response, the response field mask can be
+ * provided by using the query parameter `$fields` or the header `X-Goog-FieldMask`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Data Connect API. For a detailed explanation

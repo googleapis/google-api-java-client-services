@@ -18,7 +18,7 @@ package com.google.api.services.merchantapi.inventories_v1beta.model;
 
 /**
  * Regional inventory information for the product. Represents specific information like price and
- * availability for a given product in a specific `region`. For a list of all accepted attribute
+ * availability for a given product in a specific `region`.For a list of all accepted attribute
  * values, see the [regional product inventory data
  * specification](https://support.google.com/merchants/answer/9698880).
  *

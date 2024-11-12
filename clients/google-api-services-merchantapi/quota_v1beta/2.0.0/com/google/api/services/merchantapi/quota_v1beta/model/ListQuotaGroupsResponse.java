@@ -39,7 +39,7 @@ public final class ListQuotaGroupsResponse extends com.google.api.client.json.Ge
 
   /**
    * The methods, current quota usage and limits per each group. The quota is shared between all
-   * methods in the group. The groups are sorted in descending order based on quotaUsage.
+   * methods in the group. The groups are sorted in descending order based on quota_usage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class ListQuotaGroupsResponse extends com.google.api.client.json.Ge
 
   /**
    * The methods, current quota usage and limits per each group. The quota is shared between all
-   * methods in the group. The groups are sorted in descending order based on quotaUsage.
+   * methods in the group. The groups are sorted in descending order based on quota_usage.
    * @return value or {@code null} for none
    */
   public java.util.List<QuotaGroup> getQuotaGroups() {
@@ -75,7 +75,7 @@ public final class ListQuotaGroupsResponse extends com.google.api.client.json.Ge
 
   /**
    * The methods, current quota usage and limits per each group. The quota is shared between all
-   * methods in the group. The groups are sorted in descending order based on quotaUsage.
+   * methods in the group. The groups are sorted in descending order based on quota_usage.
    * @param quotaGroups quotaGroups or {@code null} for none
    */
   public ListQuotaGroupsResponse setQuotaGroups(java.util.List<QuotaGroup> quotaGroups) {

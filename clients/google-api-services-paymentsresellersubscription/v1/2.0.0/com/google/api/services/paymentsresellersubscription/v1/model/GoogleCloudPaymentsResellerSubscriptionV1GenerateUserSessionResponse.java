@@ -31,16 +31,14 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
 public final class GoogleCloudPaymentsResellerSubscriptionV1GenerateUserSessionResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The generated user session. The token size of proportional to the size of the intent payload.
-   * Therefore, please be mindful of keeping the request intent payload reasonably small.
+   * The generated user session. The token size is proportional to the size of the intent payload.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudPaymentsResellerSubscriptionV1UserSession userSession;
 
   /**
-   * The generated user session. The token size of proportional to the size of the intent payload.
-   * Therefore, please be mindful of keeping the request intent payload reasonably small.
+   * The generated user session. The token size is proportional to the size of the intent payload.
    * @return value or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1UserSession getUserSession() {
@@ -48,8 +46,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1GenerateUserSessionR
   }
 
   /**
-   * The generated user session. The token size of proportional to the size of the intent payload.
-   * Therefore, please be mindful of keeping the request intent payload reasonably small.
+   * The generated user session. The token size is proportional to the size of the intent payload.
    * @param userSession userSession or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1GenerateUserSessionResponse setUserSession(GoogleCloudPaymentsResellerSubscriptionV1UserSession userSession) {

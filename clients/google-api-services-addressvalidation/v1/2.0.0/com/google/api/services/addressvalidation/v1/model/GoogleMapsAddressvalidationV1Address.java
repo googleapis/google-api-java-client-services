@@ -45,8 +45,9 @@ public final class GoogleMapsAddressvalidationV1Address extends com.google.api.c
    * The post-processed address, formatted as a single-line address following the address formatting
    * rules of the region where the address is located. Note: the format of this address may not
    * match the format of the address in the `postal_address` field. For example, the
-   * `postal_address` will always represent the country as a 2 letter `region_code` (ex. "US" or
-   * "CA"), whereas this field will use a longer form of the country name (ex. "USA or "Canada").
+   * `postal_address` always represents the country as a 2 letter `region_code`, such as "US" or
+   * "NZ". By contrast, this field uses a longer form of the country name, such as "USA" or "New
+   * Zealand".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,9 +86,9 @@ public final class GoogleMapsAddressvalidationV1Address extends com.google.api.c
 
   /**
    * Any tokens in the input that could not be resolved. This might be an input that was not
-   * recognized as a valid part of an address (for example in an input like "Parcel 0000123123 &
-   * 0000456456 Str # Guthrie Center IA 50115 US", the unresolved tokens may look like `["Parcel",
-   * "0000123123", "&", "0000456456"]`.
+   * recognized as a valid part of an address. For example, for an input such as "Parcel 0000123123
+   * & 0000456456 Str # Guthrie Center IA 50115 US", the unresolved tokens might look like
+   * `["Parcel", "0000123123", "&", "0000456456"]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,8 +121,9 @@ public final class GoogleMapsAddressvalidationV1Address extends com.google.api.c
    * The post-processed address, formatted as a single-line address following the address formatting
    * rules of the region where the address is located. Note: the format of this address may not
    * match the format of the address in the `postal_address` field. For example, the
-   * `postal_address` will always represent the country as a 2 letter `region_code` (ex. "US" or
-   * "CA"), whereas this field will use a longer form of the country name (ex. "USA or "Canada").
+   * `postal_address` always represents the country as a 2 letter `region_code`, such as "US" or
+   * "NZ". By contrast, this field uses a longer form of the country name, such as "USA" or "New
+   * Zealand".
    * @return value or {@code null} for none
    */
   public java.lang.String getFormattedAddress() {
@@ -132,8 +134,9 @@ public final class GoogleMapsAddressvalidationV1Address extends com.google.api.c
    * The post-processed address, formatted as a single-line address following the address formatting
    * rules of the region where the address is located. Note: the format of this address may not
    * match the format of the address in the `postal_address` field. For example, the
-   * `postal_address` will always represent the country as a 2 letter `region_code` (ex. "US" or
-   * "CA"), whereas this field will use a longer form of the country name (ex. "USA or "Canada").
+   * `postal_address` always represents the country as a 2 letter `region_code`, such as "US" or
+   * "NZ". By contrast, this field uses a longer form of the country name, such as "USA" or "New
+   * Zealand".
    * @param formattedAddress formattedAddress or {@code null} for none
    */
   public GoogleMapsAddressvalidationV1Address setFormattedAddress(java.lang.String formattedAddress) {
@@ -214,9 +217,9 @@ public final class GoogleMapsAddressvalidationV1Address extends com.google.api.c
 
   /**
    * Any tokens in the input that could not be resolved. This might be an input that was not
-   * recognized as a valid part of an address (for example in an input like "Parcel 0000123123 &
-   * 0000456456 Str # Guthrie Center IA 50115 US", the unresolved tokens may look like `["Parcel",
-   * "0000123123", "&", "0000456456"]`.
+   * recognized as a valid part of an address. For example, for an input such as "Parcel 0000123123
+   * & 0000456456 Str # Guthrie Center IA 50115 US", the unresolved tokens might look like
+   * `["Parcel", "0000123123", "&", "0000456456"]`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnresolvedTokens() {
@@ -225,9 +228,9 @@ public final class GoogleMapsAddressvalidationV1Address extends com.google.api.c
 
   /**
    * Any tokens in the input that could not be resolved. This might be an input that was not
-   * recognized as a valid part of an address (for example in an input like "Parcel 0000123123 &
-   * 0000456456 Str # Guthrie Center IA 50115 US", the unresolved tokens may look like `["Parcel",
-   * "0000123123", "&", "0000456456"]`.
+   * recognized as a valid part of an address. For example, for an input such as "Parcel 0000123123
+   * & 0000456456 Str # Guthrie Center IA 50115 US", the unresolved tokens might look like
+   * `["Parcel", "0000123123", "&", "0000456456"]`.
    * @param unresolvedTokens unresolvedTokens or {@code null} for none
    */
   public GoogleMapsAddressvalidationV1Address setUnresolvedTokens(java.util.List<java.lang.String> unresolvedTokens) {

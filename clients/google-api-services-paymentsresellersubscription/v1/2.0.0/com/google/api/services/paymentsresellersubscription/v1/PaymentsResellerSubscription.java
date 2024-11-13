@@ -1925,10 +1925,11 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
     public class UserSessions {
 
       /**
-       * This API replaces user authorized OAuth consnet based APIs (Create, Entitle). Generates a short-
+       * This API replaces user authorized OAuth consent based APIs (Create, Entitle). Generates a short-
        * lived token for a user session based on the user intent. You can use the session token to
        * redirect the user to Google to finish the signup flow. You can re-generate new session token
-       * repeatedly for same request if necessary, regardless of the previous tokens being expired or not.
+       * repeatedly for the same request if necessary, regardless of the previous tokens being expired or
+       * not.
        *
        * Create a request for the method "userSessions.generate".
        *
@@ -1954,11 +1955,11 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
             java.util.regex.Pattern.compile("^partners/[^/]+$");
 
         /**
-         * This API replaces user authorized OAuth consnet based APIs (Create, Entitle). Generates a
+         * This API replaces user authorized OAuth consent based APIs (Create, Entitle). Generates a
          * short-lived token for a user session based on the user intent. You can use the session token to
          * redirect the user to Google to finish the signup flow. You can re-generate new session token
-         * repeatedly for same request if necessary, regardless of the previous tokens being expired or
-         * not.
+         * repeatedly for the same request if necessary, regardless of the previous tokens being expired
+         * or not.
          *
          * Create a request for the method "userSessions.generate".
          *

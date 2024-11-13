@@ -68,7 +68,7 @@ public final class GoogleCloudChannelV1CloudIdentityCustomerAccount extends com.
 
   /**
    * Returns true if the Cloud Identity account is associated with a customer of the Channel
-   * Services partner.
+   * Services partner (with active subscriptions or purchase consents).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,7 +163,7 @@ public final class GoogleCloudChannelV1CloudIdentityCustomerAccount extends com.
 
   /**
    * Returns true if the Cloud Identity account is associated with a customer of the Channel
-   * Services partner.
+   * Services partner (with active subscriptions or purchase consents).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOwned() {
@@ -172,7 +172,7 @@ public final class GoogleCloudChannelV1CloudIdentityCustomerAccount extends com.
 
   /**
    * Returns true if the Cloud Identity account is associated with a customer of the Channel
-   * Services partner.
+   * Services partner (with active subscriptions or purchase consents).
    * @param owned owned or {@code null} for none
    */
   public GoogleCloudChannelV1CloudIdentityCustomerAccount setOwned(java.lang.Boolean owned) {

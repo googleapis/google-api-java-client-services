@@ -3248,45 +3248,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * Optional. Final Backup expiration time. Timestamp in UTC of when this resource is
-       * considered expired.
-       */
-      @com.google.api.client.util.Key
-      private String finalBackupExpiryTime;
-
-      /** Optional. Final Backup expiration time. Timestamp in UTC of when this resource is considered
-     expired.
-       */
-      public String getFinalBackupExpiryTime() {
-        return finalBackupExpiryTime;
-      }
-
-      /**
-       * Optional. Final Backup expiration time. Timestamp in UTC of when this resource is
-       * considered expired.
-       */
-      public Delete setFinalBackupExpiryTime(String finalBackupExpiryTime) {
-        this.finalBackupExpiryTime = finalBackupExpiryTime;
-        return this;
-      }
-
-      /** Optional. Retention period of the final backup. */
-      @com.google.api.client.util.Key
-      private java.lang.Long finalBackupTtlDays;
-
-      /** Optional. Retention period of the final backup.
-       */
-      public java.lang.Long getFinalBackupTtlDays() {
-        return finalBackupTtlDays;
-      }
-
-      /** Optional. Retention period of the final backup. */
-      public Delete setFinalBackupTtlDays(java.lang.Long finalBackupTtlDays) {
-        this.finalBackupTtlDays = finalBackupTtlDays;
-        return this;
-      }
-
       @Override
       public Delete set(String parameterName, Object value) {
         return (Delete) super.set(parameterName, value);

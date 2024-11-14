@@ -136,10 +136,10 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Optional. A custom ID for the message. You can use field to identify a message, or to
-   * get, delete, or update a message. To set a custom ID, specify the [`messageId`](https://develop
-   * ers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages/create#body.QUERY_PARAMETER
-   * S.message_id) field when you create the message. For details, see [Name a
+   * Optional. A custom ID for the message. You can use field to identify a message, or to get,
+   * delete, or update a message. To set a custom ID, specify the [`messageId`](https://developers.g
+   * oogle.com/workspace/chat/api/reference/rest/v1/spaces.messages/create#body.QUERY_PARAMETERS.mes
+   * sage_id) field when you create the message. For details, see [Name a
    * message](https://developers.google.com/workspace/chat/create-messages#name_a_created_message).
    * The value may be {@code null}.
    */
@@ -485,10 +485,10 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Optional. A custom ID for the message. You can use field to identify a message, or to
-   * get, delete, or update a message. To set a custom ID, specify the [`messageId`](https://develop
-   * ers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages/create#body.QUERY_PARAMETER
-   * S.message_id) field when you create the message. For details, see [Name a
+   * Optional. A custom ID for the message. You can use field to identify a message, or to get,
+   * delete, or update a message. To set a custom ID, specify the [`messageId`](https://developers.g
+   * oogle.com/workspace/chat/api/reference/rest/v1/spaces.messages/create#body.QUERY_PARAMETERS.mes
+   * sage_id) field when you create the message. For details, see [Name a
    * message](https://developers.google.com/workspace/chat/create-messages#name_a_created_message).
    * @return value or {@code null} for none
    */
@@ -497,10 +497,10 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Optional. A custom ID for the message. You can use field to identify a message, or to
-   * get, delete, or update a message. To set a custom ID, specify the [`messageId`](https://develop
-   * ers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages/create#body.QUERY_PARAMETER
-   * S.message_id) field when you create the message. For details, see [Name a
+   * Optional. A custom ID for the message. You can use field to identify a message, or to get,
+   * delete, or update a message. To set a custom ID, specify the [`messageId`](https://developers.g
+   * oogle.com/workspace/chat/api/reference/rest/v1/spaces.messages/create#body.QUERY_PARAMETERS.mes
+   * sage_id) field when you create the message. For details, see [Name a
    * message](https://developers.google.com/workspace/chat/create-messages#name_a_created_message).
    * @param clientAssignedMessageId clientAssignedMessageId or {@code null} for none
    */

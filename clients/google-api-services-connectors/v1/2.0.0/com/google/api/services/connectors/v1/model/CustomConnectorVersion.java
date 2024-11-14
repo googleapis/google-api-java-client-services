@@ -91,6 +91,21 @@ public final class CustomConnectorVersion extends com.google.api.client.json.Gen
   private java.lang.String name;
 
   /**
+   * Optional. Partner metadata details. This should be populated only when publishing the custom
+   * connector to partner connector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PartnerMetadata partnerMetadata;
+
+  /**
+   * Output only. Publish status of a custom connector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PublishStatus publishStatus;
+
+  /**
    * Optional. Service account used by runtime plane to access auth config secrets.
    * The value may be {@code null}.
    */
@@ -254,6 +269,42 @@ public final class CustomConnectorVersion extends com.google.api.client.json.Gen
    */
   public CustomConnectorVersion setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Partner metadata details. This should be populated only when publishing the custom
+   * connector to partner connector.
+   * @return value or {@code null} for none
+   */
+  public PartnerMetadata getPartnerMetadata() {
+    return partnerMetadata;
+  }
+
+  /**
+   * Optional. Partner metadata details. This should be populated only when publishing the custom
+   * connector to partner connector.
+   * @param partnerMetadata partnerMetadata or {@code null} for none
+   */
+  public CustomConnectorVersion setPartnerMetadata(PartnerMetadata partnerMetadata) {
+    this.partnerMetadata = partnerMetadata;
+    return this;
+  }
+
+  /**
+   * Output only. Publish status of a custom connector.
+   * @return value or {@code null} for none
+   */
+  public PublishStatus getPublishStatus() {
+    return publishStatus;
+  }
+
+  /**
+   * Output only. Publish status of a custom connector.
+   * @param publishStatus publishStatus or {@code null} for none
+   */
+  public CustomConnectorVersion setPublishStatus(PublishStatus publishStatus) {
+    this.publishStatus = publishStatus;
     return this;
   }
 

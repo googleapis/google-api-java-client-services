@@ -60,6 +60,13 @@ public final class EventingRuntimeData extends com.google.api.client.json.Generi
   private WebhookData webhookData;
 
   /**
+   * Output only. Webhook subscriptions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WebhookSubscriptions webhookSubscriptions;
+
+  /**
    * Output only. Events listener endpoint. The value will populated after provisioning the events
    * listener.
    * @return value or {@code null} for none
@@ -128,6 +135,23 @@ public final class EventingRuntimeData extends com.google.api.client.json.Generi
    */
   public EventingRuntimeData setWebhookData(WebhookData webhookData) {
     this.webhookData = webhookData;
+    return this;
+  }
+
+  /**
+   * Output only. Webhook subscriptions.
+   * @return value or {@code null} for none
+   */
+  public WebhookSubscriptions getWebhookSubscriptions() {
+    return webhookSubscriptions;
+  }
+
+  /**
+   * Output only. Webhook subscriptions.
+   * @param webhookSubscriptions webhookSubscriptions or {@code null} for none
+   */
+  public EventingRuntimeData setWebhookSubscriptions(WebhookSubscriptions webhookSubscriptions) {
+    this.webhookSubscriptions = webhookSubscriptions;
     return this;
   }
 

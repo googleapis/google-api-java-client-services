@@ -682,17 +682,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Creates a space with no members. Can be used to create a named space. Spaces grouped by topics
-     * aren't supported. For an example, see [Create a
+     * Creates a space with no members. Can be used to create a named space, or a group chat in `Import
+     * mode`. Spaces grouped by topics aren't supported. For an example, see [Create a
      * space](https://developers.google.com/workspace/chat/create-spaces). If you receive the error
      * message `ALREADY_EXISTS` when creating a space, try a different `displayName`. An existing space
-     * within the Google Workspace organization might already use this display name. If you're a member
-     * of the [Developer Preview program](https://developers.google.com/workspace/preview), you can
-     * create a group chat in import mode using `spaceType.GROUP_CHAT`. Supports the following types of
-     * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [App
-     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-     * with [administrator approval](https://support.google.com/a?p=chat-app-auth) in [Developer
-     * Preview](https://developers.google.com/workspace/preview) - [User
+     * within the Google Workspace organization might already use this display name. Supports the
+     * following types of [authentication](https://developers.google.com/workspace/chat/authenticate-
+     * authorize): - [App authentication](https://developers.google.com/workspace/chat/authenticate-
+     * authorize-chat-app) with [administrator approval](https://support.google.com/a?p=chat-app-auth)
+     * in [Developer Preview](https://developers.google.com/workspace/preview) - [User
      * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
      * When authenticating as an app, the `space.customer` field must be set in the request.
      *
@@ -715,17 +713,16 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v1/spaces";
 
       /**
-       * Creates a space with no members. Can be used to create a named space. Spaces grouped by topics
-       * aren't supported. For an example, see [Create a
+       * Creates a space with no members. Can be used to create a named space, or a group chat in
+       * `Import mode`. Spaces grouped by topics aren't supported. For an example, see [Create a
        * space](https://developers.google.com/workspace/chat/create-spaces). If you receive the error
        * message `ALREADY_EXISTS` when creating a space, try a different `displayName`. An existing
-       * space within the Google Workspace organization might already use this display name. If you're a
-       * member of the [Developer Preview program](https://developers.google.com/workspace/preview), you
-       * can create a group chat in import mode using `spaceType.GROUP_CHAT`. Supports the following
-       * types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
-       * - [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-
-       * chat-app) with [administrator approval](https://support.google.com/a?p=chat-app-auth) in
-       * [Developer Preview](https://developers.google.com/workspace/preview) - [User
+       * space within the Google Workspace organization might already use this display name. Supports
+       * the following types of
+       * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [App
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+       * with [administrator approval](https://support.google.com/a?p=chat-app-auth) in [Developer
+       * Preview](https://developers.google.com/workspace/preview) - [User
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
        * When authenticating as an app, the `space.customer` field must be set in the request.
        *
@@ -4575,27 +4572,25 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. Optional, if resuming from a previous query. How the list of messages is
-         * ordered. Specify a value to order by an ordering operation. Valid ordering operation
-         * values are as follows: - `ASC` for ascending. - `DESC` for descending. The default
-         * ordering is `create_time ASC`.
+         * Optional. How the list of messages is ordered. Specify a value to order by an ordering
+         * operation. Valid ordering operation values are as follows: - `ASC` for ascending. -
+         * `DESC` for descending. The default ordering is `create_time ASC`.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Optional. Optional, if resuming from a previous query. How the list of messages is ordered. Specify
-       a value to order by an ordering operation. Valid ordering operation values are as follows: - `ASC`
-       for ascending. - `DESC` for descending. The default ordering is `create_time ASC`.
+        /** Optional. How the list of messages is ordered. Specify a value to order by an ordering operation.
+       Valid ordering operation values are as follows: - `ASC` for ascending. - `DESC` for descending. The
+       default ordering is `create_time ASC`.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
         }
 
         /**
-         * Optional. Optional, if resuming from a previous query. How the list of messages is
-         * ordered. Specify a value to order by an ordering operation. Valid ordering operation
-         * values are as follows: - `ASC` for ascending. - `DESC` for descending. The default
-         * ordering is `create_time ASC`.
+         * Optional. How the list of messages is ordered. Specify a value to order by an ordering
+         * operation. Valid ordering operation values are as follows: - `ASC` for ascending. -
+         * `DESC` for descending. The default ordering is `create_time ASC`.
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -4632,28 +4627,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. Optional, if resuming from a previous query. A page token received from a
-         * previous list messages call. Provide this parameter to retrieve the subsequent page. When
-         * paginating, all other parameters provided should match the call that provided the page
-         * token. Passing different values to the other parameters might lead to unexpected results.
+         * Optional. A page token received from a previous list messages call. Provide this
+         * parameter to retrieve the subsequent page. When paginating, all other parameters provided
+         * should match the call that provided the page token. Passing different values to the other
+         * parameters might lead to unexpected results.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Optional. Optional, if resuming from a previous query. A page token received from a previous list
-       messages call. Provide this parameter to retrieve the subsequent page. When paginating, all other
-       parameters provided should match the call that provided the page token. Passing different values to
-       the other parameters might lead to unexpected results.
+        /** Optional. A page token received from a previous list messages call. Provide this parameter to
+       retrieve the subsequent page. When paginating, all other parameters provided should match the call
+       that provided the page token. Passing different values to the other parameters might lead to
+       unexpected results.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * Optional. Optional, if resuming from a previous query. A page token received from a
-         * previous list messages call. Provide this parameter to retrieve the subsequent page. When
-         * paginating, all other parameters provided should match the call that provided the page
-         * token. Passing different values to the other parameters might lead to unexpected results.
+         * Optional. A page token received from a previous list messages call. Provide this
+         * parameter to retrieve the subsequent page. When paginating, all other parameters provided
+         * should match the call that provided the page token. Passing different values to the other
+         * parameters might lead to unexpected results.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;

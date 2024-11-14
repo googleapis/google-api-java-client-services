@@ -80,11 +80,26 @@ public final class OnPremisesConfiguration extends com.google.api.client.json.Ge
   private java.lang.String password;
 
   /**
+   * Optional. A list of objects that the user selects for replication from an external source
+   * instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SelectedObjects> selectedObjects;
+
+  /**
    * The reference to Cloud SQL instance if the source is Cloud SQL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InstanceReference sourceInstance;
+
+  /**
+   * Optional. SslOption for replica connection to the on-premises source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sslOption;
 
   /**
    * The username for connecting to on-premises instance.
@@ -215,6 +230,25 @@ public final class OnPremisesConfiguration extends com.google.api.client.json.Ge
   }
 
   /**
+   * Optional. A list of objects that the user selects for replication from an external source
+   * instance.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SelectedObjects> getSelectedObjects() {
+    return selectedObjects;
+  }
+
+  /**
+   * Optional. A list of objects that the user selects for replication from an external source
+   * instance.
+   * @param selectedObjects selectedObjects or {@code null} for none
+   */
+  public OnPremisesConfiguration setSelectedObjects(java.util.List<SelectedObjects> selectedObjects) {
+    this.selectedObjects = selectedObjects;
+    return this;
+  }
+
+  /**
    * The reference to Cloud SQL instance if the source is Cloud SQL.
    * @return value or {@code null} for none
    */
@@ -228,6 +262,23 @@ public final class OnPremisesConfiguration extends com.google.api.client.json.Ge
    */
   public OnPremisesConfiguration setSourceInstance(InstanceReference sourceInstance) {
     this.sourceInstance = sourceInstance;
+    return this;
+  }
+
+  /**
+   * Optional. SslOption for replica connection to the on-premises source.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSslOption() {
+    return sslOption;
+  }
+
+  /**
+   * Optional. SslOption for replica connection to the on-premises source.
+   * @param sslOption sslOption or {@code null} for none
+   */
+  public OnPremisesConfiguration setSslOption(java.lang.String sslOption) {
+    this.sslOption = sslOption;
     return this;
   }
 

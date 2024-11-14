@@ -44,6 +44,13 @@ public final class CustomConnector extends com.google.api.client.json.GenericJso
   private java.util.List<java.lang.String> allConnectorVersions;
 
   /**
+   * Output only. All marketplace versions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> allMarketplaceVersions;
+
+  /**
    * Output only. Created time.
    * The value may be {@code null}.
    */
@@ -95,6 +102,13 @@ public final class CustomConnector extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
+   * Output only. Published marketplace versions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> publishedMarketplaceVersions;
+
+  /**
    * Output only. Updated time.
    * The value may be {@code null}.
    */
@@ -132,6 +146,23 @@ public final class CustomConnector extends com.google.api.client.json.GenericJso
    */
   public CustomConnector setAllConnectorVersions(java.util.List<java.lang.String> allConnectorVersions) {
     this.allConnectorVersions = allConnectorVersions;
+    return this;
+  }
+
+  /**
+   * Output only. All marketplace versions.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAllMarketplaceVersions() {
+    return allMarketplaceVersions;
+  }
+
+  /**
+   * Output only. All marketplace versions.
+   * @param allMarketplaceVersions allMarketplaceVersions or {@code null} for none
+   */
+  public CustomConnector setAllMarketplaceVersions(java.util.List<java.lang.String> allMarketplaceVersions) {
+    this.allMarketplaceVersions = allMarketplaceVersions;
     return this;
   }
 
@@ -255,6 +286,23 @@ public final class CustomConnector extends com.google.api.client.json.GenericJso
    */
   public CustomConnector setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Published marketplace versions.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPublishedMarketplaceVersions() {
+    return publishedMarketplaceVersions;
+  }
+
+  /**
+   * Output only. Published marketplace versions.
+   * @param publishedMarketplaceVersions publishedMarketplaceVersions or {@code null} for none
+   */
+  public CustomConnector setPublishedMarketplaceVersions(java.util.List<java.lang.String> publishedMarketplaceVersions) {
+    this.publishedMarketplaceVersions = publishedMarketplaceVersions;
     return this;
   }
 

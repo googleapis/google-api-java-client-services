@@ -207,6 +207,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Disk associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Disk disk;
+
+  /**
    * The time the finding was first detected. If an existing finding is updated, then this is the
    * time the update occurred. For example, if the finding represents an open firewall, this
    * property captures the time the detector believes the firewall became open. The accuracy is
@@ -810,6 +817,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Disk associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public Disk getDisk() {
+    return disk;
+  }
+
+  /**
+   * Disk associated with the finding.
+   * @param disk disk or {@code null} for none
+   */
+  public Finding setDisk(Disk disk) {
+    this.disk = disk;
     return this;
   }
 

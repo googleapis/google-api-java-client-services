@@ -37,6 +37,13 @@ package com.google.api.services.securitycenter.v1.model;
 public final class EffectiveEventThreatDetectionCustomModule extends com.google.api.client.json.GenericJson {
 
   /**
+   * The cloud provider of the custom module.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloudProvider;
+
+  /**
    * Output only. Config for the effective module.
    * The value may be {@code null}.
    */
@@ -81,6 +88,23 @@ public final class EffectiveEventThreatDetectionCustomModule extends com.google.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * The cloud provider of the custom module.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloudProvider() {
+    return cloudProvider;
+  }
+
+  /**
+   * The cloud provider of the custom module.
+   * @param cloudProvider cloudProvider or {@code null} for none
+   */
+  public EffectiveEventThreatDetectionCustomModule setCloudProvider(java.lang.String cloudProvider) {
+    this.cloudProvider = cloudProvider;
+    return this;
+  }
 
   /**
    * Output only. Config for the effective module.

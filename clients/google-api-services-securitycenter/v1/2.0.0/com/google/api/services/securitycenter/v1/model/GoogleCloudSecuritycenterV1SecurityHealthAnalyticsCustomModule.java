@@ -43,6 +43,13 @@ public final class GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModul
   private java.lang.String ancestorModule;
 
   /**
+   * The cloud provider of the custom module.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloudProvider;
+
+  /**
    * The user specified custom configuration for the module.
    * The value may be {@code null}.
    */
@@ -110,6 +117,23 @@ public final class GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModul
    */
   public GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule setAncestorModule(java.lang.String ancestorModule) {
     this.ancestorModule = ancestorModule;
+    return this;
+  }
+
+  /**
+   * The cloud provider of the custom module.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloudProvider() {
+    return cloudProvider;
+  }
+
+  /**
+   * The cloud provider of the custom module.
+   * @param cloudProvider cloudProvider or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule setCloudProvider(java.lang.String cloudProvider) {
+    this.cloudProvider = cloudProvider;
     return this;
   }
 

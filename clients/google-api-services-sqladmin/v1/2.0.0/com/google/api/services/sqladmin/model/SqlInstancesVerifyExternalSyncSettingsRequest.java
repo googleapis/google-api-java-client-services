@@ -46,6 +46,20 @@ public final class SqlInstancesVerifyExternalSyncSettingsRequest extends com.goo
   private MySqlSyncConfig mysqlSyncConfig;
 
   /**
+   * Optional. Migrate only the specified objects from the source instance. If this field is empty,
+   * then migrate all objects.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ExternalSyncSelectedObject> selectedObjects;
+
+  static {
+    // hack to force ProGuard to consider ExternalSyncSelectedObject used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ExternalSyncSelectedObject.class);
+  }
+
+  /**
    * External sync mode
    * The value may be {@code null}.
    */
@@ -108,6 +122,25 @@ public final class SqlInstancesVerifyExternalSyncSettingsRequest extends com.goo
    */
   public SqlInstancesVerifyExternalSyncSettingsRequest setMysqlSyncConfig(MySqlSyncConfig mysqlSyncConfig) {
     this.mysqlSyncConfig = mysqlSyncConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Migrate only the specified objects from the source instance. If this field is empty,
+   * then migrate all objects.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ExternalSyncSelectedObject> getSelectedObjects() {
+    return selectedObjects;
+  }
+
+  /**
+   * Optional. Migrate only the specified objects from the source instance. If this field is empty,
+   * then migrate all objects.
+   * @param selectedObjects selectedObjects or {@code null} for none
+   */
+  public SqlInstancesVerifyExternalSyncSettingsRequest setSelectedObjects(java.util.List<ExternalSyncSelectedObject> selectedObjects) {
+    this.selectedObjects = selectedObjects;
     return this;
   }
 

@@ -30,14 +30,21 @@ package com.google.api.services.androidenterprise.model;
 public final class CreateEnrollmentTokenResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enrollment token.
+   * Deprecated: Use token instead. This field will be removed in the future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String enrollmentToken;
 
   /**
-   * Enrollment token.
+   * [Required] The created enrollment token.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EnrollmentToken token;
+
+  /**
+   * Deprecated: Use token instead. This field will be removed in the future.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnrollmentToken() {
@@ -45,11 +52,28 @@ public final class CreateEnrollmentTokenResponse extends com.google.api.client.j
   }
 
   /**
-   * Enrollment token.
+   * Deprecated: Use token instead. This field will be removed in the future.
    * @param enrollmentToken enrollmentToken or {@code null} for none
    */
   public CreateEnrollmentTokenResponse setEnrollmentToken(java.lang.String enrollmentToken) {
     this.enrollmentToken = enrollmentToken;
+    return this;
+  }
+
+  /**
+   * [Required] The created enrollment token.
+   * @return value or {@code null} for none
+   */
+  public EnrollmentToken getToken() {
+    return token;
+  }
+
+  /**
+   * [Required] The created enrollment token.
+   * @param token token or {@code null} for none
+   */
+  public CreateEnrollmentTokenResponse setToken(EnrollmentToken token) {
+    this.token = token;
     return this;
   }
 

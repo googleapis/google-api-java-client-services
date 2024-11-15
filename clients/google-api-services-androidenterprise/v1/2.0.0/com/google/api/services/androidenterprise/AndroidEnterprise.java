@@ -1430,7 +1430,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
      * optional parameters, call the {@link CreateEnrollmentToken#execute()} method to invoke the remote
      * operation.
      *
-     * @param enterpriseId The ID of the enterprise.
+     * @param enterpriseId Required. The ID of the enterprise.
      * @return the request
      */
     public CreateEnrollmentToken createEnrollmentToken(java.lang.String enterpriseId) throws java.io.IOException {
@@ -1456,7 +1456,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
        * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
        * after invoking the constructor. </p>
        *
-       * @param enterpriseId The ID of the enterprise.
+       * @param enterpriseId Required. The ID of the enterprise.
        * @since 1.13
        */
       protected CreateEnrollmentToken(java.lang.String enterpriseId) {
@@ -1519,35 +1519,107 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return (CreateEnrollmentToken) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The ID of the enterprise. */
+      /** Required. The ID of the enterprise. */
       @com.google.api.client.util.Key
       private java.lang.String enterpriseId;
 
-      /** The ID of the enterprise.
+      /** Required. The ID of the enterprise.
        */
       public java.lang.String getEnterpriseId() {
         return enterpriseId;
       }
 
-      /** The ID of the enterprise. */
+      /** Required. The ID of the enterprise. */
       public CreateEnrollmentToken setEnterpriseId(java.lang.String enterpriseId) {
         this.enterpriseId = enterpriseId;
         return this;
       }
 
-      /** Whether it’s a dedicated device or a knowledge worker device. */
+      /** Deprecated: Use enrollment_token instead. this field will be removed in the future. */
       @com.google.api.client.util.Key
       private java.lang.String deviceType;
 
-      /** Whether it’s a dedicated device or a knowledge worker device.
+      /** Deprecated: Use enrollment_token instead. this field will be removed in the future.
        */
       public java.lang.String getDeviceType() {
         return deviceType;
       }
 
-      /** Whether it’s a dedicated device or a knowledge worker device. */
+      /** Deprecated: Use enrollment_token instead. this field will be removed in the future. */
       public CreateEnrollmentToken setDeviceType(java.lang.String deviceType) {
         this.deviceType = deviceType;
+        return this;
+      }
+
+      /**
+       * [Optional] The length of time the enrollment token is valid, ranging from 1 minute to
+       * [`Durations.MAX_VALUE`](https://developers.google.com/protocol-
+       * buffers/docs/reference/java/com/google/protobuf/util/Durations.html#MAX_VALUE),
+       * approximately 10,000 years. If not specified, the default duration is 1 hour.
+       */
+      @com.google.api.client.util.Key("enrollmentToken.duration")
+      private String enrollmentTokenDuration;
+
+      /**[ Optional] The length of time the enrollment token is valid, ranging from 1 minute to
+    [ [`Durations.MAX_VALUE`](https://developers.google.com/protocol-
+    [ buffers/docs/reference/java/com/google/protobuf/util/Durations.html#MAX_VALUE), approximately
+    [ 10,000 years. If not specified, the default duration is 1 hour.
+    [
+
+       */
+      public String getEnrollmentTokenDuration() {
+        return enrollmentTokenDuration;
+      }
+
+      /**
+       * [Optional] The length of time the enrollment token is valid, ranging from 1 minute to
+       * [`Durations.MAX_VALUE`](https://developers.google.com/protocol-
+       * buffers/docs/reference/java/com/google/protobuf/util/Durations.html#MAX_VALUE),
+       * approximately 10,000 years. If not specified, the default duration is 1 hour.
+       */
+      public CreateEnrollmentToken setEnrollmentTokenDuration(String enrollmentTokenDuration) {
+        this.enrollmentTokenDuration = enrollmentTokenDuration;
+        return this;
+      }
+
+      /** [Required] The type of the enrollment token. */
+      @com.google.api.client.util.Key("enrollmentToken.enrollmentTokenType")
+      private java.lang.String enrollmentTokenEnrollmentTokenType;
+
+      /**[ Required] The type of the enrollment token.
+    [
+
+       */
+      public java.lang.String getEnrollmentTokenEnrollmentTokenType() {
+        return enrollmentTokenEnrollmentTokenType;
+      }
+
+      /** [Required] The type of the enrollment token. */
+      public CreateEnrollmentToken setEnrollmentTokenEnrollmentTokenType(java.lang.String enrollmentTokenEnrollmentTokenType) {
+        this.enrollmentTokenEnrollmentTokenType = enrollmentTokenEnrollmentTokenType;
+        return this;
+      }
+
+      /**
+       * The token value that's passed to the device and authorizes the device to enroll. This is a
+       * read-only field generated by the server.
+       */
+      @com.google.api.client.util.Key("enrollmentToken.token")
+      private java.lang.String enrollmentTokenToken;
+
+      /** The token value that's passed to the device and authorizes the device to enroll. This is a read-
+     only field generated by the server.
+       */
+      public java.lang.String getEnrollmentTokenToken() {
+        return enrollmentTokenToken;
+      }
+
+      /**
+       * The token value that's passed to the device and authorizes the device to enroll. This is a
+       * read-only field generated by the server.
+       */
+      public CreateEnrollmentToken setEnrollmentTokenToken(java.lang.String enrollmentTokenToken) {
+        this.enrollmentTokenToken = enrollmentTokenToken;
         return this;
       }
 

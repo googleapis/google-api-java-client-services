@@ -53,8 +53,8 @@ public final class GoogleIdentityStsV1ExchangeTokenResponse extends com.google.a
   /**
    * The amount of time, in seconds, between the time when the access token was issued and the time
    * when the access token will expire. This field is absent when the `subject_token` in the request
-   * is a Google-issued, short-lived access token. In this case, the access token has the same
-   * expiration time as the `subject_token`.
+   * is a a short-lived access token for a Cloud Identity or Google Workspace user account. In this
+   * case, the access token has the same expiration time as the `subject_token`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("expires_in")
@@ -157,8 +157,8 @@ public final class GoogleIdentityStsV1ExchangeTokenResponse extends com.google.a
   /**
    * The amount of time, in seconds, between the time when the access token was issued and the time
    * when the access token will expire. This field is absent when the `subject_token` in the request
-   * is a Google-issued, short-lived access token. In this case, the access token has the same
-   * expiration time as the `subject_token`.
+   * is a a short-lived access token for a Cloud Identity or Google Workspace user account. In this
+   * case, the access token has the same expiration time as the `subject_token`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getExpiresIn() {
@@ -168,8 +168,8 @@ public final class GoogleIdentityStsV1ExchangeTokenResponse extends com.google.a
   /**
    * The amount of time, in seconds, between the time when the access token was issued and the time
    * when the access token will expire. This field is absent when the `subject_token` in the request
-   * is a Google-issued, short-lived access token. In this case, the access token has the same
-   * expiration time as the `subject_token`.
+   * is a a short-lived access token for a Cloud Identity or Google Workspace user account. In this
+   * case, the access token has the same expiration time as the `subject_token`.
    * @param expiresIn expiresIn or {@code null} for none
    */
   public GoogleIdentityStsV1ExchangeTokenResponse setExpiresIn(java.lang.Integer expiresIn) {

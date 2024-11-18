@@ -69,8 +69,9 @@ public final class InstancePolicyOrTemplate extends com.google.api.client.json.G
 
   /**
    * Name of an instance template used to create VMs. Named the field as 'instance_template' instead
-   * of 'template' to avoid C++ keyword conflict. Batch only supports global instance templates. You
-   * can specify the global instance template as a full or partial URL.
+   * of 'template' to avoid C++ keyword conflict. Batch only supports global instance templates from
+   * the same project as the job. You can specify the global instance template as a full or partial
+   * URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -166,8 +167,9 @@ public final class InstancePolicyOrTemplate extends com.google.api.client.json.G
 
   /**
    * Name of an instance template used to create VMs. Named the field as 'instance_template' instead
-   * of 'template' to avoid C++ keyword conflict. Batch only supports global instance templates. You
-   * can specify the global instance template as a full or partial URL.
+   * of 'template' to avoid C++ keyword conflict. Batch only supports global instance templates from
+   * the same project as the job. You can specify the global instance template as a full or partial
+   * URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstanceTemplate() {
@@ -176,8 +178,9 @@ public final class InstancePolicyOrTemplate extends com.google.api.client.json.G
 
   /**
    * Name of an instance template used to create VMs. Named the field as 'instance_template' instead
-   * of 'template' to avoid C++ keyword conflict. Batch only supports global instance templates. You
-   * can specify the global instance template as a full or partial URL.
+   * of 'template' to avoid C++ keyword conflict. Batch only supports global instance templates from
+   * the same project as the job. You can specify the global instance template as a full or partial
+   * URL.
    * @param instanceTemplate instanceTemplate or {@code null} for none
    */
   public InstancePolicyOrTemplate setInstanceTemplate(java.lang.String instanceTemplate) {

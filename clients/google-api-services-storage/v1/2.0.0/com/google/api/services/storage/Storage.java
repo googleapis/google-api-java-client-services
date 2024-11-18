@@ -3483,7 +3483,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       return result;
     }
 
-    public class Restore extends StorageRequest<Void> {
+    public class Restore extends StorageRequest<com.google.api.services.storage.model.Bucket> {
 
       private static final String REST_PATH = "b/{bucket}/restore";
 
@@ -3503,7 +3503,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        * @since 1.13
        */
       protected Restore(java.lang.String bucket, java.lang.Long generation) {
-        super(Storage.this, "POST", REST_PATH, null, Void.class);
+        super(Storage.this, "POST", REST_PATH, null, com.google.api.services.storage.model.Bucket.class);
         this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
         this.generation = com.google.api.client.util.Preconditions.checkNotNull(generation, "Required parameter generation must be specified.");
       }
@@ -3577,6 +3577,22 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /** Generation of a bucket. */
       public Restore setGeneration(java.lang.Long generation) {
         this.generation = generation;
+        return this;
+      }
+
+      /** Set of properties to return. Defaults to full. */
+      @com.google.api.client.util.Key
+      private java.lang.String projection;
+
+      /** Set of properties to return. Defaults to full.
+       */
+      public java.lang.String getProjection() {
+        return projection;
+      }
+
+      /** Set of properties to return. Defaults to full. */
+      public Restore setProjection(java.lang.String projection) {
+        this.projection = projection;
         return this;
       }
 

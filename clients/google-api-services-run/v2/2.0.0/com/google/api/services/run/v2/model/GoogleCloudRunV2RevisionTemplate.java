@@ -63,6 +63,21 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   private java.lang.String encryptionKey;
 
   /**
+   * Optional. The action to take if the encryption key is revoked.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String encryptionKeyRevocationAction;
+
+  /**
+   * Optional. If encryption_key_revocation_action is SHUTDOWN, the duration before shutting down
+   * all instances. The minimum increment is 1 hour.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String encryptionKeyShutdownDuration;
+
+  /**
    * Optional. The sandbox environment to host this Revision.
    * The value may be {@code null}.
    */
@@ -227,6 +242,42 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
    */
   public GoogleCloudRunV2RevisionTemplate setEncryptionKey(java.lang.String encryptionKey) {
     this.encryptionKey = encryptionKey;
+    return this;
+  }
+
+  /**
+   * Optional. The action to take if the encryption key is revoked.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEncryptionKeyRevocationAction() {
+    return encryptionKeyRevocationAction;
+  }
+
+  /**
+   * Optional. The action to take if the encryption key is revoked.
+   * @param encryptionKeyRevocationAction encryptionKeyRevocationAction or {@code null} for none
+   */
+  public GoogleCloudRunV2RevisionTemplate setEncryptionKeyRevocationAction(java.lang.String encryptionKeyRevocationAction) {
+    this.encryptionKeyRevocationAction = encryptionKeyRevocationAction;
+    return this;
+  }
+
+  /**
+   * Optional. If encryption_key_revocation_action is SHUTDOWN, the duration before shutting down
+   * all instances. The minimum increment is 1 hour.
+   * @return value or {@code null} for none
+   */
+  public String getEncryptionKeyShutdownDuration() {
+    return encryptionKeyShutdownDuration;
+  }
+
+  /**
+   * Optional. If encryption_key_revocation_action is SHUTDOWN, the duration before shutting down
+   * all instances. The minimum increment is 1 hour.
+   * @param encryptionKeyShutdownDuration encryptionKeyShutdownDuration or {@code null} for none
+   */
+  public GoogleCloudRunV2RevisionTemplate setEncryptionKeyShutdownDuration(String encryptionKeyShutdownDuration) {
+    this.encryptionKeyShutdownDuration = encryptionKeyShutdownDuration;
     return this;
   }
 

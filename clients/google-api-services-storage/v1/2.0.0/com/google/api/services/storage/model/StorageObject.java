@@ -296,6 +296,13 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
   private com.google.api.client.util.DateTime timeDeleted;
 
   /**
+   * The time when the object was finalized.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private com.google.api.client.util.DateTime timeFinalized;
+
+  /**
    * The time at which the object's storage class was last changed. When the object is initially
    * created, it will be set to timeCreated.
    * The value may be {@code null}.
@@ -943,6 +950,23 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
    */
   public StorageObject setTimeDeleted(com.google.api.client.util.DateTime timeDeleted) {
     this.timeDeleted = timeDeleted;
+    return this;
+  }
+
+  /**
+   * The time when the object was finalized.
+   * @return value or {@code null} for none
+   */
+  public com.google.api.client.util.DateTime getTimeFinalized() {
+    return timeFinalized;
+  }
+
+  /**
+   * The time when the object was finalized.
+   * @param timeFinalized timeFinalized or {@code null} for none
+   */
+  public StorageObject setTimeFinalized(com.google.api.client.util.DateTime timeFinalized) {
+    this.timeFinalized = timeFinalized;
     return this;
   }
 

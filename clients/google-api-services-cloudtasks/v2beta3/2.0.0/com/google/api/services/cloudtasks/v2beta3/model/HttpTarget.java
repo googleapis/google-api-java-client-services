@@ -59,9 +59,9 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The HTTP method to use for the request. When specified, it overrides HttpRequest for the task.
-   * Note that if the value is set to HttpMethod the HttpRequest of the task will be ignored at
-   * execution time.
+   * The HTTP method to use for the request. When specified, it overrides HttpRequest.http_method
+   * for the task. Note that if the value is set to HttpMethod.GET the HttpRequest.body of the task
+   * will be ignored at execution time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,9 +144,9 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The HTTP method to use for the request. When specified, it overrides HttpRequest for the task.
-   * Note that if the value is set to HttpMethod the HttpRequest of the task will be ignored at
-   * execution time.
+   * The HTTP method to use for the request. When specified, it overrides HttpRequest.http_method
+   * for the task. Note that if the value is set to HttpMethod.GET the HttpRequest.body of the task
+   * will be ignored at execution time.
    * @return value or {@code null} for none
    */
   public java.lang.String getHttpMethod() {
@@ -154,9 +154,9 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The HTTP method to use for the request. When specified, it overrides HttpRequest for the task.
-   * Note that if the value is set to HttpMethod the HttpRequest of the task will be ignored at
-   * execution time.
+   * The HTTP method to use for the request. When specified, it overrides HttpRequest.http_method
+   * for the task. Note that if the value is set to HttpMethod.GET the HttpRequest.body of the task
+   * will be ignored at execution time.
    * @param httpMethod httpMethod or {@code null} for none
    */
   public HttpTarget setHttpMethod(java.lang.String httpMethod) {

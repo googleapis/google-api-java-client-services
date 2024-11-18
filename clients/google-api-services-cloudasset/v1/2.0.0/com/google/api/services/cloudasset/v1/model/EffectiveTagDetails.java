@@ -31,7 +31,7 @@ public final class EffectiveTagDetails extends com.google.api.client.json.Generi
 
   /**
    * The [full resource name](https://cloud.google.com/asset-inventory/docs/resource-name-format) of
-   * the ancestor from which an effective_tag is inherited, according to [tag
+   * the ancestor from which effective_tags are inherited, according to [tag
    * inheritance](https://cloud.google.com/resource-manager/docs/tags/tags-overview#inheritance).
    * The value may be {@code null}.
    */
@@ -51,7 +51,7 @@ public final class EffectiveTagDetails extends com.google.api.client.json.Generi
 
   /**
    * The [full resource name](https://cloud.google.com/asset-inventory/docs/resource-name-format) of
-   * the ancestor from which an effective_tag is inherited, according to [tag
+   * the ancestor from which effective_tags are inherited, according to [tag
    * inheritance](https://cloud.google.com/resource-manager/docs/tags/tags-overview#inheritance).
    * @return value or {@code null} for none
    */
@@ -61,7 +61,7 @@ public final class EffectiveTagDetails extends com.google.api.client.json.Generi
 
   /**
    * The [full resource name](https://cloud.google.com/asset-inventory/docs/resource-name-format) of
-   * the ancestor from which an effective_tag is inherited, according to [tag
+   * the ancestor from which effective_tags are inherited, according to [tag
    * inheritance](https://cloud.google.com/resource-manager/docs/tags/tags-overview#inheritance).
    * @param attachedResource attachedResource or {@code null} for none
    */

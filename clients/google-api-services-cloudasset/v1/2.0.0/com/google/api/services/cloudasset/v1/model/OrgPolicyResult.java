@@ -31,10 +31,9 @@ public final class OrgPolicyResult extends com.google.api.client.json.GenericJso
 
   /**
    * The consolidated organization policy for the analyzed resource. The consolidated organization
-   * policy is computed by merging and evaluating AnalyzeOrgPoliciesResponse.policy_bundle. The
-   * evaluation will respect the organization policy [hierarchy
-   * rules](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-
-   * hierarchy).
+   * policy is computed by merging and evaluating policy_bundle. The evaluation will respect the
+   * organization policy [hierarchy rules](https://cloud.google.com/resource-
+   * manager/docs/organization-policy/understanding-hierarchy).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,10 +58,9 @@ public final class OrgPolicyResult extends com.google.api.client.json.GenericJso
   private java.lang.String organization;
 
   /**
-   * The ordered list of all organization policies from the
-   * AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource. to the scope
-   * specified in the request. If the constraint is defined with default policy, it will also appear
-   * in the list.
+   * The ordered list of all organization policies from the consolidated_policy.attached_resource.
+   * to the scope specified in the request. If the constraint is defined with default policy, it
+   * will also appear in the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,10 +83,9 @@ public final class OrgPolicyResult extends com.google.api.client.json.GenericJso
 
   /**
    * The consolidated organization policy for the analyzed resource. The consolidated organization
-   * policy is computed by merging and evaluating AnalyzeOrgPoliciesResponse.policy_bundle. The
-   * evaluation will respect the organization policy [hierarchy
-   * rules](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-
-   * hierarchy).
+   * policy is computed by merging and evaluating policy_bundle. The evaluation will respect the
+   * organization policy [hierarchy rules](https://cloud.google.com/resource-
+   * manager/docs/organization-policy/understanding-hierarchy).
    * @return value or {@code null} for none
    */
   public AnalyzerOrgPolicy getConsolidatedPolicy() {
@@ -97,10 +94,9 @@ public final class OrgPolicyResult extends com.google.api.client.json.GenericJso
 
   /**
    * The consolidated organization policy for the analyzed resource. The consolidated organization
-   * policy is computed by merging and evaluating AnalyzeOrgPoliciesResponse.policy_bundle. The
-   * evaluation will respect the organization policy [hierarchy
-   * rules](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-
-   * hierarchy).
+   * policy is computed by merging and evaluating policy_bundle. The evaluation will respect the
+   * organization policy [hierarchy rules](https://cloud.google.com/resource-
+   * manager/docs/organization-policy/understanding-hierarchy).
    * @param consolidatedPolicy consolidatedPolicy or {@code null} for none
    */
   public OrgPolicyResult setConsolidatedPolicy(AnalyzerOrgPolicy consolidatedPolicy) {
@@ -151,10 +147,9 @@ public final class OrgPolicyResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The ordered list of all organization policies from the
-   * AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource. to the scope
-   * specified in the request. If the constraint is defined with default policy, it will also appear
-   * in the list.
+   * The ordered list of all organization policies from the consolidated_policy.attached_resource.
+   * to the scope specified in the request. If the constraint is defined with default policy, it
+   * will also appear in the list.
    * @return value or {@code null} for none
    */
   public java.util.List<AnalyzerOrgPolicy> getPolicyBundle() {
@@ -162,10 +157,9 @@ public final class OrgPolicyResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The ordered list of all organization policies from the
-   * AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource. to the scope
-   * specified in the request. If the constraint is defined with default policy, it will also appear
-   * in the list.
+   * The ordered list of all organization policies from the consolidated_policy.attached_resource.
+   * to the scope specified in the request. If the constraint is defined with default policy, it
+   * will also appear in the list.
    * @param policyBundle policyBundle or {@code null} for none
    */
   public OrgPolicyResult setPolicyBundle(java.util.List<AnalyzerOrgPolicy> policyBundle) {

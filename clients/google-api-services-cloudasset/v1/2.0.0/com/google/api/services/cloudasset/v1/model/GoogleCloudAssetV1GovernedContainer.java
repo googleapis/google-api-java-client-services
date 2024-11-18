@@ -89,10 +89,9 @@ public final class GoogleCloudAssetV1GovernedContainer extends com.google.api.cl
   private java.lang.String parent;
 
   /**
-   * The ordered list of all organization policies from the
-   * AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource. to the scope
-   * specified in the request. If the constraint is defined with default policy, it will also appear
-   * in the list.
+   * The ordered list of all organization policies from the consolidated_policy.attached_resource.
+   * to the scope specified in the request. If the constraint is defined with default policy, it
+   * will also appear in the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -235,10 +234,9 @@ public final class GoogleCloudAssetV1GovernedContainer extends com.google.api.cl
   }
 
   /**
-   * The ordered list of all organization policies from the
-   * AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource. to the scope
-   * specified in the request. If the constraint is defined with default policy, it will also appear
-   * in the list.
+   * The ordered list of all organization policies from the consolidated_policy.attached_resource.
+   * to the scope specified in the request. If the constraint is defined with default policy, it
+   * will also appear in the list.
    * @return value or {@code null} for none
    */
   public java.util.List<AnalyzerOrgPolicy> getPolicyBundle() {
@@ -246,10 +244,9 @@ public final class GoogleCloudAssetV1GovernedContainer extends com.google.api.cl
   }
 
   /**
-   * The ordered list of all organization policies from the
-   * AnalyzeOrgPoliciesResponse.OrgPolicyResult.consolidated_policy.attached_resource. to the scope
-   * specified in the request. If the constraint is defined with default policy, it will also appear
-   * in the list.
+   * The ordered list of all organization policies from the consolidated_policy.attached_resource.
+   * to the scope specified in the request. If the constraint is defined with default policy, it
+   * will also appear in the list.
    * @param policyBundle policyBundle or {@code null} for none
    */
   public GoogleCloudAssetV1GovernedContainer setPolicyBundle(java.util.List<AnalyzerOrgPolicy> policyBundle) {

@@ -1741,16 +1741,14 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
           /**
            * A token identifying a page of results the server will return. To request the first page
            * results, page_token must be empty. To request the next page of results, page_token must
-           * be the value of next_page_token returned from the previous call to ListJobs. It is an
-           * error to switch the value of filter or order_by while iterating through pages.
+           * be the value of next_page_token returned from the previous call to ListJobs.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
           /** A token identifying a page of results the server will return. To request the first page results,
          page_token must be empty. To request the next page of results, page_token must be the value of
-         next_page_token returned from the previous call to ListJobs. It is an error to switch the value of
-         filter or order_by while iterating through pages.
+         next_page_token returned from the previous call to ListJobs.
            */
           public java.lang.String getPageToken() {
             return pageToken;
@@ -1759,8 +1757,7 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
           /**
            * A token identifying a page of results the server will return. To request the first page
            * results, page_token must be empty. To request the next page of results, page_token must
-           * be the value of next_page_token returned from the previous call to ListJobs. It is an
-           * error to switch the value of filter or order_by while iterating through pages.
+           * be the value of next_page_token returned from the previous call to ListJobs.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;

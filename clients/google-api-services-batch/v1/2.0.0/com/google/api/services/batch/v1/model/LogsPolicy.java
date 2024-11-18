@@ -17,7 +17,9 @@
 package com.google.api.services.batch.v1.model;
 
 /**
- * LogsPolicy describes how outputs from a Job's Tasks (stdout/stderr) will be preserved.
+ * LogsPolicy describes if and how a job's logs are preserved. Logs include information that is
+ * automatically written by the Batch service agent and any information that you configured the
+ * job's runnables to write to the `stdout` or `stderr` streams.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Batch API. For a detailed explanation see:
@@ -30,31 +32,35 @@ package com.google.api.services.batch.v1.model;
 public final class LogsPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Additional settings for Cloud Logging. It will only take effect when the destination
-   * of `LogsPolicy` is set to `CLOUD_LOGGING`.
+   * Optional. When `destination` is set to `CLOUD_LOGGING`, you can optionally set this field to
+   * configure additional settings for Cloud Logging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CloudLoggingOption cloudLoggingOption;
 
   /**
-   * Where logs should be saved.
+   * If and where logs should be saved.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String destination;
 
   /**
-   * The path to which logs are saved when the destination = PATH. This can be a local file path on
-   * the VM, or under the mount point of a Persistent Disk or Filestore, or a Cloud Storage path.
+   * When `destination` is set to `PATH`, you must set this field to the path where you want logs to
+   * be saved. This path can point to a local directory on the VM or (if congifured) a directory
+   * under the mount path of any Cloud Storage bucket, network file system (NFS), or writable
+   * persistent disk that is mounted to the job. For example, if the job has a bucket with
+   * `mountPath` set to `/mnt/disks/my-bucket`, you can write logs to the root directory of the
+   * `remotePath` of that bucket by setting this field to `/mnt/disks/my-bucket/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String logsPath;
 
   /**
-   * Optional. Additional settings for Cloud Logging. It will only take effect when the destination
-   * of `LogsPolicy` is set to `CLOUD_LOGGING`.
+   * Optional. When `destination` is set to `CLOUD_LOGGING`, you can optionally set this field to
+   * configure additional settings for Cloud Logging.
    * @return value or {@code null} for none
    */
   public CloudLoggingOption getCloudLoggingOption() {
@@ -62,8 +68,8 @@ public final class LogsPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Additional settings for Cloud Logging. It will only take effect when the destination
-   * of `LogsPolicy` is set to `CLOUD_LOGGING`.
+   * Optional. When `destination` is set to `CLOUD_LOGGING`, you can optionally set this field to
+   * configure additional settings for Cloud Logging.
    * @param cloudLoggingOption cloudLoggingOption or {@code null} for none
    */
   public LogsPolicy setCloudLoggingOption(CloudLoggingOption cloudLoggingOption) {
@@ -72,7 +78,7 @@ public final class LogsPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Where logs should be saved.
+   * If and where logs should be saved.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestination() {
@@ -80,7 +86,7 @@ public final class LogsPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Where logs should be saved.
+   * If and where logs should be saved.
    * @param destination destination or {@code null} for none
    */
   public LogsPolicy setDestination(java.lang.String destination) {
@@ -89,8 +95,12 @@ public final class LogsPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The path to which logs are saved when the destination = PATH. This can be a local file path on
-   * the VM, or under the mount point of a Persistent Disk or Filestore, or a Cloud Storage path.
+   * When `destination` is set to `PATH`, you must set this field to the path where you want logs to
+   * be saved. This path can point to a local directory on the VM or (if congifured) a directory
+   * under the mount path of any Cloud Storage bucket, network file system (NFS), or writable
+   * persistent disk that is mounted to the job. For example, if the job has a bucket with
+   * `mountPath` set to `/mnt/disks/my-bucket`, you can write logs to the root directory of the
+   * `remotePath` of that bucket by setting this field to `/mnt/disks/my-bucket/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLogsPath() {
@@ -98,8 +108,12 @@ public final class LogsPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The path to which logs are saved when the destination = PATH. This can be a local file path on
-   * the VM, or under the mount point of a Persistent Disk or Filestore, or a Cloud Storage path.
+   * When `destination` is set to `PATH`, you must set this field to the path where you want logs to
+   * be saved. This path can point to a local directory on the VM or (if congifured) a directory
+   * under the mount path of any Cloud Storage bucket, network file system (NFS), or writable
+   * persistent disk that is mounted to the job. For example, if the job has a bucket with
+   * `mountPath` set to `/mnt/disks/my-bucket`, you can write logs to the root directory of the
+   * `remotePath` of that bucket by setting this field to `/mnt/disks/my-bucket/`.
    * @param logsPath logsPath or {@code null} for none
    */
   public LogsPolicy setLogsPath(java.lang.String logsPath) {

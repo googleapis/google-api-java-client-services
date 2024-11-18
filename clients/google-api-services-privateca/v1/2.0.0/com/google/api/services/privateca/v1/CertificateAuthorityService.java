@@ -5160,7 +5160,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
             /**
              * Optional. It must be unique within a location and match the regular expression
              * `[a-zA-Z0-9_-]{1,63}`. This field is required when using a CertificateAuthority in
-             * the Enterprise CertificateAuthority.Tier, but is optional and its value is ignored
+             * the Enterprise CertificateAuthority.tier, but is optional and its value is ignored
              * otherwise.
              */
             @com.google.api.client.util.Key
@@ -5168,7 +5168,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
 
             /** Optional. It must be unique within a location and match the regular expression
            `[a-zA-Z0-9_-]{1,63}`. This field is required when using a CertificateAuthority in the Enterprise
-           CertificateAuthority.Tier, but is optional and its value is ignored otherwise.
+           CertificateAuthority.tier, but is optional and its value is ignored otherwise.
              */
             public java.lang.String getCertificateId() {
               return certificateId;
@@ -5177,7 +5177,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
             /**
              * Optional. It must be unique within a location and match the regular expression
              * `[a-zA-Z0-9_-]{1,63}`. This field is required when using a CertificateAuthority in
-             * the Enterprise CertificateAuthority.Tier, but is optional and its value is ignored
+             * the Enterprise CertificateAuthority.tier, but is optional and its value is ignored
              * otherwise.
              */
             public Create setCertificateId(java.lang.String certificateId) {

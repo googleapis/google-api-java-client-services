@@ -47,7 +47,7 @@ public final class GoogleCloudAiplatformV1Scheduling extends com.google.api.clie
   private String maxWaitDuration;
 
   /**
-   * Restarts the entire CustomJob if a worker gets restarted. This feature can be used by
+   * Optional. Restarts the entire CustomJob if a worker gets restarted. This feature can be used by
    * distributed training jobs that are not resilient to workers leaving and joining a job.
    * The value may be {@code null}.
    */
@@ -62,7 +62,7 @@ public final class GoogleCloudAiplatformV1Scheduling extends com.google.api.clie
   private java.lang.String strategy;
 
   /**
-   * The maximum job running time. The default is 7 days.
+   * Optional. The maximum job running time. The default is 7 days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +109,7 @@ public final class GoogleCloudAiplatformV1Scheduling extends com.google.api.clie
   }
 
   /**
-   * Restarts the entire CustomJob if a worker gets restarted. This feature can be used by
+   * Optional. Restarts the entire CustomJob if a worker gets restarted. This feature can be used by
    * distributed training jobs that are not resilient to workers leaving and joining a job.
    * @return value or {@code null} for none
    */
@@ -118,7 +118,7 @@ public final class GoogleCloudAiplatformV1Scheduling extends com.google.api.clie
   }
 
   /**
-   * Restarts the entire CustomJob if a worker gets restarted. This feature can be used by
+   * Optional. Restarts the entire CustomJob if a worker gets restarted. This feature can be used by
    * distributed training jobs that are not resilient to workers leaving and joining a job.
    * @param restartJobOnWorkerRestart restartJobOnWorkerRestart or {@code null} for none
    */
@@ -145,7 +145,7 @@ public final class GoogleCloudAiplatformV1Scheduling extends com.google.api.clie
   }
 
   /**
-   * The maximum job running time. The default is 7 days.
+   * Optional. The maximum job running time. The default is 7 days.
    * @return value or {@code null} for none
    */
   public String getTimeout() {
@@ -153,7 +153,7 @@ public final class GoogleCloudAiplatformV1Scheduling extends com.google.api.clie
   }
 
   /**
-   * The maximum job running time. The default is 7 days.
+   * Optional. The maximum job running time. The default is 7 days.
    * @param timeout timeout or {@code null} for none
    */
   public GoogleCloudAiplatformV1Scheduling setTimeout(String timeout) {

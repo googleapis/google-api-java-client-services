@@ -67,7 +67,7 @@ public final class GoogleCloudAiplatformV1NotebookExecutionJob extends com.googl
 
   /**
    * Customer-managed encryption key spec for the notebook execution job. This field is auto-
-   * populated if the NotebookService.NotebookRuntimeTemplate has an encryption spec.
+   * populated if the NotebookRuntimeTemplate has an encryption spec.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,6 +107,13 @@ public final class GoogleCloudAiplatformV1NotebookExecutionJob extends com.googl
    */
   @com.google.api.client.util.Key
   private java.lang.String jobState;
+
+  /**
+   * The name of the kernel to use during notebook execution. If unset, the default kernel is used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kernelName;
 
   /**
    * The labels with user-defined metadata to organize NotebookExecutionJobs. Label keys and values
@@ -163,6 +170,13 @@ public final class GoogleCloudAiplatformV1NotebookExecutionJob extends com.googl
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * The Workbench runtime configuration to use for the notebook execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1NotebookExecutionJobWorkbenchRuntime workbenchRuntime;
 
   /**
    * Output only. Timestamp when this NotebookExecutionJob was created.
@@ -253,7 +267,7 @@ public final class GoogleCloudAiplatformV1NotebookExecutionJob extends com.googl
 
   /**
    * Customer-managed encryption key spec for the notebook execution job. This field is auto-
-   * populated if the NotebookService.NotebookRuntimeTemplate has an encryption spec.
+   * populated if the NotebookRuntimeTemplate has an encryption spec.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1EncryptionSpec getEncryptionSpec() {
@@ -262,7 +276,7 @@ public final class GoogleCloudAiplatformV1NotebookExecutionJob extends com.googl
 
   /**
    * Customer-managed encryption key spec for the notebook execution job. This field is auto-
-   * populated if the NotebookService.NotebookRuntimeTemplate has an encryption spec.
+   * populated if the NotebookRuntimeTemplate has an encryption spec.
    * @param encryptionSpec encryptionSpec or {@code null} for none
    */
   public GoogleCloudAiplatformV1NotebookExecutionJob setEncryptionSpec(GoogleCloudAiplatformV1EncryptionSpec encryptionSpec) {
@@ -352,6 +366,23 @@ public final class GoogleCloudAiplatformV1NotebookExecutionJob extends com.googl
    */
   public GoogleCloudAiplatformV1NotebookExecutionJob setJobState(java.lang.String jobState) {
     this.jobState = jobState;
+    return this;
+  }
+
+  /**
+   * The name of the kernel to use during notebook execution. If unset, the default kernel is used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKernelName() {
+    return kernelName;
+  }
+
+  /**
+   * The name of the kernel to use during notebook execution. If unset, the default kernel is used.
+   * @param kernelName kernelName or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1NotebookExecutionJob setKernelName(java.lang.String kernelName) {
+    this.kernelName = kernelName;
     return this;
   }
 
@@ -485,6 +516,23 @@ public final class GoogleCloudAiplatformV1NotebookExecutionJob extends com.googl
    */
   public GoogleCloudAiplatformV1NotebookExecutionJob setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * The Workbench runtime configuration to use for the notebook execution.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1NotebookExecutionJobWorkbenchRuntime getWorkbenchRuntime() {
+    return workbenchRuntime;
+  }
+
+  /**
+   * The Workbench runtime configuration to use for the notebook execution.
+   * @param workbenchRuntime workbenchRuntime or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1NotebookExecutionJob setWorkbenchRuntime(GoogleCloudAiplatformV1NotebookExecutionJobWorkbenchRuntime workbenchRuntime) {
+    this.workbenchRuntime = workbenchRuntime;
     return this;
   }
 

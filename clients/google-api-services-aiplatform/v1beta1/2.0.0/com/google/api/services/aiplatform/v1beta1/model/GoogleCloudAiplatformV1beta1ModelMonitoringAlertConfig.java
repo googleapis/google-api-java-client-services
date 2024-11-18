@@ -38,8 +38,8 @@ public final class GoogleCloudAiplatformV1beta1ModelMonitoringAlertConfig extend
 
   /**
    * Dump the anomalies to Cloud Logging. The anomalies will be put to json payload encoded from
-   * proto google.cloud.aiplatform.logging.ModelMonitoringAnomaliesLogEntry. This can be further
-   * sinked to Pub/Sub or any other services supported by Cloud Logging.
+   * proto ModelMonitoringStatsAnomalies. This can be further synced to Pub/Sub or any other
+   * services supported by Cloud Logging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,8 +72,8 @@ public final class GoogleCloudAiplatformV1beta1ModelMonitoringAlertConfig extend
 
   /**
    * Dump the anomalies to Cloud Logging. The anomalies will be put to json payload encoded from
-   * proto google.cloud.aiplatform.logging.ModelMonitoringAnomaliesLogEntry. This can be further
-   * sinked to Pub/Sub or any other services supported by Cloud Logging.
+   * proto ModelMonitoringStatsAnomalies. This can be further synced to Pub/Sub or any other
+   * services supported by Cloud Logging.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableLogging() {
@@ -82,8 +82,8 @@ public final class GoogleCloudAiplatformV1beta1ModelMonitoringAlertConfig extend
 
   /**
    * Dump the anomalies to Cloud Logging. The anomalies will be put to json payload encoded from
-   * proto google.cloud.aiplatform.logging.ModelMonitoringAnomaliesLogEntry. This can be further
-   * sinked to Pub/Sub or any other services supported by Cloud Logging.
+   * proto ModelMonitoringStatsAnomalies. This can be further synced to Pub/Sub or any other
+   * services supported by Cloud Logging.
    * @param enableLogging enableLogging or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ModelMonitoringAlertConfig setEnableLogging(java.lang.Boolean enableLogging) {

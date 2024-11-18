@@ -44,6 +44,13 @@ public final class GoogleCloudAiplatformV1EvaluateInstancesResponse extends com.
   private GoogleCloudAiplatformV1CoherenceResult coherenceResult;
 
   /**
+   * Translation metrics. Result for Comet metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1CometResult cometResult;
+
+  /**
    * Auto metric evaluation results. Results for exact match metric.
    * The value may be {@code null}.
    */
@@ -71,6 +78,13 @@ public final class GoogleCloudAiplatformV1EvaluateInstancesResponse extends com.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1GroundednessResult groundednessResult;
+
+  /**
+   * Result for Metricx metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1MetricxResult metricxResult;
 
   /**
    * Result for pairwise metric.
@@ -226,6 +240,23 @@ public final class GoogleCloudAiplatformV1EvaluateInstancesResponse extends com.
   }
 
   /**
+   * Translation metrics. Result for Comet metric.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1CometResult getCometResult() {
+    return cometResult;
+  }
+
+  /**
+   * Translation metrics. Result for Comet metric.
+   * @param cometResult cometResult or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluateInstancesResponse setCometResult(GoogleCloudAiplatformV1CometResult cometResult) {
+    this.cometResult = cometResult;
+    return this;
+  }
+
+  /**
    * Auto metric evaluation results. Results for exact match metric.
    * @return value or {@code null} for none
    */
@@ -292,6 +323,23 @@ public final class GoogleCloudAiplatformV1EvaluateInstancesResponse extends com.
    */
   public GoogleCloudAiplatformV1EvaluateInstancesResponse setGroundednessResult(GoogleCloudAiplatformV1GroundednessResult groundednessResult) {
     this.groundednessResult = groundednessResult;
+    return this;
+  }
+
+  /**
+   * Result for Metricx metric.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1MetricxResult getMetricxResult() {
+    return metricxResult;
+  }
+
+  /**
+   * Result for Metricx metric.
+   * @param metricxResult metricxResult or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluateInstancesResponse setMetricxResult(GoogleCloudAiplatformV1MetricxResult metricxResult) {
+    this.metricxResult = metricxResult;
     return this;
   }
 

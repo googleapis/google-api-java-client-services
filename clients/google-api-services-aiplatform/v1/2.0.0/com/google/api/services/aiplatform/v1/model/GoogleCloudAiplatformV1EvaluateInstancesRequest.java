@@ -44,6 +44,13 @@ public final class GoogleCloudAiplatformV1EvaluateInstancesRequest extends com.g
   private GoogleCloudAiplatformV1CoherenceInput coherenceInput;
 
   /**
+   * Translation metrics. Input for Comet metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1CometInput cometInput;
+
+  /**
    * Auto metric instances. Instances and metric spec for exact match metric.
    * The value may be {@code null}.
    */
@@ -71,6 +78,13 @@ public final class GoogleCloudAiplatformV1EvaluateInstancesRequest extends com.g
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1GroundednessInput groundednessInput;
+
+  /**
+   * Input for Metricx metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1MetricxInput metricxInput;
 
   /**
    * Input for pairwise metric.
@@ -226,6 +240,23 @@ public final class GoogleCloudAiplatformV1EvaluateInstancesRequest extends com.g
   }
 
   /**
+   * Translation metrics. Input for Comet metric.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1CometInput getCometInput() {
+    return cometInput;
+  }
+
+  /**
+   * Translation metrics. Input for Comet metric.
+   * @param cometInput cometInput or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluateInstancesRequest setCometInput(GoogleCloudAiplatformV1CometInput cometInput) {
+    this.cometInput = cometInput;
+    return this;
+  }
+
+  /**
    * Auto metric instances. Instances and metric spec for exact match metric.
    * @return value or {@code null} for none
    */
@@ -292,6 +323,23 @@ public final class GoogleCloudAiplatformV1EvaluateInstancesRequest extends com.g
    */
   public GoogleCloudAiplatformV1EvaluateInstancesRequest setGroundednessInput(GoogleCloudAiplatformV1GroundednessInput groundednessInput) {
     this.groundednessInput = groundednessInput;
+    return this;
+  }
+
+  /**
+   * Input for Metricx metric.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1MetricxInput getMetricxInput() {
+    return metricxInput;
+  }
+
+  /**
+   * Input for Metricx metric.
+   * @param metricxInput metricxInput or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluateInstancesRequest setMetricxInput(GoogleCloudAiplatformV1MetricxInput metricxInput) {
+    this.metricxInput = metricxInput;
     return this;
   }
 

@@ -30,8 +30,8 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1ListNotebookExecutionJobsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A token to retrieve next page of results. Pass to ListNotebookExecutionJobs.page_token to
-   * obtain that page.
+   * A token to retrieve next page of results. Pass to ListNotebookExecutionJobsRequest.page_token
+   * to obtain that page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +45,8 @@ public final class GoogleCloudAiplatformV1ListNotebookExecutionJobsResponse exte
   private java.util.List<GoogleCloudAiplatformV1NotebookExecutionJob> notebookExecutionJobs;
 
   /**
-   * A token to retrieve next page of results. Pass to ListNotebookExecutionJobs.page_token to
-   * obtain that page.
+   * A token to retrieve next page of results. Pass to ListNotebookExecutionJobsRequest.page_token
+   * to obtain that page.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -54,8 +54,8 @@ public final class GoogleCloudAiplatformV1ListNotebookExecutionJobsResponse exte
   }
 
   /**
-   * A token to retrieve next page of results. Pass to ListNotebookExecutionJobs.page_token to
-   * obtain that page.
+   * A token to retrieve next page of results. Pass to ListNotebookExecutionJobsRequest.page_token
+   * to obtain that page.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudAiplatformV1ListNotebookExecutionJobsResponse setNextPageToken(java.lang.String nextPageToken) {

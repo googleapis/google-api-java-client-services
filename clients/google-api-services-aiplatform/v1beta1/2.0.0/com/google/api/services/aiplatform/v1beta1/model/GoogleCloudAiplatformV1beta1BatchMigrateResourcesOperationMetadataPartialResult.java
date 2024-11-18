@@ -51,7 +51,7 @@ public final class GoogleCloudAiplatformV1beta1BatchMigrateResourcesOperationMet
   private java.lang.String model;
 
   /**
-   * It's the same as the value in MigrateResourceRequest.migrate_resource_requests.
+   * It's the same as the value in BatchMigrateResourcesRequest.migrate_resource_requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +109,7 @@ public final class GoogleCloudAiplatformV1beta1BatchMigrateResourcesOperationMet
   }
 
   /**
-   * It's the same as the value in MigrateResourceRequest.migrate_resource_requests.
+   * It's the same as the value in BatchMigrateResourcesRequest.migrate_resource_requests.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1MigrateResourceRequest getRequest() {
@@ -117,7 +117,7 @@ public final class GoogleCloudAiplatformV1beta1BatchMigrateResourcesOperationMet
   }
 
   /**
-   * It's the same as the value in MigrateResourceRequest.migrate_resource_requests.
+   * It's the same as the value in BatchMigrateResourcesRequest.migrate_resource_requests.
    * @param request request or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1BatchMigrateResourcesOperationMetadataPartialResult setRequest(GoogleCloudAiplatformV1beta1MigrateResourceRequest request) {

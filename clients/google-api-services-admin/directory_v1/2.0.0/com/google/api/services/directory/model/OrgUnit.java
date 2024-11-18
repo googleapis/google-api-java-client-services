@@ -33,12 +33,7 @@ package com.google.api.services.directory.model;
 public final class OrgUnit extends com.google.api.client.json.GenericJson {
 
   /**
-   * Determines if a sub-organizational unit can inherit the settings of the parent organization.
-   * The default value is `false`, meaning a sub-organizational unit inherits the settings of the
-   * nearest parent organizational unit. This field is deprecated. Setting it to `true` is no longer
-   * supported and can have _unintended consequences_. For more information about inheritance and
-   * users in an organization structure, see the [administration help
-   * center](https://support.google.com/a/answer/4352075).
+   * This field is deprecated and setting its value has no effect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,12 +107,7 @@ public final class OrgUnit extends com.google.api.client.json.GenericJson {
   private java.lang.String parentOrgUnitPath;
 
   /**
-   * Determines if a sub-organizational unit can inherit the settings of the parent organization.
-   * The default value is `false`, meaning a sub-organizational unit inherits the settings of the
-   * nearest parent organizational unit. This field is deprecated. Setting it to `true` is no longer
-   * supported and can have _unintended consequences_. For more information about inheritance and
-   * users in an organization structure, see the [administration help
-   * center](https://support.google.com/a/answer/4352075).
+   * This field is deprecated and setting its value has no effect.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getBlockInheritance() {
@@ -125,12 +115,7 @@ public final class OrgUnit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Determines if a sub-organizational unit can inherit the settings of the parent organization.
-   * The default value is `false`, meaning a sub-organizational unit inherits the settings of the
-   * nearest parent organizational unit. This field is deprecated. Setting it to `true` is no longer
-   * supported and can have _unintended consequences_. For more information about inheritance and
-   * users in an organization structure, see the [administration help
-   * center](https://support.google.com/a/answer/4352075).
+   * This field is deprecated and setting its value has no effect.
    * @param blockInheritance blockInheritance or {@code null} for none
    */
   public OrgUnit setBlockInheritance(java.lang.Boolean blockInheritance) {

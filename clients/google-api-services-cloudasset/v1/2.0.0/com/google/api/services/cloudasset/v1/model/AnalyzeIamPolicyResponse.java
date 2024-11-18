@@ -46,7 +46,7 @@ public final class AnalyzeIamPolicyResponse extends com.google.api.client.json.G
 
   /**
    * The service account impersonation analysis if
-   * AnalyzeIamPolicyRequest.analyze_service_account_impersonation is enabled.
+   * IamPolicyAnalysisQuery.Options.analyze_service_account_impersonation is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class AnalyzeIamPolicyResponse extends com.google.api.client.json.G
 
   /**
    * The service account impersonation analysis if
-   * AnalyzeIamPolicyRequest.analyze_service_account_impersonation is enabled.
+   * IamPolicyAnalysisQuery.Options.analyze_service_account_impersonation is enabled.
    * @return value or {@code null} for none
    */
   public java.util.List<IamPolicyAnalysis> getServiceAccountImpersonationAnalysis() {
@@ -99,7 +99,7 @@ public final class AnalyzeIamPolicyResponse extends com.google.api.client.json.G
 
   /**
    * The service account impersonation analysis if
-   * AnalyzeIamPolicyRequest.analyze_service_account_impersonation is enabled.
+   * IamPolicyAnalysisQuery.Options.analyze_service_account_impersonation is enabled.
    * @param serviceAccountImpersonationAnalysis serviceAccountImpersonationAnalysis or {@code null} for none
    */
   public AnalyzeIamPolicyResponse setServiceAccountImpersonationAnalysis(java.util.List<IamPolicyAnalysis> serviceAccountImpersonationAnalysis) {

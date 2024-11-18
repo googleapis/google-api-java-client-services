@@ -37,6 +37,13 @@ public final class AppLinkData extends com.google.api.client.json.GenericJson {
   private AppLinkDataAppLinkInfo androidAppLinkInfo;
 
   /**
+   * Optional display text for the app link button. Character limit is 30.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LocalizedString displayText;
+
+  /**
    * Deprecated. Links to open iOS apps are not supported.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class AppLinkData extends com.google.api.client.json.GenericJson {
    */
   public AppLinkData setAndroidAppLinkInfo(AppLinkDataAppLinkInfo androidAppLinkInfo) {
     this.androidAppLinkInfo = androidAppLinkInfo;
+    return this;
+  }
+
+  /**
+   * Optional display text for the app link button. Character limit is 30.
+   * @return value or {@code null} for none
+   */
+  public LocalizedString getDisplayText() {
+    return displayText;
+  }
+
+  /**
+   * Optional display text for the app link button. Character limit is 30.
+   * @param displayText displayText or {@code null} for none
+   */
+  public AppLinkData setDisplayText(LocalizedString displayText) {
+    this.displayText = displayText;
     return this;
   }
 

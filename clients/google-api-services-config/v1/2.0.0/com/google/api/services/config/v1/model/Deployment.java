@@ -143,7 +143,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   private java.lang.String quotaValidation;
 
   /**
-   * Optional. User-specified Service Account (SA) credentials to be used when actuating resources.
+   * Required. User-specified Service Account (SA) credentials to be used when actuating resources.
    * Format: `projects/{projectID}/serviceAccounts/{serviceAccount}`
    * The value may be {@code null}.
    */
@@ -477,7 +477,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. User-specified Service Account (SA) credentials to be used when actuating resources.
+   * Required. User-specified Service Account (SA) credentials to be used when actuating resources.
    * Format: `projects/{projectID}/serviceAccounts/{serviceAccount}`
    * @return value or {@code null} for none
    */
@@ -486,7 +486,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. User-specified Service Account (SA) credentials to be used when actuating resources.
+   * Required. User-specified Service Account (SA) credentials to be used when actuating resources.
    * Format: `projects/{projectID}/serviceAccounts/{serviceAccount}`
    * @param serviceAccount serviceAccount or {@code null} for none
    */

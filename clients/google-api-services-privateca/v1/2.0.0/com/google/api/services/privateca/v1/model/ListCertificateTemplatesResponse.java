@@ -45,7 +45,7 @@ public final class ListCertificateTemplatesResponse extends com.google.api.clien
 
   /**
    * A token to retrieve next page of results. Pass this value in
-   * ListCertificateTemplatesRequest.next_page_token to retrieve the next page of results.
+   * ListCertificateTemplatesRequest.page_token to retrieve the next page of results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class ListCertificateTemplatesResponse extends com.google.api.clien
 
   /**
    * A token to retrieve next page of results. Pass this value in
-   * ListCertificateTemplatesRequest.next_page_token to retrieve the next page of results.
+   * ListCertificateTemplatesRequest.page_token to retrieve the next page of results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -86,7 +86,7 @@ public final class ListCertificateTemplatesResponse extends com.google.api.clien
 
   /**
    * A token to retrieve next page of results. Pass this value in
-   * ListCertificateTemplatesRequest.next_page_token to retrieve the next page of results.
+   * ListCertificateTemplatesRequest.page_token to retrieve the next page of results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListCertificateTemplatesResponse setNextPageToken(java.lang.String nextPageToken) {

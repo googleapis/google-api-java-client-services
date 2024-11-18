@@ -45,7 +45,7 @@ public final class ListCertificateRevocationListsResponse extends com.google.api
 
   /**
    * A token to retrieve next page of results. Pass this value in
-   * ListCertificateRevocationListsRequest.next_page_token to retrieve the next page of results.
+   * ListCertificateRevocationListsRequest.page_token to retrieve the next page of results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class ListCertificateRevocationListsResponse extends com.google.api
 
   /**
    * A token to retrieve next page of results. Pass this value in
-   * ListCertificateRevocationListsRequest.next_page_token to retrieve the next page of results.
+   * ListCertificateRevocationListsRequest.page_token to retrieve the next page of results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -86,7 +86,7 @@ public final class ListCertificateRevocationListsResponse extends com.google.api
 
   /**
    * A token to retrieve next page of results. Pass this value in
-   * ListCertificateRevocationListsRequest.next_page_token to retrieve the next page of results.
+   * ListCertificateRevocationListsRequest.page_token to retrieve the next page of results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListCertificateRevocationListsResponse setNextPageToken(java.lang.String nextPageToken) {

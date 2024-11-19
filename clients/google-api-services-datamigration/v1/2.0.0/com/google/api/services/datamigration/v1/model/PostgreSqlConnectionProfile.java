@@ -47,6 +47,13 @@ public final class PostgreSqlConnectionProfile extends com.google.api.client.jso
   private java.lang.String cloudSqlId;
 
   /**
+   * Optional. The name of the specific database within the host.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String database;
+
+  /**
    * Required. The IP or hostname of the source PostgreSQL database.
    * The value may be {@code null}.
    */
@@ -148,6 +155,23 @@ public final class PostgreSqlConnectionProfile extends com.google.api.client.jso
    */
   public PostgreSqlConnectionProfile setCloudSqlId(java.lang.String cloudSqlId) {
     this.cloudSqlId = cloudSqlId;
+    return this;
+  }
+
+  /**
+   * Optional. The name of the specific database within the host.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatabase() {
+    return database;
+  }
+
+  /**
+   * Optional. The name of the specific database within the host.
+   * @param database database or {@code null} for none
+   */
+  public PostgreSqlConnectionProfile setDatabase(java.lang.String database) {
+    this.database = database;
     return this;
   }
 

@@ -49,7 +49,7 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
    * following parameters are supported. net.core.busy_poll net.core.busy_read
    * net.core.netdev_max_backlog net.core.rmem_max net.core.wmem_default net.core.wmem_max
    * net.core.optmem_max net.core.somaxconn net.ipv4.tcp_rmem net.ipv4.tcp_wmem
-   * net.ipv4.tcp_tw_reuse
+   * net.ipv4.tcp_tw_reuse kernel.shmmni kernel.shmmax kernel.shmall
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +94,7 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
    * following parameters are supported. net.core.busy_poll net.core.busy_read
    * net.core.netdev_max_backlog net.core.rmem_max net.core.wmem_default net.core.wmem_max
    * net.core.optmem_max net.core.somaxconn net.ipv4.tcp_rmem net.ipv4.tcp_wmem
-   * net.ipv4.tcp_tw_reuse
+   * net.ipv4.tcp_tw_reuse kernel.shmmni kernel.shmmax kernel.shmall
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getSysctls() {
@@ -106,7 +106,7 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
    * following parameters are supported. net.core.busy_poll net.core.busy_read
    * net.core.netdev_max_backlog net.core.rmem_max net.core.wmem_default net.core.wmem_max
    * net.core.optmem_max net.core.somaxconn net.ipv4.tcp_rmem net.ipv4.tcp_wmem
-   * net.ipv4.tcp_tw_reuse
+   * net.ipv4.tcp_tw_reuse kernel.shmmni kernel.shmmax kernel.shmall
    * @param sysctls sysctls or {@code null} for none
    */
   public LinuxNodeConfig setSysctls(java.util.Map<String, java.lang.String> sysctls) {

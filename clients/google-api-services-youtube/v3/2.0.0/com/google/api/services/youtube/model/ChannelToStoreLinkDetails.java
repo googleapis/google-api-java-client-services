@@ -37,6 +37,13 @@ public final class ChannelToStoreLinkDetails extends com.google.api.client.json.
   private ChannelToStoreLinkDetailsBillingDetails billingDetails;
 
   /**
+   * Information specific to merchant affiliate program (read-only).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ChannelToStoreLinkDetailsMerchantAffiliateProgramDetails merchantAffiliateProgramDetails;
+
+  /**
    * Google Merchant Center id of the store.
    * The value may be {@code null}.
    */
@@ -71,6 +78,23 @@ public final class ChannelToStoreLinkDetails extends com.google.api.client.json.
    */
   public ChannelToStoreLinkDetails setBillingDetails(ChannelToStoreLinkDetailsBillingDetails billingDetails) {
     this.billingDetails = billingDetails;
+    return this;
+  }
+
+  /**
+   * Information specific to merchant affiliate program (read-only).
+   * @return value or {@code null} for none
+   */
+  public ChannelToStoreLinkDetailsMerchantAffiliateProgramDetails getMerchantAffiliateProgramDetails() {
+    return merchantAffiliateProgramDetails;
+  }
+
+  /**
+   * Information specific to merchant affiliate program (read-only).
+   * @param merchantAffiliateProgramDetails merchantAffiliateProgramDetails or {@code null} for none
+   */
+  public ChannelToStoreLinkDetails setMerchantAffiliateProgramDetails(ChannelToStoreLinkDetailsMerchantAffiliateProgramDetails merchantAffiliateProgramDetails) {
+    this.merchantAffiliateProgramDetails = merchantAffiliateProgramDetails;
     return this;
   }
 

@@ -45,6 +45,13 @@ public final class GoogleCloudApigeeV1EnvironmentConfig extends com.google.api.c
   private java.lang.String arcConfigLocation;
 
   /**
+   * The algorithm to resolve IP.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApigeeV1EnvironmentConfigClientIPResolutionConfig clientIpResolutionConfig;
+
+  /**
    * Time that the environment configuration was created.
    * The value may be {@code null}.
    */
@@ -250,6 +257,23 @@ public final class GoogleCloudApigeeV1EnvironmentConfig extends com.google.api.c
    */
   public GoogleCloudApigeeV1EnvironmentConfig setArcConfigLocation(java.lang.String arcConfigLocation) {
     this.arcConfigLocation = arcConfigLocation;
+    return this;
+  }
+
+  /**
+   * The algorithm to resolve IP.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApigeeV1EnvironmentConfigClientIPResolutionConfig getClientIpResolutionConfig() {
+    return clientIpResolutionConfig;
+  }
+
+  /**
+   * The algorithm to resolve IP.
+   * @param clientIpResolutionConfig clientIpResolutionConfig or {@code null} for none
+   */
+  public GoogleCloudApigeeV1EnvironmentConfig setClientIpResolutionConfig(GoogleCloudApigeeV1EnvironmentConfigClientIPResolutionConfig clientIpResolutionConfig) {
+    this.clientIpResolutionConfig = clientIpResolutionConfig;
     return this;
   }
 

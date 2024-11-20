@@ -44,14 +44,14 @@ public final class GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint extends com.go
   private java.lang.Integer day;
 
   /**
-   * The hour in 2 digits. Ranges from 00 to 23.
+   * The hour in 24 hour format. Ranges from 0 to 23.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer hour;
 
   /**
-   * The minute in 2 digits. Ranges from 00 to 59.
+   * The minute. Ranges from 0 to 59.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +102,7 @@ public final class GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint extends com.go
   }
 
   /**
-   * The hour in 2 digits. Ranges from 00 to 23.
+   * The hour in 24 hour format. Ranges from 0 to 23.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getHour() {
@@ -110,7 +110,7 @@ public final class GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint extends com.go
   }
 
   /**
-   * The hour in 2 digits. Ranges from 00 to 23.
+   * The hour in 24 hour format. Ranges from 0 to 23.
    * @param hour hour or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint setHour(java.lang.Integer hour) {
@@ -119,7 +119,7 @@ public final class GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint extends com.go
   }
 
   /**
-   * The minute in 2 digits. Ranges from 00 to 59.
+   * The minute. Ranges from 0 to 59.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinute() {
@@ -127,7 +127,7 @@ public final class GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint extends com.go
   }
 
   /**
-   * The minute in 2 digits. Ranges from 00 to 59.
+   * The minute. Ranges from 0 to 59.
    * @param minute minute or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint setMinute(java.lang.Integer minute) {

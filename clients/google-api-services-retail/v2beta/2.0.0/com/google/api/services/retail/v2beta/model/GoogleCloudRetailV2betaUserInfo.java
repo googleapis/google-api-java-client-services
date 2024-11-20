@@ -53,10 +53,9 @@ public final class GoogleCloudRetailV2betaUserInfo extends com.google.api.client
   private java.lang.String ipAddress;
 
   /**
-   * User agent as included in the HTTP header. Required for getting
-   * SearchResponse.sponsored_results. The field must be a UTF-8 encoded string with a length limit
-   * of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. This should not be set
-   * when using the client side event reporting with GTM or JavaScript tag in
+   * User agent as included in the HTTP header. The field must be a UTF-8 encoded string with a
+   * length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. This should
+   * not be set when using the client side event reporting with GTM or JavaScript tag in
    * UserEventService.CollectUserEvent or if direct_user_request is set.
    * The value may be {@code null}.
    */
@@ -125,10 +124,9 @@ public final class GoogleCloudRetailV2betaUserInfo extends com.google.api.client
   }
 
   /**
-   * User agent as included in the HTTP header. Required for getting
-   * SearchResponse.sponsored_results. The field must be a UTF-8 encoded string with a length limit
-   * of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. This should not be set
-   * when using the client side event reporting with GTM or JavaScript tag in
+   * User agent as included in the HTTP header. The field must be a UTF-8 encoded string with a
+   * length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. This should
+   * not be set when using the client side event reporting with GTM or JavaScript tag in
    * UserEventService.CollectUserEvent or if direct_user_request is set.
    * @return value or {@code null} for none
    */
@@ -137,10 +135,9 @@ public final class GoogleCloudRetailV2betaUserInfo extends com.google.api.client
   }
 
   /**
-   * User agent as included in the HTTP header. Required for getting
-   * SearchResponse.sponsored_results. The field must be a UTF-8 encoded string with a length limit
-   * of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. This should not be set
-   * when using the client side event reporting with GTM or JavaScript tag in
+   * User agent as included in the HTTP header. The field must be a UTF-8 encoded string with a
+   * length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. This should
+   * not be set when using the client side event reporting with GTM or JavaScript tag in
    * UserEventService.CollectUserEvent or if direct_user_request is set.
    * @param userAgent userAgent or {@code null} for none
    */

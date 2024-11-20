@@ -64,7 +64,7 @@ public final class GoogleCloudRetailV2SearchResponse extends com.google.api.clie
   private java.lang.String correctedQuery;
 
   /**
-   * Metadata related to A/B testing Experiment associated with this response. Only exists when an
+   * Metadata related to A/B testing experiment associated with this response. Only exists when an
    * experiment is triggered.
    * The value may be {@code null}.
    */
@@ -231,7 +231,7 @@ public final class GoogleCloudRetailV2SearchResponse extends com.google.api.clie
   }
 
   /**
-   * Metadata related to A/B testing Experiment associated with this response. Only exists when an
+   * Metadata related to A/B testing experiment associated with this response. Only exists when an
    * experiment is triggered.
    * @return value or {@code null} for none
    */
@@ -240,7 +240,7 @@ public final class GoogleCloudRetailV2SearchResponse extends com.google.api.clie
   }
 
   /**
-   * Metadata related to A/B testing Experiment associated with this response. Only exists when an
+   * Metadata related to A/B testing experiment associated with this response. Only exists when an
    * experiment is triggered.
    * @param experimentInfo experimentInfo or {@code null} for none
    */

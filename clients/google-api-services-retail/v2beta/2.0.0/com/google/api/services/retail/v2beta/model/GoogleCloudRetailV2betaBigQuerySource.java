@@ -64,8 +64,7 @@ public final class GoogleCloudRetailV2betaBigQuerySource extends com.google.api.
   private java.lang.String gcsStagingDir;
 
   /**
-   * BigQuery time partitioned table's _PARTITIONDATE in YYYY-MM-DD format. Only supported in
-   * ImportProductsRequest.
+   * BigQuery time partitioned table's _PARTITIONDATE in YYYY-MM-DD format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,8 +161,7 @@ public final class GoogleCloudRetailV2betaBigQuerySource extends com.google.api.
   }
 
   /**
-   * BigQuery time partitioned table's _PARTITIONDATE in YYYY-MM-DD format. Only supported in
-   * ImportProductsRequest.
+   * BigQuery time partitioned table's _PARTITIONDATE in YYYY-MM-DD format.
    * @return value or {@code null} for none
    */
   public GoogleTypeDate getPartitionDate() {
@@ -171,8 +169,7 @@ public final class GoogleCloudRetailV2betaBigQuerySource extends com.google.api.
   }
 
   /**
-   * BigQuery time partitioned table's _PARTITIONDATE in YYYY-MM-DD format. Only supported in
-   * ImportProductsRequest.
+   * BigQuery time partitioned table's _PARTITIONDATE in YYYY-MM-DD format.
    * @param partitionDate partitionDate or {@code null} for none
    */
   public GoogleCloudRetailV2betaBigQuerySource setPartitionDate(GoogleTypeDate partitionDate) {

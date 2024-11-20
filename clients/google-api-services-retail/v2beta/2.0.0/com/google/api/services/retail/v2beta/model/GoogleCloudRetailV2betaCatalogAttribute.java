@@ -60,13 +60,13 @@ public final class GoogleCloudRetailV2betaCatalogAttribute extends com.google.ap
   /**
    * Output only. Indicates whether this attribute has been used by any products. `True` if at least
    * one Product is using this attribute in Product.attributes. Otherwise, this field is `False`.
-   * CatalogAttribute can be pre-loaded by using CatalogService.AddCatalogAttribute,
-   * CatalogService.ImportCatalogAttributes, or CatalogService.UpdateAttributesConfig APIs. This
-   * field is `False` for pre-loaded CatalogAttributes. Only pre-loaded catalog attributes that are
-   * neither in use by products nor predefined can be deleted. Catalog attributes that are either in
-   * use by products or are predefined attributes cannot be deleted; however, their configuration
-   * properties will reset to default values upon removal request. After catalog changes, it takes
-   * about 10 minutes for this field to update.
+   * CatalogAttribute can be pre-loaded by using CatalogService.AddCatalogAttribute or
+   * CatalogService.UpdateAttributesConfig APIs. This field is `False` for pre-loaded
+   * CatalogAttributes. Only pre-loaded catalog attributes that are neither in use by products nor
+   * predefined can be deleted. Catalog attributes that are either in use by products or are
+   * predefined attributes cannot be deleted; however, their configuration properties will reset to
+   * default values upon removal request. After catalog changes, it takes about 10 minutes for this
+   * field to update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -196,13 +196,13 @@ public final class GoogleCloudRetailV2betaCatalogAttribute extends com.google.ap
   /**
    * Output only. Indicates whether this attribute has been used by any products. `True` if at least
    * one Product is using this attribute in Product.attributes. Otherwise, this field is `False`.
-   * CatalogAttribute can be pre-loaded by using CatalogService.AddCatalogAttribute,
-   * CatalogService.ImportCatalogAttributes, or CatalogService.UpdateAttributesConfig APIs. This
-   * field is `False` for pre-loaded CatalogAttributes. Only pre-loaded catalog attributes that are
-   * neither in use by products nor predefined can be deleted. Catalog attributes that are either in
-   * use by products or are predefined attributes cannot be deleted; however, their configuration
-   * properties will reset to default values upon removal request. After catalog changes, it takes
-   * about 10 minutes for this field to update.
+   * CatalogAttribute can be pre-loaded by using CatalogService.AddCatalogAttribute or
+   * CatalogService.UpdateAttributesConfig APIs. This field is `False` for pre-loaded
+   * CatalogAttributes. Only pre-loaded catalog attributes that are neither in use by products nor
+   * predefined can be deleted. Catalog attributes that are either in use by products or are
+   * predefined attributes cannot be deleted; however, their configuration properties will reset to
+   * default values upon removal request. After catalog changes, it takes about 10 minutes for this
+   * field to update.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getInUse() {
@@ -212,13 +212,13 @@ public final class GoogleCloudRetailV2betaCatalogAttribute extends com.google.ap
   /**
    * Output only. Indicates whether this attribute has been used by any products. `True` if at least
    * one Product is using this attribute in Product.attributes. Otherwise, this field is `False`.
-   * CatalogAttribute can be pre-loaded by using CatalogService.AddCatalogAttribute,
-   * CatalogService.ImportCatalogAttributes, or CatalogService.UpdateAttributesConfig APIs. This
-   * field is `False` for pre-loaded CatalogAttributes. Only pre-loaded catalog attributes that are
-   * neither in use by products nor predefined can be deleted. Catalog attributes that are either in
-   * use by products or are predefined attributes cannot be deleted; however, their configuration
-   * properties will reset to default values upon removal request. After catalog changes, it takes
-   * about 10 minutes for this field to update.
+   * CatalogAttribute can be pre-loaded by using CatalogService.AddCatalogAttribute or
+   * CatalogService.UpdateAttributesConfig APIs. This field is `False` for pre-loaded
+   * CatalogAttributes. Only pre-loaded catalog attributes that are neither in use by products nor
+   * predefined can be deleted. Catalog attributes that are either in use by products or are
+   * predefined attributes cannot be deleted; however, their configuration properties will reset to
+   * default values upon removal request. After catalog changes, it takes about 10 minutes for this
+   * field to update.
    * @param inUse inUse or {@code null} for none
    */
   public GoogleCloudRetailV2betaCatalogAttribute setInUse(java.lang.Boolean inUse) {

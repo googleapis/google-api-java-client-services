@@ -38,6 +38,13 @@ public final class Filter extends com.google.api.client.json.GenericJson {
   private BetweenFilter betweenFilter;
 
   /**
+   * A filter for empty values such as "(not set)" and "" values.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EmptyFilter emptyFilter;
+
+  /**
    * The dimension name or metric name. In most methods, dimensions & metrics can be used for the
    * first time in this field. However in a RunPivotReportRequest, this field must be additionally
    * specified by name in the RunPivotReportRequest's dimensions or metrics.
@@ -81,6 +88,23 @@ public final class Filter extends com.google.api.client.json.GenericJson {
    */
   public Filter setBetweenFilter(BetweenFilter betweenFilter) {
     this.betweenFilter = betweenFilter;
+    return this;
+  }
+
+  /**
+   * A filter for empty values such as "(not set)" and "" values.
+   * @return value or {@code null} for none
+   */
+  public EmptyFilter getEmptyFilter() {
+    return emptyFilter;
+  }
+
+  /**
+   * A filter for empty values such as "(not set)" and "" values.
+   * @param emptyFilter emptyFilter or {@code null} for none
+   */
+  public Filter setEmptyFilter(EmptyFilter emptyFilter) {
+    this.emptyFilter = emptyFilter;
     return this;
   }
 

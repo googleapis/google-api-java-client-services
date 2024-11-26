@@ -1881,6 +1881,517 @@ public class ChecksService extends com.google.api.client.googleapis.services.jso
         }
 
       }
+      /**
+       * An accessor for creating requests from the Scans collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code ChecksService checks = new ChecksService(...);}
+       *   {@code ChecksService.Scans.List request = checks.scans().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Scans scans() {
+        return new Scans();
+      }
+
+      /**
+       * The "scans" collection of methods.
+       */
+      public class Scans {
+
+        /**
+         * Uploads the results of local Code Compliance analysis and generates a scan of privacy issues.
+         * Returns a google.longrunning.Operation containing analysis and findings.
+         *
+         * Create a request for the method "scans.generate".
+         *
+         * This request holds the parameters needed by the checks server.  After setting any optional
+         * parameters, call the {@link Generate#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Resource name of the repo. Example: `accounts/123/repos/456`
+         * @param content the {@link com.google.api.services.checks.v1alpha.model.GoogleChecksRepoScanV1alphaGenerateScanRequest}
+         * @return the request
+         */
+        public Generate generate(java.lang.String parent, com.google.api.services.checks.v1alpha.model.GoogleChecksRepoScanV1alphaGenerateScanRequest content) throws java.io.IOException {
+          Generate result = new Generate(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Generate extends ChecksServiceRequest<com.google.api.services.checks.v1alpha.model.Operation> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/scans:generate";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/repos/[^/]+$");
+
+          /**
+           * Uploads the results of local Code Compliance analysis and generates a scan of privacy issues.
+           * Returns a google.longrunning.Operation containing analysis and findings.
+           *
+           * Create a request for the method "scans.generate".
+           *
+           * This request holds the parameters needed by the the checks server.  After setting any optional
+           * parameters, call the {@link Generate#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * Generate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Resource name of the repo. Example: `accounts/123/repos/456`
+           * @param content the {@link com.google.api.services.checks.v1alpha.model.GoogleChecksRepoScanV1alphaGenerateScanRequest}
+           * @since 1.13
+           */
+          protected Generate(java.lang.String parent, com.google.api.services.checks.v1alpha.model.GoogleChecksRepoScanV1alphaGenerateScanRequest content) {
+            super(ChecksService.this, "POST", REST_PATH, content, com.google.api.services.checks.v1alpha.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/repos/[^/]+$");
+            }
+          }
+
+          @Override
+          public Generate set$Xgafv(java.lang.String $Xgafv) {
+            return (Generate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Generate setAccessToken(java.lang.String accessToken) {
+            return (Generate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Generate setAlt(java.lang.String alt) {
+            return (Generate) super.setAlt(alt);
+          }
+
+          @Override
+          public Generate setCallback(java.lang.String callback) {
+            return (Generate) super.setCallback(callback);
+          }
+
+          @Override
+          public Generate setFields(java.lang.String fields) {
+            return (Generate) super.setFields(fields);
+          }
+
+          @Override
+          public Generate setKey(java.lang.String key) {
+            return (Generate) super.setKey(key);
+          }
+
+          @Override
+          public Generate setOauthToken(java.lang.String oauthToken) {
+            return (Generate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Generate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Generate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Generate setQuotaUser(java.lang.String quotaUser) {
+            return (Generate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Generate setUploadType(java.lang.String uploadType) {
+            return (Generate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Generate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Generate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Resource name of the repo. Example: `accounts/123/repos/456` */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Resource name of the repo. Example: `accounts/123/repos/456`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Resource name of the repo. Example: `accounts/123/repos/456` */
+          public Generate setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/repos/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Generate set(String parameterName, Object value) {
+            return (Generate) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a repo scan. By default, only the name and results_uri fields are returned. You can include
+         * other fields by listing them in the `fields` URL query parameter. For example,
+         * `?fields=name,sources` will return the name and sources fields.
+         *
+         * Create a request for the method "scans.get".
+         *
+         * This request holds the parameters needed by the checks server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the repo scan. Example: `accounts/123/repos/456/scans/789`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ChecksServiceRequest<com.google.api.services.checks.v1alpha.model.GoogleChecksRepoScanV1alphaRepoScan> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/repos/[^/]+/scans/[^/]+$");
+
+          /**
+           * Gets a repo scan. By default, only the name and results_uri fields are returned. You can
+           * include other fields by listing them in the `fields` URL query parameter. For example,
+           * `?fields=name,sources` will return the name and sources fields.
+           *
+           * Create a request for the method "scans.get".
+           *
+           * This request holds the parameters needed by the the checks server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the repo scan. Example: `accounts/123/repos/456/scans/789`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(ChecksService.this, "GET", REST_PATH, null, com.google.api.services.checks.v1alpha.model.GoogleChecksRepoScanV1alphaRepoScan.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/repos/[^/]+/scans/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the repo scan. Example: `accounts/123/repos/456/scans/789`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the repo scan. Example: `accounts/123/repos/456/scans/789`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the repo scan. Example: `accounts/123/repos/456/scans/789`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/repos/[^/]+/scans/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists repo scans for the specified repo.
+         *
+         * Create a request for the method "scans.list".
+         *
+         * This request holds the parameters needed by the checks server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Resource name of the repo. Example: `accounts/123/repos/456`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ChecksServiceRequest<com.google.api.services.checks.v1alpha.model.GoogleChecksRepoScanV1alphaListRepoScansResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/scans";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/repos/[^/]+$");
+
+          /**
+           * Lists repo scans for the specified repo.
+           *
+           * Create a request for the method "scans.list".
+           *
+           * This request holds the parameters needed by the the checks server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Resource name of the repo. Example: `accounts/123/repos/456`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(ChecksService.this, "GET", REST_PATH, null, com.google.api.services.checks.v1alpha.model.GoogleChecksRepoScanV1alphaListRepoScansResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/repos/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Resource name of the repo. Example: `accounts/123/repos/456` */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Resource name of the repo. Example: `accounts/123/repos/456`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Resource name of the repo. Example: `accounts/123/repos/456` */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/repos/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. An [AIP-160](https://google.aip.dev/160) filter string to filter repo scans.
+           * Example: `scmMetadata.branch = main`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. An [AIP-160](https://google.aip.dev/160) filter string to filter repo scans. Example:
+         `scmMetadata.branch = main`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. An [AIP-160](https://google.aip.dev/160) filter string to filter repo scans.
+           * Example: `scmMetadata.branch = main`
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of repo scans to return. If unspecified, at most 10 repo
+           * scans will be returned. The maximum value is 50; values above 50 will be coerced to 50.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of repo scans to return. If unspecified, at most 10 repo scans will be
+         returned. The maximum value is 50; values above 50 will be coerced to 50.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of repo scans to return. If unspecified, at most 10 repo
+           * scans will be returned. The maximum value is 50; values above 50 will be coerced to 50.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token received from a previous `ListRepoScans` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListRepoScans` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token received from a previous `ListRepoScans` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to `ListRepoScans` must match the
+         call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token received from a previous `ListRepoScans` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListRepoScans` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
   }
 

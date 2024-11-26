@@ -2022,33 +2022,33 @@ public class Playdeveloperreporting extends com.google.api.client.googleapis.ser
             return this;
           }
 
-          /** IANA Time Zone Database time zone, e.g. "America/New_York". */
+          /** IANA Time Zone Database time zone. For example "America/New_York". */
           @com.google.api.client.util.Key("interval.endTime.timeZone.id")
           private java.lang.String intervalEndTimeTimeZoneId;
 
-          /** IANA Time Zone Database time zone, e.g. "America/New_York".
+          /** IANA Time Zone Database time zone. For example "America/New_York".
            */
           public java.lang.String getIntervalEndTimeTimeZoneId() {
             return intervalEndTimeTimeZoneId;
           }
 
-          /** IANA Time Zone Database time zone, e.g. "America/New_York". */
+          /** IANA Time Zone Database time zone. For example "America/New_York". */
           public Search setIntervalEndTimeTimeZoneId(java.lang.String intervalEndTimeTimeZoneId) {
             this.intervalEndTimeTimeZoneId = intervalEndTimeTimeZoneId;
             return this;
           }
 
-          /** Optional. IANA Time Zone Database version number, e.g. "2019a". */
+          /** Optional. IANA Time Zone Database version number. For example "2019a". */
           @com.google.api.client.util.Key("interval.endTime.timeZone.version")
           private java.lang.String intervalEndTimeTimeZoneVersion;
 
-          /** Optional. IANA Time Zone Database version number, e.g. "2019a".
+          /** Optional. IANA Time Zone Database version number. For example "2019a".
            */
           public java.lang.String getIntervalEndTimeTimeZoneVersion() {
             return intervalEndTimeTimeZoneVersion;
           }
 
-          /** Optional. IANA Time Zone Database version number, e.g. "2019a". */
+          /** Optional. IANA Time Zone Database version number. For example "2019a". */
           public Search setIntervalEndTimeTimeZoneVersion(java.lang.String intervalEndTimeTimeZoneVersion) {
             this.intervalEndTimeTimeZoneVersion = intervalEndTimeTimeZoneVersion;
             return this;
@@ -2230,33 +2230,33 @@ public class Playdeveloperreporting extends com.google.api.client.googleapis.ser
             return this;
           }
 
-          /** IANA Time Zone Database time zone, e.g. "America/New_York". */
+          /** IANA Time Zone Database time zone. For example "America/New_York". */
           @com.google.api.client.util.Key("interval.startTime.timeZone.id")
           private java.lang.String intervalStartTimeTimeZoneId;
 
-          /** IANA Time Zone Database time zone, e.g. "America/New_York".
+          /** IANA Time Zone Database time zone. For example "America/New_York".
            */
           public java.lang.String getIntervalStartTimeTimeZoneId() {
             return intervalStartTimeTimeZoneId;
           }
 
-          /** IANA Time Zone Database time zone, e.g. "America/New_York". */
+          /** IANA Time Zone Database time zone. For example "America/New_York". */
           public Search setIntervalStartTimeTimeZoneId(java.lang.String intervalStartTimeTimeZoneId) {
             this.intervalStartTimeTimeZoneId = intervalStartTimeTimeZoneId;
             return this;
           }
 
-          /** Optional. IANA Time Zone Database version number, e.g. "2019a". */
+          /** Optional. IANA Time Zone Database version number. For example "2019a". */
           @com.google.api.client.util.Key("interval.startTime.timeZone.version")
           private java.lang.String intervalStartTimeTimeZoneVersion;
 
-          /** Optional. IANA Time Zone Database version number, e.g. "2019a".
+          /** Optional. IANA Time Zone Database version number. For example "2019a".
            */
           public java.lang.String getIntervalStartTimeTimeZoneVersion() {
             return intervalStartTimeTimeZoneVersion;
           }
 
-          /** Optional. IANA Time Zone Database version number, e.g. "2019a". */
+          /** Optional. IANA Time Zone Database version number. For example "2019a". */
           public Search setIntervalStartTimeTimeZoneVersion(java.lang.String intervalStartTimeTimeZoneVersion) {
             this.intervalStartTimeTimeZoneVersion = intervalStartTimeTimeZoneVersion;
             return this;
@@ -2821,33 +2821,33 @@ public class Playdeveloperreporting extends com.google.api.client.googleapis.ser
             return this;
           }
 
-          /** IANA Time Zone Database time zone, e.g. "America/New_York". */
+          /** IANA Time Zone Database time zone. For example "America/New_York". */
           @com.google.api.client.util.Key("interval.endTime.timeZone.id")
           private java.lang.String intervalEndTimeTimeZoneId;
 
-          /** IANA Time Zone Database time zone, e.g. "America/New_York".
+          /** IANA Time Zone Database time zone. For example "America/New_York".
            */
           public java.lang.String getIntervalEndTimeTimeZoneId() {
             return intervalEndTimeTimeZoneId;
           }
 
-          /** IANA Time Zone Database time zone, e.g. "America/New_York". */
+          /** IANA Time Zone Database time zone. For example "America/New_York". */
           public Search setIntervalEndTimeTimeZoneId(java.lang.String intervalEndTimeTimeZoneId) {
             this.intervalEndTimeTimeZoneId = intervalEndTimeTimeZoneId;
             return this;
           }
 
-          /** Optional. IANA Time Zone Database version number, e.g. "2019a". */
+          /** Optional. IANA Time Zone Database version number. For example "2019a". */
           @com.google.api.client.util.Key("interval.endTime.timeZone.version")
           private java.lang.String intervalEndTimeTimeZoneVersion;
 
-          /** Optional. IANA Time Zone Database version number, e.g. "2019a".
+          /** Optional. IANA Time Zone Database version number. For example "2019a".
            */
           public java.lang.String getIntervalEndTimeTimeZoneVersion() {
             return intervalEndTimeTimeZoneVersion;
           }
 
-          /** Optional. IANA Time Zone Database version number, e.g. "2019a". */
+          /** Optional. IANA Time Zone Database version number. For example "2019a". */
           public Search setIntervalEndTimeTimeZoneVersion(java.lang.String intervalEndTimeTimeZoneVersion) {
             this.intervalEndTimeTimeZoneVersion = intervalEndTimeTimeZoneVersion;
             return this;
@@ -3029,33 +3029,33 @@ public class Playdeveloperreporting extends com.google.api.client.googleapis.ser
             return this;
           }
 
-          /** IANA Time Zone Database time zone, e.g. "America/New_York". */
+          /** IANA Time Zone Database time zone. For example "America/New_York". */
           @com.google.api.client.util.Key("interval.startTime.timeZone.id")
           private java.lang.String intervalStartTimeTimeZoneId;
 
-          /** IANA Time Zone Database time zone, e.g. "America/New_York".
+          /** IANA Time Zone Database time zone. For example "America/New_York".
            */
           public java.lang.String getIntervalStartTimeTimeZoneId() {
             return intervalStartTimeTimeZoneId;
           }
 
-          /** IANA Time Zone Database time zone, e.g. "America/New_York". */
+          /** IANA Time Zone Database time zone. For example "America/New_York". */
           public Search setIntervalStartTimeTimeZoneId(java.lang.String intervalStartTimeTimeZoneId) {
             this.intervalStartTimeTimeZoneId = intervalStartTimeTimeZoneId;
             return this;
           }
 
-          /** Optional. IANA Time Zone Database version number, e.g. "2019a". */
+          /** Optional. IANA Time Zone Database version number. For example "2019a". */
           @com.google.api.client.util.Key("interval.startTime.timeZone.version")
           private java.lang.String intervalStartTimeTimeZoneVersion;
 
-          /** Optional. IANA Time Zone Database version number, e.g. "2019a".
+          /** Optional. IANA Time Zone Database version number. For example "2019a".
            */
           public java.lang.String getIntervalStartTimeTimeZoneVersion() {
             return intervalStartTimeTimeZoneVersion;
           }
 
-          /** Optional. IANA Time Zone Database version number, e.g. "2019a". */
+          /** Optional. IANA Time Zone Database version number. For example "2019a". */
           public Search setIntervalStartTimeTimeZoneVersion(java.lang.String intervalStartTimeTimeZoneVersion) {
             this.intervalStartTimeTimeZoneVersion = intervalStartTimeTimeZoneVersion;
             return this;

@@ -44,9 +44,9 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
   private java.lang.String description;
 
   /**
-   * Optional. An opaque identifier for the current version of the `ServicePerimeter`. Clients
-   * should not expect this to be in any specific format. If etag is not provided, the operation
-   * will be performed as if a valid etag is provided.
+   * Optional. An opaque identifier for the current version of the `ServicePerimeter`. This
+   * identifier does not follow any specific format. If an etag is not provided, the operation will
+   * be performed as if a valid etag is provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,9 +128,9 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
   }
 
   /**
-   * Optional. An opaque identifier for the current version of the `ServicePerimeter`. Clients
-   * should not expect this to be in any specific format. If etag is not provided, the operation
-   * will be performed as if a valid etag is provided.
+   * Optional. An opaque identifier for the current version of the `ServicePerimeter`. This
+   * identifier does not follow any specific format. If an etag is not provided, the operation will
+   * be performed as if a valid etag is provided.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -138,9 +138,9 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
   }
 
   /**
-   * Optional. An opaque identifier for the current version of the `ServicePerimeter`. Clients
-   * should not expect this to be in any specific format. If etag is not provided, the operation
-   * will be performed as if a valid etag is provided.
+   * Optional. An opaque identifier for the current version of the `ServicePerimeter`. This
+   * identifier does not follow any specific format. If an etag is not provided, the operation will
+   * be performed as if a valid etag is provided.
    * @param etag etag or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1ServicePerimeter setEtag(java.lang.String etag) {

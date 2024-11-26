@@ -2302,6 +2302,136 @@ public class CloudAlloyDBAdmin extends com.google.api.client.googleapis.services
           }
         }
         /**
+         * Exports data from the cluster. Imperative only.
+         *
+         * Create a request for the method "clusters.export".
+         *
+         * This request holds the parameters needed by the alloydb server.  After setting any optional
+         * parameters, call the {@link Export#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the cluster.
+         * @param content the {@link com.google.api.services.alloydb.v1beta.model.ExportClusterRequest}
+         * @return the request
+         */
+        public Export export(java.lang.String name, com.google.api.services.alloydb.v1beta.model.ExportClusterRequest content) throws java.io.IOException {
+          Export result = new Export(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Export extends CloudAlloyDBAdminRequest<com.google.api.services.alloydb.v1beta.model.Operation> {
+
+          private static final String REST_PATH = "v1beta/{+name}:export";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+
+          /**
+           * Exports data from the cluster. Imperative only.
+           *
+           * Create a request for the method "clusters.export".
+           *
+           * This request holds the parameters needed by the the alloydb server.  After setting any optional
+           * parameters, call the {@link Export#execute()} method to invoke the remote operation. <p> {@link
+           * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the cluster.
+           * @param content the {@link com.google.api.services.alloydb.v1beta.model.ExportClusterRequest}
+           * @since 1.13
+           */
+          protected Export(java.lang.String name, com.google.api.services.alloydb.v1beta.model.ExportClusterRequest content) {
+            super(CloudAlloyDBAdmin.this, "POST", REST_PATH, content, com.google.api.services.alloydb.v1beta.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+            }
+          }
+
+          @Override
+          public Export set$Xgafv(java.lang.String $Xgafv) {
+            return (Export) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Export setAccessToken(java.lang.String accessToken) {
+            return (Export) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Export setAlt(java.lang.String alt) {
+            return (Export) super.setAlt(alt);
+          }
+
+          @Override
+          public Export setCallback(java.lang.String callback) {
+            return (Export) super.setCallback(callback);
+          }
+
+          @Override
+          public Export setFields(java.lang.String fields) {
+            return (Export) super.setFields(fields);
+          }
+
+          @Override
+          public Export setKey(java.lang.String key) {
+            return (Export) super.setKey(key);
+          }
+
+          @Override
+          public Export setOauthToken(java.lang.String oauthToken) {
+            return (Export) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Export setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Export) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Export setQuotaUser(java.lang.String quotaUser) {
+            return (Export) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Export setUploadType(java.lang.String uploadType) {
+            return (Export) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Export setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Export) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The resource name of the cluster. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the cluster.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The resource name of the cluster. */
+          public Export setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Export set(String parameterName, Object value) {
+            return (Export) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets details of a single Cluster.
          *
          * Create a request for the method "clusters.get".

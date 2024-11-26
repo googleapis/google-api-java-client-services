@@ -71,6 +71,14 @@ public final class GoogleCloudRunV2BuildpacksBuild extends com.google.api.client
   private java.lang.String functionTarget;
 
   /**
+   * Optional. project_descriptor stores the path to the project descriptor file. When empty, it
+   * means that there is no project descriptor file in the source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String projectDescriptor;
+
+  /**
    * The runtime name, e.g. 'go113'. Leave blank for generic builds.
    * The value may be {@code null}.
    */
@@ -171,6 +179,25 @@ public final class GoogleCloudRunV2BuildpacksBuild extends com.google.api.client
    */
   public GoogleCloudRunV2BuildpacksBuild setFunctionTarget(java.lang.String functionTarget) {
     this.functionTarget = functionTarget;
+    return this;
+  }
+
+  /**
+   * Optional. project_descriptor stores the path to the project descriptor file. When empty, it
+   * means that there is no project descriptor file in the source.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProjectDescriptor() {
+    return projectDescriptor;
+  }
+
+  /**
+   * Optional. project_descriptor stores the path to the project descriptor file. When empty, it
+   * means that there is no project descriptor file in the source.
+   * @param projectDescriptor projectDescriptor or {@code null} for none
+   */
+  public GoogleCloudRunV2BuildpacksBuild setProjectDescriptor(java.lang.String projectDescriptor) {
+    this.projectDescriptor = projectDescriptor;
     return this;
   }
 

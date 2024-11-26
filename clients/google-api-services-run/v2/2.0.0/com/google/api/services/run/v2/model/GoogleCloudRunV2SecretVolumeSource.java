@@ -35,12 +35,11 @@ public final class GoogleCloudRunV2SecretVolumeSource extends com.google.api.cli
    * 0000 and 0777 (octal), defaulting to 0444. Directories within the path are not affected by this
    * setting. Notes * Internally, a umask of 0222 will be applied to any non-zero value. * This is
    * an integer representation of the mode bits. So, the octal integer value should look exactly as
-   * the chmod numeric notation with a leading zero. Some examples: for chmod 777 (a=rwx), set to
-   * 0777 (octal) or 511 (base-10). For chmod 640 (u=rw,g=r), set to 0640 (octal) or 416 (base-10).
-   * For chmod 755 (u=rwx,g=rx,o=rx), set to 0755 (octal) or 493 (base-10). * This might be in
-   * conflict with other options that affect the file mode, like fsGroup, and the result can be
-   * other mode bits set. This might be in conflict with other options that affect the file mode,
-   * like fsGroup, and as a result, other mode bits could be set.
+   * the chmod numeric notation with a leading zero. Some examples: for chmod 640 (u=rw,g=r), set to
+   * 0640 (octal) or 416 (base-10). For chmod 755 (u=rwx,g=rx,o=rx), set to 0755 (octal) or 493
+   * (base-10). * This might be in conflict with other options that affect the file mode, like
+   * fsGroup, and the result can be other mode bits set. This might be in conflict with other
+   * options that affect the file mode, like fsGroup, and as a result, other mode bits could be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,12 +68,11 @@ public final class GoogleCloudRunV2SecretVolumeSource extends com.google.api.cli
    * 0000 and 0777 (octal), defaulting to 0444. Directories within the path are not affected by this
    * setting. Notes * Internally, a umask of 0222 will be applied to any non-zero value. * This is
    * an integer representation of the mode bits. So, the octal integer value should look exactly as
-   * the chmod numeric notation with a leading zero. Some examples: for chmod 777 (a=rwx), set to
-   * 0777 (octal) or 511 (base-10). For chmod 640 (u=rw,g=r), set to 0640 (octal) or 416 (base-10).
-   * For chmod 755 (u=rwx,g=rx,o=rx), set to 0755 (octal) or 493 (base-10). * This might be in
-   * conflict with other options that affect the file mode, like fsGroup, and the result can be
-   * other mode bits set. This might be in conflict with other options that affect the file mode,
-   * like fsGroup, and as a result, other mode bits could be set.
+   * the chmod numeric notation with a leading zero. Some examples: for chmod 640 (u=rw,g=r), set to
+   * 0640 (octal) or 416 (base-10). For chmod 755 (u=rwx,g=rx,o=rx), set to 0755 (octal) or 493
+   * (base-10). * This might be in conflict with other options that affect the file mode, like
+   * fsGroup, and the result can be other mode bits set. This might be in conflict with other
+   * options that affect the file mode, like fsGroup, and as a result, other mode bits could be set.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDefaultMode() {
@@ -86,12 +84,11 @@ public final class GoogleCloudRunV2SecretVolumeSource extends com.google.api.cli
    * 0000 and 0777 (octal), defaulting to 0444. Directories within the path are not affected by this
    * setting. Notes * Internally, a umask of 0222 will be applied to any non-zero value. * This is
    * an integer representation of the mode bits. So, the octal integer value should look exactly as
-   * the chmod numeric notation with a leading zero. Some examples: for chmod 777 (a=rwx), set to
-   * 0777 (octal) or 511 (base-10). For chmod 640 (u=rw,g=r), set to 0640 (octal) or 416 (base-10).
-   * For chmod 755 (u=rwx,g=rx,o=rx), set to 0755 (octal) or 493 (base-10). * This might be in
-   * conflict with other options that affect the file mode, like fsGroup, and the result can be
-   * other mode bits set. This might be in conflict with other options that affect the file mode,
-   * like fsGroup, and as a result, other mode bits could be set.
+   * the chmod numeric notation with a leading zero. Some examples: for chmod 640 (u=rw,g=r), set to
+   * 0640 (octal) or 416 (base-10). For chmod 755 (u=rwx,g=rx,o=rx), set to 0755 (octal) or 493
+   * (base-10). * This might be in conflict with other options that affect the file mode, like
+   * fsGroup, and the result can be other mode bits set. This might be in conflict with other
+   * options that affect the file mode, like fsGroup, and as a result, other mode bits could be set.
    * @param defaultMode defaultMode or {@code null} for none
    */
   public GoogleCloudRunV2SecretVolumeSource setDefaultMode(java.lang.Integer defaultMode) {

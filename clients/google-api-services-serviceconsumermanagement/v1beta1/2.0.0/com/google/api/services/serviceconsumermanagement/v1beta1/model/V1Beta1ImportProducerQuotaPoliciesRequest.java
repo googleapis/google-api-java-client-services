@@ -31,22 +31,30 @@ package com.google.api.services.serviceconsumermanagement.v1beta1.model;
 public final class V1Beta1ImportProducerQuotaPoliciesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether to force the import of the quota policies. If the policy import would decrease the
-   * default limit of any consumer tier by more than 10 percent, the call is rejected, as a safety
-   * measure to avoid accidentally decreasing quota too quickly. Setting the force parameter to true
-   * ignores this restriction.
+   * Whether quota policy can result in a decrease of effective limit. Don't allow any decreases if
+   * force is not specified. If force is specified, then don't allow any decreases below 120% of the
+   * 7d quota usage, or for cases where usage cannot be examined (custom dimensions/ per user/per
+   * resource), only allow a 10% decrease.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean force;
 
   /**
-   * If force option is set to true, force_justification is suggested to be set to log the reason in
-   * audit logs.
+   * If force or force_skip_quota_usage_check option is set to true, force_justification is
+   * suggested to be set to log the reason in audit logs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String forceJustification;
+
+  /**
+   * If set to true, skip the quota usage check. This field is only used when the effective limit
+   * can be decreased. If the force field is not set, this field will be ignored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean forceSkipQuotaUsageCheck;
 
   /**
    * The import data is specified in the request message itself
@@ -63,10 +71,10 @@ public final class V1Beta1ImportProducerQuotaPoliciesRequest extends com.google.
   private java.lang.Boolean validateOnly;
 
   /**
-   * Whether to force the import of the quota policies. If the policy import would decrease the
-   * default limit of any consumer tier by more than 10 percent, the call is rejected, as a safety
-   * measure to avoid accidentally decreasing quota too quickly. Setting the force parameter to true
-   * ignores this restriction.
+   * Whether quota policy can result in a decrease of effective limit. Don't allow any decreases if
+   * force is not specified. If force is specified, then don't allow any decreases below 120% of the
+   * 7d quota usage, or for cases where usage cannot be examined (custom dimensions/ per user/per
+   * resource), only allow a 10% decrease.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getForce() {
@@ -74,10 +82,10 @@ public final class V1Beta1ImportProducerQuotaPoliciesRequest extends com.google.
   }
 
   /**
-   * Whether to force the import of the quota policies. If the policy import would decrease the
-   * default limit of any consumer tier by more than 10 percent, the call is rejected, as a safety
-   * measure to avoid accidentally decreasing quota too quickly. Setting the force parameter to true
-   * ignores this restriction.
+   * Whether quota policy can result in a decrease of effective limit. Don't allow any decreases if
+   * force is not specified. If force is specified, then don't allow any decreases below 120% of the
+   * 7d quota usage, or for cases where usage cannot be examined (custom dimensions/ per user/per
+   * resource), only allow a 10% decrease.
    * @param force force or {@code null} for none
    */
   public V1Beta1ImportProducerQuotaPoliciesRequest setForce(java.lang.Boolean force) {
@@ -86,8 +94,8 @@ public final class V1Beta1ImportProducerQuotaPoliciesRequest extends com.google.
   }
 
   /**
-   * If force option is set to true, force_justification is suggested to be set to log the reason in
-   * audit logs.
+   * If force or force_skip_quota_usage_check option is set to true, force_justification is
+   * suggested to be set to log the reason in audit logs.
    * @return value or {@code null} for none
    */
   public java.lang.String getForceJustification() {
@@ -95,12 +103,31 @@ public final class V1Beta1ImportProducerQuotaPoliciesRequest extends com.google.
   }
 
   /**
-   * If force option is set to true, force_justification is suggested to be set to log the reason in
-   * audit logs.
+   * If force or force_skip_quota_usage_check option is set to true, force_justification is
+   * suggested to be set to log the reason in audit logs.
    * @param forceJustification forceJustification or {@code null} for none
    */
   public V1Beta1ImportProducerQuotaPoliciesRequest setForceJustification(java.lang.String forceJustification) {
     this.forceJustification = forceJustification;
+    return this;
+  }
+
+  /**
+   * If set to true, skip the quota usage check. This field is only used when the effective limit
+   * can be decreased. If the force field is not set, this field will be ignored.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getForceSkipQuotaUsageCheck() {
+    return forceSkipQuotaUsageCheck;
+  }
+
+  /**
+   * If set to true, skip the quota usage check. This field is only used when the effective limit
+   * can be decreased. If the force field is not set, this field will be ignored.
+   * @param forceSkipQuotaUsageCheck forceSkipQuotaUsageCheck or {@code null} for none
+   */
+  public V1Beta1ImportProducerQuotaPoliciesRequest setForceSkipQuotaUsageCheck(java.lang.Boolean forceSkipQuotaUsageCheck) {
+    this.forceSkipQuotaUsageCheck = forceSkipQuotaUsageCheck;
     return this;
   }
 

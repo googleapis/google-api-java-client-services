@@ -221,6 +221,16 @@ public final class GiftCardClass extends com.google.api.client.json.GenericJson 
   private java.util.List<LatLongPoint> locations;
 
   /**
+   * Merchant locations. There is a maximum of ten on the class. Any additional MerchantLocations
+   * added beyond the 10 will be rejected. These locations will trigger a notification when a user
+   * enters within a Google-set radius of the point. This field replaces the deprecated
+   * LatLongPoints.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<MerchantLocation> merchantLocations;
+
+  /**
    * Merchant name, such as "Adam's Apparel". The app may display an ellipsis after the first 20
    * characters to ensure full string is displayed on smaller screens.
    * The value may be {@code null}.
@@ -803,6 +813,29 @@ public final class GiftCardClass extends com.google.api.client.json.GenericJson 
    */
   public GiftCardClass setLocations(java.util.List<LatLongPoint> locations) {
     this.locations = locations;
+    return this;
+  }
+
+  /**
+   * Merchant locations. There is a maximum of ten on the class. Any additional MerchantLocations
+   * added beyond the 10 will be rejected. These locations will trigger a notification when a user
+   * enters within a Google-set radius of the point. This field replaces the deprecated
+   * LatLongPoints.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<MerchantLocation> getMerchantLocations() {
+    return merchantLocations;
+  }
+
+  /**
+   * Merchant locations. There is a maximum of ten on the class. Any additional MerchantLocations
+   * added beyond the 10 will be rejected. These locations will trigger a notification when a user
+   * enters within a Google-set radius of the point. This field replaces the deprecated
+   * LatLongPoints.
+   * @param merchantLocations merchantLocations or {@code null} for none
+   */
+  public GiftCardClass setMerchantLocations(java.util.List<MerchantLocation> merchantLocations) {
+    this.merchantLocations = merchantLocations;
     return this;
   }
 

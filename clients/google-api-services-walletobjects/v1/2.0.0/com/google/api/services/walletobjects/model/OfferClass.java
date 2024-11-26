@@ -238,6 +238,22 @@ public final class OfferClass extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Merchant locations. There is a maximum of ten on the class. Any additional MerchantLocations
+   * added beyond the 10 will be rejected. These locations will trigger a notification when a user
+   * enters within a Google-set radius of the point. This field replaces the deprecated
+   * LatLongPoints.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<MerchantLocation> merchantLocations;
+
+  static {
+    // hack to force ProGuard to consider MerchantLocation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(MerchantLocation.class);
+  }
+
+  /**
    * An array of messages displayed in the app. All users of this object will receive its associated
    * messages. The maximum number of these fields is 10.
    * The value may be {@code null}.
@@ -856,6 +872,29 @@ public final class OfferClass extends com.google.api.client.json.GenericJson {
    */
   public OfferClass setLocations(java.util.List<LatLongPoint> locations) {
     this.locations = locations;
+    return this;
+  }
+
+  /**
+   * Merchant locations. There is a maximum of ten on the class. Any additional MerchantLocations
+   * added beyond the 10 will be rejected. These locations will trigger a notification when a user
+   * enters within a Google-set radius of the point. This field replaces the deprecated
+   * LatLongPoints.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<MerchantLocation> getMerchantLocations() {
+    return merchantLocations;
+  }
+
+  /**
+   * Merchant locations. There is a maximum of ten on the class. Any additional MerchantLocations
+   * added beyond the 10 will be rejected. These locations will trigger a notification when a user
+   * enters within a Google-set radius of the point. This field replaces the deprecated
+   * LatLongPoints.
+   * @param merchantLocations merchantLocations or {@code null} for none
+   */
+  public OfferClass setMerchantLocations(java.util.List<MerchantLocation> merchantLocations) {
+    this.merchantLocations = merchantLocations;
     return this;
   }
 

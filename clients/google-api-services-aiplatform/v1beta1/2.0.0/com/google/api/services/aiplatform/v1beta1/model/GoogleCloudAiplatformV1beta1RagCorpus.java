@@ -87,6 +87,20 @@ public final class GoogleCloudAiplatformV1beta1RagCorpus extends com.google.api.
   private String updateTime;
 
   /**
+   * Optional. Immutable. The config for the Vector DBs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RagVectorDbConfig vectorDbConfig;
+
+  /**
+   * Optional. Immutable. The config for the Vertex AI Search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1VertexAiSearchConfig vertexAiSearchConfig;
+
+  /**
    * Output only. RagCorpus state.
    * @return value or {@code null} for none
    */
@@ -221,6 +235,40 @@ public final class GoogleCloudAiplatformV1beta1RagCorpus extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1RagCorpus setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. The config for the Vector DBs.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagVectorDbConfig getVectorDbConfig() {
+    return vectorDbConfig;
+  }
+
+  /**
+   * Optional. Immutable. The config for the Vector DBs.
+   * @param vectorDbConfig vectorDbConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagCorpus setVectorDbConfig(GoogleCloudAiplatformV1beta1RagVectorDbConfig vectorDbConfig) {
+    this.vectorDbConfig = vectorDbConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. The config for the Vertex AI Search.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1VertexAiSearchConfig getVertexAiSearchConfig() {
+    return vertexAiSearchConfig;
+  }
+
+  /**
+   * Optional. Immutable. The config for the Vertex AI Search.
+   * @param vertexAiSearchConfig vertexAiSearchConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagCorpus setVertexAiSearchConfig(GoogleCloudAiplatformV1beta1VertexAiSearchConfig vertexAiSearchConfig) {
+    this.vertexAiSearchConfig = vertexAiSearchConfig;
     return this;
   }
 

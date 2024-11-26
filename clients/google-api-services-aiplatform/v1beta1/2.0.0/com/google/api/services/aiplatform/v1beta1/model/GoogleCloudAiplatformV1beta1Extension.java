@@ -99,6 +99,20 @@ public final class GoogleCloudAiplatformV1beta1Extension extends com.google.api.
   private GoogleCloudAiplatformV1beta1RuntimeConfig runtimeConfig;
 
   /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Optional. Examples to illustrate the usage of the extension as a tool.
    * The value may be {@code null}.
    */
@@ -274,6 +288,40 @@ public final class GoogleCloudAiplatformV1beta1Extension extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1Extension setRuntimeConfig(GoogleCloudAiplatformV1beta1RuntimeConfig runtimeConfig) {
     this.runtimeConfig = runtimeConfig;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Extension setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Extension setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

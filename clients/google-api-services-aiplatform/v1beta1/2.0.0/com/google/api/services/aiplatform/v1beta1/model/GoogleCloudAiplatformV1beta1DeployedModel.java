@@ -162,6 +162,13 @@ public final class GoogleCloudAiplatformV1beta1DeployedModel extends com.google.
   private java.lang.String sharedResources;
 
   /**
+   * Output only. Runtime status of the deployed model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1DeployedModelStatus status;
+
+  /**
    * System labels to apply to Model Garden deployments. System labels are managed by Google for
    * internal use only.
    * The value may be {@code null}.
@@ -475,6 +482,23 @@ public final class GoogleCloudAiplatformV1beta1DeployedModel extends com.google.
    */
   public GoogleCloudAiplatformV1beta1DeployedModel setSharedResources(java.lang.String sharedResources) {
     this.sharedResources = sharedResources;
+    return this;
+  }
+
+  /**
+   * Output only. Runtime status of the deployed model.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DeployedModelStatus getStatus() {
+    return status;
+  }
+
+  /**
+   * Output only. Runtime status of the deployed model.
+   * @param status status or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DeployedModel setStatus(GoogleCloudAiplatformV1beta1DeployedModelStatus status) {
+    this.status = status;
     return this;
   }
 

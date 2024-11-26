@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1beta1UploadRagFileConfig extends com.g
   private GoogleCloudAiplatformV1beta1RagFileChunkingConfig ragFileChunkingConfig;
 
   /**
+   * Specifies the transformation config for RagFiles.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RagFileTransformationConfig ragFileTransformationConfig;
+
+  /**
    * Specifies the size and overlap of chunks after uploading RagFile.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class GoogleCloudAiplatformV1beta1UploadRagFileConfig extends com.g
    */
   public GoogleCloudAiplatformV1beta1UploadRagFileConfig setRagFileChunkingConfig(GoogleCloudAiplatformV1beta1RagFileChunkingConfig ragFileChunkingConfig) {
     this.ragFileChunkingConfig = ragFileChunkingConfig;
+    return this;
+  }
+
+  /**
+   * Specifies the transformation config for RagFiles.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagFileTransformationConfig getRagFileTransformationConfig() {
+    return ragFileTransformationConfig;
+  }
+
+  /**
+   * Specifies the transformation config for RagFiles.
+   * @param ragFileTransformationConfig ragFileTransformationConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1UploadRagFileConfig setRagFileTransformationConfig(GoogleCloudAiplatformV1beta1RagFileTransformationConfig ragFileTransformationConfig) {
+    this.ragFileTransformationConfig = ragFileTransformationConfig;
     return this;
   }
 

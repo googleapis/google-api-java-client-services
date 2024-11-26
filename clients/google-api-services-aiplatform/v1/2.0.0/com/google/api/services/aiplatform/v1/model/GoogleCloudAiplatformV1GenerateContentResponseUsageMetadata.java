@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Number of tokens in the cached part in the input (the cached content).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer cachedContentTokenCount;
+
+  /**
    * Number of tokens in the response(s).
    * The value may be {@code null}.
    */
@@ -50,6 +57,23 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
    */
   @com.google.api.client.util.Key
   private java.lang.Integer totalTokenCount;
+
+  /**
+   * Output only. Number of tokens in the cached part in the input (the cached content).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getCachedContentTokenCount() {
+    return cachedContentTokenCount;
+  }
+
+  /**
+   * Output only. Number of tokens in the cached part in the input (the cached content).
+   * @param cachedContentTokenCount cachedContentTokenCount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata setCachedContentTokenCount(java.lang.Integer cachedContentTokenCount) {
+    this.cachedContentTokenCount = cachedContentTokenCount;
+    return this;
+  }
 
   /**
    * Number of tokens in the response(s).

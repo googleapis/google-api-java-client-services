@@ -44,6 +44,13 @@ public final class GoogleCloudAiplatformV1beta1RagVectorDbConfig extends com.goo
   private GoogleCloudAiplatformV1beta1RagVectorDbConfigPinecone pinecone;
 
   /**
+   * Optional. Immutable. The embedding model config of the Vector DB.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RagEmbeddingModelConfig ragEmbeddingModelConfig;
+
+  /**
    * The config for the RAG-managed Vector DB.
    * The value may be {@code null}.
    */
@@ -102,6 +109,23 @@ public final class GoogleCloudAiplatformV1beta1RagVectorDbConfig extends com.goo
    */
   public GoogleCloudAiplatformV1beta1RagVectorDbConfig setPinecone(GoogleCloudAiplatformV1beta1RagVectorDbConfigPinecone pinecone) {
     this.pinecone = pinecone;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. The embedding model config of the Vector DB.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagEmbeddingModelConfig getRagEmbeddingModelConfig() {
+    return ragEmbeddingModelConfig;
+  }
+
+  /**
+   * Optional. Immutable. The embedding model config of the Vector DB.
+   * @param ragEmbeddingModelConfig ragEmbeddingModelConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagVectorDbConfig setRagEmbeddingModelConfig(GoogleCloudAiplatformV1beta1RagEmbeddingModelConfig ragEmbeddingModelConfig) {
+    this.ragEmbeddingModelConfig = ragEmbeddingModelConfig;
     return this;
   }
 

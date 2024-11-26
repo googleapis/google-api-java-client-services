@@ -100,6 +100,17 @@ public final class GoogleCloudAiplatformV1TuningJob extends com.google.api.clien
   private java.lang.String name;
 
   /**
+   * The service account that the tuningJob workload runs as. If not specified, the Vertex AI Secure
+   * Fine-Tuned Service Agent in the project will be used. See
+   * https://cloud.google.com/iam/docs/service-agents#vertex-ai-secure-fine-tuning-service-agent
+   * Users starting the pipeline must have the `iam.serviceAccounts.actAs` permission on this
+   * service account.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccount;
+
+  /**
    * Output only. Time when the TuningJob for the first time entered the `JOB_STATE_RUNNING` state.
    * The value may be {@code null}.
    */
@@ -313,6 +324,31 @@ public final class GoogleCloudAiplatformV1TuningJob extends com.google.api.clien
    */
   public GoogleCloudAiplatformV1TuningJob setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The service account that the tuningJob workload runs as. If not specified, the Vertex AI Secure
+   * Fine-Tuned Service Agent in the project will be used. See
+   * https://cloud.google.com/iam/docs/service-agents#vertex-ai-secure-fine-tuning-service-agent
+   * Users starting the pipeline must have the `iam.serviceAccounts.actAs` permission on this
+   * service account.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccount() {
+    return serviceAccount;
+  }
+
+  /**
+   * The service account that the tuningJob workload runs as. If not specified, the Vertex AI Secure
+   * Fine-Tuned Service Agent in the project will be used. See
+   * https://cloud.google.com/iam/docs/service-agents#vertex-ai-secure-fine-tuning-service-agent
+   * Users starting the pipeline must have the `iam.serviceAccounts.actAs` permission on this
+   * service account.
+   * @param serviceAccount serviceAccount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1TuningJob setServiceAccount(java.lang.String serviceAccount) {
+    this.serviceAccount = serviceAccount;
     return this;
   }
 

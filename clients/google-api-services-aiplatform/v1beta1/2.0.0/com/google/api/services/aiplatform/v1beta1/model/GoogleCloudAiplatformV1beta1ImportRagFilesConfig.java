@@ -89,11 +89,19 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
   private GoogleCloudAiplatformV1beta1RagFileChunkingConfig ragFileChunkingConfig;
 
   /**
-   * Specifies the parsing config for RagFiles.
+   * Optional. Specifies the parsing config for RagFiles. RAG will use the default parser if this
+   * field is not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1RagFileParsingConfig ragFileParsingConfig;
+
+  /**
+   * Specifies the transformation config for RagFiles.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RagFileTransformationConfig ragFileTransformationConfig;
 
   /**
    * SharePoint sources.
@@ -249,7 +257,8 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
   }
 
   /**
-   * Specifies the parsing config for RagFiles.
+   * Optional. Specifies the parsing config for RagFiles. RAG will use the default parser if this
+   * field is not set.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RagFileParsingConfig getRagFileParsingConfig() {
@@ -257,11 +266,29 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
   }
 
   /**
-   * Specifies the parsing config for RagFiles.
+   * Optional. Specifies the parsing config for RagFiles. RAG will use the default parser if this
+   * field is not set.
    * @param ragFileParsingConfig ragFileParsingConfig or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setRagFileParsingConfig(GoogleCloudAiplatformV1beta1RagFileParsingConfig ragFileParsingConfig) {
     this.ragFileParsingConfig = ragFileParsingConfig;
+    return this;
+  }
+
+  /**
+   * Specifies the transformation config for RagFiles.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagFileTransformationConfig getRagFileTransformationConfig() {
+    return ragFileTransformationConfig;
+  }
+
+  /**
+   * Specifies the transformation config for RagFiles.
+   * @param ragFileTransformationConfig ragFileTransformationConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setRagFileTransformationConfig(GoogleCloudAiplatformV1beta1RagFileTransformationConfig ragFileTransformationConfig) {
+    this.ragFileTransformationConfig = ragFileTransformationConfig;
     return this;
   }
 

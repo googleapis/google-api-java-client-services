@@ -209,14 +209,14 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.String headlineOfferMobileLink;
 
   /**
-   * Headline Price of the aggregate offer.
+   * Headline Price of the CSS Product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Price headlineOfferPrice;
 
   /**
-   * Headline Price of the aggregate offer.
+   * Headline Price of the CSS Product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,7 +231,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private HeadlineOfferSubscriptionCost headlineOfferSubscriptionCost;
 
   /**
-   * High Price of the aggregate offer.
+   * High Price of the CSS Product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -269,7 +269,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.String itemGroupId;
 
   /**
-   * Low Price of the aggregate offer.
+   * Low Price of the CSS Product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -298,7 +298,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.Long multipack;
 
   /**
-   * The number of aggregate offers.
+   * The number of CSS Products.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -835,7 +835,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Headline Price of the aggregate offer.
+   * Headline Price of the CSS Product.
    * @return value or {@code null} for none
    */
   public Price getHeadlineOfferPrice() {
@@ -843,7 +843,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Headline Price of the aggregate offer.
+   * Headline Price of the CSS Product.
    * @param headlineOfferPrice headlineOfferPrice or {@code null} for none
    */
   public Attributes setHeadlineOfferPrice(Price headlineOfferPrice) {
@@ -852,7 +852,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Headline Price of the aggregate offer.
+   * Headline Price of the CSS Product.
    * @return value or {@code null} for none
    */
   public Price getHeadlineOfferShippingPrice() {
@@ -860,7 +860,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Headline Price of the aggregate offer.
+   * Headline Price of the CSS Product.
    * @param headlineOfferShippingPrice headlineOfferShippingPrice or {@code null} for none
    */
   public Attributes setHeadlineOfferShippingPrice(Price headlineOfferShippingPrice) {
@@ -888,7 +888,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * High Price of the aggregate offer.
+   * High Price of the CSS Product.
    * @return value or {@code null} for none
    */
   public Price getHighPrice() {
@@ -896,7 +896,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * High Price of the aggregate offer.
+   * High Price of the CSS Product.
    * @param highPrice highPrice or {@code null} for none
    */
   public Attributes setHighPrice(Price highPrice) {
@@ -979,7 +979,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Low Price of the aggregate offer.
+   * Low Price of the CSS Product.
    * @return value or {@code null} for none
    */
   public Price getLowPrice() {
@@ -987,7 +987,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Low Price of the aggregate offer.
+   * Low Price of the CSS Product.
    * @param lowPrice lowPrice or {@code null} for none
    */
   public Attributes setLowPrice(Price lowPrice) {
@@ -1049,7 +1049,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of aggregate offers.
+   * The number of CSS Products.
    * @return value or {@code null} for none
    */
   public java.lang.Long getNumberOfOffers() {
@@ -1057,7 +1057,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of aggregate offers.
+   * The number of CSS Products.
    * @param numberOfOffers numberOfOffers or {@code null} for none
    */
   public Attributes setNumberOfOffers(java.lang.Long numberOfOffers) {

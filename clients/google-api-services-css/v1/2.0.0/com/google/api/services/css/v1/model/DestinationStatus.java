@@ -30,7 +30,7 @@ package com.google.api.services.css.v1.model;
 public final class DestinationStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where the aggregate offer is approved.
+   * List of country codes (ISO 3166-1 alpha-2) where the CSS Product is approved.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,21 +44,21 @@ public final class DestinationStatus extends com.google.api.client.json.GenericJ
   private java.lang.String destination;
 
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where the aggregate offer is disapproved.
+   * List of country codes (ISO 3166-1 alpha-2) where the CSS Product is disapproved.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> disapprovedCountries;
 
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where the aggregate offer is pending approval.
+   * List of country codes (ISO 3166-1 alpha-2) where the CSS Product is pending approval.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> pendingCountries;
 
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where the aggregate offer is approved.
+   * List of country codes (ISO 3166-1 alpha-2) where the CSS Product is approved.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getApprovedCountries() {
@@ -66,7 +66,7 @@ public final class DestinationStatus extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where the aggregate offer is approved.
+   * List of country codes (ISO 3166-1 alpha-2) where the CSS Product is approved.
    * @param approvedCountries approvedCountries or {@code null} for none
    */
   public DestinationStatus setApprovedCountries(java.util.List<java.lang.String> approvedCountries) {
@@ -92,7 +92,7 @@ public final class DestinationStatus extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where the aggregate offer is disapproved.
+   * List of country codes (ISO 3166-1 alpha-2) where the CSS Product is disapproved.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDisapprovedCountries() {
@@ -100,7 +100,7 @@ public final class DestinationStatus extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where the aggregate offer is disapproved.
+   * List of country codes (ISO 3166-1 alpha-2) where the CSS Product is disapproved.
    * @param disapprovedCountries disapprovedCountries or {@code null} for none
    */
   public DestinationStatus setDisapprovedCountries(java.util.List<java.lang.String> disapprovedCountries) {
@@ -109,7 +109,7 @@ public final class DestinationStatus extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where the aggregate offer is pending approval.
+   * List of country codes (ISO 3166-1 alpha-2) where the CSS Product is pending approval.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPendingCountries() {
@@ -117,7 +117,7 @@ public final class DestinationStatus extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where the aggregate offer is pending approval.
+   * List of country codes (ISO 3166-1 alpha-2) where the CSS Product is pending approval.
    * @param pendingCountries pendingCountries or {@code null} for none
    */
   public DestinationStatus setPendingCountries(java.util.List<java.lang.String> pendingCountries) {

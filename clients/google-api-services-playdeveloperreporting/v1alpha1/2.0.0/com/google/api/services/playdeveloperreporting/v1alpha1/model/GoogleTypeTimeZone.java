@@ -31,21 +31,21 @@ package com.google.api.services.playdeveloperreporting.v1alpha1.model;
 public final class GoogleTypeTimeZone extends com.google.api.client.json.GenericJson {
 
   /**
-   * IANA Time Zone Database time zone, e.g. "America/New_York".
+   * IANA Time Zone Database time zone. For example "America/New_York".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Optional. IANA Time Zone Database version number, e.g. "2019a".
+   * Optional. IANA Time Zone Database version number. For example "2019a".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * IANA Time Zone Database time zone, e.g. "America/New_York".
+   * IANA Time Zone Database time zone. For example "America/New_York".
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -53,7 +53,7 @@ public final class GoogleTypeTimeZone extends com.google.api.client.json.Generic
   }
 
   /**
-   * IANA Time Zone Database time zone, e.g. "America/New_York".
+   * IANA Time Zone Database time zone. For example "America/New_York".
    * @param id id or {@code null} for none
    */
   public GoogleTypeTimeZone setId(java.lang.String id) {
@@ -62,7 +62,7 @@ public final class GoogleTypeTimeZone extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. IANA Time Zone Database version number, e.g. "2019a".
+   * Optional. IANA Time Zone Database version number. For example "2019a".
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -70,7 +70,7 @@ public final class GoogleTypeTimeZone extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. IANA Time Zone Database version number, e.g. "2019a".
+   * Optional. IANA Time Zone Database version number. For example "2019a".
    * @param version version or {@code null} for none
    */
   public GoogleTypeTimeZone setVersion(java.lang.String version) {

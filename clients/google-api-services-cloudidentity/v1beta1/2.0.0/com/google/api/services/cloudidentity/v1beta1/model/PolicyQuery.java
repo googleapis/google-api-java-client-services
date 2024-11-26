@@ -64,8 +64,8 @@ public final class PolicyQuery extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The decimal sort order of this PolicyQuery. The value is relative to all other
-   * policies with the same setting type within the whole customer. (there are no duplicates within
-   * this set).
+   * policies with the same setting type within the whole customer. (There are no duplicates within
+   * this set.)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,8 +148,8 @@ public final class PolicyQuery extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The decimal sort order of this PolicyQuery. The value is relative to all other
-   * policies with the same setting type within the whole customer. (there are no duplicates within
-   * this set).
+   * policies with the same setting type within the whole customer. (There are no duplicates within
+   * this set.)
    * @return value or {@code null} for none
    */
   public java.lang.Double getSortOrder() {
@@ -158,8 +158,8 @@ public final class PolicyQuery extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The decimal sort order of this PolicyQuery. The value is relative to all other
-   * policies with the same setting type within the whole customer. (there are no duplicates within
-   * this set).
+   * policies with the same setting type within the whole customer. (There are no duplicates within
+   * this set.)
    * @param sortOrder sortOrder or {@code null} for none
    */
   public PolicyQuery setSortOrder(java.lang.Double sortOrder) {

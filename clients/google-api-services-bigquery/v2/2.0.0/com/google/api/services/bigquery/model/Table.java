@@ -175,6 +175,13 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.lang.String location;
 
   /**
+   * Optional. If set, overrides the default managed table type configured in the dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String managedTableType;
+
+  /**
    * Optional. The materialized view definition.
    * The value may be {@code null}.
    */
@@ -776,6 +783,23 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   public Table setLocation(java.lang.String location) {
     this.location = location;
+    return this;
+  }
+
+  /**
+   * Optional. If set, overrides the default managed table type configured in the dataset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getManagedTableType() {
+    return managedTableType;
+  }
+
+  /**
+   * Optional. If set, overrides the default managed table type configured in the dataset.
+   * @param managedTableType managedTableType or {@code null} for none
+   */
+  public Table setManagedTableType(java.lang.String managedTableType) {
+    this.managedTableType = managedTableType;
     return this;
   }
 

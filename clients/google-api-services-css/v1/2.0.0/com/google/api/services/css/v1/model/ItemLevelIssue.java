@@ -30,7 +30,7 @@ package com.google.api.services.css.v1.model;
 public final class ItemLevelIssue extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where issue applies to the aggregate offer.
+   * List of country codes (ISO 3166-1 alpha-2) where issue applies to the CSS Product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,14 +86,14 @@ public final class ItemLevelIssue extends com.google.api.client.json.GenericJson
   private java.lang.String resolution;
 
   /**
-   * How this issue affects serving of the aggregate offer.
+   * How this issue affects serving of the CSS Product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String servability;
 
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where issue applies to the aggregate offer.
+   * List of country codes (ISO 3166-1 alpha-2) where issue applies to the CSS Product.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getApplicableCountries() {
@@ -101,7 +101,7 @@ public final class ItemLevelIssue extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where issue applies to the aggregate offer.
+   * List of country codes (ISO 3166-1 alpha-2) where issue applies to the CSS Product.
    * @param applicableCountries applicableCountries or {@code null} for none
    */
   public ItemLevelIssue setApplicableCountries(java.util.List<java.lang.String> applicableCountries) {
@@ -229,7 +229,7 @@ public final class ItemLevelIssue extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * How this issue affects serving of the aggregate offer.
+   * How this issue affects serving of the CSS Product.
    * @return value or {@code null} for none
    */
   public java.lang.String getServability() {
@@ -237,7 +237,7 @@ public final class ItemLevelIssue extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * How this issue affects serving of the aggregate offer.
+   * How this issue affects serving of the CSS Product.
    * @param servability servability or {@code null} for none
    */
   public ItemLevelIssue setServability(java.lang.String servability) {

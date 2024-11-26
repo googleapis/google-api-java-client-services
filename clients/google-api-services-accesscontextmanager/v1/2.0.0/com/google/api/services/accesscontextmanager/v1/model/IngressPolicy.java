@@ -53,6 +53,15 @@ public final class IngressPolicy extends com.google.api.client.json.GenericJson 
   private IngressTo ingressTo;
 
   /**
+   * Optional. Human-readable title for the ingress rule. The title must be unique within the
+   * perimeter and can not exceed 100 characters. Within the access policy, the combined length of
+   * all rule titles must not exceed 240,000 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String title;
+
+  /**
    * Defines the conditions on the source of a request causing this IngressPolicy to apply.
    * @return value or {@code null} for none
    */
@@ -85,6 +94,27 @@ public final class IngressPolicy extends com.google.api.client.json.GenericJson 
    */
   public IngressPolicy setIngressTo(IngressTo ingressTo) {
     this.ingressTo = ingressTo;
+    return this;
+  }
+
+  /**
+   * Optional. Human-readable title for the ingress rule. The title must be unique within the
+   * perimeter and can not exceed 100 characters. Within the access policy, the combined length of
+   * all rule titles must not exceed 240,000 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTitle() {
+    return title;
+  }
+
+  /**
+   * Optional. Human-readable title for the ingress rule. The title must be unique within the
+   * perimeter and can not exceed 100 characters. Within the access policy, the combined length of
+   * all rule titles must not exceed 240,000 characters.
+   * @param title title or {@code null} for none
+   */
+  public IngressPolicy setTitle(java.lang.String title) {
+    this.title = title;
     return this;
   }
 

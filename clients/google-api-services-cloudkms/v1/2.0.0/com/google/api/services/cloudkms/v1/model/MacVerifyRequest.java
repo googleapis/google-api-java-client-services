@@ -63,7 +63,7 @@ public final class MacVerifyRequest extends com.google.api.client.json.GenericJs
    * Optional. An optional CRC32C checksum of the MacVerifyRequest.mac. If specified,
    * KeyManagementService will verify the integrity of the received MacVerifyRequest.mac using this
    * checksum. KeyManagementService will report an error if the checksum verification fails. If you
-   * receive a checksum error, your client should verify that CRC32C(MacVerifyRequest.tag) is equal
+   * receive a checksum error, your client should verify that CRC32C(MacVerifyRequest.mac) is equal
    * to MacVerifyRequest.mac_crc32c, and if so, perform a limited number of retries. A persistent
    * mismatch may indicate an issue in your computation of the CRC32C checksum. Note: This field is
    * defined as int64 for reasons of compatibility across different languages. However, it is a non-
@@ -201,7 +201,7 @@ public final class MacVerifyRequest extends com.google.api.client.json.GenericJs
    * Optional. An optional CRC32C checksum of the MacVerifyRequest.mac. If specified,
    * KeyManagementService will verify the integrity of the received MacVerifyRequest.mac using this
    * checksum. KeyManagementService will report an error if the checksum verification fails. If you
-   * receive a checksum error, your client should verify that CRC32C(MacVerifyRequest.tag) is equal
+   * receive a checksum error, your client should verify that CRC32C(MacVerifyRequest.mac) is equal
    * to MacVerifyRequest.mac_crc32c, and if so, perform a limited number of retries. A persistent
    * mismatch may indicate an issue in your computation of the CRC32C checksum. Note: This field is
    * defined as int64 for reasons of compatibility across different languages. However, it is a non-
@@ -217,7 +217,7 @@ public final class MacVerifyRequest extends com.google.api.client.json.GenericJs
    * Optional. An optional CRC32C checksum of the MacVerifyRequest.mac. If specified,
    * KeyManagementService will verify the integrity of the received MacVerifyRequest.mac using this
    * checksum. KeyManagementService will report an error if the checksum verification fails. If you
-   * receive a checksum error, your client should verify that CRC32C(MacVerifyRequest.tag) is equal
+   * receive a checksum error, your client should verify that CRC32C(MacVerifyRequest.mac) is equal
    * to MacVerifyRequest.mac_crc32c, and if so, perform a limited number of retries. A persistent
    * mismatch may indicate an issue in your computation of the CRC32C checksum. Note: This field is
    * defined as int64 for reasons of compatibility across different languages. However, it is a non-

@@ -18,7 +18,7 @@ package com.google.api.services.secretmanager.v1.model;
 
 /**
  * A replication policy that replicates the Secret payload into the locations specified in
- * Secret.replication.user_managed.replicas
+ * Replication.UserManaged.replicas
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Secret Manager API. For a detailed explanation see:

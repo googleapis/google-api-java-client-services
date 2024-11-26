@@ -30,6 +30,16 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1GenerateContentRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The name of the cached content used as context to serve the prediction. Note: only
+   * used in explicit caching, where users can have control over caching (e.g. what content to
+   * cache) and enjoy guaranteed cost savings. Format:
+   * `projects/{project}/locations/{location}/cachedContents/{cachedContent}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cachedContent;
+
+  /**
    * Required. The content of the current conversation with the model. For single-turn queries, this
    * is a single instance. For multi-turn queries, this is a repeated field that contains
    * conversation history + latest request.
@@ -93,6 +103,29 @@ public final class GoogleCloudAiplatformV1GenerateContentRequest extends com.goo
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1Tool> tools;
+
+  /**
+   * Optional. The name of the cached content used as context to serve the prediction. Note: only
+   * used in explicit caching, where users can have control over caching (e.g. what content to
+   * cache) and enjoy guaranteed cost savings. Format:
+   * `projects/{project}/locations/{location}/cachedContents/{cachedContent}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCachedContent() {
+    return cachedContent;
+  }
+
+  /**
+   * Optional. The name of the cached content used as context to serve the prediction. Note: only
+   * used in explicit caching, where users can have control over caching (e.g. what content to
+   * cache) and enjoy guaranteed cost savings. Format:
+   * `projects/{project}/locations/{location}/cachedContents/{cachedContent}`
+   * @param cachedContent cachedContent or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerateContentRequest setCachedContent(java.lang.String cachedContent) {
+    this.cachedContent = cachedContent;
+    return this;
+  }
 
   /**
    * Required. The content of the current conversation with the model. For single-turn queries, this

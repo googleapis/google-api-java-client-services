@@ -44,6 +44,13 @@ public final class GoogleCloudAiplatformV1beta1RagFileChunkingConfig extends com
   private java.lang.Integer chunkSize;
 
   /**
+   * Specifies the fixed length chunking config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RagFileChunkingConfigFixedLengthChunking fixedLengthChunking;
+
+  /**
    * The overlap between chunks.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class GoogleCloudAiplatformV1beta1RagFileChunkingConfig extends com
    */
   public GoogleCloudAiplatformV1beta1RagFileChunkingConfig setChunkSize(java.lang.Integer chunkSize) {
     this.chunkSize = chunkSize;
+    return this;
+  }
+
+  /**
+   * Specifies the fixed length chunking config.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagFileChunkingConfigFixedLengthChunking getFixedLengthChunking() {
+    return fixedLengthChunking;
+  }
+
+  /**
+   * Specifies the fixed length chunking config.
+   * @param fixedLengthChunking fixedLengthChunking or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagFileChunkingConfig setFixedLengthChunking(GoogleCloudAiplatformV1beta1RagFileChunkingConfigFixedLengthChunking fixedLengthChunking) {
+    this.fixedLengthChunking = fixedLengthChunking;
     return this;
   }
 

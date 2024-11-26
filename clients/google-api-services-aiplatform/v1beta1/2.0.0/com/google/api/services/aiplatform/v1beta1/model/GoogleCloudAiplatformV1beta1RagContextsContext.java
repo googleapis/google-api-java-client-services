@@ -37,6 +37,24 @@ public final class GoogleCloudAiplatformV1beta1RagContextsContext extends com.go
   private java.lang.Double distance;
 
   /**
+   * According to the underlying Vector DB and the selected metric type, the score can be either the
+   * distance or the similarity between the query and the context and its range depends on the
+   * metric type. For example, if the metric type is COSINE_DISTANCE, it represents the distance
+   * between the query and the context. The larger the distance, the less relevant the context is to
+   * the query. The range is [0, 2], while 0 means the most relevant and 2 means the least relevant.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double score;
+
+  /**
+   * The file display name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceDisplayName;
+
+  /**
    * If the file is imported from Cloud Storage or Google Drive, source_uri will be original file
    * URI in Cloud Storage or Google Drive; if file is uploaded, source_uri will be file display
    * name.
@@ -73,6 +91,48 @@ public final class GoogleCloudAiplatformV1beta1RagContextsContext extends com.go
    */
   public GoogleCloudAiplatformV1beta1RagContextsContext setDistance(java.lang.Double distance) {
     this.distance = distance;
+    return this;
+  }
+
+  /**
+   * According to the underlying Vector DB and the selected metric type, the score can be either the
+   * distance or the similarity between the query and the context and its range depends on the
+   * metric type. For example, if the metric type is COSINE_DISTANCE, it represents the distance
+   * between the query and the context. The larger the distance, the less relevant the context is to
+   * the query. The range is [0, 2], while 0 means the most relevant and 2 means the least relevant.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getScore() {
+    return score;
+  }
+
+  /**
+   * According to the underlying Vector DB and the selected metric type, the score can be either the
+   * distance or the similarity between the query and the context and its range depends on the
+   * metric type. For example, if the metric type is COSINE_DISTANCE, it represents the distance
+   * between the query and the context. The larger the distance, the less relevant the context is to
+   * the query. The range is [0, 2], while 0 means the most relevant and 2 means the least relevant.
+   * @param score score or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagContextsContext setScore(java.lang.Double score) {
+    this.score = score;
+    return this;
+  }
+
+  /**
+   * The file display name.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceDisplayName() {
+    return sourceDisplayName;
+  }
+
+  /**
+   * The file display name.
+   * @param sourceDisplayName sourceDisplayName or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagContextsContext setSourceDisplayName(java.lang.String sourceDisplayName) {
+    this.sourceDisplayName = sourceDisplayName;
     return this;
   }
 

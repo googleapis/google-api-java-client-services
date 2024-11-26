@@ -30,11 +30,59 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1RagFileParsingConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * The Advanced Parser to use for RagFiles.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RagFileParsingConfigAdvancedParser advancedParser;
+
+  /**
+   * The Layout Parser to use for RagFiles.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RagFileParsingConfigLayoutParser layoutParser;
+
+  /**
    * Whether to use advanced PDF parsing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useAdvancedPdfParsing;
+
+  /**
+   * The Advanced Parser to use for RagFiles.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagFileParsingConfigAdvancedParser getAdvancedParser() {
+    return advancedParser;
+  }
+
+  /**
+   * The Advanced Parser to use for RagFiles.
+   * @param advancedParser advancedParser or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagFileParsingConfig setAdvancedParser(GoogleCloudAiplatformV1beta1RagFileParsingConfigAdvancedParser advancedParser) {
+    this.advancedParser = advancedParser;
+    return this;
+  }
+
+  /**
+   * The Layout Parser to use for RagFiles.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagFileParsingConfigLayoutParser getLayoutParser() {
+    return layoutParser;
+  }
+
+  /**
+   * The Layout Parser to use for RagFiles.
+   * @param layoutParser layoutParser or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagFileParsingConfig setLayoutParser(GoogleCloudAiplatformV1beta1RagFileParsingConfigLayoutParser layoutParser) {
+    this.layoutParser = layoutParser;
+    return this;
+  }
 
   /**
    * Whether to use advanced PDF parsing.

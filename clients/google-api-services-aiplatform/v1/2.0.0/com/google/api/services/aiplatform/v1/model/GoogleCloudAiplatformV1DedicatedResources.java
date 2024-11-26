@@ -87,6 +87,17 @@ public final class GoogleCloudAiplatformV1DedicatedResources extends com.google.
   private java.lang.Integer minReplicaCount;
 
   /**
+   * Optional. Number of required available replicas for the deployment to succeed. This field is
+   * only needed when partial model deployment/mutation is desired. If set, the model deploy/mutate
+   * operation will succeed once available_replica_count reaches required_replica_count, and the
+   * rest of the replicas will be retried. If not set, the default required_replica_count will be
+   * min_replica_count.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer requiredReplicaCount;
+
+  /**
    * Optional. If true, schedule the deployment workload on [spot
    * VMs](https://cloud.google.com/kubernetes-engine/docs/concepts/spot-vms).
    * The value may be {@code null}.
@@ -203,6 +214,31 @@ public final class GoogleCloudAiplatformV1DedicatedResources extends com.google.
    */
   public GoogleCloudAiplatformV1DedicatedResources setMinReplicaCount(java.lang.Integer minReplicaCount) {
     this.minReplicaCount = minReplicaCount;
+    return this;
+  }
+
+  /**
+   * Optional. Number of required available replicas for the deployment to succeed. This field is
+   * only needed when partial model deployment/mutation is desired. If set, the model deploy/mutate
+   * operation will succeed once available_replica_count reaches required_replica_count, and the
+   * rest of the replicas will be retried. If not set, the default required_replica_count will be
+   * min_replica_count.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getRequiredReplicaCount() {
+    return requiredReplicaCount;
+  }
+
+  /**
+   * Optional. Number of required available replicas for the deployment to succeed. This field is
+   * only needed when partial model deployment/mutation is desired. If set, the model deploy/mutate
+   * operation will succeed once available_replica_count reaches required_replica_count, and the
+   * rest of the replicas will be retried. If not set, the default required_replica_count will be
+   * min_replica_count.
+   * @param requiredReplicaCount requiredReplicaCount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1DedicatedResources setRequiredReplicaCount(java.lang.Integer requiredReplicaCount) {
+    this.requiredReplicaCount = requiredReplicaCount;
     return this;
   }
 

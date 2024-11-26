@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1RagQuery extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The retrieval config for the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RagRetrievalConfig ragRetrievalConfig;
+
+  /**
    * Optional. Configurations for hybrid search results ranking.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class GoogleCloudAiplatformV1beta1RagQuery extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
+
+  /**
+   * Optional. The retrieval config for the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagRetrievalConfig getRagRetrievalConfig() {
+    return ragRetrievalConfig;
+  }
+
+  /**
+   * Optional. The retrieval config for the query.
+   * @param ragRetrievalConfig ragRetrievalConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagQuery setRagRetrievalConfig(GoogleCloudAiplatformV1beta1RagRetrievalConfig ragRetrievalConfig) {
+    this.ragRetrievalConfig = ragRetrievalConfig;
+    return this;
+  }
 
   /**
    * Optional. Configurations for hybrid search results ranking.

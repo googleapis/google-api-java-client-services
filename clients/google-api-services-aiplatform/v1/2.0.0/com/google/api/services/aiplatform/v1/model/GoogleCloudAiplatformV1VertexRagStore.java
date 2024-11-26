@@ -30,13 +30,6 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1VertexRagStore extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Deprecated. Please use rag_resources instead.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> ragCorpora;
-
-  /**
    * Optional. The representation of the rag source. It can be used to specify corpus only or
    * ragfiles. Currently only support one corpus or multiple files from one corpus. In the future we
    * may open up multiple corpora support.
@@ -44,6 +37,13 @@ public final class GoogleCloudAiplatformV1VertexRagStore extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1VertexRagStoreRagResource> ragResources;
+
+  /**
+   * Optional. The retrieval config for the Rag query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1RagRetrievalConfig ragRetrievalConfig;
 
   /**
    * Optional. Number of top k results to return from the selected corpora.
@@ -58,23 +58,6 @@ public final class GoogleCloudAiplatformV1VertexRagStore extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.Double vectorDistanceThreshold;
-
-  /**
-   * Optional. Deprecated. Please use rag_resources instead.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getRagCorpora() {
-    return ragCorpora;
-  }
-
-  /**
-   * Optional. Deprecated. Please use rag_resources instead.
-   * @param ragCorpora ragCorpora or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1VertexRagStore setRagCorpora(java.util.List<java.lang.String> ragCorpora) {
-    this.ragCorpora = ragCorpora;
-    return this;
-  }
 
   /**
    * Optional. The representation of the rag source. It can be used to specify corpus only or
@@ -94,6 +77,23 @@ public final class GoogleCloudAiplatformV1VertexRagStore extends com.google.api.
    */
   public GoogleCloudAiplatformV1VertexRagStore setRagResources(java.util.List<GoogleCloudAiplatformV1VertexRagStoreRagResource> ragResources) {
     this.ragResources = ragResources;
+    return this;
+  }
+
+  /**
+   * Optional. The retrieval config for the Rag query.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RagRetrievalConfig getRagRetrievalConfig() {
+    return ragRetrievalConfig;
+  }
+
+  /**
+   * Optional. The retrieval config for the Rag query.
+   * @param ragRetrievalConfig ragRetrievalConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1VertexRagStore setRagRetrievalConfig(GoogleCloudAiplatformV1RagRetrievalConfig ragRetrievalConfig) {
+    this.ragRetrievalConfig = ragRetrievalConfig;
     return this;
   }
 

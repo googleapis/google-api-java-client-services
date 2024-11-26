@@ -5292,6 +5292,222 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           return (Patch) super.set(parameterName, value);
         }
       }
+      /**
+       * Updates a rubric. See google.classroom.v1.Rubric for details of which fields can be updated.
+       * Rubric update capabilities are [limited](/classroom/rubrics/limitations) once grading has
+       * started. This request must be made by the Google Cloud console of the [OAuth client
+       * ID](https://support.google.com/cloud/answer/6158849) used to create the parent course work item.
+       * This method returns the following error codes: * `PERMISSION_DENIED` if the requesting developer
+       * project didn't create the corresponding course work, if the user isn't permitted to make the
+       * requested modification to the rubric, or for access errors. This error code is also returned if
+       * grading has already started on the rubric. * `INVALID_ARGUMENT` if the request is malformed and
+       * for the following request error: * `RubricCriteriaInvalidFormat` * `NOT_FOUND` if the requested
+       * course, course work, or rubric doesn't exist or if the user doesn't have access to the
+       * corresponding course work. * `INTERNAL` if grading has already started on the rubric.
+       *
+       * Create a request for the method "courseWork.updateRubric".
+       *
+       * This request holds the parameters needed by the classroom server.  After setting any optional
+       * parameters, call the {@link UpdateRubric#execute()} method to invoke the remote operation.
+       *
+       * @param courseId Required. Identifier of the course.
+       * @param courseWorkId Required. Identifier of the course work.
+       * @param content the {@link com.google.api.services.classroom.model.Rubric}
+       * @return the request
+       */
+      public UpdateRubric updateRubric(java.lang.String courseId, java.lang.String courseWorkId, com.google.api.services.classroom.model.Rubric content) throws java.io.IOException {
+        UpdateRubric result = new UpdateRubric(courseId, courseWorkId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateRubric extends ClassroomRequest<com.google.api.services.classroom.model.Rubric> {
+
+        private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{courseWorkId}/rubric";
+
+        /**
+         * Updates a rubric. See google.classroom.v1.Rubric for details of which fields can be updated.
+         * Rubric update capabilities are [limited](/classroom/rubrics/limitations) once grading has
+         * started. This request must be made by the Google Cloud console of the [OAuth client
+         * ID](https://support.google.com/cloud/answer/6158849) used to create the parent course work
+         * item. This method returns the following error codes: * `PERMISSION_DENIED` if the requesting
+         * developer project didn't create the corresponding course work, if the user isn't permitted to
+         * make the requested modification to the rubric, or for access errors. This error code is also
+         * returned if grading has already started on the rubric. * `INVALID_ARGUMENT` if the request is
+         * malformed and for the following request error: * `RubricCriteriaInvalidFormat` * `NOT_FOUND` if
+         * the requested course, course work, or rubric doesn't exist or if the user doesn't have access
+         * to the corresponding course work. * `INTERNAL` if grading has already started on the rubric.
+         *
+         * Create a request for the method "courseWork.updateRubric".
+         *
+         * This request holds the parameters needed by the the classroom server.  After setting any
+         * optional parameters, call the {@link UpdateRubric#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * UpdateRubric#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param courseWorkId Required. Identifier of the course work.
+         * @param content the {@link com.google.api.services.classroom.model.Rubric}
+         * @since 1.13
+         */
+        protected UpdateRubric(java.lang.String courseId, java.lang.String courseWorkId, com.google.api.services.classroom.model.Rubric content) {
+          super(Classroom.this, "PATCH", REST_PATH, content, com.google.api.services.classroom.model.Rubric.class);
+          this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+          this.courseWorkId = com.google.api.client.util.Preconditions.checkNotNull(courseWorkId, "Required parameter courseWorkId must be specified.");
+        }
+
+        @Override
+        public UpdateRubric set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateRubric) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateRubric setAccessToken(java.lang.String accessToken) {
+          return (UpdateRubric) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateRubric setAlt(java.lang.String alt) {
+          return (UpdateRubric) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateRubric setCallback(java.lang.String callback) {
+          return (UpdateRubric) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateRubric setFields(java.lang.String fields) {
+          return (UpdateRubric) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateRubric setKey(java.lang.String key) {
+          return (UpdateRubric) super.setKey(key);
+        }
+
+        @Override
+        public UpdateRubric setOauthToken(java.lang.String oauthToken) {
+          return (UpdateRubric) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateRubric setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateRubric) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateRubric setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateRubric) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateRubric setUploadType(java.lang.String uploadType) {
+          return (UpdateRubric) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateRubric setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateRubric) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Identifier of the course. */
+        @com.google.api.client.util.Key
+        private java.lang.String courseId;
+
+        /** Required. Identifier of the course.
+         */
+        public java.lang.String getCourseId() {
+          return courseId;
+        }
+
+        /** Required. Identifier of the course. */
+        public UpdateRubric setCourseId(java.lang.String courseId) {
+          this.courseId = courseId;
+          return this;
+        }
+
+        /** Required. Identifier of the course work. */
+        @com.google.api.client.util.Key
+        private java.lang.String courseWorkId;
+
+        /** Required. Identifier of the course work.
+         */
+        public java.lang.String getCourseWorkId() {
+          return courseWorkId;
+        }
+
+        /** Required. Identifier of the course work. */
+        public UpdateRubric setCourseWorkId(java.lang.String courseWorkId) {
+          this.courseWorkId = courseWorkId;
+          return this;
+        }
+
+        /** Optional. Identifier of the rubric. */
+        @com.google.api.client.util.Key
+        private java.lang.String id;
+
+        /** Optional. Identifier of the rubric.
+         */
+        public java.lang.String getId() {
+          return id;
+        }
+
+        /** Optional. Identifier of the rubric. */
+        public UpdateRubric setId(java.lang.String id) {
+          this.id = id;
+          return this;
+        }
+
+        /**
+         * Optional. Mask that identifies which fields on the rubric to update. This field is
+         * required to do an update. The update fails if invalid fields are specified. There are
+         * multiple options to define the criteria of a rubric: the `source_spreadsheet_id` and the
+         * `criteria` list. Only one of these can be used at a time to define a rubric. The rubric
+         * `criteria` list is fully replaced by the rubric criteria specified in the update request.
+         * For example, if a criterion or level is missing from the request, it is deleted. New
+         * criteria and levels are added and an ID is assigned. Existing criteria and levels retain
+         * the previously assigned ID if the ID is specified in the request. The following fields
+         * can be specified by teachers: * `criteria` * `source_spreadsheet_id`
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. Mask that identifies which fields on the rubric to update. This field is required to do
+       an update. The update fails if invalid fields are specified. There are multiple options to define
+       the criteria of a rubric: the `source_spreadsheet_id` and the `criteria` list. Only one of these
+       can be used at a time to define a rubric. The rubric `criteria` list is fully replaced by the
+       rubric criteria specified in the update request. For example, if a criterion or level is missing
+       from the request, it is deleted. New criteria and levels are added and an ID is assigned. Existing
+       criteria and levels retain the previously assigned ID if the ID is specified in the request. The
+       following fields can be specified by teachers: * `criteria` * `source_spreadsheet_id`
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Optional. Mask that identifies which fields on the rubric to update. This field is
+         * required to do an update. The update fails if invalid fields are specified. There are
+         * multiple options to define the criteria of a rubric: the `source_spreadsheet_id` and the
+         * `criteria` list. Only one of these can be used at a time to define a rubric. The rubric
+         * `criteria` list is fully replaced by the rubric criteria specified in the update request.
+         * For example, if a criterion or level is missing from the request, it is deleted. New
+         * criteria and levels are added and an ID is assigned. Existing criteria and levels retain
+         * the previously assigned ID if the ID is specified in the request. The following fields
+         * can be specified by teachers: * `criteria` * `source_spreadsheet_id`
+         */
+        public UpdateRubric setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateRubric set(String parameterName, Object value) {
+          return (UpdateRubric) super.set(parameterName, value);
+        }
+      }
 
       /**
        * An accessor for creating requests from the AddOnAttachments collection.
@@ -6842,6 +7058,936 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
         }
+      }
+      /**
+       * An accessor for creating requests from the Rubrics collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Classroom classroom = new Classroom(...);}
+       *   {@code Classroom.Rubrics.List request = classroom.rubrics().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Rubrics rubrics() {
+        return new Rubrics();
+      }
+
+      /**
+       * The "rubrics" collection of methods.
+       */
+      public class Rubrics {
+
+        /**
+         * Creates a rubric. This request must be made by the Google Cloud console of the [OAuth client
+         * ID](https://support.google.com/cloud/answer/6158849) used to create the parent course work item.
+         * For further details, see [Rubrics structure and known
+         * limitations](/classroom/rubrics/limitations). This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting user isn't permitted to create rubrics for course work in
+         * the requested course. * `INTERNAL` if the request has insufficient OAuth scopes. *
+         * `INVALID_ARGUMENT` if the request is malformed and for the following request error: *
+         * `RubricCriteriaInvalidFormat` * `NOT_FOUND` if the requested course or course work don't exist or
+         * the user doesn't have access to the course or course work. * `FAILED_PRECONDITION` for the
+         * following request error: * `AttachmentNotVisible`
+         *
+         * Create a request for the method "rubrics.create".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param courseWorkId Required. Identifier of the course work.
+         * @param content the {@link com.google.api.services.classroom.model.Rubric}
+         * @return the request
+         */
+        public Create create(java.lang.String courseId, java.lang.String courseWorkId, com.google.api.services.classroom.model.Rubric content) throws java.io.IOException {
+          Create result = new Create(courseId, courseWorkId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends ClassroomRequest<com.google.api.services.classroom.model.Rubric> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{courseWorkId}/rubrics";
+
+          /**
+           * Creates a rubric. This request must be made by the Google Cloud console of the [OAuth client
+           * ID](https://support.google.com/cloud/answer/6158849) used to create the parent course work
+           * item. For further details, see [Rubrics structure and known
+           * limitations](/classroom/rubrics/limitations). This method returns the following error codes: *
+           * `PERMISSION_DENIED` if the requesting user isn't permitted to create rubrics for course work in
+           * the requested course. * `INTERNAL` if the request has insufficient OAuth scopes. *
+           * `INVALID_ARGUMENT` if the request is malformed and for the following request error: *
+           * `RubricCriteriaInvalidFormat` * `NOT_FOUND` if the requested course or course work don't exist
+           * or the user doesn't have access to the course or course work. * `FAILED_PRECONDITION` for the
+           * following request error: * `AttachmentNotVisible`
+           *
+           * Create a request for the method "rubrics.create".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param courseWorkId Required. Identifier of the course work.
+           * @param content the {@link com.google.api.services.classroom.model.Rubric}
+           * @since 1.13
+           */
+          protected Create(java.lang.String courseId, java.lang.String courseWorkId, com.google.api.services.classroom.model.Rubric content) {
+            super(Classroom.this, "POST", REST_PATH, content, com.google.api.services.classroom.model.Rubric.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.courseWorkId = com.google.api.client.util.Preconditions.checkNotNull(courseWorkId, "Required parameter courseWorkId must be specified.");
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public Create setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /** Required. Identifier of the course work. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseWorkId;
+
+          /** Required. Identifier of the course work.
+           */
+          public java.lang.String getCourseWorkId() {
+            return courseWorkId;
+          }
+
+          /** Required. Identifier of the course work. */
+          public Create setCourseWorkId(java.lang.String courseWorkId) {
+            this.courseWorkId = courseWorkId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a rubric. This request must be made by the Google Cloud console of the [OAuth client
+         * ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding rubric.
+         * This method returns the following error codes: * `PERMISSION_DENIED` if the requesting developer
+         * project didn't create the corresponding rubric, or if the requesting user isn't permitted to
+         * delete the requested rubric. * `NOT_FOUND` if no rubric exists with the requested ID or the user
+         * does not have access to the course, course work, or rubric. * `INVALID_ARGUMENT` if grading has
+         * already started on the rubric.
+         *
+         * Create a request for the method "rubrics.delete".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param courseWorkId Required. Identifier of the course work.
+         * @param id Required. Identifier of the rubric.
+         * @return the request
+         */
+        public Delete delete(java.lang.String courseId, java.lang.String courseWorkId, java.lang.String id) throws java.io.IOException {
+          Delete result = new Delete(courseId, courseWorkId, id);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends ClassroomRequest<com.google.api.services.classroom.model.Empty> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{courseWorkId}/rubrics/{id}";
+
+          /**
+           * Deletes a rubric. This request must be made by the Google Cloud console of the [OAuth client
+           * ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding rubric.
+           * This method returns the following error codes: * `PERMISSION_DENIED` if the requesting
+           * developer project didn't create the corresponding rubric, or if the requesting user isn't
+           * permitted to delete the requested rubric. * `NOT_FOUND` if no rubric exists with the requested
+           * ID or the user does not have access to the course, course work, or rubric. * `INVALID_ARGUMENT`
+           * if grading has already started on the rubric.
+           *
+           * Create a request for the method "rubrics.delete".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param courseWorkId Required. Identifier of the course work.
+           * @param id Required. Identifier of the rubric.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String courseId, java.lang.String courseWorkId, java.lang.String id) {
+            super(Classroom.this, "DELETE", REST_PATH, null, com.google.api.services.classroom.model.Empty.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.courseWorkId = com.google.api.client.util.Preconditions.checkNotNull(courseWorkId, "Required parameter courseWorkId must be specified.");
+            this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public Delete setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /** Required. Identifier of the course work. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseWorkId;
+
+          /** Required. Identifier of the course work.
+           */
+          public java.lang.String getCourseWorkId() {
+            return courseWorkId;
+          }
+
+          /** Required. Identifier of the course work. */
+          public Delete setCourseWorkId(java.lang.String courseWorkId) {
+            this.courseWorkId = courseWorkId;
+            return this;
+          }
+
+          /** Required. Identifier of the rubric. */
+          @com.google.api.client.util.Key
+          private java.lang.String id;
+
+          /** Required. Identifier of the rubric.
+           */
+          public java.lang.String getId() {
+            return id;
+          }
+
+          /** Required. Identifier of the rubric. */
+          public Delete setId(java.lang.String id) {
+            this.id = id;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns a rubric. This method returns the following error codes: * `PERMISSION_DENIED` for access
+         * errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested course,
+         * course work, or rubric doesn't exist or if the user doesn't have access to the corresponding
+         * course work.
+         *
+         * Create a request for the method "rubrics.get".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param courseWorkId Required. Identifier of the course work.
+         * @param id Required. Identifier of the rubric.
+         * @return the request
+         */
+        public Get get(java.lang.String courseId, java.lang.String courseWorkId, java.lang.String id) throws java.io.IOException {
+          Get result = new Get(courseId, courseWorkId, id);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ClassroomRequest<com.google.api.services.classroom.model.Rubric> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{courseWorkId}/rubrics/{id}";
+
+          /**
+           * Returns a rubric. This method returns the following error codes: * `PERMISSION_DENIED` for
+           * access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested
+           * course, course work, or rubric doesn't exist or if the user doesn't have access to the
+           * corresponding course work.
+           *
+           * Create a request for the method "rubrics.get".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param courseWorkId Required. Identifier of the course work.
+           * @param id Required. Identifier of the rubric.
+           * @since 1.13
+           */
+          protected Get(java.lang.String courseId, java.lang.String courseWorkId, java.lang.String id) {
+            super(Classroom.this, "GET", REST_PATH, null, com.google.api.services.classroom.model.Rubric.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.courseWorkId = com.google.api.client.util.Preconditions.checkNotNull(courseWorkId, "Required parameter courseWorkId must be specified.");
+            this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public Get setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /** Required. Identifier of the course work. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseWorkId;
+
+          /** Required. Identifier of the course work.
+           */
+          public java.lang.String getCourseWorkId() {
+            return courseWorkId;
+          }
+
+          /** Required. Identifier of the course work. */
+          public Get setCourseWorkId(java.lang.String courseWorkId) {
+            this.courseWorkId = courseWorkId;
+            return this;
+          }
+
+          /** Required. Identifier of the rubric. */
+          @com.google.api.client.util.Key
+          private java.lang.String id;
+
+          /** Required. Identifier of the rubric.
+           */
+          public java.lang.String getId() {
+            return id;
+          }
+
+          /** Required. Identifier of the rubric. */
+          public Get setId(java.lang.String id) {
+            this.id = id;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns a list of rubrics that the requester is permitted to view. This method returns the
+         * following error codes: * `PERMISSION_DENIED` for access errors. * `INVALID_ARGUMENT` if the
+         * request is malformed. * `NOT_FOUND` if the requested course or course work doesn't exist or if
+         * the user doesn't have access to the corresponding course work.
+         *
+         * Create a request for the method "rubrics.list".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param courseWorkId Required. Identifier of the course work.
+         * @return the request
+         */
+        public List list(java.lang.String courseId, java.lang.String courseWorkId) throws java.io.IOException {
+          List result = new List(courseId, courseWorkId);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ClassroomRequest<com.google.api.services.classroom.model.ListRubricsResponse> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{courseWorkId}/rubrics";
+
+          /**
+           * Returns a list of rubrics that the requester is permitted to view. This method returns the
+           * following error codes: * `PERMISSION_DENIED` for access errors. * `INVALID_ARGUMENT` if the
+           * request is malformed. * `NOT_FOUND` if the requested course or course work doesn't exist or if
+           * the user doesn't have access to the corresponding course work.
+           *
+           * Create a request for the method "rubrics.list".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param courseWorkId Required. Identifier of the course work.
+           * @since 1.13
+           */
+          protected List(java.lang.String courseId, java.lang.String courseWorkId) {
+            super(Classroom.this, "GET", REST_PATH, null, com.google.api.services.classroom.model.ListRubricsResponse.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.courseWorkId = com.google.api.client.util.Preconditions.checkNotNull(courseWorkId, "Required parameter courseWorkId must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public List setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /** Required. Identifier of the course work. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseWorkId;
+
+          /** Required. Identifier of the course work.
+           */
+          public java.lang.String getCourseWorkId() {
+            return courseWorkId;
+          }
+
+          /** Required. Identifier of the course work. */
+          public List setCourseWorkId(java.lang.String courseWorkId) {
+            this.courseWorkId = courseWorkId;
+            return this;
+          }
+
+          /**
+           * The maximum number of rubrics to return. If unspecified, at most 1 rubric is returned.
+           * The maximum value is 1; values above 1 are coerced to 1.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of rubrics to return. If unspecified, at most 1 rubric is returned. The maximum
+         value is 1; values above 1 are coerced to 1.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of rubrics to return. If unspecified, at most 1 rubric is returned.
+           * The maximum value is 1; values above 1 are coerced to 1.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * nextPageToken value returned from a previous list call, indicating that the subsequent
+           * page of results should be returned. The list request must be otherwise identical to the
+           * one that resulted in this token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
+         results should be returned. The list request must be otherwise identical to the one that resulted
+         in this token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * nextPageToken value returned from a previous list call, indicating that the subsequent
+           * page of results should be returned. The list request must be otherwise identical to the
+           * one that resulted in this token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a rubric. See google.classroom.v1.Rubric for details of which fields can be updated.
+         * Rubric update capabilities are [limited](/classroom/rubrics/limitations) once grading has
+         * started. This request must be made by the Google Cloud console of the [OAuth client
+         * ID](https://support.google.com/cloud/answer/6158849) used to create the parent course work item.
+         * This method returns the following error codes: * `PERMISSION_DENIED` if the requesting developer
+         * project didn't create the corresponding course work, if the user isn't permitted to make the
+         * requested modification to the rubric, or for access errors. This error code is also returned if
+         * grading has already started on the rubric. * `INVALID_ARGUMENT` if the request is malformed and
+         * for the following request error: * `RubricCriteriaInvalidFormat` * `NOT_FOUND` if the requested
+         * course, course work, or rubric doesn't exist or if the user doesn't have access to the
+         * corresponding course work. * `INTERNAL` if grading has already started on the rubric.
+         *
+         * Create a request for the method "rubrics.patch".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param courseWorkId Required. Identifier of the course work.
+         * @param id Optional. Identifier of the rubric.
+         * @param content the {@link com.google.api.services.classroom.model.Rubric}
+         * @return the request
+         */
+        public Patch patch(java.lang.String courseId, java.lang.String courseWorkId, java.lang.String id, com.google.api.services.classroom.model.Rubric content) throws java.io.IOException {
+          Patch result = new Patch(courseId, courseWorkId, id, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends ClassroomRequest<com.google.api.services.classroom.model.Rubric> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{courseWorkId}/rubrics/{id}";
+
+          /**
+           * Updates a rubric. See google.classroom.v1.Rubric for details of which fields can be updated.
+           * Rubric update capabilities are [limited](/classroom/rubrics/limitations) once grading has
+           * started. This request must be made by the Google Cloud console of the [OAuth client
+           * ID](https://support.google.com/cloud/answer/6158849) used to create the parent course work
+           * item. This method returns the following error codes: * `PERMISSION_DENIED` if the requesting
+           * developer project didn't create the corresponding course work, if the user isn't permitted to
+           * make the requested modification to the rubric, or for access errors. This error code is also
+           * returned if grading has already started on the rubric. * `INVALID_ARGUMENT` if the request is
+           * malformed and for the following request error: * `RubricCriteriaInvalidFormat` * `NOT_FOUND` if
+           * the requested course, course work, or rubric doesn't exist or if the user doesn't have access
+           * to the corresponding course work. * `INTERNAL` if grading has already started on the rubric.
+           *
+           * Create a request for the method "rubrics.patch".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param courseWorkId Required. Identifier of the course work.
+           * @param id Optional. Identifier of the rubric.
+           * @param content the {@link com.google.api.services.classroom.model.Rubric}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String courseId, java.lang.String courseWorkId, java.lang.String id, com.google.api.services.classroom.model.Rubric content) {
+            super(Classroom.this, "PATCH", REST_PATH, content, com.google.api.services.classroom.model.Rubric.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.courseWorkId = com.google.api.client.util.Preconditions.checkNotNull(courseWorkId, "Required parameter courseWorkId must be specified.");
+            this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public Patch setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /** Required. Identifier of the course work. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseWorkId;
+
+          /** Required. Identifier of the course work.
+           */
+          public java.lang.String getCourseWorkId() {
+            return courseWorkId;
+          }
+
+          /** Required. Identifier of the course work. */
+          public Patch setCourseWorkId(java.lang.String courseWorkId) {
+            this.courseWorkId = courseWorkId;
+            return this;
+          }
+
+          /** Optional. Identifier of the rubric. */
+          @com.google.api.client.util.Key
+          private java.lang.String id;
+
+          /** Optional. Identifier of the rubric.
+           */
+          public java.lang.String getId() {
+            return id;
+          }
+
+          /** Optional. Identifier of the rubric. */
+          public Patch setId(java.lang.String id) {
+            this.id = id;
+            return this;
+          }
+
+          /**
+           * Optional. Mask that identifies which fields on the rubric to update. This field is
+           * required to do an update. The update fails if invalid fields are specified. There are
+           * multiple options to define the criteria of a rubric: the `source_spreadsheet_id` and
+           * the `criteria` list. Only one of these can be used at a time to define a rubric. The
+           * rubric `criteria` list is fully replaced by the rubric criteria specified in the update
+           * request. For example, if a criterion or level is missing from the request, it is
+           * deleted. New criteria and levels are added and an ID is assigned. Existing criteria and
+           * levels retain the previously assigned ID if the ID is specified in the request. The
+           * following fields can be specified by teachers: * `criteria` * `source_spreadsheet_id`
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Mask that identifies which fields on the rubric to update. This field is required to do
+         an update. The update fails if invalid fields are specified. There are multiple options to define
+         the criteria of a rubric: the `source_spreadsheet_id` and the `criteria` list. Only one of these
+         can be used at a time to define a rubric. The rubric `criteria` list is fully replaced by the
+         rubric criteria specified in the update request. For example, if a criterion or level is missing
+         from the request, it is deleted. New criteria and levels are added and an ID is assigned. Existing
+         criteria and levels retain the previously assigned ID if the ID is specified in the request. The
+         following fields can be specified by teachers: * `criteria` * `source_spreadsheet_id`
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. Mask that identifies which fields on the rubric to update. This field is
+           * required to do an update. The update fails if invalid fields are specified. There are
+           * multiple options to define the criteria of a rubric: the `source_spreadsheet_id` and
+           * the `criteria` list. Only one of these can be used at a time to define a rubric. The
+           * rubric `criteria` list is fully replaced by the rubric criteria specified in the update
+           * request. For example, if a criterion or level is missing from the request, it is
+           * deleted. New criteria and levels are added and an ID is assigned. Existing criteria and
+           * levels retain the previously assigned ID if the ID is specified in the request. The
+           * following fields can be specified by teachers: * `criteria` * `source_spreadsheet_id`
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
       }
       /**
        * An accessor for creating requests from the StudentSubmissions collection.

@@ -48,6 +48,22 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   private java.lang.Double assignedGrade;
 
   /**
+   * Assigned rubric grades based on the rubric's Criteria. This map is empty if there is no rubric
+   * attached to this course work or if a rubric is attached, but no grades have been set on any
+   * Criteria. Entries are only populated for grades that have been set. Key: The rubric's criterion
+   * ID. Read-only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, RubricGrade> assignedRubricGrades;
+
+  static {
+    // hack to force ProGuard to consider RubricGrade used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(RubricGrade.class);
+  }
+
+  /**
    * Submission content when course_work_type is ASSIGNMENT. Students can modify this content using
    * ModifyAttachments.
    * The value may be {@code null}.
@@ -100,6 +116,22 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Double draftGrade;
+
+  /**
+   * Pending rubric grades based on the rubric's criteria. This map is empty if there is no rubric
+   * attached to this course work or if a rubric is attached, but no grades have been set on any
+   * criteria. Entries are only populated for grades that have been set. Key: The rubric's criterion
+   * ID. Read-only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, RubricGrade> draftRubricGrades;
+
+  static {
+    // hack to force ProGuard to consider RubricGrade used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(RubricGrade.class);
+  }
 
   /**
    * Classroom-assigned Identifier for the student submission. This is unique among submissions for
@@ -194,6 +226,29 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
    */
   public StudentSubmission setAssignedGrade(java.lang.Double assignedGrade) {
     this.assignedGrade = assignedGrade;
+    return this;
+  }
+
+  /**
+   * Assigned rubric grades based on the rubric's Criteria. This map is empty if there is no rubric
+   * attached to this course work or if a rubric is attached, but no grades have been set on any
+   * Criteria. Entries are only populated for grades that have been set. Key: The rubric's criterion
+   * ID. Read-only.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, RubricGrade> getAssignedRubricGrades() {
+    return assignedRubricGrades;
+  }
+
+  /**
+   * Assigned rubric grades based on the rubric's Criteria. This map is empty if there is no rubric
+   * attached to this course work or if a rubric is attached, but no grades have been set on any
+   * Criteria. Entries are only populated for grades that have been set. Key: The rubric's criterion
+   * ID. Read-only.
+   * @param assignedRubricGrades assignedRubricGrades or {@code null} for none
+   */
+  public StudentSubmission setAssignedRubricGrades(java.util.Map<String, RubricGrade> assignedRubricGrades) {
+    this.assignedRubricGrades = assignedRubricGrades;
     return this;
   }
 
@@ -323,6 +378,29 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
    */
   public StudentSubmission setDraftGrade(java.lang.Double draftGrade) {
     this.draftGrade = draftGrade;
+    return this;
+  }
+
+  /**
+   * Pending rubric grades based on the rubric's criteria. This map is empty if there is no rubric
+   * attached to this course work or if a rubric is attached, but no grades have been set on any
+   * criteria. Entries are only populated for grades that have been set. Key: The rubric's criterion
+   * ID. Read-only.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, RubricGrade> getDraftRubricGrades() {
+    return draftRubricGrades;
+  }
+
+  /**
+   * Pending rubric grades based on the rubric's criteria. This map is empty if there is no rubric
+   * attached to this course work or if a rubric is attached, but no grades have been set on any
+   * criteria. Entries are only populated for grades that have been set. Key: The rubric's criterion
+   * ID. Read-only.
+   * @param draftRubricGrades draftRubricGrades or {@code null} for none
+   */
+  public StudentSubmission setDraftRubricGrades(java.util.Map<String, RubricGrade> draftRubricGrades) {
+    this.draftRubricGrades = draftRubricGrades;
     return this;
   }
 

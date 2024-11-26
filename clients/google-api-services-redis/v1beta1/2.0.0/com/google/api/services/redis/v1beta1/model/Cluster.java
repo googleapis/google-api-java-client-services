@@ -39,6 +39,21 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String authorizationMode;
 
   /**
+   * Optional. The automated backup config for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutomatedBackupConfig automatedBackupConfig;
+
+  /**
+   * Optional. Output only. The backup collection full resource name. Example:
+   * projects/{project}/locations/{location}/backupCollections/{collection}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backupCollection;
+
+  /**
    * Optional. A list of cluster enpoints.
    * The value may be {@code null}.
    */
@@ -75,6 +90,15 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.util.List<DiscoveryEndpoint> discoveryEndpoints;
 
   /**
+   * Optional. Backups stored in Cloud Storage buckets. The Cloud Storage buckets need to be the
+   * same region as the clusters. Read permission is required to import from the provided Cloud
+   * Storage objects.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GcsBackupSource gcsSource;
+
+  /**
    * Optional. ClusterMaintenancePolicy determines when to allow or deny updates.
    * The value may be {@code null}.
    */
@@ -87,6 +111,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ClusterMaintenanceSchedule maintenanceSchedule;
+
+  /**
+   * Optional. Backups generated and managed by memorystore service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedBackupSource managedBackupSource;
 
   /**
    * Required. Identifier. Unique name of the resource in this scope including project and location
@@ -228,6 +259,42 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The automated backup config for the cluster.
+   * @return value or {@code null} for none
+   */
+  public AutomatedBackupConfig getAutomatedBackupConfig() {
+    return automatedBackupConfig;
+  }
+
+  /**
+   * Optional. The automated backup config for the cluster.
+   * @param automatedBackupConfig automatedBackupConfig or {@code null} for none
+   */
+  public Cluster setAutomatedBackupConfig(AutomatedBackupConfig automatedBackupConfig) {
+    this.automatedBackupConfig = automatedBackupConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. The backup collection full resource name. Example:
+   * projects/{project}/locations/{location}/backupCollections/{collection}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackupCollection() {
+    return backupCollection;
+  }
+
+  /**
+   * Optional. Output only. The backup collection full resource name. Example:
+   * projects/{project}/locations/{location}/backupCollections/{collection}
+   * @param backupCollection backupCollection or {@code null} for none
+   */
+  public Cluster setBackupCollection(java.lang.String backupCollection) {
+    this.backupCollection = backupCollection;
+    return this;
+  }
+
+  /**
    * Optional. A list of cluster enpoints.
    * @return value or {@code null} for none
    */
@@ -315,6 +382,27 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Backups stored in Cloud Storage buckets. The Cloud Storage buckets need to be the
+   * same region as the clusters. Read permission is required to import from the provided Cloud
+   * Storage objects.
+   * @return value or {@code null} for none
+   */
+  public GcsBackupSource getGcsSource() {
+    return gcsSource;
+  }
+
+  /**
+   * Optional. Backups stored in Cloud Storage buckets. The Cloud Storage buckets need to be the
+   * same region as the clusters. Read permission is required to import from the provided Cloud
+   * Storage objects.
+   * @param gcsSource gcsSource or {@code null} for none
+   */
+  public Cluster setGcsSource(GcsBackupSource gcsSource) {
+    this.gcsSource = gcsSource;
+    return this;
+  }
+
+  /**
    * Optional. ClusterMaintenancePolicy determines when to allow or deny updates.
    * @return value or {@code null} for none
    */
@@ -345,6 +433,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setMaintenanceSchedule(ClusterMaintenanceSchedule maintenanceSchedule) {
     this.maintenanceSchedule = maintenanceSchedule;
+    return this;
+  }
+
+  /**
+   * Optional. Backups generated and managed by memorystore service.
+   * @return value or {@code null} for none
+   */
+  public ManagedBackupSource getManagedBackupSource() {
+    return managedBackupSource;
+  }
+
+  /**
+   * Optional. Backups generated and managed by memorystore service.
+   * @param managedBackupSource managedBackupSource or {@code null} for none
+   */
+  public Cluster setManagedBackupSource(ManagedBackupSource managedBackupSource) {
+    this.managedBackupSource = managedBackupSource;
     return this;
   }
 

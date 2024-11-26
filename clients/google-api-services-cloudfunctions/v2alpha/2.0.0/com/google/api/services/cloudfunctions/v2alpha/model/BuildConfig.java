@@ -57,8 +57,7 @@ public final class BuildConfig extends com.google.api.client.json.GenericJson {
    * built by Cloud Build. If specified by user, it is created and managed by user with a customer
    * managed encryption key. Otherwise, GCF will create and use a repository named 'gcf-artifacts'
    * for every deployed region. It must match the pattern
-   * `projects/{project}/locations/{location}/repositories/{repository}`. Cross-project repositories
-   * are not supported. Cross-location repositories are not supported. Repository format must be
+   * `projects/{project}/locations/{location}/repositories/{repository}`. Repository format must be
    * 'DOCKER'.
    * The value may be {@code null}.
    */
@@ -200,8 +199,7 @@ public final class BuildConfig extends com.google.api.client.json.GenericJson {
    * built by Cloud Build. If specified by user, it is created and managed by user with a customer
    * managed encryption key. Otherwise, GCF will create and use a repository named 'gcf-artifacts'
    * for every deployed region. It must match the pattern
-   * `projects/{project}/locations/{location}/repositories/{repository}`. Cross-project repositories
-   * are not supported. Cross-location repositories are not supported. Repository format must be
+   * `projects/{project}/locations/{location}/repositories/{repository}`. Repository format must be
    * 'DOCKER'.
    * @return value or {@code null} for none
    */
@@ -214,8 +212,7 @@ public final class BuildConfig extends com.google.api.client.json.GenericJson {
    * built by Cloud Build. If specified by user, it is created and managed by user with a customer
    * managed encryption key. Otherwise, GCF will create and use a repository named 'gcf-artifacts'
    * for every deployed region. It must match the pattern
-   * `projects/{project}/locations/{location}/repositories/{repository}`. Cross-project repositories
-   * are not supported. Cross-location repositories are not supported. Repository format must be
+   * `projects/{project}/locations/{location}/repositories/{repository}`. Repository format must be
    * 'DOCKER'.
    * @param dockerRepository dockerRepository or {@code null} for none
    */

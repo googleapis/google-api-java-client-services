@@ -17,8 +17,7 @@
 package com.google.api.services.spanner.v1.model;
 
 /**
- * BackupSchedule expresses the automated backup creation specification for a Spanner database. Next
- * ID: 10
+ * BackupSchedule expresses the automated backup creation specification for a Spanner database.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Spanner API. For a detailed explanation see:

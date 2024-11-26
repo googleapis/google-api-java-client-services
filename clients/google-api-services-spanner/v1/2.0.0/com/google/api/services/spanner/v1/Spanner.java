@@ -14064,14 +14064,15 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Optional. Deadline used while retrieving metadata for instance partition operations.
            * Instance partitions whose operation metadata cannot be retrieved within this deadline
-           * will be added to unreachable in ListInstancePartitionOperationsResponse.
+           * will be added to unreachable_instance_partitions in
+           * ListInstancePartitionOperationsResponse.
            */
           @com.google.api.client.util.Key
           private String instancePartitionDeadline;
 
           /** Optional. Deadline used while retrieving metadata for instance partition operations. Instance
          partitions whose operation metadata cannot be retrieved within this deadline will be added to
-         unreachable in ListInstancePartitionOperationsResponse.
+         unreachable_instance_partitions in ListInstancePartitionOperationsResponse.
            */
           public String getInstancePartitionDeadline() {
             return instancePartitionDeadline;
@@ -14080,7 +14081,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Optional. Deadline used while retrieving metadata for instance partition operations.
            * Instance partitions whose operation metadata cannot be retrieved within this deadline
-           * will be added to unreachable in ListInstancePartitionOperationsResponse.
+           * will be added to unreachable_instance_partitions in
+           * ListInstancePartitionOperationsResponse.
            */
           public List setInstancePartitionDeadline(String instancePartitionDeadline) {
             this.instancePartitionDeadline = instancePartitionDeadline;

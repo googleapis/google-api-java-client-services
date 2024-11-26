@@ -109,10 +109,10 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Specify the unit of the quota limit. It uses the same syntax as Metric.unit. The supported unit
-   * kinds are determined by the quota backend system. Here are some examples: * "1/min/{project}"
-   * for quota per minute per project. Note: the order of unit components is insignificant. The "1"
-   * at the beginning is required to follow the metric unit syntax.
+   * Specify the unit of the quota limit. It uses the same syntax as MetricDescriptor.unit. The
+   * supported unit kinds are determined by the quota backend system. Here are some examples: *
+   * "1/min/{project}" for quota per minute per project. Note: the order of unit components is
+   * insignificant. The "1" at the beginning is required to follow the metric unit syntax.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -306,10 +306,10 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specify the unit of the quota limit. It uses the same syntax as Metric.unit. The supported unit
-   * kinds are determined by the quota backend system. Here are some examples: * "1/min/{project}"
-   * for quota per minute per project. Note: the order of unit components is insignificant. The "1"
-   * at the beginning is required to follow the metric unit syntax.
+   * Specify the unit of the quota limit. It uses the same syntax as MetricDescriptor.unit. The
+   * supported unit kinds are determined by the quota backend system. Here are some examples: *
+   * "1/min/{project}" for quota per minute per project. Note: the order of unit components is
+   * insignificant. The "1" at the beginning is required to follow the metric unit syntax.
    * @return value or {@code null} for none
    */
   public java.lang.String getUnit() {
@@ -317,10 +317,10 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specify the unit of the quota limit. It uses the same syntax as Metric.unit. The supported unit
-   * kinds are determined by the quota backend system. Here are some examples: * "1/min/{project}"
-   * for quota per minute per project. Note: the order of unit components is insignificant. The "1"
-   * at the beginning is required to follow the metric unit syntax.
+   * Specify the unit of the quota limit. It uses the same syntax as MetricDescriptor.unit. The
+   * supported unit kinds are determined by the quota backend system. Here are some examples: *
+   * "1/min/{project}" for quota per minute per project. Note: the order of unit components is
+   * insignificant. The "1" at the beginning is required to follow the metric unit syntax.
    * @param unit unit or {@code null} for none
    */
   public QuotaLimit setUnit(java.lang.String unit) {

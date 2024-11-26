@@ -37,6 +37,15 @@ public final class GoSettings extends com.google.api.client.json.GenericJson {
   private CommonLanguageSettings common;
 
   /**
+   * Map of service names to renamed services. Keys are the package relative service names and
+   * values are the name to be used for the service client and call options. publishing:
+   * go_settings: renamed_services: Publisher: TopicAdmin
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> renamedServices;
+
+  /**
    * Some settings.
    * @return value or {@code null} for none
    */
@@ -50,6 +59,27 @@ public final class GoSettings extends com.google.api.client.json.GenericJson {
    */
   public GoSettings setCommon(CommonLanguageSettings common) {
     this.common = common;
+    return this;
+  }
+
+  /**
+   * Map of service names to renamed services. Keys are the package relative service names and
+   * values are the name to be used for the service client and call options. publishing:
+   * go_settings: renamed_services: Publisher: TopicAdmin
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getRenamedServices() {
+    return renamedServices;
+  }
+
+  /**
+   * Map of service names to renamed services. Keys are the package relative service names and
+   * values are the name to be used for the service client and call options. publishing:
+   * go_settings: renamed_services: Publisher: TopicAdmin
+   * @param renamedServices renamedServices or {@code null} for none
+   */
+  public GoSettings setRenamedServices(java.util.Map<String, java.lang.String> renamedServices) {
+    this.renamedServices = renamedServices;
     return this;
   }
 

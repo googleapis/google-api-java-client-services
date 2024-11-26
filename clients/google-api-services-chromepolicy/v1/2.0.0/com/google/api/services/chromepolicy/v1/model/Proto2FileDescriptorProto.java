@@ -78,7 +78,9 @@ public final class Proto2FileDescriptorProto extends com.google.api.client.json.
 
   /**
    * The syntax of the proto file. The supported values are "proto2", "proto3", and "editions". If
-   * `edition` is present, this value must be "editions".
+   * `edition` is present, this value must be "editions". WARNING: This field should only be used by
+   * protobuf plugins or special cases like the proto compiler. Other uses are discouraged and
+   * developers should rely on the protoreflect APIs for their client language.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -171,7 +173,9 @@ public final class Proto2FileDescriptorProto extends com.google.api.client.json.
 
   /**
    * The syntax of the proto file. The supported values are "proto2", "proto3", and "editions". If
-   * `edition` is present, this value must be "editions".
+   * `edition` is present, this value must be "editions". WARNING: This field should only be used by
+   * protobuf plugins or special cases like the proto compiler. Other uses are discouraged and
+   * developers should rely on the protoreflect APIs for their client language.
    * @return value or {@code null} for none
    */
   public java.lang.String getSyntax() {
@@ -180,7 +184,9 @@ public final class Proto2FileDescriptorProto extends com.google.api.client.json.
 
   /**
    * The syntax of the proto file. The supported values are "proto2", "proto3", and "editions". If
-   * `edition` is present, this value must be "editions".
+   * `edition` is present, this value must be "editions". WARNING: This field should only be used by
+   * protobuf plugins or special cases like the proto compiler. Other uses are discouraged and
+   * developers should rely on the protoreflect APIs for their client language.
    * @param syntax syntax or {@code null} for none
    */
   public Proto2FileDescriptorProto setSyntax(java.lang.String syntax) {

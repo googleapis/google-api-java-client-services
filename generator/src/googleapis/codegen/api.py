@@ -133,6 +133,18 @@ class Api(template_objects.CodeObject):
     # update the schema template properties.
     self._variant_info = {}
 
+    # Global parameters
+    self._parameters = []
+    param_dict = self.values.get('parameters') or {}
+    for name in sorted(param_dict):
+      if (name == 'key'):
+        test = "true"
+      parameter = Parameter(self, name, param_dict[name], self)
+      self._parameters.append(parameter)
+      if name == 'alt':
+        self.SetTemplateValue('alt', parameter)
+    self.SetTemplateValue('parameters', self._parameters)
+
     # Build data types and methods
     self._SetupModules()
     self.void_type = data_types.Void(self)
@@ -150,15 +162,8 @@ class Api(template_objects.CodeObject):
       self._top_level_methods.append(Method(self, name, method_dict[name]))
     self.SetTemplateValue('methods', self._top_level_methods)
 
-    # Global parameters
-    self._parameters = []
-    param_dict = self.values.get('parameters') or {}
-    for name in sorted(param_dict):
-      parameter = Parameter(self, name, param_dict[name], self)
-      self._parameters.append(parameter)
-      if name == 'alt':
-        self.SetTemplateValue('alt', parameter)
-    self.SetTemplateValue('parameters', self._parameters)
+
+    # could remove here, if any parameter is also contained in method
 
     # Auth scopes
     self._authscopes = []
@@ -725,20 +730,23 @@ class Method(template_objects.CodeObject):
     req_parameters = []
     opt_parameters = []
     for name, def_dict in list(self.values.get('parameters', {}).items()):
-      param = Parameter(api, name, def_dict, self)
-      if name == 'alt':
-        # Treat the alt parameter differently
-        self.SetTemplateValue('alt', param)
-        continue
-
-      # Standard params are part of the generic request class
-      # We want to push all parameters that aren't declared inside
-      # parameterOrder after those that are.
-      if param.values['wireName'] in order:
-        req_parameters.append(param)
+      if any(param.codeName == name for param in api._parameters):
+        _LOGGER.debug("Param %s exists at the global level, not including.", name)
       else:
-        # optional parameters are appended in the order they're declared.
-        opt_parameters.append(param)
+        param = Parameter(api, name, def_dict, self)
+        if name == 'alt':
+          # Treat the alt parameter differently
+          self.SetTemplateValue('alt', param)
+          continue
+
+        # Standard params are part of the generic request class
+        # We want to push all parameters that aren't declared inside
+        # parameterOrder after those that are.
+        if param.values['wireName'] in order:
+          req_parameters.append(param)
+        else:
+          # optional parameters are appended in the order they're declared.
+          opt_parameters.append(param)
     # pylint: disable=g-long-lambda
     req_parameters.sort(key=lambda x: order.index(x.values['wireName']))
     # sort optional parameters by name to avoid code churn

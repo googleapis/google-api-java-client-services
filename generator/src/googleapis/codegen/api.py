@@ -162,9 +162,6 @@ class Api(template_objects.CodeObject):
       self._top_level_methods.append(Method(self, name, method_dict[name]))
     self.SetTemplateValue('methods', self._top_level_methods)
 
-
-    # could remove here, if any parameter is also contained in method
-
     # Auth scopes
     self._authscopes = []
     if (self.values.get('auth') and

@@ -172,7 +172,7 @@ packages on [Maven Central][maven-search].
 | Firebase Hosting API | [v1](clients/google-api-services-firebasehosting/v1), [v1beta1](clients/google-api-services-firebasehosting/v1beta1) |
 | Firebase ML API | [v1](clients/google-api-services-firebaseml/v1), [v1beta2](clients/google-api-services-firebaseml/v1beta2), [v2beta](clients/google-api-services-firebaseml/v2beta) |
 | Firebase Management API | [v1beta1](clients/google-api-services-firebase/v1beta1) |
-| Firebase Realtime Database API | [v1beta](clients/google-api-services-firebasedatabase/v1beta) |
+| Firebase Realtime Database Management API | [v1beta](clients/google-api-services-firebasedatabase/v1beta) |
 | Firebase Rules API | [v1](clients/google-api-services-firebaserules/v1) |
 | Fitness API | [v1](clients/google-api-services-fitness/v1) |
 | GDC Virtual API | [v1](clients/google-api-services-gkeonprem/v1) |
@@ -251,6 +251,7 @@ packages on [Maven Central][maven-search].
 | Oracle Database@Google Cloud API | [v1](clients/google-api-services-oracledatabase/v1) |
 | Organization Policy API | [v2](clients/google-api-services-orgpolicy/v2) |
 | PageSpeed Insights API | [v5](clients/google-api-services-pagespeedonline/v5) |
+| Parallelstore API | [v1](clients/google-api-services-parallelstore/v1), [v1beta](clients/google-api-services-parallelstore/v1beta) |
 | Payments Reseller Subscription API | [v1](clients/google-api-services-paymentsresellersubscription/v1) |
 | People API | [v1](clients/google-api-services-people/v1) |
 | Places API (New) | [v1](clients/google-api-services-places/v1) |

@@ -1396,6 +1396,569 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
       }
     }
     /**
+     * An accessor for creating requests from the Profiles collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code ChromeManagement chromemanagement = new ChromeManagement(...);}
+     *   {@code ChromeManagement.Profiles.List request = chromemanagement.profiles().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Profiles profiles() {
+      return new Profiles();
+    }
+
+    /**
+     * The "profiles" collection of methods.
+     */
+    public class Profiles {
+
+      /**
+       * Deletes the data collected from a Chrome browser profile.
+       *
+       * Create a request for the method "profiles.delete".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Format: customers/{customer_id}/profiles/{profile_permanent_id}
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleProtobufEmpty> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+/profiles/[^/]+$");
+
+        /**
+         * Deletes the data collected from a Chrome browser profile.
+         *
+         * Create a request for the method "profiles.delete".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Format: customers/{customer_id}/profiles/{profile_permanent_id}
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(ChromeManagement.this, "DELETE", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleProtobufEmpty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/profiles/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Format: customers/{customer_id}/profiles/{profile_permanent_id} */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Format: customers/{customer_id}/profiles/{profile_permanent_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. Format: customers/{customer_id}/profiles/{profile_permanent_id} */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/profiles/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets a Chrome browser profile with customer ID and profile permanent ID.
+       *
+       * Create a request for the method "profiles.get".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Format: customers/{customer_id}/profiles/{profile_permanent_id}
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ChromeBrowserProfile> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+/profiles/[^/]+$");
+
+        /**
+         * Gets a Chrome browser profile with customer ID and profile permanent ID.
+         *
+         * Create a request for the method "profiles.get".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Format: customers/{customer_id}/profiles/{profile_permanent_id}
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ChromeBrowserProfile.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/profiles/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Format: customers/{customer_id}/profiles/{profile_permanent_id} */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Format: customers/{customer_id}/profiles/{profile_permanent_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. Format: customers/{customer_id}/profiles/{profile_permanent_id} */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/profiles/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists Chrome browser profiles of a customer based on the given search and sorting criteria.
+       *
+       * Create a request for the method "profiles.list".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Format: customers/{customer_id}
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ListChromeBrowserProfilesResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/profiles";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+        /**
+         * Lists Chrome browser profiles of a customer based on the given search and sorting criteria.
+         *
+         * Create a request for the method "profiles.list".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Format: customers/{customer_id}
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ListChromeBrowserProfilesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Format: customers/{customer_id} */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Format: customers/{customer_id}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. Format: customers/{customer_id} */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The filter used to filter profiles. The following fields can be used in the
+         * filter: - profile_id - display_name - user_email - last_activity_time -
+         * last_policy_sync_time - last_status_report_time - first_enrollment_time -
+         * os_platform_type - os_version - browser_version - browser_channel - policy_count -
+         * extension_count - identity_provider - affiliation_state - ouId Any of the above fields
+         * can be used to specify a filter, and filtering by multiple fields is supported with AND
+         * operator. String type fields and enum type fields support '=' and '!=' operators. The
+         * integer type and the timestamp type fields support '=', '!=', '<', '>', '<=' and '>='
+         * operators. Timestamps expect an RFC-3339 formatted string (e.g.
+         * 2012-04-21T11:30:00-04:00). Wildcard '*' can be used with a string type field filter. In
+         * addition, string literal filtering is also supported, for example, 'ABC' as a filter maps
+         * to a filter that checks if any of the filterable string type fields contains 'ABC'.
+         * Organization unit number can be used as a filtering criteria here by specifying 'ouId =
+         * ${your_org_unit_id}', please note that only single OU ID matching is supported.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. The filter used to filter profiles. The following fields can be used in the filter: -
+       profile_id - display_name - user_email - last_activity_time - last_policy_sync_time -
+       last_status_report_time - first_enrollment_time - os_platform_type - os_version - browser_version -
+       browser_channel - policy_count - extension_count - identity_provider - affiliation_state - ouId Any
+       of the above fields can be used to specify a filter, and filtering by multiple fields is supported
+       with AND operator. String type fields and enum type fields support '=' and '!=' operators. The
+       integer type and the timestamp type fields support '=', '!=', '<', '>', '<=' and '>=' operators.
+       Timestamps expect an RFC-3339 formatted string (e.g. 2012-04-21T11:30:00-04:00). Wildcard '*' can
+       be used with a string type field filter. In addition, string literal filtering is also supported,
+       for example, 'ABC' as a filter maps to a filter that checks if any of the filterable string type
+       fields contains 'ABC'. Organization unit number can be used as a filtering criteria here by
+       specifying 'ouId = ${your_org_unit_id}', please note that only single OU ID matching is supported.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. The filter used to filter profiles. The following fields can be used in the
+         * filter: - profile_id - display_name - user_email - last_activity_time -
+         * last_policy_sync_time - last_status_report_time - first_enrollment_time -
+         * os_platform_type - os_version - browser_version - browser_channel - policy_count -
+         * extension_count - identity_provider - affiliation_state - ouId Any of the above fields
+         * can be used to specify a filter, and filtering by multiple fields is supported with AND
+         * operator. String type fields and enum type fields support '=' and '!=' operators. The
+         * integer type and the timestamp type fields support '=', '!=', '<', '>', '<=' and '>='
+         * operators. Timestamps expect an RFC-3339 formatted string (e.g.
+         * 2012-04-21T11:30:00-04:00). Wildcard '*' can be used with a string type field filter. In
+         * addition, string literal filtering is also supported, for example, 'ABC' as a filter maps
+         * to a filter that checks if any of the filterable string type fields contains 'ABC'.
+         * Organization unit number can be used as a filtering criteria here by specifying 'ouId =
+         * ${your_org_unit_id}', please note that only single OU ID matching is supported.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. The fields used to specify the ordering of the results. The supported fields
+         * are: - profile_id - display_name - user_email - last_activity_time -
+         * last_policy_sync_time - last_status_report_time - first_enrollment_time -
+         * os_platform_type - os_version - browser_version - browser_channel - policy_count -
+         * extension_count - identity_provider - affiliation_state By default, sorting is in
+         * ascending order, to specify descending order for a field, a suffix " desc" should be
+         * added to the field name. The default ordering is the descending order of
+         * last_status_report_time.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional. The fields used to specify the ordering of the results. The supported fields are: -
+       profile_id - display_name - user_email - last_activity_time - last_policy_sync_time -
+       last_status_report_time - first_enrollment_time - os_platform_type - os_version - browser_version -
+       browser_channel - policy_count - extension_count - identity_provider - affiliation_state By
+       default, sorting is in ascending order, to specify descending order for a field, a suffix " desc"
+       should be added to the field name. The default ordering is the descending order of
+       last_status_report_time.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Optional. The fields used to specify the ordering of the results. The supported fields
+         * are: - profile_id - display_name - user_email - last_activity_time -
+         * last_policy_sync_time - last_status_report_time - first_enrollment_time -
+         * os_platform_type - os_version - browser_version - browser_channel - policy_count -
+         * extension_count - identity_provider - affiliation_state By default, sorting is in
+         * ascending order, to specify descending order for a field, a suffix " desc" should be
+         * added to the field name. The default ordering is the descending order of
+         * last_status_report_time.
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of profiles to return. The default page size is 100 if
+         * page_size is unspecified, and the maximum page size allowed is 200.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of profiles to return. The default page size is 100 if page_size is
+       unspecified, and the maximum page size allowed is 200.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of profiles to return. The default page size is 100 if
+         * page_size is unspecified, and the maximum page size allowed is 200.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Optional. The page token used to retrieve a specific page of the listing request. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. The page token used to retrieve a specific page of the listing request.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Optional. The page token used to retrieve a specific page of the listing request. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Reports collection.
      *
      * <p>The typical use is:</p>

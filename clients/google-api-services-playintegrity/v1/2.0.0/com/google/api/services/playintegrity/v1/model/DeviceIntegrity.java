@@ -52,6 +52,16 @@ public final class DeviceIntegrity extends com.google.api.client.json.GenericJso
   private java.util.List<java.lang.String> deviceRecognitionVerdict;
 
   /**
+   * Contains legacy details about the integrity of the device the app is running on. Only for
+   * devices with Android version T or higher and only for apps opted in to the new verdicts. Only
+   * available during the transition period to the new verdicts system and will be removed
+   * afterwards.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> legacyDeviceRecognitionVerdict;
+
+  /**
    * Details about the device activity of the device the app is running on.
    * The value may be {@code null}.
    */
@@ -106,6 +116,29 @@ public final class DeviceIntegrity extends com.google.api.client.json.GenericJso
    */
   public DeviceIntegrity setDeviceRecognitionVerdict(java.util.List<java.lang.String> deviceRecognitionVerdict) {
     this.deviceRecognitionVerdict = deviceRecognitionVerdict;
+    return this;
+  }
+
+  /**
+   * Contains legacy details about the integrity of the device the app is running on. Only for
+   * devices with Android version T or higher and only for apps opted in to the new verdicts. Only
+   * available during the transition period to the new verdicts system and will be removed
+   * afterwards.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLegacyDeviceRecognitionVerdict() {
+    return legacyDeviceRecognitionVerdict;
+  }
+
+  /**
+   * Contains legacy details about the integrity of the device the app is running on. Only for
+   * devices with Android version T or higher and only for apps opted in to the new verdicts. Only
+   * available during the transition period to the new verdicts system and will be removed
+   * afterwards.
+   * @param legacyDeviceRecognitionVerdict legacyDeviceRecognitionVerdict or {@code null} for none
+   */
+  public DeviceIntegrity setLegacyDeviceRecognitionVerdict(java.util.List<java.lang.String> legacyDeviceRecognitionVerdict) {
+    this.legacyDeviceRecognitionVerdict = legacyDeviceRecognitionVerdict;
     return this;
   }
 

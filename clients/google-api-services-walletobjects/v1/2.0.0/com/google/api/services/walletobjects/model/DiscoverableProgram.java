@@ -17,8 +17,9 @@
 package com.google.api.services.walletobjects.model;
 
 /**
- * Information about how a class may be discovered and instantiated from within the Android Pay app.
- * This is done by searching for a loyalty or gift card program and scanning or manually entering.
+ * Information about how a class may be discovered and instantiated from within the Google Wallet
+ * app. This is done by searching for a loyalty or gift card program and scanning or manually
+ * entering.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Wallet API. For a detailed explanation see:

@@ -73,6 +73,15 @@ public final class LoyaltyProgram extends com.google.api.client.json.GenericJson
   private java.lang.String programLabel;
 
   /**
+   * Optional. The shipping label for the loyalty program. You can use this label to indicate
+   * whether this offer has the loyalty shipping benefit. If not specified, the item is not eligible
+   * for loyalty shipping for the given loyalty tier.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String shippingLabel;
+
+  /**
    * Required. The label of the tier within the loyalty program. Must match one of the labels within
    * the program.
    * The value may be {@code null}.
@@ -174,6 +183,27 @@ public final class LoyaltyProgram extends com.google.api.client.json.GenericJson
    */
   public LoyaltyProgram setProgramLabel(java.lang.String programLabel) {
     this.programLabel = programLabel;
+    return this;
+  }
+
+  /**
+   * Optional. The shipping label for the loyalty program. You can use this label to indicate
+   * whether this offer has the loyalty shipping benefit. If not specified, the item is not eligible
+   * for loyalty shipping for the given loyalty tier.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getShippingLabel() {
+    return shippingLabel;
+  }
+
+  /**
+   * Optional. The shipping label for the loyalty program. You can use this label to indicate
+   * whether this offer has the loyalty shipping benefit. If not specified, the item is not eligible
+   * for loyalty shipping for the given loyalty tier.
+   * @param shippingLabel shippingLabel or {@code null} for none
+   */
+  public LoyaltyProgram setShippingLabel(java.lang.String shippingLabel) {
+    this.shippingLabel = shippingLabel;
     return this;
   }
 

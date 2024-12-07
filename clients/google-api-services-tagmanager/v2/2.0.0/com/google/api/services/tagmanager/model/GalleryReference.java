@@ -67,6 +67,14 @@ public final class GalleryReference extends com.google.api.client.json.GenericJs
   private java.lang.String signature;
 
   /**
+   * The developer id of the community gallery template. This value is set whenever the template is
+   * created from the gallery.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String templateDeveloperId;
+
+  /**
    * The version of the community gallery template.
    * The value may be {@code null}.
    */
@@ -157,6 +165,25 @@ public final class GalleryReference extends com.google.api.client.json.GenericJs
    */
   public GalleryReference setSignature(java.lang.String signature) {
     this.signature = signature;
+    return this;
+  }
+
+  /**
+   * The developer id of the community gallery template. This value is set whenever the template is
+   * created from the gallery.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTemplateDeveloperId() {
+    return templateDeveloperId;
+  }
+
+  /**
+   * The developer id of the community gallery template. This value is set whenever the template is
+   * created from the gallery.
+   * @param templateDeveloperId templateDeveloperId or {@code null} for none
+   */
+  public GalleryReference setTemplateDeveloperId(java.lang.String templateDeveloperId) {
+    this.templateDeveloperId = templateDeveloperId;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * EnumOption definition
+ * GSUtil message includes details of the Destination Cloud Storage bucket.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -27,64 +27,40 @@ package com.google.api.services.connectors.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class EnumOption extends com.google.api.client.json.GenericJson {
+public final class GSUtil extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Display name of the option.
+   * Required. The URI of the Cloud Storage bucket.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String displayName;
+  private java.lang.String gsutilUri;
 
   /**
-   * Optional. Id of the option.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String id;
-
-  /**
-   * Optional. Display name of the option.
+   * Required. The URI of the Cloud Storage bucket.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDisplayName() {
-    return displayName;
+  public java.lang.String getGsutilUri() {
+    return gsutilUri;
   }
 
   /**
-   * Optional. Display name of the option.
-   * @param displayName displayName or {@code null} for none
+   * Required. The URI of the Cloud Storage bucket.
+   * @param gsutilUri gsutilUri or {@code null} for none
    */
-  public EnumOption setDisplayName(java.lang.String displayName) {
-    this.displayName = displayName;
-    return this;
-  }
-
-  /**
-   * Optional. Id of the option.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getId() {
-    return id;
-  }
-
-  /**
-   * Optional. Id of the option.
-   * @param id id or {@code null} for none
-   */
-  public EnumOption setId(java.lang.String id) {
-    this.id = id;
+  public GSUtil setGsutilUri(java.lang.String gsutilUri) {
+    this.gsutilUri = gsutilUri;
     return this;
   }
 
   @Override
-  public EnumOption set(String fieldName, Object value) {
-    return (EnumOption) super.set(fieldName, value);
+  public GSUtil set(String fieldName, Object value) {
+    return (GSUtil) super.set(fieldName, value);
   }
 
   @Override
-  public EnumOption clone() {
-    return (EnumOption) super.clone();
+  public GSUtil clone() {
+    return (GSUtil) super.clone();
   }
 
 }

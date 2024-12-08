@@ -30,7 +30,7 @@ package com.google.api.services.connectors.v1.model;
 public final class LogicalExpression extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of fields to be compared.
+   * Optional. A list of fields to be compared.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,21 +43,21 @@ public final class LogicalExpression extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A list of nested conditions to be compared.
+   * Optional. A list of nested conditions to be compared.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<LogicalExpression> logicalExpressions;
 
   /**
-   * The logical operator to use between the fields and conditions.
+   * Optional. The logical operator to use between the fields and conditions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String logicalOperator;
 
   /**
-   * A list of fields to be compared.
+   * Optional. A list of fields to be compared.
    * @return value or {@code null} for none
    */
   public java.util.List<FieldComparison> getFieldComparisons() {
@@ -65,7 +65,7 @@ public final class LogicalExpression extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A list of fields to be compared.
+   * Optional. A list of fields to be compared.
    * @param fieldComparisons fieldComparisons or {@code null} for none
    */
   public LogicalExpression setFieldComparisons(java.util.List<FieldComparison> fieldComparisons) {
@@ -74,7 +74,7 @@ public final class LogicalExpression extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A list of nested conditions to be compared.
+   * Optional. A list of nested conditions to be compared.
    * @return value or {@code null} for none
    */
   public java.util.List<LogicalExpression> getLogicalExpressions() {
@@ -82,7 +82,7 @@ public final class LogicalExpression extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A list of nested conditions to be compared.
+   * Optional. A list of nested conditions to be compared.
    * @param logicalExpressions logicalExpressions or {@code null} for none
    */
   public LogicalExpression setLogicalExpressions(java.util.List<LogicalExpression> logicalExpressions) {
@@ -91,7 +91,7 @@ public final class LogicalExpression extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The logical operator to use between the fields and conditions.
+   * Optional. The logical operator to use between the fields and conditions.
    * @return value or {@code null} for none
    */
   public java.lang.String getLogicalOperator() {
@@ -99,7 +99,7 @@ public final class LogicalExpression extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The logical operator to use between the fields and conditions.
+   * Optional. The logical operator to use between the fields and conditions.
    * @param logicalOperator logicalOperator or {@code null} for none
    */
   public LogicalExpression setLogicalOperator(java.lang.String logicalOperator) {

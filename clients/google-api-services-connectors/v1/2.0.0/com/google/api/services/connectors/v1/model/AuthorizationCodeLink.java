@@ -31,7 +31,8 @@ package com.google.api.services.connectors.v1.model;
 public final class AuthorizationCodeLink extends com.google.api.client.json.GenericJson {
 
   /**
-   * The client ID assigned to the Google Cloud Connectors OAuth app for the connector data source.
+   * Optional. The client ID assigned to the Google Cloud Connectors OAuth app for the connector
+   * data source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +47,7 @@ public final class AuthorizationCodeLink extends com.google.api.client.json.Gene
   private Secret clientSecret;
 
   /**
-   * Whether to enable PKCE for the auth code flow.
+   * Optional. Whether to enable PKCE for the auth code flow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,22 +61,23 @@ public final class AuthorizationCodeLink extends com.google.api.client.json.Gene
   private java.lang.Boolean omitQueryParams;
 
   /**
-   * The scopes for which the user will authorize Google Cloud Connectors on the connector data
-   * source.
+   * Optional. The scopes for which the user will authorize Google Cloud Connectors on the connector
+   * data source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> scopes;
 
   /**
-   * The base URI the user must click to trigger the authorization code login flow.
+   * Optional. The base URI the user must click to trigger the authorization code login flow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * The client ID assigned to the Google Cloud Connectors OAuth app for the connector data source.
+   * Optional. The client ID assigned to the Google Cloud Connectors OAuth app for the connector
+   * data source.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientId() {
@@ -83,7 +85,8 @@ public final class AuthorizationCodeLink extends com.google.api.client.json.Gene
   }
 
   /**
-   * The client ID assigned to the Google Cloud Connectors OAuth app for the connector data source.
+   * Optional. The client ID assigned to the Google Cloud Connectors OAuth app for the connector
+   * data source.
    * @param clientId clientId or {@code null} for none
    */
   public AuthorizationCodeLink setClientId(java.lang.String clientId) {
@@ -111,7 +114,7 @@ public final class AuthorizationCodeLink extends com.google.api.client.json.Gene
   }
 
   /**
-   * Whether to enable PKCE for the auth code flow.
+   * Optional. Whether to enable PKCE for the auth code flow.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnablePkce() {
@@ -119,7 +122,7 @@ public final class AuthorizationCodeLink extends com.google.api.client.json.Gene
   }
 
   /**
-   * Whether to enable PKCE for the auth code flow.
+   * Optional. Whether to enable PKCE for the auth code flow.
    * @param enablePkce enablePkce or {@code null} for none
    */
   public AuthorizationCodeLink setEnablePkce(java.lang.Boolean enablePkce) {
@@ -145,8 +148,8 @@ public final class AuthorizationCodeLink extends com.google.api.client.json.Gene
   }
 
   /**
-   * The scopes for which the user will authorize Google Cloud Connectors on the connector data
-   * source.
+   * Optional. The scopes for which the user will authorize Google Cloud Connectors on the connector
+   * data source.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getScopes() {
@@ -154,8 +157,8 @@ public final class AuthorizationCodeLink extends com.google.api.client.json.Gene
   }
 
   /**
-   * The scopes for which the user will authorize Google Cloud Connectors on the connector data
-   * source.
+   * Optional. The scopes for which the user will authorize Google Cloud Connectors on the connector
+   * data source.
    * @param scopes scopes or {@code null} for none
    */
   public AuthorizationCodeLink setScopes(java.util.List<java.lang.String> scopes) {
@@ -164,7 +167,7 @@ public final class AuthorizationCodeLink extends com.google.api.client.json.Gene
   }
 
   /**
-   * The base URI the user must click to trigger the authorization code login flow.
+   * Optional. The base URI the user must click to trigger the authorization code login flow.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -172,7 +175,7 @@ public final class AuthorizationCodeLink extends com.google.api.client.json.Gene
   }
 
   /**
-   * The base URI the user must click to trigger the authorization code login flow.
+   * Optional. The base URI the user must click to trigger the authorization code login flow.
    * @param uri uri or {@code null} for none
    */
   public AuthorizationCodeLink setUri(java.lang.String uri) {

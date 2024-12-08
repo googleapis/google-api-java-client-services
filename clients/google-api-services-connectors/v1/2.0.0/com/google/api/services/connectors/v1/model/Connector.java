@@ -101,6 +101,14 @@ public final class Connector extends com.google.api.client.json.GenericJson {
   private java.lang.String launchStage;
 
   /**
+   * Output only. Marketplace connector details. Will be null if the connector is not marketplace
+   * connector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MarketplaceConnectorDetails marketplaceConnectorDetails;
+
+  /**
    * Output only. Resource name of the Connector. Format:
    * projects/{project}/locations/{location}/providers/{provider}/connectors/{connector} Only global
    * location is supported for Connector resource.
@@ -299,6 +307,25 @@ public final class Connector extends com.google.api.client.json.GenericJson {
    */
   public Connector setLaunchStage(java.lang.String launchStage) {
     this.launchStage = launchStage;
+    return this;
+  }
+
+  /**
+   * Output only. Marketplace connector details. Will be null if the connector is not marketplace
+   * connector.
+   * @return value or {@code null} for none
+   */
+  public MarketplaceConnectorDetails getMarketplaceConnectorDetails() {
+    return marketplaceConnectorDetails;
+  }
+
+  /**
+   * Output only. Marketplace connector details. Will be null if the connector is not marketplace
+   * connector.
+   * @param marketplaceConnectorDetails marketplaceConnectorDetails or {@code null} for none
+   */
+  public Connector setMarketplaceConnectorDetails(MarketplaceConnectorDetails marketplaceConnectorDetails) {
+    this.marketplaceConnectorDetails = marketplaceConnectorDetails;
     return this;
   }
 

@@ -30,28 +30,29 @@ package com.google.api.services.connectors.v1.model;
 public final class ConfigVariableTemplate extends com.google.api.client.json.GenericJson {
 
   /**
-   * Authorization code link options. To be populated if `ValueType` is `AUTHORIZATION_CODE`
+   * Optional. Authorization code link options. To be populated if `ValueType` is
+   * `AUTHORIZATION_CODE`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AuthorizationCodeLink authorizationCodeLink;
 
   /**
-   * Description.
+   * Optional. Description.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Display name of the parameter.
+   * Optional. Display name of the parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Enum options. To be populated if `ValueType` is `ENUM`
+   * Optional. Enum options. To be populated if `ValueType` is `ENUM`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,14 +66,14 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   private java.lang.String enumSource;
 
   /**
-   * Indicates if current template is part of advanced settings
+   * Optional. Indicates if current template is part of advanced settings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isAdvanced;
 
   /**
-   * Key of the config variable.
+   * Optional. Key of the config variable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,51 +94,53 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   private MultipleSelectConfig multipleSelectConfig;
 
   /**
-   * Flag represents that this `ConfigVariable` must be provided for a connection.
+   * Optional. Flag represents that this `ConfigVariable` must be provided for a connection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean required;
 
   /**
-   * Condition under which a field would be required. The condition can be represented in the form
-   * of a logical expression.
+   * Optional. Condition under which a field would be required. The condition can be represented in
+   * the form of a logical expression.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private LogicalExpression requiredCondition;
 
   /**
-   * Role grant configuration for the config variable.
+   * Optional. Role grant configuration for the config variable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RoleGrant roleGrant;
 
   /**
-   * State of the config variable.
+   * Output only. State of the config variable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Regular expression in RE2 syntax used for validating the `value` of a `ConfigVariable`.
+   * Optional. Regular expression in RE2 syntax used for validating the `value` of a
+   * `ConfigVariable`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String validationRegex;
 
   /**
-   * Type of the parameter: string, int, bool etc. consider custom type for the benefit for the
-   * validation.
+   * Optional. Type of the parameter: string, int, bool etc. consider custom type for the benefit
+   * for the validation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String valueType;
 
   /**
-   * Authorization code link options. To be populated if `ValueType` is `AUTHORIZATION_CODE`
+   * Optional. Authorization code link options. To be populated if `ValueType` is
+   * `AUTHORIZATION_CODE`
    * @return value or {@code null} for none
    */
   public AuthorizationCodeLink getAuthorizationCodeLink() {
@@ -145,7 +148,8 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   }
 
   /**
-   * Authorization code link options. To be populated if `ValueType` is `AUTHORIZATION_CODE`
+   * Optional. Authorization code link options. To be populated if `ValueType` is
+   * `AUTHORIZATION_CODE`
    * @param authorizationCodeLink authorizationCodeLink or {@code null} for none
    */
   public ConfigVariableTemplate setAuthorizationCodeLink(AuthorizationCodeLink authorizationCodeLink) {
@@ -154,7 +158,7 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   }
 
   /**
-   * Description.
+   * Optional. Description.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -162,7 +166,7 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   }
 
   /**
-   * Description.
+   * Optional. Description.
    * @param description description or {@code null} for none
    */
   public ConfigVariableTemplate setDescription(java.lang.String description) {
@@ -171,7 +175,7 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   }
 
   /**
-   * Display name of the parameter.
+   * Optional. Display name of the parameter.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -179,7 +183,7 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   }
 
   /**
-   * Display name of the parameter.
+   * Optional. Display name of the parameter.
    * @param displayName displayName or {@code null} for none
    */
   public ConfigVariableTemplate setDisplayName(java.lang.String displayName) {
@@ -188,7 +192,7 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   }
 
   /**
-   * Enum options. To be populated if `ValueType` is `ENUM`
+   * Optional. Enum options. To be populated if `ValueType` is `ENUM`
    * @return value or {@code null} for none
    */
   public java.util.List<EnumOption> getEnumOptions() {
@@ -196,7 +200,7 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   }
 
   /**
-   * Enum options. To be populated if `ValueType` is `ENUM`
+   * Optional. Enum options. To be populated if `ValueType` is `ENUM`
    * @param enumOptions enumOptions or {@code null} for none
    */
   public ConfigVariableTemplate setEnumOptions(java.util.List<EnumOption> enumOptions) {
@@ -222,7 +226,7 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   }
 
   /**
-   * Indicates if current template is part of advanced settings
+   * Optional. Indicates if current template is part of advanced settings
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsAdvanced() {
@@ -230,7 +234,7 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   }
 
   /**
-   * Indicates if current template is part of advanced settings
+   * Optional. Indicates if current template is part of advanced settings
    * @param isAdvanced isAdvanced or {@code null} for none
    */
   public ConfigVariableTemplate setIsAdvanced(java.lang.Boolean isAdvanced) {
@@ -239,7 +243,7 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   }
 
   /**
-   * Key of the config variable.
+   * Optional. Key of the config variable.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -247,7 +251,7 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   }
 
   /**
-   * Key of the config variable.
+   * Optional. Key of the config variable.
    * @param key key or {@code null} for none
    */
   public ConfigVariableTemplate setKey(java.lang.String key) {
@@ -290,7 +294,7 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   }
 
   /**
-   * Flag represents that this `ConfigVariable` must be provided for a connection.
+   * Optional. Flag represents that this `ConfigVariable` must be provided for a connection.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequired() {
@@ -298,7 +302,7 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   }
 
   /**
-   * Flag represents that this `ConfigVariable` must be provided for a connection.
+   * Optional. Flag represents that this `ConfigVariable` must be provided for a connection.
    * @param required required or {@code null} for none
    */
   public ConfigVariableTemplate setRequired(java.lang.Boolean required) {
@@ -307,8 +311,8 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   }
 
   /**
-   * Condition under which a field would be required. The condition can be represented in the form
-   * of a logical expression.
+   * Optional. Condition under which a field would be required. The condition can be represented in
+   * the form of a logical expression.
    * @return value or {@code null} for none
    */
   public LogicalExpression getRequiredCondition() {
@@ -316,8 +320,8 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   }
 
   /**
-   * Condition under which a field would be required. The condition can be represented in the form
-   * of a logical expression.
+   * Optional. Condition under which a field would be required. The condition can be represented in
+   * the form of a logical expression.
    * @param requiredCondition requiredCondition or {@code null} for none
    */
   public ConfigVariableTemplate setRequiredCondition(LogicalExpression requiredCondition) {
@@ -326,7 +330,7 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   }
 
   /**
-   * Role grant configuration for the config variable.
+   * Optional. Role grant configuration for the config variable.
    * @return value or {@code null} for none
    */
   public RoleGrant getRoleGrant() {
@@ -334,7 +338,7 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   }
 
   /**
-   * Role grant configuration for the config variable.
+   * Optional. Role grant configuration for the config variable.
    * @param roleGrant roleGrant or {@code null} for none
    */
   public ConfigVariableTemplate setRoleGrant(RoleGrant roleGrant) {
@@ -343,7 +347,7 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   }
 
   /**
-   * State of the config variable.
+   * Output only. State of the config variable.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -351,7 +355,7 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   }
 
   /**
-   * State of the config variable.
+   * Output only. State of the config variable.
    * @param state state or {@code null} for none
    */
   public ConfigVariableTemplate setState(java.lang.String state) {
@@ -360,7 +364,8 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   }
 
   /**
-   * Regular expression in RE2 syntax used for validating the `value` of a `ConfigVariable`.
+   * Optional. Regular expression in RE2 syntax used for validating the `value` of a
+   * `ConfigVariable`.
    * @return value or {@code null} for none
    */
   public java.lang.String getValidationRegex() {
@@ -368,7 +373,8 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   }
 
   /**
-   * Regular expression in RE2 syntax used for validating the `value` of a `ConfigVariable`.
+   * Optional. Regular expression in RE2 syntax used for validating the `value` of a
+   * `ConfigVariable`.
    * @param validationRegex validationRegex or {@code null} for none
    */
   public ConfigVariableTemplate setValidationRegex(java.lang.String validationRegex) {
@@ -377,8 +383,8 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   }
 
   /**
-   * Type of the parameter: string, int, bool etc. consider custom type for the benefit for the
-   * validation.
+   * Optional. Type of the parameter: string, int, bool etc. consider custom type for the benefit
+   * for the validation.
    * @return value or {@code null} for none
    */
   public java.lang.String getValueType() {
@@ -386,8 +392,8 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   }
 
   /**
-   * Type of the parameter: string, int, bool etc. consider custom type for the benefit for the
-   * validation.
+   * Optional. Type of the parameter: string, int, bool etc. consider custom type for the benefit
+   * for the validation.
    * @param valueType valueType or {@code null} for none
    */
   public ConfigVariableTemplate setValueType(java.lang.String valueType) {

@@ -37,7 +37,7 @@ public final class FieldComparison extends com.google.api.client.json.GenericJso
   private java.lang.Boolean boolValue;
 
   /**
-   * Comparator to use for comparing the field value.
+   * Optional. Comparator to use for comparing the field value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class FieldComparison extends com.google.api.client.json.GenericJso
   private java.lang.Long intValue;
 
   /**
-   * Key of the field.
+   * Optional. Key of the field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class FieldComparison extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Comparator to use for comparing the field value.
+   * Optional. Comparator to use for comparing the field value.
    * @return value or {@code null} for none
    */
   public java.lang.String getComparator() {
@@ -90,7 +90,7 @@ public final class FieldComparison extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Comparator to use for comparing the field value.
+   * Optional. Comparator to use for comparing the field value.
    * @param comparator comparator or {@code null} for none
    */
   public FieldComparison setComparator(java.lang.String comparator) {
@@ -116,7 +116,7 @@ public final class FieldComparison extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Key of the field.
+   * Optional. Key of the field.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -124,7 +124,7 @@ public final class FieldComparison extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Key of the field.
+   * Optional. Key of the field.
    * @param key key or {@code null} for none
    */
   public FieldComparison setKey(java.lang.String key) {

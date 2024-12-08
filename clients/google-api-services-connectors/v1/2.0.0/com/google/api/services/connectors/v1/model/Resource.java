@@ -30,23 +30,25 @@ package com.google.api.services.connectors.v1.model;
 public final class Resource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Template to uniquely represent a Google Cloud resource in a format IAM expects This is a
-   * template that can have references to other values provided in the config variable template.
+   * Optional. Template to uniquely represent a Google Cloud resource in a format IAM expects This
+   * is a template that can have references to other values provided in the config variable
+   * template.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pathTemplate;
 
   /**
-   * Different types of resource supported.
+   * Optional. Different types of resource supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Template to uniquely represent a Google Cloud resource in a format IAM expects This is a
-   * template that can have references to other values provided in the config variable template.
+   * Optional. Template to uniquely represent a Google Cloud resource in a format IAM expects This
+   * is a template that can have references to other values provided in the config variable
+   * template.
    * @return value or {@code null} for none
    */
   public java.lang.String getPathTemplate() {
@@ -54,8 +56,9 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Template to uniquely represent a Google Cloud resource in a format IAM expects This is a
-   * template that can have references to other values provided in the config variable template.
+   * Optional. Template to uniquely represent a Google Cloud resource in a format IAM expects This
+   * is a template that can have references to other values provided in the config variable
+   * template.
    * @param pathTemplate pathTemplate or {@code null} for none
    */
   public Resource setPathTemplate(java.lang.String pathTemplate) {
@@ -64,7 +67,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Different types of resource supported.
+   * Optional. Different types of resource supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -72,7 +75,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Different types of resource supported.
+   * Optional. Different types of resource supported.
    * @param type type or {@code null} for none
    */
   public Resource setType(java.lang.String type) {

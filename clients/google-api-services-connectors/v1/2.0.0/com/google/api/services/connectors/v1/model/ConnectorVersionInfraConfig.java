@@ -38,7 +38,7 @@ public final class ConnectorVersionInfraConfig extends com.google.api.client.jso
   private java.lang.Long connectionRatelimitWindowSeconds;
 
   /**
-   * Optional. Indicates whether connector is deployed on GKE/CloudRun
+   * Output only. Indicates whether connector is deployed on GKE/CloudRun
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +125,7 @@ public final class ConnectorVersionInfraConfig extends com.google.api.client.jso
   }
 
   /**
-   * Optional. Indicates whether connector is deployed on GKE/CloudRun
+   * Output only. Indicates whether connector is deployed on GKE/CloudRun
    * @return value or {@code null} for none
    */
   public java.lang.String getDeploymentModel() {
@@ -133,7 +133,7 @@ public final class ConnectorVersionInfraConfig extends com.google.api.client.jso
   }
 
   /**
-   * Optional. Indicates whether connector is deployed on GKE/CloudRun
+   * Output only. Indicates whether connector is deployed on GKE/CloudRun
    * @param deploymentModel deploymentModel or {@code null} for none
    */
   public ConnectorVersionInfraConfig setDeploymentModel(java.lang.String deploymentModel) {

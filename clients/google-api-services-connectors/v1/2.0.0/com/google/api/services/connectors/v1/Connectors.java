@@ -5718,6 +5718,290 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
               return (Deprecate) super.set(parameterName, value);
             }
           }
+          /**
+           * Publish request for the CustomConnectorVersion. Once approved, the CustomConnectorVersion will be
+           * published as PartnerConnector.
+           *
+           * Create a request for the method "customConnectorVersions.publish".
+           *
+           * This request holds the parameters needed by the connectors server.  After setting any optional
+           * parameters, call the {@link Publish#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Resource name of the form: `projects/{project}/locations/{location}/customConnectors/{cust
+           *        om_connector}/customConnectorVersions/{custom_connector_version}`
+           * @param content the {@link com.google.api.services.connectors.v1.model.PublishCustomConnectorVersionRequest}
+           * @return the request
+           */
+          public Publish publish(java.lang.String name, com.google.api.services.connectors.v1.model.PublishCustomConnectorVersionRequest content) throws java.io.IOException {
+            Publish result = new Publish(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Publish extends ConnectorsRequest<com.google.api.services.connectors.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}:publish";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/customConnectors/[^/]+/customConnectorVersions/[^/]+$");
+
+            /**
+             * Publish request for the CustomConnectorVersion. Once approved, the CustomConnectorVersion will
+             * be published as PartnerConnector.
+             *
+             * Create a request for the method "customConnectorVersions.publish".
+             *
+             * This request holds the parameters needed by the the connectors server.  After setting any
+             * optional parameters, call the {@link Publish#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Publish#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Resource name of the form: `projects/{project}/locations/{location}/customConnectors/{cust
+           *        om_connector}/customConnectorVersions/{custom_connector_version}`
+             * @param content the {@link com.google.api.services.connectors.v1.model.PublishCustomConnectorVersionRequest}
+             * @since 1.13
+             */
+            protected Publish(java.lang.String name, com.google.api.services.connectors.v1.model.PublishCustomConnectorVersionRequest content) {
+              super(Connectors.this, "POST", REST_PATH, content, com.google.api.services.connectors.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/customConnectors/[^/]+/customConnectorVersions/[^/]+$");
+              }
+            }
+
+            @Override
+            public Publish set$Xgafv(java.lang.String $Xgafv) {
+              return (Publish) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Publish setAccessToken(java.lang.String accessToken) {
+              return (Publish) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Publish setAlt(java.lang.String alt) {
+              return (Publish) super.setAlt(alt);
+            }
+
+            @Override
+            public Publish setCallback(java.lang.String callback) {
+              return (Publish) super.setCallback(callback);
+            }
+
+            @Override
+            public Publish setFields(java.lang.String fields) {
+              return (Publish) super.setFields(fields);
+            }
+
+            @Override
+            public Publish setKey(java.lang.String key) {
+              return (Publish) super.setKey(key);
+            }
+
+            @Override
+            public Publish setOauthToken(java.lang.String oauthToken) {
+              return (Publish) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Publish setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Publish) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Publish setQuotaUser(java.lang.String quotaUser) {
+              return (Publish) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Publish setUploadType(java.lang.String uploadType) {
+              return (Publish) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Publish setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Publish) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Resource name of the form: `projects/{project}/locations/{location}/customC
+             * onnectors/{custom_connector}/customConnectorVersions/{custom_connector_version}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Resource name of the form: `projects/{project}/locations/{location}/customConnectors/{cus
+           tom_connector}/customConnectorVersions/{custom_connector_version}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Resource name of the form: `projects/{project}/locations/{location}/customC
+             * onnectors/{custom_connector}/customConnectorVersions/{custom_connector_version}`
+             */
+            public Publish setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/customConnectors/[^/]+/customConnectorVersions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Publish set(String parameterName, Object value) {
+              return (Publish) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Withdraw the publish request for the CustomConnectorVersion. This can only be used before the
+           * CustomConnectorVersion is published.
+           *
+           * Create a request for the method "customConnectorVersions.withdraw".
+           *
+           * This request holds the parameters needed by the connectors server.  After setting any optional
+           * parameters, call the {@link Withdraw#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Resource name of the form: `projects/{project}/locations/{location}/customConnectors/{cust
+           *        om_connector}/customConnectorVersions/{custom_connector_version}`
+           * @param content the {@link com.google.api.services.connectors.v1.model.WithdrawCustomConnectorVersionRequest}
+           * @return the request
+           */
+          public Withdraw withdraw(java.lang.String name, com.google.api.services.connectors.v1.model.WithdrawCustomConnectorVersionRequest content) throws java.io.IOException {
+            Withdraw result = new Withdraw(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Withdraw extends ConnectorsRequest<com.google.api.services.connectors.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}:withdraw";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/customConnectors/[^/]+/customConnectorVersions/[^/]+$");
+
+            /**
+             * Withdraw the publish request for the CustomConnectorVersion. This can only be used before the
+             * CustomConnectorVersion is published.
+             *
+             * Create a request for the method "customConnectorVersions.withdraw".
+             *
+             * This request holds the parameters needed by the the connectors server.  After setting any
+             * optional parameters, call the {@link Withdraw#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Withdraw#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Resource name of the form: `projects/{project}/locations/{location}/customConnectors/{cust
+           *        om_connector}/customConnectorVersions/{custom_connector_version}`
+             * @param content the {@link com.google.api.services.connectors.v1.model.WithdrawCustomConnectorVersionRequest}
+             * @since 1.13
+             */
+            protected Withdraw(java.lang.String name, com.google.api.services.connectors.v1.model.WithdrawCustomConnectorVersionRequest content) {
+              super(Connectors.this, "POST", REST_PATH, content, com.google.api.services.connectors.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/customConnectors/[^/]+/customConnectorVersions/[^/]+$");
+              }
+            }
+
+            @Override
+            public Withdraw set$Xgafv(java.lang.String $Xgafv) {
+              return (Withdraw) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Withdraw setAccessToken(java.lang.String accessToken) {
+              return (Withdraw) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Withdraw setAlt(java.lang.String alt) {
+              return (Withdraw) super.setAlt(alt);
+            }
+
+            @Override
+            public Withdraw setCallback(java.lang.String callback) {
+              return (Withdraw) super.setCallback(callback);
+            }
+
+            @Override
+            public Withdraw setFields(java.lang.String fields) {
+              return (Withdraw) super.setFields(fields);
+            }
+
+            @Override
+            public Withdraw setKey(java.lang.String key) {
+              return (Withdraw) super.setKey(key);
+            }
+
+            @Override
+            public Withdraw setOauthToken(java.lang.String oauthToken) {
+              return (Withdraw) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Withdraw setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Withdraw) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Withdraw setQuotaUser(java.lang.String quotaUser) {
+              return (Withdraw) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Withdraw setUploadType(java.lang.String uploadType) {
+              return (Withdraw) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Withdraw setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Withdraw) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Resource name of the form: `projects/{project}/locations/{location}/customC
+             * onnectors/{custom_connector}/customConnectorVersions/{custom_connector_version}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Resource name of the form: `projects/{project}/locations/{location}/customConnectors/{cus
+           tom_connector}/customConnectorVersions/{custom_connector_version}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Resource name of the form: `projects/{project}/locations/{location}/customC
+             * onnectors/{custom_connector}/customConnectorVersions/{custom_connector_version}`
+             */
+            public Withdraw setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/customConnectors/[^/]+/customConnectorVersions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Withdraw set(String parameterName, Object value) {
+              return (Withdraw) super.set(parameterName, value);
+            }
+          }
 
         }
       }
@@ -9109,7 +9393,7 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
          * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
          * `Code.CANCELLED`.
          *
          * Create a request for the method "operations.cancel".
@@ -9140,7 +9424,7 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
            * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
            * methods to check whether the cancellation succeeded or whether the operation completed despite
            * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
            * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".

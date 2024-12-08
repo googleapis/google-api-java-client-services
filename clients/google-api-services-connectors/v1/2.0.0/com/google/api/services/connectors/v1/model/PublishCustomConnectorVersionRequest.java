@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * EnumOption definition
+ * Request message for ConnectorsService.PublishCustomConnectorVersion
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -27,64 +27,43 @@ package com.google.api.services.connectors.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class EnumOption extends com.google.api.client.json.GenericJson {
+public final class PublishCustomConnectorVersionRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Display name of the option.
+   * Required. Partner metadata details for validating and publishing the custom connector as a
+   * partner connector version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String displayName;
+  private PartnerMetadata partnerMetadata;
 
   /**
-   * Optional. Id of the option.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String id;
-
-  /**
-   * Optional. Display name of the option.
+   * Required. Partner metadata details for validating and publishing the custom connector as a
+   * partner connector version.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDisplayName() {
-    return displayName;
+  public PartnerMetadata getPartnerMetadata() {
+    return partnerMetadata;
   }
 
   /**
-   * Optional. Display name of the option.
-   * @param displayName displayName or {@code null} for none
+   * Required. Partner metadata details for validating and publishing the custom connector as a
+   * partner connector version.
+   * @param partnerMetadata partnerMetadata or {@code null} for none
    */
-  public EnumOption setDisplayName(java.lang.String displayName) {
-    this.displayName = displayName;
-    return this;
-  }
-
-  /**
-   * Optional. Id of the option.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getId() {
-    return id;
-  }
-
-  /**
-   * Optional. Id of the option.
-   * @param id id or {@code null} for none
-   */
-  public EnumOption setId(java.lang.String id) {
-    this.id = id;
+  public PublishCustomConnectorVersionRequest setPartnerMetadata(PartnerMetadata partnerMetadata) {
+    this.partnerMetadata = partnerMetadata;
     return this;
   }
 
   @Override
-  public EnumOption set(String fieldName, Object value) {
-    return (EnumOption) super.set(fieldName, value);
+  public PublishCustomConnectorVersionRequest set(String fieldName, Object value) {
+    return (PublishCustomConnectorVersionRequest) super.set(fieldName, value);
   }
 
   @Override
-  public EnumOption clone() {
-    return (EnumOption) super.clone();
+  public PublishCustomConnectorVersionRequest clone() {
+    return (PublishCustomConnectorVersionRequest) super.clone();
   }
 
 }

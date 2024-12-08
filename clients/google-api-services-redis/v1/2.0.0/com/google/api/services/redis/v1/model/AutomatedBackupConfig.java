@@ -45,9 +45,8 @@ public final class AutomatedBackupConfig extends com.google.api.client.json.Gene
   private FixedFrequencySchedule fixedFrequencySchedule;
 
   /**
-   * Optional. How long to keep automated backups before the backups are deleted. If not specified,
-   * the default value is 100 years which is also the maximum value supported. The minimum value is
-   * 1 day.
+   * Optional. How long to keep automated backups before the backups are deleted. The value should
+   * be between 1 day and 365 days. If not specified, the default value is 35 days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,9 +87,8 @@ public final class AutomatedBackupConfig extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. How long to keep automated backups before the backups are deleted. If not specified,
-   * the default value is 100 years which is also the maximum value supported. The minimum value is
-   * 1 day.
+   * Optional. How long to keep automated backups before the backups are deleted. The value should
+   * be between 1 day and 365 days. If not specified, the default value is 35 days.
    * @return value or {@code null} for none
    */
   public String getRetention() {
@@ -98,9 +96,8 @@ public final class AutomatedBackupConfig extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. How long to keep automated backups before the backups are deleted. If not specified,
-   * the default value is 100 years which is also the maximum value supported. The minimum value is
-   * 1 day.
+   * Optional. How long to keep automated backups before the backups are deleted. The value should
+   * be between 1 day and 365 days. If not specified, the default value is 35 days.
    * @param retention retention or {@code null} for none
    */
   public AutomatedBackupConfig setRetention(String retention) {

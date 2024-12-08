@@ -32,20 +32,16 @@ package com.google.api.services.redis.v1beta1.model;
 public final class FixedFrequencySchedule extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The start time of every automated backup in UTC. It must be set to the start of an
-   * hour. If not specified, the default value is the start of the hour when the automated backup
-   * config is enabled. For example, if the automated backup config is enabled at 10:13 AM UTC
-   * without specifying start_time, the default start time is 10:00 AM UTC.
+   * Required. The start time of every automated backup in UTC. It must be set to the start of an
+   * hour. This field is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TimeOfDay startTime;
 
   /**
-   * Optional. The start time of every automated backup in UTC. It must be set to the start of an
-   * hour. If not specified, the default value is the start of the hour when the automated backup
-   * config is enabled. For example, if the automated backup config is enabled at 10:13 AM UTC
-   * without specifying start_time, the default start time is 10:00 AM UTC.
+   * Required. The start time of every automated backup in UTC. It must be set to the start of an
+   * hour. This field is required.
    * @return value or {@code null} for none
    */
   public TimeOfDay getStartTime() {
@@ -53,10 +49,8 @@ public final class FixedFrequencySchedule extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The start time of every automated backup in UTC. It must be set to the start of an
-   * hour. If not specified, the default value is the start of the hour when the automated backup
-   * config is enabled. For example, if the automated backup config is enabled at 10:13 AM UTC
-   * without specifying start_time, the default start time is 10:00 AM UTC.
+   * Required. The start time of every automated backup in UTC. It must be set to the start of an
+   * hour. This field is required.
    * @param startTime startTime or {@code null} for none
    */
   public FixedFrequencySchedule setStartTime(TimeOfDay startTime) {

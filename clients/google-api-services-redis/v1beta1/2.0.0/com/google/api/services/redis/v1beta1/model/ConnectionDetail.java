@@ -31,11 +31,38 @@ package com.google.api.services.redis.v1beta1.model;
 public final class ConnectionDetail extends com.google.api.client.json.GenericJson {
 
   /**
+   * Detailed information of a PSC connection that is created through service connectivity
+   * automation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PscAutoConnection pscAutoConnection;
+
+  /**
    * Detailed information of a PSC connection that is created by the customer who owns the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PscConnection pscConnection;
+
+  /**
+   * Detailed information of a PSC connection that is created through service connectivity
+   * automation.
+   * @return value or {@code null} for none
+   */
+  public PscAutoConnection getPscAutoConnection() {
+    return pscAutoConnection;
+  }
+
+  /**
+   * Detailed information of a PSC connection that is created through service connectivity
+   * automation.
+   * @param pscAutoConnection pscAutoConnection or {@code null} for none
+   */
+  public ConnectionDetail setPscAutoConnection(PscAutoConnection pscAutoConnection) {
+    this.pscAutoConnection = pscAutoConnection;
+    return this;
+  }
 
   /**
    * Detailed information of a PSC connection that is created by the customer who owns the cluster.

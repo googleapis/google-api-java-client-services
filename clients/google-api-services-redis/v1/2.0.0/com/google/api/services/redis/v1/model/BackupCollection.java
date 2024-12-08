@@ -53,6 +53,13 @@ public final class BackupCollection extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
+   * Output only. System assigned unique identifier of the backup collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uid;
+
+  /**
    * Output only. The full resource path of the cluster the backup collection belongs to. Example:
    * projects/{project}/locations/{location}/clusters/{cluster}
    * @return value or {@code null} for none
@@ -102,6 +109,23 @@ public final class BackupCollection extends com.google.api.client.json.GenericJs
    */
   public BackupCollection setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. System assigned unique identifier of the backup collection.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUid() {
+    return uid;
+  }
+
+  /**
+   * Output only. System assigned unique identifier of the backup collection.
+   * @param uid uid or {@code null} for none
+   */
+  public BackupCollection setUid(java.lang.String uid) {
+    this.uid = uid;
     return this;
   }
 

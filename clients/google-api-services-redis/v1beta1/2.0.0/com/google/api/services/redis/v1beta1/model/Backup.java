@@ -124,6 +124,13 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.Long totalSizeBytes;
 
   /**
+   * Output only. System assigned unique identifier of the backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uid;
+
+  /**
    * Output only. List of backup files of the backup.
    * @return value or {@code null} for none
    */
@@ -345,6 +352,23 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setTotalSizeBytes(java.lang.Long totalSizeBytes) {
     this.totalSizeBytes = totalSizeBytes;
+    return this;
+  }
+
+  /**
+   * Output only. System assigned unique identifier of the backup.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUid() {
+    return uid;
+  }
+
+  /**
+   * Output only. System assigned unique identifier of the backup.
+   * @param uid uid or {@code null} for none
+   */
+  public Backup setUid(java.lang.String uid) {
+    this.uid = uid;
     return this;
   }
 

@@ -1580,7 +1580,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          * will be created at the backend, and this backup belongs to this collection. Both collection and
          * backup will have a resource name. Backup will be executed for each shard. A replica (primary if
          * nonHA) will be selected to perform the execution. Backup call will be rejected if there is an
-         * ongoing backup or update operation.
+         * ongoing backup or update operation. Be aware that during preview, if the cluster's internal
+         * software version is too old, critical update will be performed before actual backup. Once the
+         * internal software version is updated to the minimum version required by the backup feature,
+         * subsequent backups will not require critical update. After preview, there will be no critical
+         * update needed for backup.
          *
          * Create a request for the method "clusters.backup".
          *
@@ -1611,7 +1615,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            * will be created at the backend, and this backup belongs to this collection. Both collection and
            * backup will have a resource name. Backup will be executed for each shard. A replica (primary if
            * nonHA) will be selected to perform the execution. Backup call will be rejected if there is an
-           * ongoing backup or update operation.
+           * ongoing backup or update operation. Be aware that during preview, if the cluster's internal
+           * software version is too old, critical update will be performed before actual backup. Once the
+           * internal software version is updated to the minimum version required by the backup feature,
+           * subsequent backups will not require critical update. After preview, there will be no critical
+           * update needed for backup.
            *
            * Create a request for the method "clusters.backup".
            *

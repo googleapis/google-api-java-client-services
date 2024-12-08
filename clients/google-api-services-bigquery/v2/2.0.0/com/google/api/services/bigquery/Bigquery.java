@@ -511,10 +511,11 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * Requests specifying an invalid value will be rejected. Requests for conditional access
        * policy binding in datasets must specify version 3. Dataset with no conditional role
        * bindings in access policy may specify any valid value or leave the field unset. This field
-       * will be maped to [IAM Policy version] (https://cloud.google.com/iam/docs/policies#versions)
-       * and will be used to fetch policy from IAM. If unset or if 0 or 1 value is used for dataset
-       * with conditional bindings, access entry with condition will have role string appended by
-       * 'withcond' string followed by a hash value. For example : { "access": [ { "role":
+       * will be mapped to [IAM Policy version]
+       * (https://cloud.google.com/iam/docs/policies#versions) and will be used to fetch policy from
+       * IAM. If unset or if 0 or 1 value is used for dataset with conditional bindings, access
+       * entry with condition will have role string appended by 'withcond' string followed by a hash
+       * value. For example : { "access": [ { "role":
        * "roles/bigquery.dataViewer_with_conditionalbinding_7a34awqsda", "userByEmail":
        * "user@example.com", } ] } Please refer https://cloud.google.com/iam/docs/troubleshooting-
        * withcond for more details.
@@ -525,7 +526,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       /** Optional. The version of the access policy schema to fetch. Valid values are 0, 1, and 3. Requests
      specifying an invalid value will be rejected. Requests for conditional access policy binding in
      datasets must specify version 3. Dataset with no conditional role bindings in access policy may
-     specify any valid value or leave the field unset. This field will be maped to [IAM Policy version]
+     specify any valid value or leave the field unset. This field will be mapped to [IAM Policy version]
      (https://cloud.google.com/iam/docs/policies#versions) and will be used to fetch policy from IAM. If
      unset or if 0 or 1 value is used for dataset with conditional bindings, access entry with condition
      will have role string appended by 'withcond' string followed by a hash value. For example : {
@@ -542,10 +543,11 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * Requests specifying an invalid value will be rejected. Requests for conditional access
        * policy binding in datasets must specify version 3. Dataset with no conditional role
        * bindings in access policy may specify any valid value or leave the field unset. This field
-       * will be maped to [IAM Policy version] (https://cloud.google.com/iam/docs/policies#versions)
-       * and will be used to fetch policy from IAM. If unset or if 0 or 1 value is used for dataset
-       * with conditional bindings, access entry with condition will have role string appended by
-       * 'withcond' string followed by a hash value. For example : { "access": [ { "role":
+       * will be mapped to [IAM Policy version]
+       * (https://cloud.google.com/iam/docs/policies#versions) and will be used to fetch policy from
+       * IAM. If unset or if 0 or 1 value is used for dataset with conditional bindings, access
+       * entry with condition will have role string appended by 'withcond' string followed by a hash
+       * value. For example : { "access": [ { "role":
        * "roles/bigquery.dataViewer_with_conditionalbinding_7a34awqsda", "userByEmail":
        * "user@example.com", } ] } Please refer https://cloud.google.com/iam/docs/troubleshooting-
        * withcond for more details.
@@ -717,7 +719,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * Requests with conditional access policy binding in datasets must specify version 3. * But
        * dataset with no conditional role bindings in access policy may specify any valid value or
        * leave the field unset. If unset or if 0 or 1 value is used for dataset with conditional
-       * bindings, request will be rejected. This field will be maped to IAM Policy version
+       * bindings, request will be rejected. This field will be mapped to IAM Policy version
        * (https://cloud.google.com/iam/docs/policies#versions) and will be used to set policy in
        * IAM.
        */
@@ -730,7 +732,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      the access policy schema provided in the request. For example, * Requests with conditional access
      policy binding in datasets must specify version 3. * But dataset with no conditional role bindings
      in access policy may specify any valid value or leave the field unset. If unset or if 0 or 1 value
-     is used for dataset with conditional bindings, request will be rejected. This field will be maped
+     is used for dataset with conditional bindings, request will be rejected. This field will be mapped
      to IAM Policy version (https://cloud.google.com/iam/docs/policies#versions) and will be used to set
      policy in IAM.
        */
@@ -746,7 +748,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * Requests with conditional access policy binding in datasets must specify version 3. * But
        * dataset with no conditional role bindings in access policy may specify any valid value or
        * leave the field unset. If unset or if 0 or 1 value is used for dataset with conditional
-       * bindings, request will be rejected. This field will be maped to IAM Policy version
+       * bindings, request will be rejected. This field will be mapped to IAM Policy version
        * (https://cloud.google.com/iam/docs/policies#versions) and will be used to set policy in
        * IAM.
        */
@@ -1159,7 +1161,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * an access policy entry with condition. - Updating an access policy entry with condition. *
        * But dataset with no conditional role bindings in access policy may specify any valid value
        * or leave the field unset. If unset or if 0 or 1 value is used for dataset with conditional
-       * bindings, request will be rejected. This field will be maped to IAM Policy version
+       * bindings, request will be rejected. This field will be mapped to IAM Policy version
        * (https://cloud.google.com/iam/docs/policies#versions) and will be used to set policy in
        * IAM.
        */
@@ -1174,7 +1176,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      new access policy entry with condition. - Removing an access policy entry with condition. -
      Updating an access policy entry with condition. * But dataset with no conditional role bindings in
      access policy may specify any valid value or leave the field unset. If unset or if 0 or 1 value is
-     used for dataset with conditional bindings, request will be rejected. This field will be maped to
+     used for dataset with conditional bindings, request will be rejected. This field will be mapped to
      IAM Policy version (https://cloud.google.com/iam/docs/policies#versions) and will be used to set
      policy in IAM.
        */
@@ -1192,7 +1194,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * an access policy entry with condition. - Updating an access policy entry with condition. *
        * But dataset with no conditional role bindings in access policy may specify any valid value
        * or leave the field unset. If unset or if 0 or 1 value is used for dataset with conditional
-       * bindings, request will be rejected. This field will be maped to IAM Policy version
+       * bindings, request will be rejected. This field will be mapped to IAM Policy version
        * (https://cloud.google.com/iam/docs/policies#versions) and will be used to set policy in
        * IAM.
        */
@@ -1545,7 +1547,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * an access policy entry with condition. - Updating an access policy entry with condition. *
        * But dataset with no conditional role bindings in access policy may specify any valid value
        * or leave the field unset. If unset or if 0 or 1 value is used for dataset with conditional
-       * bindings, request will be rejected. This field will be maped to IAM Policy version
+       * bindings, request will be rejected. This field will be mapped to IAM Policy version
        * (https://cloud.google.com/iam/docs/policies#versions) and will be used to set policy in
        * IAM.
        */
@@ -1560,7 +1562,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
      new access policy entry with condition. - Removing an access policy entry with condition. -
      Updating an access policy entry with condition. * But dataset with no conditional role bindings in
      access policy may specify any valid value or leave the field unset. If unset or if 0 or 1 value is
-     used for dataset with conditional bindings, request will be rejected. This field will be maped to
+     used for dataset with conditional bindings, request will be rejected. This field will be mapped to
      IAM Policy version (https://cloud.google.com/iam/docs/policies#versions) and will be used to set
      policy in IAM.
        */
@@ -1578,7 +1580,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * an access policy entry with condition. - Updating an access policy entry with condition. *
        * But dataset with no conditional role bindings in access policy may specify any valid value
        * or leave the field unset. If unset or if 0 or 1 value is used for dataset with conditional
-       * bindings, request will be rejected. This field will be maped to IAM Policy version
+       * bindings, request will be rejected. This field will be mapped to IAM Policy version
        * (https://cloud.google.com/iam/docs/policies#versions) and will be used to set policy in
        * IAM.
        */

@@ -47,6 +47,29 @@ public final class RoleAssignment extends com.google.api.client.json.GenericJson
   private java.lang.String assigneeType;
 
   /**
+   * Optional. Note: Feature is available to Enterprise Standard, Enterprise Plus, Google Workspace
+   * for Education Plus and Cloud Identity Premium customers. No additional setup is needed to use
+   * the feature. The condition associated with this role assignment. A `RoleAssignment` with the
+   * `condition` field set will only take effect when the resource being accessed meets the
+   * condition. If `condition` is empty, the role (`role_id`) is applied to the actor
+   * (`assigned_to`) at the scope (`scope_type`) unconditionally. Currently, only two conditions are
+   * supported: - To make the `RoleAssignment` only applicable to [Security
+   * Groups](https://cloud.google.com/identity/docs/groups#group_types):
+   * `api.getAttribute('cloudidentity.googleapis.com/groups.labels', []).hasAny(['groups.security'])
+   * && resource.type == 'cloudidentity.googleapis.com/Group'` - To make the `RoleAssignment` not
+   * applicable to [Security Groups](https://cloud.google.com/identity/docs/groups#group_types):
+   * `!api.getAttribute('cloudidentity.googleapis.com/groups.labels',
+   * []).hasAny(['groups.security']) && resource.type == 'cloudidentity.googleapis.com/Group'`
+   * Currently, the two condition strings have to be verbatim and they only work with the following
+   * [pre-built administrator roles](https://support.google.com/a/answer/2405986): - Groups Editor -
+   * Groups Reader The condition follows [Cloud IAM condition
+   * syntax](https://cloud.google.com/iam/docs/conditions-overview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String condition;
+
+  /**
    * ETag of the resource.
    * The value may be {@code null}.
    */
@@ -126,6 +149,55 @@ public final class RoleAssignment extends com.google.api.client.json.GenericJson
    */
   public RoleAssignment setAssigneeType(java.lang.String assigneeType) {
     this.assigneeType = assigneeType;
+    return this;
+  }
+
+  /**
+   * Optional. Note: Feature is available to Enterprise Standard, Enterprise Plus, Google Workspace
+   * for Education Plus and Cloud Identity Premium customers. No additional setup is needed to use
+   * the feature. The condition associated with this role assignment. A `RoleAssignment` with the
+   * `condition` field set will only take effect when the resource being accessed meets the
+   * condition. If `condition` is empty, the role (`role_id`) is applied to the actor
+   * (`assigned_to`) at the scope (`scope_type`) unconditionally. Currently, only two conditions are
+   * supported: - To make the `RoleAssignment` only applicable to [Security
+   * Groups](https://cloud.google.com/identity/docs/groups#group_types):
+   * `api.getAttribute('cloudidentity.googleapis.com/groups.labels', []).hasAny(['groups.security'])
+   * && resource.type == 'cloudidentity.googleapis.com/Group'` - To make the `RoleAssignment` not
+   * applicable to [Security Groups](https://cloud.google.com/identity/docs/groups#group_types):
+   * `!api.getAttribute('cloudidentity.googleapis.com/groups.labels',
+   * []).hasAny(['groups.security']) && resource.type == 'cloudidentity.googleapis.com/Group'`
+   * Currently, the two condition strings have to be verbatim and they only work with the following
+   * [pre-built administrator roles](https://support.google.com/a/answer/2405986): - Groups Editor -
+   * Groups Reader The condition follows [Cloud IAM condition
+   * syntax](https://cloud.google.com/iam/docs/conditions-overview).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCondition() {
+    return condition;
+  }
+
+  /**
+   * Optional. Note: Feature is available to Enterprise Standard, Enterprise Plus, Google Workspace
+   * for Education Plus and Cloud Identity Premium customers. No additional setup is needed to use
+   * the feature. The condition associated with this role assignment. A `RoleAssignment` with the
+   * `condition` field set will only take effect when the resource being accessed meets the
+   * condition. If `condition` is empty, the role (`role_id`) is applied to the actor
+   * (`assigned_to`) at the scope (`scope_type`) unconditionally. Currently, only two conditions are
+   * supported: - To make the `RoleAssignment` only applicable to [Security
+   * Groups](https://cloud.google.com/identity/docs/groups#group_types):
+   * `api.getAttribute('cloudidentity.googleapis.com/groups.labels', []).hasAny(['groups.security'])
+   * && resource.type == 'cloudidentity.googleapis.com/Group'` - To make the `RoleAssignment` not
+   * applicable to [Security Groups](https://cloud.google.com/identity/docs/groups#group_types):
+   * `!api.getAttribute('cloudidentity.googleapis.com/groups.labels',
+   * []).hasAny(['groups.security']) && resource.type == 'cloudidentity.googleapis.com/Group'`
+   * Currently, the two condition strings have to be verbatim and they only work with the following
+   * [pre-built administrator roles](https://support.google.com/a/answer/2405986): - Groups Editor -
+   * Groups Reader The condition follows [Cloud IAM condition
+   * syntax](https://cloud.google.com/iam/docs/conditions-overview).
+   * @param condition condition or {@code null} for none
+   */
+  public RoleAssignment setCondition(java.lang.String condition) {
+    this.condition = condition;
     return this;
   }
 

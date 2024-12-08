@@ -347,7 +347,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   /**
    * If true, this disables the Lock Screen
    * (https://source.android.com/docs/core/display/multi_display/lock-screen) for primary and/or
-   * secondary displays.
+   * secondary displays. This policy is supported only in dedicated device management mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1532,7 +1532,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   /**
    * If true, this disables the Lock Screen
    * (https://source.android.com/docs/core/display/multi_display/lock-screen) for primary and/or
-   * secondary displays.
+   * secondary displays. This policy is supported only in dedicated device management mode.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getKeyguardDisabled() {
@@ -1542,7 +1542,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   /**
    * If true, this disables the Lock Screen
    * (https://source.android.com/docs/core/display/multi_display/lock-screen) for primary and/or
-   * secondary displays.
+   * secondary displays. This policy is supported only in dedicated device management mode.
    * @param keyguardDisabled keyguardDisabled or {@code null} for none
    */
   public Policy setKeyguardDisabled(java.lang.Boolean keyguardDisabled) {

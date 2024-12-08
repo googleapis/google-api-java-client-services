@@ -77,6 +77,13 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
   private java.lang.String personalPlayStoreMode;
 
   /**
+   * Optional. Controls whether a private space is allowed on the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String privateSpacePolicy;
+
+  /**
    * If true, screen capture is disabled for all users.
    * The value may be {@code null}.
    */
@@ -175,6 +182,23 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
    */
   public PersonalUsagePolicies setPersonalPlayStoreMode(java.lang.String personalPlayStoreMode) {
     this.personalPlayStoreMode = personalPlayStoreMode;
+    return this;
+  }
+
+  /**
+   * Optional. Controls whether a private space is allowed on the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrivateSpacePolicy() {
+    return privateSpacePolicy;
+  }
+
+  /**
+   * Optional. Controls whether a private space is allowed on the device.
+   * @param privateSpacePolicy privateSpacePolicy or {@code null} for none
+   */
+  public PersonalUsagePolicies setPrivateSpacePolicy(java.lang.String privateSpacePolicy) {
+    this.privateSpacePolicy = privateSpacePolicy;
     return this;
   }
 

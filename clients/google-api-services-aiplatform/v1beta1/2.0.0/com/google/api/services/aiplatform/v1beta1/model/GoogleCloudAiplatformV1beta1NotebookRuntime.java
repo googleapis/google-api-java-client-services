@@ -38,6 +38,14 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
   private String createTime;
 
   /**
+   * Output only. The specification of persistent disk attached to the notebook runtime as data disk
+   * storage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1PersistentDiskSpec dataPersistentDiskSpec;
+
+  /**
    * The description of the NotebookRuntime.
    * The value may be {@code null}.
    */
@@ -58,6 +66,13 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec;
+
+  /**
+   * Output only. EUC configuration of the notebook runtime.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1NotebookEucConfig eucConfig;
 
   /**
    * Output only. Timestamp when this NotebookRuntime will be expired: 1. System Predefined
@@ -108,11 +123,25 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Output only. The specification of a single machine used by the notebook runtime.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1MachineSpec machineSpec;
+
+  /**
    * Output only. The resource name of the NotebookRuntime.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. Network spec of the notebook runtime.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1NetworkSpec networkSpec;
 
   /**
    * Optional. The Compute Engine tags to add to runtime (see [Tagging
@@ -172,11 +201,22 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * Output only. The service account that the NotebookRuntime workload runs as.
+   * Output only. Deprecated: This field is no longer used and the "Vertex AI Notebook Service
+   * Account" (service-PROJECT_NUMBER@gcp-sa-aiplatform-vm.iam.gserviceaccount.com) is used for the
+   * runtime workload identity. See https://cloud.google.com/iam/docs/service-agents#vertex-ai-
+   * notebook-service-account for more details. The service account that the NotebookRuntime
+   * workload runs as.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAccount;
+
+  /**
+   * Output only. Runtime Shielded VM spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ShieldedVmConfig shieldedVmConfig;
 
   /**
    * Output only. Timestamp when this NotebookRuntime was most recently updated.
@@ -206,6 +246,25 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    */
   public GoogleCloudAiplatformV1beta1NotebookRuntime setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The specification of persistent disk attached to the notebook runtime as data disk
+   * storage.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PersistentDiskSpec getDataPersistentDiskSpec() {
+    return dataPersistentDiskSpec;
+  }
+
+  /**
+   * Output only. The specification of persistent disk attached to the notebook runtime as data disk
+   * storage.
+   * @param dataPersistentDiskSpec dataPersistentDiskSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookRuntime setDataPersistentDiskSpec(GoogleCloudAiplatformV1beta1PersistentDiskSpec dataPersistentDiskSpec) {
+    this.dataPersistentDiskSpec = dataPersistentDiskSpec;
     return this;
   }
 
@@ -259,6 +318,23 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    */
   public GoogleCloudAiplatformV1beta1NotebookRuntime setEncryptionSpec(GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec) {
     this.encryptionSpec = encryptionSpec;
+    return this;
+  }
+
+  /**
+   * Output only. EUC configuration of the notebook runtime.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookEucConfig getEucConfig() {
+    return eucConfig;
+  }
+
+  /**
+   * Output only. EUC configuration of the notebook runtime.
+   * @param eucConfig eucConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookRuntime setEucConfig(GoogleCloudAiplatformV1beta1NotebookEucConfig eucConfig) {
+    this.eucConfig = eucConfig;
     return this;
   }
 
@@ -374,6 +450,23 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
   }
 
   /**
+   * Output only. The specification of a single machine used by the notebook runtime.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1MachineSpec getMachineSpec() {
+    return machineSpec;
+  }
+
+  /**
+   * Output only. The specification of a single machine used by the notebook runtime.
+   * @param machineSpec machineSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookRuntime setMachineSpec(GoogleCloudAiplatformV1beta1MachineSpec machineSpec) {
+    this.machineSpec = machineSpec;
+    return this;
+  }
+
+  /**
    * Output only. The resource name of the NotebookRuntime.
    * @return value or {@code null} for none
    */
@@ -387,6 +480,23 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    */
   public GoogleCloudAiplatformV1beta1NotebookRuntime setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Network spec of the notebook runtime.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NetworkSpec getNetworkSpec() {
+    return networkSpec;
+  }
+
+  /**
+   * Output only. Network spec of the notebook runtime.
+   * @param networkSpec networkSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookRuntime setNetworkSpec(GoogleCloudAiplatformV1beta1NetworkSpec networkSpec) {
+    this.networkSpec = networkSpec;
     return this;
   }
 
@@ -529,7 +639,11 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
   }
 
   /**
-   * Output only. The service account that the NotebookRuntime workload runs as.
+   * Output only. Deprecated: This field is no longer used and the "Vertex AI Notebook Service
+   * Account" (service-PROJECT_NUMBER@gcp-sa-aiplatform-vm.iam.gserviceaccount.com) is used for the
+   * runtime workload identity. See https://cloud.google.com/iam/docs/service-agents#vertex-ai-
+   * notebook-service-account for more details. The service account that the NotebookRuntime
+   * workload runs as.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -537,11 +651,32 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
   }
 
   /**
-   * Output only. The service account that the NotebookRuntime workload runs as.
+   * Output only. Deprecated: This field is no longer used and the "Vertex AI Notebook Service
+   * Account" (service-PROJECT_NUMBER@gcp-sa-aiplatform-vm.iam.gserviceaccount.com) is used for the
+   * runtime workload identity. See https://cloud.google.com/iam/docs/service-agents#vertex-ai-
+   * notebook-service-account for more details. The service account that the NotebookRuntime
+   * workload runs as.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1NotebookRuntime setServiceAccount(java.lang.String serviceAccount) {
     this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * Output only. Runtime Shielded VM spec.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ShieldedVmConfig getShieldedVmConfig() {
+    return shieldedVmConfig;
+  }
+
+  /**
+   * Output only. Runtime Shielded VM spec.
+   * @param shieldedVmConfig shieldedVmConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookRuntime setShieldedVmConfig(GoogleCloudAiplatformV1beta1ShieldedVmConfig shieldedVmConfig) {
+    this.shieldedVmConfig = shieldedVmConfig;
     return this;
   }
 

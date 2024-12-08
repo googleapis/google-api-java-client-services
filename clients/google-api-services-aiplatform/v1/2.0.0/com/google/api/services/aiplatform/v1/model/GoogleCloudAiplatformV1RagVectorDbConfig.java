@@ -51,6 +51,13 @@ public final class GoogleCloudAiplatformV1RagVectorDbConfig extends com.google.a
   private GoogleCloudAiplatformV1RagEmbeddingModelConfig ragEmbeddingModelConfig;
 
   /**
+   * The config for the RAG-managed Vector DB.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDb ragManagedDb;
+
+  /**
    * The config for the Vertex Vector Search.
    * The value may be {@code null}.
    */
@@ -105,6 +112,23 @@ public final class GoogleCloudAiplatformV1RagVectorDbConfig extends com.google.a
    */
   public GoogleCloudAiplatformV1RagVectorDbConfig setRagEmbeddingModelConfig(GoogleCloudAiplatformV1RagEmbeddingModelConfig ragEmbeddingModelConfig) {
     this.ragEmbeddingModelConfig = ragEmbeddingModelConfig;
+    return this;
+  }
+
+  /**
+   * The config for the RAG-managed Vector DB.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDb getRagManagedDb() {
+    return ragManagedDb;
+  }
+
+  /**
+   * The config for the RAG-managed Vector DB.
+   * @param ragManagedDb ragManagedDb or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RagVectorDbConfig setRagManagedDb(GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDb ragManagedDb) {
+    this.ragManagedDb = ragManagedDb;
     return this;
   }
 

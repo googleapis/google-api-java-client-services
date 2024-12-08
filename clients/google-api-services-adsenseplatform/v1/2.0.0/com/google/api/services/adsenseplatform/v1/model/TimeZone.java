@@ -30,21 +30,21 @@ package com.google.api.services.adsenseplatform.v1.model;
 public final class TimeZone extends com.google.api.client.json.GenericJson {
 
   /**
-   * IANA Time Zone Database time zone, e.g. "America/New_York".
+   * IANA Time Zone Database time zone. For example "America/New_York".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Optional. IANA Time Zone Database version number, e.g. "2019a".
+   * Optional. IANA Time Zone Database version number. For example "2019a".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * IANA Time Zone Database time zone, e.g. "America/New_York".
+   * IANA Time Zone Database time zone. For example "America/New_York".
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -52,7 +52,7 @@ public final class TimeZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * IANA Time Zone Database time zone, e.g. "America/New_York".
+   * IANA Time Zone Database time zone. For example "America/New_York".
    * @param id id or {@code null} for none
    */
   public TimeZone setId(java.lang.String id) {
@@ -61,7 +61,7 @@ public final class TimeZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. IANA Time Zone Database version number, e.g. "2019a".
+   * Optional. IANA Time Zone Database version number. For example "2019a".
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -69,7 +69,7 @@ public final class TimeZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. IANA Time Zone Database version number, e.g. "2019a".
+   * Optional. IANA Time Zone Database version number. For example "2019a".
    * @param version version or {@code null} for none
    */
   public TimeZone setVersion(java.lang.String version) {

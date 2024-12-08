@@ -89,6 +89,13 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
   private java.lang.String responseMimeType;
 
   /**
+   * Optional. The modalities of the response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> responseModalities;
+
+  /**
    * Optional. The `Schema` object allows the definition of input and output data types. These types
    * can be objects, but also primitives and arrays. Represents a select subset of an [OpenAPI 3.0
    * schema object](https://spec.openapis.org/oas/v3.0.3#schema). If set, a compatible
@@ -114,6 +121,13 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
   private java.lang.Integer seed;
 
   /**
+   * Optional. The speech generation config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1SpeechConfig speechConfig;
+
+  /**
    * Optional. Stop sequences.
    * The value may be {@code null}.
    */
@@ -126,6 +140,13 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
    */
   @com.google.api.client.util.Key
   private java.lang.Float temperature;
+
+  /**
+   * Optional. If specified, the token resolution specified will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tokenResolution;
 
   /**
    * Optional. If specified, top-k sampling will be used.
@@ -284,6 +305,23 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
   }
 
   /**
+   * Optional. The modalities of the response.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getResponseModalities() {
+    return responseModalities;
+  }
+
+  /**
+   * Optional. The modalities of the response.
+   * @param responseModalities responseModalities or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfig setResponseModalities(java.util.List<java.lang.String> responseModalities) {
+    this.responseModalities = responseModalities;
+    return this;
+  }
+
+  /**
    * Optional. The `Schema` object allows the definition of input and output data types. These types
    * can be objects, but also primitives and arrays. Represents a select subset of an [OpenAPI 3.0
    * schema object](https://spec.openapis.org/oas/v3.0.3#schema). If set, a compatible
@@ -343,6 +381,23 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
   }
 
   /**
+   * Optional. The speech generation config.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SpeechConfig getSpeechConfig() {
+    return speechConfig;
+  }
+
+  /**
+   * Optional. The speech generation config.
+   * @param speechConfig speechConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfig setSpeechConfig(GoogleCloudAiplatformV1beta1SpeechConfig speechConfig) {
+    this.speechConfig = speechConfig;
+    return this;
+  }
+
+  /**
    * Optional. Stop sequences.
    * @return value or {@code null} for none
    */
@@ -373,6 +428,23 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
    */
   public GoogleCloudAiplatformV1beta1GenerationConfig setTemperature(java.lang.Float temperature) {
     this.temperature = temperature;
+    return this;
+  }
+
+  /**
+   * Optional. If specified, the token resolution specified will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTokenResolution() {
+    return tokenResolution;
+  }
+
+  /**
+   * Optional. If specified, the token resolution specified will be used.
+   * @param tokenResolution tokenResolution or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfig setTokenResolution(java.lang.String tokenResolution) {
+    this.tokenResolution = tokenResolution;
     return this;
   }
 

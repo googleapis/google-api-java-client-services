@@ -30,9 +30,12 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1PipelineJobRuntimeConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The default runtime for the PipelineJob. If not provided, Vertex Custom Job(on
-   * demand) is used as the runtime. For Vertex Custom Job, please refer to
-   * https://cloud.google.com/vertex-ai/docs/training/overview.
+   * Optional. The default runtime for the PipelineJob. If not set, Standard Vertex Custom
+   * Job(https://cloud.google.com/vertex-ai/docs/training/overview) is used as the runtime. If set,
+   * all pipeline tasks will run on the default runtime unless a task is a GCPC custom job component
+   * (https://cloud.google.com/vertex-ai/docs/pipelines/customjob-component) based task. If the task
+   * is based on a GCPC custom job component, it runs solely according to the component's
+   * configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,9 +93,12 @@ public final class GoogleCloudAiplatformV1beta1PipelineJobRuntimeConfig extends 
   private java.util.Map<String, GoogleCloudAiplatformV1beta1Value> parameters;
 
   /**
-   * Optional. The default runtime for the PipelineJob. If not provided, Vertex Custom Job(on
-   * demand) is used as the runtime. For Vertex Custom Job, please refer to
-   * https://cloud.google.com/vertex-ai/docs/training/overview.
+   * Optional. The default runtime for the PipelineJob. If not set, Standard Vertex Custom
+   * Job(https://cloud.google.com/vertex-ai/docs/training/overview) is used as the runtime. If set,
+   * all pipeline tasks will run on the default runtime unless a task is a GCPC custom job component
+   * (https://cloud.google.com/vertex-ai/docs/pipelines/customjob-component) based task. If the task
+   * is based on a GCPC custom job component, it runs solely according to the component's
+   * configuration.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1PipelineJobRuntimeConfigDefaultRuntime getDefaultRuntime() {
@@ -100,9 +106,12 @@ public final class GoogleCloudAiplatformV1beta1PipelineJobRuntimeConfig extends 
   }
 
   /**
-   * Optional. The default runtime for the PipelineJob. If not provided, Vertex Custom Job(on
-   * demand) is used as the runtime. For Vertex Custom Job, please refer to
-   * https://cloud.google.com/vertex-ai/docs/training/overview.
+   * Optional. The default runtime for the PipelineJob. If not set, Standard Vertex Custom
+   * Job(https://cloud.google.com/vertex-ai/docs/training/overview) is used as the runtime. If set,
+   * all pipeline tasks will run on the default runtime unless a task is a GCPC custom job component
+   * (https://cloud.google.com/vertex-ai/docs/pipelines/customjob-component) based task. If the task
+   * is based on a GCPC custom job component, it runs solely according to the component's
+   * configuration.
    * @param defaultRuntime defaultRuntime or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1PipelineJobRuntimeConfig setDefaultRuntime(GoogleCloudAiplatformV1beta1PipelineJobRuntimeConfigDefaultRuntime defaultRuntime) {

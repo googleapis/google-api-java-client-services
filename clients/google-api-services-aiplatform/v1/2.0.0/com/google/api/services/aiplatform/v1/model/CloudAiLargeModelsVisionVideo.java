@@ -59,7 +59,6 @@ public final class CloudAiLargeModelsVisionVideo extends com.google.api.client.j
 
   /**
    * Base 64 encoded video bytes.
-   * @see #decodeEncodedVideo()
    * @return value or {@code null} for none
    */
   public java.lang.String getEncodedVideo() {
@@ -68,37 +67,10 @@ public final class CloudAiLargeModelsVisionVideo extends com.google.api.client.j
 
   /**
    * Base 64 encoded video bytes.
-   * @see #getEncodedVideo()
-   * @return Base64 decoded value or {@code null} for none
-   *
-   * @since 1.14
-   */
-  public byte[] decodeEncodedVideo() {
-    return com.google.api.client.util.Base64.decodeBase64(encodedVideo);
-  }
-
-  /**
-   * Base 64 encoded video bytes.
-   * @see #encodeEncodedVideo()
    * @param encodedVideo encodedVideo or {@code null} for none
    */
   public CloudAiLargeModelsVisionVideo setEncodedVideo(java.lang.String encodedVideo) {
     this.encodedVideo = encodedVideo;
-    return this;
-  }
-
-  /**
-   * Base 64 encoded video bytes.
-   * @see #setEncodedVideo()
-   *
-   * <p>
-   * The value is encoded Base64 or {@code null} for none.
-   * </p>
-   *
-   * @since 1.14
-   */
-  public CloudAiLargeModelsVisionVideo encodeEncodedVideo(byte[] encodedVideo) {
-    this.encodedVideo = com.google.api.client.util.Base64.encodeBase64URLSafeString(encodedVideo);
     return this;
   }
 

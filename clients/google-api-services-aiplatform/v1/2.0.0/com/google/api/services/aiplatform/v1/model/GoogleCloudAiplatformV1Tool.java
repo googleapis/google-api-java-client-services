@@ -50,6 +50,13 @@ public final class GoogleCloudAiplatformV1Tool extends com.google.api.client.jso
   }
 
   /**
+   * Optional. GoogleSearch tool type. Tool to support Google Search in Model. Powered by Google.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1ToolGoogleSearch googleSearch;
+
+  /**
    * Optional. GoogleSearchRetrieval tool type. Specialized retrieval tool that is powered by Google
    * search.
    * The value may be {@code null}.
@@ -88,6 +95,23 @@ public final class GoogleCloudAiplatformV1Tool extends com.google.api.client.jso
    */
   public GoogleCloudAiplatformV1Tool setFunctionDeclarations(java.util.List<GoogleCloudAiplatformV1FunctionDeclaration> functionDeclarations) {
     this.functionDeclarations = functionDeclarations;
+    return this;
+  }
+
+  /**
+   * Optional. GoogleSearch tool type. Tool to support Google Search in Model. Powered by Google.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ToolGoogleSearch getGoogleSearch() {
+    return googleSearch;
+  }
+
+  /**
+   * Optional. GoogleSearch tool type. Tool to support Google Search in Model. Powered by Google.
+   * @param googleSearch googleSearch or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Tool setGoogleSearch(GoogleCloudAiplatformV1ToolGoogleSearch googleSearch) {
+    this.googleSearch = googleSearch;
     return this;
   }
 

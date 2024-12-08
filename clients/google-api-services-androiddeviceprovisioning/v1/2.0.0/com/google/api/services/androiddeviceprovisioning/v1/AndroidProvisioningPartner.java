@@ -256,13 +256,13 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
       }
 
       /**
-       * The maximum number of customers to show in a page of results. A number between 1 and 100
-       * (inclusive).
+       * Required. The maximum number of customers to show in a page of results. A number between 1
+       * and 100 (inclusive).
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The maximum number of customers to show in a page of results. A number between 1 and 100
+      /** Required. The maximum number of customers to show in a page of results. A number between 1 and 100
      (inclusive).
        */
       public java.lang.Integer getPageSize() {
@@ -270,8 +270,8 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
       }
 
       /**
-       * The maximum number of customers to show in a page of results. A number between 1 and 100
-       * (inclusive).
+       * Required. The maximum number of customers to show in a page of results. A number between 1
+       * and 100 (inclusive).
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -1537,21 +1537,22 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
         }
 
         /**
-         * The maximum number of devices to show in a page of results. Must be between 1 and 100
-         * inclusive.
+         * Required. The maximum number of devices to show in a page of results. Must be between 1
+         * and 100 inclusive.
          */
         @com.google.api.client.util.Key
         private java.lang.Long pageSize;
 
-        /** The maximum number of devices to show in a page of results. Must be between 1 and 100 inclusive.
+        /** Required. The maximum number of devices to show in a page of results. Must be between 1 and 100
+       inclusive.
          */
         public java.lang.Long getPageSize() {
           return pageSize;
         }
 
         /**
-         * The maximum number of devices to show in a page of results. Must be between 1 and 100
-         * inclusive.
+         * Required. The maximum number of devices to show in a page of results. Must be between 1
+         * and 100 inclusive.
          */
         public List setPageSize(java.lang.Long pageSize) {
           this.pageSize = pageSize;

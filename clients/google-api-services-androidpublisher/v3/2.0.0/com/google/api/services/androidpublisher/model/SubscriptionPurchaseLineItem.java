@@ -74,6 +74,13 @@ public final class SubscriptionPurchaseLineItem extends com.google.api.client.js
   private java.lang.String productId;
 
   /**
+   * Promotion details about this item. Only set if a promotion was applied during signup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SignupPromotion signupPromotion;
+
+  /**
    * The item is auto renewing.
    * @return value or {@code null} for none
    */
@@ -174,6 +181,23 @@ public final class SubscriptionPurchaseLineItem extends com.google.api.client.js
    */
   public SubscriptionPurchaseLineItem setProductId(java.lang.String productId) {
     this.productId = productId;
+    return this;
+  }
+
+  /**
+   * Promotion details about this item. Only set if a promotion was applied during signup.
+   * @return value or {@code null} for none
+   */
+  public SignupPromotion getSignupPromotion() {
+    return signupPromotion;
+  }
+
+  /**
+   * Promotion details about this item. Only set if a promotion was applied during signup.
+   * @param signupPromotion signupPromotion or {@code null} for none
+   */
+  public SubscriptionPurchaseLineItem setSignupPromotion(SignupPromotion signupPromotion) {
+    this.signupPromotion = signupPromotion;
     return this;
   }
 

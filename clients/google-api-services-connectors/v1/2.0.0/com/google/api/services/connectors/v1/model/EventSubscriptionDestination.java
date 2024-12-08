@@ -37,6 +37,13 @@ public final class EventSubscriptionDestination extends com.google.api.client.js
   private EndPoint endpoint;
 
   /**
+   * OPTION 2: Write the event to Cloud Storage bucket.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GSUtil gsutil;
+
+  /**
    * Service account needed for runtime plane to trigger IP workflow.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class EventSubscriptionDestination extends com.google.api.client.js
    */
   public EventSubscriptionDestination setEndpoint(EndPoint endpoint) {
     this.endpoint = endpoint;
+    return this;
+  }
+
+  /**
+   * OPTION 2: Write the event to Cloud Storage bucket.
+   * @return value or {@code null} for none
+   */
+  public GSUtil getGsutil() {
+    return gsutil;
+  }
+
+  /**
+   * OPTION 2: Write the event to Cloud Storage bucket.
+   * @param gsutil gsutil or {@code null} for none
+   */
+  public EventSubscriptionDestination setGsutil(GSUtil gsutil) {
+    this.gsutil = gsutil;
     return this;
   }
 

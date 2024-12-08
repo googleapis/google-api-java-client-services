@@ -33,35 +33,35 @@ package com.google.api.services.connectors.v1.model;
 public final class RoleGrant extends com.google.api.client.json.GenericJson {
 
   /**
-   * Template that UI can use to provide helper text to customers.
+   * Optional. Template that UI can use to provide helper text to customers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String helperTextTemplate;
 
   /**
-   * Prinicipal/Identity for whom the role need to assigned.
+   * Optional. Prinicipal/Identity for whom the role need to assigned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String principal;
 
   /**
-   * Resource on which the roles needs to be granted for the principal.
+   * Optional. Resource on which the roles needs to be granted for the principal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Resource resource;
 
   /**
-   * List of roles that need to be granted.
+   * Optional. List of roles that need to be granted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> roles;
 
   /**
-   * Template that UI can use to provide helper text to customers.
+   * Optional. Template that UI can use to provide helper text to customers.
    * @return value or {@code null} for none
    */
   public java.lang.String getHelperTextTemplate() {
@@ -69,7 +69,7 @@ public final class RoleGrant extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Template that UI can use to provide helper text to customers.
+   * Optional. Template that UI can use to provide helper text to customers.
    * @param helperTextTemplate helperTextTemplate or {@code null} for none
    */
   public RoleGrant setHelperTextTemplate(java.lang.String helperTextTemplate) {
@@ -78,7 +78,7 @@ public final class RoleGrant extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Prinicipal/Identity for whom the role need to assigned.
+   * Optional. Prinicipal/Identity for whom the role need to assigned.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipal() {
@@ -86,7 +86,7 @@ public final class RoleGrant extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Prinicipal/Identity for whom the role need to assigned.
+   * Optional. Prinicipal/Identity for whom the role need to assigned.
    * @param principal principal or {@code null} for none
    */
   public RoleGrant setPrincipal(java.lang.String principal) {
@@ -95,7 +95,7 @@ public final class RoleGrant extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource on which the roles needs to be granted for the principal.
+   * Optional. Resource on which the roles needs to be granted for the principal.
    * @return value or {@code null} for none
    */
   public Resource getResource() {
@@ -103,7 +103,7 @@ public final class RoleGrant extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource on which the roles needs to be granted for the principal.
+   * Optional. Resource on which the roles needs to be granted for the principal.
    * @param resource resource or {@code null} for none
    */
   public RoleGrant setResource(Resource resource) {
@@ -112,7 +112,7 @@ public final class RoleGrant extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of roles that need to be granted.
+   * Optional. List of roles that need to be granted.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRoles() {
@@ -120,7 +120,7 @@ public final class RoleGrant extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of roles that need to be granted.
+   * Optional. List of roles that need to be granted.
    * @param roles roles or {@code null} for none
    */
   public RoleGrant setRoles(java.util.List<java.lang.String> roles) {

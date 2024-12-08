@@ -30,7 +30,7 @@ package com.google.api.services.connectors.v1.model;
 public final class SslConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Additional SSL related field values
+   * Optional. Additional SSL related field values
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,70 +43,70 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of Client Cert (PEM/JKS/.. etc.)
+   * Optional. Type of Client Cert (PEM/JKS/.. etc.)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientCertType;
 
   /**
-   * Client Certificate
+   * Optional. Client Certificate
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Secret clientCertificate;
 
   /**
-   * Client Private Key
+   * Optional. Client Private Key
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Secret clientPrivateKey;
 
   /**
-   * Secret containing the passphrase protecting the Client Private Key
+   * Optional. Secret containing the passphrase protecting the Client Private Key
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Secret clientPrivateKeyPass;
 
   /**
-   * Private Server Certificate. Needs to be specified if trust model is `PRIVATE`.
+   * Optional. Private Server Certificate. Needs to be specified if trust model is `PRIVATE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Secret privateServerCertificate;
 
   /**
-   * Type of Server Cert (PEM/JKS/.. etc.)
+   * Optional. Type of Server Cert (PEM/JKS/.. etc.)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serverCertType;
 
   /**
-   * Trust Model of the SSL connection
+   * Optional. Trust Model of the SSL connection
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String trustModel;
 
   /**
-   * Controls the ssl type for the given connector version.
+   * Optional. Controls the ssl type for the given connector version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Bool for enabling SSL
+   * Optional. Bool for enabling SSL
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useSsl;
 
   /**
-   * Additional SSL related field values
+   * Optional. Additional SSL related field values
    * @return value or {@code null} for none
    */
   public java.util.List<ConfigVariable> getAdditionalVariables() {
@@ -114,7 +114,7 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional SSL related field values
+   * Optional. Additional SSL related field values
    * @param additionalVariables additionalVariables or {@code null} for none
    */
   public SslConfig setAdditionalVariables(java.util.List<ConfigVariable> additionalVariables) {
@@ -123,7 +123,7 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of Client Cert (PEM/JKS/.. etc.)
+   * Optional. Type of Client Cert (PEM/JKS/.. etc.)
    * @return value or {@code null} for none
    */
   public java.lang.String getClientCertType() {
@@ -131,7 +131,7 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of Client Cert (PEM/JKS/.. etc.)
+   * Optional. Type of Client Cert (PEM/JKS/.. etc.)
    * @param clientCertType clientCertType or {@code null} for none
    */
   public SslConfig setClientCertType(java.lang.String clientCertType) {
@@ -140,7 +140,7 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Client Certificate
+   * Optional. Client Certificate
    * @return value or {@code null} for none
    */
   public Secret getClientCertificate() {
@@ -148,7 +148,7 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Client Certificate
+   * Optional. Client Certificate
    * @param clientCertificate clientCertificate or {@code null} for none
    */
   public SslConfig setClientCertificate(Secret clientCertificate) {
@@ -157,7 +157,7 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Client Private Key
+   * Optional. Client Private Key
    * @return value or {@code null} for none
    */
   public Secret getClientPrivateKey() {
@@ -165,7 +165,7 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Client Private Key
+   * Optional. Client Private Key
    * @param clientPrivateKey clientPrivateKey or {@code null} for none
    */
   public SslConfig setClientPrivateKey(Secret clientPrivateKey) {
@@ -174,7 +174,7 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Secret containing the passphrase protecting the Client Private Key
+   * Optional. Secret containing the passphrase protecting the Client Private Key
    * @return value or {@code null} for none
    */
   public Secret getClientPrivateKeyPass() {
@@ -182,7 +182,7 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Secret containing the passphrase protecting the Client Private Key
+   * Optional. Secret containing the passphrase protecting the Client Private Key
    * @param clientPrivateKeyPass clientPrivateKeyPass or {@code null} for none
    */
   public SslConfig setClientPrivateKeyPass(Secret clientPrivateKeyPass) {
@@ -191,7 +191,7 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Private Server Certificate. Needs to be specified if trust model is `PRIVATE`.
+   * Optional. Private Server Certificate. Needs to be specified if trust model is `PRIVATE`.
    * @return value or {@code null} for none
    */
   public Secret getPrivateServerCertificate() {
@@ -199,7 +199,7 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Private Server Certificate. Needs to be specified if trust model is `PRIVATE`.
+   * Optional. Private Server Certificate. Needs to be specified if trust model is `PRIVATE`.
    * @param privateServerCertificate privateServerCertificate or {@code null} for none
    */
   public SslConfig setPrivateServerCertificate(Secret privateServerCertificate) {
@@ -208,7 +208,7 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of Server Cert (PEM/JKS/.. etc.)
+   * Optional. Type of Server Cert (PEM/JKS/.. etc.)
    * @return value or {@code null} for none
    */
   public java.lang.String getServerCertType() {
@@ -216,7 +216,7 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of Server Cert (PEM/JKS/.. etc.)
+   * Optional. Type of Server Cert (PEM/JKS/.. etc.)
    * @param serverCertType serverCertType or {@code null} for none
    */
   public SslConfig setServerCertType(java.lang.String serverCertType) {
@@ -225,7 +225,7 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Trust Model of the SSL connection
+   * Optional. Trust Model of the SSL connection
    * @return value or {@code null} for none
    */
   public java.lang.String getTrustModel() {
@@ -233,7 +233,7 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Trust Model of the SSL connection
+   * Optional. Trust Model of the SSL connection
    * @param trustModel trustModel or {@code null} for none
    */
   public SslConfig setTrustModel(java.lang.String trustModel) {
@@ -242,7 +242,7 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Controls the ssl type for the given connector version.
+   * Optional. Controls the ssl type for the given connector version.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -250,7 +250,7 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Controls the ssl type for the given connector version.
+   * Optional. Controls the ssl type for the given connector version.
    * @param type type or {@code null} for none
    */
   public SslConfig setType(java.lang.String type) {
@@ -259,7 +259,7 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Bool for enabling SSL
+   * Optional. Bool for enabling SSL
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseSsl() {
@@ -267,7 +267,7 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Bool for enabling SSL
+   * Optional. Bool for enabling SSL
    * @param useSsl useSsl or {@code null} for none
    */
   public SslConfig setUseSsl(java.lang.Boolean useSsl) {

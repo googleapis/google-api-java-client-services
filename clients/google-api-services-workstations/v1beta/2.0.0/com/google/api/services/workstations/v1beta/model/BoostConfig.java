@@ -17,7 +17,11 @@
 package com.google.api.services.workstations.v1beta.model;
 
 /**
- * A configuration that workstations can boost to.
+ * A boost configuration is a set of resources that a workstation can use to increase its
+ * performance. If a boost configuration is specified, when starting a workstation, users can choose
+ * to use a VM provisioned under the boost config by passing the boost config id in the start
+ * request. If no boost config id is provided in the start request, the system will choose a VM from
+ * the pool provisioned under the default config.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Workstations API. For a detailed explanation
@@ -75,7 +79,7 @@ public final class BoostConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enableNestedVirtualization;
 
   /**
-   * Optional. Required. The id to be used for the boost configuration.
+   * Required. The id to be used for the boost configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -185,7 +189,7 @@ public final class BoostConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Required. The id to be used for the boost configuration.
+   * Required. The id to be used for the boost configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -193,7 +197,7 @@ public final class BoostConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Required. The id to be used for the boost configuration.
+   * Required. The id to be used for the boost configuration.
    * @param id id or {@code null} for none
    */
   public BoostConfig setId(java.lang.String id) {

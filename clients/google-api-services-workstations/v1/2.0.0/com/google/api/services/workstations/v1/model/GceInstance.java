@@ -45,7 +45,8 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A list of the boost configurations that workstations created using this workstation
-   * configuration are allowed to use.
+   * configuration are allowed to use. If specified, users will have the option to choose from the
+   * list of boost configs when starting a workstation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -208,7 +209,8 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A list of the boost configurations that workstations created using this workstation
-   * configuration are allowed to use.
+   * configuration are allowed to use. If specified, users will have the option to choose from the
+   * list of boost configs when starting a workstation.
    * @return value or {@code null} for none
    */
   public java.util.List<BoostConfig> getBoostConfigs() {
@@ -217,7 +219,8 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A list of the boost configurations that workstations created using this workstation
-   * configuration are allowed to use.
+   * configuration are allowed to use. If specified, users will have the option to choose from the
+   * list of boost configs when starting a workstation.
    * @param boostConfigs boostConfigs or {@code null} for none
    */
   public GceInstance setBoostConfigs(java.util.List<BoostConfig> boostConfigs) {

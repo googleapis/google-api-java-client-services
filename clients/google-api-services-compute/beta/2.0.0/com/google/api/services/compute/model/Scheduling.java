@@ -49,6 +49,12 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Integer availabilityDomain;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SchedulingGracefulShutdown gracefulShutdown;
+
+  /**
    * Specify the time in seconds for host error detection, the value must be within the range of
    * [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will
    * be used.
@@ -200,6 +206,21 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setAvailabilityDomain(java.lang.Integer availabilityDomain) {
     this.availabilityDomain = availabilityDomain;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public SchedulingGracefulShutdown getGracefulShutdown() {
+    return gracefulShutdown;
+  }
+
+  /**
+   * @param gracefulShutdown gracefulShutdown or {@code null} for none
+   */
+  public Scheduling setGracefulShutdown(SchedulingGracefulShutdown gracefulShutdown) {
+    this.gracefulShutdown = gracefulShutdown;
     return this;
   }
 

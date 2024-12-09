@@ -50,7 +50,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
 
   /**
    * [Output only] List of features available at this InterconnectLocation, which can take one of
-   * the following values: - MACSEC
+   * the following values: - IF_MACSEC
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -212,7 +212,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
 
   /**
    * [Output only] List of features available at this InterconnectLocation, which can take one of
-   * the following values: - MACSEC
+   * the following values: - IF_MACSEC
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAvailableFeatures() {
@@ -221,7 +221,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
 
   /**
    * [Output only] List of features available at this InterconnectLocation, which can take one of
-   * the following values: - MACSEC
+   * the following values: - IF_MACSEC
    * @param availableFeatures availableFeatures or {@code null} for none
    */
   public InterconnectLocation setAvailableFeatures(java.util.List<java.lang.String> availableFeatures) {

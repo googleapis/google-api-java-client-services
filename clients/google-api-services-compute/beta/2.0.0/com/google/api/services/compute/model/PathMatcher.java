@@ -59,12 +59,10 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   /**
    * defaultRouteAction takes effect when none of the pathRules or routeRules match. The load
    * balancer performs advanced routing actions, such as URL rewrites and header transformations,
-   * before forwarding the request to the selected backend. If defaultRouteAction specifies any
-   * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
-   * defaultRouteAction cannot contain any weightedBackendServices. If defaultRouteAction is
-   * specified, don't set defaultUrlRedirect. If defaultRouteAction.weightedBackendServices is
-   * specified, don't set defaultService. URL maps for classic Application Load Balancers only
-   * support the urlRewrite action within a path matcher's defaultRouteAction.
+   * before forwarding the request to the selected backend. Only one of defaultUrlRedirect,
+   * defaultService or defaultRouteAction.weightedBackendService can be set. URL maps for classic
+   * Application Load Balancers only support the urlRewrite action within a path matcher's
+   * defaultRouteAction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,13 +75,10 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * https://www.googleapis.com/compute/v1/projects/project /global/backendServices/backendService -
    * compute/v1/projects/project/global/backendServices/backendService -
    * global/backendServices/backendService If defaultRouteAction is also specified, advanced routing
-   * actions, such as URL rewrites, take effect before sending the request to the backend. However,
-   * if defaultService is specified, defaultRouteAction cannot contain any weightedBackendServices.
-   * Conversely, if defaultRouteAction specifies any weightedBackendServices, defaultService must
-   * not be specified. If defaultService is specified, then set either defaultUrlRedirect or
-   * defaultRouteAction.weightedBackendService. Don't set both. Authorization requires one or more
-   * of the following Google IAM permissions on the specified resource default_service: -
-   * compute.backendBuckets.use - compute.backendServices.use
+   * actions, such as URL rewrites, take effect before sending the request to the backend. Only one
+   * of defaultUrlRedirect, defaultService or defaultRouteAction.weightedBackendService can be set.
+   * Authorization requires one or more of the following Google IAM permissions on the specified
+   * resource default_service: - compute.backendBuckets.use - compute.backendServices.use
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,8 +86,8 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
 
   /**
    * When none of the specified pathRules or routeRules match, the request is redirected to a URL
-   * specified by defaultUrlRedirect. If defaultUrlRedirect is specified, then set either
-   * defaultService or defaultRouteAction. Don't set both. Not supported when the URL map is bound
+   * specified by defaultUrlRedirect. Only one of defaultUrlRedirect, defaultService or
+   * defaultRouteAction.weightedBackendService can be set. Not supported when the URL map is bound
    * to a target gRPC proxy.
    * The value may be {@code null}.
    */
@@ -208,12 +203,10 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   /**
    * defaultRouteAction takes effect when none of the pathRules or routeRules match. The load
    * balancer performs advanced routing actions, such as URL rewrites and header transformations,
-   * before forwarding the request to the selected backend. If defaultRouteAction specifies any
-   * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
-   * defaultRouteAction cannot contain any weightedBackendServices. If defaultRouteAction is
-   * specified, don't set defaultUrlRedirect. If defaultRouteAction.weightedBackendServices is
-   * specified, don't set defaultService. URL maps for classic Application Load Balancers only
-   * support the urlRewrite action within a path matcher's defaultRouteAction.
+   * before forwarding the request to the selected backend. Only one of defaultUrlRedirect,
+   * defaultService or defaultRouteAction.weightedBackendService can be set. URL maps for classic
+   * Application Load Balancers only support the urlRewrite action within a path matcher's
+   * defaultRouteAction.
    * @return value or {@code null} for none
    */
   public HttpRouteAction getDefaultRouteAction() {
@@ -223,12 +216,10 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   /**
    * defaultRouteAction takes effect when none of the pathRules or routeRules match. The load
    * balancer performs advanced routing actions, such as URL rewrites and header transformations,
-   * before forwarding the request to the selected backend. If defaultRouteAction specifies any
-   * weightedBackendServices, defaultService must not be set. Conversely if defaultService is set,
-   * defaultRouteAction cannot contain any weightedBackendServices. If defaultRouteAction is
-   * specified, don't set defaultUrlRedirect. If defaultRouteAction.weightedBackendServices is
-   * specified, don't set defaultService. URL maps for classic Application Load Balancers only
-   * support the urlRewrite action within a path matcher's defaultRouteAction.
+   * before forwarding the request to the selected backend. Only one of defaultUrlRedirect,
+   * defaultService or defaultRouteAction.weightedBackendService can be set. URL maps for classic
+   * Application Load Balancers only support the urlRewrite action within a path matcher's
+   * defaultRouteAction.
    * @param defaultRouteAction defaultRouteAction or {@code null} for none
    */
   public PathMatcher setDefaultRouteAction(HttpRouteAction defaultRouteAction) {
@@ -243,13 +234,10 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * https://www.googleapis.com/compute/v1/projects/project /global/backendServices/backendService -
    * compute/v1/projects/project/global/backendServices/backendService -
    * global/backendServices/backendService If defaultRouteAction is also specified, advanced routing
-   * actions, such as URL rewrites, take effect before sending the request to the backend. However,
-   * if defaultService is specified, defaultRouteAction cannot contain any weightedBackendServices.
-   * Conversely, if defaultRouteAction specifies any weightedBackendServices, defaultService must
-   * not be specified. If defaultService is specified, then set either defaultUrlRedirect or
-   * defaultRouteAction.weightedBackendService. Don't set both. Authorization requires one or more
-   * of the following Google IAM permissions on the specified resource default_service: -
-   * compute.backendBuckets.use - compute.backendServices.use
+   * actions, such as URL rewrites, take effect before sending the request to the backend. Only one
+   * of defaultUrlRedirect, defaultService or defaultRouteAction.weightedBackendService can be set.
+   * Authorization requires one or more of the following Google IAM permissions on the specified
+   * resource default_service: - compute.backendBuckets.use - compute.backendServices.use
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultService() {
@@ -263,13 +251,10 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * https://www.googleapis.com/compute/v1/projects/project /global/backendServices/backendService -
    * compute/v1/projects/project/global/backendServices/backendService -
    * global/backendServices/backendService If defaultRouteAction is also specified, advanced routing
-   * actions, such as URL rewrites, take effect before sending the request to the backend. However,
-   * if defaultService is specified, defaultRouteAction cannot contain any weightedBackendServices.
-   * Conversely, if defaultRouteAction specifies any weightedBackendServices, defaultService must
-   * not be specified. If defaultService is specified, then set either defaultUrlRedirect or
-   * defaultRouteAction.weightedBackendService. Don't set both. Authorization requires one or more
-   * of the following Google IAM permissions on the specified resource default_service: -
-   * compute.backendBuckets.use - compute.backendServices.use
+   * actions, such as URL rewrites, take effect before sending the request to the backend. Only one
+   * of defaultUrlRedirect, defaultService or defaultRouteAction.weightedBackendService can be set.
+   * Authorization requires one or more of the following Google IAM permissions on the specified
+   * resource default_service: - compute.backendBuckets.use - compute.backendServices.use
    * @param defaultService defaultService or {@code null} for none
    */
   public PathMatcher setDefaultService(java.lang.String defaultService) {
@@ -279,8 +264,8 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
 
   /**
    * When none of the specified pathRules or routeRules match, the request is redirected to a URL
-   * specified by defaultUrlRedirect. If defaultUrlRedirect is specified, then set either
-   * defaultService or defaultRouteAction. Don't set both. Not supported when the URL map is bound
+   * specified by defaultUrlRedirect. Only one of defaultUrlRedirect, defaultService or
+   * defaultRouteAction.weightedBackendService can be set. Not supported when the URL map is bound
    * to a target gRPC proxy.
    * @return value or {@code null} for none
    */
@@ -290,8 +275,8 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
 
   /**
    * When none of the specified pathRules or routeRules match, the request is redirected to a URL
-   * specified by defaultUrlRedirect. If defaultUrlRedirect is specified, then set either
-   * defaultService or defaultRouteAction. Don't set both. Not supported when the URL map is bound
+   * specified by defaultUrlRedirect. Only one of defaultUrlRedirect, defaultService or
+   * defaultRouteAction.weightedBackendService can be set. Not supported when the URL map is bound
    * to a target gRPC proxy.
    * @param defaultUrlRedirect defaultUrlRedirect or {@code null} for none
    */

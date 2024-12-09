@@ -682,17 +682,21 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Creates a space with no members. Can be used to create a named space, or a group chat in `Import
-     * mode`. Spaces grouped by topics aren't supported. For an example, see [Create a
-     * space](https://developers.google.com/workspace/chat/create-spaces). If you receive the error
-     * message `ALREADY_EXISTS` when creating a space, try a different `displayName`. An existing space
-     * within the Google Workspace organization might already use this display name. Supports the
-     * following types of [authentication](https://developers.google.com/workspace/chat/authenticate-
-     * authorize): - [App authentication](https://developers.google.com/workspace/chat/authenticate-
-     * authorize-chat-app) with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-     * in [Developer Preview](https://developers.google.com/workspace/preview) - [User
+     * Creates a space. Can be used to create a named space, or a group chat in `Import mode`. For an
+     * example, see [Create a space](https://developers.google.com/workspace/chat/create-spaces).
+     * Supports the following types of
+     * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [App
+     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+     * with [administrator approval](https://support.google.com/a?p=chat-app-auth) in [Developer
+     * Preview](https://developers.google.com/workspace/preview) - [User
      * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-     * When authenticating as an app, the `space.customer` field must be set in the request.
+     * When authenticating as an app, the `space.customer` field must be set in the request. Space
+     * membership upon creation depends on whether the space is created in `Import mode`: * **Import
+     * mode:** No members are created. * **All other modes:** The calling user is added as a member.
+     * This is: * The app itself when using app authentication. * The human user when using user
+     * authentication. If you receive the error message `ALREADY_EXISTS` when creating a space, try a
+     * different `displayName`. An existing space within the Google Workspace organization might already
+     * use this display name.
      *
      * Create a request for the method "spaces.create".
      *
@@ -713,18 +717,21 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v1/spaces";
 
       /**
-       * Creates a space with no members. Can be used to create a named space, or a group chat in
-       * `Import mode`. Spaces grouped by topics aren't supported. For an example, see [Create a
-       * space](https://developers.google.com/workspace/chat/create-spaces). If you receive the error
-       * message `ALREADY_EXISTS` when creating a space, try a different `displayName`. An existing
-       * space within the Google Workspace organization might already use this display name. Supports
-       * the following types of
+       * Creates a space. Can be used to create a named space, or a group chat in `Import mode`. For an
+       * example, see [Create a space](https://developers.google.com/workspace/chat/create-spaces).
+       * Supports the following types of
        * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [App
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
        * with [administrator approval](https://support.google.com/a?p=chat-app-auth) in [Developer
        * Preview](https://developers.google.com/workspace/preview) - [User
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-       * When authenticating as an app, the `space.customer` field must be set in the request.
+       * When authenticating as an app, the `space.customer` field must be set in the request. Space
+       * membership upon creation depends on whether the space is created in `Import mode`: * **Import
+       * mode:** No members are created. * **All other modes:** The calling user is added as a member.
+       * This is: * The app itself when using app authentication. * The human user when using user
+       * authentication. If you receive the error message `ALREADY_EXISTS` when creating a space, try a
+       * different `displayName`. An existing space within the Google Workspace organization might
+       * already use this display name.
        *
        * Create a request for the method "spaces.create".
        *

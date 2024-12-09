@@ -17,7 +17,7 @@
 package com.google.api.services.datamigration.v1.model;
 
 /**
- * Request message for 'PromoteMigrationJob' request.
+ * Request for looking up a specific migration job object by its source object identifier.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Database Migration API. For a detailed explanation
@@ -28,40 +28,40 @@ package com.google.api.services.datamigration.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class PromoteMigrationJobRequest extends com.google.api.client.json.GenericJson {
+public final class LookupMigrationJobObjectRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The object filter to apply to the migration job.
+   * Required. The source object identifier which maps to the migration job object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private MigrationJobObjectsConfig objectsFilter;
+  private SourceObjectIdentifier sourceObjectIdentifier;
 
   /**
-   * Optional. The object filter to apply to the migration job.
+   * Required. The source object identifier which maps to the migration job object.
    * @return value or {@code null} for none
    */
-  public MigrationJobObjectsConfig getObjectsFilter() {
-    return objectsFilter;
+  public SourceObjectIdentifier getSourceObjectIdentifier() {
+    return sourceObjectIdentifier;
   }
 
   /**
-   * Optional. The object filter to apply to the migration job.
-   * @param objectsFilter objectsFilter or {@code null} for none
+   * Required. The source object identifier which maps to the migration job object.
+   * @param sourceObjectIdentifier sourceObjectIdentifier or {@code null} for none
    */
-  public PromoteMigrationJobRequest setObjectsFilter(MigrationJobObjectsConfig objectsFilter) {
-    this.objectsFilter = objectsFilter;
+  public LookupMigrationJobObjectRequest setSourceObjectIdentifier(SourceObjectIdentifier sourceObjectIdentifier) {
+    this.sourceObjectIdentifier = sourceObjectIdentifier;
     return this;
   }
 
   @Override
-  public PromoteMigrationJobRequest set(String fieldName, Object value) {
-    return (PromoteMigrationJobRequest) super.set(fieldName, value);
+  public LookupMigrationJobObjectRequest set(String fieldName, Object value) {
+    return (LookupMigrationJobObjectRequest) super.set(fieldName, value);
   }
 
   @Override
-  public PromoteMigrationJobRequest clone() {
-    return (PromoteMigrationJobRequest) super.clone();
+  public LookupMigrationJobObjectRequest clone() {
+    return (LookupMigrationJobObjectRequest) super.clone();
   }
 
 }

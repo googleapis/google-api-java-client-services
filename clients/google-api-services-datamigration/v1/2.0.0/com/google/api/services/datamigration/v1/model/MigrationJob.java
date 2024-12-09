@@ -151,6 +151,13 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. The objects that need to be migrated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MigrationJobObjectsConfig objectsConfig;
+
+  /**
    * Configuration for heterogeneous **Oracle to Cloud SQL for PostgreSQL** and **Oracle to AlloyDB
    * for PostgreSQL** migrations.
    * The value may be {@code null}.
@@ -518,6 +525,23 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
    */
   public MigrationJob setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The objects that need to be migrated.
+   * @return value or {@code null} for none
+   */
+  public MigrationJobObjectsConfig getObjectsConfig() {
+    return objectsConfig;
+  }
+
+  /**
+   * Optional. The objects that need to be migrated.
+   * @param objectsConfig objectsConfig or {@code null} for none
+   */
+  public MigrationJob setObjectsConfig(MigrationJobObjectsConfig objectsConfig) {
+    this.objectsConfig = objectsConfig;
     return this;
   }
 

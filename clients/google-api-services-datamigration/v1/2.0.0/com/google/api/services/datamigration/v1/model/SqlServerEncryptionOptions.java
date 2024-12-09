@@ -31,28 +31,34 @@ package com.google.api.services.datamigration.v1.model;
 public final class SqlServerEncryptionOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Path to certificate.
+   * Required. Path to the Certificate (.cer) in Cloud Storage, in the form
+   * `gs://bucketName/fileName`. The instance must have write permissions to the bucket and read
+   * access to the file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String certPath;
 
   /**
-   * Required. Input only. Private key password.
+   * Required. Input only. Password that encrypts the private key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pvkPassword;
 
   /**
-   * Required. Path to certificate private key.
+   * Required. Path to the Certificate Private Key (.pvk) in Cloud Storage, in the form
+   * `gs://bucketName/fileName`. The instance must have write permissions to the bucket and read
+   * access to the file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pvkPath;
 
   /**
-   * Required. Path to certificate.
+   * Required. Path to the Certificate (.cer) in Cloud Storage, in the form
+   * `gs://bucketName/fileName`. The instance must have write permissions to the bucket and read
+   * access to the file.
    * @return value or {@code null} for none
    */
   public java.lang.String getCertPath() {
@@ -60,7 +66,9 @@ public final class SqlServerEncryptionOptions extends com.google.api.client.json
   }
 
   /**
-   * Required. Path to certificate.
+   * Required. Path to the Certificate (.cer) in Cloud Storage, in the form
+   * `gs://bucketName/fileName`. The instance must have write permissions to the bucket and read
+   * access to the file.
    * @param certPath certPath or {@code null} for none
    */
   public SqlServerEncryptionOptions setCertPath(java.lang.String certPath) {
@@ -69,7 +77,7 @@ public final class SqlServerEncryptionOptions extends com.google.api.client.json
   }
 
   /**
-   * Required. Input only. Private key password.
+   * Required. Input only. Password that encrypts the private key.
    * @return value or {@code null} for none
    */
   public java.lang.String getPvkPassword() {
@@ -77,7 +85,7 @@ public final class SqlServerEncryptionOptions extends com.google.api.client.json
   }
 
   /**
-   * Required. Input only. Private key password.
+   * Required. Input only. Password that encrypts the private key.
    * @param pvkPassword pvkPassword or {@code null} for none
    */
   public SqlServerEncryptionOptions setPvkPassword(java.lang.String pvkPassword) {
@@ -86,7 +94,9 @@ public final class SqlServerEncryptionOptions extends com.google.api.client.json
   }
 
   /**
-   * Required. Path to certificate private key.
+   * Required. Path to the Certificate Private Key (.pvk) in Cloud Storage, in the form
+   * `gs://bucketName/fileName`. The instance must have write permissions to the bucket and read
+   * access to the file.
    * @return value or {@code null} for none
    */
   public java.lang.String getPvkPath() {
@@ -94,7 +104,9 @@ public final class SqlServerEncryptionOptions extends com.google.api.client.json
   }
 
   /**
-   * Required. Path to certificate private key.
+   * Required. Path to the Certificate Private Key (.pvk) in Cloud Storage, in the form
+   * `gs://bucketName/fileName`. The instance must have write permissions to the bucket and read
+   * access to the file.
    * @param pvkPath pvkPath or {@code null} for none
    */
   public SqlServerEncryptionOptions setPvkPath(java.lang.String pvkPath) {

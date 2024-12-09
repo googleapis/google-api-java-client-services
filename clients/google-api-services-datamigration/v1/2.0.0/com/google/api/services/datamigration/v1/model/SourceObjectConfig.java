@@ -17,7 +17,7 @@
 package com.google.api.services.datamigration.v1.model;
 
 /**
- * Request message for 'PromoteMigrationJob' request.
+ * Config for a single migration job object.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Database Migration API. For a detailed explanation
@@ -28,40 +28,40 @@ package com.google.api.services.datamigration.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class PromoteMigrationJobRequest extends com.google.api.client.json.GenericJson {
+public final class SourceObjectConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The object filter to apply to the migration job.
+   * The object identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private MigrationJobObjectsConfig objectsFilter;
+  private SourceObjectIdentifier objectIdentifier;
 
   /**
-   * Optional. The object filter to apply to the migration job.
+   * The object identifier.
    * @return value or {@code null} for none
    */
-  public MigrationJobObjectsConfig getObjectsFilter() {
-    return objectsFilter;
+  public SourceObjectIdentifier getObjectIdentifier() {
+    return objectIdentifier;
   }
 
   /**
-   * Optional. The object filter to apply to the migration job.
-   * @param objectsFilter objectsFilter or {@code null} for none
+   * The object identifier.
+   * @param objectIdentifier objectIdentifier or {@code null} for none
    */
-  public PromoteMigrationJobRequest setObjectsFilter(MigrationJobObjectsConfig objectsFilter) {
-    this.objectsFilter = objectsFilter;
+  public SourceObjectConfig setObjectIdentifier(SourceObjectIdentifier objectIdentifier) {
+    this.objectIdentifier = objectIdentifier;
     return this;
   }
 
   @Override
-  public PromoteMigrationJobRequest set(String fieldName, Object value) {
-    return (PromoteMigrationJobRequest) super.set(fieldName, value);
+  public SourceObjectConfig set(String fieldName, Object value) {
+    return (SourceObjectConfig) super.set(fieldName, value);
   }
 
   @Override
-  public PromoteMigrationJobRequest clone() {
-    return (PromoteMigrationJobRequest) super.clone();
+  public SourceObjectConfig clone() {
+    return (SourceObjectConfig) super.clone();
   }
 
 }

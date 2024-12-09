@@ -6430,6 +6430,155 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
         }
         /**
+         * Retrieves objects from the source database that can be selected for data migration. This is
+         * applicable for the following migrations: 1. PostgreSQL to Cloud SQL for PostgreSQL 2. PostgreSQL
+         * to AlloyDB for PostgreSQL.
+         *
+         * Create a request for the method "migrationJobs.fetchSourceObjects".
+         *
+         * This request holds the parameters needed by the datamigration server.  After setting any optional
+         * parameters, call the {@link FetchSourceObjects#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name for the migration job for which source objects should be returned.
+         * @return the request
+         */
+        public FetchSourceObjects fetchSourceObjects(java.lang.String name) throws java.io.IOException {
+          FetchSourceObjects result = new FetchSourceObjects(name);
+          initialize(result);
+          return result;
+        }
+
+        public class FetchSourceObjects extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:fetchSourceObjects";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/migrationJobs/[^/]+$");
+
+          /**
+           * Retrieves objects from the source database that can be selected for data migration. This is
+           * applicable for the following migrations: 1. PostgreSQL to Cloud SQL for PostgreSQL 2.
+           * PostgreSQL to AlloyDB for PostgreSQL.
+           *
+           * Create a request for the method "migrationJobs.fetchSourceObjects".
+           *
+           * This request holds the parameters needed by the the datamigration server.  After setting any
+           * optional parameters, call the {@link FetchSourceObjects#execute()} method to invoke the remote
+           * operation. <p> {@link FetchSourceObjects#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. The resource name for the migration job for which source objects should be returned.
+           * @since 1.13
+           */
+          protected FetchSourceObjects(java.lang.String name) {
+            super(DatabaseMigrationService.this, "GET", REST_PATH, null, com.google.api.services.datamigration.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/migrationJobs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public FetchSourceObjects set$Xgafv(java.lang.String $Xgafv) {
+            return (FetchSourceObjects) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public FetchSourceObjects setAccessToken(java.lang.String accessToken) {
+            return (FetchSourceObjects) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public FetchSourceObjects setAlt(java.lang.String alt) {
+            return (FetchSourceObjects) super.setAlt(alt);
+          }
+
+          @Override
+          public FetchSourceObjects setCallback(java.lang.String callback) {
+            return (FetchSourceObjects) super.setCallback(callback);
+          }
+
+          @Override
+          public FetchSourceObjects setFields(java.lang.String fields) {
+            return (FetchSourceObjects) super.setFields(fields);
+          }
+
+          @Override
+          public FetchSourceObjects setKey(java.lang.String key) {
+            return (FetchSourceObjects) super.setKey(key);
+          }
+
+          @Override
+          public FetchSourceObjects setOauthToken(java.lang.String oauthToken) {
+            return (FetchSourceObjects) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public FetchSourceObjects setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (FetchSourceObjects) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public FetchSourceObjects setQuotaUser(java.lang.String quotaUser) {
+            return (FetchSourceObjects) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public FetchSourceObjects setUploadType(java.lang.String uploadType) {
+            return (FetchSourceObjects) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public FetchSourceObjects setUploadProtocol(java.lang.String uploadProtocol) {
+            return (FetchSourceObjects) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name for the migration job for which source objects should be
+           * returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name for the migration job for which source objects should be returned.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name for the migration job for which source objects should be
+           * returned.
+           */
+          public FetchSourceObjects setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/migrationJobs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public FetchSourceObjects set(String parameterName, Object value) {
+            return (FetchSourceObjects) super.set(parameterName, value);
+          }
+        }
+        /**
          * Generate a SSH configuration script to configure the reverse SSH connectivity.
          *
          * Create a request for the method "migrationJobs.generateSshScript".
@@ -8588,6 +8737,144 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
         public class Objects {
 
           /**
+           * Use this method to get details about a migration job object.
+           *
+           * Create a request for the method "objects.get".
+           *
+           * This request holds the parameters needed by the datamigration server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the migration job object resource to get.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.MigrationJobObject> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/migrationJobs/[^/]+/objects/[^/]+$");
+
+            /**
+             * Use this method to get details about a migration job object.
+             *
+             * Create a request for the method "objects.get".
+             *
+             * This request holds the parameters needed by the the datamigration server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the migration job object resource to get.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(DatabaseMigrationService.this, "GET", REST_PATH, null, com.google.api.services.datamigration.v1.model.MigrationJobObject.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/migrationJobs/[^/]+/objects/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the migration job object resource to get. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the migration job object resource to get.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the migration job object resource to get. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/migrationJobs/[^/]+/objects/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
            * does not have a policy set.
            *
@@ -8783,6 +9070,324 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
             @Override
             public GetIamPolicy set(String parameterName, Object value) {
               return (GetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Use this method to list the objects of a specific migration job.
+           *
+           * Create a request for the method "objects.list".
+           *
+           * This request holds the parameters needed by the datamigration server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent migration job that owns the collection of objects.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.ListMigrationJobObjectsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/objects";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/migrationJobs/[^/]+$");
+
+            /**
+             * Use this method to list the objects of a specific migration job.
+             *
+             * Create a request for the method "objects.list".
+             *
+             * This request holds the parameters needed by the the datamigration server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent migration job that owns the collection of objects.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(DatabaseMigrationService.this, "GET", REST_PATH, null, com.google.api.services.datamigration.v1.model.ListMigrationJobObjectsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/migrationJobs/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The parent migration job that owns the collection of objects. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent migration job that owns the collection of objects.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The parent migration job that owns the collection of objects. */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/migrationJobs/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Maximum number of objects to return. Default is 50. The maximum value is 1000; values
+             * above 1000 will be coerced to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Maximum number of objects to return. Default is 50. The maximum value is 1000; values above 1000
+           will be coerced to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Maximum number of objects to return. Default is 50. The maximum value is 1000; values
+             * above 1000 will be coerced to 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Page token received from a previous `ListMigrationJObObjectsRequest` call. Provide
+             * this to retrieve the subsequent page. When paginating, all other parameters provided
+             * to `ListMigrationJobObjectsRequest` must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Page token received from a previous `ListMigrationJObObjectsRequest` call. Provide this to retrieve
+           the subsequent page. When paginating, all other parameters provided to
+           `ListMigrationJobObjectsRequest` must match the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Page token received from a previous `ListMigrationJObObjectsRequest` call. Provide
+             * this to retrieve the subsequent page. When paginating, all other parameters provided
+             * to `ListMigrationJobObjectsRequest` must match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Use this method to look up a migration job object by its source object identifier.
+           *
+           * Create a request for the method "objects.lookup".
+           *
+           * This request holds the parameters needed by the datamigration server.  After setting any optional
+           * parameters, call the {@link Lookup#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent migration job that owns the collection of objects.
+           * @param content the {@link com.google.api.services.datamigration.v1.model.LookupMigrationJobObjectRequest}
+           * @return the request
+           */
+          public Lookup lookup(java.lang.String parent, com.google.api.services.datamigration.v1.model.LookupMigrationJobObjectRequest content) throws java.io.IOException {
+            Lookup result = new Lookup(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Lookup extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.MigrationJobObject> {
+
+            private static final String REST_PATH = "v1/{+parent}/objects:lookup";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/migrationJobs/[^/]+$");
+
+            /**
+             * Use this method to look up a migration job object by its source object identifier.
+             *
+             * Create a request for the method "objects.lookup".
+             *
+             * This request holds the parameters needed by the the datamigration server.  After setting any
+             * optional parameters, call the {@link Lookup#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Lookup#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent migration job that owns the collection of objects.
+             * @param content the {@link com.google.api.services.datamigration.v1.model.LookupMigrationJobObjectRequest}
+             * @since 1.13
+             */
+            protected Lookup(java.lang.String parent, com.google.api.services.datamigration.v1.model.LookupMigrationJobObjectRequest content) {
+              super(DatabaseMigrationService.this, "POST", REST_PATH, content, com.google.api.services.datamigration.v1.model.MigrationJobObject.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/migrationJobs/[^/]+$");
+              }
+            }
+
+            @Override
+            public Lookup set$Xgafv(java.lang.String $Xgafv) {
+              return (Lookup) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Lookup setAccessToken(java.lang.String accessToken) {
+              return (Lookup) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Lookup setAlt(java.lang.String alt) {
+              return (Lookup) super.setAlt(alt);
+            }
+
+            @Override
+            public Lookup setCallback(java.lang.String callback) {
+              return (Lookup) super.setCallback(callback);
+            }
+
+            @Override
+            public Lookup setFields(java.lang.String fields) {
+              return (Lookup) super.setFields(fields);
+            }
+
+            @Override
+            public Lookup setKey(java.lang.String key) {
+              return (Lookup) super.setKey(key);
+            }
+
+            @Override
+            public Lookup setOauthToken(java.lang.String oauthToken) {
+              return (Lookup) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Lookup setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Lookup) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Lookup setQuotaUser(java.lang.String quotaUser) {
+              return (Lookup) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Lookup setUploadType(java.lang.String uploadType) {
+              return (Lookup) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Lookup setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Lookup) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The parent migration job that owns the collection of objects. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent migration job that owns the collection of objects.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The parent migration job that owns the collection of objects. */
+            public Lookup setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/migrationJobs/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Lookup set(String parameterName, Object value) {
+              return (Lookup) super.set(parameterName, value);
             }
           }
           /**
@@ -9112,7 +9717,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
          * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
          * `Code.CANCELLED`.
          *
          * Create a request for the method "operations.cancel".
@@ -9143,7 +9748,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
            * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
            * methods to check whether the cancellation succeeded or whether the operation completed despite
            * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
            * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".

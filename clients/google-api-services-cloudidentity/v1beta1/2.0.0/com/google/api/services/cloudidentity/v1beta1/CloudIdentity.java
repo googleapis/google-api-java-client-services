@@ -6214,7 +6214,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * @param parent Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to
        *        search transitive memberships in. Format: `groups/{group_id}`, where `group_id` is the
        *        unique ID assigned to the Group to which the Membership belongs to. group_id can be a
-       *        wildcard collection id "-". When a group_id is specified, the membership graph will be
+       *        wildcard collection id "-". When `group_id` is specified, the membership graph will be
        *        constrained to paths between the member (defined in the query) and the parent. If a
        *        wildcard collection is provided, all membership paths connected to the member will be
        *        returned.
@@ -6251,7 +6251,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * @param parent Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to
        *        search transitive memberships in. Format: `groups/{group_id}`, where `group_id` is the
        *        unique ID assigned to the Group to which the Membership belongs to. group_id can be a
-       *        wildcard collection id "-". When a group_id is specified, the membership graph will be
+       *        wildcard collection id "-". When `group_id` is specified, the membership graph will be
        *        constrained to paths between the member (defined in the query) and the parent. If a
        *        wildcard collection is provided, all membership paths connected to the member will be
        *        returned.
@@ -6336,7 +6336,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
          * group to search transitive memberships in. Format: `groups/{group_id}`, where `group_id`
          * is the unique ID assigned to the Group to which the Membership belongs to. group_id can
-         * be a wildcard collection id "-". When a group_id is specified, the membership graph will
+         * be a wildcard collection id "-". When `group_id` is specified, the membership graph will
          * be constrained to paths between the member (defined in the query) and the parent. If a
          * wildcard collection is provided, all membership paths connected to the member will be
          * returned.
@@ -6347,7 +6347,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to
        search transitive memberships in. Format: `groups/{group_id}`, where `group_id` is the unique ID
        assigned to the Group to which the Membership belongs to. group_id can be a wildcard collection id
-       "-". When a group_id is specified, the membership graph will be constrained to paths between the
+       "-". When `group_id` is specified, the membership graph will be constrained to paths between the
        member (defined in the query) and the parent. If a wildcard collection is provided, all membership
        paths connected to the member will be returned.
          */
@@ -6359,7 +6359,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
          * group to search transitive memberships in. Format: `groups/{group_id}`, where `group_id`
          * is the unique ID assigned to the Group to which the Membership belongs to. group_id can
-         * be a wildcard collection id "-". When a group_id is specified, the membership graph will
+         * be a wildcard collection id "-". When `group_id` is specified, the membership graph will
          * be constrained to paths between the member (defined in the query) and the parent. If a
          * wildcard collection is provided, all membership paths connected to the member will be
          * returned.
@@ -7183,17 +7183,17 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
-        /** The next_page_token value returned from a previous list request, if any */
+        /** The next_page_token value returned from a previous list request, if any. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The next_page_token value returned from a previous list request, if any
+        /** The next_page_token value returned from a previous list request, if any.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** The next_page_token value returned from a previous list request, if any */
+        /** The next_page_token value returned from a previous list request, if any. */
         public SearchDirectGroups setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -7409,17 +7409,17 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
-        /** The next_page_token value returned from a previous list request, if any. */
+        /** The `next_page_token` value returned from a previous list request, if any. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The next_page_token value returned from a previous list request, if any.
+        /** The `next_page_token` value returned from a previous list request, if any.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** The next_page_token value returned from a previous list request, if any. */
+        /** The `next_page_token` value returned from a previous list request, if any. */
         public SearchTransitiveGroups setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -7434,7 +7434,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * labels` Query may optionally contain equality operators on the parent of the group
          * restricting the search within a particular customer, e.g. `parent ==
          * 'customers/{customer_id}'`. The `customer_id` must begin with "C" (for example,
-         * 'C046psxkn'). This filtering is only supported for Admins with groups read permissons on
+         * 'C046psxkn'). This filtering is only supported for Admins with groups read permissions on
          * the input customer. Example query: `member_key_id == 'member_key_id_value' && in labels
          * && parent == 'customers/C046psxkn'`
          */
@@ -7448,7 +7448,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        query: `member_key_id == 'member_key_id_value' && in labels` Query may optionally contain equality
        operators on the parent of the group restricting the search within a particular customer, e.g.
        `parent == 'customers/{customer_id}'`. The `customer_id` must begin with "C" (for example,
-       'C046psxkn'). This filtering is only supported for Admins with groups read permissons on the input
+       'C046psxkn'). This filtering is only supported for Admins with groups read permissions on the input
        customer. Example query: `member_key_id == 'member_key_id_value' && in labels && parent ==
        'customers/C046psxkn'`
          */
@@ -7465,7 +7465,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * labels` Query may optionally contain equality operators on the parent of the group
          * restricting the search within a particular customer, e.g. `parent ==
          * 'customers/{customer_id}'`. The `customer_id` must begin with "C" (for example,
-         * 'C046psxkn'). This filtering is only supported for Admins with groups read permissons on
+         * 'C046psxkn'). This filtering is only supported for Admins with groups read permissions on
          * the input customer. Example query: `member_key_id == 'member_key_id_value' && in labels
          * && parent == 'customers/C046psxkn'`
          */
@@ -10635,7 +10635,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * sdk/directory/reference/rest/v1/customers). You may use `customers/my_customer` to specify
        * your own organization. When no customer is mentioned it will be default to
        * customers/my_customer. A maximum of one customer clause can be used. The above clauses can
-       * only be combined together in a single filter expression with the AND operator.
+       * only be combined together in a single filter expression with the `&&` operator.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
@@ -10648,7 +10648,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
      resource](https://developers.google.com/admin-sdk/directory/reference/rest/v1/customers). You may
      use `customers/my_customer` to specify your own organization. When no customer is mentioned it will
      be default to customers/my_customer. A maximum of one customer clause can be used. The above
-     clauses can only be combined together in a single filter expression with the AND operator.
+     clauses can only be combined together in a single filter expression with the `&&` operator.
        */
       public java.lang.String getFilter() {
         return filter;
@@ -10664,7 +10664,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * sdk/directory/reference/rest/v1/customers). You may use `customers/my_customer` to specify
        * your own organization. When no customer is mentioned it will be default to
        * customers/my_customer. A maximum of one customer clause can be used. The above clauses can
-       * only be combined together in a single filter expression with the AND operator.
+       * only be combined together in a single filter expression with the `&&` operator.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -10672,25 +10672,25 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Optional. The maximum number of results to return. The service may return fewer than this
-       * value. If omitted (or defaulted to zero) the server will default to 50. The maximum allowed
-       * value is 100, though requests with page_size greater than that will be interpreted as 100.
+       * Optional. The maximum number of results to return. The service can return fewer than this
+       * number. If omitted or set to 0, the default is 50 results per page. The maximum allowed
+       * value is 100. `page_size` values greater than 100 default to 100.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Optional. The maximum number of results to return. The service may return fewer than this value. If
-     omitted (or defaulted to zero) the server will default to 50. The maximum allowed value is 100,
-     though requests with page_size greater than that will be interpreted as 100.
+      /** Optional. The maximum number of results to return. The service can return fewer than this number.
+     If omitted or set to 0, the default is 50 results per page. The maximum allowed value is 100.
+     `page_size` values greater than 100 default to 100.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * Optional. The maximum number of results to return. The service may return fewer than this
-       * value. If omitted (or defaulted to zero) the server will default to 50. The maximum allowed
-       * value is 100, though requests with page_size greater than that will be interpreted as 100.
+       * Optional. The maximum number of results to return. The service can return fewer than this
+       * number. If omitted or set to 0, the default is 50 results per page. The maximum allowed
+       * value is 100. `page_size` values greater than 100 default to 100.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;

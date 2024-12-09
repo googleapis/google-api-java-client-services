@@ -44,6 +44,13 @@ public final class GoogleChecksRepoScanV1alphaSource extends com.google.api.clie
   private java.lang.String dataType;
 
   /**
+   * Optional. Whether the finding was marked as a false positive.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean falsePositive;
+
+  /**
    * Optional. Source code attribution for the finding.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class GoogleChecksRepoScanV1alphaSource extends com.google.api.clie
    */
   public GoogleChecksRepoScanV1alphaSource setDataType(java.lang.String dataType) {
     this.dataType = dataType;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the finding was marked as a false positive.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getFalsePositive() {
+    return falsePositive;
+  }
+
+  /**
+   * Optional. Whether the finding was marked as a false positive.
+   * @param falsePositive falsePositive or {@code null} for none
+   */
+  public GoogleChecksRepoScanV1alphaSource setFalsePositive(java.lang.Boolean falsePositive) {
+    this.falsePositive = falsePositive;
     return this;
   }
 

@@ -10708,6 +10708,258 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
     }
     /**
+     * An accessor for creating requests from the AttackPaths collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+     *   {@code SecurityCommandCenter.AttackPaths.List request = securitycenter.attackPaths().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public AttackPaths attackPaths() {
+      return new AttackPaths();
+    }
+
+    /**
+     * The "attackPaths" collection of methods.
+     */
+    public class AttackPaths {
+
+      /**
+       * Lists the attack paths for a set of simulation results or valued resources and filter.
+       *
+       * Create a request for the method "attackPaths.list".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Name of parent to list attack paths. Valid formats: `organizations/{organization}`,
+       *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
+       *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+       *        `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.ListAttackPathsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/attackPaths";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Lists the attack paths for a set of simulation results or valued resources and filter.
+         *
+         * Create a request for the method "attackPaths.list".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Name of parent to list attack paths. Valid formats: `organizations/{organization}`,
+       *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
+       *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+       *        `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.ListAttackPathsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of parent to list attack paths. Valid formats:
+         * `organizations/{organization}`, `organizations/{organization}/simulations/{simulation}` `
+         * organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_expos
+         * ure_result_v2}`
+         * `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Name of parent to list attack paths. Valid formats: `organizations/{organization}`,
+       `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simulations/{
+       simulation}/attackExposureResults/{attack_exposure_result_v2}`
+       `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Name of parent to list attack paths. Valid formats:
+         * `organizations/{organization}`, `organizations/{organization}/simulations/{simulation}` `
+         * organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_expos
+         * ure_result_v2}`
+         * `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The filter expression that filters the attack path in the response. Supported fields: *
+         * `valued_resources` supports =
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** The filter expression that filters the attack path in the response. Supported fields: *
+       `valued_resources` supports =
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * The filter expression that filters the attack path in the response. Supported fields: *
+         * `valued_resources` supports =
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * The maximum number of results to return in a single response. Default is 10, minimum is
+         * 1, maximum is 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
+       is 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of results to return in a single response. Default is 10, minimum is
+         * 1, maximum is 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * The value returned by the last `ListAttackPathsResponse`; indicates that this is a
+         * continuation of a prior `ListAttackPaths` call, and that the system should return the
+         * next page of data.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The value returned by the last `ListAttackPathsResponse`; indicates that this is a continuation of
+       a prior `ListAttackPaths` call, and that the system should return the next page of data.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * The value returned by the last `ListAttackPathsResponse`; indicates that this is a
+         * continuation of a prior `ListAttackPaths` call, and that the system should return the
+         * next page of data.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the BigQueryExports collection.
      *
      * <p>The typical use is:</p>
@@ -15745,7 +15997,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
        * methods to check whether the cancellation succeeded or whether the operation completed despite
        * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-       * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+       * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
        * `Code.CANCELLED`.
        *
        * Create a request for the method "operations.cancel".
@@ -15775,7 +16027,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
          * `Code.CANCELLED`.
          *
          * Create a request for the method "operations.cancel".

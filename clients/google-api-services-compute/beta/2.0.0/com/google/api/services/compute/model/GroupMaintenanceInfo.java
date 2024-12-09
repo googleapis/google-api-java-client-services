@@ -30,14 +30,6 @@ package com.google.api.services.compute.model;
 public final class GroupMaintenanceInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * This setting enables or disables opportunistic maintenance. If enabled, maintenance is
-   * performed on unused reservations whenever possible.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean enableOpportunisticMaintenance;
-
-  /**
    * Progress for ongoing maintenance for this group of VMs/hosts. Describes number of hosts in the
    * block that have ongoing maintenance.
    * The value may be {@code null}.
@@ -66,25 +58,6 @@ public final class GroupMaintenanceInfo extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private UpcomingMaintenance upcomingGroupMaintenance;
-
-  /**
-   * This setting enables or disables opportunistic maintenance. If enabled, maintenance is
-   * performed on unused reservations whenever possible.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getEnableOpportunisticMaintenance() {
-    return enableOpportunisticMaintenance;
-  }
-
-  /**
-   * This setting enables or disables opportunistic maintenance. If enabled, maintenance is
-   * performed on unused reservations whenever possible.
-   * @param enableOpportunisticMaintenance enableOpportunisticMaintenance or {@code null} for none
-   */
-  public GroupMaintenanceInfo setEnableOpportunisticMaintenance(java.lang.Boolean enableOpportunisticMaintenance) {
-    this.enableOpportunisticMaintenance = enableOpportunisticMaintenance;
-    return this;
-  }
 
   /**
    * Progress for ongoing maintenance for this group of VMs/hosts. Describes number of hosts in the

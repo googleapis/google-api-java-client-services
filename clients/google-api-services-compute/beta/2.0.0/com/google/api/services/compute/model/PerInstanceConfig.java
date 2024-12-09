@@ -42,7 +42,7 @@ public final class PerInstanceConfig extends com.google.api.client.json.GenericJ
    * The name of a per-instance configuration and its corresponding instance. Serves as a merge key
    * during UpdatePerInstanceConfigs operations, that is, if a per-instance configuration with the
    * same name exists then it will be updated, otherwise a new one will be created for the VM
-   * instance with the same name. An attempt to create a per-instance configconfiguration for a VM
+   * instance with the same name. An attempt to create a per-instance configuration for a VM
    * instance that either doesn't exist or is not part of the group will result in an error.
    * The value may be {@code null}.
    */
@@ -121,7 +121,7 @@ public final class PerInstanceConfig extends com.google.api.client.json.GenericJ
    * The name of a per-instance configuration and its corresponding instance. Serves as a merge key
    * during UpdatePerInstanceConfigs operations, that is, if a per-instance configuration with the
    * same name exists then it will be updated, otherwise a new one will be created for the VM
-   * instance with the same name. An attempt to create a per-instance configconfiguration for a VM
+   * instance with the same name. An attempt to create a per-instance configuration for a VM
    * instance that either doesn't exist or is not part of the group will result in an error.
    * @return value or {@code null} for none
    */
@@ -133,7 +133,7 @@ public final class PerInstanceConfig extends com.google.api.client.json.GenericJ
    * The name of a per-instance configuration and its corresponding instance. Serves as a merge key
    * during UpdatePerInstanceConfigs operations, that is, if a per-instance configuration with the
    * same name exists then it will be updated, otherwise a new one will be created for the VM
-   * instance with the same name. An attempt to create a per-instance configconfiguration for a VM
+   * instance with the same name. An attempt to create a per-instance configuration for a VM
    * instance that either doesn't exist or is not part of the group will result in an error.
    * @param name name or {@code null} for none
    */

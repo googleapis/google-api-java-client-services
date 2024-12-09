@@ -17,7 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for MultiMigResourcePolicies.
+ * Resource policies message for a multi-MIG. Specifies the workload policy configuration of the
+ * multi-MIG.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -30,12 +31,24 @@ package com.google.api.services.compute.model;
 public final class MultiMigResourcePolicies extends com.google.api.client.json.GenericJson {
 
   /**
+   * The URL of the workload policy for this multi-MIG. It can be a full or partial URL. For
+   * example, the following are all valid URLs to a workload policy: -
+   * https://www.googleapis.com/compute/v1/projects/project/regions/region
+   * /resourcePolicies/resourcePolicy -
+   * projects/project/regions/region/resourcePolicies/resourcePolicy -
+   * regions/region/resourcePolicies/resourcePolicy
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String workloadPolicy;
 
   /**
+   * The URL of the workload policy for this multi-MIG. It can be a full or partial URL. For
+   * example, the following are all valid URLs to a workload policy: -
+   * https://www.googleapis.com/compute/v1/projects/project/regions/region
+   * /resourcePolicies/resourcePolicy -
+   * projects/project/regions/region/resourcePolicies/resourcePolicy -
+   * regions/region/resourcePolicies/resourcePolicy
    * @return value or {@code null} for none
    */
   public java.lang.String getWorkloadPolicy() {
@@ -43,6 +56,12 @@ public final class MultiMigResourcePolicies extends com.google.api.client.json.G
   }
 
   /**
+   * The URL of the workload policy for this multi-MIG. It can be a full or partial URL. For
+   * example, the following are all valid URLs to a workload policy: -
+   * https://www.googleapis.com/compute/v1/projects/project/regions/region
+   * /resourcePolicies/resourcePolicy -
+   * projects/project/regions/region/resourcePolicies/resourcePolicy -
+   * regions/region/resourcePolicies/resourcePolicy
    * @param workloadPolicy workloadPolicy or {@code null} for none
    */
   public MultiMigResourcePolicies setWorkloadPolicy(java.lang.String workloadPolicy) {

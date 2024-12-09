@@ -143,8 +143,8 @@ public final class Network extends com.google.api.client.json.GenericJson {
   /**
    * A full or partial URL of the network profile to apply to this network. This field can be set
    * only at resource creation time. For example, the following are valid URLs: - https://www.google
-   * apis.com/compute/alpha/projects/{project_id}/global/networkProfiles/{network_profile_name} -
-   * projects/{project_id}/global/networkProfiles/{network_profile_name}
+   * apis.com/compute/{api_version}/projects/{project_id}/global/networkProfiles/{network_profile_na
+   * me} - projects/{project_id}/global/networkProfiles/{network_profile_name}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -448,8 +448,8 @@ public final class Network extends com.google.api.client.json.GenericJson {
   /**
    * A full or partial URL of the network profile to apply to this network. This field can be set
    * only at resource creation time. For example, the following are valid URLs: - https://www.google
-   * apis.com/compute/alpha/projects/{project_id}/global/networkProfiles/{network_profile_name} -
-   * projects/{project_id}/global/networkProfiles/{network_profile_name}
+   * apis.com/compute/{api_version}/projects/{project_id}/global/networkProfiles/{network_profile_na
+   * me} - projects/{project_id}/global/networkProfiles/{network_profile_name}
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkProfile() {
@@ -459,8 +459,8 @@ public final class Network extends com.google.api.client.json.GenericJson {
   /**
    * A full or partial URL of the network profile to apply to this network. This field can be set
    * only at resource creation time. For example, the following are valid URLs: - https://www.google
-   * apis.com/compute/alpha/projects/{project_id}/global/networkProfiles/{network_profile_name} -
-   * projects/{project_id}/global/networkProfiles/{network_profile_name}
+   * apis.com/compute/{api_version}/projects/{project_id}/global/networkProfiles/{network_profile_na
+   * me} - projects/{project_id}/global/networkProfiles/{network_profile_name}
    * @param networkProfile networkProfile or {@code null} for none
    */
   public Network setNetworkProfile(java.lang.String networkProfile) {

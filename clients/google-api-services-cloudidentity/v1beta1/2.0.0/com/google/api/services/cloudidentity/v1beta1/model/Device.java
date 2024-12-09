@@ -19,6 +19,9 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 /**
  * A Device within the Cloud Identity Devices API. Represents a Device known to Google Cloud,
  * independent of the device ownership, type, and whether it is assigned or in use by a user.
+ * Important: Device API scopes require that you use domain-wide delegation to access the API. For
+ * more information, see [Set up the Devices API](https://cloud.google.com/identity/docs/how-
+ * to/setup-devices).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:

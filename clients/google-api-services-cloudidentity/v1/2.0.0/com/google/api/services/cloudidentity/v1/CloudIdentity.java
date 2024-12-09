@@ -7472,17 +7472,17 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
-        /** The next_page_token value returned from a previous list request, if any */
+        /** The `next_page_token` value returned from a previous list request, if any */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The next_page_token value returned from a previous list request, if any
+        /** The `next_page_token` value returned from a previous list request, if any
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** The next_page_token value returned from a previous list request, if any */
+        /** The `next_page_token` value returned from a previous list request, if any */
         public SearchDirectGroups setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -7701,17 +7701,17 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
-        /** The next_page_token value returned from a previous list request, if any. */
+        /** The `next_page_token` value returned from a previous list request, if any. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The next_page_token value returned from a previous list request, if any.
+        /** The `next_page_token` value returned from a previous list request, if any.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** The next_page_token value returned from a previous list request, if any. */
+        /** The `next_page_token` value returned from a previous list request, if any. */
         public SearchTransitiveGroups setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -7726,7 +7726,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * labels` Query may optionally contain equality operators on the parent of the group
          * restricting the search within a particular customer, e.g. `parent ==
          * 'customers/{customer_id}'`. The `customer_id` must begin with "C" (for example,
-         * 'C046psxkn'). This filtering is only supported for Admins with groups read permissons on
+         * 'C046psxkn'). This filtering is only supported for Admins with groups read permissions on
          * the input customer. Example query: `member_key_id == 'member_key_id_value' && in labels
          * && parent == 'customers/C046psxkn'`
          */
@@ -7740,7 +7740,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        query: `member_key_id == 'member_key_id_value' && in labels` Query may optionally contain equality
        operators on the parent of the group restricting the search within a particular customer, e.g.
        `parent == 'customers/{customer_id}'`. The `customer_id` must begin with "C" (for example,
-       'C046psxkn'). This filtering is only supported for Admins with groups read permissons on the input
+       'C046psxkn'). This filtering is only supported for Admins with groups read permissions on the input
        customer. Example query: `member_key_id == 'member_key_id_value' && in labels && parent ==
        'customers/C046psxkn'`
          */
@@ -7757,7 +7757,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * labels` Query may optionally contain equality operators on the parent of the group
          * restricting the search within a particular customer, e.g. `parent ==
          * 'customers/{customer_id}'`. The `customer_id` must begin with "C" (for example,
-         * 'C046psxkn'). This filtering is only supported for Admins with groups read permissons on
+         * 'C046psxkn'). This filtering is only supported for Admins with groups read permissions on
          * the input customer. Example query: `member_key_id == 'member_key_id_value' && in labels
          * && parent == 'customers/C046psxkn'`
          */
@@ -7946,17 +7946,17 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
-        /** The next_page_token value returned from a previous list request, if any. */
+        /** The `next_page_token` value returned from a previous list request, if any. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The next_page_token value returned from a previous list request, if any.
+        /** The `next_page_token` value returned from a previous list request, if any.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** The next_page_token value returned from a previous list request, if any. */
+        /** The `next_page_token` value returned from a previous list request, if any. */
         public SearchTransitiveMemberships setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;

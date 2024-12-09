@@ -31,8 +31,8 @@ public final class MembershipAdjacencyList extends com.google.api.client.json.Ge
 
   /**
    * Each edge contains information about the member that belongs to this group. Note: Fields
-   * returned here will help identify the specific Membership resource (e.g name,
-   * preferred_member_key and role), but may not be a comprehensive list of all fields.
+   * returned here will help identify the specific Membership resource (e.g `name`,
+   * `preferred_member_key` and `role`), but may not be a comprehensive list of all fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +53,8 @@ public final class MembershipAdjacencyList extends com.google.api.client.json.Ge
 
   /**
    * Each edge contains information about the member that belongs to this group. Note: Fields
-   * returned here will help identify the specific Membership resource (e.g name,
-   * preferred_member_key and role), but may not be a comprehensive list of all fields.
+   * returned here will help identify the specific Membership resource (e.g `name`,
+   * `preferred_member_key` and `role`), but may not be a comprehensive list of all fields.
    * @return value or {@code null} for none
    */
   public java.util.List<Membership> getEdges() {
@@ -63,8 +63,8 @@ public final class MembershipAdjacencyList extends com.google.api.client.json.Ge
 
   /**
    * Each edge contains information about the member that belongs to this group. Note: Fields
-   * returned here will help identify the specific Membership resource (e.g name,
-   * preferred_member_key and role), but may not be a comprehensive list of all fields.
+   * returned here will help identify the specific Membership resource (e.g `name`,
+   * `preferred_member_key` and `role`), but may not be a comprehensive list of all fields.
    * @param edges edges or {@code null} for none
    */
   public MembershipAdjacencyList setEdges(java.util.List<Membership> edges) {

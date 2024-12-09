@@ -187,7 +187,10 @@ public final class GoogleAppsCloudidentityDevicesV1Device extends com.google.api
 
   /**
    * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device
-   * in format: `devices/{device}`, where device is the unique id assigned to the Device.
+   * in format: `devices/{device}`, where device is the unique id assigned to the Device. Important:
+   * Device API scopes require that you use domain-wide delegation to access the API. For more
+   * information, see [Set up the Devices API](https://cloud.google.com/identity/docs/how-to/setup-
+   * devices).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -637,7 +640,10 @@ public final class GoogleAppsCloudidentityDevicesV1Device extends com.google.api
 
   /**
    * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device
-   * in format: `devices/{device}`, where device is the unique id assigned to the Device.
+   * in format: `devices/{device}`, where device is the unique id assigned to the Device. Important:
+   * Device API scopes require that you use domain-wide delegation to access the API. For more
+   * information, see [Set up the Devices API](https://cloud.google.com/identity/docs/how-to/setup-
+   * devices).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -646,7 +652,10 @@ public final class GoogleAppsCloudidentityDevicesV1Device extends com.google.api
 
   /**
    * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device
-   * in format: `devices/{device}`, where device is the unique id assigned to the Device.
+   * in format: `devices/{device}`, where device is the unique id assigned to the Device. Important:
+   * Device API scopes require that you use domain-wide delegation to access the API. For more
+   * information, see [Set up the Devices API](https://cloud.google.com/identity/docs/how-to/setup-
+   * devices).
    * @param name name or {@code null} for none
    */
   public GoogleAppsCloudidentityDevicesV1Device setName(java.lang.String name) {

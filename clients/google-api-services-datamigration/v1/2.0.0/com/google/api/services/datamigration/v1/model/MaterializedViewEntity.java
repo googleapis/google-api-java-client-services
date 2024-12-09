@@ -38,6 +38,19 @@ public final class MaterializedViewEntity extends com.google.api.client.json.Gen
   private java.util.Map<String, java.lang.Object> customFeatures;
 
   /**
+   * View indices.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<IndexEntity> indices;
+
+  static {
+    // hack to force ProGuard to consider IndexEntity used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(IndexEntity.class);
+  }
+
+  /**
    * The SQL code which creates the view.
    * The value may be {@code null}.
    */
@@ -58,6 +71,23 @@ public final class MaterializedViewEntity extends com.google.api.client.json.Gen
    */
   public MaterializedViewEntity setCustomFeatures(java.util.Map<String, java.lang.Object> customFeatures) {
     this.customFeatures = customFeatures;
+    return this;
+  }
+
+  /**
+   * View indices.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<IndexEntity> getIndices() {
+    return indices;
+  }
+
+  /**
+   * View indices.
+   * @param indices indices or {@code null} for none
+   */
+  public MaterializedViewEntity setIndices(java.util.List<IndexEntity> indices) {
+    this.indices = indices;
     return this;
   }
 

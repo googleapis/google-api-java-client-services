@@ -17,7 +17,7 @@
 package com.google.api.services.datamigration.v1.model;
 
 /**
- * Request message for 'RestartMigrationJob' request.
+ * Response containing the objects for a migration job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Database Migration API. For a detailed explanation
@@ -28,67 +28,64 @@ package com.google.api.services.datamigration.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RestartMigrationJobRequest extends com.google.api.client.json.GenericJson {
+public final class ListMigrationJobObjectsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The object filter to apply to the migration job.
+   * List of migration job objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private MigrationJobObjectsConfig objectsFilter;
+  private java.util.List<MigrationJobObject> migrationJobObjects;
 
   /**
-   * Optional. Restart the migration job without running prior configuration verification. Defaults
-   * to `false`.
+   * A token, which can be sent as `page_token` to retrieve the next page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean skipValidation;
+  private java.lang.String nextPageToken;
 
   /**
-   * Optional. The object filter to apply to the migration job.
+   * List of migration job objects.
    * @return value or {@code null} for none
    */
-  public MigrationJobObjectsConfig getObjectsFilter() {
-    return objectsFilter;
+  public java.util.List<MigrationJobObject> getMigrationJobObjects() {
+    return migrationJobObjects;
   }
 
   /**
-   * Optional. The object filter to apply to the migration job.
-   * @param objectsFilter objectsFilter or {@code null} for none
+   * List of migration job objects.
+   * @param migrationJobObjects migrationJobObjects or {@code null} for none
    */
-  public RestartMigrationJobRequest setObjectsFilter(MigrationJobObjectsConfig objectsFilter) {
-    this.objectsFilter = objectsFilter;
+  public ListMigrationJobObjectsResponse setMigrationJobObjects(java.util.List<MigrationJobObject> migrationJobObjects) {
+    this.migrationJobObjects = migrationJobObjects;
     return this;
   }
 
   /**
-   * Optional. Restart the migration job without running prior configuration verification. Defaults
-   * to `false`.
+   * A token, which can be sent as `page_token` to retrieve the next page.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getSkipValidation() {
-    return skipValidation;
+  public java.lang.String getNextPageToken() {
+    return nextPageToken;
   }
 
   /**
-   * Optional. Restart the migration job without running prior configuration verification. Defaults
-   * to `false`.
-   * @param skipValidation skipValidation or {@code null} for none
+   * A token, which can be sent as `page_token` to retrieve the next page.
+   * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public RestartMigrationJobRequest setSkipValidation(java.lang.Boolean skipValidation) {
-    this.skipValidation = skipValidation;
+  public ListMigrationJobObjectsResponse setNextPageToken(java.lang.String nextPageToken) {
+    this.nextPageToken = nextPageToken;
     return this;
   }
 
   @Override
-  public RestartMigrationJobRequest set(String fieldName, Object value) {
-    return (RestartMigrationJobRequest) super.set(fieldName, value);
+  public ListMigrationJobObjectsResponse set(String fieldName, Object value) {
+    return (ListMigrationJobObjectsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public RestartMigrationJobRequest clone() {
-    return (RestartMigrationJobRequest) super.clone();
+  public ListMigrationJobObjectsResponse clone() {
+    return (ListMigrationJobObjectsResponse) super.clone();
   }
 
 }

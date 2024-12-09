@@ -17,7 +17,7 @@
 package com.google.api.services.datamigration.v1.model;
 
 /**
- * Request message for 'PromoteMigrationJob' request.
+ * Configuration for the objects to be migrated.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Database Migration API. For a detailed explanation
@@ -28,40 +28,40 @@ package com.google.api.services.datamigration.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class PromoteMigrationJobRequest extends com.google.api.client.json.GenericJson {
+public final class MigrationJobObjectsConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The object filter to apply to the migration job.
+   * The list of the migration job objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private MigrationJobObjectsConfig objectsFilter;
+  private SourceObjectsConfig sourceObjectsConfig;
 
   /**
-   * Optional. The object filter to apply to the migration job.
+   * The list of the migration job objects.
    * @return value or {@code null} for none
    */
-  public MigrationJobObjectsConfig getObjectsFilter() {
-    return objectsFilter;
+  public SourceObjectsConfig getSourceObjectsConfig() {
+    return sourceObjectsConfig;
   }
 
   /**
-   * Optional. The object filter to apply to the migration job.
-   * @param objectsFilter objectsFilter or {@code null} for none
+   * The list of the migration job objects.
+   * @param sourceObjectsConfig sourceObjectsConfig or {@code null} for none
    */
-  public PromoteMigrationJobRequest setObjectsFilter(MigrationJobObjectsConfig objectsFilter) {
-    this.objectsFilter = objectsFilter;
+  public MigrationJobObjectsConfig setSourceObjectsConfig(SourceObjectsConfig sourceObjectsConfig) {
+    this.sourceObjectsConfig = sourceObjectsConfig;
     return this;
   }
 
   @Override
-  public PromoteMigrationJobRequest set(String fieldName, Object value) {
-    return (PromoteMigrationJobRequest) super.set(fieldName, value);
+  public MigrationJobObjectsConfig set(String fieldName, Object value) {
+    return (MigrationJobObjectsConfig) super.set(fieldName, value);
   }
 
   @Override
-  public PromoteMigrationJobRequest clone() {
-    return (PromoteMigrationJobRequest) super.clone();
+  public MigrationJobObjectsConfig clone() {
+    return (MigrationJobObjectsConfig) super.clone();
   }
 
 }

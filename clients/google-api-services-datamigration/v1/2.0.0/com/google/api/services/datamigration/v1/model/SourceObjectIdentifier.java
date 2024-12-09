@@ -17,7 +17,7 @@
 package com.google.api.services.datamigration.v1.model;
 
 /**
- * Request message for 'RestartMigrationJob' request.
+ * An identifier for the Migration Job Object.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Database Migration API. For a detailed explanation
@@ -28,67 +28,67 @@ package com.google.api.services.datamigration.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RestartMigrationJobRequest extends com.google.api.client.json.GenericJson {
+public final class SourceObjectIdentifier extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The object filter to apply to the migration job.
+   * The database name. This will be required only if the object uses a database name as part of its
+   * unique identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private MigrationJobObjectsConfig objectsFilter;
+  private java.lang.String database;
 
   /**
-   * Optional. Restart the migration job without running prior configuration verification. Defaults
-   * to `false`.
+   * Required. The type of the migration job object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean skipValidation;
+  private java.lang.String type;
 
   /**
-   * Optional. The object filter to apply to the migration job.
+   * The database name. This will be required only if the object uses a database name as part of its
+   * unique identifier.
    * @return value or {@code null} for none
    */
-  public MigrationJobObjectsConfig getObjectsFilter() {
-    return objectsFilter;
+  public java.lang.String getDatabase() {
+    return database;
   }
 
   /**
-   * Optional. The object filter to apply to the migration job.
-   * @param objectsFilter objectsFilter or {@code null} for none
+   * The database name. This will be required only if the object uses a database name as part of its
+   * unique identifier.
+   * @param database database or {@code null} for none
    */
-  public RestartMigrationJobRequest setObjectsFilter(MigrationJobObjectsConfig objectsFilter) {
-    this.objectsFilter = objectsFilter;
+  public SourceObjectIdentifier setDatabase(java.lang.String database) {
+    this.database = database;
     return this;
   }
 
   /**
-   * Optional. Restart the migration job without running prior configuration verification. Defaults
-   * to `false`.
+   * Required. The type of the migration job object.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getSkipValidation() {
-    return skipValidation;
+  public java.lang.String getType() {
+    return type;
   }
 
   /**
-   * Optional. Restart the migration job without running prior configuration verification. Defaults
-   * to `false`.
-   * @param skipValidation skipValidation or {@code null} for none
+   * Required. The type of the migration job object.
+   * @param type type or {@code null} for none
    */
-  public RestartMigrationJobRequest setSkipValidation(java.lang.Boolean skipValidation) {
-    this.skipValidation = skipValidation;
+  public SourceObjectIdentifier setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 
   @Override
-  public RestartMigrationJobRequest set(String fieldName, Object value) {
-    return (RestartMigrationJobRequest) super.set(fieldName, value);
+  public SourceObjectIdentifier set(String fieldName, Object value) {
+    return (SourceObjectIdentifier) super.set(fieldName, value);
   }
 
   @Override
-  public RestartMigrationJobRequest clone() {
-    return (RestartMigrationJobRequest) super.clone();
+  public SourceObjectIdentifier clone() {
+    return (SourceObjectIdentifier) super.clone();
   }
 
 }

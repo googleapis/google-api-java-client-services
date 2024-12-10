@@ -31,7 +31,7 @@ package com.google.api.services.datafusion.v1beta1.model;
 public final class ListAvailableVersionsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Represents a list of versions that are supported.
+   * Represents a list of versions that are supported. Deprecated: Use versions field instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,14 @@ public final class ListAvailableVersionsResponse extends com.google.api.client.j
   private java.lang.String nextPageToken;
 
   /**
-   * Represents a list of versions that are supported.
+   * Represents a list of all versions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Version> versions;
+
+  /**
+   * Represents a list of versions that are supported. Deprecated: Use versions field instead.
    * @return value or {@code null} for none
    */
   public java.util.List<Version> getAvailableVersions() {
@@ -53,7 +60,7 @@ public final class ListAvailableVersionsResponse extends com.google.api.client.j
   }
 
   /**
-   * Represents a list of versions that are supported.
+   * Represents a list of versions that are supported. Deprecated: Use versions field instead.
    * @param availableVersions availableVersions or {@code null} for none
    */
   public ListAvailableVersionsResponse setAvailableVersions(java.util.List<Version> availableVersions) {
@@ -75,6 +82,23 @@ public final class ListAvailableVersionsResponse extends com.google.api.client.j
    */
   public ListAvailableVersionsResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * Represents a list of all versions.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Version> getVersions() {
+    return versions;
+  }
+
+  /**
+   * Represents a list of all versions.
+   * @param versions versions or {@code null} for none
+   */
+  public ListAvailableVersionsResponse setVersions(java.util.List<Version> versions) {
+    this.versions = versions;
     return this;
   }
 

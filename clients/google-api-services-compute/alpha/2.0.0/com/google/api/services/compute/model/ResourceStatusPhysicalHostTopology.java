@@ -30,30 +30,40 @@ package com.google.api.services.compute.model;
 public final class ResourceStatusPhysicalHostTopology extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output Only] The ID of the block in which the running instance is located. Instances within
+   * the same block experience low network latency.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String block;
 
   /**
+   * [Output Only] The global name of the Compute Engine cluster where the running instance is
+   * located.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cluster;
 
   /**
+   * [Output Only] The ID of the host on which the running instance is located. Instances on the
+   * same host experience the lowest possible network latency.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String host;
 
   /**
+   * [Output Only] The ID of the sub-block in which the running instance is located. Instances in
+   * the same sub-block experience lower network latency than instances in the same block.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subblock;
 
   /**
+   * [Output Only] The ID of the block in which the running instance is located. Instances within
+   * the same block experience low network latency.
    * @return value or {@code null} for none
    */
   public java.lang.String getBlock() {
@@ -61,6 +71,8 @@ public final class ResourceStatusPhysicalHostTopology extends com.google.api.cli
   }
 
   /**
+   * [Output Only] The ID of the block in which the running instance is located. Instances within
+   * the same block experience low network latency.
    * @param block block or {@code null} for none
    */
   public ResourceStatusPhysicalHostTopology setBlock(java.lang.String block) {
@@ -69,6 +81,8 @@ public final class ResourceStatusPhysicalHostTopology extends com.google.api.cli
   }
 
   /**
+   * [Output Only] The global name of the Compute Engine cluster where the running instance is
+   * located.
    * @return value or {@code null} for none
    */
   public java.lang.String getCluster() {
@@ -76,6 +90,8 @@ public final class ResourceStatusPhysicalHostTopology extends com.google.api.cli
   }
 
   /**
+   * [Output Only] The global name of the Compute Engine cluster where the running instance is
+   * located.
    * @param cluster cluster or {@code null} for none
    */
   public ResourceStatusPhysicalHostTopology setCluster(java.lang.String cluster) {
@@ -84,6 +100,8 @@ public final class ResourceStatusPhysicalHostTopology extends com.google.api.cli
   }
 
   /**
+   * [Output Only] The ID of the host on which the running instance is located. Instances on the
+   * same host experience the lowest possible network latency.
    * @return value or {@code null} for none
    */
   public java.lang.String getHost() {
@@ -91,6 +109,8 @@ public final class ResourceStatusPhysicalHostTopology extends com.google.api.cli
   }
 
   /**
+   * [Output Only] The ID of the host on which the running instance is located. Instances on the
+   * same host experience the lowest possible network latency.
    * @param host host or {@code null} for none
    */
   public ResourceStatusPhysicalHostTopology setHost(java.lang.String host) {
@@ -99,6 +119,8 @@ public final class ResourceStatusPhysicalHostTopology extends com.google.api.cli
   }
 
   /**
+   * [Output Only] The ID of the sub-block in which the running instance is located. Instances in
+   * the same sub-block experience lower network latency than instances in the same block.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubblock() {
@@ -106,6 +128,8 @@ public final class ResourceStatusPhysicalHostTopology extends com.google.api.cli
   }
 
   /**
+   * [Output Only] The ID of the sub-block in which the running instance is located. Instances in
+   * the same sub-block experience lower network latency than instances in the same block.
    * @param subblock subblock or {@code null} for none
    */
   public ResourceStatusPhysicalHostTopology setSubblock(java.lang.String subblock) {

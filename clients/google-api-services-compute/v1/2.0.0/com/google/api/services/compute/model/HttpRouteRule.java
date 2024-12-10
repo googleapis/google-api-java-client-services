@@ -103,11 +103,9 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   /**
    * In response to a matching matchRule, the load balancer performs advanced routing actions, such
    * as URL rewrites and header transformations, before forwarding the request to the selected
-   * backend. If routeAction specifies any weightedBackendServices, service must not be set.
-   * Conversely if service is set, routeAction cannot contain any weightedBackendServices. Only one
-   * of urlRedirect, service or routeAction.weightedBackendService must be set. URL maps for classic
-   * Application Load Balancers only support the urlRewrite action within a route rule's
-   * routeAction.
+   * backend. Only one of urlRedirect, service or routeAction.weightedBackendService can be set. URL
+   * maps for classic Application Load Balancers only support the urlRewrite action within a route
+   * rule's routeAction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,19 +114,17 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   /**
    * The full or partial URL of the backend service resource to which traffic is directed if this
    * rule is matched. If routeAction is also specified, advanced routing actions, such as URL
-   * rewrites, take effect before sending the request to the backend. However, if service is
-   * specified, routeAction cannot contain any weightedBackendServices. Conversely, if routeAction
-   * specifies any weightedBackendServices, service must not be specified. Only one of urlRedirect,
-   * service or routeAction.weightedBackendService must be set.
+   * rewrites, take effect before sending the request to the backend. Only one of urlRedirect,
+   * service or routeAction.weightedBackendService can be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String service;
 
   /**
-   * When this rule is matched, the request is redirected to a URL specified by urlRedirect. If
-   * urlRedirect is specified, service or routeAction must not be set. Not supported when the URL
-   * map is bound to a target gRPC proxy.
+   * When this rule is matched, the request is redirected to a URL specified by urlRedirect. Only
+   * one of urlRedirect, service or routeAction.weightedBackendService can be set. Not supported
+   * when the URL map is bound to a target gRPC proxy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -292,11 +288,9 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   /**
    * In response to a matching matchRule, the load balancer performs advanced routing actions, such
    * as URL rewrites and header transformations, before forwarding the request to the selected
-   * backend. If routeAction specifies any weightedBackendServices, service must not be set.
-   * Conversely if service is set, routeAction cannot contain any weightedBackendServices. Only one
-   * of urlRedirect, service or routeAction.weightedBackendService must be set. URL maps for classic
-   * Application Load Balancers only support the urlRewrite action within a route rule's
-   * routeAction.
+   * backend. Only one of urlRedirect, service or routeAction.weightedBackendService can be set. URL
+   * maps for classic Application Load Balancers only support the urlRewrite action within a route
+   * rule's routeAction.
    * @return value or {@code null} for none
    */
   public HttpRouteAction getRouteAction() {
@@ -306,11 +300,9 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   /**
    * In response to a matching matchRule, the load balancer performs advanced routing actions, such
    * as URL rewrites and header transformations, before forwarding the request to the selected
-   * backend. If routeAction specifies any weightedBackendServices, service must not be set.
-   * Conversely if service is set, routeAction cannot contain any weightedBackendServices. Only one
-   * of urlRedirect, service or routeAction.weightedBackendService must be set. URL maps for classic
-   * Application Load Balancers only support the urlRewrite action within a route rule's
-   * routeAction.
+   * backend. Only one of urlRedirect, service or routeAction.weightedBackendService can be set. URL
+   * maps for classic Application Load Balancers only support the urlRewrite action within a route
+   * rule's routeAction.
    * @param routeAction routeAction or {@code null} for none
    */
   public HttpRouteRule setRouteAction(HttpRouteAction routeAction) {
@@ -321,10 +313,8 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   /**
    * The full or partial URL of the backend service resource to which traffic is directed if this
    * rule is matched. If routeAction is also specified, advanced routing actions, such as URL
-   * rewrites, take effect before sending the request to the backend. However, if service is
-   * specified, routeAction cannot contain any weightedBackendServices. Conversely, if routeAction
-   * specifies any weightedBackendServices, service must not be specified. Only one of urlRedirect,
-   * service or routeAction.weightedBackendService must be set.
+   * rewrites, take effect before sending the request to the backend. Only one of urlRedirect,
+   * service or routeAction.weightedBackendService can be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -334,10 +324,8 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   /**
    * The full or partial URL of the backend service resource to which traffic is directed if this
    * rule is matched. If routeAction is also specified, advanced routing actions, such as URL
-   * rewrites, take effect before sending the request to the backend. However, if service is
-   * specified, routeAction cannot contain any weightedBackendServices. Conversely, if routeAction
-   * specifies any weightedBackendServices, service must not be specified. Only one of urlRedirect,
-   * service or routeAction.weightedBackendService must be set.
+   * rewrites, take effect before sending the request to the backend. Only one of urlRedirect,
+   * service or routeAction.weightedBackendService can be set.
    * @param service service or {@code null} for none
    */
   public HttpRouteRule setService(java.lang.String service) {
@@ -346,9 +334,9 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * When this rule is matched, the request is redirected to a URL specified by urlRedirect. If
-   * urlRedirect is specified, service or routeAction must not be set. Not supported when the URL
-   * map is bound to a target gRPC proxy.
+   * When this rule is matched, the request is redirected to a URL specified by urlRedirect. Only
+   * one of urlRedirect, service or routeAction.weightedBackendService can be set. Not supported
+   * when the URL map is bound to a target gRPC proxy.
    * @return value or {@code null} for none
    */
   public HttpRedirectAction getUrlRedirect() {
@@ -356,9 +344,9 @@ public final class HttpRouteRule extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * When this rule is matched, the request is redirected to a URL specified by urlRedirect. If
-   * urlRedirect is specified, service or routeAction must not be set. Not supported when the URL
-   * map is bound to a target gRPC proxy.
+   * When this rule is matched, the request is redirected to a URL specified by urlRedirect. Only
+   * one of urlRedirect, service or routeAction.weightedBackendService can be set. Not supported
+   * when the URL map is bound to a target gRPC proxy.
    * @param urlRedirect urlRedirect or {@code null} for none
    */
   public HttpRouteRule setUrlRedirect(HttpRedirectAction urlRedirect) {

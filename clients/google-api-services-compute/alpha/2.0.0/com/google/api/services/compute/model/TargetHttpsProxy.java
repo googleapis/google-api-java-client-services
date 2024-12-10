@@ -20,7 +20,7 @@ package com.google.api.services.compute.model;
  * Represents a Target HTTPS Proxy resource. Google Compute Engine has two Target HTTPS Proxy
  * resources: * [Global](/compute/docs/reference/rest/alpha/targetHttpsProxies) *
  * [Regional](/compute/docs/reference/rest/alpha/regionTargetHttpsProxies) A target HTTPS proxy is a
- * component of GCP HTTPS load balancers. * targetHttpProxies are used by global external
+ * component of Google Cloud HTTPS load balancers. * targetHttpProxies are used by global external
  * Application Load Balancers, classic Application Load Balancers, cross-region internal Application
  * Load Balancers, and Traffic Director. * regionTargetHttpProxies are used by regional internal
  * Application Load Balancers and regional external Application Load Balancers. Forwarding rules

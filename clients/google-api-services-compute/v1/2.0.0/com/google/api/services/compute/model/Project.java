@@ -78,7 +78,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Restricted features enabled for use on this project.
+   * An optional list of restricted features enabled for use on this project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,8 +123,8 @@ public final class Project extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * The naming prefix for daily usage reports and the Google Cloud Storage bucket where they are
-   * stored.
+   * An optional naming prefix for daily usage reports and the Google Cloud Storage bucket where
+   * they are stored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -258,7 +258,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Restricted features enabled for use on this project.
+   * An optional list of restricted features enabled for use on this project.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEnabledFeatures() {
@@ -266,7 +266,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Restricted features enabled for use on this project.
+   * An optional list of restricted features enabled for use on this project.
    * @param enabledFeatures enabledFeatures or {@code null} for none
    */
   public Project setEnabledFeatures(java.util.List<java.lang.String> enabledFeatures) {
@@ -366,8 +366,8 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The naming prefix for daily usage reports and the Google Cloud Storage bucket where they are
-   * stored.
+   * An optional naming prefix for daily usage reports and the Google Cloud Storage bucket where
+   * they are stored.
    * @return value or {@code null} for none
    */
   public UsageExportLocation getUsageExportLocation() {
@@ -375,8 +375,8 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The naming prefix for daily usage reports and the Google Cloud Storage bucket where they are
-   * stored.
+   * An optional naming prefix for daily usage reports and the Google Cloud Storage bucket where
+   * they are stored.
    * @param usageExportLocation usageExportLocation or {@code null} for none
    */
   public Project setUsageExportLocation(UsageExportLocation usageExportLocation) {

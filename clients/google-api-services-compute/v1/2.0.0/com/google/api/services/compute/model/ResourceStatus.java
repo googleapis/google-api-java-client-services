@@ -31,7 +31,8 @@ package com.google.api.services.compute.model;
 public final class ResourceStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] An opaque ID of the host on which the VM is running.
+   * [Output Only] The precise location of your instance within the zone's data center, including
+   * the block, sub-block, and host. The field is formatted as follows: blockId/subBlockId/hostId.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +51,8 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   private UpcomingMaintenance upcomingMaintenance;
 
   /**
-   * [Output Only] An opaque ID of the host on which the VM is running.
+   * [Output Only] The precise location of your instance within the zone's data center, including
+   * the block, sub-block, and host. The field is formatted as follows: blockId/subBlockId/hostId.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhysicalHost() {
@@ -58,7 +60,8 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] An opaque ID of the host on which the VM is running.
+   * [Output Only] The precise location of your instance within the zone's data center, including
+   * the block, sub-block, and host. The field is formatted as follows: blockId/subBlockId/hostId.
    * @param physicalHost physicalHost or {@code null} for none
    */
   public ResourceStatus setPhysicalHost(java.lang.String physicalHost) {

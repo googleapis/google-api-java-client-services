@@ -90,14 +90,6 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * Instance termination action is invoked when the reservation is deleted. This only applies to
-   * reservations with a Deployment type.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String instanceTerminationAction;
-
-  /**
    * [Output Only] Type of the resource. Always compute#reservations for reservations.
    * The value may be {@code null}.
    */
@@ -341,25 +333,6 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setId(java.math.BigInteger id) {
     this.id = id;
-    return this;
-  }
-
-  /**
-   * Instance termination action is invoked when the reservation is deleted. This only applies to
-   * reservations with a Deployment type.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getInstanceTerminationAction() {
-    return instanceTerminationAction;
-  }
-
-  /**
-   * Instance termination action is invoked when the reservation is deleted. This only applies to
-   * reservations with a Deployment type.
-   * @param instanceTerminationAction instanceTerminationAction or {@code null} for none
-   */
-  public Reservation setInstanceTerminationAction(java.lang.String instanceTerminationAction) {
-    this.instanceTerminationAction = instanceTerminationAction;
     return this;
   }
 

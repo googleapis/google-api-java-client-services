@@ -320,6 +320,14 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * [Output Only] A list of the URLs of all CrossSiteNetwork WireGroups configured to use this
+   * Interconnect. The Interconnect cannot be deleted if this list is non-empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> wireGroups;
+
+  /**
    * Enable or disable the application awareness feature on this Cloud Interconnect.
    * @return value or {@code null} for none
    */
@@ -1032,6 +1040,25 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
    */
   public Interconnect setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * [Output Only] A list of the URLs of all CrossSiteNetwork WireGroups configured to use this
+   * Interconnect. The Interconnect cannot be deleted if this list is non-empty.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getWireGroups() {
+    return wireGroups;
+  }
+
+  /**
+   * [Output Only] A list of the URLs of all CrossSiteNetwork WireGroups configured to use this
+   * Interconnect. The Interconnect cannot be deleted if this list is non-empty.
+   * @param wireGroups wireGroups or {@code null} for none
+   */
+  public Interconnect setWireGroups(java.util.List<java.lang.String> wireGroups) {
+    this.wireGroups = wireGroups;
     return this;
   }
 

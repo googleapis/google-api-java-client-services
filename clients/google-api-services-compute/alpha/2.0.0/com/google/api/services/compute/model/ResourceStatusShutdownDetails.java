@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Specifies if the instance is in `SHUTTING_DOWN` state or there is a instance stopping scheduled.
+ * Specifies if the instance is in `PENDING_STOP` state or there is a programmed stop scheduled.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class ResourceStatusShutdownDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Duration for graceful shutdown. Only applicable when `stop_state=SHUTTING_DOWN`.
+   * The duration for graceful shutdown. Only applicable when `stop_state=PENDING_STOP`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class ResourceStatusShutdownDetails extends com.google.api.client.j
   private java.lang.String targetState;
 
   /**
-   * Duration for graceful shutdown. Only applicable when `stop_state=SHUTTING_DOWN`.
+   * The duration for graceful shutdown. Only applicable when `stop_state=PENDING_STOP`.
    * @return value or {@code null} for none
    */
   public Duration getMaxDuration() {
@@ -66,7 +66,7 @@ public final class ResourceStatusShutdownDetails extends com.google.api.client.j
   }
 
   /**
-   * Duration for graceful shutdown. Only applicable when `stop_state=SHUTTING_DOWN`.
+   * The duration for graceful shutdown. Only applicable when `stop_state=PENDING_STOP`.
    * @param maxDuration maxDuration or {@code null} for none
    */
   public ResourceStatusShutdownDetails setMaxDuration(Duration maxDuration) {

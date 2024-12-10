@@ -34,9 +34,9 @@ public final class DiskPairReplicationState extends com.google.api.client.json.G
    * is doing the initial replication after starting the replication. -
    * ASYNC_REPLICATION_STATE_REPLICATING_HEALTHY: The primary disk is healthily replicating to the
    * secondary device i.e. last_replication_time is within RPO. -
-   * ASYNC_REPLICATION_STATE_REPLICATING_BEHIND: The replication is lagging above the SLO limit due
-   * to some internal issue. - ASYNC_REPLICATION_STATE_REPLICATING_UNHEALTHY: The replication is
-   * lagging, and the RPO is not being met due to some internal issue. . -
+   * ASYNC_REPLICATION_STATE_REPLICATING_BEHIND_HIGH_CHURN: The replication is lagging above the SLO
+   * limit due to some internal issue. - ASYNC_REPLICATION_STATE_REPLICATING_BEHIND_SYSTEM_LAGGING:
+   * The replication is lagging, and the RPO is not being met due to some internal issue. -
    * ASYNC_REPLICATION_STATE_REPLICATION_STUCK: The replication is completely stuck due to some
    * internal error. - ASYNC_REPLICATION_STATE_STOPPING: The replication is under the process of
    * being stopped. This is a transient state. - ASYNC_REPLICATION_STATE_STOPPED: The replication
@@ -57,9 +57,9 @@ public final class DiskPairReplicationState extends com.google.api.client.json.G
    * is doing the initial replication after starting the replication. -
    * ASYNC_REPLICATION_STATE_REPLICATING_HEALTHY: The primary disk is healthily replicating to the
    * secondary device i.e. last_replication_time is within RPO. -
-   * ASYNC_REPLICATION_STATE_REPLICATING_BEHIND: The replication is lagging above the SLO limit due
-   * to some internal issue. - ASYNC_REPLICATION_STATE_REPLICATING_UNHEALTHY: The replication is
-   * lagging, and the RPO is not being met due to some internal issue. . -
+   * ASYNC_REPLICATION_STATE_REPLICATING_BEHIND_HIGH_CHURN: The replication is lagging above the SLO
+   * limit due to some internal issue. - ASYNC_REPLICATION_STATE_REPLICATING_BEHIND_SYSTEM_LAGGING:
+   * The replication is lagging, and the RPO is not being met due to some internal issue. -
    * ASYNC_REPLICATION_STATE_REPLICATION_STUCK: The replication is completely stuck due to some
    * internal error. - ASYNC_REPLICATION_STATE_STOPPING: The replication is under the process of
    * being stopped. This is a transient state. - ASYNC_REPLICATION_STATE_STOPPED: The replication
@@ -75,9 +75,9 @@ public final class DiskPairReplicationState extends com.google.api.client.json.G
    * is doing the initial replication after starting the replication. -
    * ASYNC_REPLICATION_STATE_REPLICATING_HEALTHY: The primary disk is healthily replicating to the
    * secondary device i.e. last_replication_time is within RPO. -
-   * ASYNC_REPLICATION_STATE_REPLICATING_BEHIND: The replication is lagging above the SLO limit due
-   * to some internal issue. - ASYNC_REPLICATION_STATE_REPLICATING_UNHEALTHY: The replication is
-   * lagging, and the RPO is not being met due to some internal issue. . -
+   * ASYNC_REPLICATION_STATE_REPLICATING_BEHIND_HIGH_CHURN: The replication is lagging above the SLO
+   * limit due to some internal issue. - ASYNC_REPLICATION_STATE_REPLICATING_BEHIND_SYSTEM_LAGGING:
+   * The replication is lagging, and the RPO is not being met due to some internal issue. -
    * ASYNC_REPLICATION_STATE_REPLICATION_STUCK: The replication is completely stuck due to some
    * internal error. - ASYNC_REPLICATION_STATE_STOPPING: The replication is under the process of
    * being stopped. This is a transient state. - ASYNC_REPLICATION_STATE_STOPPED: The replication

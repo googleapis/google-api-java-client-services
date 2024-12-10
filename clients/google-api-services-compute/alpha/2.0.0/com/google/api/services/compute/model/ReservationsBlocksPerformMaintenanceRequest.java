@@ -17,8 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Policy regarding where to create managed instance groups. Initially only zonal managed instance
- * groups in the same zone are supported.
+ * Model definition for ReservationsBlocksPerformMaintenanceRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -28,40 +27,40 @@ package com.google.api.services.compute.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class MultiMigLocationPolicy extends com.google.api.client.json.GenericJson {
+public final class ReservationsBlocksPerformMaintenanceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of zones where managed instance groups will be provisioned. Should be valid RFC1035 name.
+   * Specifies if all, running or unused hosts are in scope for this request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> provisioningZones;
+  private java.lang.String maintenanceScope;
 
   /**
-   * List of zones where managed instance groups will be provisioned. Should be valid RFC1035 name.
+   * Specifies if all, running or unused hosts are in scope for this request.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getProvisioningZones() {
-    return provisioningZones;
+  public java.lang.String getMaintenanceScope() {
+    return maintenanceScope;
   }
 
   /**
-   * List of zones where managed instance groups will be provisioned. Should be valid RFC1035 name.
-   * @param provisioningZones provisioningZones or {@code null} for none
+   * Specifies if all, running or unused hosts are in scope for this request.
+   * @param maintenanceScope maintenanceScope or {@code null} for none
    */
-  public MultiMigLocationPolicy setProvisioningZones(java.util.List<java.lang.String> provisioningZones) {
-    this.provisioningZones = provisioningZones;
+  public ReservationsBlocksPerformMaintenanceRequest setMaintenanceScope(java.lang.String maintenanceScope) {
+    this.maintenanceScope = maintenanceScope;
     return this;
   }
 
   @Override
-  public MultiMigLocationPolicy set(String fieldName, Object value) {
-    return (MultiMigLocationPolicy) super.set(fieldName, value);
+  public ReservationsBlocksPerformMaintenanceRequest set(String fieldName, Object value) {
+    return (ReservationsBlocksPerformMaintenanceRequest) super.set(fieldName, value);
   }
 
   @Override
-  public MultiMigLocationPolicy clone() {
-    return (MultiMigLocationPolicy) super.clone();
+  public ReservationsBlocksPerformMaintenanceRequest clone() {
+    return (ReservationsBlocksPerformMaintenanceRequest) super.clone();
   }
 
 }

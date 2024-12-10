@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Policy for handling provisioning and other scheduling-related events.
+ * Model definition for RegionInstanceGroupManagersStartInstancesRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -27,40 +27,43 @@ package com.google.api.services.compute.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class MultiMigSchedulingPolicy extends com.google.api.client.json.GenericJson {
+public final class RegionInstanceGroupManagersStartInstancesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * How provisioning of parts (instance group managers) should be scheduled (coordinated or not).
+   * The URLs of one or more instances to start. This can be a full URL or a partial URL, such as
+   * zones/[ZONE]/instances/[INSTANCE_NAME].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String provisioning;
+  private java.util.List<java.lang.String> instances;
 
   /**
-   * How provisioning of parts (instance group managers) should be scheduled (coordinated or not).
+   * The URLs of one or more instances to start. This can be a full URL or a partial URL, such as
+   * zones/[ZONE]/instances/[INSTANCE_NAME].
    * @return value or {@code null} for none
    */
-  public java.lang.String getProvisioning() {
-    return provisioning;
+  public java.util.List<java.lang.String> getInstances() {
+    return instances;
   }
 
   /**
-   * How provisioning of parts (instance group managers) should be scheduled (coordinated or not).
-   * @param provisioning provisioning or {@code null} for none
+   * The URLs of one or more instances to start. This can be a full URL or a partial URL, such as
+   * zones/[ZONE]/instances/[INSTANCE_NAME].
+   * @param instances instances or {@code null} for none
    */
-  public MultiMigSchedulingPolicy setProvisioning(java.lang.String provisioning) {
-    this.provisioning = provisioning;
+  public RegionInstanceGroupManagersStartInstancesRequest setInstances(java.util.List<java.lang.String> instances) {
+    this.instances = instances;
     return this;
   }
 
   @Override
-  public MultiMigSchedulingPolicy set(String fieldName, Object value) {
-    return (MultiMigSchedulingPolicy) super.set(fieldName, value);
+  public RegionInstanceGroupManagersStartInstancesRequest set(String fieldName, Object value) {
+    return (RegionInstanceGroupManagersStartInstancesRequest) super.set(fieldName, value);
   }
 
   @Override
-  public MultiMigSchedulingPolicy clone() {
-    return (MultiMigSchedulingPolicy) super.clone();
+  public RegionInstanceGroupManagersStartInstancesRequest clone() {
+    return (RegionInstanceGroupManagersStartInstancesRequest) super.clone();
   }
 
 }

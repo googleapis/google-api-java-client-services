@@ -50,7 +50,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
 
   /**
    * [Output only] List of features available at this InterconnectLocation, which can take one of
-   * the following values: - MACSEC
+   * the following values: - IF_MACSEC
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,6 +86,15 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String creationTimestamp;
+
+  /**
+   * [Output Only] A list of InterconnectLocation.CrossSiteInterconnectInfo objects, that describe
+   * parameters pertaining to the relation between this InterconnectLocation and various
+   * Interconnect metros.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<InterconnectLocationCrossSiteInterconnectInfo> crossSiteInterconnectInfos;
 
   /**
    * [Output Only] An optional description of the resource.
@@ -219,7 +228,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
 
   /**
    * [Output only] List of features available at this InterconnectLocation, which can take one of
-   * the following values: - MACSEC
+   * the following values: - IF_MACSEC
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAvailableFeatures() {
@@ -228,7 +237,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
 
   /**
    * [Output only] List of features available at this InterconnectLocation, which can take one of
-   * the following values: - MACSEC
+   * the following values: - IF_MACSEC
    * @param availableFeatures availableFeatures or {@code null} for none
    */
   public InterconnectLocation setAvailableFeatures(java.util.List<java.lang.String> availableFeatures) {
@@ -307,6 +316,27 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
    */
   public InterconnectLocation setCreationTimestamp(java.lang.String creationTimestamp) {
     this.creationTimestamp = creationTimestamp;
+    return this;
+  }
+
+  /**
+   * [Output Only] A list of InterconnectLocation.CrossSiteInterconnectInfo objects, that describe
+   * parameters pertaining to the relation between this InterconnectLocation and various
+   * Interconnect metros.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<InterconnectLocationCrossSiteInterconnectInfo> getCrossSiteInterconnectInfos() {
+    return crossSiteInterconnectInfos;
+  }
+
+  /**
+   * [Output Only] A list of InterconnectLocation.CrossSiteInterconnectInfo objects, that describe
+   * parameters pertaining to the relation between this InterconnectLocation and various
+   * Interconnect metros.
+   * @param crossSiteInterconnectInfos crossSiteInterconnectInfos or {@code null} for none
+   */
+  public InterconnectLocation setCrossSiteInterconnectInfos(java.util.List<InterconnectLocationCrossSiteInterconnectInfo> crossSiteInterconnectInfos) {
+    this.crossSiteInterconnectInfos = crossSiteInterconnectInfos;
     return this;
   }
 

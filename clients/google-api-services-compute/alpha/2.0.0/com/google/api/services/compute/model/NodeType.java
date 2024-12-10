@@ -89,6 +89,13 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
   private java.lang.Integer localSsdGb;
 
   /**
+   * [Output Only] Maximum number of VMs that can be created for this node type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxVms;
+
+  /**
    * [Output Only] The amount of physical memory available to the node type, defined in MB.
    * The value may be {@code null}.
    */
@@ -256,6 +263,23 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
    */
   public NodeType setLocalSsdGb(java.lang.Integer localSsdGb) {
     this.localSsdGb = localSsdGb;
+    return this;
+  }
+
+  /**
+   * [Output Only] Maximum number of VMs that can be created for this node type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxVms() {
+    return maxVms;
+  }
+
+  /**
+   * [Output Only] Maximum number of VMs that can be created for this node type.
+   * @param maxVms maxVms or {@code null} for none
+   */
+  public NodeType setMaxVms(java.lang.Integer maxVms) {
+    this.maxVms = maxVms;
     return this;
   }
 

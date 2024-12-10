@@ -107,6 +107,13 @@ public final class WireGroup extends com.google.api.client.json.GenericJson {
   private WireGroupServiceLevel serviceLevel;
 
   /**
+   * Topology details for the wire group configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WireGroupTopology topology;
+
+  /**
    * Properties of the wire group.
    * The value may be {@code null}.
    */
@@ -323,6 +330,23 @@ public final class WireGroup extends com.google.api.client.json.GenericJson {
    */
   public WireGroup setServiceLevel(WireGroupServiceLevel serviceLevel) {
     this.serviceLevel = serviceLevel;
+    return this;
+  }
+
+  /**
+   * Topology details for the wire group configuration.
+   * @return value or {@code null} for none
+   */
+  public WireGroupTopology getTopology() {
+    return topology;
+  }
+
+  /**
+   * Topology details for the wire group configuration.
+   * @param topology topology or {@code null} for none
+   */
+  public WireGroup setTopology(WireGroupTopology topology) {
+    this.topology = topology;
     return this;
   }
 

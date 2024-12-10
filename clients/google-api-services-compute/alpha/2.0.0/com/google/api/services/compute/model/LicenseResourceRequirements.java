@@ -30,23 +30,24 @@ package com.google.api.services.compute.model;
 public final class LicenseResourceRequirements extends com.google.api.client.json.GenericJson {
 
   /**
-   * Minimum number of guest cpus required to use the Instance. Enforced at Instance creation and
-   * Instance start.
+   * [Input Only] Deprecated. This field no longer reflects the minimum number of guest cpus
+   * required to use the Instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minGuestCpuCount;
 
   /**
-   * Minimum memory required to use the Instance. Enforced at Instance creation and Instance start.
+   * [Input Only] Deprecated. This field no longer reflects the minimum memory required to use the
+   * Instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minMemoryMb;
 
   /**
-   * Minimum number of guest cpus required to use the Instance. Enforced at Instance creation and
-   * Instance start.
+   * [Input Only] Deprecated. This field no longer reflects the minimum number of guest cpus
+   * required to use the Instance.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinGuestCpuCount() {
@@ -54,8 +55,8 @@ public final class LicenseResourceRequirements extends com.google.api.client.jso
   }
 
   /**
-   * Minimum number of guest cpus required to use the Instance. Enforced at Instance creation and
-   * Instance start.
+   * [Input Only] Deprecated. This field no longer reflects the minimum number of guest cpus
+   * required to use the Instance.
    * @param minGuestCpuCount minGuestCpuCount or {@code null} for none
    */
   public LicenseResourceRequirements setMinGuestCpuCount(java.lang.Integer minGuestCpuCount) {
@@ -64,7 +65,8 @@ public final class LicenseResourceRequirements extends com.google.api.client.jso
   }
 
   /**
-   * Minimum memory required to use the Instance. Enforced at Instance creation and Instance start.
+   * [Input Only] Deprecated. This field no longer reflects the minimum memory required to use the
+   * Instance.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinMemoryMb() {
@@ -72,7 +74,8 @@ public final class LicenseResourceRequirements extends com.google.api.client.jso
   }
 
   /**
-   * Minimum memory required to use the Instance. Enforced at Instance creation and Instance start.
+   * [Input Only] Deprecated. This field no longer reflects the minimum memory required to use the
+   * Instance.
    * @param minMemoryMb minMemoryMb or {@code null} for none
    */
   public LicenseResourceRequirements setMinMemoryMb(java.lang.Integer minMemoryMb) {

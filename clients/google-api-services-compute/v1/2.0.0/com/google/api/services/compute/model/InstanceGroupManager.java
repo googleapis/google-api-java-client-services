@@ -201,6 +201,13 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.lang.String selfLink;
 
   /**
+   * Standby policy for stopped and suspended instances.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceGroupManagerStandbyPolicy standbyPolicy;
+
+  /**
    * Stateful configuration for this Instanced Group Manager
    * The value may be {@code null}.
    */
@@ -230,6 +237,24 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.Integer targetSize;
+
+  /**
+   * The target number of stopped instances for this managed instance group. This number changes
+   * when you: - Stop instance using the stopInstances method or start instances using the
+   * startInstances method. - Manually change the targetStoppedSize using the update method.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer targetStoppedSize;
+
+  /**
+   * The target number of suspended instances for this managed instance group. This number changes
+   * when you: - Suspend instance using the suspendInstances method or resume instances using the
+   * resumeInstances method. - Manually change the targetSuspendedSize using the update method.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer targetSuspendedSize;
 
   /**
    * The update policy for this managed instance group.
@@ -694,6 +719,23 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
+   * Standby policy for stopped and suspended instances.
+   * @return value or {@code null} for none
+   */
+  public InstanceGroupManagerStandbyPolicy getStandbyPolicy() {
+    return standbyPolicy;
+  }
+
+  /**
+   * Standby policy for stopped and suspended instances.
+   * @param standbyPolicy standbyPolicy or {@code null} for none
+   */
+  public InstanceGroupManager setStandbyPolicy(InstanceGroupManagerStandbyPolicy standbyPolicy) {
+    this.standbyPolicy = standbyPolicy;
+    return this;
+  }
+
+  /**
    * Stateful configuration for this Instanced Group Manager
    * @return value or {@code null} for none
    */
@@ -764,6 +806,48 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    */
   public InstanceGroupManager setTargetSize(java.lang.Integer targetSize) {
     this.targetSize = targetSize;
+    return this;
+  }
+
+  /**
+   * The target number of stopped instances for this managed instance group. This number changes
+   * when you: - Stop instance using the stopInstances method or start instances using the
+   * startInstances method. - Manually change the targetStoppedSize using the update method.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTargetStoppedSize() {
+    return targetStoppedSize;
+  }
+
+  /**
+   * The target number of stopped instances for this managed instance group. This number changes
+   * when you: - Stop instance using the stopInstances method or start instances using the
+   * startInstances method. - Manually change the targetStoppedSize using the update method.
+   * @param targetStoppedSize targetStoppedSize or {@code null} for none
+   */
+  public InstanceGroupManager setTargetStoppedSize(java.lang.Integer targetStoppedSize) {
+    this.targetStoppedSize = targetStoppedSize;
+    return this;
+  }
+
+  /**
+   * The target number of suspended instances for this managed instance group. This number changes
+   * when you: - Suspend instance using the suspendInstances method or resume instances using the
+   * resumeInstances method. - Manually change the targetSuspendedSize using the update method.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTargetSuspendedSize() {
+    return targetSuspendedSize;
+  }
+
+  /**
+   * The target number of suspended instances for this managed instance group. This number changes
+   * when you: - Suspend instance using the suspendInstances method or resume instances using the
+   * resumeInstances method. - Manually change the targetSuspendedSize using the update method.
+   * @param targetSuspendedSize targetSuspendedSize or {@code null} for none
+   */
+  public InstanceGroupManager setTargetSuspendedSize(java.lang.Integer targetSuspendedSize) {
+    this.targetSuspendedSize = targetSuspendedSize;
     return this;
   }
 

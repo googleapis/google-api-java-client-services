@@ -134,6 +134,14 @@ public final class Route extends com.google.api.client.json.GenericJson {
   private java.lang.String nextHopInstance;
 
   /**
+   * [Output only] Internal fixed region-to-region cost that Google Cloud calculates based on
+   * factors such as network performance, distance, and available bandwidth between regions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Long nextHopInterRegionCost;
+
+  /**
    * The network IP address of an instance that should handle matching packets. Both IPv6 address
    * and IPv4 addresses are supported. Must specify an IPv4 address in dot-decimal notation (e.g.
    * 192.0.2.99) or an IPv6 address in RFC 4291 format (e.g. 2001:db8::2d9:51:0:0 or
@@ -145,11 +153,27 @@ public final class Route extends com.google.api.client.json.GenericJson {
   private java.lang.String nextHopIp;
 
   /**
+   * [Output Only] Multi-Exit Discriminator, a BGP route metric that indicates the desirability of a
+   * particular route in a network.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Long nextHopMed;
+
+  /**
    * The URL of the local network if it should handle matching packets.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextHopNetwork;
+
+  /**
+   * [Output Only] Indicates the origin of the route. Can be IGP (Interior Gateway Protocol), EGP
+   * (Exterior Gateway Protocol), or INCOMPLETE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nextHopOrigin;
 
   /**
    * [Output Only] The network peering name that should handle matching packets, which should
@@ -462,6 +486,25 @@ public final class Route extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * [Output only] Internal fixed region-to-region cost that Google Cloud calculates based on
+   * factors such as network performance, distance, and available bandwidth between regions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNextHopInterRegionCost() {
+    return nextHopInterRegionCost;
+  }
+
+  /**
+   * [Output only] Internal fixed region-to-region cost that Google Cloud calculates based on
+   * factors such as network performance, distance, and available bandwidth between regions.
+   * @param nextHopInterRegionCost nextHopInterRegionCost or {@code null} for none
+   */
+  public Route setNextHopInterRegionCost(java.lang.Long nextHopInterRegionCost) {
+    this.nextHopInterRegionCost = nextHopInterRegionCost;
+    return this;
+  }
+
+  /**
    * The network IP address of an instance that should handle matching packets. Both IPv6 address
    * and IPv4 addresses are supported. Must specify an IPv4 address in dot-decimal notation (e.g.
    * 192.0.2.99) or an IPv6 address in RFC 4291 format (e.g. 2001:db8::2d9:51:0:0 or
@@ -487,6 +530,25 @@ public final class Route extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * [Output Only] Multi-Exit Discriminator, a BGP route metric that indicates the desirability of a
+   * particular route in a network.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNextHopMed() {
+    return nextHopMed;
+  }
+
+  /**
+   * [Output Only] Multi-Exit Discriminator, a BGP route metric that indicates the desirability of a
+   * particular route in a network.
+   * @param nextHopMed nextHopMed or {@code null} for none
+   */
+  public Route setNextHopMed(java.lang.Long nextHopMed) {
+    this.nextHopMed = nextHopMed;
+    return this;
+  }
+
+  /**
    * The URL of the local network if it should handle matching packets.
    * @return value or {@code null} for none
    */
@@ -500,6 +562,25 @@ public final class Route extends com.google.api.client.json.GenericJson {
    */
   public Route setNextHopNetwork(java.lang.String nextHopNetwork) {
     this.nextHopNetwork = nextHopNetwork;
+    return this;
+  }
+
+  /**
+   * [Output Only] Indicates the origin of the route. Can be IGP (Interior Gateway Protocol), EGP
+   * (Exterior Gateway Protocol), or INCOMPLETE.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNextHopOrigin() {
+    return nextHopOrigin;
+  }
+
+  /**
+   * [Output Only] Indicates the origin of the route. Can be IGP (Interior Gateway Protocol), EGP
+   * (Exterior Gateway Protocol), or INCOMPLETE.
+   * @param nextHopOrigin nextHopOrigin or {@code null} for none
+   */
+  public Route setNextHopOrigin(java.lang.String nextHopOrigin) {
+    this.nextHopOrigin = nextHopOrigin;
     return this;
   }
 

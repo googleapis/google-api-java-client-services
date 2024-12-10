@@ -59,12 +59,6 @@ public final class MultiMig extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private MultiMigLocationPolicy locationPolicy;
-
-  /**
    * The name of the multi-MIG. The name must be 1-63 characters long, and comply with RFC1035.
    * Specifically, the name must be 1-63 characters long and match the regular expression
    * `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and
@@ -74,14 +68,6 @@ public final class MultiMig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
-
-  /**
-   * Map of user-provided names associated with their parts. Keys in the map are arbitrary names
-   * chosen by the user for parts. Keys need to be alphanumeric and not longer than 64 characters.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, MultiMigPart> parts;
 
   /**
    * [Output only] The URL of the region where the resource resides. You must specify this field as
@@ -97,13 +83,6 @@ public final class MultiMig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private MultiMigResourcePolicies resourcePolicies;
-
-  /**
-   * Policy for handling provisioning and other scheduling-related events.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private MultiMigSchedulingPolicy schedulingPolicy;
 
   /**
    * [Output only] Server-defined URL for the resource.
@@ -196,21 +175,6 @@ public final class MultiMig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @return value or {@code null} for none
-   */
-  public MultiMigLocationPolicy getLocationPolicy() {
-    return locationPolicy;
-  }
-
-  /**
-   * @param locationPolicy locationPolicy or {@code null} for none
-   */
-  public MultiMig setLocationPolicy(MultiMigLocationPolicy locationPolicy) {
-    this.locationPolicy = locationPolicy;
-    return this;
-  }
-
-  /**
    * The name of the multi-MIG. The name must be 1-63 characters long, and comply with RFC1035.
    * Specifically, the name must be 1-63 characters long and match the regular expression
    * `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and
@@ -232,25 +196,6 @@ public final class MultiMig extends com.google.api.client.json.GenericJson {
    */
   public MultiMig setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Map of user-provided names associated with their parts. Keys in the map are arbitrary names
-   * chosen by the user for parts. Keys need to be alphanumeric and not longer than 64 characters.
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, MultiMigPart> getParts() {
-    return parts;
-  }
-
-  /**
-   * Map of user-provided names associated with their parts. Keys in the map are arbitrary names
-   * chosen by the user for parts. Keys need to be alphanumeric and not longer than 64 characters.
-   * @param parts parts or {@code null} for none
-   */
-  public MultiMig setParts(java.util.Map<String, MultiMigPart> parts) {
-    this.parts = parts;
     return this;
   }
 
@@ -287,23 +232,6 @@ public final class MultiMig extends com.google.api.client.json.GenericJson {
    */
   public MultiMig setResourcePolicies(MultiMigResourcePolicies resourcePolicies) {
     this.resourcePolicies = resourcePolicies;
-    return this;
-  }
-
-  /**
-   * Policy for handling provisioning and other scheduling-related events.
-   * @return value or {@code null} for none
-   */
-  public MultiMigSchedulingPolicy getSchedulingPolicy() {
-    return schedulingPolicy;
-  }
-
-  /**
-   * Policy for handling provisioning and other scheduling-related events.
-   * @param schedulingPolicy schedulingPolicy or {@code null} for none
-   */
-  public MultiMig setSchedulingPolicy(MultiMigSchedulingPolicy schedulingPolicy) {
-    this.schedulingPolicy = schedulingPolicy;
     return this;
   }
 

@@ -67,13 +67,14 @@ public final class UsableSubnetwork extends com.google.api.client.json.GenericJs
 
   /**
    * The purpose of the resource. This field can be either PRIVATE, GLOBAL_MANAGED_PROXY,
-   * REGIONAL_MANAGED_PROXY, PRIVATE_SERVICE_CONNECT, or PRIVATE is the default purpose for user-
-   * created subnets or subnets that are automatically created in auto mode networks. Subnets with
-   * purpose set to GLOBAL_MANAGED_PROXY or REGIONAL_MANAGED_PROXY are user-created subnetworks that
-   * are reserved for Envoy-based load balancers. A subnet with purpose set to
-   * PRIVATE_SERVICE_CONNECT is used to publish services using Private Service Connect. If
-   * unspecified, the subnet purpose defaults to PRIVATE. The enableFlowLogs field isn't supported
-   * if the subnet purpose field is set to GLOBAL_MANAGED_PROXY or REGIONAL_MANAGED_PROXY.
+   * REGIONAL_MANAGED_PROXY, PEER_MIGRATION or PRIVATE_SERVICE_CONNECT. PRIVATE is the default
+   * purpose for user-created subnets or subnets that are automatically created in auto mode
+   * networks. Subnets with purpose set to GLOBAL_MANAGED_PROXY or REGIONAL_MANAGED_PROXY are user-
+   * created subnetworks that are reserved for Envoy-based load balancers. A subnet with purpose set
+   * to PRIVATE_SERVICE_CONNECT is used to publish services using Private Service Connect. A subnet
+   * with purpose set to PEER_MIGRATION is used for subnet migration from one peered VPC to another.
+   * If unspecified, the subnet purpose defaults to PRIVATE. The enableFlowLogs field isn't
+   * supported if the subnet purpose field is set to GLOBAL_MANAGED_PROXY or REGIONAL_MANAGED_PROXY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -203,13 +204,14 @@ public final class UsableSubnetwork extends com.google.api.client.json.GenericJs
 
   /**
    * The purpose of the resource. This field can be either PRIVATE, GLOBAL_MANAGED_PROXY,
-   * REGIONAL_MANAGED_PROXY, PRIVATE_SERVICE_CONNECT, or PRIVATE is the default purpose for user-
-   * created subnets or subnets that are automatically created in auto mode networks. Subnets with
-   * purpose set to GLOBAL_MANAGED_PROXY or REGIONAL_MANAGED_PROXY are user-created subnetworks that
-   * are reserved for Envoy-based load balancers. A subnet with purpose set to
-   * PRIVATE_SERVICE_CONNECT is used to publish services using Private Service Connect. If
-   * unspecified, the subnet purpose defaults to PRIVATE. The enableFlowLogs field isn't supported
-   * if the subnet purpose field is set to GLOBAL_MANAGED_PROXY or REGIONAL_MANAGED_PROXY.
+   * REGIONAL_MANAGED_PROXY, PEER_MIGRATION or PRIVATE_SERVICE_CONNECT. PRIVATE is the default
+   * purpose for user-created subnets or subnets that are automatically created in auto mode
+   * networks. Subnets with purpose set to GLOBAL_MANAGED_PROXY or REGIONAL_MANAGED_PROXY are user-
+   * created subnetworks that are reserved for Envoy-based load balancers. A subnet with purpose set
+   * to PRIVATE_SERVICE_CONNECT is used to publish services using Private Service Connect. A subnet
+   * with purpose set to PEER_MIGRATION is used for subnet migration from one peered VPC to another.
+   * If unspecified, the subnet purpose defaults to PRIVATE. The enableFlowLogs field isn't
+   * supported if the subnet purpose field is set to GLOBAL_MANAGED_PROXY or REGIONAL_MANAGED_PROXY.
    * @return value or {@code null} for none
    */
   public java.lang.String getPurpose() {
@@ -218,13 +220,14 @@ public final class UsableSubnetwork extends com.google.api.client.json.GenericJs
 
   /**
    * The purpose of the resource. This field can be either PRIVATE, GLOBAL_MANAGED_PROXY,
-   * REGIONAL_MANAGED_PROXY, PRIVATE_SERVICE_CONNECT, or PRIVATE is the default purpose for user-
-   * created subnets or subnets that are automatically created in auto mode networks. Subnets with
-   * purpose set to GLOBAL_MANAGED_PROXY or REGIONAL_MANAGED_PROXY are user-created subnetworks that
-   * are reserved for Envoy-based load balancers. A subnet with purpose set to
-   * PRIVATE_SERVICE_CONNECT is used to publish services using Private Service Connect. If
-   * unspecified, the subnet purpose defaults to PRIVATE. The enableFlowLogs field isn't supported
-   * if the subnet purpose field is set to GLOBAL_MANAGED_PROXY or REGIONAL_MANAGED_PROXY.
+   * REGIONAL_MANAGED_PROXY, PEER_MIGRATION or PRIVATE_SERVICE_CONNECT. PRIVATE is the default
+   * purpose for user-created subnets or subnets that are automatically created in auto mode
+   * networks. Subnets with purpose set to GLOBAL_MANAGED_PROXY or REGIONAL_MANAGED_PROXY are user-
+   * created subnetworks that are reserved for Envoy-based load balancers. A subnet with purpose set
+   * to PRIVATE_SERVICE_CONNECT is used to publish services using Private Service Connect. A subnet
+   * with purpose set to PEER_MIGRATION is used for subnet migration from one peered VPC to another.
+   * If unspecified, the subnet purpose defaults to PRIVATE. The enableFlowLogs field isn't
+   * supported if the subnet purpose field is set to GLOBAL_MANAGED_PROXY or REGIONAL_MANAGED_PROXY.
    * @param purpose purpose or {@code null} for none
    */
   public UsableSubnetwork setPurpose(java.lang.String purpose) {

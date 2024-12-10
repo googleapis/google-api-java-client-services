@@ -145,6 +145,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> requiredCoattachedLicenses;
 
   /**
+   * [Input Only] Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -458,6 +459,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * [Input Only] Deprecated.
    * @return value or {@code null} for none
    */
   public LicenseResourceRequirements getResourceRequirements() {
@@ -465,6 +467,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * [Input Only] Deprecated.
    * @param resourceRequirements resourceRequirements or {@code null} for none
    */
   public License setResourceRequirements(LicenseResourceRequirements resourceRequirements) {

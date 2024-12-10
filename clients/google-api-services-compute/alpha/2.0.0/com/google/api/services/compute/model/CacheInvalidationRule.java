@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class CacheInvalidationRule extends com.google.api.client.json.GenericJson {
 
   /**
+   * Not implemented.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> cacheTags;
+
+  /**
    * If set, this invalidation rule will only apply to requests with a Host header matching host.
    * The value may be {@code null}.
    */
@@ -41,6 +48,23 @@ public final class CacheInvalidationRule extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
+
+  /**
+   * Not implemented.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCacheTags() {
+    return cacheTags;
+  }
+
+  /**
+   * Not implemented.
+   * @param cacheTags cacheTags or {@code null} for none
+   */
+  public CacheInvalidationRule setCacheTags(java.util.List<java.lang.String> cacheTags) {
+    this.cacheTags = cacheTags;
+    return this;
+  }
 
   /**
    * If set, this invalidation rule will only apply to requests with a Host header matching host.

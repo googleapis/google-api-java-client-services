@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Configuration for gracefully shutting down the instance.
+ * The configuration for gracefully shutting down the instance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -37,8 +37,8 @@ public final class SchedulingGracefulShutdown extends com.google.api.client.json
   private java.lang.Boolean enabled;
 
   /**
-   * Specifies time needed to gracefully shut down the instance. After that time, the instance goes
-   * to STOPPING even if graceful shutdown is not completed.
+   * The time allotted for the instance to gracefully shut down. If the graceful shutdown isn't
+   * complete after this time, then the instance transitions to the STOPPING state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +62,8 @@ public final class SchedulingGracefulShutdown extends com.google.api.client.json
   }
 
   /**
-   * Specifies time needed to gracefully shut down the instance. After that time, the instance goes
-   * to STOPPING even if graceful shutdown is not completed.
+   * The time allotted for the instance to gracefully shut down. If the graceful shutdown isn't
+   * complete after this time, then the instance transitions to the STOPPING state.
    * @return value or {@code null} for none
    */
   public Duration getMaxDuration() {
@@ -71,8 +71,8 @@ public final class SchedulingGracefulShutdown extends com.google.api.client.json
   }
 
   /**
-   * Specifies time needed to gracefully shut down the instance. After that time, the instance goes
-   * to STOPPING even if graceful shutdown is not completed.
+   * The time allotted for the instance to gracefully shut down. If the graceful shutdown isn't
+   * complete after this time, then the instance transitions to the STOPPING state.
    * @param maxDuration maxDuration or {@code null} for none
    */
   public SchedulingGracefulShutdown setMaxDuration(Duration maxDuration) {

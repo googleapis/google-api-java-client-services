@@ -39,8 +39,8 @@ public final class AutomatedBackupPolicy extends com.google.api.client.json.Gene
   private String frequency;
 
   /**
-   * Required. How long the automated backups should be retained. The only supported value at this
-   * time is 3 days.
+   * Required. How long the automated backups should be retained. Values must be at least 3 days and
+   * at most 90 days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +66,8 @@ public final class AutomatedBackupPolicy extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. How long the automated backups should be retained. The only supported value at this
-   * time is 3 days.
+   * Required. How long the automated backups should be retained. Values must be at least 3 days and
+   * at most 90 days.
    * @return value or {@code null} for none
    */
   public String getRetentionPeriod() {
@@ -75,8 +75,8 @@ public final class AutomatedBackupPolicy extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. How long the automated backups should be retained. The only supported value at this
-   * time is 3 days.
+   * Required. How long the automated backups should be retained. Values must be at least 3 days and
+   * at most 90 days.
    * @param retentionPeriod retentionPeriod or {@code null} for none
    */
   public AutomatedBackupPolicy setRetentionPeriod(String retentionPeriod) {

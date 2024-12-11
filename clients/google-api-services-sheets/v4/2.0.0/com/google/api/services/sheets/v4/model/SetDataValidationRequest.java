@@ -31,6 +31,13 @@ package com.google.api.services.sheets.v4.model;
 public final class SetDataValidationRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If true, the data validation rule will be applied to the filtered rows as well.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean filteredRowsIncluded;
+
+  /**
    * The range the data validation rule should apply to.
    * The value may be {@code null}.
    */
@@ -44,6 +51,23 @@ public final class SetDataValidationRequest extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private DataValidationRule rule;
+
+  /**
+   * Optional. If true, the data validation rule will be applied to the filtered rows as well.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getFilteredRowsIncluded() {
+    return filteredRowsIncluded;
+  }
+
+  /**
+   * Optional. If true, the data validation rule will be applied to the filtered rows as well.
+   * @param filteredRowsIncluded filteredRowsIncluded or {@code null} for none
+   */
+  public SetDataValidationRequest setFilteredRowsIncluded(java.lang.Boolean filteredRowsIncluded) {
+    this.filteredRowsIncluded = filteredRowsIncluded;
+    return this;
+  }
 
   /**
    * The range the data validation rule should apply to.

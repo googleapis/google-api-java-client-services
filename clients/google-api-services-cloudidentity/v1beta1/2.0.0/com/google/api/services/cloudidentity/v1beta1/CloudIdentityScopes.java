@@ -44,6 +44,12 @@ public class CloudIdentityScopes {
   /** See all of the Inbound SSO profiles and their assignments to any Org Units or Google Groups in your Cloud Identity Organization.. */
   public static final String CLOUD_IDENTITY_INBOUNDSSO_READONLY = "https://www.googleapis.com/auth/cloud-identity.inboundsso.readonly";
 
+  /** List, Move orgmembers of an OrgUnit in your Cloud Identity Organization.. */
+  public static final String CLOUD_IDENTITY_ORGUNITS = "https://www.googleapis.com/auth/cloud-identity.orgunits";
+
+  /** List org members of an OrgUnit in your Cloud Identity Organization.. */
+  public static final String CLOUD_IDENTITY_ORGUNITS_READONLY = "https://www.googleapis.com/auth/cloud-identity.orgunits.readonly";
+
   /** See and edit policies in your Cloud Identity Organization.. */
   public static final String CLOUD_IDENTITY_POLICIES = "https://www.googleapis.com/auth/cloud-identity.policies";
 
@@ -67,6 +73,8 @@ public class CloudIdentityScopes {
     set.add(CLOUD_IDENTITY_GROUPS_READONLY);
     set.add(CLOUD_IDENTITY_INBOUNDSSO);
     set.add(CLOUD_IDENTITY_INBOUNDSSO_READONLY);
+    set.add(CLOUD_IDENTITY_ORGUNITS);
+    set.add(CLOUD_IDENTITY_ORGUNITS_READONLY);
     set.add(CLOUD_IDENTITY_POLICIES);
     set.add(CLOUD_IDENTITY_POLICIES_READONLY);
     set.add(CLOUD_PLATFORM);

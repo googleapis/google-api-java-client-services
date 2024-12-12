@@ -488,15 +488,15 @@ public class Css extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * Optional. The maximum number of accounts to return. The service may return fewer than this
-       * value. If unspecified, at most 50 accounts will be returned. The maximum value is 1000;
-       * values above 1000 will be coerced to 1000.
+       * value. If unspecified, at most 50 accounts will be returned. The maximum value is 100;
+       * values above 100 will be coerced to 100.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
       /** Optional. The maximum number of accounts to return. The service may return fewer than this value.
-     If unspecified, at most 50 accounts will be returned. The maximum value is 1000; values above 1000
-     will be coerced to 1000.
+     If unspecified, at most 50 accounts will be returned. The maximum value is 100; values above 100
+     will be coerced to 100.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
@@ -504,8 +504,8 @@ public class Css extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * Optional. The maximum number of accounts to return. The service may return fewer than this
-       * value. If unspecified, at most 50 accounts will be returned. The maximum value is 1000;
-       * values above 1000 will be coerced to 1000.
+       * value. If unspecified, at most 50 accounts will be returned. The maximum value is 100;
+       * values above 100 will be coerced to 100.
        */
       public ListChildAccounts setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -996,7 +996,7 @@ public class Css extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The primary or supplemental feed id. If CSS Product already exists and feed id
+         * Optional. The primary or supplemental feed id. If CSS Product already exists and feed id
          * provided is different, then the CSS Product will be moved to a new feed. Note: For now,
          * CSSs do not need to provide feed ids as we create feeds on the fly. We do not have
          * supplemental feed support for CSS Products yet.
@@ -1004,7 +1004,7 @@ public class Css extends com.google.api.client.googleapis.services.json.Abstract
         @com.google.api.client.util.Key
         private java.lang.Long feedId;
 
-        /** Required. The primary or supplemental feed id. If CSS Product already exists and feed id provided
+        /** Optional. The primary or supplemental feed id. If CSS Product already exists and feed id provided
        is different, then the CSS Product will be moved to a new feed. Note: For now, CSSs do not need to
        provide feed ids as we create feeds on the fly. We do not have supplemental feed support for CSS
        Products yet.
@@ -1014,7 +1014,7 @@ public class Css extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The primary or supplemental feed id. If CSS Product already exists and feed id
+         * Optional. The primary or supplemental feed id. If CSS Product already exists and feed id
          * provided is different, then the CSS Product will be moved to a new feed. Note: For now,
          * CSSs do not need to provide feed ids as we create feeds on the fly. We do not have
          * supplemental feed support for CSS Products yet.

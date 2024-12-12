@@ -38,7 +38,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse ex
   private java.util.List<java.lang.String> setupErrors;
 
   /**
-   * Indicates SAA enrollment status of a given workload.
+   * Output only. Indicates SAA enrollment status of a given workload.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse ex
   }
 
   /**
-   * Indicates SAA enrollment status of a given workload.
+   * Output only. Indicates SAA enrollment status of a given workload.
    * @return value or {@code null} for none
    */
   public java.lang.String getSetupStatus() {
@@ -70,7 +70,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse ex
   }
 
   /**
-   * Indicates SAA enrollment status of a given workload.
+   * Output only. Indicates SAA enrollment status of a given workload.
    * @param setupStatus setupStatus or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse setSetupStatus(java.lang.String setupStatus) {

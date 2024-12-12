@@ -45,7 +45,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions exten
   private java.lang.Boolean assuredWorkloadsMonitoring;
 
   /**
-   * Allow the partner to view inspectability logs and monitoring violations.
+   * Optional. Allow the partner to view inspectability logs and monitoring violations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions exten
   }
 
   /**
-   * Allow the partner to view inspectability logs and monitoring violations.
+   * Optional. Allow the partner to view inspectability logs and monitoring violations.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDataLogsViewer() {
@@ -101,7 +101,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions exten
   }
 
   /**
-   * Allow the partner to view inspectability logs and monitoring violations.
+   * Optional. Allow the partner to view inspectability logs and monitoring violations.
    * @param dataLogsViewer dataLogsViewer or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions setDataLogsViewer(java.lang.Boolean dataLogsViewer) {

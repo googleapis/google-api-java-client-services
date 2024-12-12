@@ -125,7 +125,7 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. The relative resource name of the scan, of the form:
+   * Output only. Identifier. The relative resource name of the scan, of the form:
    * projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project refers to a
    * project_id or project_number and location_id refers to a GCP region.
    * The value may be {@code null}.
@@ -386,7 +386,7 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   }
 
   /**
-   * Output only. The relative resource name of the scan, of the form:
+   * Output only. Identifier. The relative resource name of the scan, of the form:
    * projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project refers to a
    * project_id or project_number and location_id refers to a GCP region.
    * @return value or {@code null} for none
@@ -396,7 +396,7 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   }
 
   /**
-   * Output only. The relative resource name of the scan, of the form:
+   * Output only. Identifier. The relative resource name of the scan, of the form:
    * projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project refers to a
    * project_id or project_number and location_id refers to a GCP region.
    * @param name name or {@code null} for none

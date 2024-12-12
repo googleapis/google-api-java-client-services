@@ -37,11 +37,12 @@ public final class GoogleCloudDataplexV1ImportItem extends com.google.api.client
    * The aspects to modify. Supports the following syntaxes: {aspect_type_reference}: matches
    * aspects that belong to the specified aspect type and are attached directly to the entry.
    * {aspect_type_reference}@{path}: matches aspects that belong to the specified aspect type and
-   * path. {aspect_type_reference}@*: matches aspects that belong to the specified aspect type for
-   * all paths.Replace {aspect_type_reference} with a reference to the aspect type, in the format
-   * {project_id_or_number}.{location_id}.{aspect_type_id}.If you leave this field empty, it is
-   * treated as specifying exactly those aspects that are present within the specified entry.In FULL
-   * entry sync mode, Dataplex implicitly adds the keys for all of the required aspects of an entry.
+   * path. @* : matches aspects of the given type for all paths. *@path : matches aspects of all
+   * types on the given path. Replace {aspect_type_reference} with a reference to the aspect type,
+   * in the format {project_id_or_number}.{location_id}.{aspect_type_id}.If you leave this field
+   * empty, it is treated as specifying exactly those aspects that are present within the specified
+   * entry.In FULL entry sync mode, Dataplex implicitly adds the keys for all of the required
+   * aspects of an entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,11 +75,12 @@ public final class GoogleCloudDataplexV1ImportItem extends com.google.api.client
    * The aspects to modify. Supports the following syntaxes: {aspect_type_reference}: matches
    * aspects that belong to the specified aspect type and are attached directly to the entry.
    * {aspect_type_reference}@{path}: matches aspects that belong to the specified aspect type and
-   * path. {aspect_type_reference}@*: matches aspects that belong to the specified aspect type for
-   * all paths.Replace {aspect_type_reference} with a reference to the aspect type, in the format
-   * {project_id_or_number}.{location_id}.{aspect_type_id}.If you leave this field empty, it is
-   * treated as specifying exactly those aspects that are present within the specified entry.In FULL
-   * entry sync mode, Dataplex implicitly adds the keys for all of the required aspects of an entry.
+   * path. @* : matches aspects of the given type for all paths. *@path : matches aspects of all
+   * types on the given path. Replace {aspect_type_reference} with a reference to the aspect type,
+   * in the format {project_id_or_number}.{location_id}.{aspect_type_id}.If you leave this field
+   * empty, it is treated as specifying exactly those aspects that are present within the specified
+   * entry.In FULL entry sync mode, Dataplex implicitly adds the keys for all of the required
+   * aspects of an entry.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAspectKeys() {
@@ -89,11 +91,12 @@ public final class GoogleCloudDataplexV1ImportItem extends com.google.api.client
    * The aspects to modify. Supports the following syntaxes: {aspect_type_reference}: matches
    * aspects that belong to the specified aspect type and are attached directly to the entry.
    * {aspect_type_reference}@{path}: matches aspects that belong to the specified aspect type and
-   * path. {aspect_type_reference}@*: matches aspects that belong to the specified aspect type for
-   * all paths.Replace {aspect_type_reference} with a reference to the aspect type, in the format
-   * {project_id_or_number}.{location_id}.{aspect_type_id}.If you leave this field empty, it is
-   * treated as specifying exactly those aspects that are present within the specified entry.In FULL
-   * entry sync mode, Dataplex implicitly adds the keys for all of the required aspects of an entry.
+   * path. @* : matches aspects of the given type for all paths. *@path : matches aspects of all
+   * types on the given path. Replace {aspect_type_reference} with a reference to the aspect type,
+   * in the format {project_id_or_number}.{location_id}.{aspect_type_id}.If you leave this field
+   * empty, it is treated as specifying exactly those aspects that are present within the specified
+   * entry.In FULL entry sync mode, Dataplex implicitly adds the keys for all of the required
+   * aspects of an entry.
    * @param aspectKeys aspectKeys or {@code null} for none
    */
   public GoogleCloudDataplexV1ImportItem setAspectKeys(java.util.List<java.lang.String> aspectKeys) {

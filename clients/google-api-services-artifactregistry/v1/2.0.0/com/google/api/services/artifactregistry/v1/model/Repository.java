@@ -131,6 +131,13 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. The repository endpoint, for example: `us-docker.pkg.dev/my-proj/my-repo`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String registryUri;
+
+  /**
    * Configuration specific for a Remote Repository.
    * The value may be {@code null}.
    */
@@ -401,6 +408,23 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   public Repository setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The repository endpoint, for example: `us-docker.pkg.dev/my-proj/my-repo`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegistryUri() {
+    return registryUri;
+  }
+
+  /**
+   * Output only. The repository endpoint, for example: `us-docker.pkg.dev/my-proj/my-repo`.
+   * @param registryUri registryUri or {@code null} for none
+   */
+  public Repository setRegistryUri(java.lang.String registryUri) {
+    this.registryUri = registryUri;
     return this;
   }
 

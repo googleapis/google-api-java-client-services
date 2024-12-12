@@ -196,6 +196,19 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
+   * Data retention deletion events associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudSecuritycenterV2DataRetentionDeletionEvent> dataRetentionDeletionEvents;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudSecuritycenterV2DataRetentionDeletionEvent used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudSecuritycenterV2DataRetentionDeletionEvent.class);
+  }
+
+  /**
    * Database associated with the finding.
    * The value may be {@code null}.
    */
@@ -805,6 +818,23 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Finding setDataFlowEvents(java.util.List<GoogleCloudSecuritycenterV2DataFlowEvent> dataFlowEvents) {
     this.dataFlowEvents = dataFlowEvents;
+    return this;
+  }
+
+  /**
+   * Data retention deletion events associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudSecuritycenterV2DataRetentionDeletionEvent> getDataRetentionDeletionEvents() {
+    return dataRetentionDeletionEvents;
+  }
+
+  /**
+   * Data retention deletion events associated with the finding.
+   * @param dataRetentionDeletionEvents dataRetentionDeletionEvents or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setDataRetentionDeletionEvents(java.util.List<GoogleCloudSecuritycenterV2DataRetentionDeletionEvent> dataRetentionDeletionEvents) {
+    this.dataRetentionDeletionEvents = dataRetentionDeletionEvents;
     return this;
   }
 

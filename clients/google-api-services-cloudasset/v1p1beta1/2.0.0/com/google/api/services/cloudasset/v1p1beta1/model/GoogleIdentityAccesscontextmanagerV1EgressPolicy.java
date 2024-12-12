@@ -54,6 +54,15 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressPolicy extends com.
   private GoogleIdentityAccesscontextmanagerV1EgressTo egressTo;
 
   /**
+   * Optional. Human-readable title for the egress rule. The title must be unique within the
+   * perimeter and can not exceed 100 characters. Within the access policy, the combined length of
+   * all rule titles must not exceed 240,000 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String title;
+
+  /**
    * Defines conditions on the source of a request causing this EgressPolicy to apply.
    * @return value or {@code null} for none
    */
@@ -86,6 +95,27 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressPolicy extends com.
    */
   public GoogleIdentityAccesscontextmanagerV1EgressPolicy setEgressTo(GoogleIdentityAccesscontextmanagerV1EgressTo egressTo) {
     this.egressTo = egressTo;
+    return this;
+  }
+
+  /**
+   * Optional. Human-readable title for the egress rule. The title must be unique within the
+   * perimeter and can not exceed 100 characters. Within the access policy, the combined length of
+   * all rule titles must not exceed 240,000 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTitle() {
+    return title;
+  }
+
+  /**
+   * Optional. Human-readable title for the egress rule. The title must be unique within the
+   * perimeter and can not exceed 100 characters. Within the access policy, the combined length of
+   * all rule titles must not exceed 240,000 characters.
+   * @param title title or {@code null} for none
+   */
+  public GoogleIdentityAccesscontextmanagerV1EgressPolicy setTitle(java.lang.String title) {
+    this.title = title;
     return this;
   }
 

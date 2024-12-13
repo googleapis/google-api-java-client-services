@@ -93,6 +93,16 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean importMode;
 
   /**
+   * Output only. The time when the space will be automatically deleted by the system if it remains
+   * in import mode. Each space created in import mode must exit this mode before this expire time
+   * using `spaces.completeImport`. This field is only populated for spaces that were created with
+   * import mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String importModeExpireTime;
+
+  /**
    * Output only. Timestamp of the last message in the space.
    * The value may be {@code null}.
    */
@@ -333,6 +343,29 @@ public final class Space extends com.google.api.client.json.GenericJson {
    */
   public Space setImportMode(java.lang.Boolean importMode) {
     this.importMode = importMode;
+    return this;
+  }
+
+  /**
+   * Output only. The time when the space will be automatically deleted by the system if it remains
+   * in import mode. Each space created in import mode must exit this mode before this expire time
+   * using `spaces.completeImport`. This field is only populated for spaces that were created with
+   * import mode.
+   * @return value or {@code null} for none
+   */
+  public String getImportModeExpireTime() {
+    return importModeExpireTime;
+  }
+
+  /**
+   * Output only. The time when the space will be automatically deleted by the system if it remains
+   * in import mode. Each space created in import mode must exit this mode before this expire time
+   * using `spaces.completeImport`. This field is only populated for spaces that were created with
+   * import mode.
+   * @param importModeExpireTime importModeExpireTime or {@code null} for none
+   */
+  public Space setImportModeExpireTime(String importModeExpireTime) {
+    this.importModeExpireTime = importModeExpireTime;
     return this;
   }
 

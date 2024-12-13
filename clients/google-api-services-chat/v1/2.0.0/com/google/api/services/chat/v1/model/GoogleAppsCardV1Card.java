@@ -24,19 +24,22 @@ package com.google.api.services.chat.v1.model;
  * the following documentation: * For Google Chat apps, see [Design the components of a card or
  * dialog](https://developers.google.com/workspace/chat/design-components-card-dialog). * For Google
  * Workspace Add-ons, see [Card-based interfaces](https://developers.google.com/apps-script/add-
- * ons/concepts/cards). **Example: Card message for a Google Chat app** ![Example contact
- * card](https://developers.google.com/workspace/chat/images/card_api_reference.png) To create the
- * sample card message in Google Chat, use the following JSON: ``` { "cardsV2": [ { "cardId":
- * "unique-card-id", "card": { "header": { "title": "Sasha", "subtitle": "Software Engineer",
- * "imageUrl": "https://developers.google.com/workspace/chat/images/quickstart-app-avatar.png",
- * "imageType": "CIRCLE", "imageAltText": "Avatar for Sasha" }, "sections": [ { "header": "Contact
- * Info", "collapsible": true, "uncollapsibleWidgetsCount": 1, "widgets": [ { "decoratedText": {
- * "startIcon": { "knownIcon": "EMAIL" }, "text": "sasha@example.com" } }, { "decoratedText": {
- * "startIcon": { "knownIcon": "PERSON" }, "text": "Online" } }, { "decoratedText": { "startIcon": {
- * "knownIcon": "PHONE" }, "text": "+1 (555) 555-1234" } }, { "buttonList": { "buttons": [ { "text":
- * "Share", "onClick": { "openLink": { "url": "https://example.com/share" } } }, { "text": "Edit",
- * "onClick": { "action": { "function": "goToView", "parameters": [ { "key": "viewType", "value":
- * "EDIT" } ] } } } ] } } ] } ] } } ] } ```
+ * ons/concepts/cards). Note: You can add up to 100 widgets per card. Any widgets beyond this limit
+ * are ignored. This limit applies to both card messages and dialogs in Google Chat apps, and to
+ * cards in Google Workspace Add-ons. **Example: Card message for a Google Chat app** ![Example
+ * contact card](https://developers.google.com/workspace/chat/images/card_api_reference.png) To
+ * create the sample card message in Google Chat, use the following JSON: ``` { "cardsV2": [ {
+ * "cardId": "unique-card-id", "card": { "header": { "title": "Sasha", "subtitle": "Software
+ * Engineer", "imageUrl": "https://developers.google.com/workspace/chat/images/quickstart-app-
+ * avatar.png", "imageType": "CIRCLE", "imageAltText": "Avatar for Sasha" }, "sections": [ {
+ * "header": "Contact Info", "collapsible": true, "uncollapsibleWidgetsCount": 1, "widgets": [ {
+ * "decoratedText": { "startIcon": { "knownIcon": "EMAIL" }, "text": "sasha@example.com" } }, {
+ * "decoratedText": { "startIcon": { "knownIcon": "PERSON" }, "text": "Online" } }, {
+ * "decoratedText": { "startIcon": { "knownIcon": "PHONE" }, "text": "+1 (555) 555-1234" } }, {
+ * "buttonList": { "buttons": [ { "text": "Share", "onClick": { "openLink": { "url":
+ * "https://example.com/share" } } }, { "text": "Edit", "onClick": { "action": { "function":
+ * "goToView", "parameters": [ { "key": "viewType", "value": "EDIT" } ] } } } ] } } ] } ] } } ] }
+ * ```
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

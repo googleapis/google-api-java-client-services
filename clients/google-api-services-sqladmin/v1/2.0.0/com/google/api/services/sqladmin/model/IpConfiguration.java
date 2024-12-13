@@ -55,6 +55,13 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Optional. Custom Subject Alternative Name(SAN)s for a Cloud SQL instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> customSubjectAlternativeNames;
+
+  /**
    * Controls connectivity to private IP instances from Google services, such as BigQuery.
    * The value may be {@code null}.
    */
@@ -102,6 +109,14 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String serverCaMode;
+
+  /**
+   * Optional. The resource name of the server CA pool for an instance with
+   * `CUSTOMER_MANAGED_CAS_CA` as the `server_ca_mode`. Format: projects//locations//caPools/
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serverCaPool;
 
   /**
    * Specify how SSL/TLS is enforced in database connections. If you must use the `require_ssl` flag
@@ -161,6 +176,23 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
    */
   public IpConfiguration setAuthorizedNetworks(java.util.List<AclEntry> authorizedNetworks) {
     this.authorizedNetworks = authorizedNetworks;
+    return this;
+  }
+
+  /**
+   * Optional. Custom Subject Alternative Name(SAN)s for a Cloud SQL instance.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCustomSubjectAlternativeNames() {
+    return customSubjectAlternativeNames;
+  }
+
+  /**
+   * Optional. Custom Subject Alternative Name(SAN)s for a Cloud SQL instance.
+   * @param customSubjectAlternativeNames customSubjectAlternativeNames or {@code null} for none
+   */
+  public IpConfiguration setCustomSubjectAlternativeNames(java.util.List<java.lang.String> customSubjectAlternativeNames) {
+    this.customSubjectAlternativeNames = customSubjectAlternativeNames;
     return this;
   }
 
@@ -277,6 +309,25 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
    */
   public IpConfiguration setServerCaMode(java.lang.String serverCaMode) {
     this.serverCaMode = serverCaMode;
+    return this;
+  }
+
+  /**
+   * Optional. The resource name of the server CA pool for an instance with
+   * `CUSTOMER_MANAGED_CAS_CA` as the `server_ca_mode`. Format: projects//locations//caPools/
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServerCaPool() {
+    return serverCaPool;
+  }
+
+  /**
+   * Optional. The resource name of the server CA pool for an instance with
+   * `CUSTOMER_MANAGED_CAS_CA` as the `server_ca_mode`. Format: projects//locations//caPools/
+   * @param serverCaPool serverCaPool or {@code null} for none
+   */
+  public IpConfiguration setServerCaPool(java.lang.String serverCaPool) {
+    this.serverCaPool = serverCaPool;
     return this;
   }
 

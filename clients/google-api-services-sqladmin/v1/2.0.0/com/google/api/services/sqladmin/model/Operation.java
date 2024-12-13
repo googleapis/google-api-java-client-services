@@ -135,6 +135,13 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
+   * Optional. The sub operation based on the operation type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlSubOperationType subOperationType;
+
+  /**
    * Name of the database instance related to this operation.
    * The value may be {@code null}.
    */
@@ -408,6 +415,23 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   public Operation setStatus(java.lang.String status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * Optional. The sub operation based on the operation type.
+   * @return value or {@code null} for none
+   */
+  public SqlSubOperationType getSubOperationType() {
+    return subOperationType;
+  }
+
+  /**
+   * Optional. The sub operation based on the operation type.
+   * @param subOperationType subOperationType or {@code null} for none
+   */
+  public Operation setSubOperationType(SqlSubOperationType subOperationType) {
+    this.subOperationType = subOperationType;
     return this;
   }
 

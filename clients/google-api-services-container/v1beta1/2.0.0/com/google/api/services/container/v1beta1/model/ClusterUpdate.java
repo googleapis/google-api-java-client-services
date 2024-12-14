@@ -54,7 +54,7 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private AuthenticatorGroupsConfig desiredAuthenticatorGroupsConfig;
 
   /**
-   * The desired workload policy configuration for the autopilot cluster.
+   * WorkloadPolicyConfig is the configuration related to GCW workload policy
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -659,7 +659,7 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The desired workload policy configuration for the autopilot cluster.
+   * WorkloadPolicyConfig is the configuration related to GCW workload policy
    * @return value or {@code null} for none
    */
   public WorkloadPolicyConfig getDesiredAutopilotWorkloadPolicyConfig() {
@@ -667,7 +667,7 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The desired workload policy configuration for the autopilot cluster.
+   * WorkloadPolicyConfig is the configuration related to GCW workload policy
    * @param desiredAutopilotWorkloadPolicyConfig desiredAutopilotWorkloadPolicyConfig or {@code null} for none
    */
   public ClusterUpdate setDesiredAutopilotWorkloadPolicyConfig(WorkloadPolicyConfig desiredAutopilotWorkloadPolicyConfig) {

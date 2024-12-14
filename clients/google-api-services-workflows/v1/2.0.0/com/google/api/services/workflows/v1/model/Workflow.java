@@ -169,6 +169,13 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   private StateError stateError;
 
   /**
+   * Optional. Input only. Immutable. Tags associated with this workflow.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> tags;
+
+  /**
    * Output only. The timestamp for when the workflow was last updated. This is a workflow-wide
    * field and is not tied to a specific revision.
    * The value may be {@code null}.
@@ -508,6 +515,23 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
    */
   public Workflow setStateError(StateError stateError) {
     this.stateError = stateError;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. Immutable. Tags associated with this workflow.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getTags() {
+    return tags;
+  }
+
+  /**
+   * Optional. Input only. Immutable. Tags associated with this workflow.
+   * @param tags tags or {@code null} for none
+   */
+  public Workflow setTags(java.util.Map<String, java.lang.String> tags) {
+    this.tags = tags;
     return this;
   }
 

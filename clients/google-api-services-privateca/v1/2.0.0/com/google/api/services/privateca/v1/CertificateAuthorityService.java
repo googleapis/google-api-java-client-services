@@ -1648,8 +1648,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
          * This request holds the parameters needed by the privateca server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. Identifier. The resource name for this CaPool in the format
-         *        `projects/locations/caPools`.
+         * @param name Identifier. The resource name for this CaPool in the format `projects/locations/caPools`.
          * @param content the {@link com.google.api.services.privateca.v1.model.CaPool}
          * @return the request
          */
@@ -1677,8 +1676,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. Identifier. The resource name for this CaPool in the format
-         *        `projects/locations/caPools`.
+           * @param name Identifier. The resource name for this CaPool in the format `projects/locations/caPools`.
            * @param content the {@link com.google.api.services.privateca.v1.model.CaPool}
            * @since 1.13
            */
@@ -1748,21 +1746,20 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
           }
 
           /**
-           * Output only. Identifier. The resource name for this CaPool in the format
+           * Identifier. The resource name for this CaPool in the format
            * `projects/locations/caPools`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. Identifier. The resource name for this CaPool in the format
-         `projects/locations/caPools`.
+          /** Identifier. The resource name for this CaPool in the format `projects/locations/caPools`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Output only. Identifier. The resource name for this CaPool in the format
+           * Identifier. The resource name for this CaPool in the format
            * `projects/locations/caPools`.
            */
           public Patch setName(java.lang.String name) {
@@ -3577,7 +3574,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
            * This request holds the parameters needed by the privateca server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. Identifier. The resource name for this CertificateAuthority in the format
+           * @param name Identifier. The resource name for this CertificateAuthority in the format
            *        `projects/locations/caPools/certificateAuthorities`.
            * @param content the {@link com.google.api.services.privateca.v1.model.CertificateAuthority}
            * @return the request
@@ -3606,7 +3603,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. Identifier. The resource name for this CertificateAuthority in the format
+             * @param name Identifier. The resource name for this CertificateAuthority in the format
            *        `projects/locations/caPools/certificateAuthorities`.
              * @param content the {@link com.google.api.services.privateca.v1.model.CertificateAuthority}
              * @since 1.13
@@ -3677,13 +3674,13 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
             }
 
             /**
-             * Output only. Identifier. The resource name for this CertificateAuthority in the
-             * format `projects/locations/caPools/certificateAuthorities`.
+             * Identifier. The resource name for this CertificateAuthority in the format
+             * `projects/locations/caPools/certificateAuthorities`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. Identifier. The resource name for this CertificateAuthority in the format
+            /** Identifier. The resource name for this CertificateAuthority in the format
            `projects/locations/caPools/certificateAuthorities`.
              */
             public java.lang.String getName() {
@@ -3691,8 +3688,8 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
             }
 
             /**
-             * Output only. Identifier. The resource name for this CertificateAuthority in the
-             * format `projects/locations/caPools/certificateAuthorities`.
+             * Identifier. The resource name for this CertificateAuthority in the format
+             * `projects/locations/caPools/certificateAuthorities`.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -4508,7 +4505,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
              * This request holds the parameters needed by the privateca server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name Output only. The resource name for this CertificateRevocationList in the format
+             * @param name Identifier. The resource name for this CertificateRevocationList in the format
              *        `projects/locations/caPoolscertificateAuthorities/ certificateRevocationLists`.
              * @param content the {@link com.google.api.services.privateca.v1.model.CertificateRevocationList}
              * @return the request
@@ -4537,7 +4534,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Output only. The resource name for this CertificateRevocationList in the format
+               * @param name Identifier. The resource name for this CertificateRevocationList in the format
              *        `projects/locations/caPoolscertificateAuthorities/ certificateRevocationLists`.
                * @param content the {@link com.google.api.services.privateca.v1.model.CertificateRevocationList}
                * @since 1.13
@@ -4608,13 +4605,13 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
               }
 
               /**
-               * Output only. The resource name for this CertificateRevocationList in the format
+               * Identifier. The resource name for this CertificateRevocationList in the format
                * `projects/locations/caPoolscertificateAuthorities/ certificateRevocationLists`.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Output only. The resource name for this CertificateRevocationList in the format
+              /** Identifier. The resource name for this CertificateRevocationList in the format
              `projects/locations/caPoolscertificateAuthorities/ certificateRevocationLists`.
                */
               public java.lang.String getName() {
@@ -4622,7 +4619,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
               }
 
               /**
-               * Output only. The resource name for this CertificateRevocationList in the format
+               * Identifier. The resource name for this CertificateRevocationList in the format
                * `projects/locations/caPoolscertificateAuthorities/ certificateRevocationLists`.
                */
               public Patch setName(java.lang.String name) {
@@ -5701,7 +5698,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
            * This request holds the parameters needed by the privateca server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. The resource name for this Certificate in the format
+           * @param name Identifier. The resource name for this Certificate in the format
            *        `projects/locations/caPools/certificates`.
            * @param content the {@link com.google.api.services.privateca.v1.model.Certificate}
            * @return the request
@@ -5730,7 +5727,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. The resource name for this Certificate in the format
+             * @param name Identifier. The resource name for this Certificate in the format
            *        `projects/locations/caPools/certificates`.
              * @param content the {@link com.google.api.services.privateca.v1.model.Certificate}
              * @since 1.13
@@ -5801,13 +5798,13 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
             }
 
             /**
-             * Output only. The resource name for this Certificate in the format
+             * Identifier. The resource name for this Certificate in the format
              * `projects/locations/caPools/certificates`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. The resource name for this Certificate in the format
+            /** Identifier. The resource name for this Certificate in the format
            `projects/locations/caPools/certificates`.
              */
             public java.lang.String getName() {
@@ -5815,7 +5812,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
             }
 
             /**
-             * Output only. The resource name for this Certificate in the format
+             * Identifier. The resource name for this Certificate in the format
              * `projects/locations/caPools/certificates`.
              */
             public Patch setName(java.lang.String name) {
@@ -7016,7 +7013,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
          * This request holds the parameters needed by the privateca server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The resource name for this CertificateTemplate in the format
+         * @param name Identifier. The resource name for this CertificateTemplate in the format
          *        `projects/locations/certificateTemplates`.
          * @param content the {@link com.google.api.services.privateca.v1.model.CertificateTemplate}
          * @return the request
@@ -7045,7 +7042,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The resource name for this CertificateTemplate in the format
+           * @param name Identifier. The resource name for this CertificateTemplate in the format
          *        `projects/locations/certificateTemplates`.
            * @param content the {@link com.google.api.services.privateca.v1.model.CertificateTemplate}
            * @since 1.13
@@ -7116,13 +7113,13 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
           }
 
           /**
-           * Output only. The resource name for this CertificateTemplate in the format
+           * Identifier. The resource name for this CertificateTemplate in the format
            * `projects/locations/certificateTemplates`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The resource name for this CertificateTemplate in the format
+          /** Identifier. The resource name for this CertificateTemplate in the format
          `projects/locations/certificateTemplates`.
            */
           public java.lang.String getName() {
@@ -7130,7 +7127,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
           }
 
           /**
-           * Output only. The resource name for this CertificateTemplate in the format
+           * Identifier. The resource name for this CertificateTemplate in the format
            * `projects/locations/certificateTemplates`.
            */
           public Patch setName(java.lang.String name) {
@@ -7533,7 +7530,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
          * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
          * `Code.CANCELLED`.
          *
          * Create a request for the method "operations.cancel".
@@ -7564,7 +7561,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
            * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
            * methods to check whether the cancellation succeeded or whether the operation completed despite
            * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
            * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".

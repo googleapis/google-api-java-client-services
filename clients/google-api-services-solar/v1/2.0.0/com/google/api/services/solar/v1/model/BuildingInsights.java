@@ -74,7 +74,7 @@ public final class BuildingInsights extends com.google.api.client.json.GenericJs
   private java.lang.String imageryQuality;
 
   /**
-   * The resource name for the building, of the format `building/`.
+   * The resource name for the building, of the format `buildings/{place_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,7 +213,7 @@ public final class BuildingInsights extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The resource name for the building, of the format `building/`.
+   * The resource name for the building, of the format `buildings/{place_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -221,7 +221,7 @@ public final class BuildingInsights extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The resource name for the building, of the format `building/`.
+   * The resource name for the building, of the format `buildings/{place_id}`.
    * @param name name or {@code null} for none
    */
   public BuildingInsights setName(java.lang.String name) {

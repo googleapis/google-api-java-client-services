@@ -173,8 +173,8 @@ public final class Release extends com.google.api.client.json.GenericJson {
   private java.lang.String skaffoldConfigUri;
 
   /**
-   * The Skaffold version to use when operating on this release, such as "1.20.0". Not all versions
-   * are valid; Cloud Deploy supports a specific set of versions. If unset, the most recent
+   * Optional. The Skaffold version to use when operating on this release, such as "1.20.0". Not all
+   * versions are valid; Cloud Deploy supports a specific set of versions. If unset, the most recent
    * supported Skaffold version will be used.
    * The value may be {@code null}.
    */
@@ -521,8 +521,8 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Skaffold version to use when operating on this release, such as "1.20.0". Not all versions
-   * are valid; Cloud Deploy supports a specific set of versions. If unset, the most recent
+   * Optional. The Skaffold version to use when operating on this release, such as "1.20.0". Not all
+   * versions are valid; Cloud Deploy supports a specific set of versions. If unset, the most recent
    * supported Skaffold version will be used.
    * @return value or {@code null} for none
    */
@@ -531,8 +531,8 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Skaffold version to use when operating on this release, such as "1.20.0". Not all versions
-   * are valid; Cloud Deploy supports a specific set of versions. If unset, the most recent
+   * Optional. The Skaffold version to use when operating on this release, such as "1.20.0". Not all
+   * versions are valid; Cloud Deploy supports a specific set of versions. If unset, the most recent
    * supported Skaffold version will be used.
    * @param skaffoldVersion skaffoldVersion or {@code null} for none
    */

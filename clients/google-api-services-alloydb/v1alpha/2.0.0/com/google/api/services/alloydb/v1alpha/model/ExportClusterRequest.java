@@ -37,8 +37,9 @@ public final class ExportClusterRequest extends com.google.api.client.json.Gener
   private CsvExportOptions csvExportOptions;
 
   /**
-   * Required. Name of the database where the query will be executed. Note - Value provided should
-   * be the same as expected from `SELECT current_database();` and NOT as a resource reference.
+   * Required. Name of the database where the export command will be executed. Note - Value provided
+   * should be the same as expected from `SELECT current_database();` and NOT as a resource
+   * reference.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,8 +77,9 @@ public final class ExportClusterRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Name of the database where the query will be executed. Note - Value provided should
-   * be the same as expected from `SELECT current_database();` and NOT as a resource reference.
+   * Required. Name of the database where the export command will be executed. Note - Value provided
+   * should be the same as expected from `SELECT current_database();` and NOT as a resource
+   * reference.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabase() {
@@ -85,8 +87,9 @@ public final class ExportClusterRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Name of the database where the query will be executed. Note - Value provided should
-   * be the same as expected from `SELECT current_database();` and NOT as a resource reference.
+   * Required. Name of the database where the export command will be executed. Note - Value provided
+   * should be the same as expected from `SELECT current_database();` and NOT as a resource
+   * reference.
    * @param database database or {@code null} for none
    */
   public ExportClusterRequest setDatabase(java.lang.String database) {

@@ -37,8 +37,9 @@ public final class ExportClusterRequest extends com.google.api.client.json.Gener
   private CsvExportOptions csvExportOptions;
 
   /**
-   * Required. Name of the database where the query will be executed. Note - Value provided should
-   * be the same as expected from `SELECT current_database();` and NOT as a resource reference.
+   * Required. Name of the database where the export command will be executed. Note - Value provided
+   * should be the same as expected from `SELECT current_database();` and NOT as a resource
+   * reference.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,6 +51,13 @@ public final class ExportClusterRequest extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private GcsDestination gcsDestination;
+
+  /**
+   * Options for exporting data in SQL format. Required field to be set for SQL file type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlExportOptions sqlExportOptions;
 
   /**
    * Options for exporting data in CSV format. Required field to be set for CSV file type.
@@ -69,8 +77,9 @@ public final class ExportClusterRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Name of the database where the query will be executed. Note - Value provided should
-   * be the same as expected from `SELECT current_database();` and NOT as a resource reference.
+   * Required. Name of the database where the export command will be executed. Note - Value provided
+   * should be the same as expected from `SELECT current_database();` and NOT as a resource
+   * reference.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabase() {
@@ -78,8 +87,9 @@ public final class ExportClusterRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Name of the database where the query will be executed. Note - Value provided should
-   * be the same as expected from `SELECT current_database();` and NOT as a resource reference.
+   * Required. Name of the database where the export command will be executed. Note - Value provided
+   * should be the same as expected from `SELECT current_database();` and NOT as a resource
+   * reference.
    * @param database database or {@code null} for none
    */
   public ExportClusterRequest setDatabase(java.lang.String database) {
@@ -101,6 +111,23 @@ public final class ExportClusterRequest extends com.google.api.client.json.Gener
    */
   public ExportClusterRequest setGcsDestination(GcsDestination gcsDestination) {
     this.gcsDestination = gcsDestination;
+    return this;
+  }
+
+  /**
+   * Options for exporting data in SQL format. Required field to be set for SQL file type.
+   * @return value or {@code null} for none
+   */
+  public SqlExportOptions getSqlExportOptions() {
+    return sqlExportOptions;
+  }
+
+  /**
+   * Options for exporting data in SQL format. Required field to be set for SQL file type.
+   * @param sqlExportOptions sqlExportOptions or {@code null} for none
+   */
+  public ExportClusterRequest setSqlExportOptions(SqlExportOptions sqlExportOptions) {
+    this.sqlExportOptions = sqlExportOptions;
     return this;
   }
 

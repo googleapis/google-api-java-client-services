@@ -51,6 +51,14 @@ public final class StorageDatabasecenterPartnerapiV1mainMachineConfiguration ext
   private java.lang.Integer shardCount;
 
   /**
+   * Optional. The number of vCPUs. TODO(b/342344482, b/342346271) add proto validations again after
+   * bug fix.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double vcpuCount;
+
+  /**
    * The number of CPUs. TODO(b/342344482, b/342346271) add proto validations again after bug fix.
    * @return value or {@code null} for none
    */
@@ -98,6 +106,25 @@ public final class StorageDatabasecenterPartnerapiV1mainMachineConfiguration ext
    */
   public StorageDatabasecenterPartnerapiV1mainMachineConfiguration setShardCount(java.lang.Integer shardCount) {
     this.shardCount = shardCount;
+    return this;
+  }
+
+  /**
+   * Optional. The number of vCPUs. TODO(b/342344482, b/342346271) add proto validations again after
+   * bug fix.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getVcpuCount() {
+    return vcpuCount;
+  }
+
+  /**
+   * Optional. The number of vCPUs. TODO(b/342344482, b/342346271) add proto validations again after
+   * bug fix.
+   * @param vcpuCount vcpuCount or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainMachineConfiguration setVcpuCount(java.lang.Double vcpuCount) {
+    this.vcpuCount = vcpuCount;
     return this;
   }
 

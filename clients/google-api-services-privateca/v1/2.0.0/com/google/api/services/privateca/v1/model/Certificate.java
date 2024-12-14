@@ -87,7 +87,7 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
   private String lifetime;
 
   /**
-   * Output only. The resource name for this Certificate in the format
+   * Identifier. The resource name for this Certificate in the format
    * `projects/locations/caPools/certificates`.
    * The value may be {@code null}.
    */
@@ -273,7 +273,7 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource name for this Certificate in the format
+   * Identifier. The resource name for this Certificate in the format
    * `projects/locations/caPools/certificates`.
    * @return value or {@code null} for none
    */
@@ -282,7 +282,7 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource name for this Certificate in the format
+   * Identifier. The resource name for this Certificate in the format
    * `projects/locations/caPools/certificates`.
    * @param name name or {@code null} for none
    */

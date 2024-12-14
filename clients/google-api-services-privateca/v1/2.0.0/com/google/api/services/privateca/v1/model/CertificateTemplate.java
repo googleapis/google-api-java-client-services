@@ -72,7 +72,7 @@ public final class CertificateTemplate extends com.google.api.client.json.Generi
   private String maximumLifetime;
 
   /**
-   * Output only. The resource name for this CertificateTemplate in the format
+   * Identifier. The resource name for this CertificateTemplate in the format
    * `projects/locations/certificateTemplates`.
    * The value may be {@code null}.
    */
@@ -208,7 +208,7 @@ public final class CertificateTemplate extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The resource name for this CertificateTemplate in the format
+   * Identifier. The resource name for this CertificateTemplate in the format
    * `projects/locations/certificateTemplates`.
    * @return value or {@code null} for none
    */
@@ -217,7 +217,7 @@ public final class CertificateTemplate extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The resource name for this CertificateTemplate in the format
+   * Identifier. The resource name for this CertificateTemplate in the format
    * `projects/locations/certificateTemplates`.
    * @param name name or {@code null} for none
    */

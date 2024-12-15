@@ -31,7 +31,7 @@ package com.google.api.services.config.v1.model;
 public final class TerraformError extends com.google.api.client.json.GenericJson {
 
   /**
-   * Original error response from underlying Google API, if available.
+   * Output only. Original error response from underlying Google API, if available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class TerraformError extends com.google.api.client.json.GenericJson
   private java.lang.String resourceAddress;
 
   /**
-   * Original error response from underlying Google API, if available.
+   * Output only. Original error response from underlying Google API, if available.
    * @return value or {@code null} for none
    */
   public Status getError() {
@@ -68,7 +68,7 @@ public final class TerraformError extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Original error response from underlying Google API, if available.
+   * Output only. Original error response from underlying Google API, if available.
    * @param error error or {@code null} for none
    */
   public TerraformError setError(Status error) {

@@ -47,7 +47,7 @@ public final class TerraformBlueprint extends com.google.api.client.json.Generic
   private GitSource gitSource;
 
   /**
-   * Input variable values for the Terraform blueprint.
+   * Optional. Input variable values for the Terraform blueprint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class TerraformBlueprint extends com.google.api.client.json.Generic
   }
 
   /**
-   * Input variable values for the Terraform blueprint.
+   * Optional. Input variable values for the Terraform blueprint.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, TerraformVariable> getInputValues() {
@@ -98,7 +98,7 @@ public final class TerraformBlueprint extends com.google.api.client.json.Generic
   }
 
   /**
-   * Input variable values for the Terraform blueprint.
+   * Optional. Input variable values for the Terraform blueprint.
    * @param inputValues inputValues or {@code null} for none
    */
   public TerraformBlueprint setInputValues(java.util.Map<String, TerraformVariable> inputValues) {

@@ -66,6 +66,13 @@ public final class Insight extends com.google.api.client.json.GenericJson {
   private SqlserverValidation sqlserverValidation;
 
   /**
+   * The insights data for workload validation of torso workloads.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TorsoValidation torsoValidation;
+
+  /**
    * Required. The instance id where the insight is generated from
    * @return value or {@code null} for none
    */
@@ -149,6 +156,23 @@ public final class Insight extends com.google.api.client.json.GenericJson {
    */
   public Insight setSqlserverValidation(SqlserverValidation sqlserverValidation) {
     this.sqlserverValidation = sqlserverValidation;
+    return this;
+  }
+
+  /**
+   * The insights data for workload validation of torso workloads.
+   * @return value or {@code null} for none
+   */
+  public TorsoValidation getTorsoValidation() {
+    return torsoValidation;
+  }
+
+  /**
+   * The insights data for workload validation of torso workloads.
+   * @param torsoValidation torsoValidation or {@code null} for none
+   */
+  public Insight setTorsoValidation(TorsoValidation torsoValidation) {
+    this.torsoValidation = torsoValidation;
     return this;
   }
 

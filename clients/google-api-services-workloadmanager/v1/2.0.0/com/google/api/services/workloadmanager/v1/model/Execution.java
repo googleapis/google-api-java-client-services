@@ -80,6 +80,13 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   private java.util.List<Notice> notices;
 
   /**
+   * Output only. [Output only] Result summary
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Summary resultSummary;
+
+  /**
    * Output only. execution result summary per rule
    * The value may be {@code null}.
    */
@@ -226,6 +233,23 @@ public final class Execution extends com.google.api.client.json.GenericJson {
    */
   public Execution setNotices(java.util.List<Notice> notices) {
     this.notices = notices;
+    return this;
+  }
+
+  /**
+   * Output only. [Output only] Result summary
+   * @return value or {@code null} for none
+   */
+  public Summary getResultSummary() {
+    return resultSummary;
+  }
+
+  /**
+   * Output only. [Output only] Result summary
+   * @param resultSummary resultSummary or {@code null} for none
+   */
+  public Execution setResultSummary(Summary resultSummary) {
+    this.resultSummary = resultSummary;
     return this;
   }
 

@@ -58,6 +58,13 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Evaluation type
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String evaluationType;
+
+  /**
    * Labels as key value pairs
    * The value may be {@code null}.
    */
@@ -180,6 +187,23 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
    */
   public Evaluation setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Evaluation type
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEvaluationType() {
+    return evaluationType;
+  }
+
+  /**
+   * Evaluation type
+   * @param evaluationType evaluationType or {@code null} for none
+   */
+  public Evaluation setEvaluationType(java.lang.String evaluationType) {
+    this.evaluationType = evaluationType;
     return this;
   }
 

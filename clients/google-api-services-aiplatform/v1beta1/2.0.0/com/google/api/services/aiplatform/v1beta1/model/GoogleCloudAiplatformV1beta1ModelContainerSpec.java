@@ -176,6 +176,13 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
   private java.lang.String imageUri;
 
   /**
+   * Immutable. Specification for Kubernetes liveness probe.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1Probe livenessProbe;
+
+  /**
    * Immutable. List of ports to expose from the container. Vertex AI sends any prediction requests
    * that it receives to the first port on this list. Vertex AI also sends [liveness and health
    * checks](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-
@@ -521,6 +528,23 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
    */
   public GoogleCloudAiplatformV1beta1ModelContainerSpec setImageUri(java.lang.String imageUri) {
     this.imageUri = imageUri;
+    return this;
+  }
+
+  /**
+   * Immutable. Specification for Kubernetes liveness probe.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Probe getLivenessProbe() {
+    return livenessProbe;
+  }
+
+  /**
+   * Immutable. Specification for Kubernetes liveness probe.
+   * @param livenessProbe livenessProbe or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ModelContainerSpec setLivenessProbe(GoogleCloudAiplatformV1beta1Probe livenessProbe) {
+    this.livenessProbe = livenessProbe;
     return this;
   }
 

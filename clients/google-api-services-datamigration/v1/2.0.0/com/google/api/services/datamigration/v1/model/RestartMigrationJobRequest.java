@@ -38,6 +38,13 @@ public final class RestartMigrationJobRequest extends com.google.api.client.json
   private MigrationJobObjectsConfig objectsFilter;
 
   /**
+   * Optional. If true, only failed objects will be restarted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean restartFailedObjects;
+
+  /**
    * Optional. Restart the migration job without running prior configuration verification. Defaults
    * to `false`.
    * The value may be {@code null}.
@@ -59,6 +66,23 @@ public final class RestartMigrationJobRequest extends com.google.api.client.json
    */
   public RestartMigrationJobRequest setObjectsFilter(MigrationJobObjectsConfig objectsFilter) {
     this.objectsFilter = objectsFilter;
+    return this;
+  }
+
+  /**
+   * Optional. If true, only failed objects will be restarted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRestartFailedObjects() {
+    return restartFailedObjects;
+  }
+
+  /**
+   * Optional. If true, only failed objects will be restarted.
+   * @param restartFailedObjects restartFailedObjects or {@code null} for none
+   */
+  public RestartMigrationJobRequest setRestartFailedObjects(java.lang.Boolean restartFailedObjects) {
+    this.restartFailedObjects = restartFailedObjects;
     return this;
   }
 

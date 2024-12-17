@@ -65,6 +65,13 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
   private java.lang.Integer maxOutputTokens;
 
   /**
+   * Optional. If specified, the media resolution specified will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mediaResolution;
+
+  /**
    * Optional. Positive penalties.
    * The value may be {@code null}.
    */
@@ -140,13 +147,6 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
    */
   @com.google.api.client.util.Key
   private java.lang.Float temperature;
-
-  /**
-   * Optional. If specified, the token resolution specified will be used.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String tokenResolution;
 
   /**
    * Optional. If specified, top-k sampling will be used.
@@ -244,6 +244,23 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
    */
   public GoogleCloudAiplatformV1beta1GenerationConfig setMaxOutputTokens(java.lang.Integer maxOutputTokens) {
     this.maxOutputTokens = maxOutputTokens;
+    return this;
+  }
+
+  /**
+   * Optional. If specified, the media resolution specified will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMediaResolution() {
+    return mediaResolution;
+  }
+
+  /**
+   * Optional. If specified, the media resolution specified will be used.
+   * @param mediaResolution mediaResolution or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfig setMediaResolution(java.lang.String mediaResolution) {
+    this.mediaResolution = mediaResolution;
     return this;
   }
 
@@ -428,23 +445,6 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
    */
   public GoogleCloudAiplatformV1beta1GenerationConfig setTemperature(java.lang.Float temperature) {
     this.temperature = temperature;
-    return this;
-  }
-
-  /**
-   * Optional. If specified, the token resolution specified will be used.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getTokenResolution() {
-    return tokenResolution;
-  }
-
-  /**
-   * Optional. If specified, the token resolution specified will be used.
-   * @param tokenResolution tokenResolution or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1GenerationConfig setTokenResolution(java.lang.String tokenResolution) {
-    this.tokenResolution = tokenResolution;
     return this;
   }
 

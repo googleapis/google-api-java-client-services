@@ -38,12 +38,33 @@ public final class GoogleCloudAiplatformV1Probe extends com.google.api.client.js
   private GoogleCloudAiplatformV1ProbeExecAction exec;
 
   /**
+   * GrpcAction probes the health of a container by sending a gRPC request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1ProbeGrpcAction grpc;
+
+  /**
+   * HttpGetAction probes the health of a container by sending an HTTP GET request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1ProbeHttpGetAction httpGet;
+
+  /**
    * How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Must be
    * less than timeout_seconds. Maps to Kubernetes probe argument 'periodSeconds'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer periodSeconds;
+
+  /**
+   * TcpSocketAction probes the health of a container by opening a TCP socket connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1ProbeTcpSocketAction tcpSocket;
 
   /**
    * Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1.
@@ -71,6 +92,40 @@ public final class GoogleCloudAiplatformV1Probe extends com.google.api.client.js
   }
 
   /**
+   * GrpcAction probes the health of a container by sending a gRPC request.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ProbeGrpcAction getGrpc() {
+    return grpc;
+  }
+
+  /**
+   * GrpcAction probes the health of a container by sending a gRPC request.
+   * @param grpc grpc or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Probe setGrpc(GoogleCloudAiplatformV1ProbeGrpcAction grpc) {
+    this.grpc = grpc;
+    return this;
+  }
+
+  /**
+   * HttpGetAction probes the health of a container by sending an HTTP GET request.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ProbeHttpGetAction getHttpGet() {
+    return httpGet;
+  }
+
+  /**
+   * HttpGetAction probes the health of a container by sending an HTTP GET request.
+   * @param httpGet httpGet or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Probe setHttpGet(GoogleCloudAiplatformV1ProbeHttpGetAction httpGet) {
+    this.httpGet = httpGet;
+    return this;
+  }
+
+  /**
    * How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Must be
    * less than timeout_seconds. Maps to Kubernetes probe argument 'periodSeconds'.
    * @return value or {@code null} for none
@@ -86,6 +141,23 @@ public final class GoogleCloudAiplatformV1Probe extends com.google.api.client.js
    */
   public GoogleCloudAiplatformV1Probe setPeriodSeconds(java.lang.Integer periodSeconds) {
     this.periodSeconds = periodSeconds;
+    return this;
+  }
+
+  /**
+   * TcpSocketAction probes the health of a container by opening a TCP socket connection.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ProbeTcpSocketAction getTcpSocket() {
+    return tcpSocket;
+  }
+
+  /**
+   * TcpSocketAction probes the health of a container by opening a TCP socket connection.
+   * @param tcpSocket tcpSocket or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Probe setTcpSocket(GoogleCloudAiplatformV1ProbeTcpSocketAction tcpSocket) {
+    this.tcpSocket = tcpSocket;
     return this;
   }
 

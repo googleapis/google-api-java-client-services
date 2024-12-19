@@ -762,6 +762,13 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private ProductSubscriptionCost subscriptionCost;
 
   /**
+   * Optional. The list of sustainability incentive programs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ProductSustainabilityIncentive> sustainabilityIncentives;
+
+  /**
    * Required. The CLDR territory code for the item's country of sale.
    * The value may be {@code null}.
    */
@@ -2508,6 +2515,23 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setSubscriptionCost(ProductSubscriptionCost subscriptionCost) {
     this.subscriptionCost = subscriptionCost;
+    return this;
+  }
+
+  /**
+   * Optional. The list of sustainability incentive programs.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ProductSustainabilityIncentive> getSustainabilityIncentives() {
+    return sustainabilityIncentives;
+  }
+
+  /**
+   * Optional. The list of sustainability incentive programs.
+   * @param sustainabilityIncentives sustainabilityIncentives or {@code null} for none
+   */
+  public Product setSustainabilityIncentives(java.util.List<ProductSustainabilityIncentive> sustainabilityIncentives) {
+    this.sustainabilityIncentives = sustainabilityIncentives;
     return this;
   }
 

@@ -38,6 +38,16 @@ public final class GoogleCloudApigeeV1Environment extends com.google.api.client.
   private java.lang.String apiProxyType;
 
   /**
+   * Optional. The algorithm to resolve IP. This will affect Analytics, API Security, and other
+   * features that use the client ip. To remove a client ip resolution config, update the field to
+   * an empty value. Example: '{ "clientIpResolutionConfig" = {} }' For more information, see:
+   * https://cloud.google.com/apigee/docs/api-platform/system-administration/client-ip-resolution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApigeeV1EnvironmentClientIPResolutionConfig clientIpResolutionConfig;
+
+  /**
    * Output only. Creation time of this environment as milliseconds since epoch.
    * The value may be {@code null}.
    */
@@ -148,6 +158,29 @@ public final class GoogleCloudApigeeV1Environment extends com.google.api.client.
    */
   public GoogleCloudApigeeV1Environment setApiProxyType(java.lang.String apiProxyType) {
     this.apiProxyType = apiProxyType;
+    return this;
+  }
+
+  /**
+   * Optional. The algorithm to resolve IP. This will affect Analytics, API Security, and other
+   * features that use the client ip. To remove a client ip resolution config, update the field to
+   * an empty value. Example: '{ "clientIpResolutionConfig" = {} }' For more information, see:
+   * https://cloud.google.com/apigee/docs/api-platform/system-administration/client-ip-resolution.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApigeeV1EnvironmentClientIPResolutionConfig getClientIpResolutionConfig() {
+    return clientIpResolutionConfig;
+  }
+
+  /**
+   * Optional. The algorithm to resolve IP. This will affect Analytics, API Security, and other
+   * features that use the client ip. To remove a client ip resolution config, update the field to
+   * an empty value. Example: '{ "clientIpResolutionConfig" = {} }' For more information, see:
+   * https://cloud.google.com/apigee/docs/api-platform/system-administration/client-ip-resolution.
+   * @param clientIpResolutionConfig clientIpResolutionConfig or {@code null} for none
+   */
+  public GoogleCloudApigeeV1Environment setClientIpResolutionConfig(GoogleCloudApigeeV1EnvironmentClientIPResolutionConfig clientIpResolutionConfig) {
+    this.clientIpResolutionConfig = clientIpResolutionConfig;
     return this;
   }
 

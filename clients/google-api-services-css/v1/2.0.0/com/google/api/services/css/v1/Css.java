@@ -1029,6 +1029,185 @@ public class Css extends com.google.api.client.googleapis.services.json.Abstract
           return (Insert) super.set(parameterName, value);
         }
       }
+      /**
+       * Updates the existing Css Product input in your CSS Center account. After inserting, updating, or
+       * deleting a CSS Product input, it may take several minutes before the processed Css Product can be
+       * retrieved.
+       *
+       * Create a request for the method "cssProductInputs.patch".
+       *
+       * This request holds the parameters needed by the css server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the CSS Product input. Format: `accounts/{account}/cssProductInputs/{css_product_input}`
+       * @param content the {@link com.google.api.services.css.v1.model.CssProductInput}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.css.v1.model.CssProductInput content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends CssRequest<com.google.api.services.css.v1.model.CssProductInput> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/cssProductInputs/[^/]+$");
+
+        /**
+         * Updates the existing Css Product input in your CSS Center account. After inserting, updating,
+         * or deleting a CSS Product input, it may take several minutes before the processed Css Product
+         * can be retrieved.
+         *
+         * Create a request for the method "cssProductInputs.patch".
+         *
+         * This request holds the parameters needed by the the css server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the CSS Product input. Format: `accounts/{account}/cssProductInputs/{css_product_input}`
+         * @param content the {@link com.google.api.services.css.v1.model.CssProductInput}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.css.v1.model.CssProductInput content) {
+          super(Css.this, "PATCH", REST_PATH, content, com.google.api.services.css.v1.model.CssProductInput.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/cssProductInputs/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The name of the CSS Product input. Format:
+         * `accounts/{account}/cssProductInputs/{css_product_input}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the CSS Product input. Format:
+       `accounts/{account}/cssProductInputs/{css_product_input}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The name of the CSS Product input. Format:
+         * `accounts/{account}/cssProductInputs/{css_product_input}`
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/cssProductInputs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * The list of CSS product attributes to be updated. If the update mask is omitted, then it
+         * is treated as implied field mask equivalent to all fields that are populated (have a non-
+         * empty value). Attributes specified in the update mask without a value specified in the
+         * body will be deleted from the CSS product. Update mask can only be specified for top
+         * level fields in attributes and custom attributes. To specify the update mask for custom
+         * attributes you need to add the `custom_attribute.` prefix. Providing special "*" value
+         * for full CSS product replacement is not supported.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** The list of CSS product attributes to be updated. If the update mask is omitted, then it is treated
+       as implied field mask equivalent to all fields that are populated (have a non-empty value).
+       Attributes specified in the update mask without a value specified in the body will be deleted from
+       the CSS product. Update mask can only be specified for top level fields in attributes and custom
+       attributes. To specify the update mask for custom attributes you need to add the
+       `custom_attribute.` prefix. Providing special "*" value for full CSS product replacement is not
+       supported.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * The list of CSS product attributes to be updated. If the update mask is omitted, then it
+         * is treated as implied field mask equivalent to all fields that are populated (have a non-
+         * empty value). Attributes specified in the update mask without a value specified in the
+         * body will be deleted from the CSS product. Update mask can only be specified for top
+         * level fields in attributes and custom attributes. To specify the update mask for custom
+         * attributes you need to add the `custom_attribute.` prefix. Providing special "*" value
+         * for full CSS product replacement is not supported.
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
 
     }
     /**

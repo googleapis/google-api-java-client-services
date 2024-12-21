@@ -3124,6 +3124,366 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
         }
 
+        /**
+         * An accessor for creating requests from the RouteViews collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code NetworkServices networkservices = new NetworkServices(...);}
+         *   {@code NetworkServices.RouteViews.List request = networkservices.routeViews().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public RouteViews routeViews() {
+          return new RouteViews();
+        }
+
+        /**
+         * The "routeViews" collection of methods.
+         */
+        public class RouteViews {
+
+          /**
+           * Get a single RouteView of a Gateway.
+           *
+           * Create a request for the method "routeViews.get".
+           *
+           * This request holds the parameters needed by the networkservices server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the GatewayRouteView resource. Formats:
+           *        projects/{project_number}/locations/{location}/gateways/{gateway_name}/routeViews/{route_v
+           *        iew_name}
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends NetworkServicesRequest<com.google.api.services.networkservices.v1beta1.model.GatewayRouteView> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/gateways/[^/]+/routeViews/[^/]+$");
+
+            /**
+             * Get a single RouteView of a Gateway.
+             *
+             * Create a request for the method "routeViews.get".
+             *
+             * This request holds the parameters needed by the the networkservices server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the GatewayRouteView resource. Formats:
+           *        projects/{project_number}/locations/{location}/gateways/{gateway_name}/routeViews/{route_v
+           *        iew_name}
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(NetworkServices.this, "GET", REST_PATH, null, com.google.api.services.networkservices.v1beta1.model.GatewayRouteView.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/gateways/[^/]+/routeViews/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the GatewayRouteView resource. Formats: projects/{project_number}/l
+             * ocations/{location}/gateways/{gateway_name}/routeViews/{route_view_name}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the GatewayRouteView resource. Formats:
+           projects/{project_number}/locations/{location}/gateways/{gateway_name}/routeViews/{route_view_name}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Name of the GatewayRouteView resource. Formats: projects/{project_number}/l
+             * ocations/{location}/gateways/{gateway_name}/routeViews/{route_view_name}
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/gateways/[^/]+/routeViews/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists RouteViews
+           *
+           * Create a request for the method "routeViews.list".
+           *
+           * This request holds the parameters needed by the networkservices server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The Gateway to which a Route is associated. Formats:
+           *        projects/{project_number}/locations/{location}/gateways/{gateway_name}
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends NetworkServicesRequest<com.google.api.services.networkservices.v1beta1.model.ListGatewayRouteViewsResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/routeViews";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/gateways/[^/]+$");
+
+            /**
+             * Lists RouteViews
+             *
+             * Create a request for the method "routeViews.list".
+             *
+             * This request holds the parameters needed by the the networkservices server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The Gateway to which a Route is associated. Formats:
+           *        projects/{project_number}/locations/{location}/gateways/{gateway_name}
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(NetworkServices.this, "GET", REST_PATH, null, com.google.api.services.networkservices.v1beta1.model.ListGatewayRouteViewsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/gateways/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The Gateway to which a Route is associated. Formats:
+             * projects/{project_number}/locations/{location}/gateways/{gateway_name}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The Gateway to which a Route is associated. Formats:
+           projects/{project_number}/locations/{location}/gateways/{gateway_name}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The Gateway to which a Route is associated. Formats:
+             * projects/{project_number}/locations/{location}/gateways/{gateway_name}
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/gateways/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Maximum number of GatewayRouteViews to return per call. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Maximum number of GatewayRouteViews to return per call.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Maximum number of GatewayRouteViews to return per call. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * The value returned by the last `ListGatewayRouteViewsResponse` Indicates that this is
+             * a continuation of a prior `ListGatewayRouteViews` call, and that the system should
+             * return the next page of data.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** The value returned by the last `ListGatewayRouteViewsResponse` Indicates that this is a
+           continuation of a prior `ListGatewayRouteViews` call, and that the system should return the next
+           page of data.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * The value returned by the last `ListGatewayRouteViewsResponse` Indicates that this is
+             * a continuation of a prior `ListGatewayRouteViews` call, and that the system should
+             * return the next page of data.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the GrpcRoutes collection.
@@ -7528,6 +7888,365 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
         }
 
+        /**
+         * An accessor for creating requests from the RouteViews collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code NetworkServices networkservices = new NetworkServices(...);}
+         *   {@code NetworkServices.RouteViews.List request = networkservices.routeViews().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public RouteViews routeViews() {
+          return new RouteViews();
+        }
+
+        /**
+         * The "routeViews" collection of methods.
+         */
+        public class RouteViews {
+
+          /**
+           * Get a single RouteView of a Mesh.
+           *
+           * Create a request for the method "routeViews.get".
+           *
+           * This request holds the parameters needed by the networkservices server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the MeshRouteView resource. Format:
+           *        projects/{project_number}/locations/{location}/meshes/{mesh_name}/routeViews/{route_view_n
+           *        ame}
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends NetworkServicesRequest<com.google.api.services.networkservices.v1beta1.model.MeshRouteView> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/meshes/[^/]+/routeViews/[^/]+$");
+
+            /**
+             * Get a single RouteView of a Mesh.
+             *
+             * Create a request for the method "routeViews.get".
+             *
+             * This request holds the parameters needed by the the networkservices server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the MeshRouteView resource. Format:
+           *        projects/{project_number}/locations/{location}/meshes/{mesh_name}/routeViews/{route_view_n
+           *        ame}
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(NetworkServices.this, "GET", REST_PATH, null, com.google.api.services.networkservices.v1beta1.model.MeshRouteView.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/meshes/[^/]+/routeViews/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the MeshRouteView resource. Format: projects/{project_number}/locat
+             * ions/{location}/meshes/{mesh_name}/routeViews/{route_view_name}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the MeshRouteView resource. Format:
+           projects/{project_number}/locations/{location}/meshes/{mesh_name}/routeViews/{route_view_name}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Name of the MeshRouteView resource. Format: projects/{project_number}/locat
+             * ions/{location}/meshes/{mesh_name}/routeViews/{route_view_name}
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/meshes/[^/]+/routeViews/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists RouteViews
+           *
+           * Create a request for the method "routeViews.list".
+           *
+           * This request holds the parameters needed by the networkservices server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The Mesh to which a Route is associated. Format:
+           *        projects/{project_number}/locations/{location}/meshes/{mesh_name}
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends NetworkServicesRequest<com.google.api.services.networkservices.v1beta1.model.ListMeshRouteViewsResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/routeViews";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/meshes/[^/]+$");
+
+            /**
+             * Lists RouteViews
+             *
+             * Create a request for the method "routeViews.list".
+             *
+             * This request holds the parameters needed by the the networkservices server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The Mesh to which a Route is associated. Format:
+           *        projects/{project_number}/locations/{location}/meshes/{mesh_name}
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(NetworkServices.this, "GET", REST_PATH, null, com.google.api.services.networkservices.v1beta1.model.ListMeshRouteViewsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/meshes/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The Mesh to which a Route is associated. Format:
+             * projects/{project_number}/locations/{location}/meshes/{mesh_name}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The Mesh to which a Route is associated. Format:
+           projects/{project_number}/locations/{location}/meshes/{mesh_name}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The Mesh to which a Route is associated. Format:
+             * projects/{project_number}/locations/{location}/meshes/{mesh_name}
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/meshes/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Maximum number of MeshRouteViews to return per call. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Maximum number of MeshRouteViews to return per call.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Maximum number of MeshRouteViews to return per call. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * The value returned by the last `ListMeshRouteViewsResponse` Indicates that this is a
+             * continuation of a prior `ListMeshRouteViews` call, and that the system should return
+             * the next page of data.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** The value returned by the last `ListMeshRouteViewsResponse` Indicates that this is a continuation
+           of a prior `ListMeshRouteViews` call, and that the system should return the next page of data.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * The value returned by the last `ListMeshRouteViewsResponse` Indicates that this is a
+             * continuation of a prior `ListMeshRouteViews` call, and that the system should return
+             * the next page of data.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the Operations collection.
@@ -7555,7 +8274,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
          * `Code.CANCELLED`.
          *
          * Create a request for the method "operations.cancel".
@@ -7586,7 +8305,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
            * methods to check whether the cancellation succeeded or whether the operation completed despite
            * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
            * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".
@@ -11730,20 +12449,21 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Determine how much data should be returned by the API. See
+           * Determines how much data must be returned in the response. See
            * [AIP-157](https://google.aip.dev/157).
            */
           @com.google.api.client.util.Key
           private java.lang.String view;
 
-          /** Determine how much data should be returned by the API. See [AIP-157](https://google.aip.dev/157).
+          /** Determines how much data must be returned in the response. See
+         [AIP-157](https://google.aip.dev/157).
            */
           public java.lang.String getView() {
             return view;
           }
 
           /**
-           * Determine how much data should be returned by the API. See
+           * Determines how much data must be returned in the response. See
            * [AIP-157](https://google.aip.dev/157).
            */
           public Get setView(java.lang.String view) {
@@ -11900,14 +12620,15 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Maximum number of `WasmPlugin` resources to return per call. If not specified, at most
-           * 50 `WasmPlugin`s are returned. The maximum value is 1000; values above 1000 are coerced
-           * to 1000.
+           * 50 `WasmPlugin` resources are returned. The maximum value is 1000; values above 1000
+           * are coerced to 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
           /** Maximum number of `WasmPlugin` resources to return per call. If not specified, at most 50
-         `WasmPlugin`s are returned. The maximum value is 1000; values above 1000 are coerced to 1000.
+         `WasmPlugin` resources are returned. The maximum value is 1000; values above 1000 are coerced to
+         1000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
@@ -11915,8 +12636,8 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Maximum number of `WasmPlugin` resources to return per call. If not specified, at most
-           * 50 `WasmPlugin`s are returned. The maximum value is 1000; values above 1000 are coerced
-           * to 1000.
+           * 50 `WasmPlugin` resources are returned. The maximum value is 1000; values above 1000
+           * are coerced to 1000.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -12746,15 +13467,15 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
             /**
              * Maximum number of `WasmPluginVersion` resources to return per call. If not specified,
-             * at most 50 `WasmPluginVersion`s are returned. The maximum value is 1000; values above
-             * 1000 are coerced to 1000.
+             * at most 50 `WasmPluginVersion` resources are returned. The maximum value is 1000;
+             * values above 1000 are coerced to 1000.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
             /** Maximum number of `WasmPluginVersion` resources to return per call. If not specified, at most 50
-           `WasmPluginVersion`s are returned. The maximum value is 1000; values above 1000 are coerced to
-           1000.
+           `WasmPluginVersion` resources are returned. The maximum value is 1000; values above 1000 are
+           coerced to 1000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
@@ -12762,8 +13483,8 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
             /**
              * Maximum number of `WasmPluginVersion` resources to return per call. If not specified,
-             * at most 50 `WasmPluginVersion`s are returned. The maximum value is 1000; values above
-             * 1000 are coerced to 1000.
+             * at most 50 `WasmPluginVersion` resources are returned. The maximum value is 1000;
+             * values above 1000 are coerced to 1000.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;

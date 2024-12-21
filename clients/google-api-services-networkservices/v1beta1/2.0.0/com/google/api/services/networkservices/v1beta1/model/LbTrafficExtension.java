@@ -62,9 +62,9 @@ public final class LbTrafficExtension extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. A list of references to the forwarding rules to which this service extension is
-   * attached to. At least one forwarding rule is required. There can be only one
-   * `LBTrafficExtension` resource per forwarding rule.
+   * Optional. A list of references to the forwarding rules to which this service extension is
+   * attached. At least one forwarding rule is required. There can be only one `LBTrafficExtension`
+   * resource per forwarding rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +94,8 @@ public final class LbTrafficExtension extends com.google.api.client.json.Generic
    * `ProcessingRequest.metadata_context.filter_metadata` map field. The metadata is available under
    * the key `com.google.lb_traffic_extension.`. The following variables are supported in the
    * metadata: `{forwarding_rule_id}` - substituted with the forwarding rule's fully qualified
-   * resource name. This field is not supported for plugin extensions and must not be set.
+   * resource name. This field is not supported for plugin extensions. Setting it results in a
+   * validation error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,9 +174,9 @@ public final class LbTrafficExtension extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. A list of references to the forwarding rules to which this service extension is
-   * attached to. At least one forwarding rule is required. There can be only one
-   * `LBTrafficExtension` resource per forwarding rule.
+   * Optional. A list of references to the forwarding rules to which this service extension is
+   * attached. At least one forwarding rule is required. There can be only one `LBTrafficExtension`
+   * resource per forwarding rule.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getForwardingRules() {
@@ -183,9 +184,9 @@ public final class LbTrafficExtension extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. A list of references to the forwarding rules to which this service extension is
-   * attached to. At least one forwarding rule is required. There can be only one
-   * `LBTrafficExtension` resource per forwarding rule.
+   * Optional. A list of references to the forwarding rules to which this service extension is
+   * attached. At least one forwarding rule is required. There can be only one `LBTrafficExtension`
+   * resource per forwarding rule.
    * @param forwardingRules forwardingRules or {@code null} for none
    */
   public LbTrafficExtension setForwardingRules(java.util.List<java.lang.String> forwardingRules) {
@@ -242,7 +243,8 @@ public final class LbTrafficExtension extends com.google.api.client.json.Generic
    * `ProcessingRequest.metadata_context.filter_metadata` map field. The metadata is available under
    * the key `com.google.lb_traffic_extension.`. The following variables are supported in the
    * metadata: `{forwarding_rule_id}` - substituted with the forwarding rule's fully qualified
-   * resource name. This field is not supported for plugin extensions and must not be set.
+   * resource name. This field is not supported for plugin extensions. Setting it results in a
+   * validation error.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getMetadata() {
@@ -254,7 +256,8 @@ public final class LbTrafficExtension extends com.google.api.client.json.Generic
    * `ProcessingRequest.metadata_context.filter_metadata` map field. The metadata is available under
    * the key `com.google.lb_traffic_extension.`. The following variables are supported in the
    * metadata: `{forwarding_rule_id}` - substituted with the forwarding rule's fully qualified
-   * resource name. This field is not supported for plugin extensions and must not be set.
+   * resource name. This field is not supported for plugin extensions. Setting it results in a
+   * validation error.
    * @param metadata metadata or {@code null} for none
    */
   public LbTrafficExtension setMetadata(java.util.Map<String, java.lang.Object> metadata) {

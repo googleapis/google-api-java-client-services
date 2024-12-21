@@ -17,7 +17,7 @@
 package com.google.api.services.networkservices.v1.model;
 
 /**
- * The configuration for Platform Telemetry logging for Eventarc Avdvanced resources.
+ * The configuration for Platform Telemetry logging for Eventarc Advanced resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Services API. For a detailed explanation see:

@@ -90,7 +90,7 @@ public final class GitRepositoryLink extends com.google.api.client.json.GenericJ
   private java.lang.Boolean reconciling;
 
   /**
-   * Output only. A system-assigned unique identifier for a the GitRepositoryLink.
+   * Output only. A system-assigned unique identifier for the GitRepositoryLink.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -253,7 +253,7 @@ public final class GitRepositoryLink extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. A system-assigned unique identifier for a the GitRepositoryLink.
+   * Output only. A system-assigned unique identifier for the GitRepositoryLink.
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -261,7 +261,7 @@ public final class GitRepositoryLink extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. A system-assigned unique identifier for a the GitRepositoryLink.
+   * Output only. A system-assigned unique identifier for the GitRepositoryLink.
    * @param uid uid or {@code null} for none
    */
   public GitRepositoryLink setUid(java.lang.String uid) {

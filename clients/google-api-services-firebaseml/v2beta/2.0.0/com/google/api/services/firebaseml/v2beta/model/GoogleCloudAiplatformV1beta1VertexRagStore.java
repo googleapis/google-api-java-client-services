@@ -46,6 +46,13 @@ public final class GoogleCloudAiplatformV1beta1VertexRagStore extends com.google
   private java.util.List<GoogleCloudAiplatformV1beta1VertexRagStoreRagResource> ragResources;
 
   /**
+   * Optional. The retrieval config for the Rag query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RagRetrievalConfig ragRetrievalConfig;
+
+  /**
    * Optional. Number of top k results to return from the selected corpora.
    * The value may be {@code null}.
    */
@@ -94,6 +101,23 @@ public final class GoogleCloudAiplatformV1beta1VertexRagStore extends com.google
    */
   public GoogleCloudAiplatformV1beta1VertexRagStore setRagResources(java.util.List<GoogleCloudAiplatformV1beta1VertexRagStoreRagResource> ragResources) {
     this.ragResources = ragResources;
+    return this;
+  }
+
+  /**
+   * Optional. The retrieval config for the Rag query.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagRetrievalConfig getRagRetrievalConfig() {
+    return ragRetrievalConfig;
+  }
+
+  /**
+   * Optional. The retrieval config for the Rag query.
+   * @param ragRetrievalConfig ragRetrievalConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1VertexRagStore setRagRetrievalConfig(GoogleCloudAiplatformV1beta1RagRetrievalConfig ragRetrievalConfig) {
+    this.ragRetrievalConfig = ragRetrievalConfig;
     return this;
   }
 

@@ -65,6 +65,13 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
   private java.lang.Integer maxOutputTokens;
 
   /**
+   * Optional. If specified, the media resolution specified will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mediaResolution;
+
+  /**
    * Optional. Positive penalties.
    * The value may be {@code null}.
    */
@@ -87,6 +94,13 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
    */
   @com.google.api.client.util.Key
   private java.lang.String responseMimeType;
+
+  /**
+   * Optional. The modalities of the response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> responseModalities;
 
   /**
    * Optional. The `Schema` object allows the definition of input and output data types. These types
@@ -112,6 +126,13 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
    */
   @com.google.api.client.util.Key
   private java.lang.Integer seed;
+
+  /**
+   * Optional. The speech generation config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1SpeechConfig speechConfig;
 
   /**
    * Optional. Stop sequences.
@@ -227,6 +248,23 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
   }
 
   /**
+   * Optional. If specified, the media resolution specified will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMediaResolution() {
+    return mediaResolution;
+  }
+
+  /**
+   * Optional. If specified, the media resolution specified will be used.
+   * @param mediaResolution mediaResolution or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfig setMediaResolution(java.lang.String mediaResolution) {
+    this.mediaResolution = mediaResolution;
+    return this;
+  }
+
+  /**
    * Optional. Positive penalties.
    * @return value or {@code null} for none
    */
@@ -280,6 +318,23 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
    */
   public GoogleCloudAiplatformV1beta1GenerationConfig setResponseMimeType(java.lang.String responseMimeType) {
     this.responseMimeType = responseMimeType;
+    return this;
+  }
+
+  /**
+   * Optional. The modalities of the response.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getResponseModalities() {
+    return responseModalities;
+  }
+
+  /**
+   * Optional. The modalities of the response.
+   * @param responseModalities responseModalities or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfig setResponseModalities(java.util.List<java.lang.String> responseModalities) {
+    this.responseModalities = responseModalities;
     return this;
   }
 
@@ -339,6 +394,23 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
    */
   public GoogleCloudAiplatformV1beta1GenerationConfig setSeed(java.lang.Integer seed) {
     this.seed = seed;
+    return this;
+  }
+
+  /**
+   * Optional. The speech generation config.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SpeechConfig getSpeechConfig() {
+    return speechConfig;
+  }
+
+  /**
+   * Optional. The speech generation config.
+   * @param speechConfig speechConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfig setSpeechConfig(GoogleCloudAiplatformV1beta1SpeechConfig speechConfig) {
+    this.speechConfig = speechConfig;
     return this;
   }
 

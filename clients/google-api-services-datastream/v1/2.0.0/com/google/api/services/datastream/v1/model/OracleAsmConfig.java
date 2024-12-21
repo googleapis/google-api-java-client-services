@@ -17,7 +17,7 @@
 package com.google.api.services.datastream.v1.model;
 
 /**
- * Configuration for Oracle Automatic Storage Management (ASM) connection.
+ * Configuration for Oracle Automatic Storage Management (ASM) connection. .
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Datastream API. For a detailed explanation see:
@@ -58,7 +58,7 @@ public final class OracleAsmConfig extends com.google.api.client.json.GenericJso
   private OracleSslConfig oracleSslConfig;
 
   /**
-   * Required. Password for the Oracle ASM connection.
+   * Optional. Password for the Oracle ASM connection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,7 +147,7 @@ public final class OracleAsmConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. Password for the Oracle ASM connection.
+   * Optional. Password for the Oracle ASM connection.
    * @return value or {@code null} for none
    */
   public java.lang.String getPassword() {
@@ -155,7 +155,7 @@ public final class OracleAsmConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. Password for the Oracle ASM connection.
+   * Optional. Password for the Oracle ASM connection.
    * @param password password or {@code null} for none
    */
   public OracleAsmConfig setPassword(java.lang.String password) {

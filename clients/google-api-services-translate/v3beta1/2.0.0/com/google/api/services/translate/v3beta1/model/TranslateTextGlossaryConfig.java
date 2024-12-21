@@ -17,8 +17,9 @@
 package com.google.api.services.translate.v3beta1.model;
 
 /**
- * Configures which glossary should be used for a specific target language, and defines options for
- * applying that glossary.
+ * ----------------------------------------------------------------------------- Configures which
+ * glossary should be used for a specific target language, and defines options for applying that
+ * glossary.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Translation API. For a detailed explanation
@@ -30,6 +31,13 @@ package com.google.api.services.translate.v3beta1.model;
  */
 @SuppressWarnings("javadoc")
 public final class TranslateTextGlossaryConfig extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Optional. If set to true, the glossary will be used for contextual translation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean contextualTranslationEnabled;
 
   /**
    * Required. Specifies the glossary used for this translation. Use this format:
@@ -45,6 +53,23 @@ public final class TranslateTextGlossaryConfig extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean ignoreCase;
+
+  /**
+   * Optional. If set to true, the glossary will be used for contextual translation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getContextualTranslationEnabled() {
+    return contextualTranslationEnabled;
+  }
+
+  /**
+   * Optional. If set to true, the glossary will be used for contextual translation.
+   * @param contextualTranslationEnabled contextualTranslationEnabled or {@code null} for none
+   */
+  public TranslateTextGlossaryConfig setContextualTranslationEnabled(java.lang.Boolean contextualTranslationEnabled) {
+    this.contextualTranslationEnabled = contextualTranslationEnabled;
+    return this;
+  }
 
   /**
    * Required. Specifies the glossary used for this translation. Use this format:

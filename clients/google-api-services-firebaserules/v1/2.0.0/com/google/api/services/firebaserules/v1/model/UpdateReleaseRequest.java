@@ -37,7 +37,7 @@ public final class UpdateReleaseRequest extends com.google.api.client.json.Gener
   private Release release;
 
   /**
-   * Specifies which fields to update.
+   * Optional. Specifies which fields to update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class UpdateReleaseRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Specifies which fields to update.
+   * Optional. Specifies which fields to update.
    * @return value or {@code null} for none
    */
   public String getUpdateMask() {
@@ -69,7 +69,7 @@ public final class UpdateReleaseRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Specifies which fields to update.
+   * Optional. Specifies which fields to update.
    * @param updateMask updateMask or {@code null} for none
    */
   public UpdateReleaseRequest setUpdateMask(String updateMask) {

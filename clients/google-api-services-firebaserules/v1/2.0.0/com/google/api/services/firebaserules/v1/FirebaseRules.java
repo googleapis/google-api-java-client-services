@@ -919,17 +919,23 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
-        /** The requested runtime executable version. Defaults to FIREBASE_RULES_EXECUTABLE_V1. */
+        /**
+         * Optional. The requested runtime executable version. Defaults to
+         * FIREBASE_RULES_EXECUTABLE_V1.
+         */
         @com.google.api.client.util.Key
         private java.lang.String executableVersion;
 
-        /** The requested runtime executable version. Defaults to FIREBASE_RULES_EXECUTABLE_V1.
+        /** Optional. The requested runtime executable version. Defaults to FIREBASE_RULES_EXECUTABLE_V1.
          */
         public java.lang.String getExecutableVersion() {
           return executableVersion;
         }
 
-        /** The requested runtime executable version. Defaults to FIREBASE_RULES_EXECUTABLE_V1. */
+        /**
+         * Optional. The requested runtime executable version. Defaults to
+         * FIREBASE_RULES_EXECUTABLE_V1.
+         */
         public GetExecutable setExecutableVersion(java.lang.String executableVersion) {
           this.executableVersion = executableVersion;
           return this;
@@ -1076,7 +1082,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * `Release` filter. The list method supports filters with restrictions on the
+         * Optional. `Release` filter. The list method supports filters with restrictions on the
          * `Release.name`, and `Release.ruleset_name`. Example 1: A filter of 'name=prod*' might
          * return `Release`s with names within 'projects/foo' prefixed with 'prod': Name -> Ruleset
          * Name: * projects/foo/releases/prod -> projects/foo/rulesets/uuid1234 *
@@ -1092,25 +1098,23 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /**` Release` filter. The list method supports filters with restrictions on the `Release.name`, and
-      ` `Release.ruleset_name`. Example 1: A filter of 'name=prod*' might return `Release`s with names
-      ` within 'projects/foo' prefixed with 'prod': Name -> Ruleset Name: * projects/foo/releases/prod ->
-      ` projects/foo/rulesets/uuid1234 * projects/foo/releases/prod/v1 -> projects/foo/rulesets/uuid1234 *
-      ` projects/foo/releases/prod/v2 -> projects/foo/rulesets/uuid8888 Example 2: A filter of `name=prod*
-      ` ruleset_name=uuid1234` would return only `Release` instances for 'projects/foo' with names
-      ` prefixed with 'prod' referring to the same `Ruleset` name of 'uuid1234': Name -> Ruleset Name: *
-      ` projects/foo/releases/prod -> projects/foo/rulesets/1234 * projects/foo/releases/prod/v1 ->
-      ` projects/foo/rulesets/1234 In the examples, the filter parameters refer to the search filters are
-      ` relative to the project. Fully qualified prefixed may also be used.
-      `
-
+        /** Optional. `Release` filter. The list method supports filters with restrictions on the
+       `Release.name`, and `Release.ruleset_name`. Example 1: A filter of 'name=prod*' might return
+       `Release`s with names within 'projects/foo' prefixed with 'prod': Name -> Ruleset Name: *
+       projects/foo/releases/prod -> projects/foo/rulesets/uuid1234 * projects/foo/releases/prod/v1 ->
+       projects/foo/rulesets/uuid1234 * projects/foo/releases/prod/v2 -> projects/foo/rulesets/uuid8888
+       Example 2: A filter of `name=prod* ruleset_name=uuid1234` would return only `Release` instances for
+       'projects/foo' with names prefixed with 'prod' referring to the same `Ruleset` name of 'uuid1234':
+       Name -> Ruleset Name: * projects/foo/releases/prod -> projects/foo/rulesets/1234 *
+       projects/foo/releases/prod/v1 -> projects/foo/rulesets/1234 In the examples, the filter parameters
+       refer to the search filters are relative to the project. Fully qualified prefixed may also be used.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * `Release` filter. The list method supports filters with restrictions on the
+         * Optional. `Release` filter. The list method supports filters with restrictions on the
          * `Release.name`, and `Release.ruleset_name`. Example 1: A filter of 'name=prod*' might
          * return `Release`s with names within 'projects/foo' prefixed with 'prod': Name -> Ruleset
          * Name: * projects/foo/releases/prod -> projects/foo/rulesets/uuid1234 *
@@ -1129,44 +1133,45 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Page size to load. Maximum of 100. Defaults to 10. Note: `page_size` is just a hint and
-         * the service may choose to load fewer than `page_size` results due to the size of the
-         * output. To traverse all of the releases, the caller should iterate until the `page_token`
-         * on the response is empty.
+         * Optional. Page size to load. Maximum of 100. Defaults to 10. Note: `page_size` is just a
+         * hint and the service may choose to load fewer than `page_size` results due to the size of
+         * the output. To traverse all of the releases, the caller should iterate until the
+         * `page_token` on the response is empty.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Page size to load. Maximum of 100. Defaults to 10. Note: `page_size` is just a hint and the service
-       may choose to load fewer than `page_size` results due to the size of the output. To traverse all of
-       the releases, the caller should iterate until the `page_token` on the response is empty.
+        /** Optional. Page size to load. Maximum of 100. Defaults to 10. Note: `page_size` is just a hint and
+       the service may choose to load fewer than `page_size` results due to the size of the output. To
+       traverse all of the releases, the caller should iterate until the `page_token` on the response is
+       empty.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * Page size to load. Maximum of 100. Defaults to 10. Note: `page_size` is just a hint and
-         * the service may choose to load fewer than `page_size` results due to the size of the
-         * output. To traverse all of the releases, the caller should iterate until the `page_token`
-         * on the response is empty.
+         * Optional. Page size to load. Maximum of 100. Defaults to 10. Note: `page_size` is just a
+         * hint and the service may choose to load fewer than `page_size` results due to the size of
+         * the output. To traverse all of the releases, the caller should iterate until the
+         * `page_token` on the response is empty.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /** Next page token for the next batch of `Release` instances. */
+        /** Optional. Next page token for the next batch of `Release` instances. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Next page token for the next batch of `Release` instances.
+        /** Optional. Next page token for the next batch of `Release` instances.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** Next page token for the next batch of `Release` instances. */
+        /** Optional. Next page token for the next batch of `Release` instances. */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -1904,30 +1909,28 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * `Ruleset` filter. The list method supports filters with restrictions on `Ruleset.name`.
-         * Filters on `Ruleset.create_time` should use the `date` function which parses strings that
-         * conform to the RFC 3339 date/time specifications. Example: `create_time >
-         * date("2017-01-01T00:00:00Z") AND name=UUID-*`
+         * Optional. `Ruleset` filter. The list method supports filters with restrictions on
+         * `Ruleset.name`. Filters on `Ruleset.create_time` should use the `date` function which
+         * parses strings that conform to the RFC 3339 date/time specifications. Example:
+         * `create_time > date("2017-01-01T00:00:00Z") AND name=UUID-*`
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /**` Ruleset` filter. The list method supports filters with restrictions on `Ruleset.name`. Filters on
-      ` `Ruleset.create_time` should use the `date` function which parses strings that conform to the RFC
-      ` 3339 date/time specifications. Example: `create_time > date("2017-01-01T00:00:00Z") AND
-      ` name=UUID-*`
-      `
-
+        /** Optional. `Ruleset` filter. The list method supports filters with restrictions on `Ruleset.name`.
+       Filters on `Ruleset.create_time` should use the `date` function which parses strings that conform
+       to the RFC 3339 date/time specifications. Example: `create_time > date("2017-01-01T00:00:00Z") AND
+       name=UUID-*`
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * `Ruleset` filter. The list method supports filters with restrictions on `Ruleset.name`.
-         * Filters on `Ruleset.create_time` should use the `date` function which parses strings that
-         * conform to the RFC 3339 date/time specifications. Example: `create_time >
-         * date("2017-01-01T00:00:00Z") AND name=UUID-*`
+         * Optional. `Ruleset` filter. The list method supports filters with restrictions on
+         * `Ruleset.name`. Filters on `Ruleset.create_time` should use the `date` function which
+         * parses strings that conform to the RFC 3339 date/time specifications. Example:
+         * `create_time > date("2017-01-01T00:00:00Z") AND name=UUID-*`
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -1935,42 +1938,44 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Page size to load. Maximum of 100. Defaults to 10. Note: `page_size` is just a hint and
-         * the service may choose to load less than `page_size` due to the size of the output. To
-         * traverse all of the releases, caller should iterate until the `page_token` is empty.
+         * Optional. Page size to load. Maximum of 100. Defaults to 10. Note: `page_size` is just a
+         * hint and the service may choose to load less than `page_size` due to the size of the
+         * output. To traverse all of the releases, caller should iterate until the `page_token` is
+         * empty.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Page size to load. Maximum of 100. Defaults to 10. Note: `page_size` is just a hint and the service
-       may choose to load less than `page_size` due to the size of the output. To traverse all of the
-       releases, caller should iterate until the `page_token` is empty.
+        /** Optional. Page size to load. Maximum of 100. Defaults to 10. Note: `page_size` is just a hint and
+       the service may choose to load less than `page_size` due to the size of the output. To traverse all
+       of the releases, caller should iterate until the `page_token` is empty.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * Page size to load. Maximum of 100. Defaults to 10. Note: `page_size` is just a hint and
-         * the service may choose to load less than `page_size` due to the size of the output. To
-         * traverse all of the releases, caller should iterate until the `page_token` is empty.
+         * Optional. Page size to load. Maximum of 100. Defaults to 10. Note: `page_size` is just a
+         * hint and the service may choose to load less than `page_size` due to the size of the
+         * output. To traverse all of the releases, caller should iterate until the `page_token` is
+         * empty.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /** Next page token for loading the next batch of `Ruleset` instances. */
+        /** Optional. Next page token for loading the next batch of `Ruleset` instances. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Next page token for loading the next batch of `Ruleset` instances.
+        /** Optional. Next page token for loading the next batch of `Ruleset` instances.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** Next page token for loading the next batch of `Ruleset` instances. */
+        /** Optional. Next page token for loading the next batch of `Ruleset` instances. */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;

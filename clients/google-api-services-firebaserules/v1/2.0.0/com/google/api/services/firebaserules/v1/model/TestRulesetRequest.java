@@ -30,25 +30,25 @@ package com.google.api.services.firebaserules.v1.model;
 public final class TestRulesetRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional `Source` to be checked for correctness. This field must not be set when the resource
-   * name refers to a `Ruleset`.
+   * Optional. Optional `Source` to be checked for correctness. This field must not be set when the
+   * resource name refers to a `Ruleset`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Source source;
 
   /**
-   * The tests to execute against the `Source`. When `Source` is provided inline, the test cases
-   * will only be run if the `Source` is syntactically and semantically valid. Inline `TestSuite` to
-   * run.
+   * Required. The tests to execute against the `Source`. When `Source` is provided inline, the test
+   * cases will only be run if the `Source` is syntactically and semantically valid. Inline
+   * `TestSuite` to run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TestSuite testSuite;
 
   /**
-   * Optional `Source` to be checked for correctness. This field must not be set when the resource
-   * name refers to a `Ruleset`.
+   * Optional. Optional `Source` to be checked for correctness. This field must not be set when the
+   * resource name refers to a `Ruleset`.
    * @return value or {@code null} for none
    */
   public Source getSource() {
@@ -56,8 +56,8 @@ public final class TestRulesetRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional `Source` to be checked for correctness. This field must not be set when the resource
-   * name refers to a `Ruleset`.
+   * Optional. Optional `Source` to be checked for correctness. This field must not be set when the
+   * resource name refers to a `Ruleset`.
    * @param source source or {@code null} for none
    */
   public TestRulesetRequest setSource(Source source) {
@@ -66,9 +66,9 @@ public final class TestRulesetRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * The tests to execute against the `Source`. When `Source` is provided inline, the test cases
-   * will only be run if the `Source` is syntactically and semantically valid. Inline `TestSuite` to
-   * run.
+   * Required. The tests to execute against the `Source`. When `Source` is provided inline, the test
+   * cases will only be run if the `Source` is syntactically and semantically valid. Inline
+   * `TestSuite` to run.
    * @return value or {@code null} for none
    */
   public TestSuite getTestSuite() {
@@ -76,9 +76,9 @@ public final class TestRulesetRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * The tests to execute against the `Source`. When `Source` is provided inline, the test cases
-   * will only be run if the `Source` is syntactically and semantically valid. Inline `TestSuite` to
-   * run.
+   * Required. The tests to execute against the `Source`. When `Source` is provided inline, the test
+   * cases will only be run if the `Source` is syntactically and semantically valid. Inline
+   * `TestSuite` to run.
    * @param testSuite testSuite or {@code null} for none
    */
   public TestRulesetRequest setTestSuite(TestSuite testSuite) {

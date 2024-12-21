@@ -2051,17 +2051,13 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
 
         /**
          * The maximum number of attachments fetched with each request. If not provided, the default
-         * is 10. The maximum page size that will be returned is 100. The size of each page can be
-         * smaller than the requested page size and can include zero. For example, you could request
-         * 100 attachments on one page, receive 0, and then on the next page, receive 90.
+         * is 10. The maximum page size that will be returned is 100.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** The maximum number of attachments fetched with each request. If not provided, the default is 10.
-       The maximum page size that will be returned is 100. The size of each page can be smaller than the
-       requested page size and can include zero. For example, you could request 100 attachments on one
-       page, receive 0, and then on the next page, receive 90.
+       The maximum page size that will be returned is 100.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
@@ -2069,9 +2065,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
 
         /**
          * The maximum number of attachments fetched with each request. If not provided, the default
-         * is 10. The maximum page size that will be returned is 100. The size of each page can be
-         * smaller than the requested page size and can include zero. For example, you could request
-         * 100 attachments on one page, receive 0, and then on the next page, receive 90.
+         * is 10. The maximum page size that will be returned is 100.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;

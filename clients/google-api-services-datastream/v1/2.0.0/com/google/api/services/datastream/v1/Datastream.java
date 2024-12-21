@@ -1632,7 +1632,7 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the datastream server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The resource's name.
+         * @param name Output only. Identifier. The resource's name.
          * @param content the {@link com.google.api.services.datastream.v1.model.ConnectionProfile}
          * @return the request
          */
@@ -1660,7 +1660,7 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The resource's name.
+           * @param name Output only. Identifier. The resource's name.
            * @param content the {@link com.google.api.services.datastream.v1.model.ConnectionProfile}
            * @since 1.13
            */
@@ -1729,17 +1729,17 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Output only. The resource's name. */
+          /** Output only. Identifier. The resource's name. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The resource's name.
+          /** Output only. Identifier. The resource's name.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Output only. The resource's name. */
+          /** Output only. Identifier. The resource's name. */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1894,7 +1894,7 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
          * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
          * `Code.CANCELLED`.
          *
          * Create a request for the method "operations.cancel".
@@ -1925,7 +1925,7 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
            * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
            * methods to check whether the cancellation succeeded or whether the operation completed despite
            * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
            * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".
@@ -4814,7 +4814,7 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the datastream server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The stream's name.
+         * @param name Output only. Identifier. The stream's name.
          * @param content the {@link com.google.api.services.datastream.v1.model.Stream}
          * @return the request
          */
@@ -4842,7 +4842,7 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The stream's name.
+           * @param name Output only. Identifier. The stream's name.
            * @param content the {@link com.google.api.services.datastream.v1.model.Stream}
            * @since 1.13
            */
@@ -4911,17 +4911,17 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Output only. The stream's name. */
+          /** Output only. Identifier. The stream's name. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The stream's name.
+          /** Output only. Identifier. The stream's name.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Output only. The stream's name. */
+          /** Output only. Identifier. The stream's name. */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

@@ -103,7 +103,7 @@ public final class Stream extends com.google.api.client.json.GenericJson {
   private String lastRecoveryTime;
 
   /**
-   * Output only. The stream's name.
+   * Output only. Identifier. The stream's name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -292,7 +292,7 @@ public final class Stream extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The stream's name.
+   * Output only. Identifier. The stream's name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -300,7 +300,7 @@ public final class Stream extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The stream's name.
+   * Output only. Identifier. The stream's name.
    * @param name name or {@code null} for none
    */
   public Stream setName(java.lang.String name) {

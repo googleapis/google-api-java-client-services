@@ -143,8 +143,12 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.Long storageBytes;
 
   /**
-   * Optional. Input only. Immutable. Tag key-value pairs are bound to this resource. For example:
-   * "123/environment": "production", "123/costCenter": "marketing"
+   * Optional. Input only. Immutable. Tag key-value pairs bound to this resource. Each key must be a
+   * namespaced name and each value a short name. Example: "123456789012/environment" :
+   * "production", "123456789013/costCenter" : "marketing" See the documentation for more
+   * information: - Namespaced name: https://cloud.google.com/resource-manager/docs/tags/tags-
+   * creating-and-managing#retrieving_tag_key - Short name: https://cloud.google.com/resource-
+   * manager/docs/tags/tags-creating-and-managing#retrieving_tag_value
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -422,8 +426,12 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. Immutable. Tag key-value pairs are bound to this resource. For example:
-   * "123/environment": "production", "123/costCenter": "marketing"
+   * Optional. Input only. Immutable. Tag key-value pairs bound to this resource. Each key must be a
+   * namespaced name and each value a short name. Example: "123456789012/environment" :
+   * "production", "123456789013/costCenter" : "marketing" See the documentation for more
+   * information: - Namespaced name: https://cloud.google.com/resource-manager/docs/tags/tags-
+   * creating-and-managing#retrieving_tag_key - Short name: https://cloud.google.com/resource-
+   * manager/docs/tags/tags-creating-and-managing#retrieving_tag_value
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getTags() {
@@ -431,8 +439,12 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. Immutable. Tag key-value pairs are bound to this resource. For example:
-   * "123/environment": "production", "123/costCenter": "marketing"
+   * Optional. Input only. Immutable. Tag key-value pairs bound to this resource. Each key must be a
+   * namespaced name and each value a short name. Example: "123456789012/environment" :
+   * "production", "123456789013/costCenter" : "marketing" See the documentation for more
+   * information: - Namespaced name: https://cloud.google.com/resource-manager/docs/tags/tags-
+   * creating-and-managing#retrieving_tag_key - Short name: https://cloud.google.com/resource-
+   * manager/docs/tags/tags-creating-and-managing#retrieving_tag_value
    * @param tags tags or {@code null} for none
    */
   public Backup setTags(java.util.Map<String, java.lang.String> tags) {

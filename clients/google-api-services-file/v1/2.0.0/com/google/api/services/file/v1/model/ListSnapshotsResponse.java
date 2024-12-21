@@ -45,6 +45,13 @@ public final class ListSnapshotsResponse extends com.google.api.client.json.Gene
   private java.util.List<Snapshot> snapshots;
 
   /**
+   * Unordered list. Locations that could not be reached.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * The token you can use to retrieve the next page of results. Not returned if there are no more
    * results in the list.
    * @return value or {@code null} for none
@@ -77,6 +84,23 @@ public final class ListSnapshotsResponse extends com.google.api.client.json.Gene
    */
   public ListSnapshotsResponse setSnapshots(java.util.List<Snapshot> snapshots) {
     this.snapshots = snapshots;
+    return this;
+  }
+
+  /**
+   * Unordered list. Locations that could not be reached.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * Unordered list. Locations that could not be reached.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public ListSnapshotsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

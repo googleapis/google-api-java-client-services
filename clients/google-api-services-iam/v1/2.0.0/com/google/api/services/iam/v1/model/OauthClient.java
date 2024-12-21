@@ -100,7 +100,7 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   private String expireTime;
 
   /**
-   * Immutable. The resource name of the OauthClient.
+   * Immutable. Identifier. The resource name of the OauthClient.
    * Format:`projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
    * The value may be {@code null}.
    */
@@ -278,7 +278,7 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The resource name of the OauthClient.
+   * Immutable. Identifier. The resource name of the OauthClient.
    * Format:`projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
    * @return value or {@code null} for none
    */
@@ -287,7 +287,7 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The resource name of the OauthClient.
+   * Immutable. Identifier. The resource name of the OauthClient.
    * Format:`projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
    * @param name name or {@code null} for none
    */

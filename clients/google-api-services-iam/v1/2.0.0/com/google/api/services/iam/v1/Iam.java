@@ -6892,7 +6892,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the iam server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. The resource name of the OauthClient.
+         * @param name Immutable. Identifier. The resource name of the OauthClient.
          *        Format:`projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
          * @param content the {@link com.google.api.services.iam.v1.model.OauthClient}
          * @return the request
@@ -6920,7 +6920,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. The resource name of the OauthClient.
+           * @param name Immutable. Identifier. The resource name of the OauthClient.
          *        Format:`projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
            * @param content the {@link com.google.api.services.iam.v1.model.OauthClient}
            * @since 1.13
@@ -6991,13 +6991,13 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Immutable. The resource name of the OauthClient.
+           * Immutable. Identifier. The resource name of the OauthClient.
            * Format:`projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. The resource name of the OauthClient.
+          /** Immutable. Identifier. The resource name of the OauthClient.
          Format:`projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
            */
           public java.lang.String getName() {
@@ -7005,7 +7005,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Immutable. The resource name of the OauthClient.
+           * Immutable. Identifier. The resource name of the OauthClient.
            * Format:`projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
            */
           public Patch setName(java.lang.String name) {
@@ -7794,7 +7794,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * This request holds the parameters needed by the iam server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Immutable. The resource name of the OauthClientCredential. Format:
+           * @param name Immutable. Identifier. The resource name of the OauthClientCredential. Format:
            *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credenti
            *        al}`
            * @param content the {@link com.google.api.services.iam.v1.model.OauthClientCredential}
@@ -7823,7 +7823,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Immutable. The resource name of the OauthClientCredential. Format:
+             * @param name Immutable. Identifier. The resource name of the OauthClientCredential. Format:
            *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credenti
            *        al}`
              * @param content the {@link com.google.api.services.iam.v1.model.OauthClientCredential}
@@ -7895,13 +7895,14 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Immutable. The resource name of the OauthClientCredential. Format: `projects/{project
-             * }/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`
+             * Immutable. Identifier. The resource name of the OauthClientCredential. Format: `proje
+             * cts/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credentia
+             * l}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Immutable. The resource name of the OauthClientCredential. Format:
+            /** Immutable. Identifier. The resource name of the OauthClientCredential. Format:
            `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`
              */
             public java.lang.String getName() {
@@ -7909,8 +7910,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Immutable. The resource name of the OauthClientCredential. Format: `projects/{project
-             * }/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`
+             * Immutable. Identifier. The resource name of the OauthClientCredential. Format: `proje
+             * cts/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credentia
+             * l}`
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

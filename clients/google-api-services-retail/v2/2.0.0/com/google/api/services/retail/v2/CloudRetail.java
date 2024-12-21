@@ -10095,9 +10095,10 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
         public class UserEvents {
 
           /**
-           * Writes a single user event from the browser. This uses a GET request to due to browser
-           * restriction of POST-ing to a 3rd party domain. This method is used only by the Retail API
-           * JavaScript pixel and Google Tag Manager. Users should not call this method directly.
+           * Writes a single user event from the browser. For larger user event payload over 16 KB, the POST
+           * method should be used instead, otherwise a 400 Bad Request error is returned. This method is used
+           * only by the Retail API JavaScript pixel and Google Tag Manager. Users should not call this method
+           * directly.
            *
            * Create a request for the method "userEvents.collect".
            *
@@ -10106,10 +10107,11 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            *
            * @param parent Required. The parent catalog name, such as
            *        `projects/1234/locations/global/catalogs/default_catalog`.
+           * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2CollectUserEventRequest}
            * @return the request
            */
-          public Collect collect(java.lang.String parent) throws java.io.IOException {
-            Collect result = new Collect(parent);
+          public Collect collect(java.lang.String parent, com.google.api.services.retail.v2.model.GoogleCloudRetailV2CollectUserEventRequest content) throws java.io.IOException {
+            Collect result = new Collect(parent, content);
             initialize(result);
             return result;
           }
@@ -10122,9 +10124,10 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
 
             /**
-             * Writes a single user event from the browser. This uses a GET request to due to browser
-             * restriction of POST-ing to a 3rd party domain. This method is used only by the Retail API
-             * JavaScript pixel and Google Tag Manager. Users should not call this method directly.
+             * Writes a single user event from the browser. For larger user event payload over 16 KB, the POST
+             * method should be used instead, otherwise a 400 Bad Request error is returned. This method is
+             * used only by the Retail API JavaScript pixel and Google Tag Manager. Users should not call this
+             * method directly.
              *
              * Create a request for the method "userEvents.collect".
              *
@@ -10136,26 +10139,17 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              *
              * @param parent Required. The parent catalog name, such as
            *        `projects/1234/locations/global/catalogs/default_catalog`.
+             * @param content the {@link com.google.api.services.retail.v2.model.GoogleCloudRetailV2CollectUserEventRequest}
              * @since 1.13
              */
-            protected Collect(java.lang.String parent) {
-              super(CloudRetail.this, "GET", REST_PATH, null, com.google.api.services.retail.v2.model.GoogleApiHttpBody.class);
+            protected Collect(java.lang.String parent, com.google.api.services.retail.v2.model.GoogleCloudRetailV2CollectUserEventRequest content) {
+              super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2.model.GoogleApiHttpBody.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                     "Parameter parent must conform to the pattern " +
                     "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
               }
-            }
-
-            @Override
-            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-              return super.executeUsingHead();
-            }
-
-            @Override
-            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-              return super.buildHttpRequestUsingHead();
             }
 
             @Override
@@ -10238,124 +10232,6 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                     "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
               }
               this.parent = parent;
-              return this;
-            }
-
-            /**
-             * The event timestamp in milliseconds. This prevents browser caching of otherwise
-             * identical get requests. The name is abbreviated to reduce the payload bytes.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.Long ets;
-
-            /** The event timestamp in milliseconds. This prevents browser caching of otherwise identical get
-           requests. The name is abbreviated to reduce the payload bytes.
-             */
-            public java.lang.Long getEts() {
-              return ets;
-            }
-
-            /**
-             * The event timestamp in milliseconds. This prevents browser caching of otherwise
-             * identical get requests. The name is abbreviated to reduce the payload bytes.
-             */
-            public Collect setEts(java.lang.Long ets) {
-              this.ets = ets;
-              return this;
-            }
-
-            /**
-             * The prebuilt rule name that can convert a specific type of raw_json. For example:
-             * "ga4_bq" rule for the GA4 user event schema.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String prebuiltRule;
-
-            /** The prebuilt rule name that can convert a specific type of raw_json. For example: "ga4_bq" rule for
-           the GA4 user event schema.
-             */
-            public java.lang.String getPrebuiltRule() {
-              return prebuiltRule;
-            }
-
-            /**
-             * The prebuilt rule name that can convert a specific type of raw_json. For example:
-             * "ga4_bq" rule for the GA4 user event schema.
-             */
-            public Collect setPrebuiltRule(java.lang.String prebuiltRule) {
-              this.prebuiltRule = prebuiltRule;
-              return this;
-            }
-
-            /**
-             * An arbitrary serialized JSON string that contains necessary information that can
-             * comprise a user event. When this field is specified, the user_event field will be
-             * ignored. Note: line-delimited JSON is not supported, a single JSON only.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String rawJson;
-
-            /** An arbitrary serialized JSON string that contains necessary information that can comprise a user
-           event. When this field is specified, the user_event field will be ignored. Note: line-delimited
-           JSON is not supported, a single JSON only.
-             */
-            public java.lang.String getRawJson() {
-              return rawJson;
-            }
-
-            /**
-             * An arbitrary serialized JSON string that contains necessary information that can
-             * comprise a user event. When this field is specified, the user_event field will be
-             * ignored. Note: line-delimited JSON is not supported, a single JSON only.
-             */
-            public Collect setRawJson(java.lang.String rawJson) {
-              this.rawJson = rawJson;
-              return this;
-            }
-
-            /**
-             * The URL including cgi-parameters but excluding the hash fragment with a length limit
-             * of 5,000 characters. This is often more useful than the referer URL, because many
-             * browsers only send the domain for 3rd party requests.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String uri;
-
-            /** The URL including cgi-parameters but excluding the hash fragment with a length limit of 5,000
-           characters. This is often more useful than the referer URL, because many browsers only send the
-           domain for 3rd party requests.
-             */
-            public java.lang.String getUri() {
-              return uri;
-            }
-
-            /**
-             * The URL including cgi-parameters but excluding the hash fragment with a length limit
-             * of 5,000 characters. This is often more useful than the referer URL, because many
-             * browsers only send the domain for 3rd party requests.
-             */
-            public Collect setUri(java.lang.String uri) {
-              this.uri = uri;
-              return this;
-            }
-
-            /**
-             * Required. URL encoded UserEvent proto with a length limit of 2,000,000 characters.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String userEvent;
-
-            /** Required. URL encoded UserEvent proto with a length limit of 2,000,000 characters.
-             */
-            public java.lang.String getUserEvent() {
-              return userEvent;
-            }
-
-            /**
-             * Required. URL encoded UserEvent proto with a length limit of 2,000,000 characters.
-             */
-            public Collect setUserEvent(java.lang.String userEvent) {
-              this.userEvent = userEvent;
               return this;
             }
 

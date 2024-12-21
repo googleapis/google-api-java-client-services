@@ -154,6 +154,293 @@ public class Firebasestorage extends com.google.api.client.googleapis.services.j
   public class Projects {
 
     /**
+     * Unlinks and deletes the default bucket.
+     *
+     * Create a request for the method "projects.deleteDefaultBucket".
+     *
+     * This request holds the parameters needed by the firebasestorage server.  After setting any
+     * optional parameters, call the {@link DeleteDefaultBucket#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Required. The name of the default bucket to delete, `projects/{project_id_or_number}/defaultBucket`.
+     * @return the request
+     */
+    public DeleteDefaultBucket deleteDefaultBucket(java.lang.String name) throws java.io.IOException {
+      DeleteDefaultBucket result = new DeleteDefaultBucket(name);
+      initialize(result);
+      return result;
+    }
+
+    public class DeleteDefaultBucket extends FirebasestorageRequest<com.google.api.services.firebasestorage.v1beta.model.Empty> {
+
+      private static final String REST_PATH = "v1beta/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/defaultBucket$");
+
+      /**
+       * Unlinks and deletes the default bucket.
+       *
+       * Create a request for the method "projects.deleteDefaultBucket".
+       *
+       * This request holds the parameters needed by the the firebasestorage server.  After setting any
+       * optional parameters, call the {@link DeleteDefaultBucket#execute()} method to invoke the remote
+       * operation. <p> {@link DeleteDefaultBucket#initialize(com.google.api.client.googleapis.services.
+       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. The name of the default bucket to delete, `projects/{project_id_or_number}/defaultBucket`.
+       * @since 1.13
+       */
+      protected DeleteDefaultBucket(java.lang.String name) {
+        super(Firebasestorage.this, "DELETE", REST_PATH, null, com.google.api.services.firebasestorage.v1beta.model.Empty.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/defaultBucket$");
+        }
+      }
+
+      @Override
+      public DeleteDefaultBucket set$Xgafv(java.lang.String $Xgafv) {
+        return (DeleteDefaultBucket) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public DeleteDefaultBucket setAccessToken(java.lang.String accessToken) {
+        return (DeleteDefaultBucket) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public DeleteDefaultBucket setAlt(java.lang.String alt) {
+        return (DeleteDefaultBucket) super.setAlt(alt);
+      }
+
+      @Override
+      public DeleteDefaultBucket setCallback(java.lang.String callback) {
+        return (DeleteDefaultBucket) super.setCallback(callback);
+      }
+
+      @Override
+      public DeleteDefaultBucket setFields(java.lang.String fields) {
+        return (DeleteDefaultBucket) super.setFields(fields);
+      }
+
+      @Override
+      public DeleteDefaultBucket setKey(java.lang.String key) {
+        return (DeleteDefaultBucket) super.setKey(key);
+      }
+
+      @Override
+      public DeleteDefaultBucket setOauthToken(java.lang.String oauthToken) {
+        return (DeleteDefaultBucket) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public DeleteDefaultBucket setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (DeleteDefaultBucket) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public DeleteDefaultBucket setQuotaUser(java.lang.String quotaUser) {
+        return (DeleteDefaultBucket) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public DeleteDefaultBucket setUploadType(java.lang.String uploadType) {
+        return (DeleteDefaultBucket) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public DeleteDefaultBucket setUploadProtocol(java.lang.String uploadProtocol) {
+        return (DeleteDefaultBucket) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the default bucket to delete,
+       * `projects/{project_id_or_number}/defaultBucket`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the default bucket to delete,
+     `projects/{project_id_or_number}/defaultBucket`.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the default bucket to delete,
+       * `projects/{project_id_or_number}/defaultBucket`.
+       */
+      public DeleteDefaultBucket setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/defaultBucket$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public DeleteDefaultBucket set(String parameterName, Object value) {
+        return (DeleteDefaultBucket) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets the default bucket.
+     *
+     * Create a request for the method "projects.getDefaultBucket".
+     *
+     * This request holds the parameters needed by the firebasestorage server.  After setting any
+     * optional parameters, call the {@link GetDefaultBucket#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Required. The name of the default bucket to retrieve,
+     *        `projects/{project_id_or_number}/defaultBucket`.
+     * @return the request
+     */
+    public GetDefaultBucket getDefaultBucket(java.lang.String name) throws java.io.IOException {
+      GetDefaultBucket result = new GetDefaultBucket(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetDefaultBucket extends FirebasestorageRequest<com.google.api.services.firebasestorage.v1beta.model.DefaultBucket> {
+
+      private static final String REST_PATH = "v1beta/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/defaultBucket$");
+
+      /**
+       * Gets the default bucket.
+       *
+       * Create a request for the method "projects.getDefaultBucket".
+       *
+       * This request holds the parameters needed by the the firebasestorage server.  After setting any
+       * optional parameters, call the {@link GetDefaultBucket#execute()} method to invoke the remote
+       * operation. <p> {@link GetDefaultBucket#initialize(com.google.api.client.googleapis.services.Abs
+       * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. The name of the default bucket to retrieve,
+     *        `projects/{project_id_or_number}/defaultBucket`.
+       * @since 1.13
+       */
+      protected GetDefaultBucket(java.lang.String name) {
+        super(Firebasestorage.this, "GET", REST_PATH, null, com.google.api.services.firebasestorage.v1beta.model.DefaultBucket.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/defaultBucket$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetDefaultBucket set$Xgafv(java.lang.String $Xgafv) {
+        return (GetDefaultBucket) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetDefaultBucket setAccessToken(java.lang.String accessToken) {
+        return (GetDefaultBucket) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetDefaultBucket setAlt(java.lang.String alt) {
+        return (GetDefaultBucket) super.setAlt(alt);
+      }
+
+      @Override
+      public GetDefaultBucket setCallback(java.lang.String callback) {
+        return (GetDefaultBucket) super.setCallback(callback);
+      }
+
+      @Override
+      public GetDefaultBucket setFields(java.lang.String fields) {
+        return (GetDefaultBucket) super.setFields(fields);
+      }
+
+      @Override
+      public GetDefaultBucket setKey(java.lang.String key) {
+        return (GetDefaultBucket) super.setKey(key);
+      }
+
+      @Override
+      public GetDefaultBucket setOauthToken(java.lang.String oauthToken) {
+        return (GetDefaultBucket) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetDefaultBucket setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetDefaultBucket) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetDefaultBucket setQuotaUser(java.lang.String quotaUser) {
+        return (GetDefaultBucket) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetDefaultBucket setUploadType(java.lang.String uploadType) {
+        return (GetDefaultBucket) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetDefaultBucket setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetDefaultBucket) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the default bucket to retrieve,
+       * `projects/{project_id_or_number}/defaultBucket`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the default bucket to retrieve,
+     `projects/{project_id_or_number}/defaultBucket`.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the default bucket to retrieve,
+       * `projects/{project_id_or_number}/defaultBucket`.
+       */
+      public GetDefaultBucket setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/defaultBucket$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetDefaultBucket set(String parameterName, Object value) {
+        return (GetDefaultBucket) super.set(parameterName, value);
+      }
+    }
+
+    /**
      * An accessor for creating requests from the Buckets collection.
      *
      * <p>The typical use is:</p>
@@ -792,6 +1079,172 @@ public class Firebasestorage extends com.google.api.client.googleapis.services.j
         @Override
         public RemoveFirebase set(String parameterName, Object value) {
           return (RemoveFirebase) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the DefaultBucket collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Firebasestorage firebasestorage = new Firebasestorage(...);}
+     *   {@code Firebasestorage.DefaultBucket.List request = firebasestorage.defaultBucket().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public DefaultBucket defaultBucket() {
+      return new DefaultBucket();
+    }
+
+    /**
+     * The "defaultBucket" collection of methods.
+     */
+    public class DefaultBucket {
+
+      /**
+       * Creates a Spark tier-eligible Cloud Storage bucket and links it to your Firebase project. If the
+       * default bucket already exists, this method will re-link it to your Firebase project. See
+       * https://firebase.google.com/pricing for pricing details.
+       *
+       * Create a request for the method "defaultBucket.create".
+       *
+       * This request holds the parameters needed by the firebasestorage server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent resource where the default bucket will be created,
+       *        `projects/{project_id_or_number}`.
+       * @param content the {@link com.google.api.services.firebasestorage.v1beta.model.DefaultBucket}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.firebasestorage.v1beta.model.DefaultBucket content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends FirebasestorageRequest<com.google.api.services.firebasestorage.v1beta.model.DefaultBucket> {
+
+        private static final String REST_PATH = "v1beta/{+parent}/defaultBucket";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Creates a Spark tier-eligible Cloud Storage bucket and links it to your Firebase project. If
+         * the default bucket already exists, this method will re-link it to your Firebase project. See
+         * https://firebase.google.com/pricing for pricing details.
+         *
+         * Create a request for the method "defaultBucket.create".
+         *
+         * This request holds the parameters needed by the the firebasestorage server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent resource where the default bucket will be created,
+       *        `projects/{project_id_or_number}`.
+         * @param content the {@link com.google.api.services.firebasestorage.v1beta.model.DefaultBucket}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.firebasestorage.v1beta.model.DefaultBucket content) {
+          super(Firebasestorage.this, "POST", REST_PATH, content, com.google.api.services.firebasestorage.v1beta.model.DefaultBucket.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent resource where the default bucket will be created,
+         * `projects/{project_id_or_number}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent resource where the default bucket will be created,
+       `projects/{project_id_or_number}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent resource where the default bucket will be created,
+         * `projects/{project_id_or_number}`.
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
         }
       }
 

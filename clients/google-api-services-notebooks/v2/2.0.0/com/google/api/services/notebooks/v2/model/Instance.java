@@ -51,6 +51,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean disableProxyAccess;
 
   /**
+   * Optional. Flag that specifies that a notebook can be accessed with third party identity
+   * provider.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableThirdPartyIdentity;
+
+  /**
    * Optional. Compute Engine setup for the notebook. Uses notebook-defined fields.
    * The value may be {@code null}.
    */
@@ -202,6 +210,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setDisableProxyAccess(java.lang.Boolean disableProxyAccess) {
     this.disableProxyAccess = disableProxyAccess;
+    return this;
+  }
+
+  /**
+   * Optional. Flag that specifies that a notebook can be accessed with third party identity
+   * provider.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableThirdPartyIdentity() {
+    return enableThirdPartyIdentity;
+  }
+
+  /**
+   * Optional. Flag that specifies that a notebook can be accessed with third party identity
+   * provider.
+   * @param enableThirdPartyIdentity enableThirdPartyIdentity or {@code null} for none
+   */
+  public Instance setEnableThirdPartyIdentity(java.lang.Boolean enableThirdPartyIdentity) {
+    this.enableThirdPartyIdentity = enableThirdPartyIdentity;
     return this;
   }
 

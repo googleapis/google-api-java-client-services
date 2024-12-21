@@ -59,8 +59,8 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
 
   /**
    * Identifies whether the user has requested cancellation of the operation. Operations that have
-   * successfully been cancelled have Operation.error value with a google.rpc.Status.code of 1,
-   * corresponding to `Code.CANCELLED`.
+   * successfully been cancelled have google.longrunning.Operation.error value with a
+   * google.rpc.Status.code of `1`, corresponding to `Code.CANCELLED`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,8 +157,8 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
 
   /**
    * Identifies whether the user has requested cancellation of the operation. Operations that have
-   * successfully been cancelled have Operation.error value with a google.rpc.Status.code of 1,
-   * corresponding to `Code.CANCELLED`.
+   * successfully been cancelled have google.longrunning.Operation.error value with a
+   * google.rpc.Status.code of `1`, corresponding to `Code.CANCELLED`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequestedCancellation() {
@@ -167,8 +167,8 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
 
   /**
    * Identifies whether the user has requested cancellation of the operation. Operations that have
-   * successfully been cancelled have Operation.error value with a google.rpc.Status.code of 1,
-   * corresponding to `Code.CANCELLED`.
+   * successfully been cancelled have google.longrunning.Operation.error value with a
+   * google.rpc.Status.code of `1`, corresponding to `Code.CANCELLED`.
    * @param requestedCancellation requestedCancellation or {@code null} for none
    */
   public OperationMetadata setRequestedCancellation(java.lang.Boolean requestedCancellation) {

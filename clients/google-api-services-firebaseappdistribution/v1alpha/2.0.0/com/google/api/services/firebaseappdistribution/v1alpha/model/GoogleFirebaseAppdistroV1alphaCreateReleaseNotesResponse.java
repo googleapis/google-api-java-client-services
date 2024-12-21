@@ -17,7 +17,7 @@
 package com.google.api.services.firebaseappdistribution.v1alpha.model;
 
 /**
- * Model definition for GoogleFirebaseAppdistroV1alphaCreateReleaseNotesResponse.
+ * The response message for `CreateReleaseNotes`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase App Distribution API. For a detailed

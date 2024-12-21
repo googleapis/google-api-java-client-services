@@ -45,7 +45,7 @@ public final class ListSharesResponse extends com.google.api.client.json.Generic
   private java.util.List<Share> shares;
 
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +88,7 @@ public final class ListSharesResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachable() {
@@ -96,7 +96,7 @@ public final class ListSharesResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    * @param unreachable unreachable or {@code null} for none
    */
   public ListSharesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {

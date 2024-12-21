@@ -19,12 +19,12 @@ package com.google.api.services.gkebackup.v1.model;
 /**
  * Defines the scope of cluster-scoped resources to restore. Some group kinds are not reasonable
  * choices for a restore, and will cause an error if selected here. Any scope selection that would
- * restore "all valid" resources automatically excludes these group kinds. -
- * gkebackup.gke.io/BackupJob - gkebackup.gke.io/RestoreJob - metrics.k8s.io/NodeMetrics -
- * migration.k8s.io/StorageState - migration.k8s.io/StorageVersionMigration - Node -
- * snapshot.storage.k8s.io/VolumeSnapshotContent - storage.k8s.io/CSINode Some group kinds are
- * driven by restore configuration elsewhere, and will cause an error if selected here. - Namespace
- * - PersistentVolume
+ * restore "all valid" resources automatically excludes these group kinds. - Node - ComponentStatus
+ * - gkebackup.gke.io/BackupJob - gkebackup.gke.io/RestoreJob - metrics.k8s.io/NodeMetrics -
+ * migration.k8s.io/StorageState - migration.k8s.io/StorageVersionMigration -
+ * snapshot.storage.k8s.io/VolumeSnapshotContent - storage.k8s.io/CSINode -
+ * storage.k8s.io/VolumeAttachment Some group kinds are driven by restore configuration elsewhere,
+ * and will cause an error if selected here. - Namespace - PersistentVolume
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Backup for GKE API. For a detailed explanation see:

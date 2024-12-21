@@ -223,7 +223,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * User metadata.
+   * Optional. User metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -695,7 +695,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User metadata.
+   * Optional. User metadata.
    * @return value or {@code null} for none
    */
   public UserMetadata getUserMetadata() {
@@ -703,7 +703,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User metadata.
+   * Optional. User metadata.
    * @param userMetadata userMetadata or {@code null} for none
    */
   public Instance setUserMetadata(UserMetadata userMetadata) {

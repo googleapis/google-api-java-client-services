@@ -21721,7 +21721,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * `contentType` will be filled in using the value of the `Content-Type` header, and the
              * `securityContext` field (not present in `DSTU2`) will be populated from the `X-Security-Context`
              * header if it exists. At this time `securityContext` has no special behavior in the Cloud
-             * Healthcare API. Note: the limit on data ingested through this method is 2 GB. For best
+             * Healthcare API. Note: the limit on data ingested through this method is 1 GB. For best
              * performance, use a non-FHIR data type instead of wrapping the data in a Binary resource. Some of
              * the Healthcare API features, such as [exporting to BigQuery](https://cloud.google.com/healthcare-
              * api/docs/how-tos/fhir-export-bigquery) or [Pub/Sub
@@ -21770,7 +21770,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * `contentType` will be filled in using the value of the `Content-Type` header, and the
                * `securityContext` field (not present in `DSTU2`) will be populated from the `X-Security-
                * Context` header if it exists. At this time `securityContext` has no special behavior in the
-               * Cloud Healthcare API. Note: the limit on data ingested through this method is 2 GB. For best
+               * Cloud Healthcare API. Note: the limit on data ingested through this method is 1 GB. For best
                * performance, use a non-FHIR data type instead of wrapping the data in a Binary resource. Some
                * of the Healthcare API features, such as [exporting to
                * BigQuery](https://cloud.google.com/healthcare-api/docs/how-tos/fhir-export-bigquery) or
@@ -30898,7 +30898,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
            * methods to check whether the cancellation succeeded or whether the operation completed despite
            * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
            * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".
@@ -30929,7 +30929,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
              * methods to check whether the cancellation succeeded or whether the operation completed despite
              * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-             * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+             * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
              * `Code.CANCELLED`.
              *
              * Create a request for the method "operations.cancel".

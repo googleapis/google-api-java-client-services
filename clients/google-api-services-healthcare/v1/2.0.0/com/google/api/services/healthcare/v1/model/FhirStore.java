@@ -43,6 +43,14 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   private java.lang.String complexDataTypeReferenceParsing;
 
   /**
+   * Optional. Specifies whether this store has consent enforcement. Not available for DSTU2 FHIR
+   * version due to absence of Consent resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConsentConfig consentConfig;
+
+  /**
    * Optional. If true, overrides the default search behavior for this FHIR store to
    * `handling=strict` which returns an error for unrecognized search parameters. If false, uses the
    * FHIR specification default `handling=lenient` which ignores unrecognized search parameters. The
@@ -192,6 +200,25 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    */
   public FhirStore setComplexDataTypeReferenceParsing(java.lang.String complexDataTypeReferenceParsing) {
     this.complexDataTypeReferenceParsing = complexDataTypeReferenceParsing;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies whether this store has consent enforcement. Not available for DSTU2 FHIR
+   * version due to absence of Consent resources.
+   * @return value or {@code null} for none
+   */
+  public ConsentConfig getConsentConfig() {
+    return consentConfig;
+  }
+
+  /**
+   * Optional. Specifies whether this store has consent enforcement. Not available for DSTU2 FHIR
+   * version due to absence of Consent resources.
+   * @param consentConfig consentConfig or {@code null} for none
+   */
+  public FhirStore setConsentConfig(ConsentConfig consentConfig) {
+    this.consentConfig = consentConfig;
     return this;
   }
 

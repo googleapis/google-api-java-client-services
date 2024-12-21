@@ -30,7 +30,7 @@ package com.google.api.services.healthcare.v1.model;
 public final class FhirConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The behaviour for handling FHIR extensions that aren't otherwise specified for de-
+   * Optional. The behaviour for handling FHIR extensions that aren't otherwise specified for de-
    * identification. If true, all extensions are preserved during de-identification by default. If
    * false or unspecified, all extensions are removed during de-identification by default.
    * The value may be {@code null}.
@@ -39,16 +39,16 @@ public final class FhirConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean defaultKeepExtensions;
 
   /**
-   * Specifies FHIR paths to match and how to transform them. Any field that is not matched by a
-   * FieldMetadata is passed through to the output dataset unmodified. All extensions will be
-   * processed according to `default_keep_extensions`.
+   * Optional. Specifies FHIR paths to match and how to transform them. Any field that is not
+   * matched by a FieldMetadata is passed through to the output dataset unmodified. All extensions
+   * will be processed according to `default_keep_extensions`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<FieldMetadata> fieldMetadataList;
 
   /**
-   * The behaviour for handling FHIR extensions that aren't otherwise specified for de-
+   * Optional. The behaviour for handling FHIR extensions that aren't otherwise specified for de-
    * identification. If true, all extensions are preserved during de-identification by default. If
    * false or unspecified, all extensions are removed during de-identification by default.
    * @return value or {@code null} for none
@@ -58,7 +58,7 @@ public final class FhirConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The behaviour for handling FHIR extensions that aren't otherwise specified for de-
+   * Optional. The behaviour for handling FHIR extensions that aren't otherwise specified for de-
    * identification. If true, all extensions are preserved during de-identification by default. If
    * false or unspecified, all extensions are removed during de-identification by default.
    * @param defaultKeepExtensions defaultKeepExtensions or {@code null} for none
@@ -69,9 +69,9 @@ public final class FhirConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies FHIR paths to match and how to transform them. Any field that is not matched by a
-   * FieldMetadata is passed through to the output dataset unmodified. All extensions will be
-   * processed according to `default_keep_extensions`.
+   * Optional. Specifies FHIR paths to match and how to transform them. Any field that is not
+   * matched by a FieldMetadata is passed through to the output dataset unmodified. All extensions
+   * will be processed according to `default_keep_extensions`.
    * @return value or {@code null} for none
    */
   public java.util.List<FieldMetadata> getFieldMetadataList() {
@@ -79,9 +79,9 @@ public final class FhirConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies FHIR paths to match and how to transform them. Any field that is not matched by a
-   * FieldMetadata is passed through to the output dataset unmodified. All extensions will be
-   * processed according to `default_keep_extensions`.
+   * Optional. Specifies FHIR paths to match and how to transform them. Any field that is not
+   * matched by a FieldMetadata is passed through to the output dataset unmodified. All extensions
+   * will be processed according to `default_keep_extensions`.
    * @param fieldMetadataList fieldMetadataList or {@code null} for none
    */
   public FhirConfig setFieldMetadataList(java.util.List<FieldMetadata> fieldMetadataList) {

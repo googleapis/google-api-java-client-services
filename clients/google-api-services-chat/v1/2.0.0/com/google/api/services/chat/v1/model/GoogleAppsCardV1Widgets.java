@@ -38,7 +38,7 @@ public final class GoogleAppsCardV1Widgets extends com.google.api.client.json.Ge
   private GoogleAppsCardV1ButtonList buttonList;
 
   /**
-   * ChipList widget. [Google Chat apps](https://developers.google.com/workspace/chat):
+   * ChipList widget.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +104,7 @@ public final class GoogleAppsCardV1Widgets extends com.google.api.client.json.Ge
   }
 
   /**
-   * ChipList widget. [Google Chat apps](https://developers.google.com/workspace/chat):
+   * ChipList widget.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1ChipList getChipList() {
@@ -112,7 +112,7 @@ public final class GoogleAppsCardV1Widgets extends com.google.api.client.json.Ge
   }
 
   /**
-   * ChipList widget. [Google Chat apps](https://developers.google.com/workspace/chat):
+   * ChipList widget.
    * @param chipList chipList or {@code null} for none
    */
   public GoogleAppsCardV1Widgets setChipList(GoogleAppsCardV1ChipList chipList) {

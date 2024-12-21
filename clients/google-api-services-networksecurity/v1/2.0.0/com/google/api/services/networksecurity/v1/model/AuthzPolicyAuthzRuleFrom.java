@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.networksecurity.v1beta1.model;
+package com.google.api.services.networksecurity.v1.model;
 
 /**
  * Describes properties of one or more sources of a request.

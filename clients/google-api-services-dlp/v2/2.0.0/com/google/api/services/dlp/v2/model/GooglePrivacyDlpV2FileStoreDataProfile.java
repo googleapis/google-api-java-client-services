@@ -130,7 +130,7 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   private String lastModifiedTime;
 
   /**
-   * The location type of the bucket (region, dual-region, multi-region, etc). If dual-region,
+   * The location type of the file store (region, dual-region, multi-region, etc). If dual-region,
    * expect data_storage_locations to be populated.
    * The value may be {@code null}.
    */
@@ -432,7 +432,7 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   }
 
   /**
-   * The location type of the bucket (region, dual-region, multi-region, etc). If dual-region,
+   * The location type of the file store (region, dual-region, multi-region, etc). If dual-region,
    * expect data_storage_locations to be populated.
    * @return value or {@code null} for none
    */
@@ -441,7 +441,7 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   }
 
   /**
-   * The location type of the bucket (region, dual-region, multi-region, etc). If dual-region,
+   * The location type of the file store (region, dual-region, multi-region, etc). If dual-region,
    * expect data_storage_locations to be populated.
    * @param locationType locationType or {@code null} for none
    */

@@ -53,7 +53,11 @@ public final class ApnsConfig extends com.google.api.client.json.GenericJson {
    * guidelines/live-activities) token to send updates to. This token can either be a push token or
    * [push-to-
    * start](https://developer.apple.com/documentation/activitykit/activity/pushtostarttoken) token
-   * from Apple.
+   * from Apple. To start, update, or end a live activity remotely using FCM, construct an [`aps
+   * payload`](https://developer.apple.com/documentation/activitykit/starting-and-updating-live-
+   * activities-with-activitykit-push-notifications#Construct-the-payload-that-starts-a-Live-
+   * Activity) and put it in the [`apns.payload`](https://firebase.google.com/docs/reference/fcm/res
+   * t/v1/projects.messages#ApnsConfig) field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +120,11 @@ public final class ApnsConfig extends com.google.api.client.json.GenericJson {
    * guidelines/live-activities) token to send updates to. This token can either be a push token or
    * [push-to-
    * start](https://developer.apple.com/documentation/activitykit/activity/pushtostarttoken) token
-   * from Apple.
+   * from Apple. To start, update, or end a live activity remotely using FCM, construct an [`aps
+   * payload`](https://developer.apple.com/documentation/activitykit/starting-and-updating-live-
+   * activities-with-activitykit-push-notifications#Construct-the-payload-that-starts-a-Live-
+   * Activity) and put it in the [`apns.payload`](https://firebase.google.com/docs/reference/fcm/res
+   * t/v1/projects.messages#ApnsConfig) field.
    * @return value or {@code null} for none
    */
   public java.lang.String getLiveActivityToken() {
@@ -128,7 +136,11 @@ public final class ApnsConfig extends com.google.api.client.json.GenericJson {
    * guidelines/live-activities) token to send updates to. This token can either be a push token or
    * [push-to-
    * start](https://developer.apple.com/documentation/activitykit/activity/pushtostarttoken) token
-   * from Apple.
+   * from Apple. To start, update, or end a live activity remotely using FCM, construct an [`aps
+   * payload`](https://developer.apple.com/documentation/activitykit/starting-and-updating-live-
+   * activities-with-activitykit-push-notifications#Construct-the-payload-that-starts-a-Live-
+   * Activity) and put it in the [`apns.payload`](https://firebase.google.com/docs/reference/fcm/res
+   * t/v1/projects.messages#ApnsConfig) field.
    * @param liveActivityToken liveActivityToken or {@code null} for none
    */
   public ApnsConfig setLiveActivityToken(java.lang.String liveActivityToken) {

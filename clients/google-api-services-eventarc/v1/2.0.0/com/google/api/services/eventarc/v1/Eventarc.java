@@ -3450,13 +3450,13 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The user-provided ID to be assigned to the Enrollment. It should match the
-           * format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+           * format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
            */
           @com.google.api.client.util.Key
           private java.lang.String enrollmentId;
 
           /** Required. The user-provided ID to be assigned to the Enrollment. It should match the format
-         (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+         `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
            */
           public java.lang.String getEnrollmentId() {
             return enrollmentId;
@@ -3464,7 +3464,7 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The user-provided ID to be assigned to the Enrollment. It should match the
-           * format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+           * format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
            */
           public Create setEnrollmentId(java.lang.String enrollmentId) {
             this.enrollmentId = enrollmentId;
@@ -4907,13 +4907,13 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The user-provided ID to be assigned to the GoogleApiSource. It should match
-           * the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+           * the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
            */
           @com.google.api.client.util.Key
           private java.lang.String googleApiSourceId;
 
           /** Required. The user-provided ID to be assigned to the GoogleApiSource. It should match the format
-         (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+         `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
            */
           public java.lang.String getGoogleApiSourceId() {
             return googleApiSourceId;
@@ -4921,7 +4921,7 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The user-provided ID to be assigned to the GoogleApiSource. It should match
-           * the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+           * the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
            */
           public Create setGoogleApiSourceId(java.lang.String googleApiSourceId) {
             this.googleApiSourceId = googleApiSourceId;
@@ -6364,13 +6364,13 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The user-provided ID to be assigned to the MessageBus. It should match the
-           * format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$)
+           * format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
            */
           @com.google.api.client.util.Key
           private java.lang.String messageBusId;
 
           /** Required. The user-provided ID to be assigned to the MessageBus. It should match the format
-         (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$)
+         `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
            */
           public java.lang.String getMessageBusId() {
             return messageBusId;
@@ -6378,7 +6378,7 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The user-provided ID to be assigned to the MessageBus. It should match the
-           * format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$)
+           * format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
            */
           public Create setMessageBusId(java.lang.String messageBusId) {
             this.messageBusId = messageBusId;
@@ -6941,7 +6941,7 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the eventarc server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent collection to list triggers on.
+         * @param parent Required. The parent collection to list message buses on.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -6967,7 +6967,7 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent collection to list triggers on.
+           * @param parent Required. The parent collection to list message buses on.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -7045,17 +7045,17 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent collection to list triggers on. */
+          /** Required. The parent collection to list message buses on. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent collection to list triggers on.
+          /** Required. The parent collection to list message buses on.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent collection to list triggers on. */
+          /** Required. The parent collection to list message buses on. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -7886,7 +7886,7 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
          * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
          * `Code.CANCELLED`.
          *
          * Create a request for the method "operations.cancel".
@@ -7917,7 +7917,7 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
            * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
            * methods to check whether the cancellation succeeded or whether the operation completed despite
            * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
            * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".
@@ -8632,17 +8632,24 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Required. The user-provided ID to be assigned to the Pipeline. */
+          /**
+           * Required. The user-provided ID to be assigned to the Pipeline. It should match the
+           * format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String pipelineId;
 
-          /** Required. The user-provided ID to be assigned to the Pipeline.
+          /** Required. The user-provided ID to be assigned to the Pipeline. It should match the format
+         `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
            */
           public java.lang.String getPipelineId() {
             return pipelineId;
           }
 
-          /** Required. The user-provided ID to be assigned to the Pipeline. */
+          /**
+           * Required. The user-provided ID to be assigned to the Pipeline. It should match the
+           * format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+           */
           public Create setPipelineId(java.lang.String pipelineId) {
             this.pipelineId = pipelineId;
             return this;

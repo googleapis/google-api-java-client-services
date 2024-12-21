@@ -57,6 +57,13 @@ public final class ChannelConnection extends com.google.api.client.json.GenericJ
   private String createTime;
 
   /**
+   * Optional. Resource labels.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Required. The name of the connection.
    * The value may be {@code null}.
    */
@@ -134,6 +141,23 @@ public final class ChannelConnection extends com.google.api.client.json.GenericJ
    */
   public ChannelConnection setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Resource labels.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. Resource labels.
+   * @param labels labels or {@code null} for none
+   */
+  public ChannelConnection setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

@@ -30,6 +30,30 @@ package com.google.api.services.gkeonprem.v1.model;
 @SuppressWarnings("javadoc")
 public final class VmwareAdminMetalLbConfig extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Whether MetalLB is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enabled;
+
+  /**
+   * Whether MetalLB is enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnabled() {
+    return enabled;
+  }
+
+  /**
+   * Whether MetalLB is enabled.
+   * @param enabled enabled or {@code null} for none
+   */
+  public VmwareAdminMetalLbConfig setEnabled(java.lang.Boolean enabled) {
+    this.enabled = enabled;
+    return this;
+  }
+
   @Override
   public VmwareAdminMetalLbConfig set(String fieldName, Object value) {
     return (VmwareAdminMetalLbConfig) super.set(fieldName, value);

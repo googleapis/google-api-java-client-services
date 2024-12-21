@@ -55,9 +55,8 @@ public final class Entity extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * For calls to AnalyzeEntitySentimentRequest or if
-   * AnnotateTextRequest.Features.extract_entity_sentiment is set to true, this field will contain
-   * the aggregate sentiment expressed for this entity in the provided document.
+   * For calls to AnalyzeEntitySentiment this field will contain the aggregate sentiment expressed
+   * for this entity in the provided document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,9 +125,8 @@ public final class Entity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For calls to AnalyzeEntitySentimentRequest or if
-   * AnnotateTextRequest.Features.extract_entity_sentiment is set to true, this field will contain
-   * the aggregate sentiment expressed for this entity in the provided document.
+   * For calls to AnalyzeEntitySentiment this field will contain the aggregate sentiment expressed
+   * for this entity in the provided document.
    * @return value or {@code null} for none
    */
   public Sentiment getSentiment() {
@@ -136,9 +134,8 @@ public final class Entity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For calls to AnalyzeEntitySentimentRequest or if
-   * AnnotateTextRequest.Features.extract_entity_sentiment is set to true, this field will contain
-   * the aggregate sentiment expressed for this entity in the provided document.
+   * For calls to AnalyzeEntitySentiment this field will contain the aggregate sentiment expressed
+   * for this entity in the provided document.
    * @param sentiment sentiment or {@code null} for none
    */
   public Entity setSentiment(Sentiment sentiment) {

@@ -39,8 +39,8 @@ public final class AnalyzeEntitiesResponse extends com.google.api.client.json.Ge
 
   /**
    * The language of the text, which will be the same as the language specified in the request or,
-   * if not specified, the automatically-detected language. See Document.language field for more
-   * details.
+   * if not specified, the automatically-detected language. See Document.language_code field for
+   * more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,8 +73,8 @@ public final class AnalyzeEntitiesResponse extends com.google.api.client.json.Ge
 
   /**
    * The language of the text, which will be the same as the language specified in the request or,
-   * if not specified, the automatically-detected language. See Document.language field for more
-   * details.
+   * if not specified, the automatically-detected language. See Document.language_code field for
+   * more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -83,8 +83,8 @@ public final class AnalyzeEntitiesResponse extends com.google.api.client.json.Ge
 
   /**
    * The language of the text, which will be the same as the language specified in the request or,
-   * if not specified, the automatically-detected language. See Document.language field for more
-   * details.
+   * if not specified, the automatically-detected language. See Document.language_code field for
+   * more details.
    * @param languageCode languageCode or {@code null} for none
    */
   public AnalyzeEntitiesResponse setLanguageCode(java.lang.String languageCode) {

@@ -17,7 +17,9 @@
 package com.google.api.services.firebaseappdistribution.v1alpha.model;
 
 /**
- * Release notes for a release.
+ * A generic empty message that you can re-use to avoid defining duplicated empty messages in your
+ * APIs. A typical example is to use it as the request or the response type of an API method. For
+ * instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); }
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase App Distribution API. For a detailed
@@ -28,40 +30,16 @@ package com.google.api.services.firebaseappdistribution.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleFirebaseAppdistroV1alphaReleaseNotes extends com.google.api.client.json.GenericJson {
+public final class GoogleProtobufEmpty extends com.google.api.client.json.GenericJson {
 
-  /**
-   * The actual release notes text from the user.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String releaseNotes;
-
-  /**
-   * The actual release notes text from the user.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getReleaseNotes() {
-    return releaseNotes;
-  }
-
-  /**
-   * The actual release notes text from the user.
-   * @param releaseNotes releaseNotes or {@code null} for none
-   */
-  public GoogleFirebaseAppdistroV1alphaReleaseNotes setReleaseNotes(java.lang.String releaseNotes) {
-    this.releaseNotes = releaseNotes;
-    return this;
+  @Override
+  public GoogleProtobufEmpty set(String fieldName, Object value) {
+    return (GoogleProtobufEmpty) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleFirebaseAppdistroV1alphaReleaseNotes set(String fieldName, Object value) {
-    return (GoogleFirebaseAppdistroV1alphaReleaseNotes) super.set(fieldName, value);
-  }
-
-  @Override
-  public GoogleFirebaseAppdistroV1alphaReleaseNotes clone() {
-    return (GoogleFirebaseAppdistroV1alphaReleaseNotes) super.clone();
+  public GoogleProtobufEmpty clone() {
+    return (GoogleProtobufEmpty) super.clone();
   }
 
 }

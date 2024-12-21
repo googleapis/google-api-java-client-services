@@ -69,7 +69,7 @@ public final class FetchSettings extends com.google.api.client.json.GenericJson 
   private java.lang.String frequency;
 
   /**
-   * Optional. An optional password for fetch url. Used for [submitting data sources through
+   * Optional. An optional password for fetch_uri. Used for [submitting data sources through
    * SFTP](https://support.google.com/merchants/answer/13813117).
    * The value may be {@code null}.
    */
@@ -93,7 +93,7 @@ public final class FetchSettings extends com.google.api.client.json.GenericJson 
   private java.lang.String timeZone;
 
   /**
-   * Optional. An optional user name for fetch url. Used for [submitting data sources through
+   * Optional. An optional user name for fetch_uri. Used for [submitting data sources through
    * SFTP](https://support.google.com/merchants/answer/13813117).
    * The value may be {@code null}.
    */
@@ -194,7 +194,7 @@ public final class FetchSettings extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. An optional password for fetch url. Used for [submitting data sources through
+   * Optional. An optional password for fetch_uri. Used for [submitting data sources through
    * SFTP](https://support.google.com/merchants/answer/13813117).
    * @return value or {@code null} for none
    */
@@ -203,7 +203,7 @@ public final class FetchSettings extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. An optional password for fetch url. Used for [submitting data sources through
+   * Optional. An optional password for fetch_uri. Used for [submitting data sources through
    * SFTP](https://support.google.com/merchants/answer/13813117).
    * @param password password or {@code null} for none
    */
@@ -251,7 +251,7 @@ public final class FetchSettings extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. An optional user name for fetch url. Used for [submitting data sources through
+   * Optional. An optional user name for fetch_uri. Used for [submitting data sources through
    * SFTP](https://support.google.com/merchants/answer/13813117).
    * @return value or {@code null} for none
    */
@@ -260,7 +260,7 @@ public final class FetchSettings extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. An optional user name for fetch url. Used for [submitting data sources through
+   * Optional. An optional user name for fetch_uri. Used for [submitting data sources through
    * SFTP](https://support.google.com/merchants/answer/13813117).
    * @param username username or {@code null} for none
    */

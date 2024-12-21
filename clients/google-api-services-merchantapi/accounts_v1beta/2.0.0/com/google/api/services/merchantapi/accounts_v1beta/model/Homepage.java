@@ -17,7 +17,11 @@
 package com.google.api.services.merchantapi.accounts_v1beta.model;
 
 /**
- * A store's homepage.
+ * The `Homepage` message represents a merchant's store homepage within the system. A merchant's
+ * homepage is the primary domain where customers interact with their store. The homepage can be
+ * claimed and verified as a proof of ownership and allows the merchant to unlock features that
+ * require a verified website. For more information, see [Understanding online store URL
+ * verification](//support.google.com/merchants/answer/176793).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

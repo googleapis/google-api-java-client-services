@@ -19,7 +19,7 @@ package com.google.api.services.merchantapi.products_v1beta.model;
 /**
  * This resource represents input data you submit for a product, not the processed product that you
  * see in Merchant Center, in Shopping ads, or across Google surfaces. Product inputs, rules and
- * supplemental data source data are combined to create the processed product. Required product
+ * supplemental data source data are combined to create the processed Product. Required product
  * input attributes to pass data validation checks are primarily defined in the [Products Data
  * Specification](https://support.google.com/merchants/answer/188494). The following attributes are
  * required: feedLabel, contentLanguage and offerId. After inserting, updating, or deleting a

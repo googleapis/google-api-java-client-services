@@ -66,6 +66,13 @@ public final class Question extends com.google.api.client.json.GenericJson {
   private java.lang.String questionId;
 
   /**
+   * A respondent can choose a rating from a pre-defined set of icons.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RatingQuestion ratingQuestion;
+
+  /**
    * Whether the question must be answered in order for a respondent to submit their response.
    * The value may be {@code null}.
    */
@@ -184,6 +191,23 @@ public final class Question extends com.google.api.client.json.GenericJson {
    */
   public Question setQuestionId(java.lang.String questionId) {
     this.questionId = questionId;
+    return this;
+  }
+
+  /**
+   * A respondent can choose a rating from a pre-defined set of icons.
+   * @return value or {@code null} for none
+   */
+  public RatingQuestion getRatingQuestion() {
+    return ratingQuestion;
+  }
+
+  /**
+   * A respondent can choose a rating from a pre-defined set of icons.
+   * @param ratingQuestion ratingQuestion or {@code null} for none
+   */
+  public Question setRatingQuestion(RatingQuestion ratingQuestion) {
+    this.ratingQuestion = ratingQuestion;
     return this;
   }
 

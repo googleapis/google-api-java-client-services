@@ -45,14 +45,21 @@ public final class GKEMasterInfo extends com.google.api.client.json.GenericJson 
   private java.lang.String clusterUri;
 
   /**
-   * External IP address of a GKE cluster master.
+   * DNS endpoint of a GKE cluster control plane.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dnsEndpoint;
+
+  /**
+   * External IP address of a GKE cluster control plane.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String externalIp;
 
   /**
-   * Internal IP address of a GKE cluster master.
+   * Internal IP address of a GKE cluster control plane.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +100,24 @@ public final class GKEMasterInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * External IP address of a GKE cluster master.
+   * DNS endpoint of a GKE cluster control plane.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDnsEndpoint() {
+    return dnsEndpoint;
+  }
+
+  /**
+   * DNS endpoint of a GKE cluster control plane.
+   * @param dnsEndpoint dnsEndpoint or {@code null} for none
+   */
+  public GKEMasterInfo setDnsEndpoint(java.lang.String dnsEndpoint) {
+    this.dnsEndpoint = dnsEndpoint;
+    return this;
+  }
+
+  /**
+   * External IP address of a GKE cluster control plane.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalIp() {
@@ -101,7 +125,7 @@ public final class GKEMasterInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * External IP address of a GKE cluster master.
+   * External IP address of a GKE cluster control plane.
    * @param externalIp externalIp or {@code null} for none
    */
   public GKEMasterInfo setExternalIp(java.lang.String externalIp) {
@@ -110,7 +134,7 @@ public final class GKEMasterInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Internal IP address of a GKE cluster master.
+   * Internal IP address of a GKE cluster control plane.
    * @return value or {@code null} for none
    */
   public java.lang.String getInternalIp() {
@@ -118,7 +142,7 @@ public final class GKEMasterInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Internal IP address of a GKE cluster master.
+   * Internal IP address of a GKE cluster control plane.
    * @param internalIp internalIp or {@code null} for none
    */
   public GKEMasterInfo setInternalIp(java.lang.String internalIp) {

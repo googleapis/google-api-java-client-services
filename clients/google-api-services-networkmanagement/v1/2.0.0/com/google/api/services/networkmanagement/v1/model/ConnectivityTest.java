@@ -121,6 +121,22 @@ public final class ConnectivityTest extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> relatedProjects;
 
   /**
+   * Output only. The reachability details of this test from the latest run for the return path. The
+   * details are updated when creating a new test, updating an existing test, or triggering a one-
+   * time rerun of an existing test.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReachabilityDetails returnReachabilityDetails;
+
+  /**
+   * Whether run analysis for the return path from destination to source. Default value is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean roundTrip;
+
+  /**
    * Required. Source specification of the Connectivity Test. You can use a combination of source IP
    * address, virtual machine (VM) instance, or Compute Engine network to uniquely identify the
    * source location. Examples: If the source IP address is an internal IP address within a Google
@@ -354,6 +370,44 @@ public final class ConnectivityTest extends com.google.api.client.json.GenericJs
    */
   public ConnectivityTest setRelatedProjects(java.util.List<java.lang.String> relatedProjects) {
     this.relatedProjects = relatedProjects;
+    return this;
+  }
+
+  /**
+   * Output only. The reachability details of this test from the latest run for the return path. The
+   * details are updated when creating a new test, updating an existing test, or triggering a one-
+   * time rerun of an existing test.
+   * @return value or {@code null} for none
+   */
+  public ReachabilityDetails getReturnReachabilityDetails() {
+    return returnReachabilityDetails;
+  }
+
+  /**
+   * Output only. The reachability details of this test from the latest run for the return path. The
+   * details are updated when creating a new test, updating an existing test, or triggering a one-
+   * time rerun of an existing test.
+   * @param returnReachabilityDetails returnReachabilityDetails or {@code null} for none
+   */
+  public ConnectivityTest setReturnReachabilityDetails(ReachabilityDetails returnReachabilityDetails) {
+    this.returnReachabilityDetails = returnReachabilityDetails;
+    return this;
+  }
+
+  /**
+   * Whether run analysis for the return path from destination to source. Default value is false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRoundTrip() {
+    return roundTrip;
+  }
+
+  /**
+   * Whether run analysis for the return path from destination to source. Default value is false.
+   * @param roundTrip roundTrip or {@code null} for none
+   */
+  public ConnectivityTest setRoundTrip(java.lang.Boolean roundTrip) {
+    this.roundTrip = roundTrip;
     return this;
   }
 

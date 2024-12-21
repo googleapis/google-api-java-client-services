@@ -225,6 +225,15 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   private java.lang.String pageToken;
 
   /**
+   * Optional. The relevance threshold of the search results. Default to Google defined threshold,
+   * leveraging a balance of precision and recall to deliver both highly accurate results and
+   * comprehensive coverage of relevant information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String relevanceThreshold;
+
+  /**
    * Required. The meta information collected about the job searcher, used to improve the search
    * quality of the service. The identifiers (such as `user_id`) are provided by users, and must be
    * unique and consistent.
@@ -649,6 +658,27 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    */
   public SearchJobsRequest setPageToken(java.lang.String pageToken) {
     this.pageToken = pageToken;
+    return this;
+  }
+
+  /**
+   * Optional. The relevance threshold of the search results. Default to Google defined threshold,
+   * leveraging a balance of precision and recall to deliver both highly accurate results and
+   * comprehensive coverage of relevant information.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRelevanceThreshold() {
+    return relevanceThreshold;
+  }
+
+  /**
+   * Optional. The relevance threshold of the search results. Default to Google defined threshold,
+   * leveraging a balance of precision and recall to deliver both highly accurate results and
+   * comprehensive coverage of relevant information.
+   * @param relevanceThreshold relevanceThreshold or {@code null} for none
+   */
+  public SearchJobsRequest setRelevanceThreshold(java.lang.String relevanceThreshold) {
+    this.relevanceThreshold = relevanceThreshold;
     return this;
   }
 

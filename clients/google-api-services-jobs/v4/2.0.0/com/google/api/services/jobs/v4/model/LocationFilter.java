@@ -77,7 +77,7 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
    * lat_lng are ignored. If not set or set to TelecommutePreference.TELECOMMUTE_EXCLUDED, the
    * telecommute status of the jobs is ignored. Jobs that have PostingRegion.TELECOMMUTE and have
    * additional Job.addresses may still be matched based on other location filters using address or
-   * latlng. This filter can be used by itself to search exclusively for telecommuting jobs, or it
+   * lat_lng. This filter can be used by itself to search exclusively for telecommuting jobs, or it
    * can be combined with another location filter to search for a combination of job locations, such
    * as "Mountain View" or "telecommuting" jobs. However, when used in combination with other
    * location filters, telecommuting jobs can be treated as less relevant than other jobs in the
@@ -185,7 +185,7 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
    * lat_lng are ignored. If not set or set to TelecommutePreference.TELECOMMUTE_EXCLUDED, the
    * telecommute status of the jobs is ignored. Jobs that have PostingRegion.TELECOMMUTE and have
    * additional Job.addresses may still be matched based on other location filters using address or
-   * latlng. This filter can be used by itself to search exclusively for telecommuting jobs, or it
+   * lat_lng. This filter can be used by itself to search exclusively for telecommuting jobs, or it
    * can be combined with another location filter to search for a combination of job locations, such
    * as "Mountain View" or "telecommuting" jobs. However, when used in combination with other
    * location filters, telecommuting jobs can be treated as less relevant than other jobs in the
@@ -204,7 +204,7 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
    * lat_lng are ignored. If not set or set to TelecommutePreference.TELECOMMUTE_EXCLUDED, the
    * telecommute status of the jobs is ignored. Jobs that have PostingRegion.TELECOMMUTE and have
    * additional Job.addresses may still be matched based on other location filters using address or
-   * latlng. This filter can be used by itself to search exclusively for telecommuting jobs, or it
+   * lat_lng. This filter can be used by itself to search exclusively for telecommuting jobs, or it
    * can be combined with another location filter to search for a combination of job locations, such
    * as "Mountain View" or "telecommuting" jobs. However, when used in combination with other
    * location filters, telecommuting jobs can be treated as less relevant than other jobs in the

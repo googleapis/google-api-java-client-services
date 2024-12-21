@@ -32,45 +32,46 @@ package com.google.api.services.healthcare.v1.model;
 public final class DeidentifyConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Configures de-id of application/DICOM content.
+   * Optional. Configures de-id of application/DICOM content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DicomConfig dicom;
 
   /**
-   * Configures de-id of application/FHIR content.
+   * Optional. Configures de-id of application/FHIR content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private FhirConfig fhir;
 
   /**
-   * Configures de-identification of image pixels wherever they are found in the source_dataset.
+   * Optional. Configures de-identification of image pixels wherever they are found in the
+   * source_dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ImageConfig image;
 
   /**
-   * Configures de-identification of text wherever it is found in the source_dataset.
+   * Optional. Configures de-identification of text wherever it is found in the source_dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TextConfig text;
 
   /**
-   * Ensures in-flight data remains in the region of origin during de-identification. The default
-   * value is false. Using this option results in a significant reduction of throughput, and is not
-   * compatible with `LOCATION` or `ORGANIZATION_NAME` infoTypes. `LOCATION` must be excluded within
-   * TextConfig, and must also be excluded within ImageConfig if image redaction is required.
+   * Optional. Ensures in-flight data remains in the region of origin during de-identification. The
+   * default value is false. Using this option results in a significant reduction of throughput, and
+   * is not compatible with `LOCATION` or `ORGANIZATION_NAME` infoTypes. `LOCATION` must be excluded
+   * within TextConfig, and must also be excluded within ImageConfig if image redaction is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useRegionalDataProcessing;
 
   /**
-   * Configures de-id of application/DICOM content.
+   * Optional. Configures de-id of application/DICOM content.
    * @return value or {@code null} for none
    */
   public DicomConfig getDicom() {
@@ -78,7 +79,7 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Configures de-id of application/DICOM content.
+   * Optional. Configures de-id of application/DICOM content.
    * @param dicom dicom or {@code null} for none
    */
   public DeidentifyConfig setDicom(DicomConfig dicom) {
@@ -87,7 +88,7 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Configures de-id of application/FHIR content.
+   * Optional. Configures de-id of application/FHIR content.
    * @return value or {@code null} for none
    */
   public FhirConfig getFhir() {
@@ -95,7 +96,7 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Configures de-id of application/FHIR content.
+   * Optional. Configures de-id of application/FHIR content.
    * @param fhir fhir or {@code null} for none
    */
   public DeidentifyConfig setFhir(FhirConfig fhir) {
@@ -104,7 +105,8 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Configures de-identification of image pixels wherever they are found in the source_dataset.
+   * Optional. Configures de-identification of image pixels wherever they are found in the
+   * source_dataset.
    * @return value or {@code null} for none
    */
   public ImageConfig getImage() {
@@ -112,7 +114,8 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Configures de-identification of image pixels wherever they are found in the source_dataset.
+   * Optional. Configures de-identification of image pixels wherever they are found in the
+   * source_dataset.
    * @param image image or {@code null} for none
    */
   public DeidentifyConfig setImage(ImageConfig image) {
@@ -121,7 +124,7 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Configures de-identification of text wherever it is found in the source_dataset.
+   * Optional. Configures de-identification of text wherever it is found in the source_dataset.
    * @return value or {@code null} for none
    */
   public TextConfig getText() {
@@ -129,7 +132,7 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Configures de-identification of text wherever it is found in the source_dataset.
+   * Optional. Configures de-identification of text wherever it is found in the source_dataset.
    * @param text text or {@code null} for none
    */
   public DeidentifyConfig setText(TextConfig text) {
@@ -138,10 +141,10 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Ensures in-flight data remains in the region of origin during de-identification. The default
-   * value is false. Using this option results in a significant reduction of throughput, and is not
-   * compatible with `LOCATION` or `ORGANIZATION_NAME` infoTypes. `LOCATION` must be excluded within
-   * TextConfig, and must also be excluded within ImageConfig if image redaction is required.
+   * Optional. Ensures in-flight data remains in the region of origin during de-identification. The
+   * default value is false. Using this option results in a significant reduction of throughput, and
+   * is not compatible with `LOCATION` or `ORGANIZATION_NAME` infoTypes. `LOCATION` must be excluded
+   * within TextConfig, and must also be excluded within ImageConfig if image redaction is required.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseRegionalDataProcessing() {
@@ -149,10 +152,10 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Ensures in-flight data remains in the region of origin during de-identification. The default
-   * value is false. Using this option results in a significant reduction of throughput, and is not
-   * compatible with `LOCATION` or `ORGANIZATION_NAME` infoTypes. `LOCATION` must be excluded within
-   * TextConfig, and must also be excluded within ImageConfig if image redaction is required.
+   * Optional. Ensures in-flight data remains in the region of origin during de-identification. The
+   * default value is false. Using this option results in a significant reduction of throughput, and
+   * is not compatible with `LOCATION` or `ORGANIZATION_NAME` infoTypes. `LOCATION` must be excluded
+   * within TextConfig, and must also be excluded within ImageConfig if image redaction is required.
    * @param useRegionalDataProcessing useRegionalDataProcessing or {@code null} for none
    */
   public DeidentifyConfig setUseRegionalDataProcessing(java.lang.Boolean useRegionalDataProcessing) {

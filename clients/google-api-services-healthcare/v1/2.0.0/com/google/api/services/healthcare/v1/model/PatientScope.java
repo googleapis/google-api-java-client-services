@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1.model;
 
 /**
- * Mask a string by replacing its characters with a fixed character.
+ * Apply consents given by a list of patients.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -27,40 +27,46 @@ package com.google.api.services.healthcare.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CharacterMaskConfig extends com.google.api.client.json.GenericJson {
+public final class PatientScope extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Character to mask the sensitive values. If not supplied, defaults to "*".
+   * Optional. The list of patient IDs whose Consent resources will be enforced. At most 10,000
+   * patients can be specified. An empty list is equivalent to all patients (meaning the entire FHIR
+   * store).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String maskingCharacter;
+  private java.util.List<java.lang.String> patientIds;
 
   /**
-   * Optional. Character to mask the sensitive values. If not supplied, defaults to "*".
+   * Optional. The list of patient IDs whose Consent resources will be enforced. At most 10,000
+   * patients can be specified. An empty list is equivalent to all patients (meaning the entire FHIR
+   * store).
    * @return value or {@code null} for none
    */
-  public java.lang.String getMaskingCharacter() {
-    return maskingCharacter;
+  public java.util.List<java.lang.String> getPatientIds() {
+    return patientIds;
   }
 
   /**
-   * Optional. Character to mask the sensitive values. If not supplied, defaults to "*".
-   * @param maskingCharacter maskingCharacter or {@code null} for none
+   * Optional. The list of patient IDs whose Consent resources will be enforced. At most 10,000
+   * patients can be specified. An empty list is equivalent to all patients (meaning the entire FHIR
+   * store).
+   * @param patientIds patientIds or {@code null} for none
    */
-  public CharacterMaskConfig setMaskingCharacter(java.lang.String maskingCharacter) {
-    this.maskingCharacter = maskingCharacter;
+  public PatientScope setPatientIds(java.util.List<java.lang.String> patientIds) {
+    this.patientIds = patientIds;
     return this;
   }
 
   @Override
-  public CharacterMaskConfig set(String fieldName, Object value) {
-    return (CharacterMaskConfig) super.set(fieldName, value);
+  public PatientScope set(String fieldName, Object value) {
+    return (PatientScope) super.set(fieldName, value);
   }
 
   @Override
-  public CharacterMaskConfig clone() {
-    return (CharacterMaskConfig) super.clone();
+  public PatientScope clone() {
+    return (PatientScope) super.clone();
   }
 
 }

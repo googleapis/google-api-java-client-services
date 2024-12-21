@@ -30,7 +30,7 @@ package com.google.api.services.healthcare.v1.model;
 public final class DeidentifiedStoreDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * The configuration to use when de-identifying resources that are added to this store.
+   * Optional. The configuration to use when de-identifying resources that are added to this store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class DeidentifiedStoreDestination extends com.google.api.client.js
   private java.lang.String store;
 
   /**
-   * The configuration to use when de-identifying resources that are added to this store.
+   * Optional. The configuration to use when de-identifying resources that are added to this store.
    * @return value or {@code null} for none
    */
   public DeidentifyConfig getConfig() {
@@ -53,7 +53,7 @@ public final class DeidentifiedStoreDestination extends com.google.api.client.js
   }
 
   /**
-   * The configuration to use when de-identifying resources that are added to this store.
+   * Optional. The configuration to use when de-identifying resources that are added to this store.
    * @param config config or {@code null} for none
    */
   public DeidentifiedStoreDestination setConfig(DeidentifyConfig config) {

@@ -30,7 +30,7 @@ package com.google.api.services.healthcare.v1.model;
 public final class TextConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Transformations to apply to the detected data, overridden by `exclude_info_types`.
+   * Optional. Transformations to apply to the detected data, overridden by `exclude_info_types`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,15 +43,15 @@ public final class TextConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * InfoTypes to skip transforming, overriding `additional_transformations`.
+   * Optional. InfoTypes to skip transforming, overriding `additional_transformations`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> excludeInfoTypes;
 
   /**
-   * The transformations to apply to the detected data. Deprecated. Use `additional_transformations`
-   * instead.
+   * Optional. The transformations to apply to the detected data. Deprecated. Use
+   * `additional_transformations` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class TextConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Transformations to apply to the detected data, overridden by `exclude_info_types`.
+   * Optional. Transformations to apply to the detected data, overridden by `exclude_info_types`.
    * @return value or {@code null} for none
    */
   public java.util.List<InfoTypeTransformation> getAdditionalTransformations() {
@@ -72,7 +72,7 @@ public final class TextConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Transformations to apply to the detected data, overridden by `exclude_info_types`.
+   * Optional. Transformations to apply to the detected data, overridden by `exclude_info_types`.
    * @param additionalTransformations additionalTransformations or {@code null} for none
    */
   public TextConfig setAdditionalTransformations(java.util.List<InfoTypeTransformation> additionalTransformations) {
@@ -81,7 +81,7 @@ public final class TextConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * InfoTypes to skip transforming, overriding `additional_transformations`.
+   * Optional. InfoTypes to skip transforming, overriding `additional_transformations`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExcludeInfoTypes() {
@@ -89,7 +89,7 @@ public final class TextConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * InfoTypes to skip transforming, overriding `additional_transformations`.
+   * Optional. InfoTypes to skip transforming, overriding `additional_transformations`.
    * @param excludeInfoTypes excludeInfoTypes or {@code null} for none
    */
   public TextConfig setExcludeInfoTypes(java.util.List<java.lang.String> excludeInfoTypes) {
@@ -98,8 +98,8 @@ public final class TextConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The transformations to apply to the detected data. Deprecated. Use `additional_transformations`
-   * instead.
+   * Optional. The transformations to apply to the detected data. Deprecated. Use
+   * `additional_transformations` instead.
    * @return value or {@code null} for none
    */
   public java.util.List<InfoTypeTransformation> getTransformations() {
@@ -107,8 +107,8 @@ public final class TextConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The transformations to apply to the detected data. Deprecated. Use `additional_transformations`
-   * instead.
+   * Optional. The transformations to apply to the detected data. Deprecated. Use
+   * `additional_transformations` instead.
    * @param transformations transformations or {@code null} for none
    */
   public TextConfig setTransformations(java.util.List<InfoTypeTransformation> transformations) {

@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1.model;
 
 /**
- * Mask a string by replacing its characters with a fixed character.
+ * How the server handles the consent header.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -27,40 +27,43 @@ package com.google.api.services.healthcare.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CharacterMaskConfig extends com.google.api.client.json.GenericJson {
+public final class ConsentHeaderHandling extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Character to mask the sensitive values. If not supplied, defaults to "*".
+   * Optional. Specifies the default server behavior when the header is empty. If not specified, the
+   * `ScopeProfile.PERMIT_EMPTY_SCOPE` option is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String maskingCharacter;
+  private java.lang.String profile;
 
   /**
-   * Optional. Character to mask the sensitive values. If not supplied, defaults to "*".
+   * Optional. Specifies the default server behavior when the header is empty. If not specified, the
+   * `ScopeProfile.PERMIT_EMPTY_SCOPE` option is used.
    * @return value or {@code null} for none
    */
-  public java.lang.String getMaskingCharacter() {
-    return maskingCharacter;
+  public java.lang.String getProfile() {
+    return profile;
   }
 
   /**
-   * Optional. Character to mask the sensitive values. If not supplied, defaults to "*".
-   * @param maskingCharacter maskingCharacter or {@code null} for none
+   * Optional. Specifies the default server behavior when the header is empty. If not specified, the
+   * `ScopeProfile.PERMIT_EMPTY_SCOPE` option is used.
+   * @param profile profile or {@code null} for none
    */
-  public CharacterMaskConfig setMaskingCharacter(java.lang.String maskingCharacter) {
-    this.maskingCharacter = maskingCharacter;
+  public ConsentHeaderHandling setProfile(java.lang.String profile) {
+    this.profile = profile;
     return this;
   }
 
   @Override
-  public CharacterMaskConfig set(String fieldName, Object value) {
-    return (CharacterMaskConfig) super.set(fieldName, value);
+  public ConsentHeaderHandling set(String fieldName, Object value) {
+    return (ConsentHeaderHandling) super.set(fieldName, value);
   }
 
   @Override
-  public CharacterMaskConfig clone() {
-    return (CharacterMaskConfig) super.clone();
+  public ConsentHeaderHandling clone() {
+    return (ConsentHeaderHandling) super.clone();
   }
 
 }

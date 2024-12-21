@@ -17,7 +17,10 @@
 package com.google.api.services.healthcare.v1.model;
 
 /**
- * Mask a string by replacing its characters with a fixed character.
+ * Configures consent audit log config for FHIR create, read, update, and delete (CRUD) operations.
+ * Cloud audit log for healthcare API must be
+ * [enabled](https://cloud.google.com/logging/docs/audit/configure-data-access#config-console-
+ * enable). The consent-related logs are included as part of `protoPayload.metadata`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -27,40 +30,40 @@ package com.google.api.services.healthcare.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CharacterMaskConfig extends com.google.api.client.json.GenericJson {
+public final class AccessDeterminationLogConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Character to mask the sensitive values. If not supplied, defaults to "*".
+   * Optional. Controls the amount of detail to include as part of the audit logs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String maskingCharacter;
+  private java.lang.String logLevel;
 
   /**
-   * Optional. Character to mask the sensitive values. If not supplied, defaults to "*".
+   * Optional. Controls the amount of detail to include as part of the audit logs.
    * @return value or {@code null} for none
    */
-  public java.lang.String getMaskingCharacter() {
-    return maskingCharacter;
+  public java.lang.String getLogLevel() {
+    return logLevel;
   }
 
   /**
-   * Optional. Character to mask the sensitive values. If not supplied, defaults to "*".
-   * @param maskingCharacter maskingCharacter or {@code null} for none
+   * Optional. Controls the amount of detail to include as part of the audit logs.
+   * @param logLevel logLevel or {@code null} for none
    */
-  public CharacterMaskConfig setMaskingCharacter(java.lang.String maskingCharacter) {
-    this.maskingCharacter = maskingCharacter;
+  public AccessDeterminationLogConfig setLogLevel(java.lang.String logLevel) {
+    this.logLevel = logLevel;
     return this;
   }
 
   @Override
-  public CharacterMaskConfig set(String fieldName, Object value) {
-    return (CharacterMaskConfig) super.set(fieldName, value);
+  public AccessDeterminationLogConfig set(String fieldName, Object value) {
+    return (AccessDeterminationLogConfig) super.set(fieldName, value);
   }
 
   @Override
-  public CharacterMaskConfig clone() {
-    return (CharacterMaskConfig) super.clone();
+  public AccessDeterminationLogConfig clone() {
+    return (AccessDeterminationLogConfig) super.clone();
   }
 
 }

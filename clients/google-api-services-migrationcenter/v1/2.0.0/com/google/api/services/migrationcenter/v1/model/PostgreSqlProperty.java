@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.migrationcenter.v1alpha1.model;
+package com.google.api.services.migrationcenter.v1.model;
 
 /**
- * Contains a single output file.
+ * PostgreSql property.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:
@@ -27,88 +27,88 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class OutputFile extends com.google.api.client.json.GenericJson {
+public final class PostgreSqlProperty extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. CSV output file.
+   * Required. The property is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private CsvOutputFile csvOutputFile;
+  private java.lang.Boolean enabled;
 
   /**
-   * Output only. File size in bytes.
+   * Required. The property numeric value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long numericValue;
+
+  /**
+   * Required. The property name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer fileSizeBytes;
+  private java.lang.String property;
 
   /**
-   * Output only. XLSX output file.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private XlsxOutputFile xlsxOutputFile;
-
-  /**
-   * Output only. CSV output file.
+   * Required. The property is enabled.
    * @return value or {@code null} for none
    */
-  public CsvOutputFile getCsvOutputFile() {
-    return csvOutputFile;
+  public java.lang.Boolean getEnabled() {
+    return enabled;
   }
 
   /**
-   * Output only. CSV output file.
-   * @param csvOutputFile csvOutputFile or {@code null} for none
+   * Required. The property is enabled.
+   * @param enabled enabled or {@code null} for none
    */
-  public OutputFile setCsvOutputFile(CsvOutputFile csvOutputFile) {
-    this.csvOutputFile = csvOutputFile;
+  public PostgreSqlProperty setEnabled(java.lang.Boolean enabled) {
+    this.enabled = enabled;
     return this;
   }
 
   /**
-   * Output only. File size in bytes.
+   * Required. The property numeric value.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getFileSizeBytes() {
-    return fileSizeBytes;
+  public java.lang.Long getNumericValue() {
+    return numericValue;
   }
 
   /**
-   * Output only. File size in bytes.
-   * @param fileSizeBytes fileSizeBytes or {@code null} for none
+   * Required. The property numeric value.
+   * @param numericValue numericValue or {@code null} for none
    */
-  public OutputFile setFileSizeBytes(java.lang.Integer fileSizeBytes) {
-    this.fileSizeBytes = fileSizeBytes;
+  public PostgreSqlProperty setNumericValue(java.lang.Long numericValue) {
+    this.numericValue = numericValue;
     return this;
   }
 
   /**
-   * Output only. XLSX output file.
+   * Required. The property name.
    * @return value or {@code null} for none
    */
-  public XlsxOutputFile getXlsxOutputFile() {
-    return xlsxOutputFile;
+  public java.lang.String getProperty() {
+    return property;
   }
 
   /**
-   * Output only. XLSX output file.
-   * @param xlsxOutputFile xlsxOutputFile or {@code null} for none
+   * Required. The property name.
+   * @param property property or {@code null} for none
    */
-  public OutputFile setXlsxOutputFile(XlsxOutputFile xlsxOutputFile) {
-    this.xlsxOutputFile = xlsxOutputFile;
+  public PostgreSqlProperty setProperty(java.lang.String property) {
+    this.property = property;
     return this;
   }
 
   @Override
-  public OutputFile set(String fieldName, Object value) {
-    return (OutputFile) super.set(fieldName, value);
+  public PostgreSqlProperty set(String fieldName, Object value) {
+    return (PostgreSqlProperty) super.set(fieldName, value);
   }
 
   @Override
-  public OutputFile clone() {
-    return (OutputFile) super.clone();
+  public PostgreSqlProperty clone() {
+    return (PostgreSqlProperty) super.clone();
   }
 
 }

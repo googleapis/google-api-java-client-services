@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.migrationcenter.v1alpha1.model;
+package com.google.api.services.migrationcenter.v1.model;
 
 /**
- * Represents a time zone from the [IANA Time Zone Database](https://www.iana.org/time-zones).
+ * Specific details for a PostgreSQL database deployment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class TimeZone extends com.google.api.client.json.GenericJson {
+public final class PostgreSqlDatabaseDeployment extends com.google.api.client.json.GenericJson {
 
   /**
-   * IANA Time Zone Database time zone. For example "America/New_York".
+   * Optional. List of PostgreSql properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String id;
+  private java.util.List<PostgreSqlProperty> properties;
 
   /**
-   * Optional. IANA Time Zone Database version number. For example "2019a".
+   * Optional. List of PostgreSql settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String version;
+  private java.util.List<PostgreSqlSetting> settings;
 
   /**
-   * IANA Time Zone Database time zone. For example "America/New_York".
+   * Optional. List of PostgreSql properties.
    * @return value or {@code null} for none
    */
-  public java.lang.String getId() {
-    return id;
+  public java.util.List<PostgreSqlProperty> getProperties() {
+    return properties;
   }
 
   /**
-   * IANA Time Zone Database time zone. For example "America/New_York".
-   * @param id id or {@code null} for none
+   * Optional. List of PostgreSql properties.
+   * @param properties properties or {@code null} for none
    */
-  public TimeZone setId(java.lang.String id) {
-    this.id = id;
+  public PostgreSqlDatabaseDeployment setProperties(java.util.List<PostgreSqlProperty> properties) {
+    this.properties = properties;
     return this;
   }
 
   /**
-   * Optional. IANA Time Zone Database version number. For example "2019a".
+   * Optional. List of PostgreSql settings.
    * @return value or {@code null} for none
    */
-  public java.lang.String getVersion() {
-    return version;
+  public java.util.List<PostgreSqlSetting> getSettings() {
+    return settings;
   }
 
   /**
-   * Optional. IANA Time Zone Database version number. For example "2019a".
-   * @param version version or {@code null} for none
+   * Optional. List of PostgreSql settings.
+   * @param settings settings or {@code null} for none
    */
-  public TimeZone setVersion(java.lang.String version) {
-    this.version = version;
+  public PostgreSqlDatabaseDeployment setSettings(java.util.List<PostgreSqlSetting> settings) {
+    this.settings = settings;
     return this;
   }
 
   @Override
-  public TimeZone set(String fieldName, Object value) {
-    return (TimeZone) super.set(fieldName, value);
+  public PostgreSqlDatabaseDeployment set(String fieldName, Object value) {
+    return (PostgreSqlDatabaseDeployment) super.set(fieldName, value);
   }
 
   @Override
-  public TimeZone clone() {
-    return (TimeZone) super.clone();
+  public PostgreSqlDatabaseDeployment clone() {
+    return (PostgreSqlDatabaseDeployment) super.clone();
   }
 
 }

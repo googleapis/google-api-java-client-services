@@ -17,7 +17,7 @@
 package com.google.api.services.migrationcenter.v1.model;
 
 /**
- * An insight about an asset.
+ * The identifiers of the parent database deployment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.migrationcenter.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Insight extends com.google.api.client.json.GenericJson {
+public final class DatabaseDetailsParentDatabaseDeployment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. A generic insight about an asset.
+   * Optional. The parent database deployment generated ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GenericInsight genericInsight;
+  private java.lang.String generatedId;
 
   /**
-   * Output only. An insight about potential migrations for an asset.
+   * Optional. The parent database deployment optional manual unique ID set by the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private MigrationInsight migrationInsight;
+  private java.lang.String manualUniqueId;
 
   /**
-   * Output only. A generic insight about an asset.
+   * Optional. The parent database deployment generated ID.
    * @return value or {@code null} for none
    */
-  public GenericInsight getGenericInsight() {
-    return genericInsight;
+  public java.lang.String getGeneratedId() {
+    return generatedId;
   }
 
   /**
-   * Output only. A generic insight about an asset.
-   * @param genericInsight genericInsight or {@code null} for none
+   * Optional. The parent database deployment generated ID.
+   * @param generatedId generatedId or {@code null} for none
    */
-  public Insight setGenericInsight(GenericInsight genericInsight) {
-    this.genericInsight = genericInsight;
+  public DatabaseDetailsParentDatabaseDeployment setGeneratedId(java.lang.String generatedId) {
+    this.generatedId = generatedId;
     return this;
   }
 
   /**
-   * Output only. An insight about potential migrations for an asset.
+   * Optional. The parent database deployment optional manual unique ID set by the user.
    * @return value or {@code null} for none
    */
-  public MigrationInsight getMigrationInsight() {
-    return migrationInsight;
+  public java.lang.String getManualUniqueId() {
+    return manualUniqueId;
   }
 
   /**
-   * Output only. An insight about potential migrations for an asset.
-   * @param migrationInsight migrationInsight or {@code null} for none
+   * Optional. The parent database deployment optional manual unique ID set by the user.
+   * @param manualUniqueId manualUniqueId or {@code null} for none
    */
-  public Insight setMigrationInsight(MigrationInsight migrationInsight) {
-    this.migrationInsight = migrationInsight;
+  public DatabaseDetailsParentDatabaseDeployment setManualUniqueId(java.lang.String manualUniqueId) {
+    this.manualUniqueId = manualUniqueId;
     return this;
   }
 
   @Override
-  public Insight set(String fieldName, Object value) {
-    return (Insight) super.set(fieldName, value);
+  public DatabaseDetailsParentDatabaseDeployment set(String fieldName, Object value) {
+    return (DatabaseDetailsParentDatabaseDeployment) super.set(fieldName, value);
   }
 
   @Override
-  public Insight clone() {
-    return (Insight) super.clone();
+  public DatabaseDetailsParentDatabaseDeployment clone() {
+    return (DatabaseDetailsParentDatabaseDeployment) super.clone();
   }
 
 }

@@ -30,14 +30,28 @@ package com.google.api.services.migrationcenter.v1.model;
 public final class DailyResourceUsageAggregationDisk extends com.google.api.client.json.GenericJson {
 
   /**
-   * Disk I/O operations per second.
+   * Optional. Disk I/O operations per second.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DailyResourceUsageAggregationStats iops;
 
   /**
-   * Disk I/O operations per second.
+   * Optional. Disk read I/O operations per second.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DailyResourceUsageAggregationStats readIops;
+
+  /**
+   * Optional. Disk write I/O operations per second.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DailyResourceUsageAggregationStats writeIops;
+
+  /**
+   * Optional. Disk I/O operations per second.
    * @return value or {@code null} for none
    */
   public DailyResourceUsageAggregationStats getIops() {
@@ -45,11 +59,45 @@ public final class DailyResourceUsageAggregationDisk extends com.google.api.clie
   }
 
   /**
-   * Disk I/O operations per second.
+   * Optional. Disk I/O operations per second.
    * @param iops iops or {@code null} for none
    */
   public DailyResourceUsageAggregationDisk setIops(DailyResourceUsageAggregationStats iops) {
     this.iops = iops;
+    return this;
+  }
+
+  /**
+   * Optional. Disk read I/O operations per second.
+   * @return value or {@code null} for none
+   */
+  public DailyResourceUsageAggregationStats getReadIops() {
+    return readIops;
+  }
+
+  /**
+   * Optional. Disk read I/O operations per second.
+   * @param readIops readIops or {@code null} for none
+   */
+  public DailyResourceUsageAggregationDisk setReadIops(DailyResourceUsageAggregationStats readIops) {
+    this.readIops = readIops;
+    return this;
+  }
+
+  /**
+   * Optional. Disk write I/O operations per second.
+   * @return value or {@code null} for none
+   */
+  public DailyResourceUsageAggregationStats getWriteIops() {
+    return writeIops;
+  }
+
+  /**
+   * Optional. Disk write I/O operations per second.
+   * @param writeIops writeIops or {@code null} for none
+   */
+  public DailyResourceUsageAggregationDisk setWriteIops(DailyResourceUsageAggregationStats writeIops) {
+    this.writeIops = writeIops;
     return this;
   }
 

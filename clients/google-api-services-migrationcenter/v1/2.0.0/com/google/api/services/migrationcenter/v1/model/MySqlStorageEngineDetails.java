@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.migrationcenter.v1alpha1.model;
+package com.google.api.services.migrationcenter.v1.model;
 
 /**
- * Contains a single output file.
+ * Mysql storage engine tables.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:
@@ -27,88 +27,88 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class OutputFile extends com.google.api.client.json.GenericJson {
+public final class MySqlStorageEngineDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. CSV output file.
+   * Optional. The number of encrypted tables.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private CsvOutputFile csvOutputFile;
+  private java.lang.Integer encryptedTableCount;
 
   /**
-   * Output only. File size in bytes.
+   * Required. The storage engine.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer fileSizeBytes;
+  private java.lang.String engine;
 
   /**
-   * Output only. XLSX output file.
+   * Optional. The number of tables.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private XlsxOutputFile xlsxOutputFile;
+  private java.lang.Integer tableCount;
 
   /**
-   * Output only. CSV output file.
+   * Optional. The number of encrypted tables.
    * @return value or {@code null} for none
    */
-  public CsvOutputFile getCsvOutputFile() {
-    return csvOutputFile;
+  public java.lang.Integer getEncryptedTableCount() {
+    return encryptedTableCount;
   }
 
   /**
-   * Output only. CSV output file.
-   * @param csvOutputFile csvOutputFile or {@code null} for none
+   * Optional. The number of encrypted tables.
+   * @param encryptedTableCount encryptedTableCount or {@code null} for none
    */
-  public OutputFile setCsvOutputFile(CsvOutputFile csvOutputFile) {
-    this.csvOutputFile = csvOutputFile;
+  public MySqlStorageEngineDetails setEncryptedTableCount(java.lang.Integer encryptedTableCount) {
+    this.encryptedTableCount = encryptedTableCount;
     return this;
   }
 
   /**
-   * Output only. File size in bytes.
+   * Required. The storage engine.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getFileSizeBytes() {
-    return fileSizeBytes;
+  public java.lang.String getEngine() {
+    return engine;
   }
 
   /**
-   * Output only. File size in bytes.
-   * @param fileSizeBytes fileSizeBytes or {@code null} for none
+   * Required. The storage engine.
+   * @param engine engine or {@code null} for none
    */
-  public OutputFile setFileSizeBytes(java.lang.Integer fileSizeBytes) {
-    this.fileSizeBytes = fileSizeBytes;
+  public MySqlStorageEngineDetails setEngine(java.lang.String engine) {
+    this.engine = engine;
     return this;
   }
 
   /**
-   * Output only. XLSX output file.
+   * Optional. The number of tables.
    * @return value or {@code null} for none
    */
-  public XlsxOutputFile getXlsxOutputFile() {
-    return xlsxOutputFile;
+  public java.lang.Integer getTableCount() {
+    return tableCount;
   }
 
   /**
-   * Output only. XLSX output file.
-   * @param xlsxOutputFile xlsxOutputFile or {@code null} for none
+   * Optional. The number of tables.
+   * @param tableCount tableCount or {@code null} for none
    */
-  public OutputFile setXlsxOutputFile(XlsxOutputFile xlsxOutputFile) {
-    this.xlsxOutputFile = xlsxOutputFile;
+  public MySqlStorageEngineDetails setTableCount(java.lang.Integer tableCount) {
+    this.tableCount = tableCount;
     return this;
   }
 
   @Override
-  public OutputFile set(String fieldName, Object value) {
-    return (OutputFile) super.set(fieldName, value);
+  public MySqlStorageEngineDetails set(String fieldName, Object value) {
+    return (MySqlStorageEngineDetails) super.set(fieldName, value);
   }
 
   @Override
-  public OutputFile clone() {
-    return (OutputFile) super.clone();
+  public MySqlStorageEngineDetails clone() {
+    return (MySqlStorageEngineDetails) super.clone();
   }
 
 }

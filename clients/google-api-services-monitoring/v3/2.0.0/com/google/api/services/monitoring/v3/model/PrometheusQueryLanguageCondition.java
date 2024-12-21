@@ -62,6 +62,17 @@ public final class PrometheusQueryLanguageCondition extends com.google.api.clien
   private java.lang.String alertRule;
 
   /**
+   * Optional. Whether to disable metric existence validation for this condition.This allows
+   * alerting policies to be defined on metrics that do not yet exist, improving advanced customer
+   * workflows such as configuring alerting policies using Terraform.Users with the
+   * monitoring.alertPolicyViewer role are able to see the name of the non-existent metric in the
+   * alerting policy condition.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableMetricValidation;
+
+  /**
    * Optional. Alerts are considered firing once their PromQL expression was evaluated to be "true"
    * for this long. Alerts whose PromQL expression was not evaluated to be "true" for long enough
    * are considered pending. Must be a non-negative duration or missing. This field is optional. Its
@@ -139,6 +150,31 @@ public final class PrometheusQueryLanguageCondition extends com.google.api.clien
    */
   public PrometheusQueryLanguageCondition setAlertRule(java.lang.String alertRule) {
     this.alertRule = alertRule;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to disable metric existence validation for this condition.This allows
+   * alerting policies to be defined on metrics that do not yet exist, improving advanced customer
+   * workflows such as configuring alerting policies using Terraform.Users with the
+   * monitoring.alertPolicyViewer role are able to see the name of the non-existent metric in the
+   * alerting policy condition.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableMetricValidation() {
+    return disableMetricValidation;
+  }
+
+  /**
+   * Optional. Whether to disable metric existence validation for this condition.This allows
+   * alerting policies to be defined on metrics that do not yet exist, improving advanced customer
+   * workflows such as configuring alerting policies using Terraform.Users with the
+   * monitoring.alertPolicyViewer role are able to see the name of the non-existent metric in the
+   * alerting policy condition.
+   * @param disableMetricValidation disableMetricValidation or {@code null} for none
+   */
+  public PrometheusQueryLanguageCondition setDisableMetricValidation(java.lang.Boolean disableMetricValidation) {
+    this.disableMetricValidation = disableMetricValidation;
     return this;
   }
 

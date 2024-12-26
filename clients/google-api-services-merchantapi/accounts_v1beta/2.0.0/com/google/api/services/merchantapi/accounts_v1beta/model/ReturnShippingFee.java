@@ -39,7 +39,7 @@ public final class ReturnShippingFee extends com.google.api.client.json.GenericJ
   private Price fixedFee;
 
   /**
-   * Type of return shipping fee.
+   * Required. Type of return shipping fee.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class ReturnShippingFee extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Type of return shipping fee.
+   * Required. Type of return shipping fee.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -73,7 +73,7 @@ public final class ReturnShippingFee extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Type of return shipping fee.
+   * Required. Type of return shipping fee.
    * @param type type or {@code null} for none
    */
   public ReturnShippingFee setType(java.lang.String type) {

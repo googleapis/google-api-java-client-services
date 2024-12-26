@@ -666,8 +666,14 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private SubscriptionCost subscriptionCost;
 
   /**
-   * The tax category of the product, used to configure detailed tax nexus in account-level tax
-   * settings.
+   * The list of sustainability incentive programs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ProductSustainabilityIncentive> sustainabilityIncentives;
+
+  /**
+   * The tax category of the product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -2245,8 +2251,24 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The tax category of the product, used to configure detailed tax nexus in account-level tax
-   * settings.
+   * The list of sustainability incentive programs.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ProductSustainabilityIncentive> getSustainabilityIncentives() {
+    return sustainabilityIncentives;
+  }
+
+  /**
+   * The list of sustainability incentive programs.
+   * @param sustainabilityIncentives sustainabilityIncentives or {@code null} for none
+   */
+  public Attributes setSustainabilityIncentives(java.util.List<ProductSustainabilityIncentive> sustainabilityIncentives) {
+    this.sustainabilityIncentives = sustainabilityIncentives;
+    return this;
+  }
+
+  /**
+   * The tax category of the product.
    * @return value or {@code null} for none
    */
   public java.lang.String getTaxCategory() {
@@ -2254,8 +2276,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The tax category of the product, used to configure detailed tax nexus in account-level tax
-   * settings.
+   * The tax category of the product.
    * @param taxCategory taxCategory or {@code null} for none
    */
   public Attributes setTaxCategory(java.lang.String taxCategory) {

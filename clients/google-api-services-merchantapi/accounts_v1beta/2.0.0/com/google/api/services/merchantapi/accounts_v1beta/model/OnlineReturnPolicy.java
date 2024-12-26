@@ -46,8 +46,8 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   private java.lang.Boolean acceptExchange;
 
   /**
-   * The countries of sale where the return policy applies. The values must be a valid 2 letter ISO
-   * 3166 code.
+   * Required. Immutable. The countries of sale where the return policy applies. The values must be
+   * a valid 2 letter ISO 3166 code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,11 +62,11 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> itemConditions;
 
   /**
-   * This field represents the unique user-defined label of the return policy. It is important to
-   * note that the same label cannot be used in different return policies for the same country.
-   * Unless a product specifies a specific label attribute, policies will be automatically labeled
-   * as 'default'. To assign a custom return policy to certain product groups, follow the
-   * instructions provided in the [Return policy label]
+   * Required. Immutable. This field represents the unique user-defined label of the return policy.
+   * It is important to note that the same label cannot be used in different return policies for the
+   * same country. Unless a product specifies a specific label attribute, policies will be
+   * automatically labeled as 'default'. To assign a custom return policy to certain product groups,
+   * follow the instructions provided in the [Return policy label]
    * (https://support.google.com/merchants/answer/9445425). The label can contain up to 50
    * characters.
    * The value may be {@code null}.
@@ -121,8 +121,8 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   private java.lang.String returnPolicyId;
 
   /**
-   * The return policy uri. This can used by Google to do a sanity check for the policy. It must be
-   * a valid URL.
+   * Required. The return policy uri. This can used by Google to do a sanity check for the policy.
+   * It must be a valid URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,8 +173,8 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * The countries of sale where the return policy applies. The values must be a valid 2 letter ISO
-   * 3166 code.
+   * Required. Immutable. The countries of sale where the return policy applies. The values must be
+   * a valid 2 letter ISO 3166 code.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCountries() {
@@ -182,8 +182,8 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * The countries of sale where the return policy applies. The values must be a valid 2 letter ISO
-   * 3166 code.
+   * Required. Immutable. The countries of sale where the return policy applies. The values must be
+   * a valid 2 letter ISO 3166 code.
    * @param countries countries or {@code null} for none
    */
   public OnlineReturnPolicy setCountries(java.util.List<java.lang.String> countries) {
@@ -211,11 +211,11 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * This field represents the unique user-defined label of the return policy. It is important to
-   * note that the same label cannot be used in different return policies for the same country.
-   * Unless a product specifies a specific label attribute, policies will be automatically labeled
-   * as 'default'. To assign a custom return policy to certain product groups, follow the
-   * instructions provided in the [Return policy label]
+   * Required. Immutable. This field represents the unique user-defined label of the return policy.
+   * It is important to note that the same label cannot be used in different return policies for the
+   * same country. Unless a product specifies a specific label attribute, policies will be
+   * automatically labeled as 'default'. To assign a custom return policy to certain product groups,
+   * follow the instructions provided in the [Return policy label]
    * (https://support.google.com/merchants/answer/9445425). The label can contain up to 50
    * characters.
    * @return value or {@code null} for none
@@ -225,11 +225,11 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * This field represents the unique user-defined label of the return policy. It is important to
-   * note that the same label cannot be used in different return policies for the same country.
-   * Unless a product specifies a specific label attribute, policies will be automatically labeled
-   * as 'default'. To assign a custom return policy to certain product groups, follow the
-   * instructions provided in the [Return policy label]
+   * Required. Immutable. This field represents the unique user-defined label of the return policy.
+   * It is important to note that the same label cannot be used in different return policies for the
+   * same country. Unless a product specifies a specific label attribute, policies will be
+   * automatically labeled as 'default'. To assign a custom return policy to certain product groups,
+   * follow the instructions provided in the [Return policy label]
    * (https://support.google.com/merchants/answer/9445425). The label can contain up to 50
    * characters.
    * @param label label or {@code null} for none
@@ -350,8 +350,8 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * The return policy uri. This can used by Google to do a sanity check for the policy. It must be
-   * a valid URL.
+   * Required. The return policy uri. This can used by Google to do a sanity check for the policy.
+   * It must be a valid URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getReturnPolicyUri() {
@@ -359,8 +359,8 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * The return policy uri. This can used by Google to do a sanity check for the policy. It must be
-   * a valid URL.
+   * Required. The return policy uri. This can used by Google to do a sanity check for the policy.
+   * It must be a valid URL.
    * @param returnPolicyUri returnPolicyUri or {@code null} for none
    */
   public OnlineReturnPolicy setReturnPolicyUri(java.lang.String returnPolicyUri) {

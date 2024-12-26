@@ -47,8 +47,7 @@ public final class AnnotateTextResponse extends com.google.api.client.json.Gener
 
   /**
    * Entities, along with their semantic information, in the input document. Populated if the user
-   * enables AnnotateTextRequest.Features.extract_entities or
-   * AnnotateTextRequest.Features.extract_entity_sentiment.
+   * enables AnnotateTextRequest.Features.extract_entities .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +55,8 @@ public final class AnnotateTextResponse extends com.google.api.client.json.Gener
 
   /**
    * The language of the text, which will be the same as the language specified in the request or,
-   * if not specified, the automatically-detected language. See Document.language field for more
-   * details.
+   * if not specified, the automatically-detected language. See Document.language_code field for
+   * more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,8 +123,7 @@ public final class AnnotateTextResponse extends com.google.api.client.json.Gener
 
   /**
    * Entities, along with their semantic information, in the input document. Populated if the user
-   * enables AnnotateTextRequest.Features.extract_entities or
-   * AnnotateTextRequest.Features.extract_entity_sentiment.
+   * enables AnnotateTextRequest.Features.extract_entities .
    * @return value or {@code null} for none
    */
   public java.util.List<Entity> getEntities() {
@@ -134,8 +132,7 @@ public final class AnnotateTextResponse extends com.google.api.client.json.Gener
 
   /**
    * Entities, along with their semantic information, in the input document. Populated if the user
-   * enables AnnotateTextRequest.Features.extract_entities or
-   * AnnotateTextRequest.Features.extract_entity_sentiment.
+   * enables AnnotateTextRequest.Features.extract_entities .
    * @param entities entities or {@code null} for none
    */
   public AnnotateTextResponse setEntities(java.util.List<Entity> entities) {
@@ -145,8 +142,8 @@ public final class AnnotateTextResponse extends com.google.api.client.json.Gener
 
   /**
    * The language of the text, which will be the same as the language specified in the request or,
-   * if not specified, the automatically-detected language. See Document.language field for more
-   * details.
+   * if not specified, the automatically-detected language. See Document.language_code field for
+   * more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -155,8 +152,8 @@ public final class AnnotateTextResponse extends com.google.api.client.json.Gener
 
   /**
    * The language of the text, which will be the same as the language specified in the request or,
-   * if not specified, the automatically-detected language. See Document.language field for more
-   * details.
+   * if not specified, the automatically-detected language. See Document.language_code field for
+   * more details.
    * @param languageCode languageCode or {@code null} for none
    */
   public AnnotateTextResponse setLanguageCode(java.lang.String languageCode) {

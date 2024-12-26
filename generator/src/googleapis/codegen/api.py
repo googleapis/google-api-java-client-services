@@ -137,8 +137,6 @@ class Api(template_objects.CodeObject):
     self._parameters = []
     param_dict = self.values.get('parameters') or {}
     for name in sorted(param_dict):
-      if (name == 'key'):
-        test = "true"
       parameter = Parameter(self, name, param_dict[name], self)
       self._parameters.append(parameter)
       if name == 'alt':

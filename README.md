@@ -147,7 +147,7 @@ packages on [Maven Central][maven-search].
 | Database Migration API | [v1](clients/google-api-services-datamigration/v1), [v1beta1](clients/google-api-services-datamigration/v1beta1) |
 | Dataflow API | [v1b3](clients/google-api-services-dataflow/v1b3) |
 | Dataform API | [v1beta1](clients/google-api-services-dataform/v1beta1) |
-| Dataproc Metastore API | [v1](clients/google-api-services-metastore/v1), [v1alpha](clients/google-api-services-metastore/v1alpha), [v1beta](clients/google-api-services-metastore/v1beta) |
+| Dataproc Metastore API | [v1](clients/google-api-services-metastore/v1), [v1alpha](clients/google-api-services-metastore/v1alpha), [v1beta](clients/google-api-services-metastore/v1beta), [v2](clients/google-api-services-metastore/v2), [v2alpha](clients/google-api-services-metastore/v2alpha), [v2beta](clients/google-api-services-metastore/v2beta) |
 | Datastream API | [v1](clients/google-api-services-datastream/v1), [v1alpha1](clients/google-api-services-datastream/v1alpha1) |
 | Developer Connect API | [v1](clients/google-api-services-developerconnect/v1) |
 | Dialogflow API | [v2](clients/google-api-services-dialogflow/v2), [v2beta1](clients/google-api-services-dialogflow/v2beta1), [v3](clients/google-api-services-dialogflow/v3), [v3beta1](clients/google-api-services-dialogflow/v3beta1) |
@@ -255,6 +255,7 @@ packages on [Maven Central][maven-search].
 | Payments Reseller Subscription API | [v1](clients/google-api-services-paymentsresellersubscription/v1) |
 | People API | [v1](clients/google-api-services-people/v1) |
 | Places API (New) | [v1](clients/google-api-services-places/v1) |
+| Places Insights API | [v1](clients/google-api-services-areainsights/v1) |
 | Policy Analyzer API | [v1](clients/google-api-services-policyanalyzer/v1), [v1beta1](clients/google-api-services-policyanalyzer/v1beta1) |
 | Policy Simulator API | [v1](clients/google-api-services-policysimulator/v1), [v1alpha](clients/google-api-services-policysimulator/v1alpha), [v1beta](clients/google-api-services-policysimulator/v1beta) |
 | Policy Troubleshooter API | [v1](clients/google-api-services-policytroubleshooter/v1), [v1beta](clients/google-api-services-policytroubleshooter/v1beta) |
@@ -274,6 +275,7 @@ packages on [Maven Central][maven-search].
 | Search Ads 360 Reporting API | [v0](clients/google-api-services-searchads360/v0) |
 | Secret Manager API | [v1](clients/google-api-services-secretmanager/v1), [v1beta1](clients/google-api-services-secretmanager/v1beta1), [v1beta2](clients/google-api-services-secretmanager/v1beta2) |
 | Security Command Center API | [v1](clients/google-api-services-securitycenter/v1), [v1beta1](clients/google-api-services-securitycenter/v1beta1), [v1beta2](clients/google-api-services-securitycenter/v1beta2) |
+| Security Posture API | [v1](clients/google-api-services-securityposture/v1) |
 | Security Token Service API | [v1](clients/google-api-services-sts/v1), [v1beta](clients/google-api-services-sts/v1beta) |
 | Sensitive Data Protection (DLP) | [v2](clients/google-api-services-dlp/v2) |
 | Serverless VPC Access API | [v1](clients/google-api-services-vpcaccess/v1), [v1beta1](clients/google-api-services-vpcaccess/v1beta1) |

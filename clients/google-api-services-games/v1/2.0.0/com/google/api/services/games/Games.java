@@ -20,7 +20,7 @@ package com.google.api.services.games;
  * Service definition for Games (v1).
  *
  * <p>
- * The Google Play games service allows developers to enhance games with social leaderboards, achievements, game state, sign-in with Google, and more.
+ * The Google Play Games Service allows developers to enhance games with social leaderboards, achievements, game state, sign-in with Google, and more.
  * </p>
  *
  * <p>

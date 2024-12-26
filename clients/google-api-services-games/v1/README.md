@@ -1,6 +1,6 @@
 # Google Play Game Services Client Library for Java
 
-The Google Play games service allows developers to enhance games with social leaderboards, achievements, game state, sign-in with Google, and more.
+The Google Play Games Service allows developers to enhance games with social leaderboards, achievements, game state, sign-in with Google, and more.
 
 This page contains information about getting started with the Google Play Game Services
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-games</artifactId>
-      <version>v1-rev20240701-2.0.0</version>
+      <version>v1-rev20241209-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-games:v1-rev20240701-2.0.0'
+  implementation 'com.google.apis:google-api-services-games:v1-rev20241209-2.0.0'
 }
 ```
 

@@ -5043,7 +5043,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
          * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
          * `Code.CANCELLED`.
          *
          * Create a request for the method "operations.cancel".
@@ -5074,7 +5074,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
            * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
            * methods to check whether the cancellation succeeded or whether the operation completed despite
            * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
            * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".
@@ -6582,6 +6582,140 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
             return (NetAppFilesSwitch) super.set(parameterName, value);
           }
         }
+        /**
+         * ValidateDirectoryService does a connectivity check for a directory service policy attached to the
+         * storage pool.
+         *
+         * Create a request for the method "storagePools.validateDirectoryService".
+         *
+         * This request holds the parameters needed by the netapp server.  After setting any optional
+         * parameters, call the {@link ValidateDirectoryService#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. Name of the storage pool
+         * @param content the {@link com.google.api.services.netapp.v1.model.ValidateDirectoryServiceRequest}
+         * @return the request
+         */
+        public ValidateDirectoryService validateDirectoryService(java.lang.String name, com.google.api.services.netapp.v1.model.ValidateDirectoryServiceRequest content) throws java.io.IOException {
+          ValidateDirectoryService result = new ValidateDirectoryService(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ValidateDirectoryService extends NetAppFilesRequest<com.google.api.services.netapp.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:validateDirectoryService";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/storagePools/[^/]+$");
+
+          /**
+           * ValidateDirectoryService does a connectivity check for a directory service policy attached to
+           * the storage pool.
+           *
+           * Create a request for the method "storagePools.validateDirectoryService".
+           *
+           * This request holds the parameters needed by the the netapp server.  After setting any optional
+           * parameters, call the {@link ValidateDirectoryService#execute()} method to invoke the remote
+           * operation. <p> {@link ValidateDirectoryService#initialize(com.google.api.client.googleapis.serv
+           * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. Name of the storage pool
+           * @param content the {@link com.google.api.services.netapp.v1.model.ValidateDirectoryServiceRequest}
+           * @since 1.13
+           */
+          protected ValidateDirectoryService(java.lang.String name, com.google.api.services.netapp.v1.model.ValidateDirectoryServiceRequest content) {
+            super(NetAppFiles.this, "POST", REST_PATH, content, com.google.api.services.netapp.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/storagePools/[^/]+$");
+            }
+          }
+
+          @Override
+          public ValidateDirectoryService set$Xgafv(java.lang.String $Xgafv) {
+            return (ValidateDirectoryService) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ValidateDirectoryService setAccessToken(java.lang.String accessToken) {
+            return (ValidateDirectoryService) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ValidateDirectoryService setAlt(java.lang.String alt) {
+            return (ValidateDirectoryService) super.setAlt(alt);
+          }
+
+          @Override
+          public ValidateDirectoryService setCallback(java.lang.String callback) {
+            return (ValidateDirectoryService) super.setCallback(callback);
+          }
+
+          @Override
+          public ValidateDirectoryService setFields(java.lang.String fields) {
+            return (ValidateDirectoryService) super.setFields(fields);
+          }
+
+          @Override
+          public ValidateDirectoryService setKey(java.lang.String key) {
+            return (ValidateDirectoryService) super.setKey(key);
+          }
+
+          @Override
+          public ValidateDirectoryService setOauthToken(java.lang.String oauthToken) {
+            return (ValidateDirectoryService) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ValidateDirectoryService setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ValidateDirectoryService) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ValidateDirectoryService setQuotaUser(java.lang.String quotaUser) {
+            return (ValidateDirectoryService) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ValidateDirectoryService setUploadType(java.lang.String uploadType) {
+            return (ValidateDirectoryService) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ValidateDirectoryService setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ValidateDirectoryService) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Name of the storage pool */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the storage pool
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Name of the storage pool */
+          public ValidateDirectoryService setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/storagePools/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ValidateDirectoryService set(String parameterName, Object value) {
+            return (ValidateDirectoryService) super.set(parameterName, value);
+          }
+        }
 
       }
       /**
@@ -7884,6 +8018,148 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
+           * Establish replication peering.
+           *
+           * Create a request for the method "replications.establishPeering".
+           *
+           * This request holds the parameters needed by the netapp server.  After setting any optional
+           * parameters, call the {@link EstablishPeering#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the replication, in the format of
+           *        projects/{project_id}/locations/{location}/volumes/{volume_id}/replications/{replication_i
+           *        d}.
+           * @param content the {@link com.google.api.services.netapp.v1.model.EstablishPeeringRequest}
+           * @return the request
+           */
+          public EstablishPeering establishPeering(java.lang.String name, com.google.api.services.netapp.v1.model.EstablishPeeringRequest content) throws java.io.IOException {
+            EstablishPeering result = new EstablishPeering(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class EstablishPeering extends NetAppFilesRequest<com.google.api.services.netapp.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}:establishPeering";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/volumes/[^/]+/replications/[^/]+$");
+
+            /**
+             * Establish replication peering.
+             *
+             * Create a request for the method "replications.establishPeering".
+             *
+             * This request holds the parameters needed by the the netapp server.  After setting any optional
+             * parameters, call the {@link EstablishPeering#execute()} method to invoke the remote operation.
+             * <p> {@link EstablishPeering#initialize(com.google.api.client.googleapis.services.AbstractGoogle
+             * ClientRequest)} must be called to initialize this instance immediately after invoking the
+             * constructor. </p>
+             *
+             * @param name Required. The resource name of the replication, in the format of
+           *        projects/{project_id}/locations/{location}/volumes/{volume_id}/replications/{replication_i
+           *        d}.
+             * @param content the {@link com.google.api.services.netapp.v1.model.EstablishPeeringRequest}
+             * @since 1.13
+             */
+            protected EstablishPeering(java.lang.String name, com.google.api.services.netapp.v1.model.EstablishPeeringRequest content) {
+              super(NetAppFiles.this, "POST", REST_PATH, content, com.google.api.services.netapp.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/volumes/[^/]+/replications/[^/]+$");
+              }
+            }
+
+            @Override
+            public EstablishPeering set$Xgafv(java.lang.String $Xgafv) {
+              return (EstablishPeering) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public EstablishPeering setAccessToken(java.lang.String accessToken) {
+              return (EstablishPeering) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public EstablishPeering setAlt(java.lang.String alt) {
+              return (EstablishPeering) super.setAlt(alt);
+            }
+
+            @Override
+            public EstablishPeering setCallback(java.lang.String callback) {
+              return (EstablishPeering) super.setCallback(callback);
+            }
+
+            @Override
+            public EstablishPeering setFields(java.lang.String fields) {
+              return (EstablishPeering) super.setFields(fields);
+            }
+
+            @Override
+            public EstablishPeering setKey(java.lang.String key) {
+              return (EstablishPeering) super.setKey(key);
+            }
+
+            @Override
+            public EstablishPeering setOauthToken(java.lang.String oauthToken) {
+              return (EstablishPeering) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public EstablishPeering setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (EstablishPeering) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public EstablishPeering setQuotaUser(java.lang.String quotaUser) {
+              return (EstablishPeering) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public EstablishPeering setUploadType(java.lang.String uploadType) {
+              return (EstablishPeering) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public EstablishPeering setUploadProtocol(java.lang.String uploadProtocol) {
+              return (EstablishPeering) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the replication, in the format of projects/{project_id
+             * }/locations/{location}/volumes/{volume_id}/replications/{replication_id}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the replication, in the format of
+           projects/{project_id}/locations/{location}/volumes/{volume_id}/replications/{replication_id}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the replication, in the format of projects/{project_id
+             * }/locations/{location}/volumes/{volume_id}/replications/{replication_id}.
+             */
+            public EstablishPeering setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/volumes/[^/]+/replications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public EstablishPeering set(String parameterName, Object value) {
+              return (EstablishPeering) super.set(parameterName, value);
+            }
+          }
+          /**
            * Describe a replication for a volume.
            *
            * Create a request for the method "replications.get".
@@ -8832,6 +9108,148 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
             @Override
             public Stop set(String parameterName, Object value) {
               return (Stop) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Syncs the replication. This will invoke one time volume data transfer from source to destination.
+           *
+           * Create a request for the method "replications.sync".
+           *
+           * This request holds the parameters needed by the netapp server.  After setting any optional
+           * parameters, call the {@link Sync#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the replication, in the format of
+           *        projects/{project_id}/locations/{location}/volumes/{volume_id}/replications/{replication_i
+           *        d}.
+           * @param content the {@link com.google.api.services.netapp.v1.model.SyncReplicationRequest}
+           * @return the request
+           */
+          public Sync sync(java.lang.String name, com.google.api.services.netapp.v1.model.SyncReplicationRequest content) throws java.io.IOException {
+            Sync result = new Sync(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Sync extends NetAppFilesRequest<com.google.api.services.netapp.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}:sync";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/volumes/[^/]+/replications/[^/]+$");
+
+            /**
+             * Syncs the replication. This will invoke one time volume data transfer from source to
+             * destination.
+             *
+             * Create a request for the method "replications.sync".
+             *
+             * This request holds the parameters needed by the the netapp server.  After setting any optional
+             * parameters, call the {@link Sync#execute()} method to invoke the remote operation. <p> {@link
+             * Sync#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the replication, in the format of
+           *        projects/{project_id}/locations/{location}/volumes/{volume_id}/replications/{replication_i
+           *        d}.
+             * @param content the {@link com.google.api.services.netapp.v1.model.SyncReplicationRequest}
+             * @since 1.13
+             */
+            protected Sync(java.lang.String name, com.google.api.services.netapp.v1.model.SyncReplicationRequest content) {
+              super(NetAppFiles.this, "POST", REST_PATH, content, com.google.api.services.netapp.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/volumes/[^/]+/replications/[^/]+$");
+              }
+            }
+
+            @Override
+            public Sync set$Xgafv(java.lang.String $Xgafv) {
+              return (Sync) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Sync setAccessToken(java.lang.String accessToken) {
+              return (Sync) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Sync setAlt(java.lang.String alt) {
+              return (Sync) super.setAlt(alt);
+            }
+
+            @Override
+            public Sync setCallback(java.lang.String callback) {
+              return (Sync) super.setCallback(callback);
+            }
+
+            @Override
+            public Sync setFields(java.lang.String fields) {
+              return (Sync) super.setFields(fields);
+            }
+
+            @Override
+            public Sync setKey(java.lang.String key) {
+              return (Sync) super.setKey(key);
+            }
+
+            @Override
+            public Sync setOauthToken(java.lang.String oauthToken) {
+              return (Sync) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Sync setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Sync) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Sync setQuotaUser(java.lang.String quotaUser) {
+              return (Sync) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Sync setUploadType(java.lang.String uploadType) {
+              return (Sync) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Sync setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Sync) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the replication, in the format of projects/{project_id
+             * }/locations/{location}/volumes/{volume_id}/replications/{replication_id}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the replication, in the format of
+           projects/{project_id}/locations/{location}/volumes/{volume_id}/replications/{replication_id}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the replication, in the format of projects/{project_id
+             * }/locations/{location}/volumes/{volume_id}/replications/{replication_id}.
+             */
+            public Sync setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/volumes/[^/]+/replications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Sync set(String parameterName, Object value) {
+              return (Sync) super.set(parameterName, value);
             }
           }
 

@@ -31,6 +31,13 @@ package com.google.api.services.netapp.v1beta1.model;
 public final class Replication extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Location of the user cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clusterLocation;
+
+  /**
    * Output only. Replication create time.
    * The value may be {@code null}.
    */
@@ -68,6 +75,20 @@ public final class Replication extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean healthy;
+
+  /**
+   * Output only. Hybrid peering details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HybridPeeringDetails hybridPeeringDetails;
+
+  /**
+   * Output only. Type of the hybrid replication.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String hybridReplicationType;
 
   /**
    * Resource labels to represent user provided metadata.
@@ -133,6 +154,23 @@ public final class Replication extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private TransferStats transferStats;
+
+  /**
+   * Optional. Location of the user cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClusterLocation() {
+    return clusterLocation;
+  }
+
+  /**
+   * Optional. Location of the user cluster.
+   * @param clusterLocation clusterLocation or {@code null} for none
+   */
+  public Replication setClusterLocation(java.lang.String clusterLocation) {
+    this.clusterLocation = clusterLocation;
+    return this;
+  }
 
   /**
    * Output only. Replication create time.
@@ -224,6 +262,40 @@ public final class Replication extends com.google.api.client.json.GenericJson {
    */
   public Replication setHealthy(java.lang.Boolean healthy) {
     this.healthy = healthy;
+    return this;
+  }
+
+  /**
+   * Output only. Hybrid peering details.
+   * @return value or {@code null} for none
+   */
+  public HybridPeeringDetails getHybridPeeringDetails() {
+    return hybridPeeringDetails;
+  }
+
+  /**
+   * Output only. Hybrid peering details.
+   * @param hybridPeeringDetails hybridPeeringDetails or {@code null} for none
+   */
+  public Replication setHybridPeeringDetails(HybridPeeringDetails hybridPeeringDetails) {
+    this.hybridPeeringDetails = hybridPeeringDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Type of the hybrid replication.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHybridReplicationType() {
+    return hybridReplicationType;
+  }
+
+  /**
+   * Output only. Type of the hybrid replication.
+   * @param hybridReplicationType hybridReplicationType or {@code null} for none
+   */
+  public Replication setHybridReplicationType(java.lang.String hybridReplicationType) {
+    this.hybridReplicationType = hybridReplicationType;
     return this;
   }
 

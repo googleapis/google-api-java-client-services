@@ -93,6 +93,13 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean hasReplication;
 
   /**
+   * Optional. The Hybrid Replication parameters for the volume.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HybridReplicationParameters hybridReplicationParameters;
+
+  /**
    * Optional. Flag indicating if the volume is a kerberos volume or not, export policy rules
    * control kerberos security modes (krb5, krb5i, krb5p).
    * The value may be {@code null}.
@@ -451,6 +458,23 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setHasReplication(java.lang.Boolean hasReplication) {
     this.hasReplication = hasReplication;
+    return this;
+  }
+
+  /**
+   * Optional. The Hybrid Replication parameters for the volume.
+   * @return value or {@code null} for none
+   */
+  public HybridReplicationParameters getHybridReplicationParameters() {
+    return hybridReplicationParameters;
+  }
+
+  /**
+   * Optional. The Hybrid Replication parameters for the volume.
+   * @param hybridReplicationParameters hybridReplicationParameters or {@code null} for none
+   */
+  public Volume setHybridReplicationParameters(HybridReplicationParameters hybridReplicationParameters) {
+    this.hybridReplicationParameters = hybridReplicationParameters;
     return this;
   }
 

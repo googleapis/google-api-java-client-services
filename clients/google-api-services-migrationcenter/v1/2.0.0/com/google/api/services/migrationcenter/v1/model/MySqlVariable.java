@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.migrationcenter.v1alpha1.model;
+package com.google.api.services.migrationcenter.v1.model;
 
 /**
- * Contains a single output file.
+ * MySql variable.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:
@@ -27,88 +27,88 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class OutputFile extends com.google.api.client.json.GenericJson {
+public final class MySqlVariable extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. CSV output file.
+   * Required. The variable category.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private CsvOutputFile csvOutputFile;
+  private java.lang.String category;
 
   /**
-   * Output only. File size in bytes.
+   * Required. The variable value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer fileSizeBytes;
+  private java.lang.String value;
 
   /**
-   * Output only. XLSX output file.
+   * Required. The variable name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private XlsxOutputFile xlsxOutputFile;
+  private java.lang.String variable;
 
   /**
-   * Output only. CSV output file.
+   * Required. The variable category.
    * @return value or {@code null} for none
    */
-  public CsvOutputFile getCsvOutputFile() {
-    return csvOutputFile;
+  public java.lang.String getCategory() {
+    return category;
   }
 
   /**
-   * Output only. CSV output file.
-   * @param csvOutputFile csvOutputFile or {@code null} for none
+   * Required. The variable category.
+   * @param category category or {@code null} for none
    */
-  public OutputFile setCsvOutputFile(CsvOutputFile csvOutputFile) {
-    this.csvOutputFile = csvOutputFile;
+  public MySqlVariable setCategory(java.lang.String category) {
+    this.category = category;
     return this;
   }
 
   /**
-   * Output only. File size in bytes.
+   * Required. The variable value.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getFileSizeBytes() {
-    return fileSizeBytes;
+  public java.lang.String getValue() {
+    return value;
   }
 
   /**
-   * Output only. File size in bytes.
-   * @param fileSizeBytes fileSizeBytes or {@code null} for none
+   * Required. The variable value.
+   * @param value value or {@code null} for none
    */
-  public OutputFile setFileSizeBytes(java.lang.Integer fileSizeBytes) {
-    this.fileSizeBytes = fileSizeBytes;
+  public MySqlVariable setValue(java.lang.String value) {
+    this.value = value;
     return this;
   }
 
   /**
-   * Output only. XLSX output file.
+   * Required. The variable name.
    * @return value or {@code null} for none
    */
-  public XlsxOutputFile getXlsxOutputFile() {
-    return xlsxOutputFile;
+  public java.lang.String getVariable() {
+    return variable;
   }
 
   /**
-   * Output only. XLSX output file.
-   * @param xlsxOutputFile xlsxOutputFile or {@code null} for none
+   * Required. The variable name.
+   * @param variable variable or {@code null} for none
    */
-  public OutputFile setXlsxOutputFile(XlsxOutputFile xlsxOutputFile) {
-    this.xlsxOutputFile = xlsxOutputFile;
+  public MySqlVariable setVariable(java.lang.String variable) {
+    this.variable = variable;
     return this;
   }
 
   @Override
-  public OutputFile set(String fieldName, Object value) {
-    return (OutputFile) super.set(fieldName, value);
+  public MySqlVariable set(String fieldName, Object value) {
+    return (MySqlVariable) super.set(fieldName, value);
   }
 
   @Override
-  public OutputFile clone() {
-    return (OutputFile) super.clone();
+  public MySqlVariable clone() {
+    return (MySqlVariable) super.clone();
   }
 
 }

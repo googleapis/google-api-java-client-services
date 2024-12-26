@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.migrationcenter.v1alpha1.model;
+package com.google.api.services.migrationcenter.v1.model;
 
 /**
- * Represents a time zone from the [IANA Time Zone Database](https://www.iana.org/time-zones).
+ * PostgreSql extension.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:
@@ -27,41 +27,41 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class TimeZone extends com.google.api.client.json.GenericJson {
+public final class PostgreSqlExtension extends com.google.api.client.json.GenericJson {
 
   /**
-   * IANA Time Zone Database time zone. For example "America/New_York".
+   * Required. The extension name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String id;
+  private java.lang.String extension;
 
   /**
-   * Optional. IANA Time Zone Database version number. For example "2019a".
+   * Required. The extension version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * IANA Time Zone Database time zone. For example "America/New_York".
+   * Required. The extension name.
    * @return value or {@code null} for none
    */
-  public java.lang.String getId() {
-    return id;
+  public java.lang.String getExtension() {
+    return extension;
   }
 
   /**
-   * IANA Time Zone Database time zone. For example "America/New_York".
-   * @param id id or {@code null} for none
+   * Required. The extension name.
+   * @param extension extension or {@code null} for none
    */
-  public TimeZone setId(java.lang.String id) {
-    this.id = id;
+  public PostgreSqlExtension setExtension(java.lang.String extension) {
+    this.extension = extension;
     return this;
   }
 
   /**
-   * Optional. IANA Time Zone Database version number. For example "2019a".
+   * Required. The extension version.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -69,22 +69,22 @@ public final class TimeZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. IANA Time Zone Database version number. For example "2019a".
+   * Required. The extension version.
    * @param version version or {@code null} for none
    */
-  public TimeZone setVersion(java.lang.String version) {
+  public PostgreSqlExtension setVersion(java.lang.String version) {
     this.version = version;
     return this;
   }
 
   @Override
-  public TimeZone set(String fieldName, Object value) {
-    return (TimeZone) super.set(fieldName, value);
+  public PostgreSqlExtension set(String fieldName, Object value) {
+    return (PostgreSqlExtension) super.set(fieldName, value);
   }
 
   @Override
-  public TimeZone clone() {
-    return (TimeZone) super.clone();
+  public PostgreSqlExtension clone() {
+    return (PostgreSqlExtension) super.clone();
   }
 
 }

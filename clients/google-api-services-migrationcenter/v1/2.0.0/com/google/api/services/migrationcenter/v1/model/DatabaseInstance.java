@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.migrationcenter.v1alpha1.model;
+package com.google.api.services.migrationcenter.v1.model;
 
 /**
- * Contains a single output file.
+ * Details of a database instance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:
@@ -27,88 +27,88 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class OutputFile extends com.google.api.client.json.GenericJson {
+public final class DatabaseInstance extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. CSV output file.
+   * Optional. The instance's name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private CsvOutputFile csvOutputFile;
+  private java.lang.String instanceName;
 
   /**
-   * Output only. File size in bytes.
+   * Optional. Networking details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer fileSizeBytes;
+  private DatabaseInstanceNetwork network;
 
   /**
-   * Output only. XLSX output file.
+   * Optional. The instance role in the database engine.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private XlsxOutputFile xlsxOutputFile;
+  private java.lang.String role;
 
   /**
-   * Output only. CSV output file.
+   * Optional. The instance's name.
    * @return value or {@code null} for none
    */
-  public CsvOutputFile getCsvOutputFile() {
-    return csvOutputFile;
+  public java.lang.String getInstanceName() {
+    return instanceName;
   }
 
   /**
-   * Output only. CSV output file.
-   * @param csvOutputFile csvOutputFile or {@code null} for none
+   * Optional. The instance's name.
+   * @param instanceName instanceName or {@code null} for none
    */
-  public OutputFile setCsvOutputFile(CsvOutputFile csvOutputFile) {
-    this.csvOutputFile = csvOutputFile;
+  public DatabaseInstance setInstanceName(java.lang.String instanceName) {
+    this.instanceName = instanceName;
     return this;
   }
 
   /**
-   * Output only. File size in bytes.
+   * Optional. Networking details.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getFileSizeBytes() {
-    return fileSizeBytes;
+  public DatabaseInstanceNetwork getNetwork() {
+    return network;
   }
 
   /**
-   * Output only. File size in bytes.
-   * @param fileSizeBytes fileSizeBytes or {@code null} for none
+   * Optional. Networking details.
+   * @param network network or {@code null} for none
    */
-  public OutputFile setFileSizeBytes(java.lang.Integer fileSizeBytes) {
-    this.fileSizeBytes = fileSizeBytes;
+  public DatabaseInstance setNetwork(DatabaseInstanceNetwork network) {
+    this.network = network;
     return this;
   }
 
   /**
-   * Output only. XLSX output file.
+   * Optional. The instance role in the database engine.
    * @return value or {@code null} for none
    */
-  public XlsxOutputFile getXlsxOutputFile() {
-    return xlsxOutputFile;
+  public java.lang.String getRole() {
+    return role;
   }
 
   /**
-   * Output only. XLSX output file.
-   * @param xlsxOutputFile xlsxOutputFile or {@code null} for none
+   * Optional. The instance role in the database engine.
+   * @param role role or {@code null} for none
    */
-  public OutputFile setXlsxOutputFile(XlsxOutputFile xlsxOutputFile) {
-    this.xlsxOutputFile = xlsxOutputFile;
+  public DatabaseInstance setRole(java.lang.String role) {
+    this.role = role;
     return this;
   }
 
   @Override
-  public OutputFile set(String fieldName, Object value) {
-    return (OutputFile) super.set(fieldName, value);
+  public DatabaseInstance set(String fieldName, Object value) {
+    return (DatabaseInstance) super.set(fieldName, value);
   }
 
   @Override
-  public OutputFile clone() {
-    return (OutputFile) super.clone();
+  public DatabaseInstance clone() {
+    return (DatabaseInstance) super.clone();
   }
 
 }

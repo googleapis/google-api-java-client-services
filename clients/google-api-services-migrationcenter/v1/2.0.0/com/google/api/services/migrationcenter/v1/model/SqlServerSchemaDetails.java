@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.migrationcenter.v1alpha1.model;
+package com.google.api.services.migrationcenter.v1.model;
 
 /**
- * Signed URI destination configuration.
+ * Specific details for a SqlServer database.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SignedUriDestination extends com.google.api.client.json.GenericJson {
+public final class SqlServerSchemaDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The file format to export.
+   * Optional. SqlServer number of CLR objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String fileFormat;
+  private java.lang.Integer clrObjectCount;
 
   /**
-   * Required. The file format to export.
+   * Optional. SqlServer number of CLR objects.
    * @return value or {@code null} for none
    */
-  public java.lang.String getFileFormat() {
-    return fileFormat;
+  public java.lang.Integer getClrObjectCount() {
+    return clrObjectCount;
   }
 
   /**
-   * Required. The file format to export.
-   * @param fileFormat fileFormat or {@code null} for none
+   * Optional. SqlServer number of CLR objects.
+   * @param clrObjectCount clrObjectCount or {@code null} for none
    */
-  public SignedUriDestination setFileFormat(java.lang.String fileFormat) {
-    this.fileFormat = fileFormat;
+  public SqlServerSchemaDetails setClrObjectCount(java.lang.Integer clrObjectCount) {
+    this.clrObjectCount = clrObjectCount;
     return this;
   }
 
   @Override
-  public SignedUriDestination set(String fieldName, Object value) {
-    return (SignedUriDestination) super.set(fieldName, value);
+  public SqlServerSchemaDetails set(String fieldName, Object value) {
+    return (SqlServerSchemaDetails) super.set(fieldName, value);
   }
 
   @Override
-  public SignedUriDestination clone() {
-    return (SignedUriDestination) super.clone();
+  public SqlServerSchemaDetails clone() {
+    return (SqlServerSchemaDetails) super.clone();
   }
 
 }

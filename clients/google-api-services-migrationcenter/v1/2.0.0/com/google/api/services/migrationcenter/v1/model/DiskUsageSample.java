@@ -30,14 +30,32 @@ package com.google.api.services.migrationcenter.v1.model;
 public final class DiskUsageSample extends com.google.api.client.json.GenericJson {
 
   /**
-   * Average IOPS sampled over a short window. Must be non-negative.
+   * Optional. Average IOPS sampled over a short window. Must be non-negative. Must be equal to the
+   * sum of read and write if one of them is positive. if both read and write are zero they are
+   * ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float averageIops;
 
   /**
-   * Average IOPS sampled over a short window. Must be non-negative.
+   * Optional. Average read IOPS sampled over a short window. Must be non-negative.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float averageReadIops;
+
+  /**
+   * Optional. Average write IOPS sampled over a short window. Must be non-negative.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float averageWriteIops;
+
+  /**
+   * Optional. Average IOPS sampled over a short window. Must be non-negative. Must be equal to the
+   * sum of read and write if one of them is positive. if both read and write are zero they are
+   * ignored.
    * @return value or {@code null} for none
    */
   public java.lang.Float getAverageIops() {
@@ -45,11 +63,47 @@ public final class DiskUsageSample extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Average IOPS sampled over a short window. Must be non-negative.
+   * Optional. Average IOPS sampled over a short window. Must be non-negative. Must be equal to the
+   * sum of read and write if one of them is positive. if both read and write are zero they are
+   * ignored.
    * @param averageIops averageIops or {@code null} for none
    */
   public DiskUsageSample setAverageIops(java.lang.Float averageIops) {
     this.averageIops = averageIops;
+    return this;
+  }
+
+  /**
+   * Optional. Average read IOPS sampled over a short window. Must be non-negative.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getAverageReadIops() {
+    return averageReadIops;
+  }
+
+  /**
+   * Optional. Average read IOPS sampled over a short window. Must be non-negative.
+   * @param averageReadIops averageReadIops or {@code null} for none
+   */
+  public DiskUsageSample setAverageReadIops(java.lang.Float averageReadIops) {
+    this.averageReadIops = averageReadIops;
+    return this;
+  }
+
+  /**
+   * Optional. Average write IOPS sampled over a short window. Must be non-negative.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getAverageWriteIops() {
+    return averageWriteIops;
+  }
+
+  /**
+   * Optional. Average write IOPS sampled over a short window. Must be non-negative.
+   * @param averageWriteIops averageWriteIops or {@code null} for none
+   */
+  public DiskUsageSample setAverageWriteIops(java.lang.Float averageWriteIops) {
+    this.averageWriteIops = averageWriteIops;
     return this;
   }
 

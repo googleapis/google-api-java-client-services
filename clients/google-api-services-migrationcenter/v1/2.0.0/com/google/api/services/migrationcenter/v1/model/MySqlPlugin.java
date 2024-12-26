@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.migrationcenter.v1alpha1.model;
+package com.google.api.services.migrationcenter.v1.model;
 
 /**
- * Contains a single output file.
+ * MySql plugin.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:
@@ -27,88 +27,88 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class OutputFile extends com.google.api.client.json.GenericJson {
+public final class MySqlPlugin extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. CSV output file.
+   * Required. The plugin is active.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private CsvOutputFile csvOutputFile;
+  private java.lang.Boolean enabled;
 
   /**
-   * Output only. File size in bytes.
+   * Required. The plugin name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer fileSizeBytes;
+  private java.lang.String plugin;
 
   /**
-   * Output only. XLSX output file.
+   * Required. The plugin version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private XlsxOutputFile xlsxOutputFile;
+  private java.lang.String version;
 
   /**
-   * Output only. CSV output file.
+   * Required. The plugin is active.
    * @return value or {@code null} for none
    */
-  public CsvOutputFile getCsvOutputFile() {
-    return csvOutputFile;
+  public java.lang.Boolean getEnabled() {
+    return enabled;
   }
 
   /**
-   * Output only. CSV output file.
-   * @param csvOutputFile csvOutputFile or {@code null} for none
+   * Required. The plugin is active.
+   * @param enabled enabled or {@code null} for none
    */
-  public OutputFile setCsvOutputFile(CsvOutputFile csvOutputFile) {
-    this.csvOutputFile = csvOutputFile;
+  public MySqlPlugin setEnabled(java.lang.Boolean enabled) {
+    this.enabled = enabled;
     return this;
   }
 
   /**
-   * Output only. File size in bytes.
+   * Required. The plugin name.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getFileSizeBytes() {
-    return fileSizeBytes;
+  public java.lang.String getPlugin() {
+    return plugin;
   }
 
   /**
-   * Output only. File size in bytes.
-   * @param fileSizeBytes fileSizeBytes or {@code null} for none
+   * Required. The plugin name.
+   * @param plugin plugin or {@code null} for none
    */
-  public OutputFile setFileSizeBytes(java.lang.Integer fileSizeBytes) {
-    this.fileSizeBytes = fileSizeBytes;
+  public MySqlPlugin setPlugin(java.lang.String plugin) {
+    this.plugin = plugin;
     return this;
   }
 
   /**
-   * Output only. XLSX output file.
+   * Required. The plugin version.
    * @return value or {@code null} for none
    */
-  public XlsxOutputFile getXlsxOutputFile() {
-    return xlsxOutputFile;
+  public java.lang.String getVersion() {
+    return version;
   }
 
   /**
-   * Output only. XLSX output file.
-   * @param xlsxOutputFile xlsxOutputFile or {@code null} for none
+   * Required. The plugin version.
+   * @param version version or {@code null} for none
    */
-  public OutputFile setXlsxOutputFile(XlsxOutputFile xlsxOutputFile) {
-    this.xlsxOutputFile = xlsxOutputFile;
+  public MySqlPlugin setVersion(java.lang.String version) {
+    this.version = version;
     return this;
   }
 
   @Override
-  public OutputFile set(String fieldName, Object value) {
-    return (OutputFile) super.set(fieldName, value);
+  public MySqlPlugin set(String fieldName, Object value) {
+    return (MySqlPlugin) super.set(fieldName, value);
   }
 
   @Override
-  public OutputFile clone() {
-    return (OutputFile) super.clone();
+  public MySqlPlugin clone() {
+    return (MySqlPlugin) super.clone();
   }
 
 }

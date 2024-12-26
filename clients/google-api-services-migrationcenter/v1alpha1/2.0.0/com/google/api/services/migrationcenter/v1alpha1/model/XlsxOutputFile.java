@@ -17,7 +17,7 @@
 package com.google.api.services.migrationcenter.v1alpha1.model;
 
 /**
- * Represents a time zone from the [IANA Time Zone Database](https://www.iana.org/time-zones).
+ * Contains a single output file of type XLSX.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:
@@ -27,64 +27,40 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class TimeZone extends com.google.api.client.json.GenericJson {
+public final class XlsxOutputFile extends com.google.api.client.json.GenericJson {
 
   /**
-   * IANA Time Zone Database time zone. For example "America/New_York".
+   * Output only. Signed URI destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String id;
+  private SignedUri signedUri;
 
   /**
-   * Optional. IANA Time Zone Database version number. For example "2019a".
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String version;
-
-  /**
-   * IANA Time Zone Database time zone. For example "America/New_York".
+   * Output only. Signed URI destination.
    * @return value or {@code null} for none
    */
-  public java.lang.String getId() {
-    return id;
+  public SignedUri getSignedUri() {
+    return signedUri;
   }
 
   /**
-   * IANA Time Zone Database time zone. For example "America/New_York".
-   * @param id id or {@code null} for none
+   * Output only. Signed URI destination.
+   * @param signedUri signedUri or {@code null} for none
    */
-  public TimeZone setId(java.lang.String id) {
-    this.id = id;
-    return this;
-  }
-
-  /**
-   * Optional. IANA Time Zone Database version number. For example "2019a".
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getVersion() {
-    return version;
-  }
-
-  /**
-   * Optional. IANA Time Zone Database version number. For example "2019a".
-   * @param version version or {@code null} for none
-   */
-  public TimeZone setVersion(java.lang.String version) {
-    this.version = version;
+  public XlsxOutputFile setSignedUri(SignedUri signedUri) {
+    this.signedUri = signedUri;
     return this;
   }
 
   @Override
-  public TimeZone set(String fieldName, Object value) {
-    return (TimeZone) super.set(fieldName, value);
+  public XlsxOutputFile set(String fieldName, Object value) {
+    return (XlsxOutputFile) super.set(fieldName, value);
   }
 
   @Override
-  public TimeZone clone() {
-    return (TimeZone) super.clone();
+  public XlsxOutputFile clone() {
+    return (XlsxOutputFile) super.clone();
   }
 
 }

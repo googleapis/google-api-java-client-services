@@ -45,6 +45,20 @@ public final class AssetFrame extends com.google.api.client.json.GenericJson {
   private java.lang.String collectionType;
 
   /**
+   * Asset information specific for database deployments.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DatabaseDeploymentDetails databaseDeploymentDetails;
+
+  /**
+   * Asset information specific for logical databases.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DatabaseDetails databaseDetails;
+
+  /**
    * Labels as key value pairs.
    * The value may be {@code null}.
    */
@@ -113,6 +127,40 @@ public final class AssetFrame extends com.google.api.client.json.GenericJson {
    */
   public AssetFrame setCollectionType(java.lang.String collectionType) {
     this.collectionType = collectionType;
+    return this;
+  }
+
+  /**
+   * Asset information specific for database deployments.
+   * @return value or {@code null} for none
+   */
+  public DatabaseDeploymentDetails getDatabaseDeploymentDetails() {
+    return databaseDeploymentDetails;
+  }
+
+  /**
+   * Asset information specific for database deployments.
+   * @param databaseDeploymentDetails databaseDeploymentDetails or {@code null} for none
+   */
+  public AssetFrame setDatabaseDeploymentDetails(DatabaseDeploymentDetails databaseDeploymentDetails) {
+    this.databaseDeploymentDetails = databaseDeploymentDetails;
+    return this;
+  }
+
+  /**
+   * Asset information specific for logical databases.
+   * @return value or {@code null} for none
+   */
+  public DatabaseDetails getDatabaseDetails() {
+    return databaseDetails;
+  }
+
+  /**
+   * Asset information specific for logical databases.
+   * @param databaseDetails databaseDetails or {@code null} for none
+   */
+  public AssetFrame setDatabaseDetails(DatabaseDetails databaseDetails) {
+    this.databaseDetails = databaseDetails;
     return this;
   }
 

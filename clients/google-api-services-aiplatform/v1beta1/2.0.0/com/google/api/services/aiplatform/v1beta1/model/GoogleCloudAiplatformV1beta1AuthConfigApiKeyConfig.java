@@ -30,15 +30,23 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1AuthConfigApiKeyConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The name of the SecretManager secret version resource storing the API key. Format:
-   * `projects/{project}/secrets/{secrete}/versions/{version}` - If specified, the
-   * `secretmanager.versions.access` permission should be granted to Vertex AI Extension Service
-   * Agent (https://cloud.google.com/vertex-ai/docs/general/access-control#service-agents) on the
-   * specified resource.
+   * Optional. The name of the SecretManager secret version resource storing the API key. Format:
+   * `projects/{project}/secrets/{secrete}/versions/{version}` - If both `api_key_secret` and
+   * `api_key_string` are specified, this field takes precedence over `api_key_string`. - If
+   * specified, the `secretmanager.versions.access` permission should be granted to Vertex AI
+   * Extension Service Agent (https://cloud.google.com/vertex-ai/docs/general/access-
+   * control#service-agents) on the specified resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String apiKeySecret;
+
+  /**
+   * Optional. The API key to be used in the request directly.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String apiKeyString;
 
   /**
    * Required. The location of the API key.
@@ -56,11 +64,12 @@ public final class GoogleCloudAiplatformV1beta1AuthConfigApiKeyConfig extends co
   private java.lang.String name;
 
   /**
-   * Required. The name of the SecretManager secret version resource storing the API key. Format:
-   * `projects/{project}/secrets/{secrete}/versions/{version}` - If specified, the
-   * `secretmanager.versions.access` permission should be granted to Vertex AI Extension Service
-   * Agent (https://cloud.google.com/vertex-ai/docs/general/access-control#service-agents) on the
-   * specified resource.
+   * Optional. The name of the SecretManager secret version resource storing the API key. Format:
+   * `projects/{project}/secrets/{secrete}/versions/{version}` - If both `api_key_secret` and
+   * `api_key_string` are specified, this field takes precedence over `api_key_string`. - If
+   * specified, the `secretmanager.versions.access` permission should be granted to Vertex AI
+   * Extension Service Agent (https://cloud.google.com/vertex-ai/docs/general/access-
+   * control#service-agents) on the specified resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getApiKeySecret() {
@@ -68,15 +77,33 @@ public final class GoogleCloudAiplatformV1beta1AuthConfigApiKeyConfig extends co
   }
 
   /**
-   * Required. The name of the SecretManager secret version resource storing the API key. Format:
-   * `projects/{project}/secrets/{secrete}/versions/{version}` - If specified, the
-   * `secretmanager.versions.access` permission should be granted to Vertex AI Extension Service
-   * Agent (https://cloud.google.com/vertex-ai/docs/general/access-control#service-agents) on the
-   * specified resource.
+   * Optional. The name of the SecretManager secret version resource storing the API key. Format:
+   * `projects/{project}/secrets/{secrete}/versions/{version}` - If both `api_key_secret` and
+   * `api_key_string` are specified, this field takes precedence over `api_key_string`. - If
+   * specified, the `secretmanager.versions.access` permission should be granted to Vertex AI
+   * Extension Service Agent (https://cloud.google.com/vertex-ai/docs/general/access-
+   * control#service-agents) on the specified resource.
    * @param apiKeySecret apiKeySecret or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AuthConfigApiKeyConfig setApiKeySecret(java.lang.String apiKeySecret) {
     this.apiKeySecret = apiKeySecret;
+    return this;
+  }
+
+  /**
+   * Optional. The API key to be used in the request directly.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getApiKeyString() {
+    return apiKeyString;
+  }
+
+  /**
+   * Optional. The API key to be used in the request directly.
+   * @param apiKeyString apiKeyString or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AuthConfigApiKeyConfig setApiKeyString(java.lang.String apiKeyString) {
+    this.apiKeyString = apiKeyString;
     return this;
   }
 

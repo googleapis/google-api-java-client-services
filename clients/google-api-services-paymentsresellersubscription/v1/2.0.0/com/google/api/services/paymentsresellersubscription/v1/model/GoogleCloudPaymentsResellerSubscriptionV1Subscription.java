@@ -83,6 +83,14 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   private java.util.List<GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem> lineItems;
 
   /**
+   * Output only. Describes the details of the migrated subscription. Only populated if this
+   * subscription is migrated from another system.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudPaymentsResellerSubscriptionV1SubscriptionMigrationDetails migrationDetails;
+
+  /**
    * Identifier. Resource name of the subscription. It will have the format of
    * "partners/{partner_id}/subscriptions/{subscription_id}". This is available for authorizeAddon,
    * but otherwise is response only.
@@ -306,6 +314,25 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
    */
   public GoogleCloudPaymentsResellerSubscriptionV1Subscription setLineItems(java.util.List<GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem> lineItems) {
     this.lineItems = lineItems;
+    return this;
+  }
+
+  /**
+   * Output only. Describes the details of the migrated subscription. Only populated if this
+   * subscription is migrated from another system.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionMigrationDetails getMigrationDetails() {
+    return migrationDetails;
+  }
+
+  /**
+   * Output only. Describes the details of the migrated subscription. Only populated if this
+   * subscription is migrated from another system.
+   * @param migrationDetails migrationDetails or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1Subscription setMigrationDetails(GoogleCloudPaymentsResellerSubscriptionV1SubscriptionMigrationDetails migrationDetails) {
+    this.migrationDetails = migrationDetails;
     return this;
   }
 

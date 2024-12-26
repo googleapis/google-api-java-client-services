@@ -31,8 +31,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. The `:authority` header in the gRPC request sent from Envoy to the extension service.
-   * Required for Callout extensions. This field is not supported for plugin extensions and must not
-   * be set.
+   * Required for Callout extensions. This field is not supported for plugin extensions. Setting it
+   * results in a validation error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,8 +65,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    * metadata is available under the namespace `com.google....`. For example:
    * `com.google.lb_traffic_extension.lbtrafficextension1.chain1.ext1`. The following variables are
    * supported in the metadata: `{forwarding_rule_id}` - substituted with the forwarding rule's
-   * fully qualified resource name. This field is not supported for plugin extensions and must not
-   * be set.
+   * fully qualified resource name. This field is not supported for plugin extensions. Setting it
+   * results in a validation error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,17 +83,17 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   private java.lang.String name;
 
   /**
-   * Required. The reference to the service that runs the extension. Currently only callout
-   * extensions are supported here. To configure a callout extension, `service` must be a fully-
-   * qualified reference to a [backend
+   * Required. The reference to the service that runs the extension. To configure a callout
+   * extension, `service` must be a fully-qualified reference to a [backend
    * service](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices) in the
    * format: `https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/backendServi
    * ces/{backendService}` or `https://www.googleapis.com/compute/v1/projects/{project}/global/backe
-   * ndServices/{backendService}`. To configure a plugin extension, this must be a reference to a
-   * [wasm plugin](https://cloud.google.com/service-
+   * ndServices/{backendService}`. To configure a plugin extension, `service` must be a reference to
+   * a [`WasmPlugin` resource](https://cloud.google.com/service-
    * extensions/docs/reference/rest/v1beta1/projects.locations.wasmPlugins) in the format:
    * `projects/{project}/locations/{location}/wasmPlugins/{plugin}` or `//networkservices.googleapis
-   * .com/projects/{project}/locations/{location}/wasmPlugins/{wasmPlugin}`.
+   * .com/projects/{project}/locations/{location}/wasmPlugins/{wasmPlugin}`. Plugin extensions are
+   * currently supported for the `LbTrafficExtension` and the `LbRouteExtension` resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +102,7 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   /**
    * Optional. A set of events during request or response processing for which this extension is
    * called. This field is required for the `LbTrafficExtension` resource. It must not be set for
-   * the `LbRouteExtension` resource.
+   * the `LbRouteExtension` resource, otherwise a validation error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,8 +110,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. Specifies the timeout for each individual message on the stream. The timeout must be
-   * between 10-1000 milliseconds. Required for callout extensions. This field is not supported for
-   * plugin extensions and must not be set.
+   * between `10`-`1000` milliseconds. Required for callout extensions. This field is not supported
+   * for plugin extensions. Setting it results in a validation error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,8 +119,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. The `:authority` header in the gRPC request sent from Envoy to the extension service.
-   * Required for Callout extensions. This field is not supported for plugin extensions and must not
-   * be set.
+   * Required for Callout extensions. This field is not supported for plugin extensions. Setting it
+   * results in a validation error.
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthority() {
@@ -129,8 +129,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. The `:authority` header in the gRPC request sent from Envoy to the extension service.
-   * Required for Callout extensions. This field is not supported for plugin extensions and must not
-   * be set.
+   * Required for Callout extensions. This field is not supported for plugin extensions. Setting it
+   * results in a validation error.
    * @param authority authority or {@code null} for none
    */
   public ExtensionChainExtension setAuthority(java.lang.String authority) {
@@ -192,8 +192,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    * metadata is available under the namespace `com.google....`. For example:
    * `com.google.lb_traffic_extension.lbtrafficextension1.chain1.ext1`. The following variables are
    * supported in the metadata: `{forwarding_rule_id}` - substituted with the forwarding rule's
-   * fully qualified resource name. This field is not supported for plugin extensions and must not
-   * be set.
+   * fully qualified resource name. This field is not supported for plugin extensions. Setting it
+   * results in a validation error.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getMetadata() {
@@ -206,8 +206,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    * metadata is available under the namespace `com.google....`. For example:
    * `com.google.lb_traffic_extension.lbtrafficextension1.chain1.ext1`. The following variables are
    * supported in the metadata: `{forwarding_rule_id}` - substituted with the forwarding rule's
-   * fully qualified resource name. This field is not supported for plugin extensions and must not
-   * be set.
+   * fully qualified resource name. This field is not supported for plugin extensions. Setting it
+   * results in a validation error.
    * @param metadata metadata or {@code null} for none
    */
   public ExtensionChainExtension setMetadata(java.util.Map<String, java.lang.Object> metadata) {
@@ -239,17 +239,17 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. The reference to the service that runs the extension. Currently only callout
-   * extensions are supported here. To configure a callout extension, `service` must be a fully-
-   * qualified reference to a [backend
+   * Required. The reference to the service that runs the extension. To configure a callout
+   * extension, `service` must be a fully-qualified reference to a [backend
    * service](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices) in the
    * format: `https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/backendServi
    * ces/{backendService}` or `https://www.googleapis.com/compute/v1/projects/{project}/global/backe
-   * ndServices/{backendService}`. To configure a plugin extension, this must be a reference to a
-   * [wasm plugin](https://cloud.google.com/service-
+   * ndServices/{backendService}`. To configure a plugin extension, `service` must be a reference to
+   * a [`WasmPlugin` resource](https://cloud.google.com/service-
    * extensions/docs/reference/rest/v1beta1/projects.locations.wasmPlugins) in the format:
    * `projects/{project}/locations/{location}/wasmPlugins/{plugin}` or `//networkservices.googleapis
-   * .com/projects/{project}/locations/{location}/wasmPlugins/{wasmPlugin}`.
+   * .com/projects/{project}/locations/{location}/wasmPlugins/{wasmPlugin}`. Plugin extensions are
+   * currently supported for the `LbTrafficExtension` and the `LbRouteExtension` resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -257,17 +257,17 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. The reference to the service that runs the extension. Currently only callout
-   * extensions are supported here. To configure a callout extension, `service` must be a fully-
-   * qualified reference to a [backend
+   * Required. The reference to the service that runs the extension. To configure a callout
+   * extension, `service` must be a fully-qualified reference to a [backend
    * service](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices) in the
    * format: `https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/backendServi
    * ces/{backendService}` or `https://www.googleapis.com/compute/v1/projects/{project}/global/backe
-   * ndServices/{backendService}`. To configure a plugin extension, this must be a reference to a
-   * [wasm plugin](https://cloud.google.com/service-
+   * ndServices/{backendService}`. To configure a plugin extension, `service` must be a reference to
+   * a [`WasmPlugin` resource](https://cloud.google.com/service-
    * extensions/docs/reference/rest/v1beta1/projects.locations.wasmPlugins) in the format:
    * `projects/{project}/locations/{location}/wasmPlugins/{plugin}` or `//networkservices.googleapis
-   * .com/projects/{project}/locations/{location}/wasmPlugins/{wasmPlugin}`.
+   * .com/projects/{project}/locations/{location}/wasmPlugins/{wasmPlugin}`. Plugin extensions are
+   * currently supported for the `LbTrafficExtension` and the `LbRouteExtension` resources.
    * @param service service or {@code null} for none
    */
   public ExtensionChainExtension setService(java.lang.String service) {
@@ -278,7 +278,7 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   /**
    * Optional. A set of events during request or response processing for which this extension is
    * called. This field is required for the `LbTrafficExtension` resource. It must not be set for
-   * the `LbRouteExtension` resource.
+   * the `LbRouteExtension` resource, otherwise a validation error is returned.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSupportedEvents() {
@@ -288,7 +288,7 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   /**
    * Optional. A set of events during request or response processing for which this extension is
    * called. This field is required for the `LbTrafficExtension` resource. It must not be set for
-   * the `LbRouteExtension` resource.
+   * the `LbRouteExtension` resource, otherwise a validation error is returned.
    * @param supportedEvents supportedEvents or {@code null} for none
    */
   public ExtensionChainExtension setSupportedEvents(java.util.List<java.lang.String> supportedEvents) {
@@ -298,8 +298,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. Specifies the timeout for each individual message on the stream. The timeout must be
-   * between 10-1000 milliseconds. Required for callout extensions. This field is not supported for
-   * plugin extensions and must not be set.
+   * between `10`-`1000` milliseconds. Required for callout extensions. This field is not supported
+   * for plugin extensions. Setting it results in a validation error.
    * @return value or {@code null} for none
    */
   public String getTimeout() {
@@ -308,8 +308,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. Specifies the timeout for each individual message on the stream. The timeout must be
-   * between 10-1000 milliseconds. Required for callout extensions. This field is not supported for
-   * plugin extensions and must not be set.
+   * between `10`-`1000` milliseconds. Required for callout extensions. This field is not supported
+   * for plugin extensions. Setting it results in a validation error.
    * @param timeout timeout or {@code null} for none
    */
   public ExtensionChainExtension setTimeout(String timeout) {

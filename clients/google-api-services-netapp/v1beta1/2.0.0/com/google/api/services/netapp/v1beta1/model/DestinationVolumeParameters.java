@@ -51,6 +51,13 @@ public final class DestinationVolumeParameters extends com.google.api.client.jso
   private java.lang.String storagePool;
 
   /**
+   * Optional. Tiering policy for the volume.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TieringPolicy tieringPolicy;
+
+  /**
    * Desired destination volume resource id. If not specified, source volume's resource id will be
    * used. This value must start with a lowercase letter followed by up to 62 lowercase letters,
    * numbers, or hyphens, and cannot end with a hyphen.
@@ -107,6 +114,23 @@ public final class DestinationVolumeParameters extends com.google.api.client.jso
    */
   public DestinationVolumeParameters setStoragePool(java.lang.String storagePool) {
     this.storagePool = storagePool;
+    return this;
+  }
+
+  /**
+   * Optional. Tiering policy for the volume.
+   * @return value or {@code null} for none
+   */
+  public TieringPolicy getTieringPolicy() {
+    return tieringPolicy;
+  }
+
+  /**
+   * Optional. Tiering policy for the volume.
+   * @param tieringPolicy tieringPolicy or {@code null} for none
+   */
+  public DestinationVolumeParameters setTieringPolicy(TieringPolicy tieringPolicy) {
+    this.tieringPolicy = tieringPolicy;
     return this;
   }
 

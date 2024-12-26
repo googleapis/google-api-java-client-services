@@ -2069,17 +2069,24 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
-        /** Optional. Specifies the ordering of results. */
+        /**
+         * Optional. Specifies the ordering of results. Supported values are: * relevance (default)
+         * * last_modified_timestamp * last_modified_timestamp asc
+         */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Optional. Specifies the ordering of results.
+        /** Optional. Specifies the ordering of results. Supported values are: * relevance (default) *
+       last_modified_timestamp * last_modified_timestamp asc
          */
         public java.lang.String getOrderBy() {
           return orderBy;
         }
 
-        /** Optional. Specifies the ordering of results. */
+        /**
+         * Optional. Specifies the ordering of results. Supported values are: * relevance (default)
+         * * last_modified_timestamp * last_modified_timestamp asc
+         */
         public SearchEntries setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
           return this;
@@ -2131,17 +2138,26 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
-        /** Required. The query against which entries in scope should be matched. */
+        /**
+         * Required. The query against which entries in scope should be matched. The query syntax is
+         * defined in Search syntax for Dataplex Catalog
+         * (https://cloud.google.com/dataplex/docs/search-syntax).
+         */
         @com.google.api.client.util.Key
         private java.lang.String query;
 
-        /** Required. The query against which entries in scope should be matched.
+        /** Required. The query against which entries in scope should be matched. The query syntax is defined
+       in Search syntax for Dataplex Catalog (https://cloud.google.com/dataplex/docs/search-syntax).
          */
         public java.lang.String getQuery() {
           return query;
         }
 
-        /** Required. The query against which entries in scope should be matched. */
+        /**
+         * Required. The query against which entries in scope should be matched. The query syntax is
+         * defined in Search syntax for Dataplex Catalog
+         * (https://cloud.google.com/dataplex/docs/search-syntax).
+         */
         public SearchEntries setQuery(java.lang.String query) {
           this.query = query;
           return this;
@@ -5404,6 +5420,29 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             return this;
           }
 
+          /**
+           * Optional. If set to true, any child resources of this data scan will also be deleted.
+           * (Otherwise, the request will only work if the data scan has no child resources.)
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** Optional. If set to true, any child resources of this data scan will also be deleted. (Otherwise,
+         the request will only work if the data scan has no child resources.)
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /**
+           * Optional. If set to true, any child resources of this data scan will also be deleted.
+           * (Otherwise, the request will only work if the data scan has no child resources.)
+           */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);
@@ -6170,7 +6209,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * This request holds the parameters needed by the dataplex server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The relative resource name of the scan, of the form:
+         * @param name Output only. Identifier. The relative resource name of the scan, of the form:
          *        projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project refers
          *        to a project_id or project_number and location_id refers to a GCP region.
          * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScan}
@@ -6200,7 +6239,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The relative resource name of the scan, of the form:
+           * @param name Output only. Identifier. The relative resource name of the scan, of the form:
          *        projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project refers
          *        to a project_id or project_number and location_id refers to a GCP region.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScan}
@@ -6272,14 +6311,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Output only. The relative resource name of the scan, of the form:
+           * Output only. Identifier. The relative resource name of the scan, of the form:
            * projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project
            * refers to a project_id or project_number and location_id refers to a GCP region.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The relative resource name of the scan, of the form:
+          /** Output only. Identifier. The relative resource name of the scan, of the form:
          projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project refers to a
          project_id or project_number and location_id refers to a GCP region.
            */
@@ -6288,7 +6327,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Output only. The relative resource name of the scan, of the form:
+           * Output only. Identifier. The relative resource name of the scan, of the form:
            * projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project
            * refers to a project_id or project_number and location_id refers to a GCP region.
            */
@@ -6302,17 +6341,17 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             return this;
           }
 
-          /** Required. Mask of fields to update. */
+          /** Optional. Mask of fields to update. */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Mask of fields to update.
+          /** Optional. Mask of fields to update.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /** Required. Mask of fields to update. */
+          /** Optional. Mask of fields to update. */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -12605,11 +12644,11 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * the following syntaxes: - matches an aspect of the given type and empty path. @path -
              * matches an aspect of the given type and specified path. For example, to attach an
              * aspect to a field that is specified by the schema aspect, the path should have the
-             * format Schema.. * - matches aspects of the given type for all paths. *@path - matches
-             * aspects of all types on the given path.The service will not remove existing aspects
-             * matching the syntax unless delete_missing_aspects is set to true.If this field is
-             * left empty, the service treats it as specifying exactly those Aspects present in the
-             * request.
+             * format Schema.. @* - matches aspects of the given type for all paths. *@path -
+             * matches aspects of all types on the given path.The service will not remove existing
+             * aspects matching the syntax unless delete_missing_aspects is set to true.If this
+             * field is left empty, the service treats it as specifying exactly those Aspects
+             * present in the request.
              */
             @com.google.api.client.util.Key
             private java.util.List<java.lang.String> aspectKeys;
@@ -12617,7 +12656,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /** Optional. The map keys of the Aspects which the service should modify. It supports the following
            syntaxes: - matches an aspect of the given type and empty path. @path - matches an aspect of the
            given type and specified path. For example, to attach an aspect to a field that is specified by the
-           schema aspect, the path should have the format Schema.. * - matches aspects of the given type for
+           schema aspect, the path should have the format Schema.. @* - matches aspects of the given type for
            all paths. *@path - matches aspects of all types on the given path.The service will not remove
            existing aspects matching the syntax unless delete_missing_aspects is set to true.If this field is
            left empty, the service treats it as specifying exactly those Aspects present in the request.
@@ -12631,11 +12670,11 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * the following syntaxes: - matches an aspect of the given type and empty path. @path -
              * matches an aspect of the given type and specified path. For example, to attach an
              * aspect to a field that is specified by the schema aspect, the path should have the
-             * format Schema.. * - matches aspects of the given type for all paths. *@path - matches
-             * aspects of all types on the given path.The service will not remove existing aspects
-             * matching the syntax unless delete_missing_aspects is set to true.If this field is
-             * left empty, the service treats it as specifying exactly those Aspects present in the
-             * request.
+             * format Schema.. @* - matches aspects of the given type for all paths. *@path -
+             * matches aspects of all types on the given path.The service will not remove existing
+             * aspects matching the syntax unless delete_missing_aspects is set to true.If this
+             * field is left empty, the service treats it as specifying exactly those Aspects
+             * present in the request.
              */
             public Patch setAspectKeys(java.util.List<java.lang.String> aspectKeys) {
               this.aspectKeys = aspectKeys;

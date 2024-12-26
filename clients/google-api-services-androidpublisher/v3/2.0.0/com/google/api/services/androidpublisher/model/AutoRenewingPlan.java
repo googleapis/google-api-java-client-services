@@ -53,6 +53,13 @@ public final class AutoRenewingPlan extends com.google.api.client.json.GenericJs
   private SubscriptionItemPriceChangeDetails priceChangeDetails;
 
   /**
+   * The current recurring price of the auto renewing plan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Money recurringPrice;
+
+  /**
    * If the subscription is currently set to auto-renew, e.g. the user has not canceled the
    * subscription
    * @return value or {@code null} for none
@@ -102,6 +109,23 @@ public final class AutoRenewingPlan extends com.google.api.client.json.GenericJs
    */
   public AutoRenewingPlan setPriceChangeDetails(SubscriptionItemPriceChangeDetails priceChangeDetails) {
     this.priceChangeDetails = priceChangeDetails;
+    return this;
+  }
+
+  /**
+   * The current recurring price of the auto renewing plan.
+   * @return value or {@code null} for none
+   */
+  public Money getRecurringPrice() {
+    return recurringPrice;
+  }
+
+  /**
+   * The current recurring price of the auto renewing plan.
+   * @param recurringPrice recurringPrice or {@code null} for none
+   */
+  public AutoRenewingPlan setRecurringPrice(Money recurringPrice) {
+    this.recurringPrice = recurringPrice;
     return this;
   }
 

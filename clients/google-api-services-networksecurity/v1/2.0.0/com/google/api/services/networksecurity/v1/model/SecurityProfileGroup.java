@@ -17,8 +17,7 @@
 package com.google.api.services.networksecurity.v1.model;
 
 /**
- * SecurityProfileGroup is a resource that defines the behavior for various ProfileTypes. Next ID:
- * 11
+ * SecurityProfileGroup is a resource that defines the behavior for various ProfileTypes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -36,6 +35,13 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private String createTime;
+
+  /**
+   * Optional. Reference to a SecurityProfile with the CustomIntercept configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customInterceptProfile;
 
   /**
    * Optional. Reference to a SecurityProfile with the CustomMirroring configuration.
@@ -103,6 +109,23 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
    */
   public SecurityProfileGroup setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Reference to a SecurityProfile with the CustomIntercept configuration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomInterceptProfile() {
+    return customInterceptProfile;
+  }
+
+  /**
+   * Optional. Reference to a SecurityProfile with the CustomIntercept configuration.
+   * @param customInterceptProfile customInterceptProfile or {@code null} for none
+   */
+  public SecurityProfileGroup setCustomInterceptProfile(java.lang.String customInterceptProfile) {
+    this.customInterceptProfile = customInterceptProfile;
     return this;
   }
 

@@ -94,7 +94,7 @@ public final class GcpUserAccessBinding extends com.google.api.client.json.Gener
   private java.util.List<ScopedAccessSettings> scopedAccessSettings;
 
   /**
-   * Optional. GCSL policy for the group key.
+   * Optional. The Google Cloud session length (GCSL) policy for the group key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,7 +231,7 @@ public final class GcpUserAccessBinding extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. GCSL policy for the group key.
+   * Optional. The Google Cloud session length (GCSL) policy for the group key.
    * @return value or {@code null} for none
    */
   public SessionSettings getSessionSettings() {
@@ -239,7 +239,7 @@ public final class GcpUserAccessBinding extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. GCSL policy for the group key.
+   * Optional. The Google Cloud session length (GCSL) policy for the group key.
    * @param sessionSettings sessionSettings or {@code null} for none
    */
   public GcpUserAccessBinding setSessionSettings(SessionSettings sessionSettings) {

@@ -17,7 +17,7 @@
 package com.google.api.services.firebasedatabase.v1beta;
 
 /**
- * Available OAuth 2.0 scopes for use with the Firebase Realtime Database API.
+ * Available OAuth 2.0 scopes for use with the Firebase Realtime Database Management API.
  *
  * @since 1.4
  */

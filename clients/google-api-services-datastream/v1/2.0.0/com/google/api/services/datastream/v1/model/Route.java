@@ -66,7 +66,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. The resource's name.
+   * Output only. Identifier. The resource's name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,7 +165,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource's name.
+   * Output only. Identifier. The resource's name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -173,7 +173,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource's name.
+   * Output only. Identifier. The resource's name.
    * @param name name or {@code null} for none
    */
   public Route setName(java.lang.String name) {

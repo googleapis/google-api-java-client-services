@@ -42,11 +42,20 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   private GoogleAppsCardV1ButtonList buttonList;
 
   /**
+   * A carousel contains a collection of nested widgets. For example, this is a JSON representation
+   * of a carousel that contains two text paragraphs. ``` { "widgets": [ { "textParagraph": {
+   * "text": "First text paragraph in the carousel." } }, { "textParagraph": { "text": "Second text
+   * paragraph in the carousel." } } ] } ```
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAppsCardV1Carousel carousel;
+
+  /**
    * A list of chips. For example, the following JSON creates two chips. The first is a text chip
    * and the second is an icon chip that opens a link: ``` "chipList": { "chips": [ { "text":
    * "Edit", "disabled": true, }, { "icon": { "knownIcon": "INVITE", "altText": "check calendar" },
-   * "onClick": { "openLink": { "url": "https://example.com/calendar" } } } ] } ``` [Google Chat
-   * apps](https://developers.google.com/workspace/chat):
+   * "onClick": { "openLink": { "url": "https://example.com/calendar" } } } ] } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -188,11 +197,33 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
+   * A carousel contains a collection of nested widgets. For example, this is a JSON representation
+   * of a carousel that contains two text paragraphs. ``` { "widgets": [ { "textParagraph": {
+   * "text": "First text paragraph in the carousel." } }, { "textParagraph": { "text": "Second text
+   * paragraph in the carousel." } } ] } ```
+   * @return value or {@code null} for none
+   */
+  public GoogleAppsCardV1Carousel getCarousel() {
+    return carousel;
+  }
+
+  /**
+   * A carousel contains a collection of nested widgets. For example, this is a JSON representation
+   * of a carousel that contains two text paragraphs. ``` { "widgets": [ { "textParagraph": {
+   * "text": "First text paragraph in the carousel." } }, { "textParagraph": { "text": "Second text
+   * paragraph in the carousel." } } ] } ```
+   * @param carousel carousel or {@code null} for none
+   */
+  public GoogleAppsCardV1Widget setCarousel(GoogleAppsCardV1Carousel carousel) {
+    this.carousel = carousel;
+    return this;
+  }
+
+  /**
    * A list of chips. For example, the following JSON creates two chips. The first is a text chip
    * and the second is an icon chip that opens a link: ``` "chipList": { "chips": [ { "text":
    * "Edit", "disabled": true, }, { "icon": { "knownIcon": "INVITE", "altText": "check calendar" },
-   * "onClick": { "openLink": { "url": "https://example.com/calendar" } } } ] } ``` [Google Chat
-   * apps](https://developers.google.com/workspace/chat):
+   * "onClick": { "openLink": { "url": "https://example.com/calendar" } } } ] } ```
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1ChipList getChipList() {
@@ -203,8 +234,7 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * A list of chips. For example, the following JSON creates two chips. The first is a text chip
    * and the second is an icon chip that opens a link: ``` "chipList": { "chips": [ { "text":
    * "Edit", "disabled": true, }, { "icon": { "knownIcon": "INVITE", "altText": "check calendar" },
-   * "onClick": { "openLink": { "url": "https://example.com/calendar" } } } ] } ``` [Google Chat
-   * apps](https://developers.google.com/workspace/chat):
+   * "onClick": { "openLink": { "url": "https://example.com/calendar" } } } ] } ```
    * @param chipList chipList or {@code null} for none
    */
   public GoogleAppsCardV1Widget setChipList(GoogleAppsCardV1ChipList chipList) {

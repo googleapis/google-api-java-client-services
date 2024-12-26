@@ -17,7 +17,7 @@
 package com.google.api.services.firebaseappdistribution.v1alpha.model;
 
 /**
- * Model definition for GoogleFirebaseAppdistroV1alphaReleaseNotes.
+ * Release notes for a release.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase App Distribution API. For a detailed
@@ -31,12 +31,14 @@ package com.google.api.services.firebaseappdistribution.v1alpha.model;
 public final class GoogleFirebaseAppdistroV1alphaReleaseNotes extends com.google.api.client.json.GenericJson {
 
   /**
+   * The actual release notes text from the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String releaseNotes;
 
   /**
+   * The actual release notes text from the user.
    * @return value or {@code null} for none
    */
   public java.lang.String getReleaseNotes() {
@@ -44,6 +46,7 @@ public final class GoogleFirebaseAppdistroV1alphaReleaseNotes extends com.google
   }
 
   /**
+   * The actual release notes text from the user.
    * @param releaseNotes releaseNotes or {@code null} for none
    */
   public GoogleFirebaseAppdistroV1alphaReleaseNotes setReleaseNotes(java.lang.String releaseNotes) {

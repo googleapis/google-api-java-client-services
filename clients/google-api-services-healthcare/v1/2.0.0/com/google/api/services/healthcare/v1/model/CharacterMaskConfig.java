@@ -30,14 +30,14 @@ package com.google.api.services.healthcare.v1.model;
 public final class CharacterMaskConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Character to mask the sensitive values. If not supplied, defaults to "*".
+   * Optional. Character to mask the sensitive values. If not supplied, defaults to "*".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String maskingCharacter;
 
   /**
-   * Character to mask the sensitive values. If not supplied, defaults to "*".
+   * Optional. Character to mask the sensitive values. If not supplied, defaults to "*".
    * @return value or {@code null} for none
    */
   public java.lang.String getMaskingCharacter() {
@@ -45,7 +45,7 @@ public final class CharacterMaskConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Character to mask the sensitive values. If not supplied, defaults to "*".
+   * Optional. Character to mask the sensitive values. If not supplied, defaults to "*".
    * @param maskingCharacter maskingCharacter or {@code null} for none
    */
   public CharacterMaskConfig setMaskingCharacter(java.lang.String maskingCharacter) {

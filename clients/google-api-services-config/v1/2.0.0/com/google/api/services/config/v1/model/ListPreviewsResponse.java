@@ -39,7 +39,7 @@ public final class ListPreviewsResponse extends com.google.api.client.json.Gener
   private java.lang.String nextPageToken;
 
   /**
-   * List of Previewss.
+   * List of Previews.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,7 @@ public final class ListPreviewsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * List of Previewss.
+   * List of Previews.
    * @return value or {@code null} for none
    */
   public java.util.List<Preview> getPreviews() {
@@ -80,7 +80,7 @@ public final class ListPreviewsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * List of Previewss.
+   * List of Previews.
    * @param previews previews or {@code null} for none
    */
   public ListPreviewsResponse setPreviews(java.util.List<Preview> previews) {

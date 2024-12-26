@@ -33,14 +33,14 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
 
   /**
    * Optional. How long a user is allowed to take between actions before a new access token must be
-   * issued. Presently only set for Cloud Apps.
+   * issued. Only set for Google Cloud apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String maxInactivity;
 
   /**
-   * Optional. The session length. Setting this field to zero is equal to disabling. Session. Also
+   * Optional. The session length. Setting this field to zero is equal to disabling session. Also
    * can set infinite session by flipping the enabled bit to false below. If use_oidc_max_age is
    * true, for OIDC apps, the session length will be the minimum of this field and OIDC max_age
    * param.
@@ -50,15 +50,15 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
   private String sessionLength;
 
   /**
-   * Optional. Big red button to turn off GCSL. When false, all fields set above will be disregarded
-   * and the session length is basically infinite.
+   * Optional. This field enables or disables Google Cloud session length. When false, all fields
+   * set above will be disregarded and the session length is basically infinite.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean sessionLengthEnabled;
 
   /**
-   * Optional. Session method when users GCP session is up.
+   * Optional. Session method when user's Google Cloud session is up.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +75,7 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
 
   /**
    * Optional. How long a user is allowed to take between actions before a new access token must be
-   * issued. Presently only set for Cloud Apps.
+   * issued. Only set for Google Cloud apps.
    * @return value or {@code null} for none
    */
   public String getMaxInactivity() {
@@ -84,7 +84,7 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
 
   /**
    * Optional. How long a user is allowed to take between actions before a new access token must be
-   * issued. Presently only set for Cloud Apps.
+   * issued. Only set for Google Cloud apps.
    * @param maxInactivity maxInactivity or {@code null} for none
    */
   public SessionSettings setMaxInactivity(String maxInactivity) {
@@ -93,7 +93,7 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The session length. Setting this field to zero is equal to disabling. Session. Also
+   * Optional. The session length. Setting this field to zero is equal to disabling session. Also
    * can set infinite session by flipping the enabled bit to false below. If use_oidc_max_age is
    * true, for OIDC apps, the session length will be the minimum of this field and OIDC max_age
    * param.
@@ -104,7 +104,7 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The session length. Setting this field to zero is equal to disabling. Session. Also
+   * Optional. The session length. Setting this field to zero is equal to disabling session. Also
    * can set infinite session by flipping the enabled bit to false below. If use_oidc_max_age is
    * true, for OIDC apps, the session length will be the minimum of this field and OIDC max_age
    * param.
@@ -116,8 +116,8 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Big red button to turn off GCSL. When false, all fields set above will be disregarded
-   * and the session length is basically infinite.
+   * Optional. This field enables or disables Google Cloud session length. When false, all fields
+   * set above will be disregarded and the session length is basically infinite.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSessionLengthEnabled() {
@@ -125,8 +125,8 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Big red button to turn off GCSL. When false, all fields set above will be disregarded
-   * and the session length is basically infinite.
+   * Optional. This field enables or disables Google Cloud session length. When false, all fields
+   * set above will be disregarded and the session length is basically infinite.
    * @param sessionLengthEnabled sessionLengthEnabled or {@code null} for none
    */
   public SessionSettings setSessionLengthEnabled(java.lang.Boolean sessionLengthEnabled) {
@@ -135,7 +135,7 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Session method when users GCP session is up.
+   * Optional. Session method when user's Google Cloud session is up.
    * @return value or {@code null} for none
    */
   public java.lang.String getSessionReauthMethod() {
@@ -143,7 +143,7 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Session method when users GCP session is up.
+   * Optional. Session method when user's Google Cloud session is up.
    * @param sessionReauthMethod sessionReauthMethod or {@code null} for none
    */
   public SessionSettings setSessionReauthMethod(java.lang.String sessionReauthMethod) {

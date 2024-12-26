@@ -4506,18 +4506,18 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * If this field is empty, all custom and system-defined metric descriptors are returned.
-         * Otherwise, the filter (https://cloud.google.com/monitoring/api/v3/filters) specifies
-         * which metric descriptors are to be returned. For example, the following filter matches
-         * all custom metrics (https://cloud.google.com/monitoring/custom-metrics): metric.type =
-         * starts_with("custom.googleapis.com/")
+         * Optional. If this field is empty, all custom and system-defined metric descriptors are
+         * returned. Otherwise, the filter (https://cloud.google.com/monitoring/api/v3/filters)
+         * specifies which metric descriptors are to be returned. For example, the following filter
+         * matches all custom metrics (https://cloud.google.com/monitoring/custom-metrics):
+         * metric.type = starts_with("custom.googleapis.com/")
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** If this field is empty, all custom and system-defined metric descriptors are returned. Otherwise,
-       the filter (https://cloud.google.com/monitoring/api/v3/filters) specifies which metric descriptors
-       are to be returned. For example, the following filter matches all custom metrics
+        /** Optional. If this field is empty, all custom and system-defined metric descriptors are returned.
+       Otherwise, the filter (https://cloud.google.com/monitoring/api/v3/filters) specifies which metric
+       descriptors are to be returned. For example, the following filter matches all custom metrics
        (https://cloud.google.com/monitoring/custom-metrics): metric.type =
        starts_with("custom.googleapis.com/")
          */
@@ -4526,11 +4526,11 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * If this field is empty, all custom and system-defined metric descriptors are returned.
-         * Otherwise, the filter (https://cloud.google.com/monitoring/api/v3/filters) specifies
-         * which metric descriptors are to be returned. For example, the following filter matches
-         * all custom metrics (https://cloud.google.com/monitoring/custom-metrics): metric.type =
-         * starts_with("custom.googleapis.com/")
+         * Optional. If this field is empty, all custom and system-defined metric descriptors are
+         * returned. Otherwise, the filter (https://cloud.google.com/monitoring/api/v3/filters)
+         * specifies which metric descriptors are to be returned. For example, the following filter
+         * matches all custom metrics (https://cloud.google.com/monitoring/custom-metrics):
+         * metric.type = starts_with("custom.googleapis.com/")
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -4538,24 +4538,24 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * A positive number that is the maximum number of results to return. The default and
-         * maximum value is 10,000. If a page_size <= 0 or > 10,000 is submitted, will instead
+         * Optional. A positive number that is the maximum number of results to return. The default
+         * and maximum value is 10,000. If a page_size <= 0 or > 10,000 is submitted, will instead
          * return a maximum of 10,000 results.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** A positive number that is the maximum number of results to return. The default and maximum value is
-       10,000. If a page_size <= 0 or > 10,000 is submitted, will instead return a maximum of 10,000
-       results.
+        /** Optional. A positive number that is the maximum number of results to return. The default and
+       maximum value is 10,000. If a page_size <= 0 or > 10,000 is submitted, will instead return a
+       maximum of 10,000 results.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * A positive number that is the maximum number of results to return. The default and
-         * maximum value is 10,000. If a page_size <= 0 or > 10,000 is submitted, will instead
+         * Optional. A positive number that is the maximum number of results to return. The default
+         * and maximum value is 10,000. If a page_size <= 0 or > 10,000 is submitted, will instead
          * return a maximum of 10,000 results.
          */
         public List setPageSize(java.lang.Integer pageSize) {
@@ -4564,25 +4564,25 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * If this field is not empty then it must contain the nextPageToken value returned by a
-         * previous call to this method. Using this field causes the method to return additional
-         * results from the previous method call.
+         * Optional. If this field is not empty then it must contain the nextPageToken value
+         * returned by a previous call to this method. Using this field causes the method to return
+         * additional results from the previous method call.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** If this field is not empty then it must contain the nextPageToken value returned by a previous call
-       to this method. Using this field causes the method to return additional results from the previous
-       method call.
+        /** Optional. If this field is not empty then it must contain the nextPageToken value returned by a
+       previous call to this method. Using this field causes the method to return additional results from
+       the previous method call.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * If this field is not empty then it must contain the nextPageToken value returned by a
-         * previous call to this method. Using this field causes the method to return additional
-         * results from the previous method call.
+         * Optional. If this field is not empty then it must contain the nextPageToken value
+         * returned by a previous call to this method. Using this field causes the method to return
+         * additional results from the previous method call.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;

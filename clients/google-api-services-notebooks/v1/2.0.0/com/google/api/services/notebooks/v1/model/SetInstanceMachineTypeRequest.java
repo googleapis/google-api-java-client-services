@@ -31,7 +31,7 @@ public final class SetInstanceMachineTypeRequest extends com.google.api.client.j
 
   /**
    * Required. The [Compute Engine machine type](https://cloud.google.com/compute/docs/machine-
-   * types).
+   * resource).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class SetInstanceMachineTypeRequest extends com.google.api.client.j
 
   /**
    * Required. The [Compute Engine machine type](https://cloud.google.com/compute/docs/machine-
-   * types).
+   * resource).
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -48,7 +48,7 @@ public final class SetInstanceMachineTypeRequest extends com.google.api.client.j
 
   /**
    * Required. The [Compute Engine machine type](https://cloud.google.com/compute/docs/machine-
-   * types).
+   * resource).
    * @param machineType machineType or {@code null} for none
    */
   public SetInstanceMachineTypeRequest setMachineType(java.lang.String machineType) {

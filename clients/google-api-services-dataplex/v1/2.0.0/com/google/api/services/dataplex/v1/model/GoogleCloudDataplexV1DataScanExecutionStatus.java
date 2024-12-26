@@ -37,14 +37,14 @@ public final class GoogleCloudDataplexV1DataScanExecutionStatus extends com.goog
   private String latestJobCreateTime;
 
   /**
-   * The time when the latest DataScanJob ended.
+   * Optional. The time when the latest DataScanJob ended.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String latestJobEndTime;
 
   /**
-   * The time when the latest DataScanJob started.
+   * Optional. The time when the latest DataScanJob started.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class GoogleCloudDataplexV1DataScanExecutionStatus extends com.goog
   }
 
   /**
-   * The time when the latest DataScanJob ended.
+   * Optional. The time when the latest DataScanJob ended.
    * @return value or {@code null} for none
    */
   public String getLatestJobEndTime() {
@@ -76,7 +76,7 @@ public final class GoogleCloudDataplexV1DataScanExecutionStatus extends com.goog
   }
 
   /**
-   * The time when the latest DataScanJob ended.
+   * Optional. The time when the latest DataScanJob ended.
    * @param latestJobEndTime latestJobEndTime or {@code null} for none
    */
   public GoogleCloudDataplexV1DataScanExecutionStatus setLatestJobEndTime(String latestJobEndTime) {
@@ -85,7 +85,7 @@ public final class GoogleCloudDataplexV1DataScanExecutionStatus extends com.goog
   }
 
   /**
-   * The time when the latest DataScanJob started.
+   * Optional. The time when the latest DataScanJob started.
    * @return value or {@code null} for none
    */
   public String getLatestJobStartTime() {
@@ -93,7 +93,7 @@ public final class GoogleCloudDataplexV1DataScanExecutionStatus extends com.goog
   }
 
   /**
-   * The time when the latest DataScanJob started.
+   * Optional. The time when the latest DataScanJob started.
    * @param latestJobStartTime latestJobStartTime or {@code null} for none
    */
   public GoogleCloudDataplexV1DataScanExecutionStatus setLatestJobStartTime(String latestJobStartTime) {

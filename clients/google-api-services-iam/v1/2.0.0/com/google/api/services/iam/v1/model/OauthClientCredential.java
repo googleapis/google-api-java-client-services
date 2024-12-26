@@ -58,7 +58,7 @@ public final class OauthClientCredential extends com.google.api.client.json.Gene
   private java.lang.String displayName;
 
   /**
-   * Immutable. The resource name of the OauthClientCredential. Format:
+   * Immutable. Identifier. The resource name of the OauthClientCredential. Format:
    * `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`
    * The value may be {@code null}.
    */
@@ -127,7 +127,7 @@ public final class OauthClientCredential extends com.google.api.client.json.Gene
   }
 
   /**
-   * Immutable. The resource name of the OauthClientCredential. Format:
+   * Immutable. Identifier. The resource name of the OauthClientCredential. Format:
    * `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`
    * @return value or {@code null} for none
    */
@@ -136,7 +136,7 @@ public final class OauthClientCredential extends com.google.api.client.json.Gene
   }
 
   /**
-   * Immutable. The resource name of the OauthClientCredential. Format:
+   * Immutable. Identifier. The resource name of the OauthClientCredential. Format:
    * `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`
    * @param name name or {@code null} for none
    */

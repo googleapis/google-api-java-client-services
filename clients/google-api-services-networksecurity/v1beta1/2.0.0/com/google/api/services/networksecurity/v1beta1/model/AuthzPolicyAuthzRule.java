@@ -30,14 +30,14 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class AuthzPolicyAuthzRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Describes properties of one or more sources of a request.
+   * Optional. Describes properties of a source of a request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AuthzPolicyAuthzRuleFrom from;
 
   /**
-   * Optional. Describes properties of one or more targets of a request.
+   * Optional. Describes properties of a target of a request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class AuthzPolicyAuthzRule extends com.google.api.client.json.Gener
   private java.lang.String when;
 
   /**
-   * Optional. Describes properties of one or more sources of a request.
+   * Optional. Describes properties of a source of a request.
    * @return value or {@code null} for none
    */
   public AuthzPolicyAuthzRuleFrom getFrom() {
@@ -61,7 +61,7 @@ public final class AuthzPolicyAuthzRule extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Describes properties of one or more sources of a request.
+   * Optional. Describes properties of a source of a request.
    * @param from from or {@code null} for none
    */
   public AuthzPolicyAuthzRule setFrom(AuthzPolicyAuthzRuleFrom from) {
@@ -70,7 +70,7 @@ public final class AuthzPolicyAuthzRule extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Describes properties of one or more targets of a request.
+   * Optional. Describes properties of a target of a request.
    * @return value or {@code null} for none
    */
   public AuthzPolicyAuthzRuleTo getTo() {
@@ -78,7 +78,7 @@ public final class AuthzPolicyAuthzRule extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Describes properties of one or more targets of a request.
+   * Optional. Describes properties of a target of a request.
    * @param to to or {@code null} for none
    */
   public AuthzPolicyAuthzRule setTo(AuthzPolicyAuthzRuleTo to) {

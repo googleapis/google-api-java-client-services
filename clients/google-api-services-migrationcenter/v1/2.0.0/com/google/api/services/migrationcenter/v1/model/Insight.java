@@ -30,7 +30,7 @@ package com.google.api.services.migrationcenter.v1.model;
 public final class Insight extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. A generic insight about an asset
+   * Output only. A generic insight about an asset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class Insight extends com.google.api.client.json.GenericJson {
   private MigrationInsight migrationInsight;
 
   /**
-   * Output only. A generic insight about an asset
+   * Output only. A generic insight about an asset.
    * @return value or {@code null} for none
    */
   public GenericInsight getGenericInsight() {
@@ -52,7 +52,7 @@ public final class Insight extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A generic insight about an asset
+   * Output only. A generic insight about an asset.
    * @param genericInsight genericInsight or {@code null} for none
    */
   public Insight setGenericInsight(GenericInsight genericInsight) {

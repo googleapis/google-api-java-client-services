@@ -4039,7 +4039,7 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
           /**
            * Lists workloads in a Cloud Composer environment. Workload is a unit that runs a single Composer
            * component. This method is supported for Cloud Composer environments in versions
-           * composer-3.*.*-airflow-*.*.* and newer.
+           * composer-2.*.*-airflow-*.*.* and newer.
            *
            * Create a request for the method "workloads.list".
            *
@@ -4066,7 +4066,7 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
             /**
              * Lists workloads in a Cloud Composer environment. Workload is a unit that runs a single Composer
              * component. This method is supported for Cloud Composer environments in versions
-             * composer-3.*.*-airflow-*.*.* and newer.
+             * composer-2.*.*-airflow-*.*.* and newer.
              *
              * Create a request for the method "workloads.list".
              *

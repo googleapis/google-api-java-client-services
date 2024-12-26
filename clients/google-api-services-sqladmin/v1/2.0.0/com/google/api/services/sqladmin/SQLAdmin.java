@@ -4841,31 +4841,30 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Set to true to invoke a replica failover to the designated DR replica. As part of replica
-       * failover, the promote operation attempts to add the original primary instance as a replica
-       * of the promoted DR replica when the original primary instance comes back online. If set to
-       * false or not specified, then the original primary instance becomes an independent Cloud SQL
-       * primary instance. Only applicable to MySQL.
+       * Set to true to invoke a replica failover to the DR replica. As part of replica failover,
+       * the promote operation attempts to add the original primary instance as a replica of the
+       * promoted DR replica when the original primary instance comes back online. If set to false
+       * or not specified, then the original primary instance becomes an independent Cloud SQL
+       * primary instance.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean failover;
 
-      /** Set to true to invoke a replica failover to the designated DR replica. As part of replica failover,
-     the promote operation attempts to add the original primary instance as a replica of the promoted DR
+      /** Set to true to invoke a replica failover to the DR replica. As part of replica failover, the
+     promote operation attempts to add the original primary instance as a replica of the promoted DR
      replica when the original primary instance comes back online. If set to false or not specified,
-     then the original primary instance becomes an independent Cloud SQL primary instance. Only
-     applicable to MySQL.
+     then the original primary instance becomes an independent Cloud SQL primary instance.
        */
       public java.lang.Boolean getFailover() {
         return failover;
       }
 
       /**
-       * Set to true to invoke a replica failover to the designated DR replica. As part of replica
-       * failover, the promote operation attempts to add the original primary instance as a replica
-       * of the promoted DR replica when the original primary instance comes back online. If set to
-       * false or not specified, then the original primary instance becomes an independent Cloud SQL
-       * primary instance. Only applicable to MySQL.
+       * Set to true to invoke a replica failover to the DR replica. As part of replica failover,
+       * the promote operation attempts to add the original primary instance as a replica of the
+       * promoted DR replica when the original primary instance comes back online. If set to false
+       * or not specified, then the original primary instance becomes an independent Cloud SQL
+       * primary instance.
        */
       public PromoteReplica setFailover(java.lang.Boolean failover) {
         this.failover = failover;
@@ -5985,7 +5984,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Switches over from the primary instance to the designated DR replica instance.
+     * Switches over from the primary instance to the DR replica instance.
      *
      * Create a request for the method "instances.switchover".
      *
@@ -6007,7 +6006,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "v1/projects/{project}/instances/{instance}/switchover";
 
       /**
-       * Switches over from the primary instance to the designated DR replica instance.
+       * Switches over from the primary instance to the DR replica instance.
        *
        * Create a request for the method "instances.switchover".
        *
@@ -6115,24 +6114,25 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Optional. (MySQL only) Cloud SQL instance operations timeout, which is a sum of all
-       * database operations. Default value is 10 minutes and can be modified to a maximum value of
-       * 24 hours.
+       * Optional. (MySQL and PostgreSQL only) Cloud SQL instance operations timeout, which is a sum
+       * of all database operations. Default value is 10 minutes and can be modified to a maximum
+       * value of 24 hours.
        */
       @com.google.api.client.util.Key
       private String dbTimeout;
 
-      /** Optional. (MySQL only) Cloud SQL instance operations timeout, which is a sum of all database
-     operations. Default value is 10 minutes and can be modified to a maximum value of 24 hours.
+      /** Optional. (MySQL and PostgreSQL only) Cloud SQL instance operations timeout, which is a sum of all
+     database operations. Default value is 10 minutes and can be modified to a maximum value of 24
+     hours.
        */
       public String getDbTimeout() {
         return dbTimeout;
       }
 
       /**
-       * Optional. (MySQL only) Cloud SQL instance operations timeout, which is a sum of all
-       * database operations. Default value is 10 minutes and can be modified to a maximum value of
-       * 24 hours.
+       * Optional. (MySQL and PostgreSQL only) Cloud SQL instance operations timeout, which is a sum
+       * of all database operations. Default value is 10 minutes and can be modified to a maximum
+       * value of 24 hours.
        */
       public Switchover setDbTimeout(String dbTimeout) {
         this.dbTimeout = dbTimeout;

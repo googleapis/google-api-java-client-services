@@ -91,7 +91,7 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
   /**
    * Optional. The type of a button. If unset, button type defaults to `OUTLINED`. If the `color`
    * field is set, the button type is forced to `FILLED` and any value set for this field is
-   * ignored. [Google Chat apps](https://developers.google.com/workspace/chat):
+   * ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -228,7 +228,7 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
   /**
    * Optional. The type of a button. If unset, button type defaults to `OUTLINED`. If the `color`
    * field is set, the button type is forced to `FILLED` and any value set for this field is
-   * ignored. [Google Chat apps](https://developers.google.com/workspace/chat):
+   * ignored.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -238,7 +238,7 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
   /**
    * Optional. The type of a button. If unset, button type defaults to `OUTLINED`. If the `color`
    * field is set, the button type is forced to `FILLED` and any value set for this field is
-   * ignored. [Google Chat apps](https://developers.google.com/workspace/chat):
+   * ignored.
    * @param type type or {@code null} for none
    */
   public GoogleAppsCardV1Button setType(java.lang.String type) {

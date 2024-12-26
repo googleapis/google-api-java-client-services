@@ -44,6 +44,13 @@ public final class MetricValue extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> metricLabels;
 
   /**
+   * Non-cumulative int64 value of this metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataflowGaugeValue valueGauge64;
+
+  /**
    * Histogram value of this metric.
    * The value may be {@code null}.
    */
@@ -88,6 +95,23 @@ public final class MetricValue extends com.google.api.client.json.GenericJson {
    */
   public MetricValue setMetricLabels(java.util.Map<String, java.lang.String> metricLabels) {
     this.metricLabels = metricLabels;
+    return this;
+  }
+
+  /**
+   * Non-cumulative int64 value of this metric.
+   * @return value or {@code null} for none
+   */
+  public DataflowGaugeValue getValueGauge64() {
+    return valueGauge64;
+  }
+
+  /**
+   * Non-cumulative int64 value of this metric.
+   * @param valueGauge64 valueGauge64 or {@code null} for none
+   */
+  public MetricValue setValueGauge64(DataflowGaugeValue valueGauge64) {
+    this.valueGauge64 = valueGauge64;
     return this;
   }
 

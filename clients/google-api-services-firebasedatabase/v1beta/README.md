@@ -1,14 +1,14 @@
-# Firebase Realtime Database API Client Library for Java
+# Firebase Realtime Database Management API Client Library for Java
 
 The Firebase Realtime Database API enables programmatic provisioning and management of Realtime Database instances.
 
-This page contains information about getting started with the Firebase Realtime Database API
+This page contains information about getting started with the Firebase Realtime Database Management API
 using the Google API Client Library for Java. In addition, you may be interested
 in the following documentation:
 
-* Browse the [Javadoc reference for the Firebase Realtime Database API][javadoc]
+* Browse the [Javadoc reference for the Firebase Realtime Database Management API][javadoc]
 * Read the [Developer's Guide for the Google API Client Library for Java][google-api-client].
-* Interact with this API in your browser using the [APIs Explorer for the Firebase Realtime Database API][api-explorer]
+* Interact with this API in your browser using the [APIs Explorer for the Firebase Realtime Database Management API][api-explorer]
 
 ## Installation
 
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-firebasedatabase</artifactId>
-      <version>v1beta-rev20221214-2.0.0</version>
+      <version>v1beta-rev20241202-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-firebasedatabase:v1beta-rev20221214-2.0.0'
+  implementation 'com.google.apis:google-api-services-firebasedatabase:v1beta-rev20241202-2.0.0'
 }
 ```
 

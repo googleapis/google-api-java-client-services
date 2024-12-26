@@ -32,23 +32,23 @@ package com.google.api.services.iam.v1.model;
 public final class WorkloadIdentityPool extends com.google.api.client.json.GenericJson {
 
   /**
-   * A description of the pool. Cannot exceed 256 characters.
+   * Optional. A description of the pool. Cannot exceed 256 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use
-   * existing tokens to access resources. If the pool is re-enabled, existing tokens grant access
-   * again.
+   * Optional. Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or
+   * use existing tokens to access resources. If the pool is re-enabled, existing tokens grant
+   * access again.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disabled;
 
   /**
-   * A display name for the pool. Cannot exceed 32 characters.
+   * Optional. A display name for the pool. Cannot exceed 32 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class WorkloadIdentityPool extends com.google.api.client.json.Gener
   private java.lang.String state;
 
   /**
-   * A description of the pool. Cannot exceed 256 characters.
+   * Optional. A description of the pool. Cannot exceed 256 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -85,7 +85,7 @@ public final class WorkloadIdentityPool extends com.google.api.client.json.Gener
   }
 
   /**
-   * A description of the pool. Cannot exceed 256 characters.
+   * Optional. A description of the pool. Cannot exceed 256 characters.
    * @param description description or {@code null} for none
    */
   public WorkloadIdentityPool setDescription(java.lang.String description) {
@@ -94,9 +94,9 @@ public final class WorkloadIdentityPool extends com.google.api.client.json.Gener
   }
 
   /**
-   * Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use
-   * existing tokens to access resources. If the pool is re-enabled, existing tokens grant access
-   * again.
+   * Optional. Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or
+   * use existing tokens to access resources. If the pool is re-enabled, existing tokens grant
+   * access again.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisabled() {
@@ -104,9 +104,9 @@ public final class WorkloadIdentityPool extends com.google.api.client.json.Gener
   }
 
   /**
-   * Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use
-   * existing tokens to access resources. If the pool is re-enabled, existing tokens grant access
-   * again.
+   * Optional. Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or
+   * use existing tokens to access resources. If the pool is re-enabled, existing tokens grant
+   * access again.
    * @param disabled disabled or {@code null} for none
    */
   public WorkloadIdentityPool setDisabled(java.lang.Boolean disabled) {
@@ -115,7 +115,7 @@ public final class WorkloadIdentityPool extends com.google.api.client.json.Gener
   }
 
   /**
-   * A display name for the pool. Cannot exceed 32 characters.
+   * Optional. A display name for the pool. Cannot exceed 32 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -123,7 +123,7 @@ public final class WorkloadIdentityPool extends com.google.api.client.json.Gener
   }
 
   /**
-   * A display name for the pool. Cannot exceed 32 characters.
+   * Optional. A display name for the pool. Cannot exceed 32 characters.
    * @param displayName displayName or {@code null} for none
    */
   public WorkloadIdentityPool setDisplayName(java.lang.String displayName) {

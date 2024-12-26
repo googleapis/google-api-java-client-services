@@ -31,14 +31,14 @@ package com.google.api.services.config.v1.model;
 public final class TerraformVariable extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input variable value.
+   * Optional. Input variable value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Object inputValue;
 
   /**
-   * Input variable value.
+   * Optional. Input variable value.
    * @return value or {@code null} for none
    */
   public java.lang.Object getInputValue() {
@@ -46,7 +46,7 @@ public final class TerraformVariable extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Input variable value.
+   * Optional. Input variable value.
    * @param inputValue inputValue or {@code null} for none
    */
   public TerraformVariable setInputValue(java.lang.Object inputValue) {

@@ -17,7 +17,9 @@
 package com.google.api.services.merchantapi.accounts_v1beta.model;
 
 /**
- * Collection of information related to a business.
+ * The `BusinessInfo` message contains essential information about a merchant's business. This
+ * message captures key business details such as physical address, customer service contacts, and
+ * region-specific identifiers.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

@@ -40,7 +40,7 @@ public final class GoogleAppsCardV1TextParagraph extends com.google.api.client.j
    * specified maximum number of lines, the excess content is concealed behind a **show more**
    * button. If the text is equal or shorter than the specified maximum number of lines, a **show
    * more** button isn't displayed. The default value is 0, in which case all context is displayed.
-   * Negative values are ignored. [Google Chat apps](https://developers.google.com/workspace/chat):
+   * Negative values are ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class GoogleAppsCardV1TextParagraph extends com.google.api.client.j
    * specified maximum number of lines, the excess content is concealed behind a **show more**
    * button. If the text is equal or shorter than the specified maximum number of lines, a **show
    * more** button isn't displayed. The default value is 0, in which case all context is displayed.
-   * Negative values are ignored. [Google Chat apps](https://developers.google.com/workspace/chat):
+   * Negative values are ignored.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxLines() {
@@ -70,7 +70,7 @@ public final class GoogleAppsCardV1TextParagraph extends com.google.api.client.j
    * specified maximum number of lines, the excess content is concealed behind a **show more**
    * button. If the text is equal or shorter than the specified maximum number of lines, a **show
    * more** button isn't displayed. The default value is 0, in which case all context is displayed.
-   * Negative values are ignored. [Google Chat apps](https://developers.google.com/workspace/chat):
+   * Negative values are ignored.
    * @param maxLines maxLines or {@code null} for none
    */
   public GoogleAppsCardV1TextParagraph setMaxLines(java.lang.Integer maxLines) {

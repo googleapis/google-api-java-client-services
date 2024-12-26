@@ -64,7 +64,7 @@ public final class StreamObject extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The object resource's name.
+   * Output only. Identifier. The object resource's name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,7 +153,7 @@ public final class StreamObject extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The object resource's name.
+   * Output only. Identifier. The object resource's name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -161,7 +161,7 @@ public final class StreamObject extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The object resource's name.
+   * Output only. Identifier. The object resource's name.
    * @param name name or {@code null} for none
    */
   public StreamObject setName(java.lang.String name) {

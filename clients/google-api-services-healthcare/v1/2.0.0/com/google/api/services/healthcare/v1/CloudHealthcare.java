@@ -15590,6 +15590,330 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
         public class FhirStores {
 
           /**
+           * Applies the admin Consent resources for the FHIR store and reindexes the underlying resources in
+           * the FHIR store according to the aggregate consents. This method also updates the
+           * `consent_config.enforced_admin_consents` field of the FhirStore unless `validate_only=true` in
+           * ApplyAdminConsentsRequest. Any admin Consent resource change after this operation execution
+           * (including deletion) requires you to call ApplyAdminConsents again for the change to take effect.
+           * This method returns an Operation that can be used to track the progress of the resources that
+           * were reindexed, by calling GetOperation. Upon completion, the ApplyAdminConsentsResponse
+           * additionally contains the number of resources that were reindexed. If at least one Consent
+           * resource contains an error or fails be be enforced for any reason, the method returns an error
+           * instead of an Operation. No resources will be reindexed and the
+           * `consent_config.enforced_admin_consents` field will be unchanged. To enforce a consent check for
+           * data access, `consent_config.access_enforced` must be set to true for the FhirStore.
+           *
+           * Create a request for the method "fhirStores.applyAdminConsents".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link ApplyAdminConsents#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the FHIR store to enforce, in the format
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
+           *        e_id}`.
+           * @param content the {@link com.google.api.services.healthcare.v1.model.ApplyAdminConsentsRequest}
+           * @return the request
+           */
+          public ApplyAdminConsents applyAdminConsents(java.lang.String name, com.google.api.services.healthcare.v1.model.ApplyAdminConsentsRequest content) throws java.io.IOException {
+            ApplyAdminConsents result = new ApplyAdminConsents(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ApplyAdminConsents extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}:applyAdminConsents";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+
+            /**
+             * Applies the admin Consent resources for the FHIR store and reindexes the underlying resources
+             * in the FHIR store according to the aggregate consents. This method also updates the
+             * `consent_config.enforced_admin_consents` field of the FhirStore unless `validate_only=true` in
+             * ApplyAdminConsentsRequest. Any admin Consent resource change after this operation execution
+             * (including deletion) requires you to call ApplyAdminConsents again for the change to take
+             * effect. This method returns an Operation that can be used to track the progress of the
+             * resources that were reindexed, by calling GetOperation. Upon completion, the
+             * ApplyAdminConsentsResponse additionally contains the number of resources that were reindexed.
+             * If at least one Consent resource contains an error or fails be be enforced for any reason, the
+             * method returns an error instead of an Operation. No resources will be reindexed and the
+             * `consent_config.enforced_admin_consents` field will be unchanged. To enforce a consent check
+             * for data access, `consent_config.access_enforced` must be set to true for the FhirStore.
+             *
+             * Create a request for the method "fhirStores.applyAdminConsents".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link ApplyAdminConsents#execute()} method to invoke the remote
+             * operation. <p> {@link ApplyAdminConsents#initialize(com.google.api.client.googleapis.services.A
+             * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The name of the FHIR store to enforce, in the format
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
+           *        e_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1.model.ApplyAdminConsentsRequest}
+             * @since 1.13
+             */
+            protected ApplyAdminConsents(java.lang.String name, com.google.api.services.healthcare.v1.model.ApplyAdminConsentsRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public ApplyAdminConsents set$Xgafv(java.lang.String $Xgafv) {
+              return (ApplyAdminConsents) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ApplyAdminConsents setAccessToken(java.lang.String accessToken) {
+              return (ApplyAdminConsents) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ApplyAdminConsents setAlt(java.lang.String alt) {
+              return (ApplyAdminConsents) super.setAlt(alt);
+            }
+
+            @Override
+            public ApplyAdminConsents setCallback(java.lang.String callback) {
+              return (ApplyAdminConsents) super.setCallback(callback);
+            }
+
+            @Override
+            public ApplyAdminConsents setFields(java.lang.String fields) {
+              return (ApplyAdminConsents) super.setFields(fields);
+            }
+
+            @Override
+            public ApplyAdminConsents setKey(java.lang.String key) {
+              return (ApplyAdminConsents) super.setKey(key);
+            }
+
+            @Override
+            public ApplyAdminConsents setOauthToken(java.lang.String oauthToken) {
+              return (ApplyAdminConsents) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ApplyAdminConsents setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ApplyAdminConsents) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ApplyAdminConsents setQuotaUser(java.lang.String quotaUser) {
+              return (ApplyAdminConsents) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ApplyAdminConsents setUploadType(java.lang.String uploadType) {
+              return (ApplyAdminConsents) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ApplyAdminConsents setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ApplyAdminConsents) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the FHIR store to enforce, in the format `projects/{project_id}
+             * /locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the FHIR store to enforce, in the format
+           `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the FHIR store to enforce, in the format `projects/{project_id}
+             * /locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            public ApplyAdminConsents setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public ApplyAdminConsents set(String parameterName, Object value) {
+              return (ApplyAdminConsents) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Apply the Consent resources for the FHIR store and reindex the underlying resources in the FHIR
+           * store according to the aggregate consent. The aggregate consent of the patient in scope in this
+           * request replaces any previous call of this method. Any Consent resource change after this
+           * operation execution (including deletion) requires you to call ApplyConsents again to have effect.
+           * This method returns an Operation that can be used to track the progress of the consent resources
+           * that were processed by calling GetOperation. Upon completion, the ApplyConsentsResponse
+           * additionally contains the number of resources that was reindexed. Errors are logged to Cloud
+           * Logging (see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-
+           * tos/logging)). To enforce consent check for data access, `consent_config.access_enforced` must be
+           * set to true for the FhirStore.
+           *
+           * Create a request for the method "fhirStores.applyConsents".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link ApplyConsents#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the FHIR store to enforce, in the format
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
+           *        e_id}`.
+           * @param content the {@link com.google.api.services.healthcare.v1.model.ApplyConsentsRequest}
+           * @return the request
+           */
+          public ApplyConsents applyConsents(java.lang.String name, com.google.api.services.healthcare.v1.model.ApplyConsentsRequest content) throws java.io.IOException {
+            ApplyConsents result = new ApplyConsents(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ApplyConsents extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}:applyConsents";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+
+            /**
+             * Apply the Consent resources for the FHIR store and reindex the underlying resources in the FHIR
+             * store according to the aggregate consent. The aggregate consent of the patient in scope in this
+             * request replaces any previous call of this method. Any Consent resource change after this
+             * operation execution (including deletion) requires you to call ApplyConsents again to have
+             * effect. This method returns an Operation that can be used to track the progress of the consent
+             * resources that were processed by calling GetOperation. Upon completion, the
+             * ApplyConsentsResponse additionally contains the number of resources that was reindexed. Errors
+             * are logged to Cloud Logging (see [Viewing error logs in Cloud
+             * Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). To enforce consent check
+             * for data access, `consent_config.access_enforced` must be set to true for the FhirStore.
+             *
+             * Create a request for the method "fhirStores.applyConsents".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link ApplyConsents#execute()} method to invoke the remote
+             * operation. <p> {@link ApplyConsents#initialize(com.google.api.client.googleapis.services.Abstra
+             * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Required. The name of the FHIR store to enforce, in the format
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
+           *        e_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1.model.ApplyConsentsRequest}
+             * @since 1.13
+             */
+            protected ApplyConsents(java.lang.String name, com.google.api.services.healthcare.v1.model.ApplyConsentsRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public ApplyConsents set$Xgafv(java.lang.String $Xgafv) {
+              return (ApplyConsents) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ApplyConsents setAccessToken(java.lang.String accessToken) {
+              return (ApplyConsents) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ApplyConsents setAlt(java.lang.String alt) {
+              return (ApplyConsents) super.setAlt(alt);
+            }
+
+            @Override
+            public ApplyConsents setCallback(java.lang.String callback) {
+              return (ApplyConsents) super.setCallback(callback);
+            }
+
+            @Override
+            public ApplyConsents setFields(java.lang.String fields) {
+              return (ApplyConsents) super.setFields(fields);
+            }
+
+            @Override
+            public ApplyConsents setKey(java.lang.String key) {
+              return (ApplyConsents) super.setKey(key);
+            }
+
+            @Override
+            public ApplyConsents setOauthToken(java.lang.String oauthToken) {
+              return (ApplyConsents) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ApplyConsents setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ApplyConsents) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ApplyConsents setQuotaUser(java.lang.String quotaUser) {
+              return (ApplyConsents) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ApplyConsents setUploadType(java.lang.String uploadType) {
+              return (ApplyConsents) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ApplyConsents setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ApplyConsents) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the FHIR store to enforce, in the format `projects/{project_id}
+             * /locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the FHIR store to enforce, in the format
+           `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the FHIR store to enforce, in the format `projects/{project_id}
+             * /locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            public ApplyConsents setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public ApplyConsents set(String parameterName, Object value) {
+              return (ApplyConsents) super.set(parameterName, value);
+            }
+          }
+          /**
            * Creates a new FHIR store within the parent dataset.
            *
            * Create a request for the method "fhirStores.create".
@@ -16020,6 +16344,176 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             @Override
             public Delete set(String parameterName, Object value) {
               return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Explains all the permitted/denied actor, purpose and environment for a given resource.
+           *
+           * Create a request for the method "fhirStores.explainDataAccess".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link ExplainDataAccess#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the FHIR store to enforce, in the format
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
+           *        e_id}`.
+           * @return the request
+           */
+          public ExplainDataAccess explainDataAccess(java.lang.String name) throws java.io.IOException {
+            ExplainDataAccess result = new ExplainDataAccess(name);
+            initialize(result);
+            return result;
+          }
+
+          public class ExplainDataAccess extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.ExplainDataAccessResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:explainDataAccess";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+
+            /**
+             * Explains all the permitted/denied actor, purpose and environment for a given resource.
+             *
+             * Create a request for the method "fhirStores.explainDataAccess".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link ExplainDataAccess#execute()} method to invoke the remote
+             * operation. <p> {@link ExplainDataAccess#initialize(com.google.api.client.googleapis.services.Ab
+             * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The name of the FHIR store to enforce, in the format
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
+           *        e_id}`.
+             * @since 1.13
+             */
+            protected ExplainDataAccess(java.lang.String name) {
+              super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1.model.ExplainDataAccessResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public ExplainDataAccess set$Xgafv(java.lang.String $Xgafv) {
+              return (ExplainDataAccess) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ExplainDataAccess setAccessToken(java.lang.String accessToken) {
+              return (ExplainDataAccess) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ExplainDataAccess setAlt(java.lang.String alt) {
+              return (ExplainDataAccess) super.setAlt(alt);
+            }
+
+            @Override
+            public ExplainDataAccess setCallback(java.lang.String callback) {
+              return (ExplainDataAccess) super.setCallback(callback);
+            }
+
+            @Override
+            public ExplainDataAccess setFields(java.lang.String fields) {
+              return (ExplainDataAccess) super.setFields(fields);
+            }
+
+            @Override
+            public ExplainDataAccess setKey(java.lang.String key) {
+              return (ExplainDataAccess) super.setKey(key);
+            }
+
+            @Override
+            public ExplainDataAccess setOauthToken(java.lang.String oauthToken) {
+              return (ExplainDataAccess) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ExplainDataAccess setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ExplainDataAccess) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ExplainDataAccess setQuotaUser(java.lang.String quotaUser) {
+              return (ExplainDataAccess) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ExplainDataAccess setUploadType(java.lang.String uploadType) {
+              return (ExplainDataAccess) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ExplainDataAccess setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ExplainDataAccess) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the FHIR store to enforce, in the format `projects/{project_id}
+             * /locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the FHIR store to enforce, in the format
+           `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the FHIR store to enforce, in the format `projects/{project_id}
+             * /locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            public ExplainDataAccess setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Required. The ID (`{resourceType}/{id}`) of the resource to explain data access on.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resourceId;
+
+            /** Required. The ID (`{resourceType}/{id}`) of the resource to explain data access on.
+             */
+            public java.lang.String getResourceId() {
+              return resourceId;
+            }
+
+            /**
+             * Required. The ID (`{resourceType}/{id}`) of the resource to explain data access on.
+             */
+            public ExplainDataAccess setResourceId(java.lang.String resourceId) {
+              this.resourceId = resourceId;
+              return this;
+            }
+
+            @Override
+            public ExplainDataAccess set(String parameterName, Object value) {
+              return (ExplainDataAccess) super.set(parameterName, value);
             }
           }
           /**
@@ -17786,7 +18280,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * `contentType` will be filled in using the value of the `Content-Type` header, and the
              * `securityContext` field (not present in `DSTU2`) will be populated from the `X-Security-Context`
              * header if it exists. At this time `securityContext` has no special behavior in the Cloud
-             * Healthcare API. Note: the limit on data ingested through this method is 2 GB. For best
+             * Healthcare API. Note: the limit on data ingested through this method is 1 GB. For best
              * performance, use a non-FHIR data type instead of wrapping the data in a Binary resource. Some of
              * the Healthcare API features, such as [exporting to BigQuery](https://cloud.google.com/healthcare-
              * api/docs/how-tos/fhir-export-bigquery) or [Pub/Sub
@@ -17835,7 +18329,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * `contentType` will be filled in using the value of the `Content-Type` header, and the
                * `securityContext` field (not present in `DSTU2`) will be populated from the `X-Security-
                * Context` header if it exists. At this time `securityContext` has no special behavior in the
-               * Cloud Healthcare API. Note: the limit on data ingested through this method is 2 GB. For best
+               * Cloud Healthcare API. Note: the limit on data ingested through this method is 1 GB. For best
                * performance, use a non-FHIR data type instead of wrapping the data in a Binary resource. Some
                * of the Healthcare API features, such as [exporting to
                * BigQuery](https://cloud.google.com/healthcare-api/docs/how-tos/fhir-export-bigquery) or
@@ -18438,6 +18932,380 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               @Override
               public BinaryVread set(String parameterName, Object value) {
                 return (BinaryVread) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Returns the consent enforcement status of a single consent resource. On success, the response
+             * body contains a JSON-encoded representation of a `Parameters`
+             * (http://hl7.org/fhir/parameters.html) FHIR resource, containing the current enforcement status.
+             * Does not support DSTU2.
+             *
+             * Create a request for the method "fhir.Consent-enforcement-status".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link ConsentEnforcementStatus#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param name Required. The name of the consent resource to find enforcement status, in the format `projects/{proj
+             *        ect_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Cons
+             *        ent/{consent_id}`
+             * @return the request
+             */
+            public ConsentEnforcementStatus consentEnforcementStatus(java.lang.String name) throws java.io.IOException {
+              ConsentEnforcementStatus result = new ConsentEnforcementStatus(name);
+              initialize(result);
+              return result;
+            }
+
+            public class ConsentEnforcementStatus extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1/{+name}/$consent-enforcement-status";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Consent/[^/]+$");
+
+              /**
+               * Returns the consent enforcement status of a single consent resource. On success, the response
+               * body contains a JSON-encoded representation of a `Parameters`
+               * (http://hl7.org/fhir/parameters.html) FHIR resource, containing the current enforcement status.
+               * Does not support DSTU2.
+               *
+               * Create a request for the method "fhir.Consent-enforcement-status".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link ConsentEnforcementStatus#execute()} method to invoke the
+               * remote operation. <p> {@link ConsentEnforcementStatus#initialize(com.google.api.client.googleap
+               * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+               * immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the consent resource to find enforcement status, in the format `projects/{proj
+             *        ect_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Cons
+             *        ent/{consent_id}`
+               * @since 1.13
+               */
+              protected ConsentEnforcementStatus(java.lang.String name) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1.model.HttpBody.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Consent/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public ConsentEnforcementStatus set$Xgafv(java.lang.String $Xgafv) {
+                return (ConsentEnforcementStatus) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public ConsentEnforcementStatus setAccessToken(java.lang.String accessToken) {
+                return (ConsentEnforcementStatus) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public ConsentEnforcementStatus setAlt(java.lang.String alt) {
+                return (ConsentEnforcementStatus) super.setAlt(alt);
+              }
+
+              @Override
+              public ConsentEnforcementStatus setCallback(java.lang.String callback) {
+                return (ConsentEnforcementStatus) super.setCallback(callback);
+              }
+
+              @Override
+              public ConsentEnforcementStatus setFields(java.lang.String fields) {
+                return (ConsentEnforcementStatus) super.setFields(fields);
+              }
+
+              @Override
+              public ConsentEnforcementStatus setKey(java.lang.String key) {
+                return (ConsentEnforcementStatus) super.setKey(key);
+              }
+
+              @Override
+              public ConsentEnforcementStatus setOauthToken(java.lang.String oauthToken) {
+                return (ConsentEnforcementStatus) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public ConsentEnforcementStatus setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (ConsentEnforcementStatus) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public ConsentEnforcementStatus setQuotaUser(java.lang.String quotaUser) {
+                return (ConsentEnforcementStatus) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public ConsentEnforcementStatus setUploadType(java.lang.String uploadType) {
+                return (ConsentEnforcementStatus) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public ConsentEnforcementStatus setUploadProtocol(java.lang.String uploadProtocol) {
+                return (ConsentEnforcementStatus) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the consent resource to find enforcement status, in the
+               * format `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirSto
+               * res/{fhir_store_id}/fhir/Consent/{consent_id}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the consent resource to find enforcement status, in the format `projects/{pro
+             ject_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Consent/{con
+             sent_id}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the consent resource to find enforcement status, in the
+               * format `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirSto
+               * res/{fhir_store_id}/fhir/Consent/{consent_id}`
+               */
+              public ConsentEnforcementStatus setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Consent/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public ConsentEnforcementStatus set(String parameterName, Object value) {
+                return (ConsentEnforcementStatus) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Returns the consent enforcement status of all consent resources for a patient. On success, the
+             * response body contains a JSON-encoded representation of a bundle of `Parameters`
+             * (http://hl7.org/fhir/parameters.html) FHIR resources, containing the current enforcement status
+             * for each consent resource of the patient. Does not support DSTU2.
+             *
+             * Create a request for the method "fhir.Patient-consent-enforcement-status".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link PatientConsentEnforcementStatus#execute()} method to invoke the
+             * remote operation.
+             *
+             * @param name Required. The name of the patient to find enforcement statuses, in the format `projects/{project_id}
+             *        /locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Patient/{pa
+             *        tient_id}`
+             * @return the request
+             */
+            public PatientConsentEnforcementStatus patientConsentEnforcementStatus(java.lang.String name) throws java.io.IOException {
+              PatientConsentEnforcementStatus result = new PatientConsentEnforcementStatus(name);
+              initialize(result);
+              return result;
+            }
+
+            public class PatientConsentEnforcementStatus extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1/{+name}/$consent-enforcement-status";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Patient/[^/]+$");
+
+              /**
+               * Returns the consent enforcement status of all consent resources for a patient. On success, the
+               * response body contains a JSON-encoded representation of a bundle of `Parameters`
+               * (http://hl7.org/fhir/parameters.html) FHIR resources, containing the current enforcement status
+               * for each consent resource of the patient. Does not support DSTU2.
+               *
+               * Create a request for the method "fhir.Patient-consent-enforcement-status".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link PatientConsentEnforcementStatus#execute()} method to
+               * invoke the remote operation. <p> {@link PatientConsentEnforcementStatus#initialize(com.google.a
+               * pi.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+               * instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the patient to find enforcement statuses, in the format `projects/{project_id}
+             *        /locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Patient/{pa
+             *        tient_id}`
+               * @since 1.13
+               */
+              protected PatientConsentEnforcementStatus(java.lang.String name) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1.model.HttpBody.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Patient/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public PatientConsentEnforcementStatus set$Xgafv(java.lang.String $Xgafv) {
+                return (PatientConsentEnforcementStatus) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public PatientConsentEnforcementStatus setAccessToken(java.lang.String accessToken) {
+                return (PatientConsentEnforcementStatus) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public PatientConsentEnforcementStatus setAlt(java.lang.String alt) {
+                return (PatientConsentEnforcementStatus) super.setAlt(alt);
+              }
+
+              @Override
+              public PatientConsentEnforcementStatus setCallback(java.lang.String callback) {
+                return (PatientConsentEnforcementStatus) super.setCallback(callback);
+              }
+
+              @Override
+              public PatientConsentEnforcementStatus setFields(java.lang.String fields) {
+                return (PatientConsentEnforcementStatus) super.setFields(fields);
+              }
+
+              @Override
+              public PatientConsentEnforcementStatus setKey(java.lang.String key) {
+                return (PatientConsentEnforcementStatus) super.setKey(key);
+              }
+
+              @Override
+              public PatientConsentEnforcementStatus setOauthToken(java.lang.String oauthToken) {
+                return (PatientConsentEnforcementStatus) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public PatientConsentEnforcementStatus setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (PatientConsentEnforcementStatus) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public PatientConsentEnforcementStatus setQuotaUser(java.lang.String quotaUser) {
+                return (PatientConsentEnforcementStatus) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public PatientConsentEnforcementStatus setUploadType(java.lang.String uploadType) {
+                return (PatientConsentEnforcementStatus) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public PatientConsentEnforcementStatus setUploadProtocol(java.lang.String uploadProtocol) {
+                return (PatientConsentEnforcementStatus) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the patient to find enforcement statuses, in the format `proj
+               * ects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_st
+               * ore_id}/fhir/Patient/{patient_id}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the patient to find enforcement statuses, in the format `projects/{project_id
+             }/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Patient/{patient_id
+             }`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the patient to find enforcement statuses, in the format `proj
+               * ects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_st
+               * ore_id}/fhir/Patient/{patient_id}`
+               */
+              public PatientConsentEnforcementStatus setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Patient/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Optional. The maximum number of results on a page. If not specified, 100 is used.
+               * May not be larger than 1000.
+               */
+              @com.google.api.client.util.Key("_count")
+              private java.lang.Integer count;
+
+              /** Optional. The maximum number of results on a page. If not specified, 100 is used. May not be larger
+             than 1000.
+               */
+              public java.lang.Integer getCount() {
+                return count;
+              }
+
+              /**
+               * Optional. The maximum number of results on a page. If not specified, 100 is used.
+               * May not be larger than 1000.
+               */
+              public PatientConsentEnforcementStatus setCount(java.lang.Integer count) {
+                this.count = count;
+                return this;
+              }
+
+              /**
+               * Optional. Used to retrieve the first, previous, next, or last page of consent
+               * enforcement statuses when using pagination. Value should be set to the value of
+               * `_page_token` set in next or previous page links' URLs. Next and previous page are
+               * returned in the response bundle's links field, where `link.relation` is "previous"
+               * or "next". Omit `_page_token` if no previous request has been made.
+               */
+              @com.google.api.client.util.Key("_page_token")
+              private java.lang.String pageToken;
+
+              /** Optional. Used to retrieve the first, previous, next, or last page of consent enforcement statuses
+             when using pagination. Value should be set to the value of `_page_token` set in next or previous
+             page links' URLs. Next and previous page are returned in the response bundle's links field, where
+             `link.relation` is "previous" or "next". Omit `_page_token` if no previous request has been made.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Optional. Used to retrieve the first, previous, next, or last page of consent
+               * enforcement statuses when using pagination. Value should be set to the value of
+               * `_page_token` set in next or previous page links' URLs. Next and previous page are
+               * returned in the response bundle's links field, where `link.relation` is "previous"
+               * or "next". Omit `_page_token` if no previous request has been made.
+               */
+              public PatientConsentEnforcementStatus setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public PatientConsentEnforcementStatus set(String parameterName, Object value) {
+                return (PatientConsentEnforcementStatus) super.set(parameterName, value);
               }
             }
             /**
@@ -25122,7 +25990,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
            * methods to check whether the cancellation succeeded or whether the operation completed despite
            * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
            * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".
@@ -25153,7 +26021,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
              * methods to check whether the cancellation succeeded or whether the operation completed despite
              * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-             * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+             * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
              * `Code.CANCELLED`.
              *
              * Create a request for the method "operations.cancel".

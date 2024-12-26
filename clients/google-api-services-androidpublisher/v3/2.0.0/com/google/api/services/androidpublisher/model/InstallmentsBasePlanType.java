@@ -31,9 +31,10 @@ package com.google.api.services.androidpublisher.model;
 public final class InstallmentsBasePlanType extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Account hold period of the subscription, specified exclusively in days and in ISO
-   * 8601 format. Acceptable values are P0D (zero days) to P30D (30days). If not specified, the
-   * default value is P30D (30 days).
+   * Optional. Account hold period of the subscription, specified in ISO 8601 format. Acceptable
+   * values must be in days and between P0D and P60D. If not specified, the default value is P30D.
+   * The sum of gracePeriodDuration and accountHoldDuration must be between P30D and P60D days,
+   * inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,9 +58,10 @@ public final class InstallmentsBasePlanType extends com.google.api.client.json.G
   private java.lang.Integer committedPaymentsCount;
 
   /**
-   * Grace period of the subscription, specified in ISO 8601 format. Acceptable values are P0D (zero
-   * days), P3D (3 days), P7D (7 days), P14D (14 days), and P30D (30 days). If not specified, a
-   * default value will be used based on the recurring period duration.
+   * Grace period of the subscription, specified in ISO 8601 format. Acceptable values must be in
+   * days and between P0D and the lesser of 30D and base plan billing period. If not specified, a
+   * default value will be used based on the billing period. The sum of gracePeriodDuration and
+   * accountHoldDuration must be between P30D and P60D days, inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,9 +92,10 @@ public final class InstallmentsBasePlanType extends com.google.api.client.json.G
   private java.lang.String resubscribeState;
 
   /**
-   * Optional. Account hold period of the subscription, specified exclusively in days and in ISO
-   * 8601 format. Acceptable values are P0D (zero days) to P30D (30days). If not specified, the
-   * default value is P30D (30 days).
+   * Optional. Account hold period of the subscription, specified in ISO 8601 format. Acceptable
+   * values must be in days and between P0D and P60D. If not specified, the default value is P30D.
+   * The sum of gracePeriodDuration and accountHoldDuration must be between P30D and P60D days,
+   * inclusive.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccountHoldDuration() {
@@ -100,9 +103,10 @@ public final class InstallmentsBasePlanType extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. Account hold period of the subscription, specified exclusively in days and in ISO
-   * 8601 format. Acceptable values are P0D (zero days) to P30D (30days). If not specified, the
-   * default value is P30D (30 days).
+   * Optional. Account hold period of the subscription, specified in ISO 8601 format. Acceptable
+   * values must be in days and between P0D and P60D. If not specified, the default value is P30D.
+   * The sum of gracePeriodDuration and accountHoldDuration must be between P30D and P60D days,
+   * inclusive.
    * @param accountHoldDuration accountHoldDuration or {@code null} for none
    */
   public InstallmentsBasePlanType setAccountHoldDuration(java.lang.String accountHoldDuration) {
@@ -151,9 +155,10 @@ public final class InstallmentsBasePlanType extends com.google.api.client.json.G
   }
 
   /**
-   * Grace period of the subscription, specified in ISO 8601 format. Acceptable values are P0D (zero
-   * days), P3D (3 days), P7D (7 days), P14D (14 days), and P30D (30 days). If not specified, a
-   * default value will be used based on the recurring period duration.
+   * Grace period of the subscription, specified in ISO 8601 format. Acceptable values must be in
+   * days and between P0D and the lesser of 30D and base plan billing period. If not specified, a
+   * default value will be used based on the billing period. The sum of gracePeriodDuration and
+   * accountHoldDuration must be between P30D and P60D days, inclusive.
    * @return value or {@code null} for none
    */
   public java.lang.String getGracePeriodDuration() {
@@ -161,9 +166,10 @@ public final class InstallmentsBasePlanType extends com.google.api.client.json.G
   }
 
   /**
-   * Grace period of the subscription, specified in ISO 8601 format. Acceptable values are P0D (zero
-   * days), P3D (3 days), P7D (7 days), P14D (14 days), and P30D (30 days). If not specified, a
-   * default value will be used based on the recurring period duration.
+   * Grace period of the subscription, specified in ISO 8601 format. Acceptable values must be in
+   * days and between P0D and the lesser of 30D and base plan billing period. If not specified, a
+   * default value will be used based on the billing period. The sum of gracePeriodDuration and
+   * accountHoldDuration must be between P30D and P60D days, inclusive.
    * @param gracePeriodDuration gracePeriodDuration or {@code null} for none
    */
   public InstallmentsBasePlanType setGracePeriodDuration(java.lang.String gracePeriodDuration) {

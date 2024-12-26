@@ -82,6 +82,19 @@ public final class DataSet extends com.google.api.client.json.GenericJson {
   private java.lang.String plotType;
 
   /**
+   * Optional. A collection of sort options, affects the order of the data and legend.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ColumnSortingOptions> sort;
+
+  static {
+    // hack to force ProGuard to consider ColumnSortingOptions used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ColumnSortingOptions.class);
+  }
+
+  /**
    * Optional. The target axis to use for plotting the metric.
    * The value may be {@code null}.
    */
@@ -202,6 +215,23 @@ public final class DataSet extends com.google.api.client.json.GenericJson {
    */
   public DataSet setPlotType(java.lang.String plotType) {
     this.plotType = plotType;
+    return this;
+  }
+
+  /**
+   * Optional. A collection of sort options, affects the order of the data and legend.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ColumnSortingOptions> getSort() {
+    return sort;
+  }
+
+  /**
+   * Optional. A collection of sort options, affects the order of the data and legend.
+   * @param sort sort or {@code null} for none
+   */
+  public DataSet setSort(java.util.List<ColumnSortingOptions> sort) {
+    this.sort = sort;
     return this;
   }
 

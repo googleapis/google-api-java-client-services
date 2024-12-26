@@ -32,6 +32,13 @@ package com.google.api.services.translate.v3.model;
 public final class TranslateTextGlossaryConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If set to true, the glossary will be used for contextual translation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean contextualTranslationEnabled;
+
+  /**
    * Required. The `glossary` to be applied for this translation. The format depends on the
    * glossary: - User-provided custom glossary: `projects/{project-number-or-
    * id}/locations/{location-id}/glossaries/{glossary-id}`
@@ -46,6 +53,23 @@ public final class TranslateTextGlossaryConfig extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean ignoreCase;
+
+  /**
+   * Optional. If set to true, the glossary will be used for contextual translation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getContextualTranslationEnabled() {
+    return contextualTranslationEnabled;
+  }
+
+  /**
+   * Optional. If set to true, the glossary will be used for contextual translation.
+   * @param contextualTranslationEnabled contextualTranslationEnabled or {@code null} for none
+   */
+  public TranslateTextGlossaryConfig setContextualTranslationEnabled(java.lang.Boolean contextualTranslationEnabled) {
+    this.contextualTranslationEnabled = contextualTranslationEnabled;
+    return this;
+  }
 
   /**
    * Required. The `glossary` to be applied for this translation. The format depends on the

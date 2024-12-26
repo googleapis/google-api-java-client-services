@@ -30,6 +30,23 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2ServiceScaling extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. total instance count for the service in manual scaling mode. This number of instances
+   * is divided among all revisions with specified traffic based on the percent of traffic they are
+   * receiving.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer manualInstanceCount;
+
+  /**
+   * Optional. total max instances for the service. This number of instances is divided among all
+   * revisions with specified traffic based on the percent of traffic they are receiving.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxInstanceCount;
+
+  /**
    * Optional. total min instances for the service. This number of instances is divided among all
    * revisions with specified traffic based on the percent of traffic they are receiving.
    * The value may be {@code null}.
@@ -43,6 +60,46 @@ public final class GoogleCloudRunV2ServiceScaling extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private java.lang.String scalingMode;
+
+  /**
+   * Optional. total instance count for the service in manual scaling mode. This number of instances
+   * is divided among all revisions with specified traffic based on the percent of traffic they are
+   * receiving.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getManualInstanceCount() {
+    return manualInstanceCount;
+  }
+
+  /**
+   * Optional. total instance count for the service in manual scaling mode. This number of instances
+   * is divided among all revisions with specified traffic based on the percent of traffic they are
+   * receiving.
+   * @param manualInstanceCount manualInstanceCount or {@code null} for none
+   */
+  public GoogleCloudRunV2ServiceScaling setManualInstanceCount(java.lang.Integer manualInstanceCount) {
+    this.manualInstanceCount = manualInstanceCount;
+    return this;
+  }
+
+  /**
+   * Optional. total max instances for the service. This number of instances is divided among all
+   * revisions with specified traffic based on the percent of traffic they are receiving.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxInstanceCount() {
+    return maxInstanceCount;
+  }
+
+  /**
+   * Optional. total max instances for the service. This number of instances is divided among all
+   * revisions with specified traffic based on the percent of traffic they are receiving.
+   * @param maxInstanceCount maxInstanceCount or {@code null} for none
+   */
+  public GoogleCloudRunV2ServiceScaling setMaxInstanceCount(java.lang.Integer maxInstanceCount) {
+    this.maxInstanceCount = maxInstanceCount;
+    return this;
+  }
 
   /**
    * Optional. total min instances for the service. This number of instances is divided among all

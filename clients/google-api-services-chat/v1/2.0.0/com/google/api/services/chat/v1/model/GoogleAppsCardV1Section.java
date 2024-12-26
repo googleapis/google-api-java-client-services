@@ -33,8 +33,7 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
 
   /**
    * Optional. Define the expand and collapse button of the section. This button will be shown only
-   * if the section is collapsible. If this field isn't set, the default button is used. [Google
-   * Chat apps](https://developers.google.com/workspace/chat):
+   * if the section is collapsible. If this field isn't set, the default button is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,8 +79,7 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
 
   /**
    * Optional. Define the expand and collapse button of the section. This button will be shown only
-   * if the section is collapsible. If this field isn't set, the default button is used. [Google
-   * Chat apps](https://developers.google.com/workspace/chat):
+   * if the section is collapsible. If this field isn't set, the default button is used.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1CollapseControl getCollapseControl() {
@@ -90,8 +88,7 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
 
   /**
    * Optional. Define the expand and collapse button of the section. This button will be shown only
-   * if the section is collapsible. If this field isn't set, the default button is used. [Google
-   * Chat apps](https://developers.google.com/workspace/chat):
+   * if the section is collapsible. If this field isn't set, the default button is used.
    * @param collapseControl collapseControl or {@code null} for none
    */
   public GoogleAppsCardV1Section setCollapseControl(GoogleAppsCardV1CollapseControl collapseControl) {

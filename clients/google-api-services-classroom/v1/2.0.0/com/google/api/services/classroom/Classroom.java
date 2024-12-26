@@ -5295,7 +5295,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       /**
        * Updates a rubric. See google.classroom.v1.Rubric for details of which fields can be updated.
        * Rubric update capabilities are [limited](/classroom/rubrics/limitations) once grading has
-       * started. This request must be made by the Google Cloud console of the [OAuth client
+       * started. The requesting user and course owner must have rubrics creation capabilities. For
+       * details, see [licensing
+       * requirements](https://developers.google.com/classroom/rubrics/limitations#license-requirements).
+       * This request must be made by the Google Cloud console of the [OAuth client
        * ID](https://support.google.com/cloud/answer/6158849) used to create the parent course work item.
        * This method returns the following error codes: * `PERMISSION_DENIED` if the requesting developer
        * project didn't create the corresponding course work, if the user isn't permitted to make the
@@ -5328,7 +5331,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         /**
          * Updates a rubric. See google.classroom.v1.Rubric for details of which fields can be updated.
          * Rubric update capabilities are [limited](/classroom/rubrics/limitations) once grading has
-         * started. This request must be made by the Google Cloud console of the [OAuth client
+         * started. The requesting user and course owner must have rubrics creation capabilities. For
+         * details, see [licensing
+         * requirements](https://developers.google.com/classroom/rubrics/limitations#license-
+         * requirements). This request must be made by the Google Cloud console of the [OAuth client
          * ID](https://support.google.com/cloud/answer/6158849) used to create the parent course work
          * item. This method returns the following error codes: * `PERMISSION_DENIED` if the requesting
          * developer project didn't create the corresponding course work, if the user isn't permitted to
@@ -7080,16 +7086,18 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       public class Rubrics {
 
         /**
-         * Creates a rubric. This request must be made by the Google Cloud console of the [OAuth client
-         * ID](https://support.google.com/cloud/answer/6158849) used to create the parent course work item.
+         * Creates a rubric. The requesting user and course owner must have rubrics creation capabilities.
+         * For details, see [licensing
+         * requirements](https://developers.google.com/classroom/rubrics/limitations#license-requirements).
          * For further details, see [Rubrics structure and known
-         * limitations](/classroom/rubrics/limitations). This method returns the following error codes: *
-         * `PERMISSION_DENIED` if the requesting user isn't permitted to create rubrics for course work in
-         * the requested course. * `INTERNAL` if the request has insufficient OAuth scopes. *
-         * `INVALID_ARGUMENT` if the request is malformed and for the following request error: *
-         * `RubricCriteriaInvalidFormat` * `NOT_FOUND` if the requested course or course work don't exist or
-         * the user doesn't have access to the course or course work. * `FAILED_PRECONDITION` for the
-         * following request error: * `AttachmentNotVisible`
+         * limitations](/classroom/rubrics/limitations). This request must be made by the Google Cloud
+         * console of the [OAuth client ID](https://support.google.com/cloud/answer/6158849) used to create
+         * the parent course work item. This method returns the following error codes: * `PERMISSION_DENIED`
+         * if the requesting user isn't permitted to create rubrics for course work in the requested course.
+         * * `INTERNAL` if the request has insufficient OAuth scopes. * `INVALID_ARGUMENT` if the request is
+         * malformed and for the following request error: * `RubricCriteriaInvalidFormat` * `NOT_FOUND` if
+         * the requested course or course work don't exist or the user doesn't have access to the course or
+         * course work. * `FAILED_PRECONDITION` for the following request error: * `AttachmentNotVisible`
          *
          * Create a request for the method "rubrics.create".
          *
@@ -7112,10 +7120,13 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{courseWorkId}/rubrics";
 
           /**
-           * Creates a rubric. This request must be made by the Google Cloud console of the [OAuth client
-           * ID](https://support.google.com/cloud/answer/6158849) used to create the parent course work
-           * item. For further details, see [Rubrics structure and known
-           * limitations](/classroom/rubrics/limitations). This method returns the following error codes: *
+           * Creates a rubric. The requesting user and course owner must have rubrics creation capabilities.
+           * For details, see [licensing
+           * requirements](https://developers.google.com/classroom/rubrics/limitations#license-
+           * requirements). For further details, see [Rubrics structure and known
+           * limitations](/classroom/rubrics/limitations). This request must be made by the Google Cloud
+           * console of the [OAuth client ID](https://support.google.com/cloud/answer/6158849) used to
+           * create the parent course work item. This method returns the following error codes: *
            * `PERMISSION_DENIED` if the requesting user isn't permitted to create rubrics for course work in
            * the requested course. * `INTERNAL` if the request has insufficient OAuth scopes. *
            * `INVALID_ARGUMENT` if the request is malformed and for the following request error: *
@@ -7235,7 +7246,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Deletes a rubric. This request must be made by the Google Cloud console of the [OAuth client
+         * Deletes a rubric. The requesting user and course owner must have rubrics creation capabilities.
+         * For details, see [licensing
+         * requirements](https://developers.google.com/classroom/rubrics/limitations#license-requirements).
+         * This request must be made by the Google Cloud console of the [OAuth client
          * ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding rubric.
          * This method returns the following error codes: * `PERMISSION_DENIED` if the requesting developer
          * project didn't create the corresponding rubric, or if the requesting user isn't permitted to
@@ -7264,7 +7278,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{courseWorkId}/rubrics/{id}";
 
           /**
-           * Deletes a rubric. This request must be made by the Google Cloud console of the [OAuth client
+           * Deletes a rubric. The requesting user and course owner must have rubrics creation capabilities.
+           * For details, see [licensing
+           * requirements](https://developers.google.com/classroom/rubrics/limitations#license-
+           * requirements). This request must be made by the Google Cloud console of the [OAuth client
            * ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding rubric.
            * This method returns the following error codes: * `PERMISSION_DENIED` if the requesting
            * developer project didn't create the corresponding rubric, or if the requesting user isn't
@@ -7771,7 +7788,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         /**
          * Updates a rubric. See google.classroom.v1.Rubric for details of which fields can be updated.
          * Rubric update capabilities are [limited](/classroom/rubrics/limitations) once grading has
-         * started. This request must be made by the Google Cloud console of the [OAuth client
+         * started. The requesting user and course owner must have rubrics creation capabilities. For
+         * details, see [licensing
+         * requirements](https://developers.google.com/classroom/rubrics/limitations#license-requirements).
+         * This request must be made by the Google Cloud console of the [OAuth client
          * ID](https://support.google.com/cloud/answer/6158849) used to create the parent course work item.
          * This method returns the following error codes: * `PERMISSION_DENIED` if the requesting developer
          * project didn't create the corresponding course work, if the user isn't permitted to make the
@@ -7805,7 +7825,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           /**
            * Updates a rubric. See google.classroom.v1.Rubric for details of which fields can be updated.
            * Rubric update capabilities are [limited](/classroom/rubrics/limitations) once grading has
-           * started. This request must be made by the Google Cloud console of the [OAuth client
+           * started. The requesting user and course owner must have rubrics creation capabilities. For
+           * details, see [licensing
+           * requirements](https://developers.google.com/classroom/rubrics/limitations#license-
+           * requirements). This request must be made by the Google Cloud console of the [OAuth client
            * ID](https://support.google.com/cloud/answer/6158849) used to create the parent course work
            * item. This method returns the following error codes: * `PERMISSION_DENIED` if the requesting
            * developer project didn't create the corresponding course work, if the user isn't permitted to

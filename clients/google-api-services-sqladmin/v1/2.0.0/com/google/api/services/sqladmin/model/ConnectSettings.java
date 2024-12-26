@@ -39,6 +39,13 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
   private java.lang.String backendType;
 
   /**
+   * Custom subject alternative names for the server certificate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> customSubjectAlternativeNames;
+
+  /**
    * The database engine type and version. The `databaseVersion` field cannot be changed after
    * instance creation. MySQL instances: `MYSQL_8_0`, `MYSQL_5_7` (default), or `MYSQL_5_6`.
    * PostgreSQL instances: `POSTGRES_9_6`, `POSTGRES_10`, `POSTGRES_11`, `POSTGRES_12` (default),
@@ -119,6 +126,23 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
    */
   public ConnectSettings setBackendType(java.lang.String backendType) {
     this.backendType = backendType;
+    return this;
+  }
+
+  /**
+   * Custom subject alternative names for the server certificate.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCustomSubjectAlternativeNames() {
+    return customSubjectAlternativeNames;
+  }
+
+  /**
+   * Custom subject alternative names for the server certificate.
+   * @param customSubjectAlternativeNames customSubjectAlternativeNames or {@code null} for none
+   */
+  public ConnectSettings setCustomSubjectAlternativeNames(java.util.List<java.lang.String> customSubjectAlternativeNames) {
+    this.customSubjectAlternativeNames = customSubjectAlternativeNames;
     return this;
   }
 

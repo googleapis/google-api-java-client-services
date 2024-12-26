@@ -30,6 +30,20 @@ package com.google.api.services.migrationcenter.v1.model;
 public final class ImportRowError extends com.google.api.client.json.GenericJson {
 
   /**
+   * Error details for an archive file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ImportRowErrorArchiveErrorDetails archiveError;
+
+  /**
+   * Output only. The asset title.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String assetTitle;
+
+  /**
    * Error details for a CSV file.
    * The value may be {@code null}.
    */
@@ -76,6 +90,40 @@ public final class ImportRowError extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private ImportRowErrorXlsxErrorDetails xlsxError;
+
+  /**
+   * Error details for an archive file.
+   * @return value or {@code null} for none
+   */
+  public ImportRowErrorArchiveErrorDetails getArchiveError() {
+    return archiveError;
+  }
+
+  /**
+   * Error details for an archive file.
+   * @param archiveError archiveError or {@code null} for none
+   */
+  public ImportRowError setArchiveError(ImportRowErrorArchiveErrorDetails archiveError) {
+    this.archiveError = archiveError;
+    return this;
+  }
+
+  /**
+   * Output only. The asset title.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAssetTitle() {
+    return assetTitle;
+  }
+
+  /**
+   * Output only. The asset title.
+   * @param assetTitle assetTitle or {@code null} for none
+   */
+  public ImportRowError setAssetTitle(java.lang.String assetTitle) {
+    this.assetTitle = assetTitle;
+    return this;
+  }
 
   /**
    * Error details for a CSV file.

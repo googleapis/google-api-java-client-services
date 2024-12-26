@@ -51,7 +51,7 @@ public final class DicomConfig extends com.google.api.client.json.GenericJson {
   private TagFilterList removeList;
 
   /**
-   * If true, skip replacing StudyInstanceUID, SeriesInstanceUID, SOPInstanceUID, and
+   * Optional. If true, skip replacing StudyInstanceUID, SeriesInstanceUID, SOPInstanceUID, and
    * MediaStorageSOPInstanceUID and leave them untouched. The Cloud Healthcare API regenerates these
    * UIDs by default based on the DICOM Standard's reasoning: "Whilst these UIDs cannot be mapped
    * directly to an individual out of context, given access to the original images, or to a database
@@ -114,7 +114,7 @@ public final class DicomConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If true, skip replacing StudyInstanceUID, SeriesInstanceUID, SOPInstanceUID, and
+   * Optional. If true, skip replacing StudyInstanceUID, SeriesInstanceUID, SOPInstanceUID, and
    * MediaStorageSOPInstanceUID and leave them untouched. The Cloud Healthcare API regenerates these
    * UIDs by default based on the DICOM Standard's reasoning: "Whilst these UIDs cannot be mapped
    * directly to an individual out of context, given access to the original images, or to a database
@@ -127,7 +127,7 @@ public final class DicomConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If true, skip replacing StudyInstanceUID, SeriesInstanceUID, SOPInstanceUID, and
+   * Optional. If true, skip replacing StudyInstanceUID, SeriesInstanceUID, SOPInstanceUID, and
    * MediaStorageSOPInstanceUID and leave them untouched. The Cloud Healthcare API regenerates these
    * UIDs by default based on the DICOM Standard's reasoning: "Whilst these UIDs cannot be mapped
    * directly to an individual out of context, given access to the original images, or to a database

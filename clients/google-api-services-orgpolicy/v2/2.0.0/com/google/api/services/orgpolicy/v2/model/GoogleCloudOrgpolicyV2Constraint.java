@@ -94,6 +94,13 @@ public final class GoogleCloudOrgpolicyV2Constraint extends com.google.api.clien
   private java.lang.Boolean supportsDryRun;
 
   /**
+   * Shows if simulation is supported for this constraint or not.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean supportsSimulation;
+
+  /**
    * Defines this constraint as being a BooleanConstraint.
    * @return value or {@code null} for none
    */
@@ -219,6 +226,23 @@ public final class GoogleCloudOrgpolicyV2Constraint extends com.google.api.clien
    */
   public GoogleCloudOrgpolicyV2Constraint setSupportsDryRun(java.lang.Boolean supportsDryRun) {
     this.supportsDryRun = supportsDryRun;
+    return this;
+  }
+
+  /**
+   * Shows if simulation is supported for this constraint or not.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSupportsSimulation() {
+    return supportsSimulation;
+  }
+
+  /**
+   * Shows if simulation is supported for this constraint or not.
+   * @param supportsSimulation supportsSimulation or {@code null} for none
+   */
+  public GoogleCloudOrgpolicyV2Constraint setSupportsSimulation(java.lang.Boolean supportsSimulation) {
+    this.supportsSimulation = supportsSimulation;
     return this;
   }
 

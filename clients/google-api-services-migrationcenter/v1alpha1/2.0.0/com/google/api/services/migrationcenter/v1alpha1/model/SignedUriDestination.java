@@ -29,6 +29,30 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 @SuppressWarnings("javadoc")
 public final class SignedUriDestination extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Required. The file format to export.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fileFormat;
+
+  /**
+   * Required. The file format to export.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFileFormat() {
+    return fileFormat;
+  }
+
+  /**
+   * Required. The file format to export.
+   * @param fileFormat fileFormat or {@code null} for none
+   */
+  public SignedUriDestination setFileFormat(java.lang.String fileFormat) {
+    this.fileFormat = fileFormat;
+    return this;
+  }
+
   @Override
   public SignedUriDestination set(String fieldName, Object value) {
     return (SignedUriDestination) super.set(fieldName, value);

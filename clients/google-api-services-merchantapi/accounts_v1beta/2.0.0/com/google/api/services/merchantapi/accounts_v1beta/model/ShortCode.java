@@ -19,10 +19,10 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
 /**
  * An object representing a short code, which is a phone number that is typically much shorter than
  * regular phone numbers and can be used to address messages in MMS and SMS systems, as well as for
- * abbreviated dialing (e.g. "Text 611 to see how many minutes you have remaining on your plan.").
- * Short codes are restricted to a region and are not internationally dialable, which means the same
- * short code can exist in different regions, with different usage and pricing, even if those
- * regions share the same country calling code (e.g. US and CA).
+ * abbreviated dialing (For example "Text 611 to see how many minutes you have remaining on your
+ * plan."). Short codes are restricted to a region and are not internationally dialable, which means
+ * the same short code can exist in different regions, with different usage and pricing, even if
+ * those regions share the same country calling code (For example: US and CA).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:
@@ -35,8 +35,8 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
 public final class ShortCode extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The short code digits, without a leading plus ('+') or country calling code, e.g.
-   * "611".
+   * Required. The short code digits, without a leading plus ('+') or country calling code. For
+   * example "611".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,8 +52,8 @@ public final class ShortCode extends com.google.api.client.json.GenericJson {
   private java.lang.String regionCode;
 
   /**
-   * Required. The short code digits, without a leading plus ('+') or country calling code, e.g.
-   * "611".
+   * Required. The short code digits, without a leading plus ('+') or country calling code. For
+   * example "611".
    * @return value or {@code null} for none
    */
   public java.lang.String getNumber() {
@@ -61,8 +61,8 @@ public final class ShortCode extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The short code digits, without a leading plus ('+') or country calling code, e.g.
-   * "611".
+   * Required. The short code digits, without a leading plus ('+') or country calling code. For
+   * example "611".
    * @param number number or {@code null} for none
    */
   public ShortCode setNumber(java.lang.String number) {

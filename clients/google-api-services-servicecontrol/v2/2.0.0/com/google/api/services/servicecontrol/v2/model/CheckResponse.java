@@ -30,6 +30,14 @@ package com.google.api.services.servicecontrol.v2.model;
 public final class CheckResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional response metadata that will be emitted as dynamic metadata to be consumed by the
+   * caller of ServiceController. For compatibility with the ext_authz interface.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> dynamicMetadata;
+
+  /**
    * Returns a set of request contexts generated from the `CheckRequest`.
    * The value may be {@code null}.
    */
@@ -43,6 +51,25 @@ public final class CheckResponse extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private Status status;
+
+  /**
+   * Optional response metadata that will be emitted as dynamic metadata to be consumed by the
+   * caller of ServiceController. For compatibility with the ext_authz interface.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getDynamicMetadata() {
+    return dynamicMetadata;
+  }
+
+  /**
+   * Optional response metadata that will be emitted as dynamic metadata to be consumed by the
+   * caller of ServiceController. For compatibility with the ext_authz interface.
+   * @param dynamicMetadata dynamicMetadata or {@code null} for none
+   */
+  public CheckResponse setDynamicMetadata(java.util.Map<String, java.lang.Object> dynamicMetadata) {
+    this.dynamicMetadata = dynamicMetadata;
+    return this;
+  }
 
   /**
    * Returns a set of request contexts generated from the `CheckRequest`.

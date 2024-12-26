@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Message describing MirroringEndpointGroup object. Next ID: 10
+ * Message describing MirroringEndpointGroup object.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -52,7 +52,7 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
   private java.lang.String mirroringDeploymentGroup;
 
   /**
-   * Immutable. Identifier. The name of the MirroringEndpointGroup.
+   * Immutable. Identifier. Next ID: 11 The name of the MirroringEndpointGroup.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,7 +133,7 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
   }
 
   /**
-   * Immutable. Identifier. The name of the MirroringEndpointGroup.
+   * Immutable. Identifier. Next ID: 11 The name of the MirroringEndpointGroup.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -141,7 +141,7 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
   }
 
   /**
-   * Immutable. Identifier. The name of the MirroringEndpointGroup.
+   * Immutable. Identifier. Next ID: 11 The name of the MirroringEndpointGroup.
    * @param name name or {@code null} for none
    */
   public MirroringEndpointGroup setName(java.lang.String name) {

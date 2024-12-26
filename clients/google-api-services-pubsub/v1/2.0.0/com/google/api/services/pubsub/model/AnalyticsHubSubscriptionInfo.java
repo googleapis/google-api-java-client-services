@@ -17,8 +17,8 @@
 package com.google.api.services.pubsub.model;
 
 /**
- * Information about an associated Analytics Hub subscription
- * (https://cloud.google.com/bigquery/docs/analytics-hub-manage-subscriptions).
+ * Information about an associated [Analytics Hub
+ * subscription](https://cloud.google.com/bigquery/docs/analytics-hub-manage-subscriptions).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Pub/Sub API. For a detailed explanation see:

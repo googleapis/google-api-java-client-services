@@ -44,9 +44,9 @@ public final class GoogleCloudAiplatformV1beta1DistillationSpec extends com.goog
   private GoogleCloudAiplatformV1beta1DistillationHyperParameters hyperParameters;
 
   /**
-   * Required. Deprecated. A path in a Cloud Storage bucket, which will be treated as the root
-   * output directory of the distillation pipeline. It is used by the system to generate the paths
-   * of output artifacts.
+   * Deprecated. A path in a Cloud Storage bucket, which will be treated as the root output
+   * directory of the distillation pipeline. It is used by the system to generate the paths of
+   * output artifacts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class GoogleCloudAiplatformV1beta1DistillationSpec extends com.goog
   private java.lang.String studentModel;
 
   /**
-   * Required. Cloud Storage path to file containing training dataset for tuning. The dataset must
+   * Deprecated. Cloud Storage path to file containing training dataset for tuning. The dataset must
    * be formatted as a JSONL file.
    * The value may be {@code null}.
    */
@@ -119,9 +119,9 @@ public final class GoogleCloudAiplatformV1beta1DistillationSpec extends com.goog
   }
 
   /**
-   * Required. Deprecated. A path in a Cloud Storage bucket, which will be treated as the root
-   * output directory of the distillation pipeline. It is used by the system to generate the paths
-   * of output artifacts.
+   * Deprecated. A path in a Cloud Storage bucket, which will be treated as the root output
+   * directory of the distillation pipeline. It is used by the system to generate the paths of
+   * output artifacts.
    * @return value or {@code null} for none
    */
   public java.lang.String getPipelineRootDirectory() {
@@ -129,9 +129,9 @@ public final class GoogleCloudAiplatformV1beta1DistillationSpec extends com.goog
   }
 
   /**
-   * Required. Deprecated. A path in a Cloud Storage bucket, which will be treated as the root
-   * output directory of the distillation pipeline. It is used by the system to generate the paths
-   * of output artifacts.
+   * Deprecated. A path in a Cloud Storage bucket, which will be treated as the root output
+   * directory of the distillation pipeline. It is used by the system to generate the paths of
+   * output artifacts.
    * @param pipelineRootDirectory pipelineRootDirectory or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1DistillationSpec setPipelineRootDirectory(java.lang.String pipelineRootDirectory) {
@@ -159,7 +159,7 @@ public final class GoogleCloudAiplatformV1beta1DistillationSpec extends com.goog
   }
 
   /**
-   * Required. Cloud Storage path to file containing training dataset for tuning. The dataset must
+   * Deprecated. Cloud Storage path to file containing training dataset for tuning. The dataset must
    * be formatted as a JSONL file.
    * @return value or {@code null} for none
    */
@@ -168,7 +168,7 @@ public final class GoogleCloudAiplatformV1beta1DistillationSpec extends com.goog
   }
 
   /**
-   * Required. Cloud Storage path to file containing training dataset for tuning. The dataset must
+   * Deprecated. Cloud Storage path to file containing training dataset for tuning. The dataset must
    * be formatted as a JSONL file.
    * @param trainingDatasetUri trainingDatasetUri or {@code null} for none
    */

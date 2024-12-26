@@ -30,8 +30,8 @@ package com.google.api.services.healthcare.v1.model;
 public final class TagFilterList extends com.google.api.client.json.GenericJson {
 
   /**
-   * Tags to be filtered. Tags must be DICOM Data Elements, File Meta Elements, or Directory
-   * Structuring Elements, as defined at:
+   * Optional. Tags to be filtered. Tags must be DICOM Data Elements, File Meta Elements, or
+   * Directory Structuring Elements, as defined at:
    * http://dicom.nema.org/medical/dicom/current/output/html/part06.html#table_6-1,. They may be
    * provided by "Keyword" or "Tag". For example "PatientID", "00100010".
    * The value may be {@code null}.
@@ -40,8 +40,8 @@ public final class TagFilterList extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> tags;
 
   /**
-   * Tags to be filtered. Tags must be DICOM Data Elements, File Meta Elements, or Directory
-   * Structuring Elements, as defined at:
+   * Optional. Tags to be filtered. Tags must be DICOM Data Elements, File Meta Elements, or
+   * Directory Structuring Elements, as defined at:
    * http://dicom.nema.org/medical/dicom/current/output/html/part06.html#table_6-1,. They may be
    * provided by "Keyword" or "Tag". For example "PatientID", "00100010".
    * @return value or {@code null} for none
@@ -51,8 +51,8 @@ public final class TagFilterList extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Tags to be filtered. Tags must be DICOM Data Elements, File Meta Elements, or Directory
-   * Structuring Elements, as defined at:
+   * Optional. Tags to be filtered. Tags must be DICOM Data Elements, File Meta Elements, or
+   * Directory Structuring Elements, as defined at:
    * http://dicom.nema.org/medical/dicom/current/output/html/part06.html#table_6-1,. They may be
    * provided by "Keyword" or "Tag". For example "PatientID", "00100010".
    * @param tags tags or {@code null} for none

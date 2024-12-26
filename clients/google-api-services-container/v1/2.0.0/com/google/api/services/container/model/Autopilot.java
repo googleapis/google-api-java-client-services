@@ -38,7 +38,7 @@ public final class Autopilot extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enabled;
 
   /**
-   * Workload policy configuration for Autopilot.
+   * WorkloadPolicyConfig is the configuration related to GCW workload policy
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class Autopilot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Workload policy configuration for Autopilot.
+   * WorkloadPolicyConfig is the configuration related to GCW workload policy
    * @return value or {@code null} for none
    */
   public WorkloadPolicyConfig getWorkloadPolicyConfig() {
@@ -70,7 +70,7 @@ public final class Autopilot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Workload policy configuration for Autopilot.
+   * WorkloadPolicyConfig is the configuration related to GCW workload policy
    * @param workloadPolicyConfig workloadPolicyConfig or {@code null} for none
    */
   public Autopilot setWorkloadPolicyConfig(WorkloadPolicyConfig workloadPolicyConfig) {

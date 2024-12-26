@@ -39,7 +39,7 @@ public final class ListResourcesResponse extends com.google.api.client.json.Gene
   private java.lang.String nextPageToken;
 
   /**
-   * List of Resourcess.
+   * List of Resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,7 @@ public final class ListResourcesResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * List of Resourcess.
+   * List of Resources.
    * @return value or {@code null} for none
    */
   public java.util.List<Resource> getResources() {
@@ -80,7 +80,7 @@ public final class ListResourcesResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * List of Resourcess.
+   * List of Resources.
    * @param resources resources or {@code null} for none
    */
   public ListResourcesResponse setResources(java.util.List<Resource> resources) {

@@ -53,7 +53,7 @@ public final class CertificateRevocationList extends com.google.api.client.json.
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. The resource name for this CertificateRevocationList in the format
+   * Identifier. The resource name for this CertificateRevocationList in the format
    * `projects/locations/caPoolscertificateAuthorities/ certificateRevocationLists`.
    * The value may be {@code null}.
    */
@@ -155,7 +155,7 @@ public final class CertificateRevocationList extends com.google.api.client.json.
   }
 
   /**
-   * Output only. The resource name for this CertificateRevocationList in the format
+   * Identifier. The resource name for this CertificateRevocationList in the format
    * `projects/locations/caPoolscertificateAuthorities/ certificateRevocationLists`.
    * @return value or {@code null} for none
    */
@@ -164,7 +164,7 @@ public final class CertificateRevocationList extends com.google.api.client.json.
   }
 
   /**
-   * Output only. The resource name for this CertificateRevocationList in the format
+   * Identifier. The resource name for this CertificateRevocationList in the format
    * `projects/locations/caPoolscertificateAuthorities/ certificateRevocationLists`.
    * @param name name or {@code null} for none
    */

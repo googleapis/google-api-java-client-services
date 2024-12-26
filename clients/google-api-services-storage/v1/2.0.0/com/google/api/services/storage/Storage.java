@@ -11361,6 +11361,406 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
+     * Moves the source object to the destination object in the same bucket.
+     *
+     * Create a request for the method "objects.move".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link Move#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the bucket in which the object resides.
+     * @param sourceObject Name of the source object. For information about how to URL encode object names to be path safe, see
+     *        [Encoding URI Path Parts](https://cloud.google.com/storage/docs/request-
+     *        endpoints#encoding).
+     * @param destinationObject Name of the destination object. For information about how to URL encode object names to be path
+     *        safe, see [Encoding URI Path Parts](https://cloud.google.com/storage/docs/request-
+     *        endpoints#encoding).
+     * @return the request
+     */
+    public Move move(java.lang.String bucket, java.lang.String sourceObject, java.lang.String destinationObject) throws java.io.IOException {
+      Move result = new Move(bucket, sourceObject, destinationObject);
+      initialize(result);
+      return result;
+    }
+
+    public class Move extends StorageRequest<com.google.api.services.storage.model.StorageObject> {
+
+      private static final String REST_PATH = "b/{bucket}/o/{sourceObject}/moveTo/o/{destinationObject}";
+
+      /**
+       * Moves the source object to the destination object in the same bucket.
+       *
+       * Create a request for the method "objects.move".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link Move#execute()} method to invoke the remote operation. <p> {@link
+       * Move#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the bucket in which the object resides.
+       * @param sourceObject Name of the source object. For information about how to URL encode object names to be path safe, see
+     *        [Encoding URI Path Parts](https://cloud.google.com/storage/docs/request-
+     *        endpoints#encoding).
+       * @param destinationObject Name of the destination object. For information about how to URL encode object names to be path
+     *        safe, see [Encoding URI Path Parts](https://cloud.google.com/storage/docs/request-
+     *        endpoints#encoding).
+       * @since 1.13
+       */
+      protected Move(java.lang.String bucket, java.lang.String sourceObject, java.lang.String destinationObject) {
+        super(Storage.this, "POST", REST_PATH, null, com.google.api.services.storage.model.StorageObject.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.sourceObject = com.google.api.client.util.Preconditions.checkNotNull(sourceObject, "Required parameter sourceObject must be specified.");
+        this.destinationObject = com.google.api.client.util.Preconditions.checkNotNull(destinationObject, "Required parameter destinationObject must be specified.");
+      }
+
+      @Override
+      public Move setAlt(java.lang.String alt) {
+        return (Move) super.setAlt(alt);
+      }
+
+      @Override
+      public Move setFields(java.lang.String fields) {
+        return (Move) super.setFields(fields);
+      }
+
+      @Override
+      public Move setKey(java.lang.String key) {
+        return (Move) super.setKey(key);
+      }
+
+      @Override
+      public Move setOauthToken(java.lang.String oauthToken) {
+        return (Move) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Move setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Move) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Move setQuotaUser(java.lang.String quotaUser) {
+        return (Move) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Move setUploadType(java.lang.String uploadType) {
+        return (Move) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Move setUserIp(java.lang.String userIp) {
+        return (Move) super.setUserIp(userIp);
+      }
+
+      /** Name of the bucket in which the object resides. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the bucket in which the object resides.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the bucket in which the object resides. */
+      public Move setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /**
+       * Name of the source object. For information about how to URL encode object names to be path
+       * safe, see [Encoding URI Path Parts](https://cloud.google.com/storage/docs/request-
+       * endpoints#encoding).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String sourceObject;
+
+      /** Name of the source object. For information about how to URL encode object names to be path safe,
+     see [Encoding URI Path Parts](https://cloud.google.com/storage/docs/request-endpoints#encoding).
+       */
+      public java.lang.String getSourceObject() {
+        return sourceObject;
+      }
+
+      /**
+       * Name of the source object. For information about how to URL encode object names to be path
+       * safe, see [Encoding URI Path Parts](https://cloud.google.com/storage/docs/request-
+       * endpoints#encoding).
+       */
+      public Move setSourceObject(java.lang.String sourceObject) {
+        this.sourceObject = sourceObject;
+        return this;
+      }
+
+      /**
+       * Name of the destination object. For information about how to URL encode object names to be
+       * path safe, see [Encoding URI Path Parts](https://cloud.google.com/storage/docs/request-
+       * endpoints#encoding).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String destinationObject;
+
+      /** Name of the destination object. For information about how to URL encode object names to be path
+     safe, see [Encoding URI Path Parts](https://cloud.google.com/storage/docs/request-
+     endpoints#encoding).
+       */
+      public java.lang.String getDestinationObject() {
+        return destinationObject;
+      }
+
+      /**
+       * Name of the destination object. For information about how to URL encode object names to be
+       * path safe, see [Encoding URI Path Parts](https://cloud.google.com/storage/docs/request-
+       * endpoints#encoding).
+       */
+      public Move setDestinationObject(java.lang.String destinationObject) {
+        this.destinationObject = destinationObject;
+        return this;
+      }
+
+      /**
+       * Makes the operation conditional on whether the destination object's current generation
+       * matches the given value. Setting to 0 makes the operation succeed only if there are no live
+       * versions of the object. `ifGenerationMatch` and `ifGenerationNotMatch` conditions are
+       * mutually exclusive: it's an error for both of them to be set in the request.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifGenerationMatch;
+
+      /** Makes the operation conditional on whether the destination object's current generation matches the
+     given value. Setting to 0 makes the operation succeed only if there are no live versions of the
+     object. `ifGenerationMatch` and `ifGenerationNotMatch` conditions are mutually exclusive: it's an
+     error for both of them to be set in the request.
+       */
+      public java.lang.Long getIfGenerationMatch() {
+        return ifGenerationMatch;
+      }
+
+      /**
+       * Makes the operation conditional on whether the destination object's current generation
+       * matches the given value. Setting to 0 makes the operation succeed only if there are no live
+       * versions of the object. `ifGenerationMatch` and `ifGenerationNotMatch` conditions are
+       * mutually exclusive: it's an error for both of them to be set in the request.
+       */
+      public Move setIfGenerationMatch(java.lang.Long ifGenerationMatch) {
+        this.ifGenerationMatch = ifGenerationMatch;
+        return this;
+      }
+
+      /**
+       * Makes the operation conditional on whether the destination object's current generation does
+       * not match the given value. If no live object exists, the precondition fails. Setting to 0
+       * makes the operation succeed only if there is a live version of the
+       * object.`ifGenerationMatch` and `ifGenerationNotMatch` conditions are mutually exclusive:
+       * it's an error for both of them to be set in the request.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifGenerationNotMatch;
+
+      /** Makes the operation conditional on whether the destination object's current generation does not
+     match the given value. If no live object exists, the precondition fails. Setting to 0 makes the
+     operation succeed only if there is a live version of the object.`ifGenerationMatch` and
+     `ifGenerationNotMatch` conditions are mutually exclusive: it's an error for both of them to be set
+     in the request.
+       */
+      public java.lang.Long getIfGenerationNotMatch() {
+        return ifGenerationNotMatch;
+      }
+
+      /**
+       * Makes the operation conditional on whether the destination object's current generation does
+       * not match the given value. If no live object exists, the precondition fails. Setting to 0
+       * makes the operation succeed only if there is a live version of the
+       * object.`ifGenerationMatch` and `ifGenerationNotMatch` conditions are mutually exclusive:
+       * it's an error for both of them to be set in the request.
+       */
+      public Move setIfGenerationNotMatch(java.lang.Long ifGenerationNotMatch) {
+        this.ifGenerationNotMatch = ifGenerationNotMatch;
+        return this;
+      }
+
+      /**
+       * Makes the operation conditional on whether the destination object's current metageneration
+       * matches the given value. `ifMetagenerationMatch` and `ifMetagenerationNotMatch` conditions
+       * are mutually exclusive: it's an error for both of them to be set in the request.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifMetagenerationMatch;
+
+      /** Makes the operation conditional on whether the destination object's current metageneration matches
+     the given value. `ifMetagenerationMatch` and `ifMetagenerationNotMatch` conditions are mutually
+     exclusive: it's an error for both of them to be set in the request.
+       */
+      public java.lang.Long getIfMetagenerationMatch() {
+        return ifMetagenerationMatch;
+      }
+
+      /**
+       * Makes the operation conditional on whether the destination object's current metageneration
+       * matches the given value. `ifMetagenerationMatch` and `ifMetagenerationNotMatch` conditions
+       * are mutually exclusive: it's an error for both of them to be set in the request.
+       */
+      public Move setIfMetagenerationMatch(java.lang.Long ifMetagenerationMatch) {
+        this.ifMetagenerationMatch = ifMetagenerationMatch;
+        return this;
+      }
+
+      /**
+       * Makes the operation conditional on whether the destination object's current metageneration
+       * does not match the given value. `ifMetagenerationMatch` and `ifMetagenerationNotMatch`
+       * conditions are mutually exclusive: it's an error for both of them to be set in the request.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifMetagenerationNotMatch;
+
+      /** Makes the operation conditional on whether the destination object's current metageneration does not
+     match the given value. `ifMetagenerationMatch` and `ifMetagenerationNotMatch` conditions are
+     mutually exclusive: it's an error for both of them to be set in the request.
+       */
+      public java.lang.Long getIfMetagenerationNotMatch() {
+        return ifMetagenerationNotMatch;
+      }
+
+      /**
+       * Makes the operation conditional on whether the destination object's current metageneration
+       * does not match the given value. `ifMetagenerationMatch` and `ifMetagenerationNotMatch`
+       * conditions are mutually exclusive: it's an error for both of them to be set in the request.
+       */
+      public Move setIfMetagenerationNotMatch(java.lang.Long ifMetagenerationNotMatch) {
+        this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
+        return this;
+      }
+
+      /**
+       * Makes the operation conditional on whether the source object's current generation matches
+       * the given value. `ifSourceGenerationMatch` and `ifSourceGenerationNotMatch` conditions are
+       * mutually exclusive: it's an error for both of them to be set in the request.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifSourceGenerationMatch;
+
+      /** Makes the operation conditional on whether the source object's current generation matches the given
+     value. `ifSourceGenerationMatch` and `ifSourceGenerationNotMatch` conditions are mutually
+     exclusive: it's an error for both of them to be set in the request.
+       */
+      public java.lang.Long getIfSourceGenerationMatch() {
+        return ifSourceGenerationMatch;
+      }
+
+      /**
+       * Makes the operation conditional on whether the source object's current generation matches
+       * the given value. `ifSourceGenerationMatch` and `ifSourceGenerationNotMatch` conditions are
+       * mutually exclusive: it's an error for both of them to be set in the request.
+       */
+      public Move setIfSourceGenerationMatch(java.lang.Long ifSourceGenerationMatch) {
+        this.ifSourceGenerationMatch = ifSourceGenerationMatch;
+        return this;
+      }
+
+      /**
+       * Makes the operation conditional on whether the source object's current generation does not
+       * match the given value. `ifSourceGenerationMatch` and `ifSourceGenerationNotMatch`
+       * conditions are mutually exclusive: it's an error for both of them to be set in the request.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifSourceGenerationNotMatch;
+
+      /** Makes the operation conditional on whether the source object's current generation does not match
+     the given value. `ifSourceGenerationMatch` and `ifSourceGenerationNotMatch` conditions are mutually
+     exclusive: it's an error for both of them to be set in the request.
+       */
+      public java.lang.Long getIfSourceGenerationNotMatch() {
+        return ifSourceGenerationNotMatch;
+      }
+
+      /**
+       * Makes the operation conditional on whether the source object's current generation does not
+       * match the given value. `ifSourceGenerationMatch` and `ifSourceGenerationNotMatch`
+       * conditions are mutually exclusive: it's an error for both of them to be set in the request.
+       */
+      public Move setIfSourceGenerationNotMatch(java.lang.Long ifSourceGenerationNotMatch) {
+        this.ifSourceGenerationNotMatch = ifSourceGenerationNotMatch;
+        return this;
+      }
+
+      /**
+       * Makes the operation conditional on whether the source object's current metageneration
+       * matches the given value. `ifSourceMetagenerationMatch` and `ifSourceMetagenerationNotMatch`
+       * conditions are mutually exclusive: it's an error for both of them to be set in the request.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifSourceMetagenerationMatch;
+
+      /** Makes the operation conditional on whether the source object's current metageneration matches the
+     given value. `ifSourceMetagenerationMatch` and `ifSourceMetagenerationNotMatch` conditions are
+     mutually exclusive: it's an error for both of them to be set in the request.
+       */
+      public java.lang.Long getIfSourceMetagenerationMatch() {
+        return ifSourceMetagenerationMatch;
+      }
+
+      /**
+       * Makes the operation conditional on whether the source object's current metageneration
+       * matches the given value. `ifSourceMetagenerationMatch` and `ifSourceMetagenerationNotMatch`
+       * conditions are mutually exclusive: it's an error for both of them to be set in the request.
+       */
+      public Move setIfSourceMetagenerationMatch(java.lang.Long ifSourceMetagenerationMatch) {
+        this.ifSourceMetagenerationMatch = ifSourceMetagenerationMatch;
+        return this;
+      }
+
+      /**
+       * Makes the operation conditional on whether the source object's current metageneration does
+       * not match the given value. `ifSourceMetagenerationMatch` and
+       * `ifSourceMetagenerationNotMatch` conditions are mutually exclusive: it's an error for both
+       * of them to be set in the request.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifSourceMetagenerationNotMatch;
+
+      /** Makes the operation conditional on whether the source object's current metageneration does not
+     match the given value. `ifSourceMetagenerationMatch` and `ifSourceMetagenerationNotMatch`
+     conditions are mutually exclusive: it's an error for both of them to be set in the request.
+       */
+      public java.lang.Long getIfSourceMetagenerationNotMatch() {
+        return ifSourceMetagenerationNotMatch;
+      }
+
+      /**
+       * Makes the operation conditional on whether the source object's current metageneration does
+       * not match the given value. `ifSourceMetagenerationMatch` and
+       * `ifSourceMetagenerationNotMatch` conditions are mutually exclusive: it's an error for both
+       * of them to be set in the request.
+       */
+      public Move setIfSourceMetagenerationNotMatch(java.lang.Long ifSourceMetagenerationNotMatch) {
+        this.ifSourceMetagenerationNotMatch = ifSourceMetagenerationNotMatch;
+        return this;
+      }
+
+      /** The project to be billed for this request. Required for Requester Pays buckets. */
+      @com.google.api.client.util.Key
+      private java.lang.String userProject;
+
+      /** The project to be billed for this request. Required for Requester Pays buckets.
+       */
+      public java.lang.String getUserProject() {
+        return userProject;
+      }
+
+      /** The project to be billed for this request. Required for Requester Pays buckets. */
+      public Move setUserProject(java.lang.String userProject) {
+        this.userProject = userProject;
+        return this;
+      }
+
+      @Override
+      public Move set(String parameterName, Object value) {
+        return (Move) super.set(parameterName, value);
+      }
+    }
+    /**
      * Patches an object's metadata.
      *
      * Create a request for the method "objects.patch".

@@ -17,8 +17,7 @@
 package com.google.api.services.alloydb.v1.model;
 
 /**
- * Options for exporting data in CSV format. For now, we only support a query to get the data that
- * needs to be exported.
+ * Options for exporting data in CSV format.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -31,14 +30,98 @@ package com.google.api.services.alloydb.v1.model;
 public final class CsvExportOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The select_query used to extract the data.
+   * Optional. Specifies the character that should appear before a data character that needs to be
+   * escaped. The default is the same as quote character. The value of this argument has to be a
+   * character in Hex ASCII Code.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String escapeCharacter;
+
+  /**
+   * Optional. Specifies the character that separates columns within each row (line) of the file.
+   * The default is comma. The value of this argument has to be a character in Hex ASCII Code.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fieldDelimiter;
+
+  /**
+   * Optional. Specifies the quoting character to be used when a data value is quoted. The default
+   * is double-quote. The value of this argument has to be a character in Hex ASCII Code.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String quoteCharacter;
+
+  /**
+   * Required. The SELECT query used to extract the data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selectQuery;
 
   /**
-   * Required. The select_query used to extract the data.
+   * Optional. Specifies the character that should appear before a data character that needs to be
+   * escaped. The default is the same as quote character. The value of this argument has to be a
+   * character in Hex ASCII Code.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEscapeCharacter() {
+    return escapeCharacter;
+  }
+
+  /**
+   * Optional. Specifies the character that should appear before a data character that needs to be
+   * escaped. The default is the same as quote character. The value of this argument has to be a
+   * character in Hex ASCII Code.
+   * @param escapeCharacter escapeCharacter or {@code null} for none
+   */
+  public CsvExportOptions setEscapeCharacter(java.lang.String escapeCharacter) {
+    this.escapeCharacter = escapeCharacter;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the character that separates columns within each row (line) of the file.
+   * The default is comma. The value of this argument has to be a character in Hex ASCII Code.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFieldDelimiter() {
+    return fieldDelimiter;
+  }
+
+  /**
+   * Optional. Specifies the character that separates columns within each row (line) of the file.
+   * The default is comma. The value of this argument has to be a character in Hex ASCII Code.
+   * @param fieldDelimiter fieldDelimiter or {@code null} for none
+   */
+  public CsvExportOptions setFieldDelimiter(java.lang.String fieldDelimiter) {
+    this.fieldDelimiter = fieldDelimiter;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the quoting character to be used when a data value is quoted. The default
+   * is double-quote. The value of this argument has to be a character in Hex ASCII Code.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getQuoteCharacter() {
+    return quoteCharacter;
+  }
+
+  /**
+   * Optional. Specifies the quoting character to be used when a data value is quoted. The default
+   * is double-quote. The value of this argument has to be a character in Hex ASCII Code.
+   * @param quoteCharacter quoteCharacter or {@code null} for none
+   */
+  public CsvExportOptions setQuoteCharacter(java.lang.String quoteCharacter) {
+    this.quoteCharacter = quoteCharacter;
+    return this;
+  }
+
+  /**
+   * Required. The SELECT query used to extract the data.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelectQuery() {
@@ -46,7 +129,7 @@ public final class CsvExportOptions extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The select_query used to extract the data.
+   * Required. The SELECT query used to extract the data.
    * @param selectQuery selectQuery or {@code null} for none
    */
   public CsvExportOptions setSelectQuery(java.lang.String selectQuery) {

@@ -100,30 +100,27 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Optional. The original primary location of the reservation which is set only during its
-   * creation and remains unchanged afterwards. It can be used by the customer to answer questions
-   * about disaster recovery billing. The field is output only for customers and should not be
-   * specified, however, the `google.api.field_behavior` is not set to `OUTPUT_ONLY` since these
-   * fields are set in rerouted requests sent across regions.
+   * Output only. The location where the reservation was originally created. This is set only during
+   * the failover reservation's creation. All billing charges for the failover reservation will be
+   * applied to this location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String originalPrimaryLocation;
 
   /**
-   * Optional. The primary location of the reservation. The field is only meaningful for a failover
-   * reservation that is used for managed disaster recovery. The field is output only for customers
-   * and should not be specified. However, the `google.api.field_behavior` is not set to
-   * `OUTPUT_ONLY` since these fields are set in rerouted requests sent across regions.
+   * Output only. The current location of the reservation's primary replica. This field is only set
+   * for reservations using the managed disaster recovery feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String primaryLocation;
 
   /**
-   * Optional. The secondary location of the reservation that is used for managed disaster recovery.
-   * Customers can set this in create/update reservation calls to create a failover reservation or
-   * convert a non-failover reservation to a failover reservation.
+   * Optional. The current location of the reservation's secondary replica. This field is only set
+   * for reservations using the managed disaster recovery feature. Users can set this in create
+   * reservation calls to create a failover reservation or in update reservation calls to convert a
+   * non-failover reservation to a failover reservation(or vice versa).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -317,11 +314,9 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The original primary location of the reservation which is set only during its
-   * creation and remains unchanged afterwards. It can be used by the customer to answer questions
-   * about disaster recovery billing. The field is output only for customers and should not be
-   * specified, however, the `google.api.field_behavior` is not set to `OUTPUT_ONLY` since these
-   * fields are set in rerouted requests sent across regions.
+   * Output only. The location where the reservation was originally created. This is set only during
+   * the failover reservation's creation. All billing charges for the failover reservation will be
+   * applied to this location.
    * @return value or {@code null} for none
    */
   public java.lang.String getOriginalPrimaryLocation() {
@@ -329,11 +324,9 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The original primary location of the reservation which is set only during its
-   * creation and remains unchanged afterwards. It can be used by the customer to answer questions
-   * about disaster recovery billing. The field is output only for customers and should not be
-   * specified, however, the `google.api.field_behavior` is not set to `OUTPUT_ONLY` since these
-   * fields are set in rerouted requests sent across regions.
+   * Output only. The location where the reservation was originally created. This is set only during
+   * the failover reservation's creation. All billing charges for the failover reservation will be
+   * applied to this location.
    * @param originalPrimaryLocation originalPrimaryLocation or {@code null} for none
    */
   public Reservation setOriginalPrimaryLocation(java.lang.String originalPrimaryLocation) {
@@ -342,10 +335,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The primary location of the reservation. The field is only meaningful for a failover
-   * reservation that is used for managed disaster recovery. The field is output only for customers
-   * and should not be specified. However, the `google.api.field_behavior` is not set to
-   * `OUTPUT_ONLY` since these fields are set in rerouted requests sent across regions.
+   * Output only. The current location of the reservation's primary replica. This field is only set
+   * for reservations using the managed disaster recovery feature.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryLocation() {
@@ -353,10 +344,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The primary location of the reservation. The field is only meaningful for a failover
-   * reservation that is used for managed disaster recovery. The field is output only for customers
-   * and should not be specified. However, the `google.api.field_behavior` is not set to
-   * `OUTPUT_ONLY` since these fields are set in rerouted requests sent across regions.
+   * Output only. The current location of the reservation's primary replica. This field is only set
+   * for reservations using the managed disaster recovery feature.
    * @param primaryLocation primaryLocation or {@code null} for none
    */
   public Reservation setPrimaryLocation(java.lang.String primaryLocation) {
@@ -365,9 +354,10 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The secondary location of the reservation that is used for managed disaster recovery.
-   * Customers can set this in create/update reservation calls to create a failover reservation or
-   * convert a non-failover reservation to a failover reservation.
+   * Optional. The current location of the reservation's secondary replica. This field is only set
+   * for reservations using the managed disaster recovery feature. Users can set this in create
+   * reservation calls to create a failover reservation or in update reservation calls to convert a
+   * non-failover reservation to a failover reservation(or vice versa).
    * @return value or {@code null} for none
    */
   public java.lang.String getSecondaryLocation() {
@@ -375,9 +365,10 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The secondary location of the reservation that is used for managed disaster recovery.
-   * Customers can set this in create/update reservation calls to create a failover reservation or
-   * convert a non-failover reservation to a failover reservation.
+   * Optional. The current location of the reservation's secondary replica. This field is only set
+   * for reservations using the managed disaster recovery feature. Users can set this in create
+   * reservation calls to create a failover reservation or in update reservation calls to convert a
+   * non-failover reservation to a failover reservation(or vice versa).
    * @param secondaryLocation secondaryLocation or {@code null} for none
    */
   public Reservation setSecondaryLocation(java.lang.String secondaryLocation) {

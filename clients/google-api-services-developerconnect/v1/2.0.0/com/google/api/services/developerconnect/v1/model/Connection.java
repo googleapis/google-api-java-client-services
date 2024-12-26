@@ -134,7 +134,7 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean reconciling;
 
   /**
-   * Output only. A system-assigned unique identifier for a the GitRepositoryLink.
+   * Output only. A system-assigned unique identifier for the Connection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -396,7 +396,7 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A system-assigned unique identifier for a the GitRepositoryLink.
+   * Output only. A system-assigned unique identifier for the Connection.
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -404,7 +404,7 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A system-assigned unique identifier for a the GitRepositoryLink.
+   * Output only. A system-assigned unique identifier for the Connection.
    * @param uid uid or {@code null} for none
    */
   public Connection setUid(java.lang.String uid) {

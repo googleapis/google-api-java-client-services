@@ -47,8 +47,7 @@ public final class CaPool extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. Identifier. The resource name for this CaPool in the format
-   * `projects/locations/caPools`.
+   * Identifier. The resource name for this CaPool in the format `projects/locations/caPools`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,8 +103,7 @@ public final class CaPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Identifier. The resource name for this CaPool in the format
-   * `projects/locations/caPools`.
+   * Identifier. The resource name for this CaPool in the format `projects/locations/caPools`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -113,8 +111,7 @@ public final class CaPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Identifier. The resource name for this CaPool in the format
-   * `projects/locations/caPools`.
+   * Identifier. The resource name for this CaPool in the format `projects/locations/caPools`.
    * @param name name or {@code null} for none
    */
   public CaPool setName(java.lang.String name) {

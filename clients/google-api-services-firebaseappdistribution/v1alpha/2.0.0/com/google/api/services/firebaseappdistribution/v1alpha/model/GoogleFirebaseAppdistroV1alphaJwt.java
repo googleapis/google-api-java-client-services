@@ -17,7 +17,7 @@
 package com.google.api.services.firebaseappdistribution.v1alpha.model;
 
 /**
- * Model definition for GoogleFirebaseAppdistroV1alphaJwt.
+ * A JWT token.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase App Distribution API. For a detailed
@@ -31,12 +31,14 @@ package com.google.api.services.firebaseappdistribution.v1alpha.model;
 public final class GoogleFirebaseAppdistroV1alphaJwt extends com.google.api.client.json.GenericJson {
 
   /**
+   * The JWT token (three Base64URL-encoded strings joined by dots).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String token;
 
   /**
+   * The JWT token (three Base64URL-encoded strings joined by dots).
    * @return value or {@code null} for none
    */
   public java.lang.String getToken() {
@@ -44,6 +46,7 @@ public final class GoogleFirebaseAppdistroV1alphaJwt extends com.google.api.clie
   }
 
   /**
+   * The JWT token (three Base64URL-encoded strings joined by dots).
    * @param token token or {@code null} for none
    */
   public GoogleFirebaseAppdistroV1alphaJwt setToken(java.lang.String token) {

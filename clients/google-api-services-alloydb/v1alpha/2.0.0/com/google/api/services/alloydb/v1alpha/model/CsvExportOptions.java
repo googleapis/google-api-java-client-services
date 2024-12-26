@@ -17,8 +17,7 @@
 package com.google.api.services.alloydb.v1alpha.model;
 
 /**
- * Options for exporting data in CSV format. For now, we only support a query to get the data that
- * needs to be exported.
+ * Options for exporting data in CSV format.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -56,7 +55,7 @@ public final class CsvExportOptions extends com.google.api.client.json.GenericJs
   private java.lang.String quoteCharacter;
 
   /**
-   * Required. The select_query used to extract the data.
+   * Required. The SELECT query used to extract the data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,7 +121,7 @@ public final class CsvExportOptions extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The select_query used to extract the data.
+   * Required. The SELECT query used to extract the data.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelectQuery() {
@@ -130,7 +129,7 @@ public final class CsvExportOptions extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The select_query used to extract the data.
+   * Required. The SELECT query used to extract the data.
    * @param selectQuery selectQuery or {@code null} for none
    */
   public CsvExportOptions setSelectQuery(java.lang.String selectQuery) {

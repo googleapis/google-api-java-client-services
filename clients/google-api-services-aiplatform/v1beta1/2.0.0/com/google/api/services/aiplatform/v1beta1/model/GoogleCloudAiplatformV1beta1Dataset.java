@@ -123,7 +123,8 @@ public final class GoogleCloudAiplatformV1beta1Dataset extends com.google.api.cl
   private java.lang.String modelReference;
 
   /**
-   * Output only. Identifier. The resource name of the Dataset.
+   * Output only. Identifier. The resource name of the Dataset. Format:
+   * `projects/{project}/locations/{location}/datasets/{dataset}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -381,7 +382,8 @@ public final class GoogleCloudAiplatformV1beta1Dataset extends com.google.api.cl
   }
 
   /**
-   * Output only. Identifier. The resource name of the Dataset.
+   * Output only. Identifier. The resource name of the Dataset. Format:
+   * `projects/{project}/locations/{location}/datasets/{dataset}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -389,7 +391,8 @@ public final class GoogleCloudAiplatformV1beta1Dataset extends com.google.api.cl
   }
 
   /**
-   * Output only. Identifier. The resource name of the Dataset.
+   * Output only. Identifier. The resource name of the Dataset. Format:
+   * `projects/{project}/locations/{location}/datasets/{dataset}`
    * @param name name or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Dataset setName(java.lang.String name) {

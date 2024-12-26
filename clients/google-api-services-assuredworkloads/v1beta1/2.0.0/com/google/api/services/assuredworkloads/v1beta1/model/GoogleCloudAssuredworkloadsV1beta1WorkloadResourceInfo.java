@@ -31,7 +31,7 @@ package com.google.api.services.assuredworkloads.v1beta1.model;
 public final class GoogleCloudAssuredworkloadsV1beta1WorkloadResourceInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Resource identifier. For a project this represents project_number.
+   * Output only. Resource identifier. For a project this represents project_number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -45,7 +45,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1WorkloadResourceInfo extend
   private java.lang.String resourceType;
 
   /**
-   * Resource identifier. For a project this represents project_number.
+   * Output only. Resource identifier. For a project this represents project_number.
    * @return value or {@code null} for none
    */
   public java.lang.Long getResourceId() {
@@ -53,7 +53,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1WorkloadResourceInfo extend
   }
 
   /**
-   * Resource identifier. For a project this represents project_number.
+   * Output only. Resource identifier. For a project this represents project_number.
    * @param resourceId resourceId or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1WorkloadResourceInfo setResourceId(java.lang.Long resourceId) {

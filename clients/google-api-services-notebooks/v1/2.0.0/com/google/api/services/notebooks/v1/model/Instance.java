@@ -171,7 +171,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The [Compute Engine machine type](https://cloud.google.com/compute/docs/machine-
-   * types) of this instance.
+   * resource) of this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -656,7 +656,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The [Compute Engine machine type](https://cloud.google.com/compute/docs/machine-
-   * types) of this instance.
+   * resource) of this instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -665,7 +665,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The [Compute Engine machine type](https://cloud.google.com/compute/docs/machine-
-   * types) of this instance.
+   * resource) of this instance.
    * @param machineType machineType or {@code null} for none
    */
   public Instance setMachineType(java.lang.String machineType) {

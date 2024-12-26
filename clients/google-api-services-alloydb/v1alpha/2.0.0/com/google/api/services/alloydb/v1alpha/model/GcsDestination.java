@@ -31,8 +31,7 @@ public final class GcsDestination extends com.google.api.client.json.GenericJson
 
   /**
    * Required. The path to the file in Google Cloud Storage where the export will be stored. The URI
-   * is in the form `gs://bucketName/fileName`. If the file already exists, the request succeeds,
-   * but the operation fails.
+   * is in the form `gs://bucketName/fileName`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,8 +39,7 @@ public final class GcsDestination extends com.google.api.client.json.GenericJson
 
   /**
    * Required. The path to the file in Google Cloud Storage where the export will be stored. The URI
-   * is in the form `gs://bucketName/fileName`. If the file already exists, the request succeeds,
-   * but the operation fails.
+   * is in the form `gs://bucketName/fileName`.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -50,8 +48,7 @@ public final class GcsDestination extends com.google.api.client.json.GenericJson
 
   /**
    * Required. The path to the file in Google Cloud Storage where the export will be stored. The URI
-   * is in the form `gs://bucketName/fileName`. If the file already exists, the request succeeds,
-   * but the operation fails.
+   * is in the form `gs://bucketName/fileName`.
    * @param uri uri or {@code null} for none
    */
   public GcsDestination setUri(java.lang.String uri) {

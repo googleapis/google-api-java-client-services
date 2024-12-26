@@ -37,14 +37,6 @@ public final class IOPSPerTB extends com.google.api.client.json.GenericJson {
   private java.lang.Long maxIopsPerTb;
 
   /**
-   * Optional. Deprecated: `max_iops_per_tb` should be used instead of this parameter. Maximum read
-   * IOPS per TiB.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long maxReadIopsPerTb;
-
-  /**
    * Required. Maximum IOPS per TiB.
    * @return value or {@code null} for none
    */
@@ -58,25 +50,6 @@ public final class IOPSPerTB extends com.google.api.client.json.GenericJson {
    */
   public IOPSPerTB setMaxIopsPerTb(java.lang.Long maxIopsPerTb) {
     this.maxIopsPerTb = maxIopsPerTb;
-    return this;
-  }
-
-  /**
-   * Optional. Deprecated: `max_iops_per_tb` should be used instead of this parameter. Maximum read
-   * IOPS per TiB.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getMaxReadIopsPerTb() {
-    return maxReadIopsPerTb;
-  }
-
-  /**
-   * Optional. Deprecated: `max_iops_per_tb` should be used instead of this parameter. Maximum read
-   * IOPS per TiB.
-   * @param maxReadIopsPerTb maxReadIopsPerTb or {@code null} for none
-   */
-  public IOPSPerTB setMaxReadIopsPerTb(java.lang.Long maxReadIopsPerTb) {
-    this.maxReadIopsPerTb = maxReadIopsPerTb;
     return this;
   }
 

@@ -30,14 +30,14 @@ package com.google.api.services.healthcare.v1.model;
 public final class ImageConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Determines how to redact text from image.
+   * Optional. Determines how to redact text from image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String textRedactionMode;
 
   /**
-   * Determines how to redact text from image.
+   * Optional. Determines how to redact text from image.
    * @return value or {@code null} for none
    */
   public java.lang.String getTextRedactionMode() {
@@ -45,7 +45,7 @@ public final class ImageConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Determines how to redact text from image.
+   * Optional. Determines how to redact text from image.
    * @param textRedactionMode textRedactionMode or {@code null} for none
    */
   public ImageConfig setTextRedactionMode(java.lang.String textRedactionMode) {

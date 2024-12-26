@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * SecurityProfile is a resource that defines the behavior for one of many ProfileTypes. Next ID: 12
+ * SecurityProfile is a resource that defines the behavior for one of many ProfileTypes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -35,6 +35,13 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private String createTime;
+
+  /**
+   * The custom TPPI configuration for the SecurityProfile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomInterceptProfile customInterceptProfile;
 
   /**
    * The custom Packet Mirroring v2 configuration for the SecurityProfile.
@@ -109,6 +116,23 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
    */
   public SecurityProfile setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * The custom TPPI configuration for the SecurityProfile.
+   * @return value or {@code null} for none
+   */
+  public CustomInterceptProfile getCustomInterceptProfile() {
+    return customInterceptProfile;
+  }
+
+  /**
+   * The custom TPPI configuration for the SecurityProfile.
+   * @param customInterceptProfile customInterceptProfile or {@code null} for none
+   */
+  public SecurityProfile setCustomInterceptProfile(CustomInterceptProfile customInterceptProfile) {
+    this.customInterceptProfile = customInterceptProfile;
     return this;
   }
 

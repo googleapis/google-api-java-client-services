@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Message describing MirroringEndpointGroup object.
+ * Message describing InterceptDeployment object
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -27,7 +27,7 @@ package com.google.api.services.networksecurity.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class MirroringEndpointGroup extends com.google.api.client.json.GenericJson {
+public final class InterceptDeployment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. [Output only] Create time stamp
@@ -37,6 +37,22 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
   private String createTime;
 
   /**
+   * Required. Immutable. The regional load balancer which the intercepted traffic should be
+   * forwarded to. Format is: projects/{project}/regions/{region}/forwardingRules/{forwardingRule}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String forwardingRule;
+
+  /**
+   * Required. Immutable. The Intercept Deployment Group that this resource is part of. Format is:
+   * `projects/{project}/locations/global/interceptDeploymentGroups/{interceptDeploymentGroup}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String interceptDeploymentGroup;
+
+  /**
    * Optional. Labels as key value pairs
    * The value may be {@code null}.
    */
@@ -44,15 +60,7 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. Immutable. The Mirroring Deployment Group that this resource is connected to. Format
-   * is: `projects/{project}/locations/global/mirroringDeploymentGroups/{mirroringDeploymentGroup}`
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String mirroringDeploymentGroup;
-
-  /**
-   * Immutable. Identifier. Next ID: 11 The name of the MirroringEndpointGroup.
+   * Immutable. Identifier. The name of the InterceptDeployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +74,7 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
   private java.lang.Boolean reconciling;
 
   /**
-   * Output only. Current state of the endpoint group.
+   * Output only. Current state of the deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,8 +99,46 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
    * Output only. [Output only] Create time stamp
    * @param createTime createTime or {@code null} for none
    */
-  public MirroringEndpointGroup setCreateTime(String createTime) {
+  public InterceptDeployment setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Required. Immutable. The regional load balancer which the intercepted traffic should be
+   * forwarded to. Format is: projects/{project}/regions/{region}/forwardingRules/{forwardingRule}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getForwardingRule() {
+    return forwardingRule;
+  }
+
+  /**
+   * Required. Immutable. The regional load balancer which the intercepted traffic should be
+   * forwarded to. Format is: projects/{project}/regions/{region}/forwardingRules/{forwardingRule}
+   * @param forwardingRule forwardingRule or {@code null} for none
+   */
+  public InterceptDeployment setForwardingRule(java.lang.String forwardingRule) {
+    this.forwardingRule = forwardingRule;
+    return this;
+  }
+
+  /**
+   * Required. Immutable. The Intercept Deployment Group that this resource is part of. Format is:
+   * `projects/{project}/locations/global/interceptDeploymentGroups/{interceptDeploymentGroup}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInterceptDeploymentGroup() {
+    return interceptDeploymentGroup;
+  }
+
+  /**
+   * Required. Immutable. The Intercept Deployment Group that this resource is part of. Format is:
+   * `projects/{project}/locations/global/interceptDeploymentGroups/{interceptDeploymentGroup}`
+   * @param interceptDeploymentGroup interceptDeploymentGroup or {@code null} for none
+   */
+  public InterceptDeployment setInterceptDeploymentGroup(java.lang.String interceptDeploymentGroup) {
+    this.interceptDeploymentGroup = interceptDeploymentGroup;
     return this;
   }
 
@@ -108,32 +154,13 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
    * Optional. Labels as key value pairs
    * @param labels labels or {@code null} for none
    */
-  public MirroringEndpointGroup setLabels(java.util.Map<String, java.lang.String> labels) {
+  public InterceptDeployment setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
     return this;
   }
 
   /**
-   * Required. Immutable. The Mirroring Deployment Group that this resource is connected to. Format
-   * is: `projects/{project}/locations/global/mirroringDeploymentGroups/{mirroringDeploymentGroup}`
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getMirroringDeploymentGroup() {
-    return mirroringDeploymentGroup;
-  }
-
-  /**
-   * Required. Immutable. The Mirroring Deployment Group that this resource is connected to. Format
-   * is: `projects/{project}/locations/global/mirroringDeploymentGroups/{mirroringDeploymentGroup}`
-   * @param mirroringDeploymentGroup mirroringDeploymentGroup or {@code null} for none
-   */
-  public MirroringEndpointGroup setMirroringDeploymentGroup(java.lang.String mirroringDeploymentGroup) {
-    this.mirroringDeploymentGroup = mirroringDeploymentGroup;
-    return this;
-  }
-
-  /**
-   * Immutable. Identifier. Next ID: 11 The name of the MirroringEndpointGroup.
+   * Immutable. Identifier. The name of the InterceptDeployment.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -141,10 +168,10 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
   }
 
   /**
-   * Immutable. Identifier. Next ID: 11 The name of the MirroringEndpointGroup.
+   * Immutable. Identifier. The name of the InterceptDeployment.
    * @param name name or {@code null} for none
    */
-  public MirroringEndpointGroup setName(java.lang.String name) {
+  public InterceptDeployment setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -161,13 +188,13 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
    * Output only. Whether reconciling is in progress, recommended per https://google.aip.dev/128.
    * @param reconciling reconciling or {@code null} for none
    */
-  public MirroringEndpointGroup setReconciling(java.lang.Boolean reconciling) {
+  public InterceptDeployment setReconciling(java.lang.Boolean reconciling) {
     this.reconciling = reconciling;
     return this;
   }
 
   /**
-   * Output only. Current state of the endpoint group.
+   * Output only. Current state of the deployment.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -175,10 +202,10 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. Current state of the endpoint group.
+   * Output only. Current state of the deployment.
    * @param state state or {@code null} for none
    */
-  public MirroringEndpointGroup setState(java.lang.String state) {
+  public InterceptDeployment setState(java.lang.String state) {
     this.state = state;
     return this;
   }
@@ -195,19 +222,19 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
    * Output only. [Output only] Update time stamp
    * @param updateTime updateTime or {@code null} for none
    */
-  public MirroringEndpointGroup setUpdateTime(String updateTime) {
+  public InterceptDeployment setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
     return this;
   }
 
   @Override
-  public MirroringEndpointGroup set(String fieldName, Object value) {
-    return (MirroringEndpointGroup) super.set(fieldName, value);
+  public InterceptDeployment set(String fieldName, Object value) {
+    return (InterceptDeployment) super.set(fieldName, value);
   }
 
   @Override
-  public MirroringEndpointGroup clone() {
-    return (MirroringEndpointGroup) super.clone();
+  public InterceptDeployment clone() {
+    return (InterceptDeployment) super.clone();
   }
 
 }

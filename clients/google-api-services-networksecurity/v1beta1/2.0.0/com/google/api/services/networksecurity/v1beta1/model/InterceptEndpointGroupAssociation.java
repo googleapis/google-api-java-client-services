@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Message describing MirroringEndpointGroup object.
+ * Message describing InterceptEndpointGroupAssociation object
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -27,7 +27,7 @@ package com.google.api.services.networksecurity.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class MirroringEndpointGroup extends com.google.api.client.json.GenericJson {
+public final class InterceptEndpointGroupAssociation extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. [Output only] Create time stamp
@@ -37,6 +37,14 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
   private String createTime;
 
   /**
+   * Required. Immutable. The Intercept Endpoint Group that this resource is connected to. Format
+   * is: `projects/{project}/locations/global/interceptEndpointGroups/{interceptEndpointGroup}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String interceptEndpointGroup;
+
+  /**
    * Optional. Labels as key value pairs
    * The value may be {@code null}.
    */
@@ -44,19 +52,26 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. Immutable. The Mirroring Deployment Group that this resource is connected to. Format
-   * is: `projects/{project}/locations/global/mirroringDeploymentGroups/{mirroringDeploymentGroup}`
+   * Output only. The list of locations that this association is in and its details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String mirroringDeploymentGroup;
+  private java.util.List<InterceptEndpointGroupAssociationLocationDetails> locationsDetails;
 
   /**
-   * Immutable. Identifier. Next ID: 11 The name of the MirroringEndpointGroup.
+   * Immutable. Identifier. The name of the InterceptEndpointGroupAssociation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Required. Immutable. The VPC network associated. Format:
+   * projects/{project}/global/networks/{network}.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String network;
 
   /**
    * Output only. Whether reconciling is in progress, recommended per https://google.aip.dev/128.
@@ -66,7 +81,7 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
   private java.lang.Boolean reconciling;
 
   /**
-   * Output only. Current state of the endpoint group.
+   * Output only. Current state of the endpoint group association.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,8 +106,27 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
    * Output only. [Output only] Create time stamp
    * @param createTime createTime or {@code null} for none
    */
-  public MirroringEndpointGroup setCreateTime(String createTime) {
+  public InterceptEndpointGroupAssociation setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Required. Immutable. The Intercept Endpoint Group that this resource is connected to. Format
+   * is: `projects/{project}/locations/global/interceptEndpointGroups/{interceptEndpointGroup}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInterceptEndpointGroup() {
+    return interceptEndpointGroup;
+  }
+
+  /**
+   * Required. Immutable. The Intercept Endpoint Group that this resource is connected to. Format
+   * is: `projects/{project}/locations/global/interceptEndpointGroups/{interceptEndpointGroup}`
+   * @param interceptEndpointGroup interceptEndpointGroup or {@code null} for none
+   */
+  public InterceptEndpointGroupAssociation setInterceptEndpointGroup(java.lang.String interceptEndpointGroup) {
+    this.interceptEndpointGroup = interceptEndpointGroup;
     return this;
   }
 
@@ -108,32 +142,30 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
    * Optional. Labels as key value pairs
    * @param labels labels or {@code null} for none
    */
-  public MirroringEndpointGroup setLabels(java.util.Map<String, java.lang.String> labels) {
+  public InterceptEndpointGroupAssociation setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
     return this;
   }
 
   /**
-   * Required. Immutable. The Mirroring Deployment Group that this resource is connected to. Format
-   * is: `projects/{project}/locations/global/mirroringDeploymentGroups/{mirroringDeploymentGroup}`
+   * Output only. The list of locations that this association is in and its details.
    * @return value or {@code null} for none
    */
-  public java.lang.String getMirroringDeploymentGroup() {
-    return mirroringDeploymentGroup;
+  public java.util.List<InterceptEndpointGroupAssociationLocationDetails> getLocationsDetails() {
+    return locationsDetails;
   }
 
   /**
-   * Required. Immutable. The Mirroring Deployment Group that this resource is connected to. Format
-   * is: `projects/{project}/locations/global/mirroringDeploymentGroups/{mirroringDeploymentGroup}`
-   * @param mirroringDeploymentGroup mirroringDeploymentGroup or {@code null} for none
+   * Output only. The list of locations that this association is in and its details.
+   * @param locationsDetails locationsDetails or {@code null} for none
    */
-  public MirroringEndpointGroup setMirroringDeploymentGroup(java.lang.String mirroringDeploymentGroup) {
-    this.mirroringDeploymentGroup = mirroringDeploymentGroup;
+  public InterceptEndpointGroupAssociation setLocationsDetails(java.util.List<InterceptEndpointGroupAssociationLocationDetails> locationsDetails) {
+    this.locationsDetails = locationsDetails;
     return this;
   }
 
   /**
-   * Immutable. Identifier. Next ID: 11 The name of the MirroringEndpointGroup.
+   * Immutable. Identifier. The name of the InterceptEndpointGroupAssociation.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -141,11 +173,30 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
   }
 
   /**
-   * Immutable. Identifier. Next ID: 11 The name of the MirroringEndpointGroup.
+   * Immutable. Identifier. The name of the InterceptEndpointGroupAssociation.
    * @param name name or {@code null} for none
    */
-  public MirroringEndpointGroup setName(java.lang.String name) {
+  public InterceptEndpointGroupAssociation setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Required. Immutable. The VPC network associated. Format:
+   * projects/{project}/global/networks/{network}.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetwork() {
+    return network;
+  }
+
+  /**
+   * Required. Immutable. The VPC network associated. Format:
+   * projects/{project}/global/networks/{network}.
+   * @param network network or {@code null} for none
+   */
+  public InterceptEndpointGroupAssociation setNetwork(java.lang.String network) {
+    this.network = network;
     return this;
   }
 
@@ -161,13 +212,13 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
    * Output only. Whether reconciling is in progress, recommended per https://google.aip.dev/128.
    * @param reconciling reconciling or {@code null} for none
    */
-  public MirroringEndpointGroup setReconciling(java.lang.Boolean reconciling) {
+  public InterceptEndpointGroupAssociation setReconciling(java.lang.Boolean reconciling) {
     this.reconciling = reconciling;
     return this;
   }
 
   /**
-   * Output only. Current state of the endpoint group.
+   * Output only. Current state of the endpoint group association.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -175,10 +226,10 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. Current state of the endpoint group.
+   * Output only. Current state of the endpoint group association.
    * @param state state or {@code null} for none
    */
-  public MirroringEndpointGroup setState(java.lang.String state) {
+  public InterceptEndpointGroupAssociation setState(java.lang.String state) {
     this.state = state;
     return this;
   }
@@ -195,19 +246,19 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
    * Output only. [Output only] Update time stamp
    * @param updateTime updateTime or {@code null} for none
    */
-  public MirroringEndpointGroup setUpdateTime(String updateTime) {
+  public InterceptEndpointGroupAssociation setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
     return this;
   }
 
   @Override
-  public MirroringEndpointGroup set(String fieldName, Object value) {
-    return (MirroringEndpointGroup) super.set(fieldName, value);
+  public InterceptEndpointGroupAssociation set(String fieldName, Object value) {
+    return (InterceptEndpointGroupAssociation) super.set(fieldName, value);
   }
 
   @Override
-  public MirroringEndpointGroup clone() {
-    return (MirroringEndpointGroup) super.clone();
+  public InterceptEndpointGroupAssociation clone() {
+    return (InterceptEndpointGroupAssociation) super.clone();
   }
 
 }

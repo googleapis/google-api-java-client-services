@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.networksecurity.v1beta1.model;
+package com.google.api.services.networksecurity.v1.model;
 
 /**
  * Conditions to match against the incoming request.

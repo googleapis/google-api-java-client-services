@@ -225,8 +225,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * treated as expired immediately on creation. This kind of job can not be updated. And when
    * creating a job with past timestamp, the posting_publish_time must be set before
    * posting_expire_time. The purpose of this feature is to allow other objects, such as
-   * Application, to refer a job that didn't exist in the system prior to becoming expired. If you
-   * want to modify a job that was expired on creation, delete it and create a new one. If this
+   * ApplicationInfo, to refer a job that didn't exist in the system prior to becoming expired. If
+   * you want to modify a job that was expired on creation, delete it and create a new one. If this
    * value isn't provided at the time of job creation or is invalid, the job posting expires after
    * 30 days from the job's creation time. For example, if the job was created on 2017/01/01 13:00AM
    * UTC with an unspecified expiration date, the job expires after 2017/01/31 13:00AM UTC. If this
@@ -747,8 +747,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * treated as expired immediately on creation. This kind of job can not be updated. And when
    * creating a job with past timestamp, the posting_publish_time must be set before
    * posting_expire_time. The purpose of this feature is to allow other objects, such as
-   * Application, to refer a job that didn't exist in the system prior to becoming expired. If you
-   * want to modify a job that was expired on creation, delete it and create a new one. If this
+   * ApplicationInfo, to refer a job that didn't exist in the system prior to becoming expired. If
+   * you want to modify a job that was expired on creation, delete it and create a new one. If this
    * value isn't provided at the time of job creation or is invalid, the job posting expires after
    * 30 days from the job's creation time. For example, if the job was created on 2017/01/01 13:00AM
    * UTC with an unspecified expiration date, the job expires after 2017/01/31 13:00AM UTC. If this
@@ -777,8 +777,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * treated as expired immediately on creation. This kind of job can not be updated. And when
    * creating a job with past timestamp, the posting_publish_time must be set before
    * posting_expire_time. The purpose of this feature is to allow other objects, such as
-   * Application, to refer a job that didn't exist in the system prior to becoming expired. If you
-   * want to modify a job that was expired on creation, delete it and create a new one. If this
+   * ApplicationInfo, to refer a job that didn't exist in the system prior to becoming expired. If
+   * you want to modify a job that was expired on creation, delete it and create a new one. If this
    * value isn't provided at the time of job creation or is invalid, the job posting expires after
    * 30 days from the job's creation time. For example, if the job was created on 2017/01/01 13:00AM
    * UTC with an unspecified expiration date, the job expires after 2017/01/31 13:00AM UTC. If this

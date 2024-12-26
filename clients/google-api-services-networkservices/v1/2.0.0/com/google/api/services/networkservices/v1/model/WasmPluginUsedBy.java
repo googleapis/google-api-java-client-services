@@ -17,7 +17,7 @@
 package com.google.api.services.networkservices.v1.model;
 
 /**
- * Defines a resource that uses the `WasmPlugin`.
+ * Defines a resource that uses the `WasmPlugin` resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Services API. For a detailed explanation see:
@@ -30,18 +30,18 @@ package com.google.api.services.networkservices.v1.model;
 public final class WasmPluginUsedBy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Full name of the resource https://google.aip.dev/122#full-resource-names, e.g. `//
-   * networkservices.googleapis.com/projects/{project}/locations/{location}/lbRouteExtensions/{exten
-   * sion}`
+   * Output only. Full name of the resource https://google.aip.dev/122#full-resource-names, for
+   * example `//networkservices.googleapis.com/projects/{project}/locations/{location}/lbRouteExtens
+   * ions/{extension}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. Full name of the resource https://google.aip.dev/122#full-resource-names, e.g. `//
-   * networkservices.googleapis.com/projects/{project}/locations/{location}/lbRouteExtensions/{exten
-   * sion}`
+   * Output only. Full name of the resource https://google.aip.dev/122#full-resource-names, for
+   * example `//networkservices.googleapis.com/projects/{project}/locations/{location}/lbRouteExtens
+   * ions/{extension}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -49,9 +49,9 @@ public final class WasmPluginUsedBy extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Full name of the resource https://google.aip.dev/122#full-resource-names, e.g. `//
-   * networkservices.googleapis.com/projects/{project}/locations/{location}/lbRouteExtensions/{exten
-   * sion}`
+   * Output only. Full name of the resource https://google.aip.dev/122#full-resource-names, for
+   * example `//networkservices.googleapis.com/projects/{project}/locations/{location}/lbRouteExtens
+   * ions/{extension}`
    * @param name name or {@code null} for none
    */
   public WasmPluginUsedBy setName(java.lang.String name) {

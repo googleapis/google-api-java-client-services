@@ -70,9 +70,9 @@ public final class WasmPluginVersionDetails extends com.google.api.client.json.G
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Configuration for the Wasm plugin. The configuration is provided to the Wasm plugin at runtime
-   * through the `ON_CONFIGURE` callback. When a new `WasmPluginVersion` version is created, the
-   * digest of the contents is saved in the `plugin_config_digest` field.
+   * Configuration for the plugin. The configuration is provided to the plugin at runtime through
+   * the `ON_CONFIGURE` callback. When a new `WasmPluginVersion` version is created, the digest of
+   * the contents is saved in the `plugin_config_digest` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,19 +80,18 @@ public final class WasmPluginVersionDetails extends com.google.api.client.json.G
 
   /**
    * Output only. This field holds the digest (usually checksum) value for the plugin configuration.
-   * The value is calculated based on the contents of the `plugin_config_data` or the container
-   * image defined by the `plugin_config_uri` field.
+   * The value is calculated based on the contents of the `plugin_config_data` field or the
+   * container image defined by the `plugin_config_uri` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pluginConfigDigest;
 
   /**
-   * URI of the WasmPlugin configuration stored in the Artifact Registry. The configuration is
-   * provided to the Wasm plugin at runtime through the `ON_CONFIGURE` callback. The container image
-   * must contain only a single file with the name `plugin.config`. When a new `WasmPluginVersion`
-   * resource is created, the digest of the container image is saved in the `plugin_config_digest`
-   * field.
+   * URI of the plugin configuration stored in the Artifact Registry. The configuration is provided
+   * to the plugin at runtime through the `ON_CONFIGURE` callback. The container image must contain
+   * only a single file with the name `plugin.config`. When a new `WasmPluginVersion` resource is
+   * created, the digest of the container image is saved in the `plugin_config_digest` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -201,9 +200,9 @@ public final class WasmPluginVersionDetails extends com.google.api.client.json.G
   }
 
   /**
-   * Configuration for the Wasm plugin. The configuration is provided to the Wasm plugin at runtime
-   * through the `ON_CONFIGURE` callback. When a new `WasmPluginVersion` version is created, the
-   * digest of the contents is saved in the `plugin_config_digest` field.
+   * Configuration for the plugin. The configuration is provided to the plugin at runtime through
+   * the `ON_CONFIGURE` callback. When a new `WasmPluginVersion` version is created, the digest of
+   * the contents is saved in the `plugin_config_digest` field.
    * @see #decodePluginConfigData()
    * @return value or {@code null} for none
    */
@@ -212,9 +211,9 @@ public final class WasmPluginVersionDetails extends com.google.api.client.json.G
   }
 
   /**
-   * Configuration for the Wasm plugin. The configuration is provided to the Wasm plugin at runtime
-   * through the `ON_CONFIGURE` callback. When a new `WasmPluginVersion` version is created, the
-   * digest of the contents is saved in the `plugin_config_digest` field.
+   * Configuration for the plugin. The configuration is provided to the plugin at runtime through
+   * the `ON_CONFIGURE` callback. When a new `WasmPluginVersion` version is created, the digest of
+   * the contents is saved in the `plugin_config_digest` field.
    * @see #getPluginConfigData()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -225,9 +224,9 @@ public final class WasmPluginVersionDetails extends com.google.api.client.json.G
   }
 
   /**
-   * Configuration for the Wasm plugin. The configuration is provided to the Wasm plugin at runtime
-   * through the `ON_CONFIGURE` callback. When a new `WasmPluginVersion` version is created, the
-   * digest of the contents is saved in the `plugin_config_digest` field.
+   * Configuration for the plugin. The configuration is provided to the plugin at runtime through
+   * the `ON_CONFIGURE` callback. When a new `WasmPluginVersion` version is created, the digest of
+   * the contents is saved in the `plugin_config_digest` field.
    * @see #encodePluginConfigData()
    * @param pluginConfigData pluginConfigData or {@code null} for none
    */
@@ -237,9 +236,9 @@ public final class WasmPluginVersionDetails extends com.google.api.client.json.G
   }
 
   /**
-   * Configuration for the Wasm plugin. The configuration is provided to the Wasm plugin at runtime
-   * through the `ON_CONFIGURE` callback. When a new `WasmPluginVersion` version is created, the
-   * digest of the contents is saved in the `plugin_config_digest` field.
+   * Configuration for the plugin. The configuration is provided to the plugin at runtime through
+   * the `ON_CONFIGURE` callback. When a new `WasmPluginVersion` version is created, the digest of
+   * the contents is saved in the `plugin_config_digest` field.
    * @see #setPluginConfigData()
    *
    * <p>
@@ -255,8 +254,8 @@ public final class WasmPluginVersionDetails extends com.google.api.client.json.G
 
   /**
    * Output only. This field holds the digest (usually checksum) value for the plugin configuration.
-   * The value is calculated based on the contents of the `plugin_config_data` or the container
-   * image defined by the `plugin_config_uri` field.
+   * The value is calculated based on the contents of the `plugin_config_data` field or the
+   * container image defined by the `plugin_config_uri` field.
    * @return value or {@code null} for none
    */
   public java.lang.String getPluginConfigDigest() {
@@ -265,8 +264,8 @@ public final class WasmPluginVersionDetails extends com.google.api.client.json.G
 
   /**
    * Output only. This field holds the digest (usually checksum) value for the plugin configuration.
-   * The value is calculated based on the contents of the `plugin_config_data` or the container
-   * image defined by the `plugin_config_uri` field.
+   * The value is calculated based on the contents of the `plugin_config_data` field or the
+   * container image defined by the `plugin_config_uri` field.
    * @param pluginConfigDigest pluginConfigDigest or {@code null} for none
    */
   public WasmPluginVersionDetails setPluginConfigDigest(java.lang.String pluginConfigDigest) {
@@ -275,11 +274,10 @@ public final class WasmPluginVersionDetails extends com.google.api.client.json.G
   }
 
   /**
-   * URI of the WasmPlugin configuration stored in the Artifact Registry. The configuration is
-   * provided to the Wasm plugin at runtime through the `ON_CONFIGURE` callback. The container image
-   * must contain only a single file with the name `plugin.config`. When a new `WasmPluginVersion`
-   * resource is created, the digest of the container image is saved in the `plugin_config_digest`
-   * field.
+   * URI of the plugin configuration stored in the Artifact Registry. The configuration is provided
+   * to the plugin at runtime through the `ON_CONFIGURE` callback. The container image must contain
+   * only a single file with the name `plugin.config`. When a new `WasmPluginVersion` resource is
+   * created, the digest of the container image is saved in the `plugin_config_digest` field.
    * @return value or {@code null} for none
    */
   public java.lang.String getPluginConfigUri() {
@@ -287,11 +285,10 @@ public final class WasmPluginVersionDetails extends com.google.api.client.json.G
   }
 
   /**
-   * URI of the WasmPlugin configuration stored in the Artifact Registry. The configuration is
-   * provided to the Wasm plugin at runtime through the `ON_CONFIGURE` callback. The container image
-   * must contain only a single file with the name `plugin.config`. When a new `WasmPluginVersion`
-   * resource is created, the digest of the container image is saved in the `plugin_config_digest`
-   * field.
+   * URI of the plugin configuration stored in the Artifact Registry. The configuration is provided
+   * to the plugin at runtime through the `ON_CONFIGURE` callback. The container image must contain
+   * only a single file with the name `plugin.config`. When a new `WasmPluginVersion` resource is
+   * created, the digest of the container image is saved in the `plugin_config_digest` field.
    * @param pluginConfigUri pluginConfigUri or {@code null} for none
    */
   public WasmPluginVersionDetails setPluginConfigUri(java.lang.String pluginConfigUri) {

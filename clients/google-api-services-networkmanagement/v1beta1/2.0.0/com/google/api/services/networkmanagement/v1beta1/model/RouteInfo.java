@@ -31,16 +31,17 @@ package com.google.api.services.networkmanagement.v1beta1.model;
 public final class RouteInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * For advertised routes, the URI of their next hop, i.e. the URI of the hybrid endpoint (VPN
+   * For ADVERTISED routes, the URI of their next hop, i.e. the URI of the hybrid endpoint (VPN
    * tunnel, Interconnect attachment, NCC router appliance) the advertised prefix is advertised
-   * through, or URI of the source peered network.
+   * through, or URI of the source peered network. Deprecated in favor of the next_hop_uri field,
+   * not used in new tests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String advertisedRouteNextHopUri;
 
   /**
-   * For advertised dynamic routes, the URI of the Cloud Router that advertised the corresponding IP
+   * For ADVERTISED dynamic routes, the URI of the Cloud Router that advertised the corresponding IP
    * prefix.
    * The value may be {@code null}.
    */
@@ -55,7 +56,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String destIpRange;
 
   /**
-   * Destination port ranges of the route. Policy based routes only.
+   * Destination port ranges of the route. POLICY_BASED routes only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,32 +77,50 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> instanceTags;
 
   /**
-   * URI of a NCC Hub. NCC_HUB routes only.
+   * For PEERING_SUBNET and PEERING_DYNAMIC routes that are advertised by NCC Hub, the URI of the
+   * corresponding route in NCC Hub's routing table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nccHubRouteUri;
+
+  /**
+   * URI of the NCC Hub the route is advertised by. PEERING_SUBNET and PEERING_DYNAMIC routes that
+   * are advertised by NCC Hub only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nccHubUri;
 
   /**
-   * URI of a NCC Spoke. NCC_HUB routes only.
+   * URI of the destination NCC Spoke. PEERING_SUBNET and PEERING_DYNAMIC routes that are advertised
+   * by NCC Hub only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nccSpokeUri;
 
   /**
-   * URI of a Compute Engine network. NETWORK routes only.
+   * URI of a VPC network where route is located.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String networkUri;
 
   /**
-   * Next hop of the route.
+   * String type of the next hop of the route (for example, "VPN tunnel"). Deprecated in favor of
+   * the next_hop_type and next_hop_uri fields, not used in new tests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextHop;
+
+  /**
+   * URI of a VPC network where the next hop resource is located.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nextHopNetworkUri;
 
   /**
    * Type of next hop.
@@ -111,6 +130,28 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String nextHopType;
 
   /**
+   * URI of the next hop resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nextHopUri;
+
+  /**
+   * For PEERING_SUBNET, PEERING_STATIC and PEERING_DYNAMIC routes, the name of the originating
+   * SUBNET/STATIC/DYNAMIC route.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String originatingRouteDisplayName;
+
+  /**
+   * For PEERING_SUBNET and PEERING_STATIC routes, the URI of the originating SUBNET/STATIC route.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String originatingRouteUri;
+
+  /**
    * Priority of the route.
    * The value may be {@code null}.
    */
@@ -118,21 +159,24 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   private java.lang.Integer priority;
 
   /**
-   * Protocols of the route. Policy based routes only.
+   * Protocols of the route. POLICY_BASED routes only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> protocols;
 
   /**
-   * Region of the route (if applicable).
+   * Region of the route. DYNAMIC, PEERING_DYNAMIC, POLICY_BASED and ADVERTISED routes only. If set
+   * for POLICY_BASED route, this is a region of VLAN attachments for Cloud Interconnect the route
+   * applies to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * Indicates where route is applicable.
+   * Indicates where route is applicable. Deprecated, routes with NCC_HUB scope are not included in
+   * the trace in new tests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,30 +190,32 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String routeType;
 
   /**
-   * Source IP address range of the route. Policy based routes only.
+   * Source IP address range of the route. POLICY_BASED routes only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String srcIpRange;
 
   /**
-   * Source port ranges of the route. Policy based routes only.
+   * Source port ranges of the route. POLICY_BASED routes only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> srcPortRanges;
 
   /**
-   * URI of a route (if applicable).
+   * URI of a route. SUBNET, STATIC, PEERING_SUBNET (only for peering network) and POLICY_BASED
+   * routes only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * For advertised routes, the URI of their next hop, i.e. the URI of the hybrid endpoint (VPN
+   * For ADVERTISED routes, the URI of their next hop, i.e. the URI of the hybrid endpoint (VPN
    * tunnel, Interconnect attachment, NCC router appliance) the advertised prefix is advertised
-   * through, or URI of the source peered network.
+   * through, or URI of the source peered network. Deprecated in favor of the next_hop_uri field,
+   * not used in new tests.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdvertisedRouteNextHopUri() {
@@ -177,9 +223,10 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For advertised routes, the URI of their next hop, i.e. the URI of the hybrid endpoint (VPN
+   * For ADVERTISED routes, the URI of their next hop, i.e. the URI of the hybrid endpoint (VPN
    * tunnel, Interconnect attachment, NCC router appliance) the advertised prefix is advertised
-   * through, or URI of the source peered network.
+   * through, or URI of the source peered network. Deprecated in favor of the next_hop_uri field,
+   * not used in new tests.
    * @param advertisedRouteNextHopUri advertisedRouteNextHopUri or {@code null} for none
    */
   public RouteInfo setAdvertisedRouteNextHopUri(java.lang.String advertisedRouteNextHopUri) {
@@ -188,7 +235,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For advertised dynamic routes, the URI of the Cloud Router that advertised the corresponding IP
+   * For ADVERTISED dynamic routes, the URI of the Cloud Router that advertised the corresponding IP
    * prefix.
    * @return value or {@code null} for none
    */
@@ -197,7 +244,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For advertised dynamic routes, the URI of the Cloud Router that advertised the corresponding IP
+   * For ADVERTISED dynamic routes, the URI of the Cloud Router that advertised the corresponding IP
    * prefix.
    * @param advertisedRouteSourceRouterUri advertisedRouteSourceRouterUri or {@code null} for none
    */
@@ -224,7 +271,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Destination port ranges of the route. Policy based routes only.
+   * Destination port ranges of the route. POLICY_BASED routes only.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDestPortRanges() {
@@ -232,7 +279,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Destination port ranges of the route. Policy based routes only.
+   * Destination port ranges of the route. POLICY_BASED routes only.
    * @param destPortRanges destPortRanges or {@code null} for none
    */
   public RouteInfo setDestPortRanges(java.util.List<java.lang.String> destPortRanges) {
@@ -275,7 +322,27 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a NCC Hub. NCC_HUB routes only.
+   * For PEERING_SUBNET and PEERING_DYNAMIC routes that are advertised by NCC Hub, the URI of the
+   * corresponding route in NCC Hub's routing table.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNccHubRouteUri() {
+    return nccHubRouteUri;
+  }
+
+  /**
+   * For PEERING_SUBNET and PEERING_DYNAMIC routes that are advertised by NCC Hub, the URI of the
+   * corresponding route in NCC Hub's routing table.
+   * @param nccHubRouteUri nccHubRouteUri or {@code null} for none
+   */
+  public RouteInfo setNccHubRouteUri(java.lang.String nccHubRouteUri) {
+    this.nccHubRouteUri = nccHubRouteUri;
+    return this;
+  }
+
+  /**
+   * URI of the NCC Hub the route is advertised by. PEERING_SUBNET and PEERING_DYNAMIC routes that
+   * are advertised by NCC Hub only.
    * @return value or {@code null} for none
    */
   public java.lang.String getNccHubUri() {
@@ -283,7 +350,8 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a NCC Hub. NCC_HUB routes only.
+   * URI of the NCC Hub the route is advertised by. PEERING_SUBNET and PEERING_DYNAMIC routes that
+   * are advertised by NCC Hub only.
    * @param nccHubUri nccHubUri or {@code null} for none
    */
   public RouteInfo setNccHubUri(java.lang.String nccHubUri) {
@@ -292,7 +360,8 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a NCC Spoke. NCC_HUB routes only.
+   * URI of the destination NCC Spoke. PEERING_SUBNET and PEERING_DYNAMIC routes that are advertised
+   * by NCC Hub only.
    * @return value or {@code null} for none
    */
   public java.lang.String getNccSpokeUri() {
@@ -300,7 +369,8 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a NCC Spoke. NCC_HUB routes only.
+   * URI of the destination NCC Spoke. PEERING_SUBNET and PEERING_DYNAMIC routes that are advertised
+   * by NCC Hub only.
    * @param nccSpokeUri nccSpokeUri or {@code null} for none
    */
   public RouteInfo setNccSpokeUri(java.lang.String nccSpokeUri) {
@@ -309,7 +379,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a Compute Engine network. NETWORK routes only.
+   * URI of a VPC network where route is located.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkUri() {
@@ -317,7 +387,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a Compute Engine network. NETWORK routes only.
+   * URI of a VPC network where route is located.
    * @param networkUri networkUri or {@code null} for none
    */
   public RouteInfo setNetworkUri(java.lang.String networkUri) {
@@ -326,7 +396,8 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Next hop of the route.
+   * String type of the next hop of the route (for example, "VPN tunnel"). Deprecated in favor of
+   * the next_hop_type and next_hop_uri fields, not used in new tests.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextHop() {
@@ -334,11 +405,29 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Next hop of the route.
+   * String type of the next hop of the route (for example, "VPN tunnel"). Deprecated in favor of
+   * the next_hop_type and next_hop_uri fields, not used in new tests.
    * @param nextHop nextHop or {@code null} for none
    */
   public RouteInfo setNextHop(java.lang.String nextHop) {
     this.nextHop = nextHop;
+    return this;
+  }
+
+  /**
+   * URI of a VPC network where the next hop resource is located.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNextHopNetworkUri() {
+    return nextHopNetworkUri;
+  }
+
+  /**
+   * URI of a VPC network where the next hop resource is located.
+   * @param nextHopNetworkUri nextHopNetworkUri or {@code null} for none
+   */
+  public RouteInfo setNextHopNetworkUri(java.lang.String nextHopNetworkUri) {
+    this.nextHopNetworkUri = nextHopNetworkUri;
     return this;
   }
 
@@ -360,6 +449,59 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * URI of the next hop resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNextHopUri() {
+    return nextHopUri;
+  }
+
+  /**
+   * URI of the next hop resource.
+   * @param nextHopUri nextHopUri or {@code null} for none
+   */
+  public RouteInfo setNextHopUri(java.lang.String nextHopUri) {
+    this.nextHopUri = nextHopUri;
+    return this;
+  }
+
+  /**
+   * For PEERING_SUBNET, PEERING_STATIC and PEERING_DYNAMIC routes, the name of the originating
+   * SUBNET/STATIC/DYNAMIC route.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOriginatingRouteDisplayName() {
+    return originatingRouteDisplayName;
+  }
+
+  /**
+   * For PEERING_SUBNET, PEERING_STATIC and PEERING_DYNAMIC routes, the name of the originating
+   * SUBNET/STATIC/DYNAMIC route.
+   * @param originatingRouteDisplayName originatingRouteDisplayName or {@code null} for none
+   */
+  public RouteInfo setOriginatingRouteDisplayName(java.lang.String originatingRouteDisplayName) {
+    this.originatingRouteDisplayName = originatingRouteDisplayName;
+    return this;
+  }
+
+  /**
+   * For PEERING_SUBNET and PEERING_STATIC routes, the URI of the originating SUBNET/STATIC route.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOriginatingRouteUri() {
+    return originatingRouteUri;
+  }
+
+  /**
+   * For PEERING_SUBNET and PEERING_STATIC routes, the URI of the originating SUBNET/STATIC route.
+   * @param originatingRouteUri originatingRouteUri or {@code null} for none
+   */
+  public RouteInfo setOriginatingRouteUri(java.lang.String originatingRouteUri) {
+    this.originatingRouteUri = originatingRouteUri;
+    return this;
+  }
+
+  /**
    * Priority of the route.
    * @return value or {@code null} for none
    */
@@ -377,7 +519,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Protocols of the route. Policy based routes only.
+   * Protocols of the route. POLICY_BASED routes only.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProtocols() {
@@ -385,7 +527,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Protocols of the route. Policy based routes only.
+   * Protocols of the route. POLICY_BASED routes only.
    * @param protocols protocols or {@code null} for none
    */
   public RouteInfo setProtocols(java.util.List<java.lang.String> protocols) {
@@ -394,7 +536,9 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Region of the route (if applicable).
+   * Region of the route. DYNAMIC, PEERING_DYNAMIC, POLICY_BASED and ADVERTISED routes only. If set
+   * for POLICY_BASED route, this is a region of VLAN attachments for Cloud Interconnect the route
+   * applies to.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -402,7 +546,9 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Region of the route (if applicable).
+   * Region of the route. DYNAMIC, PEERING_DYNAMIC, POLICY_BASED and ADVERTISED routes only. If set
+   * for POLICY_BASED route, this is a region of VLAN attachments for Cloud Interconnect the route
+   * applies to.
    * @param region region or {@code null} for none
    */
   public RouteInfo setRegion(java.lang.String region) {
@@ -411,7 +557,8 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates where route is applicable.
+   * Indicates where route is applicable. Deprecated, routes with NCC_HUB scope are not included in
+   * the trace in new tests.
    * @return value or {@code null} for none
    */
   public java.lang.String getRouteScope() {
@@ -419,7 +566,8 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates where route is applicable.
+   * Indicates where route is applicable. Deprecated, routes with NCC_HUB scope are not included in
+   * the trace in new tests.
    * @param routeScope routeScope or {@code null} for none
    */
   public RouteInfo setRouteScope(java.lang.String routeScope) {
@@ -445,7 +593,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Source IP address range of the route. Policy based routes only.
+   * Source IP address range of the route. POLICY_BASED routes only.
    * @return value or {@code null} for none
    */
   public java.lang.String getSrcIpRange() {
@@ -453,7 +601,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Source IP address range of the route. Policy based routes only.
+   * Source IP address range of the route. POLICY_BASED routes only.
    * @param srcIpRange srcIpRange or {@code null} for none
    */
   public RouteInfo setSrcIpRange(java.lang.String srcIpRange) {
@@ -462,7 +610,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Source port ranges of the route. Policy based routes only.
+   * Source port ranges of the route. POLICY_BASED routes only.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSrcPortRanges() {
@@ -470,7 +618,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Source port ranges of the route. Policy based routes only.
+   * Source port ranges of the route. POLICY_BASED routes only.
    * @param srcPortRanges srcPortRanges or {@code null} for none
    */
   public RouteInfo setSrcPortRanges(java.util.List<java.lang.String> srcPortRanges) {
@@ -479,7 +627,8 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a route (if applicable).
+   * URI of a route. SUBNET, STATIC, PEERING_SUBNET (only for peering network) and POLICY_BASED
+   * routes only.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -487,7 +636,8 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a route (if applicable).
+   * URI of a route. SUBNET, STATIC, PEERING_SUBNET (only for peering network) and POLICY_BASED
+   * routes only.
    * @param uri uri or {@code null} for none
    */
   public RouteInfo setUri(java.lang.String uri) {

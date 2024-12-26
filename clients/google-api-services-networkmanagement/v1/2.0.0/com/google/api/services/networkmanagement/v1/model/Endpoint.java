@@ -82,7 +82,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   /**
    * DNS endpoint of [Google Kubernetes Engine cluster control
    * plane](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture). Requires
-   * gke_master_cluster to be set, can't be used simultaneoulsly with ip_address.
+   * gke_master_cluster to be set, can't be used simultaneoulsly with ip_address or network.
+   * Applicable only to destination endpoint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -292,7 +293,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   /**
    * DNS endpoint of [Google Kubernetes Engine cluster control
    * plane](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture). Requires
-   * gke_master_cluster to be set, can't be used simultaneoulsly with ip_address.
+   * gke_master_cluster to be set, can't be used simultaneoulsly with ip_address or network.
+   * Applicable only to destination endpoint.
    * @return value or {@code null} for none
    */
   public java.lang.String getFqdn() {
@@ -302,7 +304,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   /**
    * DNS endpoint of [Google Kubernetes Engine cluster control
    * plane](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture). Requires
-   * gke_master_cluster to be set, can't be used simultaneoulsly with ip_address.
+   * gke_master_cluster to be set, can't be used simultaneoulsly with ip_address or network.
+   * Applicable only to destination endpoint.
    * @param fqdn fqdn or {@code null} for none
    */
   public Endpoint setFqdn(java.lang.String fqdn) {

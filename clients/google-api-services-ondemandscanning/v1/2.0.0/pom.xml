@@ -90,8 +90,8 @@
           <windowtitle>On-Demand Scanning API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
-            <link>https://googleapis.dev/java/google-http-client/1.45.2/</link>
-            <link>https://googleapis.dev/java/google-oauth-client/1.36.0/</link>
+            <link>https://googleapis.dev/java/google-http-client/1.45.3/</link>
+            <link>https://googleapis.dev/java/google-oauth-client/1.37.0/</link>
             <link>https://googleapis.dev/java/google-api-client/2.7.0/</link>
           </links>
         </configuration>

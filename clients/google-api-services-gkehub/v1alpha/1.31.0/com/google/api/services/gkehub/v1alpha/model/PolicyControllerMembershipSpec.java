@@ -28,14 +28,14 @@ package com.google.api.services.gkehub.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class PolicyControllerMembershipSpec extends com.google.api.client.json.GenericJson {
+public final class PolicycontrollerMembershipSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Policy Controller configuration for the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private PolicyControllerHubConfig policyControllerHubConfig;
+  private PolicycontrollerPolicyControllerHubConfig policyControllerHubConfig;
 
   /**
    * Version of Policy Controller installed.
@@ -48,7 +48,7 @@ public final class PolicyControllerMembershipSpec extends com.google.api.client.
    * Policy Controller configuration for the cluster.
    * @return value or {@code null} for none
    */
-  public PolicyControllerHubConfig getPolicyControllerHubConfig() {
+  public PolicycontrollerPolicyControllerHubConfig getPolicyControllerHubConfig() {
     return policyControllerHubConfig;
   }
 
@@ -56,7 +56,7 @@ public final class PolicyControllerMembershipSpec extends com.google.api.client.
    * Policy Controller configuration for the cluster.
    * @param policyControllerHubConfig policyControllerHubConfig or {@code null} for none
    */
-  public PolicyControllerMembershipSpec setPolicyControllerHubConfig(PolicyControllerHubConfig policyControllerHubConfig) {
+  public PolicycontrollerMembershipSpec setPolicyControllerHubConfig(PolicycontrollerPolicyControllerHubConfig policyControllerHubConfig) {
     this.policyControllerHubConfig = policyControllerHubConfig;
     return this;
   }
@@ -73,19 +73,19 @@ public final class PolicyControllerMembershipSpec extends com.google.api.client.
    * Version of Policy Controller installed.
    * @param version version or {@code null} for none
    */
-  public PolicyControllerMembershipSpec setVersion(java.lang.String version) {
+  public PolicycontrollerMembershipSpec setVersion(java.lang.String version) {
     this.version = version;
     return this;
   }
 
   @Override
-  public PolicyControllerMembershipSpec set(String fieldName, Object value) {
-    return (PolicyControllerMembershipSpec) super.set(fieldName, value);
+  public PolicycontrollerMembershipSpec set(String fieldName, Object value) {
+    return (PolicycontrollerMembershipSpec) super.set(fieldName, value);
   }
 
   @Override
-  public PolicyControllerMembershipSpec clone() {
-    return (PolicyControllerMembershipSpec) super.clone();
+  public PolicycontrollerMembershipSpec clone() {
+    return (PolicycontrollerMembershipSpec) super.clone();
   }
 
 }

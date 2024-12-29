@@ -27,7 +27,7 @@ package com.google.api.services.gkehub.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class PolicyControllerMembershipState extends com.google.api.client.json.GenericJson {
+public final class PolicycontrollerMembershipState extends com.google.api.client.json.GenericJson {
 
   /**
    * The user-defined name for the cluster used by ClusterSelectors to group clusters together. This
@@ -44,14 +44,14 @@ public final class PolicyControllerMembershipState extends com.google.api.client
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private PolicyControllerMembershipSpec membershipSpec;
+  private PolicycontrollerMembershipSpec membershipSpec;
 
   /**
    * Policy Controller state observed by the Policy Controller Hub
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private PolicyControllerHubState policyControllerHubState;
+  private PolicycontrollerPolicyControllerHubState policyControllerHubState;
 
   /**
    * The lifecycle state Policy Controller is in.
@@ -76,7 +76,7 @@ public final class PolicyControllerMembershipState extends com.google.api.client
    * prior to enabling the PC hub feature. Unique within a Policy Controller installation.
    * @param clusterName clusterName or {@code null} for none
    */
-  public PolicyControllerMembershipState setClusterName(java.lang.String clusterName) {
+  public PolicycontrollerMembershipState setClusterName(java.lang.String clusterName) {
     this.clusterName = clusterName;
     return this;
   }
@@ -86,7 +86,7 @@ public final class PolicyControllerMembershipState extends com.google.api.client
    * the MembershipSpec in the FeatureSpec represents the intended state
    * @return value or {@code null} for none
    */
-  public PolicyControllerMembershipSpec getMembershipSpec() {
+  public PolicycontrollerMembershipSpec getMembershipSpec() {
     return membershipSpec;
   }
 
@@ -95,7 +95,7 @@ public final class PolicyControllerMembershipState extends com.google.api.client
    * the MembershipSpec in the FeatureSpec represents the intended state
    * @param membershipSpec membershipSpec or {@code null} for none
    */
-  public PolicyControllerMembershipState setMembershipSpec(PolicyControllerMembershipSpec membershipSpec) {
+  public PolicycontrollerMembershipState setMembershipSpec(PolicycontrollerMembershipSpec membershipSpec) {
     this.membershipSpec = membershipSpec;
     return this;
   }
@@ -104,7 +104,7 @@ public final class PolicyControllerMembershipState extends com.google.api.client
    * Policy Controller state observed by the Policy Controller Hub
    * @return value or {@code null} for none
    */
-  public PolicyControllerHubState getPolicyControllerHubState() {
+  public PolicycontrollerPolicyControllerHubState getPolicyControllerHubState() {
     return policyControllerHubState;
   }
 
@@ -112,7 +112,7 @@ public final class PolicyControllerMembershipState extends com.google.api.client
    * Policy Controller state observed by the Policy Controller Hub
    * @param policyControllerHubState policyControllerHubState or {@code null} for none
    */
-  public PolicyControllerMembershipState setPolicyControllerHubState(PolicyControllerHubState policyControllerHubState) {
+  public PolicycontrollerMembershipState setPolicyControllerHubState(PolicycontrollerPolicyControllerHubState policyControllerHubState) {
     this.policyControllerHubState = policyControllerHubState;
     return this;
   }
@@ -129,19 +129,19 @@ public final class PolicyControllerMembershipState extends com.google.api.client
    * The lifecycle state Policy Controller is in.
    * @param state state or {@code null} for none
    */
-  public PolicyControllerMembershipState setState(java.lang.String state) {
+  public PolicycontrollerMembershipState setState(java.lang.String state) {
     this.state = state;
     return this;
   }
 
   @Override
-  public PolicyControllerMembershipState set(String fieldName, Object value) {
-    return (PolicyControllerMembershipState) super.set(fieldName, value);
+  public PolicycontrollerMembershipState set(String fieldName, Object value) {
+    return (PolicycontrollerMembershipState) super.set(fieldName, value);
   }
 
   @Override
-  public PolicyControllerMembershipState clone() {
-    return (PolicyControllerMembershipState) super.clone();
+  public PolicycontrollerMembershipState clone() {
+    return (PolicycontrollerMembershipState) super.clone();
   }
 
 }

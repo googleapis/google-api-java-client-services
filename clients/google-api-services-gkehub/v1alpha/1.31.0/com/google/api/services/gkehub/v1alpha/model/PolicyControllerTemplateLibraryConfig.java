@@ -27,7 +27,7 @@ package com.google.api.services.gkehub.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class PolicyControllerTemplateLibraryConfig extends com.google.api.client.json.GenericJson {
+public final class PolicycontrollerTemplateLibraryConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the standard template library should be installed or not.
@@ -48,19 +48,19 @@ public final class PolicyControllerTemplateLibraryConfig extends com.google.api.
    * Whether the standard template library should be installed or not.
    * @param included included or {@code null} for none
    */
-  public PolicyControllerTemplateLibraryConfig setIncluded(java.lang.Boolean included) {
+  public PolicycontrollerTemplateLibraryConfig setIncluded(java.lang.Boolean included) {
     this.included = included;
     return this;
   }
 
   @Override
-  public PolicyControllerTemplateLibraryConfig set(String fieldName, Object value) {
-    return (PolicyControllerTemplateLibraryConfig) super.set(fieldName, value);
+  public PolicycontrollerTemplateLibraryConfig set(String fieldName, Object value) {
+    return (PolicycontrollerTemplateLibraryConfig) super.set(fieldName, value);
   }
 
   @Override
-  public PolicyControllerTemplateLibraryConfig clone() {
-    return (PolicyControllerTemplateLibraryConfig) super.clone();
+  public PolicycontrollerTemplateLibraryConfig clone() {
+    return (PolicycontrollerTemplateLibraryConfig) super.clone();
   }
 
 }

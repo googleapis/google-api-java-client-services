@@ -17,7 +17,11 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for HTTPSHealthCheck.
+ * Represents a legacy HTTPS Health Check resource. Legacy HTTPS health checks have been deprecated.
+ * If you are using a target pool-based network load balancer, you must use a legacy HTTP (not
+ * HTTPS) health check. For all other load balancers, including backend service-based network load
+ * balancers, and for managed instance group auto-healing, you must use modern (non-legacy) health
+ * checks. For more information, see Health checks overview .
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -27,64 +31,79 @@ package com.google.api.services.compute.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class HTTPSHealthCheck extends com.google.api.client.json.GenericJson {
+public final class HttpsHealthCheck extends com.google.api.client.json.GenericJson {
+
+  /**
+   * How often (in seconds) to send a health check. The default value is 5 seconds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer checkIntervalSec;
+
+  /**
+   * [Output Only] Creation timestamp in RFC3339 text format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String creationTimestamp;
+
+  /**
+   * An optional description of this resource. Provide this property when you create the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
+   * A so-far unhealthy instance will be marked healthy after this many consecutive successes. The
+   * default value is 2.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer healthyThreshold;
 
   /**
    * The value of the host header in the HTTPS health check request. If left empty (default value),
-   * the host header is set to the destination IP address to which health check packets are sent.
-   * The destination IP address depends on the type of load balancer. For details, see:
-   * https://cloud.google.com/load-balancing/docs/health-check-concepts#hc-packet-dest
+   * the public IP on behalf of which this health check is performed will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String host;
 
   /**
-   * The TCP port number to which the health check prober sends packets. The default value is 443.
-   * Valid values are 1 through 65535.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.math.BigInteger id;
+
+  /**
+   * Type of the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kind;
+
+  /**
+   * Name of the resource. Provided by the client when the resource is created. The name must be
+   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
+   * character must be a lowercase letter, and all following characters must be a dash, lowercase
+   * letter, or digit, except the last character, which cannot be a dash.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
+   * The TCP port number for the HTTPS health check request. The default value is 443.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer port;
 
   /**
-   * Not supported.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String portName;
-
-  /**
-   * Specifies how a port is selected for health checking. Can be one of the following values:
-   * USE_FIXED_PORT: Specifies a port number explicitly using the port field in the health check.
-   * Supported by backend services for passthrough load balancers and backend services for proxy
-   * load balancers. Not supported by target pools. The health check supports all backends supported
-   * by the backend service provided the backend can be health checked. For example, GCE_VM_IP
-   * network endpoint groups, GCE_VM_IP_PORT network endpoint groups, and instance group backends.
-   * USE_NAMED_PORT: Not supported. USE_SERVING_PORT: Provides an indirect method of specifying the
-   * health check port by referring to the backend service. Only supported by backend services for
-   * proxy load balancers. Not supported by target pools. Not supported by backend services for
-   * passthrough load balancers. Supports all backends that can be health checked; for example,
-   * GCE_VM_IP_PORT network endpoint groups and instance group backends. For GCE_VM_IP_PORT network
-   * endpoint group backends, the health check uses the port number specified for each endpoint in
-   * the network endpoint group. For instance group backends, the health check uses the port number
-   * determined by looking up the backend service's named port in the instance group's list of named
-   * ports.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String portSpecification;
-
-  /**
-   * Specifies the type of proxy header to append before sending data to the backend, either NONE or
-   * PROXY_V1. The default is NONE.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String proxyHeader;
-
-  /**
-   * The request path of the HTTPS health check request. The default value is /. Must comply with
+   * The request path of the HTTPS health check request. The default value is "/". Must comply with
    * RFC3986.
    * The value may be {@code null}.
    */
@@ -92,20 +111,101 @@ public final class HTTPSHealthCheck extends com.google.api.client.json.GenericJs
   private java.lang.String requestPath;
 
   /**
-   * Creates a content-based HTTPS health check. In addition to the required HTTP 200 (OK) status
-   * code, you can configure the health check to pass only when the backend sends this specific
-   * ASCII response string within the first 1024 bytes of the HTTP response body. For details, see:
-   * https://cloud.google.com/load-balancing/docs/health-check-concepts#criteria-protocol-http
+   * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String response;
+  private java.lang.String selfLink;
+
+  /**
+   * How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is
+   * invalid for timeoutSec to have a greater value than checkIntervalSec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer timeoutSec;
+
+  /**
+   * A so-far healthy instance will be marked unhealthy after this many consecutive failures. The
+   * default value is 2.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer unhealthyThreshold;
+
+  /**
+   * How often (in seconds) to send a health check. The default value is 5 seconds.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getCheckIntervalSec() {
+    return checkIntervalSec;
+  }
+
+  /**
+   * How often (in seconds) to send a health check. The default value is 5 seconds.
+   * @param checkIntervalSec checkIntervalSec or {@code null} for none
+   */
+  public HttpsHealthCheck setCheckIntervalSec(java.lang.Integer checkIntervalSec) {
+    this.checkIntervalSec = checkIntervalSec;
+    return this;
+  }
+
+  /**
+   * [Output Only] Creation timestamp in RFC3339 text format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCreationTimestamp() {
+    return creationTimestamp;
+  }
+
+  /**
+   * [Output Only] Creation timestamp in RFC3339 text format.
+   * @param creationTimestamp creationTimestamp or {@code null} for none
+   */
+  public HttpsHealthCheck setCreationTimestamp(java.lang.String creationTimestamp) {
+    this.creationTimestamp = creationTimestamp;
+    return this;
+  }
+
+  /**
+   * An optional description of this resource. Provide this property when you create the resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * An optional description of this resource. Provide this property when you create the resource.
+   * @param description description or {@code null} for none
+   */
+  public HttpsHealthCheck setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * A so-far unhealthy instance will be marked healthy after this many consecutive successes. The
+   * default value is 2.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getHealthyThreshold() {
+    return healthyThreshold;
+  }
+
+  /**
+   * A so-far unhealthy instance will be marked healthy after this many consecutive successes. The
+   * default value is 2.
+   * @param healthyThreshold healthyThreshold or {@code null} for none
+   */
+  public HttpsHealthCheck setHealthyThreshold(java.lang.Integer healthyThreshold) {
+    this.healthyThreshold = healthyThreshold;
+    return this;
+  }
 
   /**
    * The value of the host header in the HTTPS health check request. If left empty (default value),
-   * the host header is set to the destination IP address to which health check packets are sent.
-   * The destination IP address depends on the type of load balancer. For details, see:
-   * https://cloud.google.com/load-balancing/docs/health-check-concepts#hc-packet-dest
+   * the public IP on behalf of which this health check is performed will be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getHost() {
@@ -114,19 +214,75 @@ public final class HTTPSHealthCheck extends com.google.api.client.json.GenericJs
 
   /**
    * The value of the host header in the HTTPS health check request. If left empty (default value),
-   * the host header is set to the destination IP address to which health check packets are sent.
-   * The destination IP address depends on the type of load balancer. For details, see:
-   * https://cloud.google.com/load-balancing/docs/health-check-concepts#hc-packet-dest
+   * the public IP on behalf of which this health check is performed will be used.
    * @param host host or {@code null} for none
    */
-  public HTTPSHealthCheck setHost(java.lang.String host) {
+  public HttpsHealthCheck setHost(java.lang.String host) {
     this.host = host;
     return this;
   }
 
   /**
-   * The TCP port number to which the health check prober sends packets. The default value is 443.
-   * Valid values are 1 through 65535.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * @return value or {@code null} for none
+   */
+  public java.math.BigInteger getId() {
+    return id;
+  }
+
+  /**
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * @param id id or {@code null} for none
+   */
+  public HttpsHealthCheck setId(java.math.BigInteger id) {
+    this.id = id;
+    return this;
+  }
+
+  /**
+   * Type of the resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKind() {
+    return kind;
+  }
+
+  /**
+   * Type of the resource.
+   * @param kind kind or {@code null} for none
+   */
+  public HttpsHealthCheck setKind(java.lang.String kind) {
+    this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Name of the resource. Provided by the client when the resource is created. The name must be
+   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
+   * character must be a lowercase letter, and all following characters must be a dash, lowercase
+   * letter, or digit, except the last character, which cannot be a dash.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Name of the resource. Provided by the client when the resource is created. The name must be
+   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
+   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
+   * character must be a lowercase letter, and all following characters must be a dash, lowercase
+   * letter, or digit, except the last character, which cannot be a dash.
+   * @param name name or {@code null} for none
+   */
+  public HttpsHealthCheck setName(java.lang.String name) {
+    this.name = name;
+    return this;
+  }
+
+  /**
+   * The TCP port number for the HTTPS health check request. The default value is 443.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPort() {
@@ -134,98 +290,16 @@ public final class HTTPSHealthCheck extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The TCP port number to which the health check prober sends packets. The default value is 443.
-   * Valid values are 1 through 65535.
+   * The TCP port number for the HTTPS health check request. The default value is 443.
    * @param port port or {@code null} for none
    */
-  public HTTPSHealthCheck setPort(java.lang.Integer port) {
+  public HttpsHealthCheck setPort(java.lang.Integer port) {
     this.port = port;
     return this;
   }
 
   /**
-   * Not supported.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPortName() {
-    return portName;
-  }
-
-  /**
-   * Not supported.
-   * @param portName portName or {@code null} for none
-   */
-  public HTTPSHealthCheck setPortName(java.lang.String portName) {
-    this.portName = portName;
-    return this;
-  }
-
-  /**
-   * Specifies how a port is selected for health checking. Can be one of the following values:
-   * USE_FIXED_PORT: Specifies a port number explicitly using the port field in the health check.
-   * Supported by backend services for passthrough load balancers and backend services for proxy
-   * load balancers. Not supported by target pools. The health check supports all backends supported
-   * by the backend service provided the backend can be health checked. For example, GCE_VM_IP
-   * network endpoint groups, GCE_VM_IP_PORT network endpoint groups, and instance group backends.
-   * USE_NAMED_PORT: Not supported. USE_SERVING_PORT: Provides an indirect method of specifying the
-   * health check port by referring to the backend service. Only supported by backend services for
-   * proxy load balancers. Not supported by target pools. Not supported by backend services for
-   * passthrough load balancers. Supports all backends that can be health checked; for example,
-   * GCE_VM_IP_PORT network endpoint groups and instance group backends. For GCE_VM_IP_PORT network
-   * endpoint group backends, the health check uses the port number specified for each endpoint in
-   * the network endpoint group. For instance group backends, the health check uses the port number
-   * determined by looking up the backend service's named port in the instance group's list of named
-   * ports.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPortSpecification() {
-    return portSpecification;
-  }
-
-  /**
-   * Specifies how a port is selected for health checking. Can be one of the following values:
-   * USE_FIXED_PORT: Specifies a port number explicitly using the port field in the health check.
-   * Supported by backend services for passthrough load balancers and backend services for proxy
-   * load balancers. Not supported by target pools. The health check supports all backends supported
-   * by the backend service provided the backend can be health checked. For example, GCE_VM_IP
-   * network endpoint groups, GCE_VM_IP_PORT network endpoint groups, and instance group backends.
-   * USE_NAMED_PORT: Not supported. USE_SERVING_PORT: Provides an indirect method of specifying the
-   * health check port by referring to the backend service. Only supported by backend services for
-   * proxy load balancers. Not supported by target pools. Not supported by backend services for
-   * passthrough load balancers. Supports all backends that can be health checked; for example,
-   * GCE_VM_IP_PORT network endpoint groups and instance group backends. For GCE_VM_IP_PORT network
-   * endpoint group backends, the health check uses the port number specified for each endpoint in
-   * the network endpoint group. For instance group backends, the health check uses the port number
-   * determined by looking up the backend service's named port in the instance group's list of named
-   * ports.
-   * @param portSpecification portSpecification or {@code null} for none
-   */
-  public HTTPSHealthCheck setPortSpecification(java.lang.String portSpecification) {
-    this.portSpecification = portSpecification;
-    return this;
-  }
-
-  /**
-   * Specifies the type of proxy header to append before sending data to the backend, either NONE or
-   * PROXY_V1. The default is NONE.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getProxyHeader() {
-    return proxyHeader;
-  }
-
-  /**
-   * Specifies the type of proxy header to append before sending data to the backend, either NONE or
-   * PROXY_V1. The default is NONE.
-   * @param proxyHeader proxyHeader or {@code null} for none
-   */
-  public HTTPSHealthCheck setProxyHeader(java.lang.String proxyHeader) {
-    this.proxyHeader = proxyHeader;
-    return this;
-  }
-
-  /**
-   * The request path of the HTTPS health check request. The default value is /. Must comply with
+   * The request path of the HTTPS health check request. The default value is "/". Must comply with
    * RFC3986.
    * @return value or {@code null} for none
    */
@@ -234,46 +308,78 @@ public final class HTTPSHealthCheck extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The request path of the HTTPS health check request. The default value is /. Must comply with
+   * The request path of the HTTPS health check request. The default value is "/". Must comply with
    * RFC3986.
    * @param requestPath requestPath or {@code null} for none
    */
-  public HTTPSHealthCheck setRequestPath(java.lang.String requestPath) {
+  public HttpsHealthCheck setRequestPath(java.lang.String requestPath) {
     this.requestPath = requestPath;
     return this;
   }
 
   /**
-   * Creates a content-based HTTPS health check. In addition to the required HTTP 200 (OK) status
-   * code, you can configure the health check to pass only when the backend sends this specific
-   * ASCII response string within the first 1024 bytes of the HTTP response body. For details, see:
-   * https://cloud.google.com/load-balancing/docs/health-check-concepts#criteria-protocol-http
+   * [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
-  public java.lang.String getResponse() {
-    return response;
+  public java.lang.String getSelfLink() {
+    return selfLink;
   }
 
   /**
-   * Creates a content-based HTTPS health check. In addition to the required HTTP 200 (OK) status
-   * code, you can configure the health check to pass only when the backend sends this specific
-   * ASCII response string within the first 1024 bytes of the HTTP response body. For details, see:
-   * https://cloud.google.com/load-balancing/docs/health-check-concepts#criteria-protocol-http
-   * @param response response or {@code null} for none
+   * [Output Only] Server-defined URL for the resource.
+   * @param selfLink selfLink or {@code null} for none
    */
-  public HTTPSHealthCheck setResponse(java.lang.String response) {
-    this.response = response;
+  public HttpsHealthCheck setSelfLink(java.lang.String selfLink) {
+    this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is
+   * invalid for timeoutSec to have a greater value than checkIntervalSec.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTimeoutSec() {
+    return timeoutSec;
+  }
+
+  /**
+   * How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is
+   * invalid for timeoutSec to have a greater value than checkIntervalSec.
+   * @param timeoutSec timeoutSec or {@code null} for none
+   */
+  public HttpsHealthCheck setTimeoutSec(java.lang.Integer timeoutSec) {
+    this.timeoutSec = timeoutSec;
+    return this;
+  }
+
+  /**
+   * A so-far healthy instance will be marked unhealthy after this many consecutive failures. The
+   * default value is 2.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getUnhealthyThreshold() {
+    return unhealthyThreshold;
+  }
+
+  /**
+   * A so-far healthy instance will be marked unhealthy after this many consecutive failures. The
+   * default value is 2.
+   * @param unhealthyThreshold unhealthyThreshold or {@code null} for none
+   */
+  public HttpsHealthCheck setUnhealthyThreshold(java.lang.Integer unhealthyThreshold) {
+    this.unhealthyThreshold = unhealthyThreshold;
     return this;
   }
 
   @Override
-  public HTTPSHealthCheck set(String fieldName, Object value) {
-    return (HTTPSHealthCheck) super.set(fieldName, value);
+  public HttpsHealthCheck set(String fieldName, Object value) {
+    return (HttpsHealthCheck) super.set(fieldName, value);
   }
 
   @Override
-  public HTTPSHealthCheck clone() {
-    return (HTTPSHealthCheck) super.clone();
+  public HttpsHealthCheck clone() {
+    return (HttpsHealthCheck) super.clone();
   }
 
 }

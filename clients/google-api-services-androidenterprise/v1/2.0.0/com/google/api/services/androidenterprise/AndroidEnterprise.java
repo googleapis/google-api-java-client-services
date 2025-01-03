@@ -1535,22 +1535,6 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /** Deprecated: Use enrollment_token instead. this field will be removed in the future. */
-      @com.google.api.client.util.Key
-      private java.lang.String deviceType;
-
-      /** Deprecated: Use enrollment_token instead. this field will be removed in the future.
-       */
-      public java.lang.String getDeviceType() {
-        return deviceType;
-      }
-
-      /** Deprecated: Use enrollment_token instead. this field will be removed in the future. */
-      public CreateEnrollmentToken setDeviceType(java.lang.String deviceType) {
-        this.deviceType = deviceType;
-        return this;
-      }
-
       /**
        * [Optional] The length of time the enrollment token is valid, ranging from 1 minute to
        * [`Durations.MAX_VALUE`](https://developers.google.com/protocol-

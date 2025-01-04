@@ -38,7 +38,9 @@ public final class GoogleCloudRetailV2alphaColorInfo extends com.google.api.clie
    * be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT
    * error is returned. Google Merchant Center property
    * [color](https://support.google.com/merchants/answer/6324487). Schema.org property
-   * [Product.color](https://schema.org/color).
+   * [Product.color](https://schema.org/color). The colorFamilies field as a system attribute is not
+   * a required field but strongly recommended to be specified. Google Search models treat this
+   * field as more important than a custom product attribute when specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +67,9 @@ public final class GoogleCloudRetailV2alphaColorInfo extends com.google.api.clie
    * be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT
    * error is returned. Google Merchant Center property
    * [color](https://support.google.com/merchants/answer/6324487). Schema.org property
-   * [Product.color](https://schema.org/color).
+   * [Product.color](https://schema.org/color). The colorFamilies field as a system attribute is not
+   * a required field but strongly recommended to be specified. Google Search models treat this
+   * field as more important than a custom product attribute when specified.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getColorFamilies() {
@@ -80,7 +84,9 @@ public final class GoogleCloudRetailV2alphaColorInfo extends com.google.api.clie
    * be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT
    * error is returned. Google Merchant Center property
    * [color](https://support.google.com/merchants/answer/6324487). Schema.org property
-   * [Product.color](https://schema.org/color).
+   * [Product.color](https://schema.org/color). The colorFamilies field as a system attribute is not
+   * a required field but strongly recommended to be specified. Google Search models treat this
+   * field as more important than a custom product attribute when specified.
    * @param colorFamilies colorFamilies or {@code null} for none
    */
   public GoogleCloudRetailV2alphaColorInfo setColorFamilies(java.util.List<java.lang.String> colorFamilies) {

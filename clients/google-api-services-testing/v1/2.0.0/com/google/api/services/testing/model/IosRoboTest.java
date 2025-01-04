@@ -46,7 +46,8 @@ public final class IosRoboTest extends com.google.api.client.json.GenericJson {
 
   /**
    * An optional Roboscript to customize the crawl. See https://firebase.google.com/docs/test-
-   * lab/android/robo-scripts-reference for more information about Roboscripts.
+   * lab/android/robo-scripts-reference for more information about Roboscripts. The maximum allowed
+   * file size of the roboscript is 10MiB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +91,8 @@ public final class IosRoboTest extends com.google.api.client.json.GenericJson {
 
   /**
    * An optional Roboscript to customize the crawl. See https://firebase.google.com/docs/test-
-   * lab/android/robo-scripts-reference for more information about Roboscripts.
+   * lab/android/robo-scripts-reference for more information about Roboscripts. The maximum allowed
+   * file size of the roboscript is 10MiB.
    * @return value or {@code null} for none
    */
   public FileReference getRoboScript() {
@@ -99,7 +101,8 @@ public final class IosRoboTest extends com.google.api.client.json.GenericJson {
 
   /**
    * An optional Roboscript to customize the crawl. See https://firebase.google.com/docs/test-
-   * lab/android/robo-scripts-reference for more information about Roboscripts.
+   * lab/android/robo-scripts-reference for more information about Roboscripts. The maximum allowed
+   * file size of the roboscript is 10MiB.
    * @param roboScript roboScript or {@code null} for none
    */
   public IosRoboTest setRoboScript(FileReference roboScript) {

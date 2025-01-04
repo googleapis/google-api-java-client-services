@@ -31,6 +31,14 @@ package com.google.api.services.analyticshub.v1.model;
 public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. This is set if this is a commercial subscription i.e. if this subscription was
+   * created from subscribing to a commercial listing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudBigqueryAnalyticshubV1SubscriptionCommercialInfo commercialInfo;
+
+  /**
    * Output only. Timestamp when the subscription was created.
    * The value may be {@code null}.
    */
@@ -132,6 +140,25 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String subscriberContact;
+
+  /**
+   * Output only. This is set if this is a commercial subscription i.e. if this subscription was
+   * created from subscribing to a commercial listing.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudBigqueryAnalyticshubV1SubscriptionCommercialInfo getCommercialInfo() {
+    return commercialInfo;
+  }
+
+  /**
+   * Output only. This is set if this is a commercial subscription i.e. if this subscription was
+   * created from subscribing to a commercial listing.
+   * @param commercialInfo commercialInfo or {@code null} for none
+   */
+  public Subscription setCommercialInfo(GoogleCloudBigqueryAnalyticshubV1SubscriptionCommercialInfo commercialInfo) {
+    this.commercialInfo = commercialInfo;
+    return this;
+  }
 
   /**
    * Output only. Timestamp when the subscription was created.

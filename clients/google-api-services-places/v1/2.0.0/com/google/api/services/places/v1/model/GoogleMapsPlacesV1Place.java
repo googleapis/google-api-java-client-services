@@ -389,7 +389,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   /**
    * The regular hours of operation. Note that if a place is always open (24 hours), the `close`
    * field will not be set. Clients can rely on always open (24 hours) being represented as an
-   * `open` period containing day with value `0`, hour with value `0`, and minute with value `0`.
+   * `open` period containing `day` with value `0`, `hour` with value `0`, and `minute` with value
+   * `0`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1400,7 +1401,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   /**
    * The regular hours of operation. Note that if a place is always open (24 hours), the `close`
    * field will not be set. Clients can rely on always open (24 hours) being represented as an
-   * `open` period containing day with value `0`, hour with value `0`, and minute with value `0`.
+   * `open` period containing `day` with value `0`, `hour` with value `0`, and `minute` with value
+   * `0`.
    * @return value or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceOpeningHours getRegularOpeningHours() {
@@ -1410,7 +1412,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   /**
    * The regular hours of operation. Note that if a place is always open (24 hours), the `close`
    * field will not be set. Clients can rely on always open (24 hours) being represented as an
-   * `open` period containing day with value `0`, hour with value `0`, and minute with value `0`.
+   * `open` period containing `day` with value `0`, `hour` with value `0`, and `minute` with value
+   * `0`.
    * @param regularOpeningHours regularOpeningHours or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setRegularOpeningHours(GoogleMapsPlacesV1PlaceOpeningHours regularOpeningHours) {

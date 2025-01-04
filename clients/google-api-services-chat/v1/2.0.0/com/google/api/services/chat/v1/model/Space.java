@@ -131,7 +131,13 @@ public final class Space extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Space permission settings for existing spaces. Input for updating exact space
    * permission settings, where existing permission settings are replaced. Output lists current
-   * permission settings.
+   * permission settings. Reading and updating permission settings supports: - In [Developer
+   * Preview](https://developers.google.com/workspace/preview), [App
+   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+   * with [administrator approval](https://support.google.com/a?p=chat-app-auth) with the
+   * `chat.app.spaces` scope. Only populated and settable when the Chat app created the space. -
+   * [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+   * user)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,7 +146,12 @@ public final class Space extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Input only. Predefined space permission settings, input only when creating a space.
    * If the field is not set, a collaboration space is created. After you create the space, settings
-   * are populated in the `PermissionSettings` field.
+   * are populated in the `PermissionSettings` field. Setting predefined permission settings
+   * supports: - In [Developer Preview](https://developers.google.com/workspace/preview), [App
+   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+   * with [administrator approval](https://support.google.com/a?p=chat-app-auth) with the
+   * `chat.app.spaces` or `chat.app.spaces.create` scopes. - [User
+   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -433,7 +444,13 @@ public final class Space extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Space permission settings for existing spaces. Input for updating exact space
    * permission settings, where existing permission settings are replaced. Output lists current
-   * permission settings.
+   * permission settings. Reading and updating permission settings supports: - In [Developer
+   * Preview](https://developers.google.com/workspace/preview), [App
+   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+   * with [administrator approval](https://support.google.com/a?p=chat-app-auth) with the
+   * `chat.app.spaces` scope. Only populated and settable when the Chat app created the space. -
+   * [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+   * user)
    * @return value or {@code null} for none
    */
   public PermissionSettings getPermissionSettings() {
@@ -443,7 +460,13 @@ public final class Space extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Space permission settings for existing spaces. Input for updating exact space
    * permission settings, where existing permission settings are replaced. Output lists current
-   * permission settings.
+   * permission settings. Reading and updating permission settings supports: - In [Developer
+   * Preview](https://developers.google.com/workspace/preview), [App
+   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+   * with [administrator approval](https://support.google.com/a?p=chat-app-auth) with the
+   * `chat.app.spaces` scope. Only populated and settable when the Chat app created the space. -
+   * [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+   * user)
    * @param permissionSettings permissionSettings or {@code null} for none
    */
   public Space setPermissionSettings(PermissionSettings permissionSettings) {
@@ -454,7 +477,12 @@ public final class Space extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Input only. Predefined space permission settings, input only when creating a space.
    * If the field is not set, a collaboration space is created. After you create the space, settings
-   * are populated in the `PermissionSettings` field.
+   * are populated in the `PermissionSettings` field. Setting predefined permission settings
+   * supports: - In [Developer Preview](https://developers.google.com/workspace/preview), [App
+   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+   * with [administrator approval](https://support.google.com/a?p=chat-app-auth) with the
+   * `chat.app.spaces` or `chat.app.spaces.create` scopes. - [User
+   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
    * @return value or {@code null} for none
    */
   public java.lang.String getPredefinedPermissionSettings() {
@@ -464,7 +492,12 @@ public final class Space extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Input only. Predefined space permission settings, input only when creating a space.
    * If the field is not set, a collaboration space is created. After you create the space, settings
-   * are populated in the `PermissionSettings` field.
+   * are populated in the `PermissionSettings` field. Setting predefined permission settings
+   * supports: - In [Developer Preview](https://developers.google.com/workspace/preview), [App
+   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+   * with [administrator approval](https://support.google.com/a?p=chat-app-auth) with the
+   * `chat.app.spaces` or `chat.app.spaces.create` scopes. - [User
+   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
    * @param predefinedPermissionSettings predefinedPermissionSettings or {@code null} for none
    */
   public Space setPredefinedPermissionSettings(java.lang.String predefinedPermissionSettings) {

@@ -17,8 +17,10 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A field in which users can enter text. Supports suggestions and on-change actions. For an example
- * in Google Chat apps, see [Add a field in which a user can enter
+ * A field in which users can enter text. Supports suggestions and on-change actions. Supports form
+ * submission validation. When `Action.all_widgets_are_required` is set to `true` or this widget is
+ * specified in `Action.required_widgets`, the submission action is blocked unless a value is
+ * entered. For an example in Google Chat apps, see [Add a field in which a user can enter
  * text](https://developers.google.com/workspace/chat/design-interactive-card-
  * dialog#add_a_field_in_which_a_user_can_enter_text). Chat apps receive and can process the value
  * of entered text during form input events. For details about working with form inputs, see
@@ -115,6 +117,14 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Specify the input format validation necessary for this text field. [Google Workspace Add-ons
+   * and Chat apps](https://developers.google.com/workspace/extend):
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAppsCardV1Validation validation;
 
   /**
    * The value entered by a user, returned as part of a form input event. For details about working
@@ -304,6 +314,25 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
    */
   public GoogleAppsCardV1TextInput setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * Specify the input format validation necessary for this text field. [Google Workspace Add-ons
+   * and Chat apps](https://developers.google.com/workspace/extend):
+   * @return value or {@code null} for none
+   */
+  public GoogleAppsCardV1Validation getValidation() {
+    return validation;
+  }
+
+  /**
+   * Specify the input format validation necessary for this text field. [Google Workspace Add-ons
+   * and Chat apps](https://developers.google.com/workspace/extend):
+   * @param validation validation or {@code null} for none
+   */
+  public GoogleAppsCardV1TextInput setValidation(GoogleAppsCardV1Validation validation) {
+    this.validation = validation;
     return this;
   }
 

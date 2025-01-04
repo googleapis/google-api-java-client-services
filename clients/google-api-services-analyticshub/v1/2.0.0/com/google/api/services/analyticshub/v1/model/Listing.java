@@ -46,6 +46,14 @@ public final class Listing extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> categories;
 
   /**
+   * Output only. Commercial info contains the information about the commercial data products
+   * associated with the listing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudBigqueryAnalyticshubV1ListingCommercialInfo commercialInfo;
+
+  /**
    * Optional. Details of the data provider who owns the source data.
    * The value may be {@code null}.
    */
@@ -184,6 +192,25 @@ public final class Listing extends com.google.api.client.json.GenericJson {
    */
   public Listing setCategories(java.util.List<java.lang.String> categories) {
     this.categories = categories;
+    return this;
+  }
+
+  /**
+   * Output only. Commercial info contains the information about the commercial data products
+   * associated with the listing.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudBigqueryAnalyticshubV1ListingCommercialInfo getCommercialInfo() {
+    return commercialInfo;
+  }
+
+  /**
+   * Output only. Commercial info contains the information about the commercial data products
+   * associated with the listing.
+   * @param commercialInfo commercialInfo or {@code null} for none
+   */
+  public Listing setCommercialInfo(GoogleCloudBigqueryAnalyticshubV1ListingCommercialInfo commercialInfo) {
+    this.commercialInfo = commercialInfo;
     return this;
   }
 

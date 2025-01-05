@@ -142,7 +142,6 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private SqlSubOperationType subOperationType;
 
   /**
-   * Name of the database instance related to this operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -436,7 +435,6 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the database instance related to this operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetId() {
@@ -444,7 +442,6 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the database instance related to this operation.
    * @param targetId targetId or {@code null} for none
    */
   public Operation setTargetId(java.lang.String targetId) {

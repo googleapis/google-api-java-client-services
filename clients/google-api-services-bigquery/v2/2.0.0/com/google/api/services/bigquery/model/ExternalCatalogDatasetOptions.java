@@ -18,7 +18,7 @@ package com.google.api.services.bigquery.model;
 
 /**
  * Options defining open source compatible datasets living in the BigQuery catalog. Contains
- * metadata of open source database, schema or namespace represented by the current dataset.
+ * metadata of open source database, schema, or namespace represented by the current dataset.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -40,7 +40,7 @@ public final class ExternalCatalogDatasetOptions extends com.google.api.client.j
 
   /**
    * Optional. A map of key value pairs defining the parameters and properties of the open source
-   * schema. Maximum size of 2Mib.
+   * schema. Maximum size of 2MiB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class ExternalCatalogDatasetOptions extends com.google.api.client.j
 
   /**
    * Optional. A map of key value pairs defining the parameters and properties of the open source
-   * schema. Maximum size of 2Mib.
+   * schema. Maximum size of 2MiB.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getParameters() {
@@ -76,7 +76,7 @@ public final class ExternalCatalogDatasetOptions extends com.google.api.client.j
 
   /**
    * Optional. A map of key value pairs defining the parameters and properties of the open source
-   * schema. Maximum size of 2Mib.
+   * schema. Maximum size of 2MiB.
    * @param parameters parameters or {@code null} for none
    */
   public ExternalCatalogDatasetOptions setParameters(java.util.Map<String, java.lang.String> parameters) {

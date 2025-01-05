@@ -1778,30 +1778,30 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * The geographic location of the job. You must specify the location to run the job for the
-       * following scenarios: * If the location to run a job is not in the `us` or the `eu` multi-
-       * regional location * If the job's location is in a single region (for example, `us-
-       * central1`) For more information, see
-       * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+       * The geographic location of the job. You must [specify the
+       * location](https://cloud.google.com/bigquery/docs/locations#specify_locations) to run the
+       * job for the following scenarios: * If the location to run a job is not in the `us` or the
+       * `eu` multi-regional location * If the job's location is in a single region (for example,
+       * `us-central1`)
        */
       @com.google.api.client.util.Key
       private java.lang.String location;
 
-      /** The geographic location of the job. You must specify the location to run the job for the following
-     scenarios: * If the location to run a job is not in the `us` or the `eu` multi-regional location *
-     If the job's location is in a single region (for example, `us-central1`) For more information, see
-     https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+      /** The geographic location of the job. You must [specify the
+     location](https://cloud.google.com/bigquery/docs/locations#specify_locations) to run the job for
+     the following scenarios: * If the location to run a job is not in the `us` or the `eu` multi-
+     regional location * If the job's location is in a single region (for example, `us-central1`)
        */
       public java.lang.String getLocation() {
         return location;
       }
 
       /**
-       * The geographic location of the job. You must specify the location to run the job for the
-       * following scenarios: * If the location to run a job is not in the `us` or the `eu` multi-
-       * regional location * If the job's location is in a single region (for example, `us-
-       * central1`) For more information, see
-       * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+       * The geographic location of the job. You must [specify the
+       * location](https://cloud.google.com/bigquery/docs/locations#specify_locations) to run the
+       * job for the following scenarios: * If the location to run a job is not in the `us` or the
+       * `eu` multi-regional location * If the job's location is in a single region (for example,
+       * `us-central1`)
        */
       public Cancel setLocation(java.lang.String location) {
         this.location = location;
@@ -1986,22 +1986,22 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * The geographic location of the job. Required. See details at:
-       * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+       * The geographic location of the job. Required. For more information, see how to [specify
+       * locations](https://cloud.google.com/bigquery/docs/locations#specify_locations).
        */
       @com.google.api.client.util.Key
       private java.lang.String location;
 
-      /** The geographic location of the job. Required. See details at:
-     https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+      /** The geographic location of the job. Required. For more information, see how to [specify
+     locations](https://cloud.google.com/bigquery/docs/locations#specify_locations).
        */
       public java.lang.String getLocation() {
         return location;
       }
 
       /**
-       * The geographic location of the job. Required. See details at:
-       * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+       * The geographic location of the job. Required. For more information, see how to [specify
+       * locations](https://cloud.google.com/bigquery/docs/locations#specify_locations).
        */
       public Delete setLocation(java.lang.String location) {
         this.location = location;
@@ -2186,8 +2186,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * The geographic location of the job. You must specify the location to run the job for the
        * following scenarios: * If the location to run a job is not in the `us` or the `eu` multi-
        * regional location * If the job's location is in a single region (for example, `us-
-       * central1`) For more information, see
-       * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+       * central1`) For more information, see how to [specify
+       * locations](https://cloud.google.com/bigquery/docs/locations#specify_locations).
        */
       @com.google.api.client.util.Key
       private java.lang.String location;
@@ -2195,7 +2195,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       /** The geographic location of the job. You must specify the location to run the job for the following
      scenarios: * If the location to run a job is not in the `us` or the `eu` multi-regional location *
      If the job's location is in a single region (for example, `us-central1`) For more information, see
-     https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+     how to [specify locations](https://cloud.google.com/bigquery/docs/locations#specify_locations).
        */
       public java.lang.String getLocation() {
         return location;
@@ -2205,8 +2205,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * The geographic location of the job. You must specify the location to run the job for the
        * following scenarios: * If the location to run a job is not in the `us` or the `eu` multi-
        * regional location * If the job's location is in a single region (for example, `us-
-       * central1`) For more information, see
-       * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+       * central1`) For more information, see how to [specify
+       * locations](https://cloud.google.com/bigquery/docs/locations#specify_locations).
        */
       public Get setLocation(java.lang.String location) {
         this.location = location;
@@ -2404,8 +2404,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * The geographic location of the job. You must specify the location to run the job for the
        * following scenarios: * If the location to run a job is not in the `us` or the `eu` multi-
        * regional location * If the job's location is in a single region (for example, `us-
-       * central1`) For more information, see
-       * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+       * central1`) For more information, see how to [specify
+       * locations](https://cloud.google.com/bigquery/docs/locations#specify_locations).
        */
       @com.google.api.client.util.Key
       private java.lang.String location;
@@ -2413,7 +2413,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       /** The geographic location of the job. You must specify the location to run the job for the following
      scenarios: * If the location to run a job is not in the `us` or the `eu` multi-regional location *
      If the job's location is in a single region (for example, `us-central1`) For more information, see
-     https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+     how to [specify locations](https://cloud.google.com/bigquery/docs/locations#specify_locations).
        */
       public java.lang.String getLocation() {
         return location;
@@ -2423,8 +2423,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * The geographic location of the job. You must specify the location to run the job for the
        * following scenarios: * If the location to run a job is not in the `us` or the `eu` multi-
        * regional location * If the job's location is in a single region (for example, `us-
-       * central1`) For more information, see
-       * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+       * central1`) For more information, see how to [specify
+       * locations](https://cloud.google.com/bigquery/docs/locations#specify_locations).
        */
       public GetQueryResults setLocation(java.lang.String location) {
         this.location = location;

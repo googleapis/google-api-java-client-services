@@ -180,8 +180,8 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    * value tag are eval data, and the false are training data. 2. When data_split_method is SEQ, the
    * first DATA_SPLIT_EVAL_FRACTION rows (from smallest to largest) in the corresponding column are
    * used as training data, and the rest are eval data. It respects the order in Orderable data
-   * types: https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#data-type-
-   * properties
+   * types: https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
+   * types#data_type_properties
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1055,8 +1055,8 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    * value tag are eval data, and the false are training data. 2. When data_split_method is SEQ, the
    * first DATA_SPLIT_EVAL_FRACTION rows (from smallest to largest) in the corresponding column are
    * used as training data, and the rest are eval data. It respects the order in Orderable data
-   * types: https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#data-type-
-   * properties
+   * types: https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
+   * types#data_type_properties
    * @return value or {@code null} for none
    */
   public java.lang.String getDataSplitColumn() {
@@ -1069,8 +1069,8 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    * value tag are eval data, and the false are training data. 2. When data_split_method is SEQ, the
    * first DATA_SPLIT_EVAL_FRACTION rows (from smallest to largest) in the corresponding column are
    * used as training data, and the rest are eval data. It respects the order in Orderable data
-   * types: https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#data-type-
-   * properties
+   * types: https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
+   * types#data_type_properties
    * @param dataSplitColumn dataSplitColumn or {@code null} for none
    */
   public TrainingOptions setDataSplitColumn(java.lang.String dataSplitColumn) {

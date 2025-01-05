@@ -18,7 +18,7 @@ package com.google.api.services.bigquery.model;
 
 /**
  * Metadata about open source compatible table. The fields contained in these options correspond to
- * hive metastore's table level properties.
+ * Hive metastore's table-level properties.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -31,9 +31,9 @@ package com.google.api.services.bigquery.model;
 public final class ExternalCatalogTableOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The connection specifying the credentials to be used to read external storage, such
-   * as Azure Blob, Cloud Storage, or S3. The connection is needed to read the open source table
-   * from BigQuery Engine. The connection_id can have the form `..` or
+   * Optional. A connection ID that specifies the credentials to be used to read external storage,
+   * such as Azure Blob, Cloud Storage, or Amazon S3. This connection is needed to read the open
+   * source table from BigQuery. The connection_id format must be either `..` or
    * `projects//locations//connections/`.
    * The value may be {@code null}.
    */
@@ -41,8 +41,8 @@ public final class ExternalCatalogTableOptions extends com.google.api.client.jso
   private java.lang.String connectionId;
 
   /**
-   * Optional. A map of key value pairs defining the parameters and properties of the open source
-   * table. Corresponds with hive meta store table parameters. Maximum size of 4Mib.
+   * Optional. A map of the key-value pairs defining the parameters and properties of the open
+   * source table. Corresponds with Hive metastore table parameters. Maximum size of 4MiB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,9 +56,9 @@ public final class ExternalCatalogTableOptions extends com.google.api.client.jso
   private StorageDescriptor storageDescriptor;
 
   /**
-   * Optional. The connection specifying the credentials to be used to read external storage, such
-   * as Azure Blob, Cloud Storage, or S3. The connection is needed to read the open source table
-   * from BigQuery Engine. The connection_id can have the form `..` or
+   * Optional. A connection ID that specifies the credentials to be used to read external storage,
+   * such as Azure Blob, Cloud Storage, or Amazon S3. This connection is needed to read the open
+   * source table from BigQuery. The connection_id format must be either `..` or
    * `projects//locations//connections/`.
    * @return value or {@code null} for none
    */
@@ -67,9 +67,9 @@ public final class ExternalCatalogTableOptions extends com.google.api.client.jso
   }
 
   /**
-   * Optional. The connection specifying the credentials to be used to read external storage, such
-   * as Azure Blob, Cloud Storage, or S3. The connection is needed to read the open source table
-   * from BigQuery Engine. The connection_id can have the form `..` or
+   * Optional. A connection ID that specifies the credentials to be used to read external storage,
+   * such as Azure Blob, Cloud Storage, or Amazon S3. This connection is needed to read the open
+   * source table from BigQuery. The connection_id format must be either `..` or
    * `projects//locations//connections/`.
    * @param connectionId connectionId or {@code null} for none
    */
@@ -79,8 +79,8 @@ public final class ExternalCatalogTableOptions extends com.google.api.client.jso
   }
 
   /**
-   * Optional. A map of key value pairs defining the parameters and properties of the open source
-   * table. Corresponds with hive meta store table parameters. Maximum size of 4Mib.
+   * Optional. A map of the key-value pairs defining the parameters and properties of the open
+   * source table. Corresponds with Hive metastore table parameters. Maximum size of 4MiB.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getParameters() {
@@ -88,8 +88,8 @@ public final class ExternalCatalogTableOptions extends com.google.api.client.jso
   }
 
   /**
-   * Optional. A map of key value pairs defining the parameters and properties of the open source
-   * table. Corresponds with hive meta store table parameters. Maximum size of 4Mib.
+   * Optional. A map of the key-value pairs defining the parameters and properties of the open
+   * source table. Corresponds with Hive metastore table parameters. Maximum size of 4MiB.
    * @param parameters parameters or {@code null} for none
    */
   public ExternalCatalogTableOptions setParameters(java.util.Map<String, java.lang.String> parameters) {

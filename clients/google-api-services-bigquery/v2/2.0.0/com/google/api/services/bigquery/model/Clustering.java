@@ -32,8 +32,8 @@ public final class Clustering extends com.google.api.client.json.GenericJson {
   /**
    * One or more fields on which data should be clustered. Only top-level, non-repeated, simple-type
    * fields are supported. The ordering of the clustering fields should be prioritized from most to
-   * least important for filtering purposes. Additional information on limitations can be found
-   * here: https://cloud.google.com/bigquery/docs/creating-clustered-tables#limitations
+   * least important for filtering purposes. For additional information, see [Introduction to
+   * clustered tables](https://cloud.google.com/bigquery/docs/clustered-tables#limitations).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,8 +42,8 @@ public final class Clustering extends com.google.api.client.json.GenericJson {
   /**
    * One or more fields on which data should be clustered. Only top-level, non-repeated, simple-type
    * fields are supported. The ordering of the clustering fields should be prioritized from most to
-   * least important for filtering purposes. Additional information on limitations can be found
-   * here: https://cloud.google.com/bigquery/docs/creating-clustered-tables#limitations
+   * least important for filtering purposes. For additional information, see [Introduction to
+   * clustered tables](https://cloud.google.com/bigquery/docs/clustered-tables#limitations).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFields() {
@@ -53,8 +53,8 @@ public final class Clustering extends com.google.api.client.json.GenericJson {
   /**
    * One or more fields on which data should be clustered. Only top-level, non-repeated, simple-type
    * fields are supported. The ordering of the clustering fields should be prioritized from most to
-   * least important for filtering purposes. Additional information on limitations can be found
-   * here: https://cloud.google.com/bigquery/docs/creating-clustered-tables#limitations
+   * least important for filtering purposes. For additional information, see [Introduction to
+   * clustered tables](https://cloud.google.com/bigquery/docs/clustered-tables#limitations).
    * @param fields fields or {@code null} for none
    */
   public Clustering setFields(java.util.List<java.lang.String> fields) {

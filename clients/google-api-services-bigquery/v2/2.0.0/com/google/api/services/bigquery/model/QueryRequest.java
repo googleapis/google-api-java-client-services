@@ -112,8 +112,8 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The geographic location where the job should run. See details at
-   * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+   * The geographic location where the job should run. For more information, see how to [specify
+   * locations](https://cloud.google.com/bigquery/docs/locations#specify_locations).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -408,8 +408,8 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The geographic location where the job should run. See details at
-   * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+   * The geographic location where the job should run. For more information, see how to [specify
+   * locations](https://cloud.google.com/bigquery/docs/locations#specify_locations).
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -417,8 +417,8 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The geographic location where the job should run. See details at
-   * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+   * The geographic location where the job should run. For more information, see how to [specify
+   * locations](https://cloud.google.com/bigquery/docs/locations#specify_locations).
    * @param location location or {@code null} for none
    */
   public QueryRequest setLocation(java.lang.String location) {

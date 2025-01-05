@@ -44,6 +44,20 @@ public final class Impact extends com.google.api.client.json.GenericJson {
   private java.lang.String impactType;
 
   /**
+   * The parent resource that the analysis is based on and the service name that the analysis is
+   * for. Example: `projects/100/services/compute.googleapis.com`,
+   * folders/101/services/compute.googleapis.com` and
+   * `organizations/102/services/compute.googleapis.com`. Usually, the parent resource here is same
+   * as the parent resource of the analyzed policy. However, for some analysis types, the parent can
+   * be different. For example, for resource existence analysis, if the parent resource of the
+   * analyzed policy is a folder or an organization, the parent resource here can still be the
+   * project that contains the resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parent;
+
+  /**
    * Output only. User friendly impact detail in a free form message.
    * @return value or {@code null} for none
    */
@@ -74,6 +88,37 @@ public final class Impact extends com.google.api.client.json.GenericJson {
    */
   public Impact setImpactType(java.lang.String impactType) {
     this.impactType = impactType;
+    return this;
+  }
+
+  /**
+   * The parent resource that the analysis is based on and the service name that the analysis is
+   * for. Example: `projects/100/services/compute.googleapis.com`,
+   * folders/101/services/compute.googleapis.com` and
+   * `organizations/102/services/compute.googleapis.com`. Usually, the parent resource here is same
+   * as the parent resource of the analyzed policy. However, for some analysis types, the parent can
+   * be different. For example, for resource existence analysis, if the parent resource of the
+   * analyzed policy is a folder or an organization, the parent resource here can still be the
+   * project that contains the resources.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParent() {
+    return parent;
+  }
+
+  /**
+   * The parent resource that the analysis is based on and the service name that the analysis is
+   * for. Example: `projects/100/services/compute.googleapis.com`,
+   * folders/101/services/compute.googleapis.com` and
+   * `organizations/102/services/compute.googleapis.com`. Usually, the parent resource here is same
+   * as the parent resource of the analyzed policy. However, for some analysis types, the parent can
+   * be different. For example, for resource existence analysis, if the parent resource of the
+   * analyzed policy is a folder or an organization, the parent resource here can still be the
+   * project that contains the resources.
+   * @param parent parent or {@code null} for none
+   */
+  public Impact setParent(java.lang.String parent) {
+    this.parent = parent;
     return this;
   }
 

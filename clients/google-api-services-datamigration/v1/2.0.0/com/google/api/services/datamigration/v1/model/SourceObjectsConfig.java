@@ -31,7 +31,7 @@ package com.google.api.services.datamigration.v1.model;
 public final class SourceObjectsConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of the objects to be migrated.
+   * Optional. The list of the objects to be migrated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class SourceObjectsConfig extends com.google.api.client.json.Generi
   private java.lang.String objectsSelectionType;
 
   /**
-   * The list of the objects to be migrated.
+   * Optional. The list of the objects to be migrated.
    * @return value or {@code null} for none
    */
   public java.util.List<SourceObjectConfig> getObjectConfigs() {
@@ -59,7 +59,7 @@ public final class SourceObjectsConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * The list of the objects to be migrated.
+   * Optional. The list of the objects to be migrated.
    * @param objectConfigs objectConfigs or {@code null} for none
    */
   public SourceObjectsConfig setObjectConfigs(java.util.List<SourceObjectConfig> objectConfigs) {

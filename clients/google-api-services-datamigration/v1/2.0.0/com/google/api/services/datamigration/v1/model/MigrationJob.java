@@ -187,6 +187,20 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
   private ReverseSshConnectivity reverseSshConnectivity;
 
   /**
+   * Output only. Zone Isolation compliance state of the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. Zone Separation compliance state of the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Required. The resource name (URI) of the source connection profile.
    * The value may be {@code null}.
    */
@@ -612,6 +626,40 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
    */
   public MigrationJob setReverseSshConnectivity(ReverseSshConnectivity reverseSshConnectivity) {
     this.reverseSshConnectivity = reverseSshConnectivity;
+    return this;
+  }
+
+  /**
+   * Output only. Zone Isolation compliance state of the resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. Zone Isolation compliance state of the resource.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public MigrationJob setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. Zone Separation compliance state of the resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Zone Separation compliance state of the resource.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public MigrationJob setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

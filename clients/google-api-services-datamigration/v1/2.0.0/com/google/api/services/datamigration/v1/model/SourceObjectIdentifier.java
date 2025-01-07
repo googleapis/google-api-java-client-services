@@ -31,8 +31,8 @@ package com.google.api.services.datamigration.v1.model;
 public final class SourceObjectIdentifier extends com.google.api.client.json.GenericJson {
 
   /**
-   * The database name. This will be required only if the object uses a database name as part of its
-   * unique identifier.
+   * Optional. The database name. This will be required only if the object uses a database name as
+   * part of its unique identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,8 @@ public final class SourceObjectIdentifier extends com.google.api.client.json.Gen
   private java.lang.String type;
 
   /**
-   * The database name. This will be required only if the object uses a database name as part of its
-   * unique identifier.
+   * Optional. The database name. This will be required only if the object uses a database name as
+   * part of its unique identifier.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabase() {
@@ -55,8 +55,8 @@ public final class SourceObjectIdentifier extends com.google.api.client.json.Gen
   }
 
   /**
-   * The database name. This will be required only if the object uses a database name as part of its
-   * unique identifier.
+   * Optional. The database name. This will be required only if the object uses a database name as
+   * part of its unique identifier.
    * @param database database or {@code null} for none
    */
   public SourceObjectIdentifier setDatabase(java.lang.String database) {

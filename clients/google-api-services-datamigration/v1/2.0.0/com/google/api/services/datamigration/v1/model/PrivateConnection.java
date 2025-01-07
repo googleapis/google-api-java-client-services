@@ -69,6 +69,20 @@ public final class PrivateConnection extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
+   * Output only. Zone Isolation compliance state of the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. Zone Separation compliance state of the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Output only. The state of the private connection.
    * The value may be {@code null}.
    */
@@ -175,6 +189,40 @@ public final class PrivateConnection extends com.google.api.client.json.GenericJ
    */
   public PrivateConnection setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Zone Isolation compliance state of the resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. Zone Isolation compliance state of the resource.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public PrivateConnection setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. Zone Separation compliance state of the resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Zone Separation compliance state of the resource.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public PrivateConnection setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

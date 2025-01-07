@@ -31,14 +31,14 @@ package com.google.api.services.datamigration.v1.model;
 public final class SourceObjectConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The object identifier.
+   * Optional. The object identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SourceObjectIdentifier objectIdentifier;
 
   /**
-   * The object identifier.
+   * Optional. The object identifier.
    * @return value or {@code null} for none
    */
   public SourceObjectIdentifier getObjectIdentifier() {
@@ -46,7 +46,7 @@ public final class SourceObjectConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The object identifier.
+   * Optional. The object identifier.
    * @param objectIdentifier objectIdentifier or {@code null} for none
    */
   public SourceObjectConfig setObjectIdentifier(SourceObjectIdentifier objectIdentifier) {

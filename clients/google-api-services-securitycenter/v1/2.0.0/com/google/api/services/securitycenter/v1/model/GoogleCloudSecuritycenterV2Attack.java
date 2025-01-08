@@ -38,18 +38,32 @@ public final class GoogleCloudSecuritycenterV2Attack extends com.google.api.clie
   private java.lang.String classification;
 
   /**
-   * Total BPS (bytes per second) volume of attack.
+   * Total BPS (bytes per second) volume of attack. Deprecated - refer to volume_bps_long instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer volumeBps;
 
   /**
-   * Total PPS (packets per second) volume of attack.
+   * Total BPS (bytes per second) volume of attack.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long volumeBpsLong;
+
+  /**
+   * Total PPS (packets per second) volume of attack. Deprecated - refer to volume_pps_long instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer volumePps;
+
+  /**
+   * Total PPS (packets per second) volume of attack.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long volumePpsLong;
 
   /**
    * Type of attack, for example, 'SYN-flood', 'NTP-udp', or 'CHARGEN-udp'.
@@ -69,7 +83,7 @@ public final class GoogleCloudSecuritycenterV2Attack extends com.google.api.clie
   }
 
   /**
-   * Total BPS (bytes per second) volume of attack.
+   * Total BPS (bytes per second) volume of attack. Deprecated - refer to volume_bps_long instead.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVolumeBps() {
@@ -77,7 +91,7 @@ public final class GoogleCloudSecuritycenterV2Attack extends com.google.api.clie
   }
 
   /**
-   * Total BPS (bytes per second) volume of attack.
+   * Total BPS (bytes per second) volume of attack. Deprecated - refer to volume_bps_long instead.
    * @param volumeBps volumeBps or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Attack setVolumeBps(java.lang.Integer volumeBps) {
@@ -86,7 +100,24 @@ public final class GoogleCloudSecuritycenterV2Attack extends com.google.api.clie
   }
 
   /**
-   * Total PPS (packets per second) volume of attack.
+   * Total BPS (bytes per second) volume of attack.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getVolumeBpsLong() {
+    return volumeBpsLong;
+  }
+
+  /**
+   * Total BPS (bytes per second) volume of attack.
+   * @param volumeBpsLong volumeBpsLong or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Attack setVolumeBpsLong(java.lang.Long volumeBpsLong) {
+    this.volumeBpsLong = volumeBpsLong;
+    return this;
+  }
+
+  /**
+   * Total PPS (packets per second) volume of attack. Deprecated - refer to volume_pps_long instead.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVolumePps() {
@@ -94,11 +125,28 @@ public final class GoogleCloudSecuritycenterV2Attack extends com.google.api.clie
   }
 
   /**
-   * Total PPS (packets per second) volume of attack.
+   * Total PPS (packets per second) volume of attack. Deprecated - refer to volume_pps_long instead.
    * @param volumePps volumePps or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Attack setVolumePps(java.lang.Integer volumePps) {
     this.volumePps = volumePps;
+    return this;
+  }
+
+  /**
+   * Total PPS (packets per second) volume of attack.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getVolumePpsLong() {
+    return volumePpsLong;
+  }
+
+  /**
+   * Total PPS (packets per second) volume of attack.
+   * @param volumePpsLong volumePpsLong or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Attack setVolumePpsLong(java.lang.Long volumePpsLong) {
+    this.volumePpsLong = volumePpsLong;
     return this;
   }
 

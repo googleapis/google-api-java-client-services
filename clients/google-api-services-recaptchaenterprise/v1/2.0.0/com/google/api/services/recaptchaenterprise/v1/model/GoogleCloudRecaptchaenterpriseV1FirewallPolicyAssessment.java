@@ -31,8 +31,8 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. If the processing of a policy config fails, an error will be populated and the
-   * firewall_policy will be left empty.
+   * Output only. If the processing of a policy config fails, an error is populated and the
+   * firewall_policy is left empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,16 +40,15 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment exte
 
   /**
    * Output only. The policy that matched the request. If more than one policy may match, this is
-   * the first match. If no policy matches the incoming request, the policy field will be left
-   * empty.
+   * the first match. If no policy matches the incoming request, the policy field is left empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudRecaptchaenterpriseV1FirewallPolicy firewallPolicy;
 
   /**
-   * Output only. If the processing of a policy config fails, an error will be populated and the
-   * firewall_policy will be left empty.
+   * Output only. If the processing of a policy config fails, an error is populated and the
+   * firewall_policy is left empty.
    * @return value or {@code null} for none
    */
   public GoogleRpcStatus getError() {
@@ -57,8 +56,8 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment exte
   }
 
   /**
-   * Output only. If the processing of a policy config fails, an error will be populated and the
-   * firewall_policy will be left empty.
+   * Output only. If the processing of a policy config fails, an error is populated and the
+   * firewall_policy is left empty.
    * @param error error or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment setError(GoogleRpcStatus error) {
@@ -68,8 +67,7 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment exte
 
   /**
    * Output only. The policy that matched the request. If more than one policy may match, this is
-   * the first match. If no policy matches the incoming request, the policy field will be left
-   * empty.
+   * the first match. If no policy matches the incoming request, the policy field is left empty.
    * @return value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1FirewallPolicy getFirewallPolicy() {
@@ -78,8 +76,7 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment exte
 
   /**
    * Output only. The policy that matched the request. If more than one policy may match, this is
-   * the first match. If no policy matches the incoming request, the policy field will be left
-   * empty.
+   * the first match. If no policy matches the incoming request, the policy field is left empty.
    * @param firewallPolicy firewallPolicy or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment setFirewallPolicy(GoogleCloudRecaptchaenterpriseV1FirewallPolicy firewallPolicy) {

@@ -40,7 +40,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
 
   /**
    * Optional. Flag for a reCAPTCHA express request for an assessment without a token. If enabled,
-   * `site_key` must reference a SCORE key with WAF feature set to EXPRESS.
+   * `site_key` must reference an Express site key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,12 +48,18 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
 
   /**
    * Optional. Flag for enabling firewall policy config assessment. If this flag is enabled, the
-   * firewall policy will be evaluated and a suggested firewall action will be returned in the
-   * response.
+   * firewall policy is evaluated and a suggested firewall action is returned in the response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean firewallPolicyEvaluation;
+
+  /**
+   * Optional. The Fraud Prevention setting for this assessment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fraudPrevention;
 
   /**
    * Optional. Deprecated: use `user_info.account_id` instead. Unique stable hashed user identifier
@@ -161,7 +167,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
 
   /**
    * Optional. Flag for a reCAPTCHA express request for an assessment without a token. If enabled,
-   * `site_key` must reference a SCORE key with WAF feature set to EXPRESS.
+   * `site_key` must reference an Express site key.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExpress() {
@@ -170,7 +176,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
 
   /**
    * Optional. Flag for a reCAPTCHA express request for an assessment without a token. If enabled,
-   * `site_key` must reference a SCORE key with WAF feature set to EXPRESS.
+   * `site_key` must reference an Express site key.
    * @param express express or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Event setExpress(java.lang.Boolean express) {
@@ -180,8 +186,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
 
   /**
    * Optional. Flag for enabling firewall policy config assessment. If this flag is enabled, the
-   * firewall policy will be evaluated and a suggested firewall action will be returned in the
-   * response.
+   * firewall policy is evaluated and a suggested firewall action is returned in the response.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getFirewallPolicyEvaluation() {
@@ -190,12 +195,28 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
 
   /**
    * Optional. Flag for enabling firewall policy config assessment. If this flag is enabled, the
-   * firewall policy will be evaluated and a suggested firewall action will be returned in the
-   * response.
+   * firewall policy is evaluated and a suggested firewall action is returned in the response.
    * @param firewallPolicyEvaluation firewallPolicyEvaluation or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Event setFirewallPolicyEvaluation(java.lang.Boolean firewallPolicyEvaluation) {
     this.firewallPolicyEvaluation = firewallPolicyEvaluation;
+    return this;
+  }
+
+  /**
+   * Optional. The Fraud Prevention setting for this assessment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFraudPrevention() {
+    return fraudPrevention;
+  }
+
+  /**
+   * Optional. The Fraud Prevention setting for this assessment.
+   * @param fraudPrevention fraudPrevention or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1Event setFraudPrevention(java.lang.String fraudPrevention) {
+    this.fraudPrevention = fraudPrevention;
     return this;
   }
 

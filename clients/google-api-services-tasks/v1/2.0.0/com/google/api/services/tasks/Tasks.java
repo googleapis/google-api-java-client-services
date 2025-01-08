@@ -2007,15 +2007,16 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * New parent task identifier. If the task is moved to the top level, this parameter is
-       * omitted. Assigned tasks can not be set as parent task (have subtasks) or be moved under a
-       * parent task (become subtasks). Optional.
+       * omitted. The task set as parent must exist in the task list and can not be hidden. Assigned
+       * tasks can not be set as parent task (have subtasks) or be moved under a parent task (become
+       * subtasks). Optional.
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** New parent task identifier. If the task is moved to the top level, this parameter is omitted.
-     Assigned tasks can not be set as parent task (have subtasks) or be moved under a parent task
-     (become subtasks). Optional.
+      /** New parent task identifier. If the task is moved to the top level, this parameter is omitted. The
+     task set as parent must exist in the task list and can not be hidden. Assigned tasks can not be set
+     as parent task (have subtasks) or be moved under a parent task (become subtasks). Optional.
        */
       public java.lang.String getParent() {
         return parent;
@@ -2023,8 +2024,9 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * New parent task identifier. If the task is moved to the top level, this parameter is
-       * omitted. Assigned tasks can not be set as parent task (have subtasks) or be moved under a
-       * parent task (become subtasks). Optional.
+       * omitted. The task set as parent must exist in the task list and can not be hidden. Assigned
+       * tasks can not be set as parent task (have subtasks) or be moved under a parent task (become
+       * subtasks). Optional.
        */
       public Move setParent(java.lang.String parent) {
         this.parent = parent;
@@ -2033,13 +2035,15 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * New previous sibling task identifier. If the task is moved to the first position among its
-       * siblings, this parameter is omitted. Optional.
+       * siblings, this parameter is omitted. The task set as previous must exist in the task list
+       * and can not be hidden. Optional.
        */
       @com.google.api.client.util.Key
       private java.lang.String previous;
 
       /** New previous sibling task identifier. If the task is moved to the first position among its
-     siblings, this parameter is omitted. Optional.
+     siblings, this parameter is omitted. The task set as previous must exist in the task list and can
+     not be hidden. Optional.
        */
       public java.lang.String getPrevious() {
         return previous;
@@ -2047,7 +2051,8 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * New previous sibling task identifier. If the task is moved to the first position among its
-       * siblings, this parameter is omitted. Optional.
+       * siblings, this parameter is omitted. The task set as previous must exist in the task list
+       * and can not be hidden. Optional.
        */
       public Move setPrevious(java.lang.String previous) {
         this.previous = previous;

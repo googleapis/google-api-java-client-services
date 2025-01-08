@@ -93,9 +93,11 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   private java.lang.String description;
 
   /**
-   * Docker Registry to use for this deployment. If unspecified, it defaults to `ARTIFACT_REGISTRY`.
-   * If `docker_repository` field is specified, this field should either be left unspecified or set
-   * to `ARTIFACT_REGISTRY`.
+   * Docker Registry to use for this deployment. Deprecated: Container Registry option will no
+   * longer be available after March 2025: https://cloud.google.com/artifact-
+   * registry/docs/transition/transition-from-gcr Please use Artifact Registry instead, which is the
+   * default choice. If unspecified, it defaults to `ARTIFACT_REGISTRY`. If `docker_repository`
+   * field is specified, this field should either be left unspecified or set to `ARTIFACT_REGISTRY`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -480,9 +482,11 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Docker Registry to use for this deployment. If unspecified, it defaults to `ARTIFACT_REGISTRY`.
-   * If `docker_repository` field is specified, this field should either be left unspecified or set
-   * to `ARTIFACT_REGISTRY`.
+   * Docker Registry to use for this deployment. Deprecated: Container Registry option will no
+   * longer be available after March 2025: https://cloud.google.com/artifact-
+   * registry/docs/transition/transition-from-gcr Please use Artifact Registry instead, which is the
+   * default choice. If unspecified, it defaults to `ARTIFACT_REGISTRY`. If `docker_repository`
+   * field is specified, this field should either be left unspecified or set to `ARTIFACT_REGISTRY`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDockerRegistry() {
@@ -490,9 +494,11 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Docker Registry to use for this deployment. If unspecified, it defaults to `ARTIFACT_REGISTRY`.
-   * If `docker_repository` field is specified, this field should either be left unspecified or set
-   * to `ARTIFACT_REGISTRY`.
+   * Docker Registry to use for this deployment. Deprecated: Container Registry option will no
+   * longer be available after March 2025: https://cloud.google.com/artifact-
+   * registry/docs/transition/transition-from-gcr Please use Artifact Registry instead, which is the
+   * default choice. If unspecified, it defaults to `ARTIFACT_REGISTRY`. If `docker_repository`
+   * field is specified, this field should either be left unspecified or set to `ARTIFACT_REGISTRY`.
    * @param dockerRegistry dockerRegistry or {@code null} for none
    */
   public CloudFunction setDockerRegistry(java.lang.String dockerRegistry) {

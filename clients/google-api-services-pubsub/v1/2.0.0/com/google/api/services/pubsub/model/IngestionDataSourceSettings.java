@@ -37,11 +37,32 @@ public final class IngestionDataSourceSettings extends com.google.api.client.jso
   private AwsKinesis awsKinesis;
 
   /**
+   * Optional. Amazon MSK.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsMsk awsMsk;
+
+  /**
+   * Optional. Azure Event Hubs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AzureEventHubs azureEventHubs;
+
+  /**
    * Optional. Cloud Storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CloudStorage cloudStorage;
+
+  /**
+   * Optional. Confluent Cloud.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConfluentCloud confluentCloud;
 
   /**
    * Optional. Platform Logs settings. If unset, no Platform Logs will be generated.
@@ -68,6 +89,40 @@ public final class IngestionDataSourceSettings extends com.google.api.client.jso
   }
 
   /**
+   * Optional. Amazon MSK.
+   * @return value or {@code null} for none
+   */
+  public AwsMsk getAwsMsk() {
+    return awsMsk;
+  }
+
+  /**
+   * Optional. Amazon MSK.
+   * @param awsMsk awsMsk or {@code null} for none
+   */
+  public IngestionDataSourceSettings setAwsMsk(AwsMsk awsMsk) {
+    this.awsMsk = awsMsk;
+    return this;
+  }
+
+  /**
+   * Optional. Azure Event Hubs.
+   * @return value or {@code null} for none
+   */
+  public AzureEventHubs getAzureEventHubs() {
+    return azureEventHubs;
+  }
+
+  /**
+   * Optional. Azure Event Hubs.
+   * @param azureEventHubs azureEventHubs or {@code null} for none
+   */
+  public IngestionDataSourceSettings setAzureEventHubs(AzureEventHubs azureEventHubs) {
+    this.azureEventHubs = azureEventHubs;
+    return this;
+  }
+
+  /**
    * Optional. Cloud Storage.
    * @return value or {@code null} for none
    */
@@ -81,6 +136,23 @@ public final class IngestionDataSourceSettings extends com.google.api.client.jso
    */
   public IngestionDataSourceSettings setCloudStorage(CloudStorage cloudStorage) {
     this.cloudStorage = cloudStorage;
+    return this;
+  }
+
+  /**
+   * Optional. Confluent Cloud.
+   * @return value or {@code null} for none
+   */
+  public ConfluentCloud getConfluentCloud() {
+    return confluentCloud;
+  }
+
+  /**
+   * Optional. Confluent Cloud.
+   * @param confluentCloud confluentCloud or {@code null} for none
+   */
+  public IngestionDataSourceSettings setConfluentCloud(ConfluentCloud confluentCloud) {
+    this.confluentCloud = confluentCloud;
     return this;
   }
 

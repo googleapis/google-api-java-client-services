@@ -5426,6 +5426,43 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
       }
 
       /**
+       * Optional. A list of domains that are permitted for the admin email. The IT admin cannot
+       * enter an email address with a domain name that is not in this list. Subdomains of domains
+       * in this list are not allowed but can be allowed by adding a second entry which has *.
+       * prefixed to the domain name (e.g. *.example.com). If the field is not present or is an
+       * empty list then the IT admin is free to use any valid domain name. Personal email domains
+       * are always allowed, but will result in the creation of a managed Google Play Accounts
+       * enterprise.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> allowedDomains;
+
+      /** Optional. A list of domains that are permitted for the admin email. The IT admin cannot enter an
+     email address with a domain name that is not in this list. Subdomains of domains in this list are
+     not allowed but can be allowed by adding a second entry which has *. prefixed to the domain name
+     (e.g. *.example.com). If the field is not present or is an empty list then the IT admin is free to
+     use any valid domain name. Personal email domains are always allowed, but will result in the
+     creation of a managed Google Play Accounts enterprise.
+       */
+      public java.util.List<java.lang.String> getAllowedDomains() {
+        return allowedDomains;
+      }
+
+      /**
+       * Optional. A list of domains that are permitted for the admin email. The IT admin cannot
+       * enter an email address with a domain name that is not in this list. Subdomains of domains
+       * in this list are not allowed but can be allowed by adding a second entry which has *.
+       * prefixed to the domain name (e.g. *.example.com). If the field is not present or is an
+       * empty list then the IT admin is free to use any valid domain name. Personal email domains
+       * are always allowed, but will result in the creation of a managed Google Play Accounts
+       * enterprise.
+       */
+      public Create setAllowedDomains(java.util.List<java.lang.String> allowedDomains) {
+        this.allowedDomains = allowedDomains;
+        return this;
+      }
+
+      /**
        * The callback URL that the admin will be redirected to after successfully creating an
        * enterprise. Before redirecting there the system will add a query parameter to this URL
        * named enterpriseToken which will contain an opaque token to be used for the create

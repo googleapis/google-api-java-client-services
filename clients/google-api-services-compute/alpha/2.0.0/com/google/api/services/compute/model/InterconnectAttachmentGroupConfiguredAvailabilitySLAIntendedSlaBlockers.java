@@ -69,6 +69,15 @@ public final class InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedS
   private java.util.List<java.lang.String> metros;
 
   /**
+   * [Output Only] Regions used to explain this blocker in more detail. These are region names
+   * formatted like "us-central1". This will be set for some blockers (like INCOMPATIBLE_REGIONS)
+   * but does not apply to others.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> regions;
+
+  /**
    * [Output Only] Zones used to explain this blocker in more detail. Format is "zone1" and/or
    * "zone2". This will be set for some blockers (like MISSING_ZONE) but does not apply to others.
    * The value may be {@code null}.
@@ -164,6 +173,27 @@ public final class InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedS
    */
   public InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedSlaBlockers setMetros(java.util.List<java.lang.String> metros) {
     this.metros = metros;
+    return this;
+  }
+
+  /**
+   * [Output Only] Regions used to explain this blocker in more detail. These are region names
+   * formatted like "us-central1". This will be set for some blockers (like INCOMPATIBLE_REGIONS)
+   * but does not apply to others.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRegions() {
+    return regions;
+  }
+
+  /**
+   * [Output Only] Regions used to explain this blocker in more detail. These are region names
+   * formatted like "us-central1". This will be set for some blockers (like INCOMPATIBLE_REGIONS)
+   * but does not apply to others.
+   * @param regions regions or {@code null} for none
+   */
+  public InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedSlaBlockers setRegions(java.util.List<java.lang.String> regions) {
+    this.regions = regions;
     return this;
   }
 

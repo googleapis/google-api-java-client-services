@@ -72,7 +72,7 @@ public final class UsableSubnetworksAggregatedList extends com.google.api.client
    * [Output Only] Informational warning messages for failures encountered from scopes.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("scoped_warnings")
+  @com.google.api.client.util.Key
   private java.util.List<SubnetworksScopedWarning> scopedWarnings;
 
   static {

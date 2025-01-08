@@ -30,8 +30,7 @@ package com.google.api.services.compute.model;
 public final class FutureReservationCommitmentInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * name of the commitment where capacity is being delivered to. In the form of "projects/{project-
-   * id}/locations/{region-name}/commitment/{name}"
+   * name of the commitment where capacity is being delivered to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +53,7 @@ public final class FutureReservationCommitmentInfo extends com.google.api.client
   private java.lang.String previousCommitmentTerms;
 
   /**
-   * name of the commitment where capacity is being delivered to. In the form of "projects/{project-
-   * id}/locations/{region-name}/commitment/{name}"
+   * name of the commitment where capacity is being delivered to.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommitmentName() {
@@ -63,8 +61,7 @@ public final class FutureReservationCommitmentInfo extends com.google.api.client
   }
 
   /**
-   * name of the commitment where capacity is being delivered to. In the form of "projects/{project-
-   * id}/locations/{region-name}/commitment/{name}"
+   * name of the commitment where capacity is being delivered to.
    * @param commitmentName commitmentName or {@code null} for none
    */
   public FutureReservationCommitmentInfo setCommitmentName(java.lang.String commitmentName) {

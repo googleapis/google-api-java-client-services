@@ -103,7 +103,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String publicPtrDomainName;
 
   /**
-   * [Output Only] The resource URL for the security policy associated with this access config.
+   * The resource URL for the security policy associated with this access config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -303,7 +303,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The resource URL for the security policy associated with this access config.
+   * The resource URL for the security policy associated with this access config.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecurityPolicy() {
@@ -311,7 +311,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The resource URL for the security policy associated with this access config.
+   * The resource URL for the security policy associated with this access config.
    * @param securityPolicy securityPolicy or {@code null} for none
    */
   public AccessConfig setSecurityPolicy(java.lang.String securityPolicy) {

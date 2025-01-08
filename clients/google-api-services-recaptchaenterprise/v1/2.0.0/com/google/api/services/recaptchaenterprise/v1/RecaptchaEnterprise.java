@@ -323,7 +323,7 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the recaptchaenterprise server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the project in which the assessment will be created, in the format
+       * @param parent Required. The name of the project in which the assessment is created, in the format
        *        `projects/{project}`.
        * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1Assessment}
        * @return the request
@@ -352,7 +352,7 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the project in which the assessment will be created, in the format
+         * @param parent Required. The name of the project in which the assessment is created, in the format
        *        `projects/{project}`.
          * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1Assessment}
          * @since 1.13
@@ -423,13 +423,13 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The name of the project in which the assessment will be created, in the format
+         * Required. The name of the project in which the assessment is created, in the format
          * `projects/{project}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the project in which the assessment will be created, in the format
+        /** Required. The name of the project in which the assessment is created, in the format
        `projects/{project}`.
          */
         public java.lang.String getParent() {
@@ -437,7 +437,7 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The name of the project in which the assessment will be created, in the format
+         * Required. The name of the project in which the assessment is created, in the format
          * `projects/{project}`.
          */
         public Create setParent(java.lang.String parent) {
@@ -486,7 +486,7 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the recaptchaenterprise server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the project this policy will apply to, in the format `projects/{project}`.
+       * @param parent Required. The name of the project this policy applies to, in the format `projects/{project}`.
        * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1FirewallPolicy}
        * @return the request
        */
@@ -515,7 +515,7 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the project this policy will apply to, in the format `projects/{project}`.
+         * @param parent Required. The name of the project this policy applies to, in the format `projects/{project}`.
          * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1FirewallPolicy}
          * @since 1.13
          */
@@ -585,20 +585,20 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The name of the project this policy will apply to, in the format
+         * Required. The name of the project this policy applies to, in the format
          * `projects/{project}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the project this policy will apply to, in the format `projects/{project}`.
+        /** Required. The name of the project this policy applies to, in the format `projects/{project}`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The name of the project this policy will apply to, in the format
+         * Required. The name of the project this policy applies to, in the format
          * `projects/{project}`.
          */
         public Create setParent(java.lang.String parent) {
@@ -1226,13 +1226,13 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
 
         /**
          * Optional. The mask to control which fields of the policy get updated. If the mask is not
-         * present, all fields will be updated.
+         * present, all fields are updated.
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
         /** Optional. The mask to control which fields of the policy get updated. If the mask is not present,
-       all fields will be updated.
+       all fields are updated.
          */
         public String getUpdateMask() {
           return updateMask;
@@ -1240,7 +1240,7 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
 
         /**
          * Optional. The mask to control which fields of the policy get updated. If the mask is not
-         * present, all fields will be updated.
+         * present, all fields are updated.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -1250,6 +1250,143 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
         @Override
         public Patch set(String parameterName, Object value) {
           return (Patch) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Reorders all firewall policies.
+       *
+       * Create a request for the method "firewallpolicies.reorder".
+       *
+       * This request holds the parameters needed by the recaptchaenterprise server.  After setting any
+       * optional parameters, call the {@link Reorder#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The name of the project to list the policies for, in the format `projects/{project}`.
+       * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1ReorderFirewallPoliciesRequest}
+       * @return the request
+       */
+      public Reorder reorder(java.lang.String parent, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1ReorderFirewallPoliciesRequest content) throws java.io.IOException {
+        Reorder result = new Reorder(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Reorder extends RecaptchaEnterpriseRequest<com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1ReorderFirewallPoliciesResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/firewallpolicies:reorder";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Reorders all firewall policies.
+         *
+         * Create a request for the method "firewallpolicies.reorder".
+         *
+         * This request holds the parameters needed by the the recaptchaenterprise server.  After setting
+         * any optional parameters, call the {@link Reorder#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Reorder#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The name of the project to list the policies for, in the format `projects/{project}`.
+         * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1ReorderFirewallPoliciesRequest}
+         * @since 1.13
+         */
+        protected Reorder(java.lang.String parent, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1ReorderFirewallPoliciesRequest content) {
+          super(RecaptchaEnterprise.this, "POST", REST_PATH, content, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1ReorderFirewallPoliciesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Reorder set$Xgafv(java.lang.String $Xgafv) {
+          return (Reorder) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Reorder setAccessToken(java.lang.String accessToken) {
+          return (Reorder) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Reorder setAlt(java.lang.String alt) {
+          return (Reorder) super.setAlt(alt);
+        }
+
+        @Override
+        public Reorder setCallback(java.lang.String callback) {
+          return (Reorder) super.setCallback(callback);
+        }
+
+        @Override
+        public Reorder setFields(java.lang.String fields) {
+          return (Reorder) super.setFields(fields);
+        }
+
+        @Override
+        public Reorder setKey(java.lang.String key) {
+          return (Reorder) super.setKey(key);
+        }
+
+        @Override
+        public Reorder setOauthToken(java.lang.String oauthToken) {
+          return (Reorder) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Reorder setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Reorder) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Reorder setQuotaUser(java.lang.String quotaUser) {
+          return (Reorder) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Reorder setUploadType(java.lang.String uploadType) {
+          return (Reorder) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Reorder setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Reorder) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the project to list the policies for, in the format
+         * `projects/{project}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The name of the project to list the policies for, in the format `projects/{project}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The name of the project to list the policies for, in the format
+         * `projects/{project}`.
+         */
+        public Reorder setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Reorder set(String parameterName, Object value) {
+          return (Reorder) super.set(parameterName, value);
         }
       }
 
@@ -1275,6 +1412,151 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
     public class Keys {
 
       /**
+       * Adds an IP override to a key. The following restrictions hold: * The maximum number of IP
+       * overrides per key is 100. * For any conflict (such as IP already exists or IP part of an existing
+       * IP range), an error is returned.
+       *
+       * Create a request for the method "keys.addIpOverride".
+       *
+       * This request holds the parameters needed by the recaptchaenterprise server.  After setting any
+       * optional parameters, call the {@link AddIpOverride#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The name of the key to which the IP override is added, in the format
+       *        `projects/{project}/keys/{key}`.
+       * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1AddIpOverrideRequest}
+       * @return the request
+       */
+      public AddIpOverride addIpOverride(java.lang.String name, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1AddIpOverrideRequest content) throws java.io.IOException {
+        AddIpOverride result = new AddIpOverride(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class AddIpOverride extends RecaptchaEnterpriseRequest<com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1AddIpOverrideResponse> {
+
+        private static final String REST_PATH = "v1/{+name}:addIpOverride";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/keys/[^/]+$");
+
+        /**
+         * Adds an IP override to a key. The following restrictions hold: * The maximum number of IP
+         * overrides per key is 100. * For any conflict (such as IP already exists or IP part of an
+         * existing IP range), an error is returned.
+         *
+         * Create a request for the method "keys.addIpOverride".
+         *
+         * This request holds the parameters needed by the the recaptchaenterprise server.  After setting
+         * any optional parameters, call the {@link AddIpOverride#execute()} method to invoke the remote
+         * operation. <p> {@link AddIpOverride#initialize(com.google.api.client.googleapis.services.Abstra
+         * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param name Required. The name of the key to which the IP override is added, in the format
+       *        `projects/{project}/keys/{key}`.
+         * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1AddIpOverrideRequest}
+         * @since 1.13
+         */
+        protected AddIpOverride(java.lang.String name, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1AddIpOverrideRequest content) {
+          super(RecaptchaEnterprise.this, "POST", REST_PATH, content, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1AddIpOverrideResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/keys/[^/]+$");
+          }
+        }
+
+        @Override
+        public AddIpOverride set$Xgafv(java.lang.String $Xgafv) {
+          return (AddIpOverride) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public AddIpOverride setAccessToken(java.lang.String accessToken) {
+          return (AddIpOverride) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public AddIpOverride setAlt(java.lang.String alt) {
+          return (AddIpOverride) super.setAlt(alt);
+        }
+
+        @Override
+        public AddIpOverride setCallback(java.lang.String callback) {
+          return (AddIpOverride) super.setCallback(callback);
+        }
+
+        @Override
+        public AddIpOverride setFields(java.lang.String fields) {
+          return (AddIpOverride) super.setFields(fields);
+        }
+
+        @Override
+        public AddIpOverride setKey(java.lang.String key) {
+          return (AddIpOverride) super.setKey(key);
+        }
+
+        @Override
+        public AddIpOverride setOauthToken(java.lang.String oauthToken) {
+          return (AddIpOverride) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public AddIpOverride setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (AddIpOverride) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public AddIpOverride setQuotaUser(java.lang.String quotaUser) {
+          return (AddIpOverride) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public AddIpOverride setUploadType(java.lang.String uploadType) {
+          return (AddIpOverride) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public AddIpOverride setUploadProtocol(java.lang.String uploadProtocol) {
+          return (AddIpOverride) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the key to which the IP override is added, in the format
+         * `projects/{project}/keys/{key}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the key to which the IP override is added, in the format
+       `projects/{project}/keys/{key}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the key to which the IP override is added, in the format
+         * `projects/{project}/keys/{key}`.
+         */
+        public AddIpOverride setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/keys/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public AddIpOverride set(String parameterName, Object value) {
+          return (AddIpOverride) super.set(parameterName, value);
+        }
+      }
+      /**
        * Creates a new reCAPTCHA Enterprise key.
        *
        * Create a request for the method "keys.create".
@@ -1282,8 +1564,7 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the recaptchaenterprise server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the project in which the key will be created, in the format
-       *        `projects/{project}`.
+       * @param parent Required. The name of the project in which the key is created, in the format `projects/{project}`.
        * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1Key}
        * @return the request
        */
@@ -1311,8 +1592,7 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the project in which the key will be created, in the format
-       *        `projects/{project}`.
+         * @param parent Required. The name of the project in which the key is created, in the format `projects/{project}`.
          * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1Key}
          * @since 1.13
          */
@@ -1382,21 +1662,20 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The name of the project in which the key will be created, in the format
+         * Required. The name of the project in which the key is created, in the format
          * `projects/{project}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the project in which the key will be created, in the format
-       `projects/{project}`.
+        /** Required. The name of the project in which the key is created, in the format `projects/{project}`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The name of the project in which the key will be created, in the format
+         * Required. The name of the project in which the key is created, in the format
          * `projects/{project}`.
          */
         public Create setParent(java.lang.String parent) {
@@ -1845,7 +2124,7 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the recaptchaenterprise server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the project that contains the keys that will be listed, in the format
+       * @param parent Required. The name of the project that contains the keys that is listed, in the format
        *        `projects/{project}`.
        * @return the request
        */
@@ -1873,7 +2152,7 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the project that contains the keys that will be listed, in the format
+         * @param parent Required. The name of the project that contains the keys that is listed, in the format
        *        `projects/{project}`.
          * @since 1.13
          */
@@ -1953,13 +2232,13 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The name of the project that contains the keys that will be listed, in the
-         * format `projects/{project}`.
+         * Required. The name of the project that contains the keys that is listed, in the format
+         * `projects/{project}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the project that contains the keys that will be listed, in the format
+        /** Required. The name of the project that contains the keys that is listed, in the format
        `projects/{project}`.
          */
         public java.lang.String getParent() {
@@ -1967,8 +2246,8 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The name of the project that contains the keys that will be listed, in the
-         * format `projects/{project}`.
+         * Required. The name of the project that contains the keys that is listed, in the format
+         * `projects/{project}`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2019,6 +2298,203 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists all IP overrides for a key.
+       *
+       * Create a request for the method "keys.listIpOverrides".
+       *
+       * This request holds the parameters needed by the recaptchaenterprise server.  After setting any
+       * optional parameters, call the {@link ListIpOverrides#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. The parent key for which the IP overrides are listed, in the format
+       *        `projects/{project}/keys/{key}`.
+       * @return the request
+       */
+      public ListIpOverrides listIpOverrides(java.lang.String parent) throws java.io.IOException {
+        ListIpOverrides result = new ListIpOverrides(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class ListIpOverrides extends RecaptchaEnterpriseRequest<com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1ListIpOverridesResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}:listIpOverrides";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/keys/[^/]+$");
+
+        /**
+         * Lists all IP overrides for a key.
+         *
+         * Create a request for the method "keys.listIpOverrides".
+         *
+         * This request holds the parameters needed by the the recaptchaenterprise server.  After setting
+         * any optional parameters, call the {@link ListIpOverrides#execute()} method to invoke the remote
+         * operation. <p> {@link ListIpOverrides#initialize(com.google.api.client.googleapis.services.Abst
+         * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param parent Required. The parent key for which the IP overrides are listed, in the format
+       *        `projects/{project}/keys/{key}`.
+         * @since 1.13
+         */
+        protected ListIpOverrides(java.lang.String parent) {
+          super(RecaptchaEnterprise.this, "GET", REST_PATH, null, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1ListIpOverridesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/keys/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public ListIpOverrides set$Xgafv(java.lang.String $Xgafv) {
+          return (ListIpOverrides) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ListIpOverrides setAccessToken(java.lang.String accessToken) {
+          return (ListIpOverrides) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ListIpOverrides setAlt(java.lang.String alt) {
+          return (ListIpOverrides) super.setAlt(alt);
+        }
+
+        @Override
+        public ListIpOverrides setCallback(java.lang.String callback) {
+          return (ListIpOverrides) super.setCallback(callback);
+        }
+
+        @Override
+        public ListIpOverrides setFields(java.lang.String fields) {
+          return (ListIpOverrides) super.setFields(fields);
+        }
+
+        @Override
+        public ListIpOverrides setKey(java.lang.String key) {
+          return (ListIpOverrides) super.setKey(key);
+        }
+
+        @Override
+        public ListIpOverrides setOauthToken(java.lang.String oauthToken) {
+          return (ListIpOverrides) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ListIpOverrides setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ListIpOverrides) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ListIpOverrides setQuotaUser(java.lang.String quotaUser) {
+          return (ListIpOverrides) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ListIpOverrides setUploadType(java.lang.String uploadType) {
+          return (ListIpOverrides) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ListIpOverrides setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ListIpOverrides) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent key for which the IP overrides are listed, in the format
+         * `projects/{project}/keys/{key}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent key for which the IP overrides are listed, in the format
+       `projects/{project}/keys/{key}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent key for which the IP overrides are listed, in the format
+         * `projects/{project}/keys/{key}`.
+         */
+        public ListIpOverrides setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/keys/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of overrides to return. Default is 10. Max limit is 100. If
+         * the number of overrides is less than the page_size, all overrides are returned. If the
+         * page size is more than 100, it is coerced to 100.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of overrides to return. Default is 10. Max limit is 100. If the number
+       of overrides is less than the page_size, all overrides are returned. If the page size is more than
+       100, it is coerced to 100.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of overrides to return. Default is 10. Max limit is 100. If
+         * the number of overrides is less than the page_size, all overrides are returned. If the
+         * page size is more than 100, it is coerced to 100.
+         */
+        public ListIpOverrides setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. The next_page_token value returned from a previous ListIpOverridesRequest, if
+         * any.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. The next_page_token value returned from a previous ListIpOverridesRequest, if any.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. The next_page_token value returned from a previous ListIpOverridesRequest, if
+         * any.
+         */
+        public ListIpOverrides setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public ListIpOverrides set(String parameterName, Object value) {
+          return (ListIpOverrides) super.set(parameterName, value);
         }
       }
       /**
@@ -2296,13 +2772,13 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
 
         /**
          * Optional. The mask to control which fields of the key get updated. If the mask is not
-         * present, all fields will be updated.
+         * present, all fields are updated.
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
         /** Optional. The mask to control which fields of the key get updated. If the mask is not present, all
-       fields will be updated.
+       fields are updated.
          */
         public String getUpdateMask() {
           return updateMask;
@@ -2310,7 +2786,7 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
 
         /**
          * Optional. The mask to control which fields of the key get updated. If the mask is not
-         * present, all fields will be updated.
+         * present, all fields are updated.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -2323,6 +2799,151 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
         }
       }
       /**
+       * Removes an IP override from a key. The following restrictions hold: * If the IP isn't found in an
+       * existing IP override, a `NOT_FOUND` error is returned. * If the IP is found in an existing IP
+       * override, but the override type does not match, a `NOT_FOUND` error is returned.
+       *
+       * Create a request for the method "keys.removeIpOverride".
+       *
+       * This request holds the parameters needed by the recaptchaenterprise server.  After setting any
+       * optional parameters, call the {@link RemoveIpOverride#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The name of the key from which the IP override is removed, in the format
+       *        `projects/{project}/keys/{key}`.
+       * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1RemoveIpOverrideRequest}
+       * @return the request
+       */
+      public RemoveIpOverride removeIpOverride(java.lang.String name, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1RemoveIpOverrideRequest content) throws java.io.IOException {
+        RemoveIpOverride result = new RemoveIpOverride(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class RemoveIpOverride extends RecaptchaEnterpriseRequest<com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1RemoveIpOverrideResponse> {
+
+        private static final String REST_PATH = "v1/{+name}:removeIpOverride";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/keys/[^/]+$");
+
+        /**
+         * Removes an IP override from a key. The following restrictions hold: * If the IP isn't found in
+         * an existing IP override, a `NOT_FOUND` error is returned. * If the IP is found in an existing
+         * IP override, but the override type does not match, a `NOT_FOUND` error is returned.
+         *
+         * Create a request for the method "keys.removeIpOverride".
+         *
+         * This request holds the parameters needed by the the recaptchaenterprise server.  After setting
+         * any optional parameters, call the {@link RemoveIpOverride#execute()} method to invoke the
+         * remote operation. <p> {@link RemoveIpOverride#initialize(com.google.api.client.googleapis.servi
+         * ces.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. The name of the key from which the IP override is removed, in the format
+       *        `projects/{project}/keys/{key}`.
+         * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1RemoveIpOverrideRequest}
+         * @since 1.13
+         */
+        protected RemoveIpOverride(java.lang.String name, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1RemoveIpOverrideRequest content) {
+          super(RecaptchaEnterprise.this, "POST", REST_PATH, content, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1RemoveIpOverrideResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/keys/[^/]+$");
+          }
+        }
+
+        @Override
+        public RemoveIpOverride set$Xgafv(java.lang.String $Xgafv) {
+          return (RemoveIpOverride) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public RemoveIpOverride setAccessToken(java.lang.String accessToken) {
+          return (RemoveIpOverride) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public RemoveIpOverride setAlt(java.lang.String alt) {
+          return (RemoveIpOverride) super.setAlt(alt);
+        }
+
+        @Override
+        public RemoveIpOverride setCallback(java.lang.String callback) {
+          return (RemoveIpOverride) super.setCallback(callback);
+        }
+
+        @Override
+        public RemoveIpOverride setFields(java.lang.String fields) {
+          return (RemoveIpOverride) super.setFields(fields);
+        }
+
+        @Override
+        public RemoveIpOverride setKey(java.lang.String key) {
+          return (RemoveIpOverride) super.setKey(key);
+        }
+
+        @Override
+        public RemoveIpOverride setOauthToken(java.lang.String oauthToken) {
+          return (RemoveIpOverride) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public RemoveIpOverride setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (RemoveIpOverride) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public RemoveIpOverride setQuotaUser(java.lang.String quotaUser) {
+          return (RemoveIpOverride) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public RemoveIpOverride setUploadType(java.lang.String uploadType) {
+          return (RemoveIpOverride) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public RemoveIpOverride setUploadProtocol(java.lang.String uploadProtocol) {
+          return (RemoveIpOverride) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the key from which the IP override is removed, in the format
+         * `projects/{project}/keys/{key}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the key from which the IP override is removed, in the format
+       `projects/{project}/keys/{key}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the key from which the IP override is removed, in the format
+         * `projects/{project}/keys/{key}`.
+         */
+        public RemoveIpOverride setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/keys/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public RemoveIpOverride set(String parameterName, Object value) {
+          return (RemoveIpOverride) super.set(parameterName, value);
+        }
+      }
+      /**
        * Returns the secret key related to the specified public key. You must use the legacy secret key
        * only in a 3rd party integration with legacy reCAPTCHA.
        *
@@ -2332,12 +2953,10 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
        * optional parameters, call the {@link RetrieveLegacySecretKey#execute()} method to invoke the
        * remote operation.
        *
-       * @param key Required. The public key name linked to the requested secret key in the format
-       *        `projects/{project}/keys/{key}`.
        * @return the request
        */
-      public RetrieveLegacySecretKey retrieveLegacySecretKey(java.lang.String key) throws java.io.IOException {
-        RetrieveLegacySecretKey result = new RetrieveLegacySecretKey(key);
+      public RetrieveLegacySecretKey retrieveLegacySecretKey() throws java.io.IOException {
+        RetrieveLegacySecretKey result = new RetrieveLegacySecretKey();
         initialize(result);
         return result;
       }
@@ -2345,9 +2964,6 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
       public class RetrieveLegacySecretKey extends RecaptchaEnterpriseRequest<com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1RetrieveLegacySecretKeyResponse> {
 
         private static final String REST_PATH = "v1/{+key}:retrieveLegacySecretKey";
-
-        private final java.util.regex.Pattern KEY_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/keys/[^/]+$");
 
         /**
          * Returns the secret key related to the specified public key. You must use the legacy secret key
@@ -2361,18 +2977,10 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
          * eapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
          * immediately after invoking the constructor. </p>
          *
-         * @param key Required. The public key name linked to the requested secret key in the format
-       *        `projects/{project}/keys/{key}`.
          * @since 1.13
          */
-        protected RetrieveLegacySecretKey(java.lang.String key) {
+        protected RetrieveLegacySecretKey() {
           super(RecaptchaEnterprise.this, "GET", REST_PATH, null, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1RetrieveLegacySecretKeyResponse.class);
-          this.key = com.google.api.client.util.Preconditions.checkNotNull(key, "Required parameter key must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(KEY_PATTERN.matcher(key).matches(),
-                "Parameter key must conform to the pattern " +
-                "^projects/[^/]+/keys/[^/]+$");
-          }
         }
 
         @Override
@@ -2438,34 +3046,6 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
         @Override
         public RetrieveLegacySecretKey setUploadProtocol(java.lang.String uploadProtocol) {
           return (RetrieveLegacySecretKey) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * Required. The public key name linked to the requested secret key in the format
-         * `projects/{project}/keys/{key}`.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String key;
-
-        /** Required. The public key name linked to the requested secret key in the format
-       `projects/{project}/keys/{key}`.
-         */
-        public java.lang.String getKey() {
-          return key;
-        }
-
-        /**
-         * Required. The public key name linked to the requested secret key in the format
-         * `projects/{project}/keys/{key}`.
-         */
-        public RetrieveLegacySecretKey setKey(java.lang.String key) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(KEY_PATTERN.matcher(key).matches(),
-                "Parameter key must conform to the pattern " +
-                "^projects/[^/]+/keys/[^/]+$");
-          }
-          this.key = key;
-          return this;
         }
 
         @Override
@@ -3200,6 +3780,11 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
     public Builder setGoogleClientRequestInitializer(
         com.google.api.client.googleapis.services.GoogleClientRequestInitializer googleClientRequestInitializer) {
       return (Builder) super.setGoogleClientRequestInitializer(googleClientRequestInitializer);
+    }
+
+    @Override
+    public Builder setUniverseDomain(String universeDomain) {
+      return (Builder) super.setUniverseDomain(universeDomain);
     }
   }
 }

@@ -31,6 +31,13 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Challenge information for SCORE_AND_CHALLENGE and INVISIBLE keys
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String challenge;
+
+  /**
    * Output only. Extended verdict reasons to be used for experimentation only. The set of possible
    * reasons is subject to change.
    * The value may be {@code null}.
@@ -52,6 +59,23 @@ public final class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends com.goog
    */
   @com.google.api.client.util.Key
   private java.lang.Float score;
+
+  /**
+   * Output only. Challenge information for SCORE_AND_CHALLENGE and INVISIBLE keys
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getChallenge() {
+    return challenge;
+  }
+
+  /**
+   * Output only. Challenge information for SCORE_AND_CHALLENGE and INVISIBLE keys
+   * @param challenge challenge or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1RiskAnalysis setChallenge(java.lang.String challenge) {
+    this.challenge = challenge;
+    return this;
+  }
 
   /**
    * Output only. Extended verdict reasons to be used for experimentation only. The set of possible

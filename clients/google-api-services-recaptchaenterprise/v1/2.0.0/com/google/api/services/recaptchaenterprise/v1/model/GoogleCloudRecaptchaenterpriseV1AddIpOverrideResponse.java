@@ -17,8 +17,7 @@
 package com.google.api.services.recaptchaenterprise.v1.model;
 
 /**
- * A redirect action returns a 307 (temporary redirect) response, pointing the user to a reCAPTCHA
- * interstitial page to attach a token.
+ * Response for AddIpOverride.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the reCAPTCHA Enterprise API. For a detailed explanation
@@ -29,16 +28,16 @@ package com.google.api.services.recaptchaenterprise.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudRecaptchaenterpriseV1FirewallActionRedirectAction extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudRecaptchaenterpriseV1AddIpOverrideResponse extends com.google.api.client.json.GenericJson {
 
   @Override
-  public GoogleCloudRecaptchaenterpriseV1FirewallActionRedirectAction set(String fieldName, Object value) {
-    return (GoogleCloudRecaptchaenterpriseV1FirewallActionRedirectAction) super.set(fieldName, value);
+  public GoogleCloudRecaptchaenterpriseV1AddIpOverrideResponse set(String fieldName, Object value) {
+    return (GoogleCloudRecaptchaenterpriseV1AddIpOverrideResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudRecaptchaenterpriseV1FirewallActionRedirectAction clone() {
-    return (GoogleCloudRecaptchaenterpriseV1FirewallActionRedirectAction) super.clone();
+  public GoogleCloudRecaptchaenterpriseV1AddIpOverrideResponse clone() {
+    return (GoogleCloudRecaptchaenterpriseV1AddIpOverrideResponse) super.clone();
   }
 
 }

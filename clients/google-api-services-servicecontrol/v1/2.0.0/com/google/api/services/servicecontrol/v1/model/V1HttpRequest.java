@@ -77,7 +77,7 @@ public final class V1HttpRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * The referer URL of the request, as defined in [HTTP/1.1 Header Field
-   * Definitions](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html).
+   * Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -254,7 +254,7 @@ public final class V1HttpRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * The referer URL of the request, as defined in [HTTP/1.1 Header Field
-   * Definitions](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html).
+   * Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html).
    * @return value or {@code null} for none
    */
   public java.lang.String getReferer() {
@@ -263,7 +263,7 @@ public final class V1HttpRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * The referer URL of the request, as defined in [HTTP/1.1 Header Field
-   * Definitions](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html).
+   * Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html).
    * @param referer referer or {@code null} for none
    */
   public V1HttpRequest setReferer(java.lang.String referer) {

@@ -1402,6 +1402,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
     }
     /**
      * Searches through all changes to an account or its children given the specified set of filters.
+     * Only returns the subset of changes supported by the API. The UI may return additional changes.
      *
      * Create a request for the method "accounts.searchChangeHistoryEvents".
      *
@@ -1429,6 +1430,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
 
       /**
        * Searches through all changes to an account or its children given the specified set of filters.
+       * Only returns the subset of changes supported by the API. The UI may return additional changes.
        *
        * Create a request for the method "accounts.searchChangeHistoryEvents".
        *

@@ -31,7 +31,7 @@ package com.google.api.services.analyticsadmin.v1alpha.model;
 public final class GoogleAnalyticsAdminV1alphaDataRetentionSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * The length of time that event-level data is retained.
+   * Required. The length of time that event-level data is retained.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class GoogleAnalyticsAdminV1alphaDataRetentionSettings extends com.
   private java.lang.Boolean resetUserDataOnNewActivity;
 
   /**
-   * The length of time that event-level data is retained.
+   * Required. The length of time that event-level data is retained.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventDataRetention() {
@@ -61,7 +61,7 @@ public final class GoogleAnalyticsAdminV1alphaDataRetentionSettings extends com.
   }
 
   /**
-   * The length of time that event-level data is retained.
+   * Required. The length of time that event-level data is retained.
    * @param eventDataRetention eventDataRetention or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaDataRetentionSettings setEventDataRetention(java.lang.String eventDataRetention) {

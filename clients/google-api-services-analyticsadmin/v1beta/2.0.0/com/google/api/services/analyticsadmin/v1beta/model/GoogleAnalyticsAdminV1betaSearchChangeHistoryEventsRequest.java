@@ -59,9 +59,12 @@ public final class GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest ex
   private String latestChangeTime;
 
   /**
-   * Optional. The maximum number of ChangeHistoryEvent items to return. The service may return
-   * fewer than this value, even if there are additional pages. If unspecified, at most 50 items
-   * will be returned. The maximum value is 200 (higher values will be coerced to the maximum).
+   * Optional. The maximum number of ChangeHistoryEvent items to return. If unspecified, at most 50
+   * items will be returned. The maximum value is 200 (higher values will be coerced to the
+   * maximum). Note that the service may return a page with fewer items than this value specifies
+   * (potentially even zero), and that there still may be additional pages. If you want a particular
+   * number of items, you'll need to continue requesting additional pages using `page_token` until
+   * you get the needed number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,9 +164,12 @@ public final class GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest ex
   }
 
   /**
-   * Optional. The maximum number of ChangeHistoryEvent items to return. The service may return
-   * fewer than this value, even if there are additional pages. If unspecified, at most 50 items
-   * will be returned. The maximum value is 200 (higher values will be coerced to the maximum).
+   * Optional. The maximum number of ChangeHistoryEvent items to return. If unspecified, at most 50
+   * items will be returned. The maximum value is 200 (higher values will be coerced to the
+   * maximum). Note that the service may return a page with fewer items than this value specifies
+   * (potentially even zero), and that there still may be additional pages. If you want a particular
+   * number of items, you'll need to continue requesting additional pages using `page_token` until
+   * you get the needed number.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -171,9 +177,12 @@ public final class GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest ex
   }
 
   /**
-   * Optional. The maximum number of ChangeHistoryEvent items to return. The service may return
-   * fewer than this value, even if there are additional pages. If unspecified, at most 50 items
-   * will be returned. The maximum value is 200 (higher values will be coerced to the maximum).
+   * Optional. The maximum number of ChangeHistoryEvent items to return. If unspecified, at most 50
+   * items will be returned. The maximum value is 200 (higher values will be coerced to the
+   * maximum). Note that the service may return a page with fewer items than this value specifies
+   * (potentially even zero), and that there still may be additional pages. If you want a particular
+   * number of items, you'll need to continue requesting additional pages using `page_token` until
+   * you get the needed number.
    * @param pageSize pageSize or {@code null} for none
    */
   public GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest setPageSize(java.lang.Integer pageSize) {

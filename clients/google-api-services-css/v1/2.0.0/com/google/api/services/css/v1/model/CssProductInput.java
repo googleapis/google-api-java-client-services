@@ -73,14 +73,14 @@ public final class CssProductInput extends com.google.api.client.json.GenericJso
   private java.lang.String finalName;
 
   /**
-   * Represents the existing version (freshness) of the CSS Product, which can be used to preserve
-   * the right order when multiple updates are done at the same time. This field must not be set to
-   * the future time. If set, the update is prevented if a newer version of the item already exists
-   * in our system (that is the last update time of the existing CSS products is later than the
-   * freshness time set in the update). If the update happens, the last update time is then set to
-   * this freshness time. If not set, the update will not be prevented and the last update time will
-   * default to when this request was received by the CSS API. If the operation is prevented, the
-   * aborted exception will be thrown.
+   * DEPRECATED. Use expiration_date instead. Represents the existing version (freshness) of the CSS
+   * Product, which can be used to preserve the right order when multiple updates are done at the
+   * same time. This field must not be set to the future time. If set, the update is prevented if a
+   * newer version of the item already exists in our system (that is the last update time of the
+   * existing CSS products is later than the freshness time set in the update). If the update
+   * happens, the last update time is then set to this freshness time. If not set, the update will
+   * not be prevented and the last update time will default to when this request was received by the
+   * CSS API. If the operation is prevented, the aborted exception will be thrown.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -204,14 +204,14 @@ public final class CssProductInput extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Represents the existing version (freshness) of the CSS Product, which can be used to preserve
-   * the right order when multiple updates are done at the same time. This field must not be set to
-   * the future time. If set, the update is prevented if a newer version of the item already exists
-   * in our system (that is the last update time of the existing CSS products is later than the
-   * freshness time set in the update). If the update happens, the last update time is then set to
-   * this freshness time. If not set, the update will not be prevented and the last update time will
-   * default to when this request was received by the CSS API. If the operation is prevented, the
-   * aborted exception will be thrown.
+   * DEPRECATED. Use expiration_date instead. Represents the existing version (freshness) of the CSS
+   * Product, which can be used to preserve the right order when multiple updates are done at the
+   * same time. This field must not be set to the future time. If set, the update is prevented if a
+   * newer version of the item already exists in our system (that is the last update time of the
+   * existing CSS products is later than the freshness time set in the update). If the update
+   * happens, the last update time is then set to this freshness time. If not set, the update will
+   * not be prevented and the last update time will default to when this request was received by the
+   * CSS API. If the operation is prevented, the aborted exception will be thrown.
    * @return value or {@code null} for none
    */
   public String getFreshnessTime() {
@@ -219,14 +219,14 @@ public final class CssProductInput extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Represents the existing version (freshness) of the CSS Product, which can be used to preserve
-   * the right order when multiple updates are done at the same time. This field must not be set to
-   * the future time. If set, the update is prevented if a newer version of the item already exists
-   * in our system (that is the last update time of the existing CSS products is later than the
-   * freshness time set in the update). If the update happens, the last update time is then set to
-   * this freshness time. If not set, the update will not be prevented and the last update time will
-   * default to when this request was received by the CSS API. If the operation is prevented, the
-   * aborted exception will be thrown.
+   * DEPRECATED. Use expiration_date instead. Represents the existing version (freshness) of the CSS
+   * Product, which can be used to preserve the right order when multiple updates are done at the
+   * same time. This field must not be set to the future time. If set, the update is prevented if a
+   * newer version of the item already exists in our system (that is the last update time of the
+   * existing CSS products is later than the freshness time set in the update). If the update
+   * happens, the last update time is then set to this freshness time. If not set, the update will
+   * not be prevented and the last update time will default to when this request was received by the
+   * CSS API. If the operation is prevented, the aborted exception will be thrown.
    * @param freshnessTime freshnessTime or {@code null} for none
    */
   public CssProductInput setFreshnessTime(String freshnessTime) {

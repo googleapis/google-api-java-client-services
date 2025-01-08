@@ -996,28 +996,30 @@ public class Css extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional. The primary or supplemental feed id. If CSS Product already exists and feed id
-         * provided is different, then the CSS Product will be moved to a new feed. Note: For now,
-         * CSSs do not need to provide feed ids as we create feeds on the fly. We do not have
-         * supplemental feed support for CSS Products yet.
+         * Optional. DEPRECATED. Feed id is not required for CSS Products. The primary or
+         * supplemental feed id. If CSS Product already exists and feed id provided is different,
+         * then the CSS Product will be moved to a new feed. Note: For now, CSSs do not need to
+         * provide feed ids as we create feeds on the fly. We do not have supplemental feed support
+         * for CSS Products yet.
          */
         @com.google.api.client.util.Key
         private java.lang.Long feedId;
 
-        /** Optional. The primary or supplemental feed id. If CSS Product already exists and feed id provided
-       is different, then the CSS Product will be moved to a new feed. Note: For now, CSSs do not need to
-       provide feed ids as we create feeds on the fly. We do not have supplemental feed support for CSS
-       Products yet.
+        /** Optional. DEPRECATED. Feed id is not required for CSS Products. The primary or supplemental feed
+       id. If CSS Product already exists and feed id provided is different, then the CSS Product will be
+       moved to a new feed. Note: For now, CSSs do not need to provide feed ids as we create feeds on the
+       fly. We do not have supplemental feed support for CSS Products yet.
          */
         public java.lang.Long getFeedId() {
           return feedId;
         }
 
         /**
-         * Optional. The primary or supplemental feed id. If CSS Product already exists and feed id
-         * provided is different, then the CSS Product will be moved to a new feed. Note: For now,
-         * CSSs do not need to provide feed ids as we create feeds on the fly. We do not have
-         * supplemental feed support for CSS Products yet.
+         * Optional. DEPRECATED. Feed id is not required for CSS Products. The primary or
+         * supplemental feed id. If CSS Product already exists and feed id provided is different,
+         * then the CSS Product will be moved to a new feed. Note: For now, CSSs do not need to
+         * provide feed ids as we create feeds on the fly. We do not have supplemental feed support
+         * for CSS Products yet.
          */
         public Insert setFeedId(java.lang.Long feedId) {
           this.feedId = feedId;

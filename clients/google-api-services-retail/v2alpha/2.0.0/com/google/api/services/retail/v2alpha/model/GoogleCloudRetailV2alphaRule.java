@@ -84,6 +84,13 @@ public final class GoogleCloudRetailV2alphaRule extends com.google.api.client.js
   private GoogleCloudRetailV2alphaRuleOnewaySynonymsAction onewaySynonymsAction;
 
   /**
+   * Pins one or more specified products to a specific position in the results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2alphaRulePinAction pinAction;
+
+  /**
    * Redirects a shopper to a specific page.
    * The value may be {@code null}.
    */
@@ -231,6 +238,23 @@ public final class GoogleCloudRetailV2alphaRule extends com.google.api.client.js
    */
   public GoogleCloudRetailV2alphaRule setOnewaySynonymsAction(GoogleCloudRetailV2alphaRuleOnewaySynonymsAction onewaySynonymsAction) {
     this.onewaySynonymsAction = onewaySynonymsAction;
+    return this;
+  }
+
+  /**
+   * Pins one or more specified products to a specific position in the results.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaRulePinAction getPinAction() {
+    return pinAction;
+  }
+
+  /**
+   * Pins one or more specified products to a specific position in the results.
+   * @param pinAction pinAction or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaRule setPinAction(GoogleCloudRetailV2alphaRulePinAction pinAction) {
+    this.pinAction = pinAction;
     return this;
   }
 

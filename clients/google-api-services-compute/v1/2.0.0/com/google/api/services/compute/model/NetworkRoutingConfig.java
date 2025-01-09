@@ -56,6 +56,20 @@ public final class NetworkRoutingConfig extends com.google.api.client.json.Gener
   private java.lang.String bgpInterRegionCost;
 
   /**
+   * [Output Only] Effective value of the bgp_always_compare_med field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean effectiveBgpAlwaysCompareMed;
+
+  /**
+   * [Output Only] Effective value of the bgp_inter_region_cost field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String effectiveBgpInterRegionCost;
+
+  /**
    * The network-wide routing mode to use. If set to REGIONAL, this network's Cloud Routers will
    * only advertise routes with subnets of this network in the same region as the router. If set to
    * GLOBAL, this network's Cloud Routers will advertise routes with all subnets of this network,
@@ -119,6 +133,40 @@ public final class NetworkRoutingConfig extends com.google.api.client.json.Gener
    */
   public NetworkRoutingConfig setBgpInterRegionCost(java.lang.String bgpInterRegionCost) {
     this.bgpInterRegionCost = bgpInterRegionCost;
+    return this;
+  }
+
+  /**
+   * [Output Only] Effective value of the bgp_always_compare_med field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEffectiveBgpAlwaysCompareMed() {
+    return effectiveBgpAlwaysCompareMed;
+  }
+
+  /**
+   * [Output Only] Effective value of the bgp_always_compare_med field.
+   * @param effectiveBgpAlwaysCompareMed effectiveBgpAlwaysCompareMed or {@code null} for none
+   */
+  public NetworkRoutingConfig setEffectiveBgpAlwaysCompareMed(java.lang.Boolean effectiveBgpAlwaysCompareMed) {
+    this.effectiveBgpAlwaysCompareMed = effectiveBgpAlwaysCompareMed;
+    return this;
+  }
+
+  /**
+   * [Output Only] Effective value of the bgp_inter_region_cost field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEffectiveBgpInterRegionCost() {
+    return effectiveBgpInterRegionCost;
+  }
+
+  /**
+   * [Output Only] Effective value of the bgp_inter_region_cost field.
+   * @param effectiveBgpInterRegionCost effectiveBgpInterRegionCost or {@code null} for none
+   */
+  public NetworkRoutingConfig setEffectiveBgpInterRegionCost(java.lang.String effectiveBgpInterRegionCost) {
+    this.effectiveBgpInterRegionCost = effectiveBgpInterRegionCost;
     return this;
   }
 

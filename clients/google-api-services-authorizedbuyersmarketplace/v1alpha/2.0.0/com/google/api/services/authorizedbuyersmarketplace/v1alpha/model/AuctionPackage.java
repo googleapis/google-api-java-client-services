@@ -46,6 +46,15 @@ public final class AuctionPackage extends com.google.api.client.json.GenericJson
   private java.lang.String creator;
 
   /**
+   * Output only. If set, this field contains the DSP specific seat id set by the media planner
+   * account that is considered the owner of this deal. The seat ID is in the calling DSP's
+   * namespace.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dealOwnerSeatId;
+
+  /**
    * Output only. A description of the auction package.
    * The value may be {@code null}.
    */
@@ -60,9 +69,9 @@ public final class AuctionPackage extends com.google.api.client.json.GenericJson
   private java.lang.String displayName;
 
   /**
-   * Output only. If set, this field contains the list of DSP specific seat ids set by media
-   * planners that are eligible to transact on this deal. The seat ID is in the calling DSP's
-   * namespace.
+   * Output only. If set, this field identifies a seat that the media planner selected as the owner
+   * of this auction package. This is a seat ID in the DSP's namespace that was provided to the
+   * media planner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,6 +156,27 @@ public final class AuctionPackage extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Output only. If set, this field contains the DSP specific seat id set by the media planner
+   * account that is considered the owner of this deal. The seat ID is in the calling DSP's
+   * namespace.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDealOwnerSeatId() {
+    return dealOwnerSeatId;
+  }
+
+  /**
+   * Output only. If set, this field contains the DSP specific seat id set by the media planner
+   * account that is considered the owner of this deal. The seat ID is in the calling DSP's
+   * namespace.
+   * @param dealOwnerSeatId dealOwnerSeatId or {@code null} for none
+   */
+  public AuctionPackage setDealOwnerSeatId(java.lang.String dealOwnerSeatId) {
+    this.dealOwnerSeatId = dealOwnerSeatId;
+    return this;
+  }
+
+  /**
    * Output only. A description of the auction package.
    * @return value or {@code null} for none
    */
@@ -181,9 +211,9 @@ public final class AuctionPackage extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. If set, this field contains the list of DSP specific seat ids set by media
-   * planners that are eligible to transact on this deal. The seat ID is in the calling DSP's
-   * namespace.
+   * Output only. If set, this field identifies a seat that the media planner selected as the owner
+   * of this auction package. This is a seat ID in the DSP's namespace that was provided to the
+   * media planner.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEligibleSeatIds() {
@@ -191,9 +221,9 @@ public final class AuctionPackage extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. If set, this field contains the list of DSP specific seat ids set by media
-   * planners that are eligible to transact on this deal. The seat ID is in the calling DSP's
-   * namespace.
+   * Output only. If set, this field identifies a seat that the media planner selected as the owner
+   * of this auction package. This is a seat ID in the DSP's namespace that was provided to the
+   * media planner.
    * @param eligibleSeatIds eligibleSeatIds or {@code null} for none
    */
   public AuctionPackage setEligibleSeatIds(java.util.List<java.lang.String> eligibleSeatIds) {

@@ -124,6 +124,13 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean reconciling;
 
   /**
+   * Optional. Output only. Runtime host for the workstation when in STATE_RUNNING.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RuntimeHost runtimeHost;
+
+  /**
    * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
@@ -393,6 +400,23 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
    */
   public Workstation setReconciling(java.lang.Boolean reconciling) {
     this.reconciling = reconciling;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. Runtime host for the workstation when in STATE_RUNNING.
+   * @return value or {@code null} for none
+   */
+  public RuntimeHost getRuntimeHost() {
+    return runtimeHost;
+  }
+
+  /**
+   * Optional. Output only. Runtime host for the workstation when in STATE_RUNNING.
+   * @param runtimeHost runtimeHost or {@code null} for none
+   */
+  public Workstation setRuntimeHost(RuntimeHost runtimeHost) {
+    this.runtimeHost = runtimeHost;
     return this;
   }
 

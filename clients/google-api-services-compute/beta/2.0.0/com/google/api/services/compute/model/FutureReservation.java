@@ -59,6 +59,13 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   private java.lang.Boolean autoDeleteAutoCreatedReservations;
 
   /**
+   * If not present, then FR will not deliver a new commitment or update an existing commitment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FutureReservationCommitmentInfo commitmentInfo;
+
+  /**
    * [Output Only] The creation timestamp for this future reservation in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -261,6 +268,23 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
    */
   public FutureReservation setAutoDeleteAutoCreatedReservations(java.lang.Boolean autoDeleteAutoCreatedReservations) {
     this.autoDeleteAutoCreatedReservations = autoDeleteAutoCreatedReservations;
+    return this;
+  }
+
+  /**
+   * If not present, then FR will not deliver a new commitment or update an existing commitment.
+   * @return value or {@code null} for none
+   */
+  public FutureReservationCommitmentInfo getCommitmentInfo() {
+    return commitmentInfo;
+  }
+
+  /**
+   * If not present, then FR will not deliver a new commitment or update an existing commitment.
+   * @param commitmentInfo commitmentInfo or {@code null} for none
+   */
+  public FutureReservation setCommitmentInfo(FutureReservationCommitmentInfo commitmentInfo) {
+    this.commitmentInfo = commitmentInfo;
     return this;
   }
 

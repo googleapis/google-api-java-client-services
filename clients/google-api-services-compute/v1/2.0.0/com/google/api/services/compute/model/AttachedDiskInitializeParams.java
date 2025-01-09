@@ -186,7 +186,8 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    * initializeParams.sourceSnapshot or initializeParams.sourceImage or disks.source is required. To
    * create a disk with a snapshot that you created, specify the snapshot name in the following
    * format: global/snapshots/my-backup If the source snapshot is deleted later, this field will not
-   * be set.
+   * be set. Note: You cannot create VMs in bulk using a snapshot as the source. Use an image
+   * instead when you create VMs using the bulk insert method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -558,7 +559,8 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    * initializeParams.sourceSnapshot or initializeParams.sourceImage or disks.source is required. To
    * create a disk with a snapshot that you created, specify the snapshot name in the following
    * format: global/snapshots/my-backup If the source snapshot is deleted later, this field will not
-   * be set.
+   * be set. Note: You cannot create VMs in bulk using a snapshot as the source. Use an image
+   * instead when you create VMs using the bulk insert method.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceSnapshot() {
@@ -570,7 +572,8 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    * initializeParams.sourceSnapshot or initializeParams.sourceImage or disks.source is required. To
    * create a disk with a snapshot that you created, specify the snapshot name in the following
    * format: global/snapshots/my-backup If the source snapshot is deleted later, this field will not
-   * be set.
+   * be set. Note: You cannot create VMs in bulk using a snapshot as the source. Use an image
+   * instead when you create VMs using the bulk insert method.
    * @param sourceSnapshot sourceSnapshot or {@code null} for none
    */
   public AttachedDiskInitializeParams setSourceSnapshot(java.lang.String sourceSnapshot) {

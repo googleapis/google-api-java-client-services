@@ -116,6 +116,21 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean reconciling;
 
   /**
+   * Optional. Output only. Runtime host for the workstation when in STATE_RUNNING.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RuntimeHost runtimeHost;
+
+  /**
+   * Optional. The source workstation from which this workstation's persistent directories were
+   * cloned on creation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceWorkstation;
+
+  /**
    * Output only. Time when this workstation was most recently successfully started, regardless of
    * the workstation's initial state.
    * The value may be {@code null}.
@@ -344,6 +359,42 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
    */
   public Workstation setReconciling(java.lang.Boolean reconciling) {
     this.reconciling = reconciling;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. Runtime host for the workstation when in STATE_RUNNING.
+   * @return value or {@code null} for none
+   */
+  public RuntimeHost getRuntimeHost() {
+    return runtimeHost;
+  }
+
+  /**
+   * Optional. Output only. Runtime host for the workstation when in STATE_RUNNING.
+   * @param runtimeHost runtimeHost or {@code null} for none
+   */
+  public Workstation setRuntimeHost(RuntimeHost runtimeHost) {
+    this.runtimeHost = runtimeHost;
+    return this;
+  }
+
+  /**
+   * Optional. The source workstation from which this workstation's persistent directories were
+   * cloned on creation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceWorkstation() {
+    return sourceWorkstation;
+  }
+
+  /**
+   * Optional. The source workstation from which this workstation's persistent directories were
+   * cloned on creation.
+   * @param sourceWorkstation sourceWorkstation or {@code null} for none
+   */
+  public Workstation setSourceWorkstation(java.lang.String sourceWorkstation) {
+    this.sourceWorkstation = sourceWorkstation;
     return this;
   }
 

@@ -17,7 +17,8 @@
 package com.google.api.services.workstations.v1beta.model;
 
 /**
- * A directory to persist across workstation sessions.
+ * A directory to persist across workstation sessions. Updates to this field will not update
+ * existing workstations and will only take effect on new workstations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Workstations API. For a detailed explanation

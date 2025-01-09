@@ -42,6 +42,16 @@ public final class HttpOptions extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean allowedUnauthenticatedCorsPreflightRequests;
 
   /**
+   * Optional. By default, the workstations service replaces references to localhost, 127.0.0.1, and
+   * 0.0.0.0 with the workstation's hostname in http responses from the workstation so that
+   * applications under development run properly on the workstation. This may intefere with some
+   * applications, and so this option allows that behavior to be disabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableLocalhostReplacement;
+
+  /**
    * Optional. By default, the workstations service makes sure that all requests to the workstation
    * are authenticated. CORS preflight requests do not include cookies or custom headers, and so are
    * considered unauthenticated and blocked by the workstations service. Enabling this option allows
@@ -63,6 +73,29 @@ public final class HttpOptions extends com.google.api.client.json.GenericJson {
    */
   public HttpOptions setAllowedUnauthenticatedCorsPreflightRequests(java.lang.Boolean allowedUnauthenticatedCorsPreflightRequests) {
     this.allowedUnauthenticatedCorsPreflightRequests = allowedUnauthenticatedCorsPreflightRequests;
+    return this;
+  }
+
+  /**
+   * Optional. By default, the workstations service replaces references to localhost, 127.0.0.1, and
+   * 0.0.0.0 with the workstation's hostname in http responses from the workstation so that
+   * applications under development run properly on the workstation. This may intefere with some
+   * applications, and so this option allows that behavior to be disabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableLocalhostReplacement() {
+    return disableLocalhostReplacement;
+  }
+
+  /**
+   * Optional. By default, the workstations service replaces references to localhost, 127.0.0.1, and
+   * 0.0.0.0 with the workstation's hostname in http responses from the workstation so that
+   * applications under development run properly on the workstation. This may intefere with some
+   * applications, and so this option allows that behavior to be disabled.
+   * @param disableLocalhostReplacement disableLocalhostReplacement or {@code null} for none
+   */
+  public HttpOptions setDisableLocalhostReplacement(java.lang.Boolean disableLocalhostReplacement) {
+    this.disableLocalhostReplacement = disableLocalhostReplacement;
     return this;
   }
 

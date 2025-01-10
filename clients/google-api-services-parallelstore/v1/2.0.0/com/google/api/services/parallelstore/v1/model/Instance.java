@@ -52,11 +52,12 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Output only. The version of DAOS software running in the instance.
+   * Optional. The deployment type of the instance. Allowed values are: * `SCRATCH`: the instance is
+   * a scratch instance. * `PERSISTENT`: the instance is a persistent instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String daosVersion;
+  private java.lang.String deploymentType;
 
   /**
    * Optional. The description of the instance. 2048 characters or less.
@@ -198,19 +199,21 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The version of DAOS software running in the instance.
+   * Optional. The deployment type of the instance. Allowed values are: * `SCRATCH`: the instance is
+   * a scratch instance. * `PERSISTENT`: the instance is a persistent instance.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDaosVersion() {
-    return daosVersion;
+  public java.lang.String getDeploymentType() {
+    return deploymentType;
   }
 
   /**
-   * Output only. The version of DAOS software running in the instance.
-   * @param daosVersion daosVersion or {@code null} for none
+   * Optional. The deployment type of the instance. Allowed values are: * `SCRATCH`: the instance is
+   * a scratch instance. * `PERSISTENT`: the instance is a persistent instance.
+   * @param deploymentType deploymentType or {@code null} for none
    */
-  public Instance setDaosVersion(java.lang.String daosVersion) {
-    this.daosVersion = daosVersion;
+  public Instance setDeploymentType(java.lang.String deploymentType) {
+    this.deploymentType = deploymentType;
     return this;
   }
 

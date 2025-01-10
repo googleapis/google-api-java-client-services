@@ -44,7 +44,7 @@ public final class QueryPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The advices/recommendations for a query. Currently this field will be serving index
+   * Optional. The advise/recommendations for a query. Currently this field will be serving index
    * recommendations for a query.
    * The value may be {@code null}.
    */
@@ -71,7 +71,7 @@ public final class QueryPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The advices/recommendations for a query. Currently this field will be serving index
+   * Optional. The advise/recommendations for a query. Currently this field will be serving index
    * recommendations for a query.
    * @return value or {@code null} for none
    */
@@ -80,7 +80,7 @@ public final class QueryPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The advices/recommendations for a query. Currently this field will be serving index
+   * Optional. The advise/recommendations for a query. Currently this field will be serving index
    * recommendations for a query.
    * @param queryAdvice queryAdvice or {@code null} for none
    */

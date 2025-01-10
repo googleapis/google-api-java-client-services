@@ -4102,7 +4102,7 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
              * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
              * @param name Required. The network that the consumer is using to connect with services. Must be in the form of
-             *        services/{service}/projects/{project}/global/networks/{network}/zones/{zoneName} Where
+             *        services/{service}/projects/{project}/global/networks/{network}/dnsZones/{zoneName} Where
              *        {service} is the peering service that is managing connectivity for the service producer's
              *        organization. For Google services that support this {project} is the project number, as in
              *        '12345' {network} is the network name. {zoneName} is the DNS zone name
@@ -4134,7 +4134,7 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
                * called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Required. The network that the consumer is using to connect with services. Must be in the form of
-             *        services/{service}/projects/{project}/global/networks/{network}/zones/{zoneName} Where
+             *        services/{service}/projects/{project}/global/networks/{network}/dnsZones/{zoneName} Where
              *        {service} is the peering service that is managing connectivity for the service producer's
              *        organization. For Google services that support this {project} is the project number, as in
              *        '12345' {network} is the network name. {zoneName} is the DNS zone name
@@ -4218,7 +4218,7 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
               /**
                * Required. The network that the consumer is using to connect with services. Must be
                * in the form of
-               * services/{service}/projects/{project}/global/networks/{network}/zones/{zoneName}
+               * services/{service}/projects/{project}/global/networks/{network}/dnsZones/{zoneName}
                * Where {service} is the peering service that is managing connectivity for the
                * service producer's organization. For Google services that support this {project} is
                * the project number, as in '12345' {network} is the network name. {zoneName} is the
@@ -4228,8 +4228,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
               private java.lang.String name;
 
               /** Required. The network that the consumer is using to connect with services. Must be in the form of
-             services/{service}/projects/{project}/global/networks/{network}/zones/{zoneName} Where {service} is
-             the peering service that is managing connectivity for the service producer's organization. For
+             services/{service}/projects/{project}/global/networks/{network}/dnsZones/{zoneName} Where {service}
+             is the peering service that is managing connectivity for the service producer's organization. For
              Google services that support this {project} is the project number, as in '12345' {network} is the
              network name. {zoneName} is the DNS zone name
                */
@@ -4240,7 +4240,7 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
               /**
                * Required. The network that the consumer is using to connect with services. Must be
                * in the form of
-               * services/{service}/projects/{project}/global/networks/{network}/zones/{zoneName}
+               * services/{service}/projects/{project}/global/networks/{network}/dnsZones/{zoneName}
                * Where {service} is the peering service that is managing connectivity for the
                * service producer's organization. For Google services that support this {project} is
                * the project number, as in '12345' {network} is the network name. {zoneName} is the

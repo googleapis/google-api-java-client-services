@@ -129,16 +129,13 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   /**
    * Baseline slots available to this reservation. A slot is a unit of computational power in
    * BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more
-   * slots during runtime if ignore_idle_slots is set to false, or autoscaling is enabled. If
-   * edition is EDITION_UNSPECIFIED and total slot_capacity of the reservation and its siblings
-   * exceeds the total slot_count of all capacity commitments, the request will fail with
-   * `google.rpc.Code.RESOURCE_EXHAUSTED`. If edition is any value but EDITION_UNSPECIFIED, then the
-   * above requirement is not needed. The total slot_capacity of the reservation and its siblings
-   * may exceed the total slot_count of capacity commitments. In that case, the exceeding slots will
-   * be charged with the autoscale SKU. You can increase the number of baseline slots in a
-   * reservation every few minutes. If you want to decrease your baseline slots, you are limited to
-   * once an hour if you have recently changed your baseline slot capacity and your baseline slots
-   * exceed your committed slots. Otherwise, you can decrease your baseline slots every few minutes.
+   * slots during runtime if ignore_idle_slots is set to false, or autoscaling is enabled. The total
+   * slot_capacity of the reservation and its siblings may exceed the total slot_count of capacity
+   * commitments. In that case, the exceeding slots will be charged with the autoscale SKU. You can
+   * increase the number of baseline slots in a reservation every few minutes. If you want to
+   * decrease your baseline slots, you are limited to once an hour if you have recently changed your
+   * baseline slot capacity and your baseline slots exceed your committed slots. Otherwise, you can
+   * decrease your baseline slots every few minutes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -379,16 +376,13 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   /**
    * Baseline slots available to this reservation. A slot is a unit of computational power in
    * BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more
-   * slots during runtime if ignore_idle_slots is set to false, or autoscaling is enabled. If
-   * edition is EDITION_UNSPECIFIED and total slot_capacity of the reservation and its siblings
-   * exceeds the total slot_count of all capacity commitments, the request will fail with
-   * `google.rpc.Code.RESOURCE_EXHAUSTED`. If edition is any value but EDITION_UNSPECIFIED, then the
-   * above requirement is not needed. The total slot_capacity of the reservation and its siblings
-   * may exceed the total slot_count of capacity commitments. In that case, the exceeding slots will
-   * be charged with the autoscale SKU. You can increase the number of baseline slots in a
-   * reservation every few minutes. If you want to decrease your baseline slots, you are limited to
-   * once an hour if you have recently changed your baseline slot capacity and your baseline slots
-   * exceed your committed slots. Otherwise, you can decrease your baseline slots every few minutes.
+   * slots during runtime if ignore_idle_slots is set to false, or autoscaling is enabled. The total
+   * slot_capacity of the reservation and its siblings may exceed the total slot_count of capacity
+   * commitments. In that case, the exceeding slots will be charged with the autoscale SKU. You can
+   * increase the number of baseline slots in a reservation every few minutes. If you want to
+   * decrease your baseline slots, you are limited to once an hour if you have recently changed your
+   * baseline slot capacity and your baseline slots exceed your committed slots. Otherwise, you can
+   * decrease your baseline slots every few minutes.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSlotCapacity() {
@@ -398,16 +392,13 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   /**
    * Baseline slots available to this reservation. A slot is a unit of computational power in
    * BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more
-   * slots during runtime if ignore_idle_slots is set to false, or autoscaling is enabled. If
-   * edition is EDITION_UNSPECIFIED and total slot_capacity of the reservation and its siblings
-   * exceeds the total slot_count of all capacity commitments, the request will fail with
-   * `google.rpc.Code.RESOURCE_EXHAUSTED`. If edition is any value but EDITION_UNSPECIFIED, then the
-   * above requirement is not needed. The total slot_capacity of the reservation and its siblings
-   * may exceed the total slot_count of capacity commitments. In that case, the exceeding slots will
-   * be charged with the autoscale SKU. You can increase the number of baseline slots in a
-   * reservation every few minutes. If you want to decrease your baseline slots, you are limited to
-   * once an hour if you have recently changed your baseline slot capacity and your baseline slots
-   * exceed your committed slots. Otherwise, you can decrease your baseline slots every few minutes.
+   * slots during runtime if ignore_idle_slots is set to false, or autoscaling is enabled. The total
+   * slot_capacity of the reservation and its siblings may exceed the total slot_count of capacity
+   * commitments. In that case, the exceeding slots will be charged with the autoscale SKU. You can
+   * increase the number of baseline slots in a reservation every few minutes. If you want to
+   * decrease your baseline slots, you are limited to once an hour if you have recently changed your
+   * baseline slot capacity and your baseline slots exceed your committed slots. Otherwise, you can
+   * decrease your baseline slots every few minutes.
    * @param slotCapacity slotCapacity or {@code null} for none
    */
   public Reservation setSlotCapacity(java.lang.Long slotCapacity) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dataflow.model;
 
 /**
- * An update to a Counter sent from a worker.
+ * An update to a Counter sent from a worker. Next ID: 17
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:
@@ -35,6 +35,13 @@ public final class CounterUpdate extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key("boolean")
   private java.lang.Boolean boolean__;
+
+  /**
+   * Bounded trie data
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BoundedTrie boundedTrie;
 
   /**
    * True if this counter is reported as the total cumulative aggregate value accumulated since the
@@ -151,6 +158,23 @@ public final class CounterUpdate extends com.google.api.client.json.GenericJson 
    */
   public CounterUpdate setBoolean(java.lang.Boolean boolean__) {
     this.boolean__ = boolean__;
+    return this;
+  }
+
+  /**
+   * Bounded trie data
+   * @return value or {@code null} for none
+   */
+  public BoundedTrie getBoundedTrie() {
+    return boundedTrie;
+  }
+
+  /**
+   * Bounded trie data
+   * @param boundedTrie boundedTrie or {@code null} for none
+   */
+  public CounterUpdate setBoundedTrie(BoundedTrie boundedTrie) {
+    this.boundedTrie = boundedTrie;
     return this;
   }
 

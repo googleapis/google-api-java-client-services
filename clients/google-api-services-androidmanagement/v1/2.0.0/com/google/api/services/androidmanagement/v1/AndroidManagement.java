@@ -5404,13 +5404,15 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
 
       /**
        * Optional. Email address used to prefill the admin field of the enterprise signup form. This
-       * value is a hint only and can be altered by the user.
+       * value is a hint only and can be altered by the user. If allowedDomains is non-empty then
+       * this must belong to one of the allowedDomains.
        */
       @com.google.api.client.util.Key
       private java.lang.String adminEmail;
 
       /** Optional. Email address used to prefill the admin field of the enterprise signup form. This value
-     is a hint only and can be altered by the user.
+     is a hint only and can be altered by the user. If allowedDomains is non-empty then this must belong
+     to one of the allowedDomains.
        */
       public java.lang.String getAdminEmail() {
         return adminEmail;
@@ -5418,7 +5420,8 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
 
       /**
        * Optional. Email address used to prefill the admin field of the enterprise signup form. This
-       * value is a hint only and can be altered by the user.
+       * value is a hint only and can be altered by the user. If allowedDomains is non-empty then
+       * this must belong to one of the allowedDomains.
        */
       public Create setAdminEmail(java.lang.String adminEmail) {
         this.adminEmail = adminEmail;

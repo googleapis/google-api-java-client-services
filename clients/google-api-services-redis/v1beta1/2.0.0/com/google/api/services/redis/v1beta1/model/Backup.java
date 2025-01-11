@@ -66,6 +66,13 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Output only. Encryption information of the backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EncryptionInfo encryptionInfo;
+
+  /**
    * Output only. redis-7.2, valkey-7.5
    * The value may be {@code null}.
    */
@@ -212,6 +219,23 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. Encryption information of the backup.
+   * @return value or {@code null} for none
+   */
+  public EncryptionInfo getEncryptionInfo() {
+    return encryptionInfo;
+  }
+
+  /**
+   * Output only. Encryption information of the backup.
+   * @param encryptionInfo encryptionInfo or {@code null} for none
+   */
+  public Backup setEncryptionInfo(EncryptionInfo encryptionInfo) {
+    this.encryptionInfo = encryptionInfo;
     return this;
   }
 

@@ -90,6 +90,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.util.List<DiscoveryEndpoint> discoveryEndpoints;
 
   /**
+   * Output only. Encryption information of the data at rest of the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EncryptionInfo encryptionInfo;
+
+  /**
    * Optional. Backups stored in Cloud Storage buckets. The Cloud Storage buckets need to be the
    * same region as the clusters. Read permission is required to import from the provided Cloud
    * Storage objects.
@@ -97,6 +104,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private GcsBackupSource gcsSource;
+
+  /**
+   * Optional. The KMS key used to encrypt the at-rest data of the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKey;
 
   /**
    * Optional. ClusterMaintenancePolicy determines when to allow or deny updates.
@@ -382,6 +396,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Encryption information of the data at rest of the cluster.
+   * @return value or {@code null} for none
+   */
+  public EncryptionInfo getEncryptionInfo() {
+    return encryptionInfo;
+  }
+
+  /**
+   * Output only. Encryption information of the data at rest of the cluster.
+   * @param encryptionInfo encryptionInfo or {@code null} for none
+   */
+  public Cluster setEncryptionInfo(EncryptionInfo encryptionInfo) {
+    this.encryptionInfo = encryptionInfo;
+    return this;
+  }
+
+  /**
    * Optional. Backups stored in Cloud Storage buckets. The Cloud Storage buckets need to be the
    * same region as the clusters. Read permission is required to import from the provided Cloud
    * Storage objects.
@@ -399,6 +430,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setGcsSource(GcsBackupSource gcsSource) {
     this.gcsSource = gcsSource;
+    return this;
+  }
+
+  /**
+   * Optional. The KMS key used to encrypt the at-rest data of the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKey() {
+    return kmsKey;
+  }
+
+  /**
+   * Optional. The KMS key used to encrypt the at-rest data of the cluster.
+   * @param kmsKey kmsKey or {@code null} for none
+   */
+  public Cluster setKmsKey(java.lang.String kmsKey) {
+    this.kmsKey = kmsKey;
     return this;
   }
 

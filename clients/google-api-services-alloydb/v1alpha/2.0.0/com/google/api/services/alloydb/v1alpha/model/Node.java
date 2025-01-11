@@ -31,37 +31,37 @@ package com.google.api.services.alloydb.v1alpha.model;
 public final class Node extends com.google.api.client.json.GenericJson {
 
   /**
-   * The identifier of the VM e.g. "test-read-0601-407e52be-ms3l".
+   * Output only. The identifier of the VM e.g. "test-read-0601-407e52be-ms3l".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * The private IP address of the VM e.g. "10.57.0.34".
+   * Output only. The private IP address of the VM e.g. "10.57.0.34".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ip;
 
   /**
-   * Determined by state of the compute VM and postgres-service health. Compute VM state can have
-   * values listed in https://cloud.google.com/compute/docs/instances/instance-life-cycle and
-   * postgres-service health can have values: HEALTHY and UNHEALTHY.
+   * Output only. Determined by state of the compute VM and postgres-service health. Compute VM
+   * state can have values listed in https://cloud.google.com/compute/docs/instances/instance-life-
+   * cycle and postgres-service health can have values: HEALTHY and UNHEALTHY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * The Compute Engine zone of the VM e.g. "us-central1-b".
+   * Output only. The Compute Engine zone of the VM e.g. "us-central1-b".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String zoneId;
 
   /**
-   * The identifier of the VM e.g. "test-read-0601-407e52be-ms3l".
+   * Output only. The identifier of the VM e.g. "test-read-0601-407e52be-ms3l".
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -69,7 +69,7 @@ public final class Node extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The identifier of the VM e.g. "test-read-0601-407e52be-ms3l".
+   * Output only. The identifier of the VM e.g. "test-read-0601-407e52be-ms3l".
    * @param id id or {@code null} for none
    */
   public Node setId(java.lang.String id) {
@@ -78,7 +78,7 @@ public final class Node extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The private IP address of the VM e.g. "10.57.0.34".
+   * Output only. The private IP address of the VM e.g. "10.57.0.34".
    * @return value or {@code null} for none
    */
   public java.lang.String getIp() {
@@ -86,7 +86,7 @@ public final class Node extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The private IP address of the VM e.g. "10.57.0.34".
+   * Output only. The private IP address of the VM e.g. "10.57.0.34".
    * @param ip ip or {@code null} for none
    */
   public Node setIp(java.lang.String ip) {
@@ -95,9 +95,9 @@ public final class Node extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Determined by state of the compute VM and postgres-service health. Compute VM state can have
-   * values listed in https://cloud.google.com/compute/docs/instances/instance-life-cycle and
-   * postgres-service health can have values: HEALTHY and UNHEALTHY.
+   * Output only. Determined by state of the compute VM and postgres-service health. Compute VM
+   * state can have values listed in https://cloud.google.com/compute/docs/instances/instance-life-
+   * cycle and postgres-service health can have values: HEALTHY and UNHEALTHY.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -105,9 +105,9 @@ public final class Node extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Determined by state of the compute VM and postgres-service health. Compute VM state can have
-   * values listed in https://cloud.google.com/compute/docs/instances/instance-life-cycle and
-   * postgres-service health can have values: HEALTHY and UNHEALTHY.
+   * Output only. Determined by state of the compute VM and postgres-service health. Compute VM
+   * state can have values listed in https://cloud.google.com/compute/docs/instances/instance-life-
+   * cycle and postgres-service health can have values: HEALTHY and UNHEALTHY.
    * @param state state or {@code null} for none
    */
   public Node setState(java.lang.String state) {
@@ -116,7 +116,7 @@ public final class Node extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Compute Engine zone of the VM e.g. "us-central1-b".
+   * Output only. The Compute Engine zone of the VM e.g. "us-central1-b".
    * @return value or {@code null} for none
    */
   public java.lang.String getZoneId() {
@@ -124,7 +124,7 @@ public final class Node extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Compute Engine zone of the VM e.g. "us-central1-b".
+   * Output only. The Compute Engine zone of the VM e.g. "us-central1-b".
    * @param zoneId zoneId or {@code null} for none
    */
   public Node setZoneId(java.lang.String zoneId) {

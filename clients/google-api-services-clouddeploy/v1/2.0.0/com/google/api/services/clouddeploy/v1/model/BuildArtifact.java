@@ -30,22 +30,22 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class BuildArtifact extends com.google.api.client.json.GenericJson {
 
   /**
-   * Image name in Skaffold configuration.
+   * Optional. Image name in Skaffold configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String image;
 
   /**
-   * Image tag to use. This will generally be the full path to an image, such as "gcr.io/my-
-   * project/busybox:1.2.3" or "gcr.io/my-project/busybox@sha256:abc123".
+   * Optional. Image tag to use. This will generally be the full path to an image, such as
+   * "gcr.io/my-project/busybox:1.2.3" or "gcr.io/my-project/busybox@sha256:abc123".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tag;
 
   /**
-   * Image name in Skaffold configuration.
+   * Optional. Image name in Skaffold configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getImage() {
@@ -53,7 +53,7 @@ public final class BuildArtifact extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Image name in Skaffold configuration.
+   * Optional. Image name in Skaffold configuration.
    * @param image image or {@code null} for none
    */
   public BuildArtifact setImage(java.lang.String image) {
@@ -62,8 +62,8 @@ public final class BuildArtifact extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Image tag to use. This will generally be the full path to an image, such as "gcr.io/my-
-   * project/busybox:1.2.3" or "gcr.io/my-project/busybox@sha256:abc123".
+   * Optional. Image tag to use. This will generally be the full path to an image, such as
+   * "gcr.io/my-project/busybox:1.2.3" or "gcr.io/my-project/busybox@sha256:abc123".
    * @return value or {@code null} for none
    */
   public java.lang.String getTag() {
@@ -71,8 +71,8 @@ public final class BuildArtifact extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Image tag to use. This will generally be the full path to an image, such as "gcr.io/my-
-   * project/busybox:1.2.3" or "gcr.io/my-project/busybox@sha256:abc123".
+   * Optional. Image tag to use. This will generally be the full path to an image, such as
+   * "gcr.io/my-project/busybox:1.2.3" or "gcr.io/my-project/busybox@sha256:abc123".
    * @param tag tag or {@code null} for none
    */
   public BuildArtifact setTag(java.lang.String tag) {

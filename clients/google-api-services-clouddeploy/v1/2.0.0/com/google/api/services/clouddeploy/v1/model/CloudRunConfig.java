@@ -30,9 +30,9 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class CloudRunConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether Cloud Deploy should update the traffic stanza in a Cloud Run Service on the user's
-   * behalf to facilitate traffic splitting. This is required to be true for CanaryDeployments, but
-   * optional for CustomCanaryDeployments.
+   * Optional. Whether Cloud Deploy should update the traffic stanza in a Cloud Run Service on the
+   * user's behalf to facilitate traffic splitting. This is required to be true for
+   * CanaryDeployments, but optional for CustomCanaryDeployments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,9 +63,9 @@ public final class CloudRunConfig extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> stableRevisionTags;
 
   /**
-   * Whether Cloud Deploy should update the traffic stanza in a Cloud Run Service on the user's
-   * behalf to facilitate traffic splitting. This is required to be true for CanaryDeployments, but
-   * optional for CustomCanaryDeployments.
+   * Optional. Whether Cloud Deploy should update the traffic stanza in a Cloud Run Service on the
+   * user's behalf to facilitate traffic splitting. This is required to be true for
+   * CanaryDeployments, but optional for CustomCanaryDeployments.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutomaticTrafficControl() {
@@ -73,9 +73,9 @@ public final class CloudRunConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Whether Cloud Deploy should update the traffic stanza in a Cloud Run Service on the user's
-   * behalf to facilitate traffic splitting. This is required to be true for CanaryDeployments, but
-   * optional for CustomCanaryDeployments.
+   * Optional. Whether Cloud Deploy should update the traffic stanza in a Cloud Run Service on the
+   * user's behalf to facilitate traffic splitting. This is required to be true for
+   * CanaryDeployments, but optional for CustomCanaryDeployments.
    * @param automaticTrafficControl automaticTrafficControl or {@code null} for none
    */
   public CloudRunConfig setAutomaticTrafficControl(java.lang.Boolean automaticTrafficControl) {

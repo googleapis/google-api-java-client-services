@@ -55,7 +55,7 @@ public final class CanaryDeployment extends com.google.api.client.json.GenericJs
   private Predeploy predeploy;
 
   /**
-   * Whether to run verify tests after each percentage deployment.
+   * Optional. Whether to run verify tests after each percentage deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,7 +121,7 @@ public final class CanaryDeployment extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Whether to run verify tests after each percentage deployment.
+   * Optional. Whether to run verify tests after each percentage deployment.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getVerify() {
@@ -129,7 +129,7 @@ public final class CanaryDeployment extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Whether to run verify tests after each percentage deployment.
+   * Optional. Whether to run verify tests after each percentage deployment.
    * @param verify verify or {@code null} for none
    */
   public CanaryDeployment setVerify(java.lang.Boolean verify) {

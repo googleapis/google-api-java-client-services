@@ -48,7 +48,8 @@ public final class CustomTargetType extends com.google.api.client.json.GenericJs
   private String createTime;
 
   /**
-   * Configures render and deploy for the `CustomTargetType` using Skaffold custom actions.
+   * Optional. Configures render and deploy for the `CustomTargetType` using Skaffold custom
+   * actions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +91,7 @@ public final class CustomTargetType extends com.google.api.client.json.GenericJs
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Optional. Name of the `CustomTargetType`. Format is
+   * Identifier. Name of the `CustomTargetType`. Format is
    * `projects/{project}/locations/{location}/customTargetTypes/{customTargetType}`. The
    * `customTargetType` component must match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
    * The value may be {@code null}.
@@ -151,7 +152,8 @@ public final class CustomTargetType extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Configures render and deploy for the `CustomTargetType` using Skaffold custom actions.
+   * Optional. Configures render and deploy for the `CustomTargetType` using Skaffold custom
+   * actions.
    * @return value or {@code null} for none
    */
   public CustomTargetSkaffoldActions getCustomActions() {
@@ -159,7 +161,8 @@ public final class CustomTargetType extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Configures render and deploy for the `CustomTargetType` using Skaffold custom actions.
+   * Optional. Configures render and deploy for the `CustomTargetType` using Skaffold custom
+   * actions.
    * @param customActions customActions or {@code null} for none
    */
   public CustomTargetType setCustomActions(CustomTargetSkaffoldActions customActions) {
@@ -250,7 +253,7 @@ public final class CustomTargetType extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Name of the `CustomTargetType`. Format is
+   * Identifier. Name of the `CustomTargetType`. Format is
    * `projects/{project}/locations/{location}/customTargetTypes/{customTargetType}`. The
    * `customTargetType` component must match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
    * @return value or {@code null} for none
@@ -260,7 +263,7 @@ public final class CustomTargetType extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Name of the `CustomTargetType`. Format is
+   * Identifier. Name of the `CustomTargetType`. Format is
    * `projects/{project}/locations/{location}/customTargetTypes/{customTargetType}`. The
    * `customTargetType` component must match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
    * @param name name or {@code null} for none

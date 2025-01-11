@@ -30,16 +30,16 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class SerialPipeline extends com.google.api.client.json.GenericJson {
 
   /**
-   * Each stage specifies configuration for a `Target`. The ordering of this list defines the
-   * promotion flow.
+   * Optional. Each stage specifies configuration for a `Target`. The ordering of this list defines
+   * the promotion flow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Stage> stages;
 
   /**
-   * Each stage specifies configuration for a `Target`. The ordering of this list defines the
-   * promotion flow.
+   * Optional. Each stage specifies configuration for a `Target`. The ordering of this list defines
+   * the promotion flow.
    * @return value or {@code null} for none
    */
   public java.util.List<Stage> getStages() {
@@ -47,8 +47,8 @@ public final class SerialPipeline extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Each stage specifies configuration for a `Target`. The ordering of this list defines the
-   * promotion flow.
+   * Optional. Each stage specifies configuration for a `Target`. The ordering of this list defines
+   * the promotion flow.
    * @param stages stages or {@code null} for none
    */
   public SerialPipeline setStages(java.util.List<Stage> stages) {

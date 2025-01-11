@@ -103,7 +103,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Configurations for all execution that relates to this `Target`. Each
+   * Optional. Configurations for all execution that relates to this `Target`. Each
    * `ExecutionEnvironmentUsage` value may only be used in a single configuration; using the same
    * value multiple times is an error. When one or more configurations are specified, they must
    * include the `RENDER` and `DEPLOY` `ExecutionEnvironmentUsage` values. When no configurations
@@ -146,7 +146,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
   private MultiTarget multiTarget;
 
   /**
-   * Optional. Name of the `Target`. Format is
+   * Identifier. Name of the `Target`. Format is
    * `projects/{project}/locations/{location}/targets/{target}`. The `target` component must match
    * `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
    * The value may be {@code null}.
@@ -346,7 +346,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configurations for all execution that relates to this `Target`. Each
+   * Optional. Configurations for all execution that relates to this `Target`. Each
    * `ExecutionEnvironmentUsage` value may only be used in a single configuration; using the same
    * value multiple times is an error. When one or more configurations are specified, they must
    * include the `RENDER` and `DEPLOY` `ExecutionEnvironmentUsage` values. When no configurations
@@ -358,7 +358,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configurations for all execution that relates to this `Target`. Each
+   * Optional. Configurations for all execution that relates to this `Target`. Each
    * `ExecutionEnvironmentUsage` value may only be used in a single configuration; using the same
    * value multiple times is an error. When one or more configurations are specified, they must
    * include the `RENDER` and `DEPLOY` `ExecutionEnvironmentUsage` values. When no configurations
@@ -432,7 +432,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Name of the `Target`. Format is
+   * Identifier. Name of the `Target`. Format is
    * `projects/{project}/locations/{location}/targets/{target}`. The `target` component must match
    * `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
    * @return value or {@code null} for none
@@ -442,7 +442,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Name of the `Target`. Format is
+   * Identifier. Name of the `Target`. Format is
    * `projects/{project}/locations/{location}/targets/{target}`. The `target` component must match
    * `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
    * @param name name or {@code null} for none

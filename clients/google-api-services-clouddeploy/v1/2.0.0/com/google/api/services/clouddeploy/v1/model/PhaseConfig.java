@@ -63,15 +63,15 @@ public final class PhaseConfig extends com.google.api.client.json.GenericJson {
   private Predeploy predeploy;
 
   /**
-   * Skaffold profiles to use when rendering the manifest for this phase. These are in addition to
-   * the profiles list specified in the `DeliveryPipeline` stage.
+   * Optional. Skaffold profiles to use when rendering the manifest for this phase. These are in
+   * addition to the profiles list specified in the `DeliveryPipeline` stage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> profiles;
 
   /**
-   * Whether to run verify tests after the deployment.
+   * Optional. Whether to run verify tests after the deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -156,8 +156,8 @@ public final class PhaseConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Skaffold profiles to use when rendering the manifest for this phase. These are in addition to
-   * the profiles list specified in the `DeliveryPipeline` stage.
+   * Optional. Skaffold profiles to use when rendering the manifest for this phase. These are in
+   * addition to the profiles list specified in the `DeliveryPipeline` stage.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProfiles() {
@@ -165,8 +165,8 @@ public final class PhaseConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Skaffold profiles to use when rendering the manifest for this phase. These are in addition to
-   * the profiles list specified in the `DeliveryPipeline` stage.
+   * Optional. Skaffold profiles to use when rendering the manifest for this phase. These are in
+   * addition to the profiles list specified in the `DeliveryPipeline` stage.
    * @param profiles profiles or {@code null} for none
    */
   public PhaseConfig setProfiles(java.util.List<java.lang.String> profiles) {
@@ -175,7 +175,7 @@ public final class PhaseConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether to run verify tests after the deployment.
+   * Optional. Whether to run verify tests after the deployment.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getVerify() {
@@ -183,7 +183,7 @@ public final class PhaseConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether to run verify tests after the deployment.
+   * Optional. Whether to run verify tests after the deployment.
    * @param verify verify or {@code null} for none
    */
   public PhaseConfig setVerify(java.lang.Boolean verify) {

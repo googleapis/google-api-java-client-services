@@ -30,21 +30,21 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class KubernetesConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Kubernetes Gateway API service mesh configuration.
+   * Optional. Kubernetes Gateway API service mesh configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GatewayServiceMesh gatewayServiceMesh;
 
   /**
-   * Kubernetes Service networking configuration.
+   * Optional. Kubernetes Service networking configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ServiceNetworking serviceNetworking;
 
   /**
-   * Kubernetes Gateway API service mesh configuration.
+   * Optional. Kubernetes Gateway API service mesh configuration.
    * @return value or {@code null} for none
    */
   public GatewayServiceMesh getGatewayServiceMesh() {
@@ -52,7 +52,7 @@ public final class KubernetesConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Kubernetes Gateway API service mesh configuration.
+   * Optional. Kubernetes Gateway API service mesh configuration.
    * @param gatewayServiceMesh gatewayServiceMesh or {@code null} for none
    */
   public KubernetesConfig setGatewayServiceMesh(GatewayServiceMesh gatewayServiceMesh) {
@@ -61,7 +61,7 @@ public final class KubernetesConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Kubernetes Service networking configuration.
+   * Optional. Kubernetes Service networking configuration.
    * @return value or {@code null} for none
    */
   public ServiceNetworking getServiceNetworking() {
@@ -69,7 +69,7 @@ public final class KubernetesConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Kubernetes Service networking configuration.
+   * Optional. Kubernetes Service networking configuration.
    * @param serviceNetworking serviceNetworking or {@code null} for none
    */
   public KubernetesConfig setServiceNetworking(ServiceNetworking serviceNetworking) {

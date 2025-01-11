@@ -17,7 +17,7 @@
 package com.google.api.services.dataflow.model;
 
 /**
- * Describes the state of a metric.
+ * Describes the state of a metric. Next ID: 14
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:
@@ -104,12 +104,20 @@ public final class MetricUpdate extends com.google.api.client.json.GenericJson {
 
   /**
    * Worker-computed aggregate value for the "Set" aggregation kind. The only possible value type is
-   * a list of Values whose type can be Long, Double, or String, according to the metric's type. All
-   * Values in the list must be of the same type.
+   * a list of Values whose type can be Long, Double, String, or BoundedTrie according to the
+   * metric's type. All Values in the list must be of the same type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Object set;
+
+  /**
+   * Worker-computed aggregate value for the "Trie" aggregation kind. The only possible value type
+   * is a BoundedTrieNode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Object trie;
 
   /**
    * Timestamp associated with the metric value. Optional when workers are reporting work progress;
@@ -294,8 +302,8 @@ public final class MetricUpdate extends com.google.api.client.json.GenericJson {
 
   /**
    * Worker-computed aggregate value for the "Set" aggregation kind. The only possible value type is
-   * a list of Values whose type can be Long, Double, or String, according to the metric's type. All
-   * Values in the list must be of the same type.
+   * a list of Values whose type can be Long, Double, String, or BoundedTrie according to the
+   * metric's type. All Values in the list must be of the same type.
    * @return value or {@code null} for none
    */
   public java.lang.Object getSet() {
@@ -304,12 +312,31 @@ public final class MetricUpdate extends com.google.api.client.json.GenericJson {
 
   /**
    * Worker-computed aggregate value for the "Set" aggregation kind. The only possible value type is
-   * a list of Values whose type can be Long, Double, or String, according to the metric's type. All
-   * Values in the list must be of the same type.
+   * a list of Values whose type can be Long, Double, String, or BoundedTrie according to the
+   * metric's type. All Values in the list must be of the same type.
    * @param set set or {@code null} for none
    */
   public MetricUpdate setSet(java.lang.Object set) {
     this.set = set;
+    return this;
+  }
+
+  /**
+   * Worker-computed aggregate value for the "Trie" aggregation kind. The only possible value type
+   * is a BoundedTrieNode.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Object getTrie() {
+    return trie;
+  }
+
+  /**
+   * Worker-computed aggregate value for the "Trie" aggregation kind. The only possible value type
+   * is a BoundedTrieNode.
+   * @param trie trie or {@code null} for none
+   */
+  public MetricUpdate setTrie(java.lang.Object trie) {
+    this.trie = trie;
     return this;
   }
 

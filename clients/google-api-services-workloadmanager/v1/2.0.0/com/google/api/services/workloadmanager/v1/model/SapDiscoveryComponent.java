@@ -59,11 +59,18 @@ public final class SapDiscoveryComponent extends com.google.api.client.json.Gene
   private java.lang.String hostProject;
 
   /**
+   * Optional. The region this component's resources are primarily located in.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
+
+  /**
    * Optional. A list of replication sites used in Disaster Recovery (DR) configurations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<SapDiscoveryComponent> replicationSites;
+  private java.util.List<SapDiscoveryComponentReplicationSite> replicationSites;
 
   /**
    * Optional. The resources in a component.
@@ -158,10 +165,27 @@ public final class SapDiscoveryComponent extends com.google.api.client.json.Gene
   }
 
   /**
+   * Optional. The region this component's resources are primarily located in.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * Optional. The region this component's resources are primarily located in.
+   * @param region region or {@code null} for none
+   */
+  public SapDiscoveryComponent setRegion(java.lang.String region) {
+    this.region = region;
+    return this;
+  }
+
+  /**
    * Optional. A list of replication sites used in Disaster Recovery (DR) configurations.
    * @return value or {@code null} for none
    */
-  public java.util.List<SapDiscoveryComponent> getReplicationSites() {
+  public java.util.List<SapDiscoveryComponentReplicationSite> getReplicationSites() {
     return replicationSites;
   }
 
@@ -169,7 +193,7 @@ public final class SapDiscoveryComponent extends com.google.api.client.json.Gene
    * Optional. A list of replication sites used in Disaster Recovery (DR) configurations.
    * @param replicationSites replicationSites or {@code null} for none
    */
-  public SapDiscoveryComponent setReplicationSites(java.util.List<SapDiscoveryComponent> replicationSites) {
+  public SapDiscoveryComponent setReplicationSites(java.util.List<SapDiscoveryComponentReplicationSite> replicationSites) {
     this.replicationSites = replicationSites;
     return this;
   }

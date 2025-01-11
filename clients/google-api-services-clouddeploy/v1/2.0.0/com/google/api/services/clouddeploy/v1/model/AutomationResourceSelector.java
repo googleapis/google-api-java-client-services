@@ -31,14 +31,14 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class AutomationResourceSelector extends com.google.api.client.json.GenericJson {
 
   /**
-   * Contains attributes about a target.
+   * Optional. Contains attributes about a target.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<TargetAttribute> targets;
 
   /**
-   * Contains attributes about a target.
+   * Optional. Contains attributes about a target.
    * @return value or {@code null} for none
    */
   public java.util.List<TargetAttribute> getTargets() {
@@ -46,7 +46,7 @@ public final class AutomationResourceSelector extends com.google.api.client.json
   }
 
   /**
-   * Contains attributes about a target.
+   * Optional. Contains attributes about a target.
    * @param targets targets or {@code null} for none
    */
   public AutomationResourceSelector setTargets(java.util.List<TargetAttribute> targets) {

@@ -30,15 +30,15 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class Canary extends com.google.api.client.json.GenericJson {
 
   /**
-   * Configures the progressive based deployment for a Target.
+   * Optional. Configures the progressive based deployment for a Target.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CanaryDeployment canaryDeployment;
 
   /**
-   * Configures the progressive based deployment for a Target, but allows customizing at the phase
-   * level where a phase represents each of the percentage deployments.
+   * Optional. Configures the progressive based deployment for a Target, but allows customizing at
+   * the phase level where a phase represents each of the percentage deployments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class Canary extends com.google.api.client.json.GenericJson {
   private RuntimeConfig runtimeConfig;
 
   /**
-   * Configures the progressive based deployment for a Target.
+   * Optional. Configures the progressive based deployment for a Target.
    * @return value or {@code null} for none
    */
   public CanaryDeployment getCanaryDeployment() {
@@ -62,7 +62,7 @@ public final class Canary extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configures the progressive based deployment for a Target.
+   * Optional. Configures the progressive based deployment for a Target.
    * @param canaryDeployment canaryDeployment or {@code null} for none
    */
   public Canary setCanaryDeployment(CanaryDeployment canaryDeployment) {
@@ -71,8 +71,8 @@ public final class Canary extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configures the progressive based deployment for a Target, but allows customizing at the phase
-   * level where a phase represents each of the percentage deployments.
+   * Optional. Configures the progressive based deployment for a Target, but allows customizing at
+   * the phase level where a phase represents each of the percentage deployments.
    * @return value or {@code null} for none
    */
   public CustomCanaryDeployment getCustomCanaryDeployment() {
@@ -80,8 +80,8 @@ public final class Canary extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configures the progressive based deployment for a Target, but allows customizing at the phase
-   * level where a phase represents each of the percentage deployments.
+   * Optional. Configures the progressive based deployment for a Target, but allows customizing at
+   * the phase level where a phase represents each of the percentage deployments.
    * @param customCanaryDeployment customCanaryDeployment or {@code null} for none
    */
   public Canary setCustomCanaryDeployment(CustomCanaryDeployment customCanaryDeployment) {

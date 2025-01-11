@@ -31,8 +31,8 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class DeliveryPipeline extends com.google.api.client.json.GenericJson {
 
   /**
-   * User annotations. These attributes can only be set and used by the user, and not by Cloud
-   * Deploy.
+   * Optional. User annotations. These attributes can only be set and used by the user, and not by
+   * Cloud Deploy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
   private String createTime;
 
   /**
-   * Description of the `DeliveryPipeline`. Max length is 255 characters.
+   * Optional. Description of the `DeliveryPipeline`. Max length is 255 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +80,7 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Optional. Name of the `DeliveryPipeline`. Format is
+   * Identifier. Name of the `DeliveryPipeline`. Format is
    * `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}`. The
    * `deliveryPipeline` component must match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
    * The value may be {@code null}.
@@ -89,14 +89,15 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
+   * Optional. SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SerialPipeline serialPipeline;
 
   /**
-   * When suspended, no new releases or rollouts can be created, but in-progress ones will complete.
+   * Optional. When suspended, no new releases or rollouts can be created, but in-progress ones will
+   * complete.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,8 +118,8 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
   private String updateTime;
 
   /**
-   * User annotations. These attributes can only be set and used by the user, and not by Cloud
-   * Deploy.
+   * Optional. User annotations. These attributes can only be set and used by the user, and not by
+   * Cloud Deploy.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -126,8 +127,8 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * User annotations. These attributes can only be set and used by the user, and not by Cloud
-   * Deploy.
+   * Optional. User annotations. These attributes can only be set and used by the user, and not by
+   * Cloud Deploy.
    * @param annotations annotations or {@code null} for none
    */
   public DeliveryPipeline setAnnotations(java.util.Map<String, java.lang.String> annotations) {
@@ -170,7 +171,7 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Description of the `DeliveryPipeline`. Max length is 255 characters.
+   * Optional. Description of the `DeliveryPipeline`. Max length is 255 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -178,7 +179,7 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Description of the `DeliveryPipeline`. Max length is 255 characters.
+   * Optional. Description of the `DeliveryPipeline`. Max length is 255 characters.
    * @param description description or {@code null} for none
    */
   public DeliveryPipeline setDescription(java.lang.String description) {
@@ -233,7 +234,7 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Name of the `DeliveryPipeline`. Format is
+   * Identifier. Name of the `DeliveryPipeline`. Format is
    * `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}`. The
    * `deliveryPipeline` component must match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
    * @return value or {@code null} for none
@@ -243,7 +244,7 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Name of the `DeliveryPipeline`. Format is
+   * Identifier. Name of the `DeliveryPipeline`. Format is
    * `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}`. The
    * `deliveryPipeline` component must match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
    * @param name name or {@code null} for none
@@ -254,7 +255,7 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
+   * Optional. SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
    * @return value or {@code null} for none
    */
   public SerialPipeline getSerialPipeline() {
@@ -262,7 +263,7 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
+   * Optional. SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
    * @param serialPipeline serialPipeline or {@code null} for none
    */
   public DeliveryPipeline setSerialPipeline(SerialPipeline serialPipeline) {
@@ -271,7 +272,8 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * When suspended, no new releases or rollouts can be created, but in-progress ones will complete.
+   * Optional. When suspended, no new releases or rollouts can be created, but in-progress ones will
+   * complete.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSuspended() {
@@ -279,7 +281,8 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * When suspended, no new releases or rollouts can be created, but in-progress ones will complete.
+   * Optional. When suspended, no new releases or rollouts can be created, but in-progress ones will
+   * complete.
    * @param suspended suspended or {@code null} for none
    */
   public DeliveryPipeline setSuspended(java.lang.Boolean suspended) {

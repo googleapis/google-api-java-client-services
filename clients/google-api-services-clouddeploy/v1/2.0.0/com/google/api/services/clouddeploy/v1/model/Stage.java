@@ -43,7 +43,7 @@ public final class Stage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Skaffold profiles to use when rendering the manifest for this stage's `Target`.
+   * Optional. Skaffold profiles to use when rendering the manifest for this stage's `Target`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,8 +57,8 @@ public final class Stage extends com.google.api.client.json.GenericJson {
   private Strategy strategy;
 
   /**
-   * The target_id to which this stage points. This field refers exclusively to the last segment of
-   * a target name. For example, this field would just be `my-target` (rather than
+   * Optional. The target_id to which this stage points. This field refers exclusively to the last
+   * segment of a target name. For example, this field would just be `my-target` (rather than
    * `projects/project/locations/location/targets/my-target`). The location of the `Target` is
    * inferred to be the same as the location of the `DeliveryPipeline` that contains this `Stage`.
    * The value may be {@code null}.
@@ -84,7 +84,7 @@ public final class Stage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Skaffold profiles to use when rendering the manifest for this stage's `Target`.
+   * Optional. Skaffold profiles to use when rendering the manifest for this stage's `Target`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProfiles() {
@@ -92,7 +92,7 @@ public final class Stage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Skaffold profiles to use when rendering the manifest for this stage's `Target`.
+   * Optional. Skaffold profiles to use when rendering the manifest for this stage's `Target`.
    * @param profiles profiles or {@code null} for none
    */
   public Stage setProfiles(java.util.List<java.lang.String> profiles) {
@@ -118,8 +118,8 @@ public final class Stage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The target_id to which this stage points. This field refers exclusively to the last segment of
-   * a target name. For example, this field would just be `my-target` (rather than
+   * Optional. The target_id to which this stage points. This field refers exclusively to the last
+   * segment of a target name. For example, this field would just be `my-target` (rather than
    * `projects/project/locations/location/targets/my-target`). The location of the `Target` is
    * inferred to be the same as the location of the `DeliveryPipeline` that contains this `Stage`.
    * @return value or {@code null} for none
@@ -129,8 +129,8 @@ public final class Stage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The target_id to which this stage points. This field refers exclusively to the last segment of
-   * a target name. For example, this field would just be `my-target` (rather than
+   * Optional. The target_id to which this stage points. This field refers exclusively to the last
+   * segment of a target name. For example, this field would just be `my-target` (rather than
    * `projects/project/locations/location/targets/my-target`). The location of the `Target` is
    * inferred to be the same as the location of the `DeliveryPipeline` that contains this `Stage`.
    * @param targetId targetId or {@code null} for none

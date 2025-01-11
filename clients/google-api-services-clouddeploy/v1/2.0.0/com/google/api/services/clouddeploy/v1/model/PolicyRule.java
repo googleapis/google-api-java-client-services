@@ -30,14 +30,14 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class PolicyRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * Rollout restrictions.
+   * Optional. Rollout restrictions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RolloutRestriction rolloutRestriction;
 
   /**
-   * Rollout restrictions.
+   * Optional. Rollout restrictions.
    * @return value or {@code null} for none
    */
   public RolloutRestriction getRolloutRestriction() {
@@ -45,7 +45,7 @@ public final class PolicyRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Rollout restrictions.
+   * Optional. Rollout restrictions.
    * @param rolloutRestriction rolloutRestriction or {@code null} for none
    */
   public PolicyRule setRolloutRestriction(RolloutRestriction rolloutRestriction) {

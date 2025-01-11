@@ -38,16 +38,16 @@ public final class Release extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean abandoned;
 
   /**
-   * User annotations. These attributes can only be set and used by the user, and not by Cloud
-   * Deploy. See https://google.aip.dev/128#annotations for more details such as format and size
-   * limitations.
+   * Optional. User annotations. These attributes can only be set and used by the user, and not by
+   * Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and
+   * size limitations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
-   * List of artifacts to pass through to Skaffold command.
+   * Optional. List of artifacts to pass through to Skaffold command.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +102,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> deployParameters;
 
   /**
-   * Description of the `Release`. Max length is 255 characters.
+   * Optional. Description of the `Release`. Max length is 255 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,8 +129,8 @@ public final class Release extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Optional. Name of the `Release`. Format is `projects/{project}/locations/{location}/deliveryPip
-   * elines/{deliveryPipeline}/releases/{release}`. The `release` component must match
+   * Identifier. Name of the `Release`. Format is `projects/{project}/locations/{location}/deliveryP
+   * ipelines/{deliveryPipeline}/releases/{release}`. The `release` component must match
    * `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
    * The value may be {@code null}.
    */
@@ -159,14 +159,14 @@ public final class Release extends com.google.api.client.json.GenericJson {
   private java.lang.String renderState;
 
   /**
-   * Filepath of the Skaffold config inside of the config URI.
+   * Optional. Filepath of the Skaffold config inside of the config URI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String skaffoldConfigPath;
 
   /**
-   * Cloud Storage URI of tar.gz archive containing Skaffold configuration.
+   * Optional. Cloud Storage URI of tar.gz archive containing Skaffold configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -227,9 +227,9 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User annotations. These attributes can only be set and used by the user, and not by Cloud
-   * Deploy. See https://google.aip.dev/128#annotations for more details such as format and size
-   * limitations.
+   * Optional. User annotations. These attributes can only be set and used by the user, and not by
+   * Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and
+   * size limitations.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -237,9 +237,9 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User annotations. These attributes can only be set and used by the user, and not by Cloud
-   * Deploy. See https://google.aip.dev/128#annotations for more details such as format and size
-   * limitations.
+   * Optional. User annotations. These attributes can only be set and used by the user, and not by
+   * Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and
+   * size limitations.
    * @param annotations annotations or {@code null} for none
    */
   public Release setAnnotations(java.util.Map<String, java.lang.String> annotations) {
@@ -248,7 +248,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of artifacts to pass through to Skaffold command.
+   * Optional. List of artifacts to pass through to Skaffold command.
    * @return value or {@code null} for none
    */
   public java.util.List<BuildArtifact> getBuildArtifacts() {
@@ -256,7 +256,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of artifacts to pass through to Skaffold command.
+   * Optional. List of artifacts to pass through to Skaffold command.
    * @param buildArtifacts buildArtifacts or {@code null} for none
    */
   public Release setBuildArtifacts(java.util.List<BuildArtifact> buildArtifacts) {
@@ -352,7 +352,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Description of the `Release`. Max length is 255 characters.
+   * Optional. Description of the `Release`. Max length is 255 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -360,7 +360,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Description of the `Release`. Max length is 255 characters.
+   * Optional. Description of the `Release`. Max length is 255 characters.
    * @param description description or {@code null} for none
    */
   public Release setDescription(java.lang.String description) {
@@ -415,8 +415,8 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Name of the `Release`. Format is `projects/{project}/locations/{location}/deliveryPip
-   * elines/{deliveryPipeline}/releases/{release}`. The `release` component must match
+   * Identifier. Name of the `Release`. Format is `projects/{project}/locations/{location}/deliveryP
+   * ipelines/{deliveryPipeline}/releases/{release}`. The `release` component must match
    * `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
    * @return value or {@code null} for none
    */
@@ -425,8 +425,8 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Name of the `Release`. Format is `projects/{project}/locations/{location}/deliveryPip
-   * elines/{deliveryPipeline}/releases/{release}`. The `release` component must match
+   * Identifier. Name of the `Release`. Format is `projects/{project}/locations/{location}/deliveryP
+   * ipelines/{deliveryPipeline}/releases/{release}`. The `release` component must match
    * `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
    * @param name name or {@code null} for none
    */
@@ -487,7 +487,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Filepath of the Skaffold config inside of the config URI.
+   * Optional. Filepath of the Skaffold config inside of the config URI.
    * @return value or {@code null} for none
    */
   public java.lang.String getSkaffoldConfigPath() {
@@ -495,7 +495,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Filepath of the Skaffold config inside of the config URI.
+   * Optional. Filepath of the Skaffold config inside of the config URI.
    * @param skaffoldConfigPath skaffoldConfigPath or {@code null} for none
    */
   public Release setSkaffoldConfigPath(java.lang.String skaffoldConfigPath) {
@@ -504,7 +504,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Storage URI of tar.gz archive containing Skaffold configuration.
+   * Optional. Cloud Storage URI of tar.gz archive containing Skaffold configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getSkaffoldConfigUri() {
@@ -512,7 +512,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Storage URI of tar.gz archive containing Skaffold configuration.
+   * Optional. Cloud Storage URI of tar.gz archive containing Skaffold configuration.
    * @param skaffoldConfigUri skaffoldConfigUri or {@code null} for none
    */
   public Release setSkaffoldConfigUri(java.lang.String skaffoldConfigUri) {

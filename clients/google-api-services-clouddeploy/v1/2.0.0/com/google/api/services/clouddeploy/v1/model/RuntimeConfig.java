@@ -30,21 +30,21 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class RuntimeConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Cloud Run runtime configuration.
+   * Optional. Cloud Run runtime configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CloudRunConfig cloudRun;
 
   /**
-   * Kubernetes runtime configuration.
+   * Optional. Kubernetes runtime configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private KubernetesConfig kubernetes;
 
   /**
-   * Cloud Run runtime configuration.
+   * Optional. Cloud Run runtime configuration.
    * @return value or {@code null} for none
    */
   public CloudRunConfig getCloudRun() {
@@ -52,7 +52,7 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Cloud Run runtime configuration.
+   * Optional. Cloud Run runtime configuration.
    * @param cloudRun cloudRun or {@code null} for none
    */
   public RuntimeConfig setCloudRun(CloudRunConfig cloudRun) {
@@ -61,7 +61,7 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Kubernetes runtime configuration.
+   * Optional. Kubernetes runtime configuration.
    * @return value or {@code null} for none
    */
   public KubernetesConfig getKubernetes() {
@@ -69,7 +69,7 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Kubernetes runtime configuration.
+   * Optional. Kubernetes runtime configuration.
    * @param kubernetes kubernetes or {@code null} for none
    */
   public RuntimeConfig setKubernetes(KubernetesConfig kubernetes) {

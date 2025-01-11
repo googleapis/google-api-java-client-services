@@ -31,15 +31,16 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class DeployPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * User annotations. These attributes can only be set and used by the user, and not by Cloud
-   * Deploy. Annotations must meet the following constraints: * Annotations are key/value pairs. *
-   * Valid annotation keys have two segments: an optional prefix and name, separated by a slash
-   * (`/`). * The name segment is required and must be 63 characters or less, beginning and ending
-   * with an alphanumeric character (`[a-z0-9A-Z]`) with dashes (`-`), underscores (`_`), dots
-   * (`.`), and alphanumerics between. * The prefix is optional. If specified, the prefix must be a
-   * DNS subdomain: a series of DNS labels separated by dots(`.`), not longer than 253 characters in
-   * total, followed by a slash (`/`). See https://kubernetes.io/docs/concepts/overview/working-
-   * with-objects/annotations/#syntax-and-character-set for more details.
+   * Optional. User annotations. These attributes can only be set and used by the user, and not by
+   * Cloud Deploy. Annotations must meet the following constraints: * Annotations are key/value
+   * pairs. * Valid annotation keys have two segments: an optional prefix and name, separated by a
+   * slash (`/`). * The name segment is required and must be 63 characters or less, beginning and
+   * ending with an alphanumeric character (`[a-z0-9A-Z]`) with dashes (`-`), underscores (`_`),
+   * dots (`.`), and alphanumerics between. * The prefix is optional. If specified, the prefix must
+   * be a DNS subdomain: a series of DNS labels separated by dots(`.`), not longer than 253
+   * characters in total, followed by a slash (`/`). See
+   * https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/#syntax-and-
+   * character-set for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +54,7 @@ public final class DeployPolicy extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Description of the `DeployPolicy`. Max length is 255 characters.
+   * Optional. Description of the `DeployPolicy`. Max length is 255 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,8 +108,8 @@ public final class DeployPolicy extends com.google.api.client.json.GenericJson {
   private java.util.List<DeployPolicyResourceSelector> selectors;
 
   /**
-   * When suspended, the policy will not prevent actions from occurring, even if the action violates
-   * the policy.
+   * Optional. When suspended, the policy will not prevent actions from occurring, even if the
+   * action violates the policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,15 +130,16 @@ public final class DeployPolicy extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * User annotations. These attributes can only be set and used by the user, and not by Cloud
-   * Deploy. Annotations must meet the following constraints: * Annotations are key/value pairs. *
-   * Valid annotation keys have two segments: an optional prefix and name, separated by a slash
-   * (`/`). * The name segment is required and must be 63 characters or less, beginning and ending
-   * with an alphanumeric character (`[a-z0-9A-Z]`) with dashes (`-`), underscores (`_`), dots
-   * (`.`), and alphanumerics between. * The prefix is optional. If specified, the prefix must be a
-   * DNS subdomain: a series of DNS labels separated by dots(`.`), not longer than 253 characters in
-   * total, followed by a slash (`/`). See https://kubernetes.io/docs/concepts/overview/working-
-   * with-objects/annotations/#syntax-and-character-set for more details.
+   * Optional. User annotations. These attributes can only be set and used by the user, and not by
+   * Cloud Deploy. Annotations must meet the following constraints: * Annotations are key/value
+   * pairs. * Valid annotation keys have two segments: an optional prefix and name, separated by a
+   * slash (`/`). * The name segment is required and must be 63 characters or less, beginning and
+   * ending with an alphanumeric character (`[a-z0-9A-Z]`) with dashes (`-`), underscores (`_`),
+   * dots (`.`), and alphanumerics between. * The prefix is optional. If specified, the prefix must
+   * be a DNS subdomain: a series of DNS labels separated by dots(`.`), not longer than 253
+   * characters in total, followed by a slash (`/`). See
+   * https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/#syntax-and-
+   * character-set for more details.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -145,15 +147,16 @@ public final class DeployPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User annotations. These attributes can only be set and used by the user, and not by Cloud
-   * Deploy. Annotations must meet the following constraints: * Annotations are key/value pairs. *
-   * Valid annotation keys have two segments: an optional prefix and name, separated by a slash
-   * (`/`). * The name segment is required and must be 63 characters or less, beginning and ending
-   * with an alphanumeric character (`[a-z0-9A-Z]`) with dashes (`-`), underscores (`_`), dots
-   * (`.`), and alphanumerics between. * The prefix is optional. If specified, the prefix must be a
-   * DNS subdomain: a series of DNS labels separated by dots(`.`), not longer than 253 characters in
-   * total, followed by a slash (`/`). See https://kubernetes.io/docs/concepts/overview/working-
-   * with-objects/annotations/#syntax-and-character-set for more details.
+   * Optional. User annotations. These attributes can only be set and used by the user, and not by
+   * Cloud Deploy. Annotations must meet the following constraints: * Annotations are key/value
+   * pairs. * Valid annotation keys have two segments: an optional prefix and name, separated by a
+   * slash (`/`). * The name segment is required and must be 63 characters or less, beginning and
+   * ending with an alphanumeric character (`[a-z0-9A-Z]`) with dashes (`-`), underscores (`_`),
+   * dots (`.`), and alphanumerics between. * The prefix is optional. If specified, the prefix must
+   * be a DNS subdomain: a series of DNS labels separated by dots(`.`), not longer than 253
+   * characters in total, followed by a slash (`/`). See
+   * https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/#syntax-and-
+   * character-set for more details.
    * @param annotations annotations or {@code null} for none
    */
   public DeployPolicy setAnnotations(java.util.Map<String, java.lang.String> annotations) {
@@ -179,7 +182,7 @@ public final class DeployPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Description of the `DeployPolicy`. Max length is 255 characters.
+   * Optional. Description of the `DeployPolicy`. Max length is 255 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -187,7 +190,7 @@ public final class DeployPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Description of the `DeployPolicy`. Max length is 255 characters.
+   * Optional. Description of the `DeployPolicy`. Max length is 255 characters.
    * @param description description or {@code null} for none
    */
   public DeployPolicy setDescription(java.lang.String description) {
@@ -305,8 +308,8 @@ public final class DeployPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When suspended, the policy will not prevent actions from occurring, even if the action violates
-   * the policy.
+   * Optional. When suspended, the policy will not prevent actions from occurring, even if the
+   * action violates the policy.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSuspended() {
@@ -314,8 +317,8 @@ public final class DeployPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When suspended, the policy will not prevent actions from occurring, even if the action violates
-   * the policy.
+   * Optional. When suspended, the policy will not prevent actions from occurring, even if the
+   * action violates the policy.
    * @param suspended suspended or {@code null} for none
    */
   public DeployPolicy setSuspended(java.lang.Boolean suspended) {

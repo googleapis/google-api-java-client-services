@@ -30,21 +30,24 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class Strategy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Canary deployment strategy provides progressive percentage based deployments to a Target.
+   * Optional. Canary deployment strategy provides progressive percentage based deployments to a
+   * Target.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Canary canary;
 
   /**
-   * Standard deployment strategy executes a single deploy and allows verifying the deployment.
+   * Optional. Standard deployment strategy executes a single deploy and allows verifying the
+   * deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Standard standard;
 
   /**
-   * Canary deployment strategy provides progressive percentage based deployments to a Target.
+   * Optional. Canary deployment strategy provides progressive percentage based deployments to a
+   * Target.
    * @return value or {@code null} for none
    */
   public Canary getCanary() {
@@ -52,7 +55,8 @@ public final class Strategy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Canary deployment strategy provides progressive percentage based deployments to a Target.
+   * Optional. Canary deployment strategy provides progressive percentage based deployments to a
+   * Target.
    * @param canary canary or {@code null} for none
    */
   public Strategy setCanary(Canary canary) {
@@ -61,7 +65,8 @@ public final class Strategy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Standard deployment strategy executes a single deploy and allows verifying the deployment.
+   * Optional. Standard deployment strategy executes a single deploy and allows verifying the
+   * deployment.
    * @return value or {@code null} for none
    */
   public Standard getStandard() {
@@ -69,7 +74,8 @@ public final class Strategy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Standard deployment strategy executes a single deploy and allows verifying the deployment.
+   * Optional. Standard deployment strategy executes a single deploy and allows verifying the
+   * deployment.
    * @param standard standard or {@code null} for none
    */
   public Strategy setStandard(Standard standard) {

@@ -30,8 +30,8 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class DeliveryPipelineAttribute extends com.google.api.client.json.GenericJson {
 
   /**
-   * ID of the `DeliveryPipeline`. The value of this field could be one of the following: * The last
-   * segment of a pipeline name * "*", all delivery pipelines in a location
+   * Optional. ID of the `DeliveryPipeline`. The value of this field could be one of the following:
+   * * The last segment of a pipeline name * "*", all delivery pipelines in a location
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +45,8 @@ public final class DeliveryPipelineAttribute extends com.google.api.client.json.
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * ID of the `DeliveryPipeline`. The value of this field could be one of the following: * The last
-   * segment of a pipeline name * "*", all delivery pipelines in a location
+   * Optional. ID of the `DeliveryPipeline`. The value of this field could be one of the following:
+   * * The last segment of a pipeline name * "*", all delivery pipelines in a location
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -54,8 +54,8 @@ public final class DeliveryPipelineAttribute extends com.google.api.client.json.
   }
 
   /**
-   * ID of the `DeliveryPipeline`. The value of this field could be one of the following: * The last
-   * segment of a pipeline name * "*", all delivery pipelines in a location
+   * Optional. ID of the `DeliveryPipeline`. The value of this field could be one of the following:
+   * * The last segment of a pipeline name * "*", all delivery pipelines in a location
    * @param id id or {@code null} for none
    */
   public DeliveryPipelineAttribute setId(java.lang.String id) {

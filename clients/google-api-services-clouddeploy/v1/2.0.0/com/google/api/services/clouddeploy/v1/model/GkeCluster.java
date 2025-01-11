@@ -38,11 +38,20 @@ public final class GkeCluster extends com.google.api.client.json.GenericJson {
   private java.lang.String cluster;
 
   /**
+   * Optional. If set, the cluster will be accessed using the DNS endpoint. Note that both
+   * `dns_endpoint` and `internal_ip` cannot be set to true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean dnsEndpoint;
+
+  /**
    * Optional. If true, `cluster` is accessed using the private IP address of the control plane
    * endpoint. Otherwise, the default IP address of the control plane endpoint is used. The default
    * IP address is the private IP address for clusters with private control-plane endpoints and the
    * public IP address otherwise. Only specify this option when `cluster` is a [private GKE
    * cluster](https://cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept).
+   * Note that `internal_ip` and `dns_endpoint` cannot both be set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,11 +86,31 @@ public final class GkeCluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. If set, the cluster will be accessed using the DNS endpoint. Note that both
+   * `dns_endpoint` and `internal_ip` cannot be set to true.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDnsEndpoint() {
+    return dnsEndpoint;
+  }
+
+  /**
+   * Optional. If set, the cluster will be accessed using the DNS endpoint. Note that both
+   * `dns_endpoint` and `internal_ip` cannot be set to true.
+   * @param dnsEndpoint dnsEndpoint or {@code null} for none
+   */
+  public GkeCluster setDnsEndpoint(java.lang.Boolean dnsEndpoint) {
+    this.dnsEndpoint = dnsEndpoint;
+    return this;
+  }
+
+  /**
    * Optional. If true, `cluster` is accessed using the private IP address of the control plane
    * endpoint. Otherwise, the default IP address of the control plane endpoint is used. The default
    * IP address is the private IP address for clusters with private control-plane endpoints and the
    * public IP address otherwise. Only specify this option when `cluster` is a [private GKE
    * cluster](https://cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept).
+   * Note that `internal_ip` and `dns_endpoint` cannot both be set to true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getInternalIp() {
@@ -94,6 +123,7 @@ public final class GkeCluster extends com.google.api.client.json.GenericJson {
    * IP address is the private IP address for clusters with private control-plane endpoints and the
    * public IP address otherwise. Only specify this option when `cluster` is a [private GKE
    * cluster](https://cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept).
+   * Note that `internal_ip` and `dns_endpoint` cannot both be set to true.
    * @param internalIp internalIp or {@code null} for none
    */
   public GkeCluster setInternalIp(java.lang.Boolean internalIp) {

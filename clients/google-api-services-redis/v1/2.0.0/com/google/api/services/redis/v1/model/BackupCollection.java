@@ -46,6 +46,13 @@ public final class BackupCollection extends com.google.api.client.json.GenericJs
   private java.lang.String clusterUid;
 
   /**
+   * Output only. The KMS key used to encrypt the backups under this backup collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKey;
+
+  /**
    * Identifier. Full resource path of the backup collection.
    * The value may be {@code null}.
    */
@@ -92,6 +99,23 @@ public final class BackupCollection extends com.google.api.client.json.GenericJs
    */
   public BackupCollection setClusterUid(java.lang.String clusterUid) {
     this.clusterUid = clusterUid;
+    return this;
+  }
+
+  /**
+   * Output only. The KMS key used to encrypt the backups under this backup collection.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKey() {
+    return kmsKey;
+  }
+
+  /**
+   * Output only. The KMS key used to encrypt the backups under this backup collection.
+   * @param kmsKey kmsKey or {@code null} for none
+   */
+  public BackupCollection setKmsKey(java.lang.String kmsKey) {
+    this.kmsKey = kmsKey;
     return this;
   }
 

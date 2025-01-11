@@ -31,7 +31,8 @@ package com.google.api.services.redis.v1beta1.model;
 public final class MachineConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of CPUs. TODO(b/342344482, b/342346271) add proto validations again after bug fix.
+   * The number of CPUs. Deprecated. Use vcpu_count instead. TODO(b/342344482, b/342346271) add
+   * proto validations again after bug fix.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +61,8 @@ public final class MachineConfiguration extends com.google.api.client.json.Gener
   private java.lang.Double vcpuCount;
 
   /**
-   * The number of CPUs. TODO(b/342344482, b/342346271) add proto validations again after bug fix.
+   * The number of CPUs. Deprecated. Use vcpu_count instead. TODO(b/342344482, b/342346271) add
+   * proto validations again after bug fix.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCpuCount() {
@@ -68,7 +70,8 @@ public final class MachineConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * The number of CPUs. TODO(b/342344482, b/342346271) add proto validations again after bug fix.
+   * The number of CPUs. Deprecated. Use vcpu_count instead. TODO(b/342344482, b/342346271) add
+   * proto validations again after bug fix.
    * @param cpuCount cpuCount or {@code null} for none
    */
   public MachineConfiguration setCpuCount(java.lang.Integer cpuCount) {

@@ -57,6 +57,13 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   private DefaultSnatStatus defaultSnatStatus;
 
   /**
+   * Disable L4 load balancer VPC firewalls to enable firewall policies.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableL4LbFirewallReconciliation;
+
+  /**
    * DNSConfig contains clusterDNS config for this cluster.
    * The value may be {@code null}.
    */
@@ -211,6 +218,23 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   public NetworkConfig setDefaultSnatStatus(DefaultSnatStatus defaultSnatStatus) {
     this.defaultSnatStatus = defaultSnatStatus;
+    return this;
+  }
+
+  /**
+   * Disable L4 load balancer VPC firewalls to enable firewall policies.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableL4LbFirewallReconciliation() {
+    return disableL4LbFirewallReconciliation;
+  }
+
+  /**
+   * Disable L4 load balancer VPC firewalls to enable firewall policies.
+   * @param disableL4LbFirewallReconciliation disableL4LbFirewallReconciliation or {@code null} for none
+   */
+  public NetworkConfig setDisableL4LbFirewallReconciliation(java.lang.Boolean disableL4LbFirewallReconciliation) {
+    this.disableL4LbFirewallReconciliation = disableL4LbFirewallReconciliation;
     return this;
   }
 

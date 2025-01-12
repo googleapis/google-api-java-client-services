@@ -154,14 +154,17 @@ public final class Node extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Network configurations for the TPU node.
+   * Network configurations for the TPU node. network_config and network_configs are mutually
+   * exclusive, you can only specify one of them. If both are specified, an error will be returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private NetworkConfig networkConfig;
 
   /**
-   * Optional. Repeated network configurations for the TPU node.
+   * Optional. Repeated network configurations for the TPU node. This field is used to specify
+   * multiple networks configs for the TPU node. network_config and network_configs are mutually
+   * exclusive, you can only specify one of them. If both are specified, an error will be returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -537,7 +540,8 @@ public final class Node extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Network configurations for the TPU node.
+   * Network configurations for the TPU node. network_config and network_configs are mutually
+   * exclusive, you can only specify one of them. If both are specified, an error will be returned.
    * @return value or {@code null} for none
    */
   public NetworkConfig getNetworkConfig() {
@@ -545,7 +549,8 @@ public final class Node extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Network configurations for the TPU node.
+   * Network configurations for the TPU node. network_config and network_configs are mutually
+   * exclusive, you can only specify one of them. If both are specified, an error will be returned.
    * @param networkConfig networkConfig or {@code null} for none
    */
   public Node setNetworkConfig(NetworkConfig networkConfig) {
@@ -554,7 +559,9 @@ public final class Node extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Repeated network configurations for the TPU node.
+   * Optional. Repeated network configurations for the TPU node. This field is used to specify
+   * multiple networks configs for the TPU node. network_config and network_configs are mutually
+   * exclusive, you can only specify one of them. If both are specified, an error will be returned.
    * @return value or {@code null} for none
    */
   public java.util.List<NetworkConfig> getNetworkConfigs() {
@@ -562,7 +569,9 @@ public final class Node extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Repeated network configurations for the TPU node.
+   * Optional. Repeated network configurations for the TPU node. This field is used to specify
+   * multiple networks configs for the TPU node. network_config and network_configs are mutually
+   * exclusive, you can only specify one of them. If both are specified, an error will be returned.
    * @param networkConfigs networkConfigs or {@code null} for none
    */
   public Node setNetworkConfigs(java.util.List<NetworkConfig> networkConfigs) {

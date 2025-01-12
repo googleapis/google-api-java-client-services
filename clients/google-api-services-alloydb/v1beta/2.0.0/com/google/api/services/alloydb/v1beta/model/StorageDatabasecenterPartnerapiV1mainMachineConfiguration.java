@@ -30,7 +30,8 @@ package com.google.api.services.alloydb.v1beta.model;
 public final class StorageDatabasecenterPartnerapiV1mainMachineConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of CPUs. TODO(b/342344482, b/342346271) add proto validations again after bug fix.
+   * The number of CPUs. Deprecated. Use vcpu_count instead. TODO(b/342344482, b/342346271) add
+   * proto validations again after bug fix.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +60,8 @@ public final class StorageDatabasecenterPartnerapiV1mainMachineConfiguration ext
   private java.lang.Double vcpuCount;
 
   /**
-   * The number of CPUs. TODO(b/342344482, b/342346271) add proto validations again after bug fix.
+   * The number of CPUs. Deprecated. Use vcpu_count instead. TODO(b/342344482, b/342346271) add
+   * proto validations again after bug fix.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCpuCount() {
@@ -67,7 +69,8 @@ public final class StorageDatabasecenterPartnerapiV1mainMachineConfiguration ext
   }
 
   /**
-   * The number of CPUs. TODO(b/342344482, b/342346271) add proto validations again after bug fix.
+   * The number of CPUs. Deprecated. Use vcpu_count instead. TODO(b/342344482, b/342346271) add
+   * proto validations again after bug fix.
    * @param cpuCount cpuCount or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainMachineConfiguration setCpuCount(java.lang.Integer cpuCount) {

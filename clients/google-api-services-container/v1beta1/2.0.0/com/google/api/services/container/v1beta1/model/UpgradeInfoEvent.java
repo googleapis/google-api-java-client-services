@@ -52,6 +52,20 @@ public final class UpgradeInfoEvent extends com.google.api.client.json.GenericJs
   private String endTime;
 
   /**
+   * The type of the event.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String eventType;
+
+  /**
+   * The end of extended support timestamp.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String extendedSupportEndTime;
+
+  /**
    * The operation associated with this upgrade.
    * The value may be {@code null}.
    */
@@ -72,6 +86,13 @@ public final class UpgradeInfoEvent extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceType;
+
+  /**
+   * The end of standard support timestamp.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String standardSupportEndTime;
 
   /**
    * The time when the operation was started.
@@ -146,6 +167,40 @@ public final class UpgradeInfoEvent extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * The type of the event.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEventType() {
+    return eventType;
+  }
+
+  /**
+   * The type of the event.
+   * @param eventType eventType or {@code null} for none
+   */
+  public UpgradeInfoEvent setEventType(java.lang.String eventType) {
+    this.eventType = eventType;
+    return this;
+  }
+
+  /**
+   * The end of extended support timestamp.
+   * @return value or {@code null} for none
+   */
+  public String getExtendedSupportEndTime() {
+    return extendedSupportEndTime;
+  }
+
+  /**
+   * The end of extended support timestamp.
+   * @param extendedSupportEndTime extendedSupportEndTime or {@code null} for none
+   */
+  public UpgradeInfoEvent setExtendedSupportEndTime(String extendedSupportEndTime) {
+    this.extendedSupportEndTime = extendedSupportEndTime;
+    return this;
+  }
+
+  /**
    * The operation associated with this upgrade.
    * @return value or {@code null} for none
    */
@@ -195,6 +250,23 @@ public final class UpgradeInfoEvent extends com.google.api.client.json.GenericJs
    */
   public UpgradeInfoEvent setResourceType(java.lang.String resourceType) {
     this.resourceType = resourceType;
+    return this;
+  }
+
+  /**
+   * The end of standard support timestamp.
+   * @return value or {@code null} for none
+   */
+  public String getStandardSupportEndTime() {
+    return standardSupportEndTime;
+  }
+
+  /**
+   * The end of standard support timestamp.
+   * @param standardSupportEndTime standardSupportEndTime or {@code null} for none
+   */
+  public UpgradeInfoEvent setStandardSupportEndTime(String standardSupportEndTime) {
+    this.standardSupportEndTime = standardSupportEndTime;
     return this;
   }
 

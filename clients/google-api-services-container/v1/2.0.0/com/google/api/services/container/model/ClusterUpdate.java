@@ -132,6 +132,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private DefaultSnatStatus desiredDefaultSnatStatus;
 
   /**
+   * Enable/Disable L4 LB VPC firewall reconciliation for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean desiredDisableL4LbFirewallReconciliation;
+
+  /**
    * DNSConfig contains clusterDNS config for this cluster.
    * The value may be {@code null}.
    */
@@ -770,6 +777,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredDefaultSnatStatus(DefaultSnatStatus desiredDefaultSnatStatus) {
     this.desiredDefaultSnatStatus = desiredDefaultSnatStatus;
+    return this;
+  }
+
+  /**
+   * Enable/Disable L4 LB VPC firewall reconciliation for the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDesiredDisableL4LbFirewallReconciliation() {
+    return desiredDisableL4LbFirewallReconciliation;
+  }
+
+  /**
+   * Enable/Disable L4 LB VPC firewall reconciliation for the cluster.
+   * @param desiredDisableL4LbFirewallReconciliation desiredDisableL4LbFirewallReconciliation or {@code null} for none
+   */
+  public ClusterUpdate setDesiredDisableL4LbFirewallReconciliation(java.lang.Boolean desiredDisableL4LbFirewallReconciliation) {
+    this.desiredDisableL4LbFirewallReconciliation = desiredDisableL4LbFirewallReconciliation;
     return this;
   }
 

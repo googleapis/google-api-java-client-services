@@ -45,8 +45,14 @@ public final class PostgreSql extends com.google.api.client.json.GenericJson {
   private java.lang.String database;
 
   /**
-   * Optional. Configure how much Postgresql schema validation to perform. Default to `STRICT` if
-   * not specified.
+   * Optional. Configure how to perform Postgresql schema migration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String schemaMigration;
+
+  /**
+   * Optional. Configure how much Postgresql schema validation to perform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,8 +101,24 @@ public final class PostgreSql extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configure how much Postgresql schema validation to perform. Default to `STRICT` if
-   * not specified.
+   * Optional. Configure how to perform Postgresql schema migration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSchemaMigration() {
+    return schemaMigration;
+  }
+
+  /**
+   * Optional. Configure how to perform Postgresql schema migration.
+   * @param schemaMigration schemaMigration or {@code null} for none
+   */
+  public PostgreSql setSchemaMigration(java.lang.String schemaMigration) {
+    this.schemaMigration = schemaMigration;
+    return this;
+  }
+
+  /**
+   * Optional. Configure how much Postgresql schema validation to perform.
    * @return value or {@code null} for none
    */
   public java.lang.String getSchemaValidation() {
@@ -104,8 +126,7 @@ public final class PostgreSql extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configure how much Postgresql schema validation to perform. Default to `STRICT` if
-   * not specified.
+   * Optional. Configure how much Postgresql schema validation to perform.
    * @param schemaValidation schemaValidation or {@code null} for none
    */
   public PostgreSql setSchemaValidation(java.lang.String schemaValidation) {

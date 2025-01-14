@@ -31,8 +31,8 @@ public final class DiskConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Indicates how many IOPS to provision for the disk. This sets the number of I/O
-   * operations per second that the disk can handle. Note: This field is only supported if
-   * boot_disk_type is hyperdisk-balanced.
+   * operations per second that the disk can handle. This field is supported only if boot_disk_type
+   * is hyperdisk-balanced.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -41,7 +41,7 @@ public final class DiskConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Indicates how much throughput to provision for the disk. This sets the number of
    * throughput mb per second that the disk can handle. Values must be greater than or equal to 1.
-   * Note: This field is only supported if boot_disk_type is hyperdisk-balanced.
+   * This field is supported only if boot_disk_type is hyperdisk-balanced.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -87,8 +87,8 @@ public final class DiskConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Indicates how many IOPS to provision for the disk. This sets the number of I/O
-   * operations per second that the disk can handle. Note: This field is only supported if
-   * boot_disk_type is hyperdisk-balanced.
+   * operations per second that the disk can handle. This field is supported only if boot_disk_type
+   * is hyperdisk-balanced.
    * @return value or {@code null} for none
    */
   public java.lang.Long getBootDiskProvisionedIops() {
@@ -97,8 +97,8 @@ public final class DiskConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Indicates how many IOPS to provision for the disk. This sets the number of I/O
-   * operations per second that the disk can handle. Note: This field is only supported if
-   * boot_disk_type is hyperdisk-balanced.
+   * operations per second that the disk can handle. This field is supported only if boot_disk_type
+   * is hyperdisk-balanced.
    * @param bootDiskProvisionedIops bootDiskProvisionedIops or {@code null} for none
    */
   public DiskConfig setBootDiskProvisionedIops(java.lang.Long bootDiskProvisionedIops) {
@@ -109,7 +109,7 @@ public final class DiskConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Indicates how much throughput to provision for the disk. This sets the number of
    * throughput mb per second that the disk can handle. Values must be greater than or equal to 1.
-   * Note: This field is only supported if boot_disk_type is hyperdisk-balanced.
+   * This field is supported only if boot_disk_type is hyperdisk-balanced.
    * @return value or {@code null} for none
    */
   public java.lang.Long getBootDiskProvisionedThroughput() {
@@ -119,7 +119,7 @@ public final class DiskConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Indicates how much throughput to provision for the disk. This sets the number of
    * throughput mb per second that the disk can handle. Values must be greater than or equal to 1.
-   * Note: This field is only supported if boot_disk_type is hyperdisk-balanced.
+   * This field is supported only if boot_disk_type is hyperdisk-balanced.
    * @param bootDiskProvisionedThroughput bootDiskProvisionedThroughput or {@code null} for none
    */
   public DiskConfig setBootDiskProvisionedThroughput(java.lang.Long bootDiskProvisionedThroughput) {

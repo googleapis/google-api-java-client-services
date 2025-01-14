@@ -35,7 +35,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * not reserved - and the same range can be used by multiple Cloud Composer environments. In case
    * of overlap, IPs from this range will not be accessible in the user's VPC network. Cannot be
    * updated. If not specified, the default value of '100.64.128.0/20' is used. This field is
-   * supported for Cloud Composer environments in versions composer-3.*.*-airflow-*.*.* and newer.
+   * supported for Cloud Composer environments in versions composer-3-airflow-*.*.*-build.* and
+   * newer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +49,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * provisioned. If not provided and network and subnetwork are also empty, then connectivity to
    * user's VPC network is disabled. Network attachment must be provided in format
    * projects/{project}/regions/{region}/networkAttachments/{networkAttachment}. This field is
-   * supported for Cloud Composer environments in versions composer-3.*.*-airflow-*.*.* and newer.
+   * supported for Cloud Composer environments in versions composer-3-airflow-*.*.*-build.* and
+   * newer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,7 +175,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * not reserved - and the same range can be used by multiple Cloud Composer environments. In case
    * of overlap, IPs from this range will not be accessible in the user's VPC network. Cannot be
    * updated. If not specified, the default value of '100.64.128.0/20' is used. This field is
-   * supported for Cloud Composer environments in versions composer-3.*.*-airflow-*.*.* and newer.
+   * supported for Cloud Composer environments in versions composer-3-airflow-*.*.*-build.* and
+   * newer.
    * @return value or {@code null} for none
    */
   public java.lang.String getComposerInternalIpv4CidrBlock() {
@@ -185,7 +188,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * not reserved - and the same range can be used by multiple Cloud Composer environments. In case
    * of overlap, IPs from this range will not be accessible in the user's VPC network. Cannot be
    * updated. If not specified, the default value of '100.64.128.0/20' is used. This field is
-   * supported for Cloud Composer environments in versions composer-3.*.*-airflow-*.*.* and newer.
+   * supported for Cloud Composer environments in versions composer-3-airflow-*.*.*-build.* and
+   * newer.
    * @param composerInternalIpv4CidrBlock composerInternalIpv4CidrBlock or {@code null} for none
    */
   public NodeConfig setComposerInternalIpv4CidrBlock(java.lang.String composerInternalIpv4CidrBlock) {
@@ -200,7 +204,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * provisioned. If not provided and network and subnetwork are also empty, then connectivity to
    * user's VPC network is disabled. Network attachment must be provided in format
    * projects/{project}/regions/{region}/networkAttachments/{networkAttachment}. This field is
-   * supported for Cloud Composer environments in versions composer-3.*.*-airflow-*.*.* and newer.
+   * supported for Cloud Composer environments in versions composer-3-airflow-*.*.*-build.* and
+   * newer.
    * @return value or {@code null} for none
    */
   public java.lang.String getComposerNetworkAttachment() {
@@ -214,7 +219,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * provisioned. If not provided and network and subnetwork are also empty, then connectivity to
    * user's VPC network is disabled. Network attachment must be provided in format
    * projects/{project}/regions/{region}/networkAttachments/{networkAttachment}. This field is
-   * supported for Cloud Composer environments in versions composer-3.*.*-airflow-*.*.* and newer.
+   * supported for Cloud Composer environments in versions composer-3-airflow-*.*.*-build.* and
+   * newer.
    * @param composerNetworkAttachment composerNetworkAttachment or {@code null} for none
    */
   public NodeConfig setComposerNetworkAttachment(java.lang.String composerNetworkAttachment) {

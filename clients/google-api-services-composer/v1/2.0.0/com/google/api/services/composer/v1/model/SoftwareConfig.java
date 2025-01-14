@@ -117,7 +117,7 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   /**
    * Optional. Whether or not the web server uses custom plugins. If unspecified, the field defaults
    * to `PLUGINS_ENABLED`. This field is supported for Cloud Composer environments in versions
-   * composer-3.*.*-airflow-*.*.* and newer.
+   * composer-3-airflow-*.*.*-build.* and newer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -317,7 +317,7 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   /**
    * Optional. Whether or not the web server uses custom plugins. If unspecified, the field defaults
    * to `PLUGINS_ENABLED`. This field is supported for Cloud Composer environments in versions
-   * composer-3.*.*-airflow-*.*.* and newer.
+   * composer-3-airflow-*.*.*-build.* and newer.
    * @return value or {@code null} for none
    */
   public java.lang.String getWebServerPluginsMode() {
@@ -327,7 +327,7 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   /**
    * Optional. Whether or not the web server uses custom plugins. If unspecified, the field defaults
    * to `PLUGINS_ENABLED`. This field is supported for Cloud Composer environments in versions
-   * composer-3.*.*-airflow-*.*.* and newer.
+   * composer-3-airflow-*.*.*-build.* and newer.
    * @param webServerPluginsMode webServerPluginsMode or {@code null} for none
    */
   public SoftwareConfig setWebServerPluginsMode(java.lang.String webServerPluginsMode) {

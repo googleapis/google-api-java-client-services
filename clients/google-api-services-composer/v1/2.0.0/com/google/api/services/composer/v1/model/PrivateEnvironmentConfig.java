@@ -71,7 +71,7 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
    * either `NodeConfig.network` and `NodeConfig.subnetwork` fields or
    * `NodeConfig.composer_network_attachment` field are specified). If `false`, the builds also have
    * access to the internet. This field is supported for Cloud Composer environments in versions
-   * composer-3.*.*-airflow-*.*.* and newer.
+   * composer-3-airflow-*.*.*-build.* and newer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -217,7 +217,7 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
    * either `NodeConfig.network` and `NodeConfig.subnetwork` fields or
    * `NodeConfig.composer_network_attachment` field are specified). If `false`, the builds also have
    * access to the internet. This field is supported for Cloud Composer environments in versions
-   * composer-3.*.*-airflow-*.*.* and newer.
+   * composer-3-airflow-*.*.*-build.* and newer.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnablePrivateBuildsOnly() {
@@ -230,7 +230,7 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
    * either `NodeConfig.network` and `NodeConfig.subnetwork` fields or
    * `NodeConfig.composer_network_attachment` field are specified). If `false`, the builds also have
    * access to the internet. This field is supported for Cloud Composer environments in versions
-   * composer-3.*.*-airflow-*.*.* and newer.
+   * composer-3-airflow-*.*.*-build.* and newer.
    * @param enablePrivateBuildsOnly enablePrivateBuildsOnly or {@code null} for none
    */
   public PrivateEnvironmentConfig setEnablePrivateBuildsOnly(java.lang.Boolean enablePrivateBuildsOnly) {

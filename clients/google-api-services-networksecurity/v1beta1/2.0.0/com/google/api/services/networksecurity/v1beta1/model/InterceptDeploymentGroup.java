@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Message describing InterceptDeploymentGroup object
+ * Message describing InterceptDeploymentGroup object NEXT ID: 10
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -42,6 +42,14 @@ public final class InterceptDeploymentGroup extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private String createTime;
+
+  /**
+   * Optional. User-provided description of the deployment group. Used as additional context for the
+   * deployment group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
 
   /**
    * Optional. Labels as key value pairs
@@ -117,6 +125,25 @@ public final class InterceptDeploymentGroup extends com.google.api.client.json.G
    */
   public InterceptDeploymentGroup setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. User-provided description of the deployment group. Used as additional context for the
+   * deployment group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Optional. User-provided description of the deployment group. Used as additional context for the
+   * deployment group.
+   * @param description description or {@code null} for none
+   */
+  public InterceptDeploymentGroup setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 

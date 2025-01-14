@@ -73,7 +73,7 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
   private String expireTime;
 
   /**
-   * Output only. The resource name of the pool. Format:
+   * Identifier. The resource name of the pool. Format:
    * `locations/{location}/workforcePools/{workforce_pool_id}`
    * The value may be {@code null}.
    */
@@ -203,7 +203,7 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The resource name of the pool. Format:
+   * Identifier. The resource name of the pool. Format:
    * `locations/{location}/workforcePools/{workforce_pool_id}`
    * @return value or {@code null} for none
    */
@@ -212,7 +212,7 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The resource name of the pool. Format:
+   * Identifier. The resource name of the pool. Format:
    * `locations/{location}/workforcePools/{workforce_pool_id}`
    * @param name name or {@code null} for none
    */

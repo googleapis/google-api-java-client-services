@@ -1230,7 +1230,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the iam server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Output only. The resource name of the pool. Format:
+       * @param name Identifier. The resource name of the pool. Format:
        *        `locations/{location}/workforcePools/{workforce_pool_id}`
        * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePool}
        * @return the request
@@ -1258,7 +1258,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Output only. The resource name of the pool. Format:
+         * @param name Identifier. The resource name of the pool. Format:
        *        `locations/{location}/workforcePools/{workforce_pool_id}`
          * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePool}
          * @since 1.13
@@ -1329,13 +1329,13 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Output only. The resource name of the pool. Format:
+         * Identifier. The resource name of the pool. Format:
          * `locations/{location}/workforcePools/{workforce_pool_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Output only. The resource name of the pool. Format:
+        /** Identifier. The resource name of the pool. Format:
        `locations/{location}/workforcePools/{workforce_pool_id}`
          */
         public java.lang.String getName() {
@@ -1343,7 +1343,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Output only. The resource name of the pool. Format:
+         * Identifier. The resource name of the pool. Format:
          * `locations/{location}/workforcePools/{workforce_pool_id}`
          */
         public Patch setName(java.lang.String name) {
@@ -2668,7 +2668,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the iam server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The resource name of the provider. Format:
+         * @param name Identifier. The resource name of the provider. Format:
          *        `locations/{location}/workforcePools/{workforce_pool_id}/providers/{provider_id}`
          * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProvider}
          * @return the request
@@ -2696,7 +2696,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The resource name of the provider. Format:
+           * @param name Identifier. The resource name of the provider. Format:
          *        `locations/{location}/workforcePools/{workforce_pool_id}/providers/{provider_id}`
            * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProvider}
            * @since 1.13
@@ -2767,13 +2767,13 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Output only. The resource name of the provider. Format:
+           * Identifier. The resource name of the provider. Format:
            * `locations/{location}/workforcePools/{workforce_pool_id}/providers/{provider_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The resource name of the provider. Format:
+          /** Identifier. The resource name of the provider. Format:
          `locations/{location}/workforcePools/{workforce_pool_id}/providers/{provider_id}`
            */
           public java.lang.String getName() {
@@ -2781,7 +2781,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Output only. The resource name of the provider. Format:
+           * Identifier. The resource name of the provider. Format:
            * `locations/{location}/workforcePools/{workforce_pool_id}/providers/{provider_id}`
            */
           public Patch setName(java.lang.String name) {

@@ -49,7 +49,8 @@ public final class WorkforcePoolProviderKey extends com.google.api.client.json.G
   private KeyData keyData;
 
   /**
-   * Output only. The resource name of the key.
+   * Identifier. The resource name of the key. Format:
+   * `locations/{location}/workforcePools/{workforce_pool_id}/providers/{provider_id}/keys/{key_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +109,8 @@ public final class WorkforcePoolProviderKey extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. The resource name of the key.
+   * Identifier. The resource name of the key. Format:
+   * `locations/{location}/workforcePools/{workforce_pool_id}/providers/{provider_id}/keys/{key_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -116,7 +118,8 @@ public final class WorkforcePoolProviderKey extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. The resource name of the key.
+   * Identifier. The resource name of the key. Format:
+   * `locations/{location}/workforcePools/{workforce_pool_id}/providers/{provider_id}/keys/{key_id}`
    * @param name name or {@code null} for none
    */
   public WorkforcePoolProviderKey setName(java.lang.String name) {

@@ -59,6 +59,15 @@ public final class PostgresqlProfile extends com.google.api.client.json.GenericJ
   private java.lang.Integer port;
 
   /**
+   * Optional. SSL configuration for the PostgreSQL connection. In case PostgresqlSslConfig is not
+   * set, the connection will use the default SSL mode, which is `prefer` (i.e. this mode will only
+   * use encryption if enabled from database side, otherwise will use unencrypted communication)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PostgresqlSslConfig sslConfig;
+
+  /**
    * Required. Username for the PostgreSQL connection.
    * The value may be {@code null}.
    */
@@ -132,6 +141,27 @@ public final class PostgresqlProfile extends com.google.api.client.json.GenericJ
    */
   public PostgresqlProfile setPort(java.lang.Integer port) {
     this.port = port;
+    return this;
+  }
+
+  /**
+   * Optional. SSL configuration for the PostgreSQL connection. In case PostgresqlSslConfig is not
+   * set, the connection will use the default SSL mode, which is `prefer` (i.e. this mode will only
+   * use encryption if enabled from database side, otherwise will use unencrypted communication)
+   * @return value or {@code null} for none
+   */
+  public PostgresqlSslConfig getSslConfig() {
+    return sslConfig;
+  }
+
+  /**
+   * Optional. SSL configuration for the PostgreSQL connection. In case PostgresqlSslConfig is not
+   * set, the connection will use the default SSL mode, which is `prefer` (i.e. this mode will only
+   * use encryption if enabled from database side, otherwise will use unencrypted communication)
+   * @param sslConfig sslConfig or {@code null} for none
+   */
+  public PostgresqlProfile setSslConfig(PostgresqlSslConfig sslConfig) {
+    this.sslConfig = sslConfig;
     return this;
   }
 

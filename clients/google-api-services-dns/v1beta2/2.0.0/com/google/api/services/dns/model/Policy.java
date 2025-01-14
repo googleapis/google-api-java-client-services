@@ -47,6 +47,13 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Configurations related to DNS64 for this Policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PolicyDns64Config dns64Config;
+
+  /**
    * Allows networks bound to this policy to receive DNS queries sent by VMs or applications over
    * VPN connections. When enabled, a virtual IP address is allocated from each of the subnetworks
    * that are bound to this policy.
@@ -127,6 +134,23 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Configurations related to DNS64 for this Policy.
+   * @return value or {@code null} for none
+   */
+  public PolicyDns64Config getDns64Config() {
+    return dns64Config;
+  }
+
+  /**
+   * Configurations related to DNS64 for this Policy.
+   * @param dns64Config dns64Config or {@code null} for none
+   */
+  public Policy setDns64Config(PolicyDns64Config dns64Config) {
+    this.dns64Config = dns64Config;
     return this;
   }
 

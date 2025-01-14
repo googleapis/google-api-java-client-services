@@ -105,7 +105,9 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * Output only. Human-readable description of why RestorePlan is in the current `state`
+   * Output only. Human-readable description of why RestorePlan is in the current `state`. This
+   * field is only meant for human readability and should not be used programmatically as this field
+   * is not guaranteed to be consistent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -302,7 +304,9 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Human-readable description of why RestorePlan is in the current `state`
+   * Output only. Human-readable description of why RestorePlan is in the current `state`. This
+   * field is only meant for human readability and should not be used programmatically as this field
+   * is not guaranteed to be consistent.
    * @return value or {@code null} for none
    */
   public java.lang.String getStateReason() {
@@ -310,7 +314,9 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Human-readable description of why RestorePlan is in the current `state`
+   * Output only. Human-readable description of why RestorePlan is in the current `state`. This
+   * field is only meant for human readability and should not be used programmatically as this field
+   * is not guaranteed to be consistent.
    * @param stateReason stateReason or {@code null} for none
    */
   public RestorePlan setStateReason(java.lang.String stateReason) {

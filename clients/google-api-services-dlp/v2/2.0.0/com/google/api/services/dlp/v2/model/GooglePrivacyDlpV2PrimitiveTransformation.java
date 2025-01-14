@@ -59,7 +59,8 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   private GooglePrivacyDlpV2CryptoHashConfig cryptoHashConfig;
 
   /**
-   * Ffx-Fpe
+   * Ffx-Fpe. Strongly discouraged, consider using CryptoDeterministicConfig instead. Fpe is
+   * computationally expensive incurring latency costs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,7 +184,8 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
-   * Ffx-Fpe
+   * Ffx-Fpe. Strongly discouraged, consider using CryptoDeterministicConfig instead. Fpe is
+   * computationally expensive incurring latency costs.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig getCryptoReplaceFfxFpeConfig() {
@@ -191,7 +193,8 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
   }
 
   /**
-   * Ffx-Fpe
+   * Ffx-Fpe. Strongly discouraged, consider using CryptoDeterministicConfig instead. Fpe is
+   * computationally expensive incurring latency costs.
    * @param cryptoReplaceFfxFpeConfig cryptoReplaceFfxFpeConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2PrimitiveTransformation setCryptoReplaceFfxFpeConfig(GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig cryptoReplaceFfxFpeConfig) {

@@ -1878,13 +1878,15 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
       /**
        * Optional. Email address used to prefill the admin field of the enterprise signup form. This
-       * value is a hint only and can be altered by the user.
+       * value is a hint only and can be altered by the user. If `allowedDomains` is non-empty then
+       * this must belong to one of the `allowedDomains`.
        */
       @com.google.api.client.util.Key
       private java.lang.String adminEmail;
 
       /** Optional. Email address used to prefill the admin field of the enterprise signup form. This value
-     is a hint only and can be altered by the user.
+     is a hint only and can be altered by the user. If `allowedDomains` is non-empty then this must
+     belong to one of the `allowedDomains`.
        */
       public java.lang.String getAdminEmail() {
         return adminEmail;
@@ -1892,10 +1894,48 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
 
       /**
        * Optional. Email address used to prefill the admin field of the enterprise signup form. This
-       * value is a hint only and can be altered by the user.
+       * value is a hint only and can be altered by the user. If `allowedDomains` is non-empty then
+       * this must belong to one of the `allowedDomains`.
        */
       public GenerateSignupUrl setAdminEmail(java.lang.String adminEmail) {
         this.adminEmail = adminEmail;
+        return this;
+      }
+
+      /**
+       * Optional. A list of domains that are permitted for the admin email. The IT admin cannot
+       * enter an email address with a domain name that is not in this list. Subdomains of domains
+       * in this list are not allowed but can be allowed by adding a second entry which has `*.`
+       * prefixed to the domain name (e.g. *.example.com). If the field is not present or is an
+       * empty list then the IT admin is free to use any valid domain name. Personal email domains
+       * are always allowed, but will result in the creation of a managed Google Play Accounts
+       * enterprise.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> allowedDomains;
+
+      /** Optional. A list of domains that are permitted for the admin email. The IT admin cannot enter an
+     email address with a domain name that is not in this list. Subdomains of domains in this list are
+     not allowed but can be allowed by adding a second entry which has `*.` prefixed to the domain name
+     (e.g. *.example.com). If the field is not present or is an empty list then the IT admin is free to
+     use any valid domain name. Personal email domains are always allowed, but will result in the
+     creation of a managed Google Play Accounts enterprise.
+       */
+      public java.util.List<java.lang.String> getAllowedDomains() {
+        return allowedDomains;
+      }
+
+      /**
+       * Optional. A list of domains that are permitted for the admin email. The IT admin cannot
+       * enter an email address with a domain name that is not in this list. Subdomains of domains
+       * in this list are not allowed but can be allowed by adding a second entry which has `*.`
+       * prefixed to the domain name (e.g. *.example.com). If the field is not present or is an
+       * empty list then the IT admin is free to use any valid domain name. Personal email domains
+       * are always allowed, but will result in the creation of a managed Google Play Accounts
+       * enterprise.
+       */
+      public GenerateSignupUrl setAllowedDomains(java.util.List<java.lang.String> allowedDomains) {
+        this.allowedDomains = allowedDomains;
         return this;
       }
 

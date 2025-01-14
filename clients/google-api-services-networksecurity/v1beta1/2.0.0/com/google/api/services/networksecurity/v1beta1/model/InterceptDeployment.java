@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Message describing InterceptDeployment object
+ * Message describing InterceptDeployment object NEXT ID: 10
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -35,6 +35,14 @@ public final class InterceptDeployment extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private String createTime;
+
+  /**
+   * Optional. User-provided description of the deployment. Used as additional context for the
+   * deployment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
 
   /**
    * Required. Immutable. The regional load balancer which the intercepted traffic should be
@@ -101,6 +109,25 @@ public final class InterceptDeployment extends com.google.api.client.json.Generi
    */
   public InterceptDeployment setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. User-provided description of the deployment. Used as additional context for the
+   * deployment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Optional. User-provided description of the deployment. Used as additional context for the
+   * deployment.
+   * @param description description or {@code null} for none
+   */
+  public InterceptDeployment setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 

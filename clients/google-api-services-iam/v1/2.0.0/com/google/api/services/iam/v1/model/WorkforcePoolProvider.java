@@ -128,7 +128,7 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   private GoogleIamAdminV1WorkforcePoolProviderExtraAttributesOAuth2Client extraAttributesOauth2Client;
 
   /**
-   * Output only. The resource name of the provider. Format:
+   * Identifier. The resource name of the provider. Format:
    * `locations/{location}/workforcePools/{workforce_pool_id}/providers/{provider_id}`
    * The value may be {@code null}.
    */
@@ -372,7 +372,7 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. The resource name of the provider. Format:
+   * Identifier. The resource name of the provider. Format:
    * `locations/{location}/workforcePools/{workforce_pool_id}/providers/{provider_id}`
    * @return value or {@code null} for none
    */
@@ -381,7 +381,7 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. The resource name of the provider. Format:
+   * Identifier. The resource name of the provider. Format:
    * `locations/{location}/workforcePools/{workforce_pool_id}/providers/{provider_id}`
    * @param name name or {@code null} for none
    */

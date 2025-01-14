@@ -46,8 +46,7 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
   private Attributes attributes;
 
   /**
-   * Required. Immutable. The [channel](https://support.google.com/merchants/answer/7361332) of the
-   * product.
+   * Immutable. The [channel](https://support.google.com/merchants/answer/7361332) of the product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,8 +145,7 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. The [channel](https://support.google.com/merchants/answer/7361332) of the
-   * product.
+   * Immutable. The [channel](https://support.google.com/merchants/answer/7361332) of the product.
    * @return value or {@code null} for none
    */
   public java.lang.String getChannel() {
@@ -155,8 +153,7 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. The [channel](https://support.google.com/merchants/answer/7361332) of the
-   * product.
+   * Immutable. The [channel](https://support.google.com/merchants/answer/7361332) of the product.
    * @param channel channel or {@code null} for none
    */
   public ProductInput setChannel(java.lang.String channel) {

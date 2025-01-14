@@ -25,7 +25,8 @@ package com.google.api.services.dlp.v2.model;
  * that the identifier is the empty string, it will be skipped. See
  * https://cloud.google.com/sensitive-data-protection/docs/pseudonymization to learn more. Note: We
  * recommend using CryptoDeterministicConfig for all use cases which do not require preserving the
- * input alphabet space and size, plus warrant referential integrity.
+ * input alphabet space and size, plus warrant referential integrity. FPE incurs significant latency
+ * costs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed

@@ -92,6 +92,8 @@ public final class VolumeBackup extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. A human readable message explaining why the VolumeBackup is in its current state.
+   * This field is only meant for human consumption and should not be used programmatically as this
+   * field is not guaranteed to be consistent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -275,6 +277,8 @@ public final class VolumeBackup extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. A human readable message explaining why the VolumeBackup is in its current state.
+   * This field is only meant for human consumption and should not be used programmatically as this
+   * field is not guaranteed to be consistent.
    * @return value or {@code null} for none
    */
   public java.lang.String getStateMessage() {
@@ -283,6 +287,8 @@ public final class VolumeBackup extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. A human readable message explaining why the VolumeBackup is in its current state.
+   * This field is only meant for human consumption and should not be used programmatically as this
+   * field is not guaranteed to be consistent.
    * @param stateMessage stateMessage or {@code null} for none
    */
   public VolumeBackup setStateMessage(java.lang.String stateMessage) {

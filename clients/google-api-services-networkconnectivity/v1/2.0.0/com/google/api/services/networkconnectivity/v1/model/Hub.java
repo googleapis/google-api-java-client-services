@@ -42,7 +42,7 @@ public final class Hub extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * An optional description of the hub.
+   * Optional. An optional description of the hub.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,7 +160,7 @@ public final class Hub extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An optional description of the hub.
+   * Optional. An optional description of the hub.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -168,7 +168,7 @@ public final class Hub extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An optional description of the hub.
+   * Optional. An optional description of the hub.
    * @param description description or {@code null} for none
    */
   public Hub setDescription(java.lang.String description) {

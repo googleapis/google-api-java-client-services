@@ -2075,7 +2075,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             }
           }
           /**
-           * Query PSC propagation status the status of a Network Connectivity Center hub.
+           * Query the Private Service Connect propagation status of a Network Connectivity Center hub.
            *
            * Create a request for the method "hubs.queryStatus".
            *
@@ -2100,7 +2100,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/hubs/[^/]+$");
 
             /**
-             * Query PSC propagation status the status of a Network Connectivity Center hub.
+             * Query the Private Service Connect propagation status of a Network Connectivity Center hub.
              *
              * Create a request for the method "hubs.queryStatus".
              *
@@ -2211,19 +2211,20 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
 
             /**
              * Optional. An expression that filters the list of results. The filter can be used to
-             * filter the results by the following fields: * psc_propagation_status.source_spoke *
-             * psc_propagation_status.source_group * psc_propagation_status.source_forwarding_rule *
-             * psc_propagation_status.target_spoke * psc_propagation_status.target_group *
-             * psc_propagation_status.code * psc_propagation_status.message
+             * filter the results by the following fields: * `psc_propagation_status.source_spoke` *
+             * `psc_propagation_status.source_group` *
+             * `psc_propagation_status.source_forwarding_rule` *
+             * `psc_propagation_status.target_spoke` * `psc_propagation_status.target_group` *
+             * `psc_propagation_status.code` * `psc_propagation_status.message`
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
             /** Optional. An expression that filters the list of results. The filter can be used to filter the
-           results by the following fields: * psc_propagation_status.source_spoke *
-           psc_propagation_status.source_group * psc_propagation_status.source_forwarding_rule *
-           psc_propagation_status.target_spoke * psc_propagation_status.target_group *
-           psc_propagation_status.code * psc_propagation_status.message
+           results by the following fields: * `psc_propagation_status.source_spoke` *
+           `psc_propagation_status.source_group` * `psc_propagation_status.source_forwarding_rule` *
+           `psc_propagation_status.target_spoke` * `psc_propagation_status.target_group` *
+           `psc_propagation_status.code` * `psc_propagation_status.message`
              */
             public java.lang.String getFilter() {
               return filter;
@@ -2231,10 +2232,11 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
 
             /**
              * Optional. An expression that filters the list of results. The filter can be used to
-             * filter the results by the following fields: * psc_propagation_status.source_spoke *
-             * psc_propagation_status.source_group * psc_propagation_status.source_forwarding_rule *
-             * psc_propagation_status.target_spoke * psc_propagation_status.target_group *
-             * psc_propagation_status.code * psc_propagation_status.message
+             * filter the results by the following fields: * `psc_propagation_status.source_spoke` *
+             * `psc_propagation_status.source_group` *
+             * `psc_propagation_status.source_forwarding_rule` *
+             * `psc_propagation_status.target_spoke` * `psc_propagation_status.target_group` *
+             * `psc_propagation_status.code` * `psc_propagation_status.message`
              */
             public QueryStatus setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -2242,28 +2244,32 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             }
 
             /**
-             * Optional. A field that counts are grouped by. A comma-separated list of any of these
-             * fields: * psc_propagation_status.source_spoke * psc_propagation_status.source_group *
-             * psc_propagation_status.source_forwarding_rule * psc_propagation_status.target_spoke *
-             * psc_propagation_status.target_group * psc_propagation_status.code
+             * Optional. Aggregate the results by the specified fields. A comma-separated list of
+             * any of these fields: * `psc_propagation_status.source_spoke` *
+             * `psc_propagation_status.source_group` *
+             * `psc_propagation_status.source_forwarding_rule` *
+             * `psc_propagation_status.target_spoke` * `psc_propagation_status.target_group` *
+             * `psc_propagation_status.code`
              */
             @com.google.api.client.util.Key
             private java.lang.String groupBy;
 
-            /** Optional. A field that counts are grouped by. A comma-separated list of any of these fields: *
-           psc_propagation_status.source_spoke * psc_propagation_status.source_group *
-           psc_propagation_status.source_forwarding_rule * psc_propagation_status.target_spoke *
-           psc_propagation_status.target_group * psc_propagation_status.code
+            /** Optional. Aggregate the results by the specified fields. A comma-separated list of any of these
+           fields: * `psc_propagation_status.source_spoke` * `psc_propagation_status.source_group` *
+           `psc_propagation_status.source_forwarding_rule` * `psc_propagation_status.target_spoke` *
+           `psc_propagation_status.target_group` * `psc_propagation_status.code`
              */
             public java.lang.String getGroupBy() {
               return groupBy;
             }
 
             /**
-             * Optional. A field that counts are grouped by. A comma-separated list of any of these
-             * fields: * psc_propagation_status.source_spoke * psc_propagation_status.source_group *
-             * psc_propagation_status.source_forwarding_rule * psc_propagation_status.target_spoke *
-             * psc_propagation_status.target_group * psc_propagation_status.code
+             * Optional. Aggregate the results by the specified fields. A comma-separated list of
+             * any of these fields: * `psc_propagation_status.source_spoke` *
+             * `psc_propagation_status.source_group` *
+             * `psc_propagation_status.source_forwarding_rule` *
+             * `psc_propagation_status.target_spoke` * `psc_propagation_status.target_group` *
+             * `psc_propagation_status.code`
              */
             public QueryStatus setGroupBy(java.lang.String groupBy) {
               this.groupBy = groupBy;
@@ -2271,22 +2277,22 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             }
 
             /**
-             * Optional. Sort the results in the ascending order by specific fields returned in the
-             * response. A comma-separated list of any of these fields: *
-             * psc_propagation_status.source_spoke * psc_propagation_status.source_group *
-             * psc_propagation_status.source_forwarding_rule * psc_propagation_status.target_spoke *
-             * psc_propagation_status.target_group * psc_propagation_status.code If `group_by` is
-             * set, the value of the `order_by` field must be the same as or a subset of the
-             * `group_by` field.
+             * Optional. Sort the results in ascending order by the specified fields. A comma-
+             * separated list of any of these fields: * `psc_propagation_status.source_spoke` *
+             * `psc_propagation_status.source_group` *
+             * `psc_propagation_status.source_forwarding_rule` *
+             * `psc_propagation_status.target_spoke` * `psc_propagation_status.target_group` *
+             * `psc_propagation_status.code` If `group_by` is set, the value of the `order_by` field
+             * must be the same as or a subset of the `group_by` field.
              */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
-            /** Optional. Sort the results in the ascending order by specific fields returned in the response. A
-           comma-separated list of any of these fields: * psc_propagation_status.source_spoke *
-           psc_propagation_status.source_group * psc_propagation_status.source_forwarding_rule *
-           psc_propagation_status.target_spoke * psc_propagation_status.target_group *
-           psc_propagation_status.code If `group_by` is set, the value of the `order_by` field must be the
+            /** Optional. Sort the results in ascending order by the specified fields. A comma-separated list of
+           any of these fields: * `psc_propagation_status.source_spoke` *
+           `psc_propagation_status.source_group` * `psc_propagation_status.source_forwarding_rule` *
+           `psc_propagation_status.target_spoke` * `psc_propagation_status.target_group` *
+           `psc_propagation_status.code` If `group_by` is set, the value of the `order_by` field must be the
            same as or a subset of the `group_by` field.
              */
             public java.lang.String getOrderBy() {
@@ -2294,13 +2300,13 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             }
 
             /**
-             * Optional. Sort the results in the ascending order by specific fields returned in the
-             * response. A comma-separated list of any of these fields: *
-             * psc_propagation_status.source_spoke * psc_propagation_status.source_group *
-             * psc_propagation_status.source_forwarding_rule * psc_propagation_status.target_spoke *
-             * psc_propagation_status.target_group * psc_propagation_status.code If `group_by` is
-             * set, the value of the `order_by` field must be the same as or a subset of the
-             * `group_by` field.
+             * Optional. Sort the results in ascending order by the specified fields. A comma-
+             * separated list of any of these fields: * `psc_propagation_status.source_spoke` *
+             * `psc_propagation_status.source_group` *
+             * `psc_propagation_status.source_forwarding_rule` *
+             * `psc_propagation_status.target_spoke` * `psc_propagation_status.target_group` *
+             * `psc_propagation_status.code` If `group_by` is set, the value of the `order_by` field
+             * must be the same as or a subset of the `group_by` field.
              */
             public QueryStatus setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;
@@ -6794,7 +6800,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
          * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
          * `Code.CANCELLED`.
          *
          * Create a request for the method "operations.cancel".
@@ -6825,7 +6831,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
            * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
            * methods to check whether the cancellation succeeded or whether the operation completed despite
            * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
            * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".

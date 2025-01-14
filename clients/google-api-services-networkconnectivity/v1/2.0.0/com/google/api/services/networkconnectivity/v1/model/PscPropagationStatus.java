@@ -17,7 +17,7 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * The PSC propagation status in a hub.
+ * The status of one or more propagated Private Service Connect connections in a hub.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation
@@ -38,7 +38,7 @@ public final class PscPropagationStatus extends com.google.api.client.json.Gener
   private java.lang.String code;
 
   /**
-   * The human-readable summary of the PSC connection propagation status.
+   * The human-readable summary of the Private Service Connect connection propagation status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +97,7 @@ public final class PscPropagationStatus extends com.google.api.client.json.Gener
   }
 
   /**
-   * The human-readable summary of the PSC connection propagation status.
+   * The human-readable summary of the Private Service Connect connection propagation status.
    * @return value or {@code null} for none
    */
   public java.lang.String getMessage() {
@@ -105,7 +105,7 @@ public final class PscPropagationStatus extends com.google.api.client.json.Gener
   }
 
   /**
-   * The human-readable summary of the PSC connection propagation status.
+   * The human-readable summary of the Private Service Connect connection propagation status.
    * @param message message or {@code null} for none
    */
   public PscPropagationStatus setMessage(java.lang.String message) {

@@ -35,16 +35,16 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class AutoAccept extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of project ids or project numbers for which you want to enable auto-accept. The auto-
-   * accept setting is applied to spokes being created or updated in these projects.
+   * Optional. A list of project ids or project numbers for which you want to enable auto-accept.
+   * The auto-accept setting is applied to spokes being created or updated in these projects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> autoAcceptProjects;
 
   /**
-   * A list of project ids or project numbers for which you want to enable auto-accept. The auto-
-   * accept setting is applied to spokes being created or updated in these projects.
+   * Optional. A list of project ids or project numbers for which you want to enable auto-accept.
+   * The auto-accept setting is applied to spokes being created or updated in these projects.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAutoAcceptProjects() {
@@ -52,8 +52,8 @@ public final class AutoAccept extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of project ids or project numbers for which you want to enable auto-accept. The auto-
-   * accept setting is applied to spokes being created or updated in these projects.
+   * Optional. A list of project ids or project numbers for which you want to enable auto-accept.
+   * The auto-accept setting is applied to spokes being created or updated in these projects.
    * @param autoAcceptProjects autoAcceptProjects or {@code null} for none
    */
   public AutoAccept setAutoAcceptProjects(java.util.List<java.lang.String> autoAcceptProjects) {

@@ -17,7 +17,8 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * The hub status entry.
+ * A hub status entry represents the status of a set of propagated Private Service Connect
+ * connections grouped by certain fields.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation
@@ -31,28 +32,31 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class HubStatusEntry extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of status. If group_by is not set in the request, the default is 1.
+   * The number of propagated Private Service Connect connections with this status. If the
+   * `group_by` field was not set in the request message, the value of this field is 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer count;
 
   /**
-   * The same group_by field from the request.
+   * The fields that this entry is grouped by. This has the same value as the `group_by` field in
+   * the request message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String groupBy;
 
   /**
-   * The PSC propagation status.
+   * The Private Service Connect propagation status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PscPropagationStatus pscPropagationStatus;
 
   /**
-   * The number of status. If group_by is not set in the request, the default is 1.
+   * The number of propagated Private Service Connect connections with this status. If the
+   * `group_by` field was not set in the request message, the value of this field is 1.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCount() {
@@ -60,7 +64,8 @@ public final class HubStatusEntry extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The number of status. If group_by is not set in the request, the default is 1.
+   * The number of propagated Private Service Connect connections with this status. If the
+   * `group_by` field was not set in the request message, the value of this field is 1.
    * @param count count or {@code null} for none
    */
   public HubStatusEntry setCount(java.lang.Integer count) {
@@ -69,7 +74,8 @@ public final class HubStatusEntry extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The same group_by field from the request.
+   * The fields that this entry is grouped by. This has the same value as the `group_by` field in
+   * the request message.
    * @return value or {@code null} for none
    */
   public java.lang.String getGroupBy() {
@@ -77,7 +83,8 @@ public final class HubStatusEntry extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The same group_by field from the request.
+   * The fields that this entry is grouped by. This has the same value as the `group_by` field in
+   * the request message.
    * @param groupBy groupBy or {@code null} for none
    */
   public HubStatusEntry setGroupBy(java.lang.String groupBy) {
@@ -86,7 +93,7 @@ public final class HubStatusEntry extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The PSC propagation status.
+   * The Private Service Connect propagation status.
    * @return value or {@code null} for none
    */
   public PscPropagationStatus getPscPropagationStatus() {
@@ -94,7 +101,7 @@ public final class HubStatusEntry extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The PSC propagation status.
+   * The Private Service Connect propagation status.
    * @param pscPropagationStatus pscPropagationStatus or {@code null} for none
    */
   public HubStatusEntry setPscPropagationStatus(PscPropagationStatus pscPropagationStatus) {

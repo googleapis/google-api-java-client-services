@@ -132,7 +132,7 @@ public final class ServiceConnectionMap extends com.google.api.client.json.Gener
 
   /**
    * The token provided by the consumer. This token authenticates that the consumer can create a
-   * connecton within the specified project and network.
+   * connection within the specified project and network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -344,7 +344,7 @@ public final class ServiceConnectionMap extends com.google.api.client.json.Gener
 
   /**
    * The token provided by the consumer. This token authenticates that the consumer can create a
-   * connecton within the specified project and network.
+   * connection within the specified project and network.
    * @return value or {@code null} for none
    */
   public java.lang.String getToken() {
@@ -353,7 +353,7 @@ public final class ServiceConnectionMap extends com.google.api.client.json.Gener
 
   /**
    * The token provided by the consumer. This token authenticates that the consumer can create a
-   * connecton within the specified project and network.
+   * connection within the specified project and network.
    * @param token token or {@code null} for none
    */
   public ServiceConnectionMap setToken(java.lang.String token) {

@@ -33,6 +33,8 @@ public final class StatusProto extends com.google.api.client.json.GenericJson {
   /**
    * The canonical error code (see codes.proto) that most closely corresponds to this status. This
    * may be missing, and in the common case of the generic space, it definitely will be.
+   * copybara:strip_begin(b/383363683) copybara:strip_end_and_replace optional int32 canonical_code
+   * = 6;
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +42,8 @@ public final class StatusProto extends com.google.api.client.json.GenericJson {
 
   /**
    * Numeric code drawn from the space specified below. Often, this is the canonical error space,
-   * and code is drawn from google3/util/task/codes.proto
+   * and code is drawn from google3/util/task/codes.proto copybara:strip_begin(b/383363683)
+   * copybara:strip_end_and_replace optional int32 code = 1;
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,6 +76,8 @@ public final class StatusProto extends com.google.api.client.json.GenericJson {
   /**
    * The canonical error code (see codes.proto) that most closely corresponds to this status. This
    * may be missing, and in the common case of the generic space, it definitely will be.
+   * copybara:strip_begin(b/383363683) copybara:strip_end_and_replace optional int32 canonical_code
+   * = 6;
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCanonicalCode() {
@@ -82,6 +87,8 @@ public final class StatusProto extends com.google.api.client.json.GenericJson {
   /**
    * The canonical error code (see codes.proto) that most closely corresponds to this status. This
    * may be missing, and in the common case of the generic space, it definitely will be.
+   * copybara:strip_begin(b/383363683) copybara:strip_end_and_replace optional int32 canonical_code
+   * = 6;
    * @param canonicalCode canonicalCode or {@code null} for none
    */
   public StatusProto setCanonicalCode(java.lang.Integer canonicalCode) {
@@ -91,7 +98,8 @@ public final class StatusProto extends com.google.api.client.json.GenericJson {
 
   /**
    * Numeric code drawn from the space specified below. Often, this is the canonical error space,
-   * and code is drawn from google3/util/task/codes.proto
+   * and code is drawn from google3/util/task/codes.proto copybara:strip_begin(b/383363683)
+   * copybara:strip_end_and_replace optional int32 code = 1;
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCode() {
@@ -100,7 +108,8 @@ public final class StatusProto extends com.google.api.client.json.GenericJson {
 
   /**
    * Numeric code drawn from the space specified below. Often, this is the canonical error space,
-   * and code is drawn from google3/util/task/codes.proto
+   * and code is drawn from google3/util/task/codes.proto copybara:strip_begin(b/383363683)
+   * copybara:strip_end_and_replace optional int32 code = 1;
    * @param code code or {@code null} for none
    */
   public StatusProto setCode(java.lang.Integer code) {

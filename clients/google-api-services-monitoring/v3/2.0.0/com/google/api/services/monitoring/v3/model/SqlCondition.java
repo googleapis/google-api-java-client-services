@@ -64,8 +64,8 @@ public final class SqlCondition extends com.google.api.client.json.GenericJson {
    * required shape. Specifically, the query must not try to filter the input by time. A filter will
    * automatically be applied to filter the input so that the query receives all rows received since
    * the last time the query was run.For example, the following query extracts all log entries
-   * containing an HTTP request:SELECT timestamp, log_name, severity, http_request, resource, labels
-   * FROM my-project.global._Default._AllLogs WHERE http_request IS NOT NULL
+   * containing an HTTP request: SELECT timestamp, log_name, severity, http_request, resource,
+   * labels FROM my-project.global._Default._AllLogs WHERE http_request IS NOT NULL
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,8 +151,8 @@ public final class SqlCondition extends com.google.api.client.json.GenericJson {
    * required shape. Specifically, the query must not try to filter the input by time. A filter will
    * automatically be applied to filter the input so that the query receives all rows received since
    * the last time the query was run.For example, the following query extracts all log entries
-   * containing an HTTP request:SELECT timestamp, log_name, severity, http_request, resource, labels
-   * FROM my-project.global._Default._AllLogs WHERE http_request IS NOT NULL
+   * containing an HTTP request: SELECT timestamp, log_name, severity, http_request, resource,
+   * labels FROM my-project.global._Default._AllLogs WHERE http_request IS NOT NULL
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -164,8 +164,8 @@ public final class SqlCondition extends com.google.api.client.json.GenericJson {
    * required shape. Specifically, the query must not try to filter the input by time. A filter will
    * automatically be applied to filter the input so that the query receives all rows received since
    * the last time the query was run.For example, the following query extracts all log entries
-   * containing an HTTP request:SELECT timestamp, log_name, severity, http_request, resource, labels
-   * FROM my-project.global._Default._AllLogs WHERE http_request IS NOT NULL
+   * containing an HTTP request: SELECT timestamp, log_name, severity, http_request, resource,
+   * labels FROM my-project.global._Default._AllLogs WHERE http_request IS NOT NULL
    * @param query query or {@code null} for none
    */
   public SqlCondition setQuery(java.lang.String query) {

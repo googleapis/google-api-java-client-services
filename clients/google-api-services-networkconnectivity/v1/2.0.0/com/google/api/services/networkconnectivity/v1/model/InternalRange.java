@@ -18,7 +18,7 @@ package com.google.api.services.networkconnectivity.v1.model;
 
 /**
  * The internal range resource for IPAM operations within a VPC network. Used to represent a private
- * address range along with behavioral characterstics of that range (its usage and peering
+ * address range along with behavioral characteristics of that range (its usage and peering
  * behavior). Networking resources can link to this range if they are created as belonging to it.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

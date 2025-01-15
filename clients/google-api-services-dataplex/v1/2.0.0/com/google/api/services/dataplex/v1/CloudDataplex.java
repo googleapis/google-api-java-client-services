@@ -2070,22 +2070,22 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Optional. Specifies the ordering of results. Supported values are: * relevance (default)
-         * * last_modified_timestamp * last_modified_timestamp asc
+         * Optional. Specifies the ordering of results. Supported values are: relevance (default)
+         * last_modified_timestamp last_modified_timestamp asc
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Optional. Specifies the ordering of results. Supported values are: * relevance (default) *
-       last_modified_timestamp * last_modified_timestamp asc
+        /** Optional. Specifies the ordering of results. Supported values are: relevance (default)
+       last_modified_timestamp last_modified_timestamp asc
          */
         public java.lang.String getOrderBy() {
           return orderBy;
         }
 
         /**
-         * Optional. Specifies the ordering of results. Supported values are: * relevance (default)
-         * * last_modified_timestamp * last_modified_timestamp asc
+         * Optional. Specifies the ordering of results. Supported values are: relevance (default)
+         * last_modified_timestamp last_modified_timestamp asc
          */
         public SearchEntries setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;

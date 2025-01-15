@@ -32,7 +32,7 @@ public final class IntegralAdScience extends com.google.api.client.json.GenericJ
 
   /**
    * The custom segment ID provided by Integral Ad Science. The ID must be between `1000001` and
-   * `1999999`, inclusive.
+   * `1999999` or `3000001` and `3999999`, inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -131,7 +131,7 @@ public final class IntegralAdScience extends com.google.api.client.json.GenericJ
 
   /**
    * The custom segment ID provided by Integral Ad Science. The ID must be between `1000001` and
-   * `1999999`, inclusive.
+   * `1999999` or `3000001` and `3999999`, inclusive.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getCustomSegmentId() {
@@ -140,7 +140,7 @@ public final class IntegralAdScience extends com.google.api.client.json.GenericJ
 
   /**
    * The custom segment ID provided by Integral Ad Science. The ID must be between `1000001` and
-   * `1999999`, inclusive.
+   * `1999999` or `3000001` and `3999999`, inclusive.
    * @param customSegmentId customSegmentId or {@code null} for none
    */
   public IntegralAdScience setCustomSegmentId(java.util.List<java.lang.Long> customSegmentId) {

@@ -30,15 +30,15 @@ package com.google.api.services.compute.model;
 public final class NetworkEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * Metadata defined as annotations on the network endpoint.
+   * Optional metadata defined as annotations on the network endpoint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
-   * Represents the port number to which PSC consumer sends packets. Only valid for network endpoint
-   * groups created with GCE_VM_IP_PORTMAP endpoint type.
+   * Represents the port number to which PSC consumer sends packets. Optional. Only valid for
+   * network endpoint groups created with GCE_VM_IP_PORTMAP endpoint type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,12 +53,12 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
   private java.lang.String fqdn;
 
   /**
-   * The name or a URL of VM instance of this network endpoint. This field is required for network
-   * endpoints of type GCE_VM_IP and GCE_VM_IP_PORT. The instance must be in the same zone of
-   * network endpoint group (for zonal NEGs) or in the zone within the region of the NEG (for
-   * regional NEGs). If the ipAddress is specified, it must belongs to the VM instance. The name
-   * must be 1-63 characters long, and comply with RFC1035 or be a valid URL pointing to an existing
-   * instance.
+   * The name or a URL of VM instance of this network endpoint. Optional, the field presence depends
+   * on the network endpoint type. The field is required for network endpoints of type GCE_VM_IP and
+   * GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group (for zonal
+   * NEGs) or in the zone within the region of the NEG (for regional NEGs). If the ipAddress is
+   * specified, it must belongs to the VM instance. The name must be 1-63 characters long, and
+   * comply with RFC1035 or be a valid URL pointing to an existing instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
   private java.lang.Integer port;
 
   /**
-   * Metadata defined as annotations on the network endpoint.
+   * Optional metadata defined as annotations on the network endpoint.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -101,7 +101,7 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Metadata defined as annotations on the network endpoint.
+   * Optional metadata defined as annotations on the network endpoint.
    * @param annotations annotations or {@code null} for none
    */
   public NetworkEndpoint setAnnotations(java.util.Map<String, java.lang.String> annotations) {
@@ -110,8 +110,8 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Represents the port number to which PSC consumer sends packets. Only valid for network endpoint
-   * groups created with GCE_VM_IP_PORTMAP endpoint type.
+   * Represents the port number to which PSC consumer sends packets. Optional. Only valid for
+   * network endpoint groups created with GCE_VM_IP_PORTMAP endpoint type.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getClientDestinationPort() {
@@ -119,8 +119,8 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Represents the port number to which PSC consumer sends packets. Only valid for network endpoint
-   * groups created with GCE_VM_IP_PORTMAP endpoint type.
+   * Represents the port number to which PSC consumer sends packets. Optional. Only valid for
+   * network endpoint groups created with GCE_VM_IP_PORTMAP endpoint type.
    * @param clientDestinationPort clientDestinationPort or {@code null} for none
    */
   public NetworkEndpoint setClientDestinationPort(java.lang.Integer clientDestinationPort) {
@@ -148,12 +148,12 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The name or a URL of VM instance of this network endpoint. This field is required for network
-   * endpoints of type GCE_VM_IP and GCE_VM_IP_PORT. The instance must be in the same zone of
-   * network endpoint group (for zonal NEGs) or in the zone within the region of the NEG (for
-   * regional NEGs). If the ipAddress is specified, it must belongs to the VM instance. The name
-   * must be 1-63 characters long, and comply with RFC1035 or be a valid URL pointing to an existing
-   * instance.
+   * The name or a URL of VM instance of this network endpoint. Optional, the field presence depends
+   * on the network endpoint type. The field is required for network endpoints of type GCE_VM_IP and
+   * GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group (for zonal
+   * NEGs) or in the zone within the region of the NEG (for regional NEGs). If the ipAddress is
+   * specified, it must belongs to the VM instance. The name must be 1-63 characters long, and
+   * comply with RFC1035 or be a valid URL pointing to an existing instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstance() {
@@ -161,12 +161,12 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The name or a URL of VM instance of this network endpoint. This field is required for network
-   * endpoints of type GCE_VM_IP and GCE_VM_IP_PORT. The instance must be in the same zone of
-   * network endpoint group (for zonal NEGs) or in the zone within the region of the NEG (for
-   * regional NEGs). If the ipAddress is specified, it must belongs to the VM instance. The name
-   * must be 1-63 characters long, and comply with RFC1035 or be a valid URL pointing to an existing
-   * instance.
+   * The name or a URL of VM instance of this network endpoint. Optional, the field presence depends
+   * on the network endpoint type. The field is required for network endpoints of type GCE_VM_IP and
+   * GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group (for zonal
+   * NEGs) or in the zone within the region of the NEG (for regional NEGs). If the ipAddress is
+   * specified, it must belongs to the VM instance. The name must be 1-63 characters long, and
+   * comply with RFC1035 or be a valid URL pointing to an existing instance.
    * @param instance instance or {@code null} for none
    */
   public NetworkEndpoint setInstance(java.lang.String instance) {

@@ -24681,7 +24681,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The canonical URL of a profile that this resource should be validated
+               * Optional. The canonical URL of a profile that this resource should be validated
                * against. For example, to validate a Patient resource against the US Core Patient
                * profile this parameter would be
                * `http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient`. A
@@ -24690,7 +24690,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               @com.google.api.client.util.Key
               private java.lang.String profile;
 
-              /** Required. The canonical URL of a profile that this resource should be validated against. For
+              /** Optional. The canonical URL of a profile that this resource should be validated against. For
              example, to validate a Patient resource against the US Core Patient profile this parameter would be
              `http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient`. A StructureDefinition with this
              canonical URL must exist in the FHIR store.
@@ -24700,7 +24700,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The canonical URL of a profile that this resource should be validated
+               * Optional. The canonical URL of a profile that this resource should be validated
                * against. For example, to validate a Patient resource against the US Core Patient
                * profile this parameter would be
                * `http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient`. A
@@ -27009,7 +27009,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * parameters, call the {@link SearchType#execute()} method to invoke the remote operation.
              *
              * @param parent Required. Name of the FHIR store to retrieve resources from.
-             * @param resourceType Required. The FHIR resource type to search, such as Patient or Observation. For a complete list, see
+             * @param resourceType Optional. The FHIR resource type to search, such as Patient or Observation. For a complete list, see
              *        the FHIR Resource Index
              *        ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
              *        [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
@@ -27095,7 +27095,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent Required. Name of the FHIR store to retrieve resources from.
-               * @param resourceType Required. The FHIR resource type to search, such as Patient or Observation. For a complete list, see
+               * @param resourceType Optional. The FHIR resource type to search, such as Patient or Observation. For a complete list, see
              *        the FHIR Resource Index
              *        ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
              *        [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
@@ -27191,7 +27191,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The FHIR resource type to search, such as Patient or Observation. For a
+               * Optional. The FHIR resource type to search, such as Patient or Observation. For a
                * complete list, see the FHIR Resource Index
                * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
                * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
@@ -27200,7 +27200,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               @com.google.api.client.util.Key
               private java.lang.String resourceType;
 
-              /** Required. The FHIR resource type to search, such as Patient or Observation. For a complete list,
+              /** Optional. The FHIR resource type to search, such as Patient or Observation. For a complete list,
              see the FHIR Resource Index
              ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
              [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
@@ -27211,7 +27211,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The FHIR resource type to search, such as Patient or Observation. For a
+               * Optional. The FHIR resource type to search, such as Patient or Observation. For a
                * complete list, see the FHIR Resource Index
                * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
                * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),

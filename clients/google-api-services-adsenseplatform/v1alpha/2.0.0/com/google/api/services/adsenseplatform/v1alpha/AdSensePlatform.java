@@ -508,6 +508,248 @@ public class AdSensePlatform extends com.google.api.client.googleapis.services.j
         }
       }
 
+      /**
+       * An accessor for creating requests from the ChildAccounts collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code AdSensePlatform adsenseplatform = new AdSensePlatform(...);}
+       *   {@code AdSensePlatform.ChildAccounts.List request = adsenseplatform.childAccounts().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ChildAccounts childAccounts() {
+        return new ChildAccounts();
+      }
+
+      /**
+       * The "childAccounts" collection of methods.
+       */
+      public class ChildAccounts {
+
+        /**
+         * An accessor for creating requests from the Sites collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code AdSensePlatform adsenseplatform = new AdSensePlatform(...);}
+         *   {@code AdSensePlatform.Sites.List request = adsenseplatform.sites().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Sites sites() {
+          return new Sites();
+        }
+
+        /**
+         * The "sites" collection of methods.
+         */
+        public class Sites {
+
+          /**
+           * Lists Platform Child Sites for a specified Platform Child Account.
+           *
+           * Create a request for the method "sites.list".
+           *
+           * This request holds the parameters needed by the adsenseplatform server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The name of the platform to retrieve. Format:
+           *        accounts/{account}/platforms/{platform}/childAccounts/{child_publisher_code}
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends AdSensePlatformRequest<com.google.api.services.adsenseplatform.v1alpha.model.ListPlatformChildSitesResponse> {
+
+            private static final String REST_PATH = "v1alpha/{+parent}/sites";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/platforms/[^/]+/childAccounts/[^/]+$");
+
+            /**
+             * Lists Platform Child Sites for a specified Platform Child Account.
+             *
+             * Create a request for the method "sites.list".
+             *
+             * This request holds the parameters needed by the the adsenseplatform server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The name of the platform to retrieve. Format:
+           *        accounts/{account}/platforms/{platform}/childAccounts/{child_publisher_code}
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(AdSensePlatform.this, "GET", REST_PATH, null, com.google.api.services.adsenseplatform.v1alpha.model.ListPlatformChildSitesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/platforms/[^/]+/childAccounts/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the platform to retrieve. Format:
+             * accounts/{account}/platforms/{platform}/childAccounts/{child_publisher_code}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The name of the platform to retrieve. Format:
+           accounts/{account}/platforms/{platform}/childAccounts/{child_publisher_code}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The name of the platform to retrieve. Format:
+             * accounts/{account}/platforms/{platform}/childAccounts/{child_publisher_code}
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/platforms/[^/]+/childAccounts/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of children to include in the response, used for paging.
+             * If unspecified, at most 10000 platforms will be returned. The maximum value is 10000;
+             * values above 10000 will be coerced to 10000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of children to include in the response, used for paging. If
+           unspecified, at most 10000 platforms will be returned. The maximum value is 10000; values above
+           10000 will be coerced to 10000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of children to include in the response, used for paging.
+             * If unspecified, at most 10000 platforms will be returned. The maximum value is 10000;
+             * values above 10000 will be coerced to 10000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListPlatformChildren` call. Provide
+             * this to retrieve the subsequent page. When paginating, all other parameters provided
+             * to `ListPlatformChildren` must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token, received from a previous `ListPlatformChildren` call. Provide this to
+           retrieve the subsequent page. When paginating, all other parameters provided to
+           `ListPlatformChildren` must match the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListPlatformChildren` call. Provide
+             * this to retrieve the subsequent page. When paginating, all other parameters provided
+             * to `ListPlatformChildren` must match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
     }
   }
 

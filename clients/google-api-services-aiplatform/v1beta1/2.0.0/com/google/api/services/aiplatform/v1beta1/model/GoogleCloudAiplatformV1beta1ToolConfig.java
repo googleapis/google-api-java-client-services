@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1beta1ToolConfig extends com.google.api
   private GoogleCloudAiplatformV1beta1FunctionCallingConfig functionCallingConfig;
 
   /**
+   * Optional. Retrieval config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RetrievalConfig retrievalConfig;
+
+  /**
    * Optional. Function calling config.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class GoogleCloudAiplatformV1beta1ToolConfig extends com.google.api
    */
   public GoogleCloudAiplatformV1beta1ToolConfig setFunctionCallingConfig(GoogleCloudAiplatformV1beta1FunctionCallingConfig functionCallingConfig) {
     this.functionCallingConfig = functionCallingConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Retrieval config.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RetrievalConfig getRetrievalConfig() {
+    return retrievalConfig;
+  }
+
+  /**
+   * Optional. Retrieval config.
+   * @param retrievalConfig retrievalConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ToolConfig setRetrievalConfig(GoogleCloudAiplatformV1beta1RetrievalConfig retrievalConfig) {
+    this.retrievalConfig = retrievalConfig;
     return this;
   }
 

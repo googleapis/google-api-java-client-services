@@ -17,7 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * The generic reusable api auth config.
+ * The generic reusable api auth config. Deprecated. Please use AuthConfig
+ * (google/cloud/aiplatform/master/auth.proto) instead.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:

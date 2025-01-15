@@ -63,7 +63,8 @@ public final class GoogleCloudAiplatformV1beta1DeployPublisherModelRequest exten
   /**
    * Required. The name of the PublisherModel resource. Format:
    * `publishers/{publisher}/models/{publisher_model}@{version_id}`, or `publishers/hf-{hugging-
-   * face-author}/models/{hugging-face-model-name}@001`
+   * face-author}/models/{hugging-face-model-name}@001` or Hugging Face model ID like
+   * `google/gemma-2-2b-it`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,7 +155,8 @@ public final class GoogleCloudAiplatformV1beta1DeployPublisherModelRequest exten
   /**
    * Required. The name of the PublisherModel resource. Format:
    * `publishers/{publisher}/models/{publisher_model}@{version_id}`, or `publishers/hf-{hugging-
-   * face-author}/models/{hugging-face-model-name}@001`
+   * face-author}/models/{hugging-face-model-name}@001` or Hugging Face model ID like
+   * `google/gemma-2-2b-it`.
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -164,7 +166,8 @@ public final class GoogleCloudAiplatformV1beta1DeployPublisherModelRequest exten
   /**
    * Required. The name of the PublisherModel resource. Format:
    * `publishers/{publisher}/models/{publisher_model}@{version_id}`, or `publishers/hf-{hugging-
-   * face-author}/models/{hugging-face-model-name}@001`
+   * face-author}/models/{hugging-face-model-name}@001` or Hugging Face model ID like
+   * `google/gemma-2-2b-it`.
    * @param model model or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1DeployPublisherModelRequest setModel(java.lang.String model) {

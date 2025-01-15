@@ -75,7 +75,8 @@ public final class GoogleCloudAiplatformV1beta1DatasetVersion extends com.google
   private java.lang.String modelReference;
 
   /**
-   * Output only. Identifier. The resource name of the DatasetVersion.
+   * Output only. Identifier. The resource name of the DatasetVersion. Format:
+   * `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,7 +212,8 @@ public final class GoogleCloudAiplatformV1beta1DatasetVersion extends com.google
   }
 
   /**
-   * Output only. Identifier. The resource name of the DatasetVersion.
+   * Output only. Identifier. The resource name of the DatasetVersion. Format:
+   * `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -219,7 +221,8 @@ public final class GoogleCloudAiplatformV1beta1DatasetVersion extends com.google
   }
 
   /**
-   * Output only. Identifier. The resource name of the DatasetVersion.
+   * Output only. Identifier. The resource name of the DatasetVersion. Format:
+   * `projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/{dataset_version}`
    * @param name name or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1DatasetVersion setName(java.lang.String name) {

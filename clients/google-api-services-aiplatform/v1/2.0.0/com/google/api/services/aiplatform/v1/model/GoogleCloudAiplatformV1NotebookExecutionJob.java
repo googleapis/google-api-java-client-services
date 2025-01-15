@@ -142,7 +142,7 @@ public final class GoogleCloudAiplatformV1NotebookExecutionJob extends com.googl
   private java.lang.String notebookRuntimeTemplateResourceName;
 
   /**
-   * Output only. The Schedule resource name if this job is triggered by one. Format:
+   * The Schedule resource name if this job is triggered by one. Format:
    * `projects/{project_id}/locations/{location}/schedules/{schedule_id}`
    * The value may be {@code null}.
    */
@@ -448,7 +448,7 @@ public final class GoogleCloudAiplatformV1NotebookExecutionJob extends com.googl
   }
 
   /**
-   * Output only. The Schedule resource name if this job is triggered by one. Format:
+   * The Schedule resource name if this job is triggered by one. Format:
    * `projects/{project_id}/locations/{location}/schedules/{schedule_id}`
    * @return value or {@code null} for none
    */
@@ -457,7 +457,7 @@ public final class GoogleCloudAiplatformV1NotebookExecutionJob extends com.googl
   }
 
   /**
-   * Output only. The Schedule resource name if this job is triggered by one. Format:
+   * The Schedule resource name if this job is triggered by one. Format:
    * `projects/{project_id}/locations/{location}/schedules/{schedule_id}`
    * @param scheduleResourceName scheduleResourceName or {@code null} for none
    */

@@ -54,11 +54,12 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Optional. Controls the default backup behavior for new databases within the instance. Note that
-   * `AUTOMATIC` is not permitted for free instances, as backups and backup schedules are not
-   * allowed for free instances. In the `GetInstance` or `ListInstances` response, if the value of
-   * default_backup_schedule_type is unset or NONE, no default backup schedule will be created for
-   * new databases within the instance.
+   * Optional. Controls the default backup schedule behavior for new databases within the instance.
+   * By default, a backup schedule is created automatically when a new database is created in a new
+   * instance. Note that the `AUTOMATIC` value isn't permitted for free instances, as backups and
+   * backup schedules aren't supported for free instances. In the `GetInstance` or `ListInstances`
+   * response, if the value of `default_backup_schedule_type` isn't set, or set to `NONE`, Spanner
+   * doesn't create a default backup schedule for new databases in the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -237,11 +238,12 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Controls the default backup behavior for new databases within the instance. Note that
-   * `AUTOMATIC` is not permitted for free instances, as backups and backup schedules are not
-   * allowed for free instances. In the `GetInstance` or `ListInstances` response, if the value of
-   * default_backup_schedule_type is unset or NONE, no default backup schedule will be created for
-   * new databases within the instance.
+   * Optional. Controls the default backup schedule behavior for new databases within the instance.
+   * By default, a backup schedule is created automatically when a new database is created in a new
+   * instance. Note that the `AUTOMATIC` value isn't permitted for free instances, as backups and
+   * backup schedules aren't supported for free instances. In the `GetInstance` or `ListInstances`
+   * response, if the value of `default_backup_schedule_type` isn't set, or set to `NONE`, Spanner
+   * doesn't create a default backup schedule for new databases in the instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultBackupScheduleType() {
@@ -249,11 +251,12 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Controls the default backup behavior for new databases within the instance. Note that
-   * `AUTOMATIC` is not permitted for free instances, as backups and backup schedules are not
-   * allowed for free instances. In the `GetInstance` or `ListInstances` response, if the value of
-   * default_backup_schedule_type is unset or NONE, no default backup schedule will be created for
-   * new databases within the instance.
+   * Optional. Controls the default backup schedule behavior for new databases within the instance.
+   * By default, a backup schedule is created automatically when a new database is created in a new
+   * instance. Note that the `AUTOMATIC` value isn't permitted for free instances, as backups and
+   * backup schedules aren't supported for free instances. In the `GetInstance` or `ListInstances`
+   * response, if the value of `default_backup_schedule_type` isn't set, or set to `NONE`, Spanner
+   * doesn't create a default backup schedule for new databases in the instance.
    * @param defaultBackupScheduleType defaultBackupScheduleType or {@code null} for none
    */
   public Instance setDefaultBackupScheduleType(java.lang.String defaultBackupScheduleType) {

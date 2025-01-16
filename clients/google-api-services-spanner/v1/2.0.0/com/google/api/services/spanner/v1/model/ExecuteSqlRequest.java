@@ -46,6 +46,18 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   private DirectedReadOptions directedReadOptions;
 
   /**
+   * Optional. If set to true, this statement marks the end of the transaction. The transaction
+   * should be committed or aborted after this statement executes, and attempts to execute any other
+   * requests against this transaction (including reads and queries) will be rejected. For DML
+   * statements, setting this option may cause some error reporting to be deferred until commit time
+   * (e.g. validation of unique constraints). Given this, successful execution of a DML statement
+   * should not be assumed until a subsequent Commit call completes successfully.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean lastStatement;
+
+  /**
    * It is not always possible for Cloud Spanner to infer the right SQL type from a JSON value. For
    * example, values of type `BYTES` and values of type `STRING` both appear in params as JSON
    * strings. In these cases, `param_types` can be used to specify the exact SQL type for some or
@@ -175,6 +187,33 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
    */
   public ExecuteSqlRequest setDirectedReadOptions(DirectedReadOptions directedReadOptions) {
     this.directedReadOptions = directedReadOptions;
+    return this;
+  }
+
+  /**
+   * Optional. If set to true, this statement marks the end of the transaction. The transaction
+   * should be committed or aborted after this statement executes, and attempts to execute any other
+   * requests against this transaction (including reads and queries) will be rejected. For DML
+   * statements, setting this option may cause some error reporting to be deferred until commit time
+   * (e.g. validation of unique constraints). Given this, successful execution of a DML statement
+   * should not be assumed until a subsequent Commit call completes successfully.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLastStatement() {
+    return lastStatement;
+  }
+
+  /**
+   * Optional. If set to true, this statement marks the end of the transaction. The transaction
+   * should be committed or aborted after this statement executes, and attempts to execute any other
+   * requests against this transaction (including reads and queries) will be rejected. For DML
+   * statements, setting this option may cause some error reporting to be deferred until commit time
+   * (e.g. validation of unique constraints). Given this, successful execution of a DML statement
+   * should not be assumed until a subsequent Commit call completes successfully.
+   * @param lastStatement lastStatement or {@code null} for none
+   */
+  public ExecuteSqlRequest setLastStatement(java.lang.Boolean lastStatement) {
+    this.lastStatement = lastStatement;
     return this;
   }
 

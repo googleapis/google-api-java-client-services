@@ -30,6 +30,18 @@ package com.google.api.services.spanner.v1.model;
 public final class ExecuteBatchDmlRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If set to true, this request marks the end of the transaction. The transaction should
+   * be committed or aborted after these statements execute, and attempts to execute any other
+   * requests against this transaction (including reads and queries) will be rejected. Setting this
+   * option may cause some error reporting to be deferred until commit time (e.g. validation of
+   * unique constraints). Given this, successful execution of statements should not be assumed until
+   * a subsequent Commit call completes successfully.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean lastStatements;
+
+  /**
    * Common options for this request.
    * The value may be {@code null}.
    */
@@ -66,6 +78,33 @@ public final class ExecuteBatchDmlRequest extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private TransactionSelector transaction;
+
+  /**
+   * Optional. If set to true, this request marks the end of the transaction. The transaction should
+   * be committed or aborted after these statements execute, and attempts to execute any other
+   * requests against this transaction (including reads and queries) will be rejected. Setting this
+   * option may cause some error reporting to be deferred until commit time (e.g. validation of
+   * unique constraints). Given this, successful execution of statements should not be assumed until
+   * a subsequent Commit call completes successfully.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLastStatements() {
+    return lastStatements;
+  }
+
+  /**
+   * Optional. If set to true, this request marks the end of the transaction. The transaction should
+   * be committed or aborted after these statements execute, and attempts to execute any other
+   * requests against this transaction (including reads and queries) will be rejected. Setting this
+   * option may cause some error reporting to be deferred until commit time (e.g. validation of
+   * unique constraints). Given this, successful execution of statements should not be assumed until
+   * a subsequent Commit call completes successfully.
+   * @param lastStatements lastStatements or {@code null} for none
+   */
+  public ExecuteBatchDmlRequest setLastStatements(java.lang.Boolean lastStatements) {
+    this.lastStatements = lastStatements;
+    return this;
+  }
 
   /**
    * Common options for this request.

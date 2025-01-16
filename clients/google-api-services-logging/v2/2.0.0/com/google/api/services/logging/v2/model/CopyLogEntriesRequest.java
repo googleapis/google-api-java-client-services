@@ -30,7 +30,8 @@ package com.google.api.services.logging.v2.model;
 public final class CopyLogEntriesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Destination to which to copy log entries.
+   * Required. Destination to which to copy log entries. For example:
+   * "storage.googleapis.com/GCS_BUCKET"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +54,8 @@ public final class CopyLogEntriesRequest extends com.google.api.client.json.Gene
   private java.lang.String name;
 
   /**
-   * Required. Destination to which to copy log entries.
+   * Required. Destination to which to copy log entries. For example:
+   * "storage.googleapis.com/GCS_BUCKET"
    * @return value or {@code null} for none
    */
   public java.lang.String getDestination() {
@@ -61,7 +63,8 @@ public final class CopyLogEntriesRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. Destination to which to copy log entries.
+   * Required. Destination to which to copy log entries. For example:
+   * "storage.googleapis.com/GCS_BUCKET"
    * @param destination destination or {@code null} for none
    */
   public CopyLogEntriesRequest setDestination(java.lang.String destination) {

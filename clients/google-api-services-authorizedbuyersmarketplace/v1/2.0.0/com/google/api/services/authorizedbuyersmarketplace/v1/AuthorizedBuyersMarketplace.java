@@ -5425,7 +5425,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
        * how to use FieldMask. Only fields specified in the UpdateProposalRequest.update_mask will be
        * updated; Fields noted as 'Immutable' or 'Output only' yet specified in the
        * UpdateProposalRequest.update_mask will be ignored and left unchanged. Updating a private auction
-       * proposal is not allowed and will result in an error.
+       * proposal is only allowed for buyer private data, all other fields are immutable.
        *
        * Create a request for the method "proposals.patch".
        *
@@ -5457,7 +5457,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
          * how to use FieldMask. Only fields specified in the UpdateProposalRequest.update_mask will be
          * updated; Fields noted as 'Immutable' or 'Output only' yet specified in the
          * UpdateProposalRequest.update_mask will be ignored and left unchanged. Updating a private
-         * auction proposal is not allowed and will result in an error.
+         * auction proposal is only allowed for buyer private data, all other fields are immutable.
          *
          * Create a request for the method "proposals.patch".
          *

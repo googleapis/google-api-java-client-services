@@ -43,13 +43,15 @@ public final class CrontabSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Textual representation of the crontab. User can customize the backup frequency and
-   * the backup version time using the cron expression. The version time must be in UTC timzeone.
-   * The backup will contain an externally consistent copy of the database at the version time.
-   * Allowed frequencies are 12 hour, 1 day, 1 week and 1 month. Examples of valid cron
-   * specifications: * `0 2/12 * * * ` : every 12 hours at (2, 14) hours past midnight in UTC. * `0
-   * 2,14 * * * ` : every 12 hours at (2,14) hours past midnight in UTC. * `0 2 * * * ` : once a day
-   * at 2 past midnight in UTC. * `0 2 * * 0 ` : once a week every Sunday at 2 past midnight in UTC.
-   * * `0 2 8 * * ` : once a month on 8th day at 2 past midnight in UTC.
+   * the backup version time using the cron expression. The version time must be in UTC timezone.
+   * The backup will contain an externally consistent copy of the database at the version time. Full
+   * backups must be scheduled a minimum of 12 hours apart and incremental backups must be scheduled
+   * a minimum of 4 hours apart. Examples of valid cron specifications: * `0 2/12 * * *` : every 12
+   * hours at (2, 14) hours past midnight in UTC. * `0 2,14 * * *` : every 12 hours at (2,14) hours
+   * past midnight in UTC. * `0 4 * * *` : (incremental backups only) every 4 hours at (0, 4, 8, 12,
+   * 16, 20) hours past midnight in UTC. * `0 2 * * *` : once a day at 2 past midnight in UTC. * `0
+   * 2 * * 0` : once a week every Sunday at 2 past midnight in UTC. * `0 2 8 * *` : once a month on
+   * 8th day at 2 past midnight in UTC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,13 +91,15 @@ public final class CrontabSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Textual representation of the crontab. User can customize the backup frequency and
-   * the backup version time using the cron expression. The version time must be in UTC timzeone.
-   * The backup will contain an externally consistent copy of the database at the version time.
-   * Allowed frequencies are 12 hour, 1 day, 1 week and 1 month. Examples of valid cron
-   * specifications: * `0 2/12 * * * ` : every 12 hours at (2, 14) hours past midnight in UTC. * `0
-   * 2,14 * * * ` : every 12 hours at (2,14) hours past midnight in UTC. * `0 2 * * * ` : once a day
-   * at 2 past midnight in UTC. * `0 2 * * 0 ` : once a week every Sunday at 2 past midnight in UTC.
-   * * `0 2 8 * * ` : once a month on 8th day at 2 past midnight in UTC.
+   * the backup version time using the cron expression. The version time must be in UTC timezone.
+   * The backup will contain an externally consistent copy of the database at the version time. Full
+   * backups must be scheduled a minimum of 12 hours apart and incremental backups must be scheduled
+   * a minimum of 4 hours apart. Examples of valid cron specifications: * `0 2/12 * * *` : every 12
+   * hours at (2, 14) hours past midnight in UTC. * `0 2,14 * * *` : every 12 hours at (2,14) hours
+   * past midnight in UTC. * `0 4 * * *` : (incremental backups only) every 4 hours at (0, 4, 8, 12,
+   * 16, 20) hours past midnight in UTC. * `0 2 * * *` : once a day at 2 past midnight in UTC. * `0
+   * 2 * * 0` : once a week every Sunday at 2 past midnight in UTC. * `0 2 8 * *` : once a month on
+   * 8th day at 2 past midnight in UTC.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -104,13 +108,15 @@ public final class CrontabSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Textual representation of the crontab. User can customize the backup frequency and
-   * the backup version time using the cron expression. The version time must be in UTC timzeone.
-   * The backup will contain an externally consistent copy of the database at the version time.
-   * Allowed frequencies are 12 hour, 1 day, 1 week and 1 month. Examples of valid cron
-   * specifications: * `0 2/12 * * * ` : every 12 hours at (2, 14) hours past midnight in UTC. * `0
-   * 2,14 * * * ` : every 12 hours at (2,14) hours past midnight in UTC. * `0 2 * * * ` : once a day
-   * at 2 past midnight in UTC. * `0 2 * * 0 ` : once a week every Sunday at 2 past midnight in UTC.
-   * * `0 2 8 * * ` : once a month on 8th day at 2 past midnight in UTC.
+   * the backup version time using the cron expression. The version time must be in UTC timezone.
+   * The backup will contain an externally consistent copy of the database at the version time. Full
+   * backups must be scheduled a minimum of 12 hours apart and incremental backups must be scheduled
+   * a minimum of 4 hours apart. Examples of valid cron specifications: * `0 2/12 * * *` : every 12
+   * hours at (2, 14) hours past midnight in UTC. * `0 2,14 * * *` : every 12 hours at (2,14) hours
+   * past midnight in UTC. * `0 4 * * *` : (incremental backups only) every 4 hours at (0, 4, 8, 12,
+   * 16, 20) hours past midnight in UTC. * `0 2 * * *` : once a day at 2 past midnight in UTC. * `0
+   * 2 * * 0` : once a week every Sunday at 2 past midnight in UTC. * `0 2 8 * *` : once a month on
+   * 8th day at 2 past midnight in UTC.
    * @param text text or {@code null} for none
    */
   public CrontabSpec setText(java.lang.String text) {

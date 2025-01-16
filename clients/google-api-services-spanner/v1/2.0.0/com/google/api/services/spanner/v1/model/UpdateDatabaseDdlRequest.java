@@ -54,8 +54,8 @@ public final class UpdateDatabaseDdlRequest extends com.google.api.client.json.G
 
   /**
    * Optional. Proto descriptors used by CREATE/ALTER PROTO BUNDLE statements. Contains a protobuf-
-   * serialized [google.protobufFileDescriptorSet](https://github.com/protocolbuffers/protobuf/blob/
-   * main/src/google/protobuf/descriptor.proto). To generate it,
+   * serialized [google.protobuf.FileDescriptorSet](https://github.com/protocolbuffers/protobuf/blob
+   * /main/src/google/protobuf/descriptor.proto). To generate it,
    * [install](https://grpc.io/docs/protoc-installation/) and run `protoc` with --include_imports
    * and --descriptor_set_out. For example, to generate for moon/shot/app.proto, run ``` $protoc
    * --proto_path=/app_path --proto_path=/lib_path \ --include_imports \
@@ -109,8 +109,8 @@ public final class UpdateDatabaseDdlRequest extends com.google.api.client.json.G
 
   /**
    * Optional. Proto descriptors used by CREATE/ALTER PROTO BUNDLE statements. Contains a protobuf-
-   * serialized [google.protobufFileDescriptorSet](https://github.com/protocolbuffers/protobuf/blob/
-   * main/src/google/protobuf/descriptor.proto). To generate it,
+   * serialized [google.protobuf.FileDescriptorSet](https://github.com/protocolbuffers/protobuf/blob
+   * /main/src/google/protobuf/descriptor.proto). To generate it,
    * [install](https://grpc.io/docs/protoc-installation/) and run `protoc` with --include_imports
    * and --descriptor_set_out. For example, to generate for moon/shot/app.proto, run ``` $protoc
    * --proto_path=/app_path --proto_path=/lib_path \ --include_imports \
@@ -126,8 +126,8 @@ public final class UpdateDatabaseDdlRequest extends com.google.api.client.json.G
 
   /**
    * Optional. Proto descriptors used by CREATE/ALTER PROTO BUNDLE statements. Contains a protobuf-
-   * serialized [google.protobufFileDescriptorSet](https://github.com/protocolbuffers/protobuf/blob/
-   * main/src/google/protobuf/descriptor.proto). To generate it,
+   * serialized [google.protobuf.FileDescriptorSet](https://github.com/protocolbuffers/protobuf/blob
+   * /main/src/google/protobuf/descriptor.proto). To generate it,
    * [install](https://grpc.io/docs/protoc-installation/) and run `protoc` with --include_imports
    * and --descriptor_set_out. For example, to generate for moon/shot/app.proto, run ``` $protoc
    * --proto_path=/app_path --proto_path=/lib_path \ --include_imports \
@@ -145,8 +145,8 @@ public final class UpdateDatabaseDdlRequest extends com.google.api.client.json.G
 
   /**
    * Optional. Proto descriptors used by CREATE/ALTER PROTO BUNDLE statements. Contains a protobuf-
-   * serialized [google.protobufFileDescriptorSet](https://github.com/protocolbuffers/protobuf/blob/
-   * main/src/google/protobuf/descriptor.proto). To generate it,
+   * serialized [google.protobuf.FileDescriptorSet](https://github.com/protocolbuffers/protobuf/blob
+   * /main/src/google/protobuf/descriptor.proto). To generate it,
    * [install](https://grpc.io/docs/protoc-installation/) and run `protoc` with --include_imports
    * and --descriptor_set_out. For example, to generate for moon/shot/app.proto, run ``` $protoc
    * --proto_path=/app_path --proto_path=/lib_path \ --include_imports \
@@ -163,8 +163,8 @@ public final class UpdateDatabaseDdlRequest extends com.google.api.client.json.G
 
   /**
    * Optional. Proto descriptors used by CREATE/ALTER PROTO BUNDLE statements. Contains a protobuf-
-   * serialized [google.protobufFileDescriptorSet](https://github.com/protocolbuffers/protobuf/blob/
-   * main/src/google/protobuf/descriptor.proto). To generate it,
+   * serialized [google.protobuf.FileDescriptorSet](https://github.com/protocolbuffers/protobuf/blob
+   * /main/src/google/protobuf/descriptor.proto). To generate it,
    * [install](https://grpc.io/docs/protoc-installation/) and run `protoc` with --include_imports
    * and --descriptor_set_out. For example, to generate for moon/shot/app.proto, run ``` $protoc
    * --proto_path=/app_path --proto_path=/lib_path \ --include_imports \

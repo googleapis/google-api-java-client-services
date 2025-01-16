@@ -68,6 +68,7 @@ public final class StatusProto extends com.google.api.client.json.GenericJson {
 
   /**
    * The following are usually only present when code != 0 Space to which this status belongs
+   * copybara:strip_begin(b/383363683) copybara:strip_end_and_replace optional string space = 2;
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,6 +160,7 @@ public final class StatusProto extends com.google.api.client.json.GenericJson {
 
   /**
    * The following are usually only present when code != 0 Space to which this status belongs
+   * copybara:strip_begin(b/383363683) copybara:strip_end_and_replace optional string space = 2;
    * @return value or {@code null} for none
    */
   public java.lang.String getSpace() {
@@ -167,6 +169,7 @@ public final class StatusProto extends com.google.api.client.json.GenericJson {
 
   /**
    * The following are usually only present when code != 0 Space to which this status belongs
+   * copybara:strip_begin(b/383363683) copybara:strip_end_and_replace optional string space = 2;
    * @param space space or {@code null} for none
    */
   public StatusProto setSpace(java.lang.String space) {

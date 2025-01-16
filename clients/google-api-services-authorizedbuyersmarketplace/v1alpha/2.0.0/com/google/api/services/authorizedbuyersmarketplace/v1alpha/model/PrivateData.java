@@ -17,7 +17,7 @@
 package com.google.api.services.authorizedbuyersmarketplace.v1alpha.model;
 
 /**
- * Buyers are allowed to store certain types of private data in a proposal or deal.
+ * Buyers are allowed to store certain types of private data in a proposal.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Authorized Buyers Marketplace API. For a detailed

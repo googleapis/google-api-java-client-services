@@ -4506,6 +4506,46 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
+         * Optional. If true, only metrics and monitored resource types that have recent data
+         * (within roughly 25 hours) will be included in the response. - If a metric descriptor
+         * enumerates monitored resource types, only the monitored resource types for which the
+         * metric type has recent data will be included in the returned metric descriptor, and if
+         * none of them have recent data, the metric descriptor will not be returned. - If a metric
+         * descriptor does not enumerate the compatible monitored resource types, it will be
+         * returned only if the metric type has recent data for some monitored resource type. The
+         * returned descriptor will not enumerate any monitored resource types.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean activeOnly;
+
+        /** Optional. If true, only metrics and monitored resource types that have recent data (within roughly
+       25 hours) will be included in the response. - If a metric descriptor enumerates monitored resource
+       types, only the monitored resource types for which the metric type has recent data will be included
+       in the returned metric descriptor, and if none of them have recent data, the metric descriptor will
+       not be returned. - If a metric descriptor does not enumerate the compatible monitored resource
+       types, it will be returned only if the metric type has recent data for some monitored resource
+       type. The returned descriptor will not enumerate any monitored resource types.
+         */
+        public java.lang.Boolean getActiveOnly() {
+          return activeOnly;
+        }
+
+        /**
+         * Optional. If true, only metrics and monitored resource types that have recent data
+         * (within roughly 25 hours) will be included in the response. - If a metric descriptor
+         * enumerates monitored resource types, only the monitored resource types for which the
+         * metric type has recent data will be included in the returned metric descriptor, and if
+         * none of them have recent data, the metric descriptor will not be returned. - If a metric
+         * descriptor does not enumerate the compatible monitored resource types, it will be
+         * returned only if the metric type has recent data for some monitored resource type. The
+         * returned descriptor will not enumerate any monitored resource types.
+         */
+        public List setActiveOnly(java.lang.Boolean activeOnly) {
+          this.activeOnly = activeOnly;
+          return this;
+        }
+
+        /**
          * Optional. If this field is empty, all custom and system-defined metric descriptors are
          * returned. Otherwise, the filter (https://cloud.google.com/monitoring/api/v3/filters)
          * specifies which metric descriptors are to be returned. For example, the following filter

@@ -750,6 +750,224 @@ public class AdSensePlatform extends com.google.api.client.googleapis.services.j
 
         }
       }
+      /**
+       * An accessor for creating requests from the Groups collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code AdSensePlatform adsenseplatform = new AdSensePlatform(...);}
+       *   {@code AdSensePlatform.Groups.List request = adsenseplatform.groups().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Groups groups() {
+        return new Groups();
+      }
+
+      /**
+       * The "groups" collection of methods.
+       */
+      public class Groups {
+
+        /**
+         * Lists Platform Groups for a specified Platform.
+         *
+         * Create a request for the method "groups.list".
+         *
+         * This request holds the parameters needed by the adsenseplatform server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The name of the platform to retrieve. Format: accounts/{account}/platforms/{platform}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AdSensePlatformRequest<com.google.api.services.adsenseplatform.v1alpha.model.ListPlatformGroupsResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/groups";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/platforms/[^/]+$");
+
+          /**
+           * Lists Platform Groups for a specified Platform.
+           *
+           * Create a request for the method "groups.list".
+           *
+           * This request holds the parameters needed by the the adsenseplatform server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The name of the platform to retrieve. Format: accounts/{account}/platforms/{platform}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(AdSensePlatform.this, "GET", REST_PATH, null, com.google.api.services.adsenseplatform.v1alpha.model.ListPlatformGroupsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/platforms/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the platform to retrieve. Format:
+           * accounts/{account}/platforms/{platform}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The name of the platform to retrieve. Format: accounts/{account}/platforms/{platform}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The name of the platform to retrieve. Format:
+           * accounts/{account}/platforms/{platform}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/platforms/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of groups to include in the response, used for paging. If
+           * unspecified, at most 10000 groups will be returned. The maximum value is 10000; values
+           * above 10000 will be coerced to 10000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of groups to include in the response, used for paging. If unspecified,
+         at most 10000 groups will be returned. The maximum value is 10000; values above 10000 will be
+         coerced to 10000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of groups to include in the response, used for paging. If
+           * unspecified, at most 10000 groups will be returned. The maximum value is 10000; values
+           * above 10000 will be coerced to 10000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListPlatformGroups` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListPlatformGroups` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListPlatformGroups` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListPlatformGroups` must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListPlatformGroups` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListPlatformGroups` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
   }
 

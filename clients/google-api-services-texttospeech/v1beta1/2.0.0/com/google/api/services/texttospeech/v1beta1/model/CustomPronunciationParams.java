@@ -38,8 +38,8 @@ public final class CustomPronunciationParams extends com.google.api.client.json.
   private java.lang.String phoneticEncoding;
 
   /**
-   * The phrase to which the customization will be applied. The phrase can be multiple words (in the
-   * case of proper nouns etc), but should not span to a whole sentence.
+   * The phrase to which the customization is applied. The phrase can be multiple words, such as
+   * proper nouns, but shouldn't span the length of the sentence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,8 +70,8 @@ public final class CustomPronunciationParams extends com.google.api.client.json.
   }
 
   /**
-   * The phrase to which the customization will be applied. The phrase can be multiple words (in the
-   * case of proper nouns etc), but should not span to a whole sentence.
+   * The phrase to which the customization is applied. The phrase can be multiple words, such as
+   * proper nouns, but shouldn't span the length of the sentence.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhrase() {
@@ -79,8 +79,8 @@ public final class CustomPronunciationParams extends com.google.api.client.json.
   }
 
   /**
-   * The phrase to which the customization will be applied. The phrase can be multiple words (in the
-   * case of proper nouns etc), but should not span to a whole sentence.
+   * The phrase to which the customization is applied. The phrase can be multiple words, such as
+   * proper nouns, but shouldn't span the length of the sentence.
    * @param phrase phrase or {@code null} for none
    */
   public CustomPronunciationParams setPhrase(java.lang.String phrase) {

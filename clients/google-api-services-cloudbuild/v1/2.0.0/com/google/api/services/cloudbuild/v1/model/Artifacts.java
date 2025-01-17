@@ -31,6 +31,14 @@ package com.google.api.services.cloudbuild.v1.model;
 public final class Artifacts extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. A list of Go modules to be uploaded to Artifact Registry upon successful completion
+   * of all build steps. If any objects fail to be pushed, the build is marked FAILURE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoModule> goModules;
+
+  /**
    * A list of images to be pushed upon the successful completion of all build steps. The images
    * will be pushed using the builder service account's credentials. The digests of the pushed
    * images will be stored in the Build resource's results field. If any of the images fail to be
@@ -79,6 +87,25 @@ public final class Artifacts extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<PythonPackage> pythonPackages;
+
+  /**
+   * Optional. A list of Go modules to be uploaded to Artifact Registry upon successful completion
+   * of all build steps. If any objects fail to be pushed, the build is marked FAILURE.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoModule> getGoModules() {
+    return goModules;
+  }
+
+  /**
+   * Optional. A list of Go modules to be uploaded to Artifact Registry upon successful completion
+   * of all build steps. If any objects fail to be pushed, the build is marked FAILURE.
+   * @param goModules goModules or {@code null} for none
+   */
+  public Artifacts setGoModules(java.util.List<GoModule> goModules) {
+    this.goModules = goModules;
+    return this;
+  }
 
   /**
    * A list of images to be pushed upon the successful completion of all build steps. The images

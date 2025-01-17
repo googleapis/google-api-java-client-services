@@ -62,6 +62,13 @@ public final class Results extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> buildStepOutputs;
 
   /**
+   * Optional. Go module artifacts uploaded to Artifact Registry at the end of the build.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<UploadedGoModule> goModules;
+
+  /**
    * Container images that were built as a part of the build.
    * The value may be {@code null}.
    */
@@ -176,6 +183,23 @@ public final class Results extends com.google.api.client.json.GenericJson {
    */
   public Results setBuildStepOutputs(java.util.List<java.lang.String> buildStepOutputs) {
     this.buildStepOutputs = buildStepOutputs;
+    return this;
+  }
+
+  /**
+   * Optional. Go module artifacts uploaded to Artifact Registry at the end of the build.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<UploadedGoModule> getGoModules() {
+    return goModules;
+  }
+
+  /**
+   * Optional. Go module artifacts uploaded to Artifact Registry at the end of the build.
+   * @param goModules goModules or {@code null} for none
+   */
+  public Results setGoModules(java.util.List<UploadedGoModule> goModules) {
+    this.goModules = goModules;
     return this;
   }
 

@@ -30,6 +30,13 @@ package com.google.api.services.file.v1beta1.model;
 public final class PerformanceLimits extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The max IOPS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxIops;
+
+  /**
    * Output only. The max read IOPS.
    * The value may be {@code null}.
    */
@@ -56,6 +63,23 @@ public final class PerformanceLimits extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxWriteThroughputBps;
+
+  /**
+   * Output only. The max IOPS.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxIops() {
+    return maxIops;
+  }
+
+  /**
+   * Output only. The max IOPS.
+   * @param maxIops maxIops or {@code null} for none
+   */
+  public PerformanceLimits setMaxIops(java.lang.Long maxIops) {
+    this.maxIops = maxIops;
+    return this;
+  }
 
   /**
    * Output only. The max read IOPS.

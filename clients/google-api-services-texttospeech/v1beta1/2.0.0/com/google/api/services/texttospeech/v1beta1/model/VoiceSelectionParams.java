@@ -72,7 +72,7 @@ public final class VoiceSelectionParams extends com.google.api.client.json.Gener
 
   /**
    * Optional. The configuration for a voice clone. If [VoiceCloneParams.voice_clone_key] is set,
-   * the service will choose the voice clone matching the specified configuration.
+   * the service chooses the voice clone matching the specified configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,7 +172,7 @@ public final class VoiceSelectionParams extends com.google.api.client.json.Gener
 
   /**
    * Optional. The configuration for a voice clone. If [VoiceCloneParams.voice_clone_key] is set,
-   * the service will choose the voice clone matching the specified configuration.
+   * the service chooses the voice clone matching the specified configuration.
    * @return value or {@code null} for none
    */
   public VoiceCloneParams getVoiceClone() {
@@ -181,7 +181,7 @@ public final class VoiceSelectionParams extends com.google.api.client.json.Gener
 
   /**
    * Optional. The configuration for a voice clone. If [VoiceCloneParams.voice_clone_key] is set,
-   * the service will choose the voice clone matching the specified configuration.
+   * the service chooses the voice clone matching the specified configuration.
    * @param voiceClone voiceClone or {@code null} for none
    */
   public VoiceSelectionParams setVoiceClone(VoiceCloneParams voiceClone) {

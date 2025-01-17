@@ -31,7 +31,7 @@ package com.google.api.services.texttospeech.v1.model;
 public final class CustomPronunciations extends com.google.api.client.json.GenericJson {
 
   /**
-   * The pronunciation customizations to be applied.
+   * The pronunciation customizations are applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class CustomPronunciations extends com.google.api.client.json.Gener
   }
 
   /**
-   * The pronunciation customizations to be applied.
+   * The pronunciation customizations are applied.
    * @return value or {@code null} for none
    */
   public java.util.List<CustomPronunciationParams> getPronunciations() {
@@ -52,7 +52,7 @@ public final class CustomPronunciations extends com.google.api.client.json.Gener
   }
 
   /**
-   * The pronunciation customizations to be applied.
+   * The pronunciation customizations are applied.
    * @param pronunciations pronunciations or {@code null} for none
    */
   public CustomPronunciations setPronunciations(java.util.List<CustomPronunciationParams> pronunciations) {

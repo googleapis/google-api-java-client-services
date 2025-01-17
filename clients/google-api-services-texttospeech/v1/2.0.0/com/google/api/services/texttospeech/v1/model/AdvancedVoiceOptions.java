@@ -31,14 +31,14 @@ package com.google.api.services.texttospeech.v1.model;
 public final class AdvancedVoiceOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Only for Journey voices. If false, the synthesis will be context aware and have higher latency.
+   * Only for Journey voices. If false, the synthesis is context aware and has a higher latency.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean lowLatencyJourneySynthesis;
 
   /**
-   * Only for Journey voices. If false, the synthesis will be context aware and have higher latency.
+   * Only for Journey voices. If false, the synthesis is context aware and has a higher latency.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLowLatencyJourneySynthesis() {
@@ -46,7 +46,7 @@ public final class AdvancedVoiceOptions extends com.google.api.client.json.Gener
   }
 
   /**
-   * Only for Journey voices. If false, the synthesis will be context aware and have higher latency.
+   * Only for Journey voices. If false, the synthesis is context aware and has a higher latency.
    * @param lowLatencyJourneySynthesis lowLatencyJourneySynthesis or {@code null} for none
    */
   public AdvancedVoiceOptions setLowLatencyJourneySynthesis(java.lang.Boolean lowLatencyJourneySynthesis) {

@@ -17,7 +17,7 @@
 package com.google.api.services.texttospeech.v1.model;
 
 /**
- * A Multi-speaker turn.
+ * A multi-speaker turn.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Text-to-Speech API. For a detailed explanation

@@ -1146,6 +1146,151 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
   }
 
   /**
+   * An accessor for creating requests from the EnrollmentTokens collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code AndroidEnterprise androidenterprise = new AndroidEnterprise(...);}
+   *   {@code AndroidEnterprise.EnrollmentTokens.List request = androidenterprise.enrollmentTokens().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public EnrollmentTokens enrollmentTokens() {
+    return new EnrollmentTokens();
+  }
+
+  /**
+   * The "enrollmentTokens" collection of methods.
+   */
+  public class EnrollmentTokens {
+
+    /**
+     * Returns a token for device enrollment. The DPC can encode this token within the QR/NFC/zero-touch
+     * enrollment payload or fetch it before calling the on-device API to authenticate the user. The
+     * token can be generated for each device or reused across multiple devices.
+     *
+     * Create a request for the method "enrollmentTokens.create".
+     *
+     * This request holds the parameters needed by the androidenterprise server.  After setting any
+     * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param enterpriseId Required. The ID of the enterprise.
+     * @param content the {@link com.google.api.services.androidenterprise.model.EnrollmentToken}
+     * @return the request
+     */
+    public Create create(java.lang.String enterpriseId, com.google.api.services.androidenterprise.model.EnrollmentToken content) throws java.io.IOException {
+      Create result = new Create(enterpriseId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.EnrollmentToken> {
+
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/enrollmentTokens";
+
+      /**
+       * Returns a token for device enrollment. The DPC can encode this token within the QR/NFC/zero-
+       * touch enrollment payload or fetch it before calling the on-device API to authenticate the user.
+       * The token can be generated for each device or reused across multiple devices.
+       *
+       * Create a request for the method "enrollmentTokens.create".
+       *
+       * This request holds the parameters needed by the the androidenterprise server.  After setting
+       * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param enterpriseId Required. The ID of the enterprise.
+       * @param content the {@link com.google.api.services.androidenterprise.model.EnrollmentToken}
+       * @since 1.13
+       */
+      protected Create(java.lang.String enterpriseId, com.google.api.services.androidenterprise.model.EnrollmentToken content) {
+        super(AndroidEnterprise.this, "POST", REST_PATH, content, com.google.api.services.androidenterprise.model.EnrollmentToken.class);
+        this.enterpriseId = com.google.api.client.util.Preconditions.checkNotNull(enterpriseId, "Required parameter enterpriseId must be specified.");
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the enterprise. */
+      @com.google.api.client.util.Key
+      private java.lang.String enterpriseId;
+
+      /** Required. The ID of the enterprise.
+       */
+      public java.lang.String getEnterpriseId() {
+        return enterpriseId;
+      }
+
+      /** Required. The ID of the enterprise. */
+      public Create setEnterpriseId(java.lang.String enterpriseId) {
+        this.enterpriseId = enterpriseId;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Enterprises collection.
    *
    * <p>The typical use is:</p>
@@ -1417,129 +1562,6 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       @Override
       public CompleteSignup set(String parameterName, Object value) {
         return (CompleteSignup) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Returns a token for device enrollment. The DPC can encode this token within the QR/NFC/zero-touch
-     * enrollment payload or fetch it before calling the on-device API to authenticate the user. The
-     * token can be generated for each device or reused across multiple devices.
-     *
-     * Create a request for the method "enterprises.createEnrollmentToken".
-     *
-     * This request holds the parameters needed by the androidenterprise server.  After setting any
-     * optional parameters, call the {@link CreateEnrollmentToken#execute()} method to invoke the remote
-     * operation.
-     *
-     * @param enterpriseId Required. The ID of the enterprise.
-     * @param content the {@link com.google.api.services.androidenterprise.model.EnrollmentToken}
-     * @return the request
-     */
-    public CreateEnrollmentToken createEnrollmentToken(java.lang.String enterpriseId, com.google.api.services.androidenterprise.model.EnrollmentToken content) throws java.io.IOException {
-      CreateEnrollmentToken result = new CreateEnrollmentToken(enterpriseId, content);
-      initialize(result);
-      return result;
-    }
-
-    public class CreateEnrollmentToken extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.EnrollmentToken> {
-
-      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/createEnrollmentToken";
-
-      /**
-       * Returns a token for device enrollment. The DPC can encode this token within the QR/NFC/zero-
-       * touch enrollment payload or fetch it before calling the on-device API to authenticate the user.
-       * The token can be generated for each device or reused across multiple devices.
-       *
-       * Create a request for the method "enterprises.createEnrollmentToken".
-       *
-       * This request holds the parameters needed by the the androidenterprise server.  After setting
-       * any optional parameters, call the {@link CreateEnrollmentToken#execute()} method to invoke the
-       * remote operation. <p> {@link CreateEnrollmentToken#initialize(com.google.api.client.googleapis.
-       * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
-       * after invoking the constructor. </p>
-       *
-       * @param enterpriseId Required. The ID of the enterprise.
-       * @param content the {@link com.google.api.services.androidenterprise.model.EnrollmentToken}
-       * @since 1.13
-       */
-      protected CreateEnrollmentToken(java.lang.String enterpriseId, com.google.api.services.androidenterprise.model.EnrollmentToken content) {
-        super(AndroidEnterprise.this, "POST", REST_PATH, content, com.google.api.services.androidenterprise.model.EnrollmentToken.class);
-        this.enterpriseId = com.google.api.client.util.Preconditions.checkNotNull(enterpriseId, "Required parameter enterpriseId must be specified.");
-      }
-
-      @Override
-      public CreateEnrollmentToken set$Xgafv(java.lang.String $Xgafv) {
-        return (CreateEnrollmentToken) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public CreateEnrollmentToken setAccessToken(java.lang.String accessToken) {
-        return (CreateEnrollmentToken) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public CreateEnrollmentToken setAlt(java.lang.String alt) {
-        return (CreateEnrollmentToken) super.setAlt(alt);
-      }
-
-      @Override
-      public CreateEnrollmentToken setCallback(java.lang.String callback) {
-        return (CreateEnrollmentToken) super.setCallback(callback);
-      }
-
-      @Override
-      public CreateEnrollmentToken setFields(java.lang.String fields) {
-        return (CreateEnrollmentToken) super.setFields(fields);
-      }
-
-      @Override
-      public CreateEnrollmentToken setKey(java.lang.String key) {
-        return (CreateEnrollmentToken) super.setKey(key);
-      }
-
-      @Override
-      public CreateEnrollmentToken setOauthToken(java.lang.String oauthToken) {
-        return (CreateEnrollmentToken) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public CreateEnrollmentToken setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (CreateEnrollmentToken) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public CreateEnrollmentToken setQuotaUser(java.lang.String quotaUser) {
-        return (CreateEnrollmentToken) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public CreateEnrollmentToken setUploadType(java.lang.String uploadType) {
-        return (CreateEnrollmentToken) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public CreateEnrollmentToken setUploadProtocol(java.lang.String uploadProtocol) {
-        return (CreateEnrollmentToken) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /** Required. The ID of the enterprise. */
-      @com.google.api.client.util.Key
-      private java.lang.String enterpriseId;
-
-      /** Required. The ID of the enterprise.
-       */
-      public java.lang.String getEnterpriseId() {
-        return enterpriseId;
-      }
-
-      /** Required. The ID of the enterprise. */
-      public CreateEnrollmentToken setEnterpriseId(java.lang.String enterpriseId) {
-        this.enterpriseId = enterpriseId;
-        return this;
-      }
-
-      @Override
-      public CreateEnrollmentToken set(String parameterName, Object value) {
-        return (CreateEnrollmentToken) super.set(parameterName, value);
       }
     }
     /**

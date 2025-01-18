@@ -23,6 +23,12 @@ package com.google.api.services.classroom;
  */
 public class ClassroomScopes {
 
+  /** See and update its own attachments to posts in Google Classroom. */
+  public static final String CLASSROOM_ADDONS_STUDENT = "https://www.googleapis.com/auth/classroom.addons.student";
+
+  /** See, create, and update its own attachments to posts in classes you teach in Google Classroom. */
+  public static final String CLASSROOM_ADDONS_TEACHER = "https://www.googleapis.com/auth/classroom.addons.teacher";
+
   /** View and manage announcements in Google Classroom. */
   public static final String CLASSROOM_ANNOUNCEMENTS = "https://www.googleapis.com/auth/classroom.announcements";
 
@@ -96,6 +102,8 @@ public class ClassroomScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
+    set.add(CLASSROOM_ADDONS_STUDENT);
+    set.add(CLASSROOM_ADDONS_TEACHER);
     set.add(CLASSROOM_ANNOUNCEMENTS);
     set.add(CLASSROOM_ANNOUNCEMENTS_READONLY);
     set.add(CLASSROOM_COURSES);

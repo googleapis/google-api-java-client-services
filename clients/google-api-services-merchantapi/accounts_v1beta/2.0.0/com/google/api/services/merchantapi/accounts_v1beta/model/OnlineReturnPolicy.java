@@ -137,6 +137,14 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   private ReturnShippingFee returnShippingFee;
 
   /**
+   * Optional. Overrides to the general policy for orders placed during a specific set of time
+   * intervals.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SeasonalOverride> seasonalOverrides;
+
+  /**
    * This field specifies if merchant only accepts defective products for returns, and this field is
    * required.
    * @return value or {@code null} for none
@@ -384,6 +392,25 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
    */
   public OnlineReturnPolicy setReturnShippingFee(ReturnShippingFee returnShippingFee) {
     this.returnShippingFee = returnShippingFee;
+    return this;
+  }
+
+  /**
+   * Optional. Overrides to the general policy for orders placed during a specific set of time
+   * intervals.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SeasonalOverride> getSeasonalOverrides() {
+    return seasonalOverrides;
+  }
+
+  /**
+   * Optional. Overrides to the general policy for orders placed during a specific set of time
+   * intervals.
+   * @param seasonalOverrides seasonalOverrides or {@code null} for none
+   */
+  public OnlineReturnPolicy setSeasonalOverrides(java.util.List<SeasonalOverride> seasonalOverrides) {
+    this.seasonalOverrides = seasonalOverrides;
     return this;
   }
 

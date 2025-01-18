@@ -31,6 +31,15 @@ package com.google.api.services.redis.v1beta1.model;
 public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If true, cluster endpoints that are created and registered by customers can be
+   * deleted asynchronously. That is, such a cluster endpoint can be de-registered before the
+   * forwarding rules in the cluster endpoint are deleted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean asyncClusterEndpointsDeletionEnabled;
+
+  /**
    * Optional. The authorization mode of the Redis cluster. If not provided, auth feature is
    * disabled for the cluster.
    * The value may be {@code null}.
@@ -252,6 +261,27 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ZoneDistributionConfig zoneDistributionConfig;
+
+  /**
+   * Optional. If true, cluster endpoints that are created and registered by customers can be
+   * deleted asynchronously. That is, such a cluster endpoint can be de-registered before the
+   * forwarding rules in the cluster endpoint are deleted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAsyncClusterEndpointsDeletionEnabled() {
+    return asyncClusterEndpointsDeletionEnabled;
+  }
+
+  /**
+   * Optional. If true, cluster endpoints that are created and registered by customers can be
+   * deleted asynchronously. That is, such a cluster endpoint can be de-registered before the
+   * forwarding rules in the cluster endpoint are deleted.
+   * @param asyncClusterEndpointsDeletionEnabled asyncClusterEndpointsDeletionEnabled or {@code null} for none
+   */
+  public Cluster setAsyncClusterEndpointsDeletionEnabled(java.lang.Boolean asyncClusterEndpointsDeletionEnabled) {
+    this.asyncClusterEndpointsDeletionEnabled = asyncClusterEndpointsDeletionEnabled;
+    return this;
+  }
 
   /**
    * Optional. The authorization mode of the Redis cluster. If not provided, auth feature is

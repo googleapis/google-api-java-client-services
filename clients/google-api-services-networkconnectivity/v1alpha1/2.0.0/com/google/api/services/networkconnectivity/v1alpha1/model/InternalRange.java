@@ -71,7 +71,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Optional. Must be present if usage is set to FOR_MIGRATION. This field is for internal use.
+   * Optional. Must be present if usage is set to FOR_MIGRATION.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -250,7 +250,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Must be present if usage is set to FOR_MIGRATION. This field is for internal use.
+   * Optional. Must be present if usage is set to FOR_MIGRATION.
    * @return value or {@code null} for none
    */
   public Migration getMigration() {
@@ -258,7 +258,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Must be present if usage is set to FOR_MIGRATION. This field is for internal use.
+   * Optional. Must be present if usage is set to FOR_MIGRATION.
    * @param migration migration or {@code null} for none
    */
   public InternalRange setMigration(Migration migration) {

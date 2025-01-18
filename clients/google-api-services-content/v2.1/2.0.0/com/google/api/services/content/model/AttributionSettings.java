@@ -39,7 +39,6 @@ public final class AttributionSettings extends com.google.api.client.json.Generi
   private java.lang.Integer attributionLookbackWindowInDays;
 
   /**
-   * Required. Attribution model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +73,6 @@ public final class AttributionSettings extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Attribution model.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttributionModel() {
@@ -82,7 +80,6 @@ public final class AttributionSettings extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Attribution model.
    * @param attributionModel attributionModel or {@code null} for none
    */
   public AttributionSettings setAttributionModel(java.lang.String attributionModel) {

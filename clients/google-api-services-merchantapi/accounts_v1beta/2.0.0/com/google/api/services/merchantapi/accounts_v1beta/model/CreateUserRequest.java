@@ -38,7 +38,7 @@ public final class CreateUserRequest extends com.google.api.client.json.GenericJ
   private java.lang.String parent;
 
   /**
-   * Required. The user to create.
+   * Optional. The user to create.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class CreateUserRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The user to create.
+   * Optional. The user to create.
    * @return value or {@code null} for none
    */
   public User getUser() {
@@ -79,7 +79,7 @@ public final class CreateUserRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The user to create.
+   * Optional. The user to create.
    * @param user user or {@code null} for none
    */
   public CreateUserRequest setUser(User user) {

@@ -45,6 +45,17 @@ public final class EgressSource extends com.google.api.client.json.GenericJson {
   private java.lang.String accessLevel;
 
   /**
+   * A Google Cloud resource that you want to allow to egress the perimeter. These resources can
+   * access data outside the perimeter. This field only supports projects. The project format is
+   * `projects/{project_number}`. The resource can be in any Google Cloud organization, not just the
+   * organization where the perimeter is defined. You can't use `*` in this field to allow all
+   * Google Cloud resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resource;
+
+  /**
    * An AccessLevel resource name that allows protected resources inside the ServicePerimeters to
    * access outside the ServicePerimeter boundaries. AccessLevels listed must be in the same policy
    * as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If an
@@ -70,6 +81,31 @@ public final class EgressSource extends com.google.api.client.json.GenericJson {
    */
   public EgressSource setAccessLevel(java.lang.String accessLevel) {
     this.accessLevel = accessLevel;
+    return this;
+  }
+
+  /**
+   * A Google Cloud resource that you want to allow to egress the perimeter. These resources can
+   * access data outside the perimeter. This field only supports projects. The project format is
+   * `projects/{project_number}`. The resource can be in any Google Cloud organization, not just the
+   * organization where the perimeter is defined. You can't use `*` in this field to allow all
+   * Google Cloud resources.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResource() {
+    return resource;
+  }
+
+  /**
+   * A Google Cloud resource that you want to allow to egress the perimeter. These resources can
+   * access data outside the perimeter. This field only supports projects. The project format is
+   * `projects/{project_number}`. The resource can be in any Google Cloud organization, not just the
+   * organization where the perimeter is defined. You can't use `*` in this field to allow all
+   * Google Cloud resources.
+   * @param resource resource or {@code null} for none
+   */
+  public EgressSource setResource(java.lang.String resource) {
+    this.resource = resource;
     return this;
   }
 

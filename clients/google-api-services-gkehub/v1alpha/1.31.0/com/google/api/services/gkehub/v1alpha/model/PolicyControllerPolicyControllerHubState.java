@@ -27,7 +27,7 @@ package com.google.api.services.gkehub.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class PolicyControllerPolicyControllerHubState extends com.google.api.client.json.GenericJson {
+public final class PolicycontrollerPolicyControllerHubState extends com.google.api.client.json.GenericJson {
 
   /**
    * Map from deployment name to deployment state. Example deployments are gatekeeper-controller-
@@ -42,7 +42,7 @@ public final class PolicyControllerPolicyControllerHubState extends com.google.a
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private PolicyControllerPolicyControllerHubVersion version;
+  private PolicycontrollerPolicyControllerHubVersion version;
 
   /**
    * Map from deployment name to deployment state. Example deployments are gatekeeper-controller-
@@ -58,7 +58,7 @@ public final class PolicyControllerPolicyControllerHubState extends com.google.a
    * manager, gatekeeper-audit deployment, and gatekeeper-mutation.
    * @param deploymentStates deploymentStates or {@code null} for none
    */
-  public PolicyControllerPolicyControllerHubState setDeploymentStates(java.util.Map<String, java.lang.String> deploymentStates) {
+  public PolicycontrollerPolicyControllerHubState setDeploymentStates(java.util.Map<String, java.lang.String> deploymentStates) {
     this.deploymentStates = deploymentStates;
     return this;
   }
@@ -67,7 +67,7 @@ public final class PolicyControllerPolicyControllerHubState extends com.google.a
    * The version of Gatekeeper Policy Controller deployed.
    * @return value or {@code null} for none
    */
-  public PolicyControllerPolicyControllerHubVersion getVersion() {
+  public PolicycontrollerPolicyControllerHubVersion getVersion() {
     return version;
   }
 
@@ -75,19 +75,19 @@ public final class PolicyControllerPolicyControllerHubState extends com.google.a
    * The version of Gatekeeper Policy Controller deployed.
    * @param version version or {@code null} for none
    */
-  public PolicyControllerPolicyControllerHubState setVersion(PolicyControllerPolicyControllerHubVersion version) {
+  public PolicycontrollerPolicyControllerHubState setVersion(PolicycontrollerPolicyControllerHubVersion version) {
     this.version = version;
     return this;
   }
 
   @Override
-  public PolicyControllerPolicyControllerHubState set(String fieldName, Object value) {
-    return (PolicyControllerPolicyControllerHubState) super.set(fieldName, value);
+  public PolicycontrollerPolicyControllerHubState set(String fieldName, Object value) {
+    return (PolicycontrollerPolicyControllerHubState) super.set(fieldName, value);
   }
 
   @Override
-  public PolicyControllerPolicyControllerHubState clone() {
-    return (PolicyControllerPolicyControllerHubState) super.clone();
+  public PolicycontrollerPolicyControllerHubState clone() {
+    return (PolicycontrollerPolicyControllerHubState) super.clone();
   }
 
 }

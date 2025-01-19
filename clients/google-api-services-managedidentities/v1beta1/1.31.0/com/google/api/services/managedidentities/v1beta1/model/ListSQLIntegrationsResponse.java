@@ -17,7 +17,7 @@
 package com.google.api.services.managedidentities.v1beta1.model;
 
 /**
- * ListSQLIntegrationsResponse is the response message for ListSQLIntegrations method.
+ * ListSqlIntegrationsResponse is the response message for ListSqlIntegrations method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Managed Service for Microsoft Active Directory API.
@@ -28,7 +28,7 @@ package com.google.api.services.managedidentities.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ListSQLIntegrationsResponse extends com.google.api.client.json.GenericJson {
+public final class ListSqlIntegrationsResponse extends com.google.api.client.json.GenericJson {
 
   /**
    * Token to retrieve the next page of results, or empty if there are no more results in the list.
@@ -38,11 +38,11 @@ public final class ListSQLIntegrationsResponse extends com.google.api.client.jso
   private java.lang.String nextPageToken;
 
   /**
-   * A list of SQLIntegrations of a domain.
+   * A list of SqlIntegrations of a domain.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<SQLIntegration> sqlIntegrations;
+  private java.util.List<SqlIntegration> sqlIntegrations;
 
   /**
    * A list of locations that could not be reached.
@@ -63,24 +63,24 @@ public final class ListSQLIntegrationsResponse extends com.google.api.client.jso
    * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public ListSQLIntegrationsResponse setNextPageToken(java.lang.String nextPageToken) {
+  public ListSqlIntegrationsResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
     return this;
   }
 
   /**
-   * A list of SQLIntegrations of a domain.
+   * A list of SqlIntegrations of a domain.
    * @return value or {@code null} for none
    */
-  public java.util.List<SQLIntegration> getSqlIntegrations() {
+  public java.util.List<SqlIntegration> getSqlIntegrations() {
     return sqlIntegrations;
   }
 
   /**
-   * A list of SQLIntegrations of a domain.
+   * A list of SqlIntegrations of a domain.
    * @param sqlIntegrations sqlIntegrations or {@code null} for none
    */
-  public ListSQLIntegrationsResponse setSqlIntegrations(java.util.List<SQLIntegration> sqlIntegrations) {
+  public ListSqlIntegrationsResponse setSqlIntegrations(java.util.List<SqlIntegration> sqlIntegrations) {
     this.sqlIntegrations = sqlIntegrations;
     return this;
   }
@@ -97,19 +97,19 @@ public final class ListSQLIntegrationsResponse extends com.google.api.client.jso
    * A list of locations that could not be reached.
    * @param unreachable unreachable or {@code null} for none
    */
-  public ListSQLIntegrationsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+  public ListSqlIntegrationsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
     this.unreachable = unreachable;
     return this;
   }
 
   @Override
-  public ListSQLIntegrationsResponse set(String fieldName, Object value) {
-    return (ListSQLIntegrationsResponse) super.set(fieldName, value);
+  public ListSqlIntegrationsResponse set(String fieldName, Object value) {
+    return (ListSqlIntegrationsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ListSQLIntegrationsResponse clone() {
-    return (ListSQLIntegrationsResponse) super.clone();
+  public ListSqlIntegrationsResponse clone() {
+    return (ListSqlIntegrationsResponse) super.clone();
   }
 
 }

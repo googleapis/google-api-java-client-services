@@ -29,16 +29,16 @@ package com.google.api.services.serviceconsumermanagement.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class V1Beta1DisableConsumerResponse extends com.google.api.client.json.GenericJson {
+public final class V1beta1DisableConsumerResponse extends com.google.api.client.json.GenericJson {
 
   @Override
-  public V1Beta1DisableConsumerResponse set(String fieldName, Object value) {
-    return (V1Beta1DisableConsumerResponse) super.set(fieldName, value);
+  public V1beta1DisableConsumerResponse set(String fieldName, Object value) {
+    return (V1beta1DisableConsumerResponse) super.set(fieldName, value);
   }
 
   @Override
-  public V1Beta1DisableConsumerResponse clone() {
-    return (V1Beta1DisableConsumerResponse) super.clone();
+  public V1beta1DisableConsumerResponse clone() {
+    return (V1beta1DisableConsumerResponse) super.clone();
   }
 
 }

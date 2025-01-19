@@ -27,7 +27,7 @@ package com.google.api.services.gkehub.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class PolicyControllerPolicyControllerHubVersion extends com.google.api.client.json.GenericJson {
+public final class PolicycontrollerPolicyControllerHubVersion extends com.google.api.client.json.GenericJson {
 
   /**
    * The gatekeeper image tag that is composed of ACM version, git tag, build number.
@@ -48,19 +48,19 @@ public final class PolicyControllerPolicyControllerHubVersion extends com.google
    * The gatekeeper image tag that is composed of ACM version, git tag, build number.
    * @param version version or {@code null} for none
    */
-  public PolicyControllerPolicyControllerHubVersion setVersion(java.lang.String version) {
+  public PolicycontrollerPolicyControllerHubVersion setVersion(java.lang.String version) {
     this.version = version;
     return this;
   }
 
   @Override
-  public PolicyControllerPolicyControllerHubVersion set(String fieldName, Object value) {
-    return (PolicyControllerPolicyControllerHubVersion) super.set(fieldName, value);
+  public PolicycontrollerPolicyControllerHubVersion set(String fieldName, Object value) {
+    return (PolicycontrollerPolicyControllerHubVersion) super.set(fieldName, value);
   }
 
   @Override
-  public PolicyControllerPolicyControllerHubVersion clone() {
-    return (PolicyControllerPolicyControllerHubVersion) super.clone();
+  public PolicycontrollerPolicyControllerHubVersion clone() {
+    return (PolicycontrollerPolicyControllerHubVersion) super.clone();
   }
 
 }

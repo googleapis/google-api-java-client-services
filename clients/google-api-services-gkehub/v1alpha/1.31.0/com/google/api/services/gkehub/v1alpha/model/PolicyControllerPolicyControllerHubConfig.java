@@ -27,7 +27,7 @@ package com.google.api.services.gkehub.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class PolicyControllerPolicyControllerHubConfig extends com.google.api.client.json.GenericJson {
+public final class PolicycontrollerPolicyControllerHubConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Sets the interval for Policy Controller Audit Scans (in seconds). When set to 0, this disables
@@ -81,7 +81,7 @@ public final class PolicyControllerPolicyControllerHubConfig extends com.google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private PolicyControllerTemplateLibraryConfig templateLibraryConfig;
+  private PolicycontrollerTemplateLibraryConfig templateLibraryConfig;
 
   /**
    * Sets the interval for Policy Controller Audit Scans (in seconds). When set to 0, this disables
@@ -97,7 +97,7 @@ public final class PolicyControllerPolicyControllerHubConfig extends com.google.
    * audit functionality altogether.
    * @param auditIntervalSeconds auditIntervalSeconds or {@code null} for none
    */
-  public PolicyControllerPolicyControllerHubConfig setAuditIntervalSeconds(java.lang.Long auditIntervalSeconds) {
+  public PolicycontrollerPolicyControllerHubConfig setAuditIntervalSeconds(java.lang.Long auditIntervalSeconds) {
     this.auditIntervalSeconds = auditIntervalSeconds;
     return this;
   }
@@ -116,7 +116,7 @@ public final class PolicyControllerPolicyControllerHubConfig extends com.google.
    * to currently exist on the cluster.
    * @param exemptableNamespaces exemptableNamespaces or {@code null} for none
    */
-  public PolicyControllerPolicyControllerHubConfig setExemptableNamespaces(java.util.List<java.lang.String> exemptableNamespaces) {
+  public PolicycontrollerPolicyControllerHubConfig setExemptableNamespaces(java.util.List<java.lang.String> exemptableNamespaces) {
     this.exemptableNamespaces = exemptableNamespaces;
     return this;
   }
@@ -137,7 +137,7 @@ public final class PolicyControllerPolicyControllerHubConfig extends com.google.
    * feature controller that is reported in the feature state.
    * @param installSpec installSpec or {@code null} for none
    */
-  public PolicyControllerPolicyControllerHubConfig setInstallSpec(java.lang.String installSpec) {
+  public PolicycontrollerPolicyControllerHubConfig setInstallSpec(java.lang.String installSpec) {
     this.installSpec = installSpec;
     return this;
   }
@@ -154,7 +154,7 @@ public final class PolicyControllerPolicyControllerHubConfig extends com.google.
    * Logs all denies and dry run failures.
    * @param logDeniesEnabled logDeniesEnabled or {@code null} for none
    */
-  public PolicyControllerPolicyControllerHubConfig setLogDeniesEnabled(java.lang.Boolean logDeniesEnabled) {
+  public PolicycontrollerPolicyControllerHubConfig setLogDeniesEnabled(java.lang.Boolean logDeniesEnabled) {
     this.logDeniesEnabled = logDeniesEnabled;
     return this;
   }
@@ -171,7 +171,7 @@ public final class PolicyControllerPolicyControllerHubConfig extends com.google.
    * Enables the ability to mutate resources using Policy Controller.
    * @param mutationEnabled mutationEnabled or {@code null} for none
    */
-  public PolicyControllerPolicyControllerHubConfig setMutationEnabled(java.lang.Boolean mutationEnabled) {
+  public PolicycontrollerPolicyControllerHubConfig setMutationEnabled(java.lang.Boolean mutationEnabled) {
     this.mutationEnabled = mutationEnabled;
     return this;
   }
@@ -190,7 +190,7 @@ public final class PolicyControllerPolicyControllerHubConfig extends com.google.
    * currently being evaluated.
    * @param referentialRulesEnabled referentialRulesEnabled or {@code null} for none
    */
-  public PolicyControllerPolicyControllerHubConfig setReferentialRulesEnabled(java.lang.Boolean referentialRulesEnabled) {
+  public PolicycontrollerPolicyControllerHubConfig setReferentialRulesEnabled(java.lang.Boolean referentialRulesEnabled) {
     this.referentialRulesEnabled = referentialRulesEnabled;
     return this;
   }
@@ -199,7 +199,7 @@ public final class PolicyControllerPolicyControllerHubConfig extends com.google.
    * Configures the library templates to install along with Policy Controller.
    * @return value or {@code null} for none
    */
-  public PolicyControllerTemplateLibraryConfig getTemplateLibraryConfig() {
+  public PolicycontrollerTemplateLibraryConfig getTemplateLibraryConfig() {
     return templateLibraryConfig;
   }
 
@@ -207,19 +207,19 @@ public final class PolicyControllerPolicyControllerHubConfig extends com.google.
    * Configures the library templates to install along with Policy Controller.
    * @param templateLibraryConfig templateLibraryConfig or {@code null} for none
    */
-  public PolicyControllerPolicyControllerHubConfig setTemplateLibraryConfig(PolicyControllerTemplateLibraryConfig templateLibraryConfig) {
+  public PolicycontrollerPolicyControllerHubConfig setTemplateLibraryConfig(PolicycontrollerTemplateLibraryConfig templateLibraryConfig) {
     this.templateLibraryConfig = templateLibraryConfig;
     return this;
   }
 
   @Override
-  public PolicyControllerPolicyControllerHubConfig set(String fieldName, Object value) {
-    return (PolicyControllerPolicyControllerHubConfig) super.set(fieldName, value);
+  public PolicycontrollerPolicyControllerHubConfig set(String fieldName, Object value) {
+    return (PolicycontrollerPolicyControllerHubConfig) super.set(fieldName, value);
   }
 
   @Override
-  public PolicyControllerPolicyControllerHubConfig clone() {
-    return (PolicyControllerPolicyControllerHubConfig) super.clone();
+  public PolicycontrollerPolicyControllerHubConfig clone() {
+    return (PolicycontrollerPolicyControllerHubConfig) super.clone();
   }
 
 }

@@ -7565,7 +7565,7 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
          * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
          * `Code.CANCELLED`.
          *
          * Create a request for the method "operations.cancel".
@@ -7596,7 +7596,7 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
            * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
            * methods to check whether the cancellation succeeded or whether the operation completed despite
            * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
            * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".
@@ -8161,6 +8161,168 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the ServiceConfig collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Backupdr backupdr = new Backupdr(...);}
+       *   {@code Backupdr.ServiceConfig.List request = backupdr.serviceConfig().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ServiceConfig serviceConfig() {
+        return new ServiceConfig();
+      }
+
+      /**
+       * The "serviceConfig" collection of methods.
+       */
+      public class ServiceConfig {
+
+        /**
+         * Initializes the service related config for a project.
+         *
+         * Create a request for the method "serviceConfig.initialize".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link Initialize#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the serviceConfig used to initialize the service. Format:
+         *        `projects/{project_id}/locations/{location}/serviceConfig`.
+         * @param content the {@link com.google.api.services.backupdr.v1.model.InitializeServiceRequest}
+         * @return the request
+         */
+        public Initialize initialize(java.lang.String name, com.google.api.services.backupdr.v1.model.InitializeServiceRequest content) throws java.io.IOException {
+          Initialize result = new Initialize(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Initialize extends BackupdrRequest<com.google.api.services.backupdr.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:initialize";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/serviceConfig$");
+
+          /**
+           * Initializes the service related config for a project.
+           *
+           * Create a request for the method "serviceConfig.initialize".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link Initialize#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Initialize#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the serviceConfig used to initialize the service. Format:
+         *        `projects/{project_id}/locations/{location}/serviceConfig`.
+           * @param content the {@link com.google.api.services.backupdr.v1.model.InitializeServiceRequest}
+           * @since 1.13
+           */
+          protected Initialize(java.lang.String name, com.google.api.services.backupdr.v1.model.InitializeServiceRequest content) {
+            super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/serviceConfig$");
+            }
+          }
+
+          @Override
+          public Initialize set$Xgafv(java.lang.String $Xgafv) {
+            return (Initialize) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Initialize setAccessToken(java.lang.String accessToken) {
+            return (Initialize) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Initialize setAlt(java.lang.String alt) {
+            return (Initialize) super.setAlt(alt);
+          }
+
+          @Override
+          public Initialize setCallback(java.lang.String callback) {
+            return (Initialize) super.setCallback(callback);
+          }
+
+          @Override
+          public Initialize setFields(java.lang.String fields) {
+            return (Initialize) super.setFields(fields);
+          }
+
+          @Override
+          public Initialize setKey(java.lang.String key) {
+            return (Initialize) super.setKey(key);
+          }
+
+          @Override
+          public Initialize setOauthToken(java.lang.String oauthToken) {
+            return (Initialize) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Initialize setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Initialize) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Initialize setQuotaUser(java.lang.String quotaUser) {
+            return (Initialize) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Initialize setUploadType(java.lang.String uploadType) {
+            return (Initialize) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Initialize setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Initialize) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the serviceConfig used to initialize the service.
+           * Format: `projects/{project_id}/locations/{location}/serviceConfig`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the serviceConfig used to initialize the service. Format:
+         `projects/{project_id}/locations/{location}/serviceConfig`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the serviceConfig used to initialize the service.
+           * Format: `projects/{project_id}/locations/{location}/serviceConfig`.
+           */
+          public Initialize setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/serviceConfig$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Initialize set(String parameterName, Object value) {
+            return (Initialize) super.set(parameterName, value);
           }
         }
 

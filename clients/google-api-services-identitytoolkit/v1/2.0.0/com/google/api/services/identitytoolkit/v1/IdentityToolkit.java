@@ -772,9 +772,10 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Sends a SMS verification code for phone number sign-in. An [API
-     * key](https://cloud.google.com/docs/authentication/api-keys) is required in the request in order
-     * to identify the Google Cloud project.
+     * Sends a SMS verification code for phone number sign-in. To localize the text of the SMS sent to
+     * the user, set the HTTP header `X-Firebase-Locale` to the language code that corresponds with the
+     * user's locale. An [API key](https://cloud.google.com/docs/authentication/api-keys) is required in
+     * the request in order to identify the Google Cloud project.
      *
      * Create a request for the method "accounts.sendVerificationCode".
      *
@@ -796,9 +797,10 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "v1/accounts:sendVerificationCode";
 
       /**
-       * Sends a SMS verification code for phone number sign-in. An [API
-       * key](https://cloud.google.com/docs/authentication/api-keys) is required in the request in order
-       * to identify the Google Cloud project.
+       * Sends a SMS verification code for phone number sign-in. To localize the text of the SMS sent to
+       * the user, set the HTTP header `X-Firebase-Locale` to the language code that corresponds with
+       * the user's locale. An [API key](https://cloud.google.com/docs/authentication/api-keys) is
+       * required in the request in order to identify the Google Cloud project.
        *
        * Create a request for the method "accounts.sendVerificationCode".
        *
@@ -1436,9 +1438,11 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
     /**
      * Completes a phone number authentication attempt. If a user already exists with the given phone
      * number, an ID token is minted for that user. Otherwise, a new user is created and associated with
-     * the phone number. This method may also be used to link a phone number to an existing user. An
-     * [API key](https://cloud.google.com/docs/authentication/api-keys) is required in the request in
-     * order to identify the Google Cloud project.
+     * the phone number. This method may also be used to link a phone number to an existing user. To
+     * localize the text of the SMS sent to the user, set the HTTP header `X-Firebase-Locale` to the
+     * language code that corresponds with the user's locale. An [API
+     * key](https://cloud.google.com/docs/authentication/api-keys) is required in the request in order
+     * to identify the Google Cloud project.
      *
      * Create a request for the method "accounts.signInWithPhoneNumber".
      *
@@ -1463,8 +1467,10 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
        * Completes a phone number authentication attempt. If a user already exists with the given phone
        * number, an ID token is minted for that user. Otherwise, a new user is created and associated
        * with the phone number. This method may also be used to link a phone number to an existing user.
-       * An [API key](https://cloud.google.com/docs/authentication/api-keys) is required in the request
-       * in order to identify the Google Cloud project.
+       * To localize the text of the SMS sent to the user, set the HTTP header `X-Firebase-Locale` to
+       * the language code that corresponds with the user's locale. An [API
+       * key](https://cloud.google.com/docs/authentication/api-keys) is required in the request in order
+       * to identify the Google Cloud project.
        *
        * Create a request for the method "accounts.signInWithPhoneNumber".
        *
@@ -1901,9 +1907,10 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
      * operation.
      *
      * @param targetProjectId The project ID of the project which the user should belong to. Specifying this field requires a
-     *        Google OAuth 2.0 credential with the proper [permissions](https://cloud.google.com
-     *        /identity-platform/docs/access-control). If this is not set, the target project is
-     *        inferred from the scope associated to the Bearer access token.
+     *        Google OAuth 2.0 credential with the proper
+     *        [permissions](https://cloud.google.com/identity-platform/docs/access-control). If this is
+     *        not set, the target project is inferred from the scope associated to the Bearer access
+     *        token.
      * @param content the {@link com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1SignUpRequest}
      * @return the request
      */
@@ -1937,9 +1944,10 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
        * the constructor. </p>
        *
        * @param targetProjectId The project ID of the project which the user should belong to. Specifying this field requires a
-     *        Google OAuth 2.0 credential with the proper [permissions](https://cloud.google.com
-     *        /identity-platform/docs/access-control). If this is not set, the target project is
-     *        inferred from the scope associated to the Bearer access token.
+     *        Google OAuth 2.0 credential with the proper
+     *        [permissions](https://cloud.google.com/identity-platform/docs/access-control). If this is
+     *        not set, the target project is inferred from the scope associated to the Bearer access
+     *        token.
        * @param content the {@link com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1SignUpRequest}
        * @since 1.13
        */
@@ -2625,10 +2633,10 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
       }
       /**
        * Download account information for all accounts on the project in a paginated manner. To use this
-       * method requires a Google OAuth 2.0 credential with proper [permissions](https://cloud.google.com
-       * /identity-platform/docs/access-control).. Furthermore, additional permissions are needed to get
-       * password hash, password salt, and password version from accounts; otherwise these fields are
-       * redacted.
+       * method requires a Google OAuth 2.0 credential with proper
+       * [permissions](https://cloud.google.com/identity-platform/docs/access-control).. Furthermore,
+       * additional permissions are needed to get password hash, password salt, and password version from
+       * accounts; otherwise these fields are redacted.
        *
        * Create a request for the method "accounts.batchGet".
        *
@@ -3116,8 +3124,8 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
         /**
          * The ID of the Google Cloud project that the account or the Identity Platform tenant
          * specified by `tenant_id` belongs to. Should only be specified by authenticated requests
-         * bearing a Google OAuth 2.0 credential with proper [permissions](https://cloud.google.com
-         * /identity-platform/docs/access-control).
+         * bearing a Google OAuth 2.0 credential with proper
+         * [permissions](https://cloud.google.com/identity-platform/docs/access-control).
          */
         @com.google.api.client.util.Key
         private java.lang.String targetProjectId;
@@ -3134,8 +3142,8 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
         /**
          * The ID of the Google Cloud project that the account or the Identity Platform tenant
          * specified by `tenant_id` belongs to. Should only be specified by authenticated requests
-         * bearing a Google OAuth 2.0 credential with proper [permissions](https://cloud.google.com
-         * /identity-platform/docs/access-control).
+         * bearing a Google OAuth 2.0 credential with proper
+         * [permissions](https://cloud.google.com/identity-platform/docs/access-control).
          */
         public Lookup setTargetProjectId(java.lang.String targetProjectId) {
           if (!getSuppressPatternChecks()) {
@@ -3404,8 +3412,8 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
         private java.lang.String targetProjectId;
 
         /** The Project ID of the Identity Platform project which the account belongs to. To specify this
-       field, it requires a Google OAuth 2.0 credential with proper [permissions](https://cloud.google.com
-       /identity-platform/docs/access-control).
+       field, it requires a Google OAuth 2.0 credential with proper
+       [permissions](https://cloud.google.com/identity-platform/docs/access-control).
          */
         public java.lang.String getTargetProjectId() {
           return targetProjectId;
@@ -3546,16 +3554,17 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
 
         /**
          * The project ID for the project that the account belongs to. Specifying this field
-         * requires Google OAuth 2.0 credential with proper [permissions] (https://cloud.google.com
-         * /identity-platform/docs/access-control). Requests from end users should pass an Identity
-         * Platform ID token instead.
+         * requires Google OAuth 2.0 credential with proper [permissions]
+         * (https://cloud.google.com/identity-platform/docs/access-control). Requests from end users
+         * should pass an Identity Platform ID token instead.
          */
         @com.google.api.client.util.Key
         private java.lang.String targetProjectId;
 
         /** The project ID for the project that the account belongs to. Specifying this field requires Google
-       OAuth 2.0 credential with proper [permissions] (https://cloud.google.com/identity-platform/docs
-       /access-control). Requests from end users should pass an Identity Platform ID token instead.
+       OAuth 2.0 credential with proper [permissions] (https://cloud.google.com/identity-
+       platform/docs/access-control). Requests from end users should pass an Identity Platform ID token
+       instead.
          */
         public java.lang.String getTargetProjectId() {
           return targetProjectId;
@@ -3563,9 +3572,9 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
 
         /**
          * The project ID for the project that the account belongs to. Specifying this field
-         * requires Google OAuth 2.0 credential with proper [permissions] (https://cloud.google.com
-         * /identity-platform/docs/access-control). Requests from end users should pass an Identity
-         * Platform ID token instead.
+         * requires Google OAuth 2.0 credential with proper [permissions]
+         * (https://cloud.google.com/identity-platform/docs/access-control). Requests from end users
+         * should pass an Identity Platform ID token instead.
          */
         public Update setTargetProjectId(java.lang.String targetProjectId) {
           if (!getSuppressPatternChecks()) {
@@ -3619,9 +3628,10 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
        * operation.
        *
        * @param targetProjectId The project ID of the project which the user should belong to. Specifying this field requires a
-       *        Google OAuth 2.0 credential with the proper [permissions](https://cloud.google.com
-       *        /identity-platform/docs/access-control). If this is not set, the target project is
-       *        inferred from the scope associated to the Bearer access token.
+       *        Google OAuth 2.0 credential with the proper
+       *        [permissions](https://cloud.google.com/identity-platform/docs/access-control). If this is
+       *        not set, the target project is inferred from the scope associated to the Bearer access
+       *        token.
        * @param tenantId The ID of the Identity Platform tenant to create a user under. If not set, the user will be created
        *        under the default Identity Platform project.
        * @param content the {@link com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1SignUpRequest}
@@ -3660,9 +3670,10 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
          * the constructor. </p>
          *
          * @param targetProjectId The project ID of the project which the user should belong to. Specifying this field requires a
-       *        Google OAuth 2.0 credential with the proper [permissions](https://cloud.google.com
-       *        /identity-platform/docs/access-control). If this is not set, the target project is
-       *        inferred from the scope associated to the Bearer access token.
+       *        Google OAuth 2.0 credential with the proper
+       *        [permissions](https://cloud.google.com/identity-platform/docs/access-control). If this is
+       *        not set, the target project is inferred from the scope associated to the Bearer access
+       *        token.
          * @param tenantId The ID of the Identity Platform tenant to create a user under. If not set, the user will be created
        *        under the default Identity Platform project.
          * @param content the {@link com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1SignUpRequest}
@@ -4357,10 +4368,10 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
         }
         /**
          * Download account information for all accounts on the project in a paginated manner. To use this
-         * method requires a Google OAuth 2.0 credential with proper [permissions](https://cloud.google.com
-         * /identity-platform/docs/access-control).. Furthermore, additional permissions are needed to get
-         * password hash, password salt, and password version from accounts; otherwise these fields are
-         * redacted.
+         * method requires a Google OAuth 2.0 credential with proper
+         * [permissions](https://cloud.google.com/identity-platform/docs/access-control).. Furthermore,
+         * additional permissions are needed to get password hash, password salt, and password version from
+         * accounts; otherwise these fields are redacted.
          *
          * Create a request for the method "accounts.batchGet".
          *
@@ -5284,8 +5295,8 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
           private java.lang.String targetProjectId;
 
           /** The Project ID of the Identity Platform project which the account belongs to. To specify this
-         field, it requires a Google OAuth 2.0 credential with proper [permissions](https://cloud.google.com
-         /identity-platform/docs/access-control).
+         field, it requires a Google OAuth 2.0 credential with proper
+         [permissions](https://cloud.google.com/identity-platform/docs/access-control).
            */
           public java.lang.String getTargetProjectId() {
             return targetProjectId;
@@ -5468,8 +5479,9 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
           private java.lang.String targetProjectId;
 
           /** The project ID for the project that the account belongs to. Specifying this field requires Google
-         OAuth 2.0 credential with proper [permissions] (https://cloud.google.com/identity-platform/docs
-         /access-control). Requests from end users should pass an Identity Platform ID token instead.
+         OAuth 2.0 credential with proper [permissions] (https://cloud.google.com/identity-
+         platform/docs/access-control). Requests from end users should pass an Identity Platform ID token
+         instead.
            */
           public java.lang.String getTargetProjectId() {
             return targetProjectId;
@@ -6296,6 +6308,11 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
     public Builder setGoogleClientRequestInitializer(
         com.google.api.client.googleapis.services.GoogleClientRequestInitializer googleClientRequestInitializer) {
       return (Builder) super.setGoogleClientRequestInitializer(googleClientRequestInitializer);
+    }
+
+    @Override
+    public Builder setUniverseDomain(String universeDomain) {
+      return (Builder) super.setUniverseDomain(universeDomain);
     }
   }
 }

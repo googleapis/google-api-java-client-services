@@ -80,8 +80,8 @@ public final class GoogleCloudIdentitytoolkitV1GetAccountInfoRequest extends com
 
   /**
    * The ID of one or more accounts to fetch. Should only be specified by authenticated requests
-   * bearing a Google OAuth 2.0 credential with proper [permissions](https://cloud.google.com
-   * /identity-platform/docs/access-control).
+   * bearing a Google OAuth 2.0 credential with proper
+   * [permissions](https://cloud.google.com/identity-platform/docs/access-control).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,8 +98,8 @@ public final class GoogleCloudIdentitytoolkitV1GetAccountInfoRequest extends com
   /**
    * The ID of the Google Cloud project that the account or the Identity Platform tenant specified
    * by `tenant_id` belongs to. Should only be specified by authenticated requests bearing a Google
-   * OAuth 2.0 credential with proper [permissions](https://cloud.google.com/identity-platform/docs
-   * /access-control).
+   * OAuth 2.0 credential with proper [permissions](https://cloud.google.com/identity-
+   * platform/docs/access-control).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -216,8 +216,8 @@ public final class GoogleCloudIdentitytoolkitV1GetAccountInfoRequest extends com
 
   /**
    * The ID of one or more accounts to fetch. Should only be specified by authenticated requests
-   * bearing a Google OAuth 2.0 credential with proper [permissions](https://cloud.google.com
-   * /identity-platform/docs/access-control).
+   * bearing a Google OAuth 2.0 credential with proper
+   * [permissions](https://cloud.google.com/identity-platform/docs/access-control).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLocalId() {
@@ -226,8 +226,8 @@ public final class GoogleCloudIdentitytoolkitV1GetAccountInfoRequest extends com
 
   /**
    * The ID of one or more accounts to fetch. Should only be specified by authenticated requests
-   * bearing a Google OAuth 2.0 credential with proper [permissions](https://cloud.google.com
-   * /identity-platform/docs/access-control).
+   * bearing a Google OAuth 2.0 credential with proper
+   * [permissions](https://cloud.google.com/identity-platform/docs/access-control).
    * @param localId localId or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1GetAccountInfoRequest setLocalId(java.util.List<java.lang.String> localId) {
@@ -257,8 +257,8 @@ public final class GoogleCloudIdentitytoolkitV1GetAccountInfoRequest extends com
   /**
    * The ID of the Google Cloud project that the account or the Identity Platform tenant specified
    * by `tenant_id` belongs to. Should only be specified by authenticated requests bearing a Google
-   * OAuth 2.0 credential with proper [permissions](https://cloud.google.com/identity-platform/docs
-   * /access-control).
+   * OAuth 2.0 credential with proper [permissions](https://cloud.google.com/identity-
+   * platform/docs/access-control).
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetProjectId() {
@@ -268,8 +268,8 @@ public final class GoogleCloudIdentitytoolkitV1GetAccountInfoRequest extends com
   /**
    * The ID of the Google Cloud project that the account or the Identity Platform tenant specified
    * by `tenant_id` belongs to. Should only be specified by authenticated requests bearing a Google
-   * OAuth 2.0 credential with proper [permissions](https://cloud.google.com/identity-platform/docs
-   * /access-control).
+   * OAuth 2.0 credential with proper [permissions](https://cloud.google.com/identity-
+   * platform/docs/access-control).
    * @param targetProjectId targetProjectId or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1GetAccountInfoRequest setTargetProjectId(java.lang.String targetProjectId) {

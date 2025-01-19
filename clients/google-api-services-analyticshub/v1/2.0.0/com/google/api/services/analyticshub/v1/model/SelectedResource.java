@@ -30,12 +30,39 @@ package com.google.api.services.analyticshub.v1.model;
 public final class SelectedResource extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Format: For routine: `projects/{projectId}/datasets/{datasetId}/routines/{routineId}`
+   * Example:"projects/test_project/datasets/test_dataset/routines/test_routine"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String routine;
+
+  /**
    * Optional. Format: For table: `projects/{projectId}/datasets/{datasetId}/tables/{tableId}`
    * Example:"projects/test_project/datasets/test_dataset/tables/test_table"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String table;
+
+  /**
+   * Optional. Format: For routine: `projects/{projectId}/datasets/{datasetId}/routines/{routineId}`
+   * Example:"projects/test_project/datasets/test_dataset/routines/test_routine"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRoutine() {
+    return routine;
+  }
+
+  /**
+   * Optional. Format: For routine: `projects/{projectId}/datasets/{datasetId}/routines/{routineId}`
+   * Example:"projects/test_project/datasets/test_dataset/routines/test_routine"
+   * @param routine routine or {@code null} for none
+   */
+  public SelectedResource setRoutine(java.lang.String routine) {
+    this.routine = routine;
+    return this;
+  }
 
   /**
    * Optional. Format: For table: `projects/{projectId}/datasets/{datasetId}/tables/{tableId}`

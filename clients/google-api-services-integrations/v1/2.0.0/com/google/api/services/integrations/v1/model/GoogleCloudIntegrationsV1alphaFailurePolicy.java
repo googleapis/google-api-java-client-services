@@ -33,6 +33,14 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudIntegrationsV1alphaFailurePolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The string condition that will be evaluated to determine if the task should be
+   * retried with this failure policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String condition;
+
+  /**
    * Required if retry_strategy is FIXED_INTERVAL or
    * LINEAR/EXPONENTIAL_BACKOFF/RESTART_INTEGRATION_WITH_BACKOFF. Defines the initial interval in
    * seconds for backoff.
@@ -56,6 +64,25 @@ public final class GoogleCloudIntegrationsV1alphaFailurePolicy extends com.googl
    */
   @com.google.api.client.util.Key
   private java.lang.String retryStrategy;
+
+  /**
+   * Optional. The string condition that will be evaluated to determine if the task should be
+   * retried with this failure policy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCondition() {
+    return condition;
+  }
+
+  /**
+   * Optional. The string condition that will be evaluated to determine if the task should be
+   * retried with this failure policy.
+   * @param condition condition or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaFailurePolicy setCondition(java.lang.String condition) {
+    this.condition = condition;
+    return this;
+  }
 
   /**
    * Required if retry_strategy is FIXED_INTERVAL or

@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Model definition for GoogleProtobufStruct.
+ * Request for replaying an execution.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -28,16 +28,40 @@ package com.google.api.services.integrations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleProtobufStruct extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudIntegrationsV1alphaReplayExecutionRequest extends com.google.api.client.json.GenericJson {
 
-  @Override
-  public GoogleProtobufStruct set(String fieldName, Object value) {
-    return (GoogleProtobufStruct) super.set(fieldName, value);
+  /**
+   * Required. The user provided reason for replaying the execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String replayReason;
+
+  /**
+   * Required. The user provided reason for replaying the execution.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReplayReason() {
+    return replayReason;
+  }
+
+  /**
+   * Required. The user provided reason for replaying the execution.
+   * @param replayReason replayReason or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaReplayExecutionRequest setReplayReason(java.lang.String replayReason) {
+    this.replayReason = replayReason;
+    return this;
   }
 
   @Override
-  public GoogleProtobufStruct clone() {
-    return (GoogleProtobufStruct) super.clone();
+  public GoogleCloudIntegrationsV1alphaReplayExecutionRequest set(String fieldName, Object value) {
+    return (GoogleCloudIntegrationsV1alphaReplayExecutionRequest) super.set(fieldName, value);
+  }
+
+  @Override
+  public GoogleCloudIntegrationsV1alphaReplayExecutionRequest clone() {
+    return (GoogleCloudIntegrationsV1alphaReplayExecutionRequest) super.clone();
   }
 
 }

@@ -7089,6 +7089,146 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
       public class Databases {
 
         /**
+         * Adds split points to specified tables, indexes of a database.
+         *
+         * Create a request for the method "databases.addSplitPoints".
+         *
+         * This request holds the parameters needed by the spanner server.  After setting any optional
+         * parameters, call the {@link AddSplitPoints#execute()} method to invoke the remote operation.
+         *
+         * @param database Required. The database on whose tables/indexes split points are to be added. Values are of the form
+         *        `projects//instances//databases/`.
+         * @param content the {@link com.google.api.services.spanner.v1.model.AddSplitPointsRequest}
+         * @return the request
+         */
+        public AddSplitPoints addSplitPoints(java.lang.String database, com.google.api.services.spanner.v1.model.AddSplitPointsRequest content) throws java.io.IOException {
+          AddSplitPoints result = new AddSplitPoints(database, content);
+          initialize(result);
+          return result;
+        }
+
+        public class AddSplitPoints extends SpannerRequest<com.google.api.services.spanner.v1.model.AddSplitPointsResponse> {
+
+          private static final String REST_PATH = "v1/{+database}:addSplitPoints";
+
+          private final java.util.regex.Pattern DATABASE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+
+          /**
+           * Adds split points to specified tables, indexes of a database.
+           *
+           * Create a request for the method "databases.addSplitPoints".
+           *
+           * This request holds the parameters needed by the the spanner server.  After setting any optional
+           * parameters, call the {@link AddSplitPoints#execute()} method to invoke the remote operation.
+           * <p> {@link AddSplitPoints#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+           * ientRequest)} must be called to initialize this instance immediately after invoking the
+           * constructor. </p>
+           *
+           * @param database Required. The database on whose tables/indexes split points are to be added. Values are of the form
+         *        `projects//instances//databases/`.
+           * @param content the {@link com.google.api.services.spanner.v1.model.AddSplitPointsRequest}
+           * @since 1.13
+           */
+          protected AddSplitPoints(java.lang.String database, com.google.api.services.spanner.v1.model.AddSplitPointsRequest content) {
+            super(Spanner.this, "POST", REST_PATH, content, com.google.api.services.spanner.v1.model.AddSplitPointsResponse.class);
+            this.database = com.google.api.client.util.Preconditions.checkNotNull(database, "Required parameter database must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATABASE_PATTERN.matcher(database).matches(),
+                  "Parameter database must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+            }
+          }
+
+          @Override
+          public AddSplitPoints set$Xgafv(java.lang.String $Xgafv) {
+            return (AddSplitPoints) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public AddSplitPoints setAccessToken(java.lang.String accessToken) {
+            return (AddSplitPoints) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public AddSplitPoints setAlt(java.lang.String alt) {
+            return (AddSplitPoints) super.setAlt(alt);
+          }
+
+          @Override
+          public AddSplitPoints setCallback(java.lang.String callback) {
+            return (AddSplitPoints) super.setCallback(callback);
+          }
+
+          @Override
+          public AddSplitPoints setFields(java.lang.String fields) {
+            return (AddSplitPoints) super.setFields(fields);
+          }
+
+          @Override
+          public AddSplitPoints setKey(java.lang.String key) {
+            return (AddSplitPoints) super.setKey(key);
+          }
+
+          @Override
+          public AddSplitPoints setOauthToken(java.lang.String oauthToken) {
+            return (AddSplitPoints) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public AddSplitPoints setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (AddSplitPoints) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public AddSplitPoints setQuotaUser(java.lang.String quotaUser) {
+            return (AddSplitPoints) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public AddSplitPoints setUploadType(java.lang.String uploadType) {
+            return (AddSplitPoints) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public AddSplitPoints setUploadProtocol(java.lang.String uploadProtocol) {
+            return (AddSplitPoints) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The database on whose tables/indexes split points are to be added. Values are
+           * of the form `projects//instances//databases/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String database;
+
+          /** Required. The database on whose tables/indexes split points are to be added. Values are of the form
+         `projects//instances//databases/`.
+           */
+          public java.lang.String getDatabase() {
+            return database;
+          }
+
+          /**
+           * Required. The database on whose tables/indexes split points are to be added. Values are
+           * of the form `projects//instances//databases/`.
+           */
+          public AddSplitPoints setDatabase(java.lang.String database) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATABASE_PATTERN.matcher(database).matches(),
+                  "Parameter database must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+            }
+            this.database = database;
+            return this;
+          }
+
+          @Override
+          public AddSplitPoints set(String parameterName, Object value) {
+            return (AddSplitPoints) super.set(parameterName, value);
+          }
+        }
+        /**
          * `ChangeQuorum` is strictly restricted to databases that use dual-region instance configurations.
          * Initiates a background operation to change the quorum of a database from dual-region mode to
          * single-region mode or vice versa. The returned long-running operation has a name of the format

@@ -2761,14 +2761,14 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. Mask of fields to update. At least one path must be supplied in this field.
            * The elements of the repeated paths field may only include these fields from Cluster: *
-           * `size_gb` * `replica_count`
+           * `size_gb` * `replica_count` * `cluster_endpoints`
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** Required. Mask of fields to update. At least one path must be supplied in this field. The elements
          of the repeated paths field may only include these fields from Cluster: * `size_gb` *
-         `replica_count`
+         `replica_count` * `cluster_endpoints`
            */
           public String getUpdateMask() {
             return updateMask;
@@ -2777,7 +2777,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. Mask of fields to update. At least one path must be supplied in this field.
            * The elements of the repeated paths field may only include these fields from Cluster: *
-           * `size_gb` * `replica_count`
+           * `size_gb` * `replica_count` * `cluster_endpoints`
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

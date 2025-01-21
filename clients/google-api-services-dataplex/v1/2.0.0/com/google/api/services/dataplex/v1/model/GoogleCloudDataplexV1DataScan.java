@@ -18,9 +18,14 @@ package com.google.api.services.dataplex.v1.model;
 
 /**
  * Represents a user-visible job which provides the insights for the related data source.For
- * example: Data Quality: generates queries based on the rules and runs against the data to get data
- * quality check results. Data Profile: analyzes the data in table(s) and generates insights about
- * the structure, content and relationships (such as null percent, cardinality, min/max/mean, etc).
+ * example: Data quality: generates queries based on the rules and runs against the data to get data
+ * quality check results. For more information, see Auto data quality overview
+ * (https://cloud.google.com/dataplex/docs/auto-data-quality-overview). Data profile: analyzes the
+ * data in tables and generates insights about the structure, content and relationships (such as
+ * null percent, cardinality, min/max/mean, etc). For more information, see About data profiling
+ * (https://cloud.google.com/dataplex/docs/data-profiling-overview). Data discovery: scans data in
+ * Cloud Storage buckets to extract and then catalog metadata. For more information, see Discover
+ * and catalog Cloud Storage data (https://cloud.google.com/bigquery/docs/automatic-discovery).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:

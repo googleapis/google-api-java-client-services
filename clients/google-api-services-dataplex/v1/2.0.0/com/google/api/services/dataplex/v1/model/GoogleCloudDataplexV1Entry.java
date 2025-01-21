@@ -88,7 +88,8 @@ public final class GoogleCloudDataplexV1Entry extends com.google.api.client.json
   private java.lang.String name;
 
   /**
-   * Optional. Immutable. The resource name of the parent entry.
+   * Optional. Immutable. The resource name of the parent entry, in the format projects/{project_id_
+   * or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entries/{entry_id}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -224,7 +225,8 @@ public final class GoogleCloudDataplexV1Entry extends com.google.api.client.json
   }
 
   /**
-   * Optional. Immutable. The resource name of the parent entry.
+   * Optional. Immutable. The resource name of the parent entry, in the format projects/{project_id_
+   * or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entries/{entry_id}.
    * @return value or {@code null} for none
    */
   public java.lang.String getParentEntry() {
@@ -232,7 +234,8 @@ public final class GoogleCloudDataplexV1Entry extends com.google.api.client.json
   }
 
   /**
-   * Optional. Immutable. The resource name of the parent entry.
+   * Optional. Immutable. The resource name of the parent entry, in the format projects/{project_id_
+   * or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entries/{entry_id}.
    * @param parentEntry parentEntry or {@code null} for none
    */
   public GoogleCloudDataplexV1Entry setParentEntry(java.lang.String parentEntry) {

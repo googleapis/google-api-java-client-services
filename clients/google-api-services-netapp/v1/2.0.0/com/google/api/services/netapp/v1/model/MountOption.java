@@ -51,6 +51,13 @@ public final class MountOption extends com.google.api.client.json.GenericJson {
   private java.lang.String instructions;
 
   /**
+   * Output only. IP Address.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipAddress;
+
+  /**
    * Protocol to mount with.
    * The value may be {@code null}.
    */
@@ -105,6 +112,23 @@ public final class MountOption extends com.google.api.client.json.GenericJson {
    */
   public MountOption setInstructions(java.lang.String instructions) {
     this.instructions = instructions;
+    return this;
+  }
+
+  /**
+   * Output only. IP Address.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpAddress() {
+    return ipAddress;
+  }
+
+  /**
+   * Output only. IP Address.
+   * @param ipAddress ipAddress or {@code null} for none
+   */
+  public MountOption setIpAddress(java.lang.String ipAddress) {
+    this.ipAddress = ipAddress;
     return this;
   }
 

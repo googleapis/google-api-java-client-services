@@ -41,7 +41,8 @@ public final class VirtualMachinePreferences extends com.google.api.client.json.
   private java.lang.String commitmentPlan;
 
   /**
-   * Compute Engine preferences concern insights and recommendations for Compute Engine target.
+   * Optional. Compute Engine preferences concern insights and recommendations for Compute Engine
+   * target.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +126,8 @@ public final class VirtualMachinePreferences extends com.google.api.client.json.
   }
 
   /**
-   * Compute Engine preferences concern insights and recommendations for Compute Engine target.
+   * Optional. Compute Engine preferences concern insights and recommendations for Compute Engine
+   * target.
    * @return value or {@code null} for none
    */
   public ComputeEnginePreferences getComputeEnginePreferences() {
@@ -133,7 +135,8 @@ public final class VirtualMachinePreferences extends com.google.api.client.json.
   }
 
   /**
-   * Compute Engine preferences concern insights and recommendations for Compute Engine target.
+   * Optional. Compute Engine preferences concern insights and recommendations for Compute Engine
+   * target.
    * @param computeEnginePreferences computeEnginePreferences or {@code null} for none
    */
   public VirtualMachinePreferences setComputeEnginePreferences(ComputeEnginePreferences computeEnginePreferences) {

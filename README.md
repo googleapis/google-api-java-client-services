@@ -296,7 +296,7 @@ packages on [Maven Central][maven-search].
 | VM Migration API | [v1](clients/google-api-services-vmmigration/v1), [v1alpha1](clients/google-api-services-vmmigration/v1alpha1) |
 | VMware Engine API | [v1](clients/google-api-services-vmwareengine/v1) |
 | Vertex AI API | [v1](clients/google-api-services-aiplatform/v1), [v1beta1](clients/google-api-services-aiplatform/v1beta1) |
-| Vertex AI Search for Retail API | [v2](clients/google-api-services-retail/v2), [v2alpha](clients/google-api-services-retail/v2alpha), [v2beta](clients/google-api-services-retail/v2beta) |
+| Vertex AI Search for commerce API | [v2](clients/google-api-services-retail/v2), [v2alpha](clients/google-api-services-retail/v2alpha), [v2beta](clients/google-api-services-retail/v2beta) |
 | Web Fonts Developer API | [v1](clients/google-api-services-webfonts/v1) |
 | Web Risk API | [v1](clients/google-api-services-webrisk/v1) |
 | Web Search Indexing API | [v3](clients/google-api-services-indexing/v3) |

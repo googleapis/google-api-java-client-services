@@ -41,7 +41,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google
    * The number of rows a rule was evaluated against.This field is only valid for row-level type
    * rules.Evaluated count can be configured to either include all rows (default) - with null rows
    * automatically failing rule evaluation, or exclude null rows from the evaluated_count, by
-   * setting ignore_nulls = true.
+   * setting ignore_nulls = true.This field is not set for rule SqlAssertion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -77,8 +77,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google
   private java.lang.Boolean passed;
 
   /**
-   * The number of rows which passed a rule evaluation.This field is only valid for row-level type
-   * rules.
+   * This field is not set for rule SqlAssertion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -114,7 +113,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google
    * The number of rows a rule was evaluated against.This field is only valid for row-level type
    * rules.Evaluated count can be configured to either include all rows (default) - with null rows
    * automatically failing rule evaluation, or exclude null rows from the evaluated_count, by
-   * setting ignore_nulls = true.
+   * setting ignore_nulls = true.This field is not set for rule SqlAssertion.
    * @return value or {@code null} for none
    */
   public java.lang.Long getEvaluatedCount() {
@@ -125,7 +124,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google
    * The number of rows a rule was evaluated against.This field is only valid for row-level type
    * rules.Evaluated count can be configured to either include all rows (default) - with null rows
    * automatically failing rule evaluation, or exclude null rows from the evaluated_count, by
-   * setting ignore_nulls = true.
+   * setting ignore_nulls = true.This field is not set for rule SqlAssertion.
    * @param evaluatedCount evaluatedCount or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleResult setEvaluatedCount(java.lang.Long evaluatedCount) {
@@ -204,8 +203,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google
   }
 
   /**
-   * The number of rows which passed a rule evaluation.This field is only valid for row-level type
-   * rules.
+   * This field is not set for rule SqlAssertion.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPassedCount() {
@@ -213,8 +211,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google
   }
 
   /**
-   * The number of rows which passed a rule evaluation.This field is only valid for row-level type
-   * rules.
+   * This field is not set for rule SqlAssertion.
    * @param passedCount passedCount or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleResult setPassedCount(java.lang.Long passedCount) {

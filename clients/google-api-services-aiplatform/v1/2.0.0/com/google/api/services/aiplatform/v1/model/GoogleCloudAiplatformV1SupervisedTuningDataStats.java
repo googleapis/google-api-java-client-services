@@ -30,6 +30,14 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1SupervisedTuningDataStats extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. For each index in `truncated_example_indices`, the user-facing reason why the
+   * example was dropped. Must not include example itself.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> droppedExampleReasons;
+
+  /**
    * Output only. Number of billable characters in the tuning dataset.
    * The value may be {@code null}.
    */
@@ -44,7 +52,9 @@ public final class GoogleCloudAiplatformV1SupervisedTuningDataStats extends com.
   private java.lang.Long totalBillableTokenCount;
 
   /**
-   * The number of examples in the dataset that have been truncated by any amount.
+   * Output only. The number of examples in the dataset that have been dropped. An example can be
+   * dropped for reasons including: too many tokens, contains an invalid image, contains too many
+   * images, etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -58,7 +68,7 @@ public final class GoogleCloudAiplatformV1SupervisedTuningDataStats extends com.
   private java.lang.Long totalTuningCharacterCount;
 
   /**
-   * A partial sample of the indices (starting from 1) of the truncated examples.
+   * Output only. A partial sample of the indices (starting from 1) of the dropped examples.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -113,6 +123,25 @@ public final class GoogleCloudAiplatformV1SupervisedTuningDataStats extends com.
   private GoogleCloudAiplatformV1SupervisedTuningDatasetDistribution userOutputTokenDistribution;
 
   /**
+   * Output only. For each index in `truncated_example_indices`, the user-facing reason why the
+   * example was dropped. Must not include example itself.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDroppedExampleReasons() {
+    return droppedExampleReasons;
+  }
+
+  /**
+   * Output only. For each index in `truncated_example_indices`, the user-facing reason why the
+   * example was dropped. Must not include example itself.
+   * @param droppedExampleReasons droppedExampleReasons or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SupervisedTuningDataStats setDroppedExampleReasons(java.util.List<java.lang.String> droppedExampleReasons) {
+    this.droppedExampleReasons = droppedExampleReasons;
+    return this;
+  }
+
+  /**
    * Output only. Number of billable characters in the tuning dataset.
    * @return value or {@code null} for none
    */
@@ -147,7 +176,9 @@ public final class GoogleCloudAiplatformV1SupervisedTuningDataStats extends com.
   }
 
   /**
-   * The number of examples in the dataset that have been truncated by any amount.
+   * Output only. The number of examples in the dataset that have been dropped. An example can be
+   * dropped for reasons including: too many tokens, contains an invalid image, contains too many
+   * images, etc.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTotalTruncatedExampleCount() {
@@ -155,7 +186,9 @@ public final class GoogleCloudAiplatformV1SupervisedTuningDataStats extends com.
   }
 
   /**
-   * The number of examples in the dataset that have been truncated by any amount.
+   * Output only. The number of examples in the dataset that have been dropped. An example can be
+   * dropped for reasons including: too many tokens, contains an invalid image, contains too many
+   * images, etc.
    * @param totalTruncatedExampleCount totalTruncatedExampleCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1SupervisedTuningDataStats setTotalTruncatedExampleCount(java.lang.Long totalTruncatedExampleCount) {
@@ -181,7 +214,7 @@ public final class GoogleCloudAiplatformV1SupervisedTuningDataStats extends com.
   }
 
   /**
-   * A partial sample of the indices (starting from 1) of the truncated examples.
+   * Output only. A partial sample of the indices (starting from 1) of the dropped examples.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getTruncatedExampleIndices() {
@@ -189,7 +222,7 @@ public final class GoogleCloudAiplatformV1SupervisedTuningDataStats extends com.
   }
 
   /**
-   * A partial sample of the indices (starting from 1) of the truncated examples.
+   * Output only. A partial sample of the indices (starting from 1) of the dropped examples.
    * @param truncatedExampleIndices truncatedExampleIndices or {@code null} for none
    */
   public GoogleCloudAiplatformV1SupervisedTuningDataStats setTruncatedExampleIndices(java.util.List<java.lang.Long> truncatedExampleIndices) {

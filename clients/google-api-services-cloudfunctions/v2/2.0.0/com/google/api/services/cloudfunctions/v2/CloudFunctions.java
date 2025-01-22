@@ -965,6 +965,138 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           }
         }
         /**
+         * Detaches 2nd Gen function to Cloud Run function.
+         *
+         * Create a request for the method "functions.detachFunction".
+         *
+         * This request holds the parameters needed by the cloudfunctions server.  After setting any
+         * optional parameters, call the {@link DetachFunction#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The name of the function for which should be detached.
+         * @param content the {@link com.google.api.services.cloudfunctions.v2.model.DetachFunctionRequest}
+         * @return the request
+         */
+        public DetachFunction detachFunction(java.lang.String name, com.google.api.services.cloudfunctions.v2.model.DetachFunctionRequest content) throws java.io.IOException {
+          DetachFunction result = new DetachFunction(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class DetachFunction extends CloudFunctionsRequest<com.google.api.services.cloudfunctions.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:detachFunction";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+
+          /**
+           * Detaches 2nd Gen function to Cloud Run function.
+           *
+           * Create a request for the method "functions.detachFunction".
+           *
+           * This request holds the parameters needed by the the cloudfunctions server.  After setting any
+           * optional parameters, call the {@link DetachFunction#execute()} method to invoke the remote
+           * operation. <p> {@link DetachFunction#initialize(com.google.api.client.googleapis.services.Abstr
+           * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param name Required. The name of the function for which should be detached.
+           * @param content the {@link com.google.api.services.cloudfunctions.v2.model.DetachFunctionRequest}
+           * @since 1.13
+           */
+          protected DetachFunction(java.lang.String name, com.google.api.services.cloudfunctions.v2.model.DetachFunctionRequest content) {
+            super(CloudFunctions.this, "POST", REST_PATH, content, com.google.api.services.cloudfunctions.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+            }
+          }
+
+          @Override
+          public DetachFunction set$Xgafv(java.lang.String $Xgafv) {
+            return (DetachFunction) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public DetachFunction setAccessToken(java.lang.String accessToken) {
+            return (DetachFunction) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public DetachFunction setAlt(java.lang.String alt) {
+            return (DetachFunction) super.setAlt(alt);
+          }
+
+          @Override
+          public DetachFunction setCallback(java.lang.String callback) {
+            return (DetachFunction) super.setCallback(callback);
+          }
+
+          @Override
+          public DetachFunction setFields(java.lang.String fields) {
+            return (DetachFunction) super.setFields(fields);
+          }
+
+          @Override
+          public DetachFunction setKey(java.lang.String key) {
+            return (DetachFunction) super.setKey(key);
+          }
+
+          @Override
+          public DetachFunction setOauthToken(java.lang.String oauthToken) {
+            return (DetachFunction) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public DetachFunction setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (DetachFunction) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public DetachFunction setQuotaUser(java.lang.String quotaUser) {
+            return (DetachFunction) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public DetachFunction setUploadType(java.lang.String uploadType) {
+            return (DetachFunction) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public DetachFunction setUploadProtocol(java.lang.String uploadProtocol) {
+            return (DetachFunction) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the function for which should be detached. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the function for which should be detached.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the function for which should be detached. */
+          public DetachFunction setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public DetachFunction set(String parameterName, Object value) {
+            return (DetachFunction) super.set(parameterName, value);
+          }
+        }
+        /**
          * Returns a signed URL for downloading deployed function source code. The URL is only valid for a
          * limited period and should be used within 30 minutes of generation. For more information about the
          * signed URL usage see: https://cloud.google.com/storage/docs/access-control/signed-urls

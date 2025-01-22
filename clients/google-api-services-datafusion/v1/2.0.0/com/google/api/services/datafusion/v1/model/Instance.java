@@ -184,7 +184,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private NetworkConfig networkConfig;
 
   /**
-   * Map of additional options used to configure the behavior of Data Fusion instance.
+   * Optional. Map of additional options used to configure the behavior of Data Fusion instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -647,7 +647,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Map of additional options used to configure the behavior of Data Fusion instance.
+   * Optional. Map of additional options used to configure the behavior of Data Fusion instance.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getOptions() {
@@ -655,7 +655,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Map of additional options used to configure the behavior of Data Fusion instance.
+   * Optional. Map of additional options used to configure the behavior of Data Fusion instance.
    * @param options options or {@code null} for none
    */
   public Instance setOptions(java.util.Map<String, java.lang.String> options) {
